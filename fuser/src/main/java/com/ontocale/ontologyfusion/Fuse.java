@@ -10,6 +10,8 @@ import java.io.OutputStream;
 import java.nio.charset.StandardCharsets;
 import java.util.ArrayList;
 import java.util.Arrays;
+import java.util.Collections;
+import java.util.Comparator;
 import java.util.HashMap;
 import java.util.Iterator;
 import java.util.List;
@@ -50,9 +52,11 @@ import org.apache.jena.util.iterator.ExtendedIterator;
 import org.apache.jena.vocabulary.OWL;
 import org.apache.jena.vocabulary.RDF;
 import org.apache.jena.vocabulary.RDFS;
+import org.apache.poi.ss.usermodel.BorderStyle;
 import org.apache.poi.ss.usermodel.CellStyle;
 import org.apache.poi.ss.usermodel.FillPatternType;
 import org.apache.poi.ss.usermodel.IndexedColors;
+import org.apache.poi.ss.util.CellRangeAddress;
 import org.apache.poi.ss.util.PropertyTemplate;
 import org.apache.poi.xssf.usermodel.XSSFCell;
 import org.apache.poi.xssf.usermodel.XSSFFont;
@@ -212,7 +216,16 @@ public class Fuse {
             }
         }
         fused = addStatuses(fused);
+        fused = addMisc(fused);
         fused = changeNamespace(fused, ASIO, ROH);
+        for(String prefix : prefixes1.keySet()) {
+           String from = prefixes1.get(prefix);
+           String to = prefixes2.get(prefix);
+           if(to != null && !(to.equals(from))) {
+               log.info("Changing namespace from " + from + " to " + to);
+               fused = changeNamespace(fused, from, to);
+           }
+        }
         return fused;
     }
     
@@ -303,16 +316,26 @@ public class Fuse {
        model.removeAll(null, null, model.getResource(uri));
     }
     
+    private static Model addMisc(Model model) {
+        // authorCitation
+//        Resource citationCount = model.getResource(ROH + "citationCount");
+//        model.add(citationCount, RDF.type, OWL.ObjectProperty);
+//        model.add(citationCount, RDFS.domain, model.getResource(prefixes2.get("foaf") + "Person"));
+//        model.add(citationCount, RDFS.range, model.getResource(ROH + "QualifiedValue"));
+        return model;
+    }
+    
     private static Model addStatuses(Model model) {
         List<String> statuses = Arrays.asList("Accepted", "Cancelled", 
-                "Closed", "Funded", "Rejected", "Signed", "Terminated", "Unfunded", "Open", "Submitted", "Proposal Submitted");
+                "Closed", "Funded", "Rejected", "Signed", "Terminated", 
+                "Unfunded", "Open", "Submitted", "Proposal Submitted", "Final", "Provisional");
         for(String status : statuses) {
             Resource statusRes = model.createResource(ROH + status.replaceAll(" ", ""));
             model.add(statusRes, RDF.type, OWL.Class);
             model.add(statusRes, RDFS.label, status, "en");
             model.add(statusRes, RDFS.subClassOf, model.getResource(ROH + "Status"));
         }
-        List<String> statusProps = Arrays.asList("status", "patentStatus", "projectStatus");
+        List<String> statusProps = Arrays.asList("status", "patentStatus", "projectStatus", "evaluationStatus");
         List<Resource> restrictionsToUpdate = new ArrayList<Resource>();
         for(String statusProp : statusProps) {
             ResIterator restrictionit = model.listResourcesWithProperty(
@@ -321,15 +344,28 @@ public class Fuse {
                 restrictionsToUpdate.add(restrictionit.next()); 
             }
             for(Resource restriction : restrictionsToUpdate) {
-                model.removeAll(restriction, OWL.allValuesFrom, null);
-                model.add(restriction, OWL.allValuesFrom, model.getResource(ROH + "Status"));
+                log.info("updating restriction");
+                if(restriction.hasProperty(OWL.allValuesFrom)) {
+                    log.info("updating allValuesFrom");
+                    model.removeAll(restriction, OWL.allValuesFrom, null);
+                    model.add(restriction, OWL.allValuesFrom, model.getResource(ROH + "Status"));
+                } else if (restriction.hasProperty(OWL.someValuesFrom)) {
+                    model.removeAll(restriction, OWL.someValuesFrom, null);
+                    model.add(restriction, OWL.someValuesFrom, model.getResource(ROH + "Status"));
+                }
             }
             // eliminate property's original range
             Model preserveNonRange = ModelFactory.createDefaultModel();
-            preserveNonRange.add(model.listStatements(model.getResource(statusProp), RDFS.label, (RDFNode) null));
-            preserveNonRange.add(model.listStatements(model.getResource(statusProp), RDFS.domain, (RDFNode) null));
-            preserveNonRange.add(model.listStatements(model.getResource(statusProp), RDFS.comment, (RDFNode) null));
-            model.remove(getDescription(model, statusProp));
+            preserveNonRange.add(model.getResource(ROH + statusProp), RDF.type, OWL.ObjectProperty);
+            preserveNonRange.add(model.listStatements(model.getResource(ROH + statusProp), RDFS.label, (RDFNode) null));
+            preserveNonRange.add(model.listStatements(model.getResource(ROH + statusProp), RDFS.domain, (RDFNode) null));
+            preserveNonRange.add(model.listStatements(model.getResource(ROH + statusProp), RDFS.comment, (RDFNode) null));
+            log.info("Editing " + statusProp);
+            log.info(model.size());
+            Model remove = getDescription(model, ROH + statusProp);
+            log.info(remove.size());
+            model.remove(remove);
+            log.info(model.size());
             model.add(preserveNonRange);
         }
         return model;
@@ -379,40 +415,155 @@ public class Fuse {
         PropertyTemplate pt = new PropertyTemplate();
         RowCreator rowCreator = new RowCreator(sheet);
         StmtIterator sit = ontology.listStatements(null, RDF.type, OWL.Class);
+        int classLevel = 0;
+        int classMax = 6;
         while(sit.hasNext()) {
             Statement stmt = sit.next();
             if(stmt.getSubject().isURIResource()) {
                 Resource clazz = stmt.getSubject();
                 XSSFRow row = rowCreator.createRow();
-                XSSFCell cell0 = row.createCell(0);
-                String prefix = prefixes2reverse.get(clazz.getNameSpace());
+                XSSFCell cell0 = row.createCell(classLevel + 0);
+                XSSFCell cell1 = row.createCell(classLevel + 1);                
+                String prefix = prefixes2reverse.get(clazz.getNameSpace());                
+                CellStyle style = styles.get(prefix);
+                if(style == null) {
+                    log.warn("No cell style found for prefix " + prefix);
+                    style = styles.get("default");
+                }
+                cell0.setCellStyle(style);
+                cell1.setCellStyle(style);
+                for(int i = classLevel + 1; i < classMax; i++) {
+                    XSSFCell fillerCell = row.createCell(i);
+                    fillerCell.setCellStyle(style);
+                }
+                sheet.addMergedRegion(new CellRangeAddress(
+                        rowCreator.rowIndex, rowCreator.rowIndex, classLevel + 1, classMax - 1));
                 if(prefix == null) {
                     log.warn("No prefix found for namespace " + clazz.getNameSpace());
-                    cell0.setCellValue(clazz.getURI());
+                    cell1.setCellValue(clazz.getURI());
                 } else {
-                    cell0.setCellValue(prefix + ":" + clazz.getLocalName());
-                    CellStyle style = styles.get(prefix);
-                    if(style == null) {
-                        log.warn("No cell style found for prefix " + prefix);
-                    } else {
-                        cell0.setCellStyle(style);
+                    cell0.setCellValue(prefix);
+                    cell1.setCellValue(clazz.getLocalName());                    
+                }
+                Iterator<String[]> objProperties = getObjectProperties(clazz.getURI(), ontology).iterator();
+                Iterator<String[]> datatypeProperties = getDatatypeProperties(clazz.getURI(), ontology).iterator();
+                boolean newRow = false;
+                while(objProperties.hasNext() || datatypeProperties.hasNext()) {
+                    boolean objPropPrinted = false;
+                    if(objProperties.hasNext()) {
+                        objPropPrinted = true;
+                        if(newRow) {
+                            for(int i = 0; i < 6; i++) {
+                                XSSFCell fillerCell = row.createCell(i);
+                                fillerCell.setCellStyle(style); // class style
+                            }
+                            sheet.addMergedRegion(new CellRangeAddress(
+                                    rowCreator.rowIndex, rowCreator.rowIndex, 0, 5));
+                        }
+                        String[] prop = objProperties.next();
+                        String propPrefix = prop[1];
+                        XSSFCell prefixCell = row.createCell(6);
+                        prefixCell.setCellValue(prop[1]);
+                        XSSFCell localNameCell = row.createCell(7);
+                        localNameCell.setCellValue(prop[2]);
+                        CellStyle propCellStyle = "range".equals(prop[6]) 
+                                ? styles.get(propPrefix + "bold") : styles.get(propPrefix);
+                        if(propCellStyle == null) {
+                            propCellStyle = "range".equals(prop[6]) 
+                                    ? styles.get("defaultbold") : styles.get("default");
+                        }
+                        prefixCell.setCellStyle(propCellStyle);
+                        localNameCell.setCellStyle(propCellStyle);
+                        String rangePrefix = prop[3];
+                        if(!StringUtils.isEmpty(rangePrefix)) {
+                            XSSFCell rangeCell = row.createCell(8);
+                            rangeCell.setCellValue(rangePrefix + ":" + prop[4]);
+                            CellStyle rangeCellStyle = styles.get(rangePrefix);
+                            if(rangeCellStyle == null) {
+                                styles.get("default");
+                            }                            
+                            rangeCell.setCellStyle(rangeCellStyle);
+                        } else {
+                            XSSFCell rangeCell = row.createCell(8);
+                            rangeCell.setCellValue(prop[4]);
+                            CellStyle rangeCellStyle = styles.get(propPrefix);
+                            if(rangeCellStyle == null) {
+                                styles.get("default");
+                            }
+                            rangeCell.setCellStyle(rangeCellStyle); 
+                        }
                     }
-                }
-                List<String> properties = getProperties(clazz.getURI(), ontology);
-                for(String prop : properties) {
-                    XSSFRow propRow = rowCreator.createRow();
-                    XSSFCell propCell = propRow.createCell(1);
-                    propCell.setCellValue(prop);                    
-                }
+                    if(datatypeProperties.hasNext()) {
+                        if(newRow  && !objPropPrinted) {
+                            for(int i = 0; i < 9; i++) {
+                                XSSFCell fillerCell = row.createCell(i);
+                                fillerCell.setCellStyle(style); // class style
+                            }
+                            sheet.addMergedRegion(new CellRangeAddress(
+                                    rowCreator.rowIndex, rowCreator.rowIndex, 0, 8));
+                        }
+                        String[] prop = datatypeProperties.next();
+                        String propPrefix = prop[1];
+                        XSSFCell prefixCell = row.createCell(9);
+                        prefixCell.setCellValue(prop[1]);
+                        XSSFCell localNameCell = row.createCell(10);
+                        localNameCell.setCellValue(prop[2]);
+                        CellStyle propCellStyle = "range".equals(prop[6]) 
+                                ? styles.get(propPrefix + "bold") : styles.get(propPrefix);
+                        if(propCellStyle == null) {
+                            propCellStyle = "range".equals(prop[6]) 
+                                    ? styles.get("defaultbold") : styles.get("default");
+                        }
+                        prefixCell.setCellStyle(propCellStyle);
+                        localNameCell.setCellStyle(propCellStyle);
+                        String rangePrefix = prop[3];
+                        CellStyle rangeCellStyle = null;
+                        if(!StringUtils.isEmpty(rangePrefix)) {
+                            XSSFCell rangeCell = row.createCell(11);
+                            rangeCell.setCellValue(rangePrefix + ":" + prop[4]);
+                            rangeCellStyle = styles.get(rangePrefix);
+                            if(rangeCellStyle == null) {
+                                rangeCellStyle = styles.get("default");    
+                            }
+                            rangeCell.setCellStyle(rangeCellStyle);
+                        } else {
+                            XSSFCell rangeCell = row.createCell(11);
+                            rangeCell.setCellValue(prop[4]);
+                            rangeCellStyle = styles.get(propPrefix);
+                            if(rangeCellStyle == null) {
+                                
+                            }
+                            rangeCell.setCellStyle(rangeCellStyle);                             
+                        }
+                        if(!StringUtils.isEmpty(prop[5])) {
+                            XSSFCell valuesCell = row.createCell(12);
+                            valuesCell.setCellValue(prop[5]);
+                            if(rangeCellStyle == null) {
+                                rangeCellStyle = styles.get("default");
+                            }
+                            valuesCell.setCellStyle(rangeCellStyle);
+                        }
+                    }
+                    if(objProperties.hasNext() || datatypeProperties.hasNext()) {
+                        row = rowCreator.createRow();
+                        newRow = true;
+                    }
+                }                    
             }
         }
-        sheet.setColumnWidth(0, 7500);
-        sheet.setColumnWidth(1, 4000);
-        sheet.setColumnWidth(2, 4000);
-        sheet.setColumnWidth(3, 4000);
-        sheet.setColumnWidth(4, 4000);
-        sheet.setColumnWidth(5, 4000);
-        sheet.setColumnWidth(6, 4000);
+        sheet.setColumnWidth(0, 2000);
+        sheet.setColumnWidth(1, 2000);
+        sheet.setColumnWidth(2, 2000);
+        sheet.setColumnWidth(3, 2000);
+        sheet.setColumnWidth(4, 2000);
+        sheet.setColumnWidth(5, 2000);
+        sheet.setColumnWidth(6, 2000);
+        sheet.setColumnWidth(7, 8000);
+        sheet.setColumnWidth(8, 8000);
+        sheet.setColumnWidth(9, 2000);
+        sheet.setColumnWidth(10, 8000);
+        sheet.setColumnWidth(11, 8000);
+        sheet.setColumnWidth(12, 8000);
         return wb;
     }
     
@@ -430,25 +581,46 @@ public class Fuse {
         return pln;
     }
     
-    private static List<String> getProperties(String classURI, Model m) {
-        List<String> properties = new ArrayList<String>();
+    private static List<String[]> getObjectProperties(String classURI, Model m) {
+        return getProperties(true, classURI, m);
+    }
+    
+    private static List<String[]> getDatatypeProperties(String classURI, Model m) {
+        return getProperties(false, classURI, m);
+    }
+    
+    private static class PropertySorter implements Comparator<String[]> {
+
+        @Override
+        public int compare(String[] arg0, String[] arg1) {
+            return arg0[2].compareTo(arg1[2]);
+        }
+        
+    }
+    
+    private static List<String[]> getProperties(boolean objectProperties, 
+            String classURI, Model m) {
+        Map<String, String[]> propertyMap = new HashMap<String, String[]>();
         OntModel ontModel = ModelFactory.createOntologyModel(OntModelSpec.OWL_MEM, m);
         OntResource clazz = ontModel.getOntResource(classURI);
         if(!clazz.canAs(OntClass.class)) {
             log.warn(classURI + " cannot as OntClass. Skipping.");
-            return properties;
+            return Collections.emptyList();
         }
         OntClass ontClazz = clazz.as(OntClass.class);
         // domains
-        ExtendedIterator<ObjectProperty> ontProps = ontModel.listObjectProperties();
-        while(ontProps.hasNext()) {
-            OntProperty ontProp = ontProps.next();
-            checkPropertyDomain(ontProp, ontClazz, properties);
-        }
-        ExtendedIterator<DatatypeProperty> dataProps = ontModel.listDatatypeProperties();
-        while(dataProps.hasNext()) {
-            OntProperty dataProp = dataProps.next();
-            checkPropertyDomain(dataProp, ontClazz, properties);
+        if(objectProperties) {
+            ExtendedIterator<ObjectProperty> ontProps = ontModel.listObjectProperties();
+            while(ontProps.hasNext()) {
+                OntProperty ontProp = ontProps.next();
+                checkPropertyDomain(ontProp, ontClazz, propertyMap);
+            }
+        } else {
+            ExtendedIterator<DatatypeProperty> dataProps = ontModel.listDatatypeProperties();
+            while(dataProps.hasNext()) {
+                OntProperty dataProp = dataProps.next();
+                checkPropertyDomain(dataProp, ontClazz, propertyMap);
+            }
         }
         // restrictions 
         ExtendedIterator<? extends OntClass> superIt = ontClazz.listSuperClasses();
@@ -456,9 +628,26 @@ public class Fuse {
             OntClass superClazz = superIt.next();
             if(superClazz.isRestriction()) {
                 Restriction rest = superClazz.asRestriction();
-                String fmt = formatRestriction(rest);
-                if(fmt != null) {
-                    properties.add(fmt);
+                if(rest.getOnProperty() == null) {
+                    log.warn("restriction with null onProperty");
+                    continue;
+                }                    
+                if( (objectProperties && rest.getOnProperty().isObjectProperty()) 
+                        || (!objectProperties && rest.getOnProperty().isDatatypeProperty()) ) {
+                    String[] fmt = formatRestriction(rest);
+                    if(fmt != null) {
+                        log.info("Adding restriction to map " + fmt[0]);
+                        String[] existing = propertyMap.get(fmt[0]); 
+                        if(existing == null || !("someValuesFrom".equals(fmt[6]))) {
+                            if(existing != null && !StringUtils.isEmpty(existing[5])) {
+                                existing[3] = fmt[3];
+                                existing[4] = fmt[4];
+                                propertyMap.put(fmt[0], existing);
+                            } else {
+                                propertyMap.put(fmt[0], fmt);
+                            }
+                        }
+                    }
                 }
             } else if(superClazz.isIntersectionClass()) {
                 IntersectionClass superIntersection = superClazz.asIntersectionClass();
@@ -468,42 +657,64 @@ public class Fuse {
                     OntClass operand = operandIt.next();
                     if(operand.isRestriction()) {
                         Restriction rest = operand.asRestriction();
-                        String fmt = formatRestriction(rest);
-                        if(fmt != null) {
-                            properties.add(fmt);
+                        if(rest.getOnProperty() == null) {
+                            log.warn("restriction with null onProperty");
+                            continue;
                         }
+                        if( (objectProperties && rest.getOnProperty().isObjectProperty()) 
+                                || (!objectProperties && rest.getOnProperty().isDatatypeProperty()) ) {
+                            String fmt[] = formatRestriction(rest);
+                            String[] existing = propertyMap.get(fmt[0]); 
+                            if(existing == null || !("someValuesFrom".equals(fmt[6]))) {
+                                log.info("Adding restriction to map " + fmt[0]);
+                                if(existing != null && !StringUtils.isEmpty(existing[5])) {
+                                    log.info("updating existing");
+                                    existing[3] = fmt[3];
+                                    existing[4] = fmt[4];
+                                    propertyMap.put(fmt[0], existing);
+                                } else {
+                                    log.info("overwriting/adding");
+                                    propertyMap.put(fmt[0], fmt);
+                                }
+                            }
+                        }                        
                     }
                 }
             }
         }
+        List<String[]> properties = new ArrayList<String[]>();
+        properties.addAll(propertyMap.values());
+        Collections.sort(properties, new PropertySorter());
         return properties;
     }
     
-    private static void checkPropertyDomain(OntProperty ontProp, OntClass ontClazz, List<String> properties) {
-        log.info("Checking domains for " + ontProp.getURI());
+    private static void checkPropertyDomain(OntProperty ontProp, OntClass ontClazz, Map<String, String[]> propertyMap) {
+        log.debug("Checking domains for " + ontProp.getURI());
         ExtendedIterator<? extends OntResource> domains = ontProp.listDomain();
         while(domains.hasNext()) {
             OntResource domain = domains.next();
             if(domain.getURI() != null) {
-                log.info("Named domain class " + domain.getURI());
+                log.debug("Named domain class " + domain.getURI());
             }
             if(domain.equals(ontClazz)) {
-                log.info("Adding simple domain");
-                String fmt = formatPropertyAndRange(ontProp, ontProp.getRange());
+                log.debug("Adding simple domain");
+                String[] fmt = formatPropertyAndRange(ontProp, ontProp.getRange());
                 if(fmt != null) {
-                    properties.add(fmt);
+                    fmt[6] = "range";
+                    propertyMap.put(fmt[0], fmt);
                 }
             } else if(domain.canAs(OntClass.class)) {
-                log.info("Checking complex domain");
+                log.debug("Checking complex domain");
                 OntClass domainClazz = domain.as(OntClass.class);
                 if(domainClazz.isUnionClass()) {
                     UnionClass domainUnion = domainClazz.asUnionClass();
                     Iterator<? extends OntClass> operandIt = domainUnion.listOperands();
                     while(operandIt.hasNext()) {
                         if(ontClazz.equals(operandIt.next())) {
-                            String fmt = formatPropertyAndRange(ontProp, ontProp.getRange());
+                            String[] fmt = formatPropertyAndRange(ontProp, ontProp.getRange());
                             if(fmt != null) {
-                                properties.add(fmt);
+                                fmt[6] = "range";
+                                propertyMap.put(fmt[0], fmt);
                             }
                         }
                     }
@@ -512,19 +723,25 @@ public class Fuse {
         }
     }
     
-    private static String formatRestriction(Restriction rest) {
+    private static String[] formatRestriction(Restriction rest) {
         if(rest.isAllValuesFromRestriction()) {
             try {
+                log.info("Formatting restriction");
                 AllValuesFromRestriction restA = rest.asAllValuesFromRestriction();
-                return "allValuesFrom: " + formatPropertyAndRange(restA.getOnProperty(), restA.getAllValuesFrom());
+                String[] fmt = formatPropertyAndRange(restA.getOnProperty(), restA.getAllValuesFrom());
+                fmt[6] = "allValuesFrom";
+                return fmt;
             } catch (Exception e) {
                 log.error(e, e);
                 log.error(rest);
             }
         } else if(rest.isSomeValuesFromRestriction()) {
             try {
+                log.info("Formatting restriction");
                 SomeValuesFromRestriction restE = rest.asSomeValuesFromRestriction();
-                return "someValuesFrom: " + formatPropertyAndRange(restE.getOnProperty(), restE.getSomeValuesFrom());
+                String[] fmt = formatPropertyAndRange(restE.getOnProperty(), restE.getSomeValuesFrom());
+                fmt[6] = "someValuesFrom";
+                return fmt;
             } catch (Exception e) {
                 log.error(e, e);
                 log.error(rest);
@@ -533,75 +750,103 @@ public class Fuse {
         return null;      
     }
     
-    private static String formatPropertyAndRange(OntProperty ontProp, Resource range) {
+    private static String[] formatPropertyAndRange(OntProperty ontProp, Resource range) {
+        // 0 full URI
+        // 1 prefix
+        // 2 local name
+        // 3 range prefix
+        // 4 range local name
+        // 5 range values
+        // 6 "range" if by explicit range
         if(range == null) {
             log.warn(ontProp.getURI() + " has a null range");
             return null;
         }
-        StringBuilder out = new StringBuilder()
-                .append(getLabel(ontProp)).append(": range: ");        
+        String[] out = new String[7];
+        String[] propPln = prefixAndLocalName(ontProp);
+        out[0] = ontProp.getURI();
+        out[1] = propPln[0];
+        out[2] = propPln[1];
+        String[] rangePln = prefixAndLocalName(range);
+        out[3] = rangePln[0];
+        out[4] = rangePln[1];
         if(range.hasProperty(RDF.type, RDFS.Datatype) && range.hasProperty(OWL.oneOf)) {
             RDFNode listValue = range.getProperty(OWL.oneOf).getObject();
             if(listValue.canAs(RDFList.class)) {
+                StringBuilder values = new StringBuilder();
                 List<RDFNode> nodes = listValue.as(RDFList.class).asJavaList();                    
-                out.append("{");
+                values.append("{");
                 boolean firstPrinted = true;
                 for(RDFNode node : nodes) {
                     if(firstPrinted == false) {
-                        out.append(", ");
+                        values.append(", ");
                     }
                     firstPrinted = false;
                     if(node.isLiteral()){
-                        out.append("\"").append(node.asLiteral().getLexicalForm()).append("\"");
+                        values.append("\"").append(node.asLiteral().getLexicalForm()).append("\"");
                     }
                 }
-                out.append("}");                
+                values.append("}");
+                out[5] = values.toString();
             }
-        } else {
+        } else if (range.canAs(OntClass.class)) {
             OntClass rangeClass = range.as(OntClass.class);
             if(!rangeClass.isAnon()) {
                 String[] pln = prefixAndLocalName(rangeClass);
                 if(!StringUtils.isEmpty(pln[0])) {
-                    out.append(pln[0]).append(":").append(pln[1]);
+                    out[3] = pln[0];
+                    out[4] = pln[1];
                 } else {
-                    out.append(pln[1]);
+                    out[4] = pln[1];
                 }
             } else if(rangeClass.isUnionClass()) {
                 UnionClass rangeUnion = rangeClass.asUnionClass();
                 ExtendedIterator<? extends OntClass> operandIt = rangeUnion.listOperands();
+                StringBuilder values = new StringBuilder();
                 boolean firstPrinted = true;
                 while(operandIt.hasNext()) {
                     OntResource operand = operandIt.next();
                     if(!operand.isAnon()) {
                         if(!firstPrinted) {
-                            out.append(" or ");                            
+                            values.append(" or ");                            
                         }
                         firstPrinted = false;
                         String[] pln = prefixAndLocalName(operand);
                         if(!StringUtils.isEmpty(pln[0])) {
-                            out.append(pln[0]).append(":").append(pln[1]);
+                            values.append(pln[0]).append(":").append(pln[1]);
                         } else {
-                            out.append(pln[1]);
+                            values.append(pln[1]);
                         }
                     }
                 }
+                out[4] = values.toString();
             } else if(rangeClass.isDataRange()) {
                 DataRange dataRange = rangeClass.asDataRange();
                 ExtendedIterator<? extends Literal> operandIt = dataRange.listOneOf();
-                out.append("{");
+                StringBuilder values = new StringBuilder();
+                values.append("{");
                 boolean firstPrinted = true;
                 while(operandIt.hasNext()) {
                     if(firstPrinted == false) {
-                        out.append(", ");
+                        values.append(", ");
                     }
                     firstPrinted = false;
                     Literal lit = operandIt.next();
-                    out.append("\"").append(lit.getLexicalForm()).append("\"");
+                    values.append("\"").append(lit.getLexicalForm()).append("\"");
                 }
-                out.append("}");
+                values.append("}");
+                out[5] = values.toString();
+            }
+        } else if(!range.isAnon()) {
+            String[] pln = prefixAndLocalName(range);
+            if(!StringUtils.isEmpty(pln[0])) {
+                out[3] = pln[0];
+                out[4] = pln[1];
+            } else {
+                out[4] = pln[1];
             }
         }
-        return out.toString();
+        return out;
     }
     
     private static String getLabel(Resource resource) {
@@ -629,28 +874,42 @@ public class Fuse {
         colors.put("cito", IndexedColors.LAVENDER.index);
         colors.put("foaf", IndexedColors.AQUA.index);
         colors.put("gn", IndexedColors.BROWN.index);
-        colors.put("bfo", IndexedColors.GREEN.index);
-        colors.put("ero", IndexedColors.GREEN.index);
-        colors.put("iao", IndexedColors.GREEN.index);
-        colors.put("ro", IndexedColors.GREEN.index);
+        colors.put("bfo", IndexedColors.LIME.index);
+        colors.put("ero", IndexedColors.LIME.index);
+        colors.put("iao", IndexedColors.LIME.index);
+        colors.put("ro", IndexedColors.LIME.index);
         colors.put("owl", IndexedColors.TAN.index);
         colors.put("rdf", IndexedColors.TAN.index);
         colors.put("rdfs", IndexedColors.TAN.index);
-        colors.put("roh", IndexedColors.DARK_YELLOW.index);
+        colors.put("xsd", IndexedColors.TAN.index);
+        colors.put("roh", IndexedColors.LEMON_CHIFFON.index);
         colors.put("rohes", IndexedColors.ORANGE.index);
         colors.put("rohum", IndexedColors.DARK_RED.index);
         colors.put("skos", IndexedColors.PLUM.index);
         colors.put("uneskos", IndexedColors.DARK_YELLOW.index);
         colors.put("vcard", IndexedColors.LIGHT_YELLOW.index);
-        colors.put("vivo", IndexedColors.SEA_GREEN.index);  
+        colors.put("vivo", IndexedColors.SEA_GREEN.index);
+        colors.put("geonames", IndexedColors.CORAL.index);
+        colors.put("default", IndexedColors.WHITE.index);        
         HashMap<String, CellStyle> styles = new HashMap<String, CellStyle>();
         for(String prefix : colors.keySet()) {
             CellStyle style = wb.createCellStyle();
             style.setFillForegroundColor(colors.get(prefix));
             style.setFillPattern(FillPatternType.SOLID_FOREGROUND);
+            style.setWrapText(true);
+            style.setBorderBottom(BorderStyle.THIN);
+            style.setBorderLeft(BorderStyle.THIN);
+            style.setBorderRight(BorderStyle.THIN);
+            style.setBorderTop(BorderStyle.THIN);
             styles.put(prefix, style);
             CellStyle bold = wb.createCellStyle();
             bold.setFillForegroundColor(colors.get(prefix));
+            bold.setFillPattern(FillPatternType.SOLID_FOREGROUND);
+            bold.setWrapText(true);
+            bold.setBorderBottom(BorderStyle.THIN);
+            bold.setBorderLeft(BorderStyle.THIN);
+            bold.setBorderRight(BorderStyle.THIN);
+            bold.setBorderTop(BorderStyle.THIN);
             XSSFFont boldfont = wb.createFont();
             boldfont.setBold(true);
             bold.setFont(boldfont);
