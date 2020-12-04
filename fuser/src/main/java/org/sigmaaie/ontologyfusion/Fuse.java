@@ -1,4 +1,4 @@
-package com.ontocale.ontologyfusion;
+package org.sigmaaie.ontologyfusion;
 
 import java.io.BufferedOutputStream;
 import java.io.File;
@@ -41,6 +41,7 @@ import org.apache.jena.rdf.model.Literal;
 import org.apache.jena.rdf.model.Model;
 import org.apache.jena.rdf.model.ModelFactory;
 import org.apache.jena.rdf.model.NodeIterator;
+import org.apache.jena.rdf.model.Property;
 import org.apache.jena.rdf.model.RDFList;
 import org.apache.jena.rdf.model.RDFNode;
 import org.apache.jena.rdf.model.ResIterator;
@@ -152,6 +153,8 @@ public class Fuse {
         Model ontology2 = loadOntology(args[2]);
         Model fused = fuse(args[0], ontology1, ontology2);
         fused.write(new FileOutputStream(new File(args[3]) + ".ttl"), "TTL");
+//        Model sampleData = createSampleData(fused);
+//        sampleData.write(new FileOutputStream(new File(args[3]) + "-sampleData.ttl"), "TTL");
         XSSFWorkbook spreadsheet = createSpreadsheet(fused);
         OutputStream out = new BufferedOutputStream(new FileOutputStream(new File(args[3] + ".xlsx")));
         try {
@@ -161,7 +164,7 @@ public class Fuse {
               out.flush();
               out.close();
           }
-        }     
+        }   
     }
     
     private static Model fuse(String mappingFilePath, Model ontology1, 
@@ -218,6 +221,8 @@ public class Fuse {
         fused = addStatuses(fused);
         fused = addMisc(fused);
         fused = changeNamespace(fused, ASIO, ROH);
+        fused = updateOntologyResource(fused);
+        fused = ensureLabels(fused, ROH);
         for(String prefix : prefixes1.keySet()) {
            String from = prefixes1.get(prefix);
            String to = prefixes2.get(prefix);
@@ -226,6 +231,37 @@ public class Fuse {
                fused = changeNamespace(fused, from, to);
            }
         }
+        return fused;
+    }
+    
+    /**
+     * For any subjects in the specified namespace, add an English label
+     * equal to the subject's local name if no other label exists
+     * @param model
+     * @param namespace
+     * @return model with any missing labels added
+     */
+    private static Model ensureLabels(Model model, String namespace) {
+        Model additions = ModelFactory.createDefaultModel();
+        StmtIterator sit = model.listStatements();
+        while(sit.hasNext()) {
+            Statement stmt = sit.next();
+            Resource subj = stmt.getSubject();
+            if(!subj.isAnon() && subj.getURI().startsWith(namespace)) {
+                if(!model.contains(subj, RDFS.label, (RDFNode) null)) {
+                    additions.add(subj, RDFS.label, subj.getLocalName(), "en");
+                }
+            }
+        }
+        model.add(additions);
+        return model;
+    }
+    
+    private static Model updateOntologyResource(Model fused) {
+        // previous namespace change will result in a owl:Ontology resource with
+        // an extra hash on the end.  Rewrite this.  
+        // TODO: update / replace metadata with appropriate new values
+        ResourceUtils.renameResource(fused.getResource(ROH), ROH.substring(0, ROH.length() - 1));
         return fused;
     }
     
@@ -367,6 +403,7 @@ public class Fuse {
             model.remove(remove);
             log.info(model.size());
             model.add(preserveNonRange);
+            model.add(model.getResource(ROH + statusProp), RDFS.range, model.getResource(ROH + "Status"));
         }
         return model;
     }
@@ -405,6 +442,143 @@ public class Fuse {
                 throw new RuntimeException("Unknown prefix: " + qname[0]);
             }
             return ns + qname[1];
+        }
+    }
+    
+    private static Model createSampleData(Model model) {
+        OntModel ontology = ModelFactory.createOntologyModel(OntModelSpec.OWL_MEM, model);
+        String namespace = "http://example.org/individual/";
+        Model sampleData = ModelFactory.createDefaultModel();
+        StmtIterator sit = ontology.listStatements(null, RDF.type, OWL.Class);
+        while(sit.hasNext()) {
+            Statement stmt = sit.next();
+            if(!stmt.getSubject().isAnon()) {
+                OntClass clazz = ontology.getOntClass(stmt.getSubject().getURI());
+                List<Resource> sampleInds = new ArrayList<Resource>();
+                sampleInds.add(sampleData.getResource(namespace + "sample-" + clazz.getLocalName() + autoIncrement()));
+                List<String[]> objProps = getAllObjectProperties(clazz, ontology);
+                for(String[] objProp : objProps) {                                       
+                    Property property = sampleData.getProperty(objProp[0]);
+                    List<OntClass> subTypes = new ArrayList<OntClass>();
+                    OntClass range = ontology.getOntClass(getRangeURI(objProp));
+                    subTypes.add(range);
+                    Iterator<OntClass> subclasses = range.listSubClasses();
+                    while(subclasses.hasNext()) {
+                        OntClass subclass = subclasses.next();
+                        if(!subclass.isAnon()) {
+                            subTypes.add(subclass);
+                        }
+                    }
+                    Model tmp = ModelFactory.createDefaultModel();
+                    for(Resource sampleInd : sampleInds) {
+                        Resource objectInd = sampleData.getResource(sampleInd.getURI() + "-" + property.getLocalName());
+                        sampleData.add(sampleInd, property, objectInd);
+                        sampleData.add(objectInd, RDF.type, range);
+                    }
+                    List<Resource> newResources = new ArrayList<Resource>();
+                    for(OntClass objectType : subTypes) {
+                        List<Resource> clones = cloneIndividuals(sampleInds, model);
+                        for(Resource clone : clones) {
+                            Resource objectInd = sampleData.getResource(clone.getURI() + "-" + property.getLocalName());
+                            sampleData.add(clone, property, objectInd);
+                            sampleData.add(objectInd, RDF.type, objectType);
+                        }
+                    }
+                    sampleInds.addAll(newResources);
+                }
+                List<String[]> dataProps = getAllDatatypeProperties(clazz, ontology);
+                for(String[] dataProp : dataProps) {
+                    String rangeDatatypeURI = getRangeURI(dataProp);
+                    if(!StringUtils.isEmpty(dataProp[5])) {
+                        // enumerated values
+                        String[] values = dataProp[5].replaceAll("{", "").replaceAll("}", "").replaceAll(" ", "").split(",");
+                        for(String value : values) {
+                            
+                        }
+                    }
+                 }
+            }
+        }
+        return sampleData;
+    }
+    
+    private static List<String[]> getAllObjectProperties(OntClass clazz, Model model) {
+        List<String[]> allProps = new ArrayList<String[]>();
+        allProps.addAll(getObjectProperties(clazz.getURI(), model));
+        Iterator<OntClass> superIt = clazz.listSuperClasses();
+        while(superIt.hasNext()) {
+            OntClass superClass = superIt.next();
+            if(!superClass.isAnon()) {
+                allProps.addAll(getObjectProperties(superClass.getURI(), model));
+            }
+        }
+        return allProps;
+    }
+    
+    private static List<String[]> getAllDatatypeProperties(OntClass clazz, Model model) {
+        List<String[]> allProps = new ArrayList<String[]>();
+        allProps.addAll(getDatatypeProperties(clazz.getURI(), model));
+        Iterator<OntClass> superIt = clazz.listSuperClasses();
+        while(superIt.hasNext()) {
+            OntClass superClass = superIt.next();
+            if(!superClass.isAnon()) {
+                allProps.addAll(getDatatypeProperties(superClass.getURI(), model));
+            }
+        }
+        return allProps;
+    }
+    
+    private static int nextInt = 0;
+    
+    private static int autoIncrement() {
+        nextInt++;
+        return nextInt;
+    }
+    
+    private static List<Resource> cloneIndividuals(List<Resource> inds, Model model) {
+        List<Resource> clonedInds = new ArrayList<Resource>();
+        Model cloneStmts = ModelFactory.createDefaultModel();
+        for(Resource ind : inds) {
+            String baseURI = ind.getURI().substring(0, ind.getURI().lastIndexOf("-"));
+            String cloneURI = baseURI + autoIncrement();
+            Resource clone = cloneStmts.getAlt(cloneURI);
+            clonedInds.add(clone);
+            StmtIterator stmtIt = model.listStatements();
+            while(stmtIt.hasNext()) {
+                Statement stmt = stmtIt.next();
+                if(stmt.getObject().isLiteral()) {
+                    cloneStmts.add(clone, stmt.getPredicate(), stmt.getObject());
+                } else if(stmt.getObject().equals(ind)) {
+                    cloneStmts.add(clone, stmt.getPredicate(), clone);
+                } else {
+                    String objURI = stmt.getObject().asResource().getURI();
+                    String objBaseURI = objURI.substring(0, ind.getURI().lastIndexOf("-"));
+                    Resource newObj = cloneStmts.getResource(objBaseURI + autoIncrement());
+                    cloneStmts.add(clone, stmt.getPredicate(), newObj);
+                    StmtIterator objSit = model.listStatements(model.getResource(objURI), null, (RDFNode) null);
+                    while(objSit.hasNext()) {
+                        Statement objStmt = objSit.next();
+                        cloneStmts.add(newObj, objStmt.getPredicate(), objStmt.getObject());
+                    }
+                }
+            }
+            
+        }
+        model.add(cloneStmts);
+        return clonedInds;
+    }
+    
+    private static String getRangeURI(String[] prop) {
+        String rangePrefix = prop[3];
+        if(rangePrefix == null) {
+           return prop[4];
+        } else {
+            String rangeClassNamespace = prefixes2.get(rangePrefix);
+            if(rangeClassNamespace == null) {
+                throw new RuntimeException("No namespace found for prefix " + rangePrefix);
+            } else {
+                return rangePrefix + prop[4];
+            }
         }
     }
     
