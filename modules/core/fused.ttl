@@ -50,14 +50,14 @@ vivo:DateTimeInterval
         rdfs:comment     "Models a time span, very similarly as in CERIF but more nicely encompasses the time interval as instance of class vivo:DateTimeInterval" ;
         rdfs:label       "Intervalo Fecha/Hora"@es , "Date/Time Interval"@en ;
         rdfs:subClassOf  bfo:BFO_0000038 ;
-        rdfs:subClassOf  [ a                  owl:Restriction ;
-                           owl:allValuesFrom  vivo:DateTimeValue ;
-                           owl:onProperty     vivo:end
-                         ] ;
         rdfs:subClassOf  [ a                            owl:Restriction ;
                            owl:maxQualifiedCardinality  "1"^^xsd:nonNegativeInteger ;
                            owl:onClass                  vivo:DateTimeValue ;
                            owl:onProperty               vivo:end
+                         ] ;
+        rdfs:subClassOf  [ a                  owl:Restriction ;
+                           owl:allValuesFrom  vivo:DateTimeValue ;
+                           owl:onProperty     vivo:start
                          ] ;
         rdfs:subClassOf  [ a                            owl:Restriction ;
                            owl:maxQualifiedCardinality  "1"^^xsd:nonNegativeInteger ;
@@ -66,7 +66,7 @@ vivo:DateTimeInterval
                          ] ;
         rdfs:subClassOf  [ a                  owl:Restriction ;
                            owl:allValuesFrom  vivo:DateTimeValue ;
-                           owl:onProperty     vivo:start
+                           owl:onProperty     vivo:end
                          ] ;
         rdfs:subClassOf  [ a                  owl:Restriction ;
                            owl:allValuesFrom  :KnowledgeArea ;
@@ -80,8 +80,13 @@ vivo:DateTimeInterval
 <http://purl.org/roh>
         a                  owl:Ontology ;
         rdfs:comment       "The University of Murcia signed on November 29, 2017, a Covenant with the Ministry of Economy, Industry and Competitiveness backing the “HÉRCULES: Semantic University Research Data” Project with a budget of FIVE MILLION FOUR HUNDRED AND SIXTY-TWO THOUSAND SIX HUNDRED euros with an 80% of co-financiering from the European Regional Development Fund program (ERDF) within the 2014-2020 period. \n\nThe project arose as a CRUE initiative, to create the basis for a new collaboration model between universities, to develop the information management systems and with the main objective of encouraging this type of collaboration.\n\nTherefore, the purpose of this agreement was to contribute to the improvement of public services and business innovation and research through the improvement of:\n\n    efficiency in public investment by decreasing the duplication of investment in R&D.\n    efficiency of research in universities.\n    scientific dissemination of research results.\n    detection of synergies in R&D between universities.\n    transfer of R&D results to companies.\n    efficiency in the management of research. \n\nby creating a research management system with semantic capacities based on semantic open data and that will provide a global view of the research data contained in the Spanish University System."@en ;
-        terms:license      <https://creativecommons.org/licenses/by-sa/4.0/> ;
-        owl:versionIRI     <http://purl.org/roh/0.2> ;
+        dc:contributor     "Alejandro González Hevia" , "José Emilio Labra Gayo" ;
+        dc:creator         "Emilio Rubiera Azcona" ;
+        dc:description     "An ontology to address the Research Management of the CRUE's Spanish University System (Sistema Universitario Español) by applying an encompassing model not only capable of addressing the universities of the CRUE but also more belonging to the European Union." ;
+        dc:title           "The ASIO ontology" ;
+        terms:license      <https://creativecommons.org/licenses/by-sa/4.0/> , <https://creativecommons.org/publicdomain/zero/1.0/> ;
+        owl:versionIRI     <http://purl.org/roh/0.2> , <http://purl.org/hercules/asio/core/0.0.1> ;
+        owl:versionInfo    "0.0.1" ;
         schema:identifier  <http://purl.org/roh> ;
         foaf:primaryTopic  <http://purl.org/roh> .
 
@@ -114,6 +119,10 @@ bibo:editorList  a          owl:ObjectProperty ;
         rdfs:range     :FundingAmount ;
         owl:inverseOf  :grants .
 
+[ a            owl:AllDisjointClasses ;
+  owl:members  ( :DegreeThesis :MasterThesis :PhDThesis )
+] .
+
 :hasTRL  a            owl:DatatypeProperty ;
         rdfs:comment  "A prototype has a given technology readiness level"@en ;
         rdfs:domain   :Prototype ;
@@ -127,15 +136,15 @@ bibo:BookSection  a       owl:Class ;
         rdfs:subClassOf   bibo:DocumentPart ;
         rdfs:subClassOf   [ a                  owl:Restriction ;
                             owl:allValuesFrom  rdfs:Literal ;
-                            owl:onProperty     bibo:pageEnd
-                          ] ;
-        rdfs:subClassOf   [ a                  owl:Restriction ;
-                            owl:allValuesFrom  rdfs:Literal ;
                             owl:onProperty     bibo:pageStart
                           ] ;
         rdfs:subClassOf   [ a                  owl:Restriction ;
                             owl:allValuesFrom  rdfs:Literal ;
                             owl:onProperty     bibo:edition
+                          ] ;
+        rdfs:subClassOf   [ a                  owl:Restriction ;
+                            owl:allValuesFrom  rdfs:Literal ;
+                            owl:onProperty     bibo:pageEnd
                           ] ;
         obo:IAO_0000112   "Short Definition from the bibo ontology" ;
         obo:IAO_0000115   "A section of a book" ;
@@ -206,7 +215,8 @@ obo:BFO_0000180  a  owl:AnnotationProperty .
 foaf:primaryTopic  a  owl:AnnotationProperty .
 
 :TestOrganization  a  owl:NamedIndividual ;
-        :produces  :TestNonResearchSoftware .
+        rdfs:label  "TestOrganization"@en ;
+        :produces   :TestNonResearchSoftware .
 
 vivo:Meeting  a          owl:Class ;
         rdfs:label       "Meeting"@en , "Reunión"@es ;
@@ -225,6 +235,10 @@ iao:IAO_0000030  a       owl:Class ;
         rdfs:domain  <http://purl.org/roh/mirror/foaf#Agent> ;
         rdfs:label   "researches in"@en .
 
+[ a            owl:AllDisjointClasses ;
+  owl:members  ( <http://purl.org/roh/mirror/obo/ero#ERO_0000391> <http://purl.org/roh/mirror/obo/ero#ERO_0000392> <http://purl.org/roh/mirror/obo/ero#ERO_0000393> <http://purl.org/roh/mirror/obo/ero#ERO_0000394> <http://purl.org/roh/mirror/obo/ero#ERO_0001254> <http://purl.org/roh/mirror/obo/ero#ERO_0001255> <http://purl.org/roh/mirror/obo/ero#ERO_0001258> <http://purl.org/roh/mirror/obo/ero#ERO_0001261> )
+] .
+
 :Role   a             owl:Class ;
         rdfs:comment  "A condition/status/position that can be predicated of a person. In the ASIO core ontology, roles are reified as first order individuals and relations between roles and players are expressed by means of the asio:plays property. The ASIO core ontology does not impose any subclassification of roles. The concept is open to be refined according to domain or application requirements."@en ;
         rdfs:label    "Role"@en , "Papell"@ca-es , "Papel"@pt , "Papel"@es .
@@ -242,12 +256,32 @@ terms:source  a  owl:AnnotationProperty .
         rdfs:comment     "Invention"@en , "A new device, method, or process developed from study and experimentation in the framework of research."@en ;
         rdfs:label       "Invention"@en ;
         rdfs:subClassOf  [ a                  owl:Restriction ;
-                           owl:allValuesFrom  :PatentExpense ;
-                           owl:onProperty     :spends
+                           owl:allValuesFrom  :ResearchObject ;
+                           owl:onProperty     :produces
                          ] ;
         rdfs:subClassOf  [ a                  owl:Restriction ;
-                           owl:allValuesFrom  :Status ;
-                           owl:onProperty     :patentStatus
+                           owl:allValuesFrom  :FundingProgram ;
+                           owl:onProperty     :fundedBy
+                         ] ;
+        rdfs:subClassOf  [ a                  owl:Restriction ;
+                           owl:allValuesFrom  bfo:BFO_0000023 ;
+                           owl:onProperty     vivo:relates
+                         ] ;
+        rdfs:subClassOf  [ a                  owl:Restriction ;
+                           owl:allValuesFrom  rdfs:Literal ;
+                           owl:onProperty     vivo:abbreviation
+                         ] ;
+        rdfs:subClassOf  [ a                  owl:Restriction ;
+                           owl:allValuesFrom  rdfs:Literal ;
+                           owl:onProperty     vivo:description
+                         ] ;
+        rdfs:subClassOf  [ a                   owl:Restriction ;
+                           owl:onProperty      :title ;
+                           owl:someValuesFrom  xsd:string
+                         ] ;
+        rdfs:subClassOf  [ a                  owl:Restriction ;
+                           owl:allValuesFrom  xsd:string ;
+                           owl:onProperty     :title
                          ] ;
         rdfs:subClassOf  [ a                   owl:Restriction ;
                            owl:onProperty      vivo:freetextKeyword ;
@@ -258,61 +292,41 @@ terms:source  a  owl:AnnotationProperty .
                            owl:onProperty     :hasKnowledgeArea
                          ] ;
         rdfs:subClassOf  [ a                  owl:Restriction ;
-                           owl:allValuesFrom  :FundingProgram ;
-                           owl:onProperty     :fundedBy
-                         ] ;
-        rdfs:subClassOf  [ a                  owl:Restriction ;
-                           owl:allValuesFrom  rdfs:Literal ;
-                           owl:onProperty     vivo:description
-                         ] ;
-        rdfs:subClassOf  [ a                   owl:Restriction ;
-                           owl:onProperty      vivo:identifier ;
-                           owl:someValuesFrom  xsd:string
-                         ] ;
-        rdfs:subClassOf  [ a                  owl:Restriction ;
-                           owl:allValuesFrom  rdfs:Literal ;
-                           owl:onProperty     vivo:abbreviation
-                         ] ;
-        rdfs:subClassOf  [ a                  owl:Restriction ;
-                           owl:allValuesFrom  bfo:BFO_0000023 ;
-                           owl:onProperty     vivo:relates
-                         ] ;
-        rdfs:subClassOf  [ a                  owl:Restriction ;
-                           owl:allValuesFrom  :ResearchObject ;
-                           owl:onProperty     :produces
-                         ] ;
-        rdfs:subClassOf  [ a                  owl:Restriction ;
-                           owl:allValuesFrom  xsd:string ;
-                           owl:onProperty     :title
-                         ] ;
-        rdfs:subClassOf  [ a                   owl:Restriction ;
-                           owl:onProperty      :title ;
-                           owl:someValuesFrom  xsd:string
-                         ] ;
-        rdfs:subClassOf  [ a                  owl:Restriction ;
-                           owl:allValuesFrom  <http://purl.org/roh/mirror/geonames#Feature> ;
-                           owl:onProperty     <http://purl.org/roh/mirror/geonames#locatedIn>
+                           owl:allValuesFrom  :Dossier ;
+                           owl:onProperty     vivo:relatedBy
                          ] ;
         rdfs:subClassOf  [ a                  owl:Restriction ;
                            owl:allValuesFrom  :PatentApplication ;
                            owl:onProperty     terms:hasPart
                          ] ;
         rdfs:subClassOf  [ a                  owl:Restriction ;
-                           owl:allValuesFrom  :PropertyClassification ;
-                           owl:onProperty     :hasPropertyCategorization
-                         ] ;
-        rdfs:subClassOf  [ a                  owl:Restriction ;
                            owl:allValuesFrom  :Funding ;
                            owl:onProperty     :isSupportedBy
                          ] ;
+        rdfs:subClassOf  [ a                   owl:Restriction ;
+                           owl:onProperty      vivo:identifier ;
+                           owl:someValuesFrom  xsd:string
+                         ] ;
         rdfs:subClassOf  [ a                  owl:Restriction ;
-                           owl:allValuesFrom  :Dossier ;
-                           owl:onProperty     vivo:relatedBy
+                           owl:allValuesFrom  :Status ;
+                           owl:onProperty     :patentStatus
+                         ] ;
+        rdfs:subClassOf  [ a                  owl:Restriction ;
+                           owl:allValuesFrom  <http://purl.org/roh/mirror/geonames#Feature> ;
+                           owl:onProperty     <http://purl.org/roh/mirror/geonames#locatedIn>
+                         ] ;
+        rdfs:subClassOf  [ a                  owl:Restriction ;
+                           owl:allValuesFrom  :PatentExpense ;
+                           owl:onProperty     :spends
+                         ] ;
+        rdfs:subClassOf  [ a                  owl:Restriction ;
+                           owl:allValuesFrom  :PropertyClassification ;
+                           owl:onProperty     :hasPropertyCategorization
                          ] .
 
-:citationCount  a    owl:ObjectProperty ;
-        rdfs:domain  <http://purl.org/roh/mirror/foaf#Person> ;
-        rdfs:range   :QualifiedValue .
+[ a            owl:AllDisjointClasses ;
+  owl:members  ( <http://purl.org/roh/mirror/obo/ero#ERO_0000071> vivo:Equipment vivo:Facility )
+] .
 
 obo:IAO_0000115  a  owl:AnnotationProperty .
 
@@ -327,34 +341,30 @@ bibo:Book  a              owl:Class ;
         rdfs:isDefinedBy  "http://purl.org/roh/mirror/bibo#"^^xsd:anyURI ;
         rdfs:label        "Llibre"@ca-ad , "Llibre"@ca-es , "Livre"@fr , "Book"@en , "Libro"@es , "Livro"@pt ;
         rdfs:subClassOf   bibo:Document , :ScientificPublication ;
-        rdfs:subClassOf   [ a                  owl:Restriction ;
-                            owl:allValuesFrom  rdfs:Literal ;
-                            owl:onProperty     bibo:lccn
-                          ] ;
-        rdfs:subClassOf   [ a                  owl:Restriction ;
-                            owl:allValuesFrom  rdfs:Literal ;
-                            owl:onProperty     bibo:edition
-                          ] ;
         rdfs:subClassOf   [ a                   owl:Restriction ;
                             owl:onProperty      :isbn ;
                             owl:someValuesFrom  xsd:string
                           ] ;
         rdfs:subClassOf   [ a                  owl:Restriction ;
                             owl:allValuesFrom  rdfs:Literal ;
-                            owl:onProperty     vivo:placeOfPublication
+                            owl:onProperty     bibo:edition
+                          ] ;
+        rdfs:subClassOf   [ a                  owl:Restriction ;
+                            owl:allValuesFrom  rdfs:Literal ;
+                            owl:onProperty     bibo:lccn
                           ] ;
         rdfs:subClassOf   [ a                  owl:Restriction ;
                             owl:allValuesFrom  <http://purl.org/roh/mirror/foaf#Organization> ;
                             owl:onProperty     vivo:publisher
                           ] ;
+        rdfs:subClassOf   [ a                  owl:Restriction ;
+                            owl:allValuesFrom  rdfs:Literal ;
+                            owl:onProperty     vivo:placeOfPublication
+                          ] ;
         obo:IAO_0000112   "Short Definition copied from bibo ontology" ;
         obo:IAO_0000115   "A written or printed work of fiction or nonfiction, usually on sheets of paper fastened or bound together within covers" ;
         ns:term_status    "stable" ;
         skos:prefLabel    "Livre"@fr , "Book"@en , "Libro"@es , "Livro"@pt , "Llibre"@ca .
-
-[ a            owl:AllDisjointClasses ;
-  owl:members  ( bibo:Article bibo:Book bibo:CollectedDocument bibo:DocumentPart bibo:Patent bibo:Report bibo:Thesis bibo:Webpage vivo:Abstract vivo:ConferencePoster vivo:Dataset )
-] .
 
 <http://purl.org/roh/mirror/foaf#Image>
         a                 owl:Class ;
@@ -387,7 +397,7 @@ bibo:Book  a              owl:Class ;
         rdfs:subPropertyOf  obo:RO_0000057 .
 
 [ a            owl:AllDisjointClasses ;
-  owl:members  ( :Accreditation :Activity :CurriculumVitae :Expense :Funding :FundingAmount :FundingProgram :FundingSource :Metric :PatentApplication :Reservable <http://purl.org/roh/mirror/foaf#Agent> <http://purl.org/roh/mirror/foaf#Document> <http://purl.org/roh/mirror/geonames#Feature> bfo:BFO_0000008 bfo:BFO_0000023 <http://purl.org/roh/mirror/obo/ero#ERO_0000005> iao:IAO_0000030 <http://purl.org/roh/mirror/vcard#Address> <http://purl.org/roh/mirror/vcard#Email> <http://purl.org/roh/mirror/vcard#Kind> <http://purl.org/roh/mirror/vcard#Name> vivo:AcademicDegree vivo:Project vivo:Relationship rdf:List rdf:Seq skos:Concept skos:ConceptScheme )
+  owl:members  ( :Invoice bibo:Article bibo:Book bibo:CollectedDocument bibo:DocumentPart bibo:Patent bibo:Report bibo:Thesis bibo:Webpage vivo:Abstract vivo:ConferencePoster vivo:Dataset )
 ] .
 
 vivo:ReviewerRole  a     owl:Class ;
@@ -535,16 +545,13 @@ terms:rights  a  owl:AnnotationProperty .
         rdfs:label       "Outsourcing"@en , "Subcontratación"@es ;
         rdfs:subClassOf  :Funding .
 
-[ a            owl:AllDisjointClasses ;
-  owl:members  ( :AuditeeRole :AuditorRole :ExternalMemberRole :ReservableConsumerRole :ReservableProviderRole :SuperviseeRole :SupervisorRole :ThirdPartyContractorRole <http://purl.org/roh/mirror/obo/ero#ERO_0000224> <http://purl.org/roh/mirror/obo/ero#ERO_0000225> <http://purl.org/roh/mirror/obo/ero#ERO_0000783> <http://purl.org/roh/mirror/obo/ero#ERO_0000787> vivo:AdministratorRole vivo:AdviseeRole vivo:AdvisorRole vivo:AttendeeRole vivo:EditorRole vivo:LeaderRole vivo:MemberRole vivo:OrganizerRole vivo:PresenterRole vivo:ResearcherRole vivo:ReviewerRole vivo:TeacherRole )
-] .
-
 bibo:eanucc13  a      owl:DatatypeProperty ;
         rdfs:comment  "An identifier for trade items."@en ;
         rdfs:label    "eanucc13"@en , "eanucc13"@es .
 
 :TestNonResearchSoftware
-        a       owl:NamedIndividual , <http://purl.org/roh/mirror/obo/ero#ERO_0000071> .
+        a           owl:NamedIndividual , <http://purl.org/roh/mirror/obo/ero#ERO_0000071> ;
+        rdfs:label  "TestNonResearchSoftware"@en .
 
 vivo:Certificate  a      owl:Class ;
         rdfs:label       "Certificado"@es , "Certificate"@en ;
@@ -589,10 +596,6 @@ vivo:Equipment  a        owl:Class ;
         obo:IAO_0000112  "A network server is one example. Medical schools and research laboratories can list professional equipment, such as microscopes." , "server; Bruker Vector-33 FT-IR" ;
         obo:IAO_0000115  "A physical object provided for specific purpose, task or occupation." .
 
-[ a            owl:AllDisjointClasses ;
-  owl:members  ( :ExpenseClassification :FundingProgramClassification :HRClassification :KnowledgeArea :ProjectClassification :PropertyClassification )
-] .
-
 :KnowledgeArea  a         owl:Class ;
         rdfs:comment      "Matière académique"@fr , "ROH will be populated with instance data of UNESCO skos concepts. A Person, Activity, Project and Organization can be qualified by a KnowledgeArea" ;
         rdfs:label        "Assignatura acadèmica"@ca-es , "Área de Conocimiento"@es , "Asignatura académica"@es , "Unidade curricular acadêmica"@pt-pt , "Academic subject"@en , "Knowledge Area"@en ;
@@ -608,6 +611,7 @@ vivo:Equipment  a        owl:Class ;
 
 :TestDateTimeInterval
         a           owl:NamedIndividual , vivo:DateTimeInterval ;
+        rdfs:label  "TestDateTimeInterval"@en ;
         vivo:end    :TestEndDateTimeValue ;
         vivo:start  :TestStartDateTimeValue .
 
@@ -722,7 +726,8 @@ bfo:BFO_0000055  a        owl:ObjectProperty ;
         obo:IAO_0000600   "to say that b realizes c at t is to assert that there is some material entity d & b is a process which has participant d at t & c is a disposition or role of which d is bearer_of at t& the type instantiated by b is correlated with the type instantiated by c. (axiom label in BFO2 Reference: [059-003])"@en ;
         obo:IAO_0000602   "(forall (x y t) (if (realizesAt x y t) (and (Process x) (or (Disposition y) (Role y)) (exists (z) (and (MaterialEntity z) (hasParticipantAt x z t) (bearerOfAt z y t)))))) // axiom label in BFO2 CLIF: [059-003]" .
 
-:TestPhDStudent  a  owl:NamedIndividual , <http://purl.org/roh/mirror/foaf#Person> .
+:TestPhDStudent  a  owl:NamedIndividual , <http://purl.org/roh/mirror/foaf#Person> ;
+        rdfs:label  "TestPhDStudent"@en .
 
 <http://purl.org/roh/mirror/obo/ero#ERO_0000391>
         a                owl:Class ;
@@ -739,28 +744,28 @@ bfo:BFO_0000055  a        owl:ObjectProperty ;
         rdfs:comment     "An Accreditation models research and academic position accreditations. Qualification goes beyond Accreditation because it also refers to degrees and other qualifications a person may have.  Accreditation has an important data property which is dateIssued which links Accreditation with vivo:DataTimeValue" ;
         rdfs:label       "Accreditation"@en , "Acreditación"@es ;
         rdfs:subClassOf  [ a                  owl:Restriction ;
-                           owl:allValuesFrom  <http://purl.org/roh/mirror/foaf#Organization> ;
-                           owl:onProperty     vivo:hasGoverningAuthority
+                           owl:allValuesFrom  xsd:string ;
+                           owl:onProperty     vivo:description
                          ] ;
         rdfs:subClassOf  [ a                  owl:Restriction ;
                            owl:allValuesFrom  xsd:string ;
                            owl:onProperty     :title
                          ] ;
         rdfs:subClassOf  [ a                  owl:Restriction ;
-                           owl:allValuesFrom  vivo:DateTimeValue ;
-                           owl:onProperty     vivo:dateIssued
-                         ] ;
-        rdfs:subClassOf  [ a                  owl:Restriction ;
                            owl:allValuesFrom  owl:Thing ;
                            owl:onProperty     vivo:hasSubjectArea
+                         ] ;
+        rdfs:subClassOf  [ a                  owl:Restriction ;
+                           owl:allValuesFrom  <http://purl.org/roh/mirror/foaf#Organization> ;
+                           owl:onProperty     vivo:hasGoverningAuthority
+                         ] ;
+        rdfs:subClassOf  [ a                  owl:Restriction ;
+                           owl:allValuesFrom  vivo:DateTimeValue ;
+                           owl:onProperty     vivo:dateIssued
                          ] ;
         rdfs:subClassOf  [ a                   owl:Restriction ;
                            owl:onProperty      <http://purl.org/roh/mirror/foaf#title> ;
                            owl:someValuesFrom  xsd:string
-                         ] ;
-        rdfs:subClassOf  [ a                  owl:Restriction ;
-                           owl:allValuesFrom  xsd:string ;
-                           owl:onProperty     vivo:description
                          ] ;
         obo:IAO_0000112  "An attestation of qualification, competence, or authority issued to an individual by a third party with a relevant or  de facto authority or assumed competence to do so." ;
         obo:IAO_0000115  "An attestation of qualification, competence, or authority issued to an individual by a third party with a relevant or  de facto authority or assumed competence to do so." .
@@ -822,6 +827,10 @@ terms:hasPart  a      owl:ObjectProperty ;
                            owl:onProperty     :monetaryAmount
                          ] .
 
+[ a            owl:AllDisjointClasses ;
+  owl:members  ( :AuditingRelationship :SupervisingRelationship vivo:AdvisingRelationship vivo:AwardedDegree vivo:Contract vivo:Position )
+] .
+
 bibo:edition  a       owl:DatatypeProperty ;
         rdfs:comment  "The different versions that a document could have."@en ;
         rdfs:label    "edición"@es , "edition"@en .
@@ -853,7 +862,7 @@ bfo:BFO_0000148  a       owl:Class ;
         rdfs:subClassOf  bfo:BFO_0000008 .
 
 [ a            owl:AllDisjointClasses ;
-  owl:members  ( :PatentExpense :PersonExpense :ProjectExpense :ResearchObjectExpense )
+  owl:members  ( vivo:FacultyMentoringRelationship vivo:GraduateAdvisingRelationship vivo:PostdocOrFellowAdvisingRelationship vivo:UndergraduateAdvisingRelationship )
 ] .
 
 :ServiceContract  a      owl:Class ;
@@ -874,7 +883,8 @@ vivo:TeacherRole  a      owl:Class ;
         ns:term_status    "stable" .
 
 :TestFundingSource  a  owl:NamedIndividual , :FundingSource ;
-        :funds  :TestFundingProgram .
+        rdfs:label  "TestFundingSource"@en ;
+        :funds      :TestFundingProgram .
 
 skos:related  a  owl:AnnotationProperty .
 
@@ -906,12 +916,12 @@ vivo:Position  a         owl:Class ;
         rdfs:label       "Position"@en , "Posición"@es ;
         rdfs:subClassOf  vivo:Relationship ;
         rdfs:subClassOf  [ a                  owl:Restriction ;
-                           owl:allValuesFrom  vivo:DateTimeInterval ;
-                           owl:onProperty     vivo:dateTimeInterval
-                         ] ;
-        rdfs:subClassOf  [ a                  owl:Restriction ;
                            owl:allValuesFrom  xsd:int ;
                            owl:onProperty     vivo:rank
+                         ] ;
+        rdfs:subClassOf  [ a                  owl:Restriction ;
+                           owl:allValuesFrom  vivo:DateTimeInterval ;
+                           owl:onProperty     vivo:dateTimeInterval
                          ] ;
         rdfs:subClassOf  [ a                   owl:Restriction ;
                            owl:onProperty      vivo:relates ;
@@ -939,52 +949,16 @@ bibo:Document  a          owl:Class ;
         rdfs:label        "Publication"@fr , "Publicação acadêmica"@pt , "Publication"@en , "Publicació acadèmica"@ca-ad , "Publicació acadèmica"@ca-es , "Documento"@es , "Publicação"@pt , "Document"@en , "Publication académique"@fr , "Academic publication"@en , "Publicación académica"@gl , "Publicación académica"@es , "Publicación"@gl , "Publicación"@es , "Publicació"@ca-es , "Publicació"@ca-ad ;
         rdfs:subClassOf   <http://xmlns.com/foaf/spec/#Document> , iao:IAO_0000030 , bibo:Document ;
         rdfs:subClassOf   [ a                  owl:Restriction ;
-                            owl:allValuesFrom  xsd:dateTime ;
-                            owl:onProperty     vivo:dateTime
-                          ] ;
-        rdfs:subClassOf   [ a                            owl:Restriction ;
-                            owl:maxQualifiedCardinality  "1"^^xsd:nonNegativeInteger ;
-                            owl:onDataRange              xsd:int ;
-                            owl:onProperty               bibo:pageStart
-                          ] ;
-        rdfs:subClassOf   [ a                  owl:Restriction ;
                             owl:allValuesFrom  xsd:string ;
                             owl:onProperty     bibo:abstract
-                          ] ;
-        rdfs:subClassOf   [ a                  owl:Restriction ;
-                            owl:allValuesFrom  xsd:string ;
-                            owl:onProperty     vivo:freetextKeyword
-                          ] ;
-        rdfs:subClassOf   [ a                            owl:Restriction ;
-                            owl:maxQualifiedCardinality  "1"^^xsd:nonNegativeInteger ;
-                            owl:onDataRange              xsd:dateTime ;
-                            owl:onProperty               vivo:dateTime
-                          ] ;
-        rdfs:subClassOf   [ a                  owl:Restriction ;
-                            owl:allValuesFrom  xsd:int ;
-                            owl:onProperty     bibo:pageEnd
-                          ] ;
-        rdfs:subClassOf   [ a                  owl:Restriction ;
-                            owl:allValuesFrom  xsd:string ;
-                            owl:onProperty     bibo:doi
-                          ] ;
-        rdfs:subClassOf   [ a                   owl:Restriction ;
-                            owl:onProperty      :title ;
-                            owl:someValuesFrom  xsd:string
-                          ] ;
-        rdfs:subClassOf   [ a                  owl:Restriction ;
-                            owl:allValuesFrom  xsd:string ;
-                            owl:onProperty     :title
                           ] ;
         rdfs:subClassOf   [ a                  owl:Restriction ;
                             owl:allValuesFrom  rdf:Seq ;
                             owl:onProperty     bibo:authorList
                           ] ;
         rdfs:subClassOf   [ a                  owl:Restriction ;
-                            owl:allValuesFrom  [ a            owl:Class ;
-                                                 owl:unionOf  ( bibo:Book bibo:Collection )
-                                               ] ;
-                            owl:onProperty     vivo:hasPublicationVenue
+                            owl:allValuesFrom  xsd:string ;
+                            owl:onProperty     :title
                           ] ;
         rdfs:subClassOf   [ a                   owl:Restriction ;
                             owl:maxCardinality  "1"^^xsd:nonNegativeInteger ;
@@ -996,12 +970,48 @@ bibo:Document  a          owl:Class ;
                             owl:onProperty               bibo:pageEnd
                           ] ;
         rdfs:subClassOf   [ a                  owl:Restriction ;
+                            owl:allValuesFrom  xsd:int ;
+                            owl:onProperty     bibo:pageStart
+                          ] ;
+        rdfs:subClassOf   [ a                  owl:Restriction ;
+                            owl:allValuesFrom  xsd:string ;
+                            owl:onProperty     bibo:doi
+                          ] ;
+        rdfs:subClassOf   [ a                  owl:Restriction ;
+                            owl:allValuesFrom  xsd:dateTime ;
+                            owl:onProperty     vivo:dateTime
+                          ] ;
+        rdfs:subClassOf   [ a                  owl:Restriction ;
+                            owl:allValuesFrom  xsd:string ;
+                            owl:onProperty     vivo:freetextKeyword
+                          ] ;
+        rdfs:subClassOf   [ a                            owl:Restriction ;
+                            owl:maxQualifiedCardinality  "1"^^xsd:nonNegativeInteger ;
+                            owl:onDataRange              xsd:dateTime ;
+                            owl:onProperty               vivo:dateTime
+                          ] ;
+        rdfs:subClassOf   [ a                   owl:Restriction ;
+                            owl:onProperty      :title ;
+                            owl:someValuesFrom  xsd:string
+                          ] ;
+        rdfs:subClassOf   [ a                  owl:Restriction ;
+                            owl:allValuesFrom  [ a            owl:Class ;
+                                                 owl:unionOf  ( bibo:Book bibo:Collection )
+                                               ] ;
+                            owl:onProperty     vivo:hasPublicationVenue
+                          ] ;
+        rdfs:subClassOf   [ a                            owl:Restriction ;
+                            owl:maxQualifiedCardinality  "1"^^xsd:nonNegativeInteger ;
+                            owl:onDataRange              xsd:int ;
+                            owl:onProperty               bibo:pageStart
+                          ] ;
+        rdfs:subClassOf   [ a                  owl:Restriction ;
                             owl:allValuesFrom  <http://purl.org/roh/mirror/foaf#Person> ;
                             owl:onProperty     :correspondingAuthor
                           ] ;
         rdfs:subClassOf   [ a                  owl:Restriction ;
                             owl:allValuesFrom  xsd:int ;
-                            owl:onProperty     bibo:pageStart
+                            owl:onProperty     bibo:pageEnd
                           ] ;
         owl:disjointWith  <http://purl.org/roh/mirror/foaf#Document> ;
         ns:term_status    "stable" ;
@@ -1023,9 +1033,14 @@ bibo:Document  a          owl:Class ;
         rdfs:label     "taught by"@en ;
         owl:inverseOf  :teaches .
 
+[ a            owl:AllDisjointClasses ;
+  owl:members  ( :DegreeMetric :PublicationMetric :ResearchGroupMetric )
+] .
+
 :TestGovernmentAgency
-        a          owl:NamedIndividual , vivo:GovernmentAgency ;
-        :promotes  :TestFundingProgram .
+        a           owl:NamedIndividual , vivo:GovernmentAgency ;
+        rdfs:label  "TestGovernmentAgency"@en ;
+        :promotes   :TestFundingProgram .
 
 vivo:contactInformation
         a             owl:DatatypeProperty ;
@@ -1050,6 +1065,7 @@ vivo:AdvisorRole  a      owl:Class ;
         rdfs:subClassOf  bfo:BFO_0000023 .
 
 :ManagementUnit  a       owl:Class ;
+        rdfs:label       "ManagementUnit"@en ;
         rdfs:subClassOf  <http://purl.org/roh/mirror/foaf#Organization> .
 
 iao:IAO_0000013  a       owl:Class ;
@@ -1079,6 +1095,7 @@ bibo:presents  a          owl:ObjectProperty ;
 
 :ORCID  a                   owl:DatatypeProperty ;
         rdfs:domain         <http://purl.org/roh/mirror/foaf#Person> ;
+        rdfs:label          "ORCID"@en ;
         rdfs:subPropertyOf  vivo:identifier .
 
 <http://prismstandard.org/namespaces/1.2/basic/endingPage>
@@ -1103,11 +1120,8 @@ vivo:Consortium  a       owl:Class ;
         rdfs:range     <http://purl.org/roh/mirror/foaf#Person> ;
         owl:inverseOf  :supervisorOf .
 
-[ a            owl:AllDisjointClasses ;
-  owl:members  ( vivo:FacultyMentoringRelationship vivo:GraduateAdvisingRelationship vivo:PostdocOrFellowAdvisingRelationship vivo:UndergraduateAdvisingRelationship )
-] .
-
 :TestBook  a             owl:NamedIndividual , bibo:Book ;
+        rdfs:label       "TestBook"@en ;
         bibo:editorList  :TestListofEditors .
 
 <http://purl.org/roh/mirror/geonames#Feature>
@@ -1191,21 +1205,29 @@ skos:hasTopConcept  a  owl:AnnotationProperty .
 :Funding  a              owl:Class ;
         rdfs:comment     "A roh:Funding is the funding associated to a vivo:Project whose funding is associated to a roh:FundingProgram, which in turn is associated to a vivo:FundingOrganization. A roh:Funding consists of several roh:FundingAmounts, associated to the different entities that participate in a project and to the annuities in which they do it.  Funding gathers information about the total funding received for a Project and its currency through properties roh:monetaryAmount and roh:currency. A roh:FundingSource funds a roh:FundingProgram. A roh:Funding supports a vivo:Project or a roh:PersonContract. A Funding can be tagged as public or private, by updating the data property roh:publicFunding." ;
         rdfs:label       "Financiación"@es , "Funding"@en ;
+        rdfs:subClassOf  [ a                  owl:Restriction ;
+                           owl:allValuesFrom  :KnowledgeArea ;
+                           owl:onProperty     :hasKnowledgeArea
+                         ] ;
         rdfs:subClassOf  [ a                   owl:Restriction ;
-                           owl:maxCardinality  "1"^^xsd:nonNegativeInteger ;
-                           owl:onProperty      vivo:identifier
+                           owl:onProperty      :hasKnowledgeArea ;
+                           owl:someValuesFrom  :KnowledgeArea
                          ] ;
         rdfs:subClassOf  [ a                  owl:Restriction ;
-                           owl:allValuesFrom  :FundingAmount ;
-                           owl:onProperty     ro:BFO_0000051
-                         ] ;
-        rdfs:subClassOf  [ a                  owl:Restriction ;
-                           owl:allValuesFrom  xsd:string ;
-                           owl:onProperty     vivo:identifier
+                           owl:allValuesFrom  vivo:DateTimeInterval ;
+                           owl:onProperty     vivo:dateTimeInterval
                          ] ;
         rdfs:subClassOf  [ a                  owl:Restriction ;
                            owl:allValuesFrom  :FundingProgram ;
                            owl:onProperty     :fundedBy
+                         ] ;
+        rdfs:subClassOf  [ a                   owl:Restriction ;
+                           owl:onProperty      :publicFunding ;
+                           owl:someValuesFrom  xsd:boolean
+                         ] ;
+        rdfs:subClassOf  [ a                  owl:Restriction ;
+                           owl:allValuesFrom  :FundingAmount ;
+                           owl:onProperty     ro:BFO_0000051
                          ] ;
         rdfs:subClassOf  [ a                  owl:Restriction ;
                            owl:allValuesFrom  [ a            owl:Class ;
@@ -1214,33 +1236,21 @@ skos:hasTopConcept  a  owl:AnnotationProperty .
                            owl:onProperty     :supports
                          ] ;
         rdfs:subClassOf  [ a                   owl:Restriction ;
-                           owl:onProperty      :hasKnowledgeArea ;
-                           owl:someValuesFrom  :KnowledgeArea
-                         ] ;
-        rdfs:subClassOf  [ a                   owl:Restriction ;
-                           owl:onProperty      vivo:identifier ;
-                           owl:someValuesFrom  xsd:string
+                           owl:maxCardinality  "1"^^xsd:nonNegativeInteger ;
+                           owl:onProperty      vivo:identifier
                          ] ;
         rdfs:subClassOf  [ a                  owl:Restriction ;
                            owl:allValuesFrom  vivo:Contract ;
                            owl:onProperty     :hasContract
                          ] ;
         rdfs:subClassOf  [ a                   owl:Restriction ;
-                           owl:onProperty      :publicFunding ;
-                           owl:someValuesFrom  xsd:boolean
+                           owl:onProperty      vivo:identifier ;
+                           owl:someValuesFrom  xsd:string
                          ] ;
         rdfs:subClassOf  [ a                  owl:Restriction ;
-                           owl:allValuesFrom  :KnowledgeArea ;
-                           owl:onProperty     :hasKnowledgeArea
-                         ] ;
-        rdfs:subClassOf  [ a                  owl:Restriction ;
-                           owl:allValuesFrom  vivo:DateTimeInterval ;
-                           owl:onProperty     vivo:dateTimeInterval
+                           owl:allValuesFrom  xsd:string ;
+                           owl:onProperty     vivo:identifier
                          ] .
-
-[ a            owl:AllDisjointClasses ;
-  owl:members  ( :ExpenseClassification :FundingProgramClassification :HRClassification :KnowledgeArea :ProjectClassification )
-] .
 
 :url    a             owl:DatatypeProperty ;
         rdfs:comment  "A Uniform Resource Identifier."@en ;
@@ -1269,11 +1279,16 @@ vivo:Institute  a        owl:Class ;
 
 bfo:BFO_0000004  rdfs:label  "continuador independiente"@es , "independent continuant"@en .
 
+[ a            owl:AllDisjointClasses ;
+  owl:members  ( :BachelorDegree :DoctoralDegree :MasterDegree )
+] .
+
 vivo:identifier  a    owl:DatatypeProperty ;
         rdfs:comment  "A name, series of numbers, etc. that is used in a system to represent someone or something."@en ;
         rdfs:label    "identificador"@es , "identifier"@en .
 
 :Researching  a          owl:Class ;
+        rdfs:label       "Researching"@en ;
         rdfs:subClassOf  vivo:ResearcherRole .
 
 :languageSkill  a           owl:DatatypeProperty ;
@@ -1329,8 +1344,13 @@ vivo:AcademicDegree  a   owl:Class ;
         obo:IAO_0000112  "B.A. Bachelor of Arts" , "This list may have multiple abbreviations for some degrees." ;
         obo:IAO_0000115  "An academic degree at any level, both as reported by individuals for employment and as offered by academic degree programs." .
 
+[ a            owl:AllDisjointClasses ;
+  owl:members  ( :ExpenseClassification :FundingProgramClassification :HRClassification :KnowledgeArea :ProjectClassification :PropertyClassification )
+] .
+
 :TestResearchSoftware
         a            owl:NamedIndividual , <http://purl.org/roh/mirror/obo/ero#ERO_0000071> ;
+        rdfs:label   "TestResearchSoftware"@en ;
         :producedBy  :TestProject .
 
 vivo:LeaderRole  a       owl:Class ;
@@ -1376,10 +1396,6 @@ vivo:relates  a          owl:ObjectProperty ;
         rdfs:label    "is granted with"@en ;
         rdfs:range    :Grant .
 
-[ a            owl:AllDisjointClasses ;
-  owl:members  ( bibo:AcademicArticle vivo:ConferencePaper vivo:EditorialArticle )
-] .
-
 dc:creator  a   owl:AnnotationProperty .
 
 vivo:scopusId  a            owl:DatatypeProperty ;
@@ -1422,30 +1438,27 @@ bibo:Interview  a         owl:Class ;
         ns:term_status    "stable" .
 
 :Teaching  a             owl:Class ;
+        rdfs:label       "Teaching"@en ;
         rdfs:subClassOf  vivo:TeacherRole .
 
 :Expense  a              owl:Class ;
         rdfs:comment     "A roh:Expense is carried out in a vivo:Project or by foaf:Person and associated through relationship roh:spends. It timestamps each expense with a vivo:DateTimeValue and has attributes roh:monetaryAmount, roh:currency, roh:title and roh:description and expenseAmount . The types of expenses considered are: Personnel Expenses, Subcontracting, Travel, Equipment, Research Infrastructure and Other Goods and Services. Some of these classes still not defined." ;
         rdfs:label       "Expense"@en , "Gasto"@es ;
         rdfs:subClassOf  [ a                  owl:Restriction ;
-                           owl:allValuesFrom  xsd:string ;
-                           owl:onProperty     :expenseModality
-                         ] ;
-        rdfs:subClassOf  [ a                  owl:Restriction ;
-                           owl:allValuesFrom  xsd:decimal ;
-                           owl:onProperty     :monetaryAmount
-                         ] ;
-        rdfs:subClassOf  [ a                  owl:Restriction ;
                            owl:allValuesFrom  vivo:DateTimeValue ;
                            owl:onProperty     vivo:dateTimeValue
                          ] ;
         rdfs:subClassOf  [ a                  owl:Restriction ;
                            owl:allValuesFrom  xsd:string ;
-                           owl:onProperty     :title
+                           owl:onProperty     :currency
                          ] ;
         rdfs:subClassOf  [ a                  owl:Restriction ;
                            owl:allValuesFrom  xsd:string ;
                            owl:onProperty     vivo:description
+                         ] ;
+        rdfs:subClassOf  [ a                  owl:Restriction ;
+                           owl:allValuesFrom  xsd:string ;
+                           owl:onProperty     :title
                          ] ;
         rdfs:subClassOf  [ a                  owl:Restriction ;
                            owl:allValuesFrom  :ExpenseClassification ;
@@ -1453,7 +1466,11 @@ bibo:Interview  a         owl:Class ;
                          ] ;
         rdfs:subClassOf  [ a                  owl:Restriction ;
                            owl:allValuesFrom  xsd:string ;
-                           owl:onProperty     :currency
+                           owl:onProperty     :expenseModality
+                         ] ;
+        rdfs:subClassOf  [ a                  owl:Restriction ;
+                           owl:allValuesFrom  xsd:decimal ;
+                           owl:onProperty     :monetaryAmount
                          ] .
 
 :monetaryAmount  a    owl:DatatypeProperty ;
@@ -1472,10 +1489,6 @@ obo:IAO_0000114  a  owl:AnnotationProperty .
 :freeOrPaid  a      owl:DatatypeProperty ;
         rdfs:label  "free or paid"@en , "gratuito o de pago"@es .
 
-[ a            owl:AllDisjointClasses ;
-  owl:members  ( :ThesisViva bibo:Conference bibo:Hearing bibo:Interview bibo:Performance bibo:Workshop vivo:Competition vivo:Course vivo:Exhibit vivo:Internship vivo:Meeting vivo:Presentation )
-] .
-
 bfo:BFO_0000038  a        owl:Class ;
         rdfs:comment      "A one-dimensional temporal region is a temporal region that is extended."@en ;
         rdfs:label        "One-Dimensional Temporal Region"@en , "Región Temporal Mono-dimensional"@es ;
@@ -1492,35 +1505,35 @@ bfo:BFO_0000038  a        owl:Class ;
 bibo:Patent  a            owl:Class ;
         rdfs:comment      "A document describing the exclusive right granted by a government to an inventor to manufacture, use, or sell an invention for a certain number of years."@en , "A form of intellectual property that gives its owner the legal right to exclude others from making, using, selling and importing an invention for a limited period of years, in exchange for publishing an enabling public disclosure of the invention."@en ;
         rdfs:isDefinedBy  "http://purl.org/roh/mirror/bibo#"^^xsd:anyURI ;
-        rdfs:label        "Patente"@pt , "Patente"@eu , "Patente"@gl , "Patente"@es , "Patent"@fr , "Patent"@ca-es , "Patent"@ca-ad , "Patent"@en ;
+        rdfs:label        "Patente"@eu , "Patente"@gl , "Patente"@es , "Patent"@fr , "Patent"@ca-es , "Patent"@ca-ad , "Patent"@en , "Patente"@pt ;
         rdfs:subClassOf   bibo:Document ;
-        rdfs:subClassOf   [ a                  owl:Restriction ;
-                            owl:allValuesFrom  xsd:string ;
-                            owl:onProperty     :modality
+        rdfs:subClassOf   [ a                   owl:Restriction ;
+                            owl:onProperty      vivo:identifier ;
+                            owl:someValuesFrom  xsd:string
                           ] ;
         rdfs:subClassOf   [ a                  owl:Restriction ;
                             owl:allValuesFrom  <http://purl.org/roh/mirror/foaf#Organization> ;
                             owl:onProperty     vivo:publisher
                           ] ;
         rdfs:subClassOf   [ a                  owl:Restriction ;
-                            owl:allValuesFrom  <http://purl.org/roh/mirror/foaf#Organization> ;
-                            owl:onProperty     :ownerOrganization
+                            owl:allValuesFrom  xsd:string ;
+                            owl:onProperty     vivo:identifier
+                          ] ;
+        rdfs:subClassOf   [ a                  owl:Restriction ;
+                            owl:allValuesFrom  vivo:DateTimeValue ;
+                            owl:onProperty     vivo:dateIssued
                           ] ;
         rdfs:subClassOf   [ a                  owl:Restriction ;
                             owl:allValuesFrom  <http://purl.org/roh/mirror/geonames#Feature> ;
                             owl:onProperty     <http://purl.org/roh/mirror/geonames#locatedIn>
                           ] ;
         rdfs:subClassOf   [ a                  owl:Restriction ;
-                            owl:allValuesFrom  vivo:DateTimeValue ;
-                            owl:onProperty     vivo:dateIssued
-                          ] ;
-        rdfs:subClassOf   [ a                   owl:Restriction ;
-                            owl:onProperty      vivo:identifier ;
-                            owl:someValuesFrom  xsd:string
+                            owl:allValuesFrom  <http://purl.org/roh/mirror/foaf#Organization> ;
+                            owl:onProperty     :ownerOrganization
                           ] ;
         rdfs:subClassOf   [ a                  owl:Restriction ;
                             owl:allValuesFrom  xsd:string ;
-                            owl:onProperty     vivo:identifier
+                            owl:onProperty     :modality
                           ] ;
         obo:IAO_0000112   "A patent is an exclusive right granted for an invention, which is a product or a process that provides, in general, a new way of doing something, or offers a new technical solution to a problem.  In order to be patentable, the invention must fulfill certain conditions. (http://www.wipo.int/patentscope/en/)" ;
         obo:IAO_0000115   "(from BIBO) A document describing the exclusive right granted by a government to an inventor to manufacture, use, or sell an invention for a certain number of years" ;
@@ -1580,6 +1593,7 @@ skos:prefLabel  a  owl:AnnotationProperty .
                          ] .
 
 :Administrative  a       owl:Class ;
+        rdfs:label       "Administrative"@en ;
         rdfs:subClassOf  vivo:AdministratorRole .
 
 :projectID  a               owl:DatatypeProperty ;
@@ -1641,7 +1655,8 @@ ro:ResearchObject  a    owl:Class ;
         rdfs:label      "Objeto de investigación"@es , "Objecte de recerca"@ca-es , "Objecte de recerca"@ca-ad , "Research object"@en , "Objet de recherche"@fr , "Objeto de investigação"@pt ;
         skos:prefLabel  "Objeto de investigação"@pt , "Objeto de investigación"@es , "Objecte de recerca"@ca-ad , "Objecte de recerca"@ca-es , "Research object"@en , "Objet de recherche"@fr .
 
-:PhDStudent  a  owl:Class .
+:PhDStudent  a      owl:Class ;
+        rdfs:label  "PhDStudent"@en .
 
 terms:issued  a  owl:AnnotationProperty .
 
@@ -1706,10 +1721,6 @@ vivo:dateIssued  a    owl:ObjectProperty ;
         skos:altLabel    "Bàtxelor"@ca-ad , "Grao"@gl , "Grau"@pt , "Grau"@ca-es , "Grado"@es , "Gradu"@eu ;
         skos:prefLabel   "Títol de bàtxelor"@ca-ad , "Licenciatura (pós-Bologna)"@pt-pt , "Título de grado"@es , "Bachelor's degree"@en , "Títol de grau"@ca-es .
 
-[ a            owl:AllDisjointClasses ;
-  owl:members  ( :Award :CourseCertificate :LanguageCertificate )
-] .
-
 :dedicationPercentage
         a           owl:DatatypeProperty ;
         rdfs:label  "dedication percentage"@en ;
@@ -1720,20 +1731,20 @@ vivo:Company  a           owl:Class ;
         rdfs:label        "Rol de Asistente"@es , "Company"@en , "Empresa"@pt , "Empresa"@gl , "Empresa"@es , "Empresa"@ca-ad , "Empresa"@ca-es , "Entreprise"@fr ;
         rdfs:subClassOf   <http://purl.org/roh/mirror/foaf#Organization> ;
         rdfs:subClassOf   [ a                  owl:Restriction ;
-                            owl:allValuesFrom  :CompanyClassification ;
-                            owl:onProperty     :hasCompanyCategorization
+                            owl:allValuesFrom  xsd:boolean ;
+                            owl:onProperty     :isStartup
                           ] ;
         rdfs:subClassOf   [ a                   owl:Restriction ;
                             owl:onProperty      :publicCompany ;
                             owl:someValuesFrom  xsd:boolean
                           ] ;
         rdfs:subClassOf   [ a                  owl:Restriction ;
-                            owl:allValuesFrom  xsd:boolean ;
-                            owl:onProperty     :publicCompany
+                            owl:allValuesFrom  :CompanyClassification ;
+                            owl:onProperty     :hasCompanyCategorization
                           ] ;
         rdfs:subClassOf   [ a                  owl:Restriction ;
                             owl:allValuesFrom  xsd:boolean ;
-                            owl:onProperty     :isStartup
+                            owl:onProperty     :publicCompany
                           ] ;
         obo:IAO_0000112   "from Wikipedia: \"A company is a form of business organization. It is an association or collection of individual real persons and/or other companies ... This collection, group or association of persons can be made to exist in law and then a company is itself considered a \"legal person\". The name company arose because, at least originally, it represented or was owned by more than one real or legal person.\"" ;
         obo:IAO_0000115   "A legally-recognized business organization" , "A legally-recognized business organization." ;
@@ -1788,10 +1799,6 @@ vivo:GraduateAdvisingRelationship
 
 obo:IAO_0000602  a  owl:AnnotationProperty .
 
-[ a            owl:AllDisjointClasses ;
-  owl:members  ( :Grant :Loan :Outsourcing :RefundableAdvance )
-] .
-
 :foundationDate  a    owl:DatatypeProperty ;
         rdfs:comment  "Date in which an Organization was created."@en ;
         rdfs:domain   <http://purl.org/roh/mirror/foaf#Organization> ;
@@ -1821,10 +1828,6 @@ vivo:publisherOf  a  owl:ObjectProperty ;
         rdfs:domain  <http://purl.org/roh/mirror/foaf#Agent> ;
         rdfs:label   "publishes"@en ;
         rdfs:range   bibo:Document .
-
-[ a            owl:AllDisjointClasses ;
-  owl:members  ( :FundingProgramClassification :HRClassification :KnowledgeArea :ProjectClassification )
-] .
 
 :patentInventor  a   owl:ObjectProperty ;
         rdfs:domain  bibo:Patent ;
@@ -1856,13 +1859,13 @@ bibo:CollectedDocument
         rdfs:isDefinedBy  "http://purl.org/roh/mirror/bibo#"^^xsd:anyURI ;
         rdfs:label        "Collected Document"@en , "Documento Contenedor"@es , "Collected document"@en ;
         rdfs:subClassOf   :ScientificPublication , bibo:Document ;
-        rdfs:subClassOf   [ a                  owl:Restriction ;
-                            owl:allValuesFrom  bibo:Document ;
-                            owl:onProperty     terms:hasPart
-                          ] ;
         rdfs:subClassOf   [ a                   owl:Restriction ;
                             owl:minCardinality  "1"^^xsd:nonNegativeInteger ;
                             owl:onProperty      terms:hasPart
+                          ] ;
+        rdfs:subClassOf   [ a                  owl:Restriction ;
+                            owl:allValuesFrom  bibo:Document ;
+                            owl:onProperty     terms:hasPart
                           ] ;
         ns:term_status    "stable" .
 
@@ -1880,11 +1883,11 @@ bibo:Article  a           owl:Class ;
         rdfs:subClassOf   :ScientificPublication , bibo:Document ;
         rdfs:subClassOf   [ a                  owl:Restriction ;
                             owl:allValuesFrom  rdfs:Literal ;
-                            owl:onProperty     bibo:pageStart
+                            owl:onProperty     bibo:pageEnd
                           ] ;
         rdfs:subClassOf   [ a                  owl:Restriction ;
                             owl:allValuesFrom  rdfs:Literal ;
-                            owl:onProperty     bibo:pageEnd
+                            owl:onProperty     bibo:pageStart
                           ] ;
         rdfs:subClassOf   [ a                   owl:Restriction ;
                             owl:onProperty      bibo:doi ;
@@ -2004,6 +2007,7 @@ ro:RO_0001025  a      owl:ObjectProperty ;
         rdfs:subClassOf   <http://purl.org/roh/mirror/vcard#Kind> .
 
 :EthicalReport  a        owl:Class ;
+        rdfs:label       "EthicalReport"@en ;
         rdfs:subClassOf  bibo:Report .
 
 vivo:Course  a           owl:Class ;
@@ -2064,6 +2068,10 @@ vivo:courseCredits  a  owl:DatatypeProperty ;
         rdfs:range     vivo:DateTimeValue ;
         owl:inverseOf  :contractSigningDateOf .
 
+[ a            owl:AllDisjointClasses ;
+  owl:members  ( :EvaluationSummary :Justification vivo:ResearchProposal )
+] .
+
 <http://purl.org/roh/mirror/foaf#Person>
         a                 owl:Class ;
         rdfs:comment      "In ROH, there is a foaf:Person entity that inherits from foaf:Agent. However, the main entity that users of ROH will deal with is roh:Researcher. Such entity inherits from foaf:Person.\n\nThe specialization of this entity imported from the VIVO ontology already adds some DataType properties of the research domain, but in ROH we also incorporate roh:taxID or roh:ORCID and also several object specific properties of the research domain as \"has a Role\" (roh: hasRole) in an Organization, \"has a CurriculumVitae\" (roh:hasCV), \"has some Accreditations\" (roh:hasAccreditation), \"has an Employment Contract\" (roh:hasContract), \"has some Knowledge Areas\" (roh:hasKnowledgeArea) or \"has some Roles\" (roh:hasRole) in Projects or participates through \"bibo:authorList\" with Research Objects. A person can \"have different roles\" in the Project over time.\n\nAs mentioned above, foaf:Person in ROH is based on FOAF (Friend of a Friend [2], following patterns used in VIVO. That explains why it includes some of the basic FOAF properties such as foaf:name, foaf:nick, foaf:title, foaf:mbox, foaf:img, foaf:depiction, foaf:firstName and foaf:surname. However, it considers all attributes and links defined in CERIF through the cfPers entity. foaf:Person incorporates the following data properties declared as attributes in cfPers, especially: identifier (vivo:identifier but preferrably roh:ORCID), roh:birthdate, foaf:gender, foaf:homepage, roh:researchLine, vivo:keywords. Some important CERIF relationships that have also been adopted: Curriculum Vitae (roh:hasCV) which links foaf:Person with roh:CurriculumVitae, Event (roh:Activity) and Indicator (roh:Accreditation). \n\nA taxonomy of types of persons has been imported in the research field from VIVO [1], such as vivo:FacultyMember, vivo:Librarian, vivo:NonAcademic, vivo:PostDoc or vivo:GraduateStudent  or some additional one by ROH as, the very important subclass roh:Researcher.\n\nBesides, an instance of a foaf:Person / roh:Researcher is associated to the following entities through object properties:\n- roh:Accreditation, where a researcher roh:hasAccreditation of different types, e.g. roh:ResearchAccreditation or roh:AcademicAccreditation.  \n- roh:Activity, where a researcher roh:participates in diverse activities, e.g. vivo:InvitedTalk or bibo:Conference.\n- vivo:AwardedDegree, where a researcher vivo:relates with an roh:AcademicDegree\n- roh:CorrespondingAuthor, where a researcher is the roh:correspondingAuthor of different subtypes of roh:ResearchObject, e.g. obo:JournalArticle, vivo:ConferencePaper or  bibo:Proceedings. \n- roh:CurriculumVitae, where a researcher roh:hasCV which includes data type properties like roh:cites, roh:factorH or roh:summary\n- bibo:Document, where a researcher through bibo:authorList is participating in a bibo:Document as one of its authors. \n- vcard:Individual, where a researcher obo:hasContactInfo described through ontology vcard. \n- vivo:Position, where a researcher roh:hasPosition usually in an organization linking it to any of the vivo:Position subclasess like vivo:FacultyAdministrativePosition or vivo:FacultyPosition. \n- roh:Role, where a foaf:Agent, i.e. and its subclasses like foaf:Person or roh:Researcher, roh:hasRole like vivo:ResearcherRole or vivo:TeacherRole either in a roh:Project or a foaf:Organization.\n- roh:PersonContract, where a researcher roh:hasContract described according to the attributes corresponding to parent class vivo:Contract.\n- bibo:Thesis, where a researcher is roh:supervisor of a bibo:Thesis, concretely, any of its subtypes  subclasess like roh:MasterThesis or roh:PhDThesis." ;
@@ -2071,8 +2079,68 @@ vivo:courseCredits  a  owl:DatatypeProperty ;
         rdfs:label        "Persona"@es , "Person"@en , "Person" ;
         rdfs:subClassOf   <http://purl.org/roh/mirror/foaf#Agent> ;
         rdfs:subClassOf   [ a                  owl:Restriction ;
+                            owl:allValuesFrom  :CurriculumVitae ;
+                            owl:onProperty     :hasCV
+                          ] ;
+        rdfs:subClassOf   [ a                  owl:Restriction ;
                             owl:allValuesFrom  :Accreditation ;
                             owl:onProperty     :hasAccreditation
+                          ] ;
+        rdfs:subClassOf   [ a                  owl:Restriction ;
+                            owl:allValuesFrom  xsd:string ;
+                            owl:onProperty     <http://purl.org/roh/mirror/foaf#surname>
+                          ] ;
+        rdfs:subClassOf   [ a                  owl:Restriction ;
+                            owl:allValuesFrom  xsd:string ;
+                            owl:onProperty     <http://purl.org/roh/mirror/foaf#title>
+                          ] ;
+        rdfs:subClassOf   [ a                  owl:Restriction ;
+                            owl:allValuesFrom  :Activity ;
+                            owl:onProperty     :participates
+                          ] ;
+        rdfs:subClassOf   [ a                  owl:Restriction ;
+                            owl:allValuesFrom  xsd:string ;
+                            owl:onProperty     :researchLine
+                          ] ;
+        rdfs:subClassOf   [ a                  owl:Restriction ;
+                            owl:allValuesFrom  owl:Thing ;
+                            owl:onProperty     <http://purl.org/roh/mirror/foaf#img>
+                          ] ;
+        rdfs:subClassOf   [ a                  owl:Restriction ;
+                            owl:allValuesFrom  xsd:string ;
+                            owl:onProperty     vivo:freetextKeyword
+                          ] ;
+        rdfs:subClassOf   [ a                  owl:Restriction ;
+                            owl:allValuesFrom  :PersonExpense ;
+                            owl:onProperty     :spends
+                          ] ;
+        rdfs:subClassOf   [ a                  owl:Restriction ;
+                            owl:allValuesFrom  skos:Concept ;
+                            owl:onProperty     :hasKnowledgeArea
+                          ] ;
+        rdfs:subClassOf   [ a                  owl:Restriction ;
+                            owl:allValuesFrom  xsd:string ;
+                            owl:onProperty     vivo:description
+                          ] ;
+        rdfs:subClassOf   [ a                  owl:Restriction ;
+                            owl:allValuesFrom  xsd:string ;
+                            owl:onProperty     :taxID
+                          ] ;
+        rdfs:subClassOf   [ a                   owl:Restriction ;
+                            owl:maxCardinality  "1"^^xsd:nonNegativeInteger ;
+                            owl:onProperty      <http://purl.org/roh/mirror/foaf#name>
+                          ] ;
+        rdfs:subClassOf   [ a                  owl:Restriction ;
+                            owl:allValuesFrom  xsd:string ;
+                            owl:onProperty     <http://purl.org/roh/mirror/foaf#firstName>
+                          ] ;
+        rdfs:subClassOf   [ a                  owl:Restriction ;
+                            owl:allValuesFrom  vivo:Position ;
+                            owl:onProperty     :hasPosition
+                          ] ;
+        rdfs:subClassOf   [ a                  owl:Restriction ;
+                            owl:allValuesFrom  bfo:BFO_0000023 ;
+                            owl:onProperty     :hasRole
                           ] ;
         rdfs:subClassOf   [ a                  owl:Restriction ;
                             owl:allValuesFrom  xsd:string ;
@@ -2082,89 +2150,33 @@ vivo:courseCredits  a  owl:DatatypeProperty ;
                             owl:allValuesFrom  xsd:string ;
                             owl:onProperty     <http://purl.org/roh/mirror/foaf#nick>
                           ] ;
-        rdfs:subClassOf   [ a                   owl:Restriction ;
-                            owl:onProperty      <http://purl.org/roh/mirror/foaf#name> ;
-                            owl:someValuesFrom  xsd:string
-                          ] ;
         rdfs:subClassOf   [ a                  owl:Restriction ;
-                            owl:allValuesFrom  :Accreditation ;
-                            owl:onProperty     vivo:eligibleFor
+                            owl:allValuesFrom  xsd:string ;
+                            owl:onProperty     vivo:identifier
                           ] ;
         rdfs:subClassOf   [ a                  owl:Restriction ;
                             owl:allValuesFrom  :PersonContract ;
                             owl:onProperty     :hasContract
                           ] ;
         rdfs:subClassOf   [ a                  owl:Restriction ;
-                            owl:allValuesFrom  xsd:string ;
-                            owl:onProperty     :taxID
+                            owl:allValuesFrom  :Accreditation ;
+                            owl:onProperty     vivo:eligibleFor
                           ] ;
-        rdfs:subClassOf   [ a                  owl:Restriction ;
-                            owl:allValuesFrom  :Activity ;
-                            owl:onProperty     :participates
+        rdfs:subClassOf   [ a                   owl:Restriction ;
+                            owl:onProperty      vivo:identifier ;
+                            owl:someValuesFrom  xsd:string
                           ] ;
-        rdfs:subClassOf   [ a                  owl:Restriction ;
-                            owl:allValuesFrom  owl:Thing ;
-                            owl:onProperty     <http://purl.org/roh/mirror/foaf#mbox>
-                          ] ;
-        rdfs:subClassOf   [ a                  owl:Restriction ;
-                            owl:allValuesFrom  skos:Concept ;
-                            owl:onProperty     :hasKnowledgeArea
-                          ] ;
-        rdfs:subClassOf   [ a                  owl:Restriction ;
-                            owl:allValuesFrom  vivo:Position ;
-                            owl:onProperty     :hasPosition
+        rdfs:subClassOf   [ a                   owl:Restriction ;
+                            owl:onProperty      <http://purl.org/roh/mirror/foaf#name> ;
+                            owl:someValuesFrom  xsd:string
                           ] ;
         rdfs:subClassOf   [ a                  owl:Restriction ;
                             owl:allValuesFrom  xsd:string ;
                             owl:onProperty     <http://purl.org/roh/mirror/foaf#gender>
                           ] ;
         rdfs:subClassOf   [ a                  owl:Restriction ;
-                            owl:allValuesFrom  xsd:string ;
-                            owl:onProperty     vivo:description
-                          ] ;
-        rdfs:subClassOf   [ a                  owl:Restriction ;
-                            owl:allValuesFrom  xsd:string ;
-                            owl:onProperty     :birthdate
-                          ] ;
-        rdfs:subClassOf   [ a                   owl:Restriction ;
-                            owl:maxCardinality  "1"^^xsd:nonNegativeInteger ;
-                            owl:onProperty      <http://purl.org/roh/mirror/foaf#name>
-                          ] ;
-        rdfs:subClassOf   [ a                  owl:Restriction ;
-                            owl:allValuesFrom  xsd:string ;
-                            owl:onProperty     <http://purl.org/roh/mirror/foaf#surname>
-                          ] ;
-        rdfs:subClassOf   [ a                   owl:Restriction ;
-                            owl:onProperty      <http://purl.org/roh/mirror/foaf#firstName> ;
-                            owl:someValuesFrom  xsd:string
-                          ] ;
-        rdfs:subClassOf   [ a                  owl:Restriction ;
-                            owl:allValuesFrom  bfo:BFO_0000023 ;
-                            owl:onProperty     :hasRole
-                          ] ;
-        rdfs:subClassOf   [ a                  owl:Restriction ;
-                            owl:allValuesFrom  xsd:string ;
-                            owl:onProperty     <http://purl.org/roh/mirror/foaf#title>
-                          ] ;
-        rdfs:subClassOf   [ a                  owl:Restriction ;
-                            owl:allValuesFrom  :CurriculumVitae ;
-                            owl:onProperty     :hasCV
-                          ] ;
-        rdfs:subClassOf   [ a                  owl:Restriction ;
-                            owl:allValuesFrom  :PersonExpense ;
-                            owl:onProperty     :spends
-                          ] ;
-        rdfs:subClassOf   [ a                  owl:Restriction ;
-                            owl:allValuesFrom  xsd:string ;
-                            owl:onProperty     vivo:freetextKeyword
-                          ] ;
-        rdfs:subClassOf   [ a                   owl:Restriction ;
-                            owl:onProperty      vivo:identifier ;
-                            owl:someValuesFrom  xsd:string
-                          ] ;
-        rdfs:subClassOf   [ a                  owl:Restriction ;
-                            owl:allValuesFrom  xsd:string ;
-                            owl:onProperty     <http://purl.org/roh/mirror/foaf#firstName>
+                            owl:allValuesFrom  owl:Thing ;
+                            owl:onProperty     <http://purl.org/roh/mirror/foaf#homepage>
                           ] ;
         rdfs:subClassOf   [ a                  owl:Restriction ;
                             owl:allValuesFrom  <http://purl.org/roh/mirror/vcard#Individual> ;
@@ -2172,23 +2184,19 @@ vivo:courseCredits  a  owl:DatatypeProperty ;
                           ] ;
         rdfs:subClassOf   [ a                  owl:Restriction ;
                             owl:allValuesFrom  xsd:string ;
-                            owl:onProperty     vivo:identifier
+                            owl:onProperty     :birthdate
+                          ] ;
+        rdfs:subClassOf   [ a                  owl:Restriction ;
+                            owl:allValuesFrom  owl:Thing ;
+                            owl:onProperty     <http://purl.org/roh/mirror/foaf#mbox>
+                          ] ;
+        rdfs:subClassOf   [ a                   owl:Restriction ;
+                            owl:onProperty      <http://purl.org/roh/mirror/foaf#firstName> ;
+                            owl:someValuesFrom  xsd:string
                           ] ;
         rdfs:subClassOf   [ a                   owl:Restriction ;
                             owl:onProperty      <http://purl.org/roh/mirror/foaf#surname> ;
                             owl:someValuesFrom  xsd:string
-                          ] ;
-        rdfs:subClassOf   [ a                  owl:Restriction ;
-                            owl:allValuesFrom  owl:Thing ;
-                            owl:onProperty     <http://purl.org/roh/mirror/foaf#homepage>
-                          ] ;
-        rdfs:subClassOf   [ a                  owl:Restriction ;
-                            owl:allValuesFrom  xsd:string ;
-                            owl:onProperty     :researchLine
-                          ] ;
-        rdfs:subClassOf   [ a                  owl:Restriction ;
-                            owl:allValuesFrom  owl:Thing ;
-                            owl:onProperty     <http://purl.org/roh/mirror/foaf#img>
                           ] ;
         obo:IAO_0000111   "person" ;
         obo:IAO_0000115   "An instance of a human being (Homo sapiens)" , "The most general classification of a person" ;
@@ -2242,15 +2250,13 @@ vivo:end  a                 owl:ObjectProperty ;
         a                owl:Class ;
         rdfs:label       "Relación de Supervisión"@es , "Supervising Relationship"@en ;
         rdfs:subClassOf  vivo:Relationship ;
-        rdfs:subClassOf  [ a                  owl:Restriction ;
-                           owl:allValuesFrom  [ a            owl:Class ;
-                                                owl:unionOf  ( :SuperviseeRole :SupervisorRole <http://purl.org/roh/mirror/foaf#Person> )
-                                              ] ;
-                           owl:onProperty     vivo:relates
-                         ] ;
         rdfs:subClassOf  [ a                   owl:Restriction ;
                            owl:onProperty      vivo:dateTimeInterval ;
                            owl:someValuesFrom  vivo:DateTimeInterval
+                         ] ;
+        rdfs:subClassOf  [ a                   owl:Restriction ;
+                           owl:onProperty      vivo:relates ;
+                           owl:someValuesFrom  <http://purl.org/roh/mirror/foaf#Person>
                          ] ;
         rdfs:subClassOf  [ a                  owl:Restriction ;
                            owl:allValuesFrom  bibo:Thesis ;
@@ -2266,11 +2272,13 @@ vivo:end  a                 owl:ObjectProperty ;
                          ] ;
         rdfs:subClassOf  [ a                   owl:Restriction ;
                            owl:onProperty      vivo:relates ;
-                           owl:someValuesFrom  <http://purl.org/roh/mirror/foaf#Person>
-                         ] ;
-        rdfs:subClassOf  [ a                   owl:Restriction ;
-                           owl:onProperty      vivo:relates ;
                            owl:someValuesFrom  :SupervisorRole
+                         ] ;
+        rdfs:subClassOf  [ a                  owl:Restriction ;
+                           owl:allValuesFrom  [ a            owl:Class ;
+                                                owl:unionOf  ( :SuperviseeRole :SupervisorRole <http://purl.org/roh/mirror/foaf#Person> )
+                                              ] ;
+                           owl:onProperty     vivo:relates
                          ] .
 
 :projectStartDate  a  owl:DatatypeProperty ;
@@ -2291,7 +2299,8 @@ vivo:OrganizerRole  a    owl:Class ;
         rdfs:subClassOf  bfo:BFO_0000023 ;
         obo:IAO_0000115  "A role of organizing" .
 
-:TestListofAuthors  a  owl:NamedIndividual , rdf:Seq .
+:TestListofAuthors  a  owl:NamedIndividual , rdf:Seq ;
+        rdfs:label  "TestListofAuthors"@en .
 
 bfo:BFO_0000008  a    owl:Class ;
         rdfs:comment  "A temporal region is an occurrent entity that is part of time as defined relative to some reference frame."@en ;
@@ -2312,14 +2321,17 @@ iao:IAO_0000412  a  owl:AnnotationProperty .
 rdf:List  a     owl:Class .
 
 :TechnicalSupport  a     owl:Class ;
+        rdfs:label       "TechnicalSupport"@en ;
         rdfs:subClassOf  bfo:BFO_0000023 .
 
 :patentStatus  a     owl:ObjectProperty ;
         rdfs:domain  :PatentApplication ;
-        rdfs:label   "patent status"@en .
+        rdfs:label   "patent status"@en ;
+        rdfs:range   :Status .
 
 :ReservableConsumerRole
         a                owl:Class ;
+        rdfs:label       "ReservableConsumerRole"@en ;
         rdfs:subClassOf  bfo:BFO_0000023 .
 
 vivo:FacultyMentoringRelationship
@@ -2359,6 +2371,7 @@ uneskos:hasMicroThesaurus
         a       owl:AnnotationProperty .
 
 :EthicalAudit  a          owl:Class ;
+        rdfs:label        "EthicalAudit"@en ;
         rdfs:subClassOf   :EthicalReport ;
         owl:disjointWith  :EthicalValidation .
 
@@ -2373,10 +2386,6 @@ uneskos:hasMicroThesaurus
         rdfs:subClassOf  bibo:Thesis .
 
 skos:narrower  a  owl:AnnotationProperty .
-
-[ a            owl:AllDisjointClasses ;
-  owl:members  ( :EthicsCommittee :ResearchGroup vivo:Center vivo:Company vivo:Consortium vivo:Department vivo:Foundation vivo:GovernmentAgency vivo:Institute vivo:University )
-] .
 
 vivo:dateTime  a      owl:DatatypeProperty ;
         rdfs:comment  "A xsd:date/time value."@en ;
@@ -2413,6 +2422,7 @@ obo:IAO_0000412  a  owl:AnnotationProperty .
         skos:prefLabel   "Scientific publication"@en , "Publicació científica"@ca-ad , "Publicació científica"@ca-es , "Publication scientifique"@fr , "Publicación científica"@es , "Publicação científica"@pt .
 
 :MasterStudent  a        owl:Class ;
+        rdfs:label       "MasterStudent"@en ;
         rdfs:subClassOf  <http://purl.org/roh/mirror/obo/ero#ERO_0000783> .
 
 :provides  a          owl:ObjectProperty ;
@@ -2467,7 +2477,8 @@ vivo:Competition  a      owl:Class ;
 :evaluationStatus  a  owl:ObjectProperty ;
         rdfs:comment  "The status in which a Evaluation Summary could be."@en ;
         rdfs:domain   :EvaluationSummary ;
-        rdfs:label    "estado de la evaluación"@es , "evaluation status"@en .
+        rdfs:label    "estado de la evaluación"@es , "evaluation status"@en ;
+        rdfs:range    :Status .
 
 :SmallEnterprise  a      owl:Class ;
         rdfs:comment     "An enterprise which employs fewer than 50 persons and whose annual turnover and/or annual balance sheet total does not exceed EUR 10 million."@en ;
@@ -2488,10 +2499,6 @@ vivo:Competition  a      owl:Class ;
         rdfs:comment  "An object property linking a Person with a Thing, such person is corresponding author for."@en ;
         rdfs:domain   <http://purl.org/roh/mirror/foaf#Person> ;
         rdfs:label    "autor de correspondencia de"@es , "corresponding author of"@en .
-
-[ a            owl:AllDisjointClasses ;
-  owl:members  ( :LargeEnterprise :MediumEnterprise :MicroEnterprise :SmallEnterprise )
-] .
 
 :TvProgram  a            owl:Class ;
         rdfs:label       "Tv Program"@en ;
@@ -2514,7 +2521,7 @@ vivo:AdviseeRole  a      owl:Class ;
         rdfs:subClassOf  :Status .
 
 [ a            owl:AllDisjointClasses ;
-  owl:members  ( :EvaluationSummary :Justification vivo:ResearchProposal )
+  owl:members  ( :PatentExpense :PersonExpense :ProjectExpense :ResearchObjectExpense )
 ] .
 
 :coadvises  a         owl:ObjectProperty ;
@@ -2537,11 +2544,11 @@ bibo:Thesis  a            owl:Class ;
         rdfs:subClassOf   bibo:Document ;
         rdfs:subClassOf   [ a                  owl:Restriction ;
                             owl:allValuesFrom  rdfs:Literal ;
-                            owl:onProperty     vivo:placeOfPublication
+                            owl:onProperty     vivo:abbreviation
                           ] ;
         rdfs:subClassOf   [ a                  owl:Restriction ;
                             owl:allValuesFrom  rdfs:Literal ;
-                            owl:onProperty     vivo:abbreviation
+                            owl:onProperty     vivo:placeOfPublication
                           ] ;
         obo:IAO_0000112   "Short Definition from OCLC Input Standards, EntW" ;
         obo:IAO_0000115   "Works created to satisfy the requirements for an academic certification or degree; also called dissertation" ;
@@ -2573,48 +2580,96 @@ vivo:Project  a          owl:Class ;
         rdfs:comment     "A vivo:Project is an entity imported from VIVO and extended according to CERIF specification. It can be defined as – a project in business and science is typically defined as a collaborative enterprise, frequently involving research or design, that is carefully planned to achieve a particular aim. Its configuration is inspired by the swrc:project and takes into account cerif:Project’s data properties. It encompasses all those properties and adds some new ones, e.g. projectStatus (CLOSED, OPEN, PROPOSAL_SUBMITTED, REJECTED), roh:foreseenJustificationDate. This entity is linked with classes Organization, Person, ResearchObject, Funding, Expense, Activity o Concept. A project in ROH may require ethical validation which is expressed as roh:needsEthicalValidation set to true. A project might be correspond to a research project categorized through roh:ProjectClassification by means of object property roh:hasProjectCategorization or correspond to some grant associated to human resources (roh:HRClassification) associated through roh:hasHRClassification. Notice that a project is a proposal (PROPOSAL_SUBMITTED) until it passes to the OPEN or REJECTED status. When the project finishes it state passes to CLOSED." ;
         rdfs:label       "Proyecto"@es , "Project"@en ;
         rdfs:subClassOf  [ a                  owl:Restriction ;
-                           owl:allValuesFrom  :ResearchObject ;
-                           owl:onProperty     :produces
-                         ] ;
-        rdfs:subClassOf  [ a                  owl:Restriction ;
-                           owl:allValuesFrom  :FundingProgram ;
-                           owl:onProperty     :fundedBy
-                         ] ;
-        rdfs:subClassOf  [ a                  owl:Restriction ;
-                           owl:allValuesFrom  xsd:string ;
-                           owl:onProperty     :title
-                         ] ;
-        rdfs:subClassOf  [ a                  owl:Restriction ;
-                           owl:allValuesFrom  xsd:string ;
-                           owl:onProperty     :modality
-                         ] ;
-        rdfs:subClassOf  [ a                  owl:Restriction ;
-                           owl:allValuesFrom  skos:Concept ;
-                           owl:onProperty     :hasKnowledgeArea
-                         ] ;
-        rdfs:subClassOf  [ a                  owl:Restriction ;
-                           owl:allValuesFrom  :ProjectContract ;
-                           owl:onProperty     :hasContract
-                         ] ;
-        rdfs:subClassOf  [ a                   owl:Restriction ;
-                           owl:onProperty      vivo:identifier ;
-                           owl:someValuesFrom  xsd:string
+                           owl:allValuesFrom  :Funding ;
+                           owl:onProperty     :isSupportedBy
                          ] ;
         rdfs:subClassOf  [ a                   owl:Restriction ;
                            owl:maxCardinality  "1"^^xsd:nonNegativeInteger ;
                            owl:onProperty      vivo:dateTimeInterval
                          ] ;
         rdfs:subClassOf  [ a                  owl:Restriction ;
-                           owl:allValuesFrom  :ProjectExpense ;
-                           owl:onProperty     :spends
+                           owl:allValuesFrom  xsd:string ;
+                           owl:onProperty     :title
+                         ] ;
+        rdfs:subClassOf  [ a                  owl:Restriction ;
+                           owl:allValuesFrom  rdfs:Literal ;
+                           owl:onProperty     vivo:abbreviation
+                         ] ;
+        rdfs:subClassOf  [ a                  owl:Restriction ;
+                           owl:allValuesFrom  :ProjectClassification ;
+                           owl:onProperty     :hasProjectCategorization
+                         ] ;
+        rdfs:subClassOf  [ a                  owl:Restriction ;
+                           owl:allValuesFrom  :ProjectContract ;
+                           owl:onProperty     :hasContract
+                         ] ;
+        rdfs:subClassOf  [ a                  owl:Restriction ;
+                           owl:allValuesFrom  xsd:string ;
+                           owl:onProperty     :modality
+                         ] ;
+        rdfs:subClassOf  [ a                   owl:Restriction ;
+                           owl:onProperty      vivo:freetextKeyword ;
+                           owl:someValuesFrom  xsd:string
+                         ] ;
+        rdfs:subClassOf  [ a                  owl:Restriction ;
+                           owl:allValuesFrom  xsd:boolean ;
+                           owl:onProperty     :needsEthicalValidation
                          ] ;
         rdfs:subClassOf  [ a                  owl:Restriction ;
                            owl:allValuesFrom  rdfs:Literal ;
                            owl:onProperty     vivo:description
                          ] ;
         rdfs:subClassOf  [ a                  owl:Restriction ;
+                           owl:allValuesFrom  <http://purl.org/roh/mirror/geonames#Feature> ;
+                           owl:onProperty     <http://purl.org/roh/mirror/geonames#locatedIn>
+                         ] ;
+        rdfs:subClassOf  [ a                  owl:Restriction ;
+                           owl:allValuesFrom  :FundingProgram ;
+                           owl:onProperty     :fundedBy
+                         ] ;
+        rdfs:subClassOf  [ a                  owl:Restriction ;
+                           owl:allValuesFrom  :ResearchObject ;
+                           owl:onProperty     :produces
+                         ] ;
+        rdfs:subClassOf  [ a                  owl:Restriction ;
+                           owl:allValuesFrom  :Status ;
+                           owl:onProperty     :projectStatus
+                         ] ;
+        rdfs:subClassOf  [ a                  owl:Restriction ;
+                           owl:allValuesFrom  xsd:dateTime ;
+                           owl:onProperty     :foreseenJustificationDate
+                         ] ;
+        rdfs:subClassOf  [ a                  owl:Restriction ;
                            owl:allValuesFrom  :HRClassification ;
                            owl:onProperty     :hasHRClassification
+                         ] ;
+        rdfs:subClassOf  [ a                   owl:Restriction ;
+                           owl:onProperty      :title ;
+                           owl:someValuesFrom  xsd:string
+                         ] ;
+        rdfs:subClassOf  [ a                   owl:Restriction ;
+                           owl:onProperty      vivo:identifier ;
+                           owl:someValuesFrom  xsd:string
+                         ] ;
+        rdfs:subClassOf  [ a                  owl:Restriction ;
+                           owl:allValuesFrom  vivo:Project ;
+                           owl:onProperty     ro:BFO_0000051
+                         ] ;
+        rdfs:subClassOf  [ a                  owl:Restriction ;
+                           owl:allValuesFrom  bfo:BFO_0000023 ;
+                           owl:onProperty     vivo:relates
+                         ] ;
+        rdfs:subClassOf  [ a                  owl:Restriction ;
+                           owl:allValuesFrom  :ProjectExpense ;
+                           owl:onProperty     :spends
+                         ] ;
+        rdfs:subClassOf  [ a                  owl:Restriction ;
+                           owl:allValuesFrom  skos:Concept ;
+                           owl:onProperty     :hasKnowledgeArea
+                         ] ;
+        rdfs:subClassOf  [ a                  owl:Restriction ;
+                           owl:allValuesFrom  vivo:DateTimeInterval ;
+                           owl:onProperty     vivo:dateTimeInterval
                          ] ;
         rdfs:subClassOf  [ a                  owl:Restriction ;
                            owl:allValuesFrom  [ a            owl:Class ;
@@ -2623,56 +2678,8 @@ vivo:Project  a          owl:Class ;
                            owl:onProperty     vivo:relatedBy
                          ] ;
         rdfs:subClassOf  [ a                  owl:Restriction ;
-                           owl:allValuesFrom  xsd:boolean ;
-                           owl:onProperty     :needsEthicalValidation
-                         ] ;
-        rdfs:subClassOf  [ a                  owl:Restriction ;
                            owl:allValuesFrom  :Activity ;
                            owl:onProperty     :participates
-                         ] ;
-        rdfs:subClassOf  [ a                   owl:Restriction ;
-                           owl:onProperty      :title ;
-                           owl:someValuesFrom  xsd:string
-                         ] ;
-        rdfs:subClassOf  [ a                  owl:Restriction ;
-                           owl:allValuesFrom  rdfs:Literal ;
-                           owl:onProperty     vivo:abbreviation
-                         ] ;
-        rdfs:subClassOf  [ a                  owl:Restriction ;
-                           owl:allValuesFrom  xsd:dateTime ;
-                           owl:onProperty     :foreseenJustificationDate
-                         ] ;
-        rdfs:subClassOf  [ a                  owl:Restriction ;
-                           owl:allValuesFrom  :Funding ;
-                           owl:onProperty     :isSupportedBy
-                         ] ;
-        rdfs:subClassOf  [ a                  owl:Restriction ;
-                           owl:allValuesFrom  :ProjectClassification ;
-                           owl:onProperty     :hasProjectCategorization
-                         ] ;
-        rdfs:subClassOf  [ a                  owl:Restriction ;
-                           owl:allValuesFrom  <http://purl.org/roh/mirror/geonames#Feature> ;
-                           owl:onProperty     <http://purl.org/roh/mirror/geonames#locatedIn>
-                         ] ;
-        rdfs:subClassOf  [ a                  owl:Restriction ;
-                           owl:allValuesFrom  vivo:Project ;
-                           owl:onProperty     ro:BFO_0000051
-                         ] ;
-        rdfs:subClassOf  [ a                  owl:Restriction ;
-                           owl:allValuesFrom  vivo:DateTimeInterval ;
-                           owl:onProperty     vivo:dateTimeInterval
-                         ] ;
-        rdfs:subClassOf  [ a                  owl:Restriction ;
-                           owl:allValuesFrom  bfo:BFO_0000023 ;
-                           owl:onProperty     vivo:relates
-                         ] ;
-        rdfs:subClassOf  [ a                   owl:Restriction ;
-                           owl:onProperty      vivo:freetextKeyword ;
-                           owl:someValuesFrom  xsd:string
-                         ] ;
-        rdfs:subClassOf  [ a                  owl:Restriction ;
-                           owl:allValuesFrom  :Status ;
-                           owl:onProperty     :projectStatus
                          ] ;
         obo:IAO_0000112  "An endeavor, frequently collaborative, that occurs over a finite period of time and is intended to achieve a particular aim." ;
         obo:IAO_0000115  "An endeavor, frequently collaborative, that occurs over a finite period of time and is intended to achieve a particular aim." .
@@ -2680,6 +2687,10 @@ vivo:Project  a          owl:Class ;
 :Cancelled  a            owl:Class ;
         rdfs:label       "Cancelled"@en ;
         rdfs:subClassOf  :Status .
+
+[ a            owl:AllDisjointClasses ;
+  owl:members  ( :DegreeSupervisingRelationship :MasterSupervisingRelationship :PhDSupervisingRelationship )
+] .
 
 :ResearchGroup  a        owl:Class ;
         rdfs:comment     "A group of researchers often from the same centre, specialised on the same subject, working together on the issue or topic."@en ;
@@ -2749,15 +2760,7 @@ skos:Concept  a           owl:Class ;
         rdfs:label       "Reservable"@en , "Reservable"@es ;
         rdfs:subClassOf  [ a                  owl:Restriction ;
                            owl:allValuesFrom  xsd:string ;
-                           owl:onProperty     vivo:freetextKeyword
-                         ] ;
-        rdfs:subClassOf  [ a                   owl:Restriction ;
-                           owl:onProperty      :title ;
-                           owl:someValuesFrom  xsd:string
-                         ] ;
-        rdfs:subClassOf  [ a                  owl:Restriction ;
-                           owl:allValuesFrom  vivo:DateTimeInterval ;
-                           owl:onProperty     vivo:dateTimeInterval
+                           owl:onProperty     vivo:description
                          ] ;
         rdfs:subClassOf  [ a                  owl:Restriction ;
                            owl:allValuesFrom  <http://purl.org/roh/mirror/foaf#Agent> ;
@@ -2765,11 +2768,19 @@ skos:Concept  a           owl:Class ;
                          ] ;
         rdfs:subClassOf  [ a                  owl:Restriction ;
                            owl:allValuesFrom  xsd:string ;
-                           owl:onProperty     :title
+                           owl:onProperty     vivo:freetextKeyword
+                         ] ;
+        rdfs:subClassOf  [ a                  owl:Restriction ;
+                           owl:allValuesFrom  vivo:DateTimeInterval ;
+                           owl:onProperty     vivo:dateTimeInterval
+                         ] ;
+        rdfs:subClassOf  [ a                   owl:Restriction ;
+                           owl:onProperty      :title ;
+                           owl:someValuesFrom  xsd:string
                          ] ;
         rdfs:subClassOf  [ a                  owl:Restriction ;
                            owl:allValuesFrom  xsd:string ;
-                           owl:onProperty     vivo:description
+                           owl:onProperty     :title
                          ] ;
         rdfs:subClassOf  [ a                   owl:Restriction ;
                            owl:onProperty      vivo:dateTimeInterval ;
@@ -2782,11 +2793,15 @@ vivo:AdvisingRelationship
         rdfs:subClassOf  vivo:Relationship ;
         rdfs:subClassOf  [ a                   owl:Restriction ;
                            owl:onProperty      vivo:relates ;
-                           owl:someValuesFrom  vivo:AdviseeRole
+                           owl:someValuesFrom  <http://purl.org/roh/mirror/foaf#Person>
+                         ] ;
+        rdfs:subClassOf  [ a                  owl:Restriction ;
+                           owl:allValuesFrom  owl:Thing ;
+                           owl:onProperty     vivo:hasSubjectArea
                          ] ;
         rdfs:subClassOf  [ a                   owl:Restriction ;
                            owl:onProperty      vivo:relates ;
-                           owl:someValuesFrom  <http://purl.org/roh/mirror/foaf#Person>
+                           owl:someValuesFrom  vivo:AdviseeRole
                          ] ;
         rdfs:subClassOf  [ a                  owl:Restriction ;
                            owl:allValuesFrom  vivo:DateTimeInterval ;
@@ -2796,15 +2811,16 @@ vivo:AdvisingRelationship
                            owl:onProperty      vivo:relates ;
                            owl:someValuesFrom  vivo:AdvisorRole
                          ] ;
-        rdfs:subClassOf  [ a                  owl:Restriction ;
-                           owl:allValuesFrom  owl:Thing ;
-                           owl:onProperty     vivo:hasSubjectArea
-                         ] ;
         obo:IAO_0000115  "A dual relationship of one person being advised or mentored by another person, typically including start and end dates" .
 
 :UndergraduateStudent
         a                owl:Class ;
+        rdfs:label       "UndergraduateStudent"@en ;
         rdfs:subClassOf  <http://purl.org/roh/mirror/obo/ero#ERO_0000784> .
+
+[ a            owl:AllDisjointClasses ;
+  owl:members  ( bibo:AcademicArticle vivo:ConferencePaper vivo:EditorialArticle )
+] .
 
 :promotedBy  a         owl:ObjectProperty ;
         rdfs:comment   "A Funding Program or Funding Source promoted by a Funding Organization."@en ;
@@ -2863,6 +2879,10 @@ vivo:Abstract  a         owl:Class ;
         rdfs:label       "Event organiser"@en ;
         rdfs:subClassOf  vivo:OrganizerRole .
 
+[ a            owl:AllDisjointClasses ;
+  owl:members  ( :ThesisViva bibo:Conference bibo:Hearing bibo:Interview bibo:Performance bibo:Workshop vivo:Competition vivo:Course vivo:Exhibit vivo:Internship vivo:Meeting vivo:Presentation )
+] .
+
 bibo:Periodical  a        owl:Class ;
         rdfs:comment      "A group of related documents issued at regular intervals."@en ;
         rdfs:isDefinedBy  "http://purl.org/roh/mirror/bibo#"^^xsd:anyURI ;
@@ -2870,7 +2890,7 @@ bibo:Periodical  a        owl:Class ;
         rdfs:subClassOf   bibo:Collection ;
         rdfs:subClassOf   [ a                  owl:Restriction ;
                             owl:allValuesFrom  rdfs:Literal ;
-                            owl:onProperty     bibo:eissn
+                            owl:onProperty     bibo:issn
                           ] ;
         rdfs:subClassOf   [ a                  owl:Restriction ;
                             owl:allValuesFrom  <http://purl.org/roh/mirror/foaf#Organization> ;
@@ -2878,7 +2898,7 @@ bibo:Periodical  a        owl:Class ;
                           ] ;
         rdfs:subClassOf   [ a                  owl:Restriction ;
                             owl:allValuesFrom  rdfs:Literal ;
-                            owl:onProperty     bibo:issn
+                            owl:onProperty     bibo:eissn
                           ] ;
         ns:term_status    "stable" .
 
@@ -2909,11 +2929,8 @@ vivo:NonAcademicPosition
         obo:IAO_0000112  "Accounting & Research Services Assistant; Director of Information Technology" , "Staff, support, and other non-academic positions." ;
         obo:IAO_0000115  "A position classified as professional, staff, support, or any other non-academic role" .
 
-:TestPhdSupervisor  a  owl:NamedIndividual , <http://purl.org/roh/mirror/foaf#Person> .
-
-[ a            owl:AllDisjointClasses ;
-  owl:members  ( :AcademicAccreditation :DegreeHomologation :ResearchAccreditation vivo:Certificate vivo:License )
-] .
+:TestPhdSupervisor  a  owl:NamedIndividual , <http://purl.org/roh/mirror/foaf#Person> ;
+        rdfs:label  "TestPhdSupervisor"@en .
 
 vivo:geographicFocus  a  owl:ObjectProperty ;
         rdfs:comment  "A geographic region in which something takes place."@en ;
@@ -2921,6 +2938,10 @@ vivo:geographicFocus  a  owl:ObjectProperty ;
 
 <http://xmlns.com/foaf/spec/#Document>
         a       owl:Class .
+
+[ a            owl:AllDisjointClasses ;
+  owl:members  ( bibo:Article bibo:Book bibo:CollectedDocument bibo:DocumentPart bibo:Patent bibo:Report bibo:Thesis bibo:Webpage vivo:Abstract vivo:ConferencePoster vivo:Dataset )
+] .
 
 obo:IAO_0000601  a  owl:AnnotationProperty .
 
@@ -2962,6 +2983,7 @@ vivo:supportedInformationResource
         rdfs:label        "depiction" , "representación"@es .
 
 :TestSupervisorRole  a  owl:NamedIndividual , :SupervisorRole ;
+        rdfs:label      "TestSupervisorRole"@en ;
         ro:RO_0000052   :TestPhdSupervisor ;
         vivo:relatedBy  :TestPhDSupervisingRelationship .
 
@@ -2969,8 +2991,16 @@ vivo:supportedInformationResource
         rdfs:comment  "A data property that associates a title to any ROH entity requiring it." ;
         rdfs:label    "title"@en , "título"@es .
 
+:correspondingOrganization
+        a              owl:ObjectProperty ;
+        rdfs:domain    iao:IAO_0000030 ;
+        rdfs:label     "correspondingOrganization"@en ;
+        rdfs:range     <http://purl.org/roh/mirror/foaf#Organization> ;
+        owl:inverseOf  :correspondingOrganizationOf .
+
 :Justification  a        owl:Class ;
         rdfs:comment     "A Justification is a bibo:Report used to justify eithet technically, economically or both a project." ;
+        rdfs:label       "Justification"@en ;
         rdfs:subClassOf  bibo:Report ;
         rdfs:subClassOf  [ a                   owl:Restriction ;
                            owl:onProperty      vivo:relates ;
@@ -2982,12 +3012,12 @@ vivo:supportedInformationResource
         rdfs:comment     "An agent (eg. person, group, software or physical artifact)." , "An agent" ;
         rdfs:label       "Agente"@es , "Agent" , "Agent"@en ;
         rdfs:subClassOf  [ a                  owl:Restriction ;
-                           owl:allValuesFrom  vivo:Relationship ;
-                           owl:onProperty     vivo:relatedBy
-                         ] ;
-        rdfs:subClassOf  [ a                  owl:Restriction ;
                            owl:allValuesFrom  xsd:string ;
                            owl:onProperty     vivo:freetextKeyword
+                         ] ;
+        rdfs:subClassOf  [ a                  owl:Restriction ;
+                           owl:allValuesFrom  vivo:Relationship ;
+                           owl:onProperty     vivo:relatedBy
                          ] ;
         obo:IAO_0000111  "agent" ;
         obo:IAO_0000112  "see: http://xmlns.com/foaf/spec/#term_Agent" ;
@@ -2996,12 +3026,6 @@ vivo:supportedInformationResource
         obo:IAO_0000118  "" ;
         ns:term_status   "stable" ;
         skos:scopeNote   "Used to describe any \"agent\" related to bibliographic items. Such agents can be persons, organizations or groups of any kind."@en .
-
-:correspondingOrganization
-        a              owl:ObjectProperty ;
-        rdfs:domain    iao:IAO_0000030 ;
-        rdfs:range     <http://purl.org/roh/mirror/foaf#Organization> ;
-        owl:inverseOf  :correspondingOrganizationOf .
 
 bibo:pageEnd  a             owl:DatatypeProperty ;
         rdfs:comment        "Ending page number within a continuous page range."@en ;
@@ -3023,15 +3047,18 @@ vivo:description  a   owl:DatatypeProperty ;
         rdfs:comment  "This data property may be associated to any roh entity which needs to include a description" ;
         rdfs:label    "descripción"@es , "description"@en .
 
+:EuropeanRegionalDevelopmentFund
+        a             owl:NamedIndividual , :FundingSource ;
+        rdfs:comment  "A fund allocated by the European Union. Its purpose is to transfer money from richer regions (not countries), and invest it in the infrastructure and services of underdeveloped regions. This will allow those regions to start attracting private sector investments, and create jobs on their own."@en ;
+        rdfs:label    "European Regional Development Fund"@en , "Fondo Europeo de Desarrollo Regional"@es .
+
 :Dossier  a               owl:Class ;
         rdfs:comment      "File is a collection in which all assets related to a Project are stored, including the Research Proposal, approval documents, viability plans and so on associated to a project are stored."@en ;
         rdfs:label        "Dossier"@en , "Dossier"@es ;
         rdfs:subClassOf   bibo:Collection ;
-        rdfs:subClassOf   [ a                  owl:Restriction ;
-                            owl:allValuesFrom  [ a            owl:Class ;
-                                                 owl:unionOf  ( :ProjectContract bibo:Report vivo:Project )
-                                               ] ;
-                            owl:onProperty     vivo:relates
+        rdfs:subClassOf   [ a                   owl:Restriction ;
+                            owl:onProperty      vivo:description ;
+                            owl:someValuesFrom  xsd:string
                           ] ;
         rdfs:subClassOf   [ a                  owl:Restriction ;
                             owl:allValuesFrom  xsd:string ;
@@ -3049,20 +3076,17 @@ vivo:description  a   owl:DatatypeProperty ;
                             owl:allValuesFrom  xsd:string ;
                             owl:onProperty     vivo:identifier
                           ] ;
-        rdfs:subClassOf   [ a                   owl:Restriction ;
-                            owl:onProperty      vivo:description ;
-                            owl:someValuesFrom  xsd:string
+        rdfs:subClassOf   [ a                  owl:Restriction ;
+                            owl:allValuesFrom  [ a            owl:Class ;
+                                                 owl:unionOf  ( :ProjectContract bibo:Report vivo:Project )
+                                               ] ;
+                            owl:onProperty     vivo:relates
                           ] ;
         rdfs:subClassOf   [ a                   owl:Restriction ;
                             owl:onProperty      :title ;
                             owl:someValuesFrom  xsd:string
                           ] ;
         owl:disjointWith  bibo:Periodical .
-
-:EuropeanRegionalDevelopmentFund
-        a             owl:NamedIndividual , :FundingSource ;
-        rdfs:comment  "A fund allocated by the European Union. Its purpose is to transfer money from richer regions (not countries), and invest it in the infrastructure and services of underdeveloped regions. This will allow those regions to start attracting private sector investments, and create jobs on their own."@en ;
-        rdfs:label    "European Regional Development Fund"@en , "Fondo Europeo de Desarrollo Regional"@es .
 
 :PASlaboral  a           owl:Class ;
         rdfs:label       "PAS laboral"@es , "PAS laboral"@ca-ad ;
@@ -3075,8 +3099,9 @@ vivo:description  a   owl:DatatypeProperty ;
         rdfs:range    xsd:date .
 
 :TestAnotherGovernmentAgency
-        a          owl:NamedIndividual , vivo:GovernmentAgency ;
-        :promotes  :TestFundingSource .
+        a           owl:NamedIndividual , vivo:GovernmentAgency ;
+        rdfs:label  "TestAnotherGovernmentAgency"@en ;
+        :promotes   :TestFundingSource .
 
 :QualifiedValue  a    owl:Class ;
         rdfs:comment  "A class to represent a qualified value as used in Wikibase."@en ;
@@ -3085,6 +3110,10 @@ vivo:description  a   owl:DatatypeProperty ;
 bibo:locator  a       owl:DatatypeProperty ;
         rdfs:comment  "A description (often numeric) that locates an item within a containing document or collection."@en ;
         rdfs:label    "localizador"@es , "locator"@en .
+
+[ a            owl:AllDisjointClasses ;
+  owl:members  ( :EthicsCommittee :ResearchGroup vivo:Center vivo:Company vivo:Consortium vivo:Department vivo:Foundation vivo:GovernmentAgency vivo:Institute vivo:University )
+] .
 
 obo:BFO_0000179  a  owl:AnnotationProperty .
 
@@ -3133,29 +3162,36 @@ vivo:AwardedDegree  a    owl:Class ;
         rdfs:comment     "A qualification awarded to students upon successful completion of a course of study in higher education."@en , "A vivo:AwardedDegree is related to a foaf:Person and vivo:AcademicDegree through vivo:relates relationship, it is a qualification (degree) received by somebody." ;
         rdfs:label       "Grao académico"@gl , "Academic degree"@en , "Título académico"@es-es , "Titulación Universitaria Concedida"@es , "Awarded Degree"@en , "Grade universitaire"@fr-fr , "Grade universitaire"@fr , "Grade universitaire"@fr-be , "Grade universitaire"@fr-ca , "Grade universitaire"@fr-ch , "Grau acadêmico"@pt-br , "Unibertsitate-gradu"@eu , "Grau académico"@pt-pt , "Grau acadèmic"@ca-ad , "Grau acadèmic"@ca-es ;
         rdfs:subClassOf  vivo:Relationship ;
-        rdfs:subClassOf  [ a                   owl:Restriction ;
-                           owl:onProperty      vivo:dateTimeValue ;
-                           owl:someValuesFrom  vivo:DateTimeValue
-                         ] ;
         rdfs:subClassOf  [ a                  owl:Restriction ;
-                           owl:allValuesFrom  [ a            owl:Class ;
-                                                owl:unionOf  ( <http://purl.org/roh/mirror/foaf#Person> vivo:AcademicDegree )
-                                              ] ;
-                           owl:onProperty     vivo:relates
+                           owl:allValuesFrom  vivo:DateTimeValue ;
+                           owl:onProperty     vivo:dateTimeValue
+                         ] ;
+        rdfs:subClassOf  [ a                         owl:Restriction ;
+                           owl:onClass               vivo:AcademicDegree ;
+                           owl:onProperty            vivo:relates ;
+                           owl:qualifiedCardinality  "1"^^xsd:nonNegativeInteger
+                         ] ;
+        rdfs:subClassOf  [ a                            owl:Restriction ;
+                           owl:maxQualifiedCardinality  "1"^^xsd:nonNegativeInteger ;
+                           owl:onClass                  vivo:DateTimeValue ;
+                           owl:onProperty               vivo:dateTimeValue
                          ] ;
         rdfs:subClassOf  [ a                            owl:Restriction ;
                            owl:maxQualifiedCardinality  "1"^^xsd:nonNegativeInteger ;
                            owl:onClass                  vivo:University ;
                            owl:onProperty               :awardedBy
                          ] ;
+        rdfs:subClassOf  [ a                  owl:Restriction ;
+                           owl:allValuesFrom  vivo:University ;
+                           owl:onProperty     :awardedBy
+                         ] ;
         rdfs:subClassOf  [ a                   owl:Restriction ;
                            owl:onProperty      :awardedBy ;
                            owl:someValuesFrom  vivo:University
                          ] ;
-        rdfs:subClassOf  [ a                         owl:Restriction ;
-                           owl:onClass               vivo:AcademicDegree ;
-                           owl:onProperty            vivo:relates ;
-                           owl:qualifiedCardinality  "1"^^xsd:nonNegativeInteger
+        rdfs:subClassOf  [ a                   owl:Restriction ;
+                           owl:onProperty      vivo:dateTimeValue ;
+                           owl:someValuesFrom  vivo:DateTimeValue
                          ] ;
         rdfs:subClassOf  [ a                         owl:Restriction ;
                            owl:onClass               <http://purl.org/roh/mirror/foaf#Person> ;
@@ -3163,17 +3199,10 @@ vivo:AwardedDegree  a    owl:Class ;
                            owl:qualifiedCardinality  "1"^^xsd:nonNegativeInteger
                          ] ;
         rdfs:subClassOf  [ a                  owl:Restriction ;
-                           owl:allValuesFrom  vivo:University ;
-                           owl:onProperty     :awardedBy
-                         ] ;
-        rdfs:subClassOf  [ a                  owl:Restriction ;
-                           owl:allValuesFrom  vivo:DateTimeValue ;
-                           owl:onProperty     vivo:dateTimeValue
-                         ] ;
-        rdfs:subClassOf  [ a                            owl:Restriction ;
-                           owl:maxQualifiedCardinality  "1"^^xsd:nonNegativeInteger ;
-                           owl:onClass                  vivo:DateTimeValue ;
-                           owl:onProperty               vivo:dateTimeValue
+                           owl:allValuesFrom  [ a            owl:Class ;
+                                                owl:unionOf  ( <http://purl.org/roh/mirror/foaf#Person> vivo:AcademicDegree )
+                                              ] ;
+                           owl:onProperty     vivo:relates
                          ] ;
         obo:IAO_0000115  "The awarding of a degree by an agent to another agent. It is mostly for academic degrees." ;
         skos:prefLabel   "Grau acadêmico"@pt-br , "Grade universitaire"@fr , "Grau académico"@pt-pt , "Grade universitaire"@fr-be , "Grade universitaire"@fr-ca , "Grade universitaire"@fr-ch , "Grade universitaire"@fr-fr , "Grau acadèmic"@ca-ad , "Grau acadèmic"@ca-es , "Unibertsitate-gradu"@eu , "Grao académico"@gl , "Título académico"@es-es , "Academic degree"@en .
@@ -3205,11 +3234,15 @@ vivo:UndergraduateAdvisingRelationship
                          ] ;
         rdfs:subClassOf  [ a                   owl:Restriction ;
                            owl:onProperty      vivo:relates ;
-                           owl:someValuesFrom  :Reservable
+                           owl:someValuesFrom  :ReservableProviderRole
+                         ] ;
+        rdfs:subClassOf  [ a                  owl:Restriction ;
+                           owl:allValuesFrom  owl:Thing ;
+                           owl:onProperty     vivo:hasSubjectArea
                          ] ;
         rdfs:subClassOf  [ a                   owl:Restriction ;
                            owl:onProperty      vivo:relates ;
-                           owl:someValuesFrom  :ReservableProviderRole
+                           owl:someValuesFrom  :Reservable
                          ] ;
         rdfs:subClassOf  [ a                   owl:Restriction ;
                            owl:onProperty      vivo:relates ;
@@ -3218,10 +3251,6 @@ vivo:UndergraduateAdvisingRelationship
         rdfs:subClassOf  [ a                   owl:Restriction ;
                            owl:onProperty      vivo:relates ;
                            owl:someValuesFrom  :ReservableConsumerRole
-                         ] ;
-        rdfs:subClassOf  [ a                  owl:Restriction ;
-                           owl:allValuesFrom  owl:Thing ;
-                           owl:onProperty     vivo:hasSubjectArea
                          ] ;
         obo:IAO_0000115  "A dual relationship of one organization offering a service to another organization, typically including start and end dates" .
 
@@ -3272,45 +3301,9 @@ vitro:exampleAnnot  a  owl:AnnotationProperty .
 :Activity  a             owl:Class ;
         rdfs:comment     "A roh:Activity is participated by Persons (roh:participates) and organized by Organizations through roh:hasRole connecting to intermediary entity vivo:OrganizerRole. Each activity is usually linked to a Project through relationship (roh:participates) and causes a ProjectExpense linked through (vivo:relates). A thorough hierarchy of roh:Activity subtypes is defined: bibo:Conference, vivo:Intership, roh:ThesisViva." ;
         rdfs:label       "Activity"@en , "Actividad"@es ;
-        rdfs:subClassOf  [ a                  owl:Restriction ;
-                           owl:allValuesFrom  <http://purl.org/roh/mirror/geonames#Feature> ;
-                           owl:onProperty     <http://purl.org/roh/mirror/geonames#locatedIn>
-                         ] ;
         rdfs:subClassOf  [ a                   owl:Restriction ;
                            owl:onProperty      vivo:identifier ;
                            owl:someValuesFrom  xsd:string
-                         ] ;
-        rdfs:subClassOf  [ a                  owl:Restriction ;
-                           owl:allValuesFrom  rdfs:Literal ;
-                           owl:onProperty     vivo:contactInformation
-                         ] ;
-        rdfs:subClassOf  [ a                   owl:Restriction ;
-                           owl:maxCardinality  "1"^^xsd:nonNegativeInteger ;
-                           owl:onProperty      ro:RO_0001025
-                         ] ;
-        rdfs:subClassOf  [ a                  owl:Restriction ;
-                           owl:allValuesFrom  xsd:string ;
-                           owl:onProperty     <http://purl.org/roh/mirror/vcard#locality>
-                         ] ;
-        rdfs:subClassOf  [ a                  owl:Restriction ;
-                           owl:allValuesFrom  rdfs:Literal ;
-                           owl:onProperty     vivo:description
-                         ] ;
-        rdfs:subClassOf  [ a                   owl:Restriction ;
-                           owl:onProperty      :title ;
-                           owl:someValuesFrom  xsd:string
-                         ] ;
-        rdfs:subClassOf  [ a                   owl:Restriction ;
-                           owl:maxCardinality  "1"^^xsd:nonNegativeInteger ;
-                           owl:onProperty      vivo:dateTimeInterval
-                         ] ;
-        rdfs:subClassOf  [ a                  owl:Restriction ;
-                           owl:allValuesFrom  xsd:string ;
-                           owl:onProperty     vivo:identifier
-                         ] ;
-        rdfs:subClassOf  [ a                  owl:Restriction ;
-                           owl:allValuesFrom  xsd:string ;
-                           owl:onProperty     :title
                          ] ;
         rdfs:subClassOf  [ a                  owl:Restriction ;
                            owl:allValuesFrom  [ a            owl:Class ;
@@ -3319,29 +3312,65 @@ vitro:exampleAnnot  a  owl:AnnotationProperty .
                            owl:onProperty     vivo:relates
                          ] ;
         rdfs:subClassOf  [ a                  owl:Restriction ;
-                           owl:allValuesFrom  xsd:string ;
-                           owl:onProperty     vivo:freetextKeyword
-                         ] ;
-        rdfs:subClassOf  [ a                  owl:Restriction ;
                            owl:allValuesFrom  <http://purl.org/roh/mirror/foaf#Agent> ;
                            owl:onProperty     :participatedBy
+                         ] ;
+        rdfs:subClassOf  [ a                  owl:Restriction ;
+                           owl:allValuesFrom  xsd:string ;
+                           owl:onProperty     vivo:freetextKeyword
                          ] ;
         rdfs:subClassOf  [ a                  owl:Restriction ;
                            owl:allValuesFrom  owl:Thing ;
                            owl:onProperty     vivo:hasSubjectArea
                          ] ;
         rdfs:subClassOf  [ a                  owl:Restriction ;
+                           owl:allValuesFrom  rdfs:Literal ;
+                           owl:onProperty     vivo:description
+                         ] ;
+        rdfs:subClassOf  [ a                  owl:Restriction ;
+                           owl:allValuesFrom  xsd:string ;
+                           owl:onProperty     :title
+                         ] ;
+        rdfs:subClassOf  [ a                   owl:Restriction ;
+                           owl:maxCardinality  "1"^^xsd:nonNegativeInteger ;
+                           owl:onProperty      vivo:dateTimeInterval
+                         ] ;
+        rdfs:subClassOf  [ a                  owl:Restriction ;
+                           owl:allValuesFrom  vivo:DateTimeInterval ;
+                           owl:onProperty     vivo:dateTimeInterval
+                         ] ;
+        rdfs:subClassOf  [ a                   owl:Restriction ;
+                           owl:onProperty      :title ;
+                           owl:someValuesFrom  xsd:string
+                         ] ;
+        rdfs:subClassOf  [ a                  owl:Restriction ;
+                           owl:allValuesFrom  xsd:string ;
+                           owl:onProperty     vivo:identifier
+                         ] ;
+        rdfs:subClassOf  [ a                  owl:Restriction ;
                            owl:allValuesFrom  bibo:Document ;
                            owl:onProperty     bibo:presents
+                         ] ;
+        rdfs:subClassOf  [ a                   owl:Restriction ;
+                           owl:maxCardinality  "1"^^xsd:nonNegativeInteger ;
+                           owl:onProperty      ro:RO_0001025
+                         ] ;
+        rdfs:subClassOf  [ a                  owl:Restriction ;
+                           owl:allValuesFrom  <http://purl.org/roh/mirror/geonames#Feature> ;
+                           owl:onProperty     <http://purl.org/roh/mirror/geonames#locatedIn>
+                         ] ;
+        rdfs:subClassOf  [ a                  owl:Restriction ;
+                           owl:allValuesFrom  xsd:string ;
+                           owl:onProperty     <http://purl.org/roh/mirror/vcard#locality>
+                         ] ;
+        rdfs:subClassOf  [ a                  owl:Restriction ;
+                           owl:allValuesFrom  rdfs:Literal ;
+                           owl:onProperty     vivo:contactInformation
                          ] ;
         rdfs:subClassOf  [ a                            owl:Restriction ;
                            owl:maxQualifiedCardinality  "1"^^xsd:nonNegativeInteger ;
                            owl:onDataRange              xsd:string ;
                            owl:onProperty               <http://purl.org/roh/mirror/vcard#locality>
-                         ] ;
-        rdfs:subClassOf  [ a                  owl:Restriction ;
-                           owl:allValuesFrom  vivo:DateTimeInterval ;
-                           owl:onProperty     vivo:dateTimeInterval
                          ] ;
         obo:IAO_0000112  "This class will also display instances of subclasses under Event, e.g. Philosophy Department Discussion Club; 2009 Racker Lecture; screening of a documentary. In addition to a location in space and time, an event may have any or all the following qualities: actively participating agents, passive factors, work products. Also, it may be in a virtual space or part of a series such as a lecture series.\n\nThe previous short definition was: \"An arbitrary classification of a space/time region, by a cognitive agent.\"" , "Only use if no specific subclasses of event:Event are appropriate." ;
         obo:IAO_0000115  "Something that happens at a given place and time." .
@@ -3379,10 +3408,6 @@ bibo:oclcnum  a       owl:DatatypeProperty ;
         rdfs:label    "cum laude"@en , "cum laude"@es ;
         rdfs:range    xsd:boolean .
 
-[ a            owl:AllDisjointClasses ;
-  owl:members  ( :Invoice bibo:Article bibo:Book bibo:CollectedDocument bibo:DocumentPart bibo:Patent bibo:Report bibo:Thesis bibo:Webpage vivo:Abstract vivo:ConferencePoster vivo:Dataset )
-] .
-
 :projectCoordinator  a  owl:ObjectProperty ;
         rdfs:comment  "A property to link an agent (person or organisation) with a project in the role of coordinator."@en ;
         rdfs:domain   <http://purl.org/roh/mirror/foaf#Agent> ;
@@ -3390,10 +3415,6 @@ bibo:oclcnum  a       owl:DatatypeProperty ;
         rdfs:range    <http://purl.org/roh/mirror/foaf#Project> .
 
 iao:IAO_0000117  a  owl:AnnotationProperty .
-
-[ a            owl:AllDisjointClasses ;
-  owl:members  ( :DegreeThesis :MasterThesis :PhDThesis )
-] .
 
 :patentDate  a       owl:DatatypeProperty ;
         rdfs:domain  bibo:Patent ;
@@ -3419,6 +3440,7 @@ iao:IAO_0000117  a  owl:AnnotationProperty .
         rdfs:range   xsd:string .
 
 :TestChapterThree  a              owl:NamedIndividual , bibo:Chapter ;
+        rdfs:label                "TestChapterThree"@en ;
         vivo:hasPublicationVenue  :TestBook .
 
 :courseHours  a       owl:DatatypeProperty ;
@@ -3444,7 +3466,8 @@ bibo:presentedAt  a       owl:ObjectProperty ;
         rdfs:isDefinedBy  "http://purl.org/roh/mirror/bibo#"^^xsd:anyURI ;
         rdfs:label        "presentado en"@es , "presented at"@en .
 
-:TestFundingProgram  a  owl:NamedIndividual , :FundingProgram .
+:TestFundingProgram  a  owl:NamedIndividual , :FundingProgram ;
+        rdfs:label  "TestFundingProgram"@en .
 
 <http://purl.org/roh/mirror/foaf#mbox>
         a                 owl:ObjectProperty , owl:InverseFunctionalProperty ;
@@ -3488,6 +3511,10 @@ bibo:presentedAt  a       owl:ObjectProperty ;
         a             owl:ObjectProperty ;
         rdfs:comment  "The cited entity is cited as a data source by the citing entity."@en ;
         rdfs:label    "citado como fuente de datos por"@es , "is cited as data source by"@en .
+
+[ a            owl:AllDisjointClasses ;
+  owl:members  ( :AuditeeRole :AuditorRole :ExternalMemberRole :ReservableConsumerRole :ReservableProviderRole :SuperviseeRole :SupervisorRole :ThirdPartyContractorRole <http://purl.org/roh/mirror/obo/ero#ERO_0000224> <http://purl.org/roh/mirror/obo/ero#ERO_0000225> <http://purl.org/roh/mirror/obo/ero#ERO_0000783> <http://purl.org/roh/mirror/obo/ero#ERO_0000787> vivo:AdministratorRole vivo:AdviseeRole vivo:AdvisorRole vivo:AttendeeRole vivo:EditorRole vivo:LeaderRole vivo:MemberRole vivo:OrganizerRole vivo:PresenterRole vivo:ResearcherRole vivo:ReviewerRole vivo:TeacherRole )
+] .
 
 :hasCV  a             owl:ObjectProperty ;
         rdfs:comment  "An object property linking a Person with her CV."@en ;
@@ -3598,6 +3625,7 @@ terms:type  a   owl:AnnotationProperty .
 :correspondingOrganizationOf
         a            owl:ObjectProperty ;
         rdfs:domain  <http://purl.org/roh/mirror/foaf#Organization> ;
+        rdfs:label   "correspondingOrganizationOf"@en ;
         rdfs:range   iao:IAO_0000030 .
 
 :expenseModality  a   owl:DatatypeProperty ;
@@ -3642,8 +3670,12 @@ bfo:BFO_0000023  a       owl:Class ;
         rdfs:comment     "Based on VIVO defined roles, however in ROH, roles might be specific to a country or a university in a country. Therefore, their types have to refined per country and university case.\n\nBased on obo-bfo:Role also used in VIVO, it defines roles. The object property roh:hasRole links foaf:Person y foaf:Organization with obo-bfo:Role which is related (vivo:relates) with vivo:Project y roh:Organization." ;
         rdfs:label       "Role"@en , "Rol"@es ;
         rdfs:subClassOf  [ a                  owl:Restriction ;
-                           owl:allValuesFrom  xsd:double ;
-                           owl:onProperty     :dedicationPercentage
+                           owl:allValuesFrom  <http://purl.org/roh/mirror/foaf#Person> ;
+                           owl:onProperty     ro:RO_0000052
+                         ] ;
+        rdfs:subClassOf  [ a                  owl:Restriction ;
+                           owl:allValuesFrom  :KnowledgeArea ;
+                           owl:onProperty     :hasKnowledgeArea
                          ] ;
         rdfs:subClassOf  [ a                  owl:Restriction ;
                            owl:allValuesFrom  xsd:string ;
@@ -3656,27 +3688,24 @@ bfo:BFO_0000023  a       owl:Class ;
                            owl:onProperty     vivo:relatedBy
                          ] ;
         rdfs:subClassOf  [ a                  owl:Restriction ;
-                           owl:allValuesFrom  :KnowledgeArea ;
-                           owl:onProperty     :hasKnowledgeArea
-                         ] ;
-        rdfs:subClassOf  [ a                   owl:Restriction ;
-                           owl:onProperty      ro:RO_0000052 ;
-                           owl:someValuesFrom  <http://purl.org/roh/mirror/foaf#Person>
-                         ] ;
-        rdfs:subClassOf  [ a                  owl:Restriction ;
-                           owl:allValuesFrom  <http://purl.org/roh/mirror/foaf#Person> ;
-                           owl:onProperty     ro:RO_0000052
+                           owl:allValuesFrom  xsd:string ;
+                           owl:onProperty     :dedication
                          ] ;
         rdfs:subClassOf  [ a                  owl:Restriction ;
                            owl:allValuesFrom  vivo:DateTimeInterval ;
                            owl:onProperty     vivo:dateTimeInterval
                          ] ;
         rdfs:subClassOf  [ a                  owl:Restriction ;
-                           owl:allValuesFrom  xsd:string ;
-                           owl:onProperty     :dedication
+                           owl:allValuesFrom  xsd:double ;
+                           owl:onProperty     :dedicationPercentage
+                         ] ;
+        rdfs:subClassOf  [ a                   owl:Restriction ;
+                           owl:onProperty      ro:RO_0000052 ;
+                           owl:someValuesFrom  <http://purl.org/roh/mirror/foaf#Person>
                          ] .
 
-:TestPhdCoSupervisor  a  owl:NamedIndividual , <http://purl.org/roh/mirror/foaf#Person> .
+:TestPhdCoSupervisor  a  owl:NamedIndividual , <http://purl.org/roh/mirror/foaf#Person> ;
+        rdfs:label  "TestPhdCoSupervisor"@en .
 
 bibo:Proceedings  a       owl:Class ;
         rdfs:comment      "A compilation of documents published from an event, such as a conference."@en , "A book integrated by a compilation of documents published from an event, such as a conference."@en ;
@@ -3707,16 +3736,8 @@ vitro:descriptionAnnot
         a           owl:ObjectProperty ;
         rdfs:label  "has Expense Classification"@en .
 
-:       a                owl:Ontology ;
-        dc:contributor   "José Emilio Labra Gayo" , "Alejandro González Hevia" ;
-        dc:creator       "Emilio Rubiera Azcona" ;
-        dc:description   "An ontology to address the Research Management of the CRUE's Spanish University System (Sistema Universitario Español) by applying an encompassing model not only capable of addressing the universities of the CRUE but also more belonging to the European Union." ;
-        dc:title         "The ASIO ontology" ;
-        terms:license    <https://creativecommons.org/publicdomain/zero/1.0/> ;
-        owl:versionIRI   <http://purl.org/hercules/asio/core/0.0.1> ;
-        owl:versionInfo  "0.0.1" .
-
 :EthicalValidation  a    owl:Class ;
+        rdfs:label       "EthicalValidation"@en ;
         rdfs:subClassOf  :EthicalReport ;
         rdfs:subClassOf  [ a                   owl:Restriction ;
                            owl:onProperty      :status ;
@@ -3727,25 +3748,27 @@ vitro:descriptionAnnot
                            owl:onProperty     :status
                          ] .
 
-terms:created  a  owl:AnnotationProperty .
-
 <http://purl.org/roh/mirror/foaf#Project>
         a             owl:Class ;
         rdfs:comment  "In ASIO, a temporary research endeavor undertaken to achieve defined objectives."@en .
+
+terms:created  a  owl:AnnotationProperty .
+
+[ a            owl:AllDisjointClasses ;
+  owl:members  ( :Accreditation :Activity :CurriculumVitae :Expense :Funding :FundingAmount :FundingProgram :FundingSource :Metric :PatentApplication :Reservable <http://purl.org/roh/mirror/foaf#Agent> <http://purl.org/roh/mirror/foaf#Document> <http://purl.org/roh/mirror/geonames#Feature> bfo:BFO_0000008 bfo:BFO_0000023 <http://purl.org/roh/mirror/obo/ero#ERO_0000005> iao:IAO_0000030 <http://purl.org/roh/mirror/vcard#Address> <http://purl.org/roh/mirror/vcard#Email> <http://purl.org/roh/mirror/vcard#Kind> <http://purl.org/roh/mirror/vcard#Name> vivo:AcademicDegree vivo:Project vivo:Relationship rdf:List rdf:Seq skos:Concept skos:ConceptScheme )
+] .
 
 vivo:Contract  a         owl:Class ;
         rdfs:comment     "A roh:Contract is a legal document which gathers the conditions and obligations of a Person (foaf:Person) or the conditions and obligations of a Project (foaf:Project) and the different organizations which take part in it." ;
         rdfs:label       "Contract"@en , "Contrat"@fr , "Contracte"@ca-es , "Contracte"@ca-ad , "Contrato"@pt , "Contrato"@gl , "Contrato"@es ;
         rdfs:subClassOf  vivo:Relationship ;
-        rdfs:subClassOf  [ a                   owl:Restriction ;
-                           owl:onProperty      vivo:relates ;
-                           owl:someValuesFrom  [ a            owl:Class ;
-                                                 owl:unionOf  ( :Funding :PatentApplication <http://purl.org/roh/mirror/foaf#Agent> bfo:BFO_0000023 )
-                                               ]
-                         ] ;
         rdfs:subClassOf  [ a                  owl:Restriction ;
                            owl:allValuesFrom  iao:IAO_0000030 ;
                            owl:onProperty     vivo:supportedInformationResource
+                         ] ;
+        rdfs:subClassOf  [ a                  owl:Restriction ;
+                           owl:allValuesFrom  vivo:DateTimeInterval ;
+                           owl:onProperty     vivo:dateTimeInterval
                          ] ;
         rdfs:subClassOf  [ a                  owl:Restriction ;
                            owl:allValuesFrom  rdfs:Literal ;
@@ -3756,12 +3779,12 @@ vivo:Contract  a         owl:Class ;
                            owl:onProperty     vivo:hasSubjectArea
                          ] ;
         rdfs:subClassOf  [ a                  owl:Restriction ;
-                           owl:allValuesFrom  <http://purl.org/roh/mirror/foaf#Organization> ;
-                           owl:onProperty     vivo:assignedBy
-                         ] ;
-        rdfs:subClassOf  [ a                  owl:Restriction ;
                            owl:allValuesFrom  owl:Thing ;
                            owl:onProperty     :attachment
+                         ] ;
+        rdfs:subClassOf  [ a                  owl:Restriction ;
+                           owl:allValuesFrom  <http://purl.org/roh/mirror/foaf#Organization> ;
+                           owl:onProperty     vivo:assignedBy
                          ] ;
         rdfs:subClassOf  [ a                  owl:Restriction ;
                            owl:allValuesFrom  [ a            owl:Class ;
@@ -3769,9 +3792,11 @@ vivo:Contract  a         owl:Class ;
                                               ] ;
                            owl:onProperty     vivo:relates
                          ] ;
-        rdfs:subClassOf  [ a                  owl:Restriction ;
-                           owl:allValuesFrom  vivo:DateTimeInterval ;
-                           owl:onProperty     vivo:dateTimeInterval
+        rdfs:subClassOf  [ a                   owl:Restriction ;
+                           owl:onProperty      vivo:relates ;
+                           owl:someValuesFrom  [ a            owl:Class ;
+                                                 owl:unionOf  ( :Funding :PatentApplication <http://purl.org/roh/mirror/foaf#Agent> bfo:BFO_0000023 )
+                                               ]
                          ] ;
         obo:IAO_0000115  "An agreement involving specific deliverables and payment" ;
         skos:prefLabel   "Contracte"@ca-es , "Contracte"@ca-ad , "Contract"@en , "Contrato"@pt , "Contrato"@gl , "Contrato"@es , "Contrat"@fr .
@@ -3791,11 +3816,6 @@ vivo:Contract  a         owl:Class ;
         rdfs:label  "publication date"@en ;
         rdfs:range  xsd:date .
 
-:metricName  a        owl:DatatypeProperty ;
-        rdfs:comment  "The name of a Metric."@en ;
-        rdfs:domain   :Metric ;
-        rdfs:label    "metric name"@en , "nombre de la métrica"@es .
-
 <http://purl.org/roh/mirror/obo/ero#ERO_0001254>
         a                owl:Class ;
         rdfs:label       "Servicio de Transporte"@es , "Transport Service"@en ;
@@ -3805,6 +3825,11 @@ vivo:Contract  a         owl:Class ;
         obo:IAO_0000115  "A service offering that describes a service in which the provider facilitates the transport of some material entity to a specified destination for the service consumer." ;
         obo:IAO_0000117  "PERSON: Matt Brush" ;
         obo:IAO_0000119  "PERSON: Matthew Brush" .
+
+:metricName  a        owl:DatatypeProperty ;
+        rdfs:comment  "The name of a Metric."@en ;
+        rdfs:domain   :Metric ;
+        rdfs:label    "metric name"@en , "nombre de la métrica"@es .
 
 :hasDOI  a                  owl:DatatypeProperty ;
         rdfs:domain         bibo:Document ;
@@ -3913,10 +3938,6 @@ vivo:FundingOrganization
         rdfs:range     skos:Concept ;
         owl:inverseOf  :hasCode .
 
-[ a            owl:AllDisjointClasses ;
-  owl:members  ( :DegreeMetric :PublicationMetric :ResearchGroupMetric )
-] .
-
 :pubmedid  a                owl:DatatypeProperty ;
         rdfs:comment        "The PubMed ID (PMID) identifies a citation record (rather than full-text) in the PubMed database. It is not evidence of compliance with the NIH Public Access Policy, because it does not identify a full-text submission of any kind."@en ;
         rdfs:label          "has PubMed ID"@en ;
@@ -3964,7 +3985,12 @@ bibo:issue  a               owl:DatatypeProperty ;
         rdfs:label       "Contest"@en ;
         rdfs:subClassOf  :Activity .
 
+[ a            owl:AllDisjointClasses ;
+  owl:members  ( :AcademicAccreditation :DegreeHomologation :ResearchAccreditation vivo:Certificate vivo:License )
+] .
+
 :RefundableAdvance  a    owl:Class ;
+        rdfs:label       "RefundableAdvance"@en ;
         rdfs:subClassOf  :Funding .
 
 :attachment  a              owl:ObjectProperty ;
@@ -4015,10 +4041,6 @@ terms:conformsTo  a  owl:AnnotationProperty .
         rdfs:range     :Expense ;
         owl:inverseOf  :spentBy .
 
-[ a            owl:AllDisjointClasses ;
-  owl:members  ( :Accreditation :Activity :CurriculumVitae :Expense :Funding :FundingAmount :FundingProgram :FundingSource :Metric :Reservable <http://purl.org/roh/mirror/foaf#Agent> <http://purl.org/roh/mirror/foaf#Document> <http://purl.org/roh/mirror/geonames#Feature> bfo:BFO_0000008 bfo:BFO_0000023 <http://purl.org/roh/mirror/obo/ero#ERO_0000005> iao:IAO_0000030 <http://purl.org/roh/mirror/vcard#Kind> vivo:AcademicDegree vivo:Project vivo:Relationship rdf:List rdf:Seq skos:Concept skos:ConceptScheme )
-] .
-
 :fundedBy  a           owl:ObjectProperty ;
         rdfs:comment   "An object property linking a Thing when is funded by another Thing."@en ;
         rdfs:label     "financiado por"@es , "fundedBy"@en ;
@@ -4028,10 +4050,6 @@ terms:conformsTo  a  owl:AnnotationProperty .
         rdfs:domain  <http://purl.org/roh/mirror/foaf#Person> ;
         rdfs:label   "A property to express the h-index of an author."@en , "h-index"@en ;
         rdfs:range   :QualifiedValue .
-
-[ a            owl:AllDisjointClasses ;
-  owl:members  ( <http://purl.org/roh/mirror/vcard#Group> <http://purl.org/roh/mirror/vcard#Individual> <http://purl.org/roh/mirror/vcard#Location> <http://purl.org/roh/mirror/vcard#Organization> )
-] .
 
 ro:RO_0000053  a      owl:ObjectProperty ;
         rdfs:comment  "A relation between an independent continuant (the bearer) and a specifically dependent continuant (the dependent), in which the dependent specifically depends on the bearer for its existence"@en ;
@@ -4043,6 +4061,14 @@ ro:RO_0000053  a      owl:ObjectProperty ;
         rdfs:label     "coordinated by"@en ;
         rdfs:range     <http://purl.org/roh/mirror/foaf#Agent> ;
         owl:inverseOf  :projectCoordinator .
+
+[ a            owl:AllDisjointClasses ;
+  owl:members  ( :BlogPost :PressArticle bibo:AcademicArticle vivo:ConferencePaper vivo:EditorialArticle )
+] .
+
+[ a            owl:AllDisjointClasses ;
+  owl:members  ( :HRClassification :KnowledgeArea :ProjectClassification )
+] .
 
 obo:IAO_0000600  a  owl:AnnotationProperty .
 
@@ -4069,12 +4095,12 @@ bibo:AcademicArticle  a   owl:Class ;
         rdfs:label        "Academic Article"@en , "Artículo Académico"@es ;
         rdfs:subClassOf   bibo:Article ;
         rdfs:subClassOf   [ a                  owl:Restriction ;
-                            owl:allValuesFrom  bibo:Journal ;
-                            owl:onProperty     vivo:hasPublicationVenue
-                          ] ;
-        rdfs:subClassOf   [ a                  owl:Restriction ;
                             owl:allValuesFrom  rdfs:Literal ;
                             owl:onProperty     bibo:eanucc13
+                          ] ;
+        rdfs:subClassOf   [ a                  owl:Restriction ;
+                            owl:allValuesFrom  bibo:Journal ;
+                            owl:onProperty     vivo:hasPublicationVenue
                           ] ;
         obo:IAO_0000112   "A specific academic journal article" ;
         obo:IAO_0000115   "Written by scholars for other scholars, typically published in an academic journal with an abstract and bibliography" ;
@@ -4118,6 +4144,7 @@ vivo:Relationship  a     owl:Class ;
 skos-thes:subGroup  a  owl:AnnotationProperty .
 
 :TestChapterTwo  a                owl:NamedIndividual , bibo:Chapter ;
+        rdfs:label                "TestChapterTwo"@en ;
         vivo:hasPublicationVenue  :TestBook .
 
 :EuropeanMaritimeAndFisheriesFund
@@ -4161,6 +4188,10 @@ schema:identifier  a  owl:AnnotationProperty .
         rdfs:label   "addresses"@en ;
         rdfs:range   :ResearchProblem .
 
+[ a            owl:AllDisjointClasses ;
+  owl:members  ( :Accreditation :Activity :CurriculumVitae :Expense :Funding :FundingAmount :FundingProgram :FundingSource :Metric :Reservable <http://purl.org/roh/mirror/foaf#Agent> <http://purl.org/roh/mirror/foaf#Document> <http://purl.org/roh/mirror/geonames#Feature> bfo:BFO_0000008 bfo:BFO_0000023 <http://purl.org/roh/mirror/obo/ero#ERO_0000005> iao:IAO_0000030 <http://purl.org/roh/mirror/vcard#Kind> vivo:AcademicDegree vivo:Project vivo:Relationship rdf:List rdf:Seq skos:Concept skos:ConceptScheme )
+] .
+
 terms:title  a  owl:AnnotationProperty .
 
 :issn   a                   owl:DatatypeProperty ;
@@ -4181,14 +4212,6 @@ terms:title  a  owl:AnnotationProperty .
                            owl:onProperty      vivo:relates ;
                            owl:someValuesFrom  :AuditeeRole
                          ] ;
-        rdfs:subClassOf  [ a                   owl:Restriction ;
-                           owl:onProperty      vivo:relates ;
-                           owl:someValuesFrom  <http://purl.org/roh/mirror/foaf#Agent>
-                         ] ;
-        rdfs:subClassOf  [ a                   owl:Restriction ;
-                           owl:onProperty      vivo:relates ;
-                           owl:someValuesFrom  :AuditorRole
-                         ] ;
         rdfs:subClassOf  [ a                  owl:Restriction ;
                            owl:allValuesFrom  vivo:DateTimeValue ;
                            owl:onProperty     vivo:dateTimeValue
@@ -4198,6 +4221,14 @@ terms:title  a  owl:AnnotationProperty .
                                                 owl:unionOf  ( :AuditeeRole :AuditorRole <http://purl.org/roh/mirror/foaf#Agent> )
                                               ] ;
                            owl:onProperty     vivo:relates
+                         ] ;
+        rdfs:subClassOf  [ a                   owl:Restriction ;
+                           owl:onProperty      vivo:relates ;
+                           owl:someValuesFrom  <http://purl.org/roh/mirror/foaf#Agent>
+                         ] ;
+        rdfs:subClassOf  [ a                   owl:Restriction ;
+                           owl:onProperty      vivo:relates ;
+                           owl:someValuesFrom  :AuditorRole
                          ] .
 
 :hrClassificationOf  a  owl:ObjectProperty ;
@@ -4235,8 +4266,13 @@ skos-thes:superGroup  a  owl:AnnotationProperty .
 
 :TestCoSupervisorRole
         a               owl:NamedIndividual , :SupervisorRole ;
+        rdfs:label      "TestCoSupervisorRole"@en ;
         ro:RO_0000052   :TestPhdCoSupervisor ;
         vivo:relatedBy  :TestPhDSupervisingRelationship .
+
+[ a            owl:AllDisjointClasses ;
+  owl:members  ( :EthicalReport :EvaluationSummary :Justification vivo:ResearchProposal )
+] .
 
 bibo:DocumentPart  a      owl:Class ;
         rdfs:comment      "a distinct part of a larger document or collected document."@en ;
@@ -4244,12 +4280,12 @@ bibo:DocumentPart  a      owl:Class ;
         rdfs:label        "Parte de Documento"@es , "Document Part"@en ;
         rdfs:subClassOf   bibo:Document ;
         rdfs:subClassOf   [ a                  owl:Restriction ;
-                            owl:allValuesFrom  <http://purl.org/roh/mirror/foaf#Organization> ;
-                            owl:onProperty     vivo:publisher
-                          ] ;
-        rdfs:subClassOf   [ a                  owl:Restriction ;
                             owl:allValuesFrom  rdfs:Literal ;
                             owl:onProperty     vivo:placeOfPublication
+                          ] ;
+        rdfs:subClassOf   [ a                  owl:Restriction ;
+                            owl:allValuesFrom  <http://purl.org/roh/mirror/foaf#Organization> ;
+                            owl:onProperty     vivo:publisher
                           ] ;
         obo:IAO_0000112   "Short Definition from the bibo ontology" ;
         obo:IAO_0000115   "A distinct part of a larger document or collected document" ;
@@ -4267,10 +4303,6 @@ bibo:DocumentPart  a      owl:Class ;
         rdfs:subClassOf  obo:BFO_0000040 ;
         skos:prefLabel   "Research material"@en .
 
-[ a            owl:AllDisjointClasses ;
-  owl:members  ( :AuditingRelationship :SupervisingRelationship vivo:AdvisingRelationship vivo:AwardedDegree vivo:Contract vivo:Position )
-] .
-
 <http://purl.org/roh/mirror/foaf#title>
         a                 owl:DatatypeProperty ;
         rdfs:comment      "Title (Mr, Mrs, Ms, Dr. etc)" ;
@@ -4281,7 +4313,8 @@ bibo:DocumentPart  a      owl:Class ;
 :status  a            owl:ObjectProperty ;
         rdfs:comment  "The status of a Report (Accepted or Rejected)."@en ;
         rdfs:domain   bibo:Report ;
-        rdfs:label    "estado"@es , "status"@en .
+        rdfs:label    "estado"@es , "status"@en ;
+        rdfs:range    :Status .
 
 :reviews  a           owl:ObjectProperty ;
         rdfs:comment  "a proerty to link a person to a publication as a reviewer."@en ;
@@ -4289,15 +4322,11 @@ bibo:DocumentPart  a      owl:Class ;
         rdfs:label    "reviews"@en ;
         rdfs:range    bibo:Document .
 
+[ a            owl:AllDisjointClasses ;
+  owl:members  ( :Award :CourseCertificate :LanguageCertificate )
+] .
+
 bfo:BFO_0000179  a  owl:AnnotationProperty .
-
-[ a            owl:AllDisjointClasses ;
-  owl:members  ( :ResearcherPosition vivo:FacultyAdministrativePosition vivo:FacultyPosition vivo:LibrarianPosition vivo:NonAcademicPosition vivo:NonFacultyAcademicPosition vivo:PrimaryPosition )
-] .
-
-[ a            owl:AllDisjointClasses ;
-  owl:members  ( <http://purl.org/roh/mirror/obo/ero#ERO_0000071> vivo:Equipment vivo:Facility )
-] .
 
 terms:publisher  a  owl:AnnotationProperty .
 
@@ -4330,7 +4359,8 @@ vivo:Exhibit  a          owl:Class ;
         rdfs:subClassOf  :Activity ;
         obo:IAO_0000115  "The showing of an object or a collection of objects, in an organized manner." .
 
-:TestProject  a  owl:NamedIndividual , vivo:Project .
+:TestProject  a     owl:NamedIndividual , vivo:Project ;
+        rdfs:label  "TestProject"@en .
 
 :Budget  a              owl:Class ;
         rdfs:comment    "A financial plan for a defined period that may also include planned sales volumes and revenues, resource quantities, costs and expenses, assets, liabilities and cash flows."@en ;
@@ -4370,11 +4400,11 @@ skos:inScheme  a  owl:AnnotationProperty .
         rdfs:range     vivo:AwardedDegree ;
         owl:inverseOf  :isAwardedBy .
 
-iao:IAO_0000116  a  owl:AnnotationProperty .
-
 :Context  a           owl:Class ;
         rdfs:comment  "Contexts are similar to situations or state of affairs providing interpretation coordinates for profiles. In the most simple case, these coordinates are just geographical/spatial or temporal coordinates. The ASIO core ontology does not impose a fixed definition of context. It is deliberately wide in order to enable third-parties the adequation of the meaning of context according to their modeling needs and requirements."@en ;
         rdfs:label    "Contexto"@pt , "Contexto"@es , "Context"@en , "Context"@ca-es .
+
+iao:IAO_0000116  a  owl:AnnotationProperty .
 
 :infrastructureOf  a  owl:ObjectProperty ;
         rdfs:comment  "An Infrastructure belonging to an Agent."@en ;
@@ -4472,15 +4502,15 @@ skos1:definition  a  owl:AnnotationProperty .
                                    ]
                       ] .
 
-bibo:issn  a          owl:DatatypeProperty ;
-        rdfs:comment  "An eight-digit serial number used to uniquely identify a serial publication, such as a magazine"@en ;
-        rdfs:label    "issn"@en , "issn"@es .
-
 bibo:Report  a            owl:Class ;
         rdfs:comment      "A document describing an account or statement describing in detail an event, situation, or the like, usually as the result of observation, inquiry, etc.."@en , "A document describing an account or statement describing in detail an event, situation, or the like, usually as the result of observation, inquiry, etc."@en ;
         rdfs:isDefinedBy  "http://purl.org/roh/mirror/bibo#"^^xsd:anyURI ;
         rdfs:label        "Report"@en , "Reporte"@es ;
         rdfs:subClassOf   bibo:Document ;
+        rdfs:subClassOf   [ a                  owl:Restriction ;
+                            owl:allValuesFrom  <http://purl.org/roh/mirror/foaf#Organization> ;
+                            owl:onProperty     vivo:publisher
+                          ] ;
         rdfs:subClassOf   [ a                  owl:Restriction ;
                             owl:allValuesFrom  <http://purl.org/roh/mirror/foaf#Organization> ;
                             owl:onProperty     bibo:distributor
@@ -4489,13 +4519,13 @@ bibo:Report  a            owl:Class ;
                             owl:allValuesFrom  vivo:DateTimeValue ;
                             owl:onProperty     vivo:dateTimeValue
                           ] ;
-        rdfs:subClassOf   [ a                  owl:Restriction ;
-                            owl:allValuesFrom  <http://purl.org/roh/mirror/foaf#Organization> ;
-                            owl:onProperty     vivo:publisher
-                          ] ;
         obo:IAO_0000112   "Medical Subject Heading (MeSH) definition of Technical Report: Work consisting of a formal report giving details of the investigation and results of a medical or other scientific problem. When issued by a government agency or comparable official body, its contents may be classified, unclassified, or declassified with regard to security clearance. This publication type may also cover a scientific paper or article that records the current state or current position of scientific research and development. If so labeled by the editor or publisher, this publication type may be properly used for journal articles." ;
         obo:IAO_0000115   "A document describing an account or statement describing in detail an event, situation, or the like, usually as the result of observation, inquiry, etc." ;
         ns:term_status    "stable" .
+
+bibo:issn  a          owl:DatatypeProperty ;
+        rdfs:comment  "An eight-digit serial number used to uniquely identify a serial publication, such as a magazine"@en ;
+        rdfs:label    "issn"@en , "issn"@es .
 
 :MediumEnterprise  a     owl:Class ;
         rdfs:comment     "An enterprise which employ fewer than 250 persons and which have an annual turnover not exceeding EUR 50 million, and/or an annual balance sheet total not exceeding EUR 43 million."@en ;
@@ -4513,6 +4543,7 @@ bibo:Report  a            owl:Class ;
         rdfs:subClassOf  skos:Concept .
 
 :TestSuperviseeRole  a  owl:NamedIndividual , :SuperviseeRole ;
+        rdfs:label      "TestSuperviseeRole"@en ;
         ro:RO_0000052   :TestPhDStudent ;
         vivo:relatedBy  :TestPhDSupervisingRelationship .
 
@@ -4572,10 +4603,6 @@ vivo:hasSubjectArea  a  owl:ObjectProperty ;
         rdfs:label       "External Member Role"@en , "Rol de Miembro Externo"@es ;
         rdfs:subClassOf  bfo:BFO_0000023 .
 
-[ a            owl:AllDisjointClasses ;
-  owl:members  ( <http://purl.org/roh/mirror/obo/ero#ERO_0000391> <http://purl.org/roh/mirror/obo/ero#ERO_0000392> <http://purl.org/roh/mirror/obo/ero#ERO_0000393> <http://purl.org/roh/mirror/obo/ero#ERO_0000394> <http://purl.org/roh/mirror/obo/ero#ERO_0001254> <http://purl.org/roh/mirror/obo/ero#ERO_0001255> <http://purl.org/roh/mirror/obo/ero#ERO_0001258> <http://purl.org/roh/mirror/obo/ero#ERO_0001261> )
-] .
-
 :Rejected  a             owl:Class ;
         rdfs:label       "Rejected"@en ;
         rdfs:subClassOf  :Status .
@@ -4633,10 +4660,6 @@ vivo:assigns  a       owl:ObjectProperty ;
         rdfs:label       "Rol de Supervisor"@es , "Supervisor Role"@en ;
         rdfs:subClassOf  bfo:BFO_0000023 .
 
-[ a            owl:AllDisjointClasses ;
-  owl:members  ( :PatentContract :PersonContract :ProjectContract )
-] .
-
 :publicFunding  a     owl:DatatypeProperty ;
         rdfs:comment  "To tag something as public (true) or private (false)"@en ;
         rdfs:domain   :Funding ;
@@ -4670,6 +4693,14 @@ obo:IAO_0000111  a  owl:AnnotationProperty .
         obo:IAO_0000115  "An employee role inhering in a person that is realized when the bearer is employed by an employer." ;
         obo:IAO_0000117  "PERSON: Nicole Vasilevsky" ;
         obo:IAO_0000119  "PERSON: Nicole Vasilevsky" .
+
+[ a            owl:AllDisjointClasses ;
+  owl:members  ( :Grant :Loan :Outsourcing :RefundableAdvance )
+] .
+
+[ a            owl:AllDisjointClasses ;
+  owl:members  ( :ResearcherPosition vivo:FacultyAdministrativePosition vivo:FacultyPosition vivo:LibrarianPosition vivo:NonAcademicPosition vivo:NonFacultyAcademicPosition vivo:PrimaryPosition )
+] .
 
 :ResearchObject  a           owl:Class ;
         rdfs:comment         "A roh:ResearchObject is generated by one to several foaf:Person specified through property bibo:authorList. Usually a roh:ResearchObject results from the work in a vivo:Project (roh:produces). An elaborated taxonomy of research objects is provided, covering all types of publications, Patents, Software and Webpage. The main author of a research object is accessible through property roh:correspondingAuthor." ;
@@ -4714,23 +4745,19 @@ obo:IAO_0000111  a  owl:AnnotationProperty .
         rdfs:label    "at context"@en ;
         rdfs:range    :Context .
 
-bibo:doi  a           owl:DatatypeProperty ;
-        rdfs:comment  "This data property can be used to qualify many entities in ROH, e.g. Projects. Notice that there derivatives of this data property to be used for researchers, e.g. ORCID or Scopus ID. There are other type of IDs, like DOI which have been imported from other ontologies such as bibo:doi" ;
-        rdfs:label    "doi"@en , "doi"@es .
-
 :WorkshopPaper  a        owl:Class ;
         rdfs:comment     "A paper published on a conference workshop."@en ;
         rdfs:label       "Artículo de Seminario"@es , "Workshop Paper"@en ;
         rdfs:subClassOf  vivo:ConferencePaper .
 
+bibo:doi  a           owl:DatatypeProperty ;
+        rdfs:comment  "This data property can be used to qualify many entities in ROH, e.g. Projects. Notice that there derivatives of this data property to be used for researchers, e.g. ORCID or Scopus ID. There are other type of IDs, like DOI which have been imported from other ontologies such as bibo:doi" ;
+        rdfs:label    "doi"@en , "doi"@es .
+
 :participates  a      owl:ObjectProperty ;
         rdfs:comment  "An Entity participating in an Activity."@en ;
         rdfs:label    "participa en"@es , "participates"@en ;
         rdfs:range    :Activity .
-
-[ a            owl:AllDisjointClasses ;
-  owl:members  ( :EthicalReport :EvaluationSummary :Justification vivo:ResearchProposal )
-] .
 
 bibo:authorList  a          owl:ObjectProperty ;
         rdfs:comment        "An ordered list of authors. Normally, this list is seen as a priority list that order authors by importance."@en ;
@@ -4745,6 +4772,12 @@ bibo:authorList  a          owl:ObjectProperty ;
 
 obo:RO_0000057  a  owl:ObjectProperty .
 
+:hasORCID  a                owl:DatatypeProperty ;
+        rdfs:domain         <http://purl.org/roh/mirror/foaf#Person> ;
+        rdfs:label          "has ORCID"@en ;
+        rdfs:range          xsd:string ;
+        rdfs:subPropertyOf  :identifier .
+
 :hasProjectCategorization
         a              owl:ObjectProperty ;
         rdfs:comment   "A Project is categorized by different Project Classifications."@en ;
@@ -4752,12 +4785,6 @@ obo:RO_0000057  a  owl:ObjectProperty .
         rdfs:label     "has project categorization"@en , "tiene categorizacion proyecto"@es ;
         rdfs:range     :ProjectClassification ;
         owl:inverseOf  :projectCategorizationOf .
-
-:hasORCID  a                owl:DatatypeProperty ;
-        rdfs:domain         <http://purl.org/roh/mirror/foaf#Person> ;
-        rdfs:label          "has ORCID"@en ;
-        rdfs:range          xsd:string ;
-        rdfs:subPropertyOf  :identifier .
 
 :hasHRClassification  a  owl:ObjectProperty ;
         rdfs:comment   "The position a person has inside its organization."@en ;
@@ -4789,7 +4816,8 @@ obo:RO_0000057  a  owl:ObjectProperty .
         rdfs:label       "Research Group Metric"@en ;
         rdfs:subClassOf  :Metric .
 
-:Status  a      owl:Class .
+:Status  a          owl:Class ;
+        rdfs:label  "Status"@en .
 
 vivo:researcherId  a        owl:DatatypeProperty ;
         rdfs:domain         <http://purl.org/roh/mirror/foaf#Person> ;
@@ -4805,7 +4833,8 @@ vivo:researcherId  a        owl:DatatypeProperty ;
 uneskos:hasMainConcept
         a       owl:AnnotationProperty .
 
-:identifier  a  owl:DatatypeProperty .
+:identifier  a      owl:DatatypeProperty ;
+        rdfs:label  "identifier"@en .
 
 <http://purl.org/roh/mirror/obo/ero#ERO_0000392>
         a                owl:Class ;
@@ -4828,6 +4857,10 @@ vivo:InvitedTalk  a      owl:Class ;
         rdfs:label    "supervisor de"@es , "supervisor of"@en ;
         rdfs:range    bibo:Thesis .
 
+[ a            owl:AllDisjointClasses ;
+  owl:members  ( <http://purl.org/roh/mirror/vcard#Group> <http://purl.org/roh/mirror/vcard#Individual> <http://purl.org/roh/mirror/vcard#Location> <http://purl.org/roh/mirror/vcard#Organization> )
+] .
+
 <http://purl.org/roh/mirror/obo/ero#ERO_0001261>
         a                owl:Class ;
         rdfs:label       "Analysis Service"@en , "Servicio de Análisis"@es ;
@@ -4840,6 +4873,7 @@ vivo:InvitedTalk  a      owl:Class ;
 
 :ReservableProviderRole
         a                owl:Class ;
+        rdfs:label       "ReservableProviderRole"@en ;
         rdfs:subClassOf  bfo:BFO_0000023 .
 
 :CompanyClassification
@@ -4918,7 +4952,7 @@ ro:RO_0000052  a         owl:ObjectProperty , owl:FunctionalProperty ;
                          ] ;
         rdfs:subClassOf  [ a                  owl:Restriction ;
                            owl:allValuesFrom  xsd:string ;
-                           owl:onProperty     :title
+                           owl:onProperty     vivo:description
                          ] ;
         rdfs:subClassOf  [ a                  owl:Restriction ;
                            owl:allValuesFrom  bibo:Report ;
@@ -4926,11 +4960,11 @@ ro:RO_0000052  a         owl:ObjectProperty , owl:FunctionalProperty ;
                          ] ;
         rdfs:subClassOf  [ a                  owl:Restriction ;
                            owl:allValuesFrom  xsd:string ;
-                           owl:onProperty     vivo:identifier
+                           owl:onProperty     :title
                          ] ;
         rdfs:subClassOf  [ a                  owl:Restriction ;
                            owl:allValuesFrom  xsd:string ;
-                           owl:onProperty     vivo:description
+                           owl:onProperty     vivo:identifier
                          ] ;
         obo:IAO_0000111  "service" ;
         obo:IAO_0000112  "A DNA sequencing service performed by a core lab." ;
@@ -4939,18 +4973,16 @@ ro:RO_0000052  a         owl:ObjectProperty , owl:FunctionalProperty ;
         obo:IAO_0000117  "PERSON: Melissa Haendel" ;
         obo:IAO_0000119  "PERSON: Melissa Haendel" .
 
-:TestListofEditors  a  owl:NamedIndividual , rdf:Seq .
+:TestListofEditors  a  owl:NamedIndividual , rdf:Seq ;
+        rdfs:label  "TestListofEditors"@en .
 
 :ResearchObjectExpense
         a                owl:Class ;
         rdfs:label       "Gasto de Objeto de Investigación"@es , "Research Object Expense"@en ;
         rdfs:subClassOf  :Expense .
 
-[ a            owl:AllDisjointClasses ;
-  owl:members  ( :BlogPost :PressArticle bibo:AcademicArticle vivo:ConferencePaper vivo:EditorialArticle )
-] .
-
 :TestChapterOne  a                owl:NamedIndividual , bibo:Chapter ;
+        rdfs:label                "TestChapterOne"@en ;
         bibo:authorList           :TestListofAuthors ;
         vivo:hasPublicationVenue  :TestBook .
 
@@ -4969,10 +5001,15 @@ vivo:EditorRole  a       owl:Class ;
         obo:IAO_0000112  "An ongoing editorial responsibility for a bibo:Collection, such as a Journal or Series" ;
         obo:IAO_0000115  "An ongoing editorial responsibility for a bibo:Collection, such as a Journal or Series" .
 
+[ a            owl:AllDisjointClasses ;
+  owl:members  ( :LargeEnterprise :MediumEnterprise :MicroEnterprise :SmallEnterprise )
+] .
+
 uneskos:memberOf  a  owl:AnnotationProperty .
 
 :TestPhDSupervisingRelationship
         a                      owl:NamedIndividual , :PhDSupervisingRelationship ;
+        rdfs:label             "TestPhDSupervisingRelationship"@en ;
         vivo:dateTimeInterval  :TestDateTimeInterval ;
         vivo:relates           :TestPhDStudent , :TestPhdCoSupervisor , :TestPhdSupervisor .
 
@@ -4988,21 +5025,17 @@ vivo:University  a       owl:Class ;
 :FundingProgram  a       owl:Class ;
         rdfs:comment     "A roh:FundingProgram is promoted (roh:promotedBy) by a Funding Organization (vivo:FundingOrganization) and it is in place for a time interval (vivo:dateTimeInterval)" , "A programme of related funded projects, typically established by a funding organization."@en ;
         rdfs:label       "Funding programme"@en , "Programa de Financiación"@es , "Funding Program"@en ;
+        rdfs:subClassOf  [ a                   owl:Restriction ;
+                           owl:onProperty      :promotedBy ;
+                           owl:someValuesFrom  vivo:FundingOrganization
+                         ] ;
+        rdfs:subClassOf  [ a                  owl:Restriction ;
+                           owl:allValuesFrom  :FundingProgramClassification ;
+                           owl:onProperty     :hasFundingProgramClassification
+                         ] ;
         rdfs:subClassOf  [ a                  owl:Restriction ;
                            owl:allValuesFrom  xsd:string ;
-                           owl:onProperty     :title
-                         ] ;
-        rdfs:subClassOf  [ a                  owl:Restriction ;
-                           owl:allValuesFrom  :FundingProgram ;
-                           owl:onProperty     ro:BFO_0000051
-                         ] ;
-        rdfs:subClassOf  [ a                   owl:Restriction ;
-                           owl:onProperty      vivo:identifier ;
-                           owl:someValuesFrom  xsd:string
-                         ] ;
-        rdfs:subClassOf  [ a                  owl:Restriction ;
-                           owl:allValuesFrom  <http://purl.org/roh/mirror/geonames#Feature> ;
-                           owl:onProperty     <http://purl.org/roh/mirror/geonames#locatedIn>
+                           owl:onProperty     vivo:description
                          ] ;
         rdfs:subClassOf  [ a                  owl:Restriction ;
                            owl:allValuesFrom  :Dossier ;
@@ -5013,24 +5046,28 @@ vivo:University  a       owl:Class ;
                            owl:onProperty     vivo:identifier
                          ] ;
         rdfs:subClassOf  [ a                  owl:Restriction ;
+                           owl:allValuesFrom  vivo:DateTimeInterval ;
+                           owl:onProperty     vivo:dateTimeInterval
+                         ] ;
+        rdfs:subClassOf  [ a                  owl:Restriction ;
+                           owl:allValuesFrom  <http://purl.org/roh/mirror/geonames#Feature> ;
+                           owl:onProperty     <http://purl.org/roh/mirror/geonames#locatedIn>
+                         ] ;
+        rdfs:subClassOf  [ a                  owl:Restriction ;
+                           owl:allValuesFrom  :FundingProgram ;
+                           owl:onProperty     ro:BFO_0000051
+                         ] ;
+        rdfs:subClassOf  [ a                  owl:Restriction ;
                            owl:allValuesFrom  vivo:FundingOrganization ;
                            owl:onProperty     :promotedBy
                          ] ;
         rdfs:subClassOf  [ a                  owl:Restriction ;
                            owl:allValuesFrom  xsd:string ;
-                           owl:onProperty     vivo:description
-                         ] ;
-        rdfs:subClassOf  [ a                  owl:Restriction ;
-                           owl:allValuesFrom  vivo:DateTimeInterval ;
-                           owl:onProperty     vivo:dateTimeInterval
+                           owl:onProperty     :title
                          ] ;
         rdfs:subClassOf  [ a                   owl:Restriction ;
-                           owl:onProperty      :promotedBy ;
-                           owl:someValuesFrom  vivo:FundingOrganization
-                         ] ;
-        rdfs:subClassOf  [ a                  owl:Restriction ;
-                           owl:allValuesFrom  :FundingProgramClassification ;
-                           owl:onProperty     :hasFundingProgramClassification
+                           owl:onProperty      vivo:identifier ;
+                           owl:someValuesFrom  xsd:string
                          ] .
 
 :isSupportedBy  a      owl:ObjectProperty ;
@@ -5064,12 +5101,36 @@ bibo:volume  a              owl:DatatypeProperty ;
         rdfs:label        "Organization" , "Organización"@es , "Organization"@en ;
         rdfs:subClassOf   <http://purl.org/roh/mirror/foaf#Agent> ;
         rdfs:subClassOf   [ a                  owl:Restriction ;
-                            owl:allValuesFrom  skos:Concept ;
-                            owl:onProperty     :hasKnowledgeArea
-                          ] ;
-        rdfs:subClassOf   [ a                  owl:Restriction ;
                             owl:allValuesFrom  <http://purl.org/roh/mirror/foaf#Organization> ;
                             owl:onProperty     ro:BFO_0000051
+                          ] ;
+        rdfs:subClassOf   [ a                   owl:Restriction ;
+                            owl:onProperty      <http://purl.org/roh/mirror/foaf#title> ;
+                            owl:someValuesFrom  xsd:string
+                          ] ;
+        rdfs:subClassOf   [ a                   owl:Restriction ;
+                            owl:onProperty      :hasContactInfo ;
+                            owl:someValuesFrom  <http://purl.org/roh/mirror/vcard#Organization>
+                          ] ;
+        rdfs:subClassOf   [ a                  owl:Restriction ;
+                            owl:allValuesFrom  :Accreditation ;
+                            owl:onProperty     :hasAccreditation
+                          ] ;
+        rdfs:subClassOf   [ a                  owl:Restriction ;
+                            owl:allValuesFrom  xsd:string ;
+                            owl:onProperty     vivo:freetextKeyword
+                          ] ;
+        rdfs:subClassOf   [ a                  owl:Restriction ;
+                            owl:allValuesFrom  :Reservable ;
+                            owl:onProperty     :hasReservable
+                          ] ;
+        rdfs:subClassOf   [ a                  owl:Restriction ;
+                            owl:allValuesFrom  owl:Thing ;
+                            owl:onProperty     <http://purl.org/roh/mirror/foaf#homepage>
+                          ] ;
+        rdfs:subClassOf   [ a                   owl:Restriction ;
+                            owl:onProperty      vivo:identifier ;
+                            owl:someValuesFrom  xsd:string
                           ] ;
         rdfs:subClassOf   [ a                  owl:Restriction ;
                             owl:allValuesFrom  :Activity ;
@@ -5080,56 +5141,24 @@ bibo:volume  a              owl:DatatypeProperty ;
                             owl:onProperty     <http://purl.org/roh/mirror/geonames#locatedIn>
                           ] ;
         rdfs:subClassOf   [ a                  owl:Restriction ;
-                            owl:allValuesFrom  vivo:DateTimeInterval ;
-                            owl:onProperty     vivo:dateTimeInterval
-                          ] ;
-        rdfs:subClassOf   [ a                  owl:Restriction ;
-                            owl:allValuesFrom  xsd:string ;
-                            owl:onProperty     :title
-                          ] ;
-        rdfs:subClassOf   [ a                  owl:Restriction ;
-                            owl:allValuesFrom  :Reservable ;
-                            owl:onProperty     :hasReservable
-                          ] ;
-        rdfs:subClassOf   [ a                  owl:Restriction ;
-                            owl:allValuesFrom  <http://purl.org/roh/mirror/obo/ero#ERO_0000005> ;
-                            owl:onProperty     :provides
-                          ] ;
-        rdfs:subClassOf   [ a                  owl:Restriction ;
-                            owl:allValuesFrom  :Accreditation ;
-                            owl:onProperty     :hasAccreditation
-                          ] ;
-        rdfs:subClassOf   [ a                  owl:Restriction ;
-                            owl:allValuesFrom  owl:Thing ;
-                            owl:onProperty     <http://purl.org/roh/mirror/foaf#homepage>
-                          ] ;
-        rdfs:subClassOf   [ a                  owl:Restriction ;
-                            owl:allValuesFrom  bfo:BFO_0000023 ;
-                            owl:onProperty     :hasRole
-                          ] ;
-        rdfs:subClassOf   [ a                   owl:Restriction ;
-                            owl:onProperty      vivo:identifier ;
-                            owl:someValuesFrom  xsd:string
-                          ] ;
-        rdfs:subClassOf   [ a                  owl:Restriction ;
                             owl:allValuesFrom  <http://purl.org/roh/mirror/foaf#Organization> ;
                             owl:onProperty     vivo:hasSuccessorOrganization
-                          ] ;
-        rdfs:subClassOf   [ a                  owl:Restriction ;
-                            owl:allValuesFrom  <http://purl.org/roh/mirror/foaf#Organization> ;
-                            owl:onProperty     vivo:hasPredecessorOrganization
                           ] ;
         rdfs:subClassOf   [ a                   owl:Restriction ;
                             owl:onProperty      vivo:description ;
                             owl:someValuesFrom  xsd:string
                           ] ;
-        rdfs:subClassOf   [ a                   owl:Restriction ;
-                            owl:onProperty      :hasContactInfo ;
-                            owl:someValuesFrom  <http://purl.org/roh/mirror/vcard#Organization>
+        rdfs:subClassOf   [ a                  owl:Restriction ;
+                            owl:allValuesFrom  vivo:DateTimeInterval ;
+                            owl:onProperty     vivo:dateTimeInterval
                           ] ;
-        rdfs:subClassOf   [ a                   owl:Restriction ;
-                            owl:onProperty      <http://purl.org/roh/mirror/foaf#title> ;
-                            owl:someValuesFrom  xsd:string
+        rdfs:subClassOf   [ a                  owl:Restriction ;
+                            owl:allValuesFrom  <http://purl.org/roh/mirror/foaf#Organization> ;
+                            owl:onProperty     vivo:hasPredecessorOrganization
+                          ] ;
+        rdfs:subClassOf   [ a                  owl:Restriction ;
+                            owl:allValuesFrom  bfo:BFO_0000023 ;
+                            owl:onProperty     :hasRole
                           ] ;
         rdfs:subClassOf   [ a                  owl:Restriction ;
                             owl:allValuesFrom  rdfs:Literal ;
@@ -5137,7 +5166,15 @@ bibo:volume  a              owl:DatatypeProperty ;
                           ] ;
         rdfs:subClassOf   [ a                  owl:Restriction ;
                             owl:allValuesFrom  xsd:string ;
-                            owl:onProperty     vivo:freetextKeyword
+                            owl:onProperty     :title
+                          ] ;
+        rdfs:subClassOf   [ a                  owl:Restriction ;
+                            owl:allValuesFrom  <http://purl.org/roh/mirror/obo/ero#ERO_0000005> ;
+                            owl:onProperty     :provides
+                          ] ;
+        rdfs:subClassOf   [ a                  owl:Restriction ;
+                            owl:allValuesFrom  skos:Concept ;
+                            owl:onProperty     :hasKnowledgeArea
                           ] ;
         obo:IAO_0000111   "organization" ;
         obo:IAO_0000112   "This class will display all the instances in the subclasses below it, as well as any organizations that were added as part of this generic class because there wasn't a specific class available." , "Only use if no specific subclasses of foaf:organization desribe the organization." ;
@@ -5151,7 +5188,8 @@ bibo:volume  a              owl:DatatypeProperty ;
 :projectStatus  a     owl:ObjectProperty ;
         rdfs:comment  "A project may be in a CLOSED, OPEN or in other future status that may be defined." ;
         rdfs:domain   vivo:Project ;
-        rdfs:label    "estado del proyecto"@es , "project status"@en .
+        rdfs:label    "estado del proyecto"@es , "project status"@en ;
+        rdfs:range    :Status .
 
 :MasterSupervisingRelationship
         a                owl:Class ;
@@ -5177,19 +5215,12 @@ bibo:volume  a              owl:DatatypeProperty ;
         rdfs:label     "contract of"@en , "contrato de"@es ;
         owl:inverseOf  :hasContract .
 
-[ a            owl:AllDisjointClasses ;
-  owl:members  ( :HRClassification :KnowledgeArea :ProjectClassification )
-] .
-
 :needsEthicalValidation
         a             owl:DatatypeProperty ;
         rdfs:comment  "Represents if a Project needs to pass an ethical validation."@en ;
         rdfs:domain   vivo:Project ;
         rdfs:label    "necesita validación ética"@es , "needs ethical validation"@en ;
         rdfs:range    xsd:boolean .
-
-:Database  a             owl:Class ;
-        rdfs:subClassOf  bibo:CollectedDocument .
 
 :writingSkill  a            owl:DatatypeProperty ;
         rdfs:comment        "The ability to write into a certain language."@en ;
@@ -5218,15 +5249,16 @@ bibo:volume  a              owl:DatatypeProperty ;
                             ] ;
         rdfs:subPropertyOf  :languageSkill .
 
+xsd:date  a     rdfs:Datatype .
+
+:Database  a             owl:Class ;
+        rdfs:label       "Database"@en ;
+        rdfs:subClassOf  bibo:CollectedDocument .
+
 :TestEndDateTimeValue
         a              owl:NamedIndividual , vivo:DateTimeValue ;
+        rdfs:label     "TestEndDateTimeValue"@en ;
         vivo:dateTime  "2015-11-13T00:00:00"^^xsd:dateTime .
-
-[ a            owl:AllDisjointClasses ;
-  owl:members  ( :DegreeSupervisingRelationship :MasterSupervisingRelationship :PhDSupervisingRelationship )
-] .
-
-xsd:date  a     rdfs:Datatype .
 
 :hasSealOfQuality  a        owl:ObjectProperty ;
         rdfs:domain         <http://purl.org/roh/mirror/foaf#Agent> ;
@@ -5256,15 +5288,19 @@ vivo:ConferencePoster
         rdfs:label    "rol de"@es , "role of"@en ;
         rdfs:range    <http://purl.org/roh/mirror/foaf#Agent> .
 
+[ a            owl:AllDisjointClasses ;
+  owl:members  ( :PatentContract :PersonContract :ProjectContract )
+] .
+
+[ a            owl:AllDisjointClasses ;
+  owl:members  ( :ExpenseClassification :FundingProgramClassification :HRClassification :KnowledgeArea :ProjectClassification )
+] .
+
 :BachelorsDegreeSubject
         a                owl:Class ;
         rdfs:comment     "Unidade curricular de grau"@pt ;
         rdfs:label       "Bachelor's degree subject"@en , "Assignatura de grau"@ca-es , "Assignatura de bàtxelor"@ca-ad , "Asignatura de grao"@gl ;
         rdfs:subClassOf  :KnowledgeArea .
-
-[ a            owl:AllDisjointClasses ;
-  owl:members  ( :BachelorDegree :DoctoralDegree :MasterDegree )
-] .
 
 vivo:eRACommonsId  a        owl:DatatypeProperty ;
         rdfs:domain         <http://purl.org/roh/mirror/foaf#Person> ;
@@ -5287,39 +5323,11 @@ vivo:eRACommonsId  a        owl:DatatypeProperty ;
         rdfs:label       "Language Certificate"@en , "Certificado de Idioma"@es ;
         rdfs:subClassOf  vivo:Certificate ;
         rdfs:subClassOf  [ a                   owl:Restriction ;
-                           owl:onProperty      :writingSkill ;
+                           owl:onProperty      :listeningSkill ;
                            owl:someValuesFrom  xsd:string
                          ] ;
         rdfs:subClassOf  [ a                   owl:Restriction ;
                            owl:onProperty      :speakingSkill ;
-                           owl:someValuesFrom  xsd:string
-                         ] ;
-        rdfs:subClassOf  [ a                   owl:Restriction ;
-                           owl:onProperty      :spokenInteractionSkill ;
-                           owl:someValuesFrom  xsd:string
-                         ] ;
-        rdfs:subClassOf  [ a                  owl:Restriction ;
-                           owl:allValuesFrom  xsd:string ;
-                           owl:onProperty     :listeningSkill
-                         ] ;
-        rdfs:subClassOf  [ a                   owl:Restriction ;
-                           owl:onProperty      :readingSkill ;
-                           owl:someValuesFrom  xsd:string
-                         ] ;
-        rdfs:subClassOf  [ a                  owl:Restriction ;
-                           owl:allValuesFrom  xsd:string ;
-                           owl:onProperty     :speakingSkill
-                         ] ;
-        rdfs:subClassOf  [ a                  owl:Restriction ;
-                           owl:allValuesFrom  xsd:string ;
-                           owl:onProperty     :writingSkill
-                         ] ;
-        rdfs:subClassOf  [ a                  owl:Restriction ;
-                           owl:allValuesFrom  xsd:string ;
-                           owl:onProperty     :readingSkill
-                         ] ;
-        rdfs:subClassOf  [ a                   owl:Restriction ;
-                           owl:onProperty      :language ;
                            owl:someValuesFrom  xsd:string
                          ] ;
         rdfs:subClassOf  [ a                  owl:Restriction ;
@@ -5331,16 +5339,49 @@ vivo:eRACommonsId  a        owl:DatatypeProperty ;
                            owl:onProperty     :spokenInteractionSkill
                          ] ;
         rdfs:subClassOf  [ a                   owl:Restriction ;
-                           owl:onProperty      :listeningSkill ;
+                           owl:onProperty      :language ;
+                           owl:someValuesFrom  xsd:string
+                         ] ;
+        rdfs:subClassOf  [ a                   owl:Restriction ;
+                           owl:onProperty      :readingSkill ;
+                           owl:someValuesFrom  xsd:string
+                         ] ;
+        rdfs:subClassOf  [ a                   owl:Restriction ;
+                           owl:onProperty      :spokenInteractionSkill ;
+                           owl:someValuesFrom  xsd:string
+                         ] ;
+        rdfs:subClassOf  [ a                  owl:Restriction ;
+                           owl:allValuesFrom  xsd:string ;
+                           owl:onProperty     :listeningSkill
+                         ] ;
+        rdfs:subClassOf  [ a                  owl:Restriction ;
+                           owl:allValuesFrom  xsd:string ;
+                           owl:onProperty     :writingSkill
+                         ] ;
+        rdfs:subClassOf  [ a                  owl:Restriction ;
+                           owl:allValuesFrom  xsd:string ;
+                           owl:onProperty     :speakingSkill
+                         ] ;
+        rdfs:subClassOf  [ a                  owl:Restriction ;
+                           owl:allValuesFrom  xsd:string ;
+                           owl:onProperty     :readingSkill
+                         ] ;
+        rdfs:subClassOf  [ a                   owl:Restriction ;
+                           owl:onProperty      :writingSkill ;
                            owl:someValuesFrom  xsd:string
                          ] .
+
+[ a            owl:AllDisjointClasses ;
+  owl:members  ( :FundingProgramClassification :HRClassification :KnowledgeArea :ProjectClassification )
+] .
+
+:TestStartDateTimeValue
+        a              owl:NamedIndividual , vivo:DateTimeValue ;
+        rdfs:label     "TestStartDateTimeValue"@en ;
+        vivo:dateTime  "2011-09-01T00:00:00"^^xsd:dateTime .
 
 <http://purl.org/roh/mirror/geonames#locatedIn>
         a             owl:ObjectProperty ;
         rdfs:comment  "Indicates that the subject resource is located in the object feature"@en ;
         rdfs:label    "localizado en"@es , "located in"@en ;
         rdfs:range    <http://purl.org/roh/mirror/geonames#Feature> .
-
-:TestStartDateTimeValue
-        a              owl:NamedIndividual , vivo:DateTimeValue ;
-        vivo:dateTime  "2011-09-01T00:00:00"^^xsd:dateTime .
