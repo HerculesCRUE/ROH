@@ -1,0 +1,485 @@
+{
+  "_comment" : "Created with OWL2VOWL (version 0.3.5), http://vowl.visualdataweb.org",
+  "header" : {
+    "languages" : [ "en", "es" ],
+    "baseIris" : [ "http://www.w3.org/1999/02/22-rdf-syntax-ns", "http://www.w3.org/2000/01/rdf-schema", "http://purl.org/roh", "http://www.w3.org/2004/02/skos/core" ],
+    "iri" : "http://purl.org/roh/ProjectClassification"
+  },
+  "namespace" : [ ],
+  "class" : [ {
+    "id" : "0",
+    "type" : "owl:Class"
+  }, {
+    "id" : "5",
+    "type" : "owl:Class"
+  }, {
+    "id" : "7",
+    "type" : "owl:Class"
+  }, {
+    "id" : "9",
+    "type" : "owl:Class"
+  }, {
+    "id" : "2",
+    "type" : "owl:Thing"
+  } ],
+  "classAttribute" : [ {
+    "iri" : "http://www.w3.org/2004/02/skos/core#ConceptScheme",
+    "baseIri" : "http://www.w3.org/2004/02/skos/core",
+    "instances" : 0,
+    "annotations" : {
+      "isDefinedBy" : [ {
+        "identifier" : "isDefinedBy",
+        "language" : "undefined",
+        "value" : "http://www.w3.org/2004/02/skos/core",
+        "type" : "iri"
+      } ],
+      "definition" : [ {
+        "identifier" : "definition",
+        "language" : "en",
+        "value" : "A set of concepts, optionally including statements about semantic relationships between those concepts.",
+        "type" : "label"
+      } ],
+      "scopeNote" : [ {
+        "identifier" : "scopeNote",
+        "language" : "en",
+        "value" : "A concept scheme may be defined to include concepts from different sources.",
+        "type" : "label"
+      } ],
+      "example" : [ {
+        "identifier" : "example",
+        "language" : "en",
+        "value" : "Thesauri, classification schemes, subject heading lists, taxonomies, 'folksonomies', and other types of controlled vocabulary are all examples of concept schemes. Concept schemes are also embedded in glossaries and terminologies.",
+        "type" : "label"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "ConceptScheme",
+      "en" : "Concept Scheme"
+    },
+    "individuals" : [ {
+      "iri" : "http://purl.org/roh/ProjectClassification#ProjectClassification",
+      "baseIri" : "http://purl.org/roh/ProjectClassification",
+      "labels" : {
+        "IRI-based" : "ProjectClassification"
+      }
+    } ],
+    "attributes" : [ "external" ],
+    "id" : "0"
+  }, {
+    "iri" : "http://www.w3.org/2004/02/skos/core#Collection",
+    "baseIri" : "http://www.w3.org/2004/02/skos/core",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "Collection"
+    },
+    "attributes" : [ "external" ],
+    "id" : "5"
+  }, {
+    "iri" : "http://www.w3.org/2004/02/skos/core#Concept",
+    "baseIri" : "http://www.w3.org/2004/02/skos/core",
+    "instances" : 0,
+    "annotations" : {
+      "isDefinedBy" : [ {
+        "identifier" : "isDefinedBy",
+        "language" : "undefined",
+        "value" : "http://www.w3.org/2004/02/skos/core",
+        "type" : "iri"
+      } ],
+      "definition" : [ {
+        "identifier" : "definition",
+        "language" : "en",
+        "value" : "An idea or notion; a unit of thought.",
+        "type" : "label"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "Concept",
+      "en" : "Concept"
+    },
+    "individuals" : [ {
+      "iri" : "http://purl.org/roh/ProjectClassification#RegionsofEurope",
+      "baseIri" : "http://purl.org/roh/ProjectClassification",
+      "labels" : {
+        "IRI-based" : "RegionsofEurope"
+      }
+    }, {
+      "iri" : "http://purl.org/roh/ProjectClassification#Internal",
+      "baseIri" : "http://purl.org/roh/ProjectClassification",
+      "labels" : {
+        "IRI-based" : "Internal"
+      }
+    }, {
+      "iri" : "http://purl.org/roh/ProjectClassification#SC1",
+      "baseIri" : "http://purl.org/roh/ProjectClassification",
+      "labels" : {
+        "IRI-based" : "SC1"
+      }
+    }, {
+      "iri" : "http://purl.org/roh/ProjectClassification#ExcellentScience",
+      "baseIri" : "http://purl.org/roh/ProjectClassification",
+      "labels" : {
+        "IRI-based" : "ExcellentScience"
+      }
+    }, {
+      "iri" : "http://purl.org/roh/ProjectClassification#Interreg",
+      "baseIri" : "http://purl.org/roh/ProjectClassification",
+      "labels" : {
+        "IRI-based" : "Interreg"
+      }
+    }, {
+      "iri" : "http://purl.org/roh/ProjectClassification#Regional",
+      "baseIri" : "http://purl.org/roh/ProjectClassification",
+      "labels" : {
+        "IRI-based" : "Regional"
+      }
+    }, {
+      "iri" : "http://purl.org/roh/ProjectClassification#SC2",
+      "baseIri" : "http://purl.org/roh/ProjectClassification",
+      "labels" : {
+        "IRI-based" : "SC2"
+      }
+    }, {
+      "iri" : "http://purl.org/roh/ProjectClassification#European",
+      "baseIri" : "http://purl.org/roh/ProjectClassification",
+      "labels" : {
+        "IRI-based" : "European"
+      }
+    }, {
+      "iri" : "http://purl.org/roh/ProjectClassification#IndividualFellowships",
+      "baseIri" : "http://purl.org/roh/ProjectClassification",
+      "labels" : {
+        "IRI-based" : "IndividualFellowships"
+      }
+    }, {
+      "iri" : "http://purl.org/roh/ProjectClassification#Sudoe",
+      "baseIri" : "http://purl.org/roh/ProjectClassification",
+      "labels" : {
+        "IRI-based" : "Sudoe"
+      }
+    }, {
+      "iri" : "http://purl.org/roh/ProjectClassification#ITN-ETN",
+      "baseIri" : "http://purl.org/roh/ProjectClassification",
+      "labels" : {
+        "IRI-based" : "ITN-ETN"
+      }
+    }, {
+      "iri" : "http://purl.org/roh/ProjectClassification#National",
+      "baseIri" : "http://purl.org/roh/ProjectClassification",
+      "labels" : {
+        "IRI-based" : "National"
+      }
+    }, {
+      "iri" : "http://purl.org/roh/ProjectClassification#International",
+      "baseIri" : "http://purl.org/roh/ProjectClassification",
+      "labels" : {
+        "IRI-based" : "International"
+      }
+    }, {
+      "iri" : "http://purl.org/roh/ProjectClassification#Horizon2020",
+      "baseIri" : "http://purl.org/roh/ProjectClassification",
+      "labels" : {
+        "IRI-based" : "Horizon2020"
+      }
+    }, {
+      "iri" : "http://purl.org/roh/ProjectClassification#SocietalChallenges",
+      "baseIri" : "http://purl.org/roh/ProjectClassification",
+      "labels" : {
+        "IRI-based" : "SocietalChallenges"
+      }
+    } ],
+    "subClasses" : [ "9" ],
+    "attributes" : [ "external" ],
+    "id" : "7"
+  }, {
+    "iri" : "http://purl.org/roh#ProjectClassification",
+    "baseIri" : "http://purl.org/roh",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "ProjectClassification",
+      "en" : "Project Classification",
+      "es" : "Clasificación de Proyecto"
+    },
+    "individuals" : [ {
+      "iri" : "http://purl.org/roh/ProjectClassification#RegionsofEurope",
+      "baseIri" : "http://purl.org/roh/ProjectClassification",
+      "labels" : {
+        "IRI-based" : "RegionsofEurope"
+      }
+    }, {
+      "iri" : "http://purl.org/roh/ProjectClassification#Internal",
+      "baseIri" : "http://purl.org/roh/ProjectClassification",
+      "labels" : {
+        "IRI-based" : "Internal"
+      }
+    }, {
+      "iri" : "http://purl.org/roh/ProjectClassification#SC1",
+      "baseIri" : "http://purl.org/roh/ProjectClassification",
+      "labels" : {
+        "IRI-based" : "SC1"
+      }
+    }, {
+      "iri" : "http://purl.org/roh/ProjectClassification#Interreg",
+      "baseIri" : "http://purl.org/roh/ProjectClassification",
+      "labels" : {
+        "IRI-based" : "Interreg"
+      }
+    }, {
+      "iri" : "http://purl.org/roh/ProjectClassification#Regional",
+      "baseIri" : "http://purl.org/roh/ProjectClassification",
+      "labels" : {
+        "IRI-based" : "Regional"
+      }
+    }, {
+      "iri" : "http://purl.org/roh/ProjectClassification#ExcellentScience",
+      "baseIri" : "http://purl.org/roh/ProjectClassification",
+      "labels" : {
+        "IRI-based" : "ExcellentScience"
+      }
+    }, {
+      "iri" : "http://purl.org/roh/ProjectClassification#SC2",
+      "baseIri" : "http://purl.org/roh/ProjectClassification",
+      "labels" : {
+        "IRI-based" : "SC2"
+      }
+    }, {
+      "iri" : "http://purl.org/roh/ProjectClassification#European",
+      "baseIri" : "http://purl.org/roh/ProjectClassification",
+      "labels" : {
+        "IRI-based" : "European"
+      }
+    }, {
+      "iri" : "http://purl.org/roh/ProjectClassification#IndividualFellowships",
+      "baseIri" : "http://purl.org/roh/ProjectClassification",
+      "labels" : {
+        "IRI-based" : "IndividualFellowships"
+      }
+    }, {
+      "iri" : "http://purl.org/roh/ProjectClassification#Sudoe",
+      "baseIri" : "http://purl.org/roh/ProjectClassification",
+      "labels" : {
+        "IRI-based" : "Sudoe"
+      }
+    }, {
+      "iri" : "http://purl.org/roh/ProjectClassification#ITN-ETN",
+      "baseIri" : "http://purl.org/roh/ProjectClassification",
+      "labels" : {
+        "IRI-based" : "ITN-ETN"
+      }
+    }, {
+      "iri" : "http://purl.org/roh/ProjectClassification#National",
+      "baseIri" : "http://purl.org/roh/ProjectClassification",
+      "labels" : {
+        "IRI-based" : "National"
+      }
+    }, {
+      "iri" : "http://purl.org/roh/ProjectClassification#International",
+      "baseIri" : "http://purl.org/roh/ProjectClassification",
+      "labels" : {
+        "IRI-based" : "International"
+      }
+    }, {
+      "iri" : "http://purl.org/roh/ProjectClassification#Horizon2020",
+      "baseIri" : "http://purl.org/roh/ProjectClassification",
+      "labels" : {
+        "IRI-based" : "Horizon2020"
+      }
+    }, {
+      "iri" : "http://purl.org/roh/ProjectClassification#SocietalChallenges",
+      "baseIri" : "http://purl.org/roh/ProjectClassification",
+      "labels" : {
+        "IRI-based" : "SocietalChallenges"
+      }
+    } ],
+    "attributes" : [ "external" ],
+    "id" : "9",
+    "superClasses" : [ "7" ]
+  }, {
+    "iri" : "http://www.w3.org/2002/07/owl#Thing",
+    "baseIri" : "http://owl2vowl.de",
+    "id" : "2",
+    "label" : {
+      "undefined" : "Thing"
+    }
+  } ],
+  "property" : [ {
+    "id" : "1",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "6",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "10",
+    "type" : "owl:disjointWith"
+  }, {
+    "id" : "11",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "3",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "12",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "4",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "13",
+    "type" : "owl:disjointWith"
+  }, {
+    "id" : "14",
+    "type" : "owl:disjointWith"
+  }, {
+    "id" : "8",
+    "type" : "owl:objectProperty"
+  } ],
+  "propertyAttribute" : [ {
+    "iri" : "http://www.w3.org/2004/02/skos/core#broader",
+    "inverse" : "3",
+    "baseIri" : "http://www.w3.org/2004/02/skos/core",
+    "range" : "2",
+    "annotations" : {
+      "isDefinedBy" : [ {
+        "identifier" : "isDefinedBy",
+        "language" : "undefined",
+        "value" : "http://www.w3.org/2004/02/skos/core",
+        "type" : "iri"
+      } ],
+      "definition" : [ {
+        "identifier" : "definition",
+        "language" : "en",
+        "value" : "Relates a concept to a concept that is more general in meaning.",
+        "type" : "label"
+      } ],
+      "scopeNote" : [ {
+        "identifier" : "scopeNote",
+        "language" : "en",
+        "value" : "By convention, skos:broader is only used to assert an immediate (i.e. direct) hierarchical link between two conceptual resources.",
+        "type" : "label"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "broader",
+      "en" : "has broader"
+    },
+    "superproperty" : [ "4" ],
+    "domain" : "2",
+    "comment" : {
+      "en" : "Broader concepts are typically rendered as parents in a concept hierarchy (tree)."
+    },
+    "attributes" : [ "object", "external" ],
+    "id" : "1"
+  }, {
+    "iri" : "http://www.w3.org/2004/02/skos/core#hasTopConcept",
+    "inverse" : "8",
+    "baseIri" : "http://www.w3.org/2004/02/skos/core",
+    "range" : "7",
+    "annotations" : {
+      "isDefinedBy" : [ {
+        "identifier" : "isDefinedBy",
+        "language" : "undefined",
+        "value" : "http://www.w3.org/2004/02/skos/core",
+        "type" : "iri"
+      } ],
+      "definition" : [ {
+        "identifier" : "definition",
+        "language" : "en",
+        "value" : "Relates, by convention, a concept scheme to a concept which is topmost in the broader/narrower concept hierarchies for that scheme, providing an entry point to these hierarchies.",
+        "type" : "label"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "hasTopConcept",
+      "en" : "has top concept"
+    },
+    "domain" : "0",
+    "attributes" : [ "object", "external" ],
+    "id" : "6"
+  }, {
+    "range" : "0",
+    "domain" : "7",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "10"
+  }, {
+    "range" : "7",
+    "domain" : "9",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "11"
+  }, {
+    "iri" : "http://www.w3.org/2004/02/skos/core#narrower",
+    "baseIri" : "http://www.w3.org/2004/02/skos/core",
+    "range" : "2",
+    "annotations" : {
+      "isDefinedBy" : [ {
+        "identifier" : "isDefinedBy",
+        "language" : "undefined",
+        "value" : "http://www.w3.org/2004/02/skos/core",
+        "type" : "iri"
+      } ],
+      "definition" : [ {
+        "identifier" : "definition",
+        "language" : "en",
+        "value" : "Relates a concept to a concept that is more specific in meaning.",
+        "type" : "label"
+      } ],
+      "scopeNote" : [ {
+        "identifier" : "scopeNote",
+        "language" : "en",
+        "value" : "By convention, skos:broader is only used to assert an immediate (i.e. direct) hierarchical link between two conceptual resources.",
+        "type" : "label"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "narrower",
+      "en" : "has narrower"
+    },
+    "superproperty" : [ "12" ],
+    "domain" : "2",
+    "comment" : {
+      "en" : "Narrower concepts are typically rendered as children in a concept hierarchy (tree)."
+    },
+    "attributes" : [ "object", "external" ],
+    "id" : "3"
+  }, {
+    "iri" : "http://www.w3.org/2004/02/skos/core#narrowerTransitive",
+    "baseIri" : "http://www.w3.org/2004/02/skos/core",
+    "range" : "2",
+    "label" : {
+      "IRI-based" : "narrowerTransitive"
+    },
+    "domain" : "2",
+    "subproperty" : [ "3" ],
+    "attributes" : [ "object", "external" ],
+    "id" : "12"
+  }, {
+    "iri" : "http://www.w3.org/2004/02/skos/core#broaderTransitive",
+    "baseIri" : "http://www.w3.org/2004/02/skos/core",
+    "range" : "2",
+    "label" : {
+      "IRI-based" : "broaderTransitive"
+    },
+    "domain" : "2",
+    "subproperty" : [ "1" ],
+    "attributes" : [ "object", "external" ],
+    "id" : "4"
+  }, {
+    "range" : "7",
+    "domain" : "5",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "13"
+  }, {
+    "range" : "0",
+    "domain" : "5",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "14"
+  }, {
+    "iri" : "http://www.w3.org/2004/02/skos/core#topConceptOf",
+    "baseIri" : "http://www.w3.org/2004/02/skos/core",
+    "range" : "2",
+    "label" : {
+      "IRI-based" : "topConceptOf"
+    },
+    "domain" : "2",
+    "attributes" : [ "object", "external" ],
+    "id" : "8"
+  } ]
+}

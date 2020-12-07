@@ -1,0 +1,204 @@
+<http://purl.org/roh/ProjectClassification> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Ontology> .
+# 
+# 
+# #################################################################
+# #
+# #    Annotation properties
+# #
+# #################################################################
+# 
+# 
+# http://www.w3.org/2004/02/skos/core#definition
+<http://www.w3.org/2004/02/skos/core#definition> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+# 
+# http://www.w3.org/2004/02/skos/core#example
+<http://www.w3.org/2004/02/skos/core#example> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+# 
+# http://www.w3.org/2004/02/skos/core#scopeNote
+<http://www.w3.org/2004/02/skos/core#scopeNote> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+# 
+# 
+# 
+# #################################################################
+# #
+# #    Object Properties
+# #
+# #################################################################
+# 
+# 
+# http://www.w3.org/2004/02/skos/core#broader
+<http://www.w3.org/2004/02/skos/core#broader> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://www.w3.org/2004/02/skos/core#broader> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://www.w3.org/2004/02/skos/core#broaderTransitive> .
+<http://www.w3.org/2004/02/skos/core#broader> <http://www.w3.org/2002/07/owl#inverseOf> <http://www.w3.org/2004/02/skos/core#narrower> .
+<http://www.w3.org/2004/02/skos/core#broader> <http://www.w3.org/2000/01/rdf-schema#comment> "Broader concepts are typically rendered as parents in a concept hierarchy (tree)."@en .
+<http://www.w3.org/2004/02/skos/core#broader> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://www.w3.org/2004/02/skos/core> .
+<http://www.w3.org/2004/02/skos/core#broader> <http://www.w3.org/2000/01/rdf-schema#label> "has broader"@en .
+<http://www.w3.org/2004/02/skos/core#broader> <http://www.w3.org/2004/02/skos/core#definition> "Relates a concept to a concept that is more general in meaning."@en .
+<http://www.w3.org/2004/02/skos/core#broader> <http://www.w3.org/2004/02/skos/core#scopeNote> "By convention, skos:broader is only used to assert an immediate (i.e. direct) hierarchical link between two conceptual resources."@en .
+# 
+# http://www.w3.org/2004/02/skos/core#broaderTransitive
+<http://www.w3.org/2004/02/skos/core#broaderTransitive> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+# 
+# http://www.w3.org/2004/02/skos/core#hasTopConcept
+<http://www.w3.org/2004/02/skos/core#hasTopConcept> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://www.w3.org/2004/02/skos/core#hasTopConcept> <http://www.w3.org/2002/07/owl#inverseOf> <http://www.w3.org/2004/02/skos/core#topConceptOf> .
+<http://www.w3.org/2004/02/skos/core#hasTopConcept> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.w3.org/2004/02/skos/core#ConceptScheme> .
+<http://www.w3.org/2004/02/skos/core#hasTopConcept> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2004/02/skos/core#Concept> .
+<http://www.w3.org/2004/02/skos/core#hasTopConcept> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://www.w3.org/2004/02/skos/core> .
+<http://www.w3.org/2004/02/skos/core#hasTopConcept> <http://www.w3.org/2000/01/rdf-schema#label> "has top concept"@en .
+<http://www.w3.org/2004/02/skos/core#hasTopConcept> <http://www.w3.org/2004/02/skos/core#definition> "Relates, by convention, a concept scheme to a concept which is topmost in the broader/narrower concept hierarchies for that scheme, providing an entry point to these hierarchies."@en .
+# 
+# http://www.w3.org/2004/02/skos/core#narrower
+<http://www.w3.org/2004/02/skos/core#narrower> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://www.w3.org/2004/02/skos/core#narrower> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://www.w3.org/2004/02/skos/core#narrowerTransitive> .
+<http://www.w3.org/2004/02/skos/core#narrower> <http://www.w3.org/2000/01/rdf-schema#comment> "Narrower concepts are typically rendered as children in a concept hierarchy (tree)."@en .
+<http://www.w3.org/2004/02/skos/core#narrower> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://www.w3.org/2004/02/skos/core> .
+<http://www.w3.org/2004/02/skos/core#narrower> <http://www.w3.org/2000/01/rdf-schema#label> "has narrower"@en .
+<http://www.w3.org/2004/02/skos/core#narrower> <http://www.w3.org/2004/02/skos/core#definition> "Relates a concept to a concept that is more specific in meaning."@en .
+<http://www.w3.org/2004/02/skos/core#narrower> <http://www.w3.org/2004/02/skos/core#scopeNote> "By convention, skos:broader is only used to assert an immediate (i.e. direct) hierarchical link between two conceptual resources."@en .
+# 
+# http://www.w3.org/2004/02/skos/core#narrowerTransitive
+<http://www.w3.org/2004/02/skos/core#narrowerTransitive> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+# 
+# http://www.w3.org/2004/02/skos/core#topConceptOf
+<http://www.w3.org/2004/02/skos/core#topConceptOf> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+# 
+# 
+# 
+# #################################################################
+# #
+# #    Classes
+# #
+# #################################################################
+# 
+# 
+# http://purl.org/roh#ProjectClassification
+<http://purl.org/roh#ProjectClassification> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://purl.org/roh#ProjectClassification> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.w3.org/2004/02/skos/core#Concept> .
+<http://purl.org/roh#ProjectClassification> <http://www.w3.org/2000/01/rdf-schema#label> "Clasificación de Proyecto"@es .
+<http://purl.org/roh#ProjectClassification> <http://www.w3.org/2000/01/rdf-schema#label> "Project Classification"@en .
+# 
+# http://www.w3.org/2004/02/skos/core#Collection
+<http://www.w3.org/2004/02/skos/core#Collection> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.w3.org/2004/02/skos/core#Collection> <http://www.w3.org/2002/07/owl#disjointWith> <http://www.w3.org/2004/02/skos/core#Concept> .
+<http://www.w3.org/2004/02/skos/core#Collection> <http://www.w3.org/2002/07/owl#disjointWith> <http://www.w3.org/2004/02/skos/core#ConceptScheme> .
+# 
+# http://www.w3.org/2004/02/skos/core#Concept
+<http://www.w3.org/2004/02/skos/core#Concept> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.w3.org/2004/02/skos/core#Concept> <http://www.w3.org/2002/07/owl#disjointWith> <http://www.w3.org/2004/02/skos/core#ConceptScheme> .
+<http://www.w3.org/2004/02/skos/core#Concept> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://www.w3.org/2004/02/skos/core> .
+<http://www.w3.org/2004/02/skos/core#Concept> <http://www.w3.org/2000/01/rdf-schema#label> "Concept"@en .
+<http://www.w3.org/2004/02/skos/core#Concept> <http://www.w3.org/2004/02/skos/core#definition> "An idea or notion; a unit of thought."@en .
+# 
+# http://www.w3.org/2004/02/skos/core#ConceptScheme
+<http://www.w3.org/2004/02/skos/core#ConceptScheme> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.w3.org/2004/02/skos/core#ConceptScheme> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://www.w3.org/2004/02/skos/core> .
+<http://www.w3.org/2004/02/skos/core#ConceptScheme> <http://www.w3.org/2000/01/rdf-schema#label> "Concept Scheme"@en .
+<http://www.w3.org/2004/02/skos/core#ConceptScheme> <http://www.w3.org/2004/02/skos/core#definition> "A set of concepts, optionally including statements about semantic relationships between those concepts."@en .
+<http://www.w3.org/2004/02/skos/core#ConceptScheme> <http://www.w3.org/2004/02/skos/core#example> "Thesauri, classification schemes, subject heading lists, taxonomies, 'folksonomies', and other types of controlled vocabulary are all examples of concept schemes. Concept schemes are also embedded in glossaries and terminologies."@en .
+<http://www.w3.org/2004/02/skos/core#ConceptScheme> <http://www.w3.org/2004/02/skos/core#scopeNote> "A concept scheme may be defined to include concepts from different sources."@en .
+# 
+# 
+# 
+# #################################################################
+# #
+# #    Individuals
+# #
+# #################################################################
+# 
+# 
+# http://purl.org/roh/ProjectClassification#European
+<http://purl.org/roh/ProjectClassification#European> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://purl.org/roh/ProjectClassification#European> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://purl.org/roh#ProjectClassification> .
+<http://purl.org/roh/ProjectClassification#European> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2004/02/skos/core#Concept> .
+# 
+# http://purl.org/roh/ProjectClassification#ExcellentScience
+<http://purl.org/roh/ProjectClassification#ExcellentScience> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://purl.org/roh/ProjectClassification#ExcellentScience> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://purl.org/roh#ProjectClassification> .
+<http://purl.org/roh/ProjectClassification#ExcellentScience> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2004/02/skos/core#Concept> .
+<http://purl.org/roh/ProjectClassification#ExcellentScience> <http://www.w3.org/2004/02/skos/core#broader> <http://purl.org/roh/ProjectClassification#Horizon2020> .
+# 
+# http://purl.org/roh/ProjectClassification#Horizon2020
+<http://purl.org/roh/ProjectClassification#Horizon2020> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://purl.org/roh/ProjectClassification#Horizon2020> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://purl.org/roh#ProjectClassification> .
+<http://purl.org/roh/ProjectClassification#Horizon2020> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2004/02/skos/core#Concept> .
+<http://purl.org/roh/ProjectClassification#Horizon2020> <http://www.w3.org/2004/02/skos/core#broader> <http://purl.org/roh/ProjectClassification#European> .
+# 
+# http://purl.org/roh/ProjectClassification#ITN-ETN
+<http://purl.org/roh/ProjectClassification#ITN-ETN> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://purl.org/roh/ProjectClassification#ITN-ETN> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://purl.org/roh#ProjectClassification> .
+<http://purl.org/roh/ProjectClassification#ITN-ETN> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2004/02/skos/core#Concept> .
+<http://purl.org/roh/ProjectClassification#ITN-ETN> <http://www.w3.org/2004/02/skos/core#broader> <http://purl.org/roh/ProjectClassification#ExcellentScience> .
+# 
+# http://purl.org/roh/ProjectClassification#IndividualFellowships
+<http://purl.org/roh/ProjectClassification#IndividualFellowships> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://purl.org/roh/ProjectClassification#IndividualFellowships> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://purl.org/roh#ProjectClassification> .
+<http://purl.org/roh/ProjectClassification#IndividualFellowships> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2004/02/skos/core#Concept> .
+<http://purl.org/roh/ProjectClassification#IndividualFellowships> <http://www.w3.org/2004/02/skos/core#broader> <http://purl.org/roh/ProjectClassification#ExcellentScience> .
+# 
+# http://purl.org/roh/ProjectClassification#Internal
+<http://purl.org/roh/ProjectClassification#Internal> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://purl.org/roh/ProjectClassification#Internal> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://purl.org/roh#ProjectClassification> .
+<http://purl.org/roh/ProjectClassification#Internal> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2004/02/skos/core#Concept> .
+# 
+# http://purl.org/roh/ProjectClassification#International
+<http://purl.org/roh/ProjectClassification#International> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://purl.org/roh/ProjectClassification#International> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://purl.org/roh#ProjectClassification> .
+<http://purl.org/roh/ProjectClassification#International> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2004/02/skos/core#Concept> .
+# 
+# http://purl.org/roh/ProjectClassification#Interreg
+<http://purl.org/roh/ProjectClassification#Interreg> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://purl.org/roh/ProjectClassification#Interreg> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://purl.org/roh#ProjectClassification> .
+<http://purl.org/roh/ProjectClassification#Interreg> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2004/02/skos/core#Concept> .
+<http://purl.org/roh/ProjectClassification#Interreg> <http://www.w3.org/2004/02/skos/core#broader> <http://purl.org/roh/ProjectClassification#European> .
+# 
+# http://purl.org/roh/ProjectClassification#National
+<http://purl.org/roh/ProjectClassification#National> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://purl.org/roh/ProjectClassification#National> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://purl.org/roh#ProjectClassification> .
+<http://purl.org/roh/ProjectClassification#National> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2004/02/skos/core#Concept> .
+# 
+# http://purl.org/roh/ProjectClassification#ProjectClassification
+<http://purl.org/roh/ProjectClassification#ProjectClassification> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://purl.org/roh/ProjectClassification#ProjectClassification> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2004/02/skos/core#ConceptScheme> .
+<http://purl.org/roh/ProjectClassification#ProjectClassification> <http://www.w3.org/2004/02/skos/core#hasTopConcept> <http://purl.org/roh/ProjectClassification#European> .
+<http://purl.org/roh/ProjectClassification#ProjectClassification> <http://www.w3.org/2004/02/skos/core#hasTopConcept> <http://purl.org/roh/ProjectClassification#Internal> .
+<http://purl.org/roh/ProjectClassification#ProjectClassification> <http://www.w3.org/2004/02/skos/core#hasTopConcept> <http://purl.org/roh/ProjectClassification#International> .
+<http://purl.org/roh/ProjectClassification#ProjectClassification> <http://www.w3.org/2004/02/skos/core#hasTopConcept> <http://purl.org/roh/ProjectClassification#National> .
+<http://purl.org/roh/ProjectClassification#ProjectClassification> <http://www.w3.org/2004/02/skos/core#hasTopConcept> <http://purl.org/roh/ProjectClassification#Regional> .
+# 
+# http://purl.org/roh/ProjectClassification#Regional
+<http://purl.org/roh/ProjectClassification#Regional> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://purl.org/roh/ProjectClassification#Regional> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://purl.org/roh#ProjectClassification> .
+<http://purl.org/roh/ProjectClassification#Regional> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2004/02/skos/core#Concept> .
+# 
+# http://purl.org/roh/ProjectClassification#RegionsofEurope
+<http://purl.org/roh/ProjectClassification#RegionsofEurope> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://purl.org/roh/ProjectClassification#RegionsofEurope> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://purl.org/roh#ProjectClassification> .
+<http://purl.org/roh/ProjectClassification#RegionsofEurope> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2004/02/skos/core#Concept> .
+<http://purl.org/roh/ProjectClassification#RegionsofEurope> <http://www.w3.org/2004/02/skos/core#broader> <http://purl.org/roh/ProjectClassification#Interreg> .
+# 
+# http://purl.org/roh/ProjectClassification#SC1
+<http://purl.org/roh/ProjectClassification#SC1> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://purl.org/roh/ProjectClassification#SC1> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://purl.org/roh#ProjectClassification> .
+<http://purl.org/roh/ProjectClassification#SC1> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2004/02/skos/core#Concept> .
+<http://purl.org/roh/ProjectClassification#SC1> <http://www.w3.org/2004/02/skos/core#broader> <http://purl.org/roh/ProjectClassification#SocietalChallenges> .
+# 
+# http://purl.org/roh/ProjectClassification#SC2
+<http://purl.org/roh/ProjectClassification#SC2> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://purl.org/roh/ProjectClassification#SC2> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://purl.org/roh#ProjectClassification> .
+<http://purl.org/roh/ProjectClassification#SC2> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2004/02/skos/core#Concept> .
+<http://purl.org/roh/ProjectClassification#SC2> <http://www.w3.org/2004/02/skos/core#broader> <http://purl.org/roh/ProjectClassification#SocietalChallenges> .
+# 
+# http://purl.org/roh/ProjectClassification#SocietalChallenges
+<http://purl.org/roh/ProjectClassification#SocietalChallenges> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://purl.org/roh/ProjectClassification#SocietalChallenges> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://purl.org/roh#ProjectClassification> .
+<http://purl.org/roh/ProjectClassification#SocietalChallenges> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2004/02/skos/core#Concept> .
+<http://purl.org/roh/ProjectClassification#SocietalChallenges> <http://www.w3.org/2004/02/skos/core#broader> <http://purl.org/roh/ProjectClassification#Horizon2020> .
+# 
+# http://purl.org/roh/ProjectClassification#Sudoe
+<http://purl.org/roh/ProjectClassification#Sudoe> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://purl.org/roh/ProjectClassification#Sudoe> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://purl.org/roh#ProjectClassification> .
+<http://purl.org/roh/ProjectClassification#Sudoe> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2004/02/skos/core#Concept> .
+<http://purl.org/roh/ProjectClassification#Sudoe> <http://www.w3.org/2004/02/skos/core#broader> <http://purl.org/roh/ProjectClassification#Interreg> .
+# 
+# Generated by the OWL API (version 5.1.14) https://github.com/owlcs/owlapi/
