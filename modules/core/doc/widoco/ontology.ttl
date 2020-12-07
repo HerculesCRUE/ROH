@@ -2654,30 +2654,12 @@ Definition source: http://isiwebofknowledge.com/researcherid/""" ;
 #    Classes
 #################################################################
 
-###  file:/C:/Users/Brian%20Lowe/Documents/src/ROH/modules/core/ProjectClassification#National
-<file:/C:/Users/Brian%20Lowe/Documents/src/ROH/modules/core/ProjectClassification#National> rdf:type owl:Class ;
-                                                                                            rdfs:subClassOf <http://purl.org/roh/mirror/foaf#Project> ;
-                                                                                            rdfs:comment "A project developed and funded at the national level."@en ;
-                                                                                            rdfs:label "National project"@en ,
-                                                                                                       "Projecte nacional"@ca-ad ,
-                                                                                                       "Projecte nacional"@ca-es ,
-                                                                                                       "Projet national"@fr ,
-                                                                                                       "Projeto nacional"@pt ,
-                                                                                                       "Proyecto nacional"@es ;
-                                                                                            <http://www.w3.org/2004/02/skos/core#prefLabel> "National project"@en ,
-                                                                                                                                            "Projecte nacional"@ca-ad ,
-                                                                                                                                            "Projecte nacional"@ca-es ,
-                                                                                                                                            "Projet national"@fr ,
-                                                                                                                                            "Projeto nacional"@pt ,
-                                                                                                                                            "Proyecto nacional"@es .
+###  http://org.semanticweb.owlapi/error#Error11
+<http://org.semanticweb.owlapi/error#Error11> rdf:type owl:Class .
 
 
-###  http://org.semanticweb.owlapi/error#Error7
-<http://org.semanticweb.owlapi/error#Error7> rdf:type owl:Class .
-
-
-###  http://org.semanticweb.owlapi/error#Error8
-<http://org.semanticweb.owlapi/error#Error8> rdf:type owl:Class .
+###  http://org.semanticweb.owlapi/error#Error12
+<http://org.semanticweb.owlapi/error#Error12> rdf:type owl:Class .
 
 
 ###  http://purl.obolibrary.org/obo/BFO_0000015
@@ -3116,6 +3098,24 @@ The previous short definition was: \"An arbitrary classification of a space/time
                     "Contexto"@pt .
 
 
+###  http://purl.org/roh#Contract
+:Contract rdf:type owl:Class ;
+          rdfs:label "Contract"@en ,
+                     "Contracte"@ca-ad ,
+                     "Contracte"@ca-es ,
+                     "Contrat"@fr ,
+                     "Contrato"@es ,
+                     "Contrato"@gl ,
+                     "Contrato"@pt ;
+          <http://www.w3.org/2004/02/skos/core#prefLabel> "Contract"@en ,
+                                                          "Contracte"@ca-ad ,
+                                                          "Contracte"@ca-es ,
+                                                          "Contrat"@fr ,
+                                                          "Contrato"@es ,
+                                                          "Contrato"@gl ,
+                                                          "Contrato"@pt .
+
+
 ###  http://purl.org/roh#Country
 :Country rdf:type owl:Class ;
          rdfs:comment "A region legally identified as a distinct entity in political geography."@en ;
@@ -3146,8 +3146,8 @@ The previous short definition was: \"An arbitrary classification of a space/time
 
 ###  http://purl.org/roh#CurriculumVitae
 :CurriculumVitae rdf:type owl:Class ;
-                 rdfs:subClassOf <http://org.semanticweb.owlapi/error#Error7> ,
-                                 <http://org.semanticweb.owlapi/error#Error8> ,
+                 rdfs:subClassOf <http://org.semanticweb.owlapi/error#Error11> ,
+                                 <http://org.semanticweb.owlapi/error#Error12> ,
                                  <http://purl.org/roh/mirror/bibo#Document> ,
                                  [ rdf:type owl:Restriction ;
                                    owl:onProperty :summary ;
@@ -3391,6 +3391,13 @@ The previous short definition was: \"An arbitrary classification of a space/time
                 rdfs:subClassOf <http://purl.org/roh/mirror/vivo#OrganizerRole> ;
                 rdfs:comment "A role of organising cientific events, such as conferences, workshops, etc."@en ;
                 rdfs:label "Event organiser"@en .
+
+
+###  http://purl.org/roh#Expenditure
+:Expenditure rdf:type owl:Class ;
+             rdfs:label "Despesa"@ca-es ,
+                        "Expenditure"@en ,
+                        "Gasto"@es .
 
 
 ###  http://purl.org/roh#Expense
@@ -3729,7 +3736,8 @@ A roh:FundingSource roh:feeds a roh:Funding with funds to sponsor some projects.
 ###  http://purl.org/roh#Invoice
 :Invoice rdf:type owl:Class ;
          rdfs:subClassOf <http://purl.org/roh/mirror/bibo#Document> ;
-         rdfs:label "Factura"@es ,
+         rdfs:label "Factura"@ca-es ,
+                    "Factura"@es ,
                     "Invoice"@en .
 
 
@@ -4060,7 +4068,8 @@ A roh:FundingSource roh:feeds a roh:Funding with funds to sponsor some projects.
 
 ###  http://purl.org/roh#PersonContract
 :PersonContract rdf:type owl:Class ;
-                rdfs:subClassOf <http://purl.org/roh/mirror/vivo#Contract> ;
+                rdfs:subClassOf :Contract ,
+                                <http://purl.org/roh/mirror/vivo#Contract> ;
                 owl:disjointWith :ProjectContract ;
                 rdfs:comment "An agreement between a person and an organization to work in a project for a specified duration."@en ;
                 rdfs:label "Contracte de treball"@ca-ad ,
@@ -4164,6 +4173,13 @@ A roh:FundingSource roh:feeds a roh:Funding with funds to sponsor some projects.
          rdfs:subClassOf :ResearchObject ;
          rdfs:comment "A product as outcome of a project."@en ;
          rdfs:label "Product"@en .
+
+
+###  http://purl.org/roh#ProformaInvoice
+:ProformaInvoice rdf:type owl:Class ;
+                 rdfs:subClassOf :Invoice ,
+                                 <http://purl.org/roh/mirror/bibo#Document> ;
+                 rdfs:label "Proforma invoice"@en .
 
 
 ###  http://purl.org/roh#ProjectBudget
@@ -4587,7 +4603,8 @@ A roh:FundingSource roh:feeds a roh:Funding with funds to sponsor some projects.
 
 ###  http://purl.org/roh#ServiceContract
 :ServiceContract rdf:type owl:Class ;
-                 rdfs:subClassOf <http://purl.org/roh/mirror/vivo#Contract> ;
+                 rdfs:subClassOf :Contract ,
+                                 <http://purl.org/roh/mirror/vivo#Contract> ;
                  rdfs:label "Contracte de servei"@ca-es ,
                             "Contrat de service"@fr ,
                             "Contrato de servicio"@es ,
@@ -6633,19 +6650,7 @@ Based on obo-bfo:Role also used in VIVO, it defines roles. The object property r
                                            <http://purl.obolibrary.org/obo/IAO_0000115> "An agreement involving specific deliverables and payment" ;
                                            rdfs:comment "A roh:Contract is a legal document which gathers the conditions and obligations of a Person (foaf:Person) or the conditions and obligations of a Project (foaf:Project) and the different organizations which take part in it." ;
                                            rdfs:label "Contract"@en ,
-                                                      "Contracte"@ca-ad ,
-                                                      "Contracte"@ca-es ,
-                                                      "Contrat"@fr ,
-                                                      "Contrato"@es ,
-                                                      "Contrato"@gl ,
-                                                      "Contrato"@pt ;
-                                           <http://www.w3.org/2004/02/skos/core#prefLabel> "Contract"@en ,
-                                                                                           "Contracte"@ca-ad ,
-                                                                                           "Contracte"@ca-es ,
-                                                                                           "Contrat"@fr ,
-                                                                                           "Contrato"@es ,
-                                                                                           "Contrato"@gl ,
-                                                                                           "Contrato"@pt .
+                                                      "Contrato"@es .
 
 
 ###  http://purl.org/roh/mirror/vivo#Course

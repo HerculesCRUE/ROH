@@ -4114,39 +4114,17 @@ Definition source: http://isiwebofknowledge.com/researcherid/</obo:IAO_0000112>
     
 
 
-    <!-- file:/C:/Users/Brian%20Lowe/Documents/src/ROH/modules/core/ProjectClassification#National -->
+    <!-- http://org.semanticweb.owlapi/error#Error11 -->
 
 
-    <owl:Class rdf:about="file:/C:/Users/Brian%20Lowe/Documents/src/ROH/modules/core/ProjectClassification#National">
-        <rdfs:subClassOf rdf:resource="http://purl.org/roh/mirror/foaf#Project"/>
-        <rdfs:comment xml:lang="en">A project developed and funded at the national level.</rdfs:comment>
-        <rdfs:label xml:lang="en">National project</rdfs:label>
-        <rdfs:label xml:lang="ca-ad">Projecte nacional</rdfs:label>
-        <rdfs:label xml:lang="ca-es">Projecte nacional</rdfs:label>
-        <rdfs:label xml:lang="fr">Projet national</rdfs:label>
-        <rdfs:label xml:lang="pt">Projeto nacional</rdfs:label>
-        <rdfs:label xml:lang="es">Proyecto nacional</rdfs:label>
-        <skos:prefLabel xml:lang="en">National project</skos:prefLabel>
-        <skos:prefLabel xml:lang="ca-ad">Projecte nacional</skos:prefLabel>
-        <skos:prefLabel xml:lang="ca-es">Projecte nacional</skos:prefLabel>
-        <skos:prefLabel xml:lang="fr">Projet national</skos:prefLabel>
-        <skos:prefLabel xml:lang="pt">Projeto nacional</skos:prefLabel>
-        <skos:prefLabel xml:lang="es">Proyecto nacional</skos:prefLabel>
-    </owl:Class>
+    <owl:Class rdf:about="http://org.semanticweb.owlapi/error#Error11"/>
     
 
 
-    <!-- http://org.semanticweb.owlapi/error#Error7 -->
+    <!-- http://org.semanticweb.owlapi/error#Error12 -->
 
 
-    <owl:Class rdf:about="http://org.semanticweb.owlapi/error#Error7"/>
-    
-
-
-    <!-- http://org.semanticweb.owlapi/error#Error8 -->
-
-
-    <owl:Class rdf:about="http://org.semanticweb.owlapi/error#Error8"/>
+    <owl:Class rdf:about="http://org.semanticweb.owlapi/error#Error12"/>
     
 
 
@@ -4779,6 +4757,28 @@ The previous short definition was: &quot;An arbitrary classification of a space/
     
 
 
+    <!-- http://purl.org/roh#Contract -->
+
+
+    <owl:Class rdf:about="http://purl.org/roh#Contract">
+        <rdfs:label xml:lang="en">Contract</rdfs:label>
+        <rdfs:label xml:lang="ca-ad">Contracte</rdfs:label>
+        <rdfs:label xml:lang="ca-es">Contracte</rdfs:label>
+        <rdfs:label xml:lang="fr">Contrat</rdfs:label>
+        <rdfs:label xml:lang="es">Contrato</rdfs:label>
+        <rdfs:label xml:lang="gl">Contrato</rdfs:label>
+        <rdfs:label xml:lang="pt">Contrato</rdfs:label>
+        <skos:prefLabel xml:lang="en">Contract</skos:prefLabel>
+        <skos:prefLabel xml:lang="ca-ad">Contracte</skos:prefLabel>
+        <skos:prefLabel xml:lang="ca-es">Contracte</skos:prefLabel>
+        <skos:prefLabel xml:lang="fr">Contrat</skos:prefLabel>
+        <skos:prefLabel xml:lang="es">Contrato</skos:prefLabel>
+        <skos:prefLabel xml:lang="gl">Contrato</skos:prefLabel>
+        <skos:prefLabel xml:lang="pt">Contrato</skos:prefLabel>
+    </owl:Class>
+    
+
+
     <!-- http://purl.org/roh#Country -->
 
 
@@ -4819,8 +4819,8 @@ The previous short definition was: &quot;An arbitrary classification of a space/
 
 
     <owl:Class rdf:about="http://purl.org/roh#CurriculumVitae">
-        <rdfs:subClassOf rdf:resource="http://org.semanticweb.owlapi/error#Error7"/>
-        <rdfs:subClassOf rdf:resource="http://org.semanticweb.owlapi/error#Error8"/>
+        <rdfs:subClassOf rdf:resource="http://org.semanticweb.owlapi/error#Error11"/>
+        <rdfs:subClassOf rdf:resource="http://org.semanticweb.owlapi/error#Error12"/>
         <rdfs:subClassOf rdf:resource="http://purl.org/roh/mirror/bibo#Document"/>
         <rdfs:subClassOf>
             <owl:Restriction>
@@ -5161,6 +5161,17 @@ The previous short definition was: &quot;An arbitrary classification of a space/
         <rdfs:subClassOf rdf:resource="http://purl.org/roh/mirror/vivo#OrganizerRole"/>
         <rdfs:comment xml:lang="en">A role of organising cientific events, such as conferences, workshops, etc.</rdfs:comment>
         <rdfs:label xml:lang="en">Event organiser</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/roh#Expenditure -->
+
+
+    <owl:Class rdf:about="http://purl.org/roh#Expenditure">
+        <rdfs:label xml:lang="ca-es">Despesa</rdfs:label>
+        <rdfs:label xml:lang="en">Expenditure</rdfs:label>
+        <rdfs:label xml:lang="es">Gasto</rdfs:label>
     </owl:Class>
     
 
@@ -5678,6 +5689,7 @@ A roh:FundingSource roh:feeds a roh:Funding with funds to sponsor some projects.
 
     <owl:Class rdf:about="http://purl.org/roh#Invoice">
         <rdfs:subClassOf rdf:resource="http://purl.org/roh/mirror/bibo#Document"/>
+        <rdfs:label xml:lang="ca-es">Factura</rdfs:label>
         <rdfs:label xml:lang="es">Factura</rdfs:label>
         <rdfs:label xml:lang="en">Invoice</rdfs:label>
     </owl:Class>
@@ -6145,6 +6157,7 @@ A roh:FundingSource roh:feeds a roh:Funding with funds to sponsor some projects.
 
 
     <owl:Class rdf:about="http://purl.org/roh#PersonContract">
+        <rdfs:subClassOf rdf:resource="http://purl.org/roh#Contract"/>
         <rdfs:subClassOf rdf:resource="http://purl.org/roh/mirror/vivo#Contract"/>
         <owl:disjointWith rdf:resource="http://purl.org/roh#ProjectContract"/>
         <rdfs:comment xml:lang="en">An agreement between a person and an organization to work in a project for a specified duration.</rdfs:comment>
@@ -6287,6 +6300,17 @@ A roh:FundingSource roh:feeds a roh:Funding with funds to sponsor some projects.
         <rdfs:subClassOf rdf:resource="http://purl.org/roh#ResearchObject"/>
         <rdfs:comment xml:lang="en">A product as outcome of a project.</rdfs:comment>
         <rdfs:label xml:lang="en">Product</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/roh#ProformaInvoice -->
+
+
+    <owl:Class rdf:about="http://purl.org/roh#ProformaInvoice">
+        <rdfs:subClassOf rdf:resource="http://purl.org/roh#Invoice"/>
+        <rdfs:subClassOf rdf:resource="http://purl.org/roh/mirror/bibo#Document"/>
+        <rdfs:label xml:lang="en">Proforma invoice</rdfs:label>
     </owl:Class>
     
 
@@ -6899,6 +6923,7 @@ A roh:FundingSource roh:feeds a roh:Funding with funds to sponsor some projects.
 
 
     <owl:Class rdf:about="http://purl.org/roh#ServiceContract">
+        <rdfs:subClassOf rdf:resource="http://purl.org/roh#Contract"/>
         <rdfs:subClassOf rdf:resource="http://purl.org/roh/mirror/vivo#Contract"/>
         <rdfs:label xml:lang="ca-es">Contracte de servei</rdfs:label>
         <rdfs:label xml:lang="fr">Contrat de service</rdfs:label>
@@ -9748,19 +9773,7 @@ Based on obo-bfo:Role also used in VIVO, it defines roles. The object property r
         <obo:IAO_0000115>An agreement involving specific deliverables and payment</obo:IAO_0000115>
         <rdfs:comment>A roh:Contract is a legal document which gathers the conditions and obligations of a Person (foaf:Person) or the conditions and obligations of a Project (foaf:Project) and the different organizations which take part in it.</rdfs:comment>
         <rdfs:label xml:lang="en">Contract</rdfs:label>
-        <rdfs:label xml:lang="ca-ad">Contracte</rdfs:label>
-        <rdfs:label xml:lang="ca-es">Contracte</rdfs:label>
-        <rdfs:label xml:lang="fr">Contrat</rdfs:label>
         <rdfs:label xml:lang="es">Contrato</rdfs:label>
-        <rdfs:label xml:lang="gl">Contrato</rdfs:label>
-        <rdfs:label xml:lang="pt">Contrato</rdfs:label>
-        <skos:prefLabel xml:lang="en">Contract</skos:prefLabel>
-        <skos:prefLabel xml:lang="ca-ad">Contracte</skos:prefLabel>
-        <skos:prefLabel xml:lang="ca-es">Contracte</skos:prefLabel>
-        <skos:prefLabel xml:lang="fr">Contrat</skos:prefLabel>
-        <skos:prefLabel xml:lang="es">Contrato</skos:prefLabel>
-        <skos:prefLabel xml:lang="gl">Contrato</skos:prefLabel>
-        <skos:prefLabel xml:lang="pt">Contrato</skos:prefLabel>
     </owl:Class>
     
 

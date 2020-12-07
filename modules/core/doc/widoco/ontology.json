@@ -4195,58 +4195,10 @@
     "@id" : "http://purl.org/roh/mirror/vcard#locality"
   } ]
 }, {
-  "@id" : "file:/C:/Users/Brian%20Lowe/Documents/src/ROH/modules/core/ProjectClassification#National",
-  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
-  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
-    "@language" : "en",
-    "@value" : "A project developed and funded at the national level."
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
-    "@language" : "en",
-    "@value" : "National project"
-  }, {
-    "@language" : "ca-ad",
-    "@value" : "Projecte nacional"
-  }, {
-    "@language" : "ca-es",
-    "@value" : "Projecte nacional"
-  }, {
-    "@language" : "fr",
-    "@value" : "Projet national"
-  }, {
-    "@language" : "pt",
-    "@value" : "Projeto nacional"
-  }, {
-    "@language" : "es",
-    "@value" : "Proyecto nacional"
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
-    "@id" : "http://purl.org/roh/mirror/foaf#Project"
-  } ],
-  "http://www.w3.org/2004/02/skos/core#prefLabel" : [ {
-    "@language" : "en",
-    "@value" : "National project"
-  }, {
-    "@language" : "ca-ad",
-    "@value" : "Projecte nacional"
-  }, {
-    "@language" : "ca-es",
-    "@value" : "Projecte nacional"
-  }, {
-    "@language" : "fr",
-    "@value" : "Projet national"
-  }, {
-    "@language" : "pt",
-    "@value" : "Projeto nacional"
-  }, {
-    "@language" : "es",
-    "@value" : "Proyecto nacional"
-  } ]
-}, {
-  "@id" : "http://org.semanticweb.owlapi/error#Error7",
+  "@id" : "http://org.semanticweb.owlapi/error#Error11",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ]
 }, {
-  "@id" : "http://org.semanticweb.owlapi/error#Error8",
+  "@id" : "http://org.semanticweb.owlapi/error#Error12",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ]
 }, {
   "@id" : "http://prismstandard.org/namespaces/1.2/basic/endingPage",
@@ -5192,6 +5144,53 @@
     "@value" : "Contexto"
   } ]
 }, {
+  "@id" : "http://purl.org/roh#Contract",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "Contract"
+  }, {
+    "@language" : "ca-ad",
+    "@value" : "Contracte"
+  }, {
+    "@language" : "ca-es",
+    "@value" : "Contracte"
+  }, {
+    "@language" : "fr",
+    "@value" : "Contrat"
+  }, {
+    "@language" : "es",
+    "@value" : "Contrato"
+  }, {
+    "@language" : "gl",
+    "@value" : "Contrato"
+  }, {
+    "@language" : "pt",
+    "@value" : "Contrato"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#prefLabel" : [ {
+    "@language" : "en",
+    "@value" : "Contract"
+  }, {
+    "@language" : "ca-ad",
+    "@value" : "Contracte"
+  }, {
+    "@language" : "ca-es",
+    "@value" : "Contracte"
+  }, {
+    "@language" : "fr",
+    "@value" : "Contrat"
+  }, {
+    "@language" : "es",
+    "@value" : "Contrato"
+  }, {
+    "@language" : "gl",
+    "@value" : "Contrato"
+  }, {
+    "@language" : "pt",
+    "@value" : "Contrato"
+  } ]
+}, {
   "@id" : "http://purl.org/roh#Country",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
@@ -5302,9 +5301,9 @@
     "@value" : "Currículum vitae"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
-    "@id" : "http://org.semanticweb.owlapi/error#Error7"
+    "@id" : "http://org.semanticweb.owlapi/error#Error11"
   }, {
-    "@id" : "http://org.semanticweb.owlapi/error#Error8"
+    "@id" : "http://org.semanticweb.owlapi/error#Error12"
   }, {
     "@id" : "http://purl.org/roh/mirror/bibo#Document"
   }, {
@@ -5771,6 +5770,19 @@
     "@id" : "http://purl.org/roh/mirror/vivo#OrganizerRole"
   } ]
 }, {
+  "@id" : "http://purl.org/roh#Expenditure",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "ca-es",
+    "@value" : "Despesa"
+  }, {
+    "@language" : "en",
+    "@value" : "Expenditure"
+  }, {
+    "@language" : "es",
+    "@value" : "Gasto"
+  } ]
+}, {
   "@id" : "http://purl.org/roh#Expense",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
@@ -6111,6 +6123,9 @@
   "@id" : "http://purl.org/roh#Invoice",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "ca-es",
+    "@value" : "Factura"
+  }, {
     "@language" : "es",
     "@value" : "Factura"
   }, {
@@ -6795,6 +6810,8 @@
     "@value" : "Person Contract"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "http://purl.org/roh#Contract"
+  }, {
     "@id" : "http://purl.org/roh/mirror/vivo#Contract"
   } ],
   "http://www.w3.org/2002/07/owl#disjointWith" : [ {
@@ -6978,6 +6995,18 @@
   } ],
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
     "@id" : "http://purl.org/roh#ResearchObject"
+  } ]
+}, {
+  "@id" : "http://purl.org/roh#ProformaInvoice",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "Proforma invoice"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "http://purl.org/roh#Invoice"
+  }, {
+    "@id" : "http://purl.org/roh/mirror/bibo#Document"
   } ]
 }, {
   "@id" : "http://purl.org/roh#ProjectBudget",
@@ -7725,6 +7754,8 @@
     "@value" : "Service contract"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "http://purl.org/roh#Contract"
+  }, {
     "@id" : "http://purl.org/roh/mirror/vivo#Contract"
   } ],
   "http://www.w3.org/2004/02/skos/core#prefLabel" : [ {
@@ -15195,22 +15226,7 @@
     "@language" : "en",
     "@value" : "Contract"
   }, {
-    "@language" : "ca-ad",
-    "@value" : "Contracte"
-  }, {
-    "@language" : "ca-es",
-    "@value" : "Contracte"
-  }, {
-    "@language" : "fr",
-    "@value" : "Contrat"
-  }, {
     "@language" : "es",
-    "@value" : "Contrato"
-  }, {
-    "@language" : "gl",
-    "@value" : "Contrato"
-  }, {
-    "@language" : "pt",
     "@value" : "Contrato"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
@@ -15231,28 +15247,6 @@
     "@id" : "_:genid418"
   }, {
     "@id" : "_:genid419"
-  } ],
-  "http://www.w3.org/2004/02/skos/core#prefLabel" : [ {
-    "@language" : "en",
-    "@value" : "Contract"
-  }, {
-    "@language" : "ca-ad",
-    "@value" : "Contracte"
-  }, {
-    "@language" : "ca-es",
-    "@value" : "Contracte"
-  }, {
-    "@language" : "fr",
-    "@value" : "Contrat"
-  }, {
-    "@language" : "es",
-    "@value" : "Contrato"
-  }, {
-    "@language" : "gl",
-    "@value" : "Contrato"
-  }, {
-    "@language" : "pt",
-    "@value" : "Contrato"
   } ]
 }, {
   "@id" : "http://purl.org/roh/mirror/vivo#Course",
