@@ -155,7 +155,8 @@ public class Fuse {
         fused.write(new FileOutputStream(new File(args[3]) + ".ttl"), "TTL");
 //        Model sampleData = createSampleData(fused);
 //        sampleData.write(new FileOutputStream(new File(args[3]) + "-sampleData.ttl"), "TTL");
-        XSSFWorkbook spreadsheet = createSpreadsheet(fused);
+        OntModel ontology = ModelFactory.createOntologyModel(OntModelSpec.OWL_MEM, fused);
+        XSSFWorkbook spreadsheet = createSpreadsheet(ontology);
         OutputStream out = new BufferedOutputStream(new FileOutputStream(new File(args[3] + ".xlsx")));
         try {
           spreadsheet.write(out);
@@ -582,148 +583,17 @@ public class Fuse {
         }
     }
     
-    private static XSSFWorkbook createSpreadsheet(Model ontology) {
+    private static XSSFWorkbook createSpreadsheet(OntModel ontology) {
         XSSFWorkbook wb = new XSSFWorkbook();
         Map<String, CellStyle> styles = makePrefixStyles(wb);
         XSSFSheet sheet = wb.createSheet("ontology");
         PropertyTemplate pt = new PropertyTemplate();
         RowCreator rowCreator = new RowCreator(sheet);
-        StmtIterator sit = ontology.listStatements(null, RDF.type, OWL.Class);
         int classLevel = 0;
         int classMax = 6;
-        while(sit.hasNext()) {
-            Statement stmt = sit.next();
-            if(stmt.getSubject().isURIResource()) {
-                Resource clazz = stmt.getSubject();
-                XSSFRow row = rowCreator.createRow();
-                XSSFCell cell0 = row.createCell(classLevel + 0);
-                XSSFCell cell1 = row.createCell(classLevel + 1);                
-                String prefix = prefixes2reverse.get(clazz.getNameSpace());                
-                CellStyle style = styles.get(prefix);
-                if(style == null) {
-                    log.warn("No cell style found for prefix " + prefix);
-                    style = styles.get("default");
-                }
-                cell0.setCellStyle(style);
-                cell1.setCellStyle(style);
-                for(int i = classLevel + 1; i < classMax; i++) {
-                    XSSFCell fillerCell = row.createCell(i);
-                    fillerCell.setCellStyle(style);
-                }
-                sheet.addMergedRegion(new CellRangeAddress(
-                        rowCreator.rowIndex, rowCreator.rowIndex, classLevel + 1, classMax - 1));
-                if(prefix == null) {
-                    log.warn("No prefix found for namespace " + clazz.getNameSpace());
-                    cell1.setCellValue(clazz.getURI());
-                } else {
-                    cell0.setCellValue(prefix);
-                    cell1.setCellValue(clazz.getLocalName());                    
-                }
-                Iterator<String[]> objProperties = getObjectProperties(clazz.getURI(), ontology).iterator();
-                Iterator<String[]> datatypeProperties = getDatatypeProperties(clazz.getURI(), ontology).iterator();
-                boolean newRow = false;
-                while(objProperties.hasNext() || datatypeProperties.hasNext()) {
-                    boolean objPropPrinted = false;
-                    if(objProperties.hasNext()) {
-                        objPropPrinted = true;
-                        if(newRow) {
-                            for(int i = 0; i < 6; i++) {
-                                XSSFCell fillerCell = row.createCell(i);
-                                fillerCell.setCellStyle(style); // class style
-                            }
-                            sheet.addMergedRegion(new CellRangeAddress(
-                                    rowCreator.rowIndex, rowCreator.rowIndex, 0, 5));
-                        }
-                        String[] prop = objProperties.next();
-                        String propPrefix = prop[1];
-                        XSSFCell prefixCell = row.createCell(6);
-                        prefixCell.setCellValue(prop[1]);
-                        XSSFCell localNameCell = row.createCell(7);
-                        localNameCell.setCellValue(prop[2]);
-                        CellStyle propCellStyle = "range".equals(prop[6]) 
-                                ? styles.get(propPrefix + "bold") : styles.get(propPrefix);
-                        if(propCellStyle == null) {
-                            propCellStyle = "range".equals(prop[6]) 
-                                    ? styles.get("defaultbold") : styles.get("default");
-                        }
-                        prefixCell.setCellStyle(propCellStyle);
-                        localNameCell.setCellStyle(propCellStyle);
-                        String rangePrefix = prop[3];
-                        if(!StringUtils.isEmpty(rangePrefix)) {
-                            XSSFCell rangeCell = row.createCell(8);
-                            rangeCell.setCellValue(rangePrefix + ":" + prop[4]);
-                            CellStyle rangeCellStyle = styles.get(rangePrefix);
-                            if(rangeCellStyle == null) {
-                                styles.get("default");
-                            }                            
-                            rangeCell.setCellStyle(rangeCellStyle);
-                        } else {
-                            XSSFCell rangeCell = row.createCell(8);
-                            rangeCell.setCellValue(prop[4]);
-                            CellStyle rangeCellStyle = styles.get(propPrefix);
-                            if(rangeCellStyle == null) {
-                                styles.get("default");
-                            }
-                            rangeCell.setCellStyle(rangeCellStyle); 
-                        }
-                    }
-                    if(datatypeProperties.hasNext()) {
-                        if(newRow  && !objPropPrinted) {
-                            for(int i = 0; i < 9; i++) {
-                                XSSFCell fillerCell = row.createCell(i);
-                                fillerCell.setCellStyle(style); // class style
-                            }
-                            sheet.addMergedRegion(new CellRangeAddress(
-                                    rowCreator.rowIndex, rowCreator.rowIndex, 0, 8));
-                        }
-                        String[] prop = datatypeProperties.next();
-                        String propPrefix = prop[1];
-                        XSSFCell prefixCell = row.createCell(9);
-                        prefixCell.setCellValue(prop[1]);
-                        XSSFCell localNameCell = row.createCell(10);
-                        localNameCell.setCellValue(prop[2]);
-                        CellStyle propCellStyle = "range".equals(prop[6]) 
-                                ? styles.get(propPrefix + "bold") : styles.get(propPrefix);
-                        if(propCellStyle == null) {
-                            propCellStyle = "range".equals(prop[6]) 
-                                    ? styles.get("defaultbold") : styles.get("default");
-                        }
-                        prefixCell.setCellStyle(propCellStyle);
-                        localNameCell.setCellStyle(propCellStyle);
-                        String rangePrefix = prop[3];
-                        CellStyle rangeCellStyle = null;
-                        if(!StringUtils.isEmpty(rangePrefix)) {
-                            XSSFCell rangeCell = row.createCell(11);
-                            rangeCell.setCellValue(rangePrefix + ":" + prop[4]);
-                            rangeCellStyle = styles.get(rangePrefix);
-                            if(rangeCellStyle == null) {
-                                rangeCellStyle = styles.get("default");    
-                            }
-                            rangeCell.setCellStyle(rangeCellStyle);
-                        } else {
-                            XSSFCell rangeCell = row.createCell(11);
-                            rangeCell.setCellValue(prop[4]);
-                            rangeCellStyle = styles.get(propPrefix);
-                            if(rangeCellStyle == null) {
-                                
-                            }
-                            rangeCell.setCellStyle(rangeCellStyle);                             
-                        }
-                        if(!StringUtils.isEmpty(prop[5])) {
-                            XSSFCell valuesCell = row.createCell(12);
-                            valuesCell.setCellValue(prop[5]);
-                            if(rangeCellStyle == null) {
-                                rangeCellStyle = styles.get("default");
-                            }
-                            valuesCell.setCellStyle(rangeCellStyle);
-                        }
-                    }
-                    if(objProperties.hasNext() || datatypeProperties.hasNext()) {
-                        row = rowCreator.createRow();
-                        newRow = true;
-                    }
-                }                    
-            }
+        for(Resource clazz : getRootClasses(ontology)) {
+                addClassToSpreadsheet(clazz, sheet, rowCreator, classLevel, 
+                        classMax, styles, ontology);      
         }
         sheet.setColumnWidth(0, 2000);
         sheet.setColumnWidth(1, 2000);
@@ -739,6 +609,176 @@ public class Fuse {
         sheet.setColumnWidth(11, 8000);
         sheet.setColumnWidth(12, 8000);
         return wb;
+    }
+    
+    private static List<Resource> getRootClasses(Model ontology) {
+        List<Resource> rootClasses = new ArrayList<Resource>();
+        StmtIterator sit = ontology.listStatements(null, RDF.type, OWL.Class);
+        while(sit.hasNext()) {
+            Statement stmt = sit.next();
+            if(!stmt.getSubject().isAnon() 
+                    && !ontology.contains(stmt.getSubject(), RDFS.subClassOf, (Resource) null)) {
+                rootClasses.add(stmt.getSubject());
+            }
+        }
+        return rootClasses;
+    }
+    
+    private static List<Resource> getSubClasses(Resource superClass, OntModel ontology) {
+        List<Resource> subClasses = new ArrayList<Resource>();
+        try {
+            OntClass ontSuperClass = ontology.getOntClass(superClass.getURI());
+            Iterator<OntClass> subs = ontSuperClass.listSubClasses();
+            while(subs.hasNext()) {
+                OntClass sub = subs.next();
+                if(!sub.isAnon()) {
+                    subClasses.add(sub);
+                }
+            }
+        } catch (Exception e) {
+            log.error(e, e);
+        }
+        return subClasses;
+    }
+    
+    private static void addClassToSpreadsheet(Resource clazz, XSSFSheet sheet, 
+            RowCreator rowCreator, int classLevel, int classMax, 
+            Map<String, CellStyle> styles, OntModel ontology) {
+        log.info("Adding " + clazz.getURI() + " at level " + classLevel);
+        XSSFRow row = rowCreator.createRow();
+        XSSFCell cell0 = row.createCell(classLevel + 0);
+        XSSFCell cell1 = row.createCell(classLevel + 1);                
+        String prefix = prefixes2reverse.get(clazz.getNameSpace());                
+        CellStyle style = styles.get(prefix);
+        if(style == null) {
+            log.warn("No cell style found for prefix " + prefix);
+            style = styles.get("default");
+        }
+        cell0.setCellStyle(style);
+        cell1.setCellStyle(style);
+        for(int i = classLevel + 1; i < classMax; i++) {
+            XSSFCell fillerCell = row.createCell(i);
+            fillerCell.setCellStyle(style);
+        }
+        if(classLevel  + 1 < classMax - 1) {
+        sheet.addMergedRegion(new CellRangeAddress(
+                rowCreator.rowIndex, rowCreator.rowIndex, classLevel + 1, classMax - 1));
+        }
+        if(prefix == null) {
+            log.warn("No prefix found for namespace " + clazz.getNameSpace());
+            cell1.setCellValue(clazz.getURI());
+        } else {
+            cell0.setCellValue(prefix);
+            cell1.setCellValue(clazz.getLocalName());                    
+        }
+        Iterator<String[]> objProperties = getObjectProperties(clazz.getURI(), ontology).iterator();
+        Iterator<String[]> datatypeProperties = getDatatypeProperties(clazz.getURI(), ontology).iterator();
+        boolean newRow = false;
+        while(objProperties.hasNext() || datatypeProperties.hasNext()) {
+            boolean objPropPrinted = false;
+            if(objProperties.hasNext()) {
+                objPropPrinted = true;
+                if(newRow) {
+                    for(int i = 0; i < 6; i++) {
+                        XSSFCell fillerCell = row.createCell(i);
+                        fillerCell.setCellStyle(style); // class style
+                    }
+                    sheet.addMergedRegion(new CellRangeAddress(
+                            rowCreator.rowIndex, rowCreator.rowIndex, 0, 5));
+                }
+                String[] prop = objProperties.next();
+                String propPrefix = prop[1];
+                XSSFCell prefixCell = row.createCell(6);
+                prefixCell.setCellValue(prop[1]);
+                XSSFCell localNameCell = row.createCell(7);
+                localNameCell.setCellValue(prop[2]);
+                CellStyle propCellStyle = "range".equals(prop[6]) 
+                        ? styles.get(propPrefix + "bold") : styles.get(propPrefix);
+                if(propCellStyle == null) {
+                    propCellStyle = "range".equals(prop[6]) 
+                            ? styles.get("defaultbold") : styles.get("default");
+                }
+                prefixCell.setCellStyle(propCellStyle);
+                localNameCell.setCellStyle(propCellStyle);
+                String rangePrefix = prop[3];
+                if(!StringUtils.isEmpty(rangePrefix)) {
+                    XSSFCell rangeCell = row.createCell(8);
+                    rangeCell.setCellValue(rangePrefix + ":" + prop[4]);
+                    CellStyle rangeCellStyle = styles.get(rangePrefix);
+                    if(rangeCellStyle == null) {
+                        styles.get("default");
+                    }                            
+                    rangeCell.setCellStyle(rangeCellStyle);
+                } else {
+                    XSSFCell rangeCell = row.createCell(8);
+                    rangeCell.setCellValue(prop[4]);
+                    CellStyle rangeCellStyle = styles.get(propPrefix);
+                    if(rangeCellStyle == null) {
+                        styles.get("default");
+                    }
+                    rangeCell.setCellStyle(rangeCellStyle); 
+                }
+            }
+            if(datatypeProperties.hasNext()) {
+                if(newRow  && !objPropPrinted) {
+                    for(int i = 0; i < 9; i++) {
+                        XSSFCell fillerCell = row.createCell(i);
+                        fillerCell.setCellStyle(style); // class style
+                    }
+                    sheet.addMergedRegion(new CellRangeAddress(
+                            rowCreator.rowIndex, rowCreator.rowIndex, 0, 8));
+                }
+                String[] prop = datatypeProperties.next();
+                String propPrefix = prop[1];
+                XSSFCell prefixCell = row.createCell(9);
+                prefixCell.setCellValue(prop[1]);
+                XSSFCell localNameCell = row.createCell(10);
+                localNameCell.setCellValue(prop[2]);
+                CellStyle propCellStyle = "range".equals(prop[6]) 
+                        ? styles.get(propPrefix + "bold") : styles.get(propPrefix);
+                if(propCellStyle == null) {
+                    propCellStyle = "range".equals(prop[6]) 
+                            ? styles.get("defaultbold") : styles.get("default");
+                }
+                prefixCell.setCellStyle(propCellStyle);
+                localNameCell.setCellStyle(propCellStyle);
+                String rangePrefix = prop[3];
+                CellStyle rangeCellStyle = null;
+                if(!StringUtils.isEmpty(rangePrefix)) {
+                    XSSFCell rangeCell = row.createCell(11);
+                    rangeCell.setCellValue(rangePrefix + ":" + prop[4]);
+                    rangeCellStyle = styles.get(rangePrefix);
+                    if(rangeCellStyle == null) {
+                        rangeCellStyle = styles.get("default");    
+                    }
+                    rangeCell.setCellStyle(rangeCellStyle);
+                } else {
+                    XSSFCell rangeCell = row.createCell(11);
+                    rangeCell.setCellValue(prop[4]);
+                    rangeCellStyle = styles.get(propPrefix);
+                    if(rangeCellStyle == null) {
+                        
+                    }
+                    rangeCell.setCellStyle(rangeCellStyle);                             
+                }
+                if(!StringUtils.isEmpty(prop[5])) {
+                    XSSFCell valuesCell = row.createCell(12);
+                    valuesCell.setCellValue(prop[5]);
+                    if(rangeCellStyle == null) {
+                        rangeCellStyle = styles.get("default");
+                    }
+                    valuesCell.setCellStyle(rangeCellStyle);
+                }
+            }
+            if(objProperties.hasNext() || datatypeProperties.hasNext()) {
+                row = rowCreator.createRow();
+                newRow = true;
+            }
+        }
+        for(Resource subClass : getSubClasses(clazz, ontology)) {
+            addClassToSpreadsheet(subClass, sheet, rowCreator, Math.min(
+                    classLevel + 1, classMax - 2), classMax, styles, ontology);  
+        }
     }
     
     private static String[] prefixAndLocalName(Resource res) {
