@@ -16,6 +16,7 @@ import java.util.HashMap;
 import java.util.Iterator;
 import java.util.List;
 import java.util.Map;
+import java.util.Random;
 
 import org.apache.commons.csv.CSVFormat;
 import org.apache.commons.csv.CSVRecord;
@@ -53,6 +54,7 @@ import org.apache.jena.util.iterator.ExtendedIterator;
 import org.apache.jena.vocabulary.OWL;
 import org.apache.jena.vocabulary.RDF;
 import org.apache.jena.vocabulary.RDFS;
+import org.apache.jena.vocabulary.XSD;
 import org.apache.poi.ss.usermodel.BorderStyle;
 import org.apache.poi.ss.usermodel.CellStyle;
 import org.apache.poi.ss.usermodel.FillPatternType;
@@ -153,8 +155,8 @@ public class Fuse {
         Model ontology2 = loadOntology(args[2]);
         Model fused = fuse(args[0], ontology1, ontology2);
         fused.write(new FileOutputStream(new File(args[3]) + ".ttl"), "TTL");
-//        Model sampleData = createSampleData(fused);
-//        sampleData.write(new FileOutputStream(new File(args[3]) + "-sampleData.ttl"), "TTL");
+        Model sampleData = createSampleData(fused);
+        sampleData.write(new FileOutputStream(new File(args[3]) + "-sampleData.ttl"), "TTL");
         OntModel ontology = ModelFactory.createOntologyModel(OntModelSpec.OWL_MEM, fused);
         XSSFWorkbook spreadsheet = createSpreadsheet(ontology);
         OutputStream out = new BufferedOutputStream(new FileOutputStream(new File(args[3] + ".xlsx")));
@@ -447,6 +449,7 @@ public class Fuse {
     }
     
     private static Model createSampleData(Model model) {
+        Random random = new Random(System.currentTimeMillis());
         OntModel ontology = ModelFactory.createOntologyModel(OntModelSpec.OWL_MEM, model);
         String namespace = "http://example.org/individual/";
         Model sampleData = ModelFactory.createDefaultModel();
@@ -456,12 +459,19 @@ public class Fuse {
             if(!stmt.getSubject().isAnon()) {
                 OntClass clazz = ontology.getOntClass(stmt.getSubject().getURI());
                 List<Resource> sampleInds = new ArrayList<Resource>();
-                sampleInds.add(sampleData.getResource(namespace + "sample-" + clazz.getLocalName() + autoIncrement()));
+                Resource newInd = sampleData.getResource(namespace + "sample-" + clazz.getLocalName() + "-" + autoIncrement());
+                sampleInds.add(newInd);
+                sampleData.add(newInd, RDF.type, clazz);
+                sampleData.add(newInd, RDFS.label, newInd.getLocalName());
                 List<String[]> objProps = getAllObjectProperties(clazz, ontology);
                 for(String[] objProp : objProps) {                                       
                     Property property = sampleData.getProperty(objProp[0]);
                     List<OntClass> subTypes = new ArrayList<OntClass>();
                     OntClass range = ontology.getOntClass(getRangeURI(objProp));
+                    if(range == null) {
+                        log.warn("Null range class found for " + property.getURI());
+                        continue;
+                    }
                     subTypes.add(range);
                     Iterator<OntClass> subclasses = range.listSubClasses();
                     while(subclasses.hasNext()) {
@@ -470,32 +480,57 @@ public class Fuse {
                             subTypes.add(subclass);
                         }
                     }
-                    Model tmp = ModelFactory.createDefaultModel();
+                    //Model tmp = ModelFactory.createDefaultModel();
                     for(Resource sampleInd : sampleInds) {
+                        log.info("Adding " + property.getURI() + " range " + range.getURI() + " to individual " + sampleInd.getURI());
                         Resource objectInd = sampleData.getResource(sampleInd.getURI() + "-" + property.getLocalName());
                         sampleData.add(sampleInd, property, objectInd);
                         sampleData.add(objectInd, RDF.type, range);
                     }
-                    List<Resource> newResources = new ArrayList<Resource>();
+                    //List<Resource> newResources = new ArrayList<Resource>();
                     for(OntClass objectType : subTypes) {
-                        List<Resource> clones = cloneIndividuals(sampleInds, model);
+                        List<Resource> clones = cloneIndividuals(sampleInds, sampleData);
                         for(Resource clone : clones) {
+                            log.info("Adding " + property.getURI() + " range " + objectType.getURI() + " to individual " + clone.getURI());
                             Resource objectInd = sampleData.getResource(clone.getURI() + "-" + property.getLocalName());
                             sampleData.add(clone, property, objectInd);
                             sampleData.add(objectInd, RDF.type, objectType);
                         }
                     }
-                    sampleInds.addAll(newResources);
+                    //sampleInds.addAll(newResources);
                 }
                 List<String[]> dataProps = getAllDatatypeProperties(clazz, ontology);
                 for(String[] dataProp : dataProps) {
-                    String rangeDatatypeURI = getRangeURI(dataProp);
-                    if(!StringUtils.isEmpty(dataProp[5])) {
+                    Property property = sampleData.getProperty(dataProp[0]);
+                    if(!StringUtils.isEmpty(dataProp[5])) {                        
                         // enumerated values
-                        String[] values = dataProp[5].replaceAll("{", "").replaceAll("}", "").replaceAll(" ", "").split(",");
+                        String[] values = dataProp[5].replaceAll("\\{", "")
+                                .replaceAll("\\}", "").replaceAll("\\\"",  "")
+                                .replaceAll(" ", "").split(",");
                         for(String value : values) {
-                            
+                            List<Resource> clones = cloneIndividuals(sampleInds, sampleData);
+                            for(Resource clone : clones) {                                
+                                sampleData.add(clone, property, value);
+                            }
                         }
+                    } else {
+                        String rangeDatatypeURI = getRangeURI(dataProp);
+                        for(Resource res : sampleInds) {
+                            if(rangeDatatypeURI == null) {
+                                log.warn("Null rangeDatatypeURI for" + property.getURI());
+                                sampleData.add(res, property, "plain literal " + random.nextInt(9999));
+                            } else if(rangeDatatypeURI.equals(XSD.integer.getURI()) || rangeDatatypeURI.equals(XSD.xint.getURI())) {
+                                sampleData.add(res, property, sampleData.createTypedLiteral(random.nextInt(9999)));
+                            } else if(rangeDatatypeURI.equals(XSD.xstring.getURI())) {
+                                sampleData.add(res, property, sampleData.createTypedLiteral("a string " + random.nextInt(9999)));
+                            } else if(rangeDatatypeURI.equals(XSD.date.getURI())) {
+                                sampleData.add(res, property, sampleData.createTypedLiteral(random.nextInt(9999) + "-01-01"));
+                            } else if(rangeDatatypeURI.equals(XSD.dateTime.getURI())) {
+                                sampleData.add(res, property, sampleData.createTypedLiteral(random.nextInt(9999) + "-01-01T00:00:00Z"));
+                            } else {
+                                log.warn("Unsupported datatype URI " + rangeDatatypeURI);
+                            }
+                        } 
                     }
                  }
             }
@@ -541,20 +576,31 @@ public class Fuse {
         Model cloneStmts = ModelFactory.createDefaultModel();
         for(Resource ind : inds) {
             String baseURI = ind.getURI().substring(0, ind.getURI().lastIndexOf("-"));
-            String cloneURI = baseURI + autoIncrement();
-            Resource clone = cloneStmts.getAlt(cloneURI);
+            String cloneURI = baseURI + "-" + autoIncrement();
+            Resource clone = cloneStmts.getResource(cloneURI);
             clonedInds.add(clone);
-            StmtIterator stmtIt = model.listStatements();
+            StmtIterator stmtIt = model.listStatements(ind, null, (RDFNode) null);
             while(stmtIt.hasNext()) {
                 Statement stmt = stmtIt.next();
-                if(stmt.getObject().isLiteral()) {
+                if(RDFS.label.equals(stmt.getPredicate())) {
+                    cloneStmts.add(clone, RDFS.label, clone.getLocalName());
+                } else if(stmt.getObject().isLiteral()) {
                     cloneStmts.add(clone, stmt.getPredicate(), stmt.getObject());
                 } else if(stmt.getObject().equals(ind)) {
                     cloneStmts.add(clone, stmt.getPredicate(), clone);
-                } else {
+                } else if(RDF.type.equals(stmt.getPredicate())) {
+                    cloneStmts.add(clone, RDF.type, stmt.getObject());
+                }  else if(stmt.getObject().isURIResource()){
                     String objURI = stmt.getObject().asResource().getURI();
-                    String objBaseURI = objURI.substring(0, ind.getURI().lastIndexOf("-"));
-                    Resource newObj = cloneStmts.getResource(objBaseURI + autoIncrement());
+                    int endOfBaseURI = objURI.lastIndexOf("-");
+                    String objBaseURI = null;
+                    if(endOfBaseURI < 0) {
+                        log.warn("No hyphen found in objURI " + objURI);
+                        objBaseURI = objURI;
+                    } else {
+                        objBaseURI = objURI.substring(0, endOfBaseURI);
+                    }                    
+                    Resource newObj = cloneStmts.getResource(objBaseURI + "-" + autoIncrement());
                     cloneStmts.add(clone, stmt.getPredicate(), newObj);
                     StmtIterator objSit = model.listStatements(model.getResource(objURI), null, (RDFNode) null);
                     while(objSit.hasNext()) {
@@ -571,14 +617,14 @@ public class Fuse {
     
     private static String getRangeURI(String[] prop) {
         String rangePrefix = prop[3];
-        if(rangePrefix == null) {
+        if(StringUtils.isEmpty(rangePrefix)) {
            return prop[4];
         } else {
             String rangeClassNamespace = prefixes2.get(rangePrefix);
-            if(rangeClassNamespace == null) {
+            if(StringUtils.isEmpty(rangeClassNamespace)) {
                 throw new RuntimeException("No namespace found for prefix " + rangePrefix);
             } else {
-                return rangePrefix + prop[4];
+                return rangeClassNamespace + prop[4];
             }
         }
     }
