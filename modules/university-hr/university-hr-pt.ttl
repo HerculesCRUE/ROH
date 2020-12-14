@@ -1,0 +1,183 @@
+@prefix dct:   <http://purl.org/dc/terms/> .
+@prefix asioModules: <http://purl.org/asio/modules#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix asio:  <http://purl.org/hercules/asio/core#> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix unescothes: <http://skos.um.es/unescothes/> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix project: <http://weso.es/tablines/project/HRuniversitiesPT/> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix dcat:  <http://www.w3.org/ns/dcat#> .
+@prefix my:    <http://weso.es/tablines/project/HRuniversitiesPT/resource/> .
+@prefix foaf:  <http://xmlns.com/foaf/0.1/#> .
+@prefix euCountry: <http://publications.europa.eu/resource/authority/country/> .
+
+<http://purl.org/roh#Funded>
+        a                owl:Class ;
+        rdfs:label       "Funded"@en ;
+        rdfs:subClassOf  <http://purl.org/roh#Status> .
+
+<http://purl.org/roh#Unfunded>
+        a                owl:Class ;
+        rdfs:label       "Unfunded"@en ;
+        rdfs:subClassOf  <http://purl.org/roh#Status> .
+
+<http://purl.org/roh#Final>
+        a                owl:Class ;
+        rdfs:label       "Final"@en ;
+        rdfs:subClassOf  <http://purl.org/roh#Status> .
+
+<http://purl.org/rohpt#PT_UNIVERSITY_HR_PTPEM>
+        a                owl:Class ;
+        rdfs:label       "Professor emérito"@pt ;
+        rdfs:subClassOf  <http://purl.org/roh/mirror/vivo#FacultyPosition> ;
+        asio:country     euCountry:PRT ;
+        asio:hasCode     <http://purl.org/rohpt#PT_UNIVERSITY_HR_CODE_PTPEM> ;
+        skos:closeMatch  unescothes:C03965 , unescothes:C00015 ;
+        skos:inScheme    asioModules:PTUniversityHumanResourcesList ;
+        skos:notation    "PTPEM" ;
+        skos:prefLabel   "Profesor emérito"@gl , "Profesor emérito"@es , "Professor emèrit"@ca , "Profesor eméritu"@ast , "Professor emérito"@pt .
+
+<http://purl.org/rohpt#PT_UNIVERSITY_HR_PTPAU>
+        a                owl:Class ;
+        rdfs:label       "Professor auxiliar"@pt ;
+        rdfs:subClassOf  <http://purl.org/roh/mirror/vivo#FacultyPosition> ;
+        asio:country     euCountry:PRT ;
+        asio:hasCode     <http://purl.org/rohpt#PT_UNIVERSITY_HR_CODE_PTPAU> ;
+        skos:closeMatch  unescothes:C00015 , unescothes:C03965 ;
+        skos:inScheme    asioModules:PTUniversityHumanResourcesList ;
+        skos:notation    "PTPAU" ;
+        skos:prefLabel   "Profesor auxiliar"@es , "Profesor auxiliar"@gl , "Profesor auxiliar"@ast , "Professor auxiliar"@pt , "Professor auxiliar"@ca .
+
+<http://purl.org/rohpt#PT_UNIVERSITY_HR_CODE_PTPC>
+        a               skos:Concept ;
+        rdfs:label      "PTPC" ;
+        asio:codeOf     <http://purl.org/rohpt#PT_UNIVERSITY_HR_PTPC> ;
+        skos:inScheme   asioModules:PTUniversityHumanResourcesCodesList ;
+        skos:prefLabel  "PTPC" .
+
+<http://purl.org/roh/mirror/vivo#FacultyPosition>
+        a       owl:Class .
+
+<http://purl.org/roh#patentStatus>
+        a           owl:ObjectProperty ;
+        rdfs:label  "patentStatus"@en ;
+        rdfs:range  <http://purl.org/roh#Status> .
+
+<http://purl.org/roh#projectStatus>
+        a           owl:ObjectProperty ;
+        rdfs:label  "projectStatus"@en ;
+        rdfs:range  <http://purl.org/roh#Status> .
+
+<http://purl.org/rohpt#PT_UNIVERSITY_HR_PTPC>
+        a                owl:Class ;
+        rdfs:label       "Professor catedrático"@pt ;
+        rdfs:subClassOf  <http://purl.org/roh/mirror/vivo#FacultyPosition> ;
+        asio:country     euCountry:PRT ;
+        asio:hasCode     <http://purl.org/rohpt#PT_UNIVERSITY_HR_CODE_PTPC> ;
+        skos:closeMatch  unescothes:C03965 , unescothes:C00015 ;
+        skos:inScheme    asioModules:PTUniversityHumanResourcesList ;
+        skos:notation    "PTPC" ;
+        skos:prefLabel   "Professor catedrático"@pt , "Profesor catedrático"@gl , "Profesor catedrático"@es , "Professor catedràtic"@ca , "Profesor catedráticu"@ast .
+
+<http://purl.org/rohpt#PT_UNIVERSITY_HR_CODE_PTPEM>
+        a               skos:Concept ;
+        rdfs:label      "PTPEM" ;
+        asio:codeOf     <http://purl.org/rohpt#PT_UNIVERSITY_HR_PTPEM> ;
+        skos:inScheme   asioModules:PTUniversityHumanResourcesCodesList ;
+        skos:prefLabel  "PTPEM" .
+
+<http://purl.org/roh#Rejected>
+        a                owl:Class ;
+        rdfs:label       "Rejected"@en ;
+        rdfs:subClassOf  <http://purl.org/roh#Status> .
+
+asioModules:PTUniversityHumanResourcesCodesList
+        a               asioModules:UniversityHumanResources ;
+        rdfs:label      "Codis dels recursos humans de les universitats de Portugal"@ca , "Códigos dos recursos humanos das universidades de Portugal"@pt , "Códigos dos recursos humanos das universidades de Portugal"@gl , "Códigos de los recursos humanos de las universidades de Portugal"@es , "Codes des resources humains des universités de Portugal"@fr , "Codes for the human resources of the universities from Portugal"@en , "Códigos de los recursos humanos de les universidaes de Portugal"@ast ;
+        skos:prefLabel  "Codes for the human resources of the universities from Portugal"@en , "Códigos dos recursos humanos das universidades de Portugal"@pt , "Códigos dos recursos humanos das universidades de Portugal"@gl , "Codis dels recursos humans de les universitats de Portugal"@ca , "Codes des resources humains des universités de Portugal"@fr , "Códigos de los recursos humanos de les universidaes de Portugal"@ast , "Códigos de los recursos humanos de las universidades de España"@es .
+
+<http://purl.org/roh#Submitted>
+        a                owl:Class ;
+        rdfs:label       "Submitted"@en ;
+        rdfs:subClassOf  <http://purl.org/roh#Status> .
+
+<http://purl.org/rohpt#PT_UNIVERSITY_HR_PTPAS>
+        a                owl:Class ;
+        rdfs:label       "Professor associado"@pt ;
+        rdfs:subClassOf  <http://purl.org/roh/mirror/vivo#FacultyPosition> ;
+        asio:country     euCountry:PRT ;
+        asio:hasCode     <http://purl.org/rohpt#PT_UNIVERSITY_HR_CODE_PTPAS> ;
+        skos:closeMatch  unescothes:C00015 , unescothes:C03965 ;
+        skos:inScheme    asioModules:PTUniversityHumanResourcesList ;
+        skos:notation    "PTPAS" ;
+        skos:prefLabel   "Profesor asociáu"@ast , "Professor associado"@pt , "Professor associat"@ca , "Irakasle elkartua"@eu , "Profesor asociado"@gl , "Profesor asociado"@es .
+
+<http://purl.org/rohpt#PT_UNIVERSITY_HR_CODE_PTPAU>
+        a               skos:Concept ;
+        rdfs:label      "PTPAU" ;
+        asio:codeOf     <http://purl.org/rohpt#PT_UNIVERSITY_HR_PTPAU> ;
+        skos:inScheme   asioModules:PTUniversityHumanResourcesCodesList ;
+        skos:prefLabel  "PTPAU" .
+
+<http://purl.org/roh#Signed>
+        a                owl:Class ;
+        rdfs:label       "Signed"@en ;
+        rdfs:subClassOf  <http://purl.org/roh#Status> .
+
+<http://purl.org/roh#evaluationStatus>
+        a           owl:ObjectProperty ;
+        rdfs:label  "evaluationStatus"@en ;
+        rdfs:range  <http://purl.org/roh#Status> .
+
+<http://purl.org/roh#status>
+        a           owl:ObjectProperty ;
+        rdfs:label  "status"@en ;
+        rdfs:range  <http://purl.org/roh#Status> .
+
+<http://purl.org/roh#Closed>
+        a                owl:Class ;
+        rdfs:label       "Closed"@en ;
+        rdfs:subClassOf  <http://purl.org/roh#Status> .
+
+<http://purl.org/roh#Cancelled>
+        a                owl:Class ;
+        rdfs:label       "Cancelled"@en ;
+        rdfs:subClassOf  <http://purl.org/roh#Status> .
+
+<http://purl.org/roh#Provisional>
+        a                owl:Class ;
+        rdfs:label       "Provisional"@en ;
+        rdfs:subClassOf  <http://purl.org/roh#Status> .
+
+<http://purl.org/roh#Terminated>
+        a                owl:Class ;
+        rdfs:label       "Terminated"@en ;
+        rdfs:subClassOf  <http://purl.org/roh#Status> .
+
+<http://purl.org/roh#ProposalSubmitted>
+        a                owl:Class ;
+        rdfs:label       "Proposal Submitted"@en ;
+        rdfs:subClassOf  <http://purl.org/roh#Status> .
+
+<http://purl.org/roh#Open>
+        a                owl:Class ;
+        rdfs:label       "Open"@en ;
+        rdfs:subClassOf  <http://purl.org/roh#Status> .
+
+asioModules:PTUniversityHumanResourcesList
+        a               asioModules:UniversityHumanResources ;
+        rdfs:label      "Resources humains des universités de Portugal"@fr , "Recursos humanos das universidades de Portugal"@gl , "Recursos humanos das universidades de Portugal"@pt , "Human resources of the universities from Portugal"@en , "Recursos humanos de las universidades de Portugal"@es , "Recursos humans de les universitats de Portugal"@ca , "Recursos humanos de les universidaes de Portugal"@ast ;
+        skos:prefLabel  "Recursos humans de les universitats de Portugal"@ca , "Resources humains des universités de Portugal"@fr , "Human resources of the universities from Portugal"@en , "Recursos humanos de les universidaes de Portugal"@ast , "Recursos humanos de las universidades de Portugal"@es , "Recursos humanos das universidades de Portugal"@gl , "Recursos humanos das universidades de Portugal"@pt .
+
+<http://purl.org/rohpt#PT_UNIVERSITY_HR_CODE_PTPAS>
+        a               skos:Concept ;
+        rdfs:label      "PTPAS" ;
+        asio:codeOf     <http://purl.org/rohpt#PT_UNIVERSITY_HR_PTPAS> ;
+        skos:inScheme   asioModules:PTUniversityHumanResourcesCodesList ;
+        skos:prefLabel  "PTPAS" .
+
+<http://purl.org/roh#Accepted>
+        a                owl:Class ;
+        rdfs:label       "Accepted"@en ;
+        rdfs:subClassOf  <http://purl.org/roh#Status> .
