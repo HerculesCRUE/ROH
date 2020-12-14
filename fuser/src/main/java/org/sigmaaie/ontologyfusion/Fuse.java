@@ -87,6 +87,7 @@ public class Fuse {
     static {
         // ib-hercules prefixes
         prefixes1.put("asio", "http://purl.org/hercules/asio/core#");
+        prefixes1.put("asioModules", "http://purl.org/asio/modules#");
         prefixes1.put("event", "http://purl.org/NET/c4dm/event.owl#");
         prefixes1.put("dc", "http://purl.org/dc/elements/1.1/");
         prefixes1.put("ro", "http://purl.org/wf4ever/ro#");
@@ -117,6 +118,9 @@ public class Fuse {
         prefixes1.put("humantechreadiness", "http://sweetontology.net/humanTechReadiness#");
         // GnossDeusOnto prefixes
         prefixes2.put("roh", "http://purl.org/roh#");
+        prefixes2.put("rohes", "http://purl.org/rohes#");
+        prefixes2.put("rohpt", "http://purl.org/rohpt#");
+        prefixes2.put("rohuk", "http://purl.org/rohuk#");
         prefixes2.put("event", "http://purl.org/NET/c4dm/event.owl#");
         prefixes2.put("ns", "http://www.w3.org/2003/06/sw-vocab-status/ns#");
         prefixes2.put("ro", "http://purl.org/roh/mirror/obo/ro#");
@@ -224,6 +228,9 @@ public class Fuse {
         fused = addStatuses(fused);
         fused = addMisc(fused);
         fused = changeNamespace(fused, ASIO, ROH);
+        fused = changeNamespace(fused, prefixes1.get("asioModules"), prefixes2.get("rohes"), "ES_");
+        fused = changeNamespace(fused, prefixes1.get("asioModules"), prefixes2.get("rohpt"), "PT_");
+        fused = changeNamespace(fused, prefixes1.get("asioModules"), prefixes2.get("rohuk"), "GB_");
         fused = updateOntologyResource(fused);
         fused = ensureLabels(fused, ROH);
         for(String prefix : prefixes1.keySet()) {
@@ -268,11 +275,18 @@ public class Fuse {
         return fused;
     }
     
-    private static Model changeNamespace(Model model, String fromNS, String toNS) {
+    private static Model changeNamespace(Model model, String fromNS, 
+            String toNS) {
+        return changeNamespace(model, fromNS, toNS, null);  
+    }
+    private static Model changeNamespace(Model model, String fromNS, 
+            String toNS, String localNameStartsWith) {
         ResIterator resIt = model.listSubjects();
         while(resIt.hasNext()) {
             Resource res = resIt.next();
-            if(!res.isAnon() && fromNS.equals(res.getNameSpace())) {
+            if(!res.isAnon() && fromNS.equals(res.getNameSpace()) 
+                    && (localNameStartsWith == null 
+                    || res.getLocalName().startsWith(localNameStartsWith))) {
                 ResourceUtils.renameResource(res, toNS + res.getLocalName());
             }
         }
@@ -281,7 +295,9 @@ public class Fuse {
             RDFNode node = nodeIt.next();
             if(node.isURIResource()) {
                 Resource res = node.asResource();
-                if(!res.isAnon() && fromNS.equals(res.getNameSpace())) {
+                if(!res.isAnon() && fromNS.equals(res.getNameSpace())
+                        && (localNameStartsWith == null 
+                        || res.getLocalName().startsWith(localNameStartsWith))) {
                     ResourceUtils.renameResource(res, toNS + res.getLocalName());
                 }
             }            
@@ -299,7 +315,7 @@ public class Fuse {
         } else if(model.contains(fromRes, RDF.type, OWL.DatatypeProperty)) {
             model.add(toRes, RDF.type, OWL.DatatypeProperty);
         } else {
-            throw new RuntimeException("No type found for entity " + fromURI);
+            log.warn("No type found for entity " + fromURI);
         }
         ResourceUtils.renameResource(fromRes, toURI);
     }
@@ -317,7 +333,7 @@ public class Fuse {
             model.add(fromRes, RDFS.subPropertyOf, superRes);
             model.add(superRes, RDF.type, OWL.DatatypeProperty);
         } else {
-            throw new RuntimeException("No type found for entity " + fromURI);
+            log.warn("No type found for entity " + fromURI + ". Skipping.");
         }
     }
     
@@ -1144,6 +1160,8 @@ public class Fuse {
         colors.put("xsd", IndexedColors.TAN.index);
         colors.put("roh", IndexedColors.LEMON_CHIFFON.index);
         colors.put("rohes", IndexedColors.ORANGE.index);
+        colors.put("rohpt", IndexedColors.ORANGE.index);
+        colors.put("rohuk", IndexedColors.LIGHT_ORANGE.index);
         colors.put("rohum", IndexedColors.DARK_RED.index);
         colors.put("skos", IndexedColors.PLUM.index);
         colors.put("uneskos", IndexedColors.DARK_YELLOW.index);
