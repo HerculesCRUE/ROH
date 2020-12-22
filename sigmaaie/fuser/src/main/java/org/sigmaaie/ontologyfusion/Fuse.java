@@ -1,10 +1,12 @@
 package org.sigmaaie.ontologyfusion;
 
 import java.io.BufferedOutputStream;
+import java.io.BufferedReader;
 import java.io.File;
 import java.io.FileInputStream;
 import java.io.FileOutputStream;
 import java.io.IOException;
+import java.io.InputStream;
 import java.io.InputStreamReader;
 import java.io.OutputStream;
 import java.nio.charset.StandardCharsets;
@@ -156,8 +158,14 @@ public class Fuse {
             return;
         }
         Model ontology1 = loadOntology(args[1]);
-        Model ontology2 = loadOntology(args[2]);
-        Model fused = fuse(args[0], ontology1, ontology2);
+        Model ontology2 = ("omit".equals(args[2])) 
+                ? ModelFactory.createDefaultModel() : loadOntology(args[2]);
+        Model fused = null;
+        if("university-structure".equals(args[0])) {
+            fused = processUniversityStructure(ontology1);
+        } else {
+            fused = fuse(args[0], ontology1, ontology2);
+        }
         fused.write(new FileOutputStream(new File(args[3]) + ".ttl"), "TTL");
         Model sampleData = createSampleData(fused);
         sampleData.write(new FileOutputStream(new File(args[3]) + "-sampleData.ttl"), "TTL");
@@ -1214,6 +1222,62 @@ public class Fuse {
             return this.rowIndex;
         }
 
+    }
+    
+    protected static Model processUniversityStructure(Model model) {
+        boolean DELETE = true;
+        boolean ADD = !DELETE;
+        String dir = "/university-structure/";
+        model = construct(dir + "additions/university.rq", model, ADD);
+        model = construct(dir + "additions/division.rq", model, ADD);
+        model = construct(dir + "additions/locatedIn.rq", model, ADD);
+        model = construct(dir + "removals/university.rq", model, DELETE);
+        model = construct(dir + "removals/division.rq", model, DELETE);
+        model = construct(dir + "removals/locatedIn.rq", model, DELETE);
+        return model;
+    }
+    
+    private static Model construct(String queryFileName, Model model, boolean delete) {
+        String queryStr = loadQuery(queryFileName);
+        QueryExecution qe = QueryExecutionFactory.create(queryStr, model);
+        try {
+            Model results = qe.execConstruct();
+            if(delete) {
+                model.remove(results);
+            } else {
+                model.add(results);
+            }
+        } finally {
+            if(qe != null) {
+                qe.close();
+            }
+        }
+        return model;
+    }
+    
+    protected static String loadQuery(String resourcePath) {
+        InputStream inputStream = Fuse.class.getResourceAsStream(
+                resourcePath);
+        StringBuffer fileContents = new StringBuffer();
+        BufferedReader reader = null;
+        try {
+            reader = new BufferedReader(new InputStreamReader(inputStream, "UTF-8"));
+            String ln;
+            while ( (ln = reader.readLine()) != null) {
+                fileContents.append(ln).append('\n');
+            }
+        } catch (Exception e) {
+            throw new RuntimeException("Unable to load " + resourcePath, e);
+        } finally {
+            if (reader != null) {
+                try {
+                    reader.close();
+                } catch (IOException e) {
+                    throw new RuntimeException(e);
+                }
+            }
+        }
+        return fileContents.toString();
     }
     
 }

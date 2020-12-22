@@ -1,0 +1,17 @@
+PREFIX asioModules:  <http://purl.org/hercules/asio/modules#>
+PREFIX foaf:    <https://xmlns.com/foaf/0.1/>
+PREFIX skos:    <http://www.w3.org/2004/02/skos/core#>
+PREFIX vivo:    <http://purl.org/roh/mirror/vivo>
+PREFIX obo:     <http://purl.org/roh/mirror/obo/ro#>
+
+CONSTRUCT {
+    ?x a foaf:Organization .
+    ?x obo:BFO_0000050 ?parent .
+} WHERE {
+    ?x a skos:Concept .
+    ?x skos:inScheme asioModules:UniversityDivisionList .
+    OPTIONAL {
+        ?x skos:broader ?parent .
+    }
+}
+
