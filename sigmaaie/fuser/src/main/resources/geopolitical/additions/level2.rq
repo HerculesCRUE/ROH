@@ -1,0 +1,22 @@
+PREFIX asio:         <http://purl.org/hercules/asio/core#>
+PREFIX asioModules:  <http://purl.org/hercules/asio/modules#>
+PREFIX atold:   <http://publications.europa.eu/resource/authority/>
+PREFIX foaf:    <https://xmlns.com/foaf/0.1/>
+PREFIX geonames: <http://purl.org/roh/mirror/geonames#>
+PREFIX skos:    <http://www.w3.org/2004/02/skos/core#>
+PREFIX vivo:    <http://purl.org/roh/mirror/vivo>
+PREFIX obo:     <http://purl.org/roh/mirror/obo/ro#>
+
+CONSTRUCT {
+    ?x a geonames:Feature .
+    ?x geonames:featureCode geonames:A.ADM2 .
+    ?x geonames:parentADM1 ?parent .
+} WHERE {
+    ?x a skos:Concept .
+    FILTER(REGEX(STR(?x), "LEVEL_2"))
+    ?x asio:hasCode ?someCode
+    OPTIONAL {
+      ?x skos:broader ?parent
+    }
+}
+

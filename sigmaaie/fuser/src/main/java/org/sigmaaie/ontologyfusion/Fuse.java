@@ -163,6 +163,8 @@ public class Fuse {
         Model fused = null;
         if("university-structure".equals(args[0])) {
             fused = processUniversityStructure(ontology1);
+        } else if("geopolitical".equals(args[0])) {
+            fused = processGeopolitical(ontology1);
         } else {
             fused = fuse(args[0], ontology1, ontology2);
         }
@@ -1234,6 +1236,21 @@ public class Fuse {
         model = construct(dir + "removals/university.rq", model, DELETE);
         model = construct(dir + "removals/division.rq", model, DELETE);
         model = construct(dir + "removals/locatedIn.rq", model, DELETE);
+        return model;
+    }
+    
+    protected static Model processGeopolitical(Model model) {
+        boolean DELETE = true;
+        boolean ADD = !DELETE;
+        String dir = "/geopolitical/";
+        model = construct(dir + "additions/country.rq", model, ADD);
+        model = construct(dir + "additions/country-eu.rq", model, ADD);
+        model = construct(dir + "additions/level1.rq", model, ADD);
+        model = construct(dir + "additions/level1-eu.rq", model, ADD);
+        model = construct(dir + "additions/level2.rq", model, ADD);
+        model = construct(dir + "removals/country.rq", model, DELETE);
+        model = construct(dir + "removals/level1.rq", model, DELETE);
+        model = construct(dir + "removals/level2.rq", model, DELETE);
         return model;
     }
     
