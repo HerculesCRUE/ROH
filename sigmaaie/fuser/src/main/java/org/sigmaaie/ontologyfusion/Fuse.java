@@ -9,6 +9,7 @@ import java.io.IOException;
 import java.io.InputStream;
 import java.io.InputStreamReader;
 import java.io.OutputStream;
+import java.io.StringWriter;
 import java.nio.charset.StandardCharsets;
 import java.util.ArrayList;
 import java.util.Arrays;
@@ -242,6 +243,7 @@ public class Fuse {
         fused = changeNamespace(fused, prefixes1.get("asioModules"), prefixes2.get("rohpt"), "PT_");
         fused = changeNamespace(fused, prefixes1.get("asioModules"), prefixes2.get("rohuk"), "GB_");
         fused = updateOntologyResource(fused);
+        fused = vacuumBrokenRestrictions(fused);
         fused = ensureLabels(fused, ROH);
         for(String prefix : prefixes1.keySet()) {
            String from = prefixes1.get(prefix);
@@ -252,6 +254,36 @@ public class Fuse {
            }
         }
         return fused;
+    }
+    
+    /**
+     * Remove broken owl:Restriction constructs from a model
+     * @param model 
+     * @return supplied model with bad triples removed
+     */
+    private static Model vacuumBrokenRestrictions(Model model) {
+        Model removals = ModelFactory.createDefaultModel();
+        StmtIterator restIt = model.listStatements(null, RDF.type, OWL.Restriction);
+        while(restIt.hasNext()) {
+            Statement restStmt = restIt.next();
+            int statementsAboutRestriction = 0;
+            StmtIterator restStmtIt = model.listStatements(restStmt.getSubject(), null, (RDFNode) null);
+            while(restStmtIt.hasNext()) {
+                restStmtIt.next();
+                statementsAboutRestriction++;
+            }
+            // should be at least 3: the type declaration, onProperty and all/some/min/max/etc.
+            if(statementsAboutRestriction < 3) {
+                removals.add(model.listStatements(restStmt.getSubject(), null, (RDFNode) null));
+                removals.add(model.listStatements(null, null, restStmt.getSubject()));
+            }
+        }
+        model.remove(removals);
+        log.info("Removed " + removals.size() + " bad restriction triples:");
+        StringWriter sw = new StringWriter();
+        removals.write(sw, "N3");
+        log.info(sw.toString());
+        return model;
     }
     
     /**
