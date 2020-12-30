@@ -20,6 +20,7 @@ import java.util.Iterator;
 import java.util.List;
 import java.util.Map;
 import java.util.Random;
+import java.util.Set;
 
 import org.apache.commons.csv.CSVFormat;
 import org.apache.commons.csv.CSVRecord;
@@ -41,6 +42,8 @@ import org.apache.jena.ontology.SomeValuesFromRestriction;
 import org.apache.jena.ontology.UnionClass;
 import org.apache.jena.query.QueryExecution;
 import org.apache.jena.query.QueryExecutionFactory;
+import org.apache.jena.query.QuerySolution;
+import org.apache.jena.query.ResultSet;
 import org.apache.jena.rdf.model.Literal;
 import org.apache.jena.rdf.model.Model;
 import org.apache.jena.rdf.model.ModelFactory;
@@ -50,6 +53,7 @@ import org.apache.jena.rdf.model.RDFList;
 import org.apache.jena.rdf.model.RDFNode;
 import org.apache.jena.rdf.model.ResIterator;
 import org.apache.jena.rdf.model.Resource;
+import org.apache.jena.rdf.model.Seq;
 import org.apache.jena.rdf.model.Statement;
 import org.apache.jena.rdf.model.StmtIterator;
 import org.apache.jena.util.ResourceUtils;
@@ -80,6 +84,7 @@ public class Fuse {
     private static HashMap<String, String> prefixes1 = new HashMap<String, String>();
     private static HashMap<String, String> prefixes2 = new HashMap<String, String>();
     private static HashMap<String, String> prefixes2reverse = new HashMap<String, String>();
+    private static Random random = new Random(System.currentTimeMillis());
     private static final List<String> entryPoints = Arrays.asList(
             "vivo:AcademicDegree", "roh:Accreditation", "rohes:Account", 
             "roh:Activity", "foaf:Agent", "skos:Concept", "roh:CurriculumVitae",
@@ -419,6 +424,16 @@ public class Fuse {
 //        model.add(citationCount, RDF.type, OWL.ObjectProperty);
 //        model.add(citationCount, RDFS.domain, model.getResource(prefixes2.get("foaf") + "Person"));
 //        model.add(citationCount, RDFS.range, model.getResource(ROH + "QualifiedValue"));
+        
+        model.add(model.getResource(prefixes2.get("bibo") + "Article"), 
+                RDFS.subClassOf, model.getResource(prefixes2.get("bibo") + "Document"));
+        Resource authorListRest = model.createResource();
+        model.add(authorListRest, RDF.type, OWL.Restriction);
+        model.add(authorListRest, OWL.onProperty,
+                model.getResource(prefixes2.get("bibo") + "authorList"));
+        model.add(authorListRest, OWL.allValuesFrom, RDF.Seq);
+        model.add(model.getResource(prefixes2.get("roh") + "ResearchObject"), 
+                RDFS.subClassOf, authorListRest);
         return model;
     }
     
@@ -507,7 +522,7 @@ public class Fuse {
     }
     
     private static Model createSampleData(Model model) {
-        Random random = new Random(System.currentTimeMillis());
+        Map<String, Set<String>> indsByType = new HashMap<String, Set<String>>();
         OntModel ontology = ModelFactory.createOntologyModel(OntModelSpec.OWL_MEM, model);
         String namespace = "http://example.org/individual/";
         Model sampleData = ModelFactory.createDefaultModel();
@@ -593,18 +608,71 @@ public class Fuse {
                  }
             }
         }
+        sampleData = createAuthorLists(sampleData);
         return sampleData;
+    }
+    
+    private static Model createAuthorLists(Model model) {
+        Property authorList = model.getProperty(prefixes2.get("bibo") + "authorList");
+        String foafPersonURI = prefixes2.get("foaf") + "Person";
+        int personCount = countResources(foafPersonURI, model);
+        log.info(personCount + " " + foafPersonURI + " objects have been created");
+        List<Resource> resourcesWithAuthorLists = new ArrayList<Resource>();
+        Model toRemove = ModelFactory.createDefaultModel();
+        StmtIterator sit = model.listStatements(null, authorList, (RDFNode) null);
+        while(sit.hasNext()) {
+            Statement stmt = sit.next();
+            resourcesWithAuthorLists.add(stmt.getSubject());
+            // remove existing Seq; we'll just make a new one
+            if(stmt.getObject().isResource()) {
+                toRemove.add(stmt);
+                toRemove.add(model.listStatements(stmt.getObject().asResource(), null, (RDFNode) null));
+            }
+        }
+        model.remove(toRemove);
+        for(Resource doc : resourcesWithAuthorLists) {
+            Seq authorSeq = model.createSeq();
+            int numAuthors = random.nextInt(Math.min(10, personCount - 1));
+            if(numAuthors == 0) {
+                numAuthors = 1;
+            }
+            for(int i = 0; i < numAuthors; i++) {
+                authorSeq.add(getRandomResource(foafPersonURI, model));    
+            }
+            model.add(doc, authorList, authorSeq);
+        }
+        return model;
+    }
+    
+    private static List<Resource> getAllNamedSuperClasses(OntClass clazz, Model model) {
+        List<Resource> superClasses = new ArrayList<Resource>();
+        String query = "SELECT ?y WHERE { <" + clazz.getURI() + "> <" + RDFS.subClassOf.getURI() + ">* ?y }";
+        QueryExecution qe = QueryExecutionFactory.create(query, model);
+        try {
+            ResultSet rs = qe.execSelect();
+            while(rs.hasNext()) {
+                QuerySolution qsoln = rs.next();
+                if(qsoln.get("y").isURIResource()) {
+                    superClasses.add(qsoln.get("y").asResource());
+                }
+            }
+        } finally {
+            if(qe != null) {
+                qe.close();
+            }
+        }
+        return superClasses;
     }
     
     private static List<String[]> getAllObjectProperties(OntClass clazz, Model model) {
         List<String[]> allProps = new ArrayList<String[]>();
         allProps.addAll(getObjectProperties(clazz.getURI(), model));
-        Iterator<OntClass> superIt = clazz.listSuperClasses();
-        while(superIt.hasNext()) {
-            OntClass superClass = superIt.next();
+        log.info("Found " + allProps.size() + " object properties for " + clazz.getURI());
+        for(Resource superClass : getAllNamedSuperClasses(clazz, model)) {     
             if(!superClass.isAnon()) {
-                allProps.addAll(getObjectProperties(superClass.getURI(), model));
+                mergeProperties(getObjectProperties(superClass.getURI(), model), allProps);
             }
+            log.info("Found " + allProps.size() + " including parent " + superClass.getURI());
         }
         return allProps;
     }
@@ -612,14 +680,27 @@ public class Fuse {
     private static List<String[]> getAllDatatypeProperties(OntClass clazz, Model model) {
         List<String[]> allProps = new ArrayList<String[]>();
         allProps.addAll(getDatatypeProperties(clazz.getURI(), model));
-        Iterator<OntClass> superIt = clazz.listSuperClasses();
-        while(superIt.hasNext()) {
-            OntClass superClass = superIt.next();
+        for(Resource superClass : getAllNamedSuperClasses(clazz, model)) {
             if(!superClass.isAnon()) {
-                allProps.addAll(getDatatypeProperties(superClass.getURI(), model));
+                mergeProperties(getDatatypeProperties(superClass.getURI(), model), allProps);
             }
         }
         return allProps;
+    }
+    
+    private static void mergeProperties(List<String[]> newProps, List<String[]> existingProps) {
+        for(String[] newProp : newProps) {
+            boolean duplicate = false;
+            for(String[] existingProp : existingProps) {
+                if(existingProp[0].equals(newProp[0])) {
+                    duplicate = true;
+                    break;
+                }
+            }
+            if(!duplicate) {
+                existingProps.add(newProp);
+            }
+        }
     }
     
     private static int nextInt = 0;
@@ -627,6 +708,40 @@ public class Fuse {
     private static int autoIncrement() {
         nextInt++;
         return nextInt;
+    }
+    
+    private static int countResources(String classURI, Model model) {
+        int count = 0;
+        if(classURI == null || model == null) {
+            return count;
+        }
+        StmtIterator sit = model.listStatements(null, RDF.type, model.getResource(classURI));
+        while(sit.hasNext()) {
+            Statement stmt = sit.next();
+            if(model.contains(stmt.getSubject(), RDFS.label, (RDFNode) null)) {
+                count++;    
+            }
+        }
+        return count;
+    }
+    
+    private static Resource getRandomResource(String classURI, Model model) {
+        int indexDesired = random.nextInt(countResources(classURI, model) - 1);
+        StmtIterator sit = model.listStatements(null, RDF.type, model.getResource(classURI));
+        int i = 0;
+        Resource randomResource = null;
+        while(sit.hasNext()) {
+            Statement stmt = sit.next();
+            if(!model.contains(stmt.getSubject(), RDFS.label, (RDFNode) null)) {
+                continue;    
+            }
+            randomResource = stmt.getSubject();
+            if(i == indexDesired || !sit.hasNext()) {
+                break;
+            }
+            i++;
+        }
+        return randomResource;
     }
     
     private static List<Resource> cloneIndividuals(List<Resource> inds, Model model) {
