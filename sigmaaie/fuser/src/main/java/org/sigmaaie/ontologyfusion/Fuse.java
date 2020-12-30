@@ -212,8 +212,8 @@ public class Fuse {
             // fourth column = notes; ignore
             String fromURI = uri(row.get(0), prefixes1, prefixes2);              
             String equivURI = (row.size() > 1) ? uri(row.get(1), prefixes2, null) : "";
-            String useInsteadURI = (row.size() > 1) ? uri(row.get(1), prefixes2, null) : "";
-            String superURI = (row.size() > 2) ? uri(row.get(3), prefixes2, null) : "";
+            String useInsteadURI = (row.size() > 2) ? uri(row.get(2), prefixes2, null) : "";
+            String superURI = (row.size() > 3) ? uri(row.get(3), prefixes2, null) : "";
             if(StringUtils.isEmpty(fromURI)) {
                 continue;
             }
@@ -687,13 +687,42 @@ public class Fuse {
         List<Resource> rootClasses = new ArrayList<Resource>();
         StmtIterator sit = ontology.listStatements(null, RDF.type, OWL.Class);
         while(sit.hasNext()) {
-            Statement stmt = sit.next();
-            if(!stmt.getSubject().isAnon() 
-                    && !ontology.contains(stmt.getSubject(), RDFS.subClassOf, (Resource) null)) {
+            Statement stmt = sit.next();            
+            if(stmt.getSubject().isAnon()) {
+                continue;
+            }
+            boolean hasNamedParents = false;
+            StmtIterator parentIt = ontology.listStatements(stmt.getSubject(), RDFS.subClassOf, (Resource) null);
+            while(parentIt.hasNext()) {
+                Statement parentStmt = parentIt.next();
+                if(parentStmt.getObject().isURIResource()) {
+                    hasNamedParents = true;
+                    break;
+                }
+            }
+            if(!hasNamedParents) {
                 rootClasses.add(stmt.getSubject());
             }
         }
+        Collections.sort(rootClasses, new LocalNameSorter());
         return rootClasses;
+    }
+    
+    private static class LocalNameSorter implements Comparator<Resource> {
+
+        @Override
+        public int compare(Resource arg0, Resource arg1) {
+            if(arg0.getLocalName() == null && arg1.getLocalName() == null) {
+                return 0;
+            } else if(arg0.getLocalName() == null) {
+                return -1;
+            } else if(arg1.getLocalName() == null) {
+                return 1;
+            } else {
+                return arg0.getLocalName().compareTo(arg1.getLocalName());
+            }
+        }      
+        
     }
     
     private static List<Resource> getSubClasses(Resource superClass, OntModel ontology) {
@@ -710,6 +739,7 @@ public class Fuse {
         } catch (Exception e) {
             log.error(e, e);
         }
+        Collections.sort(subClasses, new LocalNameSorter());
         return subClasses;
     }
     
