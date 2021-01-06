@@ -27,6 +27,7 @@ import org.apache.commons.csv.CSVRecord;
 import org.apache.commons.lang3.StringUtils;
 import org.apache.commons.logging.Log;
 import org.apache.commons.logging.LogFactory;
+import org.apache.jena.datatypes.xsd.XSDDatatype;
 import org.apache.jena.ontology.AllValuesFromRestriction;
 import org.apache.jena.ontology.DataRange;
 import org.apache.jena.ontology.DatatypeProperty;
@@ -42,6 +43,7 @@ import org.apache.jena.ontology.SomeValuesFromRestriction;
 import org.apache.jena.ontology.UnionClass;
 import org.apache.jena.query.QueryExecution;
 import org.apache.jena.query.QueryExecutionFactory;
+import org.apache.jena.query.QueryParseException;
 import org.apache.jena.query.QuerySolution;
 import org.apache.jena.query.ResultSet;
 import org.apache.jena.rdf.model.Literal;
@@ -53,6 +55,7 @@ import org.apache.jena.rdf.model.RDFList;
 import org.apache.jena.rdf.model.RDFNode;
 import org.apache.jena.rdf.model.ResIterator;
 import org.apache.jena.rdf.model.Resource;
+import org.apache.jena.rdf.model.ResourceFactory;
 import org.apache.jena.rdf.model.Seq;
 import org.apache.jena.rdf.model.Statement;
 import org.apache.jena.rdf.model.StmtIterator;
@@ -80,6 +83,7 @@ public class Fuse {
     private static final String ROH = "http://purl.org/roh#";
     private static final String EXCEL_CONTENT_TYPE = 
             "application/vnd.openxmlformats-officedocument.spreadsheetml.sheet";
+    private static final boolean INCLUDE_STUBS = true;
     private static final Log log = LogFactory.getLog(Fuse.class);
     private static HashMap<String, String> prefixes1 = new HashMap<String, String>();
     private static HashMap<String, String> prefixes2 = new HashMap<String, String>();
@@ -434,7 +438,54 @@ public class Fuse {
         model.add(authorListRest, OWL.allValuesFrom, RDF.Seq);
         model.add(model.getResource(prefixes2.get("roh") + "ResearchObject"), 
                 RDFS.subClassOf, authorListRest);
+        Resource dateTimeRest = model.createResource();
+        model.add(dateTimeRest, RDF.type, OWL.Restriction);
+        model.add(dateTimeRest, OWL.onProperty, model.getResource(prefixes2.get("vivo") + "dateTime"));
+        model.add(dateTimeRest, OWL.someValuesFrom, XSD.dateTime);
+        model.add(model.getResource(prefixes2.get("vivo") + "DateTimeValue"), 
+                RDFS.subClassOf, dateTimeRest);
+        // move restriction on dateIssued from Journal to JournalArticle
+        Resource restToMove = findRestriction(prefixes2.get("bibo") + "Journal", prefixes2.get("vivo") + "dateIssued", model);
+        if(restToMove != null) {
+            model.add(model.getResource(prefixes2.get("iao") + "IAO_0000013"), RDFS.subClassOf, restToMove);
+            model.remove(model.getResource(prefixes2.get("bibo") + "Journal"), RDFS.subClassOf, restToMove);
+        }
+        // fix restriction(s) on bibo:Document from vivo:dateTime to vivo:dateTimeValue
+        Resource restToFix = findRestriction(prefixes2.get("bibo") + "Document", prefixes2.get("vivo") + "dateTime", model);
+        if(restToFix != null) {         
+            model.remove(restToFix, OWL.onProperty, model.getResource(prefixes2.get("vivo") + "dateTime"));
+            model.remove(restToFix, OWL.allValuesFrom, model.getResource(prefixes2.get("xsd") + "dateTime"));
+            model.remove(restToFix, model.getProperty(OWL.getURI() + "maxQualifiedCardinality"), model.createTypedLiteral("1", XSDDatatype.XSDnonNegativeInteger));
+            model.remove(restToFix, model.getProperty(OWL.getURI() + "onDataRange"), model.getResource(prefixes2.get("vivo") + "dateTime"));
+            model.add(restToFix, OWL.onProperty, model.getResource(prefixes2.get("vivo") + "dateTimeValue"));
+            model.add(restToFix, OWL.allValuesFrom, model.getResource(prefixes2.get("vivo") + "DateTimeValue"));
+        }
+        restToFix = findRestriction(prefixes2.get("bibo") + "Document", prefixes2.get("vivo") + "dateTime", model);
+        if(restToFix != null) {
+            model.remove(restToFix, OWL.onProperty, model.getResource(prefixes2.get("vivo") + "dateTime"));
+            model.remove(restToFix, OWL.allValuesFrom, model.getResource(prefixes2.get("xsd") + "dateTime"));
+            model.remove(restToFix, model.getProperty(OWL.getURI() + "maxQualifiedCardinality"), model.createTypedLiteral("1", XSDDatatype.XSDnonNegativeInteger));
+            model.remove(restToFix, model.getProperty(OWL.getURI() + "onDataRange"), model.getResource(prefixes2.get("vivo") + "dateTime"));
+            model.add(restToFix, OWL.onProperty, model.getResource(prefixes2.get("vivo") + "dateTimeValue"));
+            model.add(restToFix, model.getProperty(OWL.getURI() + "maxQualifiedCardinality"), model.createTypedLiteral("1", XSDDatatype.XSDnonNegativeInteger));
+            model.add(restToFix, model.getProperty(OWL.getURI() + "onClass"), model.getResource(prefixes2.get("vivo") + "DateTimeValue"));
+        }
         return model;
+    }
+    
+    private static Resource findRestriction(String classURI, String onPropertyURI, Model model) {
+        StmtIterator sit = model.listStatements(model.getResource(classURI
+                ), RDFS.subClassOf, (RDFNode) null);
+        Resource restToMove = null;
+        while(sit.hasNext()) {
+            Statement stmt = sit.next();
+            if(stmt.getObject().isResource() 
+                    && model.contains(stmt.getObject().asResource(), 
+                            OWL.onProperty, model.getResource(onPropertyURI))) {
+                restToMove = stmt.getObject().asResource();
+            }        
+        }
+        return restToMove;
     }
     
     private static Model addStatuses(Model model) {
@@ -522,7 +573,6 @@ public class Fuse {
     }
     
     private static Model createSampleData(Model model) {
-        Map<String, Set<String>> indsByType = new HashMap<String, Set<String>>();
         OntModel ontology = ModelFactory.createOntologyModel(OntModelSpec.OWL_MEM, model);
         String namespace = "http://example.org/individual/";
         Model sampleData = ModelFactory.createDefaultModel();
@@ -531,91 +581,257 @@ public class Fuse {
             Statement stmt = sit.next();
             if(!stmt.getSubject().isAnon()) {
                 OntClass clazz = ontology.getOntClass(stmt.getSubject().getURI());
-                List<Resource> sampleInds = new ArrayList<Resource>();
-                Resource newInd = sampleData.getResource(namespace + "sample-" + clazz.getLocalName() + "-" + autoIncrement());
-                sampleInds.add(newInd);
-                sampleData.add(newInd, RDF.type, clazz);
-                sampleData.add(newInd, RDFS.label, newInd.getLocalName());
                 List<String[]> objProps = getAllObjectProperties(clazz, ontology);
+                List<String[]> dataProps = getAllDatatypeProperties(clazz, ontology);
+                // figure out how many individuals we need to represent the different possible values
+                // If necessary, we can stash this work in a map so as not to repeat it later
+                int individualsRequired = 1;
                 for(String[] objProp : objProps) {                                       
                     Property property = sampleData.getProperty(objProp[0]);
-                    List<OntClass> subTypes = new ArrayList<OntClass>();
                     OntClass range = ontology.getOntClass(getRangeURI(objProp));
                     if(range == null) {
                         log.warn("Null range class found for " + property.getURI());
                         continue;
+                    }       
+                    List<OntClass> subClasses = getAllNamedSubClasses(range, ontology);
+                    if((subClasses.size() > individualsRequired) && individualsRequired < 5) {
+                        individualsRequired = subClasses.size();
                     }
-                    subTypes.add(range);
-                    Iterator<OntClass> subclasses = range.listSubClasses();
-                    while(subclasses.hasNext()) {
-                        OntClass subclass = subclasses.next();
-                        if(!subclass.isAnon()) {
-                            subTypes.add(subclass);
-                        }
-                    }
-                    //Model tmp = ModelFactory.createDefaultModel();
-                    for(Resource sampleInd : sampleInds) {
-                        log.info("Adding " + property.getURI() + " range " + range.getURI() + " to individual " + sampleInd.getURI());
-                        Resource objectInd = sampleData.getResource(sampleInd.getURI() + "-" + property.getLocalName());
-                        sampleData.add(sampleInd, property, objectInd);
-                        sampleData.add(objectInd, RDF.type, range);
-                    }
-                    //List<Resource> newResources = new ArrayList<Resource>();
-                    for(OntClass objectType : subTypes) {
-                        List<Resource> clones = cloneIndividuals(sampleInds, sampleData);
-                        for(Resource clone : clones) {
-                            log.info("Adding " + property.getURI() + " range " + objectType.getURI() + " to individual " + clone.getURI());
-                            Resource objectInd = sampleData.getResource(clone.getURI() + "-" + property.getLocalName());
-                            sampleData.add(clone, property, objectInd);
-                            sampleData.add(objectInd, RDF.type, objectType);
-                        }
-                    }
-                    //sampleInds.addAll(newResources);
                 }
-                List<String[]> dataProps = getAllDatatypeProperties(clazz, ontology);
+                for(String[] dataProp : dataProps) {
+                    if(!StringUtils.isEmpty(dataProp[5])) {                        
+                        // enumerated values
+                        String[] values = getEnumValues(dataProp);
+                        if(values.length > individualsRequired) {
+                            individualsRequired = values.length;    
+                        }
+                    }
+                }
+                List<Resource> sampleInds = new ArrayList<Resource>();
+                for(int i = 0; i < individualsRequired; i++) {
+                    Resource newInd = sampleData.getResource(namespace + 
+                            "sample-" + clazz.getLocalName() + "-" + autoIncrement());
+                    sampleInds.add(newInd);
+                    sampleData.add(newInd, RDF.type, clazz);
+                    sampleData.add(newInd, RDFS.label, newInd.getLocalName());
+                }
+                log.info("Created " + sampleInds.size() + " " + clazz.getURI());
+                for(String[] objProp : objProps) {                                       
+                    Property property = sampleData.getProperty(objProp[0]);
+                    OntClass range = ontology.getOntClass(getRangeURI(objProp));
+                    if(range == null) {
+                        log.warn("Null range class found for " + property.getURI());
+                        continue;
+                    }       
+                    List<OntClass> subClasses = getAllNamedSubClasses(range, ontology);                    
+                    int subClassIndex = 0;
+                    for(Resource clone : sampleInds) {
+                        OntClass objectType = subClasses.get(subClassIndex);
+                        if(subClassIndex == subClasses.size() - 1) {
+                            subClassIndex = 0;
+                        } else {
+                            subClassIndex++;
+                        }
+                        log.debug("Adding " + property.getURI() + " range " 
+                                + objectType.getURI() + " to individual " + clone.getURI());
+                        Resource objectInd = getRelatedIndividual(
+                                0, objectType, ontology, sampleData, namespace);
+                        if(objectInd != null) {
+                            sampleData.add(clone, property, objectInd);
+                        }
+                    }
+                }
+                
                 for(String[] dataProp : dataProps) {
                     Property property = sampleData.getProperty(dataProp[0]);
                     if(!StringUtils.isEmpty(dataProp[5])) {                        
                         // enumerated values
-                        String[] values = dataProp[5].replaceAll("\\{", "")
-                                .replaceAll("\\}", "").replaceAll("\\\"",  "")
-                                .replaceAll(" ", "").split(",");
-                        for(String value : values) {
-                            List<Resource> clones = cloneIndividuals(sampleInds, sampleData);
-                            for(Resource clone : clones) {                                
-                                sampleData.add(clone, property, value);
+                        String[] values = getEnumValues(dataProp);                       
+                        int valueIndex = 0;                                                
+                        for(Resource clone : sampleInds) {
+                            String value = values[valueIndex];
+                            if(valueIndex == values.length - 1) {
+                                valueIndex = 0;
+                            } else {
+                                valueIndex++;
                             }
+                            sampleData.add(clone, property, value);
                         }
                     } else {
                         String rangeDatatypeURI = getRangeURI(dataProp);
                         for(Resource res : sampleInds) {
-                            if(rangeDatatypeURI == null) {
-                                log.warn("Null rangeDatatypeURI for" + property.getURI());
-                                sampleData.add(res, property, "plain literal " + random.nextInt(9999));
-                            } else if(rangeDatatypeURI.equals(XSD.integer.getURI()) || rangeDatatypeURI.equals(XSD.xint.getURI())) {
-                                sampleData.add(res, property, sampleData.createTypedLiteral(random.nextInt(9999)));
-                            } else if(rangeDatatypeURI.equals(XSD.xstring.getURI())) {
-                                sampleData.add(res, property, sampleData.createTypedLiteral("a string " + random.nextInt(9999)));
-                            } else if(rangeDatatypeURI.equals(XSD.date.getURI())) {
-                                sampleData.add(res, property, sampleData.createTypedLiteral(random.nextInt(9999) + "-01-01"));
-                            } else if(rangeDatatypeURI.equals(XSD.dateTime.getURI())) {
-                                sampleData.add(res, property, sampleData.createTypedLiteral(random.nextInt(9999) + "-01-01T00:00:00Z"));
-                            } else {
-                                log.warn("Unsupported datatype URI " + rangeDatatypeURI);
-                            }
+                            createDatatypeValue(res, property, rangeDatatypeURI, sampleData);
                         } 
                     }
                  }
             }
         }
+        sampleData = fleshOutStubs(sampleData, ontology, namespace);
         sampleData = createAuthorLists(sampleData);
+        sampleData = addDateTimePrecision(sampleData);
         return sampleData;
+    }
+    
+    private static String[] getEnumValues(String[] dataProp) {
+        return dataProp[5].replaceAll("\\{", "")
+                .replaceAll("\\}", "").replaceAll("\\\"",  "")
+                .replaceAll(" ", "").split(","); 
+    }
+    
+    private static void createDatatypeValue(Resource res, Property property, 
+            String rangeDatatypeURI, Model sampleData) {
+        if(rangeDatatypeURI == null || RDFS.Literal.equals(rangeDatatypeURI)) {
+            log.warn("Null rangeDatatypeURI for" + property.getURI());
+            sampleData.add(res, property, "plain literal " + random.nextInt(9999));
+        } else if(rangeDatatypeURI.equals(XSD.integer.getURI()) || rangeDatatypeURI.equals(XSD.xint.getURI())) {
+            sampleData.add(res, property, sampleData.createTypedLiteral(random.nextInt(9999)));
+        } else if(rangeDatatypeURI.equals(XSD.xdouble.getURI())) {
+            sampleData.add(res, property, sampleData.createTypedLiteral(random.nextDouble()));
+        } else if(rangeDatatypeURI.equals(XSD.xstring.getURI())) {
+            sampleData.add(res, property, sampleData.createTypedLiteral("a string " + random.nextInt(99999)));
+        } else if(rangeDatatypeURI.equals(XSD.date.getURI())) {
+            sampleData.add(res, property, sampleData.createTypedLiteral(1990 + random.nextInt(30) + "-01-01", XSDDatatype.XSDdate));
+        } else if(rangeDatatypeURI.equals(XSD.dateTime.getURI())) {
+            sampleData.add(res, property, sampleData.createTypedLiteral(1990 + random.nextInt(30) + "-01-01T00:00:00Z", XSDDatatype.XSDdateTime));
+        } else {
+            log.warn("Unsupported datatype URI " + rangeDatatypeURI);
+        }
+    }
+    
+    private static Model fleshOutStubs(Model model, OntModel ontology, 
+            String namespace) {
+        List<Resource> stubs = new ArrayList<Resource>();
+        StmtIterator sit = model.listStatements(null, RDFS.label, "stub");
+        while(sit.hasNext()) {
+            Statement stmt = sit.next();
+            stubs.add(stmt.getSubject());
+        }
+        int count = 0;
+        for(Resource stub : stubs) {
+            count++;
+            log.info("Processing stub " + count + " out of " + stubs.size());
+            OntClass clazz = null;
+            StmtIterator typeIt = stub.listProperties(RDF.type);
+            while(typeIt.hasNext()) {
+                Statement typeStmt = typeIt.next();
+                clazz = ontology.getOntClass(typeStmt.getObject().asResource().getURI());
+            }
+            if(isDependentClass(clazz, ontology)) {
+                createRelatedIndividual(2, clazz, ontology, model, namespace, stub);
+            } else {
+                if(countResources(clazz.getURI(), model, !INCLUDE_STUBS) > 3) {
+                    Resource reused = getRandomResource(clazz.getURI(), model, false);
+                    List<Statement> additions = new ArrayList<Statement>();
+                    StmtIterator incomingIt = model.listStatements(null, null, stub);
+                    while(incomingIt.hasNext()) {
+                        Statement stmt = incomingIt.next();
+                        additions.add(ResourceFactory.createStatement(stmt.getSubject(), stmt.getPredicate(), reused));
+                    }
+                    model.add(additions);
+                    model.removeAll(stub, null, (RDFNode) null);
+                    model.removeAll(null, null, stub);
+                    // try to reuse
+                } else {
+                    createRelatedIndividual(2, clazz, ontology, model, namespace, stub);
+                }                 
+            }
+        }
+        return model;
+    }    
+    
+    private static Model addDateTimePrecision(Model sampleData) {
+        Model additions = ModelFactory.createDefaultModel();
+        StmtIterator sit = sampleData.listStatements(null, RDF.type, 
+                sampleData.getResource(prefixes2.get("vivo") + "DateTimeValue"));
+        while(sit.hasNext()) {
+            Statement stmt = sit.next();
+            additions.add(stmt.getSubject(), additions.getProperty(
+                    prefixes2.get("vivo") + "dateTimePrecision"), 
+                    additions.getResource(prefixes2.get("vivo") + "yearPrecision")); 
+        }
+        sampleData.add(additions);
+        return sampleData;
+    }
+    
+    private static Resource getRelatedIndividual(int depth, OntClass clazz, OntModel ontology, Model sampleData, String namespace) {
+        // If clazz is not a subclass of Role, Relationship, or DateTimeValue,
+        // try to reuse an existing individual if enough have already been made.      
+        log.info("Trying to reuse a " + clazz.getURI());
+        int resCount = countResources(clazz.getURI(), sampleData, INCLUDE_STUBS);
+        boolean isDependent = isDependentClass(clazz, ontology);
+        log.info("resCount is " + resCount + " and isDependent is " + isDependent);
+        if(!isDependent && ( resCount > 3) ) {
+            Resource randomRes = getRandomResource(clazz.getURI(), sampleData, INCLUDE_STUBS);
+            sampleData.add(randomRes, RDFS.comment, "reused");         
+            log.info("reused one");
+            return randomRes;
+        } else if (depth > 0) {
+            return createRelatedIndividual(depth - 1, clazz, ontology, sampleData, namespace);
+        } else {
+            Resource newInd = sampleData.getResource(namespace + "sample-" + clazz.getLocalName() + "-" + autoIncrement());
+            sampleData.add(newInd, RDF.type, clazz);
+            sampleData.add(newInd, RDFS.label, "stub");
+            return null;
+        }
+    }
+    
+    private static boolean isDependentClass(OntClass clazz, OntModel ontology) {
+        return isSubClassOf(clazz, prefixes2.get("vivo") + "Relationship", ontology) 
+               /* || isSubClassOf(clazz, prefixes2.get("vivo") + "DateTimeInterval", ontology) */
+               /* || isSubClassOf(clazz, prefixes2.get("vivo") + "DateTimeValue", ontology) */
+                || isSubClassOf(clazz, prefixes2.get("bfo") + "BFO_0000023", ontology);
+    }
+    
+    private static Resource createRelatedIndividual(int depth, OntClass clazz, OntModel ontology, 
+            Model sampleData, String namespace) {
+        return createRelatedIndividual(depth, clazz, ontology, sampleData, namespace, null);
+    }
+    
+    private static Resource createRelatedIndividual(int depth, OntClass clazz, OntModel ontology, 
+            Model sampleData, String namespace, Resource stub) {
+        Resource newInd = null;
+        if(stub != null) {
+            newInd = stub;
+            sampleData.remove(sampleData.listStatements(stub, RDFS.label, (RDFNode) null));
+        } else {
+            newInd = sampleData.getResource(namespace + "sample-" + clazz.getLocalName() + "-" + autoIncrement());    
+        }        
+        sampleData.add(newInd, RDF.type, clazz);
+        sampleData.add(newInd, RDFS.label, newInd.getLocalName());
+        List<String[]> objProps = getAllObjectProperties(clazz, ontology);
+        for(String[] objProp : objProps) {                                       
+            Property property = sampleData.getProperty(objProp[0]);
+            OntClass range = ontology.getOntClass(getRangeURI(objProp));
+            if(range == null) {
+                log.warn("Null range class found for " + property.getURI());
+                continue;
+            }
+            OntClass objectType = getRandomSubClass(range, ontology);
+            log.debug("Adding " + property.getURI() + " range " + objectType.getURI() + " to individual " + newInd.getURI());
+            Resource objectInd = getRelatedIndividual(depth, objectType, ontology, sampleData, namespace);
+            if(objectInd != null) {
+                sampleData.add(newInd, property, objectInd);
+            }
+        }
+        List<String[]> dataProps = getAllDatatypeProperties(clazz, ontology);
+        for(String[] dataProp : dataProps) {
+            Property property = sampleData.getProperty(dataProp[0]);
+            if(!StringUtils.isEmpty(dataProp[5])) {                        
+                // enumerated values
+                String[] values = getEnumValues(dataProp);
+                sampleData.add(newInd, property, values[random.nextInt(values.length)]);
+            } else {
+                String rangeDatatypeURI = getRangeURI(dataProp);
+                createDatatypeValue(newInd, property, rangeDatatypeURI, sampleData);
+            }
+        }
+        return newInd;
     }
     
     private static Model createAuthorLists(Model model) {
         Property authorList = model.getProperty(prefixes2.get("bibo") + "authorList");
         String foafPersonURI = prefixes2.get("foaf") + "Person";
-        int personCount = countResources(foafPersonURI, model);
+        int personCount = countResources(foafPersonURI, model, INCLUDE_STUBS);
         log.info(personCount + " " + foafPersonURI + " objects have been created");
         List<Resource> resourcesWithAuthorLists = new ArrayList<Resource>();
         Model toRemove = ModelFactory.createDefaultModel();
@@ -632,16 +848,23 @@ public class Fuse {
         model.remove(toRemove);
         for(Resource doc : resourcesWithAuthorLists) {
             Seq authorSeq = model.createSeq();
-            int numAuthors = random.nextInt(Math.min(10, personCount - 1));
-            if(numAuthors == 0) {
-                numAuthors = 1;
-            }
+            int numAuthors = random.nextInt(Math.min(10, personCount)) + 1;
             for(int i = 0; i < numAuthors; i++) {
-                authorSeq.add(getRandomResource(foafPersonURI, model));    
+                authorSeq.add(getRandomResource(foafPersonURI, model, INCLUDE_STUBS));    
             }
             model.add(doc, authorList, authorSeq);
         }
         return model;
+    }
+    
+    private static boolean isSubClassOf(OntClass subclass, String superClassURI, OntModel ontology) {
+        List<Resource> parents = getAllNamedSuperClasses(subclass, ontology);
+        for(Resource parent : parents) {
+            if(parent.getURI().equals(superClassURI)) {
+                return true;
+            }
+        }
+        return false;
     }
     
     private static List<Resource> getAllNamedSuperClasses(OntClass clazz, Model model) {
@@ -656,23 +879,56 @@ public class Fuse {
                     superClasses.add(qsoln.get("y").asResource());
                 }
             }
+        } catch (QueryParseException e) {
+            log.error("Unable to parse " + query);
+            throw e;
         } finally {
             if(qe != null) {
                 qe.close();
             }
         }
+        superClasses.add(clazz);
         return superClasses;
+    }
+    
+    private static List<OntClass> getAllNamedSubClasses(OntClass clazz, OntModel model) {
+        List<OntClass> subClasses = new ArrayList<OntClass>();
+        String query = "SELECT ?y WHERE { ?y <" + RDFS.subClassOf.getURI() + ">* <" + clazz.getURI() + "> }";
+        QueryExecution qe = QueryExecutionFactory.create(query, model);
+        try {
+            ResultSet rs = qe.execSelect();
+            while(rs.hasNext()) {
+                QuerySolution qsoln = rs.next();
+                if(qsoln.get("y").isURIResource()) {
+                    subClasses.add(model.getOntClass(qsoln.get("y").asResource().getURI()));
+                }
+            }
+        } catch (QueryParseException e) {
+            log.error("Unable to parse " + query);
+            throw e;
+        } finally {
+            if(qe != null) {
+                qe.close();
+            }
+        }
+        subClasses.add(clazz);
+        return subClasses;
+    }
+    
+    private static OntClass getRandomSubClass(OntClass clazz, OntModel model) {
+        List<OntClass> allSubs = getAllNamedSubClasses(clazz, model);
+        return allSubs.get(random.nextInt(allSubs.size()));
     }
     
     private static List<String[]> getAllObjectProperties(OntClass clazz, Model model) {
         List<String[]> allProps = new ArrayList<String[]>();
         allProps.addAll(getObjectProperties(clazz.getURI(), model));
-        log.info("Found " + allProps.size() + " object properties for " + clazz.getURI());
+        log.debug("Found " + allProps.size() + " object properties for " + clazz.getURI());
         for(Resource superClass : getAllNamedSuperClasses(clazz, model)) {     
             if(!superClass.isAnon()) {
                 mergeProperties(getObjectProperties(superClass.getURI(), model), allProps);
             }
-            log.info("Found " + allProps.size() + " including parent " + superClass.getURI());
+            log.debug("Found " + allProps.size() + " including parent " + superClass.getURI());
         }
         return allProps;
     }
@@ -710,7 +966,7 @@ public class Fuse {
         return nextInt;
     }
     
-    private static int countResources(String classURI, Model model) {
+    private static int countResources(String classURI, Model model, boolean includeStubs) {
         int count = 0;
         if(classURI == null || model == null) {
             return count;
@@ -719,14 +975,16 @@ public class Fuse {
         while(sit.hasNext()) {
             Statement stmt = sit.next();
             if(model.contains(stmt.getSubject(), RDFS.label, (RDFNode) null)) {
-                count++;    
+                if(includeStubs || !model.contains(stmt.getSubject(), RDFS.label, "stub")) {
+                    count++;
+                }
             }
         }
         return count;
     }
     
-    private static Resource getRandomResource(String classURI, Model model) {
-        int indexDesired = random.nextInt(countResources(classURI, model) - 1);
+    private static Resource getRandomResource(String classURI, Model model, boolean includeStubs) {
+        int indexDesired = random.nextInt(countResources(classURI, model, includeStubs));
         StmtIterator sit = model.listStatements(null, RDF.type, model.getResource(classURI));
         int i = 0;
         Resource randomResource = null;
@@ -734,6 +992,9 @@ public class Fuse {
             Statement stmt = sit.next();
             if(!model.contains(stmt.getSubject(), RDFS.label, (RDFNode) null)) {
                 continue;    
+            }
+            if(!includeStubs && model.contains(stmt.getSubject(), RDFS.label, "stub")) {
+                continue;
             }
             randomResource = stmt.getSubject();
             if(i == indexDesired || !sit.hasNext()) {
@@ -744,49 +1005,49 @@ public class Fuse {
         return randomResource;
     }
     
-    private static List<Resource> cloneIndividuals(List<Resource> inds, Model model) {
-        List<Resource> clonedInds = new ArrayList<Resource>();
-        Model cloneStmts = ModelFactory.createDefaultModel();
-        for(Resource ind : inds) {
-            String baseURI = ind.getURI().substring(0, ind.getURI().lastIndexOf("-"));
-            String cloneURI = baseURI + "-" + autoIncrement();
-            Resource clone = cloneStmts.getResource(cloneURI);
-            clonedInds.add(clone);
-            StmtIterator stmtIt = model.listStatements(ind, null, (RDFNode) null);
-            while(stmtIt.hasNext()) {
-                Statement stmt = stmtIt.next();
-                if(RDFS.label.equals(stmt.getPredicate())) {
-                    cloneStmts.add(clone, RDFS.label, clone.getLocalName());
-                } else if(stmt.getObject().isLiteral()) {
-                    cloneStmts.add(clone, stmt.getPredicate(), stmt.getObject());
-                } else if(stmt.getObject().equals(ind)) {
-                    cloneStmts.add(clone, stmt.getPredicate(), clone);
-                } else if(RDF.type.equals(stmt.getPredicate())) {
-                    cloneStmts.add(clone, RDF.type, stmt.getObject());
-                }  else if(stmt.getObject().isURIResource()){
-                    String objURI = stmt.getObject().asResource().getURI();
-                    int endOfBaseURI = objURI.lastIndexOf("-");
-                    String objBaseURI = null;
-                    if(endOfBaseURI < 0) {
-                        log.warn("No hyphen found in objURI " + objURI);
-                        objBaseURI = objURI;
-                    } else {
-                        objBaseURI = objURI.substring(0, endOfBaseURI);
-                    }                    
-                    Resource newObj = cloneStmts.getResource(objBaseURI + "-" + autoIncrement());
-                    cloneStmts.add(clone, stmt.getPredicate(), newObj);
-                    StmtIterator objSit = model.listStatements(model.getResource(objURI), null, (RDFNode) null);
-                    while(objSit.hasNext()) {
-                        Statement objStmt = objSit.next();
-                        cloneStmts.add(newObj, objStmt.getPredicate(), objStmt.getObject());
-                    }
-                }
-            }
-            
-        }
-        model.add(cloneStmts);
-        return clonedInds;
-    }
+//    private static List<Resource> extendIndividualList(List<Resource> inds, int toAdd, Model model) {
+//        Model cloneStmts = ModelFactory.createDefaultModel();
+//        for(int i = 0; i < toAdd; i++) {
+//            Resource ind = inds.get(random.nextInt(inds.size()));
+//            String baseURI = ind.getURI().substring(0, ind.getURI().lastIndexOf("-"));
+//            String cloneURI = baseURI + "-" + autoIncrement();
+//            Resource clone = cloneStmts.getResource(cloneURI);
+//            inds.add(clone);
+//            StmtIterator stmtIt = model.listStatements(ind, null, (RDFNode) null);
+//            while(stmtIt.hasNext()) {
+//                Statement stmt = stmtIt.next();
+//                if(RDFS.label.equals(stmt.getPredicate())) {
+//                    cloneStmts.add(clone, RDFS.label, clone.getLocalName());
+//                } else if(stmt.getObject().isLiteral()) {
+//                    cloneStmts.add(clone, stmt.getPredicate(), stmt.getObject());
+//                } else if(stmt.getObject().equals(ind)) {
+//                    cloneStmts.add(clone, stmt.getPredicate(), clone);
+//                } else if(RDF.type.equals(stmt.getPredicate())) {
+//                    cloneStmts.add(clone, RDF.type, stmt.getObject());
+//                }  else if(stmt.getObject().isURIResource()){
+//                    String objURI = stmt.getObject().asResource().getURI();
+//                    int endOfBaseURI = objURI.lastIndexOf("-");
+//                    String objBaseURI = null;
+//                    if(endOfBaseURI < 0) {
+//                        log.warn("No hyphen found in objURI " + objURI);
+//                        objBaseURI = objURI;
+//                    } else {
+//                        objBaseURI = objURI.substring(0, endOfBaseURI);
+//                    }                    
+//                    Resource newObj = cloneStmts.getResource(objBaseURI + "-" + autoIncrement());
+//                    cloneStmts.add(clone, stmt.getPredicate(), newObj);
+//                    StmtIterator objSit = model.listStatements(model.getResource(objURI), null, (RDFNode) null);
+//                    while(objSit.hasNext()) {
+//                        Statement objStmt = objSit.next();
+//                        cloneStmts.add(newObj, objStmt.getPredicate(), objStmt.getObject());
+//                    }
+//                }
+//            }
+//            
+//        }
+//        model.add(cloneStmts);
+//        return inds;
+//    }
     
     private static String getRangeURI(String[] prop) {
         String rangePrefix = prop[3];
@@ -1099,7 +1360,7 @@ public class Fuse {
                         || (!objectProperties && rest.getOnProperty().isDatatypeProperty()) ) {
                     String[] fmt = formatRestriction(rest);
                     if(fmt != null) {
-                        log.info("Adding restriction to map " + fmt[0]);
+                        log.debug("Adding restriction to map " + fmt[0]);
                         String[] existing = propertyMap.get(fmt[0]); 
                         if(existing == null || !("someValuesFrom".equals(fmt[6]))) {
                             if(existing != null && !StringUtils.isEmpty(existing[5])) {
@@ -1129,14 +1390,14 @@ public class Fuse {
                             String fmt[] = formatRestriction(rest);
                             String[] existing = propertyMap.get(fmt[0]); 
                             if(existing == null || !("someValuesFrom".equals(fmt[6]))) {
-                                log.info("Adding restriction to map " + fmt[0]);
+                                log.debug("Adding restriction to map " + fmt[0]);
                                 if(existing != null && !StringUtils.isEmpty(existing[5])) {
-                                    log.info("updating existing");
+                                    log.debug("updating existing");
                                     existing[3] = fmt[3];
                                     existing[4] = fmt[4];
                                     propertyMap.put(fmt[0], existing);
                                 } else {
-                                    log.info("overwriting/adding");
+                                    log.debug("overwriting/adding");
                                     propertyMap.put(fmt[0], fmt);
                                 }
                             }
@@ -1189,7 +1450,7 @@ public class Fuse {
     private static String[] formatRestriction(Restriction rest) {
         if(rest.isAllValuesFromRestriction()) {
             try {
-                log.info("Formatting restriction");
+                log.debug("Formatting restriction");
                 AllValuesFromRestriction restA = rest.asAllValuesFromRestriction();
                 String[] fmt = formatPropertyAndRange(restA.getOnProperty(), restA.getAllValuesFrom());
                 fmt[6] = "allValuesFrom";
@@ -1200,7 +1461,7 @@ public class Fuse {
             }
         } else if(rest.isSomeValuesFromRestriction()) {
             try {
-                log.info("Formatting restriction");
+                log.debug("Formatting restriction");
                 SomeValuesFromRestriction restE = rest.asSomeValuesFromRestriction();
                 String[] fmt = formatPropertyAndRange(restE.getOnProperty(), restE.getSomeValuesFrom());
                 fmt[6] = "someValuesFrom";
