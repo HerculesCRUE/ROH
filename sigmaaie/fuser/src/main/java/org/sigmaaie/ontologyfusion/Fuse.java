@@ -687,6 +687,8 @@ public class Fuse {
             sampleData.add(res, property, sampleData.createTypedLiteral(random.nextInt(9999)));
         } else if(rangeDatatypeURI.equals(XSD.xdouble.getURI())) {
             sampleData.add(res, property, sampleData.createTypedLiteral(random.nextDouble()));
+        } else if(rangeDatatypeURI.equals(XSD.decimal.getURI())) {
+            sampleData.add(res, property, sampleData.createTypedLiteral(random.nextInt(9999999) + "." + random.nextInt(10) + "0", XSDDatatype.XSDdecimal));
         } else if(rangeDatatypeURI.equals(XSD.xstring.getURI())) {
             sampleData.add(res, property, sampleData.createTypedLiteral("a string " + random.nextInt(99999)));
         } else if(rangeDatatypeURI.equals(XSD.date.getURI())) {
