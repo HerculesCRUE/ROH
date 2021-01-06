@@ -470,6 +470,12 @@ public class Fuse {
             model.add(restToFix, model.getProperty(OWL.getURI() + "maxQualifiedCardinality"), model.createTypedLiteral("1", XSDDatatype.XSDnonNegativeInteger));
             model.add(restToFix, model.getProperty(OWL.getURI() + "onClass"), model.getResource(prefixes2.get("vivo") + "DateTimeValue"));
         }
+        // make hasKnowledgeArea visible on bibo:Patent
+        Resource patentRest = model.createResource();
+        model.add(patentRest, RDF.type, OWL.Restriction);
+        model.add(patentRest, OWL.onProperty, model.getResource(prefixes2.get("roh") + "hasKnowledgeArea"));
+        model.add(patentRest, OWL.allValuesFrom, model.getResource(prefixes2.get("roh") + "KnowledgeArea"));
+        model.add(model.getResource(prefixes2.get("bibo") + "Patent"), RDFS.subClassOf, patentRest);
         return model;
     }
     
