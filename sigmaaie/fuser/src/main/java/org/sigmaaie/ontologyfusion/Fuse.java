@@ -692,7 +692,9 @@ public class Fuse {
         } else if(rangeDatatypeURI.equals(XSD.integer.getURI()) || rangeDatatypeURI.equals(XSD.xint.getURI())) {
             sampleData.add(res, property, sampleData.createTypedLiteral(random.nextInt(9999)));
         } else if(rangeDatatypeURI.equals(XSD.xdouble.getURI())) {
-            sampleData.add(res, property, sampleData.createTypedLiteral(random.nextDouble()));
+            sampleData.add(res, property, sampleData.createTypedLiteral(random.nextDouble() * 200, XSDDatatype.XSDdouble));
+        } else if(rangeDatatypeURI.equals(XSD.xfloat.getURI())) {
+            sampleData.add(res, property, sampleData.createTypedLiteral(random.nextFloat() * 200, XSDDatatype.XSDfloat));
         } else if(rangeDatatypeURI.equals(XSD.decimal.getURI())) {
             sampleData.add(res, property, sampleData.createTypedLiteral(random.nextInt(9999999) + "." + random.nextInt(10) + "0", XSDDatatype.XSDdecimal));
         } else if(rangeDatatypeURI.equals(XSD.xstring.getURI())) {
@@ -764,14 +766,14 @@ public class Fuse {
     private static Resource getRelatedIndividual(int depth, OntClass clazz, OntModel ontology, Model sampleData, String namespace) {
         // If clazz is not a subclass of Role, Relationship, or DateTimeValue,
         // try to reuse an existing individual if enough have already been made.      
-        log.info("Trying to reuse a " + clazz.getURI());
+        log.debug("Trying to reuse a " + clazz.getURI());
         int resCount = countResources(clazz.getURI(), sampleData, INCLUDE_STUBS);
         boolean isDependent = isDependentClass(clazz, ontology);
-        log.info("resCount is " + resCount + " and isDependent is " + isDependent);
+        log.debug("resCount is " + resCount + " and isDependent is " + isDependent);
         if(!isDependent && ( resCount > 3) ) {
             Resource randomRes = getRandomResource(clazz.getURI(), sampleData, INCLUDE_STUBS);
             sampleData.add(randomRes, RDFS.comment, "reused");         
-            log.info("reused one");
+            log.debug("reused one");
             return randomRes;
         } else if (depth > 0) {
             return createRelatedIndividual(depth - 1, clazz, ontology, sampleData, namespace);

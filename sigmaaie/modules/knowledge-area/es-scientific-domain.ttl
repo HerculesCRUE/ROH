@@ -1,0 +1,2180 @@
+@prefix asio:  <http://purl.org/hercules/asio/core#> .
+@prefix asioModules:  <http://purl.org/hercules/asio/modules#> .
+@prefix dcat:    <http://www.w3.org/ns/dcat#> .
+@prefix dct:     <http://purl.org/dc/terms/> .
+@prefix foaf:    <http://xmlns.com/foaf/0.1/#> .
+@prefix my:      <http://weso.es/tablines/project/scientificDomains/resource/> .
+@prefix ontolex:  <http://www.w3.org/ns/lemon/ontolex#> .
+@prefix org: <http://www.w3.org/ns/org#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix provo:   <http://www.w3.org/ns/prov#> .
+@prefix project:  <http://weso.es/tablines/project/scientificDomains/> .
+@prefix rdf:     <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:    <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:    <http://www.w3.org/2004/02/skos/core#> .
+@prefix time: <http://www.w3.org/2006/time#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix voaf: <http://purl.org/vocommons/voaf#> .
+@prefix unescothes:    <http://skos.um.es/unescothes/> .
+@prefix roh:     <http://purl.org/roh#>
+
+roh:ESScientificDomain
+      a       owl:Class ;
+      rdfs:label "ES Scientific Domain"@en ;
+      rdfs:subClassOf roh:KnowledgeArea .
+
+asioModules:ES_SCIENTIFIC_DOMAIN_LEVEL_3_MCLIJMIG
+      a       roh:ESScientificDomain ;
+      rdfs:label "Miscelánea" ;
+      asio:hasCode asioModules:ES_SCIENTIFIC_DOMAIN_LEVEL_3_CODE_MCLIJMIG ;
+      skos:broader asioModules:ES_SCIENTIFIC_DOMAIN_LEVEL_2_MCLI ;
+      skos:inScheme asioModules:ESscientificDomains3rdList ;
+      skos:notation "MCLIJMIG" ;
+      skos:prefLabel "Miscel·lània"@ca , "Miscellany"@en , "Diversos"@pt , "Miscelánea" , "Miscelánea"@es , "Miscelánea"@ast , "Miscelánea"@gl , "Divers"@fr .
+
+asioModules:ES_SCIENTIFIC_DOMAIN_LEVEL_3_MTMANAL
+      a       roh:ESScientificDomain ;
+      rdfs:label "Análisis numérico" ;
+      asio:hasCode asioModules:ES_SCIENTIFIC_DOMAIN_LEVEL_3_CODE_MTMANAL ;
+      skos:broader asioModules:ES_SCIENTIFIC_DOMAIN_LEVEL_2_MTM ;
+      skos:inScheme asioModules:ESscientificDomains3rdList ;
+      skos:notation "MTMANAL" ;
+      skos:exactMatch unescothes:C02774 ;
+      skos:prefLabel "Numerical analysis"@en , "Análisis numérico"@ast , "Análisis numérico" , "Análisis numérico"@es , "Análisis numérico"@an , "Análise numérica"@gl , "Análise numérica"@pt , "Analyse numérique"@fr , "Anàlisi numèrica"@ca .
+
+asioModules:ES_SCIENTIFIC_DOMAIN_LEVEL_3_CODE_CTPETR
+      a       roh:ESScientificDomain ;
+      rdfs:label "CTPETR" ;
+      asio:codeOf asioModules:ES_SCIENTIFIC_DOMAIN_LEVEL_3_CTPETR ;
+      skos:inScheme asioModules:ESscientificDomains3rdCodeList ;
+      skos:prefLabel "CTPETR" .
+
+asioModules:ES_SCIENTIFIC_DOMAIN_LEVEL_3_FFIRKXR
+      a       roh:ESScientificDomain ;
+      rdfs:label "Literatura" ;
+      asio:hasCode asioModules:ES_SCIENTIFIC_DOMAIN_LEVEL_3_CODE_FFIRKXR ;
+      skos:broader asioModules:ES_SCIENTIFIC_DOMAIN_LEVEL_2_FFI ;
+      skos:inScheme asioModules:ESscientificDomains3rdList ;
+      skos:notation "FFIRKXR" ;
+      skos:exactMatch unescothes:C02321 ;
+      skos:prefLabel "Literature"@en , "Littérature"@fr , "Literatura"@pt , "Literatura" , "Literatura"@es , "Literatura"@gl , "Literatura"@ca , "Lliteratura"@ast .
+
+asioModules:ES_SCIENTIFIC_DOMAIN_LEVEL_3_HALMCG
+      a       roh:ESScientificDomain ;
+      rdfs:label "Historia antigua" ;
+      asio:hasCode asioModules:ES_SCIENTIFIC_DOMAIN_LEVEL_3_CODE_HALMCG ;
+      skos:broader asioModules:ES_SCIENTIFIC_DOMAIN_LEVEL_2_HA ;
+      skos:inScheme asioModules:ESscientificDomains3rdList ;
+      skos:notation "HALMCG" ;
+      skos:exactMatch unescothes:C00153 ;
+      skos:prefLabel "Histoire ancienne"@fr , "História antiga"@pt , "Historia antiga"@gl , "Historia antiga"@ast , "Història antiga"@ca , "Historia antigua" , "Historia antigua"@es , "Old history"@en .
+
+asioModules:ES_SCIENTIFIC_DOMAIN_LEVEL_3_CODE_FFIVCZF
+      a       roh:ESScientificDomain ;
+      rdfs:label "FFIVCZF" ;
+      asio:codeOf asioModules:ES_SCIENTIFIC_DOMAIN_LEVEL_3_FFIVCZF ;
+      skos:inScheme asioModules:ESscientificDomains3rdCodeList ;
+      skos:prefLabel "FFIVCZF" .
+
+asioModules:ES_SCIENTIFIC_DOMAIN_LEVEL_2_CODE_HA
+      a       roh:ESScientificDomain ;
+      rdfs:label "HA" ;
+      asio:codeOf asioModules:ES_SCIENTIFIC_DOMAIN_LEVEL_2_HA ;
+      skos:inScheme asioModules:ESscientificDomains2ndCodeList ;
+      skos:prefLabel "HA" .
+
+asioModules:ES_SCIENTIFIC_DOMAIN_LEVEL_3_BMEDPJHL
+      a       roh:ESScientificDomain ;
+      rdfs:label "Cardiovascular" ;
+      asio:hasCode asioModules:ES_SCIENTIFIC_DOMAIN_LEVEL_3_CODE_BMEDPJHL ;
+      skos:broader asioModules:ES_SCIENTIFIC_DOMAIN_LEVEL_2_BMED ;
+      skos:inScheme asioModules:ESscientificDomains3rdList ;
+      skos:notation "BMEDPJHL" ;
+      skos:prefLabel "Cardiovasculaire"@fr , "Cardiovascular"@ast , "Cardiovascular" , "Cardiovascular"@es , "Cardiovascular"@ca , "Cardiovascular"@gl , "Cardiovascular"@en , "Cardiovascular"@pt .
+
+asioModules:ES_SCIENTIFIC_DOMAIN_LEVEL_3_CODE_BFSHRRE
+      a       roh:ESScientificDomain ;
+      rdfs:label "BFSHRRE" ;
+      asio:codeOf asioModules:ES_SCIENTIFIC_DOMAIN_LEVEL_3_BFSHRRE ;
+      skos:inScheme asioModules:ESscientificDomains3rdCodeList ;
+      skos:prefLabel "BFSHRRE" .
+
+asioModules:ES_SCIENTIFIC_DOMAIN_LEVEL_3_CODE_HAQGZR
+      a       roh:ESScientificDomain ;
+      rdfs:label "HAQGZR" ;
+      asio:codeOf asioModules:ES_SCIENTIFIC_DOMAIN_LEVEL_3_HAQGZR ;
+      skos:inScheme asioModules:ESscientificDomains3rdCodeList ;
+      skos:prefLabel "HAQGZR" .
+
+asioModules:ES_SCIENTIFIC_DOMAIN_LEVEL_3_CODE_MTMALGE
+      a       roh:ESScientificDomain ;
+      rdfs:label "MTMALGE" ;
+      asio:codeOf asioModules:ES_SCIENTIFIC_DOMAIN_LEVEL_3_MTMALGE ;
+      skos:inScheme asioModules:ESscientificDomains3rdCodeList ;
+      skos:prefLabel "MTMALGE" .
+
+asioModules:ES_SCIENTIFIC_DOMAIN_LEVEL_3_CODE_CTMIN
+      a       roh:ESScientificDomain ;
+      rdfs:label "CTMIN" ;
+      asio:codeOf asioModules:ES_SCIENTIFIC_DOMAIN_LEVEL_3_CTMIN ;
+      skos:inScheme asioModules:ESscientificDomains3rdCodeList ;
+      skos:prefLabel "CTMIN" .
+
+asioModules:ES_SCIENTIFIC_DOMAIN_LEVEL_3_CODE_MCLICFDU
+      a       roh:ESScientificDomain ;
+      rdfs:label "MCLICFDU" ;
+      asio:codeOf asioModules:ES_SCIENTIFIC_DOMAIN_LEVEL_3_MCLICFDU ;
+      skos:inScheme asioModules:ESscientificDomains3rdCodeList ;
+      skos:prefLabel "MCLICFDU" .
+
+asioModules:ES_SCIENTIFIC_DOMAIN_LEVEL_3_CODE_MTMANAM
+      a       roh:ESScientificDomain ;
+      rdfs:label "MTMANAM" ;
+      asio:codeOf asioModules:ES_SCIENTIFIC_DOMAIN_LEVEL_3_MTMANAM ;
+      skos:inScheme asioModules:ESscientificDomains3rdCodeList ;
+      skos:prefLabel "MTMANAM" .
+
+asioModules:ES_SCIENTIFIC_DOMAIN_LEVEL_3_FFIURLV
+      a       roh:ESScientificDomain ;
+      rdfs:label "Lógica y filosofía de la ciencia" ;
+      asio:hasCode asioModules:ES_SCIENTIFIC_DOMAIN_LEVEL_3_CODE_FFIURLV ;
+      skos:broader asioModules:ES_SCIENTIFIC_DOMAIN_LEVEL_2_FFI ;
+      skos:inScheme asioModules:ESscientificDomains3rdList ;
+      skos:notation "FFIURLV" ;
+      skos:prefLabel "Lógica e filosofia da ciência"@pt , "Lógica y filosofía de la ciencia" , "Lógica y filosofía de la ciencia"@es , "Logique et philosophie des sciences"@fr , "Lóxica e filosofía da ciencia"@gl , "Logic and philosophy of science"@en , "Lóxica y filosofía de la ciencia"@ast , "Lògica i filosofia de la ciència"@ca .
+
+asioModules:ES_SCIENTIFIC_DOMAIN_LEVEL_3_CODE_CTGEOF
+      a       roh:ESScientificDomain ;
+      rdfs:label "CTGEOF" ;
+      asio:codeOf asioModules:ES_SCIENTIFIC_DOMAIN_LEVEL_3_CTGEOF ;
+      skos:inScheme asioModules:ESscientificDomains3rdCodeList ;
+      skos:prefLabel "CTGEOF" .
+
+asioModules:ES_SCIENTIFIC_DOMAIN_LEVEL_3_CODE_BMEDJNIS
+      a       roh:ESScientificDomain ;
+      rdfs:label "BMEDJNIS" ;
+      asio:codeOf asioModules:ES_SCIENTIFIC_DOMAIN_LEVEL_3_BMEDJNIS ;
+      skos:inScheme asioModules:ESscientificDomains3rdCodeList ;
+      skos:prefLabel "BMEDJNIS" .
+
+asioModules:ES_SCIENTIFIC_DOMAIN_LEVEL_3_CODE_MCLIAJCV
+      a       roh:ESScientificDomain ;
+      rdfs:label "MCLIAJCV" ;
+      asio:codeOf asioModules:ES_SCIENTIFIC_DOMAIN_LEVEL_3_MCLIAJCV ;
+      skos:inScheme asioModules:ESscientificDomains3rdCodeList ;
+      skos:prefLabel "MCLIAJCV" .
+
+asioModules:ES_SCIENTIFIC_DOMAIN_LEVEL_2_CODE_CS
+      a       roh:ESScientificDomain ;
+      rdfs:label "CS" ;
+      asio:codeOf asioModules:ES_SCIENTIFIC_DOMAIN_LEVEL_2_CS ;
+      skos:inScheme asioModules:ESscientificDomains2ndCodeList ;
+      skos:prefLabel "CS" .
+
+asioModules:ES_SCIENTIFIC_DOMAIN_LEVEL_3_BFSDGRC
+      a       roh:ESScientificDomain ;
+      rdfs:label "Virología" ;
+      asio:hasCode asioModules:ES_SCIENTIFIC_DOMAIN_LEVEL_3_CODE_BFSDGRC ;
+      skos:broader asioModules:ES_SCIENTIFIC_DOMAIN_LEVEL_2_BFS ;
+      skos:inScheme asioModules:ESscientificDomains3rdList ;
+      skos:notation "BFSDGRC" ;
+      skos:exactMatch unescothes:C04252 ;
+      skos:prefLabel "Viroloxía"@ast , "Viroloxía"@gl , "Virologie"@fr , "Virology"@en , "Virología" , "Virología"@es , "Virologia"@ca , "Virologia"@pt .
+
+asioModules:ES_SCIENTIFIC_DOMAIN_LEVEL_3_CODE_BFSEEAB
+      a       roh:ESScientificDomain ;
+      rdfs:label "BFSEEAB" ;
+      asio:codeOf asioModules:ES_SCIENTIFIC_DOMAIN_LEVEL_3_BFSEEAB ;
+      skos:inScheme asioModules:ESscientificDomains3rdCodeList ;
+      skos:prefLabel "BFSEEAB" .
+
+asioModules:ES_SCIENTIFIC_DOMAIN_LEVEL_3_CTMETE
+      a       roh:ESScientificDomain ;
+      rdfs:label "Meteorología" ;
+      asio:hasCode asioModules:ES_SCIENTIFIC_DOMAIN_LEVEL_3_CODE_CTMETE ;
+      skos:broader asioModules:ES_SCIENTIFIC_DOMAIN_LEVEL_2_CT ;
+      skos:inScheme asioModules:ESscientificDomains3rdList ;
+      skos:notation "CTMETE" ;
+      skos:closeMatch unescothes:C02496 ;
+      skos:prefLabel "Meteorology"@en , "Météorologie"@fr , "Meteorología"@es , "Meteorología" , "Meteoroloxía"@ast , "Meteoroloxía"@gl , "Meteorologia"@ca , "Meteorologia"@pt , "Meteorologia"@ext .
+
+asioModules:ES_SCIENTIFIC_DOMAIN_LEVEL_2_MTM
+      a       roh:ESScientificDomain ;
+      rdfs:label "Matemáticas" ;
+      asio:hasCode asioModules:ES_SCIENTIFIC_DOMAIN_LEVEL_2_CODE_MTM ;
+      skos:broader asioModules:ES_SCIENTIFIC_DOMAIN_LEVEL_1_CB ;
+      skos:inScheme asioModules:ESscientificDomains2ndList ;
+      skos:notation "MTM" ;
+      skos:closeMatch unescothes:C02437 ;
+      skos:note "Investigación en Matemáticas, incluíndo álxebra, análise real, análise complexa, análise funcional, análise armónica, análise numérica, combinativa, ecuacións funcionais, educación matemática, estatísticas, física matemática, xeometría, historia matemática, lóxica matemática, investigación operacional, matemáticas Aplicada, Matemática Discreta, Optimización, Teoría de Control, Teoría de Probabilidades, Teoría de Números e Topoloxía."@gl , "Recerca en matemàtiques, incloent-hi Àlgebra, Anàlisi Real, Anàlisi Complex, Anàlisi Funcional, anàlisi harmònica, Anàlisi Numèric, Combinatòria, Equacions Funcionals, Educació Matemàtica, Estadística, Física Matemàtica, Geometria, Història de la Matemàtica, Lògica Matemàtica, Investigació Operativa, Matemàtica aplicada, Matemàtica Discreta, Optimització, Teoria de Control, Teoria de la Probabilitat, Teoria de Nombres i Topologia."@ca , "Mathematics research, including Algebra, Real Analysis, Complex Analysis, Functional Analysis, Harmonic Analysis, Numerical, Combinatorial Analysis, Functional Equations, Mathematical Education, Statistics, Mathematical Physics, Geometry, Mathematical History, Mathematical Logic, Operational Research, Mathematics Applied, Discrete Mathematics, Optimization, Control Theory, Probability Theory, Number Theory and Topology."@en ;
+      skos:prefLabel "Matemàtiques"@ca , "Matemática"@pt , "Matemáticas"@gl , "Mathématiques"@fr , "Mathematics"@en , "Matemáticas" , "Matemáticas"@es , "Matemáticas"@ast .
+
+asioModules:ES_SCIENTIFIC_DOMAIN_LEVEL_2_IME
+      a       roh:ESScientificDomain ;
+      rdfs:label "Ingeniería mecánica, naval y aeronáutica" ;
+      asio:hasCode asioModules:ES_SCIENTIFIC_DOMAIN_LEVEL_2_CODE_IME ;
+      skos:broader asioModules:ES_SCIENTIFIC_DOMAIN_LEVEL_1_IYT ;
+      skos:inScheme asioModules:ESscientificDomains2ndList ;
+      skos:notation "IME" ;
+      skos:prefLabel "Mechanical, naval and aeronautical engineering"@en , "Ingeniería mecánica, naval y aeronáutica" , "Ingeniería mecánica, naval y aeronáutica"@es , "Enxeñaría mecánica, naval e aeronáutica"@gl , "Ingénierie mécanique, naval et aéronautique"@fr , "Enginyeria mecànica, naval i aeronàutica"@ca , "Inxeniería mecánica, naval y aeronáutica"@ast , "Engenharia mecânica, naval e aeronáutica"@pt .
+
+asioModules:ES_SCIENTIFIC_DOMAIN_LEVEL_3_CODE_CTPALE
+      a       roh:ESScientificDomain ;
+      rdfs:label "CTPALE" ;
+      asio:codeOf asioModules:ES_SCIENTIFIC_DOMAIN_LEVEL_3_CTPALE ;
+      skos:inScheme asioModules:ESscientificDomains3rdCodeList ;
+      skos:prefLabel "CTPALE" .
+
+asioModules:ES_SCIENTIFIC_DOMAIN_LEVEL_3_CODE_CTMATE
+      a       roh:ESScientificDomain ;
+      rdfs:label "CTMATE" ;
+      asio:codeOf asioModules:ES_SCIENTIFIC_DOMAIN_LEVEL_3_CTMATE ;
+      skos:inScheme asioModules:ESscientificDomains3rdCodeList ;
+      skos:prefLabel "CTMATE" .
+
+asioModules:ES_SCIENTIFIC_DOMAIN_LEVEL_3_BFSGSYN
+      a       roh:ESScientificDomain ;
+      rdfs:label "Bioinformática" ;
+      asio:hasCode asioModules:ES_SCIENTIFIC_DOMAIN_LEVEL_3_CODE_BFSGSYN ;
+      skos:broader asioModules:ES_SCIENTIFIC_DOMAIN_LEVEL_2_BFS ;
+      skos:inScheme asioModules:ESscientificDomains3rdList ;
+      skos:notation "BFSGSYN" ;
+      skos:prefLabel "Bioinformática"@gl , "Bioinformática" , "Bioinformática"@es , "Bioinformática"@ast , "Bioinformática"@pt , "Bioinformàtica"@ca , "Bioinformatics"@en , "Bioinformatique"@fr .
+
+asioModules:ES_SCIENTIFIC_DOMAIN_LEVEL_2_CODE_BVAE
+      a       roh:ESScientificDomain ;
+      rdfs:label "BVAE" ;
+      asio:codeOf asioModules:ES_SCIENTIFIC_DOMAIN_LEVEL_2_BVAE ;
+      skos:inScheme asioModules:ESscientificDomains2ndCodeList ;
+      skos:prefLabel "BVAE" .
+
+asioModules:ES_SCIENTIFIC_DOMAIN_LEVEL_3_CTGEOD
+      a       roh:ESScientificDomain ;
+      rdfs:label "Geodinámica interna" ;
+      asio:hasCode asioModules:ES_SCIENTIFIC_DOMAIN_LEVEL_3_CODE_CTGEOD ;
+      skos:broader asioModules:ES_SCIENTIFIC_DOMAIN_LEVEL_2_CT ;
+      skos:inScheme asioModules:ESscientificDomains3rdList ;
+      skos:notation "CTGEOD" ;
+      skos:closeMatch unescothes:C01667 ;
+      skos:prefLabel "Xeodinámica interna"@gl , "Geodinâmica interna"@pt , "Geodinámica interna"@es , "Geodinámica interna" , "Xeodinámica interno"@ast , "Geodinàmica Interna"@ca , "Internal geodynamics"@en , "Géodynamique interne"@fr .
+
+asioModules:ES_SCIENTIFIC_DOMAIN_LEVEL_3_CODE_MTMTOPO
+      a       roh:ESScientificDomain ;
+      rdfs:label "MTMTOPO" ;
+      asio:codeOf asioModules:ES_SCIENTIFIC_DOMAIN_LEVEL_3_MTMTOPO ;
+      skos:inScheme asioModules:ESscientificDomains3rdCodeList ;
+      skos:prefLabel "MTMTOPO" .
+
+asioModules:ES_SCIENTIFIC_DOMAIN_LEVEL_3_CODE_HAYSVE
+      a       roh:ESScientificDomain ;
+      rdfs:label "HAYSVE" ;
+      asio:codeOf asioModules:ES_SCIENTIFIC_DOMAIN_LEVEL_3_HAYSVE ;
+      skos:inScheme asioModules:ESscientificDomains3rdCodeList ;
+      skos:prefLabel "HAYSVE" .
+
+asioModules:ES_SCIENTIFIC_DOMAIN_LEVEL_3_PSBODX
+      a       roh:ESScientificDomain ;
+      rdfs:label "Metodología" ;
+      asio:hasCode asioModules:ES_SCIENTIFIC_DOMAIN_LEVEL_3_CODE_PSBODX ;
+      skos:broader asioModules:ES_SCIENTIFIC_DOMAIN_LEVEL_2_PS ;
+      skos:inScheme asioModules:ESscientificDomains3rdList ;
+      skos:notation "PSBODX" ;
+      skos:closeMatch unescothes:C02497 ;
+      skos:prefLabel "Metodoloxía"@ast , "Metodoloxía"@gl , "Metodología"@es , "Metodología" , "Methodology"@en , "Metodologia"@ca , "Metodologia"@pt , "Méthodologie"@fr .
+
+asioModules:ES_SCIENTIFIC_DOMAIN_LEVEL_3_CODE_BMEDTINW
+      a       roh:ESScientificDomain ;
+      rdfs:label "BMEDTINW" ;
+      asio:codeOf asioModules:ES_SCIENTIFIC_DOMAIN_LEVEL_3_BMEDTINW ;
+      skos:inScheme asioModules:ESscientificDomains3rdCodeList ;
+      skos:prefLabel "BMEDTINW" .
+
+asioModules:ES_SCIENTIFIC_DOMAIN_LEVEL_3_CODE_BMEDMJHF
+      a       roh:ESScientificDomain ;
+      rdfs:label "BMEDMJHF" ;
+      asio:codeOf asioModules:ES_SCIENTIFIC_DOMAIN_LEVEL_3_BMEDMJHF ;
+      skos:inScheme asioModules:ESscientificDomains3rdCodeList ;
+      skos:prefLabel "BMEDMJHF" .
+
+asioModules:ES_SCIENTIFIC_DOMAIN_LEVEL_3_BFSCXPL
+      a       roh:ESScientificDomain ;
+      rdfs:label "Neurobiología y desarrollo" ;
+      asio:hasCode asioModules:ES_SCIENTIFIC_DOMAIN_LEVEL_3_CODE_BFSCXPL ;
+      skos:broader asioModules:ES_SCIENTIFIC_DOMAIN_LEVEL_2_BFS ;
+      skos:inScheme asioModules:ESscientificDomains3rdList ;
+      skos:notation "BFSCXPL" ;
+      skos:prefLabel "Neurobioloxía e desenvolvemento"@gl , "Neurobiologia i desenvolupament"@ca , "Neurobiology and Development"@en , "Neurobiologia e Desenvolvimento"@pt , "Neurobioloxía y desendolcamientu"@ast , "Neurobiología y desarrollo"@es , "Neurobiología y desarrollo" , "Neurobiologie et développement"@fr .
+
+asioModules:ES_SCIENTIFIC_DOMAIN_LEVEL_2_MCLI
+      a       roh:ESScientificDomain ;
+      rdfs:label "Medicina clínica y epidemiología" ;
+      asio:hasCode asioModules:ES_SCIENTIFIC_DOMAIN_LEVEL_2_CODE_MCLI ;
+      skos:broader asioModules:ES_SCIENTIFIC_DOMAIN_LEVEL_1_CVS ;
+      skos:inScheme asioModules:ESscientificDomains2ndList ;
+      skos:notation "MCLI" ;
+      skos:note "Engloba tots els estudis que tenen com a objectiu un millor coneixement de la malaltia, dels seus mecanismes o dels seus possibles tractaments, quan una part significativa dels estudis es realitza en éssers humans."@ca , "Abarca todos os estudos que teñen como obxectivo un mellor coñecemento da enfermidade, os seus mecanismos ou os seus posibles tratamentos, cando unha parte significativa dos estudos se realizan en humanos."@gl , "It encompasses all studies that aim at a better knowledge of the disease, its mechanisms or its possible treatments, when a significant part of the studies are carried out in humans."@en ;
+      skos:prefLabel "Medicina Clínica e Epidemioloxía"@gl , "Medicina clínica e epidemiologia"@pt , "Medicina clínica y epidemiología" , "Medicina clínica y epidemiología"@es , "Médecine clinique et épidémiologie"@fr , "Medicina clínica y epidemioloxía"@ast , "Clinical medicine and epidemiology"@en , "Medicina clínica i epidemiologia"@ca .
+
+asioModules:ES_SCIENTIFIC_DOMAIN_LEVEL_3_HAQGZR
+      a       roh:ESScientificDomain ;
+      rdfs:label "Prehistoria" ;
+      asio:hasCode asioModules:ES_SCIENTIFIC_DOMAIN_LEVEL_3_CODE_HAQGZR ;
+      skos:broader asioModules:ES_SCIENTIFIC_DOMAIN_LEVEL_2_HA ;
+      skos:inScheme asioModules:ESscientificDomains3rdList ;
+      skos:notation "HAQGZR" ;
+      skos:exactMatch unescothes:C03114 ;
+      skos:prefLabel "Préhistoire"@fr , "Prehistory"@en , "Prehistoria"@es , "Prehistoria" , "Prehistoria"@ast , "Prehistoria"@gl , "Pré-história"@pt , "Prehistòria"@ca .
+
+asioModules:ES_SCIENTIFIC_DOMAIN_LEVEL_3_FFIYMLQ
+      a       roh:ESScientificDomain ;
+      rdfs:label "Teoría de la literatura" ;
+      asio:hasCode asioModules:ES_SCIENTIFIC_DOMAIN_LEVEL_3_CODE_FFIYMLQ ;
+      skos:broader asioModules:ES_SCIENTIFIC_DOMAIN_LEVEL_2_FFI ;
+      skos:inScheme asioModules:ESscientificDomains3rdList ;
+      skos:notation "FFIYMLQ" ;
+      skos:prefLabel "Teoria de la literatura"@ca , "Théorie de la littérature"@fr , "Teoría da literatura"@gl , "Teoria da literatura"@pt , "Literature theory"@en , "Teoría de la lliteratura"@ast , "Teoría de la literatura" , "Teoría de la literatura"@es .
+
+asioModules:ES_SCIENTIFIC_DOMAIN_LEVEL_3_BMEDJNIS
+      a       roh:ESScientificDomain ;
+      rdfs:label "Inmunología" ;
+      asio:hasCode asioModules:ES_SCIENTIFIC_DOMAIN_LEVEL_3_CODE_BMEDJNIS ;
+      skos:broader asioModules:ES_SCIENTIFIC_DOMAIN_LEVEL_2_BMED ;
+      skos:inScheme asioModules:ESscientificDomains3rdList ;
+      skos:notation "BMEDJNIS" ;
+      skos:prefLabel "Imunologia"@pt , "Immunologia"@ca , "Inmunoloxía"@gl , "Inmunoloxía"@ast , "Immunologie"@fr , "Immunology"@en , "Inmunología" , "Inmunología"@es .
+
+asioModules:ES_SCIENTIFIC_DOMAIN_LEVEL_3_CODE_MCLIATZZ
+      a       roh:ESScientificDomain ;
+      rdfs:label "MCLIATZZ" ;
+      asio:codeOf asioModules:ES_SCIENTIFIC_DOMAIN_LEVEL_3_MCLIATZZ ;
+      skos:inScheme asioModules:ESscientificDomains3rdCodeList ;
+      skos:prefLabel "MCLIATZZ" .
+
+asioModules:ES_SCIENTIFIC_DOMAIN_LEVEL_3_BMEDDHHL
+      a       roh:ESScientificDomain ;
+      rdfs:label "Farmacología Molecular" ;
+      asio:hasCode asioModules:ES_SCIENTIFIC_DOMAIN_LEVEL_3_CODE_BMEDDHHL ;
+      skos:broader asioModules:ES_SCIENTIFIC_DOMAIN_LEVEL_2_BMED ;
+      skos:inScheme asioModules:ESscientificDomains3rdList ;
+      skos:notation "BMEDDHHL" ;
+      skos:prefLabel "Farmacología Molecular" , "Farmacología Molecular"@es , "Molecular Pharmacology"@en , "Farmacoloxía Molecular"@gl , "Farmacologia Molecular"@pt , "Farmacologia Molecular"@ca , "Pharmacologie moléculaire"@fr , "Farmacoloxía molecular"@ast .
+
+asioModules:ES_SCIENTIFIC_DOMAIN_LEVEL_3_CTFISP
+      a       roh:ESScientificDomain ;
+      rdfs:label "Física de partículas" ;
+      asio:hasCode asioModules:ES_SCIENTIFIC_DOMAIN_LEVEL_3_CODE_CTFISP ;
+      skos:broader asioModules:ES_SCIENTIFIC_DOMAIN_LEVEL_2_FI ;
+      skos:inScheme asioModules:ESscientificDomains3rdList ;
+      skos:notation "CTFISP" ;
+      skos:prefLabel "Particle physics"@en , "Physique des particules"@fr , "Física de partículas"@es , "Física de partículas" , "Física de partículas"@gl , "Física de partículas"@pt , "Física de partícules"@ast , "Física de partícules"@ca .
+
+asioModules:ES_SCIENTIFIC_DOMAIN_LEVEL_2_CODE_DER
+      a       roh:ESScientificDomain ;
+      rdfs:label "DER" ;
+      asio:codeOf asioModules:ES_SCIENTIFIC_DOMAIN_LEVEL_2_DER ;
+      skos:inScheme asioModules:ESscientificDomains2ndCodeList ;
+      skos:prefLabel "DER" .
+
+asioModules:ES_SCIENTIFIC_DOMAIN_LEVEL_3_HAQJKH
+      a       roh:ESScientificDomain ;
+      rdfs:label "Historia contemporánea" ;
+      asio:hasCode asioModules:ES_SCIENTIFIC_DOMAIN_LEVEL_3_CODE_HAQJKH ;
+      skos:broader asioModules:ES_SCIENTIFIC_DOMAIN_LEVEL_2_HA ;
+      skos:inScheme asioModules:ESscientificDomains3rdList ;
+      skos:notation "HAQJKH" ;
+      skos:prefLabel "Histoire contemporaine"@fr , "Contemporary history"@en , "Història contemporània"@ca , "Historia contemporánea" , "Historia contemporánea"@es , "Historia contemporánea"@ast , "Historia contemporánea"@gl , "História contemporânea"@pt .
+
+asioModules:ES_SCIENTIFIC_DOMAIN_LEVEL_2_CODE_CT
+      a       roh:ESScientificDomain ;
+      rdfs:label "CT" ;
+      asio:codeOf asioModules:ES_SCIENTIFIC_DOMAIN_LEVEL_2_CT ;
+      skos:inScheme asioModules:ESscientificDomains2ndCodeList ;
+      skos:prefLabel "CT" .
+
+asioModules:ESscientificDomains3rdList
+      a       asioModules:scientificDomains ;
+      rdfs:label "Dominis científics de tercer nivell"@ca , "Third-level scientific domains"@en , "θɜrd ˈlɛvəl ˌsaɪənˈtɪfɪk doʊˈmeɪnz"@en-US-fonipa , "Áreas científicas de terceiro nível"@pt , "Árees científiques de terceru nivel"@ast , "Áreas scientificas de tresen nivel"@oc , "duˈminis siənˈtifikz ðə tərˈse niˈβeʎ"@ca-CA-fonipa , "Hirugarren mailako arlo zientifikoak"@eu , "Áreas científicas de terceiro nivel"@gl , "Áreas scientificas de tercer nivel"@an , "Áreas científicas de tercer nivel"@es , "ˈaɾeas θjen̪ˈtifikas ðe terˈθer niˈβ̞el"@es-ES-fonipa , "θɜːd ˈlɛvl ˌsaɪənˈtɪfɪk dəʊˈmeɪnz"@en-GB-fonipa , "Domains scientifiques de troisième niveau"@fr ;
+      skos:prefLabel "Dominis científics de tercer nivell"@ca , "Third-level scientific domains"@en , "θɜrd ˈlɛvəl ˌsaɪənˈtɪfɪk doʊˈmeɪnz"@en-US-fonipa , "Áreas científicas de terceiro nível"@pt , "Árees científiques de terceru nivel"@ast , "Áreas scientificas de tresen nivel"@oc , "duˈminis siənˈtifikz ðə tərˈse niˈβeʎ"@ca-CA-fonipa , "Áreas científicas de terceiro nivel"@gl , "Hirugarren mailako arlo zientifikoak"@eu , "Áreas scientificas de tercer nivel"@an , "Áreas científicas de tercer nivel"@es , "ˈaɾeas θjen̪ˈtifikas ðe terˈθer niˈβ̞el"@es-ES-fonipa , "θɜːd ˈlɛvl ˌsaɪənˈtɪfɪk dəʊˈmeɪnz"@en-GB-fonipa , "Domains scientifiques de troisième niveau"@fr ;
+      ontolex:phoneticRep "θɜrd ˈlɛvəl ˌsaɪənˈtɪfɪk doʊˈmeɪnz"@en-US-fonipa , "ˈaɾeas θjen̪ˈtifikas ðe terˈθer niˈβ̞el"@es-ES-fonipa , "θɜːd ˈlɛvl ˌsaɪənˈtɪfɪk dəʊˈmeɪnz"@en-GB-fonipa , "duˈminis siənˈtifikz ðə tərˈse niˈβeʎ"@ca-CA-fonipa .
+
+asioModules:ES_SCIENTIFIC_DOMAIN_LEVEL_3_CODE_QMCNANO
+      a       roh:ESScientificDomain ;
+      rdfs:label "QMCNANO" ;
+      asio:codeOf asioModules:ES_SCIENTIFIC_DOMAIN_LEVEL_3_QMCNANO ;
+      skos:inScheme asioModules:ESscientificDomains3rdCodeList ;
+      skos:prefLabel "QMCNANO" .
+
+asioModules:ES_SCIENTIFIC_DOMAIN_LEVEL_3_CODE_BMEDIRHV
+      a       roh:ESScientificDomain ;
+      rdfs:label "BMEDIRHV" ;
+      asio:codeOf asioModules:ES_SCIENTIFIC_DOMAIN_LEVEL_3_BMEDIRHV ;
+      skos:inScheme asioModules:ESscientificDomains3rdCodeList ;
+      skos:prefLabel "BMEDIRHV" .
+
+asioModules:ES_SCIENTIFIC_DOMAIN_LEVEL_2_COM
+      a       roh:ESScientificDomain ;
+      rdfs:label "Tecnología electrónica y de las comunicaciones" ;
+      asio:hasCode asioModules:ES_SCIENTIFIC_DOMAIN_LEVEL_2_CODE_COM ;
+      skos:broader asioModules:ES_SCIENTIFIC_DOMAIN_LEVEL_1_IYT ;
+      skos:inScheme asioModules:ESscientificDomains2ndList ;
+      skos:notation "COM" ;
+      skos:prefLabel "Tecnología electrónica y de las comunicaciones" , "Tecnología electrónica y de las comunicaciones"@es , "Technologie électronique et de communication"@fr , "Tecnologia eletrônica e de comunicações"@pt , "Tecnologia electrònica i de les comunicacions"@ca , "Electronic and communications technology"@en , "Tecnoloxía electrónica y de les comunicaciones"@ast , "Tecnoloxía electrónica e de comunicacións"@gl .
+
+asioModules:ES_SCIENTIFIC_DOMAIN_LEVEL_3_QMCMATM
+      a       roh:ESScientificDomain ;
+      rdfs:label "Materiales moleculares" ;
+      asio:hasCode asioModules:ES_SCIENTIFIC_DOMAIN_LEVEL_3_CODE_QMCMATM ;
+      skos:broader asioModules:ES_SCIENTIFIC_DOMAIN_LEVEL_2_QMC ;
+      skos:inScheme asioModules:ESscientificDomains3rdList ;
+      skos:notation "QMCMATM" ;
+      skos:prefLabel "Molecular materials"@en , "Materials moleculars"@ca , "Materiais moleculares"@pt , "Materiais moleculares"@gl , "Materiales moleculares" , "Materiales moleculares"@es , "Materiales moleculares"@ast , "Matériaux moléculaires"@fr .
+
+asioModules:ES_SCIENTIFIC_DOMAIN_LEVEL_3_BMEDYQHF
+      a       roh:ESScientificDomain ;
+      rdfs:label "Fisiología celular y de sistemas" ;
+      asio:hasCode asioModules:ES_SCIENTIFIC_DOMAIN_LEVEL_3_CODE_BMEDYQHF ;
+      skos:broader asioModules:ES_SCIENTIFIC_DOMAIN_LEVEL_2_BMED ;
+      skos:inScheme asioModules:ESscientificDomains3rdList ;
+      skos:notation "BMEDYQHF" ;
+      skos:prefLabel "Physiologie cellulaire et systémique"@fr , "Fisiología celular y de sistemas" , "Fisiología celular y de sistemas"@es , "Fisiologia celular e de sistemas"@pt , "Cellular and systems physiology"@en , "Fisioloxía celular e dos sistemas"@gl , "Fisiologia cel·lular i de sistemes"@ca , "Fisioloxía celular y de los sistemes"@ast .
+
+asioModules:ES_SCIENTIFIC_DOMAIN_LEVEL_3_HAMOXL
+      a       roh:ESScientificDomain ;
+      rdfs:label "Historia medieval" ;
+      asio:hasCode asioModules:ES_SCIENTIFIC_DOMAIN_LEVEL_3_CODE_HAMOXL ;
+      skos:broader asioModules:ES_SCIENTIFIC_DOMAIN_LEVEL_2_HA ;
+      skos:inScheme asioModules:ESscientificDomains3rdList ;
+      skos:notation "HAMOXL" ;
+      skos:prefLabel "Historia medieval" , "Historia medieval"@es , "Histoire médiévale"@fr , "Historia medieval"@ast , "Historia medieval"@gl , "História medieval"@pt , "Medieval history"@en , "Història medieval"@ca .
+
+asioModules:ES_SCIENTIFIC_DOMAIN_LEVEL_3_CTPETR
+      a       roh:ESScientificDomain ;
+      rdfs:label "Petrología" ;
+      asio:hasCode asioModules:ES_SCIENTIFIC_DOMAIN_LEVEL_3_CODE_CTPETR ;
+      skos:broader asioModules:ES_SCIENTIFIC_DOMAIN_LEVEL_2_CT ;
+      skos:inScheme asioModules:ESscientificDomains3rdList ;
+      skos:notation "CTPETR" ;
+      skos:exactMatch unescothes:C02963 ;
+      skos:prefLabel "Petrology"@en , "Petrologia"@oc , "Petrologia"@ca , "Petrologia"@pt , "Pétrologie"@fr , "Petroloxía"@ast , "Petroloxía"@gl , "Petrología" , "Petrología"@es .
+
+asioModules:ES_SCIENTIFIC_DOMAIN_LEVEL_3_MCLIQUEG
+      a       roh:ESScientificDomain ;
+      rdfs:label "Enfermedades infecciosas" ;
+      asio:hasCode asioModules:ES_SCIENTIFIC_DOMAIN_LEVEL_3_CODE_MCLIQUEG ;
+      skos:broader asioModules:ES_SCIENTIFIC_DOMAIN_LEVEL_2_MCLI ;
+      skos:inScheme asioModules:ESscientificDomains3rdList ;
+      skos:notation "MCLIQUEG" ;
+      skos:exactMatch unescothes:C01973 ;
+      skos:prefLabel "Maladies infectieuses"@fr , "Enfermedades infecciosas" , "Enfermedades infecciosas"@es , "Doenças infecciosas"@pt , "Enfermedaes infeccioses"@ast , "Infectious diseases"@en , "Enfermidades infecciosas"@gl , "Malalties infeccioses"@ca .
+
+asioModules:ES_SCIENTIFIC_DOMAIN_LEVEL_2_CODE_AGR
+      a       roh:ESScientificDomain ;
+      rdfs:label "AGR" ;
+      asio:codeOf asioModules:ES_SCIENTIFIC_DOMAIN_LEVEL_2_AGR ;
+      skos:inScheme asioModules:ESscientificDomains2ndCodeList ;
+      skos:prefLabel "AGR" .
+
+asioModules:ES_SCIENTIFIC_DOMAIN_LEVEL_3_CODE_CTGEOD
+      a       roh:ESScientificDomain ;
+      rdfs:label "CTGEOD" ;
+      asio:codeOf asioModules:ES_SCIENTIFIC_DOMAIN_LEVEL_3_CTGEOD ;
+      skos:inScheme asioModules:ESscientificDomains3rdCodeList ;
+      skos:prefLabel "CTGEOD" .
+
+asioModules:ES_SCIENTIFIC_DOMAIN_LEVEL_3_CODE_PSJTFX
+      a       roh:ESScientificDomain ;
+      rdfs:label "PSJTFX" ;
+      asio:codeOf asioModules:ES_SCIENTIFIC_DOMAIN_LEVEL_3_PSJTFX ;
+      skos:inScheme asioModules:ESscientificDomains3rdCodeList ;
+      skos:prefLabel "PSJTFX" .
+
+asioModules:ES_SCIENTIFIC_DOMAIN_LEVEL_3_MTMANAM
+      a       roh:ESScientificDomain ;
+      rdfs:label "Análisis matemático" ;
+      asio:hasCode asioModules:ES_SCIENTIFIC_DOMAIN_LEVEL_3_CODE_MTMANAM ;
+      skos:broader asioModules:ES_SCIENTIFIC_DOMAIN_LEVEL_2_MTM ;
+      skos:inScheme asioModules:ESscientificDomains3rdList ;
+      skos:notation "MTMANAM" ;
+      skos:prefLabel "Anàlisi matemàtica"@ca , "Análisis matemático"@ast , "Análisis matemático" , "Análisis matemático"@es , "Analyse mathématique"@fr , "Mathematical analysis"@en , "Análise matemática"@gl , "Análise matemática"@pt .
+
+asioModules:ES_SCIENTIFIC_DOMAIN_LEVEL_2_HA
+      a       roh:ESScientificDomain ;
+      rdfs:label "Historia y arte" ;
+      asio:hasCode asioModules:ES_SCIENTIFIC_DOMAIN_LEVEL_2_CODE_HA ;
+      skos:broader asioModules:ES_SCIENTIFIC_DOMAIN_LEVEL_1_CSH ;
+      skos:inScheme asioModules:ESscientificDomains2ndList ;
+      skos:notation "HA" ;
+      skos:prefLabel "Historia y arte" , "Historia y arte"@es , "Historia y arte"@ast , "Histoire et art"@fr , "Historia e arte"@gl , "História e arte"@pt , "Història i art"@ca , "History and art"@en .
+
+asioModules:ES_SCIENTIFIC_DOMAIN_LEVEL_2_CODE_COM
+      a       roh:ESScientificDomain ;
+      rdfs:label "COM" ;
+      asio:codeOf asioModules:ES_SCIENTIFIC_DOMAIN_LEVEL_2_COM ;
+      skos:inScheme asioModules:ESscientificDomains2ndCodeList ;
+      skos:prefLabel "COM" .
+
+asioModules:ES_SCIENTIFIC_DOMAIN_LEVEL_2_BFS
+      a       roh:ESScientificDomain ;
+      rdfs:label "Biología fundamental y de sistemas" ;
+      asio:hasCode asioModules:ES_SCIENTIFIC_DOMAIN_LEVEL_2_CODE_BFS ;
+      skos:broader asioModules:ES_SCIENTIFIC_DOMAIN_LEVEL_1_CVS ;
+      skos:inScheme asioModules:ESscientificDomains2ndList ;
+      skos:notation "BFS" ;
+      skos:note "Research on the fundamentals of biological function, structure and their interrelations, from the molecular level to that of the organism, and without distinction of the biological study model, except for the one whose main purpose is to improve human health."@en , "Investigación sobre os fundamentos da función biolóxica, a estrutura e as súas interrelacións, desde o nivel molecular ao do organismo e sen distinción do modelo de estudo biolóxico, salvo aquel que ten como finalidade principal mellorar a saúde humana."@gl , "Recerca sobre els fonaments de la funció biològica, estructura i les seves interrelacions, des del nivell molecular a el de l'organisme, i sense distinció de el model biològic d'estudi, a excepció d'aquella el propòsit principal del qual sigui millorar la salut humana."@ca ;
+      skos:prefLabel "Biologia fonamental i de sistemes"@ca , "Fundamentos e bioloxía dos sistemas"@gl , "Bioloxía fundamental y de sistemes"@ast , "Biologia fundamental e de sistemas"@pt , "Biología fundamental y de sistemas" , "Biología fundamental y de sistemas"@es , "Biologie fondamentale et systémique"@fr , "Fundamental and systems biology"@en .
+
+asioModules:ES_SCIENTIFIC_DOMAIN_LEVEL_3_MTMTOPO
+      a       roh:ESScientificDomain ;
+      rdfs:label "Topología" ;
+      asio:hasCode asioModules:ES_SCIENTIFIC_DOMAIN_LEVEL_3_CODE_MTMTOPO ;
+      skos:broader asioModules:ES_SCIENTIFIC_DOMAIN_LEVEL_2_MTM ;
+      skos:inScheme asioModules:ESscientificDomains3rdList ;
+      skos:notation "MTMTOPO" ;
+      skos:exactMatch unescothes:C04079 ;
+      skos:prefLabel "Topología" , "Topología"@es , "Topologia"@ca , "Topologia"@pt , "Topoloxía"@ast , "Topoloxía"@gl , "Topology"@en , "Topologie"@fr .
+
+asioModules:ES_SCIENTIFIC_DOMAIN_LEVEL_3_PSFRSQ
+      a       roh:ESScientificDomain ;
+      rdfs:label "Psicobiología" ;
+      asio:hasCode asioModules:ES_SCIENTIFIC_DOMAIN_LEVEL_3_CODE_PSFRSQ ;
+      skos:broader asioModules:ES_SCIENTIFIC_DOMAIN_LEVEL_2_PS ;
+      skos:inScheme asioModules:ESscientificDomains3rdList ;
+      skos:notation "PSFRSQ" ;
+      skos:prefLabel "Psicobiologia"@ca , "Psicobiologia"@pt , "Psychobiologie"@fr , "Psicobioloxía"@ast , "Psicobioloxía"@gl , "Psicobiología" , "Psicobiología"@es , "Psychobiology"@en .
+
+asioModules:ES_SCIENTIFIC_DOMAIN_LEVEL_2_CODE_BMED
+      a       roh:ESScientificDomain ;
+      rdfs:label "BMED" ;
+      asio:codeOf asioModules:ES_SCIENTIFIC_DOMAIN_LEVEL_2_BMED ;
+      skos:inScheme asioModules:ESscientificDomains2ndCodeList ;
+      skos:prefLabel "BMED" .
+
+asioModules:ES_SCIENTIFIC_DOMAIN_LEVEL_3_CODE_HAZQGB
+      a       roh:ESScientificDomain ;
+      rdfs:label "HAZQGB" ;
+      asio:codeOf asioModules:ES_SCIENTIFIC_DOMAIN_LEVEL_3_HAZQGB ;
+      skos:inScheme asioModules:ESscientificDomains3rdCodeList ;
+      skos:prefLabel "HAZQGB" .
+
+asioModules:ES_SCIENTIFIC_DOMAIN_LEVEL_3_CTTAFO
+      a       roh:ESScientificDomain ;
+      rdfs:label "Tafonomía" ;
+      asio:hasCode asioModules:ES_SCIENTIFIC_DOMAIN_LEVEL_3_CODE_CTTAFO ;
+      skos:broader asioModules:ES_SCIENTIFIC_DOMAIN_LEVEL_2_CT ;
+      skos:inScheme asioModules:ESscientificDomains3rdList ;
+      skos:notation "CTTAFO" ;
+      skos:prefLabel "Tafonomía"@gl , "Tafonomía" , "Tafonomía"@es , "Tafonomía"@ast , "Taphonomy"@en , "Tafonomia"@ca , "Tafonomia"@pt , "Taphonomie"@fr .
+
+asioModules:ES_SCIENTIFIC_DOMAIN_LEVEL_2_CODE_TQ
+      a       roh:ESScientificDomain ;
+      rdfs:label "TQ" ;
+      asio:codeOf asioModules:ES_SCIENTIFIC_DOMAIN_LEVEL_2_TQ ;
+      skos:inScheme asioModules:ESscientificDomains2ndCodeList ;
+      skos:prefLabel "TQ" .
+
+asioModules:ES_SCIENTIFIC_DOMAIN_LEVEL_3_CTGEOF
+      a       roh:ESScientificDomain ;
+      rdfs:label "Geomorfología" , "Geofísica" ;
+      asio:hasCode asioModules:ES_SCIENTIFIC_DOMAIN_LEVEL_3_CODE_CTGEOF ;
+      skos:broader asioModules:ES_SCIENTIFIC_DOMAIN_LEVEL_2_CT ;
+      skos:inScheme asioModules:ESscientificDomains3rdList ;
+      skos:notation "CTGEOF" ;
+      skos:prefLabel "Xeomorfoloxía"@ast , "Xeomorfoloxía"@gl , "Géomorphologie"@fr , "Geophysics"@en , "Geomorphology"@en , "Geofísica" , "Geofísica"@es , "Geofísica"@ca , "Geofísica"@pt , "Geomorfología" , "Geomorfología"@es , "Geomorfologia"@ca , "Geomorfologia"@pt , "Xeofísica"@ast , "Xeofísica"@gl , "Géophysique"@fr .
+
+asioModules:ES_SCIENTIFIC_DOMAIN_LEVEL_3_CODE_BMEDPJHL
+      a       roh:ESScientificDomain ;
+      rdfs:label "BMEDPJHL" ;
+      asio:codeOf asioModules:ES_SCIENTIFIC_DOMAIN_LEVEL_3_BMEDPJHL ;
+      skos:inScheme asioModules:ESscientificDomains3rdCodeList ;
+      skos:prefLabel "BMEDPJHL" .
+
+asioModules:ES_SCIENTIFIC_DOMAIN_LEVEL_2_FI
+      a       roh:ESScientificDomain ;
+      rdfs:label "Física y ciencias del espacio" ;
+      asio:hasCode asioModules:ES_SCIENTIFIC_DOMAIN_LEVEL_2_CODE_FI ;
+      skos:broader asioModules:ES_SCIENTIFIC_DOMAIN_LEVEL_1_CB ;
+      skos:inScheme asioModules:ESscientificDomains2ndList ;
+      skos:notation "FI" ;
+      skos:note "Juntament amb les àrees de coneixement pròpies de la física moderna, com la Física Quàntica, Relativitat especial i general i les seves diferents aplicacions a l'estructura de la matèria i de l'univers, s'inclouen també tòpics com Biofísica, Òptica, Sistemes Complexos, fenòmens no- lineals, Nanotecnologia, Computació Quàntica i altres."@ca , "Xunto ás áreas de coñecemento propias da física moderna, como a Física Cuántica, a Relatividade Especial e Xeral e as súas diferentes aplicacións á estrutura da materia e ao universo, tamén se inclúen temas como Biofísica, Óptica, Sistemas Complexos, non fenómenos. Lineal, Nanotecnoloxía, Informática cuántica e outros."@gl , "Along with the areas of knowledge typical of modern physics, such as Quantum Physics, Special and General Relativity and its different applications to the structure of matter and the universe, topics such as Biophysics, Optics, Complex Systems, non-phenomena are also included. Linear, Nanotechnology, Quantum Computing and others."@en ;
+      skos:prefLabel "Physique et sciences spatiales"@fr , "Física e ciencias do espazo"@gl , "Physics and space sciences"@en , "Física i ciències de l'espai"@ca , "Física y ciencies del espaciu"@ast , "Física y ciencias del espacio" , "Física y ciencias del espacio"@es , "Física e ciências espaciais"@pt .
+
+asioModules:ES_SCIENTIFIC_DOMAIN_LEVEL_2_CODE_PS
+      a       roh:ESScientificDomain ;
+      rdfs:label "PS" ;
+      asio:codeOf asioModules:ES_SCIENTIFIC_DOMAIN_LEVEL_2_PS ;
+      skos:inScheme asioModules:ESscientificDomains2ndCodeList ;
+      skos:prefLabel "PS" .
+
+asioModules:ES_SCIENTIFIC_DOMAIN_LEVEL_2_PS
+      a       roh:ESScientificDomain ;
+      rdfs:label "Psicología" ;
+      asio:hasCode asioModules:ES_SCIENTIFIC_DOMAIN_LEVEL_2_CODE_PS ;
+      skos:broader asioModules:ES_SCIENTIFIC_DOMAIN_LEVEL_1_CSH ;
+      skos:inScheme asioModules:ESscientificDomains2ndList ;
+      skos:notation "PS" ;
+      skos:prefLabel "Psychologie"@fr , "Psicoloxía"@ast , "Psicoloxía"@gl , "Psychology"@en , "Psicologia"@ca , "Psicologia"@pt , "Psicología" , "Psicología"@es .
+
+asioModules:scientificDomain3rdCodeResource
+      a       asioModules:scientificDomains ;
+      rdfs:label "Codis dels dominis científics de tercer nivell"@ca , "Códigos de las áreas científicas de tercer nivel"@es , "Codes for the third-level scientific domains"@en , "Códigos das áreas científicas de terceiro nível"@pt , "Códigos das áreas científicas de terceiro nivel"@gl , "Códigos de les árees científiques de terceru nivel"@ast ;
+      skos:prefLabel "Codis dels dominis científics de tercer nivell"@ca , "Códigos de las áreas científicas de tercer nivel"@es , "Codes for the third-level scientific domains"@en , "Códigos das áreas científicas de terceiro nivel"@gl , "Códigos das áreas científicas de terceiro nível"@pt , "Códigos de les árees científiques de terceru nivel"@ast .
+
+asioModules:ES_SCIENTIFIC_DOMAIN_LEVEL_2_ICI
+      a       roh:ESScientificDomain ;
+      rdfs:label "Ingeniería civil y arquitectura" ;
+      asio:hasCode asioModules:ES_SCIENTIFIC_DOMAIN_LEVEL_2_CODE_ICI ;
+      skos:broader asioModules:ES_SCIENTIFIC_DOMAIN_LEVEL_1_IYT ;
+      skos:inScheme asioModules:ESscientificDomains2ndList ;
+      skos:notation "ICI" ;
+      skos:prefLabel "Ingeniería civil y arquitectura" , "Ingeniería civil y arquitectura"@es , "Civil Engineering and Architecture"@en , "Ingénierie civil et architecture"@fr , "Enxeñaría Civil e Arquitectura"@gl , "Engenharia civil e arquitetura"@pt , "Inxeniería civil y arquitectura"@ast , "Enginyeria civil i arquitectura"@ca .
+
+asioModules:ES_SCIENTIFIC_DOMAIN_LEVEL_2_ECO
+      a       roh:ESScientificDomain ;
+      rdfs:label "Economía" ;
+      asio:hasCode asioModules:ES_SCIENTIFIC_DOMAIN_LEVEL_2_CODE_ECO ;
+      skos:broader asioModules:ES_SCIENTIFIC_DOMAIN_LEVEL_1_CSH ;
+      skos:inScheme asioModules:ESscientificDomains2ndList ;
+      skos:notation "ECO" ;
+      skos:prefLabel "Économie"@fr , "Economy"@en , "Economía"@es , "Economía"@gl , "Economía" , "Economía"@ast , "Economia"@ca , "Economia"@pt .
+
+asioModules:ES_SCIENTIFIC_DOMAIN_LEVEL_3_CODE_PSBODX
+      a       roh:ESScientificDomain ;
+      rdfs:label "PSBODX" ;
+      asio:codeOf asioModules:ES_SCIENTIFIC_DOMAIN_LEVEL_3_PSBODX ;
+      skos:inScheme asioModules:ESscientificDomains3rdCodeList ;
+      skos:prefLabel "PSBODX" .
+
+asioModules:ES_SCIENTIFIC_DOMAIN_LEVEL_3_CTCON
+      a       roh:ESScientificDomain ;
+      rdfs:label "Contaminación" ;
+      asio:hasCode asioModules:ES_SCIENTIFIC_DOMAIN_LEVEL_3_CODE_CTCON ;
+      skos:broader asioModules:ES_SCIENTIFIC_DOMAIN_LEVEL_2_CT ;
+      skos:inScheme asioModules:ESscientificDomains3rdList ;
+      skos:notation "CTCON" ;
+      skos:prefLabel "Pollution"@fr , "Pollution"@en , "Poluição"@pt , "Contaminación" , "Contaminación"@es , "Contaminación"@ast , "Contaminación"@gl , "Contaminació"@ca .
+
+asioModules:ES_SCIENTIFIC_DOMAIN_LEVEL_2_TA
+      a       roh:ESScientificDomain ;
+      rdfs:label "Ciencia y tecnología de alimentos" ;
+      asio:hasCode asioModules:ES_SCIENTIFIC_DOMAIN_LEVEL_2_CODE_TA ;
+      skos:broader asioModules:ES_SCIENTIFIC_DOMAIN_LEVEL_1_CVS ;
+      skos:inScheme asioModules:ESscientificDomains2ndList ;
+      skos:notation "TA" ;
+      skos:prefLabel "Ciencia e Tecnoloxía dos Alimentos"@gl , "Food Science and Technology"@en , "Ciência e tecnologia de alimentos"@pt , "Ciència i tecnologia d'aliments"@ca , "Science et technologie alimentaire"@fr , "Ciencia y tecnoloxía d'alimentos"@ast , "Ciencia y tecnología de alimentos" , "Ciencia y tecnología de alimentos"@es .
+
+asioModules:ES_SCIENTIFIC_DOMAIN_LEVEL_3_QMCQUFI
+      a       roh:ESScientificDomain ;
+      rdfs:label "Química física" ;
+      asio:hasCode asioModules:ES_SCIENTIFIC_DOMAIN_LEVEL_3_CODE_QMCQUFI ;
+      skos:broader asioModules:ES_SCIENTIFIC_DOMAIN_LEVEL_2_QMC ;
+      skos:inScheme asioModules:ESscientificDomains3rdList ;
+      skos:notation "QMCQUFI" ;
+      skos:prefLabel "Físico-química"@pt , "Química física"@ca , "Química física" , "Química física"@es , "Química física"@gl , "Chimie physique"@fr , "Physical chemistry"@en , "Química físico"@ast .
+
+asioModules:ES_SCIENTIFIC_DOMAIN_LEVEL_1_CODE_CB
+      a       roh:ESScientificDomain ;
+      rdfs:label "CB" ;
+      asio:codeOf asioModules:ES_SCIENTIFIC_DOMAIN_LEVEL_1_CB ;
+      skos:inScheme asioModules:ESDomainCode1stList ;
+      skos:prefLabel "CB" .
+
+asioModules:ES_SCIENTIFIC_DOMAIN_LEVEL_2_CODE_QMC
+      a       roh:ESScientificDomain ;
+      rdfs:label "QMC" ;
+      asio:codeOf asioModules:ES_SCIENTIFIC_DOMAIN_LEVEL_2_QMC ;
+      skos:inScheme asioModules:ESscientificDomains2ndCodeList ;
+      skos:prefLabel "QMC" .
+
+asioModules:ES_SCIENTIFIC_DOMAIN_LEVEL_2_CODE_INF
+      a       roh:ESScientificDomain ;
+      rdfs:label "INF" ;
+      asio:codeOf asioModules:ES_SCIENTIFIC_DOMAIN_LEVEL_2_INF ;
+      skos:inScheme asioModules:ESscientificDomains2ndCodeList ;
+      skos:prefLabel "INF" .
+
+asioModules:ES_SCIENTIFIC_DOMAIN_LEVEL_3_QMCCATE
+      a       roh:ESScientificDomain ;
+      rdfs:label "Catálisis enantioselectiva" ;
+      asio:hasCode asioModules:ES_SCIENTIFIC_DOMAIN_LEVEL_3_CODE_QMCCATE ;
+      skos:broader asioModules:ES_SCIENTIFIC_DOMAIN_LEVEL_2_QMC ;
+      skos:inScheme asioModules:ESscientificDomains3rdList ;
+      skos:notation "QMCCATE" ;
+      skos:prefLabel "Catálisis enantioselectivo"@ast , "Catalyse énantiosélective"@fr , "Catálise enantiosseletiva"@pt , "Catálise enantioselectiva"@gl , "Catàlisi enantioselectiva"@ca , "Catálisis enantioselectiva" , "Catálisis enantioselectiva"@es , "Enantioselective catalysis"@en .
+
+asioModules:ES_SCIENTIFIC_DOMAIN_LEVEL_3_BMEDHTAZ
+      a       roh:ESScientificDomain ;
+      rdfs:label "Hepatología" ;
+      asio:hasCode asioModules:ES_SCIENTIFIC_DOMAIN_LEVEL_3_CODE_BMEDHTAZ ;
+      skos:broader asioModules:ES_SCIENTIFIC_DOMAIN_LEVEL_2_BMED ;
+      skos:inScheme asioModules:ESscientificDomains3rdList ;
+      skos:notation "BMEDHTAZ" ;
+      skos:prefLabel "Hepatoloxía"@ast , "Hepatoloxía"@gl , "Hépatologie"@fr , "Hepatología" , "Hepatología"@es , "Hepatology"@en , "Hepatologia"@ca , "Hepatologia"@pt .
+
+asioModules:ES_SCIENTIFIC_DOMAIN_LEVEL_3_CTESTR
+      a       roh:ESScientificDomain ;
+      rdfs:label "Estratigrafía" ;
+      asio:hasCode asioModules:ES_SCIENTIFIC_DOMAIN_LEVEL_3_CODE_CTESTR ;
+      skos:broader asioModules:ES_SCIENTIFIC_DOMAIN_LEVEL_2_CT ;
+      skos:inScheme asioModules:ESscientificDomains3rdList ;
+      skos:notation "CTESTR" ;
+      skos:prefLabel "Stratigraphie"@fr , "Estratigrafía" , "Estratigrafía"@es , "Estratigrafía"@gl , "Estratigrafía"@ast , "Stratigraphy"@en , "Estratigrafia"@ca , "Estratigrafia"@pt .
+
+asioModules:ES_SCIENTIFIC_DOMAIN_LEVEL_3_CODE_BMEDZYOC
+      a       roh:ESScientificDomain ;
+      rdfs:label "BMEDZYOC" ;
+      asio:codeOf asioModules:ES_SCIENTIFIC_DOMAIN_LEVEL_3_BMEDZYOC ;
+      skos:inScheme asioModules:ESscientificDomains3rdCodeList ;
+      skos:prefLabel "BMEDZYOC" .
+
+asioModules:ES_SCIENTIFIC_DOMAIN_LEVEL_3_CODE_QMCQUAN
+      a       roh:ESScientificDomain ;
+      rdfs:label "QMCQUAN" ;
+      asio:codeOf asioModules:ES_SCIENTIFIC_DOMAIN_LEVEL_3_QMCQUAN ;
+      skos:inScheme asioModules:ESscientificDomains3rdCodeList ;
+      skos:prefLabel "QMCQUAN" .
+
+asioModules:ES_SCIENTIFIC_DOMAIN_LEVEL_2_EDUC
+      a       roh:ESScientificDomain ;
+      rdfs:label "Ciencias de la educación" ;
+      asio:hasCode asioModules:ES_SCIENTIFIC_DOMAIN_LEVEL_2_CODE_EDUC ;
+      skos:broader asioModules:ES_SCIENTIFIC_DOMAIN_LEVEL_1_CSH ;
+      skos:inScheme asioModules:ESscientificDomains2ndList ;
+      skos:notation "EDUC" ;
+      skos:prefLabel "Sciences de l'éducation"@fr , "Ciencies de la educación"@ast , "Ciències de l'educació"@ca , "Ciências da educação"@pt , "Ciencias da educación"@gl , "Ciencias de la educación" , "Ciencias de la educación"@es , "Education sciences"@en .
+
+asioModules:ES_SCIENTIFIC_DOMAIN_LEVEL_3_BFSDNIG
+      a       roh:ESScientificDomain ;
+      rdfs:label "Genómica" ;
+      asio:hasCode asioModules:ES_SCIENTIFIC_DOMAIN_LEVEL_3_CODE_BFSDNIG ;
+      skos:broader asioModules:ES_SCIENTIFIC_DOMAIN_LEVEL_2_BFS ;
+      skos:inScheme asioModules:ESscientificDomains3rdList ;
+      skos:notation "BFSDNIG" ;
+      skos:prefLabel "Xenómica"@gl , "Xenómica"@ast , "Genómica" , "Genómica"@es , "Génomique"@fr , "Genômica"@pt , "Genòmica"@ca , "Genomics"@en .
+
+asioModules:ES_SCIENTIFIC_DOMAIN_LEVEL_2_CODE_FI
+      a       roh:ESScientificDomain ;
+      rdfs:label "FI" ;
+      asio:codeOf asioModules:ES_SCIENTIFIC_DOMAIN_LEVEL_2_FI ;
+      skos:inScheme asioModules:ESscientificDomains2ndCodeList ;
+      skos:prefLabel "FI" .
+
+asioModules:ESDomainCode1stList
+      a       asioModules:ScientificDomains ;
+      rdfs:label "Códigos de las áreas científicas de primer nivel"@es , "kəʊdz fɔː ðə fɜːst ˈlɛvl ˌsaɪənˈtɪfɪk dəʊˈmeɪnz"@en-GB-fonipa , "'ko ði γoz ðe las 'a ɾe as θjen̪ 'ti fi kas ðe pri 'mer ni 'βel"@es-ES-fonipa , "Códigos de les árees científiques de primer nivel"@ast , "Códigos das áreas científicas de primeiro nível"@pt , "Codes for the first-level scientific domains"@en , "Codes des domains scientífiques de premier niveau"@fr , "koʊdz fɔr ðə fɜrst ˈlɛvəl ˌsaɪənˈtɪfɪk doʊˈmeɪnz"@en-US-fonipa , "Códigos das áreas científicas de primeiro nivel"@gl , "Codis dels dominis científics de primer nivell"@ca ;
+      skos:prefLabel "Códigos de las áreas científicas de primer nivel"@es , "'ko ði γoz ðe las 'a ɾe as θjen̪ 'ti fi kas ðe pri 'mer ni 'βel"@es-ES-fonipa , "kəʊdz fɔː ðə fɜːst ˈlɛvl ˌsaɪənˈtɪfɪk dəʊˈmeɪnz"@en-GB-fonipa , "Códigos de les árees científiques de primer nivel"@ast , "Códigos das áreas científicas de primeiro nível"@pt , "Codes for the first-level scientific domains"@en , "Codes des domains scientífiques de premier niveau"@fr , "koʊdz fɔr ðə fɜrst ˈlɛvəl ˌsaɪənˈtɪfɪk doʊˈmeɪnz"@en-US-fonipa , "Códigos das áreas científicas de primeiro nivel"@gl , "Codis dels dominis científics de primer nivell"@ca ;
+      ontolex:phoneticRep "kəʊdz fɔː ðə fɜːst ˈlɛvl ˌsaɪənˈtɪfɪk dəʊˈmeɪnz"@en-GB-fonipa , "koʊdz fɔr ðə fɜrst ˈlɛvəl ˌsaɪənˈtɪfɪk doʊˈmeɪnz"@en-US-fonipa , "'ko ði γoz ðe las 'a ɾe as θjen̪ 'ti fi kas"@es-ES-fonipa .
+
+asioModules:ES_SCIENTIFIC_DOMAIN_LEVEL_3_QMCORGA
+      a       roh:ESScientificDomain ;
+      rdfs:label "Química orgánica" ;
+      asio:hasCode asioModules:ES_SCIENTIFIC_DOMAIN_LEVEL_3_CODE_QMCORGA ;
+      skos:broader asioModules:ES_SCIENTIFIC_DOMAIN_LEVEL_2_QMC ;
+      skos:inScheme asioModules:ESscientificDomains3rdList ;
+      skos:notation "QMCORGA" ;
+      skos:prefLabel "Organic chemistry"@en , "Química orgànica"@ca , "Química orgánica"@es , "Química orgánica" , "Química orgánica"@gl , "Chimie organique"@fr , "Quimica Organica"@pt , "Química orgánico"@ast .
+
+asioModules:ES_SCIENTIFIC_DOMAIN_LEVEL_3_MTMESTA
+      a       roh:ESScientificDomain ;
+      rdfs:label "Estadística" ;
+      asio:hasCode asioModules:ES_SCIENTIFIC_DOMAIN_LEVEL_3_CODE_MTMESTA ;
+      skos:broader asioModules:ES_SCIENTIFIC_DOMAIN_LEVEL_2_MTM ;
+      skos:inScheme asioModules:ESscientificDomains3rdList ;
+      skos:notation "MTMESTA" ;
+      skos:prefLabel "Statistiques"@fr , "Statistics"@en , "Estadística"@ast , "Estadística"@es , "Estadística"@ca , "Estadística" , "Estatística"@gl , "Estatística"@pt .
+
+asioModules:ES_SCIENTIFIC_DOMAIN_LEVEL_3_HAYSVE
+      a       roh:ESScientificDomain ;
+      rdfs:label "Arqueología" ;
+      asio:hasCode asioModules:ES_SCIENTIFIC_DOMAIN_LEVEL_3_CODE_HAYSVE ;
+      skos:broader asioModules:ES_SCIENTIFIC_DOMAIN_LEVEL_2_HA ;
+      skos:inScheme asioModules:ESscientificDomains3rdList ;
+      skos:notation "HAYSVE" ;
+      skos:prefLabel "Arqueología" , "Arqueología"@es , "Arqueologia"@pt , "Arqueologia"@ca , "Archeology"@en , "Archéologie"@fr , "Arqueoloxía"@ast , "Arqueoloxía"@gl .
+
+asioModules:ES_SCIENTIFIC_DOMAIN_LEVEL_3_BMEDMJHF
+      a       roh:ESScientificDomain ;
+      rdfs:label "Muerte celular" ;
+      asio:hasCode asioModules:ES_SCIENTIFIC_DOMAIN_LEVEL_3_CODE_BMEDMJHF ;
+      skos:broader asioModules:ES_SCIENTIFIC_DOMAIN_LEVEL_2_BMED ;
+      skos:inScheme asioModules:ESscientificDomains3rdList ;
+      skos:notation "BMEDMJHF" ;
+      skos:prefLabel "Mort cellulaire"@fr , "Cell death"@en , "Morte celular"@pt , "Morte celular"@gl , "Muerte celular"@ast , "Muerte celular" , "Muerte celular"@es , "Mort cel·lular"@ca .
+
+asioModules:ES_SCIENTIFIC_DOMAIN_LEVEL_3_BVAEWIUP
+      a       roh:ESScientificDomain ;
+      rdfs:label "Microbiología" ;
+      asio:hasCode asioModules:ES_SCIENTIFIC_DOMAIN_LEVEL_3_CODE_BVAEWIUP ;
+      skos:broader asioModules:ES_SCIENTIFIC_DOMAIN_LEVEL_2_BVAE ;
+      skos:inScheme asioModules:ESscientificDomains3rdList ;
+      skos:notation "BVAEWIUP" ;
+      skos:prefLabel "Microbioloxía"@ast , "Microbioloxía"@gl , "Microbiologie"@fr , "Microbiologia"@ca , "Microbiologia"@pt , "Microbiology"@en , "Microbiología" , "Microbiología"@es .
+
+asioModules:ES_SCIENTIFIC_DOMAIN_LEVEL_3_MTMALGE
+      a       roh:ESScientificDomain ;
+      rdfs:label "Álgebra" ;
+      asio:hasCode asioModules:ES_SCIENTIFIC_DOMAIN_LEVEL_3_CODE_MTMALGE ;
+      skos:broader asioModules:ES_SCIENTIFIC_DOMAIN_LEVEL_2_MTM ;
+      skos:inScheme asioModules:ESscientificDomains3rdList ;
+      skos:notation "MTMALGE" ;
+      skos:prefLabel "Algèbre"@fr , "Algebra"@en , "Àlgebra"@ca , "Álgebra" , "Álgebra"@es , "Álgebra"@pt , "Álxebra"@ast , "Álxebra"@gl .
+
+asioModules:ES_SCIENTIFIC_DOMAIN_LEVEL_3_CTCLIM
+      a       roh:ESScientificDomain ;
+      rdfs:label "Climatología y atmósfera" ;
+      asio:hasCode asioModules:ES_SCIENTIFIC_DOMAIN_LEVEL_3_CODE_CTCLIM ;
+      skos:broader asioModules:ES_SCIENTIFIC_DOMAIN_LEVEL_2_CT ;
+      skos:inScheme asioModules:ESscientificDomains3rdList ;
+      skos:notation "CTCLIM" ;
+      skos:prefLabel "Climatologie et atmosphère"@fr , "Climatoloxía e Atmósfera"@gl , "Climatologia e atmosfera"@pt , "Climatología y atmósfera" , "Climatología y atmósfera"@es , "Climatoloxía y atmósfera"@ast , "Climatology and atmosphere"@en , "Climatologia i atmosfera"@ca .
+
+asioModules:ES_SCIENTIFIC_DOMAIN_LEVEL_3_BMEDOFOI
+      a       roh:ESScientificDomain ;
+      rdfs:label "Anatomía" ;
+      asio:hasCode asioModules:ES_SCIENTIFIC_DOMAIN_LEVEL_3_CODE_BMEDOFOI ;
+      skos:broader asioModules:ES_SCIENTIFIC_DOMAIN_LEVEL_2_BMED ;
+      skos:inScheme asioModules:ESscientificDomains3rdList ;
+      skos:notation "BMEDOFOI" ;
+      skos:prefLabel "Anatomy"@en , "Anatomia"@ca , "Anatomia"@pt , "Anatomía" , "Anatomía"@es , "Anatomía"@ast , "Anatomía"@gl , "Anatomie"@fr .
+
+asioModules:ES_SCIENTIFIC_DOMAIN_LEVEL_3_FFIVNPK
+      a       roh:ESScientificDomain ;
+      rdfs:label "Ética y filosofía política" ;
+      asio:hasCode asioModules:ES_SCIENTIFIC_DOMAIN_LEVEL_3_CODE_FFIVNPK ;
+      skos:broader asioModules:ES_SCIENTIFIC_DOMAIN_LEVEL_2_FFI ;
+      skos:inScheme asioModules:ESscientificDomains3rdList ;
+      skos:notation "FFIVNPK" ;
+      skos:prefLabel "Ética e filosofía política"@gl , "Ethics and political philosophy"@en , "Ethique et philosophie politique"@fr , "Ética y filosofía política" , "Ética y filosofía política"@es , "Ética y filosofía política"@ast , "Ética e filosofia política"@pt , "Ètica i filosofia política"@ca .
+
+asioModules:ES_SCIENTIFIC_DOMAIN_LEVEL_3_CODE_QMCQUSU
+      a       roh:ESScientificDomain ;
+      rdfs:label "QMCQUSU" ;
+      asio:codeOf asioModules:ES_SCIENTIFIC_DOMAIN_LEVEL_3_QMCQUSU ;
+      skos:inScheme asioModules:ESscientificDomains3rdCodeList ;
+      skos:prefLabel "QMCQUSU" .
+
+asioModules:ES_SCIENTIFIC_DOMAIN_LEVEL_3_CODE_BFSHQCF
+      a       roh:ESScientificDomain ;
+      rdfs:label "BFSHQCF" ;
+      asio:codeOf asioModules:ES_SCIENTIFIC_DOMAIN_LEVEL_3_BFSHQCF ;
+      skos:inScheme asioModules:ESscientificDomains3rdCodeList ;
+      skos:prefLabel "BFSHQCF" .
+
+asioModules:ES_SCIENTIFIC_DOMAIN_LEVEL_3_CODE_CTFISE
+      a       roh:ESScientificDomain ;
+      rdfs:label "CTFISE" ;
+      asio:codeOf asioModules:ES_SCIENTIFIC_DOMAIN_LEVEL_3_CTFISE ;
+      skos:inScheme asioModules:ESscientificDomains3rdCodeList ;
+      skos:prefLabel "CTFISE" .
+
+asioModules:ES_SCIENTIFIC_DOMAIN_LEVEL_3_MCLIAJCV
+      a       roh:ESScientificDomain ;
+      rdfs:label "Enfermedades metabólicas" ;
+      asio:hasCode asioModules:ES_SCIENTIFIC_DOMAIN_LEVEL_3_CODE_MCLIAJCV ;
+      skos:broader asioModules:ES_SCIENTIFIC_DOMAIN_LEVEL_2_MCLI ;
+      skos:inScheme asioModules:ESscientificDomains3rdList ;
+      skos:notation "MCLIAJCV" ;
+      skos:prefLabel "Metabolic diseases"@en , "Enfermidades metabólicas"@gl , "Doenças metabólicas"@pt , "Enfermedaes metabóliques"@ast , "Enfermedades metabólicas" , "Enfermedades metabólicas"@es , "Malalties metabòliques"@ca , "Maladies métaboliques"@fr .
+
+asioModules:ES_SCIENTIFIC_DOMAIN_LEVEL_3_CODE_MCLIAVLC
+      a       roh:ESScientificDomain ;
+      rdfs:label "MCLIAVLC" ;
+      asio:codeOf asioModules:ES_SCIENTIFIC_DOMAIN_LEVEL_3_MCLIAVLC ;
+      skos:inScheme asioModules:ESscientificDomains3rdCodeList ;
+      skos:prefLabel "MCLIAVLC" .
+
+asioModules:ES_SCIENTIFIC_DOMAIN_LEVEL_3_CTFISA
+      a       roh:ESScientificDomain ;
+      rdfs:label "Física atómica, molecular y óptica" ;
+      asio:hasCode asioModules:ES_SCIENTIFIC_DOMAIN_LEVEL_3_CODE_CTFISA ;
+      skos:broader asioModules:ES_SCIENTIFIC_DOMAIN_LEVEL_2_FI ;
+      skos:inScheme asioModules:ESscientificDomains3rdList ;
+      skos:notation "CTFISA" ;
+      skos:prefLabel "Física atómica, molecular y óptica" , "Física atómica, molecular y óptica"@es , "Física atómica, molecular y óptica"@ast , "Atomic, molecular and optical physics"@en , "Physique atomique, moléculaire et optique"@fr , "Física atòmica, molecular i òptica"@ca , "Física atômica, molecular e óptica"@pt , "Física atómica, molecular e óptica"@gl .
+
+asioModules:ES_SCIENTIFIC_DOMAIN_LEVEL_3_CTPALE
+      a       roh:ESScientificDomain ;
+      rdfs:label "Paleobiología" ;
+      asio:hasCode asioModules:ES_SCIENTIFIC_DOMAIN_LEVEL_3_CODE_CTPALE ;
+      skos:broader asioModules:ES_SCIENTIFIC_DOMAIN_LEVEL_2_CT ;
+      skos:inScheme asioModules:ESscientificDomains3rdList ;
+      skos:notation "CTPALE" ;
+      skos:prefLabel "Paleobiology"@en , "Paleobiología" , "Paleobiología"@es , "Paleobiologia"@ca , "Paleobiologia"@pt , "Paleobiologia"@oc , "Paléobiologie"@fr , "Paleobioloxía"@ast , "Paleobioloxía"@gl .
+
+asioModules:ES_SCIENTIFIC_DOMAIN_LEVEL_3_BFSTSEI
+      a       roh:ESScientificDomain ;
+      rdfs:label "Inmunología" ;
+      asio:hasCode asioModules:ES_SCIENTIFIC_DOMAIN_LEVEL_3_CODE_BFSTSEI ;
+      skos:broader asioModules:ES_SCIENTIFIC_DOMAIN_LEVEL_2_BFS ;
+      skos:inScheme asioModules:ESscientificDomains3rdList ;
+      skos:notation "BFSTSEI" ;
+      skos:prefLabel "Imunologia"@pt , "Immunologia"@ca , "Inmunoloxía"@gl , "Inmunoloxía"@ast , "Immunologie"@fr , "Immunology"@en , "Inmunología" , "Inmunología"@es .
+
+asioModules:ES_SCIENTIFIC_DOMAIN_LEVEL_2_CS
+      a       roh:ESScientificDomain ;
+      rdfs:label "Ciencias sociales" ;
+      asio:hasCode asioModules:ES_SCIENTIFIC_DOMAIN_LEVEL_2_CODE_CS ;
+      skos:broader asioModules:ES_SCIENTIFIC_DOMAIN_LEVEL_1_CSH ;
+      skos:inScheme asioModules:ESscientificDomains2ndList ;
+      skos:notation "CS" ;
+      skos:prefLabel "Ciências sociais"@pt , "Ciencias sociais"@gl , "Sciences sociales"@fr , "Social Sciences"@en , "Ciències socials"@ca , "Ciencias sociales" , "Ciencias sociales"@es , "Ciencies sociales"@ast .
+
+asioModules:ES_SCIENTIFIC_DOMAIN_LEVEL_3_MCLICFDU
+      a       roh:ESScientificDomain ;
+      rdfs:label "Cáncer" ;
+      asio:hasCode asioModules:ES_SCIENTIFIC_DOMAIN_LEVEL_3_CODE_MCLICFDU ;
+      skos:broader asioModules:ES_SCIENTIFIC_DOMAIN_LEVEL_2_MCLI ;
+      skos:inScheme asioModules:ESscientificDomains3rdList ;
+      skos:notation "MCLICFDU" ;
+      skos:prefLabel "Câncer"@pt , "Cancer"@fr , "Cancer"@en , "Cáncer"@gl , "Cáncer" , "Cáncer"@es , "Cáncer"@ast , "Càncer"@ca .
+
+asioModules:ES_SCIENTIFIC_DOMAIN_LEVEL_3_CODE_BMEDAYJV
+      a       roh:ESScientificDomain ;
+      rdfs:label "BMEDAYJV" ;
+      asio:codeOf asioModules:ES_SCIENTIFIC_DOMAIN_LEVEL_3_BMEDAYJV ;
+      skos:inScheme asioModules:ESscientificDomains3rdCodeList ;
+      skos:prefLabel "BMEDAYJV" .
+
+asioModules:ES_SCIENTIFIC_DOMAIN_LEVEL_2_FFI
+      a       roh:ESScientificDomain ;
+      rdfs:label "Filología y filosofía" ;
+      asio:hasCode asioModules:ES_SCIENTIFIC_DOMAIN_LEVEL_2_CODE_FFI ;
+      skos:broader asioModules:ES_SCIENTIFIC_DOMAIN_LEVEL_1_CSH ;
+      skos:inScheme asioModules:ESscientificDomains2ndList ;
+      skos:notation "FFI" ;
+      skos:prefLabel "Filologia i filosofia"@ca , "Philology and philosophy"@en , "Philologie et philosophie"@fr , "Filologia e filosofia"@pt , "Filoloxía e filosofía"@gl , "Filoloxía y filosofía"@ast , "Filología y filosofía" , "Filología y filosofía"@es .
+
+asioModules:ES_SCIENTIFIC_DOMAIN_LEVEL_3_MCLIATZZ
+      a       roh:ESScientificDomain ;
+      rdfs:label "Psiquiatría" ;
+      asio:hasCode asioModules:ES_SCIENTIFIC_DOMAIN_LEVEL_3_CODE_MCLIATZZ ;
+      skos:broader asioModules:ES_SCIENTIFIC_DOMAIN_LEVEL_2_MCLI ;
+      skos:inScheme asioModules:ESscientificDomains3rdList ;
+      skos:notation "MCLIATZZ" ;
+      skos:prefLabel "Psiquiatría"@gl , "Psiquiatría" , "Psiquiatría"@es , "Psiquiatría"@ast , "Psychiatrie"@fr , "Psychiatry"@en , "Psiquiatria"@ca , "Psiquiatria"@pt .
+
+asioModules:ES_SCIENTIFIC_DOMAIN_LEVEL_3_CODE_BFSOWHX
+      a       roh:ESScientificDomain ;
+      rdfs:label "BFSOWHX" ;
+      asio:codeOf asioModules:ES_SCIENTIFIC_DOMAIN_LEVEL_3_BFSOWHX ;
+      skos:inScheme asioModules:ESscientificDomains3rdCodeList ;
+      skos:prefLabel "BFSOWHX" .
+
+asioModules:ES_SCIENTIFIC_DOMAIN_LEVEL_3_CTFIST
+      a       roh:ESScientificDomain ;
+      rdfs:label "Física teórica" ;
+      asio:hasCode asioModules:ES_SCIENTIFIC_DOMAIN_LEVEL_3_CODE_CTFIST ;
+      skos:broader asioModules:ES_SCIENTIFIC_DOMAIN_LEVEL_2_FI ;
+      skos:inScheme asioModules:ESscientificDomains3rdList ;
+      skos:notation "CTFIST" ;
+      skos:prefLabel "Theoretical physics"@en , "Physique théorique"@fr , "Física teórica"@es , "Física teórica" , "Física teórica"@ast , "Física teórica"@gl , "Física teórica"@pt , "Física teórica"@an , "Física teòrica"@ca .
+
+asioModules:ES_SCIENTIFIC_DOMAIN_LEVEL_3_CODE_CTFISP
+      a       roh:ESScientificDomain ;
+      rdfs:label "CTFISP" ;
+      asio:codeOf asioModules:ES_SCIENTIFIC_DOMAIN_LEVEL_3_CTFISP ;
+      skos:inScheme asioModules:ESscientificDomains3rdCodeList ;
+      skos:prefLabel "CTFISP" .
+
+asioModules:ES_SCIENTIFIC_DOMAIN_LEVEL_1_CSH
+      a       roh:ESScientificDomain ;
+      rdfs:label "Ciencias sociales y humanidades" ;
+      asio:hasCode asioModules:ES_SCIENTIFIC_DOMAIN_LEVEL_1_CODE_CSH ;
+      skos:inScheme asioModules:ESscientificDomains1stList ;
+      skos:notation "CSH" ;
+      skos:prefLabel "Sciencias socials e humanidatz"@an , "Ciències socials i humanitats"@ca , "Ciencies sociales y humanidaes"@ast , "Sciences sociales et humaines"@fr , "Social sciences and humanities"@en , "siˈɛnsiəs susiˈaɫs i uməniˈtats"@ca , "Gizarte zientziak eta giza zientziak"@eu , "θjen̪ θjas so 'θja les i w ma ni 'ða ðes"@es , "ˈsəʊʃəl ˈsaɪənsɪz ænd hju(ː)ˈmænɪtiz"@en-GB , "Ciencias sociales y humanidades" , "Ciencias sociales y humanidades"@es , "Sciéncias socials"@oc , "Ciências sociais e humanidades"@pt , "Céncias socialis i humanidadis"@ext , "ˈsoʊʃəl ˈsaɪənsəz ænd hjuˈmænɪtiz"@en-US , "Ciencias sociais e humanidades"@gl ;
+      ontolex:phoneticRep "ˈsəʊʃəl ˈsaɪənsɪz ænd hju(ː)ˈmænɪtiz"@en-GB , "siˈɛnsiəs susiˈaɫs i uməniˈtats"@ca , "ˈsoʊʃəl ˈsaɪənsəz ænd hjuˈmænɪtiz"@en-US , "θjen̪ θjas so 'θja les i w ma ni 'ða ðes"@es .
+
+asioModules:ES_SCIENTIFIC_DOMAIN_LEVEL_2_CODE_MTM
+      a       roh:ESScientificDomain ;
+      rdfs:label "MTM" ;
+      asio:codeOf asioModules:ES_SCIENTIFIC_DOMAIN_LEVEL_2_MTM ;
+      skos:inScheme asioModules:ESscientificDomains2ndCodeList ;
+      skos:prefLabel "MTM" .
+
+asioModules:ES_SCIENTIFIC_DOMAIN_LEVEL_2_CODE_
+      a       roh:ESScientificDomain ;
+      rdfs:label "" ;
+      asio:codeOf asioModules:ES_SCIENTIFIC_DOMAIN_LEVEL_2_ ;
+      skos:inScheme asioModules:ESscientificDomains2ndCodeList ;
+      skos:prefLabel "" .
+
+asioModules:ES_SCIENTIFIC_DOMAIN_LEVEL_3_CODE_CTHIDRO
+      a       roh:ESScientificDomain ;
+      rdfs:label "CTHIDRO" ;
+      asio:codeOf asioModules:ES_SCIENTIFIC_DOMAIN_LEVEL_3_CTHIDRO ;
+      skos:inScheme asioModules:ESscientificDomains3rdCodeList ;
+      skos:prefLabel "CTHIDRO" .
+
+asioModules:ES_SCIENTIFIC_DOMAIN_LEVEL_3_QMCQBIT
+      a       roh:ESScientificDomain ;
+      rdfs:label "Química biotecnológica" ;
+      asio:hasCode asioModules:ES_SCIENTIFIC_DOMAIN_LEVEL_3_CODE_QMCQBIT ;
+      skos:broader asioModules:ES_SCIENTIFIC_DOMAIN_LEVEL_2_QMC ;
+      skos:inScheme asioModules:ESscientificDomains3rdList ;
+      skos:notation "QMCQBIT" ;
+      skos:prefLabel "Química de la biotecnoloxía"@ast , "Biotechnology chemistry"@en , "Química biotecnológica"@es , "Química biotecnológica" , "Química da biotecnoloxía"@gl , "Chimie des biotechnologies"@fr , "Química da biotecnologia"@pt , "Química biotecnològica"@ca .
+
+asioModules:ES_SCIENTIFIC_DOMAIN_LEVEL_3_HAZQGB
+      a       roh:ESScientificDomain ;
+      rdfs:label "Arte" ;
+      asio:hasCode asioModules:ES_SCIENTIFIC_DOMAIN_LEVEL_3_CODE_HAZQGB ;
+      skos:broader asioModules:ES_SCIENTIFIC_DOMAIN_LEVEL_2_HA ;
+      skos:inScheme asioModules:ESscientificDomains3rdList ;
+      skos:notation "HAZQGB" ;
+      skos:prefLabel "Arte"@gl , "Arte" , "Arte"@es , "Arte"@ast , "Arte"@pt , "Art"@fr , "Art"@ca , "Art"@en .
+
+asioModules:ES_SCIENTIFIC_DOMAIN_LEVEL_1_IYT
+      a       roh:ESScientificDomain ;
+      rdfs:label "Ingenierías y tecnologías" ;
+      asio:hasCode asioModules:ES_SCIENTIFIC_DOMAIN_LEVEL_1_CODE_IYT ;
+      skos:inScheme asioModules:ESscientificDomains1stList ;
+      skos:notation "IYT" ;
+      skos:prefLabel "Ingenierías y tecnologías" , "Ingenierías y tecnologías"@es , "Inxeniería y tecnoloxíes"@ast , "Engenharia e tecnologias"@pt , "ˈɛnʤəˈnɪrɪŋ ænd tɛkˈnɑləʤiz"@en-US , "Enchinierías e tecnolochías"@an , "Enxeñaría e tecnoloxías"@gl , "ˌɛnʤɪˈnɪərɪŋ ænd tɛkˈnɒləʤiz"@en-GB , "iŋ xe nje 'ɾi as i tek no lo 'xi as"@es , "əɲʒiɲəˈɾiə i təɡnuluˈʒiəs"@ca , "Ingenierías i tecnologías"@ext , "Enginyeria i tecnologies"@ca , "Ingeniaritza eta teknologiak"@eu , "Engenhariás e tecnologias"@oc , "Engineering and technologies"@en , "Ingénierie et technologies"@fr ;
+      ontolex:phoneticRep "ˈɛnʤəˈnɪrɪŋ ænd tɛkˈnɑləʤiz"@en-US , "ˌɛnʤɪˈnɪərɪŋ ænd tɛkˈnɒləʤiz"@en-GB , "iŋ xe nje 'ɾi as i tek no lo 'xi as"@es , "əɲʒiɲəˈɾiə i təɡnuluˈʒiəs"@ca .
+
+asioModules:ES_SCIENTIFIC_DOMAIN_LEVEL_3_CODE_QMCORGA
+      a       roh:ESScientificDomain ;
+      rdfs:label "QMCORGA" ;
+      asio:codeOf asioModules:ES_SCIENTIFIC_DOMAIN_LEVEL_3_QMCORGA ;
+      skos:inScheme asioModules:ESscientificDomains3rdCodeList ;
+      skos:prefLabel "QMCORGA" .
+
+asioModules:ES_SCIENTIFIC_DOMAIN_LEVEL_3_BMEDLFCH
+      a       roh:ESScientificDomain ;
+      rdfs:label "Endocrinología" ;
+      asio:hasCode asioModules:ES_SCIENTIFIC_DOMAIN_LEVEL_3_CODE_BMEDLFCH ;
+      skos:broader asioModules:ES_SCIENTIFIC_DOMAIN_LEVEL_2_BMED ;
+      skos:inScheme asioModules:ESscientificDomains3rdList ;
+      skos:notation "BMEDLFCH" ;
+      skos:prefLabel "Endocrinología" , "Endocrinología"@es , "Endocrinologia"@pt , "Endocrinologia"@ca , "Endocrinoloxía"@ast , "Endocrinoloxía"@gl , "Endocrinology"@en , "Endocrinologie"@fr .
+
+asioModules:ES_SCIENTIFIC_DOMAIN_LEVEL_2_CT
+      a       roh:ESScientificDomain ;
+      rdfs:label "Ciencias de la tierra" ;
+      asio:hasCode asioModules:ES_SCIENTIFIC_DOMAIN_LEVEL_2_CODE_CT ;
+      skos:broader asioModules:ES_SCIENTIFIC_DOMAIN_LEVEL_1_CB ;
+      skos:inScheme asioModules:ESscientificDomains2ndList ;
+      skos:notation "CT" ;
+      skos:note "Investigación sobre o sistema terrestre, incluíndo a historia e evolución da biosfera, litosfera, hidrosfera e atmosfera, as súas interaccións, así como o seu estado actual e posible evolución futura. Área moi interdisciplinaria xa que integra diversas disciplinas básicas para o estudo de problemas complexos, tanto fundamentais como aplicados, que a Terra presenta a diferentes escalas espaciais e temporais. Inclúe Climatoloxía, Edafoloxía, Estratigrafía, Xeodesia, Xeofísica, Xeoloxía Estrutural, Xeomorfoloxía, Geoquímica, Hidroloxía, Meteoroloxía, Mineraloxía, Oceanografía, Paleontoloxía, Petrografía, Petroloxía, Sedimentoloxía, Sismoloxía, Tectonica ou Volcanoloxía."@gl , "Research on the terrestrial system, including the history and evolution of the biosphere, lithosphere, hydrosphere and atmosphere, their interactions, as well as their current state and possible future evolution. Very interdisciplinary area as it integrates various basic disciplines for the study of complex problems, both fundamental and applied, that the Earth presents at different spatial and temporal scales. It includes Climatology, Edaphology, Stratigraphy, Geodesy, Geophysics, Structural Geology, Geomorphology, Geochemistry, Hydrology, Meteorology, Mineralogy, Oceanography, Paleontology, Petrography, Petrology, Sedimentology, Seismology, Tectonics or Volcanology."@en , "Recerca sobre el sistema terrestre, incloent la història i evolució de la biosfera, litosfera, hidrosfera i atmosfera, les seves interaccions, així com el seu estat actual i possible evolució futura. Àrea molt interdisciplinària en tant que integra diverses disciplines bàsiques per a l'estudi dels problemes complexos, tant fonamentals com aplicats, que presenta la Terra a diferents escales espacials i temporals. Engloba la Climatologia, Edafologia, Estratigrafia, Geodèsia, Geofísica, Geologia Estructural, Geomorfologia, Geoquímica, Hidrologia, Meteorologia, Mineralogia, Oceanografia, Paleontologia, Petrografía, Petrologia, Sedimentologia, Sismologia, Tectònica o Vulcanologia."@ca ;
+      skos:prefLabel "Ciencias de la tierra" , "Ciencias de la tierra"@es , "Ciencias da terra"@gl , "Ciències de la terra"@ca , "Ciências da terra"@pt , "Ciencies de la tierra"@ast , "Earth sciences"@en , "Sciences de la terre"@fr .
+
+asioModules:ES_SCIENTIFIC_DOMAIN_LEVEL_2_TQ
+      a       roh:ESScientificDomain ;
+      rdfs:label "Tecnología química" ;
+      asio:hasCode asioModules:ES_SCIENTIFIC_DOMAIN_LEVEL_2_CODE_TQ ;
+      skos:broader asioModules:ES_SCIENTIFIC_DOMAIN_LEVEL_1_IYT ;
+      skos:inScheme asioModules:ESscientificDomains2ndList ;
+      skos:notation "TQ" ;
+      skos:prefLabel "Technologie chimique"@fr , "Tecnologia química"@pt , "Chemical technology"@en , "tecnologia química"@ca , "Tecnología química" , "Tecnología química"@es , "Tecnoloxía química"@ast , "Tecnoloxía química"@gl .
+
+asioModules:ES_SCIENTIFIC_DOMAIN_LEVEL_2_IEL
+      a       roh:ESScientificDomain ;
+      rdfs:label "Ingeniería eléctrica, electrónica y automática" ;
+      asio:hasCode asioModules:ES_SCIENTIFIC_DOMAIN_LEVEL_2_CODE_IEL ;
+      skos:broader asioModules:ES_SCIENTIFIC_DOMAIN_LEVEL_1_IYT ;
+      skos:inScheme asioModules:ESscientificDomains2ndList ;
+      skos:notation "IEL" ;
+      skos:prefLabel "Enxeñaría eléctrica, electrónica e automática"@gl , "Enginyeria elèctrica, electrònica i automàtica"@ca , "Inxeniería eléctrica, electrónica y automática"@ast , "Electrical, electronic and automatic engineering"@en , "Ingénierie électrique, électronique et automatique"@fr , "Engenharia elétrica, eletrônica e automática"@pt , "Ingeniería eléctrica, electrónica y automática" , "Ingeniería eléctrica, electrónica y automática"@es .
+
+asioModules:ES_SCIENTIFIC_DOMAIN_LEVEL_3_CODE_BMEDLFCH
+      a       roh:ESScientificDomain ;
+      rdfs:label "BMEDLFCH" ;
+      asio:codeOf asioModules:ES_SCIENTIFIC_DOMAIN_LEVEL_3_BMEDLFCH ;
+      skos:inScheme asioModules:ESscientificDomains3rdCodeList ;
+      skos:prefLabel "BMEDLFCH" .
+
+asioModules:ES_SCIENTIFIC_DOMAIN_LEVEL_3_CODE_PSDSJH
+      a       roh:ESScientificDomain ;
+      rdfs:label "PSDSJH" ;
+      asio:codeOf asioModules:ES_SCIENTIFIC_DOMAIN_LEVEL_3_PSDSJH ;
+      skos:inScheme asioModules:ESscientificDomains3rdCodeList ;
+      skos:prefLabel "PSDSJH" .
+
+asioModules:ES_SCIENTIFIC_DOMAIN_LEVEL_1_CODE_IYT
+      a       roh:ESScientificDomain ;
+      rdfs:label "IYT" ;
+      asio:codeOf asioModules:ES_SCIENTIFIC_DOMAIN_LEVEL_1_IYT ;
+      skos:inScheme asioModules:ESDomainCode1stList ;
+      skos:prefLabel "IYT" .
+
+asioModules:ES_SCIENTIFIC_DOMAIN_LEVEL_3_MCLIOCBV
+      a       roh:ESScientificDomain ;
+      rdfs:label "Enfermedades cardiovasculares" ;
+      asio:hasCode asioModules:ES_SCIENTIFIC_DOMAIN_LEVEL_3_CODE_MCLIOCBV ;
+      skos:broader asioModules:ES_SCIENTIFIC_DOMAIN_LEVEL_2_MCLI ;
+      skos:inScheme asioModules:ESscientificDomains3rdList ;
+      skos:notation "MCLIOCBV" ;
+      skos:prefLabel "Doenças cardiovasculares"@pt , "Enfermidades cardiovasculares"@gl , "Cardiovascular diseases"@en , "Malalties cardiovasculars"@ca , "Maladies cardiovasculaires"@fr , "Enfermedades cardiovasculares" , "Enfermedades cardiovasculares"@es , "Enfermedaes cardiovasculares"@ast .
+
+asioModules:ES_SCIENTIFIC_DOMAIN_LEVEL_2_CODE_IME
+      a       roh:ESScientificDomain ;
+      rdfs:label "IME" ;
+      asio:codeOf asioModules:ES_SCIENTIFIC_DOMAIN_LEVEL_2_IME ;
+      skos:inScheme asioModules:ESscientificDomains2ndCodeList ;
+      skos:prefLabel "IME" .
+
+asioModules:ES_SCIENTIFIC_DOMAIN_LEVEL_3_PSNRWD
+      a       roh:ESScientificDomain ;
+      rdfs:label "Psicología básica" ;
+      asio:hasCode asioModules:ES_SCIENTIFIC_DOMAIN_LEVEL_3_CODE_PSNRWD ;
+      skos:broader asioModules:ES_SCIENTIFIC_DOMAIN_LEVEL_2_PS ;
+      skos:inScheme asioModules:ESscientificDomains3rdList ;
+      skos:notation "PSNRWD" ;
+      skos:prefLabel "Psicologia básica"@pt , "Psicologia bàsica"@ca , "Psicoloxía básico"@ast , "Psicología básica" , "Psicología básica"@es , "Basic psychology"@en , "Psicoloxía básica"@gl , "Psychologie de base"@fr .
+
+asioModules:ES_SCIENTIFIC_DOMAIN_LEVEL_3_CODE_MTMMATE
+      a       roh:ESScientificDomain ;
+      rdfs:label "MTMMATE" ;
+      asio:codeOf asioModules:ES_SCIENTIFIC_DOMAIN_LEVEL_3_MTMMATE ;
+      skos:inScheme asioModules:ESscientificDomains3rdCodeList ;
+      skos:prefLabel "MTMMATE" .
+
+asioModules:ES_SCIENTIFIC_DOMAIN_LEVEL_2_CODE_ICI
+      a       roh:ESScientificDomain ;
+      rdfs:label "ICI" ;
+      asio:codeOf asioModules:ES_SCIENTIFIC_DOMAIN_LEVEL_2_ICI ;
+      skos:inScheme asioModules:ESscientificDomains2ndCodeList ;
+      skos:prefLabel "ICI" .
+
+asioModules:ES_SCIENTIFIC_DOMAIN_LEVEL_3_MCLIHKZZ
+      a       roh:ESScientificDomain ;
+      rdfs:label "Servicios de salud" ;
+      asio:hasCode asioModules:ES_SCIENTIFIC_DOMAIN_LEVEL_3_CODE_MCLIHKZZ ;
+      skos:broader asioModules:ES_SCIENTIFIC_DOMAIN_LEVEL_2_MCLI ;
+      skos:inScheme asioModules:ESscientificDomains3rdList ;
+      skos:notation "MCLIHKZZ" ;
+      skos:prefLabel "Serveis de salut"@ca , "Health services"@en , "Servicios de salud"@es , "Servicios de salud" , "Serviços de saúde"@pt , "Servizos sanitarios"@gl , "Services de santé"@fr , "Servicios sanitarios"@ast .
+
+asioModules:ES_SCIENTIFIC_DOMAIN_LEVEL_3_MCLIAVLC
+      a       roh:ESScientificDomain ;
+      rdfs:label "Neurología" ;
+      asio:hasCode asioModules:ES_SCIENTIFIC_DOMAIN_LEVEL_3_CODE_MCLIAVLC ;
+      skos:broader asioModules:ES_SCIENTIFIC_DOMAIN_LEVEL_2_MCLI ;
+      skos:inScheme asioModules:ESscientificDomains3rdList ;
+      skos:notation "MCLIAVLC" ;
+      skos:prefLabel "Neurologia"@ca , "Neurologia"@pt , "Neurology"@en , "Neurología" , "Neurología"@es , "Neuroloxía"@ast , "Neuroloxía"@gl , "Neurologie"@fr .
+
+asioModules:ES_SCIENTIFIC_DOMAIN_LEVEL_3_HAYOHM
+      a       roh:ESScientificDomain ;
+      rdfs:label "Historia moderna" ;
+      asio:hasCode asioModules:ES_SCIENTIFIC_DOMAIN_LEVEL_3_CODE_HAYOHM ;
+      skos:broader asioModules:ES_SCIENTIFIC_DOMAIN_LEVEL_2_HA ;
+      skos:inScheme asioModules:ESscientificDomains3rdList ;
+      skos:notation "HAYOHM" ;
+      skos:prefLabel "História moderna"@pt , "Modern history"@en , "Histoire moderne"@fr , "Historia moderna" , "Historia moderna"@es , "Historia moderna"@ast , "Historia moderna"@gl , "Història moderna"@ca .
+
+asioModules:ES_SCIENTIFIC_DOMAIN_LEVEL_3_CODE_BFSCXPL
+      a       roh:ESScientificDomain ;
+      rdfs:label "BFSCXPL" ;
+      asio:codeOf asioModules:ES_SCIENTIFIC_DOMAIN_LEVEL_3_BFSCXPL ;
+      skos:inScheme asioModules:ESscientificDomains3rdCodeList ;
+      skos:prefLabel "BFSCXPL" .
+
+asioModules:ES_SCIENTIFIC_DOMAIN_LEVEL_2_CODE_GAN
+      a       roh:ESScientificDomain ;
+      rdfs:label "GAN" ;
+      asio:codeOf asioModules:ES_SCIENTIFIC_DOMAIN_LEVEL_2_GAN ;
+      skos:inScheme asioModules:ESscientificDomains2ndCodeList ;
+      skos:prefLabel "GAN" .
+
+asioModules:ES_SCIENTIFIC_DOMAIN_LEVEL_2_CODE_TM
+      a       roh:ESScientificDomain ;
+      rdfs:label "TM" ;
+      asio:codeOf asioModules:ES_SCIENTIFIC_DOMAIN_LEVEL_2_TM ;
+      skos:inScheme asioModules:ESscientificDomains2ndCodeList ;
+      skos:prefLabel "TM" .
+
+asioModules:ES_SCIENTIFIC_DOMAIN_LEVEL_3_CODE_MTMANAL
+      a       roh:ESScientificDomain ;
+      rdfs:label "MTMANAL" ;
+      asio:codeOf asioModules:ES_SCIENTIFIC_DOMAIN_LEVEL_3_MTMANAL ;
+      skos:inScheme asioModules:ESscientificDomains3rdCodeList ;
+      skos:prefLabel "MTMANAL" .
+
+asioModules:ES_SCIENTIFIC_DOMAIN_LEVEL_3_BFSJJXW
+      a       roh:ESScientificDomain ;
+      rdfs:label "Plantas" ;
+      asio:hasCode asioModules:ES_SCIENTIFIC_DOMAIN_LEVEL_3_CODE_BFSJJXW ;
+      skos:broader asioModules:ES_SCIENTIFIC_DOMAIN_LEVEL_2_BFS ;
+      skos:inScheme asioModules:ESscientificDomains3rdList ;
+      skos:notation "BFSJJXW" ;
+      skos:prefLabel "Plants"@en , "Plantes"@ca , "Plantes"@fr , "Plantes"@ast , "Plantas" , "Plantas"@es , "Plantas"@gl , "Plantas"@pt .
+
+asioModules:ES_SCIENTIFIC_DOMAIN_LEVEL_3_CTSEDI
+      a       roh:ESScientificDomain ;
+      rdfs:label "Sedimentología" ;
+      asio:hasCode asioModules:ES_SCIENTIFIC_DOMAIN_LEVEL_3_CODE_CTSEDI ;
+      skos:broader asioModules:ES_SCIENTIFIC_DOMAIN_LEVEL_2_CT ;
+      skos:inScheme asioModules:ESscientificDomains3rdList ;
+      skos:notation "CTSEDI" ;
+      skos:prefLabel "Sedimentología" , "Sedimentología"@es , "Sedimentologia"@ca , "Sedimentologia"@pt , "Sédimentologie"@fr , "Sedimentoloxía"@ast , "Sedimentoloxía"@gl , "Sedimentology"@en .
+
+asioModules:ES_SCIENTIFIC_DOMAIN_LEVEL_3_QMCAMBI
+      a       roh:ESScientificDomain ;
+      rdfs:label "Química ambiental" ;
+      asio:hasCode asioModules:ES_SCIENTIFIC_DOMAIN_LEVEL_3_CODE_QMCAMBI ;
+      skos:broader asioModules:ES_SCIENTIFIC_DOMAIN_LEVEL_2_QMC ;
+      skos:inScheme asioModules:ESscientificDomains3rdList ;
+      skos:notation "QMCAMBI" ;
+      skos:prefLabel "Química ambiental"@ca , "Química ambiental" , "Química ambiental"@es , "Química ambiental"@ast , "Química ambiental"@gl , "Química ambiental"@pt , "Chimie environnementale"@fr , "Enviromental chemistry"@en .
+
+asioModules:ES_SCIENTIFIC_DOMAIN_LEVEL_2_CODE_BFS
+      a       roh:ESScientificDomain ;
+      rdfs:label "BFS" ;
+      asio:codeOf asioModules:ES_SCIENTIFIC_DOMAIN_LEVEL_2_BFS ;
+      skos:inScheme asioModules:ESscientificDomains2ndCodeList ;
+      skos:prefLabel "BFS" .
+
+asioModules:ES_SCIENTIFIC_DOMAIN_LEVEL_2_AGR
+      a       roh:ESScientificDomain ;
+      rdfs:label "Agricultura" ;
+      asio:hasCode asioModules:ES_SCIENTIFIC_DOMAIN_LEVEL_2_CODE_AGR ;
+      skos:broader asioModules:ES_SCIENTIFIC_DOMAIN_LEVEL_1_CVS ;
+      skos:inScheme asioModules:ESscientificDomains2ndList ;
+      skos:notation "AGR" ;
+      skos:prefLabel "Agriculture"@fr , "farming"@en , "Agricultura"@pt , "Agricultura"@gl , "Agricultura" , "Agricultura"@es , "Agricultura"@ast , "Agricultura"@ca .
+
+asioModules:ES_SCIENTIFIC_DOMAIN_LEVEL_3_CODE_QMCCATE
+      a       roh:ESScientificDomain ;
+      rdfs:label "QMCCATE" ;
+      asio:codeOf asioModules:ES_SCIENTIFIC_DOMAIN_LEVEL_3_QMCCATE ;
+      skos:inScheme asioModules:ESscientificDomains3rdCodeList ;
+      skos:prefLabel "QMCCATE" .
+
+asioModules:ES_SCIENTIFIC_DOMAIN_LEVEL_3_MCLINMLH
+      a       roh:ESScientificDomain ;
+      rdfs:label "Cirugía y maxilofacial" ;
+      asio:hasCode asioModules:ES_SCIENTIFIC_DOMAIN_LEVEL_3_CODE_MCLINMLH ;
+      skos:broader asioModules:ES_SCIENTIFIC_DOMAIN_LEVEL_2_MCLI ;
+      skos:inScheme asioModules:ESscientificDomains3rdList ;
+      skos:notation "MCLINMLH" ;
+      skos:prefLabel "Cirurgia i maxil·lofacial"@ca , "Chirurgie et maxillo-faciale"@fr , "Surgery and maxillofacial"@en , "Cirurxía y maxilofacial"@ast , "Cirurxía e maxilofacial"@gl , "Cirurgia e maxilofacial"@pt , "Cirugía y maxilofacial" , "Cirugía y maxilofacial"@es .
+
+asioModules:ES_SCIENTIFIC_DOMAIN_LEVEL_3_CTHIDRO
+      a       roh:ESScientificDomain ;
+      rdfs:label "Hidrología" ;
+      asio:hasCode asioModules:ES_SCIENTIFIC_DOMAIN_LEVEL_3_CODE_CTHIDRO ;
+      skos:broader asioModules:ES_SCIENTIFIC_DOMAIN_LEVEL_2_CT ;
+      skos:inScheme asioModules:ESscientificDomains3rdList ;
+      skos:notation "CTHIDRO" ;
+      skos:prefLabel "Hidroloxía"@ast , "Hidroloxía"@gl , "Hidrologia"@pt , "Hidrologia"@ca , "Hydrologie"@fr , "Hidrología" , "Hidrología"@es , "Hydrology"@en .
+
+asioModules:ES_SCIENTIFIC_DOMAIN_LEVEL_3_CODE_BMEDYQHF
+      a       roh:ESScientificDomain ;
+      rdfs:label "BMEDYQHF" ;
+      asio:codeOf asioModules:ES_SCIENTIFIC_DOMAIN_LEVEL_3_BMEDYQHF ;
+      skos:inScheme asioModules:ESscientificDomains3rdCodeList ;
+      skos:prefLabel "BMEDYQHF" .
+
+asioModules:ES_SCIENTIFIC_DOMAIN_LEVEL_3_BMEDRCYB
+      a       roh:ESScientificDomain ;
+      rdfs:label "Neurociencias" ;
+      asio:hasCode asioModules:ES_SCIENTIFIC_DOMAIN_LEVEL_3_CODE_BMEDRCYB ;
+      skos:broader asioModules:ES_SCIENTIFIC_DOMAIN_LEVEL_2_BMED ;
+      skos:inScheme asioModules:ESscientificDomains3rdList ;
+      skos:notation "BMEDRCYB" ;
+      skos:prefLabel "Neurociencias" , "Neurociencias"@es , "Neurociencias"@gl , "Neurociencies"@ast , "Neurosciences"@fr , "Neurosciences"@en , "Neurociències"@ca , "Neurociências"@pt .
+
+asioModules:ES_SCIENTIFIC_DOMAIN_LEVEL_3_CODE_BMEDOFOI
+      a       roh:ESScientificDomain ;
+      rdfs:label "BMEDOFOI" ;
+      asio:codeOf asioModules:ES_SCIENTIFIC_DOMAIN_LEVEL_3_BMEDOFOI ;
+      skos:inScheme asioModules:ESscientificDomains3rdCodeList ;
+      skos:prefLabel "BMEDOFOI" .
+
+asioModules:ES_SCIENTIFIC_DOMAIN_LEVEL_3_CTFISE
+      a       roh:ESScientificDomain ;
+      rdfs:label "Física, estadística, biofísica y física no lineal" ;
+      asio:hasCode asioModules:ES_SCIENTIFIC_DOMAIN_LEVEL_3_CODE_CTFISE ;
+      skos:broader asioModules:ES_SCIENTIFIC_DOMAIN_LEVEL_2_FI ;
+      skos:inScheme asioModules:ESscientificDomains3rdList ;
+      skos:notation "CTFISE" ;
+      skos:prefLabel "Física, estatísticas, biofísica e física non lineal"@gl , "Física, estadística, biofísica y física non lineal"@ast , "Physics, statistics, biophysics and nonlinear physics"@en , "Physique, statistique, biophysique et physique non linéaire"@fr , "Física, estatística, biofísica e física não linear"@pt , "Física, estadística, biofísica y física no lineal" , "Física, estadística, biofísica y física no lineal"@es , "Física, estadística, biofísica i física no lineal"@ca .
+
+asioModules:ES_SCIENTIFIC_DOMAIN_LEVEL_3_BFSDXWB
+      a       roh:ESScientificDomain ;
+      rdfs:label "Genética de poblaciones" ;
+      asio:hasCode asioModules:ES_SCIENTIFIC_DOMAIN_LEVEL_3_CODE_BFSDXWB ;
+      skos:broader asioModules:ES_SCIENTIFIC_DOMAIN_LEVEL_2_BFS ;
+      skos:inScheme asioModules:ESscientificDomains3rdList ;
+      skos:notation "BFSDXWB" ;
+      skos:prefLabel "Population's genetics"@en , "Genética de Populações"@pt , "Xenética de población"@ast , "Genètica de poblacions"@ca , "Genética de poblaciones" , "Genética de poblaciones"@es , "Xenética de poboación"@gl , "Génétique des populations"@fr .
+
+asioModules:ES_SCIENTIFIC_DOMAIN_LEVEL_3_QMCQUSU
+      a       roh:ESScientificDomain ;
+      rdfs:label "Química supramolecular" ;
+      asio:hasCode asioModules:ES_SCIENTIFIC_DOMAIN_LEVEL_3_CODE_QMCQUSU ;
+      skos:broader asioModules:ES_SCIENTIFIC_DOMAIN_LEVEL_2_QMC ;
+      skos:inScheme asioModules:ESscientificDomains3rdList ;
+      skos:notation "QMCQUSU" ;
+      skos:prefLabel "Química supramolecular"@ca , "Química supramolecular" , "Química supramolecular"@es , "Química supramolecular"@ast , "Química supramolecular"@gl , "Química supramolecular"@pt , "Chimie supramoléculaire"@fr , "Supramolecular chemistry"@en .
+
+asioModules:ES_SCIENTIFIC_DOMAIN_LEVEL_3_CODE_BFSGSYN
+      a       roh:ESScientificDomain ;
+      rdfs:label "BFSGSYN" ;
+      asio:codeOf asioModules:ES_SCIENTIFIC_DOMAIN_LEVEL_3_BFSGSYN ;
+      skos:inScheme asioModules:ESscientificDomains3rdCodeList ;
+      skos:prefLabel "BFSGSYN" .
+
+asioModules:ES_SCIENTIFIC_DOMAIN_LEVEL_3_CODE_CTCON
+      a       roh:ESScientificDomain ;
+      rdfs:label "CTCON" ;
+      asio:codeOf asioModules:ES_SCIENTIFIC_DOMAIN_LEVEL_3_CTCON ;
+      skos:inScheme asioModules:ESscientificDomains3rdCodeList ;
+      skos:prefLabel "CTCON" .
+
+asioModules:ES_SCIENTIFIC_DOMAIN_LEVEL_3_CODE_BFSJEYV
+      a       roh:ESScientificDomain ;
+      rdfs:label "BFSJEYV" ;
+      asio:codeOf asioModules:ES_SCIENTIFIC_DOMAIN_LEVEL_3_BFSJEYV ;
+      skos:inScheme asioModules:ESscientificDomains3rdCodeList ;
+      skos:prefLabel "BFSJEYV" .
+
+asioModules:ES_SCIENTIFIC_DOMAIN_LEVEL_3_CODE_BFSCVHN
+      a       roh:ESScientificDomain ;
+      rdfs:label "BFSCVHN" ;
+      asio:codeOf asioModules:ES_SCIENTIFIC_DOMAIN_LEVEL_3_BFSCVHN ;
+      skos:inScheme asioModules:ESscientificDomains3rdCodeList ;
+      skos:prefLabel "BFSCVHN" .
+
+asioModules:ES_SCIENTIFIC_DOMAIN_LEVEL_3_MTMGEOM
+      a       roh:ESScientificDomain ;
+      rdfs:label "Geometría" ;
+      asio:hasCode asioModules:ES_SCIENTIFIC_DOMAIN_LEVEL_3_CODE_MTMGEOM ;
+      skos:broader asioModules:ES_SCIENTIFIC_DOMAIN_LEVEL_2_MTM ;
+      skos:inScheme asioModules:ESscientificDomains3rdList ;
+      skos:notation "MTMGEOM" ;
+      skos:prefLabel "Geometría" , "Geometría"@es , "Géométrie"@fr , "Xeometría"@ast , "Xeometría"@gl , "Geometria"@ca , "Geometria"@pt , "Geometry"@en .
+
+asioModules:ES_SCIENTIFIC_DOMAIN_LEVEL_1_CODE_CSH
+      a       roh:ESScientificDomain ;
+      rdfs:label "CSH" ;
+      asio:codeOf asioModules:ES_SCIENTIFIC_DOMAIN_LEVEL_1_CSH ;
+      skos:inScheme asioModules:ESDomainCode1stList ;
+      skos:prefLabel "CSH" .
+
+asioModules:ES_SCIENTIFIC_DOMAIN_LEVEL_3_CODE_FFIYMLQ
+      a       roh:ESScientificDomain ;
+      rdfs:label "FFIYMLQ" ;
+      asio:codeOf asioModules:ES_SCIENTIFIC_DOMAIN_LEVEL_3_FFIYMLQ ;
+      skos:inScheme asioModules:ESscientificDomains3rdCodeList ;
+      skos:prefLabel "FFIYMLQ" .
+
+asioModules:ES_SCIENTIFIC_DOMAIN_LEVEL_3_CODE_MTMESTA
+      a       roh:ESScientificDomain ;
+      rdfs:label "MTMESTA" ;
+      asio:codeOf asioModules:ES_SCIENTIFIC_DOMAIN_LEVEL_3_MTMESTA ;
+      skos:inScheme asioModules:ESscientificDomains3rdCodeList ;
+      skos:prefLabel "MTMESTA" .
+
+asioModules:ES_SCIENTIFIC_DOMAIN_LEVEL_3_CODE_MCLIBGSE
+      a       roh:ESScientificDomain ;
+      rdfs:label "MCLIBGSE" ;
+      asio:codeOf asioModules:ES_SCIENTIFIC_DOMAIN_LEVEL_3_MCLIBGSE ;
+      skos:inScheme asioModules:ESscientificDomains3rdCodeList ;
+      skos:prefLabel "MCLIBGSE" .
+
+asioModules:ES_SCIENTIFIC_DOMAIN_LEVEL_3_CODE_HAQJKH
+      a       roh:ESScientificDomain ;
+      rdfs:label "HAQJKH" ;
+      asio:codeOf asioModules:ES_SCIENTIFIC_DOMAIN_LEVEL_3_HAQJKH ;
+      skos:inScheme asioModules:ESscientificDomains3rdCodeList ;
+      skos:prefLabel "HAQJKH" .
+
+asioModules:ES_SCIENTIFIC_DOMAIN_LEVEL_3_BFSCVHN
+      a       roh:ESScientificDomain ;
+      rdfs:label "Biotecnología" ;
+      asio:hasCode asioModules:ES_SCIENTIFIC_DOMAIN_LEVEL_3_CODE_BFSCVHN ;
+      skos:broader asioModules:ES_SCIENTIFIC_DOMAIN_LEVEL_2_BFS ;
+      skos:inScheme asioModules:ESscientificDomains3rdList ;
+      skos:notation "BFSCVHN" ;
+      skos:prefLabel "Biotecnologia"@ca , "Biotecnologia"@pt , "Biotecnoloxía"@gl , "Biotecnoloxía"@ast , "Biotecnología" , "Biotecnología"@es , "Biotechnologie"@fr , "Biotechnology"@en .
+
+asioModules:ES_SCIENTIFIC_DOMAIN_LEVEL_3_CODE_CTFISA
+      a       roh:ESScientificDomain ;
+      rdfs:label "CTFISA" ;
+      asio:codeOf asioModules:ES_SCIENTIFIC_DOMAIN_LEVEL_3_CTFISA ;
+      skos:inScheme asioModules:ESscientificDomains3rdCodeList ;
+      skos:prefLabel "CTFISA" .
+
+asioModules:ES_SCIENTIFIC_DOMAIN_LEVEL_2_TM
+      a       roh:ESScientificDomain ;
+      rdfs:label "Ciencia y tecnología de materiales" ;
+      asio:hasCode asioModules:ES_SCIENTIFIC_DOMAIN_LEVEL_2_CODE_TM ;
+      skos:broader asioModules:ES_SCIENTIFIC_DOMAIN_LEVEL_1_IYT ;
+      skos:inScheme asioModules:ESscientificDomains2ndList ;
+      skos:notation "TM" ;
+      skos:prefLabel "Science et technologie des matériaux"@fr , "Ciència i tecnologia de materials"@ca , "Ciencia y tecnología de materiales"@es , "Ciencia y tecnología de materiales" , "Science and technology of materials"@en , "Ciencia y tecnoloxía de materiales"@ast , "Ciência e tecnologia de materiais"@pt , "Ciencia e tecnoloxía dos materiais"@gl .
+
+asioModules:ES_SCIENTIFIC_DOMAIN_LEVEL_3_QMCCATA
+      a       roh:ESScientificDomain ;
+      rdfs:label "Catálisis" ;
+      asio:hasCode asioModules:ES_SCIENTIFIC_DOMAIN_LEVEL_3_CODE_QMCCATA ;
+      skos:broader asioModules:ES_SCIENTIFIC_DOMAIN_LEVEL_2_QMC ;
+      skos:inScheme asioModules:ESscientificDomains3rdList ;
+      skos:notation "QMCCATA" ;
+      skos:prefLabel "Catálisis"@an , "Catálisis" , "Catálisis"@es , "Catálisis"@ast , "Catalysis"@en , "Catálise"@gl , "Catálise"@pt , "Catàlisi"@ca , "Catalyse"@fr .
+
+asioModules:ES_SCIENTIFIC_DOMAIN_LEVEL_3_CODE_CTTAFO
+      a       roh:ESScientificDomain ;
+      rdfs:label "CTTAFO" ;
+      asio:codeOf asioModules:ES_SCIENTIFIC_DOMAIN_LEVEL_3_CTTAFO ;
+      skos:inScheme asioModules:ESscientificDomains3rdCodeList ;
+      skos:prefLabel "CTTAFO" .
+
+asioModules:ES_SCIENTIFIC_DOMAIN_LEVEL_3_CODE_BFSTSEI
+      a       roh:ESScientificDomain ;
+      rdfs:label "BFSTSEI" ;
+      asio:codeOf asioModules:ES_SCIENTIFIC_DOMAIN_LEVEL_3_BFSTSEI ;
+      skos:inScheme asioModules:ESscientificDomains3rdCodeList ;
+      skos:prefLabel "BFSTSEI" .
+
+asioModules:ES_SCIENTIFIC_DOMAIN_LEVEL_3_CODE_QMCQBIT
+      a       roh:ESScientificDomain ;
+      rdfs:label "QMCQBIT" ;
+      asio:codeOf asioModules:ES_SCIENTIFIC_DOMAIN_LEVEL_3_QMCQBIT ;
+      skos:inScheme asioModules:ESscientificDomains3rdCodeList ;
+      skos:prefLabel "QMCQBIT" .
+
+asioModules:ES_SCIENTIFIC_DOMAIN_LEVEL_3_CODE_FFIQIYR
+      a       roh:ESScientificDomain ;
+      rdfs:label "FFIQIYR" ;
+      asio:codeOf asioModules:ES_SCIENTIFIC_DOMAIN_LEVEL_3_FFIQIYR ;
+      skos:inScheme asioModules:ESscientificDomains3rdCodeList ;
+      skos:prefLabel "FFIQIYR" .
+
+asioModules:ES_SCIENTIFIC_DOMAIN_LEVEL_3_CODE_FFIYJTK
+      a       roh:ESScientificDomain ;
+      rdfs:label "FFIYJTK" ;
+      asio:codeOf asioModules:ES_SCIENTIFIC_DOMAIN_LEVEL_3_FFIYJTK ;
+      skos:inScheme asioModules:ESscientificDomains3rdCodeList ;
+      skos:prefLabel "FFIYJTK" .
+
+asioModules:ES_SCIENTIFIC_DOMAIN_LEVEL_3_BFSEEAB
+      a       roh:ESScientificDomain ;
+      rdfs:label "Diferenciación" ;
+      asio:hasCode asioModules:ES_SCIENTIFIC_DOMAIN_LEVEL_3_CODE_BFSEEAB ;
+      skos:broader asioModules:ES_SCIENTIFIC_DOMAIN_LEVEL_2_BFS ;
+      skos:inScheme asioModules:ESscientificDomains3rdList ;
+      skos:notation "BFSEEAB" ;
+      skos:prefLabel "Differentiation"@en , "Différenciation"@fr , "Diferenciação"@pt , "Diferenciació"@ca , "Diferenciación" , "Diferenciación"@es , "Diferenciación"@ast , "Diferenciación"@gl .
+
+asioModules:ES_SCIENTIFIC_DOMAIN_LEVEL_3_CODE_FFIVVJH
+      a       roh:ESScientificDomain ;
+      rdfs:label "FFIVVJH" ;
+      asio:codeOf asioModules:ES_SCIENTIFIC_DOMAIN_LEVEL_3_FFIVVJH ;
+      skos:inScheme asioModules:ESscientificDomains3rdCodeList ;
+      skos:prefLabel "FFIVVJH" .
+
+asioModules:ES_SCIENTIFIC_DOMAIN_LEVEL_3_CODE_BFSSBGU
+      a       roh:ESScientificDomain ;
+      rdfs:label "BFSSBGU" ;
+      asio:codeOf asioModules:ES_SCIENTIFIC_DOMAIN_LEVEL_3_BFSSBGU ;
+      skos:inScheme asioModules:ESscientificDomains3rdCodeList ;
+      skos:prefLabel "BFSSBGU" .
+
+asioModules:ES_SCIENTIFIC_DOMAIN_LEVEL_3_CODE_HALMCG
+      a       roh:ESScientificDomain ;
+      rdfs:label "HALMCG" ;
+      asio:codeOf asioModules:ES_SCIENTIFIC_DOMAIN_LEVEL_3_HALMCG ;
+      skos:inScheme asioModules:ESscientificDomains3rdCodeList ;
+      skos:prefLabel "HALMCG" .
+
+asioModules:ES_SCIENTIFIC_DOMAIN_LEVEL_3_BFSJEYV
+      a       roh:ESScientificDomain ;
+      rdfs:label "Cáncer" ;
+      asio:hasCode asioModules:ES_SCIENTIFIC_DOMAIN_LEVEL_3_CODE_BFSJEYV ;
+      skos:broader asioModules:ES_SCIENTIFIC_DOMAIN_LEVEL_2_BFS ;
+      skos:inScheme asioModules:ESscientificDomains3rdList ;
+      skos:notation "BFSJEYV" ;
+      skos:prefLabel "Câncer"@pt , "Cancer"@fr , "Cancer"@en , "Cáncer" , "Cáncer"@es , "Cáncer"@ast , "Cáncer"@gl , "Càncer"@ca .
+
+asioModules:ES_SCIENTIFIC_DOMAIN_LEVEL_3_CODE_BFSJJXW
+      a       roh:ESScientificDomain ;
+      rdfs:label "BFSJJXW" ;
+      asio:codeOf asioModules:ES_SCIENTIFIC_DOMAIN_LEVEL_3_BFSJJXW ;
+      skos:inScheme asioModules:ESscientificDomains3rdCodeList ;
+      skos:prefLabel "BFSJJXW" .
+
+asioModules:ES_SCIENTIFIC_DOMAIN_LEVEL_3_MCLIBGSE
+      a       roh:ESScientificDomain ;
+      rdfs:label "Epidemiología" ;
+      asio:hasCode asioModules:ES_SCIENTIFIC_DOMAIN_LEVEL_3_CODE_MCLIBGSE ;
+      skos:broader asioModules:ES_SCIENTIFIC_DOMAIN_LEVEL_2_MCLI ;
+      skos:inScheme asioModules:ESscientificDomains3rdList ;
+      skos:notation "MCLIBGSE" ;
+      skos:prefLabel "Epidemiology"@en , "Epidemiología" , "Epidemiología"@es , "Epidemioloxía"@ast , "Epidemioloxía"@gl , "Epidémiologie"@fr , "Epidemiologia"@ca , "Epidemiologia"@pt .
+
+asioModules:ES_SCIENTIFIC_DOMAIN_LEVEL_3_CODE_CTFIST
+      a       roh:ESScientificDomain ;
+      rdfs:label "CTFIST" ;
+      asio:codeOf asioModules:ES_SCIENTIFIC_DOMAIN_LEVEL_3_CTFIST ;
+      skos:inScheme asioModules:ESscientificDomains3rdCodeList ;
+      skos:prefLabel "CTFIST" .
+
+asioModules:ES_SCIENTIFIC_DOMAIN_LEVEL_3_CODE_QMCQUIO
+      a       roh:ESScientificDomain ;
+      rdfs:label "QMCQUIO" ;
+      asio:codeOf asioModules:ES_SCIENTIFIC_DOMAIN_LEVEL_3_QMCQUIO ;
+      skos:inScheme asioModules:ESscientificDomains3rdCodeList ;
+      skos:prefLabel "QMCQUIO" .
+
+asioModules:ES_SCIENTIFIC_DOMAIN_LEVEL_2_BVAE
+      a       roh:ESScientificDomain ;
+      rdfs:label "Biología vegetal, animal y ecología" ;
+      asio:hasCode asioModules:ES_SCIENTIFIC_DOMAIN_LEVEL_2_CODE_BVAE ;
+      skos:broader asioModules:ES_SCIENTIFIC_DOMAIN_LEVEL_1_CVS ;
+      skos:inScheme asioModules:ESscientificDomains2ndList ;
+      skos:notation "BVAE" ;
+      skos:prefLabel "Biología vegetal, animal y ecología" , "Biología vegetal, animal y ecología"@es , "Bioloxía vexetal, animal e ecolóxica"@gl , "Biologia vegetal, animal e ecológica"@pt , "Biologie végétale, animale et écologique"@fr , "Plant, animal and ecology biology"@en , "Bioloxía vexetal, animal y ecoloxía"@ast , "Biologia vegetal, animal i ecologia"@ca .
+
+asioModules:ES_SCIENTIFIC_DOMAIN_LEVEL_3_CODE_BMEDRCYB
+      a       roh:ESScientificDomain ;
+      rdfs:label "BMEDRCYB" ;
+      asio:codeOf asioModules:ES_SCIENTIFIC_DOMAIN_LEVEL_3_BMEDRCYB ;
+      skos:inScheme asioModules:ESscientificDomains3rdCodeList ;
+      skos:prefLabel "BMEDRCYB" .
+
+asioModules:ES_SCIENTIFIC_DOMAIN_LEVEL_3_BFSHQCF
+      a       roh:ESScientificDomain ;
+      rdfs:label "Microbiología" ;
+      asio:hasCode asioModules:ES_SCIENTIFIC_DOMAIN_LEVEL_3_CODE_BFSHQCF ;
+      skos:broader asioModules:ES_SCIENTIFIC_DOMAIN_LEVEL_2_BFS ;
+      skos:inScheme asioModules:ESscientificDomains3rdList ;
+      skos:notation "BFSHQCF" ;
+      skos:prefLabel "Microbioloxía"@ast , "Microbioloxía"@gl , "Microbiologie"@fr , "Microbiologia"@ca , "Microbiologia"@pt , "Microbiología" , "Microbiología"@es , "Microbiology"@en .
+
+asioModules:ES_SCIENTIFIC_DOMAIN_LEVEL_2_CODE_MCLI
+      a       roh:ESScientificDomain ;
+      rdfs:label "MCLI" ;
+      asio:codeOf asioModules:ES_SCIENTIFIC_DOMAIN_LEVEL_2_MCLI ;
+      skos:inScheme asioModules:ESscientificDomains2ndCodeList ;
+      skos:prefLabel "MCLI" .
+
+asioModules:ES_SCIENTIFIC_DOMAIN_LEVEL_3_QMCQUBI
+      a       roh:ESScientificDomain ;
+      rdfs:label "Química biológica" ;
+      asio:hasCode asioModules:ES_SCIENTIFIC_DOMAIN_LEVEL_3_CODE_QMCQUBI ;
+      skos:broader asioModules:ES_SCIENTIFIC_DOMAIN_LEVEL_2_QMC ;
+      skos:inScheme asioModules:ESscientificDomains3rdList ;
+      skos:notation "QMCQUBI" ;
+      skos:prefLabel "Química biolóxico"@ast , "Biological Chemistry"@en , "Química biológica"@es , "Química biológica" , "Química biológica"@pt , "Química biolóxica"@gl , "Chimie biologique"@fr , "Química biològica"@ca .
+
+asioModules:ES_SCIENTIFIC_DOMAIN_LEVEL_3_FFIVCZF
+      a       roh:ESScientificDomain ;
+      rdfs:label "Estética" ;
+      asio:hasCode asioModules:ES_SCIENTIFIC_DOMAIN_LEVEL_3_CODE_FFIVCZF ;
+      skos:broader asioModules:ES_SCIENTIFIC_DOMAIN_LEVEL_2_FFI ;
+      skos:inScheme asioModules:ESscientificDomains3rdList ;
+      skos:notation "FFIVCZF" ;
+      skos:prefLabel "Esthetics"@en , "Estética"@ast , "Estética" , "Estética"@es , "Estética"@gl , "Estética"@pt , "Estètica"@ca , "Esthétique"@fr .
+
+asioModules:ES_SCIENTIFIC_DOMAIN_LEVEL_3_CODE_MTMGEOM
+      a       roh:ESScientificDomain ;
+      rdfs:label "MTMGEOM" ;
+      asio:codeOf asioModules:ES_SCIENTIFIC_DOMAIN_LEVEL_3_MTMGEOM ;
+      skos:inScheme asioModules:ESscientificDomains3rdCodeList ;
+      skos:prefLabel "MTMGEOM" .
+
+asioModules:ES_SCIENTIFIC_DOMAIN_LEVEL_3_CODE_FFIRKXR
+      a       roh:ESScientificDomain ;
+      rdfs:label "FFIRKXR" ;
+      asio:codeOf asioModules:ES_SCIENTIFIC_DOMAIN_LEVEL_3_FFIRKXR ;
+      skos:inScheme asioModules:ESscientificDomains3rdCodeList ;
+      skos:prefLabel "FFIRKXR" .
+
+asioModules:ES_SCIENTIFIC_DOMAIN_LEVEL_3_CODE_QMCQUIN
+      a       roh:ESScientificDomain ;
+      rdfs:label "QMCQUIN" ;
+      asio:codeOf asioModules:ES_SCIENTIFIC_DOMAIN_LEVEL_3_QMCQUIN ;
+      skos:inScheme asioModules:ESscientificDomains3rdCodeList ;
+      skos:prefLabel "QMCQUIN" .
+
+asioModules:ES_SCIENTIFIC_DOMAIN_LEVEL_1_CODE_CVS
+      a       roh:ESScientificDomain ;
+      rdfs:label "CVS" ;
+      asio:codeOf asioModules:ES_SCIENTIFIC_DOMAIN_LEVEL_1_CVS ;
+      skos:inScheme asioModules:ESDomainCode1stList ;
+      skos:prefLabel "CVS" .
+
+asioModules:ES_SCIENTIFIC_DOMAIN_LEVEL_3_CODE_CTASTR
+      a       roh:ESScientificDomain ;
+      rdfs:label "CTASTR" ;
+      asio:codeOf asioModules:ES_SCIENTIFIC_DOMAIN_LEVEL_3_CTASTR ;
+      skos:inScheme asioModules:ESscientificDomains3rdCodeList ;
+      skos:prefLabel "CTASTR" .
+
+asioModules:ES_SCIENTIFIC_DOMAIN_LEVEL_3_FFIYJTK
+      a       roh:ESScientificDomain ;
+      rdfs:label "Estudios culturales y teorías culturales" ;
+      asio:hasCode asioModules:ES_SCIENTIFIC_DOMAIN_LEVEL_3_CODE_FFIYJTK ;
+      skos:broader asioModules:ES_SCIENTIFIC_DOMAIN_LEVEL_2_FFI ;
+      skos:inScheme asioModules:ESscientificDomains3rdList ;
+      skos:notation "FFIYJTK" ;
+      skos:prefLabel "Estudios culturales y teoríes culturales"@ast , "Estudos culturais e teorias culturais"@pt , "Estudios culturales y teorías culturales"@es , "Estudios culturales y teorías culturales" , "Estudis culturals i teories culturals"@ca , "Cultural studies and cultural theories"@en , "Études culturelles et théories culturelles"@fr , "Estudos culturais e teorías culturais"@gl .
+
+asioModules:ES_SCIENTIFIC_DOMAIN_LEVEL_3_CODE_BFSDNIG
+      a       roh:ESScientificDomain ;
+      rdfs:label "BFSDNIG" ;
+      asio:codeOf asioModules:ES_SCIENTIFIC_DOMAIN_LEVEL_3_BFSDNIG ;
+      skos:inScheme asioModules:ESscientificDomains3rdCodeList ;
+      skos:prefLabel "BFSDNIG" .
+
+asioModules:ES_SCIENTIFIC_DOMAIN_LEVEL_1_CVS
+      a       roh:ESScientificDomain ;
+      rdfs:label "Ciencias de la vida y de la salud" ;
+      asio:hasCode asioModules:ES_SCIENTIFIC_DOMAIN_LEVEL_1_CODE_CVS ;
+      skos:inScheme asioModules:ESscientificDomains1stList ;
+      skos:notation "CVS" ;
+      skos:prefLabel "Ciències de la vida i de la salut"@ca , "Ciencias de la vida y de la salud" , "Ciencias de la vida y de la salud"@es , "'θjen̪ θjaz ðe la 'βi ða i ðe la sa 'luð"@es , "Sciences de la vie et de la santé"@fr , "laɪf ænd hɛlθ ˈsaɪənsɪz"@en-GB , "siˈɛnsiəs ðə ɫə ˈβiðə i ðə ɫə səˈɫut"@ca , "laɪf ænd hɛlθ ˈsaɪənsəz"@en-US , "Ciencies de la vida y de la salú"@ast , "Sciéncias de la vida e de la santat"@oc , "Bizi eta osasun zientziak"@eu , "Ciencias da vida e da saúde"@gl , "Sciencias d'a vida e d'a salut"@an , "Céncias de la vida i de la salú"@ext , "Life and health sciences"@en , "Ciências da vida e da saúde"@pt ;
+      ontolex:phoneticRep "'θjen̪ θjaz ðe la 'βi ða i ðe la sa 'luð"@es , "laɪf ænd hɛlθ ˈsaɪənsɪz"@en-GB , "siˈɛnsiəs ðə ɫə ˈβiðə i ðə ɫə səˈɫut"@ca , "laɪf ænd hɛlθ ˈsaɪənsəz"@en-US .
+
+asioModules:ES_SCIENTIFIC_DOMAIN_LEVEL_3_CTASTR
+      a       roh:ESScientificDomain ;
+      rdfs:label "Astronomía y Astrofísica" ;
+      asio:hasCode asioModules:ES_SCIENTIFIC_DOMAIN_LEVEL_3_CODE_CTASTR ;
+      skos:broader asioModules:ES_SCIENTIFIC_DOMAIN_LEVEL_2_FI ;
+      skos:inScheme asioModules:ESscientificDomains3rdList ;
+      skos:notation "CTASTR" ;
+      skos:prefLabel "Astronomie et astrophysique"@fr , "Astronomia i Astrofísica"@ca , "Astronomía y Astrofísica"@es , "Astronomía y Astrofísica" , "Astronomía y Astrofísica"@ast , "Astronomia e Astrofísica"@pt , "Astronomy and Astrophysics"@en , "Astronomía e Astrofísica"@gl .
+
+asioModules:ES_SCIENTIFIC_DOMAIN_LEVEL_3_QMCNANO
+      a       roh:ESScientificDomain ;
+      rdfs:label "Nanoquímica" ;
+      asio:hasCode asioModules:ES_SCIENTIFIC_DOMAIN_LEVEL_3_CODE_QMCNANO ;
+      skos:broader asioModules:ES_SCIENTIFIC_DOMAIN_LEVEL_2_QMC ;
+      skos:inScheme asioModules:ESscientificDomains3rdList ;
+      skos:notation "QMCNANO" ;
+      skos:prefLabel "Nanochemistry"@en , "Nanochemistry"@pt , "Nanochimie"@fr , "Nanoquímica" , "Nanoquímica"@es , "Nanoquímica"@ast , "Nanoquímica"@ca , "Nanoquímica"@gl .
+
+asioModules:ES_SCIENTIFIC_DOMAIN_LEVEL_3_PSAZSJ
+      a       roh:ESScientificDomain ;
+      rdfs:label "Psicología evolutiva y de la educación" ;
+      asio:hasCode asioModules:ES_SCIENTIFIC_DOMAIN_LEVEL_3_CODE_PSAZSJ ;
+      skos:broader asioModules:ES_SCIENTIFIC_DOMAIN_LEVEL_2_PS ;
+      skos:inScheme asioModules:ESscientificDomains3rdList ;
+      skos:notation "PSAZSJ" ;
+      skos:prefLabel "Evolutionary and educational psychology"@en , "Psicología evolutiva y de la educación" , "Psicología evolutiva y de la educación"@es , "Psicologia evolutiva i de l'educació"@ca , "Psicoloxía evolutiva e educativa"@gl , "Psicologia evolutiva e educacional"@pt , "Psychologie évolutive et pédagogique"@fr , "Psicoloxía evolutiva y educativa"@ast .
+
+asioModules:ES_SCIENTIFIC_DOMAIN_LEVEL_3_CODE_MTMINVO
+      a       roh:ESScientificDomain ;
+      rdfs:label "MTMINVO" ;
+      asio:codeOf asioModules:ES_SCIENTIFIC_DOMAIN_LEVEL_3_MTMINVO ;
+      skos:inScheme asioModules:ESscientificDomains3rdCodeList ;
+      skos:prefLabel "MTMINVO" .
+
+asioModules:ES_SCIENTIFIC_DOMAIN_LEVEL_3_CTMIN
+      a       roh:ESScientificDomain ;
+      rdfs:label "Mineralogía" ;
+      asio:hasCode asioModules:ES_SCIENTIFIC_DOMAIN_LEVEL_3_CODE_CTMIN ;
+      skos:broader asioModules:ES_SCIENTIFIC_DOMAIN_LEVEL_2_CT ;
+      skos:inScheme asioModules:ESscientificDomains3rdList ;
+      skos:notation "CTMIN" ;
+      skos:prefLabel "Mineraloxía"@ast , "Mineraloxía"@gl , "Mineralogía"@es , "Mineralogía" , "Minéralogie"@fr , "Mineralogy"@en , "Mineralogia"@ca , "Mineralogia"@pt , "Mineralogia"@eu , "Mineralogia"@oc .
+
+asioModules:ES_SCIENTIFIC_DOMAIN_LEVEL_3_FFIQIYR
+      a       roh:ESScientificDomain ;
+      rdfs:label "Literatura comparada" ;
+      asio:hasCode asioModules:ES_SCIENTIFIC_DOMAIN_LEVEL_3_CODE_FFIQIYR ;
+      skos:broader asioModules:ES_SCIENTIFIC_DOMAIN_LEVEL_2_FFI ;
+      skos:inScheme asioModules:ESscientificDomains3rdList ;
+      skos:notation "FFIQIYR" ;
+      skos:prefLabel "Littérature comparée"@fr , "Comparative literature"@en , "Lliteratura comparao"@ast , "Literatura comparada"@ca , "Literatura comparada"@gl , "Literatura comparada"@pt , "Literatura comparada" , "Literatura comparada"@es .
+
+asioModules:ES_SCIENTIFIC_DOMAIN_LEVEL_1_CB
+      a       roh:ESScientificDomain ;
+      rdfs:label "Ciencias básicas" ;
+      asio:hasCode asioModules:ES_SCIENTIFIC_DOMAIN_LEVEL_1_CODE_CB ;
+      skos:inScheme asioModules:ESscientificDomains1stList ;
+      skos:notation "CB" ;
+      skos:prefLabel "Sciéncias fondamentalas"@oc , "Ciències bàsiques"@ca , "siˈɛnsiəs ˈbəzikəs"@ca , "θjen̪ θjaz 'βa si kas"@es , "Oinarrizko zientziak"@eu , "Sciencias basicas"@an , "Ciencies básiques"@ast , "Ciencias básicas" , "Ciencias básicas"@es , "Ciencias básicas"@gl , "Sciences fondamentales"@fr , "ˈbeɪsɪk ˈsaɪənsɪz"@en-GB , "Ciências básicas"@pt , "Basic sciences"@en , "Céncias básicas"@ext , "ˈbeɪsɪk ˈsaɪənsəz"@en-US ;
+      ontolex:phoneticRep "siˈɛnsiəs ˈbəzikəs"@ca , "ˈbeɪsɪk ˈsaɪənsɪz"@en-GB , "θjen̪ θjaz 'βa si kas"@es , "ˈbeɪsɪk ˈsaɪənsəz"@en-US .
+
+asioModules:ES_SCIENTIFIC_DOMAIN_LEVEL_2_DER
+      a       roh:ESScientificDomain ;
+      rdfs:label "Derecho" ;
+      asio:hasCode asioModules:ES_SCIENTIFIC_DOMAIN_LEVEL_2_CODE_DER ;
+      skos:broader asioModules:ES_SCIENTIFIC_DOMAIN_LEVEL_1_CSH ;
+      skos:inScheme asioModules:ESscientificDomains2ndList ;
+      skos:notation "DER" ;
+      skos:prefLabel "Droit"@fr , "Dereito"@gl , "Dret"@ca , "Drechu"@ast , "Direito"@pt , "Law"@en , "Derecho" , "Derecho"@es .
+
+asioModules:ES_SCIENTIFIC_DOMAIN_LEVEL_3_CODE_BMEDMJZM
+      a       roh:ESScientificDomain ;
+      rdfs:label "BMEDMJZM" ;
+      asio:codeOf asioModules:ES_SCIENTIFIC_DOMAIN_LEVEL_3_BMEDMJZM ;
+      skos:inScheme asioModules:ESscientificDomains3rdCodeList ;
+      skos:prefLabel "BMEDMJZM" .
+
+asioModules:ES_SCIENTIFIC_DOMAIN_LEVEL_3_BMEDIRHV
+      a       roh:ESScientificDomain ;
+      rdfs:label "Microbiología" ;
+      asio:hasCode asioModules:ES_SCIENTIFIC_DOMAIN_LEVEL_3_CODE_BMEDIRHV ;
+      skos:broader asioModules:ES_SCIENTIFIC_DOMAIN_LEVEL_2_BMED ;
+      skos:inScheme asioModules:ESscientificDomains3rdList ;
+      skos:notation "BMEDIRHV" ;
+      skos:prefLabel "Microbioloxía"@ast , "Microbioloxía"@gl , "Microbiologie"@fr , "Microbiologia"@ca , "Microbiologia"@pt , "Microbiología" , "Microbiología"@es , "Microbiology"@en .
+
+asioModules:ES_SCIENTIFIC_DOMAIN_LEVEL_3_FFIVVJH
+      a       roh:ESScientificDomain ;
+      rdfs:label "Metafísica y teoría del conocimiento" ;
+      asio:hasCode asioModules:ES_SCIENTIFIC_DOMAIN_LEVEL_3_CODE_FFIVVJH ;
+      skos:broader asioModules:ES_SCIENTIFIC_DOMAIN_LEVEL_2_FFI ;
+      skos:inScheme asioModules:ESscientificDomains3rdList ;
+      skos:notation "FFIVVJH" ;
+      skos:prefLabel "Metafísica y teoría del conocimientu"@ast , "Metaphysics and knowledge theory"@en , "Métaphysique et théorie des connaissances"@fr , "Metafísica e teoria do conhecimento"@pt , "Metafísica e teoría do coñecemento"@gl , "Metafísica y teoría del conocimiento"@es , "Metafísica y teoría del conocimiento" , "Metafísica i teoria de el coneixement"@ca .
+
+asioModules:ES_SCIENTIFIC_DOMAIN_LEVEL_3_BMEDMJZM
+      a       roh:ESScientificDomain ;
+      rdfs:label "Genética" ;
+      asio:hasCode asioModules:ES_SCIENTIFIC_DOMAIN_LEVEL_3_CODE_BMEDMJZM ;
+      skos:broader asioModules:ES_SCIENTIFIC_DOMAIN_LEVEL_2_BMED ;
+      skos:inScheme asioModules:ESscientificDomains3rdList ;
+      skos:notation "BMEDMJZM" ;
+      skos:prefLabel "Genética" , "Genética"@es , "Genètica"@ca , "Génétique"@fr , "Genetics"@en , "Xenética"@ast , "Xenética"@gl , "Genetics"@pt .
+
+asioModules:ES_SCIENTIFIC_DOMAIN_LEVEL_3_CODE_CTESTR
+      a       roh:ESScientificDomain ;
+      rdfs:label "CTESTR" ;
+      asio:codeOf asioModules:ES_SCIENTIFIC_DOMAIN_LEVEL_3_CTESTR ;
+      skos:inScheme asioModules:ESscientificDomains3rdCodeList ;
+      skos:prefLabel "CTESTR" .
+
+asioModules:ES_SCIENTIFIC_DOMAIN_LEVEL_3_CODE_QMCCATA
+      a       roh:ESScientificDomain ;
+      rdfs:label "QMCCATA" ;
+      asio:codeOf asioModules:ES_SCIENTIFIC_DOMAIN_LEVEL_3_QMCCATA ;
+      skos:inScheme asioModules:ESscientificDomains3rdCodeList ;
+      skos:prefLabel "QMCCATA" .
+
+asioModules:ES_SCIENTIFIC_DOMAIN_LEVEL_3_CODE_CTMETE
+      a       roh:ESScientificDomain ;
+      rdfs:label "CTMETE" ;
+      asio:codeOf asioModules:ES_SCIENTIFIC_DOMAIN_LEVEL_3_CTMETE ;
+      skos:inScheme asioModules:ESscientificDomains3rdCodeList ;
+      skos:prefLabel "CTMETE" .
+
+asioModules:ES_SCIENTIFIC_DOMAIN_LEVEL_2_CODE_FFI
+      a       roh:ESScientificDomain ;
+      rdfs:label "FFI" ;
+      asio:codeOf asioModules:ES_SCIENTIFIC_DOMAIN_LEVEL_2_FFI ;
+      skos:inScheme asioModules:ESscientificDomains2ndCodeList ;
+      skos:prefLabel "FFI" .
+
+asioModules:ES_SCIENTIFIC_DOMAIN_LEVEL_3_MTMINVO
+      a       roh:ESScientificDomain ;
+      rdfs:label "Investigación operativa" ;
+      asio:hasCode asioModules:ES_SCIENTIFIC_DOMAIN_LEVEL_3_CODE_MTMINVO ;
+      skos:broader asioModules:ES_SCIENTIFIC_DOMAIN_LEVEL_2_MTM ;
+      skos:inScheme asioModules:ESscientificDomains3rdList ;
+      skos:notation "MTMINVO" ;
+      skos:prefLabel "Investigación operativa"@es , "Investigación operativa"@gl , "Recherche opérationnelle"@fr , "Investigación operativa" , "Operative investigation"@en , "Investigació operativa"@ca , "Pesquisa operacional"@pt , "Investigación operativo"@ast .
+
+asioModules:ES_SCIENTIFIC_DOMAIN_LEVEL_3_CODE_BVAEWIUP
+      a       roh:ESScientificDomain ;
+      rdfs:label "BVAEWIUP" ;
+      asio:codeOf asioModules:ES_SCIENTIFIC_DOMAIN_LEVEL_3_BVAEWIUP ;
+      skos:inScheme asioModules:ESscientificDomains3rdCodeList ;
+      skos:prefLabel "BVAEWIUP" .
+
+asioModules:ES_SCIENTIFIC_DOMAIN_LEVEL_3_CODE_PSFRSQ
+      a       roh:ESScientificDomain ;
+      rdfs:label "PSFRSQ" ;
+      asio:codeOf asioModules:ES_SCIENTIFIC_DOMAIN_LEVEL_3_PSFRSQ ;
+      skos:inScheme asioModules:ESscientificDomains3rdCodeList ;
+      skos:prefLabel "PSFRSQ" .
+
+asioModules:ES_SCIENTIFIC_DOMAIN_LEVEL_3_CODE_CTCLIM
+      a       roh:ESScientificDomain ;
+      rdfs:label "CTCLIM" ;
+      asio:codeOf asioModules:ES_SCIENTIFIC_DOMAIN_LEVEL_3_CTCLIM ;
+      skos:inScheme asioModules:ESscientificDomains3rdCodeList ;
+      skos:prefLabel "CTCLIM" .
+
+asioModules:ES_SCIENTIFIC_DOMAIN_LEVEL_3_CTGEOQ
+      a       roh:ESScientificDomain ;
+      rdfs:label "Geoquímica ambiental" ;
+      asio:hasCode asioModules:ES_SCIENTIFIC_DOMAIN_LEVEL_3_CODE_CTGEOQ ;
+      skos:broader asioModules:ES_SCIENTIFIC_DOMAIN_LEVEL_2_CT ;
+      skos:inScheme asioModules:ESscientificDomains3rdList ;
+      skos:notation "CTGEOQ" ;
+      skos:prefLabel "Xeoquímica Ambiental"@gl , "Environmental geochemistry"@en , "Xeoquímica ambiental"@ast , "Géochimie environnementale"@fr , "Geoquímica ambiental"@es , "Geoquímica ambiental"@ca , "Geoquímica ambiental"@pt , "Geoquímica ambiental" .
+
+asioModules:ES_SCIENTIFIC_DOMAIN_LEVEL_3_PSJTFX
+      a       roh:ESScientificDomain ;
+      rdfs:label "Personalidad, evaluación y tratamientos psicológicos" ;
+      asio:hasCode asioModules:ES_SCIENTIFIC_DOMAIN_LEVEL_3_CODE_PSJTFX ;
+      skos:broader asioModules:ES_SCIENTIFIC_DOMAIN_LEVEL_2_PS ;
+      skos:inScheme asioModules:ESscientificDomains3rdList ;
+      skos:notation "PSJTFX" ;
+      skos:prefLabel "Personalidade, avaliação e tratamentos psicológicos"@pt , "Personalidad, evaluación y tratamientos psicológicos" , "Personalidad, evaluación y tratamientos psicológicos"@es , "Personalidade, avaliación e tratamentos psicolóxicos"@gl , "Personalitat, avaluació i tractaments psicològics"@ca , "Personnalité, évaluation et traitements psychologiques"@fr , "Personalidá, avaliación y tratamientos psicolóxicos"@ast , "Personality, evaluation and psychological treatments"@en .
+
+asioModules:ES_SCIENTIFIC_DOMAIN_LEVEL_3_BMEDTINW
+      a       roh:ESScientificDomain ;
+      rdfs:label "Descubrimiento de fármacos" ;
+      asio:hasCode asioModules:ES_SCIENTIFIC_DOMAIN_LEVEL_3_CODE_BMEDTINW ;
+      skos:broader asioModules:ES_SCIENTIFIC_DOMAIN_LEVEL_2_BMED ;
+      skos:inScheme asioModules:ESscientificDomains3rdList ;
+      skos:notation "BMEDTINW" ;
+      skos:prefLabel "Descobriment de fàrmacs"@ca , "Drug Discovery"@en , "Descubrimientu de medicamentos"@ast , "Descubrimento de medicamentos"@gl , "Découverte de médicaments"@fr , "Descoberta de medicamentos"@pt , "Descubrimiento de fármacos"@es , "Descubrimiento de fármacos" .
+
+asioModules:ES_SCIENTIFIC_DOMAIN_LEVEL_3_BMEDMHOU
+      a       roh:ESScientificDomain ;
+      rdfs:label "Enfermedades metabólicas" ;
+      asio:hasCode asioModules:ES_SCIENTIFIC_DOMAIN_LEVEL_3_CODE_BMEDMHOU ;
+      skos:broader asioModules:ES_SCIENTIFIC_DOMAIN_LEVEL_2_BMED ;
+      skos:inScheme asioModules:ESscientificDomains3rdList ;
+      skos:notation "BMEDMHOU" ;
+      skos:prefLabel "Metabolic diseases"@en , "Enfermidades metabólicas"@gl , "Doenças metabólicas"@pt , "Enfermedaes metabóliques"@ast , "Enfermedades metabólicas" , "Enfermedades metabólicas"@es , "Malalties metabòliques"@ca , "Maladies métaboliques"@fr .
+
+asioModules:ES_SCIENTIFIC_DOMAIN_LEVEL_3_CODE_PSAZSJ
+      a       roh:ESScientificDomain ;
+      rdfs:label "PSAZSJ" ;
+      asio:codeOf asioModules:ES_SCIENTIFIC_DOMAIN_LEVEL_3_PSAZSJ ;
+      skos:inScheme asioModules:ESscientificDomains3rdCodeList ;
+      skos:prefLabel "PSAZSJ" .
+
+asioModules:ES_SCIENTIFIC_DOMAIN_LEVEL_3_CODE_BMEDHTAZ
+      a       roh:ESScientificDomain ;
+      rdfs:label "BMEDHTAZ" ;
+      asio:codeOf asioModules:ES_SCIENTIFIC_DOMAIN_LEVEL_3_BMEDHTAZ ;
+      skos:inScheme asioModules:ESscientificDomains3rdCodeList ;
+      skos:prefLabel "BMEDHTAZ" .
+
+asioModules:ES_SCIENTIFIC_DOMAIN_LEVEL_3_CODE_FFIURLV
+      a       roh:ESScientificDomain ;
+      rdfs:label "FFIURLV" ;
+      asio:codeOf asioModules:ES_SCIENTIFIC_DOMAIN_LEVEL_3_FFIURLV ;
+      skos:inScheme asioModules:ESscientificDomains3rdCodeList ;
+      skos:prefLabel "FFIURLV" .
+
+asioModules:ES_SCIENTIFIC_DOMAIN_LEVEL_2_GAN
+      a       roh:ESScientificDomain ;
+      rdfs:label "Ganadería y pesca" ;
+      asio:hasCode asioModules:ES_SCIENTIFIC_DOMAIN_LEVEL_2_CODE_GAN ;
+      skos:broader asioModules:ES_SCIENTIFIC_DOMAIN_LEVEL_1_CVS ;
+      skos:inScheme asioModules:ESscientificDomains2ndList ;
+      skos:notation "GAN" ;
+      skos:prefLabel "Pecuária e pesca"@pt , "Ganadería y pesca"@ast , "Ganadería y pesca" , "Ganadería y pesca"@es , "Gandería e pesca"@gl , "Ramaderia i pesca"@ca , "Bétail et pêche"@fr , "Livestock and fishing"@en .
+
+asioModules:ES_SCIENTIFIC_DOMAIN_LEVEL_2_CODE_IEL
+      a       roh:ESScientificDomain ;
+      rdfs:label "IEL" ;
+      asio:codeOf asioModules:ES_SCIENTIFIC_DOMAIN_LEVEL_2_IEL ;
+      skos:inScheme asioModules:ESscientificDomains2ndCodeList ;
+      skos:prefLabel "IEL" .
+
+asioModules:ES_SCIENTIFIC_DOMAIN_LEVEL_3_QMCQUIO
+      a       roh:ESScientificDomain ;
+      rdfs:label "Química organometálica" ;
+      asio:hasCode asioModules:ES_SCIENTIFIC_DOMAIN_LEVEL_3_CODE_QMCQUIO ;
+      skos:broader asioModules:ES_SCIENTIFIC_DOMAIN_LEVEL_2_QMC ;
+      skos:inScheme asioModules:ESscientificDomains3rdList ;
+      skos:notation "QMCQUIO" ;
+      skos:prefLabel "Química organometálico"@ast , "Organometallic chemistry"@en , "Química organometàl·lica"@ca , "Chimie organométallique"@fr , "Química organometálica"@gl , "Química organometálica"@pt , "Química organometálica" , "Química organometálica"@es .
+
+asioModules:ES_SCIENTIFIC_DOMAIN_LEVEL_3_CODE_FFIVNPK
+      a       roh:ESScientificDomain ;
+      rdfs:label "FFIVNPK" ;
+      asio:codeOf asioModules:ES_SCIENTIFIC_DOMAIN_LEVEL_3_FFIVNPK ;
+      skos:inScheme asioModules:ESscientificDomains3rdCodeList ;
+      skos:prefLabel "FFIVNPK" .
+
+asioModules:ES_SCIENTIFIC_DOMAIN_LEVEL_3_CODE_MCLIJMIG
+      a       roh:ESScientificDomain ;
+      rdfs:label "MCLIJMIG" ;
+      asio:codeOf asioModules:ES_SCIENTIFIC_DOMAIN_LEVEL_3_MCLIJMIG ;
+      skos:inScheme asioModules:ESscientificDomains3rdCodeList ;
+      skos:prefLabel "MCLIJMIG" .
+
+asioModules:ES_SCIENTIFIC_DOMAIN_LEVEL_3_CODE_MCLIHKZZ
+      a       roh:ESScientificDomain ;
+      rdfs:label "MCLIHKZZ" ;
+      asio:codeOf asioModules:ES_SCIENTIFIC_DOMAIN_LEVEL_3_MCLIHKZZ ;
+      skos:inScheme asioModules:ESscientificDomains3rdCodeList ;
+      skos:prefLabel "MCLIHKZZ" .
+
+asioModules:ES_SCIENTIFIC_DOMAIN_LEVEL_2_CODE_EDUC
+      a       roh:ESScientificDomain ;
+      rdfs:label "EDUC" ;
+      asio:codeOf asioModules:ES_SCIENTIFIC_DOMAIN_LEVEL_2_EDUC ;
+      skos:inScheme asioModules:ESscientificDomains2ndCodeList ;
+      skos:prefLabel "EDUC" .
+
+asioModules:ES_SCIENTIFIC_DOMAIN_LEVEL_3_MTMMATE
+      a       roh:ESScientificDomain ;
+      rdfs:label "Matemática aplicada" ;
+      asio:hasCode asioModules:ES_SCIENTIFIC_DOMAIN_LEVEL_3_CODE_MTMMATE ;
+      skos:broader asioModules:ES_SCIENTIFIC_DOMAIN_LEVEL_2_MTM ;
+      skos:inScheme asioModules:ESscientificDomains3rdList ;
+      skos:notation "MTMMATE" ;
+      skos:prefLabel "Matemáticas Aplicadas"@gl , "Matemática aplicao"@ast , "Matemática aplicada"@es , "Matemática aplicada" , "Matemática aplicada"@an , "Matemática Aplicada"@pt , "Mathématiques appliquées"@fr , "Applied Mathematics"@en , "Matemàtica aplicada"@ca .
+
+asioModules:ESscientificDomains1stList
+      a       asioModules:ScientificDomains ;
+      rdfs:label "Árees científiques de primer nivel"@ast , "Goi mailako arlo zientifikoak"@eu , "Áreas científicas de primeiro nível"@pt , "Áreas científicas de primer nivel"@es , "First-level scientific domains"@en , "ˈaɾeas θjen̪ˈtifikas ðe priˈmer niˈβel"@es-ES-fonipa , "fɜrst ˈlɛvəl ˌsaɪənˈtɪfɪk doʊˈmeɪnz"@en-US-fonipa , "Dominis científics de primer nivell"@ca , "Áreas scientificas de primièr nivel"@oc , "Domains scientifiques de premier niveau"@fr , "Áreas scientificas de primer libel"@an , "Áreas científicas de primeiro nivel"@gl , "duˈminis siənˈtifikz ðə pɾiˈme niˈβeʎ"@ca-CA-fonipa , "fɜːst ˈlɛvl ˌsaɪənˈtɪfɪk dəʊˈmeɪnz"@en-GB-fonipa ;
+      skos:prefLabel "Árees científiques de primer nivel"@ast , "Áreas científicas de primer nivel"@es , "Áreas científicas de primeiro nível"@pt , "Goi mailako arlo zientifikoak"@eu , "First-level scientific domains"@en , "ˈaɾeas θjen̪ˈtifikas ðe priˈmer niˈβel"@es-ES-fonipa , "fɜrst ˈlɛvəl ˌsaɪənˈtɪfɪk doʊˈmeɪnz"@en-US-fonipa , "Dominis científics de primer nivell"@ca , "Áreas scientificas de primièr nivel"@oc , "Domains scientifiques de premier niveau"@fr , "Áreas scientificas de primer libel"@an , "Áreas científicas de primeiro nivel"@gl , "duˈminis siənˈtifikz ðə pɾiˈme niˈβeʎ"@ca-CA-fonipa , "fɜːst ˈlɛvl ˌsaɪənˈtɪfɪk dəʊˈmeɪnz"@en-GB-fonipa ;
+      ontolex:phoneticRep "ˌsaɪənˈtɪfɪk dəʊˈmeɪnz"@en-GB-fonipa , "fɜrst ˈlɛvəl ˌsaɪənˈtɪfɪk doʊˈmeɪnz"@en-US-fonipa , "'ˈaɾeas θjen̪ˈtifikas ðe priˈmer niˈβel"@es-ES-fonipa , "duˈminis siənˈtifikz ðə pɾiˈme niˈβeʎ"@ca-CA-fonipa .
+
+asioModules:ES_SCIENTIFIC_DOMAIN_LEVEL_2_CODE_TA
+      a       roh:ESScientificDomain ;
+      rdfs:label "TA" ;
+      asio:codeOf asioModules:ES_SCIENTIFIC_DOMAIN_LEVEL_2_TA ;
+      skos:inScheme asioModules:ESscientificDomains2ndCodeList ;
+      skos:prefLabel "TA" .
+
+asioModules:ES_SCIENTIFIC_DOMAIN_LEVEL_3_CODE_QMCAMBI
+      a       roh:ESScientificDomain ;
+      rdfs:label "QMCAMBI" ;
+      asio:codeOf asioModules:ES_SCIENTIFIC_DOMAIN_LEVEL_3_QMCAMBI ;
+      skos:inScheme asioModules:ESscientificDomains3rdCodeList ;
+      skos:prefLabel "QMCAMBI" .
+
+asioModules:ES_SCIENTIFIC_DOMAIN_LEVEL_3_BFSSBGU
+      a       roh:ESScientificDomain ;
+      rdfs:label "Biología celular" ;
+      asio:hasCode asioModules:ES_SCIENTIFIC_DOMAIN_LEVEL_3_CODE_BFSSBGU ;
+      skos:broader asioModules:ES_SCIENTIFIC_DOMAIN_LEVEL_2_BFS ;
+      skos:inScheme asioModules:ESscientificDomains3rdList ;
+      skos:notation "BFSSBGU" ;
+      skos:prefLabel "Biologia cel·lular"@ca , "Biologie cellulaire"@fr , "Bioloxía celular"@gl , "Bioloxía celular"@ast , "Cell biology"@en , "Biología celular" , "Biología celular"@es , "Biologia celular"@pt .
+
+asioModules:ES_SCIENTIFIC_DOMAIN_LEVEL_2_INF
+      a       roh:ESScientificDomain ;
+      rdfs:label "Ciencias de la computación y tecnología informática" ;
+      asio:hasCode asioModules:ES_SCIENTIFIC_DOMAIN_LEVEL_2_CODE_INF ;
+      skos:broader asioModules:ES_SCIENTIFIC_DOMAIN_LEVEL_1_IYT ;
+      skos:inScheme asioModules:ESscientificDomains2ndList ;
+      skos:notation "INF" ;
+      skos:prefLabel "Ciències de la computació i tecnologia informàtica"@ca , "Ciência da computação e tecnologia da computação"@pt , "Ciencias de la computación y tecnología informática"@es , "Ciencias de la computación y tecnología informática" , "Computer science and computer technology"@en , "Informática e tecnoloxía informática"@gl , "Informatique et technologie informatique"@fr , "Ciencies de la computación y tecnoloxía informática"@ast .
+
+asioModules:ES_SCIENTIFIC_DOMAIN_LEVEL_2_CODE_ECO
+      a       roh:ESScientificDomain ;
+      rdfs:label "ECO" ;
+      asio:codeOf asioModules:ES_SCIENTIFIC_DOMAIN_LEVEL_2_ECO ;
+      skos:inScheme asioModules:ESscientificDomains2ndCodeList ;
+      skos:prefLabel "ECO" .
+
+asioModules:ESscientificDomains2ndList
+      a       asioModules:scientificDomains ;
+      rdfs:label "Áreas scientificas de segundo nivel"@an , "Second-level scientific domains"@en , "Áreas científicas de segundo nível"@pt , "Dominis científics de segon nivell"@ca , "Bigarren mailako arlo zientifikoak"@eu , "Domains scientifiques de deuxième niveau"@fr , "ˈaɾeas θjen̪ˈtifikas ðe seˈɣ̞un̟do niˈβ̞el"@es-ES-fonipa , "Áreas scientificas de segond nivel"@oc , "ˈsɛkənd ˈlɛvəl ˌsaɪənˈtɪfɪk doʊˈmeɪnz"@en-US-fonipa , "Árees científiques de segundu nivel"@ast , "duˈminis siənˈtifikz ðə səˈɣon niˈβeʎ"@ca-CA-fonipa , "ˈsɛkənd ˈlɛvl ˌsaɪənˈtɪfɪk dəʊˈmeɪnz"@en-GB-fonipa , "Áreas científicas de segundo nivel"@es , "Áreas científicas de segundo nivel"@gl ;
+      skos:prefLabel "Áreas scientificas de segundo nivel"@an , "Second-level scientific domains"@en , "Áreas científicas de segundo nível"@pt , "Dominis científics de segon nivell"@ca , "Bigarren mailako arlo zientifikoak"@eu , "Domains scientifiques de deuxième niveau"@fr , "ˈaɾeas θjen̪ˈtifikas ðe seˈɣ̞un̟do niˈβ̞el"@es-ES-fonipa , "Áreas scientificas de segond nivel"@oc , "ˈsɛkənd ˈlɛvəl ˌsaɪənˈtɪfɪk doʊˈmeɪnz"@en-US-fonipa , "Árees científiques de segundu nivel"@ast , "duˈminis siənˈtifikz ðə səˈɣon niˈβeʎ"@ca-CA-fonipa , "ˈsɛkənd ˈlɛvl ˌsaɪənˈtɪfɪk dəʊˈmeɪnz"@en-GB-fonipa , "Áreas científicas de segundo nivel"@es , "Áreas científicas de segundo nivel"@gl ;
+      ontolex:phoneticRep "ˈaɾeas θjen̪ˈtifikas ðe seˈɣ̞un̟do niˈβ̞el"@es-ES-fonipa , "ˈsɛkənd ˈlɛvəl ˌsaɪənˈtɪfɪk doʊˈmeɪnz"@en-US-fonipa , "duˈminis siənˈtifikz ðə səˈɣon niˈβeʎ"@ca-CA-fonipa , "ˈsɛkənd ˈlɛvl ˌsaɪənˈtɪfɪk dəʊˈmeɪnz"@en-GB-fonipa .
+
+asioModules:ES_SCIENTIFIC_DOMAIN_LEVEL_3_QMCQUIN
+      a       roh:ESScientificDomain ;
+      rdfs:label "Química inorgánica" ;
+      asio:hasCode asioModules:ES_SCIENTIFIC_DOMAIN_LEVEL_3_CODE_QMCQUIN ;
+      skos:broader asioModules:ES_SCIENTIFIC_DOMAIN_LEVEL_2_QMC ;
+      skos:inScheme asioModules:ESscientificDomains3rdList ;
+      skos:notation "QMCQUIN" ;
+      skos:prefLabel "Chimie inorganique"@fr , "Inorganic chemistry"@en , "Química inorgánica"@es , "Química inorgánica" , "Química inorgánica"@gl , "Química inorgánico"@ast , "Química inorgânica"@pt , "Química inorgànica"@ca .
+
+asioModules:ES_SCIENTIFIC_DOMAIN_LEVEL_3_CODE_BFSDXWB
+      a       roh:ESScientificDomain ;
+      rdfs:label "BFSDXWB" ;
+      asio:codeOf asioModules:ES_SCIENTIFIC_DOMAIN_LEVEL_3_BFSDXWB ;
+      skos:inScheme asioModules:ESscientificDomains3rdCodeList ;
+      skos:prefLabel "BFSDXWB" .
+
+asioModules:ES_SCIENTIFIC_DOMAIN_LEVEL_3_CODE_BMEDMHOU
+      a       roh:ESScientificDomain ;
+      rdfs:label "BMEDMHOU" ;
+      asio:codeOf asioModules:ES_SCIENTIFIC_DOMAIN_LEVEL_3_BMEDMHOU ;
+      skos:inScheme asioModules:ESscientificDomains3rdCodeList ;
+      skos:prefLabel "BMEDMHOU" .
+
+asioModules:ES_SCIENTIFIC_DOMAIN_LEVEL_3_CODE_PSNRWD
+      a       roh:ESScientificDomain ;
+      rdfs:label "PSNRWD" ;
+      asio:codeOf asioModules:ES_SCIENTIFIC_DOMAIN_LEVEL_3_PSNRWD ;
+      skos:inScheme asioModules:ESscientificDomains3rdCodeList ;
+      skos:prefLabel "PSNRWD" .
+
+asioModules:ES_SCIENTIFIC_DOMAIN_LEVEL_3_BFSHRRE
+      a       roh:ESScientificDomain ;
+      rdfs:label "Metabolismo" ;
+      asio:hasCode asioModules:ES_SCIENTIFIC_DOMAIN_LEVEL_3_CODE_BFSHRRE ;
+      skos:broader asioModules:ES_SCIENTIFIC_DOMAIN_LEVEL_2_BFS ;
+      skos:inScheme asioModules:ESscientificDomains3rdList ;
+      skos:notation "BFSHRRE" ;
+      skos:prefLabel "Metabolism"@en , "Metabolisme"@ca , "Metabolismo"@es , "Metabolismo" , "Metabolismo"@gl , "Metabolismo"@pt , "Métabolisme"@fr , "Metabolismu"@ast .
+
+asioModules:ES_SCIENTIFIC_DOMAIN_LEVEL_3_CODE_HAYOHM
+      a       roh:ESScientificDomain ;
+      rdfs:label "HAYOHM" ;
+      asio:codeOf asioModules:ES_SCIENTIFIC_DOMAIN_LEVEL_3_HAYOHM ;
+      skos:inScheme asioModules:ESscientificDomains3rdCodeList ;
+      skos:prefLabel "HAYOHM" .
+
+asioModules:ES_SCIENTIFIC_DOMAIN_LEVEL_3_CODE_QMCQUBI
+      a       roh:ESScientificDomain ;
+      rdfs:label "QMCQUBI" ;
+      asio:codeOf asioModules:ES_SCIENTIFIC_DOMAIN_LEVEL_3_QMCQUBI ;
+      skos:inScheme asioModules:ESscientificDomains3rdCodeList ;
+      skos:prefLabel "QMCQUBI" .
+
+asioModules:ES_SCIENTIFIC_DOMAIN_LEVEL_3_CODE_BMEDRYDY
+      a       roh:ESScientificDomain ;
+      rdfs:label "BMEDRYDY" ;
+      asio:codeOf asioModules:ES_SCIENTIFIC_DOMAIN_LEVEL_3_BMEDRYDY ;
+      skos:inScheme asioModules:ESscientificDomains3rdCodeList ;
+      skos:prefLabel "BMEDRYDY" .
+
+asioModules:ES_SCIENTIFIC_DOMAIN_LEVEL_3_BMEDRYDY
+      a       roh:ESScientificDomain ;
+      rdfs:label "Cáncer" ;
+      asio:hasCode asioModules:ES_SCIENTIFIC_DOMAIN_LEVEL_3_CODE_BMEDRYDY ;
+      skos:broader asioModules:ES_SCIENTIFIC_DOMAIN_LEVEL_2_BMED ;
+      skos:inScheme asioModules:ESscientificDomains3rdList ;
+      skos:notation "BMEDRYDY" ;
+      skos:prefLabel "Câncer"@pt , "Cancer"@fr , "Cancer"@en , "Cáncer" , "Cáncer"@es , "Cáncer"@ast , "Cáncer"@gl , "Càncer"@ca .
+
+asioModules:ES_SCIENTIFIC_DOMAIN_LEVEL_3_QMCQUAN
+      a       roh:ESScientificDomain ;
+      rdfs:label "Química analítica" ;
+      asio:hasCode asioModules:ES_SCIENTIFIC_DOMAIN_LEVEL_3_CODE_QMCQUAN ;
+      skos:broader asioModules:ES_SCIENTIFIC_DOMAIN_LEVEL_2_QMC ;
+      skos:inScheme asioModules:ESscientificDomains3rdList ;
+      skos:notation "QMCQUAN" ;
+      skos:prefLabel "Química analítico"@ast , "Química analítica"@ca , "Química analítica" , "Química analítica"@es , "Química analítica"@gl , "Química analítica"@pt , "Chimie analytique"@fr , "Analytic chemistry"@en .
+
+asioModules:ESscientificDomains2ndCodeList
+      a       asioModules:scientificDomains ;
+      rdfs:label "Codes for the second-level scientific domains"@en , "Códigos das áreas científicas de segundo nível"@pt , "Códigos de les árees científiques de segundu nivel"@ast , "Códigos de las áreas científicas de segundo nivel"@es , "Codis dels dominis científics de segon nivell"@ca , "Códigos das áreas científicas de segundo nivel"@gl ;
+      skos:prefLabel "Codes for the second-level scientific domains"@en , "Códigos das áreas científicas de segundo nível"@pt , "Códigos de las áreas científicas de segundo nivel"@es , "Códigos de les árees científiques de segundu nivel"@ast , "Codis dels dominis científics de segon nivell"@ca , "Códigos das áreas científicas de segundo nivel"@gl .
+
+asioModules:ES_SCIENTIFIC_DOMAIN_LEVEL_3_PSDSJH
+      a       roh:ESScientificDomain ;
+      rdfs:label "Psicología social" ;
+      asio:hasCode asioModules:ES_SCIENTIFIC_DOMAIN_LEVEL_3_CODE_PSDSJH ;
+      skos:broader asioModules:ES_SCIENTIFIC_DOMAIN_LEVEL_2_PS ;
+      skos:inScheme asioModules:ESscientificDomains3rdList ;
+      skos:notation "PSDSJH" ;
+      skos:prefLabel "Psychologie sociale"@fr , "Psicología social" , "Psicología social"@es , "Social psychology"@en , "Psicoloxía social"@ast , "Psicoloxía social"@gl , "Psicologia social"@ca , "Psicologia social"@pt .
+
+asioModules:ES_SCIENTIFIC_DOMAIN_LEVEL_3_BMEDAYJV
+      a       roh:ESScientificDomain ;
+      rdfs:label "Farmacología general y de sistemas" ;
+      asio:hasCode asioModules:ES_SCIENTIFIC_DOMAIN_LEVEL_3_CODE_BMEDAYJV ;
+      skos:broader asioModules:ES_SCIENTIFIC_DOMAIN_LEVEL_2_BMED ;
+      skos:inScheme asioModules:ESscientificDomains3rdList ;
+      skos:notation "BMEDAYJV" ;
+      skos:prefLabel "Pharmacologie générale et systémique"@fr , "Farmacología general y de sistemas" , "Farmacología general y de sistemas"@es , "Farmacologia general i de sistemes"@ca , "Farmacoloxía xeneral y de sistemas"@ast , "General and systems pharmacology"@en , "Farmacologia geral e de sistemas"@pt , "Farmacoloxía xeral e de sistemas"@gl .
+
+asioModules:ES_SCIENTIFIC_DOMAIN_LEVEL_3_CODE_HAMOXL
+      a       roh:ESScientificDomain ;
+      rdfs:label "HAMOXL" ;
+      asio:codeOf asioModules:ES_SCIENTIFIC_DOMAIN_LEVEL_3_HAMOXL ;
+      skos:inScheme asioModules:ESscientificDomains3rdCodeList ;
+      skos:prefLabel "HAMOXL" .
+
+asioModules:ES_SCIENTIFIC_DOMAIN_LEVEL_3_BFSOWHX
+      a       roh:ESScientificDomain ;
+      rdfs:label "Biología estructural" ;
+      asio:hasCode asioModules:ES_SCIENTIFIC_DOMAIN_LEVEL_3_CODE_BFSOWHX ;
+      skos:broader asioModules:ES_SCIENTIFIC_DOMAIN_LEVEL_2_BFS ;
+      skos:inScheme asioModules:ESscientificDomains3rdList ;
+      skos:notation "BFSOWHX" ;
+      skos:prefLabel "Biologia estructural"@ca , "Structural biology"@en , "Biología estructural"@es , "Biología estructural" , "Biologia estrutural"@pt , "Bioloxía estrutural"@gl , "Bioloxía estrutural"@ast , "Biologie structurale"@fr .
+
+asioModules:ES_SCIENTIFIC_DOMAIN_LEVEL_3_CODE_QMCQUFI
+      a       roh:ESScientificDomain ;
+      rdfs:label "QMCQUFI" ;
+      asio:codeOf asioModules:ES_SCIENTIFIC_DOMAIN_LEVEL_3_QMCQUFI ;
+      skos:inScheme asioModules:ESscientificDomains3rdCodeList ;
+      skos:prefLabel "QMCQUFI" .
+
+asioModules:ES_SCIENTIFIC_DOMAIN_LEVEL_3_BMEDZYOC
+      a       roh:ESScientificDomain ;
+      rdfs:label "Biología celular y molecular" ;
+      asio:hasCode asioModules:ES_SCIENTIFIC_DOMAIN_LEVEL_3_CODE_BMEDZYOC ;
+      skos:broader asioModules:ES_SCIENTIFIC_DOMAIN_LEVEL_2_BMED ;
+      skos:inScheme asioModules:ESscientificDomains3rdList ;
+      skos:notation "BMEDZYOC" ;
+      skos:prefLabel "Cellular and molecular biology"@en , "Biologie cellulaire et moléculaire"@fr , "Biologia cel·lular i molecular"@ca , "Biologia celular e molecular"@pt , "Biología celular y molecular" , "Biología celular y molecular"@es , "Bioloxía celular y molecular"@ast , "Bioloxía celular e molecular"@gl .
+
+asioModules:ES_SCIENTIFIC_DOMAIN_LEVEL_3_CODE_BMEDDHHL
+      a       roh:ESScientificDomain ;
+      rdfs:label "BMEDDHHL" ;
+      asio:codeOf asioModules:ES_SCIENTIFIC_DOMAIN_LEVEL_3_BMEDDHHL ;
+      skos:inScheme asioModules:ESscientificDomains3rdCodeList ;
+      skos:prefLabel "BMEDDHHL" .
+
+asioModules:ES_SCIENTIFIC_DOMAIN_LEVEL_3_CODE_MCLIQUEG
+      a       roh:ESScientificDomain ;
+      rdfs:label "MCLIQUEG" ;
+      asio:codeOf asioModules:ES_SCIENTIFIC_DOMAIN_LEVEL_3_MCLIQUEG ;
+      skos:inScheme asioModules:ESscientificDomains3rdCodeList ;
+      skos:prefLabel "MCLIQUEG" .
+
+asioModules:ES_SCIENTIFIC_DOMAIN_LEVEL_2_QMC
+      a       roh:ESScientificDomain ;
+      rdfs:label "Química" ;
+      asio:hasCode asioModules:ES_SCIENTIFIC_DOMAIN_LEVEL_2_CODE_QMC ;
+      skos:broader asioModules:ES_SCIENTIFIC_DOMAIN_LEVEL_1_CB ;
+      skos:inScheme asioModules:ESscientificDomains2ndList ;
+      skos:notation "QMC" ;
+      skos:note "It addresses, from the molecular to the macroscopic level, research on the composition, structure, preparation and properties of natural and synthetic substances or samples that contain them, the interactions and transformations they undergo, the mechanism thereof, the instrumentation for their analysis and the experimental and / or theoretical methodology required for its study."@en , "Aborda, desde o nivel molecular ata o macroscópico, a investigación sobre a composición, estrutura, preparación e propiedades de substancias ou mostras naturais e sintéticas que as conteñen, as interaccións e transformacións que sofren, o seu mecanismo, a instrumentación para a súa análise e a metodoloxía experimental e/ou teórica requirida para o seu estudo."@gl , "Aborda, des del nivell molecular al macroscòpic, la recerca sobre la composició, estructura, preparació i propietats de les substàncies naturals i sintètiques o mostres que les contenen, les interaccions i transformacions que experimenten, llur mecanisme, la instrumentació per a la seva anàlisi i la metodologia experimental i / o teòrica requerida per al seu estudi."@ca ;
+      skos:prefLabel "Chemistry"@en , "Química" , "Química"@es , "Química"@ast , "Química"@ca , "Química"@gl , "Química"@pt , "Chimie"@fr .
+
+asioModules:ES_SCIENTIFIC_DOMAIN_LEVEL_3_CODE_CTGEOQ
+      a       roh:ESScientificDomain ;
+      rdfs:label "CTGEOQ" ;
+      asio:codeOf asioModules:ES_SCIENTIFIC_DOMAIN_LEVEL_3_CTGEOQ ;
+      skos:inScheme asioModules:ESscientificDomains3rdCodeList ;
+      skos:prefLabel "CTGEOQ" .
+
+asioModules:ES_SCIENTIFIC_DOMAIN_LEVEL_3_CTMATE
+      a       roh:ESScientificDomain ;
+      rdfs:label "Materia condensada" ;
+      asio:hasCode asioModules:ES_SCIENTIFIC_DOMAIN_LEVEL_3_CODE_CTMATE ;
+      skos:broader asioModules:ES_SCIENTIFIC_DOMAIN_LEVEL_2_FI ;
+      skos:inScheme asioModules:ESscientificDomains3rdList ;
+      skos:notation "CTMATE" ;
+      skos:prefLabel "Matéria condensada"@pt , "Materia condensao"@ast , "Condensed matter"@en , "Matière condensée"@fr , "Matèria condensada"@ca , "Materia condensada" , "Materia condensada"@es , "Materia condensada"@gl , "Materia condensada"@an .
+
+asioModules:ES_SCIENTIFIC_DOMAIN_LEVEL_3_CODE_QMCMATM
+      a       roh:ESScientificDomain ;
+      rdfs:label "QMCMATM" ;
+      asio:codeOf asioModules:ES_SCIENTIFIC_DOMAIN_LEVEL_3_QMCMATM ;
+      skos:inScheme asioModules:ESscientificDomains3rdCodeList ;
+      skos:prefLabel "QMCMATM" .
+
+asioModules:ES_SCIENTIFIC_DOMAIN_LEVEL_3_CODE_MCLINMLH
+      a       roh:ESScientificDomain ;
+      rdfs:label "MCLINMLH" ;
+      asio:codeOf asioModules:ES_SCIENTIFIC_DOMAIN_LEVEL_3_MCLINMLH ;
+      skos:inScheme asioModules:ESscientificDomains3rdCodeList ;
+      skos:prefLabel "MCLINMLH" .
+
+asioModules:ES_SCIENTIFIC_DOMAIN_LEVEL_3_CODE_BFSDGRC
+      a       roh:ESScientificDomain ;
+      rdfs:label "BFSDGRC" ;
+      asio:codeOf asioModules:ES_SCIENTIFIC_DOMAIN_LEVEL_3_BFSDGRC ;
+      skos:inScheme asioModules:ESscientificDomains3rdCodeList ;
+      skos:prefLabel "BFSDGRC" .
+
+asioModules:ES_SCIENTIFIC_DOMAIN_LEVEL_3_CODE_CTSEDI
+      a       roh:ESScientificDomain ;
+      rdfs:label "CTSEDI" ;
+      asio:codeOf asioModules:ES_SCIENTIFIC_DOMAIN_LEVEL_3_CTSEDI ;
+      skos:inScheme asioModules:ESscientificDomains3rdCodeList ;
+      skos:prefLabel "CTSEDI" .
+
+asioModules:ES_SCIENTIFIC_DOMAIN_LEVEL_3_CODE_MCLIOCBV
+      a       roh:ESScientificDomain ;
+      rdfs:label "MCLIOCBV" ;
+      asio:codeOf asioModules:ES_SCIENTIFIC_DOMAIN_LEVEL_3_MCLIOCBV ;
+      skos:inScheme asioModules:ESscientificDomains3rdCodeList ;
+      skos:prefLabel "MCLIOCBV" .
+
+asioModules:ES_SCIENTIFIC_DOMAIN_LEVEL_2_BMED
+      a       roh:ESScientificDomain ;
+      rdfs:label "Biomedicina" ;
+      asio:hasCode asioModules:ES_SCIENTIFIC_DOMAIN_LEVEL_2_CODE_BMED ;
+      skos:broader asioModules:ES_SCIENTIFIC_DOMAIN_LEVEL_1_CVS ;
+      skos:inScheme asioModules:ESscientificDomains2ndList ;
+      skos:notation "BMED" ;
+      skos:note "Investigación e estudo en Bioloxía Molecular, Celular, Xenética, Microbioloxía, Fisioloxía, Inmunoloxía e áreas relacionadas, con aplicacións ou interese na Biomedicina."@gl , "Research and study in Molecular, Cellular, Genetic Biology, Microbiology, Physiology, Immunology and related areas, with applications or interest in Biomedicine."@en , "Recerca i estudi en Biologia Molecular, Cel·lular, Genètica, Microbiologia, Fisiologia, Immunologia i àrees afins, amb aplicacions o interès en biomedicina."@ca ;
+      skos:prefLabel "Biomedicina" , "Biomedicina"@es , "Biomedicina"@ast , "Biomedicina"@gl , "Biomedicina"@pt , "Biomedicine"@en , "Biomédecine"@fr , "biomedicina"@ca .
