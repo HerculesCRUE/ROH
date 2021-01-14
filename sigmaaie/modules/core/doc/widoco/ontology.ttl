@@ -1293,7 +1293,7 @@ xsd:date rdf:type rdfs:Datatype .
                                                               <http://purl.org/roh/mirror/foaf#page> ;
                                            rdf:type owl:InverseFunctionalProperty ;
                                            rdfs:domain owl:Thing ;
-                                           rdfs:range <http://purl.org/roh/mirror/foaf#Document> ;
+                                           rdfs:range <http://purl.org/roh/mirror/bibo#Document> ;
                                            rdfs:comment "A homepage for some thing." ;
                                            rdfs:isDefinedBy <http://purl.org/roh/mirror/foaf#> ;
                                            rdfs:label "página web"@es ,
@@ -1326,7 +1326,7 @@ xsd:date rdf:type rdfs:Datatype .
 <http://purl.org/roh/mirror/foaf#mbox> rdf:type owl:ObjectProperty ,
                                                 owl:InverseFunctionalProperty ;
                                        rdfs:domain <http://purl.org/roh/mirror/foaf#Agent> ;
-                                       rdfs:range owl:Thing ;
+                                       rdfs:range <http://purl.org/roh/mirror/obo/iao#IAO_0000030> ;
                                        rdfs:comment "A  personal mailbox, ie. an Internet mailbox associated with exactly one owner, the first owner of this mailbox. This is a 'static inverse functional property', in that  there is (across time and change) at most one individual that ever has any particular value for foaf:mbox." ;
                                        rdfs:isDefinedBy <http://purl.org/roh/mirror/foaf#> ;
                                        rdfs:label "buzón personal"@es ,
@@ -2593,7 +2593,7 @@ passive factors, products, and a location in space/time."""@en ;
                                ] ,
                                [ rdf:type owl:Restriction ;
                                  owl:onProperty <http://purl.org/roh/mirror/vivo#hasSubjectArea> ;
-                                 owl:allValuesFrom owl:Thing
+                                 owl:allValuesFrom <http://www.w3.org/2004/02/skos/core#Concept>
                                ] ,
                                [ rdf:type owl:Restriction ;
                                  owl:onProperty <http://purl.org/roh/mirror/foaf#title> ;
@@ -2673,10 +2673,6 @@ passive factors, products, and a location in space/time."""@en ;
                           ] ,
                           [ rdf:type owl:Restriction ;
                             owl:onProperty :title ;
-                            owl:someValuesFrom xsd:string
-                          ] ,
-                          [ rdf:type owl:Restriction ;
-                            owl:onProperty <http://purl.org/roh/mirror/vivo#identifier> ;
                             owl:someValuesFrom xsd:string
                           ] ,
                           [ rdf:type owl:Restriction ;
@@ -3303,14 +3299,6 @@ The previous short definition was: \"An arbitrary classification of a space/time
                                "Rol de Miembro Externo"@es .
 
 
-###  http://purl.org/roh#Facility
-:Facility rdf:type owl:Class ;
-          rdfs:label "Facility"@en ,
-                     "Instalaciones"@es ,
-                     "Instalacions"@ca-es ,
-                     "établissement"@fr .
-
-
 ###  http://purl.org/roh#FacultyPositionEmeritus
 :FacultyPositionEmeritus rdf:type owl:Class ;
                          rdfs:subClassOf <http://purl.org/roh/mirror/vivo#FacultyPosition> ;
@@ -3386,12 +3374,6 @@ The previous short definition was: \"An arbitrary classification of a space/time
                     "Funding"@en .
 
 
-###  http://purl.org/roh#FundingAgency
-:FundingAgency rdf:type owl:Class ;
-               rdfs:subClassOf <http://purl.org/roh/mirror/vivo#FundingOrganization> ;
-               rdfs:label "Funding agency"@en .
-
-
 ###  http://purl.org/roh#FundingAmount
 :FundingAmount rdf:type owl:Class ;
                rdfs:subClassOf [ rdf:type owl:Restriction ;
@@ -3454,10 +3436,6 @@ The previous short definition was: \"An arbitrary classification of a space/time
                                 [ rdf:type owl:Restriction ;
                                   owl:onProperty <http://purl.org/roh/mirror/vivo#relatedBy> ;
                                   owl:allValuesFrom :Dossier
-                                ] ,
-                                [ rdf:type owl:Restriction ;
-                                  owl:onProperty <http://purl.org/roh/mirror/vivo#identifier> ;
-                                  owl:someValuesFrom xsd:string
                                 ] ,
                                 [ rdf:type owl:Restriction ;
                                   owl:onProperty :title ;
@@ -4111,7 +4089,7 @@ A roh:FundingSource roh:feeds a roh:Funding with funds to sponsor some projects.
                                      owl:onProperty :ranking ;
                                      owl:allValuesFrom xsd:string
                                    ] ;
-                   rdfs:label "Métrica de Pubicación"@es ,
+                   rdfs:label "Métrica de Publicación"@es ,
                               "Publication Metric"@en .
 
 
@@ -4914,7 +4892,6 @@ This is a type of roh:ResearchObjects related to publication concept. It is base
                                                              owl:maxQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
                                                              owl:onDataRange xsd:int
                                                            ] ;
-                                           owl:disjointWith <http://purl.org/roh/mirror/foaf#Document> ;
                                            rdfs:comment "A document (noun) is a bounded physical representation of body of information designed with the capacity (and usually intent) to communicate. A document may manifest symbolic, diagrammatic or sensory-representational information."@en ,
                                                         "Content made available to the general public. In the case of ASIO, often scientific or academic contents published."@en ,
                                                         """ResearchObjects related to publication concept are based on types defined by BIBO ontology. Currently, the following set of publication-related entities are supported: bibo:Document (Article, ConferencePaper, EditorialArticle, Book, Proceedings, ConferencePaper, Chapter, Thesis)
@@ -5278,15 +5255,6 @@ This is a type of roh:ResearchObjects related to publication concept. It is base
                                         <http://www.w3.org/2004/02/skos/core#scopeNote> "Used to describe any \"agent\" related to bibliographic items. Such agents can be persons, organizations or groups of any kind."@en .
 
 
-###  http://purl.org/roh/mirror/foaf#Document
-<http://purl.org/roh/mirror/foaf#Document> rdf:type owl:Class ;
-                                           rdfs:comment "A document." ;
-                                           rdfs:isDefinedBy <http://purl.org/roh/mirror/foaf#> ;
-                                           rdfs:label "Documento"@es ,
-                                                      "Document" ;
-                                           <http://www.w3.org/2003/06/sw-vocab-status/ns#term_status> "stable" .
-
-
 ###  http://purl.org/roh/mirror/foaf#Group
 <http://purl.org/roh/mirror/foaf#Group> rdf:type owl:Class ;
                                         rdfs:subClassOf <http://purl.org/roh/mirror/foaf#Agent> .
@@ -5294,7 +5262,7 @@ This is a type of roh:ResearchObjects related to publication concept. It is base
 
 ###  http://purl.org/roh/mirror/foaf#Image
 <http://purl.org/roh/mirror/foaf#Image> rdf:type owl:Class ;
-                                        rdfs:subClassOf <http://purl.org/roh/mirror/foaf#Document> ;
+                                        rdfs:subClassOf <http://purl.org/roh/mirror/bibo#Document> ;
                                         rdfs:comment "An image." ;
                                         rdfs:isDefinedBy <http://purl.org/roh/mirror/foaf#> ;
                                         rdfs:label "Imagen"@es ,
@@ -5335,7 +5303,7 @@ This is a type of roh:ResearchObjects related to publication concept. It is base
                                                                ] ,
                                                                [ rdf:type owl:Restriction ;
                                                                  owl:onProperty <http://purl.org/roh/mirror/foaf#homepage> ;
-                                                                 owl:allValuesFrom owl:Thing
+                                                                 owl:allValuesFrom <http://purl.org/roh/mirror/bibo#Document>
                                                                ] ,
                                                                [ rdf:type owl:Restriction ;
                                                                  owl:onProperty <http://purl.org/roh/mirror/geonames#locatedIn> ;
@@ -5393,7 +5361,7 @@ This is a type of roh:ResearchObjects related to publication concept. It is base
 
 An Organization in ROH is a foaf:Organization which carries out several roh:Project. It is a child of foaf:Agent. Some organization can emit roh:Acreditation (e.g. ANECA or CENAI in Spain), those belonging to subclass roh:AccreditationIssuer, or award degrees (vivo:AwardedDegree), those of subclass vivo:University. An Organization may receive several roh:FundingAmount, corresponding to a roh:Funding, obtained through a roh:FundingProgram provided by a vivo:FundingOrganization through a roh:FundingSource. As a foaf:Agent an Organization may be involved in several roh:Actitity, has several instances of attribute roh:researchLine, is associated through roh:hasKnowledgeArea with roh:KnowledgeArea and bound to a geographical scope through gn:locatedIn with gn:Feature, it may also have a time span through vivo:dateTimeInterval linking it with an instance of vivo:DateTimeInterval.
 
-Based on FOAF, the foaf:Organization entity takes into account the object properties (attributes: roh:acronym, headcount, turnover, foaf:homepage) and data properties (links) defined by the Organization Unit in CERIF. It also takes into account and supports the relationships of CERIF Equipment (via roh:Equipment and roh:hasInfrastructure), ElectronicAddress (obo:hasContactInfo), Event (roh:Activity), Expertise and Skill (via vivo:keywords and roh:hasKnowledgeArea), Facility (roh:Facility and roh:hasInfrastructure), Funding (roh:Funding), Organization Unit (kinship relationships between organizations can be established with vivo:hasPart and vivo:partOf), Prize Award (through roh:Accreditation), Result Patent, Result Product, Result Publication and Service - all of them through roh:ResearchObject which can be obtained through the roh:produces relationship from the Projects in which an organization participates by playing a declared role through roh:hasRole, Person (through roh:hasPosition). Therefore, the CERIF data model for Organization is covered.
+Based on FOAF, the foaf:Organization entity takes into account the object properties (attributes: roh:acronym, headcount, turnover, foaf:homepage) and data properties (links) defined by the Organization Unit in CERIF. It also takes into account and supports the relationships of CERIF Equipment (via roh:Equipment and roh:hasInfrastructure), ElectronicAddress (obo:hasContactInfo), Event (roh:Activity), Expertise and Skill (via vivo:keywords and roh:hasKnowledgeArea), Facility (vivo:Facility and roh:hasInfrastructure), Funding (roh:Funding), Organization Unit (kinship relationships between organizations can be established with vivo:hasPart and vivo:partOf), Prize Award (through roh:Accreditation), Result Patent, Result Product, Result Publication and Service - all of them through roh:ResearchObject which can be obtained through the roh:produces relationship from the Projects in which an organization participates by playing a declared role through roh:hasRole, Person (through roh:hasPosition). Therefore, the CERIF data model for Organization is covered.
 
 An exhaustive hierarchy of organizations is includes, e.g. roh:AccreditationIssuer, vivo:Company or vivo:University, among many others. 
 
@@ -5406,7 +5374,7 @@ Besides, an instance of a foaf:Organization is associated to the following entit
 - gn:Feature through relationship gn:locatedIn, where an organization may be associated a geographical scope.  
 - roh:FundingAmount where an organization may receive several funding amounts part of a roh:Funding through roh:grants object property. 
 - vcard:Individual, where an organization obo:hasContactInfo described through ontology vcard. 
-- roh:Infrastructure, where an organization may roh:hasInfrastructure, belonging to any of its subclasses, e.g. roh:Equipment or roh:Facility. 
+- roh:Infrastructure, where an organization may roh:hasInfrastructure, belonging to any of its subclasses, e.g. roh:Equipment or vivo:Facility. 
 - foaf:Organization, where a foaf:Organization may be linked through vivo:hasSucessorOrganization or vivo:hasPredecessorOrganization with another foaf:Organization or may be part of (vivo:partOf) or include (vivo:hasPart) other several foaf:Organization.""" ,
                                                             "An organization" ,
                                                             "An organization." ;
@@ -5459,35 +5427,19 @@ Besides, an instance of a foaf:Organization is associated to the following entit
                                                          ] ,
                                                          [ rdf:type owl:Restriction ;
                                                            owl:onProperty <http://purl.org/roh/mirror/foaf#homepage> ;
-                                                           owl:allValuesFrom owl:Thing
+                                                           owl:allValuesFrom <http://purl.org/roh/mirror/bibo#Document>
                                                          ] ,
                                                          [ rdf:type owl:Restriction ;
                                                            owl:onProperty <http://purl.org/roh/mirror/foaf#img> ;
-                                                           owl:allValuesFrom owl:Thing
+                                                           owl:allValuesFrom <http://purl.org/roh/mirror/foaf#Image>
                                                          ] ,
                                                          [ rdf:type owl:Restriction ;
                                                            owl:onProperty <http://purl.org/roh/mirror/foaf#mbox> ;
-                                                           owl:allValuesFrom owl:Thing
+                                                           owl:allValuesFrom <http://purl.org/roh/mirror/obo/iao#IAO_0000030>
                                                          ] ,
                                                          [ rdf:type owl:Restriction ;
                                                            owl:onProperty <http://purl.org/roh/mirror/vivo#eligibleFor> ;
                                                            owl:allValuesFrom :Accreditation
-                                                         ] ,
-                                                         [ rdf:type owl:Restriction ;
-                                                           owl:onProperty <http://purl.org/roh/mirror/foaf#firstName> ;
-                                                           owl:someValuesFrom xsd:string
-                                                         ] ,
-                                                         [ rdf:type owl:Restriction ;
-                                                           owl:onProperty <http://purl.org/roh/mirror/foaf#name> ;
-                                                           owl:someValuesFrom xsd:string
-                                                         ] ,
-                                                         [ rdf:type owl:Restriction ;
-                                                           owl:onProperty <http://purl.org/roh/mirror/foaf#surname> ;
-                                                           owl:someValuesFrom xsd:string
-                                                         ] ,
-                                                         [ rdf:type owl:Restriction ;
-                                                           owl:onProperty <http://purl.org/roh/mirror/vivo#identifier> ;
-                                                           owl:someValuesFrom xsd:string
                                                          ] ,
                                                          [ rdf:type owl:Restriction ;
                                                            owl:onProperty :birthdate ;
@@ -5536,10 +5488,6 @@ Besides, an instance of a foaf:Organization is associated to the following entit
                                                          [ rdf:type owl:Restriction ;
                                                            owl:onProperty <http://purl.org/roh/mirror/vivo#identifier> ;
                                                            owl:allValuesFrom xsd:string
-                                                         ] ,
-                                                         [ rdf:type owl:Restriction ;
-                                                           owl:onProperty <http://purl.org/roh/mirror/foaf#name> ;
-                                                           owl:maxCardinality "1"^^xsd:nonNegativeInteger
                                                          ] ;
                                          <http://purl.obolibrary.org/obo/IAO_0000111> "person" ;
                                          <http://purl.obolibrary.org/obo/IAO_0000115> "An instance of a human being (Homo sapiens)" ,
@@ -6463,7 +6411,7 @@ Based on obo-bfo:Role also used in VIVO, it defines roles. The object property r
                                                              owl:allValuesFrom rdfs:Literal
                                                            ] ;
                                            <http://purl.obolibrary.org/obo/IAO_0000115> "An agreement involving specific deliverables and payment" ;
-                                           rdfs:comment "A roh:Contract is a legal document which gathers the conditions and obligations of a Person (foaf:Person) or the conditions and obligations of a Project (foaf:Project) and the different organizations which take part in it." ;
+                                           rdfs:comment "A roh:Contract is a legal document which gathers the conditions and obligations of a Person (foaf:Person) or the conditions and obligations of a Project (vivo:Project) and the different organizations which take part in it." ;
                                            rdfs:label "Contract"@en ,
                                                       "Contrato"@es .
 
@@ -6620,7 +6568,10 @@ A vivo:Equipment, subclasss of roh:Infrastructure, belongs to a foaf:Organizatio
                                            <http://purl.obolibrary.org/obo/IAO_0000115> "Something designed, built, installed, etc., to serve a specific function or activity affording a convenience or service." ;
                                            rdfs:comment "A vivo:Facility belongs to an foaf:Organization and might be funded by a roh:Funding." ;
                                            rdfs:label "Facility"@en ,
-                                                      "Instalación"@es .
+                                                      "Instalaciones"@es ,
+                                                      "Instalacions"@ca-es ,
+                                                      "Instalación"@es ,
+                                                      "établissement"@fr .
 
 
 ###  http://purl.org/roh/mirror/vivo#FacultyAdministrativePosition
@@ -6987,14 +6938,6 @@ Contents
                                                             owl:someValuesFrom xsd:string
                                                           ] ,
                                                           [ rdf:type owl:Restriction ;
-                                                            owl:onProperty <http://purl.org/roh/mirror/vivo#freetextKeyword> ;
-                                                            owl:someValuesFrom xsd:string
-                                                          ] ,
-                                                          [ rdf:type owl:Restriction ;
-                                                            owl:onProperty <http://purl.org/roh/mirror/vivo#identifier> ;
-                                                            owl:someValuesFrom xsd:string
-                                                          ] ,
-                                                          [ rdf:type owl:Restriction ;
                                                             owl:onProperty :foreseenJustificationDate ;
                                                             owl:allValuesFrom xsd:dateTime
                                                           ] ,
@@ -7017,6 +6960,14 @@ Contents
                                                           [ rdf:type owl:Restriction ;
                                                             owl:onProperty <http://purl.org/roh/mirror/vivo#description> ;
                                                             owl:allValuesFrom rdfs:Literal
+                                                          ] ,
+                                                          [ rdf:type owl:Restriction ;
+                                                            owl:onProperty <http://purl.org/roh/mirror/vivo#freetextKeyword> ;
+                                                            owl:allValuesFrom xsd:string
+                                                          ] ,
+                                                          [ rdf:type owl:Restriction ;
+                                                            owl:onProperty <http://purl.org/roh/mirror/vivo#identifier> ;
+                                                            owl:allValuesFrom xsd:string
                                                           ] ;
                                           <http://purl.obolibrary.org/obo/IAO_0000112> "An endeavor, frequently collaborative, that occurs over a finite period of time and is intended to achieve a particular aim." ;
                                           <http://purl.obolibrary.org/obo/IAO_0000115> "An endeavor, frequently collaborative, that occurs over a finite period of time and is intended to achieve a particular aim." ;
@@ -7379,7 +7330,6 @@ rdf:Seq rdf:type owl:Class .
                 :PatentApplication
                 :Reservable
                 <http://purl.org/roh/mirror/foaf#Agent>
-                <http://purl.org/roh/mirror/foaf#Document>
                 <http://purl.org/roh/mirror/geonames#Feature>
                 <http://purl.org/roh/mirror/obo/bfo#BFO_0000008>
                 <http://purl.org/roh/mirror/obo/bfo#BFO_0000023>
@@ -7412,7 +7362,6 @@ rdf:Seq rdf:type owl:Class .
                 :Metric
                 :Reservable
                 <http://purl.org/roh/mirror/foaf#Agent>
-                <http://purl.org/roh/mirror/foaf#Document>
                 <http://purl.org/roh/mirror/geonames#Feature>
                 <http://purl.org/roh/mirror/obo/bfo#BFO_0000008>
                 <http://purl.org/roh/mirror/obo/bfo#BFO_0000023>
