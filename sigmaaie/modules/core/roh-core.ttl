@@ -2089,17 +2089,13 @@ vivo:courseCredits  a  owl:DatatypeProperty ;
                             owl:allValuesFrom  :CurriculumVitae ;
                             owl:onProperty     :hasCV
                           ] ;
-        rdfs:subClassOf   [ a                   owl:Restriction ;
-                            owl:maxCardinality  "1"^^xsd:nonNegativeInteger ;
-                            owl:onProperty      <http://purl.org/roh/mirror/foaf#name>
-                          ] ;
         rdfs:subClassOf   [ a                  owl:Restriction ;
                             owl:allValuesFrom  xsd:string ;
                             owl:onProperty     <http://purl.org/roh/mirror/foaf#surname>
                           ] ;
         rdfs:subClassOf   [ a                   owl:Restriction ;
                             owl:onProperty      vivo:identifier ;
-                            owl:someValuesFrom  xsd:string
+                            owl:allValuesFrom  xsd:string
                           ] ;
         rdfs:subClassOf   [ a                  owl:Restriction ;
                             owl:allValuesFrom  xsd:string ;
@@ -2109,17 +2105,9 @@ vivo:courseCredits  a  owl:DatatypeProperty ;
                             owl:allValuesFrom  :Accreditation ;
                             owl:onProperty     :hasAccreditation
                           ] ;
-        rdfs:subClassOf   [ a                   owl:Restriction ;
-                            owl:onProperty      <http://purl.org/roh/mirror/foaf#surname> ;
-                            owl:someValuesFrom  xsd:string
-                          ] ;
         rdfs:subClassOf   [ a                  owl:Restriction ;
                             owl:allValuesFrom  owl:Thing ;
                             owl:onProperty     <http://purl.org/roh/mirror/foaf#homepage>
-                          ] ;
-        rdfs:subClassOf   [ a                   owl:Restriction ;
-                            owl:onProperty      <http://purl.org/roh/mirror/foaf#firstName> ;
-                            owl:someValuesFrom  xsd:string
                           ] ;
         rdfs:subClassOf   [ a                  owl:Restriction ;
                             owl:allValuesFrom  xsd:string ;
@@ -2127,7 +2115,7 @@ vivo:courseCredits  a  owl:DatatypeProperty ;
                           ] ;
         rdfs:subClassOf   [ a                   owl:Restriction ;
                             owl:onProperty      <http://purl.org/roh/mirror/foaf#name> ;
-                            owl:someValuesFrom  xsd:string
+                            owl:allValuesFrom  xsd:string
                           ] ;
         rdfs:subClassOf   [ a                  owl:Restriction ;
                             owl:allValuesFrom  :PersonExpense ;
@@ -2612,7 +2600,7 @@ vivo:Project  a          owl:Class ;
                          ] ;
         rdfs:subClassOf  [ a                   owl:Restriction ;
                            owl:onProperty      vivo:identifier ;
-                           owl:someValuesFrom  xsd:string
+                           owl:allValuesFrom  xsd:string
                          ] ;
         rdfs:subClassOf  [ a                  owl:Restriction ;
                            owl:allValuesFrom  :ResearchObject ;
@@ -2632,7 +2620,7 @@ vivo:Project  a          owl:Class ;
                          ] ;
         rdfs:subClassOf  [ a                   owl:Restriction ;
                            owl:onProperty      vivo:freetextKeyword ;
-                           owl:someValuesFrom  xsd:string
+                           owl:allValuesFrom   xsd:string
                          ] ;
         rdfs:subClassOf  [ a                   owl:Restriction ;
                            owl:maxCardinality  "1"^^xsd:nonNegativeInteger ;
@@ -3275,7 +3263,7 @@ vitro:exampleAnnot  a  owl:AnnotationProperty .
                          ] ;
         rdfs:subClassOf  [ a                   owl:Restriction ;
                            owl:onProperty      vivo:identifier ;
-                           owl:someValuesFrom  xsd:string
+                           owl:allValuesFrom  xsd:string
                          ] ;
         rdfs:subClassOf  [ a                  owl:Restriction ;
                            owl:allValuesFrom  xsd:string ;
@@ -4966,10 +4954,6 @@ vivo:University  a       owl:Class ;
         rdfs:subClassOf  [ a                  owl:Restriction ;
                            owl:allValuesFrom  vivo:FundingOrganization ;
                            owl:onProperty     :promotedBy
-                         ] ;
-        rdfs:subClassOf  [ a                   owl:Restriction ;
-                           owl:onProperty      vivo:identifier ;
-                           owl:someValuesFrom  xsd:string
                          ] .
 
 :isSupportedBy  a      owl:ObjectProperty ;
