@@ -242,7 +242,7 @@ terms:source  a  owl:AnnotationProperty .
         rdfs:subClassOf  vivo:Position .
 
 [ a            owl:AllDisjointClasses ;
-  owl:members  ( :Accreditation :Activity :CurriculumVitae :Expense :Funding :FundingAmount :FundingProgram :FundingSource :Metric :Reservable <http://purl.org/roh/mirror/foaf#Agent> <http://purl.org/roh/mirror/foaf#Document> <http://purl.org/roh/mirror/geonames#Feature> bfo:BFO_0000008 bfo:BFO_0000023 <http://purl.org/roh/mirror/obo/ero#ERO_0000005> iao:IAO_0000030 <http://purl.org/roh/mirror/vcard#Kind> vivo:AcademicDegree vivo:Project vivo:Relationship rdf:List rdf:Seq skos:Concept skos:ConceptScheme )
+  owl:members  ( :Accreditation :Activity :CurriculumVitae :Expense :Funding :FundingAmount :FundingProgram :FundingSource :Metric :Reservable <http://purl.org/roh/mirror/foaf#Agent> <http://purl.org/roh/mirror/geonames#Feature> bfo:BFO_0000008 bfo:BFO_0000023 <http://purl.org/roh/mirror/obo/ero#ERO_0000005> iao:IAO_0000030 <http://purl.org/roh/mirror/vcard#Kind> vivo:AcademicDegree vivo:Project vivo:Relationship rdf:List rdf:Seq skos:Concept skos:ConceptScheme )
 ] .
 
 <http://purl.org/roh/mirror/vcard#Address>
@@ -363,7 +363,7 @@ bibo:Book  a              owl:Class ;
         rdfs:comment      "An image." ;
         rdfs:isDefinedBy  <http://purl.org/roh/mirror/foaf#> ;
         rdfs:label        "Image" , "Imagen"@es ;
-        rdfs:subClassOf   <http://purl.org/roh/mirror/foaf#Document> ;
+        rdfs:subClassOf   bibo:Document ;
         ns:term_status    "stable" .
 
 <http://purl.org/roh/mirror/foaf#page>
@@ -679,7 +679,7 @@ vivo:AttendeeRole  a     owl:Class ;
         rdfs:domain         owl:Thing ;
         rdfs:isDefinedBy    <http://purl.org/roh/mirror/foaf#> ;
         rdfs:label          "homepage" , "página web"@es ;
-        rdfs:range          <http://purl.org/roh/mirror/foaf#Document> ;
+        rdfs:range          bibo:Document ;
         rdfs:subPropertyOf  <http://purl.org/roh/mirror/foaf#page> , <http://purl.org/roh/mirror/foaf#isPrimaryTopicOf> ;
         ns:term_status      "stable" .
 
@@ -740,7 +740,7 @@ bfo:BFO_0000055  a        owl:ObjectProperty ;
                            owl:onProperty     vivo:hasGoverningAuthority
                          ] ;
         rdfs:subClassOf  [ a                  owl:Restriction ;
-                           owl:allValuesFrom  owl:Thing ;
+                           owl:allValuesFrom  skos:Concept ;
                            owl:onProperty     vivo:hasSubjectArea
                          ] ;
         rdfs:subClassOf  [ a                  owl:Restriction ;
@@ -770,7 +770,7 @@ bfo:BFO_0000055  a        owl:ObjectProperty ;
 ] .
 
 [ a            owl:AllDisjointClasses ;
-  owl:members  ( :Accreditation :Activity :CurriculumVitae :Expense :Funding :FundingAmount :FundingProgram :FundingSource :Metric :PatentApplication :Reservable <http://purl.org/roh/mirror/foaf#Agent> <http://purl.org/roh/mirror/foaf#Document> <http://purl.org/roh/mirror/geonames#Feature> bfo:BFO_0000008 bfo:BFO_0000023 <http://purl.org/roh/mirror/obo/ero#ERO_0000005> iao:IAO_0000030 <http://purl.org/roh/mirror/vcard#Address> <http://purl.org/roh/mirror/vcard#Email> <http://purl.org/roh/mirror/vcard#Kind> <http://purl.org/roh/mirror/vcard#Name> vivo:AcademicDegree vivo:Project vivo:Relationship rdf:List rdf:Seq skos:Concept skos:ConceptScheme )
+  owl:members  ( :Accreditation :Activity :CurriculumVitae :Expense :Funding :FundingAmount :FundingProgram :FundingSource :Metric :PatentApplication :Reservable <http://purl.org/roh/mirror/foaf#Agent> <http://purl.org/roh/mirror/geonames#Feature> bfo:BFO_0000008 bfo:BFO_0000023 <http://purl.org/roh/mirror/obo/ero#ERO_0000005> iao:IAO_0000030 <http://purl.org/roh/mirror/vcard#Address> <http://purl.org/roh/mirror/vcard#Email> <http://purl.org/roh/mirror/vcard#Kind> <http://purl.org/roh/mirror/vcard#Name> vivo:AcademicDegree vivo:Project vivo:Relationship rdf:List rdf:Seq skos:Concept skos:ConceptScheme )
 ] .
 
 <http://purl.org/roh/mirror/obo/ero#ERO_0001260>
@@ -857,13 +857,6 @@ vivo:TeacherRole  a      owl:Class ;
         rdfs:label       "Rol de Profesor"@es , "Teacher Role"@en ;
         rdfs:subClassOf  bfo:BFO_0000023 ;
         obo:IAO_0000115  "A role of serving as an educator" .
-
-<http://purl.org/roh/mirror/foaf#Document>
-        a                 owl:Class ;
-        rdfs:comment      "A document." ;
-        rdfs:isDefinedBy  <http://purl.org/roh/mirror/foaf#> ;
-        rdfs:label        "Document" , "Documento"@es ;
-        ns:term_status    "stable" .
 
 :TestFundingSource  a  owl:NamedIndividual , :FundingSource ;
         rdfs:label  "TestFundingSource"@en ;
@@ -997,7 +990,6 @@ bibo:Document  a          owl:Class ;
                             owl:allValuesFrom  vivo:DateTimeValue ;
                             owl:onProperty     vivo:dateTimeValue
                           ] ;
-        owl:disjointWith  <http://purl.org/roh/mirror/foaf#Document> ;
         ns:term_status    "stable" ;
         skos:prefLabel    "Publicación"@gl , "Publicación"@es , "Publicació"@ca-es , "Publicació"@ca-ad , "Publicação"@pt , "Academic publication"@en , "Publicação acadêmica"@pt , "Publication"@fr , "Publication"@en , "Publicació acadèmica"@ca-ad , "Publication académique"@fr , "Publicació acadèmica"@ca-es , "Publicación académica"@es , "Publicación académica"@gl .
 
@@ -2082,7 +2074,7 @@ vivo:courseCredits  a  owl:DatatypeProperty ;
                             owl:onProperty     :birthdate
                           ] ;
         rdfs:subClassOf   [ a                  owl:Restriction ;
-                            owl:allValuesFrom  owl:Thing ;
+                            owl:allValuesFrom  <http://purl.org/roh/mirror/foaf#Image> ;
                             owl:onProperty     <http://purl.org/roh/mirror/foaf#img>
                           ] ;
         rdfs:subClassOf   [ a                  owl:Restriction ;
@@ -2106,7 +2098,7 @@ vivo:courseCredits  a  owl:DatatypeProperty ;
                             owl:onProperty     :hasAccreditation
                           ] ;
         rdfs:subClassOf   [ a                  owl:Restriction ;
-                            owl:allValuesFrom  owl:Thing ;
+                            owl:allValuesFrom  bibo:Document ;
                             owl:onProperty     <http://purl.org/roh/mirror/foaf#homepage>
                           ] ;
         rdfs:subClassOf   [ a                  owl:Restriction ;
@@ -2122,7 +2114,7 @@ vivo:courseCredits  a  owl:DatatypeProperty ;
                             owl:onProperty     :spends
                           ] ;
         rdfs:subClassOf   [ a                  owl:Restriction ;
-                            owl:allValuesFrom  owl:Thing ;
+                            owl:allValuesFrom  iao:IAO_0000030 ;
                             owl:onProperty     <http://purl.org/roh/mirror/foaf#mbox>
                           ] ;
         rdfs:subClassOf   [ a                  owl:Restriction ;
@@ -3414,7 +3406,7 @@ bibo:presentedAt  a       owl:ObjectProperty ;
         rdfs:domain       <http://purl.org/roh/mirror/foaf#Agent> ;
         rdfs:isDefinedBy  <http://purl.org/roh/mirror/foaf#> ;
         rdfs:label        "buzón personal"@es , "personal mailbox" ;
-        rdfs:range        owl:Thing ;
+        rdfs:range        iao:IAO_0000030 ;
         ns:term_status    "stable" .
 
 :authorCitation  a    owl:ObjectProperty ;
@@ -4999,7 +4991,7 @@ bibo:volume  a              owl:DatatypeProperty ;
                             owl:someValuesFrom  xsd:string
                           ] ;
         rdfs:subClassOf   [ a                  owl:Restriction ;
-                            owl:allValuesFrom  owl:Thing ;
+                            owl:allValuesFrom  bibo:Document ;
                             owl:onProperty     <http://purl.org/roh/mirror/foaf#homepage>
                           ] ;
         rdfs:subClassOf   [ a                  owl:Restriction ;
