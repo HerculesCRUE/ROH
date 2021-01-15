@@ -227,6 +227,14 @@ iao:IAO_0000030  a       owl:Class ;
                          ] ;
         obo:IAO_0000115  "A generically dependent continuant that is about some thing."@en .
 
+obo:IAO_0000136  a          owl:ObjectProperty ;
+        rdfs:domain         obo:IAO_0000030 ;
+        rdfs:label          "is about"@en ;
+        obo:IAO_0000112     "This document is about information artifacts and their representations"@en ;
+        obo:IAO_0000115     "is_about is a (currently) primitive relation that relates an information artifact to an entity."@en ;
+        obo:IAO_0000117     "person:Alan Ruttenberg"@en ;
+        obo:IAO_0000119     "Smith, Ceusters, Ruttenberg, 2000 years of philosophy"@en .
+
 :TestOrganization  a  owl:NamedIndividual ;
         rdfs:label  "TestOrganization"@en ;
         :produces   :TestNonResearchSoftware .
@@ -2027,13 +2035,27 @@ vivo:courseCredits  a  owl:DatatypeProperty ;
                            owl:someValuesFrom  vivo:DateTimeValue
                          ] ;
         rdfs:subClassOf  [ a                   owl:Restriction ;
-                           owl:onProperty      vivo:relates ;
+                           owl:onProperty      :homologationOf ;
                            owl:someValuesFrom  vivo:AwardedDegree
                          ] ;
         rdfs:subClassOf  [ a                  owl:Restriction ;
                            owl:allValuesFrom  vivo:AwardedDegree ;
-                           owl:onProperty     vivo:relates
+                           owl:onProperty     :homologationOf
                          ] .
+
+:homologationOf  a   owl:ObjectProperty ;
+        rdfs:label     "homologation of"@en ;
+	rdfs:comment   "proposed addition to avoid overloading vivo:relates"@en ;
+	owl:inverseOf  :hasHomologation ;
+	rdfs:domain    :DegreeHomologation ;
+	rdfs:range     :AwardedDegree .
+
+:hasHomologation  a   owl:ObjectProperty ;
+        rdfs:label     "has homologation"@en ;
+	rdfs:comment   "proposed addition to avoid overloading vivo:relatedBy"@en ;
+	owl:inverseOf  :homologationOf ;
+	rdfs:domain    :AwardedDegree ;
+	rdfs:range     :DegreeHomologation .
 
 :contractSigningDate  a  owl:ObjectProperty ;
         rdfs:comment   "An object property linking a Contract with the date (DateTimeValue) when it was signed."@en ;
@@ -2941,7 +2963,7 @@ vivo:supportedInformationResource
         rdfs:label       "Justification"@en ;
         rdfs:subClassOf  bibo:Report ;
         rdfs:subClassOf  [ a                   owl:Restriction ;
-                           owl:onProperty      vivo:relates ;
+                           owl:onProperty      obo:IAO_0000136 ;
                            owl:someValuesFrom  vivo:Project
                          ] .
 
@@ -3005,9 +3027,14 @@ vivo:description  a   owl:DatatypeProperty ;
                             owl:allValuesFrom  xsd:string ;
                             owl:onProperty     vivo:identifier
                           ] ;
+        rdfs:subClassOf   [
+	                    a                  owl:Restriction ;
+                            owl:onProperty     obo:IAO_0000136 ;
+                            owl:someValuesFrom vivo:Project
+                          ] ;
         rdfs:subClassOf   [ a                  owl:Restriction ;
                             owl:allValuesFrom  [ a            owl:Class ;
-                                                 owl:unionOf  ( :ProjectContract bibo:Report vivo:Project )
+                                                 owl:unionOf  ( :ProjectContract bibo:Report )
                                                ] ;
                             owl:onProperty     vivo:relates
                           ] ;
