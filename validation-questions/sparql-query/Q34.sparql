@@ -3,14 +3,14 @@ PREFIX vivo: <http://purl.org/roh/mirror/vivo#>
 PREFIX ro: <http://purl.org/roh/mirror/obo/ro#>
 
 
-SELECT ?project ?company ?fundingAmounts 
+SELECT ?project ?company ?fundingAmounts ?funding ?fundingProgram
 WHERE {
   ?project a vivo:Project ;
   roh:projectStatus ?status ;
-  roh:isSupportedBy ?funding .
+  roh:isSupportedBy ?funding ;
+  roh:fundedBy ?fundingProgram .
   ?status a roh:ProposalSubmitted .
-  ?funding ro:BFO_0000051 ?fundingAmount ;
-           roh:fundedBy ?fundingProgram .
+  ?funding ro:BFO_0000051 ?fundingAmount .
   ?fundingProgram roh:promotedBy ?company .
   ?fundingAmount roh:monetaryAmount ?fundingAmounts .
 }
