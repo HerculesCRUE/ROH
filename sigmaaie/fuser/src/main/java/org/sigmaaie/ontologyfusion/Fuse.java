@@ -20,7 +20,6 @@ import java.util.Iterator;
 import java.util.List;
 import java.util.Map;
 import java.util.Random;
-import java.util.Set;
 
 import org.apache.commons.csv.CSVFormat;
 import org.apache.commons.csv.CSVRecord;
@@ -171,14 +170,20 @@ public class Fuse {
         Model ontology2 = ("omit".equals(args[2])) 
                 ? ModelFactory.createDefaultModel() : loadOntology(args[2]);
         Model fused = null;
-        if("university-structure".equals(args[0])) {
+        boolean writeFused = true;
+        if("docsonly".equals(args[0])) {
+            fused = loadOntology(args[3]);
+            writeFused = false;
+        } else if("university-structure".equals(args[0])) {
             fused = processUniversityStructure(ontology1);
         } else if("geopolitical".equals(args[0])) {
             fused = processGeopolitical(ontology1);
         } else {
             fused = fuse(args[0], ontology1, ontology2);
         }
-        fused.write(new FileOutputStream(new File(args[3]) + ".ttl"), "TTL");
+        if(writeFused) {
+            fused.write(new FileOutputStream(new File(args[3]) + ".ttl"), "TTL");
+        }
         Model sampleData = createSampleData(fused);
         sampleData.write(new FileOutputStream(new File(args[3]) + "-sampleData.ttl"), "TTL");
         OntModel ontology = ModelFactory.createOntologyModel(OntModelSpec.OWL_MEM, fused);
@@ -578,15 +583,40 @@ public class Fuse {
         }
     }
     
+    private static Model getGeoNamesData() {
+        Model geo = ModelFactory.createDefaultModel();
+        List<String> geoIDs = Arrays.asList("2510769", "2264397", "2635167", "2593109", "3125609", "2513413");
+        for(String geoID : geoIDs) {
+            geo.add(geo.getResource("https://sws.geonames.org/" + geoID + "/"), 
+                    RDF.type, geo.getResource(prefixes2.get("geonames") + "Feature"));
+            geo.add(geo.getResource("https://sws.geonames.org/" + geoID + "/"), 
+                    RDFS.label, geoID);
+        }
+        return geo;
+    }
+    
+    private static Model removeTemporaryGeoLabels(Model model) {
+        List<String> geoIDs = Arrays.asList("2510769", "2264397", "2635167", "2593109", "3125609", "2513413");
+        for(String geoID : geoIDs) {
+            model.removeAll(model.getResource("https://sws.geonames.org/" + geoID + "/"), 
+                    RDFS.label, (RDFNode) null);
+        }
+        return model;
+    }
+    
     private static Model createSampleData(Model model) {
         OntModel ontology = ModelFactory.createOntologyModel(OntModelSpec.OWL_MEM, model);
         String namespace = "http://example.org/individual/";
         Model sampleData = ModelFactory.createDefaultModel();
+        sampleData.add(getGeoNamesData());
         StmtIterator sit = ontology.listStatements(null, RDF.type, OWL.Class);
         while(sit.hasNext()) {
             Statement stmt = sit.next();
             if(!stmt.getSubject().isAnon()) {
                 OntClass clazz = ontology.getOntClass(stmt.getSubject().getURI());
+                if(clazz.getURI().contains("Feature")) {
+                    continue;
+                }
                 List<String[]> objProps = getAllObjectProperties(clazz, ontology);
                 List<String[]> dataProps = getAllDatatypeProperties(clazz, ontology);
                 // figure out how many individuals we need to represent the different possible values
@@ -640,10 +670,23 @@ public class Fuse {
                         }
                         log.debug("Adding " + property.getURI() + " range " 
                                 + objectType.getURI() + " to individual " + clone.getURI());
-                        Resource objectInd = getRelatedIndividual(
-                                0, objectType, ontology, sampleData, namespace);
-                        if(objectInd != null) {
-                            sampleData.add(clone, property, objectInd);
+                        Property inverse = getInverse(property, ontology);
+                        Resource inverseInd = null;
+                        if(inverse != null) {
+                            StmtIterator invIt = sampleData.listStatements(null, inverse, clone);
+                            while(invIt.hasNext()) {
+                                Statement invStmt = invIt.next();
+                                inverseInd = invStmt.getSubject();
+                            }
+                        }
+                        if(inverseInd != null) {
+                            sampleData.add(clone, property, inverseInd);
+                        } else {
+                            Resource objectInd = getRelatedIndividual(
+                                    0, objectType, ontology, sampleData, namespace);
+                            if(objectInd != null) {
+                                sampleData.add(clone, property, objectInd);
+                            }
                         }
                     }
                 }
@@ -675,7 +718,64 @@ public class Fuse {
         sampleData = fleshOutStubs(sampleData, ontology, namespace);
         sampleData = createAuthorLists(sampleData);
         sampleData = addDateTimePrecision(sampleData);
+        sampleData = fixRelates(sampleData);
+        sampleData = fixHasRole(sampleData);
+        sampleData = replaceTemporaryClass(prefixes2.get("roh") + "JournalMetric", prefixes2.get("roh") + "PublicationMetric", sampleData);
+        sampleData = removeTemporaryGeoLabels(sampleData);
         return sampleData;
+    }
+    
+    private static Model replaceTemporaryClass(String fromClassURI, String toClassURI, Model model) {
+        Model additions = ModelFactory.createDefaultModel();
+        Model removals = ModelFactory.createDefaultModel();
+        StmtIterator sit = model.listStatements(null, RDF.type, model.getResource(fromClassURI));
+        while(sit.hasNext()) {
+            Statement stmt = sit.next();
+            removals.add(stmt);
+            additions.add(stmt.getSubject(), RDF.type, model.getResource(toClassURI));
+        }
+        model.remove(removals);
+        model.add(additions);
+        return model;
+    }
+    
+    private static Model fixHasRole(Model model) {
+        Model additions = ModelFactory.createDefaultModel();
+        Model removals = ModelFactory.createDefaultModel();
+        StmtIterator sit = model.listStatements(null, model.getProperty(prefixes2.get("roh") + "roleOf"), (RDFNode) null);
+        while(sit.hasNext()) {
+            Statement stmt = sit.next();
+            if(!stmt.getObject().isResource()) {
+                continue;
+            }
+            Resource bearer = stmt.getObject().asResource();
+            additions.add(bearer, model.getProperty("hasRole"), stmt.getSubject());
+            additions.add(bearer, model.getProperty(prefixes2.get("ro") + "RO_0000053"), stmt.getSubject());
+            additions.add(stmt.getSubject(), model.getProperty(prefixes2.get("ro") + "RO_0000052"), bearer);
+            removals.add(model.listStatements(null, model.getProperty("hasRole"), stmt.getSubject()));
+            removals.add(model.listStatements(null, model.getProperty(prefixes2.get("ro") + "RO_0000053"), stmt.getSubject()));
+            removals.add(model.listStatements(stmt.getSubject(), model.getProperty(prefixes2.get("ro") + "RO_0000052"), (RDFNode) null));
+        }
+        model.remove(removals);
+        model.add(additions);
+        return model;
+    }
+    
+    private static Model fixRelates(Model model) {
+        Model additions = ModelFactory.createDefaultModel();
+        Model removals = ModelFactory.createDefaultModel();
+        List<String> fakePredicates = Arrays.asList(prefixes2.get("vivo") + "relates1", prefixes2.get("vivo") + "relates2", prefixes2.get("vivo") + "relates3");
+        for(String fakePredicate : fakePredicates) {
+            StmtIterator sit = model.listStatements(null, model.getProperty(fakePredicate), (RDFNode) null);
+            while(sit.hasNext()) {
+                Statement stmt = sit.next();
+                removals.add(stmt);
+                additions.add(stmt.getSubject(), model.getProperty(prefixes2.get("vivo") + "relates"), stmt.getObject());
+            }
+        }
+        model.remove(removals);
+        model.add(additions);
+        return model;
     }
     
     private static String[] getEnumValues(String[] dataProp) {
@@ -686,7 +786,7 @@ public class Fuse {
     
     private static void createDatatypeValue(Resource res, Property property, 
             String rangeDatatypeURI, Model sampleData) {
-        if(rangeDatatypeURI == null || RDFS.Literal.equals(rangeDatatypeURI)) {
+        if(rangeDatatypeURI == null || RDFS.Literal.getURI().equals(rangeDatatypeURI)) {
             log.warn("Null rangeDatatypeURI for" + property.getURI());
             sampleData.add(res, property, "plain literal " + random.nextInt(9999));
         } else if(rangeDatatypeURI.equals(XSD.integer.getURI()) || rangeDatatypeURI.equals(XSD.xint.getURI())) {
@@ -781,7 +881,7 @@ public class Fuse {
             Resource newInd = sampleData.getResource(namespace + "sample-" + clazz.getLocalName() + "-" + autoIncrement());
             sampleData.add(newInd, RDF.type, clazz);
             sampleData.add(newInd, RDFS.label, "stub");
-            return null;
+            return newInd;
         }
     }
     
@@ -789,12 +889,34 @@ public class Fuse {
         return isSubClassOf(clazz, prefixes2.get("vivo") + "Relationship", ontology) 
                /* || isSubClassOf(clazz, prefixes2.get("vivo") + "DateTimeInterval", ontology) */
                /* || isSubClassOf(clazz, prefixes2.get("vivo") + "DateTimeValue", ontology) */
-                || isSubClassOf(clazz, prefixes2.get("bfo") + "BFO_0000023", ontology);
+                || isSubClassOf(clazz, prefixes2.get("bfo") + "BFO_0000023", ontology)
+                || isSubClassOf(clazz, prefixes2.get("roh") + "Metric", ontology);
     }
     
     private static Resource createRelatedIndividual(int depth, OntClass clazz, OntModel ontology, 
             Model sampleData, String namespace) {
         return createRelatedIndividual(depth, clazz, ontology, sampleData, namespace, null);
+    }
+    
+    private static Property getInverse(Property property, Model ontology) {
+        Property inverse = null;
+        StmtIterator sit = ontology.listStatements(ontology.getResource(property.getURI()), OWL.inverseOf, (RDFNode) null);
+        while(sit.hasNext()) {
+            Statement stmt = sit.next();
+            if(stmt.getObject().isURIResource()) {
+                inverse = ontology.getProperty(stmt.getObject().asResource().getURI());
+            }
+        }
+        if(inverse == null) {
+            sit = ontology.listStatements(null, OWL.inverseOf, ontology.getResource(property.getURI()));
+            while(sit.hasNext()) {
+                Statement stmt = sit.next();
+                if(stmt.getSubject().isURIResource()) {
+                    inverse = ontology.getProperty(stmt.getSubject().asResource().getURI());
+                }
+            }
+        }
+        return inverse;
     }
     
     private static Resource createRelatedIndividual(int depth, OntClass clazz, OntModel ontology, 
@@ -811,16 +933,35 @@ public class Fuse {
         List<String[]> objProps = getAllObjectProperties(clazz, ontology);
         for(String[] objProp : objProps) {                                       
             Property property = sampleData.getProperty(objProp[0]);
-            OntClass range = ontology.getOntClass(getRangeURI(objProp));
-            if(range == null) {
-                log.warn("Null range class found for " + property.getURI());
-                continue;
+            Property inverse = getInverse(property, ontology);
+            Resource inverseInd = null;
+            if(inverse != null) {
+                StmtIterator sit = sampleData.listStatements(null, inverse, newInd);
+                while(sit.hasNext()) {
+                    Statement stmt = sit.next();
+                    inverseInd = stmt.getSubject();
+                }
             }
-            OntClass objectType = getRandomSubClass(range, ontology);
-            log.debug("Adding " + property.getURI() + " range " + objectType.getURI() + " to individual " + newInd.getURI());
-            Resource objectInd = getRelatedIndividual(depth, objectType, ontology, sampleData, namespace);
-            if(objectInd != null) {
-                sampleData.add(newInd, property, objectInd);
+            if(inverseInd != null) {
+                sampleData.add(newInd, property, inverseInd);
+            } else {
+                OntClass range = ontology.getOntClass(getRangeURI(objProp));
+                if( (prefixes2.get("bfo") + "BFO_0000054").equals(property.getURI()) ) {
+                    int rand = random.nextInt(1);
+                    if(rand == 0) {
+                        range = ontology.getOntClass(prefixes2.get("vivo") + "Project");
+                    }
+                }
+                if(range == null) {
+                    log.warn("Null range class found for " + property.getURI());
+                    continue;
+                }
+                OntClass objectType = getRandomSubClass(range, ontology);
+                log.debug("Adding " + property.getURI() + " range " + objectType.getURI() + " to individual " + newInd.getURI());
+                Resource objectInd = getRelatedIndividual(depth, objectType, ontology, sampleData, namespace);
+                if(objectInd != null) {
+                    sampleData.add(newInd, property, objectInd);
+                }
             }
         }
         List<String[]> dataProps = getAllDatatypeProperties(clazz, ontology);
