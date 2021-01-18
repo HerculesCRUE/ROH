@@ -1,0 +1,12 @@
+PREFIX roh: <http://purl.org/roh#>
+PREFIX bibo: <http://purl.org/roh/mirror/bibo#>
+PREFIX rdfs:  <http://www.w3.org/2000/01/rdf-schema#>
+
+SELECT ?researcher (COUNT(?metric) as ?count)
+WHERE {
+	?researchObject	a roh:ResearchObject ;
+					bibo:authorList ?authorList ;
+					roh:hasMetric ?metric .
+	?metric roh:impactFactor ?impactFactor .
+	?authorList rdfs:member ?researcher .
+} GROUP BY ?researcher 
