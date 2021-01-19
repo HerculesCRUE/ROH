@@ -2,12 +2,12 @@ PREFIX vivo: <http://purl.org/roh/mirror/vivo#>
 PREFIX roh: <http://purl.org/roh#>
 PREFIX bibo: <http://purl.org/roh/mirror/bibo#>
 PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
-SELECT ?patent ?centre ?knowledgeArea 
+SELECT DISTINCT ?patent ?centre ?knowledgeArea 
 WHERE {
   ?patent a bibo:Patent ;
   bibo:authorList ?authorList .
   ?patent roh:hasKnowledgeArea ?knowledgeArea .
-  ?authorlist rdfs:member ?author .
+  ?authorlist ?member ?author .
   ?position roh:positionOf ?author .
   ?position vivo:relates ?centre .
   ?centre a roh:ResearchGroup .

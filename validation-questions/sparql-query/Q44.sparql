@@ -14,7 +14,7 @@ WHERE{
     ?role roh:roleOf ?researchOrganization .
     ?otherRole roh:roleOf ?otherOrganization .
     ?university ro:BFO_0000051 ?otherOrganization .
-    ?university a vivo:University .
+    # ?university a vivo:University .
     ?dateTimeInterval	vivo:start ?start ;
     					vivo:end ?end .
     ?start vivo:dateTime ?startTime .

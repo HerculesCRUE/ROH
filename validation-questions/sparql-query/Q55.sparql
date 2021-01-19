@@ -17,7 +17,7 @@ WHERE {
   	?fundingAmount roh:monetaryAmount ?fundingAmounts .
   	?role roh:roleOf ?organization .
   	?organization a ?researchGroupClass .
-  	?researchGroupClass	rdfs:subClassOf foaf:Organization .
+  	# ?researchGroupClass	rdfs:subClassOf foaf:Organization .
   	?projectStatus a ?projectStatusClass .
   	FILTER (?projectStatusClass != roh:ProposalSubmitted)
 }

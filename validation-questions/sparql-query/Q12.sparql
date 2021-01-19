@@ -2,7 +2,7 @@ PREFIX vivo: <http://purl.org/roh/mirror/vivo#>
 PREFIX roh: <http://purl.org/roh#>
 PREFIX gn:	<http://purl.org/roh/mirror/geonames#>
 
-SELECT DISTINCT ?project ?centre ?location ?projectStatusClass
+SELECT DISTINCT ?project ?centre ?location
 WHERE {
 	?project	a vivo:Project ; 
 				gn:locatedIn ?location ;
@@ -11,4 +11,4 @@ WHERE {
     ?project	roh:projectStatus ?projectStatus . 
     ?projectStatus a ?projectStatusClass .
     FILTER (?projectStatusClass != roh:ProposalSubmitted)
-}
+} GROUP BY ?location
