@@ -1692,7 +1692,7 @@ vivo:dateIssued  a    owl:ObjectProperty ;
 :BachelorDegree  a       owl:Class ;
         rdfs:comment     "An undergraduate academic degree awarded by colleges and universities upon completion of a course of study lasting three to four years (depending on institution and academic discipline)."@en ;
         rdfs:label       "Bachelor's degree"@en , "Títol de bàtxelor"@ca-ad , "Licenciatura (pós-Bologna)"@pt-pt , "Títol de grau"@ca-es , "Título de grado"@es ;
-        rdfs:subClassOf  vivo:AcademicDegree , vivo:AwardedDegree ;
+        rdfs:subClassOf  vivo:AcademicDegree ;
         skos:altLabel    "Bàtxelor"@ca-ad , "Grao"@gl , "Grau"@pt , "Grau"@ca-es , "Grado"@es , "Gradu"@eu ;
         skos:prefLabel   "Títol de bàtxelor"@ca-ad , "Licenciatura (pós-Bologna)"@pt-pt , "Título de grado"@es , "Bachelor's degree"@en , "Títol de grau"@ca-es .
 
@@ -3564,7 +3564,7 @@ bibo:Issue  a             owl:Class ;
 
 :DoctoralDegree  a       owl:Class ;
         rdfs:label       "Doctoral degree"@en , "Doctorat"@fr-fr , "Doctorat"@fr-ch , "Doctorat"@fr-ca , "Doctorat"@fr-be , "Doctorat"@ca-es , "Doctorat"@ca-ad , "Doctorado"@es , "Doktorego"@eu , "Doutoramento"@pt , "Doutoramento"@gl ;
-        rdfs:subClassOf  vivo:AwardedDegree , vivo:AcademicDegree ;
+        rdfs:subClassOf  vivo:AcademicDegree ;
         skos:altLabel    "Doctorate"@en , "Doktoretza"@eu ;
         skos:prefLabel   "Doctorado"@es , "Doctorat"@fr-fr , "Doctorat"@fr-ch , "Doctorat"@fr-ca , "Doctorat"@fr-be , "Doutoramento"@pt , "Doutoramento"@gl , "Doktorego"@eu , "Doctorat"@ca-ad , "Doctorat"@ca-es , "Doctoral degree"@en .
 
@@ -4519,7 +4519,7 @@ vivo:hasSubjectArea  a  owl:ObjectProperty ;
 
 :MasterDegree  a         owl:Class ;
         rdfs:label       "Magister Scientiae"@es-ve , "Mestrado"@pt-br , "Mestrado"@pt-pt , "Maîtrise universitaire"@fr-fr , "Maîtrise universitaire"@fr-ca , "Maîtrise universitaire"@fr-be , "Maîtrise universitaire"@fr-ch , "Máster universitario"@gl , "Master's degree"@en , "Máster universitario"@es-es , "Màster universitari"@ca-es , "Màster universitari"@ca-ad ;
-        rdfs:subClassOf  vivo:AwardedDegree , vivo:AcademicDegree ;
+        rdfs:subClassOf  vivo:AcademicDegree ;
         skos:altLabel    "Mestratge universitari"@ca-es , "Mestrado universitario"@gl , "Mestratge universitari"@ca-ad ;
         skos:prefLabel   "Maîtrise universitaire"@fr-fr , "Maîtrise universitaire"@fr-ch , "Maîtrise universitaire"@fr-ca , "Maîtrise universitaire"@fr-be , "Màster universitari"@ca-ad , "Màster universitari"@ca-es , "Máster universitario"@gl , "Máster universitario"@es-es , "Mestrado"@pt-pt , "Mestrado"@pt-br , "Master's degree"@en , "Magister Scientiae"@es-ve .
 
