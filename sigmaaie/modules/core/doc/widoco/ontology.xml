@@ -967,7 +967,6 @@ by creating a research management system with semantic capacities based on seman
 
     <owl:ObjectProperty rdf:about="http://purl.org/roh#funds">
         <owl:inverseOf rdf:resource="http://purl.org/roh#isFundedBy"/>
-        <rdfs:domain rdf:resource="http://purl.org/roh/mirror/foaf#Agent"/>
         <rdfs:comment xml:lang="en">An object property linking a Thing when it funds another Thing.</rdfs:comment>
         <rdfs:label xml:lang="es">financia</rdfs:label>
         <rdfs:label xml:lang="en">funds</rdfs:label>
@@ -4245,16 +4244,6 @@ The previous short definition was: &quot;An arbitrary classification of a space/
     
 
 
-    <!-- http://purl.org/roh#AudioVisualDocument -->
-
-
-    <owl:Class rdf:about="http://purl.org/roh#AudioVisualDocument">
-        <rdfs:subClassOf rdf:resource="http://purl.org/roh/mirror/bibo#Document"/>
-        <rdfs:label xml:lang="en">AudioVisual Document</rdfs:label>
-    </owl:Class>
-    
-
-
     <!-- http://purl.org/roh#AuditeeRole -->
 
 
@@ -4392,7 +4381,7 @@ The previous short definition was: &quot;An arbitrary classification of a space/
         <owl:disjointWith rdf:resource="http://purl.org/roh#MastersThesis"/>
         <owl:disjointWith rdf:resource="http://purl.org/roh#PhDThesis"/>
         <rdfs:comment xml:lang="en">A thesis reporting a research project undertaken as part of an undergraduate course of education to receive a bachelor&apos;s degree.</rdfs:comment>
-        <rdfs:label xml:lang="en">Bachelor&apos;s thesis</rdfs:label>
+        <rdfs:label xml:lang="en">Bachelor&apos;s Thesis</rdfs:label>
         <rdfs:label xml:lang="fr">Mémoire de fin de licence</rdfs:label>
         <rdfs:label xml:lang="es-es">Trabajo de fin de grado</rdfs:label>
         <rdfs:label xml:lang="ast">Trabayu de fin de grau</rdfs:label>
@@ -4410,7 +4399,7 @@ The previous short definition was: &quot;An arbitrary classification of a space/
         <skos:altLabel xml:lang="es">Trabajo de fin de carrera</skos:altLabel>
         <skos:altLabel xml:lang="gl">Traballo de fin de carreira</skos:altLabel>
         <skos:altLabel xml:lang="ca-es">Treball de fi de carrera</skos:altLabel>
-        <skos:prefLabel xml:lang="en">Bachelor&apos;s thesis</skos:prefLabel>
+        <skos:prefLabel xml:lang="en">Bachelor&apos;s Thesis</skos:prefLabel>
         <skos:prefLabel xml:lang="eu">Gradu Amaierako Lana</skos:prefLabel>
         <skos:prefLabel xml:lang="fr">Mémoire de fin de licence</skos:prefLabel>
         <skos:prefLabel xml:lang="es-es">Trabajo de fin de grado</skos:prefLabel>
@@ -5668,23 +5657,11 @@ A roh:FundingSource roh:feeds a roh:Funding with funds to sponsor some projects.
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="http://purl.org/roh#produces"/>
-                <owl:allValuesFrom rdf:resource="http://purl.org/roh#MasterThesis"/>
+                <owl:allValuesFrom rdf:resource="http://purl.org/roh#MastersThesis"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:label xml:lang="en">Master Supervising Relationship</rdfs:label>
         <rdfs:label xml:lang="es">Relación de Supervisión de Máster Universitario</rdfs:label>
-    </owl:Class>
-    
-
-
-    <!-- http://purl.org/roh#MasterThesis -->
-
-
-    <owl:Class rdf:about="http://purl.org/roh#MasterThesis">
-        <rdfs:subClassOf rdf:resource="http://purl.org/roh/mirror/bibo#Thesis"/>
-        <rdfs:comment xml:lang="en">A document created to summarize research findings associated with the completion of a master degree.</rdfs:comment>
-        <rdfs:label xml:lang="en">Master Thesis</rdfs:label>
-        <rdfs:label xml:lang="es">Tesis de Máster</rdfs:label>
     </owl:Class>
     
 
@@ -5712,13 +5689,15 @@ A roh:FundingSource roh:feeds a roh:Funding with funds to sponsor some projects.
     <owl:Class rdf:about="http://purl.org/roh#MastersThesis">
         <rdfs:subClassOf rdf:resource="http://purl.org/roh/mirror/bibo#Thesis"/>
         <owl:disjointWith rdf:resource="http://purl.org/roh#PhDThesis"/>
+        <rdfs:comment xml:lang="en">A document created to summarize research findings associated with the completion of a master degree.</rdfs:comment>
         <rdfs:comment xml:lang="en">A thesis reporting a research project undertaken as part of a second-cycle course of education to receive a master&apos;s degree.</rdfs:comment>
         <rdfs:label xml:lang="pt-br">Dissertação de mestrado</rdfs:label>
         <rdfs:label xml:lang="pt-pt">Dissertação de mestrado</rdfs:label>
-        <rdfs:label xml:lang="en">Master&apos;s thesis</rdfs:label>
+        <rdfs:label xml:lang="en">Master&apos;s Thesis</rdfs:label>
         <rdfs:label xml:lang="fr-ca">Mémoire de maîtrise</rdfs:label>
         <rdfs:label xml:lang="fr-fr">Mémoire de maîtrise</rdfs:label>
         <rdfs:label xml:lang="pt-ao">Tese de mestrado</rdfs:label>
+        <rdfs:label xml:lang="es">Tesis de Máster</rdfs:label>
         <rdfs:label xml:lang="es-ar">Tesis de maestría</rdfs:label>
         <rdfs:label xml:lang="es-co">Tesis de maestría</rdfs:label>
         <rdfs:label xml:lang="es-cu">Tesis de maestría</rdfs:label>
@@ -6196,7 +6175,7 @@ A roh:FundingSource roh:feeds a roh:Funding with funds to sponsor some projects.
 
 
     <owl:Class rdf:about="http://purl.org/roh#RadioProgram">
-        <rdfs:subClassOf rdf:resource="http://purl.org/roh#AudioVisualDocument"/>
+        <rdfs:subClassOf rdf:resource="http://purl.org/roh/mirror/bibo#AudioVisualDocument"/>
         <owl:disjointWith rdf:resource="http://purl.org/roh#TvProgram"/>
         <rdfs:label xml:lang="en">Radio Program</rdfs:label>
     </owl:Class>
@@ -6887,7 +6866,7 @@ A roh:FundingSource roh:feeds a roh:Funding with funds to sponsor some projects.
 
 
     <owl:Class rdf:about="http://purl.org/roh#TvProgram">
-        <rdfs:subClassOf rdf:resource="http://purl.org/roh#AudioVisualDocument"/>
+        <rdfs:subClassOf rdf:resource="http://purl.org/roh/mirror/bibo#AudioVisualDocument"/>
         <rdfs:label xml:lang="en">Tv Program</rdfs:label>
     </owl:Class>
     
@@ -7195,7 +7174,7 @@ A roh:FundingSource roh:feeds a roh:Funding with funds to sponsor some projects.
         <rdfs:comment xml:lang="en">A collection of Documents or Collections</rdfs:comment>
         <rdfs:comment>ResearchObjects related to publication concept are based on types defined by BIBO ontology. Currently, the following set of publication-related entities are supported: bibo: bibo:Collection (Periodical, Journal, Magazine)
 
-This is a type of roh:ResearchObjects related to publication concept. It is based on types defined by BIBO ontology. Currently, the following set of publication-related entities are supported: bibo: bibo:Collection (Periodical, Journal, Magazine) and bibo:Document (Article, ConferencePaper, EditorialArticle, Book, Proceedings, ConferencePaper, Chapter, Thesis) and obo:Software. bibo:Thesis has been refined into roh:DegreeThesis, roh:MasterThesis and roh:PhDThesis. Notably a new subclass of bibo:Collection named roh:Dossier has been created. Under such collection can be included the reports usually associated to a project, e.g.  roh:EthicalReport, roh:EvaluationSummary, roh:Justification, vivo:ResearchProposal. A roh:Dossier is bound through object property vivo:relates with a vivo:Project</rdfs:comment>
+This is a type of roh:ResearchObjects related to publication concept. It is based on types defined by BIBO ontology. Currently, the following set of publication-related entities are supported: bibo: bibo:Collection (Periodical, Journal, Magazine) and bibo:Document (Article, ConferencePaper, EditorialArticle, Book, Proceedings, ConferencePaper, Chapter, Thesis) and obo:Software. bibo:Thesis has been refined into roh:DegreeThesis, roh:MastersThesis and roh:PhDThesis. Notably a new subclass of bibo:Collection named roh:Dossier has been created. Under such collection can be included the reports usually associated to a project, e.g.  roh:EthicalReport, roh:EvaluationSummary, roh:Justification, vivo:ResearchProposal. A roh:Dossier is bound through object property vivo:relates with a vivo:Project</rdfs:comment>
         <rdfs:isDefinedBy rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">http://purl.org/roh/mirror/bibo#</rdfs:isDefinedBy>
         <rdfs:label xml:lang="es">Colección</rdfs:label>
         <rdfs:label xml:lang="en">Collection</rdfs:label>
@@ -7233,9 +7212,7 @@ This is a type of roh:ResearchObjects related to publication concept. It is base
 
 
     <owl:Class rdf:about="http://purl.org/roh/mirror/bibo#Document">
-        <rdfs:subClassOf rdf:resource="http://purl.org/roh/mirror/bibo#Document"/>
         <rdfs:subClassOf rdf:resource="http://purl.org/roh/mirror/obo/iao#IAO_0000030"/>
-        <rdfs:subClassOf rdf:resource="http://xmlns.com/foaf/spec/#Document"/>
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="http://purl.org/roh#correspondingAuthor"/>
@@ -7340,7 +7317,7 @@ This is a type of roh:ResearchObjects related to publication concept. It is base
         <rdfs:comment xml:lang="en">Content made available to the general public. In the case of ASIO, often scientific or academic contents published.</rdfs:comment>
         <rdfs:comment>ResearchObjects related to publication concept are based on types defined by BIBO ontology. Currently, the following set of publication-related entities are supported: bibo:Document (Article, ConferencePaper, EditorialArticle, Book, Proceedings, ConferencePaper, Chapter, Thesis)
 
-This is a type of roh:ResearchObjects related to publication concept. It is based on types defined by BIBO ontology. Currently, the following set of publication-related entities are supported: bibo: bibo:Collection (Periodical, Journal, Magazine) and bibo:Document (Article, ConferencePaper, EditorialArticle, Book, Proceedings, ConferencePaper, Chapter, Thesis) and obo:Software. bibo:Thesis has been refined into roh:DegreeThesis, roh:MasterThesis and roh:PhDThesis. Notably a new subclass of bibo:Collection named roh:Dossier has been created. Under such collection can be included the reports usually associated to a project, e.g.  roh:EthicalReport, roh:EvaluationSummary, roh:Justification, vivo:ResearchProposal. A roh:Dossier is bound through object property vivo:relates with a vivo:Project</rdfs:comment>
+This is a type of roh:ResearchObjects related to publication concept. It is based on types defined by BIBO ontology. Currently, the following set of publication-related entities are supported: bibo: bibo:Collection (Periodical, Journal, Magazine) and bibo:Document (Article, ConferencePaper, EditorialArticle, Book, Proceedings, ConferencePaper, Chapter, Thesis) and obo:Software. bibo:Thesis has been refined into roh:DegreeThesis, roh:MastersThesis and roh:PhDThesis. Notably a new subclass of bibo:Collection named roh:Dossier has been created. Under such collection can be included the reports usually associated to a project, e.g.  roh:EthicalReport, roh:EvaluationSummary, roh:Justification, vivo:ResearchProposal. A roh:Dossier is bound through object property vivo:relates with a vivo:Project</rdfs:comment>
         <rdfs:isDefinedBy rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">http://purl.org/roh/mirror/bibo#</rdfs:isDefinedBy>
         <rdfs:label xml:lang="en">Academic publication</rdfs:label>
         <rdfs:label xml:lang="en">Document</rdfs:label>
@@ -8175,7 +8152,7 @@ Besides, an instance of a foaf:Person / roh:Researcher is associated to the foll
 - vivo:Position, where a researcher roh:hasPosition usually in an organization linking it to any of the vivo:Position subclasess like vivo:FacultyAdministrativePosition or vivo:FacultyPosition. 
 - roh:Role, where a foaf:Agent, i.e. and its subclasses like foaf:Person or roh:Researcher, roh:hasRole like vivo:ResearcherRole or vivo:TeacherRole either in a roh:Project or a foaf:Organization.
 - roh:PersonContract, where a researcher roh:hasContract described according to the attributes corresponding to parent class vivo:Contract.
-- bibo:Thesis, where a researcher is roh:supervisor of a bibo:Thesis, concretely, any of its subtypes  subclasess like roh:MasterThesis or roh:PhDThesis.</rdfs:comment>
+- bibo:Thesis, where a researcher is roh:supervisor of a bibo:Thesis, concretely, any of its subtypes  subclasess like roh:MastersThesis or roh:PhDThesis.</rdfs:comment>
         <rdfs:isDefinedBy rdf:resource="http://purl.org/roh/mirror/foaf#"/>
         <rdfs:label xml:lang="en">Person</rdfs:label>
         <rdfs:label xml:lang="es">Persona</rdfs:label>
@@ -10400,13 +10377,6 @@ Contents
     
 
 
-    <!-- http://xmlns.com/foaf/spec/#Document -->
-
-
-    <owl:Class rdf:about="http://xmlns.com/foaf/spec/#Document"/>
-    
-
-
     <!-- 
     ///////////////////////////////////////////////////////////////////////////////////////
     //
@@ -10770,7 +10740,6 @@ Contents
         <owl:members rdf:parseType="Collection">
             <rdf:Description rdf:about="http://purl.org/roh#Accreditation"/>
             <rdf:Description rdf:about="http://purl.org/roh#Activity"/>
-            <rdf:Description rdf:about="http://purl.org/roh#CurriculumVitae"/>
             <rdf:Description rdf:about="http://purl.org/roh#Expense"/>
             <rdf:Description rdf:about="http://purl.org/roh#Funding"/>
             <rdf:Description rdf:about="http://purl.org/roh#FundingAmount"/>
@@ -10803,7 +10772,6 @@ Contents
         <owl:members rdf:parseType="Collection">
             <rdf:Description rdf:about="http://purl.org/roh#Accreditation"/>
             <rdf:Description rdf:about="http://purl.org/roh#Activity"/>
-            <rdf:Description rdf:about="http://purl.org/roh#CurriculumVitae"/>
             <rdf:Description rdf:about="http://purl.org/roh#Expense"/>
             <rdf:Description rdf:about="http://purl.org/roh#Funding"/>
             <rdf:Description rdf:about="http://purl.org/roh#FundingAmount"/>
@@ -10913,7 +10881,7 @@ Contents
         <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDisjointClasses"/>
         <owl:members rdf:parseType="Collection">
             <rdf:Description rdf:about="http://purl.org/roh#DegreeThesis"/>
-            <rdf:Description rdf:about="http://purl.org/roh#MasterThesis"/>
+            <rdf:Description rdf:about="http://purl.org/roh#MastersThesis"/>
             <rdf:Description rdf:about="http://purl.org/roh#PhDThesis"/>
         </owl:members>
     </rdf:Description>

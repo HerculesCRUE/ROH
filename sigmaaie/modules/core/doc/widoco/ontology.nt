@@ -477,7 +477,6 @@
 # http://purl.org/roh#funds
 <http://purl.org/roh#funds> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
 <http://purl.org/roh#funds> <http://www.w3.org/2002/07/owl#inverseOf> <http://purl.org/roh#isFundedBy> .
-<http://purl.org/roh#funds> <http://www.w3.org/2000/01/rdf-schema#domain> <http://purl.org/roh/mirror/foaf#Agent> .
 <http://purl.org/roh#funds> <http://www.w3.org/2000/01/rdf-schema#comment> "An object property linking a Thing when it funds another Thing."@en .
 <http://purl.org/roh#funds> <http://www.w3.org/2000/01/rdf-schema#label> "financia"@es .
 <http://purl.org/roh#funds> <http://www.w3.org/2000/01/rdf-schema#label> "funds"@en .
@@ -2445,11 +2444,6 @@ _:genid98 <http://www.w3.org/2002/07/owl#onDataRange> <http://www.w3.org/2001/XM
 <http://purl.org/roh#AudioDocument> <http://www.w3.org/2000/01/rdf-schema#comment> "Recorded audio in any format."@en .
 <http://purl.org/roh#AudioDocument> <http://www.w3.org/2000/01/rdf-schema#label> "Audio document"@en .
 # 
-# http://purl.org/roh#AudioVisualDocument
-<http://purl.org/roh#AudioVisualDocument> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
-<http://purl.org/roh#AudioVisualDocument> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://purl.org/roh/mirror/bibo#Document> .
-<http://purl.org/roh#AudioVisualDocument> <http://www.w3.org/2000/01/rdf-schema#label> "AudioVisual Document"@en .
-# 
 # http://purl.org/roh#AuditeeRole
 <http://purl.org/roh#AuditeeRole> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
 <http://purl.org/roh#AuditeeRole> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://purl.org/roh/mirror/obo/bfo#BFO_0000023> .
@@ -2546,7 +2540,7 @@ _:genid106 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/
 <http://purl.org/roh#BachelorsThesis> <http://www.w3.org/2002/07/owl#disjointWith> <http://purl.org/roh#MastersThesis> .
 <http://purl.org/roh#BachelorsThesis> <http://www.w3.org/2002/07/owl#disjointWith> <http://purl.org/roh#PhDThesis> .
 <http://purl.org/roh#BachelorsThesis> <http://www.w3.org/2000/01/rdf-schema#comment> "A thesis reporting a research project undertaken as part of an undergraduate course of education to receive a bachelor's degree."@en .
-<http://purl.org/roh#BachelorsThesis> <http://www.w3.org/2000/01/rdf-schema#label> "Bachelor's thesis"@en .
+<http://purl.org/roh#BachelorsThesis> <http://www.w3.org/2000/01/rdf-schema#label> "Bachelor's Thesis"@en .
 <http://purl.org/roh#BachelorsThesis> <http://www.w3.org/2000/01/rdf-schema#label> "Mémoire de fin de licence"@fr .
 <http://purl.org/roh#BachelorsThesis> <http://www.w3.org/2000/01/rdf-schema#label> "Trabajo de fin de grado"@es-es .
 <http://purl.org/roh#BachelorsThesis> <http://www.w3.org/2000/01/rdf-schema#label> "Trabayu de fin de grau"@ast .
@@ -2564,7 +2558,7 @@ _:genid106 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/
 <http://purl.org/roh#BachelorsThesis> <http://www.w3.org/2004/02/skos/core#altLabel> "Trabajo de fin de carrera"@es .
 <http://purl.org/roh#BachelorsThesis> <http://www.w3.org/2004/02/skos/core#altLabel> "Traballo de fin de carreira"@gl .
 <http://purl.org/roh#BachelorsThesis> <http://www.w3.org/2004/02/skos/core#altLabel> "Treball de fi de carrera"@ca-es .
-<http://purl.org/roh#BachelorsThesis> <http://www.w3.org/2004/02/skos/core#prefLabel> "Bachelor's thesis"@en .
+<http://purl.org/roh#BachelorsThesis> <http://www.w3.org/2004/02/skos/core#prefLabel> "Bachelor's Thesis"@en .
 <http://purl.org/roh#BachelorsThesis> <http://www.w3.org/2004/02/skos/core#prefLabel> "Gradu Amaierako Lana"@eu .
 <http://purl.org/roh#BachelorsThesis> <http://www.w3.org/2004/02/skos/core#prefLabel> "Mémoire de fin de licence"@fr .
 <http://purl.org/roh#BachelorsThesis> <http://www.w3.org/2004/02/skos/core#prefLabel> "Trabajo de fin de grado"@es-es .
@@ -3381,16 +3375,9 @@ _:genid194 <http://www.w3.org/2002/07/owl#allValuesFrom> <http://www.w3.org/2001
 <http://purl.org/roh#MasterSupervisingRelationship> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid195 .
 _:genid195 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
 _:genid195 <http://www.w3.org/2002/07/owl#onProperty> <http://purl.org/roh#produces> .
-_:genid195 <http://www.w3.org/2002/07/owl#allValuesFrom> <http://purl.org/roh#MasterThesis> .
+_:genid195 <http://www.w3.org/2002/07/owl#allValuesFrom> <http://purl.org/roh#MastersThesis> .
 <http://purl.org/roh#MasterSupervisingRelationship> <http://www.w3.org/2000/01/rdf-schema#label> "Master Supervising Relationship"@en .
 <http://purl.org/roh#MasterSupervisingRelationship> <http://www.w3.org/2000/01/rdf-schema#label> "Relación de Supervisión de Máster Universitario"@es .
-# 
-# http://purl.org/roh#MasterThesis
-<http://purl.org/roh#MasterThesis> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
-<http://purl.org/roh#MasterThesis> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://purl.org/roh/mirror/bibo#Thesis> .
-<http://purl.org/roh#MasterThesis> <http://www.w3.org/2000/01/rdf-schema#comment> "A document created to summarize research findings associated with the completion of a master degree."@en .
-<http://purl.org/roh#MasterThesis> <http://www.w3.org/2000/01/rdf-schema#label> "Master Thesis"@en .
-<http://purl.org/roh#MasterThesis> <http://www.w3.org/2000/01/rdf-schema#label> "Tesis de Máster"@es .
 # 
 # http://purl.org/roh#MastersDegreeSubject
 <http://purl.org/roh#MastersDegreeSubject> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
@@ -3408,13 +3395,15 @@ _:genid195 <http://www.w3.org/2002/07/owl#allValuesFrom> <http://purl.org/roh#Ma
 <http://purl.org/roh#MastersThesis> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
 <http://purl.org/roh#MastersThesis> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://purl.org/roh/mirror/bibo#Thesis> .
 <http://purl.org/roh#MastersThesis> <http://www.w3.org/2002/07/owl#disjointWith> <http://purl.org/roh#PhDThesis> .
+<http://purl.org/roh#MastersThesis> <http://www.w3.org/2000/01/rdf-schema#comment> "A document created to summarize research findings associated with the completion of a master degree."@en .
 <http://purl.org/roh#MastersThesis> <http://www.w3.org/2000/01/rdf-schema#comment> "A thesis reporting a research project undertaken as part of a second-cycle course of education to receive a master's degree."@en .
 <http://purl.org/roh#MastersThesis> <http://www.w3.org/2000/01/rdf-schema#label> "Dissertação de mestrado"@pt-br .
 <http://purl.org/roh#MastersThesis> <http://www.w3.org/2000/01/rdf-schema#label> "Dissertação de mestrado"@pt-pt .
-<http://purl.org/roh#MastersThesis> <http://www.w3.org/2000/01/rdf-schema#label> "Master's thesis"@en .
+<http://purl.org/roh#MastersThesis> <http://www.w3.org/2000/01/rdf-schema#label> "Master's Thesis"@en .
 <http://purl.org/roh#MastersThesis> <http://www.w3.org/2000/01/rdf-schema#label> "Mémoire de maîtrise"@fr-ca .
 <http://purl.org/roh#MastersThesis> <http://www.w3.org/2000/01/rdf-schema#label> "Mémoire de maîtrise"@fr-fr .
 <http://purl.org/roh#MastersThesis> <http://www.w3.org/2000/01/rdf-schema#label> "Tese de mestrado"@pt-ao .
+<http://purl.org/roh#MastersThesis> <http://www.w3.org/2000/01/rdf-schema#label> "Tesis de Máster"@es .
 <http://purl.org/roh#MastersThesis> <http://www.w3.org/2000/01/rdf-schema#label> "Tesis de maestría"@es-ar .
 <http://purl.org/roh#MastersThesis> <http://www.w3.org/2000/01/rdf-schema#label> "Tesis de maestría"@es-co .
 <http://purl.org/roh#MastersThesis> <http://www.w3.org/2000/01/rdf-schema#label> "Tesis de maestría"@es-cu .
@@ -3717,7 +3706,7 @@ _:genid205 <http://www.w3.org/2002/07/owl#allValuesFrom> <http://www.w3.org/2001
 # 
 # http://purl.org/roh#RadioProgram
 <http://purl.org/roh#RadioProgram> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
-<http://purl.org/roh#RadioProgram> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://purl.org/roh#AudioVisualDocument> .
+<http://purl.org/roh#RadioProgram> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://purl.org/roh/mirror/bibo#AudioVisualDocument> .
 <http://purl.org/roh#RadioProgram> <http://www.w3.org/2002/07/owl#disjointWith> <http://purl.org/roh#TvProgram> .
 <http://purl.org/roh#RadioProgram> <http://www.w3.org/2000/01/rdf-schema#label> "Radio Program"@en .
 # 
@@ -4170,7 +4159,7 @@ _:genid247 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/
 # 
 # http://purl.org/roh#TvProgram
 <http://purl.org/roh#TvProgram> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
-<http://purl.org/roh#TvProgram> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://purl.org/roh#AudioVisualDocument> .
+<http://purl.org/roh#TvProgram> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://purl.org/roh/mirror/bibo#AudioVisualDocument> .
 <http://purl.org/roh#TvProgram> <http://www.w3.org/2000/01/rdf-schema#label> "Tv Program"@en .
 # 
 # http://purl.org/roh#UNESCOKnowledgeArea
@@ -4374,7 +4363,7 @@ _:genid265 <http://www.w3.org/2002/07/owl#allValuesFrom> <http://www.w3.org/2000
 <http://purl.org/roh/mirror/bibo#Collection> <http://purl.obolibrary.org/obo/IAO_0000112> "Hill Ornithology Collection; Wiley Interscience Online Books Biochemisty Collection" .
 <http://purl.org/roh/mirror/bibo#Collection> <http://purl.obolibrary.org/obo/IAO_0000115> "Collection of information resources that have a unified identity" .
 <http://purl.org/roh/mirror/bibo#Collection> <http://www.w3.org/2000/01/rdf-schema#comment> "A collection of Documents or Collections"@en .
-<http://purl.org/roh/mirror/bibo#Collection> <http://www.w3.org/2000/01/rdf-schema#comment> "ResearchObjects related to publication concept are based on types defined by BIBO ontology. Currently, the following set of publication-related entities are supported: bibo: bibo:Collection (Periodical, Journal, Magazine)\n\nThis is a type of roh:ResearchObjects related to publication concept. It is based on types defined by BIBO ontology. Currently, the following set of publication-related entities are supported: bibo: bibo:Collection (Periodical, Journal, Magazine) and bibo:Document (Article, ConferencePaper, EditorialArticle, Book, Proceedings, ConferencePaper, Chapter, Thesis) and obo:Software. bibo:Thesis has been refined into roh:DegreeThesis, roh:MasterThesis and roh:PhDThesis. Notably a new subclass of bibo:Collection named roh:Dossier has been created. Under such collection can be included the reports usually associated to a project, e.g.  roh:EthicalReport, roh:EvaluationSummary, roh:Justification, vivo:ResearchProposal. A roh:Dossier is bound through object property vivo:relates with a vivo:Project" .
+<http://purl.org/roh/mirror/bibo#Collection> <http://www.w3.org/2000/01/rdf-schema#comment> "ResearchObjects related to publication concept are based on types defined by BIBO ontology. Currently, the following set of publication-related entities are supported: bibo: bibo:Collection (Periodical, Journal, Magazine)\n\nThis is a type of roh:ResearchObjects related to publication concept. It is based on types defined by BIBO ontology. Currently, the following set of publication-related entities are supported: bibo: bibo:Collection (Periodical, Journal, Magazine) and bibo:Document (Article, ConferencePaper, EditorialArticle, Book, Proceedings, ConferencePaper, Chapter, Thesis) and obo:Software. bibo:Thesis has been refined into roh:DegreeThesis, roh:MastersThesis and roh:PhDThesis. Notably a new subclass of bibo:Collection named roh:Dossier has been created. Under such collection can be included the reports usually associated to a project, e.g.  roh:EthicalReport, roh:EvaluationSummary, roh:Justification, vivo:ResearchProposal. A roh:Dossier is bound through object property vivo:relates with a vivo:Project" .
 <http://purl.org/roh/mirror/bibo#Collection> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> "http://purl.org/roh/mirror/bibo#"^^<http://www.w3.org/2001/XMLSchema#anyURI> .
 <http://purl.org/roh/mirror/bibo#Collection> <http://www.w3.org/2000/01/rdf-schema#label> "Colección"@es .
 <http://purl.org/roh/mirror/bibo#Collection> <http://www.w3.org/2000/01/rdf-schema#label> "Collection"@en .
@@ -4400,9 +4389,7 @@ _:genid266 <http://www.w3.org/2002/07/owl#allValuesFrom> <http://www.w3.org/2000
 # 
 # http://purl.org/roh/mirror/bibo#Document
 <http://purl.org/roh/mirror/bibo#Document> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
-<http://purl.org/roh/mirror/bibo#Document> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://purl.org/roh/mirror/bibo#Document> .
 <http://purl.org/roh/mirror/bibo#Document> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://purl.org/roh/mirror/obo/iao#IAO_0000030> .
-<http://purl.org/roh/mirror/bibo#Document> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://xmlns.com/foaf/spec/#Document> .
 <http://purl.org/roh/mirror/bibo#Document> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid267 .
 _:genid267 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
 _:genid267 <http://www.w3.org/2002/07/owl#onProperty> <http://purl.org/roh#correspondingAuthor> .
@@ -4476,7 +4463,7 @@ _:genid284 <http://www.w3.org/2002/07/owl#maxQualifiedCardinality> "1"^^<http://
 _:genid284 <http://www.w3.org/2002/07/owl#onDataRange> <http://www.w3.org/2001/XMLSchema#int> .
 <http://purl.org/roh/mirror/bibo#Document> <http://www.w3.org/2000/01/rdf-schema#comment> "A document (noun) is a bounded physical representation of body of information designed with the capacity (and usually intent) to communicate. A document may manifest symbolic, diagrammatic or sensory-representational information."@en .
 <http://purl.org/roh/mirror/bibo#Document> <http://www.w3.org/2000/01/rdf-schema#comment> "Content made available to the general public. In the case of ASIO, often scientific or academic contents published."@en .
-<http://purl.org/roh/mirror/bibo#Document> <http://www.w3.org/2000/01/rdf-schema#comment> "ResearchObjects related to publication concept are based on types defined by BIBO ontology. Currently, the following set of publication-related entities are supported: bibo:Document (Article, ConferencePaper, EditorialArticle, Book, Proceedings, ConferencePaper, Chapter, Thesis)\n\nThis is a type of roh:ResearchObjects related to publication concept. It is based on types defined by BIBO ontology. Currently, the following set of publication-related entities are supported: bibo: bibo:Collection (Periodical, Journal, Magazine) and bibo:Document (Article, ConferencePaper, EditorialArticle, Book, Proceedings, ConferencePaper, Chapter, Thesis) and obo:Software. bibo:Thesis has been refined into roh:DegreeThesis, roh:MasterThesis and roh:PhDThesis. Notably a new subclass of bibo:Collection named roh:Dossier has been created. Under such collection can be included the reports usually associated to a project, e.g.  roh:EthicalReport, roh:EvaluationSummary, roh:Justification, vivo:ResearchProposal. A roh:Dossier is bound through object property vivo:relates with a vivo:Project" .
+<http://purl.org/roh/mirror/bibo#Document> <http://www.w3.org/2000/01/rdf-schema#comment> "ResearchObjects related to publication concept are based on types defined by BIBO ontology. Currently, the following set of publication-related entities are supported: bibo:Document (Article, ConferencePaper, EditorialArticle, Book, Proceedings, ConferencePaper, Chapter, Thesis)\n\nThis is a type of roh:ResearchObjects related to publication concept. It is based on types defined by BIBO ontology. Currently, the following set of publication-related entities are supported: bibo: bibo:Collection (Periodical, Journal, Magazine) and bibo:Document (Article, ConferencePaper, EditorialArticle, Book, Proceedings, ConferencePaper, Chapter, Thesis) and obo:Software. bibo:Thesis has been refined into roh:DegreeThesis, roh:MastersThesis and roh:PhDThesis. Notably a new subclass of bibo:Collection named roh:Dossier has been created. Under such collection can be included the reports usually associated to a project, e.g.  roh:EthicalReport, roh:EvaluationSummary, roh:Justification, vivo:ResearchProposal. A roh:Dossier is bound through object property vivo:relates with a vivo:Project" .
 <http://purl.org/roh/mirror/bibo#Document> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> "http://purl.org/roh/mirror/bibo#"^^<http://www.w3.org/2001/XMLSchema#anyURI> .
 <http://purl.org/roh/mirror/bibo#Document> <http://www.w3.org/2000/01/rdf-schema#label> "Academic publication"@en .
 <http://purl.org/roh/mirror/bibo#Document> <http://www.w3.org/2000/01/rdf-schema#label> "Document"@en .
@@ -5035,7 +5022,7 @@ _:genid351 <http://www.w3.org/2002/07/owl#allValuesFrom> <http://www.w3.org/2001
 <http://purl.org/roh/mirror/foaf#Person> <http://purl.obolibrary.org/obo/IAO_0000115> "The most general classification of a person" .
 <http://purl.org/roh/mirror/foaf#Person> <http://purl.obolibrary.org/obo/IAO_0000117> "PERSON: Melissa Haendel" .
 <http://purl.org/roh/mirror/foaf#Person> <http://purl.obolibrary.org/obo/IAO_0000118> "" .
-<http://purl.org/roh/mirror/foaf#Person> <http://www.w3.org/2000/01/rdf-schema#comment> "In ROH, there is a foaf:Person entity that inherits from foaf:Agent. However, the main entity that users of ROH will deal with is roh:Researcher. Such entity inherits from foaf:Person.\n\nThe specialization of this entity imported from the VIVO ontology already adds some DataType properties of the research domain, but in ROH we also incorporate roh:taxID or roh:ORCID and also several object specific properties of the research domain as \"has a Role\" (roh: hasRole) in an Organization, \"has a CurriculumVitae\" (roh:hasCV), \"has some Accreditations\" (roh:hasAccreditation), \"has an Employment Contract\" (roh:hasContract), \"has some Knowledge Areas\" (roh:hasKnowledgeArea) or \"has some Roles\" (roh:hasRole) in Projects or participates through \"bibo:authorList\" with Research Objects. A person can \"have different roles\" in the Project over time.\n\nAs mentioned above, foaf:Person in ROH is based on FOAF (Friend of a Friend [2], following patterns used in VIVO. That explains why it includes some of the basic FOAF properties such as foaf:name, foaf:nick, foaf:title, foaf:mbox, foaf:img, foaf:depiction, foaf:firstName and foaf:surname. However, it considers all attributes and links defined in CERIF through the cfPers entity. foaf:Person incorporates the following data properties declared as attributes in cfPers, especially: identifier (vivo:identifier but preferrably roh:ORCID), roh:birthdate, foaf:gender, foaf:homepage, roh:researchLine, vivo:keywords. Some important CERIF relationships that have also been adopted: Curriculum Vitae (roh:hasCV) which links foaf:Person with roh:CurriculumVitae, Event (roh:Activity) and Indicator (roh:Accreditation). \n\nA taxonomy of types of persons has been imported in the research field from VIVO [1], such as vivo:FacultyMember, vivo:Librarian, vivo:NonAcademic, vivo:PostDoc or vivo:GraduateStudent  or some additional one by ROH as, the very important subclass roh:Researcher.\n\nBesides, an instance of a foaf:Person / roh:Researcher is associated to the following entities through object properties:\n- roh:Accreditation, where a researcher roh:hasAccreditation of different types, e.g. roh:ResearchAccreditation or roh:AcademicAccreditation.  \n- roh:Activity, where a researcher roh:participates in diverse activities, e.g. vivo:InvitedTalk or bibo:Conference.\n- vivo:AwardedDegree, where a researcher vivo:relates with an roh:AcademicDegree\n- roh:CorrespondingAuthor, where a researcher is the roh:correspondingAuthor of different subtypes of roh:ResearchObject, e.g. obo:JournalArticle, vivo:ConferencePaper or  bibo:Proceedings. \n- roh:CurriculumVitae, where a researcher roh:hasCV which includes data type properties like roh:cites, roh:factorH or roh:summary\n- bibo:Document, where a researcher through bibo:authorList is participating in a bibo:Document as one of its authors. \n- vcard:Individual, where a researcher obo:hasContactInfo described through ontology vcard. \n- vivo:Position, where a researcher roh:hasPosition usually in an organization linking it to any of the vivo:Position subclasess like vivo:FacultyAdministrativePosition or vivo:FacultyPosition. \n- roh:Role, where a foaf:Agent, i.e. and its subclasses like foaf:Person or roh:Researcher, roh:hasRole like vivo:ResearcherRole or vivo:TeacherRole either in a roh:Project or a foaf:Organization.\n- roh:PersonContract, where a researcher roh:hasContract described according to the attributes corresponding to parent class vivo:Contract.\n- bibo:Thesis, where a researcher is roh:supervisor of a bibo:Thesis, concretely, any of its subtypes  subclasess like roh:MasterThesis or roh:PhDThesis." .
+<http://purl.org/roh/mirror/foaf#Person> <http://www.w3.org/2000/01/rdf-schema#comment> "In ROH, there is a foaf:Person entity that inherits from foaf:Agent. However, the main entity that users of ROH will deal with is roh:Researcher. Such entity inherits from foaf:Person.\n\nThe specialization of this entity imported from the VIVO ontology already adds some DataType properties of the research domain, but in ROH we also incorporate roh:taxID or roh:ORCID and also several object specific properties of the research domain as \"has a Role\" (roh: hasRole) in an Organization, \"has a CurriculumVitae\" (roh:hasCV), \"has some Accreditations\" (roh:hasAccreditation), \"has an Employment Contract\" (roh:hasContract), \"has some Knowledge Areas\" (roh:hasKnowledgeArea) or \"has some Roles\" (roh:hasRole) in Projects or participates through \"bibo:authorList\" with Research Objects. A person can \"have different roles\" in the Project over time.\n\nAs mentioned above, foaf:Person in ROH is based on FOAF (Friend of a Friend [2], following patterns used in VIVO. That explains why it includes some of the basic FOAF properties such as foaf:name, foaf:nick, foaf:title, foaf:mbox, foaf:img, foaf:depiction, foaf:firstName and foaf:surname. However, it considers all attributes and links defined in CERIF through the cfPers entity. foaf:Person incorporates the following data properties declared as attributes in cfPers, especially: identifier (vivo:identifier but preferrably roh:ORCID), roh:birthdate, foaf:gender, foaf:homepage, roh:researchLine, vivo:keywords. Some important CERIF relationships that have also been adopted: Curriculum Vitae (roh:hasCV) which links foaf:Person with roh:CurriculumVitae, Event (roh:Activity) and Indicator (roh:Accreditation). \n\nA taxonomy of types of persons has been imported in the research field from VIVO [1], such as vivo:FacultyMember, vivo:Librarian, vivo:NonAcademic, vivo:PostDoc or vivo:GraduateStudent  or some additional one by ROH as, the very important subclass roh:Researcher.\n\nBesides, an instance of a foaf:Person / roh:Researcher is associated to the following entities through object properties:\n- roh:Accreditation, where a researcher roh:hasAccreditation of different types, e.g. roh:ResearchAccreditation or roh:AcademicAccreditation.  \n- roh:Activity, where a researcher roh:participates in diverse activities, e.g. vivo:InvitedTalk or bibo:Conference.\n- vivo:AwardedDegree, where a researcher vivo:relates with an roh:AcademicDegree\n- roh:CorrespondingAuthor, where a researcher is the roh:correspondingAuthor of different subtypes of roh:ResearchObject, e.g. obo:JournalArticle, vivo:ConferencePaper or  bibo:Proceedings. \n- roh:CurriculumVitae, where a researcher roh:hasCV which includes data type properties like roh:cites, roh:factorH or roh:summary\n- bibo:Document, where a researcher through bibo:authorList is participating in a bibo:Document as one of its authors. \n- vcard:Individual, where a researcher obo:hasContactInfo described through ontology vcard. \n- vivo:Position, where a researcher roh:hasPosition usually in an organization linking it to any of the vivo:Position subclasess like vivo:FacultyAdministrativePosition or vivo:FacultyPosition. \n- roh:Role, where a foaf:Agent, i.e. and its subclasses like foaf:Person or roh:Researcher, roh:hasRole like vivo:ResearcherRole or vivo:TeacherRole either in a roh:Project or a foaf:Organization.\n- roh:PersonContract, where a researcher roh:hasContract described according to the attributes corresponding to parent class vivo:Contract.\n- bibo:Thesis, where a researcher is roh:supervisor of a bibo:Thesis, concretely, any of its subtypes  subclasess like roh:MastersThesis or roh:PhDThesis." .
 <http://purl.org/roh/mirror/foaf#Person> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://purl.org/roh/mirror/foaf#> .
 <http://purl.org/roh/mirror/foaf#Person> <http://www.w3.org/2000/01/rdf-schema#label> "Person"@en .
 <http://purl.org/roh/mirror/foaf#Person> <http://www.w3.org/2000/01/rdf-schema#label> "Persona"@es .
@@ -6546,9 +6533,6 @@ _:genid476 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/
 # http://www.w3.org/2004/02/skos/core#ConceptScheme
 <http://www.w3.org/2004/02/skos/core#ConceptScheme> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
 # 
-# http://xmlns.com/foaf/spec/#Document
-<http://xmlns.com/foaf/spec/#Document> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
-# 
 # 
 # 
 # #################################################################
@@ -6769,15 +6753,12 @@ _:genid481 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://purl.org/r
 _:genid481 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
 # 
 _:genid486 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AllDisjointClasses> .
-_:genid486 <http://www.w3.org/2002/07/owl#members> _:genid514 .
-_:genid514 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
-_:genid514 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://purl.org/roh#Accreditation> .
-_:genid514 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid513 .
+_:genid486 <http://www.w3.org/2002/07/owl#members> _:genid513 .
 _:genid513 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
-_:genid513 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://purl.org/roh#Activity> .
+_:genid513 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://purl.org/roh#Accreditation> .
 _:genid513 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid512 .
 _:genid512 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
-_:genid512 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://purl.org/roh#CurriculumVitae> .
+_:genid512 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://purl.org/roh#Activity> .
 _:genid512 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid511 .
 _:genid511 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
 _:genid511 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://purl.org/roh#Expense> .
@@ -6855,655 +6836,652 @@ _:genid487 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/
 _:genid487 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://www.w3.org/2004/02/skos/core#ConceptScheme> .
 _:genid487 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
 # 
-_:genid515 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AllDisjointClasses> .
-_:genid515 <http://www.w3.org/2002/07/owl#members> _:genid539 .
-_:genid539 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
-_:genid539 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://purl.org/roh#Accreditation> .
-_:genid539 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid538 .
-_:genid538 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
-_:genid538 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://purl.org/roh#Activity> .
-_:genid538 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid537 .
+_:genid514 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AllDisjointClasses> .
+_:genid514 <http://www.w3.org/2002/07/owl#members> _:genid537 .
 _:genid537 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
-_:genid537 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://purl.org/roh#CurriculumVitae> .
+_:genid537 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://purl.org/roh#Accreditation> .
 _:genid537 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid536 .
 _:genid536 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
-_:genid536 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://purl.org/roh#Expense> .
+_:genid536 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://purl.org/roh#Activity> .
 _:genid536 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid535 .
 _:genid535 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
-_:genid535 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://purl.org/roh#Funding> .
+_:genid535 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://purl.org/roh#Expense> .
 _:genid535 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid534 .
 _:genid534 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
-_:genid534 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://purl.org/roh#FundingAmount> .
+_:genid534 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://purl.org/roh#Funding> .
 _:genid534 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid533 .
 _:genid533 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
-_:genid533 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://purl.org/roh#FundingProgram> .
+_:genid533 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://purl.org/roh#FundingAmount> .
 _:genid533 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid532 .
 _:genid532 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
-_:genid532 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://purl.org/roh#FundingSource> .
+_:genid532 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://purl.org/roh#FundingProgram> .
 _:genid532 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid531 .
 _:genid531 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
-_:genid531 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://purl.org/roh#Metric> .
+_:genid531 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://purl.org/roh#FundingSource> .
 _:genid531 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid530 .
 _:genid530 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
-_:genid530 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://purl.org/roh#Reservable> .
+_:genid530 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://purl.org/roh#Metric> .
 _:genid530 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid529 .
 _:genid529 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
-_:genid529 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://purl.org/roh/mirror/foaf#Agent> .
+_:genid529 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://purl.org/roh#Reservable> .
 _:genid529 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid528 .
 _:genid528 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
-_:genid528 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://purl.org/roh/mirror/geonames#Feature> .
+_:genid528 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://purl.org/roh/mirror/foaf#Agent> .
 _:genid528 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid527 .
 _:genid527 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
-_:genid527 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://purl.org/roh/mirror/obo/bfo#BFO_0000008> .
+_:genid527 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://purl.org/roh/mirror/geonames#Feature> .
 _:genid527 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid526 .
 _:genid526 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
-_:genid526 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://purl.org/roh/mirror/obo/bfo#BFO_0000023> .
+_:genid526 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://purl.org/roh/mirror/obo/bfo#BFO_0000008> .
 _:genid526 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid525 .
 _:genid525 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
-_:genid525 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://purl.org/roh/mirror/obo/ero#ERO_0000005> .
+_:genid525 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://purl.org/roh/mirror/obo/bfo#BFO_0000023> .
 _:genid525 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid524 .
 _:genid524 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
-_:genid524 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://purl.org/roh/mirror/obo/iao#IAO_0000030> .
+_:genid524 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://purl.org/roh/mirror/obo/ero#ERO_0000005> .
 _:genid524 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid523 .
 _:genid523 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
-_:genid523 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://purl.org/roh/mirror/vcard#Kind> .
+_:genid523 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://purl.org/roh/mirror/obo/iao#IAO_0000030> .
 _:genid523 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid522 .
 _:genid522 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
-_:genid522 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://purl.org/roh/mirror/vivo#AcademicDegree> .
+_:genid522 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://purl.org/roh/mirror/vcard#Kind> .
 _:genid522 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid521 .
 _:genid521 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
-_:genid521 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://purl.org/roh/mirror/vivo#Project> .
+_:genid521 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://purl.org/roh/mirror/vivo#AcademicDegree> .
 _:genid521 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid520 .
 _:genid520 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
-_:genid520 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://purl.org/roh/mirror/vivo#Relationship> .
+_:genid520 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://purl.org/roh/mirror/vivo#Project> .
 _:genid520 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid519 .
 _:genid519 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
-_:genid519 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid519 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://purl.org/roh/mirror/vivo#Relationship> .
 _:genid519 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid518 .
 _:genid518 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
-_:genid518 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://www.w3.org/1999/02/22-rdf-syntax-ns#Seq> .
+_:genid518 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
 _:genid518 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid517 .
 _:genid517 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
-_:genid517 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://www.w3.org/2004/02/skos/core#Concept> .
+_:genid517 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://www.w3.org/1999/02/22-rdf-syntax-ns#Seq> .
 _:genid517 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid516 .
 _:genid516 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
-_:genid516 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://www.w3.org/2004/02/skos/core#ConceptScheme> .
-_:genid516 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
+_:genid516 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://www.w3.org/2004/02/skos/core#Concept> .
+_:genid516 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid515 .
+_:genid515 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid515 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://www.w3.org/2004/02/skos/core#ConceptScheme> .
+_:genid515 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
 # 
-_:genid540 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AllDisjointClasses> .
-_:genid540 <http://www.w3.org/2002/07/owl#members> _:genid564 .
-_:genid564 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
-_:genid564 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://purl.org/roh#AuditeeRole> .
-_:genid564 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid563 .
-_:genid563 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
-_:genid563 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://purl.org/roh#AuditorRole> .
-_:genid563 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid562 .
+_:genid538 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AllDisjointClasses> .
+_:genid538 <http://www.w3.org/2002/07/owl#members> _:genid562 .
 _:genid562 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
-_:genid562 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://purl.org/roh#ExternalMemberRole> .
+_:genid562 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://purl.org/roh#AuditeeRole> .
 _:genid562 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid561 .
 _:genid561 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
-_:genid561 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://purl.org/roh#ReservableConsumerRole> .
+_:genid561 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://purl.org/roh#AuditorRole> .
 _:genid561 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid560 .
 _:genid560 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
-_:genid560 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://purl.org/roh#ReservableProviderRole> .
+_:genid560 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://purl.org/roh#ExternalMemberRole> .
 _:genid560 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid559 .
 _:genid559 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
-_:genid559 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://purl.org/roh#SuperviseeRole> .
+_:genid559 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://purl.org/roh#ReservableConsumerRole> .
 _:genid559 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid558 .
 _:genid558 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
-_:genid558 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://purl.org/roh#SupervisorRole> .
+_:genid558 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://purl.org/roh#ReservableProviderRole> .
 _:genid558 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid557 .
 _:genid557 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
-_:genid557 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://purl.org/roh#ThirdPartyContractorRole> .
+_:genid557 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://purl.org/roh#SuperviseeRole> .
 _:genid557 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid556 .
 _:genid556 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
-_:genid556 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://purl.org/roh/mirror/obo/ero#ERO_0000224> .
+_:genid556 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://purl.org/roh#SupervisorRole> .
 _:genid556 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid555 .
 _:genid555 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
-_:genid555 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://purl.org/roh/mirror/obo/ero#ERO_0000225> .
+_:genid555 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://purl.org/roh#ThirdPartyContractorRole> .
 _:genid555 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid554 .
 _:genid554 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
-_:genid554 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://purl.org/roh/mirror/obo/ero#ERO_0000783> .
+_:genid554 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://purl.org/roh/mirror/obo/ero#ERO_0000224> .
 _:genid554 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid553 .
 _:genid553 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
-_:genid553 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://purl.org/roh/mirror/obo/ero#ERO_0000787> .
+_:genid553 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://purl.org/roh/mirror/obo/ero#ERO_0000225> .
 _:genid553 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid552 .
 _:genid552 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
-_:genid552 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://purl.org/roh/mirror/vivo#AdministratorRole> .
+_:genid552 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://purl.org/roh/mirror/obo/ero#ERO_0000783> .
 _:genid552 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid551 .
 _:genid551 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
-_:genid551 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://purl.org/roh/mirror/vivo#AdviseeRole> .
+_:genid551 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://purl.org/roh/mirror/obo/ero#ERO_0000787> .
 _:genid551 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid550 .
 _:genid550 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
-_:genid550 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://purl.org/roh/mirror/vivo#AdvisorRole> .
+_:genid550 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://purl.org/roh/mirror/vivo#AdministratorRole> .
 _:genid550 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid549 .
 _:genid549 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
-_:genid549 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://purl.org/roh/mirror/vivo#AttendeeRole> .
+_:genid549 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://purl.org/roh/mirror/vivo#AdviseeRole> .
 _:genid549 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid548 .
 _:genid548 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
-_:genid548 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://purl.org/roh/mirror/vivo#EditorRole> .
+_:genid548 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://purl.org/roh/mirror/vivo#AdvisorRole> .
 _:genid548 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid547 .
 _:genid547 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
-_:genid547 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://purl.org/roh/mirror/vivo#LeaderRole> .
+_:genid547 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://purl.org/roh/mirror/vivo#AttendeeRole> .
 _:genid547 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid546 .
 _:genid546 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
-_:genid546 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://purl.org/roh/mirror/vivo#MemberRole> .
+_:genid546 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://purl.org/roh/mirror/vivo#EditorRole> .
 _:genid546 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid545 .
 _:genid545 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
-_:genid545 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://purl.org/roh/mirror/vivo#OrganizerRole> .
+_:genid545 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://purl.org/roh/mirror/vivo#LeaderRole> .
 _:genid545 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid544 .
 _:genid544 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
-_:genid544 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://purl.org/roh/mirror/vivo#PresenterRole> .
+_:genid544 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://purl.org/roh/mirror/vivo#MemberRole> .
 _:genid544 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid543 .
 _:genid543 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
-_:genid543 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://purl.org/roh/mirror/vivo#ResearcherRole> .
+_:genid543 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://purl.org/roh/mirror/vivo#OrganizerRole> .
 _:genid543 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid542 .
 _:genid542 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
-_:genid542 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://purl.org/roh/mirror/vivo#ReviewerRole> .
+_:genid542 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://purl.org/roh/mirror/vivo#PresenterRole> .
 _:genid542 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid541 .
 _:genid541 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
-_:genid541 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://purl.org/roh/mirror/vivo#TeacherRole> .
-_:genid541 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
+_:genid541 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://purl.org/roh/mirror/vivo#ResearcherRole> .
+_:genid541 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid540 .
+_:genid540 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid540 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://purl.org/roh/mirror/vivo#ReviewerRole> .
+_:genid540 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid539 .
+_:genid539 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid539 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://purl.org/roh/mirror/vivo#TeacherRole> .
+_:genid539 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
 # 
-_:genid565 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AllDisjointClasses> .
-_:genid565 <http://www.w3.org/2002/07/owl#members> _:genid571 .
-_:genid571 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
-_:genid571 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://purl.org/roh#AuditingRelationship> .
-_:genid571 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid570 .
-_:genid570 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
-_:genid570 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://purl.org/roh#SupervisingRelationship> .
-_:genid570 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid569 .
+_:genid563 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AllDisjointClasses> .
+_:genid563 <http://www.w3.org/2002/07/owl#members> _:genid569 .
 _:genid569 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
-_:genid569 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://purl.org/roh/mirror/vivo#AdvisingRelationship> .
+_:genid569 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://purl.org/roh#AuditingRelationship> .
 _:genid569 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid568 .
 _:genid568 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
-_:genid568 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://purl.org/roh/mirror/vivo#AwardedDegree> .
+_:genid568 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://purl.org/roh#SupervisingRelationship> .
 _:genid568 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid567 .
 _:genid567 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
-_:genid567 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://purl.org/roh/mirror/vivo#Contract> .
+_:genid567 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://purl.org/roh/mirror/vivo#AdvisingRelationship> .
 _:genid567 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid566 .
 _:genid566 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
-_:genid566 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://purl.org/roh/mirror/vivo#Position> .
-_:genid566 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
+_:genid566 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://purl.org/roh/mirror/vivo#AwardedDegree> .
+_:genid566 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid565 .
+_:genid565 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid565 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://purl.org/roh/mirror/vivo#Contract> .
+_:genid565 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid564 .
+_:genid564 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid564 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://purl.org/roh/mirror/vivo#Position> .
+_:genid564 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
 # 
-_:genid572 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AllDisjointClasses> .
-_:genid572 <http://www.w3.org/2002/07/owl#members> _:genid575 .
-_:genid575 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
-_:genid575 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://purl.org/roh#Award> .
-_:genid575 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid574 .
-_:genid574 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
-_:genid574 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://purl.org/roh#CourseCertificate> .
-_:genid574 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid573 .
+_:genid570 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AllDisjointClasses> .
+_:genid570 <http://www.w3.org/2002/07/owl#members> _:genid573 .
 _:genid573 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
-_:genid573 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://purl.org/roh#LanguageCertificate> .
-_:genid573 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
+_:genid573 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://purl.org/roh#Award> .
+_:genid573 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid572 .
+_:genid572 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid572 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://purl.org/roh#CourseCertificate> .
+_:genid572 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid571 .
+_:genid571 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid571 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://purl.org/roh#LanguageCertificate> .
+_:genid571 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
 # 
-_:genid576 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AllDisjointClasses> .
-_:genid576 <http://www.w3.org/2002/07/owl#members> _:genid579 .
-_:genid579 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
-_:genid579 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://purl.org/roh#BachelorDegree> .
-_:genid579 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid578 .
-_:genid578 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
-_:genid578 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://purl.org/roh#DoctoralDegree> .
-_:genid578 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid577 .
+_:genid574 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AllDisjointClasses> .
+_:genid574 <http://www.w3.org/2002/07/owl#members> _:genid577 .
 _:genid577 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
-_:genid577 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://purl.org/roh#MasterDegree> .
-_:genid577 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
+_:genid577 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://purl.org/roh#BachelorDegree> .
+_:genid577 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid576 .
+_:genid576 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid576 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://purl.org/roh#DoctoralDegree> .
+_:genid576 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid575 .
+_:genid575 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid575 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://purl.org/roh#MasterDegree> .
+_:genid575 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
 # 
-_:genid580 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AllDisjointClasses> .
-_:genid580 <http://www.w3.org/2002/07/owl#members> _:genid585 .
-_:genid585 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
-_:genid585 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://purl.org/roh#BlogPost> .
-_:genid585 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid584 .
-_:genid584 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
-_:genid584 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://purl.org/roh#PressArticle> .
-_:genid584 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid583 .
+_:genid578 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AllDisjointClasses> .
+_:genid578 <http://www.w3.org/2002/07/owl#members> _:genid583 .
 _:genid583 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
-_:genid583 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://purl.org/roh/mirror/bibo#AcademicArticle> .
+_:genid583 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://purl.org/roh#BlogPost> .
 _:genid583 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid582 .
 _:genid582 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
-_:genid582 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://purl.org/roh/mirror/vivo#ConferencePaper> .
+_:genid582 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://purl.org/roh#PressArticle> .
 _:genid582 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid581 .
 _:genid581 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
-_:genid581 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://purl.org/roh/mirror/vivo#EditorialArticle> .
-_:genid581 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
+_:genid581 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://purl.org/roh/mirror/bibo#AcademicArticle> .
+_:genid581 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid580 .
+_:genid580 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid580 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://purl.org/roh/mirror/vivo#ConferencePaper> .
+_:genid580 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid579 .
+_:genid579 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid579 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://purl.org/roh/mirror/vivo#EditorialArticle> .
+_:genid579 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
 # 
-_:genid586 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AllDisjointClasses> .
-_:genid586 <http://www.w3.org/2002/07/owl#members> _:genid589 .
-_:genid589 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
-_:genid589 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://purl.org/roh#DegreeMetric> .
-_:genid589 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid588 .
-_:genid588 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
-_:genid588 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://purl.org/roh#PublicationMetric> .
-_:genid588 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid587 .
+_:genid584 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AllDisjointClasses> .
+_:genid584 <http://www.w3.org/2002/07/owl#members> _:genid587 .
 _:genid587 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
-_:genid587 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://purl.org/roh#ResearchGroupMetric> .
-_:genid587 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
+_:genid587 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://purl.org/roh#DegreeMetric> .
+_:genid587 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid586 .
+_:genid586 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid586 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://purl.org/roh#PublicationMetric> .
+_:genid586 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid585 .
+_:genid585 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid585 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://purl.org/roh#ResearchGroupMetric> .
+_:genid585 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
 # 
-_:genid590 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AllDisjointClasses> .
-_:genid590 <http://www.w3.org/2002/07/owl#members> _:genid593 .
-_:genid593 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
-_:genid593 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://purl.org/roh#DegreeSupervisingRelationship> .
-_:genid593 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid592 .
-_:genid592 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
-_:genid592 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://purl.org/roh#MasterSupervisingRelationship> .
-_:genid592 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid591 .
+_:genid588 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AllDisjointClasses> .
+_:genid588 <http://www.w3.org/2002/07/owl#members> _:genid591 .
 _:genid591 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
-_:genid591 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://purl.org/roh#PhDSupervisingRelationship> .
-_:genid591 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
+_:genid591 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://purl.org/roh#DegreeSupervisingRelationship> .
+_:genid591 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid590 .
+_:genid590 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid590 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://purl.org/roh#MasterSupervisingRelationship> .
+_:genid590 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid589 .
+_:genid589 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid589 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://purl.org/roh#PhDSupervisingRelationship> .
+_:genid589 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
 # 
-_:genid594 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AllDisjointClasses> .
-_:genid594 <http://www.w3.org/2002/07/owl#members> _:genid597 .
-_:genid597 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
-_:genid597 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://purl.org/roh#DegreeThesis> .
-_:genid597 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid596 .
-_:genid596 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
-_:genid596 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://purl.org/roh#MasterThesis> .
-_:genid596 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid595 .
+_:genid592 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AllDisjointClasses> .
+_:genid592 <http://www.w3.org/2002/07/owl#members> _:genid595 .
 _:genid595 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
-_:genid595 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://purl.org/roh#PhDThesis> .
-_:genid595 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
+_:genid595 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://purl.org/roh#DegreeThesis> .
+_:genid595 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid594 .
+_:genid594 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid594 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://purl.org/roh#MastersThesis> .
+_:genid594 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid593 .
+_:genid593 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid593 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://purl.org/roh#PhDThesis> .
+_:genid593 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
 # 
-_:genid598 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AllDisjointClasses> .
-_:genid598 <http://www.w3.org/2002/07/owl#members> _:genid602 .
-_:genid602 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
-_:genid602 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://purl.org/roh#EthicalReport> .
-_:genid602 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid601 .
-_:genid601 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
-_:genid601 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://purl.org/roh#EvaluationSummary> .
-_:genid601 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid600 .
+_:genid596 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AllDisjointClasses> .
+_:genid596 <http://www.w3.org/2002/07/owl#members> _:genid600 .
 _:genid600 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
-_:genid600 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://purl.org/roh#Justification> .
+_:genid600 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://purl.org/roh#EthicalReport> .
 _:genid600 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid599 .
 _:genid599 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
-_:genid599 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://purl.org/roh/mirror/vivo#ResearchProposal> .
-_:genid599 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
+_:genid599 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://purl.org/roh#EvaluationSummary> .
+_:genid599 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid598 .
+_:genid598 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid598 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://purl.org/roh#Justification> .
+_:genid598 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid597 .
+_:genid597 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid597 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://purl.org/roh/mirror/vivo#ResearchProposal> .
+_:genid597 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
 # 
-_:genid603 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AllDisjointClasses> .
-_:genid603 <http://www.w3.org/2002/07/owl#members> _:genid613 .
-_:genid613 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
-_:genid613 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://purl.org/roh#EthicsCommittee> .
-_:genid613 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid612 .
-_:genid612 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
-_:genid612 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://purl.org/roh#ResearchGroup> .
-_:genid612 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid611 .
+_:genid601 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AllDisjointClasses> .
+_:genid601 <http://www.w3.org/2002/07/owl#members> _:genid611 .
 _:genid611 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
-_:genid611 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://purl.org/roh/mirror/vivo#Center> .
+_:genid611 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://purl.org/roh#EthicsCommittee> .
 _:genid611 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid610 .
 _:genid610 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
-_:genid610 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://purl.org/roh/mirror/vivo#Company> .
+_:genid610 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://purl.org/roh#ResearchGroup> .
 _:genid610 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid609 .
 _:genid609 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
-_:genid609 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://purl.org/roh/mirror/vivo#Consortium> .
+_:genid609 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://purl.org/roh/mirror/vivo#Center> .
 _:genid609 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid608 .
 _:genid608 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
-_:genid608 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://purl.org/roh/mirror/vivo#Department> .
+_:genid608 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://purl.org/roh/mirror/vivo#Company> .
 _:genid608 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid607 .
 _:genid607 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
-_:genid607 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://purl.org/roh/mirror/vivo#Foundation> .
+_:genid607 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://purl.org/roh/mirror/vivo#Consortium> .
 _:genid607 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid606 .
 _:genid606 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
-_:genid606 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://purl.org/roh/mirror/vivo#GovernmentAgency> .
+_:genid606 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://purl.org/roh/mirror/vivo#Department> .
 _:genid606 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid605 .
 _:genid605 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
-_:genid605 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://purl.org/roh/mirror/vivo#Institute> .
+_:genid605 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://purl.org/roh/mirror/vivo#Foundation> .
 _:genid605 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid604 .
 _:genid604 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
-_:genid604 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://purl.org/roh/mirror/vivo#University> .
-_:genid604 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
+_:genid604 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://purl.org/roh/mirror/vivo#GovernmentAgency> .
+_:genid604 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid603 .
+_:genid603 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid603 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://purl.org/roh/mirror/vivo#Institute> .
+_:genid603 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid602 .
+_:genid602 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid602 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://purl.org/roh/mirror/vivo#University> .
+_:genid602 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
 # 
-_:genid614 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AllDisjointClasses> .
-_:genid614 <http://www.w3.org/2002/07/owl#members> _:genid617 .
-_:genid617 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
-_:genid617 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://purl.org/roh#EvaluationSummary> .
-_:genid617 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid616 .
-_:genid616 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
-_:genid616 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://purl.org/roh#Justification> .
-_:genid616 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid615 .
+_:genid612 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AllDisjointClasses> .
+_:genid612 <http://www.w3.org/2002/07/owl#members> _:genid615 .
 _:genid615 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
-_:genid615 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://purl.org/roh/mirror/vivo#ResearchProposal> .
-_:genid615 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
+_:genid615 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://purl.org/roh#EvaluationSummary> .
+_:genid615 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid614 .
+_:genid614 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid614 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://purl.org/roh#Justification> .
+_:genid614 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid613 .
+_:genid613 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid613 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://purl.org/roh/mirror/vivo#ResearchProposal> .
+_:genid613 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
 # 
-_:genid618 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AllDisjointClasses> .
-_:genid618 <http://www.w3.org/2002/07/owl#members> _:genid623 .
-_:genid623 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
-_:genid623 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://purl.org/roh#ExpenseClassification> .
-_:genid623 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid622 .
-_:genid622 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
-_:genid622 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://purl.org/roh#FundingProgramClassification> .
-_:genid622 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid621 .
+_:genid616 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AllDisjointClasses> .
+_:genid616 <http://www.w3.org/2002/07/owl#members> _:genid621 .
 _:genid621 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
-_:genid621 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://purl.org/roh#HRClassification> .
+_:genid621 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://purl.org/roh#ExpenseClassification> .
 _:genid621 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid620 .
 _:genid620 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
-_:genid620 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://purl.org/roh#KnowledgeArea> .
+_:genid620 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://purl.org/roh#FundingProgramClassification> .
 _:genid620 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid619 .
 _:genid619 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
-_:genid619 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://purl.org/roh#ProjectClassification> .
-_:genid619 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
+_:genid619 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://purl.org/roh#HRClassification> .
+_:genid619 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid618 .
+_:genid618 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid618 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://purl.org/roh#KnowledgeArea> .
+_:genid618 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid617 .
+_:genid617 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid617 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://purl.org/roh#ProjectClassification> .
+_:genid617 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
 # 
-_:genid624 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AllDisjointClasses> .
-_:genid624 <http://www.w3.org/2002/07/owl#members> _:genid630 .
-_:genid630 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
-_:genid630 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://purl.org/roh#ExpenseClassification> .
-_:genid630 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid629 .
-_:genid629 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
-_:genid629 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://purl.org/roh#FundingProgramClassification> .
-_:genid629 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid628 .
+_:genid622 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AllDisjointClasses> .
+_:genid622 <http://www.w3.org/2002/07/owl#members> _:genid628 .
 _:genid628 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
-_:genid628 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://purl.org/roh#HRClassification> .
+_:genid628 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://purl.org/roh#ExpenseClassification> .
 _:genid628 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid627 .
 _:genid627 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
-_:genid627 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://purl.org/roh#KnowledgeArea> .
+_:genid627 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://purl.org/roh#FundingProgramClassification> .
 _:genid627 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid626 .
 _:genid626 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
-_:genid626 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://purl.org/roh#ProjectClassification> .
+_:genid626 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://purl.org/roh#HRClassification> .
 _:genid626 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid625 .
 _:genid625 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
-_:genid625 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://purl.org/roh#PropertyClassification> .
-_:genid625 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
+_:genid625 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://purl.org/roh#KnowledgeArea> .
+_:genid625 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid624 .
+_:genid624 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid624 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://purl.org/roh#ProjectClassification> .
+_:genid624 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid623 .
+_:genid623 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid623 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://purl.org/roh#PropertyClassification> .
+_:genid623 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
 # 
-_:genid631 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AllDisjointClasses> .
-_:genid631 <http://www.w3.org/2002/07/owl#members> _:genid635 .
-_:genid635 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
-_:genid635 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://purl.org/roh#FundingProgramClassification> .
-_:genid635 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid634 .
-_:genid634 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
-_:genid634 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://purl.org/roh#HRClassification> .
-_:genid634 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid633 .
+_:genid629 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AllDisjointClasses> .
+_:genid629 <http://www.w3.org/2002/07/owl#members> _:genid633 .
 _:genid633 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
-_:genid633 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://purl.org/roh#KnowledgeArea> .
+_:genid633 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://purl.org/roh#FundingProgramClassification> .
 _:genid633 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid632 .
 _:genid632 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
-_:genid632 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://purl.org/roh#ProjectClassification> .
-_:genid632 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
+_:genid632 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://purl.org/roh#HRClassification> .
+_:genid632 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid631 .
+_:genid631 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid631 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://purl.org/roh#KnowledgeArea> .
+_:genid631 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid630 .
+_:genid630 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid630 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://purl.org/roh#ProjectClassification> .
+_:genid630 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
 # 
-_:genid636 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AllDisjointClasses> .
-_:genid636 <http://www.w3.org/2002/07/owl#members> _:genid640 .
-_:genid640 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
-_:genid640 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://purl.org/roh#Grant> .
-_:genid640 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid639 .
-_:genid639 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
-_:genid639 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://purl.org/roh#Loan> .
-_:genid639 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid638 .
+_:genid634 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AllDisjointClasses> .
+_:genid634 <http://www.w3.org/2002/07/owl#members> _:genid638 .
 _:genid638 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
-_:genid638 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://purl.org/roh#Outsourcing> .
+_:genid638 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://purl.org/roh#Grant> .
 _:genid638 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid637 .
 _:genid637 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
-_:genid637 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://purl.org/roh#RefundableAdvance> .
-_:genid637 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
+_:genid637 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://purl.org/roh#Loan> .
+_:genid637 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid636 .
+_:genid636 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid636 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://purl.org/roh#Outsourcing> .
+_:genid636 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid635 .
+_:genid635 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid635 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://purl.org/roh#RefundableAdvance> .
+_:genid635 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
 # 
-_:genid641 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AllDisjointClasses> .
-_:genid641 <http://www.w3.org/2002/07/owl#members> _:genid644 .
-_:genid644 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
-_:genid644 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://purl.org/roh#HRClassification> .
-_:genid644 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid643 .
-_:genid643 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
-_:genid643 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://purl.org/roh#KnowledgeArea> .
-_:genid643 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid642 .
+_:genid639 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AllDisjointClasses> .
+_:genid639 <http://www.w3.org/2002/07/owl#members> _:genid642 .
 _:genid642 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
-_:genid642 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://purl.org/roh#ProjectClassification> .
-_:genid642 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
+_:genid642 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://purl.org/roh#HRClassification> .
+_:genid642 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid641 .
+_:genid641 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid641 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://purl.org/roh#KnowledgeArea> .
+_:genid641 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid640 .
+_:genid640 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid640 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://purl.org/roh#ProjectClassification> .
+_:genid640 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
 # 
-_:genid645 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AllDisjointClasses> .
-_:genid645 <http://www.w3.org/2002/07/owl#members> _:genid657 .
-_:genid657 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
-_:genid657 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://purl.org/roh#Invoice> .
-_:genid657 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid656 .
-_:genid656 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
-_:genid656 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://purl.org/roh/mirror/bibo#Article> .
-_:genid656 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid655 .
+_:genid643 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AllDisjointClasses> .
+_:genid643 <http://www.w3.org/2002/07/owl#members> _:genid655 .
 _:genid655 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
-_:genid655 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://purl.org/roh/mirror/bibo#Book> .
+_:genid655 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://purl.org/roh#Invoice> .
 _:genid655 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid654 .
 _:genid654 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
-_:genid654 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://purl.org/roh/mirror/bibo#CollectedDocument> .
+_:genid654 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://purl.org/roh/mirror/bibo#Article> .
 _:genid654 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid653 .
 _:genid653 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
-_:genid653 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://purl.org/roh/mirror/bibo#DocumentPart> .
+_:genid653 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://purl.org/roh/mirror/bibo#Book> .
 _:genid653 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid652 .
 _:genid652 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
-_:genid652 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://purl.org/roh/mirror/bibo#Patent> .
+_:genid652 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://purl.org/roh/mirror/bibo#CollectedDocument> .
 _:genid652 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid651 .
 _:genid651 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
-_:genid651 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://purl.org/roh/mirror/bibo#Report> .
+_:genid651 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://purl.org/roh/mirror/bibo#DocumentPart> .
 _:genid651 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid650 .
 _:genid650 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
-_:genid650 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://purl.org/roh/mirror/bibo#Thesis> .
+_:genid650 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://purl.org/roh/mirror/bibo#Patent> .
 _:genid650 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid649 .
 _:genid649 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
-_:genid649 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://purl.org/roh/mirror/bibo#Webpage> .
+_:genid649 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://purl.org/roh/mirror/bibo#Report> .
 _:genid649 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid648 .
 _:genid648 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
-_:genid648 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://purl.org/roh/mirror/vivo#Abstract> .
+_:genid648 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://purl.org/roh/mirror/bibo#Thesis> .
 _:genid648 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid647 .
 _:genid647 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
-_:genid647 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://purl.org/roh/mirror/vivo#ConferencePoster> .
+_:genid647 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://purl.org/roh/mirror/bibo#Webpage> .
 _:genid647 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid646 .
 _:genid646 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
-_:genid646 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://purl.org/roh/mirror/vivo#Dataset> .
-_:genid646 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
+_:genid646 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://purl.org/roh/mirror/vivo#Abstract> .
+_:genid646 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid645 .
+_:genid645 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid645 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://purl.org/roh/mirror/vivo#ConferencePoster> .
+_:genid645 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid644 .
+_:genid644 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid644 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://purl.org/roh/mirror/vivo#Dataset> .
+_:genid644 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
 # 
-_:genid658 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AllDisjointClasses> .
-_:genid658 <http://www.w3.org/2002/07/owl#members> _:genid662 .
-_:genid662 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
-_:genid662 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://purl.org/roh#LargeEnterprise> .
-_:genid662 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid661 .
-_:genid661 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
-_:genid661 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://purl.org/roh#MediumEnterprise> .
-_:genid661 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid660 .
+_:genid656 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AllDisjointClasses> .
+_:genid656 <http://www.w3.org/2002/07/owl#members> _:genid660 .
 _:genid660 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
-_:genid660 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://purl.org/roh#MicroEnterprise> .
+_:genid660 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://purl.org/roh#LargeEnterprise> .
 _:genid660 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid659 .
 _:genid659 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
-_:genid659 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://purl.org/roh#SmallEnterprise> .
-_:genid659 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
+_:genid659 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://purl.org/roh#MediumEnterprise> .
+_:genid659 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid658 .
+_:genid658 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid658 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://purl.org/roh#MicroEnterprise> .
+_:genid658 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid657 .
+_:genid657 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid657 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://purl.org/roh#SmallEnterprise> .
+_:genid657 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
 # 
-_:genid663 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AllDisjointClasses> .
-_:genid663 <http://www.w3.org/2002/07/owl#members> _:genid666 .
-_:genid666 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
-_:genid666 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://purl.org/roh#PatentContract> .
-_:genid666 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid665 .
-_:genid665 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
-_:genid665 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://purl.org/roh#PersonContract> .
-_:genid665 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid664 .
+_:genid661 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AllDisjointClasses> .
+_:genid661 <http://www.w3.org/2002/07/owl#members> _:genid664 .
 _:genid664 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
-_:genid664 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://purl.org/roh#ProjectContract> .
-_:genid664 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
+_:genid664 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://purl.org/roh#PatentContract> .
+_:genid664 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid663 .
+_:genid663 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid663 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://purl.org/roh#PersonContract> .
+_:genid663 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid662 .
+_:genid662 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid662 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://purl.org/roh#ProjectContract> .
+_:genid662 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
 # 
-_:genid667 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AllDisjointClasses> .
-_:genid667 <http://www.w3.org/2002/07/owl#members> _:genid671 .
-_:genid671 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
-_:genid671 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://purl.org/roh#PatentExpense> .
-_:genid671 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid670 .
-_:genid670 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
-_:genid670 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://purl.org/roh#PersonExpense> .
-_:genid670 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid669 .
+_:genid665 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AllDisjointClasses> .
+_:genid665 <http://www.w3.org/2002/07/owl#members> _:genid669 .
 _:genid669 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
-_:genid669 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://purl.org/roh#ProjectExpense> .
+_:genid669 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://purl.org/roh#PatentExpense> .
 _:genid669 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid668 .
 _:genid668 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
-_:genid668 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://purl.org/roh#ResearchObjectExpense> .
-_:genid668 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
+_:genid668 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://purl.org/roh#PersonExpense> .
+_:genid668 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid667 .
+_:genid667 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid667 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://purl.org/roh#ProjectExpense> .
+_:genid667 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid666 .
+_:genid666 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid666 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://purl.org/roh#ResearchObjectExpense> .
+_:genid666 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
 # 
-_:genid672 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AllDisjointClasses> .
-_:genid672 <http://www.w3.org/2002/07/owl#members> _:genid679 .
-_:genid679 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
-_:genid679 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://purl.org/roh#ResearcherPosition> .
-_:genid679 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid678 .
-_:genid678 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
-_:genid678 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://purl.org/roh/mirror/vivo#FacultyAdministrativePosition> .
-_:genid678 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid677 .
+_:genid670 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AllDisjointClasses> .
+_:genid670 <http://www.w3.org/2002/07/owl#members> _:genid677 .
 _:genid677 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
-_:genid677 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://purl.org/roh/mirror/vivo#FacultyPosition> .
+_:genid677 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://purl.org/roh#ResearcherPosition> .
 _:genid677 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid676 .
 _:genid676 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
-_:genid676 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://purl.org/roh/mirror/vivo#LibrarianPosition> .
+_:genid676 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://purl.org/roh/mirror/vivo#FacultyAdministrativePosition> .
 _:genid676 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid675 .
 _:genid675 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
-_:genid675 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://purl.org/roh/mirror/vivo#NonAcademicPosition> .
+_:genid675 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://purl.org/roh/mirror/vivo#FacultyPosition> .
 _:genid675 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid674 .
 _:genid674 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
-_:genid674 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://purl.org/roh/mirror/vivo#NonFacultyAcademicPosition> .
+_:genid674 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://purl.org/roh/mirror/vivo#LibrarianPosition> .
 _:genid674 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid673 .
 _:genid673 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
-_:genid673 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://purl.org/roh/mirror/vivo#PrimaryPosition> .
-_:genid673 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
+_:genid673 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://purl.org/roh/mirror/vivo#NonAcademicPosition> .
+_:genid673 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid672 .
+_:genid672 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid672 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://purl.org/roh/mirror/vivo#NonFacultyAcademicPosition> .
+_:genid672 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid671 .
+_:genid671 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid671 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://purl.org/roh/mirror/vivo#PrimaryPosition> .
+_:genid671 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
 # 
-_:genid680 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AllDisjointClasses> .
-_:genid680 <http://www.w3.org/2002/07/owl#members> _:genid692 .
-_:genid692 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
-_:genid692 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://purl.org/roh#ThesisViva> .
-_:genid692 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid691 .
-_:genid691 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
-_:genid691 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://purl.org/roh/mirror/bibo#Conference> .
-_:genid691 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid690 .
+_:genid678 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AllDisjointClasses> .
+_:genid678 <http://www.w3.org/2002/07/owl#members> _:genid690 .
 _:genid690 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
-_:genid690 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://purl.org/roh/mirror/bibo#Hearing> .
+_:genid690 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://purl.org/roh#ThesisViva> .
 _:genid690 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid689 .
 _:genid689 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
-_:genid689 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://purl.org/roh/mirror/bibo#Interview> .
+_:genid689 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://purl.org/roh/mirror/bibo#Conference> .
 _:genid689 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid688 .
 _:genid688 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
-_:genid688 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://purl.org/roh/mirror/bibo#Performance> .
+_:genid688 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://purl.org/roh/mirror/bibo#Hearing> .
 _:genid688 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid687 .
 _:genid687 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
-_:genid687 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://purl.org/roh/mirror/bibo#Workshop> .
+_:genid687 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://purl.org/roh/mirror/bibo#Interview> .
 _:genid687 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid686 .
 _:genid686 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
-_:genid686 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://purl.org/roh/mirror/vivo#Competition> .
+_:genid686 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://purl.org/roh/mirror/bibo#Performance> .
 _:genid686 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid685 .
 _:genid685 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
-_:genid685 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://purl.org/roh/mirror/vivo#Course> .
+_:genid685 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://purl.org/roh/mirror/bibo#Workshop> .
 _:genid685 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid684 .
 _:genid684 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
-_:genid684 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://purl.org/roh/mirror/vivo#Exhibit> .
+_:genid684 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://purl.org/roh/mirror/vivo#Competition> .
 _:genid684 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid683 .
 _:genid683 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
-_:genid683 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://purl.org/roh/mirror/vivo#Internship> .
+_:genid683 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://purl.org/roh/mirror/vivo#Course> .
 _:genid683 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid682 .
 _:genid682 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
-_:genid682 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://purl.org/roh/mirror/vivo#Meeting> .
+_:genid682 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://purl.org/roh/mirror/vivo#Exhibit> .
 _:genid682 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid681 .
 _:genid681 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
-_:genid681 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://purl.org/roh/mirror/vivo#Presentation> .
-_:genid681 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
+_:genid681 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://purl.org/roh/mirror/vivo#Internship> .
+_:genid681 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid680 .
+_:genid680 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid680 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://purl.org/roh/mirror/vivo#Meeting> .
+_:genid680 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid679 .
+_:genid679 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid679 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://purl.org/roh/mirror/vivo#Presentation> .
+_:genid679 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
 # 
-_:genid693 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AllDisjointClasses> .
-_:genid693 <http://www.w3.org/2002/07/owl#members> _:genid696 .
-_:genid696 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
-_:genid696 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://purl.org/roh/mirror/bibo#AcademicArticle> .
-_:genid696 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid695 .
-_:genid695 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
-_:genid695 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://purl.org/roh/mirror/vivo#ConferencePaper> .
-_:genid695 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid694 .
+_:genid691 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AllDisjointClasses> .
+_:genid691 <http://www.w3.org/2002/07/owl#members> _:genid694 .
 _:genid694 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
-_:genid694 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://purl.org/roh/mirror/vivo#EditorialArticle> .
-_:genid694 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
+_:genid694 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://purl.org/roh/mirror/bibo#AcademicArticle> .
+_:genid694 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid693 .
+_:genid693 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid693 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://purl.org/roh/mirror/vivo#ConferencePaper> .
+_:genid693 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid692 .
+_:genid692 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid692 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://purl.org/roh/mirror/vivo#EditorialArticle> .
+_:genid692 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
 # 
-_:genid697 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AllDisjointClasses> .
-_:genid697 <http://www.w3.org/2002/07/owl#members> _:genid708 .
-_:genid708 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
-_:genid708 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://purl.org/roh/mirror/bibo#Article> .
-_:genid708 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid707 .
-_:genid707 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
-_:genid707 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://purl.org/roh/mirror/bibo#Book> .
-_:genid707 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid706 .
+_:genid695 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AllDisjointClasses> .
+_:genid695 <http://www.w3.org/2002/07/owl#members> _:genid706 .
 _:genid706 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
-_:genid706 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://purl.org/roh/mirror/bibo#CollectedDocument> .
+_:genid706 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://purl.org/roh/mirror/bibo#Article> .
 _:genid706 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid705 .
 _:genid705 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
-_:genid705 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://purl.org/roh/mirror/bibo#DocumentPart> .
+_:genid705 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://purl.org/roh/mirror/bibo#Book> .
 _:genid705 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid704 .
 _:genid704 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
-_:genid704 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://purl.org/roh/mirror/bibo#Patent> .
+_:genid704 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://purl.org/roh/mirror/bibo#CollectedDocument> .
 _:genid704 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid703 .
 _:genid703 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
-_:genid703 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://purl.org/roh/mirror/bibo#Report> .
+_:genid703 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://purl.org/roh/mirror/bibo#DocumentPart> .
 _:genid703 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid702 .
 _:genid702 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
-_:genid702 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://purl.org/roh/mirror/bibo#Thesis> .
+_:genid702 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://purl.org/roh/mirror/bibo#Patent> .
 _:genid702 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid701 .
 _:genid701 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
-_:genid701 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://purl.org/roh/mirror/bibo#Webpage> .
+_:genid701 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://purl.org/roh/mirror/bibo#Report> .
 _:genid701 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid700 .
 _:genid700 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
-_:genid700 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://purl.org/roh/mirror/vivo#Abstract> .
+_:genid700 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://purl.org/roh/mirror/bibo#Thesis> .
 _:genid700 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid699 .
 _:genid699 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
-_:genid699 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://purl.org/roh/mirror/vivo#ConferencePoster> .
+_:genid699 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://purl.org/roh/mirror/bibo#Webpage> .
 _:genid699 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid698 .
 _:genid698 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
-_:genid698 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://purl.org/roh/mirror/vivo#Dataset> .
-_:genid698 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
+_:genid698 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://purl.org/roh/mirror/vivo#Abstract> .
+_:genid698 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid697 .
+_:genid697 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid697 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://purl.org/roh/mirror/vivo#ConferencePoster> .
+_:genid697 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid696 .
+_:genid696 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid696 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://purl.org/roh/mirror/vivo#Dataset> .
+_:genid696 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
 # 
-_:genid709 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AllDisjointClasses> .
-_:genid709 <http://www.w3.org/2002/07/owl#members> _:genid712 .
-_:genid712 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
-_:genid712 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://purl.org/roh/mirror/obo/ero#ERO_0000071> .
-_:genid712 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid711 .
-_:genid711 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
-_:genid711 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://purl.org/roh/mirror/vivo#Equipment> .
-_:genid711 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid710 .
+_:genid707 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AllDisjointClasses> .
+_:genid707 <http://www.w3.org/2002/07/owl#members> _:genid710 .
 _:genid710 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
-_:genid710 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://purl.org/roh/mirror/vivo#Facility> .
-_:genid710 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
+_:genid710 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://purl.org/roh/mirror/obo/ero#ERO_0000071> .
+_:genid710 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid709 .
+_:genid709 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid709 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://purl.org/roh/mirror/vivo#Equipment> .
+_:genid709 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid708 .
+_:genid708 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid708 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://purl.org/roh/mirror/vivo#Facility> .
+_:genid708 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
 # 
-_:genid713 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AllDisjointClasses> .
-_:genid713 <http://www.w3.org/2002/07/owl#members> _:genid721 .
-_:genid721 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
-_:genid721 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://purl.org/roh/mirror/obo/ero#ERO_0000391> .
-_:genid721 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid720 .
-_:genid720 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
-_:genid720 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://purl.org/roh/mirror/obo/ero#ERO_0000392> .
-_:genid720 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid719 .
+_:genid711 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AllDisjointClasses> .
+_:genid711 <http://www.w3.org/2002/07/owl#members> _:genid719 .
 _:genid719 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
-_:genid719 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://purl.org/roh/mirror/obo/ero#ERO_0000393> .
+_:genid719 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://purl.org/roh/mirror/obo/ero#ERO_0000391> .
 _:genid719 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid718 .
 _:genid718 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
-_:genid718 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://purl.org/roh/mirror/obo/ero#ERO_0000394> .
+_:genid718 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://purl.org/roh/mirror/obo/ero#ERO_0000392> .
 _:genid718 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid717 .
 _:genid717 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
-_:genid717 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://purl.org/roh/mirror/obo/ero#ERO_0001254> .
+_:genid717 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://purl.org/roh/mirror/obo/ero#ERO_0000393> .
 _:genid717 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid716 .
 _:genid716 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
-_:genid716 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://purl.org/roh/mirror/obo/ero#ERO_0001255> .
+_:genid716 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://purl.org/roh/mirror/obo/ero#ERO_0000394> .
 _:genid716 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid715 .
 _:genid715 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
-_:genid715 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://purl.org/roh/mirror/obo/ero#ERO_0001258> .
+_:genid715 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://purl.org/roh/mirror/obo/ero#ERO_0001254> .
 _:genid715 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid714 .
 _:genid714 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
-_:genid714 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://purl.org/roh/mirror/obo/ero#ERO_0001261> .
-_:genid714 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
+_:genid714 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://purl.org/roh/mirror/obo/ero#ERO_0001255> .
+_:genid714 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid713 .
+_:genid713 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid713 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://purl.org/roh/mirror/obo/ero#ERO_0001258> .
+_:genid713 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid712 .
+_:genid712 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid712 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://purl.org/roh/mirror/obo/ero#ERO_0001261> .
+_:genid712 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
 # 
-_:genid722 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AllDisjointClasses> .
-_:genid722 <http://www.w3.org/2002/07/owl#members> _:genid726 .
-_:genid726 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
-_:genid726 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://purl.org/roh/mirror/vcard#Group> .
-_:genid726 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid725 .
-_:genid725 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
-_:genid725 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://purl.org/roh/mirror/vcard#Individual> .
-_:genid725 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid724 .
+_:genid720 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AllDisjointClasses> .
+_:genid720 <http://www.w3.org/2002/07/owl#members> _:genid724 .
 _:genid724 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
-_:genid724 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://purl.org/roh/mirror/vcard#Location> .
+_:genid724 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://purl.org/roh/mirror/vcard#Group> .
 _:genid724 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid723 .
 _:genid723 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
-_:genid723 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://purl.org/roh/mirror/vcard#Organization> .
-_:genid723 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
+_:genid723 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://purl.org/roh/mirror/vcard#Individual> .
+_:genid723 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid722 .
+_:genid722 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid722 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://purl.org/roh/mirror/vcard#Location> .
+_:genid722 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid721 .
+_:genid721 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid721 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://purl.org/roh/mirror/vcard#Organization> .
+_:genid721 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
 # 
-_:genid727 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AllDisjointClasses> .
-_:genid727 <http://www.w3.org/2002/07/owl#members> _:genid731 .
-_:genid731 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
-_:genid731 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://purl.org/roh/mirror/vivo#FacultyMentoringRelationship> .
-_:genid731 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid730 .
-_:genid730 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
-_:genid730 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://purl.org/roh/mirror/vivo#GraduateAdvisingRelationship> .
-_:genid730 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid729 .
+_:genid725 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AllDisjointClasses> .
+_:genid725 <http://www.w3.org/2002/07/owl#members> _:genid729 .
 _:genid729 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
-_:genid729 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://purl.org/roh/mirror/vivo#PostdocOrFellowAdvisingRelationship> .
+_:genid729 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://purl.org/roh/mirror/vivo#FacultyMentoringRelationship> .
 _:genid729 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid728 .
 _:genid728 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
-_:genid728 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://purl.org/roh/mirror/vivo#UndergraduateAdvisingRelationship> .
-_:genid728 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
+_:genid728 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://purl.org/roh/mirror/vivo#GraduateAdvisingRelationship> .
+_:genid728 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid727 .
+_:genid727 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid727 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://purl.org/roh/mirror/vivo#PostdocOrFellowAdvisingRelationship> .
+_:genid727 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid726 .
+_:genid726 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid726 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://purl.org/roh/mirror/vivo#UndergraduateAdvisingRelationship> .
+_:genid726 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
 # 
 # Generated by the OWL API (version 5.1.14) https://github.com/owlcs/owlapi/

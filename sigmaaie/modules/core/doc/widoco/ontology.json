@@ -851,7 +851,7 @@
   "@id" : "_:genid195",
   "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
   "http://www.w3.org/2002/07/owl#allValuesFrom" : [ {
-    "@id" : "http://purl.org/roh#MasterThesis"
+    "@id" : "http://purl.org/roh#MastersThesis"
   } ],
   "http://www.w3.org/2002/07/owl#onProperty" : [ {
     "@id" : "http://purl.org/roh#produces"
@@ -3233,8 +3233,6 @@
     }, {
       "@id" : "http://purl.org/roh#Activity"
     }, {
-      "@id" : "http://purl.org/roh#CurriculumVitae"
-    }, {
       "@id" : "http://purl.org/roh#Expense"
     }, {
       "@id" : "http://purl.org/roh#Funding"
@@ -3287,15 +3285,13 @@
     } ]
   } ]
 }, {
-  "@id" : "_:genid515",
+  "@id" : "_:genid514",
   "@type" : [ "http://www.w3.org/2002/07/owl#AllDisjointClasses" ],
   "http://www.w3.org/2002/07/owl#members" : [ {
     "@list" : [ {
       "@id" : "http://purl.org/roh#Accreditation"
     }, {
       "@id" : "http://purl.org/roh#Activity"
-    }, {
-      "@id" : "http://purl.org/roh#CurriculumVitae"
     }, {
       "@id" : "http://purl.org/roh#Expense"
     }, {
@@ -3359,7 +3355,7 @@
     } ]
   } ]
 }, {
-  "@id" : "_:genid540",
+  "@id" : "_:genid538",
   "@type" : [ "http://www.w3.org/2002/07/owl#AllDisjointClasses" ],
   "http://www.w3.org/2002/07/owl#members" : [ {
     "@list" : [ {
@@ -3413,7 +3409,7 @@
     } ]
   } ]
 }, {
-  "@id" : "_:genid565",
+  "@id" : "_:genid563",
   "@type" : [ "http://www.w3.org/2002/07/owl#AllDisjointClasses" ],
   "http://www.w3.org/2002/07/owl#members" : [ {
     "@list" : [ {
@@ -3431,7 +3427,7 @@
     } ]
   } ]
 }, {
-  "@id" : "_:genid572",
+  "@id" : "_:genid570",
   "@type" : [ "http://www.w3.org/2002/07/owl#AllDisjointClasses" ],
   "http://www.w3.org/2002/07/owl#members" : [ {
     "@list" : [ {
@@ -3443,7 +3439,7 @@
     } ]
   } ]
 }, {
-  "@id" : "_:genid576",
+  "@id" : "_:genid574",
   "@type" : [ "http://www.w3.org/2002/07/owl#AllDisjointClasses" ],
   "http://www.w3.org/2002/07/owl#members" : [ {
     "@list" : [ {
@@ -3455,7 +3451,7 @@
     } ]
   } ]
 }, {
-  "@id" : "_:genid580",
+  "@id" : "_:genid578",
   "@type" : [ "http://www.w3.org/2002/07/owl#AllDisjointClasses" ],
   "http://www.w3.org/2002/07/owl#members" : [ {
     "@list" : [ {
@@ -3471,7 +3467,7 @@
     } ]
   } ]
 }, {
-  "@id" : "_:genid586",
+  "@id" : "_:genid584",
   "@type" : [ "http://www.w3.org/2002/07/owl#AllDisjointClasses" ],
   "http://www.w3.org/2002/07/owl#members" : [ {
     "@list" : [ {
@@ -3480,6 +3476,18 @@
       "@id" : "http://purl.org/roh#PublicationMetric"
     }, {
       "@id" : "http://purl.org/roh#ResearchGroupMetric"
+    } ]
+  } ]
+}, {
+  "@id" : "_:genid588",
+  "@type" : [ "http://www.w3.org/2002/07/owl#AllDisjointClasses" ],
+  "http://www.w3.org/2002/07/owl#members" : [ {
+    "@list" : [ {
+      "@id" : "http://purl.org/roh#DegreeSupervisingRelationship"
+    }, {
+      "@id" : "http://purl.org/roh#MasterSupervisingRelationship"
+    }, {
+      "@id" : "http://purl.org/roh#PhDSupervisingRelationship"
     } ]
   } ]
 }, {
@@ -3501,31 +3509,19 @@
     } ]
   } ]
 }, {
-  "@id" : "_:genid590",
-  "@type" : [ "http://www.w3.org/2002/07/owl#AllDisjointClasses" ],
-  "http://www.w3.org/2002/07/owl#members" : [ {
-    "@list" : [ {
-      "@id" : "http://purl.org/roh#DegreeSupervisingRelationship"
-    }, {
-      "@id" : "http://purl.org/roh#MasterSupervisingRelationship"
-    }, {
-      "@id" : "http://purl.org/roh#PhDSupervisingRelationship"
-    } ]
-  } ]
-}, {
-  "@id" : "_:genid594",
+  "@id" : "_:genid592",
   "@type" : [ "http://www.w3.org/2002/07/owl#AllDisjointClasses" ],
   "http://www.w3.org/2002/07/owl#members" : [ {
     "@list" : [ {
       "@id" : "http://purl.org/roh#DegreeThesis"
     }, {
-      "@id" : "http://purl.org/roh#MasterThesis"
+      "@id" : "http://purl.org/roh#MastersThesis"
     }, {
       "@id" : "http://purl.org/roh#PhDThesis"
     } ]
   } ]
 }, {
-  "@id" : "_:genid598",
+  "@id" : "_:genid596",
   "@type" : [ "http://www.w3.org/2002/07/owl#AllDisjointClasses" ],
   "http://www.w3.org/2002/07/owl#members" : [ {
     "@list" : [ {
@@ -3539,7 +3535,7 @@
     } ]
   } ]
 }, {
-  "@id" : "_:genid603",
+  "@id" : "_:genid601",
   "@type" : [ "http://www.w3.org/2002/07/owl#AllDisjointClasses" ],
   "http://www.w3.org/2002/07/owl#members" : [ {
     "@list" : [ {
@@ -3565,7 +3561,7 @@
     } ]
   } ]
 }, {
-  "@id" : "_:genid614",
+  "@id" : "_:genid612",
   "@type" : [ "http://www.w3.org/2002/07/owl#AllDisjointClasses" ],
   "http://www.w3.org/2002/07/owl#members" : [ {
     "@list" : [ {
@@ -3577,7 +3573,7 @@
     } ]
   } ]
 }, {
-  "@id" : "_:genid618",
+  "@id" : "_:genid616",
   "@type" : [ "http://www.w3.org/2002/07/owl#AllDisjointClasses" ],
   "http://www.w3.org/2002/07/owl#members" : [ {
     "@list" : [ {
@@ -3593,7 +3589,7 @@
     } ]
   } ]
 }, {
-  "@id" : "_:genid624",
+  "@id" : "_:genid622",
   "@type" : [ "http://www.w3.org/2002/07/owl#AllDisjointClasses" ],
   "http://www.w3.org/2002/07/owl#members" : [ {
     "@list" : [ {
@@ -3611,7 +3607,7 @@
     } ]
   } ]
 }, {
-  "@id" : "_:genid631",
+  "@id" : "_:genid629",
   "@type" : [ "http://www.w3.org/2002/07/owl#AllDisjointClasses" ],
   "http://www.w3.org/2002/07/owl#members" : [ {
     "@list" : [ {
@@ -3625,7 +3621,7 @@
     } ]
   } ]
 }, {
-  "@id" : "_:genid636",
+  "@id" : "_:genid634",
   "@type" : [ "http://www.w3.org/2002/07/owl#AllDisjointClasses" ],
   "http://www.w3.org/2002/07/owl#members" : [ {
     "@list" : [ {
@@ -3639,7 +3635,7 @@
     } ]
   } ]
 }, {
-  "@id" : "_:genid641",
+  "@id" : "_:genid639",
   "@type" : [ "http://www.w3.org/2002/07/owl#AllDisjointClasses" ],
   "http://www.w3.org/2002/07/owl#members" : [ {
     "@list" : [ {
@@ -3651,7 +3647,7 @@
     } ]
   } ]
 }, {
-  "@id" : "_:genid645",
+  "@id" : "_:genid643",
   "@type" : [ "http://www.w3.org/2002/07/owl#AllDisjointClasses" ],
   "http://www.w3.org/2002/07/owl#members" : [ {
     "@list" : [ {
@@ -3681,7 +3677,7 @@
     } ]
   } ]
 }, {
-  "@id" : "_:genid658",
+  "@id" : "_:genid656",
   "@type" : [ "http://www.w3.org/2002/07/owl#AllDisjointClasses" ],
   "http://www.w3.org/2002/07/owl#members" : [ {
     "@list" : [ {
@@ -3704,7 +3700,7 @@
     "@id" : "http://www.w3.org/2001/XMLSchema#string"
   } ]
 }, {
-  "@id" : "_:genid663",
+  "@id" : "_:genid661",
   "@type" : [ "http://www.w3.org/2002/07/owl#AllDisjointClasses" ],
   "http://www.w3.org/2002/07/owl#members" : [ {
     "@list" : [ {
@@ -3716,7 +3712,7 @@
     } ]
   } ]
 }, {
-  "@id" : "_:genid667",
+  "@id" : "_:genid665",
   "@type" : [ "http://www.w3.org/2002/07/owl#AllDisjointClasses" ],
   "http://www.w3.org/2002/07/owl#members" : [ {
     "@list" : [ {
@@ -3739,7 +3735,7 @@
     "@id" : "http://purl.org/roh#title"
   } ]
 }, {
-  "@id" : "_:genid672",
+  "@id" : "_:genid670",
   "@type" : [ "http://www.w3.org/2002/07/owl#AllDisjointClasses" ],
   "http://www.w3.org/2002/07/owl#members" : [ {
     "@list" : [ {
@@ -3759,16 +3755,7 @@
     } ]
   } ]
 }, {
-  "@id" : "_:genid68",
-  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
-  "http://www.w3.org/2002/07/owl#allValuesFrom" : [ {
-    "@id" : "http://purl.org/roh/mirror/vivo#DateTimeValue"
-  } ],
-  "http://www.w3.org/2002/07/owl#onProperty" : [ {
-    "@id" : "http://purl.org/roh/mirror/vivo#dateIssued"
-  } ]
-}, {
-  "@id" : "_:genid680",
+  "@id" : "_:genid678",
   "@type" : [ "http://www.w3.org/2002/07/owl#AllDisjointClasses" ],
   "http://www.w3.org/2002/07/owl#members" : [ {
     "@list" : [ {
@@ -3798,6 +3785,15 @@
     } ]
   } ]
 }, {
+  "@id" : "_:genid68",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
+  "http://www.w3.org/2002/07/owl#allValuesFrom" : [ {
+    "@id" : "http://purl.org/roh/mirror/vivo#DateTimeValue"
+  } ],
+  "http://www.w3.org/2002/07/owl#onProperty" : [ {
+    "@id" : "http://purl.org/roh/mirror/vivo#dateIssued"
+  } ]
+}, {
   "@id" : "_:genid69",
   "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
   "http://www.w3.org/2002/07/owl#allValuesFrom" : [ {
@@ -3807,7 +3803,7 @@
     "@id" : "http://purl.org/roh/mirror/vivo#hasGoverningAuthority"
   } ]
 }, {
-  "@id" : "_:genid693",
+  "@id" : "_:genid691",
   "@type" : [ "http://www.w3.org/2002/07/owl#AllDisjointClasses" ],
   "http://www.w3.org/2002/07/owl#members" : [ {
     "@list" : [ {
@@ -3819,7 +3815,7 @@
     } ]
   } ]
 }, {
-  "@id" : "_:genid697",
+  "@id" : "_:genid695",
   "@type" : [ "http://www.w3.org/2002/07/owl#AllDisjointClasses" ],
   "http://www.w3.org/2002/07/owl#members" : [ {
     "@list" : [ {
@@ -3866,7 +3862,7 @@
     "@id" : "http://purl.org/roh/mirror/vivo#hasSubjectArea"
   } ]
 }, {
-  "@id" : "_:genid709",
+  "@id" : "_:genid707",
   "@type" : [ "http://www.w3.org/2002/07/owl#AllDisjointClasses" ],
   "http://www.w3.org/2002/07/owl#members" : [ {
     "@list" : [ {
@@ -3887,7 +3883,7 @@
     "@id" : "http://www.w3.org/2001/XMLSchema#string"
   } ]
 }, {
-  "@id" : "_:genid713",
+  "@id" : "_:genid711",
   "@type" : [ "http://www.w3.org/2002/07/owl#AllDisjointClasses" ],
   "http://www.w3.org/2002/07/owl#members" : [ {
     "@list" : [ {
@@ -3918,7 +3914,7 @@
     "@id" : "http://purl.org/roh#title"
   } ]
 }, {
-  "@id" : "_:genid722",
+  "@id" : "_:genid720",
   "@type" : [ "http://www.w3.org/2002/07/owl#AllDisjointClasses" ],
   "http://www.w3.org/2002/07/owl#members" : [ {
     "@list" : [ {
@@ -3932,7 +3928,7 @@
     } ]
   } ]
 }, {
-  "@id" : "_:genid727",
+  "@id" : "_:genid725",
   "@type" : [ "http://www.w3.org/2002/07/owl#AllDisjointClasses" ],
   "http://www.w3.org/2002/07/owl#members" : [ {
     "@list" : [ {
@@ -4605,16 +4601,6 @@
     "@id" : "http://purl.org/roh#ScientificPublication"
   } ]
 }, {
-  "@id" : "http://purl.org/roh#AudioVisualDocument",
-  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
-  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
-    "@language" : "en",
-    "@value" : "AudioVisual Document"
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
-    "@id" : "http://purl.org/roh/mirror/bibo#Document"
-  } ]
-}, {
   "@id" : "http://purl.org/roh#AuditeeRole",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
@@ -4773,7 +4759,7 @@
   } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@language" : "en",
-    "@value" : "Bachelor's thesis"
+    "@value" : "Bachelor's Thesis"
   }, {
     "@language" : "fr",
     "@value" : "Mémoire de fin de licence"
@@ -4837,7 +4823,7 @@
   } ],
   "http://www.w3.org/2004/02/skos/core#prefLabel" : [ {
     "@language" : "en",
-    "@value" : "Bachelor's thesis"
+    "@value" : "Bachelor's Thesis"
   }, {
     "@language" : "eu",
     "@value" : "Gradu Amaierako Lana"
@@ -6269,23 +6255,6 @@
     "@id" : "_:genid195"
   } ]
 }, {
-  "@id" : "http://purl.org/roh#MasterThesis",
-  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
-  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
-    "@language" : "en",
-    "@value" : "A document created to summarize research findings associated with the completion of a master degree."
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
-    "@language" : "en",
-    "@value" : "Master Thesis"
-  }, {
-    "@language" : "es",
-    "@value" : "Tesis de Máster"
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
-    "@id" : "http://purl.org/roh/mirror/bibo#Thesis"
-  } ]
-}, {
   "@id" : "http://purl.org/roh#MastersDegreeSubject",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
@@ -6322,6 +6291,9 @@
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
     "@language" : "en",
+    "@value" : "A document created to summarize research findings associated with the completion of a master degree."
+  }, {
+    "@language" : "en",
     "@value" : "A thesis reporting a research project undertaken as part of a second-cycle course of education to receive a master's degree."
   } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
@@ -6332,7 +6304,7 @@
     "@value" : "Dissertação de mestrado"
   }, {
     "@language" : "en",
-    "@value" : "Master's thesis"
+    "@value" : "Master's Thesis"
   }, {
     "@language" : "fr-ca",
     "@value" : "Mémoire de maîtrise"
@@ -6342,6 +6314,9 @@
   }, {
     "@language" : "pt-ao",
     "@value" : "Tese de mestrado"
+  }, {
+    "@language" : "es",
+    "@value" : "Tesis de Máster"
   }, {
     "@language" : "es-ar",
     "@value" : "Tesis de maestría"
@@ -7034,7 +7009,7 @@
     "@value" : "Radio Program"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
-    "@id" : "http://purl.org/roh#AudioVisualDocument"
+    "@id" : "http://purl.org/roh/mirror/bibo#AudioVisualDocument"
   } ],
   "http://www.w3.org/2002/07/owl#disjointWith" : [ {
     "@id" : "http://purl.org/roh#TvProgram"
@@ -8043,7 +8018,7 @@
     "@value" : "Tv Program"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
-    "@id" : "http://purl.org/roh#AudioVisualDocument"
+    "@id" : "http://purl.org/roh/mirror/bibo#AudioVisualDocument"
   } ]
 }, {
   "@id" : "http://purl.org/roh#UNESCOKnowledgeArea",
@@ -8831,9 +8806,6 @@
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
     "@language" : "en",
     "@value" : "An object property linking a Thing when it funds another Thing."
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
-    "@id" : "http://purl.org/roh/mirror/foaf#Agent"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@language" : "es",
@@ -11047,7 +11019,7 @@
     "@language" : "en",
     "@value" : "A collection of Documents or Collections"
   }, {
-    "@value" : "ResearchObjects related to publication concept are based on types defined by BIBO ontology. Currently, the following set of publication-related entities are supported: bibo: bibo:Collection (Periodical, Journal, Magazine)\n\nThis is a type of roh:ResearchObjects related to publication concept. It is based on types defined by BIBO ontology. Currently, the following set of publication-related entities are supported: bibo: bibo:Collection (Periodical, Journal, Magazine) and bibo:Document (Article, ConferencePaper, EditorialArticle, Book, Proceedings, ConferencePaper, Chapter, Thesis) and obo:Software. bibo:Thesis has been refined into roh:DegreeThesis, roh:MasterThesis and roh:PhDThesis. Notably a new subclass of bibo:Collection named roh:Dossier has been created. Under such collection can be included the reports usually associated to a project, e.g.  roh:EthicalReport, roh:EvaluationSummary, roh:Justification, vivo:ResearchProposal. A roh:Dossier is bound through object property vivo:relates with a vivo:Project"
+    "@value" : "ResearchObjects related to publication concept are based on types defined by BIBO ontology. Currently, the following set of publication-related entities are supported: bibo: bibo:Collection (Periodical, Journal, Magazine)\n\nThis is a type of roh:ResearchObjects related to publication concept. It is based on types defined by BIBO ontology. Currently, the following set of publication-related entities are supported: bibo: bibo:Collection (Periodical, Journal, Magazine) and bibo:Document (Article, ConferencePaper, EditorialArticle, Book, Proceedings, ConferencePaper, Chapter, Thesis) and obo:Software. bibo:Thesis has been refined into roh:DegreeThesis, roh:MastersThesis and roh:PhDThesis. Notably a new subclass of bibo:Collection named roh:Dossier has been created. Under such collection can be included the reports usually associated to a project, e.g.  roh:EthicalReport, roh:EvaluationSummary, roh:Justification, vivo:ResearchProposal. A roh:Dossier is bound through object property vivo:relates with a vivo:Project"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#isDefinedBy" : [ {
     "@type" : "http://www.w3.org/2001/XMLSchema#anyURI",
@@ -11120,7 +11092,7 @@
     "@language" : "en",
     "@value" : "Content made available to the general public. In the case of ASIO, often scientific or academic contents published."
   }, {
-    "@value" : "ResearchObjects related to publication concept are based on types defined by BIBO ontology. Currently, the following set of publication-related entities are supported: bibo:Document (Article, ConferencePaper, EditorialArticle, Book, Proceedings, ConferencePaper, Chapter, Thesis)\n\nThis is a type of roh:ResearchObjects related to publication concept. It is based on types defined by BIBO ontology. Currently, the following set of publication-related entities are supported: bibo: bibo:Collection (Periodical, Journal, Magazine) and bibo:Document (Article, ConferencePaper, EditorialArticle, Book, Proceedings, ConferencePaper, Chapter, Thesis) and obo:Software. bibo:Thesis has been refined into roh:DegreeThesis, roh:MasterThesis and roh:PhDThesis. Notably a new subclass of bibo:Collection named roh:Dossier has been created. Under such collection can be included the reports usually associated to a project, e.g.  roh:EthicalReport, roh:EvaluationSummary, roh:Justification, vivo:ResearchProposal. A roh:Dossier is bound through object property vivo:relates with a vivo:Project"
+    "@value" : "ResearchObjects related to publication concept are based on types defined by BIBO ontology. Currently, the following set of publication-related entities are supported: bibo:Document (Article, ConferencePaper, EditorialArticle, Book, Proceedings, ConferencePaper, Chapter, Thesis)\n\nThis is a type of roh:ResearchObjects related to publication concept. It is based on types defined by BIBO ontology. Currently, the following set of publication-related entities are supported: bibo: bibo:Collection (Periodical, Journal, Magazine) and bibo:Document (Article, ConferencePaper, EditorialArticle, Book, Proceedings, ConferencePaper, Chapter, Thesis) and obo:Software. bibo:Thesis has been refined into roh:DegreeThesis, roh:MastersThesis and roh:PhDThesis. Notably a new subclass of bibo:Collection named roh:Dossier has been created. Under such collection can be included the reports usually associated to a project, e.g.  roh:EthicalReport, roh:EvaluationSummary, roh:Justification, vivo:ResearchProposal. A roh:Dossier is bound through object property vivo:relates with a vivo:Project"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#isDefinedBy" : [ {
     "@type" : "http://www.w3.org/2001/XMLSchema#anyURI",
@@ -11176,11 +11148,7 @@
     "@value" : "Publicação acadêmica"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
-    "@id" : "http://purl.org/roh/mirror/bibo#Document"
-  }, {
     "@id" : "http://purl.org/roh/mirror/obo/iao#IAO_0000030"
-  }, {
-    "@id" : "http://xmlns.com/foaf/spec/#Document"
   }, {
     "@id" : "_:genid267"
   }, {
@@ -12427,7 +12395,7 @@
     "@value" : ""
   } ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
-    "@value" : "In ROH, there is a foaf:Person entity that inherits from foaf:Agent. However, the main entity that users of ROH will deal with is roh:Researcher. Such entity inherits from foaf:Person.\n\nThe specialization of this entity imported from the VIVO ontology already adds some DataType properties of the research domain, but in ROH we also incorporate roh:taxID or roh:ORCID and also several object specific properties of the research domain as \"has a Role\" (roh: hasRole) in an Organization, \"has a CurriculumVitae\" (roh:hasCV), \"has some Accreditations\" (roh:hasAccreditation), \"has an Employment Contract\" (roh:hasContract), \"has some Knowledge Areas\" (roh:hasKnowledgeArea) or \"has some Roles\" (roh:hasRole) in Projects or participates through \"bibo:authorList\" with Research Objects. A person can \"have different roles\" in the Project over time.\n\nAs mentioned above, foaf:Person in ROH is based on FOAF (Friend of a Friend [2], following patterns used in VIVO. That explains why it includes some of the basic FOAF properties such as foaf:name, foaf:nick, foaf:title, foaf:mbox, foaf:img, foaf:depiction, foaf:firstName and foaf:surname. However, it considers all attributes and links defined in CERIF through the cfPers entity. foaf:Person incorporates the following data properties declared as attributes in cfPers, especially: identifier (vivo:identifier but preferrably roh:ORCID), roh:birthdate, foaf:gender, foaf:homepage, roh:researchLine, vivo:keywords. Some important CERIF relationships that have also been adopted: Curriculum Vitae (roh:hasCV) which links foaf:Person with roh:CurriculumVitae, Event (roh:Activity) and Indicator (roh:Accreditation). \n\nA taxonomy of types of persons has been imported in the research field from VIVO [1], such as vivo:FacultyMember, vivo:Librarian, vivo:NonAcademic, vivo:PostDoc or vivo:GraduateStudent  or some additional one by ROH as, the very important subclass roh:Researcher.\n\nBesides, an instance of a foaf:Person / roh:Researcher is associated to the following entities through object properties:\n- roh:Accreditation, where a researcher roh:hasAccreditation of different types, e.g. roh:ResearchAccreditation or roh:AcademicAccreditation.  \n- roh:Activity, where a researcher roh:participates in diverse activities, e.g. vivo:InvitedTalk or bibo:Conference.\n- vivo:AwardedDegree, where a researcher vivo:relates with an roh:AcademicDegree\n- roh:CorrespondingAuthor, where a researcher is the roh:correspondingAuthor of different subtypes of roh:ResearchObject, e.g. obo:JournalArticle, vivo:ConferencePaper or  bibo:Proceedings. \n- roh:CurriculumVitae, where a researcher roh:hasCV which includes data type properties like roh:cites, roh:factorH or roh:summary\n- bibo:Document, where a researcher through bibo:authorList is participating in a bibo:Document as one of its authors. \n- vcard:Individual, where a researcher obo:hasContactInfo described through ontology vcard. \n- vivo:Position, where a researcher roh:hasPosition usually in an organization linking it to any of the vivo:Position subclasess like vivo:FacultyAdministrativePosition or vivo:FacultyPosition. \n- roh:Role, where a foaf:Agent, i.e. and its subclasses like foaf:Person or roh:Researcher, roh:hasRole like vivo:ResearcherRole or vivo:TeacherRole either in a roh:Project or a foaf:Organization.\n- roh:PersonContract, where a researcher roh:hasContract described according to the attributes corresponding to parent class vivo:Contract.\n- bibo:Thesis, where a researcher is roh:supervisor of a bibo:Thesis, concretely, any of its subtypes  subclasess like roh:MasterThesis or roh:PhDThesis."
+    "@value" : "In ROH, there is a foaf:Person entity that inherits from foaf:Agent. However, the main entity that users of ROH will deal with is roh:Researcher. Such entity inherits from foaf:Person.\n\nThe specialization of this entity imported from the VIVO ontology already adds some DataType properties of the research domain, but in ROH we also incorporate roh:taxID or roh:ORCID and also several object specific properties of the research domain as \"has a Role\" (roh: hasRole) in an Organization, \"has a CurriculumVitae\" (roh:hasCV), \"has some Accreditations\" (roh:hasAccreditation), \"has an Employment Contract\" (roh:hasContract), \"has some Knowledge Areas\" (roh:hasKnowledgeArea) or \"has some Roles\" (roh:hasRole) in Projects or participates through \"bibo:authorList\" with Research Objects. A person can \"have different roles\" in the Project over time.\n\nAs mentioned above, foaf:Person in ROH is based on FOAF (Friend of a Friend [2], following patterns used in VIVO. That explains why it includes some of the basic FOAF properties such as foaf:name, foaf:nick, foaf:title, foaf:mbox, foaf:img, foaf:depiction, foaf:firstName and foaf:surname. However, it considers all attributes and links defined in CERIF through the cfPers entity. foaf:Person incorporates the following data properties declared as attributes in cfPers, especially: identifier (vivo:identifier but preferrably roh:ORCID), roh:birthdate, foaf:gender, foaf:homepage, roh:researchLine, vivo:keywords. Some important CERIF relationships that have also been adopted: Curriculum Vitae (roh:hasCV) which links foaf:Person with roh:CurriculumVitae, Event (roh:Activity) and Indicator (roh:Accreditation). \n\nA taxonomy of types of persons has been imported in the research field from VIVO [1], such as vivo:FacultyMember, vivo:Librarian, vivo:NonAcademic, vivo:PostDoc or vivo:GraduateStudent  or some additional one by ROH as, the very important subclass roh:Researcher.\n\nBesides, an instance of a foaf:Person / roh:Researcher is associated to the following entities through object properties:\n- roh:Accreditation, where a researcher roh:hasAccreditation of different types, e.g. roh:ResearchAccreditation or roh:AcademicAccreditation.  \n- roh:Activity, where a researcher roh:participates in diverse activities, e.g. vivo:InvitedTalk or bibo:Conference.\n- vivo:AwardedDegree, where a researcher vivo:relates with an roh:AcademicDegree\n- roh:CorrespondingAuthor, where a researcher is the roh:correspondingAuthor of different subtypes of roh:ResearchObject, e.g. obo:JournalArticle, vivo:ConferencePaper or  bibo:Proceedings. \n- roh:CurriculumVitae, where a researcher roh:hasCV which includes data type properties like roh:cites, roh:factorH or roh:summary\n- bibo:Document, where a researcher through bibo:authorList is participating in a bibo:Document as one of its authors. \n- vcard:Individual, where a researcher obo:hasContactInfo described through ontology vcard. \n- vivo:Position, where a researcher roh:hasPosition usually in an organization linking it to any of the vivo:Position subclasess like vivo:FacultyAdministrativePosition or vivo:FacultyPosition. \n- roh:Role, where a foaf:Agent, i.e. and its subclasses like foaf:Person or roh:Researcher, roh:hasRole like vivo:ResearcherRole or vivo:TeacherRole either in a roh:Project or a foaf:Organization.\n- roh:PersonContract, where a researcher roh:hasContract described according to the attributes corresponding to parent class vivo:Contract.\n- bibo:Thesis, where a researcher is roh:supervisor of a bibo:Thesis, concretely, any of its subtypes  subclasess like roh:MastersThesis or roh:PhDThesis."
   } ],
   "http://www.w3.org/2000/01/rdf-schema#isDefinedBy" : [ {
     "@id" : "http://purl.org/roh/mirror/foaf#"
@@ -16497,9 +16465,6 @@
 }, {
   "@id" : "http://www.w3.org/2004/02/skos/core#topConceptOf",
   "@type" : [ "http://www.w3.org/2002/07/owl#AnnotationProperty" ]
-}, {
-  "@id" : "http://xmlns.com/foaf/spec/#Document",
-  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ]
 }, {
   "@id" : "https://schema.org/identifier",
   "@type" : [ "http://www.w3.org/2002/07/owl#AnnotationProperty" ]
