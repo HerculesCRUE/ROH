@@ -3869,7 +3869,9 @@ vivo:Center  a           owl:Class ;
 
 bibo:issue  a               owl:DatatypeProperty ;
         rdfs:comment        "An issue number"@en ;
-        rdfs:domain         bibo:Article , bibo:Issue ;
+        rdfs:domain   [ a            owl:Class ;
+                        owl:unionOf  ( :bibo:Article bibo:Issue )
+                      ] ;
         rdfs:isDefinedBy    "http://purl.org/roh/mirror/bibo#"^^xsd:anyURI ;
         rdfs:label          "issue"@en , "número"@es ;
         rdfs:range          rdfs:Literal ;
@@ -4004,9 +4006,13 @@ bibo:AcademicArticle  a   owl:Class ;
 
 :requires  a          owl:ObjectProperty ;
         rdfs:comment  "This property relates roles and their requisites, i.e. other roles."@en ;
-        rdfs:domain   vivo:AwardedDegree , bfo:BFO_0000023 ;
+        rdfs:domain   [ a            owl:Class ;
+                        owl:unionOf  ( vivo:AwardedDegree bfo:BFO_0000023 )
+                      ] ;
         rdfs:label    "requires"@en ;
-        rdfs:range    bibo:Document , bfo:BFO_0000023 .
+        rdfs:range    [ a            owl:Class ;
+                        owl:unionOf  ( :bibo:Document bfo:BFO_0000023 )
+                      ] .
 
 bibo:AudioVisualDocument
         a                owl:Class ;
