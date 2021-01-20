@@ -1911,10 +1911,6 @@ bibo:Article  a           owl:Class ;
 skos-thes:microThesaurusOf
         a       owl:AnnotationProperty .
 
-:AudioVisualDocument  a  owl:Class ;
-        rdfs:label       "AudioVisual Document"@en ;
-        rdfs:subClassOf  bibo:Document .
-
 :hasPatent  a        owl:ObjectProperty ;
         rdfs:domain  :Invention ;
         rdfs:label   "has patent"@en ;
@@ -2458,7 +2454,7 @@ vivo:Competition  a      owl:Class ;
 
 :TvProgram  a            owl:Class ;
         rdfs:label       "Tv Program"@en ;
-        rdfs:subClassOf  :AudioVisualDocument .
+        rdfs:subClassOf  bibo:AudioVisualDocument .
 
 :projectObjective  a  owl:DatatypeProperty ;
         rdfs:comment  "A defined objective of the project."@en ;
@@ -4790,7 +4786,7 @@ vivo:InvitedTalk  a      owl:Class ;
 
 :RadioProgram  a          owl:Class ;
         rdfs:label        "Radio Program"@en ;
-        rdfs:subClassOf   :AudioVisualDocument ;
+        rdfs:subClassOf   bibo:AudioVisualDocument ;
         owl:disjointWith  :TvProgram .
 
 vivo:hrJobTitle  a              owl:DatatypeProperty ;
