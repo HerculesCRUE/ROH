@@ -923,7 +923,7 @@ bibo:Document  a          owl:Class ;
         rdfs:comment      "A document (noun) is a bounded physical representation of body of information designed with the capacity (and usually intent) to communicate. A document may manifest symbolic, diagrammatic or sensory-representational information."@en , "Content made available to the general public. In the case of ASIO, often scientific or academic contents published."@en , "ResearchObjects related to publication concept are based on types defined by BIBO ontology. Currently, the following set of publication-related entities are supported: bibo:Document (Article, ConferencePaper, EditorialArticle, Book, Proceedings, ConferencePaper, Chapter, Thesis)\n\nThis is a type of roh:ResearchObjects related to publication concept. It is based on types defined by BIBO ontology. Currently, the following set of publication-related entities are supported: bibo: bibo:Collection (Periodical, Journal, Magazine) and bibo:Document (Article, ConferencePaper, EditorialArticle, Book, Proceedings, ConferencePaper, Chapter, Thesis) and obo:Software. bibo:Thesis has been refined into roh:DegreeThesis, roh:MastersThesis and roh:PhDThesis. Notably a new subclass of bibo:Collection named roh:Dossier has been created. Under such collection can be included the reports usually associated to a project, e.g.  roh:EthicalReport, roh:EvaluationSummary, roh:Justification, vivo:ResearchProposal. A roh:Dossier is bound through object property vivo:relates with a vivo:Project" ;
         rdfs:isDefinedBy  "http://purl.org/roh/mirror/bibo#"^^xsd:anyURI ;
         rdfs:label        "Publication"@fr , "Publicação acadêmica"@pt , "Publication"@en , "Publicació acadèmica"@ca-ad , "Publicació acadèmica"@ca-es , "Documento"@es , "Publicação"@pt , "Document"@en , "Publication académique"@fr , "Academic publication"@en , "Publicación académica"@gl , "Publicación académica"@es , "Publicación"@gl , "Publicación"@es , "Publicació"@ca-es , "Publicació"@ca-ad ;
-        rdfs:subClassOf   <http://xmlns.com/foaf/spec/#Document> , iao:IAO_0000030 , bibo:Document ;
+        rdfs:subClassOf   iao:IAO_0000030 ;
         rdfs:subClassOf   [ a                  owl:Restriction ;
                             owl:allValuesFrom  [ a            owl:Class ;
                                                  owl:unionOf  ( bibo:Book bibo:Collection )
@@ -2872,9 +2872,6 @@ vivo:NonAcademicPosition
 vivo:geographicFocus  a  owl:ObjectProperty ;
         rdfs:comment  "A geographic region in which something takes place."@en ;
         rdfs:label    "enfoque geográfico"@es , "geographic focus"@en .
-
-<http://xmlns.com/foaf/spec/#Document>
-        a       owl:Class .
 
 [ a            owl:AllDisjointClasses ;
   owl:members  ( bibo:AcademicArticle vivo:ConferencePaper vivo:EditorialArticle )
