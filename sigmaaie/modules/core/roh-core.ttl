@@ -3870,7 +3870,7 @@ vivo:Center  a           owl:Class ;
 bibo:issue  a               owl:DatatypeProperty ;
         rdfs:comment        "An issue number"@en ;
         rdfs:domain   [ a            owl:Class ;
-                        owl:unionOf  ( :bibo:Article bibo:Issue )
+                        owl:unionOf  ( bibo:Article bibo:Issue )
                       ] ;
         rdfs:isDefinedBy    "http://purl.org/roh/mirror/bibo#"^^xsd:anyURI ;
         rdfs:label          "issue"@en , "número"@es ;
@@ -4011,7 +4011,7 @@ bibo:AcademicArticle  a   owl:Class ;
                       ] ;
         rdfs:label    "requires"@en ;
         rdfs:range    [ a            owl:Class ;
-                        owl:unionOf  ( :bibo:Document bfo:BFO_0000023 )
+                        owl:unionOf  ( bibo:Document bfo:BFO_0000023 )
                       ] .
 
 bibo:AudioVisualDocument
