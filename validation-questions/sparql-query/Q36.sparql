@@ -1,0 +1,11 @@
+PREFIX roh: <http://purl.org/roh#>
+PREFIX ro: <http://purl.org/roh/mirror/obo/ro#>
+
+SELECT ?organization ?fundingProgram (SUM(?monetaryAmount) as ?totalFunding) 
+WHERE {
+	?fundingProgram	a roh:FundingProgram .
+	?funding		roh:fundedBy  ?fundingProgram .
+	?funding 		ro:BFO_0000051 ?fundingAmount .
+	?fundingAmount 	roh:grants ?organization ;
+                	roh:monetaryAmount ?monetaryAmount .
+} GROUP BY ?organization ?fundingProgram 
