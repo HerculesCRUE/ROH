@@ -101,10 +101,6 @@ terms:creator  a  owl:AnnotationProperty .
         rdfs:label       "Catalog"@en ;
         rdfs:subClassOf  bibo:Document .
 
-:FundingOrganization  a  owl:Class ;
-        rdfs:label       "Funding organization"@en ;
-        rdfs:subClassOf  <http://purl.org/roh/mirror/foaf#Organization> .
-
 bibo:editorList  a          owl:ObjectProperty ;
         rdfs:comment        "An ordered list of editors. Normally, this list is seen as a priority list that order editors by importance."@en ;
         rdfs:domain         bibo:Document ;
@@ -2639,7 +2635,7 @@ vivo:Project  a          owl:Class ;
 :ResearchGroup  a        owl:Class ;
         rdfs:comment     "A group of researchers often from the same centre, specialised on the same subject, working together on the issue or topic."@en ;
         rdfs:label       "Grupo de investigación"@es , "Group de recherche"@fr , "Grupo de investigação"@pt , "Grupo de Investigación"@es , "Grup de recerca"@ca-ad , "Research group"@en , "Grup d'investigació"@ca-es , "Research Group"@en ;
-        rdfs:subClassOf  <http://purl.org/roh/mirror/foaf#Group> , <http://purl.org/roh/mirror/foaf#Organization> , :ResearchGroup ;
+        rdfs:subClassOf  <http://purl.org/roh/mirror/foaf#Organization> ;
         rdfs:subClassOf  [ a                  owl:Restriction ;
                            owl:allValuesFrom  xsd:boolean ;
                            owl:onProperty     :excellenceLabel
@@ -3086,7 +3082,7 @@ vivo:PostdocOrFellowAdvisingRelationship
 :UniversityDivision  a   owl:Class ;
         rdfs:comment     "A division within a university (school, faculty, etc.)"@en ;
         rdfs:label       "Divisió d'universitat"@ca-es , "Divisão de universidade"@pt , "Divisió d'universitat"@ca-ad , "University division"@en , "Division d'université"@fr , "División de universidad"@es , "División de universidade"@gl ;
-        rdfs:subClassOf  vivo:University , <http://purl.org/roh/mirror/foaf#Organization> .
+        rdfs:subClassOf  <http://purl.org/roh/mirror/foaf#Organization> .
 
 vivo:AwardedDegree  a    owl:Class ;
         rdfs:comment     "A qualification awarded to students upon successful completion of a course of study in higher education."@en , "A vivo:AwardedDegree is related to a foaf:Person and vivo:AcademicDegree through vivo:relates relationship, it is a qualification (degree) received by somebody." ;
@@ -3147,12 +3143,6 @@ vivo:UndergraduateAdvisingRelationship
         rdfs:label       "Relación de Asesor de Estudiantes sin Grado"@es , "Undergraduate Advising Relationship"@en ;
         rdfs:subClassOf  vivo:AdvisingRelationship ;
         obo:IAO_0000115  "An advisory relationship in which a professor advises an undergraduate student." .
-
-:SME    a                owl:Class ;
-        rdfs:comment     "A company whose personnel numbers fall below certain limits."@en ;
-        rdfs:label       "Small and medium-sized enterprise"@en , "Pequena e média empresa"@pt , "Petite ou moyenne entreprise"@fr , "Petita i mitjana empresa"@ca-es , "Petita i mitjana empresa"@ca-ad , "Pequeña y mediana empresa"@es ;
-        rdfs:subClassOf  vivo:Company ;
-        skos:prefLabel   "Petita i mitjana empresa"@ca-ad , "Petita i mitjana empresa"@ca-es , "Pequena e média empresa"@pt , "Small and medium-sized enterprise"@en , "Pequeña y mediana empresa"@es , "Petite ou moyenne entreprise"@fr .
 
 :ReservationRelationship
         a                owl:Class ;
@@ -3700,11 +3690,6 @@ vivo:Contract  a         owl:Class ;
                            owl:onProperty     vivo:hasSubjectArea
                          ] ;
         obo:IAO_0000115  "An agreement involving specific deliverables and payment" .
-
-:Workshop  a             owl:Class ;
-        rdfs:comment     "A seminar, discussion group, or the like, that emphasizes zxchange of ideas and the demonstration and application of techniques, skills, etc. [Source: http://purl.org/ontology/bibo/Workshop]"@en ;
-        rdfs:label       "Workshop"@en ;
-        rdfs:subClassOf  <http://purl.org/NET/c4dm/event.owl#Event> , bibo:Workshop .
 
 :ranking  a           owl:DatatypeProperty ;
         rdfs:comment  "The ranking of a scientific publication."@en ;
@@ -4468,7 +4453,7 @@ iao:IAO_0000111  a  owl:AnnotationProperty .
 :ResearchInstitute  a    owl:Class ;
         rdfs:comment     "An establishment founded for doing research."@en ;
         rdfs:label       "Research institute"@en , "Centro de investigação"@pt , "Centre de recherche"@fr , "Centro de investigación"@es , "Centre d'investigació"@ca-es , "Centre de recerca"@ca-ad ;
-        rdfs:subClassOf  <http://purl.org/roh/mirror/foaf#Organization> , vivo:Institute ;
+        rdfs:subClassOf  vivo:Institute ;
         skos:prefLabel   "Centre de recherche"@fr , "Centre d'investigació"@ca-es , "Centro de investigação"@pt , "Centro de investigación"@es , "Research institute"@en , "Centre de recerca"@ca-ad .
 
 [ a            owl:AllDisjointClasses ;
@@ -4522,11 +4507,6 @@ vivo:hasSubjectArea  a  owl:ObjectProperty ;
         rdfs:subClassOf  vivo:AcademicDegree ;
         skos:altLabel    "Mestratge universitari"@ca-es , "Mestrado universitario"@gl , "Mestratge universitari"@ca-ad ;
         skos:prefLabel   "Maîtrise universitaire"@fr-fr , "Maîtrise universitaire"@fr-ch , "Maîtrise universitaire"@fr-ca , "Maîtrise universitaire"@fr-be , "Màster universitari"@ca-ad , "Màster universitari"@ca-es , "Máster universitario"@gl , "Máster universitario"@es-es , "Mestrado"@pt-pt , "Mestrado"@pt-br , "Master's degree"@en , "Magister Scientiae"@es-ve .
-
-:ConferencePoster  a     owl:Class ;
-        rdfs:comment     "The digital file (or physical equivalent), if available after the conference, vs. the act of attending/presenting."@en ;
-        rdfs:label       "Conference poster"@en ;
-        rdfs:subClassOf  bibo:Document .
 
 :ownerOrganizationOf  a  owl:ObjectProperty ;
         rdfs:comment  "An Organization owning a Patent."@en ;

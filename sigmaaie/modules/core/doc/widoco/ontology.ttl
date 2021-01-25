@@ -1107,10 +1107,16 @@ xsd:date rdf:type rdfs:Datatype .
 
 ###  http://purl.org/roh#requires
 :requires rdf:type owl:ObjectProperty ;
-          rdfs:domain <http://purl.org/roh/mirror/obo/bfo#BFO_0000023> ,
-                      <http://purl.org/roh/mirror/vivo#AwardedDegree> ;
-          rdfs:range <http://purl.org/roh/mirror/bibo#Document> ,
-                     <http://purl.org/roh/mirror/obo/bfo#BFO_0000023> ;
+          rdfs:domain [ rdf:type owl:Class ;
+                        owl:unionOf ( <http://purl.org/roh/mirror/obo/bfo#BFO_0000023>
+                                      <http://purl.org/roh/mirror/vivo#AwardedDegree>
+                                    )
+                      ] ;
+          rdfs:range [ rdf:type owl:Class ;
+                       owl:unionOf ( <http://purl.org/roh/mirror/bibo#Document>
+                                     <http://purl.org/roh/mirror/obo/bfo#BFO_0000023>
+                                   )
+                     ] ;
           rdfs:comment "This property relates roles and their requisites, i.e. other roles."@en ;
           rdfs:label "requires"@en .
 
@@ -2288,8 +2294,11 @@ xsd:date rdf:type rdfs:Datatype .
 ###  http://purl.org/roh/mirror/bibo#issue
 <http://purl.org/roh/mirror/bibo#issue> rdf:type owl:DatatypeProperty ;
                                         rdfs:subPropertyOf <http://purl.org/roh/mirror/bibo#locator> ;
-                                        rdfs:domain <http://purl.org/roh/mirror/bibo#Article> ,
-                                                    <http://purl.org/roh/mirror/bibo#Issue> ;
+                                        rdfs:domain [ rdf:type owl:Class ;
+                                                      owl:unionOf ( <http://purl.org/roh/mirror/bibo#Article>
+                                                                    <http://purl.org/roh/mirror/bibo#Issue>
+                                                                  )
+                                                    ] ;
                                         rdfs:range rdfs:Literal ;
                                         <http://purl.obolibrary.org/obo/IAO_0000112> "Bibo has the domain of bibo:issue as the class Issue, but an example on their site uses it with Article, referring to the issue number \"4\"" ;
                                         rdfs:comment "An issue number"@en ;
@@ -2803,8 +2812,7 @@ The previous short definition was: \"An arbitrary classification of a space/time
 
 ###  http://purl.org/roh#BachelorDegree
 :BachelorDegree rdf:type owl:Class ;
-                rdfs:subClassOf <http://purl.org/roh/mirror/vivo#AcademicDegree> ,
-                                <http://purl.org/roh/mirror/vivo#AwardedDegree> ;
+                rdfs:subClassOf <http://purl.org/roh/mirror/vivo#AcademicDegree> ;
                 rdfs:comment "An undergraduate academic degree awarded by colleges and universities upon completion of a course of study lasting three to four years (depending on institution and academic discipline)."@en ;
                 rdfs:label "Bachelor's degree"@en ,
                            "Licenciatura (pós-Bologna)"@pt-pt ,
@@ -2944,13 +2952,6 @@ The previous short definition was: \"An arbitrary classification of a space/time
 :CompanyClassification rdf:type owl:Class ;
                        rdfs:subClassOf <http://www.w3.org/2004/02/skos/core#Concept> ;
                        rdfs:label "Company Classification"@en .
-
-
-###  http://purl.org/roh#ConferencePoster
-:ConferencePoster rdf:type owl:Class ;
-                  rdfs:subClassOf <http://purl.org/roh/mirror/bibo#Document> ;
-                  rdfs:comment "The digital file (or physical equivalent), if available after the conference, vs. the act of attending/presenting."@en ;
-                  rdfs:label "Conference poster"@en .
 
 
 ###  http://purl.org/roh#Contest
@@ -3100,8 +3101,7 @@ The previous short definition was: \"An arbitrary classification of a space/time
 
 ###  http://purl.org/roh#DoctoralDegree
 :DoctoralDegree rdf:type owl:Class ;
-                rdfs:subClassOf <http://purl.org/roh/mirror/vivo#AcademicDegree> ,
-                                <http://purl.org/roh/mirror/vivo#AwardedDegree> ;
+                rdfs:subClassOf <http://purl.org/roh/mirror/vivo#AcademicDegree> ;
                 rdfs:label "Doctorado"@es ,
                            "Doctoral degree"@en ,
                            "Doctorat"@ca-ad ,
@@ -3394,12 +3394,6 @@ The previous short definition was: \"An arbitrary classification of a space/time
                           "Monto de Financiación"@es .
 
 
-###  http://purl.org/roh#FundingOrganization
-:FundingOrganization rdf:type owl:Class ;
-                     rdfs:subClassOf <http://purl.org/roh/mirror/foaf#Organization> ;
-                     rdfs:label "Funding organization"@en .
-
-
 ###  http://purl.org/roh#FundingProgram
 :FundingProgram rdf:type owl:Class ;
                 rdfs:subClassOf [ rdf:type owl:Restriction ;
@@ -3681,8 +3675,7 @@ A roh:FundingSource roh:feeds a roh:Funding with funds to sponsor some projects.
 
 ###  http://purl.org/roh#MasterDegree
 :MasterDegree rdf:type owl:Class ;
-              rdfs:subClassOf <http://purl.org/roh/mirror/vivo#AcademicDegree> ,
-                              <http://purl.org/roh/mirror/vivo#AwardedDegree> ;
+              rdfs:subClassOf <http://purl.org/roh/mirror/vivo#AcademicDegree> ;
               rdfs:label "Magister Scientiae"@es-ve ,
                          "Master's degree"@en ,
                          "Maîtrise universitaire"@fr-be ,
@@ -4126,9 +4119,7 @@ A roh:FundingSource roh:feeds a roh:Funding with funds to sponsor some projects.
 
 ###  http://purl.org/roh#ResearchGroup
 :ResearchGroup rdf:type owl:Class ;
-               rdfs:subClassOf :ResearchGroup ,
-                               <http://purl.org/roh/mirror/foaf#Group> ,
-                               <http://purl.org/roh/mirror/foaf#Organization> ,
+               rdfs:subClassOf <http://purl.org/roh/mirror/foaf#Organization> ,
                                [ rdf:type owl:Restriction ;
                                  owl:onProperty :excellenceLabel ;
                                  owl:allValuesFrom xsd:boolean
@@ -4158,8 +4149,7 @@ A roh:FundingSource roh:feeds a roh:Funding with funds to sponsor some projects.
 
 ###  http://purl.org/roh#ResearchInstitute
 :ResearchInstitute rdf:type owl:Class ;
-                   rdfs:subClassOf <http://purl.org/roh/mirror/foaf#Organization> ,
-                                   <http://purl.org/roh/mirror/vivo#Institute> ;
+                   rdfs:subClassOf <http://purl.org/roh/mirror/vivo#Institute> ;
                    rdfs:comment "An establishment founded for doing research."@en ;
                    rdfs:label "Centre d'investigació"@ca-es ,
                               "Centre de recerca"@ca-ad ,
@@ -4345,24 +4335,6 @@ A roh:FundingSource roh:feeds a roh:Funding with funds to sponsor some projects.
 :RoundTable rdf:type owl:Class ;
             rdfs:subClassOf :Activity ;
             rdfs:label "Round Table"@en .
-
-
-###  http://purl.org/roh#SME
-:SME rdf:type owl:Class ;
-     rdfs:subClassOf <http://purl.org/roh/mirror/vivo#Company> ;
-     rdfs:comment "A company whose personnel numbers fall below certain limits."@en ;
-     rdfs:label "Pequena e média empresa"@pt ,
-                "Pequeña y mediana empresa"@es ,
-                "Petita i mitjana empresa"@ca-ad ,
-                "Petita i mitjana empresa"@ca-es ,
-                "Petite ou moyenne entreprise"@fr ,
-                "Small and medium-sized enterprise"@en ;
-     <http://www.w3.org/2004/02/skos/core#prefLabel> "Pequena e média empresa"@pt ,
-                                                     "Pequeña y mediana empresa"@es ,
-                                                     "Petita i mitjana empresa"@ca-ad ,
-                                                     "Petita i mitjana empresa"@ca-es ,
-                                                     "Petite ou moyenne entreprise"@fr ,
-                                                     "Small and medium-sized enterprise"@en .
 
 
 ###  http://purl.org/roh#ScientificPublication
@@ -4587,8 +4559,7 @@ A roh:FundingSource roh:feeds a roh:Funding with funds to sponsor some projects.
 
 ###  http://purl.org/roh#UniversityDivision
 :UniversityDivision rdf:type owl:Class ;
-                    rdfs:subClassOf <http://purl.org/roh/mirror/foaf#Organization> ,
-                                    <http://purl.org/roh/mirror/vivo#University> ;
+                    rdfs:subClassOf <http://purl.org/roh/mirror/foaf#Organization> ;
                     rdfs:comment "A division within a university (school, faculty, etc.)"@en ;
                     rdfs:label "Division d'université"@fr ,
                                "Divisió d'universitat"@ca-ad ,
@@ -4597,14 +4568,6 @@ A roh:FundingSource roh:feeds a roh:Funding with funds to sponsor some projects.
                                "División de universidade"@gl ,
                                "Divisão de universidade"@pt ,
                                "University division"@en .
-
-
-###  http://purl.org/roh#Workshop
-:Workshop rdf:type owl:Class ;
-          rdfs:subClassOf <http://purl.org/NET/c4dm/event.owl#Event> ,
-                          <http://purl.org/roh/mirror/bibo#Workshop> ;
-          rdfs:comment "A seminar, discussion group, or the like, that emphasizes zxchange of ideas and the demonstration and application of techniques, skills, etc. [Source: http://purl.org/ontology/bibo/Workshop]"@en ;
-          rdfs:label "Workshop"@en .
 
 
 ###  http://purl.org/roh#WorkshopPaper
