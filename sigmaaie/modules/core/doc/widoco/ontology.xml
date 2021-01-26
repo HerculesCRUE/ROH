@@ -565,25 +565,6 @@ by creating a research management system with semantic capacities based on seman
     <!-- 
     ///////////////////////////////////////////////////////////////////////////////////////
     //
-    // Datatypes
-    //
-    ///////////////////////////////////////////////////////////////////////////////////////
-     -->
-
-
-    
-
-
-    <!-- http://www.w3.org/2001/XMLSchema#date -->
-
-
-    <rdfs:Datatype rdf:about="http://www.w3.org/2001/XMLSchema#date"/>
-    
-
-
-    <!-- 
-    ///////////////////////////////////////////////////////////////////////////////////////
-    //
     // Object Properties
     //
     ///////////////////////////////////////////////////////////////////////////////////////
@@ -749,6 +730,19 @@ by creating a research management system with semantic capacities based on seman
     
 
 
+    <!-- http://purl.org/roh#birthdate -->
+
+
+    <owl:ObjectProperty rdf:about="http://purl.org/roh#birthdate">
+        <rdfs:subPropertyOf rdf:resource="http://purl.org/roh/mirror/vivo#dateTimeValue"/>
+        <rdfs:range rdf:resource="http://purl.org/roh/mirror/vivo#DateTimeValue"/>
+        <rdfs:comment xml:lang="en">The birthdate of an Entity.</rdfs:comment>
+        <rdfs:label xml:lang="en">birthdate</rdfs:label>
+        <rdfs:label xml:lang="es">fecha de nacimiento</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
     <!-- http://purl.org/roh#coadvisedBy -->
 
 
@@ -828,6 +822,7 @@ by creating a research management system with semantic capacities based on seman
 
 
     <owl:ObjectProperty rdf:about="http://purl.org/roh#contractSigningDate">
+        <rdfs:subPropertyOf rdf:resource="http://purl.org/roh/mirror/vivo#dateTimeValue"/>
         <owl:inverseOf rdf:resource="http://purl.org/roh#contractSigningDateOf"/>
         <rdfs:domain rdf:resource="http://purl.org/roh/mirror/vivo#Contract"/>
         <rdfs:range rdf:resource="http://purl.org/roh/mirror/vivo#DateTimeValue"/>
@@ -946,6 +941,45 @@ by creating a research management system with semantic capacities based on seman
         <rdfs:comment xml:lang="en">The status in which a Evaluation Summary could be.</rdfs:comment>
         <rdfs:label xml:lang="es">estado de la evaluación</rdfs:label>
         <rdfs:label xml:lang="en">evaluation status</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://purl.org/roh#expirationDate -->
+
+
+    <owl:ObjectProperty rdf:about="http://purl.org/roh#expirationDate">
+        <rdfs:subPropertyOf rdf:resource="http://purl.org/roh/mirror/vivo#dateTimeValue"/>
+        <rdfs:range rdf:resource="http://purl.org/roh/mirror/vivo#DateTimeValue"/>
+        <rdfs:label xml:lang="en">expiration date</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://purl.org/roh#foreseenJustificationDate -->
+
+
+    <owl:ObjectProperty rdf:about="http://purl.org/roh#foreseenJustificationDate">
+        <rdfs:subPropertyOf rdf:resource="http://purl.org/roh/mirror/vivo#dateTimeValue"/>
+        <rdfs:domain rdf:resource="http://purl.org/roh/mirror/vivo#Project"/>
+        <rdfs:range rdf:resource="http://purl.org/roh/mirror/vivo#DateTimeValue"/>
+        <rdfs:comment xml:lang="en">The date in which a Justificacion has to be delivered.</rdfs:comment>
+        <rdfs:label xml:lang="es">fecha de justificación prevista</rdfs:label>
+        <rdfs:label xml:lang="en">foreseen justification date</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://purl.org/roh#foundationDate -->
+
+
+    <owl:ObjectProperty rdf:about="http://purl.org/roh#foundationDate">
+        <rdfs:subPropertyOf rdf:resource="http://purl.org/roh/mirror/vivo#dateTimeValue"/>
+        <rdfs:domain rdf:resource="http://purl.org/roh/mirror/foaf#Organization"/>
+        <rdfs:range rdf:resource="http://purl.org/roh/mirror/vivo#DateTimeValue"/>
+        <rdfs:comment xml:lang="en">Date in which an Organization was created.</rdfs:comment>
+        <rdfs:label xml:lang="es">fecha de fundación</rdfs:label>
+        <rdfs:label xml:lang="en">foundation date</rdfs:label>
     </owl:ObjectProperty>
     
 
@@ -1730,6 +1764,19 @@ by creating a research management system with semantic capacities based on seman
     
 
 
+    <!-- http://purl.org/roh#qualifieddate -->
+
+
+    <owl:ObjectProperty rdf:about="http://purl.org/roh#qualifieddate">
+        <rdfs:subPropertyOf rdf:resource="http://purl.org/roh/mirror/vivo#dateTimeValue"/>
+        <rdfs:domain rdf:resource="http://purl.org/roh#QualifiedValue"/>
+        <rdfs:range rdf:resource="http://purl.org/roh/mirror/vivo#DateTimeValue"/>
+        <rdfs:comment xml:lang="en">A given date (point in time) linked to a given value within a qualified value.</rdfs:comment>
+        <rdfs:label xml:lang="en">qualified date</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
     <!-- http://purl.org/roh#requiredFor -->
 
 
@@ -2313,6 +2360,7 @@ by creating a research management system with semantic capacities based on seman
 
 
     <owl:ObjectProperty rdf:about="http://purl.org/roh/mirror/vivo#dateIssued">
+        <rdfs:subPropertyOf rdf:resource="http://purl.org/roh/mirror/vivo#dateTimeValue"/>
         <rdfs:range rdf:resource="http://purl.org/roh/mirror/vivo#DateTimeValue"/>
         <rdfs:comment xml:lang="es">Fecha de publicación de una entidad.</rdfs:comment>
         <rdfs:comment xml:lang="en">The date of issue of an entity.</rdfs:comment>
@@ -2645,18 +2693,6 @@ by creating a research management system with semantic capacities based on seman
     
 
 
-    <!-- http://purl.org/roh#birthdate -->
-
-
-    <owl:DatatypeProperty rdf:about="http://purl.org/roh#birthdate">
-        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#dateTime"/>
-        <rdfs:comment xml:lang="en">The birthdate of an Entity.</rdfs:comment>
-        <rdfs:label xml:lang="en">birthdate</rdfs:label>
-        <rdfs:label xml:lang="es">fecha de nacimiento</rdfs:label>
-    </owl:DatatypeProperty>
-    
-
-
     <!-- http://purl.org/roh#courseHours -->
 
 
@@ -2750,32 +2786,6 @@ by creating a research management system with semantic capacities based on seman
         <rdfs:comment xml:lang="en">A free text property to represent the modality of an Expense.</rdfs:comment>
         <rdfs:label xml:lang="en">expense modality</rdfs:label>
         <rdfs:label xml:lang="es">modalidad de gasto</rdfs:label>
-    </owl:DatatypeProperty>
-    
-
-
-    <!-- http://purl.org/roh#foreseenJustificationDate -->
-
-
-    <owl:DatatypeProperty rdf:about="http://purl.org/roh#foreseenJustificationDate">
-        <rdfs:domain rdf:resource="http://purl.org/roh/mirror/vivo#Project"/>
-        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#dateTime"/>
-        <rdfs:comment xml:lang="en">The date in which a Justificacion has to be delivered.</rdfs:comment>
-        <rdfs:label xml:lang="es">fecha de justificación prevista</rdfs:label>
-        <rdfs:label xml:lang="en">foreseen justification date</rdfs:label>
-    </owl:DatatypeProperty>
-    
-
-
-    <!-- http://purl.org/roh#foundationDate -->
-
-
-    <owl:DatatypeProperty rdf:about="http://purl.org/roh#foundationDate">
-        <rdfs:domain rdf:resource="http://purl.org/roh/mirror/foaf#Organization"/>
-        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#dateTime"/>
-        <rdfs:comment xml:lang="en">Date in which an Organization was created.</rdfs:comment>
-        <rdfs:label xml:lang="es">fecha de fundación</rdfs:label>
-        <rdfs:label xml:lang="en">foundation date</rdfs:label>
     </owl:DatatypeProperty>
     
 
@@ -3034,17 +3044,6 @@ by creating a research management system with semantic capacities based on seman
     
 
 
-    <!-- http://purl.org/roh#patentExpirationDate -->
-
-
-    <owl:DatatypeProperty rdf:about="http://purl.org/roh#patentExpirationDate">
-        <rdfs:domain rdf:resource="http://purl.org/roh/mirror/bibo#Patent"/>
-        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#date"/>
-        <rdfs:label xml:lang="en">patent expiration date</rdfs:label>
-    </owl:DatatypeProperty>
-    
-
-
     <!-- http://purl.org/roh#projectAcronym -->
 
 
@@ -3082,19 +3081,6 @@ by creating a research management system with semantic capacities based on seman
     
 
 
-    <!-- http://purl.org/roh#projectStartDate -->
-
-
-    <owl:DatatypeProperty rdf:about="http://purl.org/roh#projectStartDate">
-        <rdfs:domain rdf:resource="http://purl.org/roh/mirror/vivo#Project"/>
-        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#date"/>
-        <rdfs:comment xml:lang="en">The start date of the project.</rdfs:comment>
-        <rdfs:label xml:lang="es">fecha inicio proyecto</rdfs:label>
-        <rdfs:label xml:lang="en">project start date</rdfs:label>
-    </owl:DatatypeProperty>
-    
-
-
     <!-- http://purl.org/roh#publicCompany -->
 
 
@@ -3117,28 +3103,6 @@ by creating a research management system with semantic capacities based on seman
         <rdfs:comment xml:lang="en">To tag something as public (true) or private (false)</rdfs:comment>
         <rdfs:label xml:lang="es">financiación pública</rdfs:label>
         <rdfs:label xml:lang="en">public funding</rdfs:label>
-    </owl:DatatypeProperty>
-    
-
-
-    <!-- http://purl.org/roh#publicationDate -->
-
-
-    <owl:DatatypeProperty rdf:about="http://purl.org/roh#publicationDate">
-        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#date"/>
-        <rdfs:label xml:lang="en">publication date</rdfs:label>
-    </owl:DatatypeProperty>
-    
-
-
-    <!-- http://purl.org/roh#qualifieddate -->
-
-
-    <owl:DatatypeProperty rdf:about="http://purl.org/roh#qualifieddate">
-        <rdfs:domain rdf:resource="http://purl.org/roh#QualifiedValue"/>
-        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#date"/>
-        <rdfs:comment xml:lang="en">A given date (point in time) linked to a given value within a qualified value.</rdfs:comment>
-        <rdfs:label xml:lang="en">qualified date</rdfs:label>
     </owl:DatatypeProperty>
     
 
@@ -5884,7 +5848,7 @@ A roh:FundingSource roh:feeds a roh:Funding with funds to sponsor some projects.
     <owl:Class rdf:about="http://purl.org/roh#PersonExpense">
         <rdfs:subClassOf rdf:resource="http://purl.org/roh#Expense"/>
         <owl:disjointWith rdf:resource="http://purl.org/roh#ProjectExpense"/>
-        <rdfs:comment xml:lang="en">A ProjectExpense is carried out by a Researcher (by default the principal researcher) in charge of a Project, which indirectly links it to Funding, understood as a set of FundingAmounts. It timestamps each expense with a xsd:dateTime through property expenseDate and has attributes expenseConcept, expenseType and expenseAmount . The types of expenses considered are: Personnel Expenses, Subcontracting, Travel, Equipment, Research Infrastructure and Other Goods and Services.&quot;^^rdfs:Literal</rdfs:comment>
+        <rdfs:comment xml:lang="en">A ProjectExpense is carried out by a Researcher (by default the principal researcher) in charge of a Project, which indirectly links it to Funding, understood as a set of FundingAmounts. The types of expenses considered are: Personnel Expenses, Subcontracting, Travel, Equipment, Research Infrastructure and Other Goods and Services.&quot;^^rdfs:Literal</rdfs:comment>
         <rdfs:label xml:lang="es">Gasto de Persona</rdfs:label>
         <rdfs:label xml:lang="en">Person Expense</rdfs:label>
     </owl:Class>
@@ -6055,7 +6019,7 @@ A roh:FundingSource roh:feeds a roh:Funding with funds to sponsor some projects.
 
     <owl:Class rdf:about="http://purl.org/roh#ProjectExpense">
         <rdfs:subClassOf rdf:resource="http://purl.org/roh#Expense"/>
-        <rdfs:comment rdf:datatype="http://www.w3.org/2000/01/rdf-schema#Literal">A ProjectExpense is carried out by a Researcher (by default the principal researcher) in charge of a Project, which indirectly links it to Funding, understood as a set of FundingAmounts. It timestamps each expense with a xsd:dateTime through property expenseDate and has attributes expenseConcept, expenseType and expenseAmount . The types of expenses considered are: Personnel Expenses, Subcontracting, Travel, Equipment, Research Infrastructure and Other Goods and Services.</rdfs:comment>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2000/01/rdf-schema#Literal">A ProjectExpense is carried out by a Researcher (by default the principal researcher) in charge of a Project, which indirectly links it to Funding, understood as a set of FundingAmounts. The types of expenses considered are: Personnel Expenses, Subcontracting, Travel, Equipment, Research Infrastructure and Other Goods and Services.</rdfs:comment>
         <rdfs:label xml:lang="es">Gasto de Proyecto</rdfs:label>
         <rdfs:label xml:lang="en">Project Expense</rdfs:label>
     </owl:Class>
@@ -7450,6 +7414,12 @@ This is a type of roh:ResearchObjects related to publication concept. It is base
         <rdfs:subClassOf rdf:resource="http://purl.org/roh/mirror/bibo#Document"/>
         <rdfs:subClassOf>
             <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.org/roh#expirationDate"/>
+                <owl:allValuesFrom rdf:resource="http://purl.org/roh/mirror/vivo#DateTimeValue"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
                 <owl:onProperty rdf:resource="http://purl.org/roh#hasKnowledgeArea"/>
                 <owl:allValuesFrom rdf:resource="http://purl.org/roh#KnowledgeArea"/>
             </owl:Restriction>
@@ -7914,6 +7884,12 @@ Besides, an instance of a foaf:Organization is associated to the following entit
         <rdfs:subClassOf rdf:resource="http://purl.org/roh/mirror/foaf#Agent"/>
         <rdfs:subClassOf>
             <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.org/roh#birthdate"/>
+                <owl:allValuesFrom rdf:resource="http://purl.org/roh/mirror/vivo#DateTimeValue"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
                 <owl:onProperty rdf:resource="http://purl.org/roh#hasAccreditation"/>
                 <owl:allValuesFrom rdf:resource="http://purl.org/roh#Accreditation"/>
             </owl:Restriction>
@@ -7988,12 +7964,6 @@ Besides, an instance of a foaf:Organization is associated to the following entit
             <owl:Restriction>
                 <owl:onProperty rdf:resource="http://purl.org/roh/mirror/vivo#eligibleFor"/>
                 <owl:allValuesFrom rdf:resource="http://purl.org/roh#Accreditation"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://purl.org/roh#birthdate"/>
-                <owl:allValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
@@ -9985,6 +9955,12 @@ Contents
     <owl:Class rdf:about="http://purl.org/roh/mirror/vivo#Project">
         <rdfs:subClassOf>
             <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.org/roh#foreseenJustificationDate"/>
+                <owl:allValuesFrom rdf:resource="http://purl.org/roh/mirror/vivo#DateTimeValue"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
                 <owl:onProperty rdf:resource="http://purl.org/roh#fundedBy"/>
                 <owl:allValuesFrom rdf:resource="http://purl.org/roh#FundingProgram"/>
             </owl:Restriction>
@@ -10091,12 +10067,6 @@ Contents
             <owl:Restriction>
                 <owl:onProperty rdf:resource="http://purl.org/roh#title"/>
                 <owl:someValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://purl.org/roh#foreseenJustificationDate"/>
-                <owl:allValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#dateTime"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>

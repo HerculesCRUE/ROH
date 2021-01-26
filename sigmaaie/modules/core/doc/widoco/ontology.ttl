@@ -322,14 +322,6 @@ by creating a research management system with semantic capacities based on seman
 
 
 #################################################################
-#    Datatypes
-#################################################################
-
-###  http://www.w3.org/2001/XMLSchema#date
-xsd:date rdf:type rdfs:Datatype .
-
-
-#################################################################
 #    Object Properties
 #################################################################
 
@@ -438,6 +430,15 @@ xsd:date rdf:type rdfs:Datatype .
                    "concede"@es .
 
 
+###  http://purl.org/roh#birthdate
+:birthdate rdf:type owl:ObjectProperty ;
+           rdfs:subPropertyOf <http://purl.org/roh/mirror/vivo#dateTimeValue> ;
+           rdfs:range <http://purl.org/roh/mirror/vivo#DateTimeValue> ;
+           rdfs:comment "The birthdate of an Entity."@en ;
+           rdfs:label "birthdate"@en ,
+                      "fecha de nacimiento"@es .
+
+
 ###  http://purl.org/roh#coadvisedBy
 :coadvisedBy rdf:type owl:ObjectProperty ;
              rdfs:domain <http://purl.org/roh/mirror/bibo#Document> ;
@@ -491,6 +492,7 @@ xsd:date rdf:type rdfs:Datatype .
 
 ###  http://purl.org/roh#contractSigningDate
 :contractSigningDate rdf:type owl:ObjectProperty ;
+                     rdfs:subPropertyOf <http://purl.org/roh/mirror/vivo#dateTimeValue> ;
                      owl:inverseOf :contractSigningDateOf ;
                      rdfs:domain <http://purl.org/roh/mirror/vivo#Contract> ;
                      rdfs:range <http://purl.org/roh/mirror/vivo#DateTimeValue> ;
@@ -573,6 +575,33 @@ xsd:date rdf:type rdfs:Datatype .
                   rdfs:comment "The status in which a Evaluation Summary could be."@en ;
                   rdfs:label "estado de la evaluación"@es ,
                              "evaluation status"@en .
+
+
+###  http://purl.org/roh#expirationDate
+:expirationDate rdf:type owl:ObjectProperty ;
+                rdfs:subPropertyOf <http://purl.org/roh/mirror/vivo#dateTimeValue> ;
+                rdfs:range <http://purl.org/roh/mirror/vivo#DateTimeValue> ;
+                rdfs:label "expiration date"@en .
+
+
+###  http://purl.org/roh#foreseenJustificationDate
+:foreseenJustificationDate rdf:type owl:ObjectProperty ;
+                           rdfs:subPropertyOf <http://purl.org/roh/mirror/vivo#dateTimeValue> ;
+                           rdfs:domain <http://purl.org/roh/mirror/vivo#Project> ;
+                           rdfs:range <http://purl.org/roh/mirror/vivo#DateTimeValue> ;
+                           rdfs:comment "The date in which a Justificacion has to be delivered."@en ;
+                           rdfs:label "fecha de justificación prevista"@es ,
+                                      "foreseen justification date"@en .
+
+
+###  http://purl.org/roh#foundationDate
+:foundationDate rdf:type owl:ObjectProperty ;
+                rdfs:subPropertyOf <http://purl.org/roh/mirror/vivo#dateTimeValue> ;
+                rdfs:domain <http://purl.org/roh/mirror/foaf#Organization> ;
+                rdfs:range <http://purl.org/roh/mirror/vivo#DateTimeValue> ;
+                rdfs:comment "Date in which an Organization was created."@en ;
+                rdfs:label "fecha de fundación"@es ,
+                           "foundation date"@en .
 
 
 ###  http://purl.org/roh#fundedBy
@@ -1097,6 +1126,15 @@ xsd:date rdf:type rdfs:Datatype .
                      rdfs:label "publication citations"@en .
 
 
+###  http://purl.org/roh#qualifieddate
+:qualifieddate rdf:type owl:ObjectProperty ;
+               rdfs:subPropertyOf <http://purl.org/roh/mirror/vivo#dateTimeValue> ;
+               rdfs:domain :QualifiedValue ;
+               rdfs:range <http://purl.org/roh/mirror/vivo#DateTimeValue> ;
+               rdfs:comment "A given date (point in time) linked to a given value within a qualified value."@en ;
+               rdfs:label "qualified date"@en .
+
+
 ###  http://purl.org/roh#requiredFor
 :requiredFor rdf:type owl:ObjectProperty ;
              rdfs:domain <http://purl.org/roh/mirror/bibo#Document> ;
@@ -1494,6 +1532,7 @@ xsd:date rdf:type rdfs:Datatype .
 
 ###  http://purl.org/roh/mirror/vivo#dateIssued
 <http://purl.org/roh/mirror/vivo#dateIssued> rdf:type owl:ObjectProperty ;
+                                             rdfs:subPropertyOf <http://purl.org/roh/mirror/vivo#dateTimeValue> ;
                                              rdfs:range <http://purl.org/roh/mirror/vivo#DateTimeValue> ;
                                              rdfs:comment "Fecha de publicación de una entidad."@es ,
                                                           "The date of issue of an entity."@en ;
@@ -1712,14 +1751,6 @@ xsd:date rdf:type rdfs:Datatype .
              rdfs:label "awarded with"@en .
 
 
-###  http://purl.org/roh#birthdate
-:birthdate rdf:type owl:DatatypeProperty ;
-           rdfs:range xsd:dateTime ;
-           rdfs:comment "The birthdate of an Entity."@en ;
-           rdfs:label "birthdate"@en ,
-                      "fecha de nacimiento"@es .
-
-
 ###  http://purl.org/roh#courseHours
 :courseHours rdf:type owl:DatatypeProperty ;
              rdfs:comment "The number of hours a course lasts."@en ;
@@ -1779,24 +1810,6 @@ xsd:date rdf:type rdfs:Datatype .
                  rdfs:comment "A free text property to represent the modality of an Expense."@en ;
                  rdfs:label "expense modality"@en ,
                             "modalidad de gasto"@es .
-
-
-###  http://purl.org/roh#foreseenJustificationDate
-:foreseenJustificationDate rdf:type owl:DatatypeProperty ;
-                           rdfs:domain <http://purl.org/roh/mirror/vivo#Project> ;
-                           rdfs:range xsd:dateTime ;
-                           rdfs:comment "The date in which a Justificacion has to be delivered."@en ;
-                           rdfs:label "fecha de justificación prevista"@es ,
-                                      "foreseen justification date"@en .
-
-
-###  http://purl.org/roh#foundationDate
-:foundationDate rdf:type owl:DatatypeProperty ;
-                rdfs:domain <http://purl.org/roh/mirror/foaf#Organization> ;
-                rdfs:range xsd:dateTime ;
-                rdfs:comment "Date in which an Organization was created."@en ;
-                rdfs:label "fecha de fundación"@es ,
-                           "foundation date"@en .
 
 
 ###  http://purl.org/roh#freeOrPaid
@@ -1957,13 +1970,6 @@ xsd:date rdf:type rdfs:Datatype .
                                    "needs ethical validation"@en .
 
 
-###  http://purl.org/roh#patentExpirationDate
-:patentExpirationDate rdf:type owl:DatatypeProperty ;
-                      rdfs:domain <http://purl.org/roh/mirror/bibo#Patent> ;
-                      rdfs:range xsd:date ;
-                      rdfs:label "patent expiration date"@en .
-
-
 ###  http://purl.org/roh#projectAcronym
 :projectAcronym rdf:type owl:DatatypeProperty ;
                 rdfs:subPropertyOf <http://purl.org/roh/mirror/vivo#abbreviation> ;
@@ -1989,15 +1995,6 @@ xsd:date rdf:type rdfs:Datatype .
                              "project objective"@en .
 
 
-###  http://purl.org/roh#projectStartDate
-:projectStartDate rdf:type owl:DatatypeProperty ;
-                  rdfs:domain <http://purl.org/roh/mirror/vivo#Project> ;
-                  rdfs:range xsd:date ;
-                  rdfs:comment "The start date of the project."@en ;
-                  rdfs:label "fecha inicio proyecto"@es ,
-                             "project start date"@en .
-
-
 ###  http://purl.org/roh#publicCompany
 :publicCompany rdf:type owl:DatatypeProperty ;
                rdfs:domain <http://purl.org/roh/mirror/vivo#Company> ;
@@ -2014,20 +2011,6 @@ xsd:date rdf:type rdfs:Datatype .
                rdfs:comment "To tag something as public (true) or private (false)"@en ;
                rdfs:label "financiación pública"@es ,
                           "public funding"@en .
-
-
-###  http://purl.org/roh#publicationDate
-:publicationDate rdf:type owl:DatatypeProperty ;
-                 rdfs:range xsd:date ;
-                 rdfs:label "publication date"@en .
-
-
-###  http://purl.org/roh#qualifieddate
-:qualifieddate rdf:type owl:DatatypeProperty ;
-               rdfs:domain :QualifiedValue ;
-               rdfs:range xsd:date ;
-               rdfs:comment "A given date (point in time) linked to a given value within a qualified value."@en ;
-               rdfs:label "qualified date"@en .
 
 
 ###  http://purl.org/roh#qualifiedvaluation
@@ -3888,7 +3871,7 @@ A roh:FundingSource roh:feeds a roh:Funding with funds to sponsor some projects.
 :PersonExpense rdf:type owl:Class ;
                rdfs:subClassOf :Expense ;
                owl:disjointWith :ProjectExpense ;
-               rdfs:comment "A ProjectExpense is carried out by a Researcher (by default the principal researcher) in charge of a Project, which indirectly links it to Funding, understood as a set of FundingAmounts. It timestamps each expense with a xsd:dateTime through property expenseDate and has attributes expenseConcept, expenseType and expenseAmount . The types of expenses considered are: Personnel Expenses, Subcontracting, Travel, Equipment, Research Infrastructure and Other Goods and Services.\"^^rdfs:Literal"@en ;
+               rdfs:comment "A ProjectExpense is carried out by a Researcher (by default the principal researcher) in charge of a Project, which indirectly links it to Funding, understood as a set of FundingAmounts. The types of expenses considered are: Personnel Expenses, Subcontracting, Travel, Equipment, Research Infrastructure and Other Goods and Services.\"^^rdfs:Literal"@en ;
                rdfs:label "Gasto de Persona"@es ,
                           "Person Expense"@en .
 
@@ -4009,7 +3992,7 @@ A roh:FundingSource roh:feeds a roh:Funding with funds to sponsor some projects.
 ###  http://purl.org/roh#ProjectExpense
 :ProjectExpense rdf:type owl:Class ;
                 rdfs:subClassOf :Expense ;
-                rdfs:comment "A ProjectExpense is carried out by a Researcher (by default the principal researcher) in charge of a Project, which indirectly links it to Funding, understood as a set of FundingAmounts. It timestamps each expense with a xsd:dateTime through property expenseDate and has attributes expenseConcept, expenseType and expenseAmount . The types of expenses considered are: Personnel Expenses, Subcontracting, Travel, Equipment, Research Infrastructure and Other Goods and Services."^^rdfs:Literal ;
+                rdfs:comment "A ProjectExpense is carried out by a Researcher (by default the principal researcher) in charge of a Project, which indirectly links it to Funding, understood as a set of FundingAmounts. The types of expenses considered are: Personnel Expenses, Subcontracting, Travel, Equipment, Research Infrastructure and Other Goods and Services."^^rdfs:Literal ;
                 rdfs:label "Gasto de Proyecto"@es ,
                            "Project Expense"@en .
 
@@ -4982,6 +4965,10 @@ This is a type of roh:ResearchObjects related to publication concept. It is base
 <http://purl.org/roh/mirror/bibo#Patent> rdf:type owl:Class ;
                                          rdfs:subClassOf <http://purl.org/roh/mirror/bibo#Document> ,
                                                          [ rdf:type owl:Restriction ;
+                                                           owl:onProperty :expirationDate ;
+                                                           owl:allValuesFrom <http://purl.org/roh/mirror/vivo#DateTimeValue>
+                                                         ] ,
+                                                         [ rdf:type owl:Restriction ;
                                                            owl:onProperty :hasKnowledgeArea ;
                                                            owl:allValuesFrom :KnowledgeArea
                                                          ] ,
@@ -5324,6 +5311,10 @@ Besides, an instance of a foaf:Organization is associated to the following entit
 <http://purl.org/roh/mirror/foaf#Person> rdf:type owl:Class ;
                                          rdfs:subClassOf <http://purl.org/roh/mirror/foaf#Agent> ,
                                                          [ rdf:type owl:Restriction ;
+                                                           owl:onProperty :birthdate ;
+                                                           owl:allValuesFrom <http://purl.org/roh/mirror/vivo#DateTimeValue>
+                                                         ] ,
+                                                         [ rdf:type owl:Restriction ;
                                                            owl:onProperty :hasAccreditation ;
                                                            owl:allValuesFrom :Accreditation
                                                          ] ,
@@ -5374,10 +5365,6 @@ Besides, an instance of a foaf:Organization is associated to the following entit
                                                          [ rdf:type owl:Restriction ;
                                                            owl:onProperty <http://purl.org/roh/mirror/vivo#eligibleFor> ;
                                                            owl:allValuesFrom :Accreditation
-                                                         ] ,
-                                                         [ rdf:type owl:Restriction ;
-                                                           owl:onProperty :birthdate ;
-                                                           owl:allValuesFrom xsd:string
                                                          ] ,
                                                          [ rdf:type owl:Restriction ;
                                                            owl:onProperty :researchLine ;
@@ -6799,6 +6786,10 @@ Contents
 ###  http://purl.org/roh/mirror/vivo#Project
 <http://purl.org/roh/mirror/vivo#Project> rdf:type owl:Class ;
                                           rdfs:subClassOf [ rdf:type owl:Restriction ;
+                                                            owl:onProperty :foreseenJustificationDate ;
+                                                            owl:allValuesFrom <http://purl.org/roh/mirror/vivo#DateTimeValue>
+                                                          ] ,
+                                                          [ rdf:type owl:Restriction ;
                                                             owl:onProperty :fundedBy ;
                                                             owl:allValuesFrom :FundingProgram
                                                           ] ,
@@ -6870,10 +6861,6 @@ Contents
                                                           [ rdf:type owl:Restriction ;
                                                             owl:onProperty :title ;
                                                             owl:someValuesFrom xsd:string
-                                                          ] ,
-                                                          [ rdf:type owl:Restriction ;
-                                                            owl:onProperty :foreseenJustificationDate ;
-                                                            owl:allValuesFrom xsd:dateTime
                                                           ] ,
                                                           [ rdf:type owl:Restriction ;
                                                             owl:onProperty :modality ;

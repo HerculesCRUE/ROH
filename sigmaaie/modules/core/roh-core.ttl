@@ -318,11 +318,11 @@ terms:source  a  owl:AnnotationProperty .
 
 obo:IAO_0000115  a  owl:AnnotationProperty .
 
-:patentExpirationDate
-        a            owl:DatatypeProperty ;
-        rdfs:domain  bibo:Patent ;
-        rdfs:label   "patent expiration date"@en ;
-        rdfs:range   xsd:date .
+:expirationDate
+        a            owl:ObjectProperty ;
+	rdfs:subPropertyOf vivo:dateTimeValue ;
+        rdfs:label   "expiration date"@en ;
+        rdfs:range   vivo:DateTimeValue .
 
 bibo:Book  a              owl:Class ;
         rdfs:comment      "A written or printed work of fiction or nonfiction, usually on sheets of paper fastened or bound together within covers."@en ;
@@ -861,11 +861,12 @@ vivo:TeacherRole  a      owl:Class ;
 skos:related  a  owl:AnnotationProperty .
 
 :foreseenJustificationDate
-        a             owl:DatatypeProperty ;
+        a             owl:ObjectProperty ;
+	rdfs:subPropertyOf vivo:dateTimeValue ;
         rdfs:comment  "The date in which a Justificacion has to be delivered."@en ;
         rdfs:domain   vivo:Project ;
         rdfs:label    "fecha de justificación prevista"@es , "foreseen justification date"@en ;
-        rdfs:range    xsd:dateTime .
+        rdfs:range    vivo:DateTimeValue .
 
 :knowledgeAreaOf  a   owl:ObjectProperty ;
         rdfs:comment  "A skos:Concept which is the knowledge area of some entity."@en ;
@@ -970,7 +971,6 @@ bibo:Document  a          owl:Class ;
         rdfs:subClassOf   [ a                            owl:Restriction ;
                             owl:maxQualifiedCardinality  "1"^^xsd:nonNegativeInteger ;
                             owl:onClass                  vivo:DateTimeValue ;
-                            owl:onDataRange              xsd:dateTime ;
                             owl:onProperty               vivo:dateTimeValue
                           ] ;
         rdfs:subClassOf   [ a                            owl:Restriction ;
@@ -1492,6 +1492,10 @@ bibo:Patent  a            owl:Class ;
                             owl:allValuesFrom  vivo:DateTimeValue ;
                             owl:onProperty     vivo:dateIssued
                           ] ;
+        rdfs:subClassOf   [ a                  owl:Restriction ;
+                            owl:allValuesFrom  vivo:DateTimeValue ;
+                            owl:onProperty     :expirationDate
+                          ] ;
         rdfs:subClassOf   [ a                   owl:Restriction ;
                             owl:onProperty      vivo:identifier ;
                             owl:someValuesFrom  xsd:string
@@ -1666,6 +1670,7 @@ bibo:Collection  a        owl:Class ;
         ns:term_status    "stable" .
 
 vivo:dateIssued  a    owl:ObjectProperty ;
+        rdfs:subPropertyOf vivo:dateTimeValue ;
         rdfs:comment  "Fecha de publicación de una entidad."@es , "The date of issue of an entity."@en ;
         rdfs:label    "date issued"@en , "fecha de publicación"@es ;
         rdfs:range    vivo:DateTimeValue .
@@ -1768,11 +1773,12 @@ vivo:GraduateAdvisingRelationship
 
 obo:IAO_0000602  a  owl:AnnotationProperty .
 
-:foundationDate  a    owl:DatatypeProperty ;
+:foundationDate  a    owl:ObjectProperty ;
+        rdfs:subPropertyOf vivo:dateTimeValue ;
         rdfs:comment  "Date in which an Organization was created."@en ;
         rdfs:domain   <http://purl.org/roh/mirror/foaf#Organization> ;
         rdfs:label    "fecha de fundación"@es , "foundation date"@en ;
-        rdfs:range    xsd:dateTime .
+        rdfs:range    vivo:DateTimeValue .
 
 bfo:BFO_0000054  a        owl:ObjectProperty ;
         rdfs:domain       bfo:BFO_0000023 ;
@@ -2023,6 +2029,7 @@ vivo:courseCredits  a  owl:DatatypeProperty ;
                          ] .
 
 :contractSigningDate  a  owl:ObjectProperty ;
+        rdfs:subPropertyOf vivo:dateTimeValue ;
         rdfs:comment   "An object property linking a Contract with the date (DateTimeValue) when it was signed."@en ;
         rdfs:domain    vivo:Contract ;
         rdfs:label     "contract signing date"@en , "fecha de firma del contrato"@es ;
@@ -2056,7 +2063,7 @@ vivo:courseCredits  a  owl:DatatypeProperty ;
                             owl:onProperty     :hasRole
                           ] ;
         rdfs:subClassOf   [ a                  owl:Restriction ;
-                            owl:allValuesFrom  xsd:string ;
+                            owl:allValuesFrom  vivo:DateTimeValue ;
                             owl:onProperty     :birthdate
                           ] ;
         rdfs:subClassOf   [ a                  owl:Restriction ;
@@ -2223,12 +2230,6 @@ vivo:end  a                 owl:ObjectProperty ;
                            owl:someValuesFrom  :SupervisorRole
                          ] .
 
-:projectStartDate  a  owl:DatatypeProperty ;
-        rdfs:comment  "The start date of the project."@en ;
-        rdfs:domain   vivo:Project ;
-        rdfs:label    "project start date"@en , "fecha inicio proyecto"@es ;
-        rdfs:range    xsd:date .
-
 vivo:OrganizerRole  a    owl:Class ;
         rdfs:label       "Organizer Role"@en , "Rol de Organizador"@es ;
         rdfs:subClassOf  bfo:BFO_0000023 ;
@@ -2335,7 +2336,7 @@ vivo:dateTime  a      owl:DatatypeProperty ;
 ] .
 
 :ProjectExpense  a       owl:Class ;
-        rdfs:comment     "A ProjectExpense is carried out by a Researcher (by default the principal researcher) in charge of a Project, which indirectly links it to Funding, understood as a set of FundingAmounts. It timestamps each expense with a xsd:dateTime through property expenseDate and has attributes expenseConcept, expenseType and expenseAmount . The types of expenses considered are: Personnel Expenses, Subcontracting, Travel, Equipment, Research Infrastructure and Other Goods and Services."^^rdfs:Literal ;
+        rdfs:comment     "A ProjectExpense is carried out by a Researcher (by default the principal researcher) in charge of a Project, which indirectly links it to Funding, understood as a set of FundingAmounts. The types of expenses considered are: Personnel Expenses, Subcontracting, Travel, Equipment, Research Infrastructure and Other Goods and Services."^^rdfs:Literal ;
         rdfs:label       "Gasto de Proyecto"@es , "Project Expense"@en ;
         rdfs:subClassOf  :Expense .
 
@@ -2601,7 +2602,7 @@ vivo:Project  a          owl:Class ;
                            owl:onProperty     :fundedBy
                          ] ;
         rdfs:subClassOf  [ a                  owl:Restriction ;
-                           owl:allValuesFrom  xsd:dateTime ;
+                           owl:allValuesFrom  vivo:DateTimeValue ;
                            owl:onProperty     :foreseenJustificationDate
                          ] ;
         rdfs:subClassOf  [ a                  owl:Restriction ;
@@ -3013,11 +3014,12 @@ vivo:description  a   owl:DatatypeProperty ;
         rdfs:label       "PAS laboral"@es , "PAS laboral"@ca-ad ;
         rdfs:subClassOf  vivo:Position .
 
-:qualifieddate  a     owl:DatatypeProperty ;
+:qualifieddate  a     owl:ObjectProperty ;
+        rdfs:subPropertyOf vivo:dateTimeValue ;
         rdfs:comment  "A given date (point in time) linked to a given value within a qualified value."@en ;
         rdfs:domain   :QualifiedValue ;
         rdfs:label    "qualified date"@en ;
-        rdfs:range    xsd:date .
+        rdfs:range    vivo:DateTimeValue .
 
 :TestAnotherGovernmentAgency
         a           owl:NamedIndividual , vivo:GovernmentAgency ;
@@ -3124,10 +3126,11 @@ vivo:AwardedDegree  a    owl:Class ;
         obo:IAO_0000115  "The awarding of a degree by an agent to another agent. It is mostly for academic degrees." ;
         skos:prefLabel   "Grau acadêmico"@pt-br , "Grade universitaire"@fr , "Grau académico"@pt-pt , "Grade universitaire"@fr-be , "Grade universitaire"@fr-ca , "Grade universitaire"@fr-ch , "Grade universitaire"@fr-fr , "Grau acadèmic"@ca-ad , "Grau acadèmic"@ca-es , "Unibertsitate-gradu"@eu , "Grao académico"@gl , "Título académico"@es-es , "Academic degree"@en .
 
-:birthdate  a         owl:DatatypeProperty ;
+:birthdate  a         owl:ObjectProperty ;
+        rdfs:subPropertyOf vivo:dateTimeValue ;
         rdfs:comment  "The birthdate of an Entity."@en ;
         rdfs:label    "birthdate"@en , "fecha de nacimiento"@es ;
-        rdfs:range    xsd:dateTime .
+        rdfs:range    vivo:DateTimeValue .
 
 vivo:UndergraduateAdvisingRelationship
         a                owl:Class ;
@@ -3329,7 +3332,7 @@ iao:IAO_0000117  a  owl:AnnotationProperty .
         rdfs:label  "is advised by"@en .
 
 :PersonExpense  a         owl:Class ;
-        rdfs:comment      "A ProjectExpense is carried out by a Researcher (by default the principal researcher) in charge of a Project, which indirectly links it to Funding, understood as a set of FundingAmounts. It timestamps each expense with a xsd:dateTime through property expenseDate and has attributes expenseConcept, expenseType and expenseAmount . The types of expenses considered are: Personnel Expenses, Subcontracting, Travel, Equipment, Research Infrastructure and Other Goods and Services.\"^^rdfs:Literal"@en ;
+        rdfs:comment      "A ProjectExpense is carried out by a Researcher (by default the principal researcher) in charge of a Project, which indirectly links it to Funding, understood as a set of FundingAmounts. The types of expenses considered are: Personnel Expenses, Subcontracting, Travel, Equipment, Research Infrastructure and Other Goods and Services.\"^^rdfs:Literal"@en ;
         rdfs:label        "Gasto de Persona"@es , "Person Expense"@en ;
         rdfs:subClassOf   :Expense ;
         owl:disjointWith  :ProjectExpense .
@@ -3687,10 +3690,6 @@ vivo:Contract  a         owl:Class ;
         rdfs:domain   :PublicationMetric ;
         rdfs:label    "ranking"@en , "ranking"@es ;
         rdfs:range    xsd:string .
-
-:publicationDate  a  owl:DatatypeProperty ;
-        rdfs:label  "publication date"@en ;
-        rdfs:range  xsd:date .
 
 <http://purl.org/roh/mirror/obo/ero#ERO_0001254>
         a                owl:Class ;
@@ -5098,8 +5097,6 @@ bibo:volume  a              owl:DatatypeProperty ;
 [ a            owl:AllDisjointClasses ;
   owl:members  ( :EvaluationSummary :Justification vivo:ResearchProposal )
 ] .
-
-xsd:date  a     rdfs:Datatype .
 
 :Database  a             owl:Class ;
         rdfs:label       "Database"@en ;
