@@ -1194,12 +1194,6 @@ skos:hasTopConcept  a  owl:AnnotationProperty .
                            owl:someValuesFrom  xsd:string
                          ] ;
         rdfs:subClassOf  [ a                  owl:Restriction ;
-                           owl:allValuesFrom  [ a            owl:Class ;
-                                                owl:unionOf  ( :PersonContract vivo:Project )
-                                              ] ;
-                           owl:onProperty     :supports
-                         ] ;
-        rdfs:subClassOf  [ a                  owl:Restriction ;
                            owl:allValuesFrom  xsd:string ;
                            owl:onProperty     vivo:identifier
                          ] ;
@@ -2158,10 +2152,7 @@ vivo:courseCredits  a  owl:DatatypeProperty ;
 :supports  a          owl:ObjectProperty ;
         rdfs:comment  "A Funding which supports a Person Contract or a Project."@en ;
         rdfs:domain   :Funding ;
-        rdfs:label    "apoya"@es , "supports"@en ;
-        rdfs:range    [ a            owl:Class ;
-                        owl:unionOf  ( :PersonContract vivo:Project )
-                      ] .
+        rdfs:label    "apoya"@es , "supports"@en .
 
 vivo:end  a                 owl:ObjectProperty ;
         rdfs:comment        "The date/time value in which something ends."@en ;
@@ -4924,7 +4915,6 @@ vivo:University  a       owl:Class ;
 
 :isSupportedBy  a      owl:ObjectProperty ;
         rdfs:comment   "A Project supported by a Funding."@en ;
-        rdfs:domain    vivo:Project ;
         rdfs:label     "apoyado por"@es , "is supported by"@en ;
         rdfs:range     :Funding ;
         owl:inverseOf  :supports .

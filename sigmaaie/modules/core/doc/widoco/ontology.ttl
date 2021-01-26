@@ -888,7 +888,6 @@ xsd:date rdf:type rdfs:Datatype .
 ###  http://purl.org/roh#isSupportedBy
 :isSupportedBy rdf:type owl:ObjectProperty ;
                owl:inverseOf :supports ;
-               rdfs:domain <http://purl.org/roh/mirror/vivo#Project> ;
                rdfs:range :Funding ;
                rdfs:comment "A Project supported by a Funding."@en ;
                rdfs:label "apoyado por"@es ,
@@ -1186,11 +1185,6 @@ xsd:date rdf:type rdfs:Datatype .
 ###  http://purl.org/roh#supports
 :supports rdf:type owl:ObjectProperty ;
           rdfs:domain :Funding ;
-          rdfs:range [ rdf:type owl:Class ;
-                       owl:unionOf ( :PersonContract
-                                     <http://purl.org/roh/mirror/vivo#Project>
-                                   )
-                     ] ;
           rdfs:comment "A Funding which supports a Person Contract or a Project."@en ;
           rdfs:label "apoya"@es ,
                      "supports"@en .
@@ -3329,14 +3323,6 @@ The previous short definition was: \"An arbitrary classification of a space/time
                          [ rdf:type owl:Restriction ;
                            owl:onProperty :hasKnowledgeArea ;
                            owl:allValuesFrom :KnowledgeArea
-                         ] ,
-                         [ rdf:type owl:Restriction ;
-                           owl:onProperty :supports ;
-                           owl:allValuesFrom [ rdf:type owl:Class ;
-                                               owl:unionOf ( :PersonContract
-                                                             <http://purl.org/roh/mirror/vivo#Project>
-                                                           )
-                                             ]
                          ] ,
                          [ rdf:type owl:Restriction ;
                            owl:onProperty <http://purl.org/roh/mirror/obo/ro#BFO_0000051> ;
