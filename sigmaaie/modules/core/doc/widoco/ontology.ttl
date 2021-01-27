@@ -395,14 +395,6 @@ by creating a research management system with semantic capacities based on seman
                        "attachment"@en .
 
 
-###  http://purl.org/roh#authorCitation
-:authorCitation rdf:type owl:ObjectProperty ;
-                rdfs:domain <http://purl.org/roh/mirror/foaf#Person> ;
-                rdfs:range :QualifiedValue ;
-                rdfs:comment "A property to link the number of citations to a given author."@en ;
-                rdfs:label "author citations"@en .
-
-
 ###  http://purl.org/roh#authors
 :authors rdf:type owl:ObjectProperty ;
          owl:inverseOf :isAuthoredBy ;
@@ -639,14 +631,6 @@ by creating a research management system with semantic capacities based on seman
                    "grants"@en .
 
 
-###  http://purl.org/roh#h-index
-:h-index rdf:type owl:ObjectProperty ;
-         rdfs:domain <http://purl.org/roh/mirror/foaf#Person> ;
-         rdfs:range :QualifiedValue ;
-         rdfs:label "A property to express the h-index of an author."@en ,
-                    "h-index"@en .
-
-
 ###  http://purl.org/roh#hasAccreditation
 :hasAccreditation rdf:type owl:ObjectProperty ;
                   rdfs:domain <http://purl.org/roh/mirror/foaf#Agent> ;
@@ -730,7 +714,6 @@ by creating a research management system with semantic capacities based on seman
 ###  http://purl.org/roh#hasMetric
 :hasMetric rdf:type owl:ObjectProperty ;
            owl:inverseOf :metricOf ;
-           rdfs:domain :ResearchObject ;
            rdfs:range :Metric ;
            rdfs:comment "A Metric which quantifies a Research Object."@en ;
            rdfs:label "has metric"@en ,
@@ -840,10 +823,7 @@ by creating a research management system with semantic capacities based on seman
 
 ###  http://purl.org/roh#i10-index
 :i10-index rdf:type owl:ObjectProperty ;
-           rdfs:domain <http://purl.org/roh/mirror/foaf#Person> ;
-           rdfs:range :QualifiedValue ;
-           rdfs:comment "A property to express the i10-index of an author."@en ;
-           rdfs:label "i10-index"@en .
+           rdfs:domain :AuthorMetric .
 
 
 ###  http://purl.org/roh#infrastructureOf
@@ -951,9 +931,9 @@ by creating a research management system with semantic capacities based on seman
 
 ###  http://purl.org/roh#metricOf
 :metricOf rdf:type owl:ObjectProperty ;
+          rdfs:subPropertyOf <http://purl.org/roh/mirror/obo/iao#IAO_0000136> ;
           rdfs:domain :Metric ;
-          rdfs:range :ResearchObject ;
-          rdfs:comment "A metric which quantifies a Research Object."@en ;
+          rdfs:comment "relates a Metric to the entity it describes"@en ;
           rdfs:label "metric of"@en ,
                      "métrica de"@es .
 
@@ -1115,23 +1095,6 @@ by creating a research management system with semantic capacities based on seman
           rdfs:comment "An Organization which provides a Service."@en ;
           rdfs:label "provee"@es ,
                      "provides"@en .
-
-
-###  http://purl.org/roh#publicationCitation
-:publicationCitation rdf:type owl:ObjectProperty ;
-                     rdfs:domain <http://purl.org/roh/mirror/bibo#Document> ;
-                     rdfs:range :QualifiedValue ;
-                     rdfs:comment "a property to link a given publication to the number of citations."@en ;
-                     rdfs:label "publication citations"@en .
-
-
-###  http://purl.org/roh#qualifieddate
-:qualifieddate rdf:type owl:ObjectProperty ;
-               rdfs:subPropertyOf <http://purl.org/roh/mirror/vivo#dateTimeValue> ;
-               rdfs:domain :QualifiedValue ;
-               rdfs:range <http://purl.org/roh/mirror/vivo#DateTimeValue> ;
-               rdfs:comment "A given date (point in time) linked to a given value within a qualified value."@en ;
-               rdfs:label "qualified date"@en .
 
 
 ###  http://purl.org/roh#requiredFor
@@ -1390,7 +1353,7 @@ by creating a research management system with semantic capacities based on seman
 <http://purl.org/roh/mirror/obo/bfo#BFO_0000054> rdf:type owl:ObjectProperty ;
                                                  owl:inverseOf <http://purl.org/roh/mirror/obo/bfo#BFO_0000055> ;
                                                  rdfs:domain <http://purl.org/roh/mirror/obo/bfo#BFO_0000023> ;
-                                                 rdfs:range :Activity ;
+                                                 rdfs:range <http://purl.org/roh/mirror/obo/bfo#BFO_0000015> ;
                                                  <http://purl.obolibrary.org/obo/BFO_0000179> "realized-in" ;
                                                  <http://purl.obolibrary.org/obo/BFO_0000180> "realizedIn" ;
                                                  <http://purl.obolibrary.org/obo/IAO_0000600> "[copied from inverse property 'realizes'] to say that b realizes c at t is to assert that there is some material entity d & b is a process which has participant d at t & c is a disposition or role of which d is bearer_of at t& the type instantiated by b is correlated with the type instantiated by c. (axiom label in BFO2 Reference: [059-003])" ;
@@ -1403,7 +1366,7 @@ by creating a research management system with semantic capacities based on seman
 
 ###  http://purl.org/roh/mirror/obo/bfo#BFO_0000055
 <http://purl.org/roh/mirror/obo/bfo#BFO_0000055> rdf:type owl:ObjectProperty ;
-                                                 rdfs:domain :Activity ;
+                                                 rdfs:domain <http://purl.org/roh/mirror/obo/bfo#BFO_0000015> ;
                                                  rdfs:range <http://purl.org/roh/mirror/obo/bfo#BFO_0000023> ;
                                                  <http://purl.obolibrary.org/obo/BFO_0000179> "realizes" ;
                                                  <http://purl.obolibrary.org/obo/BFO_0000180> "realizes" ;
@@ -1412,6 +1375,11 @@ by creating a research management system with semantic capacities based on seman
                                                  rdfs:isDefinedBy <http://purl.obolibrary.org/obo/bfo.owl> ;
                                                  rdfs:label "realiza"@es ,
                                                             "realizes"@en .
+
+
+###  http://purl.org/roh/mirror/obo/iao#IAO_0000136
+<http://purl.org/roh/mirror/obo/iao#IAO_0000136> rdf:type owl:ObjectProperty ;
+                                                 rdfs:domain <http://purl.org/roh/mirror/obo/iao#IAO_0000030> .
 
 
 ###  http://purl.org/roh/mirror/obo/ro#BFO_0000050
@@ -1750,6 +1718,18 @@ by creating a research management system with semantic capacities based on seman
              rdfs:label "awarded with"@en .
 
 
+###  http://purl.org/roh#citationCount
+:citationCount rdf:type owl:DatatypeProperty ;
+               rdfs:domain [ rdf:type owl:Class ;
+                             owl:unionOf ( :AuthorMetric
+                                           :PublicationMetric
+                                         )
+                           ] ;
+               rdfs:range xsd:integer ;
+               rdfs:comment "the number of times a publication has been cited (when used in PublicationMetric) or the total number of citations for all of an author's works (when used in AuthorMetric)"@en ;
+               rdfs:label "citation count"@en .
+
+
 ###  http://purl.org/roh#courseHours
 :courseHours rdf:type owl:DatatypeProperty ;
              rdfs:comment "The number of hours a course lasts."@en ;
@@ -1817,12 +1797,24 @@ by creating a research management system with semantic capacities based on seman
                        "gratuito o de pago"@es .
 
 
+###  http://purl.org/roh#h-index
+:h-index rdf:type owl:DatatypeProperty ;
+         rdfs:domain :AuthorMetric ;
+         rdfs:range xsd:integer ;
+         rdfs:label "h-index"@en .
+
+
 ###  http://purl.org/roh#hasTRL
 :hasTRL rdf:type owl:DatatypeProperty ;
         rdfs:domain :Prototype ;
         rdfs:range xsd:integer ;
         rdfs:comment "A prototype has a given technology readiness level"@en ;
         rdfs:label "has TRL"@en .
+
+
+###  http://purl.org/roh#i10-index
+:i10-index rdf:type owl:DatatypeProperty ;
+           rdfs:range xsd:integer .
 
 
 ###  http://purl.org/roh#impactFactor
@@ -1945,7 +1937,11 @@ by creating a research management system with semantic capacities based on seman
 
 ###  http://purl.org/roh#modality
 :modality rdf:type owl:DatatypeProperty ;
-          rdfs:domain <http://purl.org/roh/mirror/vivo#Project> ;
+          rdfs:domain [ rdf:type owl:Class ;
+                        owl:unionOf ( <http://purl.org/roh/mirror/bibo#Patent>
+                                      <http://purl.org/roh/mirror/vivo#Project>
+                                    )
+                      ] ;
           rdfs:range xsd:string ;
           rdfs:comment "A free text property to represent the modality of a Project."@en ;
           rdfs:label "modalidad"@en ,
@@ -1981,7 +1977,7 @@ by creating a research management system with semantic capacities based on seman
 :projectID rdf:type owl:DatatypeProperty ;
            rdfs:subPropertyOf <http://purl.org/roh/mirror/vivo#identifier> ;
            rdfs:domain <http://purl.org/roh/mirror/vivo#Project> ;
-           rdfs:range xsd:integer ;
+           rdfs:range rdfs:Literal ;
            rdfs:label "project ID"@en .
 
 
@@ -2010,14 +2006,6 @@ by creating a research management system with semantic capacities based on seman
                rdfs:comment "To tag something as public (true) or private (false)"@en ;
                rdfs:label "financiación pública"@es ,
                           "public funding"@en .
-
-
-###  http://purl.org/roh#qualifiedvaluation
-:qualifiedvaluation rdf:type owl:DatatypeProperty ;
-                    rdfs:domain :QualifiedValue ;
-                    rdfs:range xsd:string ;
-                    rdfs:comment "A given value linked to a given date (point in time) within a qualified value."@en ;
-                    rdfs:label "qualified valuation"@en .
 
 
 ###  http://purl.org/roh#quartile
@@ -2535,14 +2523,6 @@ Definition source: http://isiwebofknowledge.com/researcherid/""" ;
 <http://purl.obolibrary.org/obo/BFO_0000040> rdf:type owl:Class .
 
 
-###  http://purl.org/NET/c4dm/event.owl#Event
-<http://purl.org/NET/c4dm/event.owl#Event> rdf:type owl:Class ;
-                                           rdfs:comment """An arbitrary classification of a space/time region, by a
-cognitive agent. An event may have actively participating agents,
-passive factors, products, and a location in space/time."""@en ;
-                                           rdfs:label "Event"@en .
-
-
 ###  http://purl.org/roh#AcademicAccreditation
 :AcademicAccreditation rdf:type owl:Class ;
                        rdfs:subClassOf :Accreditation ,
@@ -2619,7 +2599,8 @@ passive factors, products, and a location in space/time."""@en ;
 
 ###  http://purl.org/roh#Activity
 :Activity rdf:type owl:Class ;
-          rdfs:subClassOf [ rdf:type owl:Restriction ;
+          rdfs:subClassOf <http://purl.org/roh/mirror/obo/bfo#BFO_0000015> ,
+                          [ rdf:type owl:Restriction ;
                             owl:onProperty :participatedBy ;
                             owl:allValuesFrom <http://purl.org/roh/mirror/foaf#Agent>
                           ] ,
@@ -2681,7 +2662,7 @@ passive factors, products, and a location in space/time."""@en ;
                           ] ,
                           [ rdf:type owl:Restriction ;
                             owl:onProperty <http://purl.org/roh/mirror/vivo#identifier> ;
-                            owl:allValuesFrom xsd:string
+                            owl:allValuesFrom rdfs:Literal
                           ] ,
                           [ rdf:type owl:Restriction ;
                             owl:onProperty <http://purl.org/roh/mirror/vcard#locality> ;
@@ -2777,6 +2758,29 @@ The previous short definition was: \"An arbitrary classification of a space/time
              rdfs:subClassOf <http://purl.org/roh/mirror/obo/bfo#BFO_0000023> ;
              rdfs:label "Auditor Role"@en ,
                         "Rol de Auditor"@es .
+
+
+###  http://purl.org/roh#AuthorMetric
+:AuthorMetric rdf:type owl:Class ;
+              rdfs:subClassOf :Metric ,
+                              [ rdf:type owl:Restriction ;
+                                owl:onProperty :metricOf ;
+                                owl:allValuesFrom <http://purl.org/roh/mirror/foaf#Agent>
+                              ] ,
+                              [ rdf:type owl:Restriction ;
+                                owl:onProperty :citationCount ;
+                                owl:allValuesFrom xsd:integer
+                              ] ,
+                              [ rdf:type owl:Restriction ;
+                                owl:onProperty :h-index ;
+                                owl:allValuesFrom xsd:integer
+                              ] ,
+                              [ rdf:type owl:Restriction ;
+                                owl:onProperty :i10-index ;
+                                owl:allValuesFrom xsd:integer
+                              ] ;
+              rdfs:label "Author Metric"@en ,
+                         "Métrica de Autor"@es .
 
 
 ###  http://purl.org/roh#Award
@@ -3045,7 +3049,6 @@ The previous short definition was: \"An arbitrary classification of a space/time
 ###  http://purl.org/roh#DegreeMetric
 :DegreeMetric rdf:type owl:Class ;
               rdfs:subClassOf :Metric ;
-              owl:disjointWith :PublicationMetric ;
               rdfs:label "Degree Metric"@en ,
                          "Métrica de Grado"@es .
 
@@ -3143,7 +3146,7 @@ The previous short definition was: \"An arbitrary classification of a space/time
                          ] ,
                          [ rdf:type owl:Restriction ;
                            owl:onProperty <http://purl.org/roh/mirror/vivo#identifier> ;
-                           owl:someValuesFrom xsd:string
+                           owl:someValuesFrom rdfs:Literal
                          ] ,
                          [ rdf:type owl:Restriction ;
                            owl:onProperty :title ;
@@ -3151,7 +3154,7 @@ The previous short definition was: \"An arbitrary classification of a space/time
                          ] ,
                          [ rdf:type owl:Restriction ;
                            owl:onProperty <http://purl.org/roh/mirror/vivo#identifier> ;
-                           owl:allValuesFrom xsd:string
+                           owl:allValuesFrom rdfs:Literal
                          ] ;
          owl:disjointWith <http://purl.org/roh/mirror/bibo#Periodical> ;
          rdfs:comment "File is a collection in which all assets related to a Project are stored, including the Research Proposal, approval documents, viability plans and so on associated to a project are stored."@en ;
@@ -3320,11 +3323,7 @@ The previous short definition was: \"An arbitrary classification of a space/time
                          ] ,
                          [ rdf:type owl:Restriction ;
                            owl:onProperty <http://purl.org/roh/mirror/vivo#identifier> ;
-                           owl:someValuesFrom xsd:string
-                         ] ,
-                         [ rdf:type owl:Restriction ;
-                           owl:onProperty <http://purl.org/roh/mirror/vivo#identifier> ;
-                           owl:allValuesFrom xsd:string
+                           owl:someValuesFrom rdfs:Literal
                          ] ,
                          [ rdf:type owl:Restriction ;
                            owl:onProperty <http://purl.org/roh/mirror/vivo#identifier> ;
@@ -3402,7 +3401,7 @@ The previous short definition was: \"An arbitrary classification of a space/time
                                 ] ,
                                 [ rdf:type owl:Restriction ;
                                   owl:onProperty <http://purl.org/roh/mirror/vivo#identifier> ;
-                                  owl:allValuesFrom xsd:string
+                                  owl:allValuesFrom rdfs:Literal
                                 ] ;
                 rdfs:comment "A programme of related funded projects, typically established by a funding organization."@en ,
                              "A roh:FundingProgram is promoted (roh:promotedBy) by a Funding Organization (vivo:FundingOrganization) and it is in place for a time interval (vivo:dateTimeInterval)" ;
@@ -3501,7 +3500,7 @@ A roh:FundingSource roh:feeds a roh:Funding with funds to sponsor some projects.
                            ] ,
                            [ rdf:type owl:Restriction ;
                              owl:onProperty <http://purl.org/roh/mirror/vivo#identifier> ;
-                             owl:someValuesFrom xsd:string
+                             owl:someValuesFrom rdfs:Literal
                            ] ,
                            [ rdf:type owl:Restriction ;
                              owl:onProperty :title ;
@@ -3761,9 +3760,10 @@ A roh:FundingSource roh:feeds a roh:Funding with funds to sponsor some projects.
 
 ###  http://purl.org/roh#Metric
 :Metric rdf:type owl:Class ;
-        rdfs:subClassOf [ rdf:type owl:Restriction ;
-                          owl:onProperty :metricOf ;
-                          owl:allValuesFrom :ResearchObject
+        rdfs:subClassOf <http://purl.org/roh/mirror/obo/iao#IAO_0000030> ,
+                        [ rdf:type owl:Restriction ;
+                          owl:onProperty <http://purl.org/roh/mirror/vivo#dateTimeValue> ;
+                          owl:allValuesFrom <http://purl.org/roh/mirror/vivo#DateTimeValue>
                         ] ,
                         [ rdf:type owl:Restriction ;
                           owl:onProperty :metricName ;
@@ -4026,6 +4026,14 @@ A roh:FundingSource roh:feeds a roh:Funding with funds to sponsor some projects.
 :PublicationMetric rdf:type owl:Class ;
                    rdfs:subClassOf :Metric ,
                                    [ rdf:type owl:Restriction ;
+                                     owl:onProperty :metricOf ;
+                                     owl:allValuesFrom <http://purl.org/roh/mirror/obo/iao#IAO_0000136>
+                                   ] ,
+                                   [ rdf:type owl:Restriction ;
+                                     owl:onProperty :citationCount ;
+                                     owl:allValuesFrom xsd:integer
+                                   ] ,
+                                   [ rdf:type owl:Restriction ;
                                      owl:onProperty :impactFactor ;
                                      owl:allValuesFrom xsd:float
                                    ] ,
@@ -4039,12 +4047,6 @@ A roh:FundingSource roh:feeds a roh:Funding with funds to sponsor some projects.
                                    ] ;
                    rdfs:label "Métrica de Publicación"@es ,
                               "Publication Metric"@en .
-
-
-###  http://purl.org/roh#QualifiedValue
-:QualifiedValue rdf:type owl:Class ;
-                rdfs:comment "A class to represent a qualified value as used in Wikibase."@en ;
-                rdfs:label "Qualified value"@en .
 
 
 ###  http://purl.org/roh#RadioProgram
@@ -4188,9 +4190,7 @@ A roh:FundingSource roh:feeds a roh:Funding with funds to sponsor some projects.
                                 ] ;
                 rdfs:comment "A roh:ResearchObject is generated by one to several foaf:Person specified through property bibo:authorList. Usually a roh:ResearchObject results from the work in a vivo:Project (roh:produces). An elaborated taxonomy of research objects is provided, covering all types of publications, Patents, Software and Webpage. The main author of a research object is accessible through property roh:correspondingAuthor." ;
                 rdfs:label "Objeto de Investigación"@es ,
-                           "Research Object"@en ,
-                           "Research result"@en ;
-                <http://www.w3.org/2004/02/skos/core#prefLabel> "Research result"@en .
+                           "Research Object"@en .
 
 
 ###  http://purl.org/roh#ResearchObjectExpense
@@ -4721,8 +4721,7 @@ This is a type of roh:ResearchObjects related to publication concept. It is base
 
 ###  http://purl.org/roh/mirror/bibo#Conference
 <http://purl.org/roh/mirror/bibo#Conference> rdf:type owl:Class ;
-                                             rdfs:subClassOf <http://purl.org/NET/c4dm/event.owl#Event> ,
-                                                             :Activity ,
+                                             rdfs:subClassOf :Activity ,
                                                              [ rdf:type owl:Restriction ;
                                                                owl:onProperty <http://purl.org/roh/mirror/vivo#abbreviation> ;
                                                                owl:allValuesFrom rdfs:Literal
@@ -4788,11 +4787,11 @@ This is a type of roh:ResearchObjects related to publication concept. It is base
                                                            ] ,
                                                            [ rdf:type owl:Restriction ;
                                                              owl:onProperty <http://purl.org/roh/mirror/bibo#pageEnd> ;
-                                                             owl:allValuesFrom xsd:int
+                                                             owl:allValuesFrom rdfs:Literal
                                                            ] ,
                                                            [ rdf:type owl:Restriction ;
                                                              owl:onProperty <http://purl.org/roh/mirror/bibo#pageStart> ;
-                                                             owl:allValuesFrom xsd:int
+                                                             owl:allValuesFrom rdfs:Literal
                                                            ] ,
                                                            [ rdf:type owl:Restriction ;
                                                              owl:onProperty <http://purl.org/roh/mirror/vivo#freetextKeyword> ;
@@ -4800,13 +4799,11 @@ This is a type of roh:ResearchObjects related to publication concept. It is base
                                                            ] ,
                                                            [ rdf:type owl:Restriction ;
                                                              owl:onProperty <http://purl.org/roh/mirror/bibo#pageEnd> ;
-                                                             owl:maxQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
-                                                             owl:onDataRange xsd:int
+                                                             owl:maxCardinality "1"^^xsd:nonNegativeInteger
                                                            ] ,
                                                            [ rdf:type owl:Restriction ;
                                                              owl:onProperty <http://purl.org/roh/mirror/bibo#pageStart> ;
-                                                             owl:maxQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
-                                                             owl:onDataRange xsd:int
+                                                             owl:maxCardinality "1"^^xsd:nonNegativeInteger
                                                            ] ;
                                            rdfs:comment "A document (noun) is a bounded physical representation of body of information designed with the capacity (and usually intent) to communicate. A document may manifest symbolic, diagrammatic or sensory-representational information."@en ,
                                                         "Content made available to the general public. In the case of ASIO, often scientific or academic contents published."@en ,
@@ -4989,7 +4986,7 @@ This is a type of roh:ResearchObjects related to publication concept. It is base
                                                          ] ,
                                                          [ rdf:type owl:Restriction ;
                                                            owl:onProperty <http://purl.org/roh/mirror/vivo#identifier> ;
-                                                           owl:someValuesFrom xsd:string
+                                                           owl:someValuesFrom rdfs:Literal
                                                          ] ,
                                                          [ rdf:type owl:Restriction ;
                                                            owl:onProperty :modality ;
@@ -4997,7 +4994,7 @@ This is a type of roh:ResearchObjects related to publication concept. It is base
                                                          ] ,
                                                          [ rdf:type owl:Restriction ;
                                                            owl:onProperty <http://purl.org/roh/mirror/vivo#identifier> ;
-                                                           owl:allValuesFrom xsd:string
+                                                           owl:allValuesFrom rdfs:Literal
                                                          ] ;
                                          <http://purl.obolibrary.org/obo/IAO_0000112> "A patent is an exclusive right granted for an invention, which is a product or a process that provides, in general, a new way of doing something, or offers a new technical solution to a problem.  In order to be patentable, the invention must fulfill certain conditions. (http://www.wipo.int/patentscope/en/)" ;
                                          <http://purl.obolibrary.org/obo/IAO_0000115> "(from BIBO) A document describing the exclusive right granted by a government to an inventor to manufacture, use, or sell an invention for a certain number of years" ;
@@ -5255,7 +5252,7 @@ This is a type of roh:ResearchObjects related to publication concept. It is base
                                                                ] ,
                                                                [ rdf:type owl:Restriction ;
                                                                  owl:onProperty <http://purl.org/roh/mirror/vivo#identifier> ;
-                                                                 owl:someValuesFrom xsd:string
+                                                                 owl:someValuesFrom rdfs:Literal
                                                                ] ,
                                                                [ rdf:type owl:Restriction ;
                                                                  owl:onProperty :title ;
@@ -5407,7 +5404,7 @@ Besides, an instance of a foaf:Organization is associated to the following entit
                                                          ] ,
                                                          [ rdf:type owl:Restriction ;
                                                            owl:onProperty <http://purl.org/roh/mirror/vivo#identifier> ;
-                                                           owl:allValuesFrom xsd:string
+                                                           owl:allValuesFrom rdfs:Literal
                                                          ] ;
                                          <http://purl.obolibrary.org/obo/IAO_0000111> "person" ;
                                          <http://purl.obolibrary.org/obo/IAO_0000115> "An instance of a human being (Homo sapiens)" ,
@@ -5454,6 +5451,10 @@ Besides, an instance of a foaf:Person / roh:Researcher is associated to the foll
                                                  rdfs:comment "A temporal region is an occurrent entity that is part of time as defined relative to some reference frame."@en ;
                                                  rdfs:label "Región Temporal"@es ,
                                                             "Temporal Region"@en .
+
+
+###  http://purl.org/roh/mirror/obo/bfo#BFO_0000015
+<http://purl.org/roh/mirror/obo/bfo#BFO_0000015> rdf:type owl:Class .
 
 
 ###  http://purl.org/roh/mirror/obo/bfo#BFO_0000023
@@ -5539,7 +5540,7 @@ Based on obo-bfo:Role also used in VIVO, it defines roles. The object property r
                                                                  ] ,
                                                                  [ rdf:type owl:Restriction ;
                                                                    owl:onProperty <http://purl.org/roh/mirror/vivo#identifier> ;
-                                                                   owl:allValuesFrom xsd:string
+                                                                   owl:allValuesFrom rdfs:Literal
                                                                  ] ;
                                                  <http://purl.obolibrary.org/obo/IAO_0000111> "service" ;
                                                  <http://purl.obolibrary.org/obo/IAO_0000112> "A DNA sequencing service performed by a core lab." ;
@@ -5933,6 +5934,10 @@ Based on obo-bfo:Role also used in VIVO, it defines roles. The object property r
                                                  <http://purl.obolibrary.org/obo/IAO_0000115> "A generically dependent continuant that is about some thing."@en ;
                                                  rdfs:label "Entidad de Contenido de Información"@es ,
                                                             "Information Content Entity"@en .
+
+
+###  http://purl.org/roh/mirror/obo/iao#IAO_0000136
+<http://purl.org/roh/mirror/obo/iao#IAO_0000136> rdf:type owl:Class .
 
 
 ###  http://purl.org/roh/mirror/vcard#Address
@@ -6462,12 +6467,6 @@ A vivo:Equipment, subclasss of roh:Infrastructure, belongs to a foaf:Organizatio
                                                        "équipements"@fr .
 
 
-###  http://purl.org/roh/mirror/vivo#EventSeries
-<http://purl.org/roh/mirror/vivo#EventSeries> rdf:type owl:Class ;
-                                              rdfs:comment "A generic class which may include a conference series, a course section, a seminar series, or a workshop series. When possible, use one of these more specific classes."@en ;
-                                              rdfs:label "Event series"@en .
-
-
 ###  http://purl.org/roh/mirror/vivo#Exhibit
 <http://purl.org/roh/mirror/vivo#Exhibit> rdf:type owl:Class ;
                                           rdfs:subClassOf :Activity ;
@@ -6784,7 +6783,8 @@ Contents
 
 ###  http://purl.org/roh/mirror/vivo#Project
 <http://purl.org/roh/mirror/vivo#Project> rdf:type owl:Class ;
-                                          rdfs:subClassOf [ rdf:type owl:Restriction ;
+                                          rdfs:subClassOf <http://purl.org/roh/mirror/obo/bfo#BFO_0000015> ,
+                                                          [ rdf:type owl:Restriction ;
                                                             owl:onProperty :foreseenJustificationDate ;
                                                             owl:allValuesFrom <http://purl.org/roh/mirror/vivo#DateTimeValue>
                                                           ] ,
@@ -6887,7 +6887,7 @@ Contents
                                                           ] ,
                                                           [ rdf:type owl:Restriction ;
                                                             owl:onProperty <http://purl.org/roh/mirror/vivo#identifier> ;
-                                                            owl:allValuesFrom xsd:string
+                                                            owl:allValuesFrom rdfs:Literal
                                                           ] ;
                                           <http://purl.obolibrary.org/obo/IAO_0000112> "An endeavor, frequently collaborative, that occurs over a finite period of time and is intended to achieve a particular aim." ;
                                           <http://purl.obolibrary.org/obo/IAO_0000115> "An endeavor, frequently collaborative, that occurs over a finite period of time and is intended to achieve a particular aim." ;
@@ -7215,8 +7215,17 @@ rdf:Seq rdf:type owl:Class .
 #    Annotations
 #################################################################
 
+:i10-index rdfs:comment "A property to express the i10-index of an author."@en ;
+           rdfs:label "i10-index"@en .
+
+
 <http://purl.org/roh/mirror/obo/bfo#BFO_0000004> rdfs:label "continuador independiente"@es ,
                                                             "independent continuant"@en .
+
+
+<http://purl.org/roh/mirror/obo/iao#IAO_0000136> <http://purl.org/roh/mirror/obo/iao#IAO_0000114> <http://purl.org/roh/mirror/obo/iao#IAO_0000125> ;
+                                                 <http://purl.org/roh/mirror/obo/iao#IAO_0000115> "is_about is a (currently) primitive relation that relates an information artifact to an entity."@en ;
+                                                 rdfs:label "is about"@en .
 
 
 #################################################################
@@ -7241,7 +7250,6 @@ rdf:Seq rdf:type owl:Class .
                 :FundingAmount
                 :FundingProgram
                 :FundingSource
-                :Metric
                 :PatentApplication
                 :Reservable
                 <http://purl.org/roh/mirror/foaf#Agent>
@@ -7273,7 +7281,6 @@ rdf:Seq rdf:type owl:Class .
                 :FundingAmount
                 :FundingProgram
                 :FundingSource
-                :Metric
                 :Reservable
                 <http://purl.org/roh/mirror/foaf#Agent>
                 <http://purl.org/roh/mirror/geonames#Feature>
@@ -7334,6 +7341,15 @@ rdf:Seq rdf:type owl:Class .
 
 
 [ rdf:type owl:AllDisjointClasses ;
+  owl:members ( :AuthorMetric
+                :DegreeMetric
+                :PublicationMetric
+                :ResearchGroupMetric
+              )
+] .
+
+
+[ rdf:type owl:AllDisjointClasses ;
   owl:members ( :Award
                 :CourseCertificate
                 :LanguageCertificate
@@ -7355,14 +7371,6 @@ rdf:Seq rdf:type owl:Class .
                 <http://purl.org/roh/mirror/bibo#AcademicArticle>
                 <http://purl.org/roh/mirror/vivo#ConferencePaper>
                 <http://purl.org/roh/mirror/vivo#EditorialArticle>
-              )
-] .
-
-
-[ rdf:type owl:AllDisjointClasses ;
-  owl:members ( :DegreeMetric
-                :PublicationMetric
-                :ResearchGroupMetric
               )
 ] .
 

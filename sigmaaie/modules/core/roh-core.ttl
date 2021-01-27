@@ -238,7 +238,7 @@ terms:source  a  owl:AnnotationProperty .
         rdfs:subClassOf  vivo:Position .
 
 [ a            owl:AllDisjointClasses ;
-  owl:members  ( :Accreditation :Activity :Expense :Funding :FundingAmount :FundingProgram :FundingSource :Metric :Reservable <http://purl.org/roh/mirror/foaf#Agent> <http://purl.org/roh/mirror/geonames#Feature> bfo:BFO_0000008 bfo:BFO_0000023 <http://purl.org/roh/mirror/obo/ero#ERO_0000005> iao:IAO_0000030 <http://purl.org/roh/mirror/vcard#Kind> vivo:AcademicDegree vivo:Project vivo:Relationship rdf:List rdf:Seq skos:Concept skos:ConceptScheme )
+  owl:members  ( :Accreditation :Activity :Expense :Funding :FundingAmount :FundingProgram :FundingSource :Reservable <http://purl.org/roh/mirror/foaf#Agent> <http://purl.org/roh/mirror/geonames#Feature> bfo:BFO_0000008 bfo:BFO_0000023 <http://purl.org/roh/mirror/obo/ero#ERO_0000005> iao:IAO_0000030 <http://purl.org/roh/mirror/vcard#Kind> vivo:AcademicDegree vivo:Project vivo:Relationship rdf:List rdf:Seq skos:Concept skos:ConceptScheme )
 ] .
 
 <http://purl.org/roh/mirror/vcard#Address>
@@ -301,7 +301,7 @@ terms:source  a  owl:AnnotationProperty .
                          ] ;
         rdfs:subClassOf  [ a                   owl:Restriction ;
                            owl:onProperty      vivo:identifier ;
-                           owl:someValuesFrom  xsd:string
+                           owl:someValuesFrom  rdfs:Literal
                          ] ;
         rdfs:subClassOf  [ a                  owl:Restriction ;
                            owl:allValuesFrom  :Dossier ;
@@ -487,13 +487,14 @@ vivo:dateTimeValue  a  owl:ObjectProperty ;
 :Metric  a               owl:Class ;
         rdfs:comment     "An roh:Metric indicates qualifies a roh:ResearchObject according to common established quality measurement metrics, e.g. impact factor or mark in an PhD viva." ;
         rdfs:label       "Metric"@en , "Métrica"@es ;
-        rdfs:subClassOf  [ a                  owl:Restriction ;
-                           owl:allValuesFrom  :ResearchObject ;
-                           owl:onProperty     :metricOf
-                         ] ;
+        rdfs:subClassOf   iao:IAO_0000030 ;
         rdfs:subClassOf  [ a                  owl:Restriction ;
                            owl:allValuesFrom  xsd:string ;
                            owl:onProperty     :metricName
+                         ] ;
+        rdfs:subClassOf  [ a                  owl:Restriction ;
+                           owl:allValuesFrom  vivo:DateTimeValue ;
+                           owl:onProperty     vivo:dateTimeValue
                          ] .
 
 :isSpinfoffOf  a      owl:ObjectProperty ;
@@ -601,7 +602,6 @@ skos:ConceptScheme  a  owl:Class .
 
 :hasMetric  a          owl:ObjectProperty ;
         rdfs:comment   "A Metric which quantifies a Research Object."@en ;
-        rdfs:domain    :ResearchObject ;
         rdfs:label     "has metric"@en , "tiene métrica"@es ;
         rdfs:range     :Metric ;
         owl:inverseOf  :metricOf .
@@ -697,7 +697,7 @@ vivo:freetextKeyword  a  owl:DatatypeProperty ;
         obo:IAO_0000112  "conservation\n\nuse one freetextKeyword assertion for each keyword or phrase." , "one keyword or phrase per freetextKeyword assertion" .
 
 bfo:BFO_0000055  a        owl:ObjectProperty ;
-        rdfs:domain       :Activity ;
+        rdfs:domain       bfo:BFO_0000015 ;
         rdfs:isDefinedBy  obo:bfo.owl ;
         rdfs:label        "realizes"@en , "realiza"@es ;
         rdfs:range        bfo:BFO_0000023 ;
@@ -766,7 +766,7 @@ bfo:BFO_0000055  a        owl:ObjectProperty ;
 ] .
 
 [ a            owl:AllDisjointClasses ;
-  owl:members  ( :Accreditation :Activity :Expense :Funding :FundingAmount :FundingProgram :FundingSource :Metric :PatentApplication :Reservable <http://purl.org/roh/mirror/foaf#Agent> <http://purl.org/roh/mirror/geonames#Feature> bfo:BFO_0000008 bfo:BFO_0000023 <http://purl.org/roh/mirror/obo/ero#ERO_0000005> iao:IAO_0000030 <http://purl.org/roh/mirror/vcard#Address> <http://purl.org/roh/mirror/vcard#Email> <http://purl.org/roh/mirror/vcard#Kind> <http://purl.org/roh/mirror/vcard#Name> vivo:AcademicDegree vivo:Project vivo:Relationship rdf:List rdf:Seq skos:Concept skos:ConceptScheme )
+  owl:members  ( :Accreditation :Activity :Expense :Funding :FundingAmount :FundingProgram :FundingSource :PatentApplication :Reservable <http://purl.org/roh/mirror/foaf#Agent> <http://purl.org/roh/mirror/geonames#Feature> bfo:BFO_0000008 bfo:BFO_0000023 <http://purl.org/roh/mirror/obo/ero#ERO_0000005> iao:IAO_0000030 <http://purl.org/roh/mirror/vcard#Address> <http://purl.org/roh/mirror/vcard#Email> <http://purl.org/roh/mirror/vcard#Kind> <http://purl.org/roh/mirror/vcard#Name> vivo:AcademicDegree vivo:Project vivo:Relationship rdf:List rdf:Seq skos:Concept skos:ConceptScheme )
 ] .
 
 <http://purl.org/roh/mirror/obo/ero#ERO_0001260>
@@ -928,7 +928,7 @@ bibo:Document  a          owl:Class ;
                             owl:onProperty     vivo:hasPublicationVenue
                           ] ;
         rdfs:subClassOf   [ a                  owl:Restriction ;
-                            owl:allValuesFrom  xsd:int ;
+                            owl:allValuesFrom  rdfs:Literal ;
                             owl:onProperty     bibo:pageEnd
                           ] ;
         rdfs:subClassOf   [ a                  owl:Restriction ;
@@ -944,7 +944,7 @@ bibo:Document  a          owl:Class ;
                             owl:onProperty     bibo:abstract
                           ] ;
         rdfs:subClassOf   [ a                  owl:Restriction ;
-                            owl:allValuesFrom  xsd:int ;
+                            owl:allValuesFrom  rdfs:Literal ;
                             owl:onProperty     bibo:pageStart
                           ] ;
         rdfs:subClassOf   [ a                   owl:Restriction ;
@@ -965,7 +965,7 @@ bibo:Document  a          owl:Class ;
                           ] ;
         rdfs:subClassOf   [ a                            owl:Restriction ;
                             owl:maxQualifiedCardinality  "1"^^xsd:nonNegativeInteger ;
-                            owl:onDataRange              xsd:int ;
+                            owl:onDataRange              rdfs:Literal ;
                             owl:onProperty               bibo:pageEnd
                           ] ;
         rdfs:subClassOf   [ a                            owl:Restriction ;
@@ -975,7 +975,7 @@ bibo:Document  a          owl:Class ;
                           ] ;
         rdfs:subClassOf   [ a                            owl:Restriction ;
                             owl:maxQualifiedCardinality  "1"^^xsd:nonNegativeInteger ;
-                            owl:onDataRange              xsd:int ;
+                            owl:onDataRange              rdfs:Literal ;
                             owl:onProperty               bibo:pageStart
                           ] ;
         rdfs:subClassOf   [ a                  owl:Restriction ;
@@ -1127,10 +1127,10 @@ bibo:EditedBook  a        owl:Class ;
 iao:IAO_0000119  a  owl:AnnotationProperty .
 
 :metricOf  a          owl:ObjectProperty ;
-        rdfs:comment  "A metric which quantifies a Research Object."@en ;
+        rdfs:subPropertyOf iao:IAO_0000136 ;
+        rdfs:comment  "relates a Metric to the entity it describes"@en ;
         rdfs:domain   :Metric ;
-        rdfs:label    "metric of"@en , "métrica de"@es ;
-        rdfs:range    :ResearchObject .
+        rdfs:label    "metric of"@en , "métrica de"@es .
 
 vivo:rank  a          owl:DatatypeProperty ;
         rdfs:comment  "this number indicates a position in a list"@en ;
@@ -1143,11 +1143,13 @@ vivo:LibrarianPosition
         obo:IAO_0000112  "It is the common position in libraries." , "Librarian; Library Systems Analyst; Music Bibliographer" ;
         obo:IAO_0000115  "A position held  by library and information science professionals, or academic or technical experts, in support of providing information services or materials" .
 
-:publicationCitation  a  owl:ObjectProperty ;
-        rdfs:comment  "a property to link a given publication to the number of citations."@en ;
-        rdfs:domain   bibo:Document ;
-        rdfs:label    "publication citations"@en ;
-        rdfs:range    :QualifiedValue .
+:citationCount  a  owl:DatatypeProperty ;
+        rdfs:comment  "the number of times a publication has been cited (when used in PublicationMetric) or the total number of citations for all of an author's works (when used in AuthorMetric)"@en ;
+        rdfs:domain    [ a            owl:Class ;
+                         owl:unionOf  ( :PublicationMetric :AuthorMetric )
+                       ] ;
+        rdfs:label    "citation count"@en ;
+        rdfs:range    xsd:integer .
 
 :RoundTable  a           owl:Class ;
         rdfs:label       "Round Table"@en ;
@@ -1191,11 +1193,7 @@ skos:hasTopConcept  a  owl:AnnotationProperty .
                          ] ;
         rdfs:subClassOf  [ a                   owl:Restriction ;
                            owl:onProperty      vivo:identifier ;
-                           owl:someValuesFrom  xsd:string
-                         ] ;
-        rdfs:subClassOf  [ a                  owl:Restriction ;
-                           owl:allValuesFrom  xsd:string ;
-                           owl:onProperty     vivo:identifier
+                           owl:someValuesFrom  rdfs:Literal
                          ] ;
         rdfs:subClassOf  [ a                  owl:Restriction ;
                            owl:allValuesFrom  vivo:Contract ;
@@ -1380,10 +1378,6 @@ bibo:Magazine  a          owl:Class ;
         rdfs:label     "financia"@es , "funds"@en ;
         owl:inverseOf  :isFundedBy .
 
-vivo:EventSeries  a   owl:Class ;
-        rdfs:comment  "A generic class which may include a conference series, a course section, a seminar series, or a workshop series. When possible, use one of these more specific classes."@en ;
-        rdfs:label    "Event series"@en .
-
 vivo:placeOfPublication
         a             owl:DatatypeProperty ;
         rdfs:comment  "Place where a document was publicated."@en ;
@@ -1473,7 +1467,7 @@ bibo:Patent  a            owl:Class ;
                             owl:onProperty     :ownerOrganization
                           ] ;
         rdfs:subClassOf   [ a                  owl:Restriction ;
-                            owl:allValuesFrom  xsd:string ;
+                            owl:allValuesFrom  rdfs:Literal ;
                             owl:onProperty     vivo:identifier
                           ] ;
         rdfs:subClassOf   [ a                  owl:Restriction ;
@@ -1498,7 +1492,7 @@ bibo:Patent  a            owl:Class ;
                           ] ;
         rdfs:subClassOf   [ a                   owl:Restriction ;
                             owl:onProperty      vivo:identifier ;
-                            owl:someValuesFrom  xsd:string
+                            owl:someValuesFrom  rdfs:Literal
                           ] ;
         rdfs:subClassOf   [ a                  owl:Restriction ;
                             owl:allValuesFrom  <http://purl.org/roh/mirror/foaf#Organization> ;
@@ -1568,7 +1562,7 @@ skos:prefLabel  a  owl:AnnotationProperty .
 :projectID  a               owl:DatatypeProperty ;
         rdfs:domain         vivo:Project ;
         rdfs:label          "project ID"@en ;
-        rdfs:range          xsd:integer ;
+        rdfs:range          rdfs:Literal ;
         rdfs:subPropertyOf  vivo:identifier .
 
 ro:BFO_0000050  a      owl:ObjectProperty ;
@@ -1784,7 +1778,7 @@ bfo:BFO_0000054  a        owl:ObjectProperty ;
         rdfs:domain       bfo:BFO_0000023 ;
         rdfs:isDefinedBy  obo:bfo.owl ;
         rdfs:label        "realized in"@en , "realizado en"@es ;
-        rdfs:range        :Activity ;
+        rdfs:range        bfo:BFO_0000015 ;
         obo:BFO_0000179   "realized-in" ;
         obo:BFO_0000180   "realizedIn" ;
         obo:IAO_0000600   "[copied from inverse property 'realizes'] to say that b realizes c at t is to assert that there is some material entity d & b is a process which has participant d at t & c is a disposition or role of which d is bearer_of at t& the type instantiated by b is correlated with the type instantiated by c. (axiom label in BFO2 Reference: [059-003])" ;
@@ -1928,7 +1922,9 @@ vivo:publisher  a      owl:ObjectProperty ;
 
 :modality  a          owl:DatatypeProperty ;
         rdfs:comment  "A free text property to represent the modality of a Project."@en ;
-        rdfs:domain   vivo:Project ;
+        rdfs:domain    [ a            owl:Class ;
+                         owl:unionOf  ( vivo:Project bibo:Patent )
+                       ] ;
         rdfs:label    "modalidad"@en , "modalidad"@es ;
         rdfs:range    xsd:string .
 
@@ -2055,7 +2051,7 @@ vivo:courseCredits  a  owl:DatatypeProperty ;
                             owl:onProperty     vivo:freetextKeyword
                           ] ;
         rdfs:subClassOf   [ a                  owl:Restriction ;
-                            owl:allValuesFrom  xsd:string ;
+                            owl:allValuesFrom  rdfs:Literal ;
                             owl:onProperty     vivo:identifier
                           ] ;
         rdfs:subClassOf   [ a                  owl:Restriction ;
@@ -2080,7 +2076,7 @@ vivo:courseCredits  a  owl:DatatypeProperty ;
                           ] ;
         rdfs:subClassOf   [ a                   owl:Restriction ;
                             owl:onProperty      vivo:identifier ;
-                            owl:allValuesFrom  xsd:string
+                            owl:allValuesFrom   rdfs:Literal
                           ] ;
         rdfs:subClassOf   [ a                  owl:Restriction ;
                             owl:allValuesFrom  xsd:string ;
@@ -2371,12 +2367,6 @@ obo:IAO_0000412  a  owl:AnnotationProperty .
         rdfs:label    "provee"@es , "provides"@en ;
         rdfs:range    <http://purl.org/roh/mirror/obo/ero#ERO_0000005> .
 
-:qualifiedvaluation  a  owl:DatatypeProperty ;
-        rdfs:comment  "A given value linked to a given date (point in time) within a qualified value."@en ;
-        rdfs:domain   :QualifiedValue ;
-        rdfs:label    "qualified valuation"@en ;
-        rdfs:range    xsd:string .
-
 <http://prismstandard.org/namespaces/1.2/basic/issue>
         a                       owl:DatatypeProperty ;
         rdfs:comment            "A single copy of a newspaper or magazine."@en ;
@@ -2515,6 +2505,7 @@ terms:license  a  owl:AnnotationProperty .
 vivo:Project  a          owl:Class ;
         rdfs:comment     "A vivo:Project is an entity imported from VIVO and extended according to CERIF specification. It can be defined as – a project in business and science is typically defined as a collaborative enterprise, frequently involving research or design, that is carefully planned to achieve a particular aim. Its configuration is inspired by the swrc:project and takes into account cerif:Project’s data properties. It encompasses all those properties and adds some new ones, e.g. projectStatus (CLOSED, OPEN, PROPOSAL_SUBMITTED, REJECTED), roh:foreseenJustificationDate. This entity is linked with classes Organization, Person, ResearchObject, Funding, Expense, Activity o Concept. A project in ROH may require ethical validation which is expressed as roh:needsEthicalValidation set to true. A project might be correspond to a research project categorized through roh:ProjectClassification by means of object property roh:hasProjectCategorization or correspond to some grant associated to human resources (roh:HRClassification) associated through roh:hasHRClassification. Notice that a project is a proposal (PROPOSAL_SUBMITTED) until it passes to the OPEN or REJECTED status. When the project finishes it state passes to CLOSED." ;
         rdfs:label       "Proyecto"@es , "Project"@en ;
+	rdfs:subClassOf  bfo:BFO_0000015 ;
         rdfs:subClassOf  [ a                  owl:Restriction ;
                            owl:allValuesFrom  skos:Concept ;
                            owl:onProperty     :hasKnowledgeArea
@@ -2571,7 +2562,7 @@ vivo:Project  a          owl:Class ;
                          ] ;
         rdfs:subClassOf  [ a                   owl:Restriction ;
                            owl:onProperty      vivo:identifier ;
-                           owl:allValuesFrom  xsd:string
+                           owl:allValuesFrom   rdfs:Literal
                          ] ;
         rdfs:subClassOf  [ a                  owl:Restriction ;
                            owl:allValuesFrom  :ResearchObject ;
@@ -2979,7 +2970,7 @@ vivo:description  a   owl:DatatypeProperty ;
         rdfs:label        "Dossier"@en , "Dossier"@es ;
         rdfs:subClassOf   bibo:Collection ;
         rdfs:subClassOf   [ a                  owl:Restriction ;
-                            owl:allValuesFrom  xsd:string ;
+                            owl:allValuesFrom  rdfs:Literal ;
                             owl:onProperty     vivo:identifier
                           ] ;
         rdfs:subClassOf   [ a                  owl:Restriction ;
@@ -3006,7 +2997,7 @@ vivo:description  a   owl:DatatypeProperty ;
                           ] ;
         rdfs:subClassOf   [ a                   owl:Restriction ;
                             owl:onProperty      vivo:identifier ;
-                            owl:someValuesFrom  xsd:string
+                            owl:someValuesFrom  rdfs:Literal
                           ] ;
         owl:disjointWith  bibo:Periodical .
 
@@ -3014,21 +3005,10 @@ vivo:description  a   owl:DatatypeProperty ;
         rdfs:label       "PAS laboral"@es , "PAS laboral"@ca-ad ;
         rdfs:subClassOf  vivo:Position .
 
-:qualifieddate  a     owl:ObjectProperty ;
-        rdfs:subPropertyOf vivo:dateTimeValue ;
-        rdfs:comment  "A given date (point in time) linked to a given value within a qualified value."@en ;
-        rdfs:domain   :QualifiedValue ;
-        rdfs:label    "qualified date"@en ;
-        rdfs:range    vivo:DateTimeValue .
-
 :TestAnotherGovernmentAgency
         a           owl:NamedIndividual , vivo:GovernmentAgency ;
         rdfs:label  "TestAnotherGovernmentAgency"@en ;
         :promotes   :TestFundingSource .
-
-:QualifiedValue  a    owl:Class ;
-        rdfs:comment  "A class to represent a qualified value as used in Wikibase."@en ;
-        rdfs:label    "Qualified value"@en .
 
 bibo:locator  a       owl:DatatypeProperty ;
         rdfs:comment  "A description (often numeric) that locates an item within a containing document or collection."@en ;
@@ -3057,8 +3037,7 @@ vivo:PostdocOrFellowAdvisingRelationship
 
 :DegreeMetric  a          owl:Class ;
         rdfs:label        "Degree Metric"@en , "Métrica de Grado"@es ;
-        rdfs:subClassOf   :Metric ;
-        owl:disjointWith  :PublicationMetric .
+        rdfs:subClassOf   :Metric .
 
 :AdministrativeEntity
         a                owl:Class ;
@@ -3209,6 +3188,7 @@ vitro:exampleAnnot  a  owl:AnnotationProperty .
 :Activity  a             owl:Class ;
         rdfs:comment     "A roh:Activity is participated by Persons (roh:participates) and organized by Organizations through roh:hasRole connecting to intermediary entity vivo:OrganizerRole. Each activity is usually linked to a Project through relationship (roh:participates) and causes a ProjectExpense linked through (vivo:relates). A thorough hierarchy of roh:Activity subtypes is defined: bibo:Conference, vivo:Intership, roh:ThesisViva." ;
         rdfs:label       "Activity"@en , "Actividad"@es ;
+	rdfs:subClassOf  bfo:BFO_0000015 ;
         rdfs:subClassOf  [ a                  owl:Restriction ;
                            owl:allValuesFrom  <http://purl.org/roh/mirror/foaf#Agent> ;
                            owl:onProperty     :participatedBy
@@ -3227,15 +3207,11 @@ vitro:exampleAnnot  a  owl:AnnotationProperty .
                          ] ;
         rdfs:subClassOf  [ a                   owl:Restriction ;
                            owl:onProperty      vivo:identifier ;
-                           owl:allValuesFrom  xsd:string
+                           owl:allValuesFrom   rdfs:Literal
                          ] ;
         rdfs:subClassOf  [ a                  owl:Restriction ;
                            owl:allValuesFrom  xsd:string ;
                            owl:onProperty     <http://purl.org/roh/mirror/vcard#locality>
-                         ] ;
-        rdfs:subClassOf  [ a                  owl:Restriction ;
-                           owl:allValuesFrom  xsd:string ;
-                           owl:onProperty     vivo:identifier
                          ] ;
         rdfs:subClassOf  [ a                  owl:Restriction ;
                            owl:allValuesFrom  xsd:string ;
@@ -3381,12 +3357,6 @@ bibo:presentedAt  a       owl:ObjectProperty ;
         rdfs:range        iao:IAO_0000030 ;
         ns:term_status    "stable" .
 
-:authorCitation  a    owl:ObjectProperty ;
-        rdfs:comment  "A property to link the number of citations to a given author."@en ;
-        rdfs:domain   <http://purl.org/roh/mirror/foaf#Person> ;
-        rdfs:label    "author citations"@en ;
-        rdfs:range    :QualifiedValue .
-
 :MicroEnterprise  a      owl:Class ;
         rdfs:comment     "An enterprise which employs fewer than 10 persons and whose annual turnover and/or annual balance sheet total does not exceed EUR 2 million."@en ;
         rdfs:label       "Micro Enterprise"@en ;
@@ -3446,7 +3416,7 @@ bibo:Conference  a        owl:Class ;
         rdfs:comment      "A meeting for consultation or discussion."@en , "A meeting for consultation or discussion. [Source: http://purl.org/ontology/bibo/Conference]"@en ;
         rdfs:isDefinedBy  "http://purl.org/roh/mirror/bibo#"^^xsd:anyURI ;
         rdfs:label        "Conference"@en , "Conferencia"@es ;
-        rdfs:subClassOf   <http://purl.org/NET/c4dm/event.owl#Event> , :Activity ;
+        rdfs:subClassOf   :Activity ;
         rdfs:subClassOf   [ a                  owl:Restriction ;
                             owl:allValuesFrom  rdfs:Literal ;
                             owl:onProperty     vivo:abbreviation
@@ -3723,11 +3693,6 @@ vivo:start  a               owl:ObjectProperty ;
         rdfs:range          vivo:DateTimeValue ;
         rdfs:subPropertyOf  vivo:dateTimeValue .
 
-<http://purl.org/NET/c4dm/event.owl#Event>
-        a             owl:Class ;
-        rdfs:comment  "An arbitrary classification of a space/time region, by a\r\ncognitive agent. An event may have actively participating agents,\r\npassive factors, products, and a location in space/time."@en ;
-        rdfs:label    "Event"@en .
-
 :ResearchProblem  a      owl:Class ;
         rdfs:label       "Research problem"@en ;
         rdfs:subClassOf  skos:Concept ;
@@ -3818,6 +3783,13 @@ vivo:FundingOrganization
         rdfs:range     bfo:BFO_0000023 ;
         owl:inverseOf  :roleOf .
 
+iao:IAO_0000136
+          a owl:ObjectProperty ;
+	  rdfs:label "is about"@en ;
+          iao:IAO_0000115 "is_about is a (currently) primitive relation that relates an information artifact to an entity."@en ;
+          rdfs:domain iao:IAO_0000030 ;
+          iao:IAO_0000114 iao:IAO_0000125 .
+
 iao:IAO_0000600  a  owl:AnnotationProperty .
 
 vivo:Center  a           owl:Class ;
@@ -3864,7 +3836,7 @@ vivo:DateTimeValue  a    owl:Class ;
         obo:IAO_0000115  "A date and/or time" .
 
 [ a            owl:AllDisjointClasses ;
-  owl:members  ( :DegreeMetric :PublicationMetric :ResearchGroupMetric )
+  owl:members  ( :AuthorMetric :DegreeMetric :PublicationMetric :ResearchGroupMetric )
 ] .
 
 :RefundableAdvance  a    owl:Class ;
@@ -3919,10 +3891,10 @@ terms:conformsTo  a  owl:AnnotationProperty .
         rdfs:label     "financiado por"@es , "fundedBy"@en ;
         owl:inverseOf  :funds .
 
-:h-index  a          owl:ObjectProperty ;
-        rdfs:domain  <http://purl.org/roh/mirror/foaf#Person> ;
-        rdfs:label   "A property to express the h-index of an author."@en , "h-index"@en ;
-        rdfs:range   :QualifiedValue .
+:h-index  a          owl:DatatypeProperty ;
+        rdfs:domain  :AuthorMetric ;
+        rdfs:label   "h-index"@en ;
+        rdfs:range   xsd:integer .
 
 ro:RO_0000053  a      owl:ObjectProperty ;
         rdfs:comment  "A relation between an independent continuant (the bearer) and a specifically dependent continuant (the dependent), in which the dependent specifically depends on the bearer for its existence"@en ;
@@ -3950,9 +3922,9 @@ vivo:assignedBy  a    owl:ObjectProperty ;
 
 :i10-index  a         owl:ObjectProperty ;
         rdfs:comment  "A property to express the i10-index of an author."@en ;
-        rdfs:domain   <http://purl.org/roh/mirror/foaf#Person> ;
+        rdfs:domain   :AuthorMetric ;
         rdfs:label    "i10-index"@en ;
-        rdfs:range    :QualifiedValue .
+        rdfs:range    xsd:integer .
 
 bibo:AcademicArticle  a   owl:Class ;
         rdfs:comment      "A scholarly academic article, typically published in a journal."@en ;
@@ -4548,7 +4520,7 @@ obo:IAO_0000111  a  owl:AnnotationProperty .
 
 :ResearchObject  a           owl:Class ;
         rdfs:comment         "A roh:ResearchObject is generated by one to several foaf:Person specified through property bibo:authorList. Usually a roh:ResearchObject results from the work in a vivo:Project (roh:produces). An elaborated taxonomy of research objects is provided, covering all types of publications, Patents, Software and Webpage. The main author of a research object is accessible through property roh:correspondingAuthor." ;
-        rdfs:label           "Research result"@en , "Objeto de Investigación"@es , "Research Object"@en ;
+        rdfs:label           "Objeto de Investigación"@es , "Research Object"@en ;
         rdfs:subClassOf      [ a                  owl:Restriction ;
                                owl:allValuesFrom  rdf:Seq ;
                                owl:onProperty     bibo:authorList
@@ -4585,8 +4557,7 @@ obo:IAO_0000111  a  owl:AnnotationProperty .
                                                 owl:onProperty     :producedBy
                                               ]
                                             )
-                             ] ;
-        skos:prefLabel       "Research result"@en .
+                             ] .
 
 :atContext  a         owl:ObjectProperty ;
         rdfs:comment  "This property enables to relate a profile with a given context (geographical, temporal, spatial, social, etc.)."@en ;
@@ -4719,9 +4690,33 @@ vivo:InvitedTalk  a      owl:Class ;
         rdfs:label       "ReservableProviderRole"@en ;
         rdfs:subClassOf  bfo:BFO_0000023 .
 
+:AuthorMetric  a    owl:Class ;
+        rdfs:label       "Métrica de Autor"@es , "Author Metric"@en ;
+        rdfs:subClassOf  :Metric ;
+        rdfs:subClassOf  [ a                  owl:Restriction ;
+                           owl:allValuesFrom  <http://purl.org/roh/mirror/foaf#Agent> ;
+                           owl:onProperty     :metricOf
+                         ] ;
+        rdfs:subClassOf  [ a                  owl:Restriction ;
+                           owl:allValuesFrom  xsd:integer ;
+                           owl:onProperty     :h-index
+                         ] ;
+        rdfs:subClassOf  [ a                  owl:Restriction ;
+                           owl:allValuesFrom  xsd:integer ;
+                           owl:onProperty     :i10-index
+                         ] ;
+        rdfs:subClassOf  [ a                  owl:Restriction ;
+                           owl:allValuesFrom  xsd:integer ;
+                           owl:onProperty     :citationCount
+                         ] .
+
 :PublicationMetric  a    owl:Class ;
         rdfs:label       "Métrica de Publicación"@es , "Publication Metric"@en ;
         rdfs:subClassOf  :Metric ;
+        rdfs:subClassOf  [ a                  owl:Restriction ;
+                           owl:allValuesFrom  iao:IAO_0000136 ;
+                           owl:onProperty     :metricOf
+                         ] ;
         rdfs:subClassOf  [ a                  owl:Restriction ;
                            owl:allValuesFrom  xsd:float ;
                            owl:onProperty     :impactFactor
@@ -4733,6 +4728,10 @@ vivo:InvitedTalk  a      owl:Class ;
         rdfs:subClassOf  [ a                  owl:Restriction ;
                            owl:allValuesFrom  xsd:string ;
                            owl:onProperty     :ranking
+                         ] ;
+        rdfs:subClassOf  [ a                  owl:Restriction ;
+                           owl:allValuesFrom  xsd:integer ;
+                           owl:onProperty     :citationCount
                          ] .
 
 :CompanyClassification
@@ -4797,7 +4796,7 @@ ro:RO_0000052  a         owl:ObjectProperty , owl:FunctionalProperty ;
         rdfs:comment     "Coordinate with NIF. NIF ID: nlx_res_20090105" ;
         rdfs:label       "Servicio"@es , "Service"@en ;
         rdfs:subClassOf  [ a                  owl:Restriction ;
-                           owl:allValuesFrom  xsd:string ;
+                           owl:allValuesFrom  rdfs:Literal ;
                            owl:onProperty     vivo:identifier
                          ] ;
         rdfs:subClassOf  [ a                  owl:Restriction ;
@@ -4892,7 +4891,7 @@ vivo:University  a       owl:Class ;
                            owl:onProperty     ro:BFO_0000051
                          ] ;
         rdfs:subClassOf  [ a                  owl:Restriction ;
-                           owl:allValuesFrom  xsd:string ;
+                           owl:allValuesFrom  rdfs:Literal ;
                            owl:onProperty     vivo:identifier
                          ] ;
         rdfs:subClassOf  [ a                  owl:Restriction ;
@@ -4983,7 +4982,7 @@ bibo:volume  a              owl:DatatypeProperty ;
                           ] ;
         rdfs:subClassOf   [ a                   owl:Restriction ;
                             owl:onProperty      vivo:identifier ;
-                            owl:someValuesFrom  xsd:string
+                            owl:someValuesFrom  rdfs:Literal
                           ] ;
         rdfs:subClassOf   [ a                  owl:Restriction ;
                             owl:allValuesFrom  bfo:BFO_0000023 ;

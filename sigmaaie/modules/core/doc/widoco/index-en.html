@@ -6,7 +6,7 @@
 
 
 <!-- SCHEMA.ORG METADATA -->
-<script type="application/ld+json">{"@context":"http://schema.org","@type":"TechArticle","url":"http://purl.org/roh","image":"http://vowl.visualdataweb.org/webvowl/#iri=http://purl.org/roh","name":"The ROH ontology", "headline":"The University of Murcia signed on November 29, 2017, a Covenant with the Ministry of Economy, Industry and Competitiveness backing the “HÉRCULES: Semantic University Research Data” Project with a budget of FIVE MILLION FOUR HUNDRED AND SIXTY-TWO THOUSAND SIX HUNDRED euros with an 80% of co-financiering from the European Regional Development Fund program (ERDF) within the 2014-2020 period. ", "datePublished":"Tue Jan 26 17:10:16 EET 2021", "version":"0.0.1", "license":"https://creativecommons.org/publicdomain/zero/1.0/"}</script>
+<script type="application/ld+json">{"@context":"http://schema.org","@type":"TechArticle","url":"http://purl.org/roh","image":"http://vowl.visualdataweb.org/webvowl/#iri=http://purl.org/roh","name":"The ROH ontology", "headline":"The University of Murcia signed on November 29, 2017, a Covenant with the Ministry of Economy, Industry and Competitiveness backing the “HÉRCULES: Semantic University Research Data” Project with a budget of FIVE MILLION FOUR HUNDRED AND SIXTY-TWO THOUSAND SIX HUNDRED euros with an 80% of co-financiering from the European Regional Development Fund program (ERDF) within the 2014-2020 period. ", "datePublished":"Wed Jan 27 16:46:36 EET 2021", "version":"0.0.1", "license":"https://creativecommons.org/publicdomain/zero/1.0/"}</script>
 
 <script src="resources/jquery.js"></script> 
 <script src="resources/marked.min.js"></script> 
@@ -106,7 +106,6 @@ This is a place holder text for the introduction. The introduction should briefl
 <tr><td><b>purl-org</b></td><td>&lt;http://purl.org&gt;</td></tr>
 <tr><td><b>uneskos</b></td><td>&lt;http://purl.org/umu/uneskos&gt;</td></tr>
 <tr><td><b>vivo</b></td><td>&lt;http://purl.org/roh/mirror/vivo&gt;</td></tr>
-<tr><td><b>event-owl</b></td><td>&lt;http://purl.org/NET/c4dm/event.owl&gt;</td></tr>
 <tr><td><b>foaf</b></td><td>&lt;https://xmlns.com/foaf/0.1&gt;</td></tr>
 <tr><td><b>ero</b></td><td>&lt;http://purl.org/roh/mirror/obo/ero&gt;</td></tr>
 <tr><td><b>bfo</b></td><td>&lt;http://purl.org/roh/mirror/obo/bfo&gt;</td></tr>
@@ -226,6 +225,9 @@ This ontology has the following classes and properties.</span>
    </li>
    <li>
       <a href="#AuditorRole" title="http://purl.org/roh#AuditorRole">Auditor Role</a>
+   </li>
+   <li>
+      <a href="#AuthorMetric" title="http://purl.org/roh#AuthorMetric">Author Metric</a>
    </li>
    <li>
       <a href="#Award" title="http://purl.org/roh#Award">Award</a>
@@ -434,13 +436,7 @@ This ontology has the following classes and properties.</span>
       <a href="#EvaluationSummary" title="http://purl.org/roh#EvaluationSummary">Evaluation Summary</a>
    </li>
    <li>
-      <a href="#http://purl.org/NET/c4dm/event.owl#Event" title="http://purl.org/NET/c4dm/event.owl#Event">Event</a>
-   </li>
-   <li>
       <a href="#EventOrganiser" title="http://purl.org/roh#EventOrganiser">Event organiser</a>
-   </li>
-   <li>
-      <a href="#/mirror/vivo#EventSeries" title="http://purl.org/roh/mirror/vivo#EventSeries">Event series</a>
    </li>
    <li>
       <a href="#/mirror/vivo#Exhibit" title="http://purl.org/roh/mirror/vivo#Exhibit">Exhibit</a>
@@ -816,9 +812,6 @@ This ontology has the following classes and properties.</span>
       <a href="#PublicationMetric" title="http://purl.org/roh#PublicationMetric">Publication Metric</a>
    </li>
    <li>
-      <a href="#QualifiedValue" title="http://purl.org/roh#QualifiedValue">Qualified value</a>
-   </li>
-   <li>
       <a href="#RadioProgram" title="http://purl.org/roh#RadioProgram">Radio Program</a>
    </li>
    <li>
@@ -858,10 +851,10 @@ This ontology has the following classes and properties.</span>
       <a href="#ResearchMethod" title="http://purl.org/roh#ResearchMethod">Research method Research method</a>
    </li>
    <li>
-      <a href="#ResearchObjectExpense" title="http://purl.org/roh#ResearchObjectExpense">Research Object Expense</a>
+      <a href="#ResearchObject" title="http://purl.org/roh#ResearchObject">Research Object</a>
    </li>
    <li>
-      <a href="#ResearchObject" title="http://purl.org/roh#ResearchObject">Research Object Research result</a>
+      <a href="#ResearchObjectExpense" title="http://purl.org/roh#ResearchObjectExpense">Research Object Expense</a>
    </li>
    <li>
       <a href="#ResearchProblem" title="http://purl.org/roh#ResearchProblem">Research problem Research problem</a>
@@ -1023,9 +1016,6 @@ This ontology has the following classes and properties.</span>
    </li>
 </ul><h4>Object Properties</h4><ul class="hlist">
    <li>
-      <a href="#h-index" title="http://purl.org/roh#h-index">A property to express the h-index of an author.</a>
-   </li>
-   <li>
       <a href="#accreditationOf" title="http://purl.org/roh#accreditationOf">accreditation of</a>
    </li>
    <li>
@@ -1051,9 +1041,6 @@ This ontology has the following classes and properties.</span>
    </li>
    <li>
       <a href="#attachment" title="http://purl.org/roh#attachment">attachment</a>
-   </li>
-   <li>
-      <a href="#authorCitation" title="http://purl.org/roh#authorCitation">author citations</a>
    </li>
    <li>
       <a href="#authors" title="http://purl.org/roh#authors">authors</a>
@@ -1277,7 +1264,9 @@ This ontology has the following classes and properties.</span>
       <a href="#hrClassificationOf" title="http://purl.org/roh#hrClassificationOf">HR classification of</a>
    </li>
    <li>
-      <a href="#i10-index" title="http://purl.org/roh#i10-index">i10-index</a>
+      <a href="#i10-index" title="http://purl.org/roh#i10-index">
+         <span>i10-index</span>
+      </a>
    </li>
    <li>
       <a href="#/mirror/foaf#img" title="http://purl.org/roh/mirror/foaf#img">imagen</a>
@@ -1287,6 +1276,11 @@ This ontology has the following classes and properties.</span>
    </li>
    <li>
       <a href="#/mirror/obo/ro#RO_0000052" title="http://purl.org/roh/mirror/obo/ro#RO_0000052">inheres in</a>
+   </li>
+   <li>
+      <a href="#/mirror/obo/iao#IAO_0000136" title="http://purl.org/roh/mirror/obo/iao#IAO_0000136">
+         <span>is about</span>
+      </a>
    </li>
    <li>
       <a href="#isAdvisedBy" title="http://purl.org/roh#isAdvisedBy">is advised by</a>
@@ -1419,9 +1413,6 @@ This ontology has the following classes and properties.</span>
       <a href="#provides" title="http://purl.org/roh#provides">provides</a>
    </li>
    <li>
-      <a href="#publicationCitation" title="http://purl.org/roh#publicationCitation">publication citations</a>
-   </li>
-   <li>
       <a href="#/mirror/vivo#publicationVenueFor"
          title="http://purl.org/roh/mirror/vivo#publicationVenueFor">publication venue for</a>
    </li>
@@ -1440,9 +1431,6 @@ This ontology has the following classes and properties.</span>
    </li>
    <li>
       <a href="#/mirror/foaf#homepage" title="http://purl.org/roh/mirror/foaf#homepage">página web</a>
-   </li>
-   <li>
-      <a href="#qualifieddate" title="http://purl.org/roh#qualifieddate">qualified date</a>
    </li>
    <li>
       <a href="#/mirror/obo/bfo#BFO_0000054" title="http://purl.org/roh/mirror/obo/bfo#BFO_0000054">realized in</a>
@@ -1526,6 +1514,9 @@ This ontology has the following classes and properties.</span>
       <a href="#awardedWith" title="http://purl.org/roh#awardedWith">awarded with</a>
    </li>
    <li>
+      <a href="#citationCount" title="http://purl.org/roh#citationCount">citation count</a>
+   </li>
+   <li>
       <a href="#/mirror/vivo#contactInformation"
          title="http://purl.org/roh/mirror/vivo#contactInformation">contact information</a>
    </li>
@@ -1588,6 +1579,9 @@ This ontology has the following classes and properties.</span>
       <a href="#/mirror/foaf#gender" title="http://purl.org/roh/mirror/foaf#gender">género</a>
    </li>
    <li>
+      <a href="#h-index" title="http://purl.org/roh#h-index">h-index</a>
+   </li>
+   <li>
       <a href="#/mirror/vivo#pmcid" title="http://purl.org/roh/mirror/vivo#pmcid">has PubMed Central ID</a>
    </li>
    <li>
@@ -1595,6 +1589,11 @@ This ontology has the following classes and properties.</span>
    </li>
    <li>
       <a href="#/mirror/vivo#hrJobTitle" title="http://purl.org/roh/mirror/vivo#hrJobTitle">HR job title</a>
+   </li>
+   <li>
+      <a href="#i10-index" title="http://purl.org/roh#i10-index">
+         <span>i10-index</span>
+      </a>
    </li>
    <li>
       <a href="#/mirror/vivo#identifier" title="http://purl.org/roh/mirror/vivo#identifier">identifier</a>
@@ -1693,9 +1692,6 @@ This ontology has the following classes and properties.</span>
    </li>
    <li>
       <a href="#publicFunding" title="http://purl.org/roh#publicFunding">public funding</a>
-   </li>
-   <li>
-      <a href="#qualifiedvaluation" title="http://purl.org/roh#qualifiedvaluation">qualified valuation</a>
    </li>
    <li>
       <a href="#quartile" title="http://purl.org/roh#quartile">quartile</a>
@@ -1870,6 +1866,9 @@ This section provides details for each class and property defined by The ROH ont
       </li>
       <li>
          <a href="#AuditorRole" title="http://purl.org/roh#AuditorRole">Auditor Role</a>
+      </li>
+      <li>
+         <a href="#AuthorMetric" title="http://purl.org/roh#AuthorMetric">Author Metric</a>
       </li>
       <li>
          <a href="#Award" title="http://purl.org/roh#Award">Award</a>
@@ -2078,13 +2077,7 @@ This section provides details for each class and property defined by The ROH ont
          <a href="#EvaluationSummary" title="http://purl.org/roh#EvaluationSummary">Evaluation Summary</a>
       </li>
       <li>
-         <a href="#http://purl.org/NET/c4dm/event.owl#Event" title="http://purl.org/NET/c4dm/event.owl#Event">Event</a>
-      </li>
-      <li>
          <a href="#EventOrganiser" title="http://purl.org/roh#EventOrganiser">Event organiser</a>
-      </li>
-      <li>
-         <a href="#/mirror/vivo#EventSeries" title="http://purl.org/roh/mirror/vivo#EventSeries">Event series</a>
       </li>
       <li>
          <a href="#/mirror/vivo#Exhibit" title="http://purl.org/roh/mirror/vivo#Exhibit">Exhibit</a>
@@ -2460,9 +2453,6 @@ This section provides details for each class and property defined by The ROH ont
          <a href="#PublicationMetric" title="http://purl.org/roh#PublicationMetric">Publication Metric</a>
       </li>
       <li>
-         <a href="#QualifiedValue" title="http://purl.org/roh#QualifiedValue">Qualified value</a>
-      </li>
-      <li>
          <a href="#RadioProgram" title="http://purl.org/roh#RadioProgram">Radio Program</a>
       </li>
       <li>
@@ -2502,10 +2492,10 @@ This section provides details for each class and property defined by The ROH ont
          <a href="#ResearchMethod" title="http://purl.org/roh#ResearchMethod">Research method Research method</a>
       </li>
       <li>
-         <a href="#ResearchObjectExpense" title="http://purl.org/roh#ResearchObjectExpense">Research Object Expense</a>
+         <a href="#ResearchObject" title="http://purl.org/roh#ResearchObject">Research Object</a>
       </li>
       <li>
-         <a href="#ResearchObject" title="http://purl.org/roh#ResearchObject">Research Object Research result</a>
+         <a href="#ResearchObjectExpense" title="http://purl.org/roh#ResearchObjectExpense">Research Object Expense</a>
       </li>
       <li>
          <a href="#ResearchProblem" title="http://purl.org/roh#ResearchProblem">Research problem Research problem</a>
@@ -2741,7 +2731,6 @@ This section provides details for each class and property defined by The ROH ont
             <sup class="type-c" title="class">c</sup>, <a href="#FundingAmount" title="http://purl.org/roh#FundingAmount">Funding Amount</a>
             <sup class="type-c" title="class">c</sup>, <a href="#FundingProgram" title="http://purl.org/roh#FundingProgram">Funding Program</a>
             <sup class="type-c" title="class">c</sup>, <a href="#FundingSource" title="http://purl.org/roh#FundingSource">Funding Source</a>
-            <sup class="type-c" title="class">c</sup>, <a href="#Metric" title="http://purl.org/roh#Metric">Metric</a>
             <sup class="type-c" title="class">c</sup>, <a href="#PatentApplication" title="http://purl.org/roh#PatentApplication">Patent Application</a>
             <sup class="type-c" title="class">c</sup>, <a href="#Reservable" title="http://purl.org/roh#Reservable">Reservable</a>
             <sup class="type-c" title="class">c</sup>, <a href="#/mirror/geonames#Feature" title="http://purl.org/roh/mirror/geonames#Feature">Feature</a>
@@ -2768,7 +2757,6 @@ This section provides details for each class and property defined by The ROH ont
             <sup class="type-c" title="class">c</sup>, <a href="#FundingAmount" title="http://purl.org/roh#FundingAmount">Funding Amount</a>
             <sup class="type-c" title="class">c</sup>, <a href="#FundingProgram" title="http://purl.org/roh#FundingProgram">Funding Program</a>
             <sup class="type-c" title="class">c</sup>, <a href="#FundingSource" title="http://purl.org/roh#FundingSource">Funding Source</a>
-            <sup class="type-c" title="class">c</sup>, <a href="#Metric" title="http://purl.org/roh#Metric">Metric</a>
             <sup class="type-c" title="class">c</sup>, <a href="#Reservable" title="http://purl.org/roh#Reservable">Reservable</a>
             <sup class="type-c" title="class">c</sup>, <a href="#/mirror/geonames#Feature" title="http://purl.org/roh/mirror/geonames#Feature">Feature</a>
             <sup class="type-c" title="class">c</sup>, <a href="#/mirror/obo/bfo#BFO_0000008" title="http://purl.org/roh/mirror/obo/bfo#BFO_0000008">Temporal Region</a>
@@ -2960,12 +2948,10 @@ Besides, an instance of a foaf:Person / roh:Researcher is associated to the foll
          </dd>
          <dt>is in domain of</dt>
          <dd>
-            <a href="#h-index" title="http://purl.org/roh#h-index">A property to express the h-index of an author.</a>
-            <sup class="type-op" title="object property">op</sup>, <a href="#/mirror/vivo#researcherId" title="http://purl.org/roh/mirror/vivo#researcherId">ISI Researcher ID</a>
+            <a href="#/mirror/vivo#researcherId" title="http://purl.org/roh/mirror/vivo#researcherId">ISI Researcher ID</a>
             <sup class="type-dp" title="data property">dp</sup>, <a href="#ORCID" title="http://purl.org/roh#ORCID">ORCID</a>
             <sup class="type-dp" title="data property">dp</sup>, <a href="#/mirror/vivo#scopusId" title="http://purl.org/roh/mirror/vivo#scopusId">Scopus ID</a>
             <sup class="type-dp" title="data property">dp</sup>, <a href="#advises" title="http://purl.org/roh#advises">advises</a>
-            <sup class="type-op" title="object property">op</sup>, <a href="#authorCitation" title="http://purl.org/roh#authorCitation">author citations</a>
             <sup class="type-op" title="object property">op</sup>, <a href="#coadvises" title="http://purl.org/roh#coadvises">co-advises</a>
             <sup class="type-op" title="object property">op</sup>, <a href="#companyFounder" title="http://purl.org/roh#companyFounder">company founder</a>
             <sup class="type-op" title="object property">op</sup>, <a href="#correspondingAuthorOf" title="http://purl.org/roh#correspondingAuthorOf">corresponding author of</a>
@@ -2973,7 +2959,6 @@ Besides, an instance of a foaf:Person / roh:Researcher is associated to the foll
             <sup class="type-dp" title="data property">dp</sup>, <a href="#/mirror/foaf#gender" title="http://purl.org/roh/mirror/foaf#gender">género</a>
             <sup class="type-dp" title="data property">dp</sup>, <a href="#hasCV" title="http://purl.org/roh#hasCV">has CV</a>
             <sup class="type-op" title="object property">op</sup>, <a href="#hasPosition" title="http://purl.org/roh#hasPosition">has position</a>
-            <sup class="type-op" title="object property">op</sup>, <a href="#i10-index" title="http://purl.org/roh#i10-index">i10-index</a>
             <sup class="type-op" title="object property">op</sup>, <a href="#/mirror/foaf#img" title="http://purl.org/roh/mirror/foaf#img">imagen</a>
             <sup class="type-op" title="object property">op</sup>, <a href="#isGrantedWith" title="http://purl.org/roh#isGrantedWith">is granted with</a>
             <sup class="type-op" title="object property">op</sup>, <a href="#/mirror/foaf#firstName" title="http://purl.org/roh/mirror/foaf#firstName">nombre de pila</a>
@@ -3187,7 +3172,6 @@ Besides, an instance of a foaf:Person / roh:Researcher is associated to the foll
             <sup class="type-c" title="class">c</sup>, <a href="#FundingAmount" title="http://purl.org/roh#FundingAmount">Funding Amount</a>
             <sup class="type-c" title="class">c</sup>, <a href="#FundingProgram" title="http://purl.org/roh#FundingProgram">Funding Program</a>
             <sup class="type-c" title="class">c</sup>, <a href="#FundingSource" title="http://purl.org/roh#FundingSource">Funding Source</a>
-            <sup class="type-c" title="class">c</sup>, <a href="#Metric" title="http://purl.org/roh#Metric">Metric</a>
             <sup class="type-c" title="class">c</sup>, <a href="#PatentApplication" title="http://purl.org/roh#PatentApplication">Patent Application</a>
             <sup class="type-c" title="class">c</sup>, <a href="#Reservable" title="http://purl.org/roh#Reservable">Reservable</a>
             <sup class="type-c" title="class">c</sup>, <a href="#/mirror/foaf#Agent" title="http://purl.org/roh/mirror/foaf#Agent"> Agent</a>
@@ -3214,7 +3198,6 @@ Besides, an instance of a foaf:Person / roh:Researcher is associated to the foll
             <sup class="type-c" title="class">c</sup>, <a href="#FundingAmount" title="http://purl.org/roh#FundingAmount">Funding Amount</a>
             <sup class="type-c" title="class">c</sup>, <a href="#FundingProgram" title="http://purl.org/roh#FundingProgram">Funding Program</a>
             <sup class="type-c" title="class">c</sup>, <a href="#FundingSource" title="http://purl.org/roh#FundingSource">Funding Source</a>
-            <sup class="type-c" title="class">c</sup>, <a href="#Metric" title="http://purl.org/roh#Metric">Metric</a>
             <sup class="type-c" title="class">c</sup>, <a href="#Reservable" title="http://purl.org/roh#Reservable">Reservable</a>
             <sup class="type-c" title="class">c</sup>, <a href="#/mirror/foaf#Agent" title="http://purl.org/roh/mirror/foaf#Agent"> Agent</a>
             <sup class="type-c" title="class">c</sup>, <a href="#/mirror/geonames#Feature" title="http://purl.org/roh/mirror/geonames#Feature">Feature</a>
@@ -3366,8 +3349,7 @@ Besides, an instance of a foaf:Person / roh:Researcher is associated to the foll
             <sup class="type-op" title="object property">op</sup>, <a href="#/mirror/bibo#authorList" title="http://purl.org/roh/mirror/bibo#authorList">list of authors</a>
             <sup class="type-op" title="object property">op</sup>, <a href="#/mirror/bibo#editorList" title="http://purl.org/roh/mirror/bibo#editorList">list of editors</a>
             <sup class="type-op" title="object property">op</sup>, <a href="#/mirror/bibo#pageStart" title="http://purl.org/roh/mirror/bibo#pageStart">page start</a>
-            <sup class="type-dp" title="data property">dp</sup>, <a href="#publicationCitation" title="http://purl.org/roh#publicationCitation">publication citations</a>
-            <sup class="type-op" title="object property">op</sup>, <a href="#/mirror/vivo#publisher" title="http://purl.org/roh/mirror/vivo#publisher">published by</a>
+            <sup class="type-dp" title="data property">dp</sup>, <a href="#/mirror/vivo#publisher" title="http://purl.org/roh/mirror/vivo#publisher">published by</a>
             <sup class="type-op" title="object property">op</sup>, <a href="#requiredFor" title="http://purl.org/roh#requiredFor">required for</a>
             <sup class="type-op" title="object property">op</sup>, <a href="#/mirror/bibo#volume" title="http://purl.org/roh/mirror/bibo#volume">volume</a>
             <sup class="type-dp" title="data property">dp</sup>
@@ -3556,7 +3538,6 @@ Besides, an instance of a foaf:Person / roh:Researcher is associated to the foll
             <sup class="type-c" title="class">c</sup>, <a href="#FundingAmount" title="http://purl.org/roh#FundingAmount">Funding Amount</a>
             <sup class="type-c" title="class">c</sup>, <a href="#FundingProgram" title="http://purl.org/roh#FundingProgram">Funding Program</a>
             <sup class="type-c" title="class">c</sup>, <a href="#FundingSource" title="http://purl.org/roh#FundingSource">Funding Source</a>
-            <sup class="type-c" title="class">c</sup>, <a href="#Metric" title="http://purl.org/roh#Metric">Metric</a>
             <sup class="type-c" title="class">c</sup>, <a href="#PatentApplication" title="http://purl.org/roh#PatentApplication">Patent Application</a>
             <sup class="type-c" title="class">c</sup>, <a href="#Reservable" title="http://purl.org/roh#Reservable">Reservable</a>
             <sup class="type-c" title="class">c</sup>, <a href="#/mirror/foaf#Agent" title="http://purl.org/roh/mirror/foaf#Agent"> Agent</a>
@@ -3583,7 +3564,6 @@ Besides, an instance of a foaf:Person / roh:Researcher is associated to the foll
             <sup class="type-c" title="class">c</sup>, <a href="#FundingAmount" title="http://purl.org/roh#FundingAmount">Funding Amount</a>
             <sup class="type-c" title="class">c</sup>, <a href="#FundingProgram" title="http://purl.org/roh#FundingProgram">Funding Program</a>
             <sup class="type-c" title="class">c</sup>, <a href="#FundingSource" title="http://purl.org/roh#FundingSource">Funding Source</a>
-            <sup class="type-c" title="class">c</sup>, <a href="#Metric" title="http://purl.org/roh#Metric">Metric</a>
             <sup class="type-c" title="class">c</sup>, <a href="#Reservable" title="http://purl.org/roh#Reservable">Reservable</a>
             <sup class="type-c" title="class">c</sup>, <a href="#/mirror/foaf#Agent" title="http://purl.org/roh/mirror/foaf#Agent"> Agent</a>
             <sup class="type-c" title="class">c</sup>, <a href="#/mirror/geonames#Feature" title="http://purl.org/roh/mirror/geonames#Feature">Feature</a>
@@ -3666,7 +3646,10 @@ The previous short definition was: "An arbitrary classification of a space/time 
       </dl>
       <dl class="description">
          <dt>has super-classes</dt>
-         <dd/>
+         <dd>
+            <span class="dotted" title="http://purl.org/roh/mirror/obo/bfo#BFO_0000015">b f o 0000015</span>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
          <dt>has sub-classes</dt>
          <dd>
             <a href="#/mirror/vivo#Competition" title="http://purl.org/roh/mirror/vivo#Competition">Competition</a>
@@ -3689,13 +3672,11 @@ The previous short definition was: "An arbitrary classification of a space/time 
          <dt>is in domain of</dt>
          <dd>
             <a href="#participatedBy" title="http://purl.org/roh#participatedBy">participated by</a>
-            <sup class="type-op" title="object property">op</sup>, <a href="#/mirror/obo/bfo#BFO_0000055" title="http://purl.org/roh/mirror/obo/bfo#BFO_0000055">realizes</a>
             <sup class="type-op" title="object property">op</sup>
          </dd>
          <dt>is in range of</dt>
          <dd>
             <a href="#participates" title="http://purl.org/roh#participates">participates</a>
-            <sup class="type-op" title="object property">op</sup>, <a href="#/mirror/obo/bfo#BFO_0000054" title="http://purl.org/roh/mirror/obo/bfo#BFO_0000054">realized in</a>
             <sup class="type-op" title="object property">op</sup>
          </dd>
          <dt>is disjoint with</dt>
@@ -3706,7 +3687,6 @@ The previous short definition was: "An arbitrary classification of a space/time 
             <sup class="type-c" title="class">c</sup>, <a href="#FundingAmount" title="http://purl.org/roh#FundingAmount">Funding Amount</a>
             <sup class="type-c" title="class">c</sup>, <a href="#FundingProgram" title="http://purl.org/roh#FundingProgram">Funding Program</a>
             <sup class="type-c" title="class">c</sup>, <a href="#FundingSource" title="http://purl.org/roh#FundingSource">Funding Source</a>
-            <sup class="type-c" title="class">c</sup>, <a href="#Metric" title="http://purl.org/roh#Metric">Metric</a>
             <sup class="type-c" title="class">c</sup>, <a href="#PatentApplication" title="http://purl.org/roh#PatentApplication">Patent Application</a>
             <sup class="type-c" title="class">c</sup>, <a href="#Reservable" title="http://purl.org/roh#Reservable">Reservable</a>
             <sup class="type-c" title="class">c</sup>, <a href="#/mirror/foaf#Agent" title="http://purl.org/roh/mirror/foaf#Agent"> Agent</a>
@@ -3733,7 +3713,6 @@ The previous short definition was: "An arbitrary classification of a space/time 
             <sup class="type-c" title="class">c</sup>, <a href="#FundingAmount" title="http://purl.org/roh#FundingAmount">Funding Amount</a>
             <sup class="type-c" title="class">c</sup>, <a href="#FundingProgram" title="http://purl.org/roh#FundingProgram">Funding Program</a>
             <sup class="type-c" title="class">c</sup>, <a href="#FundingSource" title="http://purl.org/roh#FundingSource">Funding Source</a>
-            <sup class="type-c" title="class">c</sup>, <a href="#Metric" title="http://purl.org/roh#Metric">Metric</a>
             <sup class="type-c" title="class">c</sup>, <a href="#Reservable" title="http://purl.org/roh#Reservable">Reservable</a>
             <sup class="type-c" title="class">c</sup>, <a href="#/mirror/foaf#Agent" title="http://purl.org/roh/mirror/foaf#Agent"> Agent</a>
             <sup class="type-c" title="class">c</sup>, <a href="#/mirror/geonames#Feature" title="http://purl.org/roh/mirror/geonames#Feature">Feature</a>
@@ -4300,6 +4279,34 @@ The previous short definition was: "An arbitrary classification of a space/time 
             <sup class="type-c" title="class">c</sup>, <a href="#/mirror/vivo#ResearcherRole" title="http://purl.org/roh/mirror/vivo#ResearcherRole">Researcher Role</a>
             <sup class="type-c" title="class">c</sup>, <a href="#/mirror/vivo#ReviewerRole" title="http://purl.org/roh/mirror/vivo#ReviewerRole">Reviewer Role</a>
             <sup class="type-c" title="class">c</sup>, <a href="#/mirror/vivo#TeacherRole" title="http://purl.org/roh/mirror/vivo#TeacherRole">Teacher Role</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="AuthorMetric">
+      <h3>Author Metric<sup class="type-c" title="class">c</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://purl.org/roh#AuthorMetric</p>
+      <dl class="description">
+         <dt>has super-classes</dt>
+         <dd>
+            <a href="#Metric" title="http://purl.org/roh#Metric">Metric</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+         <dt>is in domain of</dt>
+         <dd>
+            <a href="#h-index" title="http://purl.org/roh#h-index">h-index</a>
+            <sup class="type-dp" title="data property">dp</sup>, <a href="#i10-index" title="http://purl.org/roh#i10-index">i10-index</a>
+            <sup class="type-op" title="object property">op</sup>
+         </dd>
+         <dt>is disjoint with</dt>
+         <dd>
+            <a href="#DegreeMetric" title="http://purl.org/roh#DegreeMetric">Degree Metric</a>
+            <sup class="type-c" title="class">c</sup>, <a href="#PublicationMetric" title="http://purl.org/roh#PublicationMetric">Publication Metric</a>
+            <sup class="type-c" title="class">c</sup>, <a href="#ResearchGroupMetric" title="http://purl.org/roh#ResearchGroupMetric">Research Group Metric</a>
             <sup class="type-c" title="class">c</sup>
          </dd>
       </dl>
@@ -5090,7 +5097,6 @@ The previous short definition was: "An arbitrary classification of a space/time 
             <sup class="type-c" title="class">c</sup>, <a href="#FundingAmount" title="http://purl.org/roh#FundingAmount">Funding Amount</a>
             <sup class="type-c" title="class">c</sup>, <a href="#FundingProgram" title="http://purl.org/roh#FundingProgram">Funding Program</a>
             <sup class="type-c" title="class">c</sup>, <a href="#FundingSource" title="http://purl.org/roh#FundingSource">Funding Source</a>
-            <sup class="type-c" title="class">c</sup>, <a href="#Metric" title="http://purl.org/roh#Metric">Metric</a>
             <sup class="type-c" title="class">c</sup>, <a href="#PatentApplication" title="http://purl.org/roh#PatentApplication">Patent Application</a>
             <sup class="type-c" title="class">c</sup>, <a href="#Reservable" title="http://purl.org/roh#Reservable">Reservable</a>
             <sup class="type-c" title="class">c</sup>, <a href="#/mirror/foaf#Agent" title="http://purl.org/roh/mirror/foaf#Agent"> Agent</a>
@@ -5117,7 +5123,6 @@ The previous short definition was: "An arbitrary classification of a space/time 
             <sup class="type-c" title="class">c</sup>, <a href="#FundingAmount" title="http://purl.org/roh#FundingAmount">Funding Amount</a>
             <sup class="type-c" title="class">c</sup>, <a href="#FundingProgram" title="http://purl.org/roh#FundingProgram">Funding Program</a>
             <sup class="type-c" title="class">c</sup>, <a href="#FundingSource" title="http://purl.org/roh#FundingSource">Funding Source</a>
-            <sup class="type-c" title="class">c</sup>, <a href="#Metric" title="http://purl.org/roh#Metric">Metric</a>
             <sup class="type-c" title="class">c</sup>, <a href="#Reservable" title="http://purl.org/roh#Reservable">Reservable</a>
             <sup class="type-c" title="class">c</sup>, <a href="#/mirror/foaf#Agent" title="http://purl.org/roh/mirror/foaf#Agent"> Agent</a>
             <sup class="type-c" title="class">c</sup>, <a href="#/mirror/geonames#Feature" title="http://purl.org/roh/mirror/geonames#Feature">Feature</a>
@@ -5171,7 +5176,6 @@ The previous short definition was: "An arbitrary classification of a space/time 
          <dt>has super-classes</dt>
          <dd>
             <a href="#Activity" title="http://purl.org/roh#Activity">Activity</a>
-            <sup class="type-c" title="class">c</sup>, <a href="#http://purl.org/NET/c4dm/event.owl#Event" title="http://purl.org/NET/c4dm/event.owl#Event">Event</a>
             <sup class="type-c" title="class">c</sup>
          </dd>
          <dt>is disjoint with</dt>
@@ -5762,7 +5766,6 @@ The previous short definition was: "An arbitrary classification of a space/time 
             <sup class="type-op" title="object property">op</sup>, <a href="#expirationDate" title="http://purl.org/roh#expirationDate">expiration date</a>
             <sup class="type-op" title="object property">op</sup>, <a href="#foreseenJustificationDate" title="http://purl.org/roh#foreseenJustificationDate">foreseen justification date</a>
             <sup class="type-op" title="object property">op</sup>, <a href="#foundationDate" title="http://purl.org/roh#foundationDate">foundation date</a>
-            <sup class="type-op" title="object property">op</sup>, <a href="#qualifieddate" title="http://purl.org/roh#qualifieddate">qualified date</a>
             <sup class="type-op" title="object property">op</sup>, <a href="#/mirror/vivo#start" title="http://purl.org/roh/mirror/vivo#start">start</a>
             <sup class="type-op" title="object property">op</sup>
          </dd>
@@ -5817,7 +5820,7 @@ The previous short definition was: "An arbitrary classification of a space/time 
          </dd>
          <dt>is disjoint with</dt>
          <dd>
-            <a href="#PublicationMetric" title="http://purl.org/roh#PublicationMetric">Publication Metric</a>
+            <a href="#AuthorMetric" title="http://purl.org/roh#AuthorMetric">Author Metric</a>
             <sup class="type-c" title="class">c</sup>, <a href="#PublicationMetric" title="http://purl.org/roh#PublicationMetric">Publication Metric</a>
             <sup class="type-c" title="class">c</sup>, <a href="#ResearchGroupMetric" title="http://purl.org/roh#ResearchGroupMetric">Research Group Metric</a>
             <sup class="type-c" title="class">c</sup>
@@ -6548,26 +6551,6 @@ A vivo:Equipment, subclasss of roh:Infrastructure, belongs to a foaf:Organizatio
          </dd>
       </dl>
    </div>
-   <div class="entity" id="http://purl.org/NET/c4dm/event.owl#Event">
-      <h3>Event<sup class="type-c" title="class">c</sup>
-         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a>
-         </span>
-      </h3>
-      <p>
-         <strong>IRI:</strong> http://purl.org/NET/c4dm/event.owl#Event</p>
-      <div class="comment">
-         <span class="markdown">An arbitrary classification of a space/time region, by a
-cognitive agent. An event may have actively participating agents,
-passive factors, products, and a location in space/time.</span>
-      </div>
-      <dl class="description">
-         <dt>has sub-classes</dt>
-         <dd>
-            <a href="#/mirror/bibo#Conference" title="http://purl.org/roh/mirror/bibo#Conference">Conference</a>
-            <sup class="type-c" title="class">c</sup>
-         </dd>
-      </dl>
-   </div>
    <div class="entity" id="EventOrganiser">
       <h3>Event organiser<sup class="type-c" title="class">c</sup>
          <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a>
@@ -6585,17 +6568,6 @@ passive factors, products, and a location in space/time.</span>
             <sup class="type-c" title="class">c</sup>
          </dd>
       </dl>
-   </div>
-   <div class="entity" id="/mirror/vivo#EventSeries">
-      <h3>Event series<sup class="type-c" title="class">c</sup>
-         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a>
-         </span>
-      </h3>
-      <p>
-         <strong>IRI:</strong> http://purl.org/roh/mirror/vivo#EventSeries</p>
-      <div class="comment">
-         <span class="markdown">A generic class which may include a conference series, a course section, a seminar series, or a workshop series. When possible, use one of these more specific classes.</span>
-      </div>
    </div>
    <div class="entity" id="/mirror/vivo#Exhibit">
       <h3>Exhibit<sup class="type-c" title="class">c</sup>
@@ -6669,7 +6641,6 @@ passive factors, products, and a location in space/time.</span>
             <sup class="type-c" title="class">c</sup>, <a href="#FundingAmount" title="http://purl.org/roh#FundingAmount">Funding Amount</a>
             <sup class="type-c" title="class">c</sup>, <a href="#FundingProgram" title="http://purl.org/roh#FundingProgram">Funding Program</a>
             <sup class="type-c" title="class">c</sup>, <a href="#FundingSource" title="http://purl.org/roh#FundingSource">Funding Source</a>
-            <sup class="type-c" title="class">c</sup>, <a href="#Metric" title="http://purl.org/roh#Metric">Metric</a>
             <sup class="type-c" title="class">c</sup>, <a href="#PatentApplication" title="http://purl.org/roh#PatentApplication">Patent Application</a>
             <sup class="type-c" title="class">c</sup>, <a href="#Reservable" title="http://purl.org/roh#Reservable">Reservable</a>
             <sup class="type-c" title="class">c</sup>, <a href="#/mirror/foaf#Agent" title="http://purl.org/roh/mirror/foaf#Agent"> Agent</a>
@@ -6696,7 +6667,6 @@ passive factors, products, and a location in space/time.</span>
             <sup class="type-c" title="class">c</sup>, <a href="#FundingAmount" title="http://purl.org/roh#FundingAmount">Funding Amount</a>
             <sup class="type-c" title="class">c</sup>, <a href="#FundingProgram" title="http://purl.org/roh#FundingProgram">Funding Program</a>
             <sup class="type-c" title="class">c</sup>, <a href="#FundingSource" title="http://purl.org/roh#FundingSource">Funding Source</a>
-            <sup class="type-c" title="class">c</sup>, <a href="#Metric" title="http://purl.org/roh#Metric">Metric</a>
             <sup class="type-c" title="class">c</sup>, <a href="#Reservable" title="http://purl.org/roh#Reservable">Reservable</a>
             <sup class="type-c" title="class">c</sup>, <a href="#/mirror/foaf#Agent" title="http://purl.org/roh/mirror/foaf#Agent"> Agent</a>
             <sup class="type-c" title="class">c</sup>, <a href="#/mirror/geonames#Feature" title="http://purl.org/roh/mirror/geonames#Feature">Feature</a>
@@ -7025,7 +6995,6 @@ passive factors, products, and a location in space/time.</span>
             <sup class="type-c" title="class">c</sup>, <a href="#FundingAmount" title="http://purl.org/roh#FundingAmount">Funding Amount</a>
             <sup class="type-c" title="class">c</sup>, <a href="#FundingProgram" title="http://purl.org/roh#FundingProgram">Funding Program</a>
             <sup class="type-c" title="class">c</sup>, <a href="#FundingSource" title="http://purl.org/roh#FundingSource">Funding Source</a>
-            <sup class="type-c" title="class">c</sup>, <a href="#Metric" title="http://purl.org/roh#Metric">Metric</a>
             <sup class="type-c" title="class">c</sup>, <a href="#PatentApplication" title="http://purl.org/roh#PatentApplication">Patent Application</a>
             <sup class="type-c" title="class">c</sup>, <a href="#Reservable" title="http://purl.org/roh#Reservable">Reservable</a>
             <sup class="type-c" title="class">c</sup>, <a href="#/mirror/foaf#Agent" title="http://purl.org/roh/mirror/foaf#Agent"> Agent</a>
@@ -7052,7 +7021,6 @@ passive factors, products, and a location in space/time.</span>
             <sup class="type-c" title="class">c</sup>, <a href="#FundingAmount" title="http://purl.org/roh#FundingAmount">Funding Amount</a>
             <sup class="type-c" title="class">c</sup>, <a href="#FundingProgram" title="http://purl.org/roh#FundingProgram">Funding Program</a>
             <sup class="type-c" title="class">c</sup>, <a href="#FundingSource" title="http://purl.org/roh#FundingSource">Funding Source</a>
-            <sup class="type-c" title="class">c</sup>, <a href="#Metric" title="http://purl.org/roh#Metric">Metric</a>
             <sup class="type-c" title="class">c</sup>, <a href="#Reservable" title="http://purl.org/roh#Reservable">Reservable</a>
             <sup class="type-c" title="class">c</sup>, <a href="#/mirror/foaf#Agent" title="http://purl.org/roh/mirror/foaf#Agent"> Agent</a>
             <sup class="type-c" title="class">c</sup>, <a href="#/mirror/obo/bfo#BFO_0000008" title="http://purl.org/roh/mirror/obo/bfo#BFO_0000008">Temporal Region</a>
@@ -7183,7 +7151,6 @@ passive factors, products, and a location in space/time.</span>
             <sup class="type-c" title="class">c</sup>, <a href="#FundingAmount" title="http://purl.org/roh#FundingAmount">Funding Amount</a>
             <sup class="type-c" title="class">c</sup>, <a href="#FundingProgram" title="http://purl.org/roh#FundingProgram">Funding Program</a>
             <sup class="type-c" title="class">c</sup>, <a href="#FundingSource" title="http://purl.org/roh#FundingSource">Funding Source</a>
-            <sup class="type-c" title="class">c</sup>, <a href="#Metric" title="http://purl.org/roh#Metric">Metric</a>
             <sup class="type-c" title="class">c</sup>, <a href="#PatentApplication" title="http://purl.org/roh#PatentApplication">Patent Application</a>
             <sup class="type-c" title="class">c</sup>, <a href="#Reservable" title="http://purl.org/roh#Reservable">Reservable</a>
             <sup class="type-c" title="class">c</sup>, <a href="#/mirror/foaf#Agent" title="http://purl.org/roh/mirror/foaf#Agent"> Agent</a>
@@ -7210,7 +7177,6 @@ passive factors, products, and a location in space/time.</span>
             <sup class="type-c" title="class">c</sup>, <a href="#FundingAmount" title="http://purl.org/roh#FundingAmount">Funding Amount</a>
             <sup class="type-c" title="class">c</sup>, <a href="#FundingProgram" title="http://purl.org/roh#FundingProgram">Funding Program</a>
             <sup class="type-c" title="class">c</sup>, <a href="#FundingSource" title="http://purl.org/roh#FundingSource">Funding Source</a>
-            <sup class="type-c" title="class">c</sup>, <a href="#Metric" title="http://purl.org/roh#Metric">Metric</a>
             <sup class="type-c" title="class">c</sup>, <a href="#Reservable" title="http://purl.org/roh#Reservable">Reservable</a>
             <sup class="type-c" title="class">c</sup>, <a href="#/mirror/foaf#Agent" title="http://purl.org/roh/mirror/foaf#Agent"> Agent</a>
             <sup class="type-c" title="class">c</sup>, <a href="#/mirror/geonames#Feature" title="http://purl.org/roh/mirror/geonames#Feature">Feature</a>
@@ -7262,7 +7228,6 @@ passive factors, products, and a location in space/time.</span>
             <sup class="type-c" title="class">c</sup>, <a href="#Funding" title="http://purl.org/roh#Funding">Funding</a>
             <sup class="type-c" title="class">c</sup>, <a href="#FundingProgram" title="http://purl.org/roh#FundingProgram">Funding Program</a>
             <sup class="type-c" title="class">c</sup>, <a href="#FundingSource" title="http://purl.org/roh#FundingSource">Funding Source</a>
-            <sup class="type-c" title="class">c</sup>, <a href="#Metric" title="http://purl.org/roh#Metric">Metric</a>
             <sup class="type-c" title="class">c</sup>, <a href="#PatentApplication" title="http://purl.org/roh#PatentApplication">Patent Application</a>
             <sup class="type-c" title="class">c</sup>, <a href="#Reservable" title="http://purl.org/roh#Reservable">Reservable</a>
             <sup class="type-c" title="class">c</sup>, <a href="#/mirror/foaf#Agent" title="http://purl.org/roh/mirror/foaf#Agent"> Agent</a>
@@ -7289,7 +7254,6 @@ passive factors, products, and a location in space/time.</span>
             <sup class="type-c" title="class">c</sup>, <a href="#Funding" title="http://purl.org/roh#Funding">Funding</a>
             <sup class="type-c" title="class">c</sup>, <a href="#FundingProgram" title="http://purl.org/roh#FundingProgram">Funding Program</a>
             <sup class="type-c" title="class">c</sup>, <a href="#FundingSource" title="http://purl.org/roh#FundingSource">Funding Source</a>
-            <sup class="type-c" title="class">c</sup>, <a href="#Metric" title="http://purl.org/roh#Metric">Metric</a>
             <sup class="type-c" title="class">c</sup>, <a href="#Reservable" title="http://purl.org/roh#Reservable">Reservable</a>
             <sup class="type-c" title="class">c</sup>, <a href="#/mirror/foaf#Agent" title="http://purl.org/roh/mirror/foaf#Agent"> Agent</a>
             <sup class="type-c" title="class">c</sup>, <a href="#/mirror/geonames#Feature" title="http://purl.org/roh/mirror/geonames#Feature">Feature</a>
@@ -7397,7 +7361,6 @@ passive factors, products, and a location in space/time.</span>
             <sup class="type-c" title="class">c</sup>, <a href="#Funding" title="http://purl.org/roh#Funding">Funding</a>
             <sup class="type-c" title="class">c</sup>, <a href="#FundingAmount" title="http://purl.org/roh#FundingAmount">Funding Amount</a>
             <sup class="type-c" title="class">c</sup>, <a href="#FundingSource" title="http://purl.org/roh#FundingSource">Funding Source</a>
-            <sup class="type-c" title="class">c</sup>, <a href="#Metric" title="http://purl.org/roh#Metric">Metric</a>
             <sup class="type-c" title="class">c</sup>, <a href="#PatentApplication" title="http://purl.org/roh#PatentApplication">Patent Application</a>
             <sup class="type-c" title="class">c</sup>, <a href="#Reservable" title="http://purl.org/roh#Reservable">Reservable</a>
             <sup class="type-c" title="class">c</sup>, <a href="#/mirror/foaf#Agent" title="http://purl.org/roh/mirror/foaf#Agent"> Agent</a>
@@ -7424,7 +7387,6 @@ passive factors, products, and a location in space/time.</span>
             <sup class="type-c" title="class">c</sup>, <a href="#Funding" title="http://purl.org/roh#Funding">Funding</a>
             <sup class="type-c" title="class">c</sup>, <a href="#FundingAmount" title="http://purl.org/roh#FundingAmount">Funding Amount</a>
             <sup class="type-c" title="class">c</sup>, <a href="#FundingSource" title="http://purl.org/roh#FundingSource">Funding Source</a>
-            <sup class="type-c" title="class">c</sup>, <a href="#Metric" title="http://purl.org/roh#Metric">Metric</a>
             <sup class="type-c" title="class">c</sup>, <a href="#Reservable" title="http://purl.org/roh#Reservable">Reservable</a>
             <sup class="type-c" title="class">c</sup>, <a href="#/mirror/foaf#Agent" title="http://purl.org/roh/mirror/foaf#Agent"> Agent</a>
             <sup class="type-c" title="class">c</sup>, <a href="#/mirror/geonames#Feature" title="http://purl.org/roh/mirror/geonames#Feature">Feature</a>
@@ -7579,7 +7541,6 @@ A roh:FundingSource roh:feeds a roh:Funding with funds to sponsor some projects.
             <sup class="type-c" title="class">c</sup>, <a href="#Funding" title="http://purl.org/roh#Funding">Funding</a>
             <sup class="type-c" title="class">c</sup>, <a href="#FundingAmount" title="http://purl.org/roh#FundingAmount">Funding Amount</a>
             <sup class="type-c" title="class">c</sup>, <a href="#FundingProgram" title="http://purl.org/roh#FundingProgram">Funding Program</a>
-            <sup class="type-c" title="class">c</sup>, <a href="#Metric" title="http://purl.org/roh#Metric">Metric</a>
             <sup class="type-c" title="class">c</sup>, <a href="#PatentApplication" title="http://purl.org/roh#PatentApplication">Patent Application</a>
             <sup class="type-c" title="class">c</sup>, <a href="#Reservable" title="http://purl.org/roh#Reservable">Reservable</a>
             <sup class="type-c" title="class">c</sup>, <a href="#/mirror/foaf#Agent" title="http://purl.org/roh/mirror/foaf#Agent"> Agent</a>
@@ -7606,7 +7567,6 @@ A roh:FundingSource roh:feeds a roh:Funding with funds to sponsor some projects.
             <sup class="type-c" title="class">c</sup>, <a href="#Funding" title="http://purl.org/roh#Funding">Funding</a>
             <sup class="type-c" title="class">c</sup>, <a href="#FundingAmount" title="http://purl.org/roh#FundingAmount">Funding Amount</a>
             <sup class="type-c" title="class">c</sup>, <a href="#FundingProgram" title="http://purl.org/roh#FundingProgram">Funding Program</a>
-            <sup class="type-c" title="class">c</sup>, <a href="#Metric" title="http://purl.org/roh#Metric">Metric</a>
             <sup class="type-c" title="class">c</sup>, <a href="#Reservable" title="http://purl.org/roh#Reservable">Reservable</a>
             <sup class="type-c" title="class">c</sup>, <a href="#/mirror/foaf#Agent" title="http://purl.org/roh/mirror/foaf#Agent"> Agent</a>
             <sup class="type-c" title="class">c</sup>, <a href="#/mirror/geonames#Feature" title="http://purl.org/roh/mirror/geonames#Feature">Feature</a>
@@ -8024,11 +7984,13 @@ A roh:FundingSource roh:feeds a roh:Funding with funds to sponsor some projects.
          <dd>
             <a href="#/mirror/bibo#Document" title="http://purl.org/roh/mirror/bibo#Document">Academic publication Academic publication</a>
             <sup class="type-c" title="class">c</sup>, <a href="#/mirror/bibo#Collection" title="http://purl.org/roh/mirror/bibo#Collection">Collection</a>
+            <sup class="type-c" title="class">c</sup>, <a href="#Metric" title="http://purl.org/roh#Metric">Metric</a>
             <sup class="type-c" title="class">c</sup>
          </dd>
          <dt>is in domain of</dt>
          <dd>
             <a href="#correspondingOrganization" title="http://purl.org/roh#correspondingOrganization">correspondingOrganization</a>
+            <sup class="type-op" title="object property">op</sup>, <a href="#/mirror/obo/iao#IAO_0000136" title="http://purl.org/roh/mirror/obo/iao#IAO_0000136">is about</a>
             <sup class="type-op" title="object property">op</sup>
          </dd>
          <dt>is in range of</dt>
@@ -8046,7 +8008,6 @@ A roh:FundingSource roh:feeds a roh:Funding with funds to sponsor some projects.
             <sup class="type-c" title="class">c</sup>, <a href="#FundingAmount" title="http://purl.org/roh#FundingAmount">Funding Amount</a>
             <sup class="type-c" title="class">c</sup>, <a href="#FundingProgram" title="http://purl.org/roh#FundingProgram">Funding Program</a>
             <sup class="type-c" title="class">c</sup>, <a href="#FundingSource" title="http://purl.org/roh#FundingSource">Funding Source</a>
-            <sup class="type-c" title="class">c</sup>, <a href="#Metric" title="http://purl.org/roh#Metric">Metric</a>
             <sup class="type-c" title="class">c</sup>, <a href="#PatentApplication" title="http://purl.org/roh#PatentApplication">Patent Application</a>
             <sup class="type-c" title="class">c</sup>, <a href="#Reservable" title="http://purl.org/roh#Reservable">Reservable</a>
             <sup class="type-c" title="class">c</sup>, <a href="#/mirror/foaf#Agent" title="http://purl.org/roh/mirror/foaf#Agent"> Agent</a>
@@ -8073,7 +8034,6 @@ A roh:FundingSource roh:feeds a roh:Funding with funds to sponsor some projects.
             <sup class="type-c" title="class">c</sup>, <a href="#FundingAmount" title="http://purl.org/roh#FundingAmount">Funding Amount</a>
             <sup class="type-c" title="class">c</sup>, <a href="#FundingProgram" title="http://purl.org/roh#FundingProgram">Funding Program</a>
             <sup class="type-c" title="class">c</sup>, <a href="#FundingSource" title="http://purl.org/roh#FundingSource">Funding Source</a>
-            <sup class="type-c" title="class">c</sup>, <a href="#Metric" title="http://purl.org/roh#Metric">Metric</a>
             <sup class="type-c" title="class">c</sup>, <a href="#Reservable" title="http://purl.org/roh#Reservable">Reservable</a>
             <sup class="type-c" title="class">c</sup>, <a href="#/mirror/foaf#Agent" title="http://purl.org/roh/mirror/foaf#Agent"> Agent</a>
             <sup class="type-c" title="class">c</sup>, <a href="#/mirror/geonames#Feature" title="http://purl.org/roh/mirror/geonames#Feature">Feature</a>
@@ -8513,7 +8473,6 @@ A roh:FundingSource roh:feeds a roh:Funding with funds to sponsor some projects.
             <sup class="type-c" title="class">c</sup>, <a href="#FundingAmount" title="http://purl.org/roh#FundingAmount">Funding Amount</a>
             <sup class="type-c" title="class">c</sup>, <a href="#FundingProgram" title="http://purl.org/roh#FundingProgram">Funding Program</a>
             <sup class="type-c" title="class">c</sup>, <a href="#FundingSource" title="http://purl.org/roh#FundingSource">Funding Source</a>
-            <sup class="type-c" title="class">c</sup>, <a href="#Metric" title="http://purl.org/roh#Metric">Metric</a>
             <sup class="type-c" title="class">c</sup>, <a href="#PatentApplication" title="http://purl.org/roh#PatentApplication">Patent Application</a>
             <sup class="type-c" title="class">c</sup>, <a href="#Reservable" title="http://purl.org/roh#Reservable">Reservable</a>
             <sup class="type-c" title="class">c</sup>, <a href="#/mirror/foaf#Agent" title="http://purl.org/roh/mirror/foaf#Agent"> Agent</a>
@@ -8540,7 +8499,6 @@ A roh:FundingSource roh:feeds a roh:Funding with funds to sponsor some projects.
             <sup class="type-c" title="class">c</sup>, <a href="#FundingAmount" title="http://purl.org/roh#FundingAmount">Funding Amount</a>
             <sup class="type-c" title="class">c</sup>, <a href="#FundingProgram" title="http://purl.org/roh#FundingProgram">Funding Program</a>
             <sup class="type-c" title="class">c</sup>, <a href="#FundingSource" title="http://purl.org/roh#FundingSource">Funding Source</a>
-            <sup class="type-c" title="class">c</sup>, <a href="#Metric" title="http://purl.org/roh#Metric">Metric</a>
             <sup class="type-c" title="class">c</sup>, <a href="#Reservable" title="http://purl.org/roh#Reservable">Reservable</a>
             <sup class="type-c" title="class">c</sup>, <a href="#/mirror/foaf#Agent" title="http://purl.org/roh/mirror/foaf#Agent"> Agent</a>
             <sup class="type-c" title="class">c</sup>, <a href="#/mirror/geonames#Feature" title="http://purl.org/roh/mirror/geonames#Feature">Feature</a>
@@ -9430,10 +9388,14 @@ A roh:FundingSource roh:feeds a roh:Funding with funds to sponsor some projects.
       </div>
       <dl class="description">
          <dt>has super-classes</dt>
-         <dd/>
+         <dd>
+            <a href="#/mirror/obo/iao#IAO_0000030" title="http://purl.org/roh/mirror/obo/iao#IAO_0000030">Information Content Entity</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
          <dt>has sub-classes</dt>
          <dd>
-            <a href="#DegreeMetric" title="http://purl.org/roh#DegreeMetric">Degree Metric</a>
+            <a href="#AuthorMetric" title="http://purl.org/roh#AuthorMetric">Author Metric</a>
+            <sup class="type-c" title="class">c</sup>, <a href="#DegreeMetric" title="http://purl.org/roh#DegreeMetric">Degree Metric</a>
             <sup class="type-c" title="class">c</sup>, <a href="#PublicationMetric" title="http://purl.org/roh#PublicationMetric">Publication Metric</a>
             <sup class="type-c" title="class">c</sup>, <a href="#ResearchGroupMetric" title="http://purl.org/roh#ResearchGroupMetric">Research Group Metric</a>
             <sup class="type-c" title="class">c</sup>
@@ -9448,60 +9410,6 @@ A roh:FundingSource roh:feeds a roh:Funding with funds to sponsor some projects.
          <dd>
             <a href="#hasMetric" title="http://purl.org/roh#hasMetric">has metric</a>
             <sup class="type-op" title="object property">op</sup>
-         </dd>
-         <dt>is disjoint with</dt>
-         <dd>
-            <a href="#Accreditation" title="http://purl.org/roh#Accreditation">Accreditation</a>
-            <sup class="type-c" title="class">c</sup>, <a href="#Activity" title="http://purl.org/roh#Activity">Activity</a>
-            <sup class="type-c" title="class">c</sup>, <a href="#Expense" title="http://purl.org/roh#Expense">Expense</a>
-            <sup class="type-c" title="class">c</sup>, <a href="#Funding" title="http://purl.org/roh#Funding">Funding</a>
-            <sup class="type-c" title="class">c</sup>, <a href="#FundingAmount" title="http://purl.org/roh#FundingAmount">Funding Amount</a>
-            <sup class="type-c" title="class">c</sup>, <a href="#FundingProgram" title="http://purl.org/roh#FundingProgram">Funding Program</a>
-            <sup class="type-c" title="class">c</sup>, <a href="#FundingSource" title="http://purl.org/roh#FundingSource">Funding Source</a>
-            <sup class="type-c" title="class">c</sup>, <a href="#PatentApplication" title="http://purl.org/roh#PatentApplication">Patent Application</a>
-            <sup class="type-c" title="class">c</sup>, <a href="#Reservable" title="http://purl.org/roh#Reservable">Reservable</a>
-            <sup class="type-c" title="class">c</sup>, <a href="#/mirror/foaf#Agent" title="http://purl.org/roh/mirror/foaf#Agent"> Agent</a>
-            <sup class="type-c" title="class">c</sup>, <a href="#/mirror/geonames#Feature" title="http://purl.org/roh/mirror/geonames#Feature">Feature</a>
-            <sup class="type-c" title="class">c</sup>, <a href="#/mirror/obo/bfo#BFO_0000008" title="http://purl.org/roh/mirror/obo/bfo#BFO_0000008">Temporal Region</a>
-            <sup class="type-c" title="class">c</sup>, <a href="#/mirror/obo/bfo#BFO_0000023" title="http://purl.org/roh/mirror/obo/bfo#BFO_0000023">Role</a>
-            <sup class="type-c" title="class">c</sup>, <a href="#/mirror/obo/ero#ERO_0000005" title="http://purl.org/roh/mirror/obo/ero#ERO_0000005">Service</a>
-            <sup class="type-c" title="class">c</sup>, <a href="#/mirror/obo/iao#IAO_0000030" title="http://purl.org/roh/mirror/obo/iao#IAO_0000030">Information Content Entity</a>
-            <sup class="type-c" title="class">c</sup>, <span class="dotted" title="http://purl.org/roh/mirror/vcard#Address">address</span>
-            <sup class="type-c" title="class">c</sup>, <span class="dotted" title="http://purl.org/roh/mirror/vcard#Email">email</span>
-            <sup class="type-c" title="class">c</sup>, <a href="#/mirror/vcard#Kind" title="http://purl.org/roh/mirror/vcard#Kind">Kind</a>
-            <sup class="type-c" title="class">c</sup>, <span class="dotted" title="http://purl.org/roh/mirror/vcard#Name">name</span>
-            <sup class="type-c" title="class">c</sup>, <a href="#/mirror/vivo#AcademicDegree" title="http://purl.org/roh/mirror/vivo#AcademicDegree">Academic Degree</a>
-            <sup class="type-c" title="class">c</sup>, <a href="#/mirror/vivo#Project" title="http://purl.org/roh/mirror/vivo#Project">Project</a>
-            <sup class="type-c" title="class">c</sup>, <a href="#/mirror/vivo#Relationship" title="http://purl.org/roh/mirror/vivo#Relationship">Relationship</a>
-            <sup class="type-c" title="class">c</sup>, <span class="dotted" title="http://www.w3.org/1999/02/22-rdf-syntax-ns#List">list</span>
-            <sup class="type-c" title="class">c</sup>, <span class="dotted" title="http://www.w3.org/1999/02/22-rdf-syntax-ns#Seq">seq</span>
-            <sup class="type-c" title="class">c</sup>, <a href="#http://www.w3.org/2004/02/skos/core#Concept" title="http://www.w3.org/2004/02/skos/core#Concept">Concept</a>
-            <sup class="type-c" title="class">c</sup>, <span class="dotted"
-                  title="http://www.w3.org/2004/02/skos/core#ConceptScheme">concept scheme</span>
-            <sup class="type-c" title="class">c</sup>, <a href="#Accreditation" title="http://purl.org/roh#Accreditation">Accreditation</a>
-            <sup class="type-c" title="class">c</sup>, <a href="#Activity" title="http://purl.org/roh#Activity">Activity</a>
-            <sup class="type-c" title="class">c</sup>, <a href="#Expense" title="http://purl.org/roh#Expense">Expense</a>
-            <sup class="type-c" title="class">c</sup>, <a href="#Funding" title="http://purl.org/roh#Funding">Funding</a>
-            <sup class="type-c" title="class">c</sup>, <a href="#FundingAmount" title="http://purl.org/roh#FundingAmount">Funding Amount</a>
-            <sup class="type-c" title="class">c</sup>, <a href="#FundingProgram" title="http://purl.org/roh#FundingProgram">Funding Program</a>
-            <sup class="type-c" title="class">c</sup>, <a href="#FundingSource" title="http://purl.org/roh#FundingSource">Funding Source</a>
-            <sup class="type-c" title="class">c</sup>, <a href="#Reservable" title="http://purl.org/roh#Reservable">Reservable</a>
-            <sup class="type-c" title="class">c</sup>, <a href="#/mirror/foaf#Agent" title="http://purl.org/roh/mirror/foaf#Agent"> Agent</a>
-            <sup class="type-c" title="class">c</sup>, <a href="#/mirror/geonames#Feature" title="http://purl.org/roh/mirror/geonames#Feature">Feature</a>
-            <sup class="type-c" title="class">c</sup>, <a href="#/mirror/obo/bfo#BFO_0000008" title="http://purl.org/roh/mirror/obo/bfo#BFO_0000008">Temporal Region</a>
-            <sup class="type-c" title="class">c</sup>, <a href="#/mirror/obo/bfo#BFO_0000023" title="http://purl.org/roh/mirror/obo/bfo#BFO_0000023">Role</a>
-            <sup class="type-c" title="class">c</sup>, <a href="#/mirror/obo/ero#ERO_0000005" title="http://purl.org/roh/mirror/obo/ero#ERO_0000005">Service</a>
-            <sup class="type-c" title="class">c</sup>, <a href="#/mirror/obo/iao#IAO_0000030" title="http://purl.org/roh/mirror/obo/iao#IAO_0000030">Information Content Entity</a>
-            <sup class="type-c" title="class">c</sup>, <a href="#/mirror/vcard#Kind" title="http://purl.org/roh/mirror/vcard#Kind">Kind</a>
-            <sup class="type-c" title="class">c</sup>, <a href="#/mirror/vivo#AcademicDegree" title="http://purl.org/roh/mirror/vivo#AcademicDegree">Academic Degree</a>
-            <sup class="type-c" title="class">c</sup>, <a href="#/mirror/vivo#Project" title="http://purl.org/roh/mirror/vivo#Project">Project</a>
-            <sup class="type-c" title="class">c</sup>, <a href="#/mirror/vivo#Relationship" title="http://purl.org/roh/mirror/vivo#Relationship">Relationship</a>
-            <sup class="type-c" title="class">c</sup>, <span class="dotted" title="http://www.w3.org/1999/02/22-rdf-syntax-ns#List">list</span>
-            <sup class="type-c" title="class">c</sup>, <span class="dotted" title="http://www.w3.org/1999/02/22-rdf-syntax-ns#Seq">seq</span>
-            <sup class="type-c" title="class">c</sup>, <a href="#http://www.w3.org/2004/02/skos/core#Concept" title="http://www.w3.org/2004/02/skos/core#Concept">Concept</a>
-            <sup class="type-c" title="class">c</sup>, <span class="dotted"
-                  title="http://www.w3.org/2004/02/skos/core#ConceptScheme">concept scheme</span>
-            <sup class="type-c" title="class">c</sup>
          </dd>
       </dl>
    </div>
@@ -9851,7 +9759,6 @@ A roh:FundingSource roh:feeds a roh:Funding with funds to sponsor some projects.
             <sup class="type-c" title="class">c</sup>, <a href="#FundingAmount" title="http://purl.org/roh#FundingAmount">Funding Amount</a>
             <sup class="type-c" title="class">c</sup>, <a href="#FundingProgram" title="http://purl.org/roh#FundingProgram">Funding Program</a>
             <sup class="type-c" title="class">c</sup>, <a href="#FundingSource" title="http://purl.org/roh#FundingSource">Funding Source</a>
-            <sup class="type-c" title="class">c</sup>, <a href="#Metric" title="http://purl.org/roh#Metric">Metric</a>
             <sup class="type-c" title="class">c</sup>, <a href="#Reservable" title="http://purl.org/roh#Reservable">Reservable</a>
             <sup class="type-c" title="class">c</sup>, <a href="#/mirror/foaf#Agent" title="http://purl.org/roh/mirror/foaf#Agent"> Agent</a>
             <sup class="type-c" title="class">c</sup>, <a href="#/mirror/geonames#Feature" title="http://purl.org/roh/mirror/geonames#Feature">Feature</a>
@@ -10601,7 +10508,7 @@ Contents
       <dl class="description">
          <dt>has super-classes</dt>
          <dd>
-            <a href="#ResearchObject" title="http://purl.org/roh#ResearchObject">Research Object Research result</a>
+            <a href="#ResearchObject" title="http://purl.org/roh#ResearchObject">Research Object</a>
             <sup class="type-c" title="class">c</sup>
          </dd>
          <dt>has sub-classes</dt>
@@ -10663,14 +10570,16 @@ Contents
       </dl>
       <dl class="description">
          <dt>has super-classes</dt>
-         <dd/>
+         <dd>
+            <span class="dotted" title="http://purl.org/roh/mirror/obo/bfo#BFO_0000015">b f o 0000015</span>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
          <dt>is in domain of</dt>
          <dd>
             <a href="#coordinatedBy" title="http://purl.org/roh#coordinatedBy">coordinated by</a>
             <sup class="type-op" title="object property">op</sup>, <a href="#foreseenJustificationDate" title="http://purl.org/roh#foreseenJustificationDate">foreseen justification date</a>
             <sup class="type-op" title="object property">op</sup>, <a href="#hasProjectCategorization" title="http://purl.org/roh#hasProjectCategorization">has project categorization</a>
             <sup class="type-op" title="object property">op</sup>, <a href="#isCompetitive" title="http://purl.org/roh#isCompetitive">is competitive</a>
-            <sup class="type-dp" title="data property">dp</sup>, <a href="#modality" title="http://purl.org/roh#modality">modalidad</a>
             <sup class="type-dp" title="data property">dp</sup>, <a href="#needsEthicalValidation" title="http://purl.org/roh#needsEthicalValidation">needs ethical validation</a>
             <sup class="type-dp" title="data property">dp</sup>, <a href="#projectID" title="http://purl.org/roh#projectID">project ID</a>
             <sup class="type-dp" title="data property">dp</sup>, <a href="#projectAcronym" title="http://purl.org/roh#projectAcronym">project acronym</a>
@@ -10698,7 +10607,6 @@ Contents
             <sup class="type-c" title="class">c</sup>, <a href="#FundingAmount" title="http://purl.org/roh#FundingAmount">Funding Amount</a>
             <sup class="type-c" title="class">c</sup>, <a href="#FundingProgram" title="http://purl.org/roh#FundingProgram">Funding Program</a>
             <sup class="type-c" title="class">c</sup>, <a href="#FundingSource" title="http://purl.org/roh#FundingSource">Funding Source</a>
-            <sup class="type-c" title="class">c</sup>, <a href="#Metric" title="http://purl.org/roh#Metric">Metric</a>
             <sup class="type-c" title="class">c</sup>, <a href="#PatentApplication" title="http://purl.org/roh#PatentApplication">Patent Application</a>
             <sup class="type-c" title="class">c</sup>, <a href="#Reservable" title="http://purl.org/roh#Reservable">Reservable</a>
             <sup class="type-c" title="class">c</sup>, <a href="#/mirror/foaf#Agent" title="http://purl.org/roh/mirror/foaf#Agent"> Agent</a>
@@ -10725,7 +10633,6 @@ Contents
             <sup class="type-c" title="class">c</sup>, <a href="#FundingAmount" title="http://purl.org/roh#FundingAmount">Funding Amount</a>
             <sup class="type-c" title="class">c</sup>, <a href="#FundingProgram" title="http://purl.org/roh#FundingProgram">Funding Program</a>
             <sup class="type-c" title="class">c</sup>, <a href="#FundingSource" title="http://purl.org/roh#FundingSource">Funding Source</a>
-            <sup class="type-c" title="class">c</sup>, <a href="#Metric" title="http://purl.org/roh#Metric">Metric</a>
             <sup class="type-c" title="class">c</sup>, <a href="#Reservable" title="http://purl.org/roh#Reservable">Reservable</a>
             <sup class="type-c" title="class">c</sup>, <a href="#/mirror/foaf#Agent" title="http://purl.org/roh/mirror/foaf#Agent"> Agent</a>
             <sup class="type-c" title="class">c</sup>, <a href="#/mirror/geonames#Feature" title="http://purl.org/roh/mirror/geonames#Feature">Feature</a>
@@ -10919,7 +10826,7 @@ Contents
          <dt>has super-classes</dt>
          <dd>
             <a href="#Product" title="http://purl.org/roh#Product">Product</a>
-            <sup class="type-c" title="class">c</sup>, <a href="#ResearchObject" title="http://purl.org/roh#ResearchObject">Research Object Research result</a>
+            <sup class="type-c" title="class">c</sup>, <a href="#ResearchObject" title="http://purl.org/roh#ResearchObject">Research Object</a>
             <sup class="type-c" title="class">c</sup>
          </dd>
          <dt>is in domain of</dt>
@@ -10966,37 +10873,10 @@ Contents
          </dd>
          <dt>is disjoint with</dt>
          <dd>
-            <a href="#DegreeMetric" title="http://purl.org/roh#DegreeMetric">Degree Metric</a>
+            <a href="#AuthorMetric" title="http://purl.org/roh#AuthorMetric">Author Metric</a>
             <sup class="type-c" title="class">c</sup>, <a href="#DegreeMetric" title="http://purl.org/roh#DegreeMetric">Degree Metric</a>
             <sup class="type-c" title="class">c</sup>, <a href="#ResearchGroupMetric" title="http://purl.org/roh#ResearchGroupMetric">Research Group Metric</a>
             <sup class="type-c" title="class">c</sup>
-         </dd>
-      </dl>
-   </div>
-   <div class="entity" id="QualifiedValue">
-      <h3>Qualified value<sup class="type-c" title="class">c</sup>
-         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a>
-         </span>
-      </h3>
-      <p>
-         <strong>IRI:</strong> http://purl.org/roh#QualifiedValue</p>
-      <div class="comment">
-         <span class="markdown">A class to represent a qualified value as used in Wikibase.</span>
-      </div>
-      <dl class="description">
-         <dt>is in domain of</dt>
-         <dd>
-            <a href="#qualifieddate" title="http://purl.org/roh#qualifieddate">qualified date</a>
-            <sup class="type-op" title="object property">op</sup>, <a href="#qualifiedvaluation" title="http://purl.org/roh#qualifiedvaluation">qualified valuation</a>
-            <sup class="type-dp" title="data property">dp</sup>
-         </dd>
-         <dt>is in range of</dt>
-         <dd>
-            <a href="#h-index" title="http://purl.org/roh#h-index">A property to express the h-index of an author.</a>
-            <sup class="type-op" title="object property">op</sup>, <a href="#authorCitation" title="http://purl.org/roh#authorCitation">author citations</a>
-            <sup class="type-op" title="object property">op</sup>, <a href="#i10-index" title="http://purl.org/roh#i10-index">i10-index</a>
-            <sup class="type-op" title="object property">op</sup>, <a href="#publicationCitation" title="http://purl.org/roh#publicationCitation">publication citations</a>
-            <sup class="type-op" title="object property">op</sup>
          </dd>
       </dl>
    </div>
@@ -11096,7 +10976,6 @@ Contents
             <sup class="type-c" title="class">c</sup>, <a href="#FundingAmount" title="http://purl.org/roh#FundingAmount">Funding Amount</a>
             <sup class="type-c" title="class">c</sup>, <a href="#FundingProgram" title="http://purl.org/roh#FundingProgram">Funding Program</a>
             <sup class="type-c" title="class">c</sup>, <a href="#FundingSource" title="http://purl.org/roh#FundingSource">Funding Source</a>
-            <sup class="type-c" title="class">c</sup>, <a href="#Metric" title="http://purl.org/roh#Metric">Metric</a>
             <sup class="type-c" title="class">c</sup>, <a href="#PatentApplication" title="http://purl.org/roh#PatentApplication">Patent Application</a>
             <sup class="type-c" title="class">c</sup>, <a href="#Reservable" title="http://purl.org/roh#Reservable">Reservable</a>
             <sup class="type-c" title="class">c</sup>, <a href="#/mirror/foaf#Agent" title="http://purl.org/roh/mirror/foaf#Agent"> Agent</a>
@@ -11123,7 +11002,6 @@ Contents
             <sup class="type-c" title="class">c</sup>, <a href="#FundingAmount" title="http://purl.org/roh#FundingAmount">Funding Amount</a>
             <sup class="type-c" title="class">c</sup>, <a href="#FundingProgram" title="http://purl.org/roh#FundingProgram">Funding Program</a>
             <sup class="type-c" title="class">c</sup>, <a href="#FundingSource" title="http://purl.org/roh#FundingSource">Funding Source</a>
-            <sup class="type-c" title="class">c</sup>, <a href="#Metric" title="http://purl.org/roh#Metric">Metric</a>
             <sup class="type-c" title="class">c</sup>, <a href="#Reservable" title="http://purl.org/roh#Reservable">Reservable</a>
             <sup class="type-c" title="class">c</sup>, <a href="#/mirror/foaf#Agent" title="http://purl.org/roh/mirror/foaf#Agent"> Agent</a>
             <sup class="type-c" title="class">c</sup>, <a href="#/mirror/geonames#Feature" title="http://purl.org/roh/mirror/geonames#Feature">Feature</a>
@@ -11293,7 +11171,8 @@ Contents
          </dd>
          <dt>is disjoint with</dt>
          <dd>
-            <a href="#DegreeMetric" title="http://purl.org/roh#DegreeMetric">Degree Metric</a>
+            <a href="#AuthorMetric" title="http://purl.org/roh#AuthorMetric">Author Metric</a>
+            <sup class="type-c" title="class">c</sup>, <a href="#DegreeMetric" title="http://purl.org/roh#DegreeMetric">Degree Metric</a>
             <sup class="type-c" title="class">c</sup>, <a href="#PublicationMetric" title="http://purl.org/roh#PublicationMetric">Publication Metric</a>
             <sup class="type-c" title="class">c</sup>
          </dd>
@@ -11410,34 +11289,8 @@ Contents
          </dd>
       </dl>
    </div>
-   <div class="entity" id="ResearchObjectExpense">
-      <h3>Research Object Expense<sup class="type-c" title="class">c</sup>
-         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a>
-         </span>
-      </h3>
-      <p>
-         <strong>IRI:</strong> http://purl.org/roh#ResearchObjectExpense</p>
-      <dl class="description">
-         <dt>has super-classes</dt>
-         <dd>
-            <a href="#Expense" title="http://purl.org/roh#Expense">Expense</a>
-            <sup class="type-c" title="class">c</sup>
-         </dd>
-         <dt>is disjoint with</dt>
-         <dd>
-            <a href="#PatentExpense" title="http://purl.org/roh#PatentExpense">Patent Expense</a>
-            <sup class="type-c" title="class">c</sup>, <a href="#PersonExpense" title="http://purl.org/roh#PersonExpense">Person Expense</a>
-            <sup class="type-c" title="class">c</sup>, <a href="#ProjectExpense" title="http://purl.org/roh#ProjectExpense">Project Expense</a>
-            <sup class="type-c" title="class">c</sup>
-         </dd>
-      </dl>
-   </div>
    <div class="entity" id="ResearchObject">
       <h3>Research Object<sup class="type-c" title="class">c</sup>
-         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a>
-         </span>
-      </h3>
-      <h3>Research result<sup class="type-c" title="class">c</sup>
          <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a>
          </span>
       </h3>
@@ -11477,15 +11330,27 @@ Contents
             <sup class="type-c" title="class">c</sup>, <a href="#Prototype" title="http://purl.org/roh#Prototype">Prototype</a>
             <sup class="type-c" title="class">c</sup>
          </dd>
-         <dt>is in domain of</dt>
+      </dl>
+   </div>
+   <div class="entity" id="ResearchObjectExpense">
+      <h3>Research Object Expense<sup class="type-c" title="class">c</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://purl.org/roh#ResearchObjectExpense</p>
+      <dl class="description">
+         <dt>has super-classes</dt>
          <dd>
-            <a href="#hasMetric" title="http://purl.org/roh#hasMetric">has metric</a>
-            <sup class="type-op" title="object property">op</sup>
+            <a href="#Expense" title="http://purl.org/roh#Expense">Expense</a>
+            <sup class="type-c" title="class">c</sup>
          </dd>
-         <dt>is in range of</dt>
+         <dt>is disjoint with</dt>
          <dd>
-            <a href="#metricOf" title="http://purl.org/roh#metricOf">metric of</a>
-            <sup class="type-op" title="object property">op</sup>
+            <a href="#PatentExpense" title="http://purl.org/roh#PatentExpense">Patent Expense</a>
+            <sup class="type-c" title="class">c</sup>, <a href="#PersonExpense" title="http://purl.org/roh#PersonExpense">Person Expense</a>
+            <sup class="type-c" title="class">c</sup>, <a href="#ProjectExpense" title="http://purl.org/roh#ProjectExpense">Project Expense</a>
+            <sup class="type-c" title="class">c</sup>
          </dd>
       </dl>
    </div>
@@ -11687,7 +11552,6 @@ Contents
             <sup class="type-c" title="class">c</sup>, <a href="#FundingAmount" title="http://purl.org/roh#FundingAmount">Funding Amount</a>
             <sup class="type-c" title="class">c</sup>, <a href="#FundingProgram" title="http://purl.org/roh#FundingProgram">Funding Program</a>
             <sup class="type-c" title="class">c</sup>, <a href="#FundingSource" title="http://purl.org/roh#FundingSource">Funding Source</a>
-            <sup class="type-c" title="class">c</sup>, <a href="#Metric" title="http://purl.org/roh#Metric">Metric</a>
             <sup class="type-c" title="class">c</sup>, <a href="#PatentApplication" title="http://purl.org/roh#PatentApplication">Patent Application</a>
             <sup class="type-c" title="class">c</sup>, <a href="#/mirror/foaf#Agent" title="http://purl.org/roh/mirror/foaf#Agent"> Agent</a>
             <sup class="type-c" title="class">c</sup>, <a href="#/mirror/geonames#Feature" title="http://purl.org/roh/mirror/geonames#Feature">Feature</a>
@@ -11714,7 +11578,6 @@ Contents
             <sup class="type-c" title="class">c</sup>, <a href="#FundingAmount" title="http://purl.org/roh#FundingAmount">Funding Amount</a>
             <sup class="type-c" title="class">c</sup>, <a href="#FundingProgram" title="http://purl.org/roh#FundingProgram">Funding Program</a>
             <sup class="type-c" title="class">c</sup>, <a href="#FundingSource" title="http://purl.org/roh#FundingSource">Funding Source</a>
-            <sup class="type-c" title="class">c</sup>, <a href="#Metric" title="http://purl.org/roh#Metric">Metric</a>
             <sup class="type-c" title="class">c</sup>, <a href="#/mirror/foaf#Agent" title="http://purl.org/roh/mirror/foaf#Agent"> Agent</a>
             <sup class="type-c" title="class">c</sup>, <a href="#/mirror/geonames#Feature" title="http://purl.org/roh/mirror/geonames#Feature">Feature</a>
             <sup class="type-c" title="class">c</sup>, <a href="#/mirror/obo/bfo#BFO_0000008" title="http://purl.org/roh/mirror/obo/bfo#BFO_0000008">Temporal Region</a>
@@ -11964,7 +11827,6 @@ Based on obo-bfo:Role also used in VIVO, it defines roles. The object property r
             <sup class="type-c" title="class">c</sup>, <a href="#FundingAmount" title="http://purl.org/roh#FundingAmount">Funding Amount</a>
             <sup class="type-c" title="class">c</sup>, <a href="#FundingProgram" title="http://purl.org/roh#FundingProgram">Funding Program</a>
             <sup class="type-c" title="class">c</sup>, <a href="#FundingSource" title="http://purl.org/roh#FundingSource">Funding Source</a>
-            <sup class="type-c" title="class">c</sup>, <a href="#Metric" title="http://purl.org/roh#Metric">Metric</a>
             <sup class="type-c" title="class">c</sup>, <a href="#PatentApplication" title="http://purl.org/roh#PatentApplication">Patent Application</a>
             <sup class="type-c" title="class">c</sup>, <a href="#Reservable" title="http://purl.org/roh#Reservable">Reservable</a>
             <sup class="type-c" title="class">c</sup>, <a href="#/mirror/foaf#Agent" title="http://purl.org/roh/mirror/foaf#Agent"> Agent</a>
@@ -11991,7 +11853,6 @@ Based on obo-bfo:Role also used in VIVO, it defines roles. The object property r
             <sup class="type-c" title="class">c</sup>, <a href="#FundingAmount" title="http://purl.org/roh#FundingAmount">Funding Amount</a>
             <sup class="type-c" title="class">c</sup>, <a href="#FundingProgram" title="http://purl.org/roh#FundingProgram">Funding Program</a>
             <sup class="type-c" title="class">c</sup>, <a href="#FundingSource" title="http://purl.org/roh#FundingSource">Funding Source</a>
-            <sup class="type-c" title="class">c</sup>, <a href="#Metric" title="http://purl.org/roh#Metric">Metric</a>
             <sup class="type-c" title="class">c</sup>, <a href="#Reservable" title="http://purl.org/roh#Reservable">Reservable</a>
             <sup class="type-c" title="class">c</sup>, <a href="#/mirror/foaf#Agent" title="http://purl.org/roh/mirror/foaf#Agent"> Agent</a>
             <sup class="type-c" title="class">c</sup>, <a href="#/mirror/geonames#Feature" title="http://purl.org/roh/mirror/geonames#Feature">Feature</a>
@@ -12142,7 +12003,6 @@ Based on obo-bfo:Role also used in VIVO, it defines roles. The object property r
             <sup class="type-c" title="class">c</sup>, <a href="#FundingAmount" title="http://purl.org/roh#FundingAmount">Funding Amount</a>
             <sup class="type-c" title="class">c</sup>, <a href="#FundingProgram" title="http://purl.org/roh#FundingProgram">Funding Program</a>
             <sup class="type-c" title="class">c</sup>, <a href="#FundingSource" title="http://purl.org/roh#FundingSource">Funding Source</a>
-            <sup class="type-c" title="class">c</sup>, <a href="#Metric" title="http://purl.org/roh#Metric">Metric</a>
             <sup class="type-c" title="class">c</sup>, <a href="#PatentApplication" title="http://purl.org/roh#PatentApplication">Patent Application</a>
             <sup class="type-c" title="class">c</sup>, <a href="#Reservable" title="http://purl.org/roh#Reservable">Reservable</a>
             <sup class="type-c" title="class">c</sup>, <a href="#/mirror/foaf#Agent" title="http://purl.org/roh/mirror/foaf#Agent"> Agent</a>
@@ -12169,7 +12029,6 @@ Based on obo-bfo:Role also used in VIVO, it defines roles. The object property r
             <sup class="type-c" title="class">c</sup>, <a href="#FundingAmount" title="http://purl.org/roh#FundingAmount">Funding Amount</a>
             <sup class="type-c" title="class">c</sup>, <a href="#FundingProgram" title="http://purl.org/roh#FundingProgram">Funding Program</a>
             <sup class="type-c" title="class">c</sup>, <a href="#FundingSource" title="http://purl.org/roh#FundingSource">Funding Source</a>
-            <sup class="type-c" title="class">c</sup>, <a href="#Metric" title="http://purl.org/roh#Metric">Metric</a>
             <sup class="type-c" title="class">c</sup>, <a href="#Reservable" title="http://purl.org/roh#Reservable">Reservable</a>
             <sup class="type-c" title="class">c</sup>, <a href="#/mirror/foaf#Agent" title="http://purl.org/roh/mirror/foaf#Agent"> Agent</a>
             <sup class="type-c" title="class">c</sup>, <a href="#/mirror/geonames#Feature" title="http://purl.org/roh/mirror/geonames#Feature">Feature</a>
@@ -12810,7 +12669,6 @@ Based on obo-bfo:Role also used in VIVO, it defines roles. The object property r
             <sup class="type-c" title="class">c</sup>, <a href="#FundingAmount" title="http://purl.org/roh#FundingAmount">Funding Amount</a>
             <sup class="type-c" title="class">c</sup>, <a href="#FundingProgram" title="http://purl.org/roh#FundingProgram">Funding Program</a>
             <sup class="type-c" title="class">c</sup>, <a href="#FundingSource" title="http://purl.org/roh#FundingSource">Funding Source</a>
-            <sup class="type-c" title="class">c</sup>, <a href="#Metric" title="http://purl.org/roh#Metric">Metric</a>
             <sup class="type-c" title="class">c</sup>, <a href="#PatentApplication" title="http://purl.org/roh#PatentApplication">Patent Application</a>
             <sup class="type-c" title="class">c</sup>, <a href="#Reservable" title="http://purl.org/roh#Reservable">Reservable</a>
             <sup class="type-c" title="class">c</sup>, <a href="#/mirror/foaf#Agent" title="http://purl.org/roh/mirror/foaf#Agent"> Agent</a>
@@ -12837,7 +12695,6 @@ Based on obo-bfo:Role also used in VIVO, it defines roles. The object property r
             <sup class="type-c" title="class">c</sup>, <a href="#FundingAmount" title="http://purl.org/roh#FundingAmount">Funding Amount</a>
             <sup class="type-c" title="class">c</sup>, <a href="#FundingProgram" title="http://purl.org/roh#FundingProgram">Funding Program</a>
             <sup class="type-c" title="class">c</sup>, <a href="#FundingSource" title="http://purl.org/roh#FundingSource">Funding Source</a>
-            <sup class="type-c" title="class">c</sup>, <a href="#Metric" title="http://purl.org/roh#Metric">Metric</a>
             <sup class="type-c" title="class">c</sup>, <a href="#Reservable" title="http://purl.org/roh#Reservable">Reservable</a>
             <sup class="type-c" title="class">c</sup>, <a href="#/mirror/foaf#Agent" title="http://purl.org/roh/mirror/foaf#Agent"> Agent</a>
             <sup class="type-c" title="class">c</sup>, <a href="#/mirror/geonames#Feature" title="http://purl.org/roh/mirror/geonames#Feature">Feature</a>
@@ -13523,9 +13380,6 @@ Based on obo-bfo:Role also used in VIVO, it defines roles. The object property r
    <h3 id="properties" class="list">Object Properties</h3>
    <ul class="hlist">
       <li>
-         <a href="#h-index" title="http://purl.org/roh#h-index">A property to express the h-index of an author.</a>
-      </li>
-      <li>
          <a href="#accreditationOf" title="http://purl.org/roh#accreditationOf">accreditation of</a>
       </li>
       <li>
@@ -13551,9 +13405,6 @@ Based on obo-bfo:Role also used in VIVO, it defines roles. The object property r
       </li>
       <li>
          <a href="#attachment" title="http://purl.org/roh#attachment">attachment</a>
-      </li>
-      <li>
-         <a href="#authorCitation" title="http://purl.org/roh#authorCitation">author citations</a>
       </li>
       <li>
          <a href="#authors" title="http://purl.org/roh#authors">authors</a>
@@ -13777,7 +13628,9 @@ Based on obo-bfo:Role also used in VIVO, it defines roles. The object property r
          <a href="#hrClassificationOf" title="http://purl.org/roh#hrClassificationOf">HR classification of</a>
       </li>
       <li>
-         <a href="#i10-index" title="http://purl.org/roh#i10-index">i10-index</a>
+         <a href="#i10-index" title="http://purl.org/roh#i10-index">
+            <span>i10-index</span>
+         </a>
       </li>
       <li>
          <a href="#/mirror/foaf#img" title="http://purl.org/roh/mirror/foaf#img">imagen</a>
@@ -13787,6 +13640,11 @@ Based on obo-bfo:Role also used in VIVO, it defines roles. The object property r
       </li>
       <li>
          <a href="#/mirror/obo/ro#RO_0000052" title="http://purl.org/roh/mirror/obo/ro#RO_0000052">inheres in</a>
+      </li>
+      <li>
+         <a href="#/mirror/obo/iao#IAO_0000136" title="http://purl.org/roh/mirror/obo/iao#IAO_0000136">
+            <span>is about</span>
+         </a>
       </li>
       <li>
          <a href="#isAdvisedBy" title="http://purl.org/roh#isAdvisedBy">is advised by</a>
@@ -13919,9 +13777,6 @@ Based on obo-bfo:Role also used in VIVO, it defines roles. The object property r
          <a href="#provides" title="http://purl.org/roh#provides">provides</a>
       </li>
       <li>
-         <a href="#publicationCitation" title="http://purl.org/roh#publicationCitation">publication citations</a>
-      </li>
-      <li>
          <a href="#/mirror/vivo#publicationVenueFor"
             title="http://purl.org/roh/mirror/vivo#publicationVenueFor">publication venue for</a>
       </li>
@@ -13940,9 +13795,6 @@ Based on obo-bfo:Role also used in VIVO, it defines roles. The object property r
       </li>
       <li>
          <a href="#/mirror/foaf#homepage" title="http://purl.org/roh/mirror/foaf#homepage">página web</a>
-      </li>
-      <li>
-         <a href="#qualifieddate" title="http://purl.org/roh#qualifieddate">qualified date</a>
       </li>
       <li>
          <a href="#/mirror/obo/bfo#BFO_0000054" title="http://purl.org/roh/mirror/obo/bfo#BFO_0000054">realized in</a>
@@ -14013,28 +13865,6 @@ Based on obo-bfo:Role also used in VIVO, it defines roles. The object property r
          <a href="#utilizes" title="http://purl.org/roh#utilizes">utilizes</a>
       </li>
    </ul>
-   <div class="entity" id="h-index">
-      <h3>A property to express the h-index of an author.<sup class="type-op" title="object property">op</sup>
-         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a>
-         </span>
-      </h3>
-      <p>
-         <strong>IRI:</strong> http://purl.org/roh#h-index</p>
-      <div class="description">
-         <dl>
-            <dt>has domain</dt>
-            <dd>
-               <a href="#/mirror/foaf#Person" title="http://purl.org/roh/mirror/foaf#Person"> Person</a>
-               <sup class="type-c" title="class">c</sup>
-            </dd>
-            <dt>has range</dt>
-            <dd>
-               <a href="#QualifiedValue" title="http://purl.org/roh#QualifiedValue">Qualified value</a>
-               <sup class="type-c" title="class">c</sup>
-            </dd>
-         </dl>
-      </div>
-   </div>
    <div class="entity" id="accreditationOf">
       <h3>accreditation of<sup class="type-op" title="object property">op</sup>
          <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a>
@@ -14227,31 +14057,6 @@ Based on obo-bfo:Role also used in VIVO, it defines roles. The object property r
             <dt>has super-properties</dt>
             <dd>
                <span class="dotted" title="http://www.w3.org/2002/07/owl#topObjectProperty">top object property</span>
-            </dd>
-         </dl>
-      </div>
-   </div>
-   <div class="entity" id="authorCitation">
-      <h3>author citations<sup class="type-op" title="object property">op</sup>
-         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a>
-         </span>
-      </h3>
-      <p>
-         <strong>IRI:</strong> http://purl.org/roh#authorCitation</p>
-      <div class="comment">
-         <span class="markdown">A property to link the number of citations to a given author.</span>
-      </div>
-      <div class="description">
-         <dl>
-            <dt>has domain</dt>
-            <dd>
-               <a href="#/mirror/foaf#Person" title="http://purl.org/roh/mirror/foaf#Person"> Person</a>
-               <sup class="type-c" title="class">c</sup>
-            </dd>
-            <dt>has range</dt>
-            <dd>
-               <a href="#QualifiedValue" title="http://purl.org/roh#QualifiedValue">Qualified value</a>
-               <sup class="type-c" title="class">c</sup>
             </dd>
          </dl>
       </div>
@@ -14899,7 +14704,6 @@ Based on obo-bfo:Role also used in VIVO, it defines roles. The object property r
                <sup class="type-op" title="object property">op</sup>, <a href="#expirationDate" title="http://purl.org/roh#expirationDate">expiration date</a>
                <sup class="type-op" title="object property">op</sup>, <a href="#foreseenJustificationDate" title="http://purl.org/roh#foreseenJustificationDate">foreseen justification date</a>
                <sup class="type-op" title="object property">op</sup>, <a href="#foundationDate" title="http://purl.org/roh#foundationDate">foundation date</a>
-               <sup class="type-op" title="object property">op</sup>, <a href="#qualifieddate" title="http://purl.org/roh#qualifieddate">qualified date</a>
                <sup class="type-op" title="object property">op</sup>, <a href="#/mirror/vivo#start" title="http://purl.org/roh/mirror/vivo#start">start</a>
                <sup class="type-op" title="object property">op</sup>
             </dd>
@@ -15627,11 +15431,6 @@ Based on obo-bfo:Role also used in VIVO, it defines roles. The object property r
       </div>
       <div class="description">
          <dl>
-            <dt>has domain</dt>
-            <dd>
-               <a href="#ResearchObject" title="http://purl.org/roh#ResearchObject">Research Object Research result</a>
-               <sup class="type-c" title="class">c</sup>
-            </dd>
             <dt>has range</dt>
             <dd>
                <a href="#Metric" title="http://purl.org/roh#Metric">Metric</a>
@@ -16019,20 +15818,16 @@ Based on obo-bfo:Role also used in VIVO, it defines roles. The object property r
       </h3>
       <p>
          <strong>IRI:</strong> http://purl.org/roh#i10-index</p>
-      <div class="comment">
-         <span class="markdown">A property to express the i10-index of an author.</span>
-      </div>
       <div class="description">
          <dl>
             <dt>has domain</dt>
             <dd>
-               <a href="#/mirror/foaf#Person" title="http://purl.org/roh/mirror/foaf#Person"> Person</a>
+               <a href="#AuthorMetric" title="http://purl.org/roh#AuthorMetric">Author Metric</a>
                <sup class="type-c" title="class">c</sup>
             </dd>
-            <dt>has range</dt>
+            <dt>is also defined as</dt>
             <dd>
-               <a href="#QualifiedValue" title="http://purl.org/roh#QualifiedValue">Qualified value</a>
-               <sup class="type-c" title="class">c</sup>
+               <a href="#i10-index">data property</a>
             </dd>
          </dl>
       </div>
@@ -16126,6 +15921,30 @@ Based on obo-bfo:Role also used in VIVO, it defines roles. The object property r
                <a href="#/mirror/obo/ro#RO_0000053" title="http://purl.org/roh/mirror/obo/ro#RO_0000053">bearer of</a>
                <sup class="type-op" title="object property">op</sup>
             </dd>
+         </dl>
+      </div>
+   </div>
+   <div class="entity" id="/mirror/obo/iao#IAO_0000136">
+      <h3>is about<sup class="type-op" title="object property">op</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://purl.org/roh/mirror/obo/iao#IAO_0000136</p>
+      <div class="description">
+         <dl>
+            <dt>has sub-properties</dt>
+            <dd>
+               <a href="#metricOf" title="http://purl.org/roh#metricOf">metric of</a>
+               <sup class="type-op" title="object property">op</sup>
+            </dd>
+            <dt>has domain</dt>
+            <dd>
+               <a href="#/mirror/obo/iao#IAO_0000030" title="http://purl.org/roh/mirror/obo/iao#IAO_0000030">Information Content Entity</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+            <dt>is also defined as</dt>
+            <dd>class</dd>
          </dl>
       </div>
    </div>
@@ -16582,18 +16401,18 @@ Based on obo-bfo:Role also used in VIVO, it defines roles. The object property r
       <p>
          <strong>IRI:</strong> http://purl.org/roh#metricOf</p>
       <div class="comment">
-         <span class="markdown">A metric which quantifies a Research Object.</span>
+         <span class="markdown">relates a Metric to the entity it describes</span>
       </div>
       <div class="description">
          <dl>
+            <dt>has super-properties</dt>
+            <dd>
+               <a href="#/mirror/obo/iao#IAO_0000136" title="http://purl.org/roh/mirror/obo/iao#IAO_0000136">is about</a>
+               <sup class="type-op" title="object property">op</sup>
+            </dd>
             <dt>has domain</dt>
             <dd>
                <a href="#Metric" title="http://purl.org/roh#Metric">Metric</a>
-               <sup class="type-c" title="class">c</sup>
-            </dd>
-            <dt>has range</dt>
-            <dd>
-               <a href="#ResearchObject" title="http://purl.org/roh#ResearchObject">Research Object Research result</a>
                <sup class="type-c" title="class">c</sup>
             </dd>
             <dt>is inverse of</dt>
@@ -17212,31 +17031,6 @@ Based on obo-bfo:Role also used in VIVO, it defines roles. The object property r
          </dl>
       </div>
    </div>
-   <div class="entity" id="publicationCitation">
-      <h3>publication citations<sup class="type-op" title="object property">op</sup>
-         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a>
-         </span>
-      </h3>
-      <p>
-         <strong>IRI:</strong> http://purl.org/roh#publicationCitation</p>
-      <div class="comment">
-         <span class="markdown">a property to link a given publication to the number of citations.</span>
-      </div>
-      <div class="description">
-         <dl>
-            <dt>has domain</dt>
-            <dd>
-               <a href="#/mirror/bibo#Document" title="http://purl.org/roh/mirror/bibo#Document">Academic publication Academic publication</a>
-               <sup class="type-c" title="class">c</sup>
-            </dd>
-            <dt>has range</dt>
-            <dd>
-               <a href="#QualifiedValue" title="http://purl.org/roh#QualifiedValue">Qualified value</a>
-               <sup class="type-c" title="class">c</sup>
-            </dd>
-         </dl>
-      </div>
-   </div>
    <div class="entity" id="/mirror/vivo#publicationVenueFor">
       <h3>publication venue for<sup class="type-op" title="object property">op</sup>
          <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a>
@@ -17406,36 +17200,6 @@ Based on obo-bfo:Role also used in VIVO, it defines roles. The object property r
          </dl>
       </div>
    </div>
-   <div class="entity" id="qualifieddate">
-      <h3>qualified date<sup class="type-op" title="object property">op</sup>
-         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a>
-         </span>
-      </h3>
-      <p>
-         <strong>IRI:</strong> http://purl.org/roh#qualifieddate</p>
-      <div class="comment">
-         <span class="markdown">A given date (point in time) linked to a given value within a qualified value.</span>
-      </div>
-      <div class="description">
-         <dl>
-            <dt>has super-properties</dt>
-            <dd>
-               <a href="#/mirror/vivo#dateTimeValue" title="http://purl.org/roh/mirror/vivo#dateTimeValue">date/time value</a>
-               <sup class="type-op" title="object property">op</sup>
-            </dd>
-            <dt>has domain</dt>
-            <dd>
-               <a href="#QualifiedValue" title="http://purl.org/roh#QualifiedValue">Qualified value</a>
-               <sup class="type-c" title="class">c</sup>
-            </dd>
-            <dt>has range</dt>
-            <dd>
-               <a href="#/mirror/vivo#DateTimeValue" title="http://purl.org/roh/mirror/vivo#DateTimeValue">Date/Time Value</a>
-               <sup class="type-c" title="class">c</sup>
-            </dd>
-         </dl>
-      </div>
-   </div>
    <div class="entity" id="/mirror/obo/bfo#BFO_0000054">
       <h3>realized in<sup class="type-op" title="object property">op</sup>
          <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a>
@@ -17458,7 +17222,7 @@ Based on obo-bfo:Role also used in VIVO, it defines roles. The object property r
             </dd>
             <dt>has range</dt>
             <dd>
-               <a href="#Activity" title="http://purl.org/roh#Activity">Activity</a>
+               <span class="dotted" title="http://purl.org/roh/mirror/obo/bfo#BFO_0000015">b f o 0000015</span>
                <sup class="type-c" title="class">c</sup>
             </dd>
             <dt>is inverse of</dt>
@@ -17486,7 +17250,7 @@ Based on obo-bfo:Role also used in VIVO, it defines roles. The object property r
          <dl>
             <dt>has domain</dt>
             <dd>
-               <a href="#Activity" title="http://purl.org/roh#Activity">Activity</a>
+               <span class="dotted" title="http://purl.org/roh/mirror/obo/bfo#BFO_0000015">b f o 0000015</span>
                <sup class="type-c" title="class">c</sup>
             </dd>
             <dt>has range</dt>
@@ -18018,6 +17782,9 @@ Based on obo-bfo:Role also used in VIVO, it defines roles. The object property r
          <a href="#awardedWith" title="http://purl.org/roh#awardedWith">awarded with</a>
       </li>
       <li>
+         <a href="#citationCount" title="http://purl.org/roh#citationCount">citation count</a>
+      </li>
+      <li>
          <a href="#/mirror/vivo#contactInformation"
             title="http://purl.org/roh/mirror/vivo#contactInformation">contact information</a>
       </li>
@@ -18080,6 +17847,9 @@ Based on obo-bfo:Role also used in VIVO, it defines roles. The object property r
          <a href="#/mirror/foaf#gender" title="http://purl.org/roh/mirror/foaf#gender">género</a>
       </li>
       <li>
+         <a href="#h-index" title="http://purl.org/roh#h-index">h-index</a>
+      </li>
+      <li>
          <a href="#/mirror/vivo#pmcid" title="http://purl.org/roh/mirror/vivo#pmcid">has PubMed Central ID</a>
       </li>
       <li>
@@ -18087,6 +17857,11 @@ Based on obo-bfo:Role also used in VIVO, it defines roles. The object property r
       </li>
       <li>
          <a href="#/mirror/vivo#hrJobTitle" title="http://purl.org/roh/mirror/vivo#hrJobTitle">HR job title</a>
+      </li>
+      <li>
+         <a href="#i10-index" title="http://purl.org/roh#i10-index">
+            <span>i10-index</span>
+         </a>
       </li>
       <li>
          <a href="#/mirror/vivo#identifier" title="http://purl.org/roh/mirror/vivo#identifier">identifier</a>
@@ -18185,9 +17960,6 @@ Based on obo-bfo:Role also used in VIVO, it defines roles. The object property r
       </li>
       <li>
          <a href="#publicFunding" title="http://purl.org/roh#publicFunding">public funding</a>
-      </li>
-      <li>
-         <a href="#qualifiedvaluation" title="http://purl.org/roh#qualifiedvaluation">qualified valuation</a>
       </li>
       <li>
          <a href="#quartile" title="http://purl.org/roh#quartile">quartile</a>
@@ -18321,6 +18093,33 @@ Based on obo-bfo:Role also used in VIVO, it defines roles. The object property r
             <dt>has range</dt>
             <dd>
                <span class="dotted" title="http://www.w3.org/2001/XMLSchema#string">string</span>
+            </dd>
+         </dl>
+      </div>
+   </div>
+   <div class="entity" id="citationCount">
+      <h3>citation count<sup class="type-dp" title="data property">dp</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://purl.org/roh#citationCount</p>
+      <div class="comment">
+         <span class="markdown">the number of times a publication has been cited (when used in PublicationMetric) or the total number of citations for all of an author's works (when used in AuthorMetric)</span>
+      </div>
+      <div class="description">
+         <dl>
+            <dt>has domain</dt>
+            <dd>
+               <a href="#AuthorMetric" title="http://purl.org/roh#AuthorMetric">Author Metric</a>
+               <sup class="type-c" title="class">c</sup> 
+               <span class="logic">or</span> 
+               <a href="#PublicationMetric" title="http://purl.org/roh#PublicationMetric">Publication Metric</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+            <dt>has range</dt>
+            <dd>
+               <span class="dotted" title="http://www.w3.org/2001/XMLSchema#integer">integer</span>
             </dd>
          </dl>
       </div>
@@ -18664,6 +18463,27 @@ Based on obo-bfo:Role also used in VIVO, it defines roles. The object property r
          </dl>
       </div>
    </div>
+   <div class="entity" id="h-index">
+      <h3>h-index<sup class="type-dp" title="data property">dp</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://purl.org/roh#h-index</p>
+      <div class="description">
+         <dl>
+            <dt>has domain</dt>
+            <dd>
+               <a href="#AuthorMetric" title="http://purl.org/roh#AuthorMetric">Author Metric</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+            <dt>has range</dt>
+            <dd>
+               <span class="dotted" title="http://www.w3.org/2001/XMLSchema#integer">integer</span>
+            </dd>
+         </dl>
+      </div>
+   </div>
    <div class="entity" id="/mirror/vivo#pmcid">
       <h3>has PubMed Central ID<sup class="type-dp" title="data property">dp</sup>
          <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a>
@@ -18725,6 +18545,26 @@ Based on obo-bfo:Role also used in VIVO, it defines roles. The object property r
             <dd>
                <a href="#/mirror/vivo#Position" title="http://purl.org/roh/mirror/vivo#Position">Position</a>
                <sup class="type-c" title="class">c</sup>
+            </dd>
+         </dl>
+      </div>
+   </div>
+   <div class="entity" id="i10-index">
+      <h3>i10-index<sup class="type-op" title="object property">op</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://purl.org/roh#i10-index</p>
+      <div class="description">
+         <dl>
+            <dt>has range</dt>
+            <dd>
+               <span class="dotted" title="http://www.w3.org/2001/XMLSchema#integer">integer</span>
+            </dd>
+            <dt>is also defined as</dt>
+            <dd>
+               <a href="#i10-index">object property</a>
             </dd>
          </dl>
       </div>
@@ -19174,6 +19014,9 @@ use one freetextKeyword assertion for each keyword or phrase.</pre>
          <dl>
             <dt>has domain</dt>
             <dd>
+               <a href="#/mirror/bibo#Patent" title="http://purl.org/roh/mirror/bibo#Patent">Patent Patent</a>
+               <sup class="type-c" title="class">c</sup> 
+               <span class="logic">or</span> 
                <a href="#/mirror/vivo#Project" title="http://purl.org/roh/mirror/vivo#Project">Project</a>
                <sup class="type-c" title="class">c</sup>
             </dd>
@@ -19429,7 +19272,7 @@ use one freetextKeyword assertion for each keyword or phrase.</pre>
             </dd>
             <dt>has range</dt>
             <dd>
-               <span class="dotted" title="http://www.w3.org/2001/XMLSchema#integer">integer</span>
+               <span class="dotted" title="http://www.w3.org/2000/01/rdf-schema#Literal">literal</span>
             </dd>
          </dl>
       </div>
@@ -19502,30 +19345,6 @@ use one freetextKeyword assertion for each keyword or phrase.</pre>
             <dt>has range</dt>
             <dd>
                <span class="dotted" title="http://www.w3.org/2001/XMLSchema#boolean">boolean</span>
-            </dd>
-         </dl>
-      </div>
-   </div>
-   <div class="entity" id="qualifiedvaluation">
-      <h3>qualified valuation<sup class="type-dp" title="data property">dp</sup>
-         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a>
-         </span>
-      </h3>
-      <p>
-         <strong>IRI:</strong> http://purl.org/roh#qualifiedvaluation</p>
-      <div class="comment">
-         <span class="markdown">A given value linked to a given date (point in time) within a qualified value.</span>
-      </div>
-      <div class="description">
-         <dl>
-            <dt>has domain</dt>
-            <dd>
-               <a href="#QualifiedValue" title="http://purl.org/roh#QualifiedValue">Qualified value</a>
-               <sup class="type-c" title="class">c</sup>
-            </dd>
-            <dt>has range</dt>
-            <dd>
-               <span class="dotted" title="http://www.w3.org/2001/XMLSchema#string">string</span>
             </dd>
          </dl>
       </div>
