@@ -200,7 +200,9 @@ obo:BFO_0000180  a  owl:AnnotationProperty .
 
 :ownerOrganization  a  owl:ObjectProperty ;
         rdfs:comment   "A Patent has an Organization who owns it."@en ;
-        rdfs:domain    bibo:Patent ;
+        rdfs:domain  [ a            owl:Class ;
+                       owl:unionOf  ( bibo:Patent :PatentApplication )
+                     ] ;
         rdfs:label     "organización propietaria"@es , "owner organization"@en ;
         rdfs:range     <http://purl.org/roh/mirror/foaf#Organization> ;
         owl:inverseOf  :ownerOrganizationOf .
@@ -328,7 +330,7 @@ bibo:Book  a              owl:Class ;
         rdfs:comment      "A written or printed work of fiction or nonfiction, usually on sheets of paper fastened or bound together within covers."@en ;
         rdfs:isDefinedBy  "http://purl.org/roh/mirror/bibo#"^^xsd:anyURI ;
         rdfs:label        "Llibre"@ca-ad , "Llibre"@ca-es , "Livre"@fr , "Book"@en , "Libro"@es , "Livro"@pt ;
-        rdfs:subClassOf   bibo:Document , :ScientificPublication ;
+        rdfs:subClassOf   bibo:Document ;
         rdfs:subClassOf   [ a                  owl:Restriction ;
                             owl:allValuesFrom  rdfs:Literal ;
                             owl:onProperty     bibo:lccn
@@ -625,7 +627,7 @@ vivo:AttendeeRole  a     owl:Class ;
 
 :PhDThesisMetric  a      owl:Class ;
         rdfs:label       "Métrica de Tesis Doctoral"@es , "PhD Thesis Metric"@en ;
-        rdfs:subClassOf  :Thesis_Metric ;
+        rdfs:subClassOf  :ThesisMetric ;
         rdfs:subClassOf  [ a                   owl:Restriction ;
                            owl:onProperty      :cumLaude ;
                            owl:someValuesFrom  xsd:boolean
@@ -1539,11 +1541,6 @@ vivo:PresenterRole  a    owl:Class ;
         obo:IAO_0000119   "PERSON: Matthew Brush" ;
         owl:disjointWith  <http://purl.org/roh/mirror/obo/ero#ERO_0001257> .
 
-:AudioDocument  a        owl:Class ;
-        rdfs:comment     "Recorded audio in any format."@en ;
-        rdfs:label       "Audio document"@en ;
-        rdfs:subClassOf  :ScientificPublication .
-
 :Administrative  a       owl:Class ;
         rdfs:label       "Administrative"@en ;
         rdfs:subClassOf  vivo:AdministratorRole .
@@ -1735,7 +1732,7 @@ rdf:Seq  a      owl:Class .
 
 :EditedPublication  a    owl:Class ;
         rdfs:label       "Edited publication"@en ;
-        rdfs:subClassOf  :ScientificPublication .
+        rdfs:subClassOf  bibo:Document .
 
 dc:description  a  owl:AnnotationProperty .
 
@@ -1832,7 +1829,7 @@ bibo:CollectedDocument
         rdfs:comment      "A document that simultaneously contains other documents."@en , "A document consisting of collections of previously published works."@en ;
         rdfs:isDefinedBy  "http://purl.org/roh/mirror/bibo#"^^xsd:anyURI ;
         rdfs:label        "Collected Document"@en , "Documento Contenedor"@es , "Collected document"@en ;
-        rdfs:subClassOf   :ScientificPublication , bibo:Document ;
+        rdfs:subClassOf   bibo:Document ;
         rdfs:subClassOf   [ a                  owl:Restriction ;
                             owl:allValuesFrom  bibo:Document ;
                             owl:onProperty     terms:hasPart
@@ -1854,7 +1851,7 @@ bibo:Article  a           owl:Class ;
         rdfs:comment      "A written composition in prose, usually nonfiction, on a specific topic, forming an independent part of a book or other publication, as a newspaper or magazine."@en ;
         rdfs:isDefinedBy  "http://purl.org/roh/mirror/bibo#"^^xsd:anyURI ;
         rdfs:label        "Article"@en , "Artículo"@es ;
-        rdfs:subClassOf   :ScientificPublication , bibo:Document ;
+        rdfs:subClassOf   bibo:Document ;
         rdfs:subClassOf   [ a                  owl:Restriction ;
                             owl:allValuesFrom  rdfs:Literal ;
                             owl:onProperty     bibo:pageEnd
@@ -1958,7 +1955,7 @@ ro:RO_0001025  a      owl:ObjectProperty ;
         rdfs:comment  "A relation between two independent continuants, the target and the location, in which the target is entirely within the location"@en ;
         rdfs:label    "located in"@en , "ubicado en"@es .
 
-:Thesis_Metric  a        owl:Class ;
+:ThesisMetric  a        owl:Class ;
         rdfs:label       "Métrica de Tesis"@es , "Thesis Metric"@en ;
         rdfs:subClassOf  :DegreeMetric .
 
@@ -2350,12 +2347,6 @@ vivo:Foundation  a       owl:Class ;
 obo:IAO_0000118  a  owl:AnnotationProperty .
 
 obo:IAO_0000412  a  owl:AnnotationProperty .
-
-:ScientificPublication
-        a                owl:Class ;
-        rdfs:label       "Scientific publication"@en , "Publication scientifique"@fr , "Publicação científica"@pt , "Publicació científica"@ca-es , "Publicació científica"@ca-ad , "Publicación científica"@es ;
-        rdfs:subClassOf  bibo:Document ;
-        skos:prefLabel   "Scientific publication"@en , "Publicació científica"@ca-ad , "Publicació científica"@ca-es , "Publication scientifique"@fr , "Publicación científica"@es , "Publicação científica"@pt .
 
 :MasterStudent  a        owl:Class ;
         rdfs:label       "MasterStudent"@en ;
@@ -2975,7 +2966,7 @@ vivo:description  a   owl:DatatypeProperty ;
                           ] ;
         rdfs:subClassOf   [ a                  owl:Restriction ;
                             owl:allValuesFrom  [ a            owl:Class ;
-                                                 owl:unionOf  ( :ProjectContract bibo:Report vivo:Project )
+                                                 owl:unionOf  ( :FundingProgram :ProjectContract bibo:Report vivo:Project )
                                                ] ;
                             owl:onProperty     vivo:relates
                           ] ;
@@ -3288,7 +3279,7 @@ bibo:oclcnum  a       owl:DatatypeProperty ;
 
 :cumLaude  a          owl:DatatypeProperty ;
         rdfs:comment  "Meaning \"with praise\", used to indicate the level of distinction with which an academic degree has been earned."@en ;
-        rdfs:domain   :Thesis_Metric ;
+        rdfs:domain   :ThesisMetric ;
         rdfs:label    "cum laude"@en , "cum laude"@es ;
         rdfs:range    xsd:boolean .
 
@@ -3455,7 +3446,11 @@ vivo:Department  a       owl:Class ;
 
 :PatentApplication  a    owl:Class ;
         rdfs:label       "Patent Application"@en ;
-        rdfs:subClassOf  :Invention .
+        rdfs:subClassOf  :Invention ;
+        rdfs:subClassOf   [ a                  owl:Restriction ;
+                            owl:allValuesFrom  <http://purl.org/roh/mirror/foaf#Organization> ;
+                            owl:onProperty     :ownerOrganization
+                          ] .
 
 <http://purl.org/roh/mirror/foaf#firstName>
         a                 owl:DatatypeProperty ;
@@ -4193,7 +4188,7 @@ vivo:Exhibit  a          owl:Class ;
 bibo:Manual  a           owl:Class ;
         rdfs:comment     "A book of instructions or guide to a specific topic."@en ;
         rdfs:label       "Manual"@en ;
-        rdfs:subClassOf  :ScientificPublication ;
+        rdfs:subClassOf  bibo:Document ;
         skos:altLabel    "Handbook"@en ;
         skos:prefLabel   "Manual"@en .
 
@@ -4359,7 +4354,7 @@ bibo:Report  a            owl:Class ;
 
 :TechnicalReport  a      owl:Class ;
         rdfs:label       "Technical report"@en ;
-        rdfs:subClassOf  bibo:Report , vivo:Report ;
+        rdfs:subClassOf  bibo:Report , bibo:Report ;
         skos:prefLabel   "Technical report"@en .
 
 :ExpenseClassification
@@ -4388,7 +4383,7 @@ bibo:Chapter  a           owl:Class ;
 
 :mark   a             owl:DatatypeProperty ;
         rdfs:comment  "A judgment, expressed as a number or letter, about the quality of a work."@en ;
-        rdfs:domain   :Thesis_Metric ;
+        rdfs:domain   :ThesisMetric ;
         rdfs:label    "mark"@en , "nota"@es ;
         rdfs:range    xsd:string .
 
@@ -4439,7 +4434,7 @@ vivo:hasSubjectArea  a  owl:ObjectProperty ;
 :CaseStudy  a            owl:Class ;
         rdfs:comment     "A qualitative descriptive research study of individuals or a group."@en ;
         rdfs:label       "Case study"@en ;
-        rdfs:subClassOf  :ScientificPublication .
+        rdfs:subClassOf  bibo:Document .
 
 :Loan   a                owl:Class ;
         rdfs:comment     "An amount of money that is borrowed, often from a bank or a funding organization, and has to be paid back, usually together with an extra amount of money that you have to pay as a charge for borrowing."@en ;
@@ -4474,7 +4469,9 @@ vivo:hasSubjectArea  a  owl:ObjectProperty ;
         rdfs:comment  "An Organization owning a Patent."@en ;
         rdfs:domain   <http://purl.org/roh/mirror/foaf#Organization> ;
         rdfs:label    "organización propietaria de"@es , "owner organization of"@en ;
-        rdfs:range    bibo:Patent .
+        rdfs:range  [ a            owl:Class ;
+                       owl:unionOf  ( bibo:Patent :PatentApplication )
+                    ] .
 
 vivo:assigns  a       owl:ObjectProperty ;
         rdfs:comment  "Relates an Agent to a Relationship."@en ;
@@ -4500,8 +4497,6 @@ vivo:assigns  a       owl:ObjectProperty ;
         rdfs:comment            "Starting page number within a continuous page range."@en ;
         rdfs:label              "página inicial"@es , "starting page"@en ;
         owl:equivalentProperty  bibo:pageStart .
-
-vivo:Report  a  owl:Class .
 
 obo:IAO_0000111  a  owl:AnnotationProperty .
 
@@ -4558,11 +4553,6 @@ obo:IAO_0000111  a  owl:AnnotationProperty .
                                               ]
                                             )
                              ] .
-
-:atContext  a         owl:ObjectProperty ;
-        rdfs:comment  "This property enables to relate a profile with a given context (geographical, temporal, spatial, social, etc.)."@en ;
-        rdfs:label    "at context"@en ;
-        rdfs:range    :Context .
 
 :WorkshopPaper  a        owl:Class ;
         rdfs:comment     "A paper published on a conference workshop."@en ;
