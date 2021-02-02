@@ -380,13 +380,6 @@ by creating a research management system with semantic capacities based on seman
                 rdfs:label "associated with"@en .
 
 
-###  http://purl.org/roh#atContext
-:atContext rdf:type owl:ObjectProperty ;
-           rdfs:range :Context ;
-           rdfs:comment "This property enables to relate a profile with a given context (geographical, temporal, spatial, social, etc.)."@en ;
-           rdfs:label "at context"@en .
-
-
 ###  http://purl.org/roh#attachment
 :attachment rdf:type owl:ObjectProperty ;
             rdfs:subPropertyOf owl:topObjectProperty ;
@@ -435,7 +428,7 @@ by creating a research management system with semantic capacities based on seman
 :coadvisedBy rdf:type owl:ObjectProperty ;
              rdfs:domain <http://purl.org/roh/mirror/bibo#Document> ;
              rdfs:range <http://purl.org/roh/mirror/foaf#Person> ;
-             rdfs:comment "An academic publication (bachelor thesis, master thesis or doctoral thesis) is co-advised by an advisor."@en ;
+             rdfs:comment "An academic publication (bachelor's thesis, master's thesis or doctoral thesis) is co-advised by an advisor."@en ;
              rdfs:label "co-advised by"@en .
 
 
@@ -443,7 +436,7 @@ by creating a research management system with semantic capacities based on seman
 :coadvises rdf:type owl:ObjectProperty ;
            rdfs:domain <http://purl.org/roh/mirror/foaf#Person> ;
            rdfs:range <http://purl.org/roh/mirror/bibo#Document> ;
-           rdfs:comment "A person co-advises an academic publication (bachelor thesis, master thesis or doctoral thesis)."@en ;
+           rdfs:comment "A person co-advises an academic publication (bachelor's thesis, master's thesis or doctoral thesis)."@en ;
            rdfs:label "co-advises"@en .
 
 
@@ -551,6 +544,19 @@ by creating a research management system with semantic capacities based on seman
                     "país"@es .
 
 
+###  http://purl.org/roh#documentStatus
+:documentStatus rdf:type owl:ObjectProperty ;
+                rdfs:domain <http://purl.org/roh/mirror/bibo#Document> ;
+                rdfs:range [ rdf:type owl:Class ;
+                             owl:unionOf ( :Accepted
+                                           :Rejected
+                                         )
+                           ] ;
+                rdfs:comment "The status of a Document (Accepted or Rejected)."@en ;
+                rdfs:label "estado"@es ,
+                           "status"@en .
+
+
 ###  http://purl.org/roh#employs
 :employs rdf:type owl:ObjectProperty ;
          rdfs:subPropertyOf <http://purl.obolibrary.org/obo/RO_0000057> ;
@@ -563,7 +569,11 @@ by creating a research management system with semantic capacities based on seman
 ###  http://purl.org/roh#evaluationStatus
 :evaluationStatus rdf:type owl:ObjectProperty ;
                   rdfs:domain :EvaluationSummary ;
-                  rdfs:range :Status ;
+                  rdfs:range [ rdf:type owl:Class ;
+                               owl:unionOf ( :Final
+                                             :Provisional
+                                           )
+                             ] ;
                   rdfs:comment "The status in which a Evaluation Summary could be."@en ;
                   rdfs:label "estado de la evaluación"@es ,
                              "evaluation status"@en .
@@ -941,7 +951,11 @@ by creating a research management system with semantic capacities based on seman
 ###  http://purl.org/roh#ownerOrganization
 :ownerOrganization rdf:type owl:ObjectProperty ;
                    owl:inverseOf :ownerOrganizationOf ;
-                   rdfs:domain <http://purl.org/roh/mirror/bibo#Patent> ;
+                   rdfs:domain [ rdf:type owl:Class ;
+                                 owl:unionOf ( :PatentApplication
+                                               <http://purl.org/roh/mirror/bibo#Patent>
+                                             )
+                               ] ;
                    rdfs:range <http://purl.org/roh/mirror/foaf#Organization> ;
                    rdfs:comment "A Patent has an Organization who owns it."@en ;
                    rdfs:label "organización propietaria"@es ,
@@ -951,7 +965,11 @@ by creating a research management system with semantic capacities based on seman
 ###  http://purl.org/roh#ownerOrganizationOf
 :ownerOrganizationOf rdf:type owl:ObjectProperty ;
                      rdfs:domain <http://purl.org/roh/mirror/foaf#Organization> ;
-                     rdfs:range <http://purl.org/roh/mirror/bibo#Patent> ;
+                     rdfs:range [ rdf:type owl:Class ;
+                                  owl:unionOf ( :PatentApplication
+                                                <http://purl.org/roh/mirror/bibo#Patent>
+                                              )
+                                ] ;
                      rdfs:comment "An Organization owning a Patent."@en ;
                      rdfs:label "organización propietaria de"@es ,
                                 "owner organization of"@en .
@@ -1005,7 +1023,12 @@ by creating a research management system with semantic capacities based on seman
 ###  http://purl.org/roh#patentStatus
 :patentStatus rdf:type owl:ObjectProperty ;
               rdfs:domain :PatentApplication ;
-              rdfs:range :Status ;
+              rdfs:range [ rdf:type owl:Class ;
+                           owl:unionOf ( :Accepted
+                                         :Rejected
+                                         :Submitted
+                                       )
+                         ] ;
               rdfs:label "patent status"@en .
 
 
@@ -1055,7 +1078,13 @@ by creating a research management system with semantic capacities based on seman
 ###  http://purl.org/roh#projectStatus
 :projectStatus rdf:type owl:ObjectProperty ;
                rdfs:domain <http://purl.org/roh/mirror/vivo#Project> ;
-               rdfs:range :Status ;
+               rdfs:range [ rdf:type owl:Class ;
+                            owl:unionOf ( :Closed
+                                          :Open
+                                          :ProposalSubmitted
+                                          :Rejected
+                                        )
+                          ] ;
                rdfs:comment "A project may be in a CLOSED, OPEN or in other future status that may be defined." ;
                rdfs:label "estado del proyecto"@es ,
                           "project status"@en .
@@ -1152,15 +1181,6 @@ by creating a research management system with semantic capacities based on seman
          rdfs:comment "An Expense spent by an Entity."@en ;
          rdfs:label "gasto realizado por"@es ,
                     "spent by"@en .
-
-
-###  http://purl.org/roh#status
-:status rdf:type owl:ObjectProperty ;
-        rdfs:domain <http://purl.org/roh/mirror/bibo#Report> ;
-        rdfs:range :Status ;
-        rdfs:comment "The status of a Report (Accepted or Rejected)."@en ;
-        rdfs:label "estado"@es ,
-                   "status"@en .
 
 
 ###  http://purl.org/roh#supervisedBy
@@ -1739,7 +1759,7 @@ by creating a research management system with semantic capacities based on seman
 
 ###  http://purl.org/roh#cumLaude
 :cumLaude rdf:type owl:DatatypeProperty ;
-          rdfs:domain :Thesis_Metric ;
+          rdfs:domain :ThesisMetric ;
           rdfs:range xsd:boolean ;
           rdfs:comment "Meaning \"with praise\", used to indicate the level of distinction with which an academic degree has been earned."@en ;
           rdfs:label "cum laude"@en ,
@@ -1920,7 +1940,7 @@ by creating a research management system with semantic capacities based on seman
 
 ###  http://purl.org/roh#mark
 :mark rdf:type owl:DatatypeProperty ;
-      rdfs:domain :Thesis_Metric ;
+      rdfs:domain :ThesisMetric ;
       rdfs:range xsd:string ;
       rdfs:comment "A judgment, expressed as a number or letter, about the quality of a work."@en ;
       rdfs:label "mark"@en ,
@@ -2539,6 +2559,17 @@ Definition source: http://isiwebofknowledge.com/researcherid/""" ;
                                   "Acreditación Académica"@es .
 
 
+###  http://purl.org/roh#AcademicSubject
+:AcademicSubject rdf:type owl:Class ;
+                 rdfs:subClassOf <http://www.w3.org/2004/02/skos/core#Concept> ;
+                 rdfs:comment "Matière académique"@fr ;
+                 rdfs:label "Academic subject"@en ,
+                            "Asignatura académica"@es ,
+                            "Assignatura acadèmica"@ca-es ,
+                            "Unidade curricular acadêmica"@pt-pt ;
+                 <http://www.w3.org/2004/02/skos/core#altLabel> "Cadeira"@pt .
+
+
 ###  http://purl.org/roh#Accepted
 :Accepted rdf:type owl:Class ;
           rdfs:subClassOf :Status ;
@@ -2618,7 +2649,7 @@ Definition source: http://isiwebofknowledge.com/researcherid/""" ;
                           ] ,
                           [ rdf:type owl:Restriction ;
                             owl:onProperty <http://purl.org/roh/mirror/vivo#hasSubjectArea> ;
-                            owl:allValuesFrom owl:Thing
+                            owl:allValuesFrom <http://www.w3.org/2004/02/skos/core#Concept>
                           ] ,
                           [ rdf:type owl:Restriction ;
                             owl:onProperty <http://purl.org/roh/mirror/vivo#relates> ;
@@ -2703,13 +2734,6 @@ The previous short definition was: \"An arbitrary classification of a space/time
                                                                       "Entités administratives"@fr .
 
 
-###  http://purl.org/roh#AudioDocument
-:AudioDocument rdf:type owl:Class ;
-               rdfs:subClassOf :ScientificPublication ;
-               rdfs:comment "Recorded audio in any format."@en ;
-               rdfs:label "Audio document"@en .
-
-
 ###  http://purl.org/roh#AuditeeRole
 :AuditeeRole rdf:type owl:Class ;
              rdfs:subClassOf <http://purl.org/roh/mirror/obo/bfo#BFO_0000023> ;
@@ -2790,31 +2814,31 @@ The previous short definition was: \"An arbitrary classification of a space/time
                   "Premio"@es .
 
 
-###  http://purl.org/roh#BachelorDegree
-:BachelorDegree rdf:type owl:Class ;
-                rdfs:subClassOf <http://purl.org/roh/mirror/vivo#AcademicDegree> ;
-                rdfs:comment "An undergraduate academic degree awarded by colleges and universities upon completion of a course of study lasting three to four years (depending on institution and academic discipline)."@en ;
-                rdfs:label "Bachelor's degree"@en ,
-                           "Licenciatura (pós-Bologna)"@pt-pt ,
-                           "Títol de bàtxelor"@ca-ad ,
-                           "Títol de grau"@ca-es ,
-                           "Título de grado"@es ;
-                <http://www.w3.org/2004/02/skos/core#altLabel> "Bàtxelor"@ca-ad ,
-                                                               "Grado"@es ,
-                                                               "Gradu"@eu ,
-                                                               "Grao"@gl ,
-                                                               "Grau"@ca-es ,
-                                                               "Grau"@pt ;
-                <http://www.w3.org/2004/02/skos/core#prefLabel> "Bachelor's degree"@en ,
-                                                                "Licenciatura (pós-Bologna)"@pt-pt ,
-                                                                "Títol de bàtxelor"@ca-ad ,
-                                                                "Títol de grau"@ca-es ,
-                                                                "Título de grado"@es .
+###  http://purl.org/roh#BachelorsDegree
+:BachelorsDegree rdf:type owl:Class ;
+                 rdfs:subClassOf <http://purl.org/roh/mirror/vivo#AcademicDegree> ;
+                 rdfs:comment "An undergraduate academic degree awarded by colleges and universities upon completion of a course of study lasting three to four years (depending on institution and academic discipline)."@en ;
+                 rdfs:label "Bachelor's degree"@en ,
+                            "Licenciatura (pós-Bologna)"@pt-pt ,
+                            "Títol de bàtxelor"@ca-ad ,
+                            "Títol de grau"@ca-es ,
+                            "Título de grado"@es ;
+                 <http://www.w3.org/2004/02/skos/core#altLabel> "Bàtxelor"@ca-ad ,
+                                                                "Grado"@es ,
+                                                                "Gradu"@eu ,
+                                                                "Grao"@gl ,
+                                                                "Grau"@ca-es ,
+                                                                "Grau"@pt ;
+                 <http://www.w3.org/2004/02/skos/core#prefLabel> "Bachelor's degree"@en ,
+                                                                 "Licenciatura (pós-Bologna)"@pt-pt ,
+                                                                 "Títol de bàtxelor"@ca-ad ,
+                                                                 "Títol de grau"@ca-es ,
+                                                                 "Título de grado"@es .
 
 
 ###  http://purl.org/roh#BachelorsDegreeSubject
 :BachelorsDegreeSubject rdf:type owl:Class ;
-                        rdfs:subClassOf :KnowledgeArea ;
+                        rdfs:subClassOf :AcademicSubject ;
                         rdfs:comment "Unidade curricular de grau"@pt ;
                         rdfs:label "Asignatura de grao"@gl ,
                                    "Assignatura de bàtxelor"@ca-ad ,
@@ -2822,14 +2846,28 @@ The previous short definition was: \"An arbitrary classification of a space/time
                                    "Bachelor's degree subject"@en .
 
 
+###  http://purl.org/roh#BachelorsSupervisingRelationship
+:BachelorsSupervisingRelationship rdf:type owl:Class ;
+                                  rdfs:subClassOf :SupervisingRelationship ,
+                                                  [ rdf:type owl:Restriction ;
+                                                    owl:onProperty :produces ;
+                                                    owl:allValuesFrom :BachelorsThesis
+                                                  ] ;
+                                  rdfs:label "Bachelor's Supervising Relationship"@en ,
+                                             "Relación de Supervisión de Titulación Universitaria"@es .
+
+
 ###  http://purl.org/roh#BachelorsThesis
 :BachelorsThesis rdf:type owl:Class ;
                  rdfs:subClassOf <http://purl.org/roh/mirror/bibo#Thesis> ;
                  owl:disjointWith :MastersThesis ,
                                   :PhDThesis ;
-                 rdfs:comment "A thesis reporting a research project undertaken as part of an undergraduate course of education to receive a bachelor's degree."@en ;
+                 rdfs:comment "A document created to summarize research findings associated with the completion of an academic degree."@en ,
+                              "A thesis reporting a research project undertaken as part of an undergraduate course of education to receive a bachelor's degree."@en ;
                  rdfs:label "Bachelor's Thesis"@en ,
+                            "Degree Thesis"@en ,
                             "Mémoire de fin de licence"@fr ,
+                            "Tesis de Grado"@es ,
                             "Trabajo de fin de grado"@es-es ,
                             "Trabayu de fin de grau"@ast ,
                             "Treball fi de bàtxelor"@ca-ad ,
@@ -2862,28 +2900,6 @@ The previous short definition was: \"An arbitrary classification of a space/time
           rdfs:label "Blog Post"@en .
 
 
-###  http://purl.org/roh#Budget
-:Budget rdf:type owl:Class ;
-        rdfs:comment "A financial plan for a defined period that may also include planned sales volumes and revenues, resource quantities, costs and expenses, assets, liabilities and cash flows."@en ;
-        rdfs:label "Aurrekontu"@eu ,
-                   "Budget"@en ,
-                   "Budget"@fr ,
-                   "Orzamento"@gl ,
-                   "Orçamento"@pt ,
-                   "Pressupost"@ca-ad ,
-                   "Pressupost"@ca-es ,
-                   "Presupuesto"@es ;
-        <http://www.w3.org/2004/02/skos/core#altLabel> "Presupuesto"@gl ;
-        <http://www.w3.org/2004/02/skos/core#prefLabel> "Aurrekontu"@eu ,
-                                                        "Budget"@en ,
-                                                        "Budget"@fr ,
-                                                        "Orzamento"@gl ,
-                                                        "Orçamento"@pt ,
-                                                        "Pressupost"@ca-ad ,
-                                                        "Pressupost"@ca-es ,
-                                                        "Presupuesto"@es .
-
-
 ###  http://purl.org/roh#Cancelled
 :Cancelled rdf:type owl:Class ;
            rdfs:subClassOf :Status ;
@@ -2892,7 +2908,7 @@ The previous short definition was: \"An arbitrary classification of a space/time
 
 ###  http://purl.org/roh#CaseStudy
 :CaseStudy rdf:type owl:Class ;
-           rdfs:subClassOf :ScientificPublication ;
+           rdfs:subClassOf <http://purl.org/roh/mirror/bibo#Document> ;
            rdfs:comment "A qualitative descriptive research study of individuals or a group."@en ;
            rdfs:label "Case study"@en .
 
@@ -2902,24 +2918,6 @@ The previous short definition was: \"An arbitrary classification of a space/time
          rdfs:subClassOf <http://purl.org/roh/mirror/bibo#Document> ;
          rdfs:comment "A list of items in a collection; an ordered compilation of item descriptions and sufficient information to afford access to them."@en ;
          rdfs:label "Catalog"@en .
-
-
-###  http://purl.org/roh#CatedraticoEscuelaUniversitaria
-:CatedraticoEscuelaUniversitaria rdf:type owl:Class ;
-                                 rdfs:subClassOf <http://purl.org/roh/mirror/vivo#Position> ;
-                                 rdfs:label "Catedràtic d'escola universitària"@ca-ad ,
-                                            "Catedrático de escola universitaria"@gl ,
-                                            "Catedrático de escuela universitaria"@es ,
-                                            "Catedráticu d'escuela universitaria"@ast .
-
-
-###  http://purl.org/roh#CatedraticoUniversidad
-:CatedraticoUniversidad rdf:type owl:Class ;
-                        rdfs:subClassOf <http://purl.org/roh/mirror/vivo#Position> ;
-                        rdfs:label "Catedràtic d'universitat"@ca-ad ,
-                                   "Catedrático de universidad"@es ,
-                                   "Catedrático de universidade"@gl ,
-                                   "Catedráticu d'universidá"@ast .
 
 
 ###  http://purl.org/roh#Closed
@@ -2940,17 +2938,9 @@ The previous short definition was: \"An arbitrary classification of a space/time
          rdfs:label "Contest"@en .
 
 
-###  http://purl.org/roh#Context
-:Context rdf:type owl:Class ;
-         rdfs:comment "Contexts are similar to situations or state of affairs providing interpretation coordinates for profiles. In the most simple case, these coordinates are just geographical/spatial or temporal coordinates. The ASIO core ontology does not impose a fixed definition of context. It is deliberately wide in order to enable third-parties the adequation of the meaning of context according to their modeling needs and requirements."@en ;
-         rdfs:label "Context"@ca-es ,
-                    "Context"@en ,
-                    "Contexto"@es ,
-                    "Contexto"@pt .
-
-
 ###  http://purl.org/roh#Country
 :Country rdf:type owl:Class ;
+         rdfs:subClassOf <http://www.w3.org/2004/02/skos/core#Concept> ;
          rdfs:comment "A region legally identified as a distinct entity in political geography."@en ;
          rdfs:label "Country"@en ,
                     "Herrialde"@eu ,
@@ -3053,25 +3043,6 @@ The previous short definition was: \"An arbitrary classification of a space/time
                          "Métrica de Grado"@es .
 
 
-###  http://purl.org/roh#DegreeSupervisingRelationship
-:DegreeSupervisingRelationship rdf:type owl:Class ;
-                               rdfs:subClassOf :SupervisingRelationship ,
-                                               [ rdf:type owl:Restriction ;
-                                                 owl:onProperty :produces ;
-                                                 owl:allValuesFrom :DegreeThesis
-                                               ] ;
-                               rdfs:label "Degree Supervising Relationship"@en ,
-                                          "Relación de Supervisión de Titulación Universitaria"@es .
-
-
-###  http://purl.org/roh#DegreeThesis
-:DegreeThesis rdf:type owl:Class ;
-              rdfs:subClassOf <http://purl.org/roh/mirror/bibo#Thesis> ;
-              rdfs:comment "A document created to summarize research findings associated with the completion of an academic degree."@en ;
-              rdfs:label "Degree Thesis"@en ,
-                         "Tesis de Grado"@es .
-
-
 ###  http://purl.org/roh#DisseminationEvent
 :DisseminationEvent rdf:type owl:Class ;
                     rdfs:subClassOf :Activity ;
@@ -3107,19 +3078,6 @@ The previous short definition was: \"An arbitrary classification of a space/time
                                                                 "Doutoramento"@pt .
 
 
-###  http://purl.org/roh#DoctoralProgram
-:DoctoralProgram rdf:type owl:Class ;
-                 rdfs:label "Doctoral program"@en ,
-                            "Doctoral programme"@en-gb ,
-                            "Programa de doctorado"@es ,
-                            "Programa de doctorat"@ca-es ,
-                            "Programa de doutoramento"@gl ,
-                            "Programa de doutoramento"@pt ,
-                            "Programme de doctorat"@fr ;
-                 <http://www.w3.org/2004/02/skos/core#altLabel> "PhD program"@en-us ,
-                                                                "PhD programme"@en-gb .
-
-
 ###  http://purl.org/roh#Dossier
 :Dossier rdf:type owl:Class ;
          rdfs:subClassOf <http://purl.org/roh/mirror/bibo#Collection> ,
@@ -3130,7 +3088,8 @@ The previous short definition was: \"An arbitrary classification of a space/time
                          [ rdf:type owl:Restriction ;
                            owl:onProperty <http://purl.org/roh/mirror/vivo#relates> ;
                            owl:allValuesFrom [ rdf:type owl:Class ;
-                                               owl:unionOf ( :ProjectContract
+                                               owl:unionOf ( :FundingProgram
+                                                             :ProjectContract
                                                              <http://purl.org/roh/mirror/bibo#Report>
                                                              <http://purl.org/roh/mirror/vivo#Project>
                                                            )
@@ -3164,7 +3123,7 @@ The previous short definition was: \"An arbitrary classification of a space/time
 
 ###  http://purl.org/roh#EditedPublication
 :EditedPublication rdf:type owl:Class ;
-                   rdfs:subClassOf :ScientificPublication ;
+                   rdfs:subClassOf <http://purl.org/roh/mirror/bibo#Document> ;
                    rdfs:label "Edited publication"@en .
 
 
@@ -3185,11 +3144,11 @@ The previous short definition was: \"An arbitrary classification of a space/time
 :EthicalValidation rdf:type owl:Class ;
                    rdfs:subClassOf :EthicalReport ,
                                    [ rdf:type owl:Restriction ;
-                                     owl:onProperty :status ;
+                                     owl:onProperty :documentStatus ;
                                      owl:someValuesFrom :Status
                                    ] ,
                                    [ rdf:type owl:Restriction ;
-                                     owl:onProperty :status ;
+                                     owl:onProperty :documentStatus ;
                                      owl:allValuesFrom :Status
                                    ] ;
                    rdfs:label "EthicalValidation"@en .
@@ -3209,7 +3168,15 @@ The previous short definition was: \"An arbitrary classification of a space/time
 
 ###  http://purl.org/roh#EvaluationSummary
 :EvaluationSummary rdf:type owl:Class ;
-                   rdfs:subClassOf <http://purl.org/roh/mirror/bibo#Report> ;
+                   rdfs:subClassOf <http://purl.org/roh/mirror/bibo#Report> ,
+                                   [ rdf:type owl:Restriction ;
+                                     owl:onProperty :evaluationStatus ;
+                                     owl:allValuesFrom [ rdf:type owl:Class ;
+                                                         owl:unionOf ( :Final
+                                                                       :Provisional
+                                                                     )
+                                                       ]
+                                   ] ;
                    rdfs:comment "An evaluation summary provided by a funding organization."@en ;
                    rdfs:label "Evaluation Summary"@en ,
                               "Resumen de Evaluación"@es .
@@ -3468,7 +3435,12 @@ A roh:FundingSource roh:feeds a roh:Funding with funds to sponsor some projects.
                            ] ,
                            [ rdf:type owl:Restriction ;
                              owl:onProperty :patentStatus ;
-                             owl:allValuesFrom :Status
+                             owl:allValuesFrom [ rdf:type owl:Class ;
+                                                 owl:unionOf ( :Accepted
+                                                               :Rejected
+                                                               :Submitted
+                                                             )
+                                               ]
                            ] ,
                            [ rdf:type owl:Restriction ;
                              owl:onProperty :produces ;
@@ -3541,13 +3513,8 @@ A roh:FundingSource roh:feeds a roh:Funding with funds to sponsor some projects.
 :KnowledgeArea rdf:type owl:Class ;
                rdfs:subClassOf <http://www.w3.org/2004/02/skos/core#Concept> ;
                owl:disjointWith :ProjectClassification ;
-               rdfs:comment "Matière académique"@fr ,
-                            "ROH will be populated with instance data of UNESCO skos concepts. A Person, Activity, Project and Organization can be qualified by a KnowledgeArea" ;
-               rdfs:label "Academic subject"@en ,
-                          "Asignatura académica"@es ,
-                          "Assignatura acadèmica"@ca-es ,
-                          "Knowledge Area"@en ,
-                          "Unidade curricular acadêmica"@pt-pt ,
+               rdfs:comment "ROH will be populated with instance data of UNESCO skos concepts. A Person, Activity, Project and Organization can be qualified by a KnowledgeArea" ;
+               rdfs:label "Knowledge Area"@en ,
                           "Área de Conocimiento"@es ;
                <http://www.w3.org/2004/02/skos/core#altLabel> "Cadeira"@pt .
 
@@ -3640,58 +3607,41 @@ A roh:FundingSource roh:feeds a roh:Funding with funds to sponsor some projects.
                 rdfs:label "ManagementUnit"@en .
 
 
-###  http://purl.org/roh#MasterDegree
-:MasterDegree rdf:type owl:Class ;
-              rdfs:subClassOf <http://purl.org/roh/mirror/vivo#AcademicDegree> ;
-              rdfs:label "Magister Scientiae"@es-ve ,
-                         "Master's degree"@en ,
-                         "Maîtrise universitaire"@fr-be ,
-                         "Maîtrise universitaire"@fr-ca ,
-                         "Maîtrise universitaire"@fr-ch ,
-                         "Maîtrise universitaire"@fr-fr ,
-                         "Mestrado"@pt-br ,
-                         "Mestrado"@pt-pt ,
-                         "Màster universitari"@ca-ad ,
-                         "Màster universitari"@ca-es ,
-                         "Máster universitario"@es-es ,
-                         "Máster universitario"@gl ;
-              <http://www.w3.org/2004/02/skos/core#altLabel> "Mestrado universitario"@gl ,
-                                                             "Mestratge universitari"@ca-ad ,
-                                                             "Mestratge universitari"@ca-es ;
-              <http://www.w3.org/2004/02/skos/core#prefLabel> "Magister Scientiae"@es-ve ,
-                                                              "Master's degree"@en ,
-                                                              "Maîtrise universitaire"@fr-be ,
-                                                              "Maîtrise universitaire"@fr-ca ,
-                                                              "Maîtrise universitaire"@fr-ch ,
-                                                              "Maîtrise universitaire"@fr-fr ,
-                                                              "Mestrado"@pt-br ,
-                                                              "Mestrado"@pt-pt ,
-                                                              "Màster universitari"@ca-ad ,
-                                                              "Màster universitari"@ca-es ,
-                                                              "Máster universitario"@es-es ,
-                                                              "Máster universitario"@gl .
-
-
-###  http://purl.org/roh#MasterStudent
-:MasterStudent rdf:type owl:Class ;
-               rdfs:subClassOf <http://purl.org/roh/mirror/obo/ero#ERO_0000783> ;
-               rdfs:label "MasterStudent"@en .
-
-
-###  http://purl.org/roh#MasterSupervisingRelationship
-:MasterSupervisingRelationship rdf:type owl:Class ;
-                               rdfs:subClassOf :SupervisingRelationship ,
-                                               [ rdf:type owl:Restriction ;
-                                                 owl:onProperty :produces ;
-                                                 owl:allValuesFrom :MastersThesis
-                                               ] ;
-                               rdfs:label "Master Supervising Relationship"@en ,
-                                          "Relación de Supervisión de Máster Universitario"@es .
+###  http://purl.org/roh#MastersDegree
+:MastersDegree rdf:type owl:Class ;
+               rdfs:subClassOf <http://purl.org/roh/mirror/vivo#AcademicDegree> ;
+               rdfs:label "Magister Scientiae"@es-ve ,
+                          "Master's degree"@en ,
+                          "Maîtrise universitaire"@fr-be ,
+                          "Maîtrise universitaire"@fr-ca ,
+                          "Maîtrise universitaire"@fr-ch ,
+                          "Maîtrise universitaire"@fr-fr ,
+                          "Mestrado"@pt-br ,
+                          "Mestrado"@pt-pt ,
+                          "Màster universitari"@ca-ad ,
+                          "Màster universitari"@ca-es ,
+                          "Máster universitario"@es-es ,
+                          "Máster universitario"@gl ;
+               <http://www.w3.org/2004/02/skos/core#altLabel> "Mestrado universitario"@gl ,
+                                                              "Mestratge universitari"@ca-ad ,
+                                                              "Mestratge universitari"@ca-es ;
+               <http://www.w3.org/2004/02/skos/core#prefLabel> "Magister Scientiae"@es-ve ,
+                                                               "Master's degree"@en ,
+                                                               "Maîtrise universitaire"@fr-be ,
+                                                               "Maîtrise universitaire"@fr-ca ,
+                                                               "Maîtrise universitaire"@fr-ch ,
+                                                               "Maîtrise universitaire"@fr-fr ,
+                                                               "Mestrado"@pt-br ,
+                                                               "Mestrado"@pt-pt ,
+                                                               "Màster universitari"@ca-ad ,
+                                                               "Màster universitari"@ca-es ,
+                                                               "Máster universitario"@es-es ,
+                                                               "Máster universitario"@gl .
 
 
 ###  http://purl.org/roh#MastersDegreeSubject
 :MastersDegreeSubject rdf:type owl:Class ;
-                      rdfs:subClassOf :KnowledgeArea ;
+                      rdfs:subClassOf :AcademicSubject ;
                       rdfs:comment "Matière de master"@fr-fr ,
                                    "Matière de maîtrise"@fr-ca ;
                       rdfs:label "Asignatura de máster"@es ,
@@ -3702,11 +3652,28 @@ A roh:FundingSource roh:feeds a roh:Funding with funds to sponsor some projects.
                                  "Unidace curricular de mestrado"@pt .
 
 
+###  http://purl.org/roh#MastersStudent
+:MastersStudent rdf:type owl:Class ;
+                rdfs:subClassOf <http://purl.org/roh/mirror/obo/ero#ERO_0000783> ;
+                rdfs:label "Master's Student"@en .
+
+
+###  http://purl.org/roh#MastersSupervisingRelationship
+:MastersSupervisingRelationship rdf:type owl:Class ;
+                                rdfs:subClassOf :SupervisingRelationship ,
+                                                [ rdf:type owl:Restriction ;
+                                                  owl:onProperty :produces ;
+                                                  owl:allValuesFrom :MastersThesis
+                                                ] ;
+                                rdfs:label "Master's Supervising Relationship"@en ,
+                                           "Relación de Supervisión de Máster Universitario"@es .
+
+
 ###  http://purl.org/roh#MastersThesis
 :MastersThesis rdf:type owl:Class ;
                rdfs:subClassOf <http://purl.org/roh/mirror/bibo#Thesis> ;
                owl:disjointWith :PhDThesis ;
-               rdfs:comment "A document created to summarize research findings associated with the completion of a master degree."@en ,
+               rdfs:comment "A document created to summarize research findings associated with the completion of a master's degree."@en ,
                             "A thesis reporting a research project undertaken as part of a second-cycle course of education to receive a master's degree."@en ;
                rdfs:label "Dissertação de mestrado"@pt-br ,
                           "Dissertação de mestrado"@pt-pt ,
@@ -3795,22 +3762,6 @@ A roh:FundingSource roh:feeds a roh:Funding with funds to sponsor some projects.
                         "Subcontratación"@es .
 
 
-###  http://purl.org/roh#PASfuncionario
-:PASfuncionario rdf:type owl:Class ;
-                rdfs:subClassOf <http://purl.org/roh/mirror/vivo#Position> ;
-                rdfs:label "PAS funcionari"@ca-ad ,
-                           "PAS funcionario"@es ,
-                           "PAS funcionario"@gl ,
-                           "PAS funcionariu"@ast .
-
-
-###  http://purl.org/roh#PASlaboral
-:PASlaboral rdf:type owl:Class ;
-            rdfs:subClassOf <http://purl.org/roh/mirror/vivo#Position> ;
-            rdfs:label "PAS laboral"@ca-ad ,
-                       "PAS laboral"@es .
-
-
 ###  http://purl.org/roh#PanelTalk
 :PanelTalk rdf:type owl:Class ;
            rdfs:subClassOf <http://purl.org/roh/mirror/vivo#Presentation> ;
@@ -3822,7 +3773,11 @@ A roh:FundingSource roh:feeds a roh:Funding with funds to sponsor some projects.
 
 ###  http://purl.org/roh#PatentApplication
 :PatentApplication rdf:type owl:Class ;
-                   rdfs:subClassOf :Invention ;
+                   rdfs:subClassOf :Invention ,
+                                   [ rdf:type owl:Restriction ;
+                                     owl:onProperty :ownerOrganization ;
+                                     owl:allValuesFrom <http://purl.org/roh/mirror/foaf#Organization>
+                                   ] ;
                    rdfs:label "Patent Application"@en .
 
 
@@ -3914,7 +3869,7 @@ A roh:FundingSource roh:feeds a roh:Funding with funds to sponsor some projects.
 
 ###  http://purl.org/roh#PhDThesisMetric
 :PhDThesisMetric rdf:type owl:Class ;
-                 rdfs:subClassOf :Thesis_Metric ,
+                 rdfs:subClassOf :ThesisMetric ,
                                  [ rdf:type owl:Restriction ;
                                    owl:onProperty :cumLaude ;
                                    owl:someValuesFrom xsd:boolean
@@ -3955,24 +3910,6 @@ A roh:FundingSource roh:feeds a roh:Funding with funds to sponsor some projects.
                  rdfs:label "Proforma invoice"@en .
 
 
-###  http://purl.org/roh#ProjectBudget
-:ProjectBudget rdf:type owl:Class ;
-               rdfs:subClassOf :Budget ;
-               rdfs:comment "The budget established or devoted to a project."@en ;
-               rdfs:label "Budget de projet"@fr ,
-                          "Orçamento de projeto"@pt ,
-                          "Pressupost de projecte"@ca-ad ,
-                          "Pressupost de projecte"@ca-es ,
-                          "Presupuesto de proyecto"@es ,
-                          "Project budget"@en ;
-               <http://www.w3.org/2004/02/skos/core#prefLabel> "Budget de projet"@fr ,
-                                                               "Orçamento de projeto"@pt ,
-                                                               "Pressupost de projecte"@ca-ad ,
-                                                               "Pressupost de projecte"@ca-es ,
-                                                               "Presupuesto de proyecto"@es ,
-                                                               "Project budget"@en .
-
-
 ###  http://purl.org/roh#ProjectClassification
 :ProjectClassification rdf:type owl:Class ;
                        rdfs:subClassOf <http://www.w3.org/2004/02/skos/core#Concept> ;
@@ -4010,8 +3947,7 @@ A roh:FundingSource roh:feeds a roh:Funding with funds to sponsor some projects.
 
 ###  http://purl.org/roh#Prototype
 :Prototype rdf:type owl:Class ;
-           rdfs:subClassOf :Product ,
-                           :ResearchObject ;
+           rdfs:subClassOf :Product ;
            rdfs:comment "A product prototype"@en ;
            rdfs:label "Prototype"@en .
 
@@ -4084,6 +4020,7 @@ A roh:FundingSource roh:feeds a roh:Funding with funds to sponsor some projects.
 
 ###  http://purl.org/roh#ResearchField
 :ResearchField rdf:type owl:Class ;
+               rdfs:subClassOf <http://www.w3.org/2004/02/skos/core#Concept> ;
                rdfs:label "Research field"@en .
 
 
@@ -4293,7 +4230,7 @@ A roh:FundingSource roh:feeds a roh:Funding with funds to sponsor some projects.
                                          ] ,
                                          [ rdf:type owl:Restriction ;
                                            owl:onProperty <http://purl.org/roh/mirror/vivo#hasSubjectArea> ;
-                                           owl:allValuesFrom owl:Thing
+                                           owl:allValuesFrom <http://www.w3.org/2004/02/skos/core#Concept>
                                          ] ;
                          <http://purl.obolibrary.org/obo/IAO_0000115> "A dual relationship of one organization offering a service to another organization, typically including start and end dates" ;
                          rdfs:label "Reservation Relationship"@en .
@@ -4303,23 +4240,6 @@ A roh:FundingSource roh:feeds a roh:Funding with funds to sponsor some projects.
 :RoundTable rdf:type owl:Class ;
             rdfs:subClassOf :Activity ;
             rdfs:label "Round Table"@en .
-
-
-###  http://purl.org/roh#ScientificPublication
-:ScientificPublication rdf:type owl:Class ;
-                       rdfs:subClassOf <http://purl.org/roh/mirror/bibo#Document> ;
-                       rdfs:label "Publicació científica"@ca-ad ,
-                                  "Publicació científica"@ca-es ,
-                                  "Publicación científica"@es ,
-                                  "Publication scientifique"@fr ,
-                                  "Publicação científica"@pt ,
-                                  "Scientific publication"@en ;
-                       <http://www.w3.org/2004/02/skos/core#prefLabel> "Publicació científica"@ca-ad ,
-                                                                       "Publicació científica"@ca-es ,
-                                                                       "Publicación científica"@es ,
-                                                                       "Publication scientifique"@fr ,
-                                                                       "Publicação científica"@pt ,
-                                                                       "Scientific publication"@en .
 
 
 ###  http://purl.org/roh#SealOfQuality
@@ -4370,6 +4290,10 @@ A roh:FundingSource roh:feeds a roh:Funding with funds to sponsor some projects.
 
 ###  http://purl.org/roh#Status
 :Status rdf:type owl:Class ;
+        rdfs:subClassOf [ rdf:type owl:Restriction ;
+                          owl:onProperty <http://purl.org/roh/mirror/vivo#dateTimeInterval> ;
+                          owl:allValuesFrom <http://purl.org/roh/mirror/vivo#DateTimeInterval>
+                        ] ;
         rdfs:label "Status"@en .
 
 
@@ -4436,7 +4360,15 @@ A roh:FundingSource roh:feeds a roh:Funding with funds to sponsor some projects.
 
 ###  http://purl.org/roh#SupervisorRole
 :SupervisorRole rdf:type owl:Class ;
-                rdfs:subClassOf <http://purl.org/roh/mirror/obo/bfo#BFO_0000023> ;
+                rdfs:subClassOf <http://purl.org/roh/mirror/obo/bfo#BFO_0000023> ,
+                                [ rdf:type owl:Restriction ;
+                                  owl:onProperty <http://purl.org/roh/mirror/obo/ro#RO_0000052> ;
+                                  owl:someValuesFrom <http://purl.org/roh/mirror/foaf#Person>
+                                ] ,
+                                [ rdf:type owl:Restriction ;
+                                  owl:onProperty <http://purl.org/roh/mirror/obo/ro#RO_0000052> ;
+                                  owl:allValuesFrom <http://purl.org/roh/mirror/foaf#Person>
+                                ] ;
                 rdfs:label "Rol de Supervisor"@es ,
                            "Supervisor Role"@en .
 
@@ -4449,8 +4381,7 @@ A roh:FundingSource roh:feeds a roh:Funding with funds to sponsor some projects.
 
 ###  http://purl.org/roh#TechnicalReport
 :TechnicalReport rdf:type owl:Class ;
-                 rdfs:subClassOf <http://purl.org/roh/mirror/bibo#Report> ,
-                                 <http://purl.org/roh/mirror/vivo#Report> ;
+                 rdfs:subClassOf <http://purl.org/roh/mirror/bibo#Report> ;
                  rdfs:label "Technical report"@en ;
                  <http://www.w3.org/2004/02/skos/core#prefLabel> "Technical report"@en .
 
@@ -4467,19 +4398,19 @@ A roh:FundingSource roh:feeds a roh:Funding with funds to sponsor some projects.
             rdfs:label "Terminated"@en .
 
 
+###  http://purl.org/roh#ThesisMetric
+:ThesisMetric rdf:type owl:Class ;
+              rdfs:subClassOf :DegreeMetric ;
+              rdfs:label "Métrica de Tesis"@es ,
+                         "Thesis Metric"@en .
+
+
 ###  http://purl.org/roh#ThesisViva
 :ThesisViva rdf:type owl:Class ;
             rdfs:subClassOf :Activity ;
             rdfs:comment "An oral examination in which a PhD Student defends her/his doctoral thesis."@en ;
             rdfs:label "Defensa de Tesis"@es ,
                        "Thesis Viva"@en .
-
-
-###  http://purl.org/roh#Thesis_Metric
-:Thesis_Metric rdf:type owl:Class ;
-               rdfs:subClassOf :DegreeMetric ;
-               rdfs:label "Métrica de Tesis"@es ,
-                          "Thesis Metric"@en .
 
 
 ###  http://purl.org/roh#ThirdPartyContractorRole
@@ -4490,27 +4421,10 @@ A roh:FundingSource roh:feeds a roh:Funding with funds to sponsor some projects.
                                      "Third Party Contractor Role"@en .
 
 
-###  http://purl.org/roh#TitularUniversidad
-:TitularUniversidad rdf:type owl:Class ;
-                    rdfs:subClassOf <http://purl.org/roh/mirror/vivo#Position> ;
-                    rdfs:label "Profesor titular d'universidá"@ast ,
-                               "Profesor titular de universidad"@es ,
-                               "Profesor titular de universidade"@gl ,
-                               "Professor titular d'universitat"@ca-ad .
-
-
 ###  http://purl.org/roh#TvProgram
 :TvProgram rdf:type owl:Class ;
            rdfs:subClassOf <http://purl.org/roh/mirror/bibo#AudioVisualDocument> ;
            rdfs:label "Tv Program"@en .
-
-
-###  http://purl.org/roh#UNESCOKnowledgeArea
-:UNESCOKnowledgeArea rdf:type owl:Class ;
-                     rdfs:subClassOf :KnowledgeArea ;
-                     rdfs:comment "List of terms used in subject analysis and retrieval of documents and publications in the fields of education, culture, natural sciences, social and human sciences, communication and information by UNESCO."@en ;
-                     rdfs:label "UNESCO Knowledge Area"@en ,
-                                "Área de Conocimiento UNESCO"@es .
 
 
 ###  http://purl.org/roh#UndergraduateStudent
@@ -4568,8 +4482,7 @@ A roh:FundingSource roh:feeds a roh:Funding with funds to sponsor some projects.
 
 ###  http://purl.org/roh/mirror/bibo#Article
 <http://purl.org/roh/mirror/bibo#Article> rdf:type owl:Class ;
-                                          rdfs:subClassOf :ScientificPublication ,
-                                                          <http://purl.org/roh/mirror/bibo#Document> ,
+                                          rdfs:subClassOf <http://purl.org/roh/mirror/bibo#Document> ,
                                                           [ rdf:type owl:Restriction ;
                                                             owl:onProperty <http://purl.org/roh/mirror/bibo#doi> ;
                                                             owl:someValuesFrom xsd:string
@@ -4602,8 +4515,7 @@ A roh:FundingSource roh:feeds a roh:Funding with funds to sponsor some projects.
 
 ###  http://purl.org/roh/mirror/bibo#Book
 <http://purl.org/roh/mirror/bibo#Book> rdf:type owl:Class ;
-                                       rdfs:subClassOf :ScientificPublication ,
-                                                       <http://purl.org/roh/mirror/bibo#Document> ,
+                                       rdfs:subClassOf <http://purl.org/roh/mirror/bibo#Document> ,
                                                        [ rdf:type owl:Restriction ;
                                                          owl:onProperty <http://purl.org/roh/mirror/vivo#publisher> ;
                                                          owl:allValuesFrom <http://purl.org/roh/mirror/foaf#Organization>
@@ -4679,8 +4591,7 @@ A roh:FundingSource roh:feeds a roh:Funding with funds to sponsor some projects.
 
 ###  http://purl.org/roh/mirror/bibo#CollectedDocument
 <http://purl.org/roh/mirror/bibo#CollectedDocument> rdf:type owl:Class ;
-                                                    rdfs:subClassOf :ScientificPublication ,
-                                                                    <http://purl.org/roh/mirror/bibo#Document> ,
+                                                    rdfs:subClassOf <http://purl.org/roh/mirror/bibo#Document> ,
                                                                     [ rdf:type owl:Restriction ;
                                                                       owl:onProperty <http://purl.org/dc/terms/hasPart> ;
                                                                       owl:allValuesFrom <http://purl.org/roh/mirror/bibo#Document>
@@ -4712,7 +4623,7 @@ A roh:FundingSource roh:feeds a roh:Funding with funds to sponsor some projects.
                                              rdfs:comment "A collection of Documents or Collections"@en ,
                                                           """ResearchObjects related to publication concept are based on types defined by BIBO ontology. Currently, the following set of publication-related entities are supported: bibo: bibo:Collection (Periodical, Journal, Magazine)
 
-This is a type of roh:ResearchObjects related to publication concept. It is based on types defined by BIBO ontology. Currently, the following set of publication-related entities are supported: bibo: bibo:Collection (Periodical, Journal, Magazine) and bibo:Document (Article, ConferencePaper, EditorialArticle, Book, Proceedings, ConferencePaper, Chapter, Thesis) and obo:Software. bibo:Thesis has been refined into roh:DegreeThesis, roh:MastersThesis and roh:PhDThesis. Notably a new subclass of bibo:Collection named roh:Dossier has been created. Under such collection can be included the reports usually associated to a project, e.g.  roh:EthicalReport, roh:EvaluationSummary, roh:Justification, vivo:ResearchProposal. A roh:Dossier is bound through object property vivo:relates with a vivo:Project""" ;
+This is a type of roh:ResearchObjects related to publication concept. It is based on types defined by BIBO ontology. Currently, the following set of publication-related entities are supported: bibo: bibo:Collection (Periodical, Journal, Magazine) and bibo:Document (Article, ConferencePaper, EditorialArticle, Book, Proceedings, ConferencePaper, Chapter, Thesis) and obo:Software. bibo:Thesis has been refined into roh:BachelorsThesis, roh:MastersThesis and roh:PhDThesis. Notably a new subclass of bibo:Collection named roh:Dossier has been created. Under such collection can be included the reports usually associated to a project, e.g.  roh:EthicalReport, roh:EvaluationSummary, roh:Justification, vivo:ResearchProposal. A roh:Dossier is bound through object property vivo:relates with a vivo:Project""" ;
                                              rdfs:isDefinedBy "http://purl.org/roh/mirror/bibo#"^^xsd:anyURI ;
                                              rdfs:label "Colección"@es ,
                                                         "Collection"@en ;
@@ -4743,6 +4654,14 @@ This is a type of roh:ResearchObjects related to publication concept. It is base
                                                            [ rdf:type owl:Restriction ;
                                                              owl:onProperty :correspondingAuthor ;
                                                              owl:allValuesFrom <http://purl.org/roh/mirror/foaf#Person>
+                                                           ] ,
+                                                           [ rdf:type owl:Restriction ;
+                                                             owl:onProperty :documentStatus ;
+                                                             owl:allValuesFrom [ rdf:type owl:Class ;
+                                                                                 owl:unionOf ( :Accepted
+                                                                                               :Rejected
+                                                                                             )
+                                                                               ]
                                                            ] ,
                                                            [ rdf:type owl:Restriction ;
                                                              owl:onProperty <http://purl.org/roh/mirror/bibo#authorList> ;
@@ -4809,7 +4728,7 @@ This is a type of roh:ResearchObjects related to publication concept. It is base
                                                         "Content made available to the general public. In the case of ASIO, often scientific or academic contents published."@en ,
                                                         """ResearchObjects related to publication concept are based on types defined by BIBO ontology. Currently, the following set of publication-related entities are supported: bibo:Document (Article, ConferencePaper, EditorialArticle, Book, Proceedings, ConferencePaper, Chapter, Thesis)
 
-This is a type of roh:ResearchObjects related to publication concept. It is based on types defined by BIBO ontology. Currently, the following set of publication-related entities are supported: bibo: bibo:Collection (Periodical, Journal, Magazine) and bibo:Document (Article, ConferencePaper, EditorialArticle, Book, Proceedings, ConferencePaper, Chapter, Thesis) and obo:Software. bibo:Thesis has been refined into roh:DegreeThesis, roh:MastersThesis and roh:PhDThesis. Notably a new subclass of bibo:Collection named roh:Dossier has been created. Under such collection can be included the reports usually associated to a project, e.g.  roh:EthicalReport, roh:EvaluationSummary, roh:Justification, vivo:ResearchProposal. A roh:Dossier is bound through object property vivo:relates with a vivo:Project""" ;
+This is a type of roh:ResearchObjects related to publication concept. It is based on types defined by BIBO ontology. Currently, the following set of publication-related entities are supported: bibo: bibo:Collection (Periodical, Journal, Magazine) and bibo:Document (Article, ConferencePaper, EditorialArticle, Book, Proceedings, ConferencePaper, Chapter, Thesis) and obo:Software. bibo:Thesis has been refined into roh:BachelorsThesis, roh:MastersThesis and roh:PhDThesis. Notably a new subclass of bibo:Collection named roh:Dossier has been created. Under such collection can be included the reports usually associated to a project, e.g.  roh:EthicalReport, roh:EvaluationSummary, roh:Justification, vivo:ResearchProposal. A roh:Dossier is bound through object property vivo:relates with a vivo:Project""" ;
                                            rdfs:isDefinedBy "http://purl.org/roh/mirror/bibo#"^^xsd:anyURI ;
                                            rdfs:label "Academic publication"@en ,
                                                       "Document"@en ,
@@ -4950,7 +4869,7 @@ This is a type of roh:ResearchObjects related to publication concept. It is base
 
 ###  http://purl.org/roh/mirror/bibo#Manual
 <http://purl.org/roh/mirror/bibo#Manual> rdf:type owl:Class ;
-                                         rdfs:subClassOf :ScientificPublication ;
+                                         rdfs:subClassOf <http://purl.org/roh/mirror/bibo#Document> ;
                                          rdfs:comment "A book of instructions or guide to a specific topic."@en ;
                                          rdfs:label "Manual"@en ;
                                          <http://www.w3.org/2004/02/skos/core#altLabel> "Handbook"@en ;
@@ -5207,10 +5126,6 @@ This is a type of roh:ResearchObjects related to publication concept. It is base
                                                                  owl:allValuesFrom :Reservable
                                                                ] ,
                                                                [ rdf:type owl:Restriction ;
-                                                                 owl:onProperty :hasRole ;
-                                                                 owl:allValuesFrom <http://purl.org/roh/mirror/obo/bfo#BFO_0000023>
-                                                               ] ,
-                                                               [ rdf:type owl:Restriction ;
                                                                  owl:onProperty :participates ;
                                                                  owl:allValuesFrom :Activity
                                                                ] ,
@@ -5461,7 +5376,7 @@ Besides, an instance of a foaf:Person / roh:Researcher is associated to the foll
 <http://purl.org/roh/mirror/obo/bfo#BFO_0000023> rdf:type owl:Class ;
                                                  rdfs:subClassOf [ rdf:type owl:Restriction ;
                                                                    owl:onProperty <http://purl.org/roh/mirror/obo/ro#RO_0000052> ;
-                                                                   owl:someValuesFrom <http://purl.org/roh/mirror/foaf#Person>
+                                                                   owl:someValuesFrom <http://purl.org/roh/mirror/foaf#Agent>
                                                                  ] ,
                                                                  [ rdf:type owl:Restriction ;
                                                                    owl:onProperty :hasKnowledgeArea ;
@@ -5469,7 +5384,7 @@ Besides, an instance of a foaf:Person / roh:Researcher is associated to the foll
                                                                  ] ,
                                                                  [ rdf:type owl:Restriction ;
                                                                    owl:onProperty <http://purl.org/roh/mirror/obo/ro#RO_0000052> ;
-                                                                   owl:allValuesFrom <http://purl.org/roh/mirror/foaf#Person>
+                                                                   owl:allValuesFrom <http://purl.org/roh/mirror/foaf#Agent>
                                                                  ] ,
                                                                  [ rdf:type owl:Restriction ;
                                                                    owl:onProperty <http://purl.org/roh/mirror/vivo#dateTimeInterval> ;
@@ -5688,7 +5603,7 @@ Based on obo-bfo:Role also used in VIVO, it defines roles. The object property r
                                                  rdfs:subClassOf <http://purl.org/roh/mirror/obo/ero#ERO_0000783> ;
                                                  <http://purl.obolibrary.org/obo/IAO_0000112> "A college student." ;
                                                  <http://purl.obolibrary.org/obo/IAO_0000114> <http://purl.org/roh/mirror/obo/iao#IAO_0000120> ;
-                                                 <http://purl.obolibrary.org/obo/IAO_0000115> "A student role inhering in a person that is realized when the bearer participates in a course of study at a college, university, etc. in pursuit of an associate or bachelor degree." ;
+                                                 <http://purl.obolibrary.org/obo/IAO_0000115> "A student role inhering in a person that is realized when the bearer participates in a course of study at a college, university, etc. in pursuit of an associate or bachelor's degree." ;
                                                  <http://purl.obolibrary.org/obo/IAO_0000117> "PERSON: Nicole Vasilevsky" ;
                                                  <http://purl.obolibrary.org/obo/IAO_0000119> "http://www.thefreedictionary.com/student" ;
                                                  rdfs:label "Rol de Estudiante de Grado"@es ,
@@ -5759,7 +5674,7 @@ Based on obo-bfo:Role also used in VIVO, it defines roles. The object property r
 <http://purl.org/roh/mirror/obo/ero#ERO_0000790> rdf:type owl:Class ;
                                                  rdfs:subClassOf <http://purl.org/roh/mirror/obo/ero#ERO_0000783> ;
                                                  <http://purl.obolibrary.org/obo/IAO_0000114> <http://purl.org/roh/mirror/obo/iao#IAO_0000123> ;
-                                                 <http://purl.obolibrary.org/obo/IAO_0000115> "A student role inhering in a person that is realized when the bearer participates in a post-baccalaureate training program in pursuit of an additional bachelor degree or new or additional training in a particular field." ;
+                                                 <http://purl.obolibrary.org/obo/IAO_0000115> "A student role inhering in a person that is realized when the bearer participates in a post-baccalaureate training program in pursuit of an additional bachelor's degree or new or additional training in a particular field." ;
                                                  <http://purl.obolibrary.org/obo/IAO_0000117> "PERSON: Nicole Vasilevsky" ;
                                                  <http://purl.obolibrary.org/obo/IAO_0000119> "PERSON: Nicole Vasilevsky" ;
                                                  rdfs:label "Alumno de Estudios tras Grado"@es ,
@@ -5925,6 +5840,12 @@ Based on obo-bfo:Role also used in VIVO, it defines roles. The object property r
                                                             "Journal Article"@en .
 
 
+###  http://purl.org/roh/mirror/obo/iao#IAO_0000027
+<http://purl.org/roh/mirror/obo/iao#IAO_0000027> rdf:type owl:Class ;
+                                                 rdfs:subClassOf <http://purl.org/roh/mirror/obo/iao#IAO_0000030> ;
+                                                 rdfs:label "Data Item"@en .
+
+
 ###  http://purl.org/roh/mirror/obo/iao#IAO_0000030
 <http://purl.org/roh/mirror/obo/iao#IAO_0000030> rdf:type owl:Class ;
                                                  rdfs:subClassOf [ rdf:type owl:Restriction ;
@@ -5936,8 +5857,20 @@ Based on obo-bfo:Role also used in VIVO, it defines roles. The object property r
                                                             "Information Content Entity"@en .
 
 
+###  http://purl.org/roh/mirror/obo/iao#IAO_0000109
+<http://purl.org/roh/mirror/obo/iao#IAO_0000109> rdf:type owl:Class ;
+                                                 rdfs:subClassOf <http://purl.org/roh/mirror/obo/iao#IAO_0000027> ;
+                                                 rdfs:label "Measurement Datum"@en .
+
+
 ###  http://purl.org/roh/mirror/obo/iao#IAO_0000136
 <http://purl.org/roh/mirror/obo/iao#IAO_0000136> rdf:type owl:Class .
+
+
+###  http://purl.org/roh/mirror/obo/iao#IAO_0000582
+<http://purl.org/roh/mirror/obo/iao#IAO_0000582> rdf:type owl:Class ;
+                                                 rdfs:subClassOf <http://purl.org/roh/mirror/obo/iao#IAO_0000109> ;
+                                                 rdfs:label "Time-Stamped Measurement Datum"@en .
 
 
 ###  http://purl.org/roh/mirror/vcard#Address
@@ -6046,7 +5979,15 @@ Based on obo-bfo:Role also used in VIVO, it defines roles. The object property r
 
 ###  http://purl.org/roh/mirror/vivo#AdviseeRole
 <http://purl.org/roh/mirror/vivo#AdviseeRole> rdf:type owl:Class ;
-                                              rdfs:subClassOf <http://purl.org/roh/mirror/obo/bfo#BFO_0000023> ;
+                                              rdfs:subClassOf <http://purl.org/roh/mirror/obo/bfo#BFO_0000023> ,
+                                                              [ rdf:type owl:Restriction ;
+                                                                owl:onProperty <http://purl.org/roh/mirror/obo/ro#RO_0000052> ;
+                                                                owl:someValuesFrom <http://purl.org/roh/mirror/foaf#Person>
+                                                              ] ,
+                                                              [ rdf:type owl:Restriction ;
+                                                                owl:onProperty <http://purl.org/roh/mirror/obo/ro#RO_0000052> ;
+                                                                owl:allValuesFrom <http://purl.org/roh/mirror/foaf#Person>
+                                                              ] ;
                                               rdfs:label "Advisee Role"@en ,
                                                          "Rol de Receptor de Asesoramiento"@es .
 
@@ -6081,7 +6022,15 @@ Based on obo-bfo:Role also used in VIVO, it defines roles. The object property r
 
 ###  http://purl.org/roh/mirror/vivo#AdvisorRole
 <http://purl.org/roh/mirror/vivo#AdvisorRole> rdf:type owl:Class ;
-                                              rdfs:subClassOf <http://purl.org/roh/mirror/obo/bfo#BFO_0000023> ;
+                                              rdfs:subClassOf <http://purl.org/roh/mirror/obo/bfo#BFO_0000023> ,
+                                                              [ rdf:type owl:Restriction ;
+                                                                owl:onProperty <http://purl.org/roh/mirror/obo/ro#RO_0000052> ;
+                                                                owl:someValuesFrom <http://purl.org/roh/mirror/foaf#Person>
+                                                              ] ,
+                                                              [ rdf:type owl:Restriction ;
+                                                                owl:onProperty <http://purl.org/roh/mirror/obo/ro#RO_0000052> ;
+                                                                owl:allValuesFrom <http://purl.org/roh/mirror/foaf#Person>
+                                                              ] ;
                                               rdfs:label "Advisor Role"@en ,
                                                          "Rol de Asesor"@es .
 
@@ -6822,7 +6771,13 @@ Contents
                                                           ] ,
                                                           [ rdf:type owl:Restriction ;
                                                             owl:onProperty :projectStatus ;
-                                                            owl:allValuesFrom :Status
+                                                            owl:allValuesFrom [ rdf:type owl:Class ;
+                                                                                owl:unionOf ( :Closed
+                                                                                              :Open
+                                                                                              :ProposalSubmitted
+                                                                                              :Rejected
+                                                                                            )
+                                                                              ]
                                                           ] ,
                                                           [ rdf:type owl:Restriction ;
                                                             owl:onProperty :spends ;
@@ -6891,7 +6846,7 @@ Contents
                                                           ] ;
                                           <http://purl.obolibrary.org/obo/IAO_0000112> "An endeavor, frequently collaborative, that occurs over a finite period of time and is intended to achieve a particular aim." ;
                                           <http://purl.obolibrary.org/obo/IAO_0000115> "An endeavor, frequently collaborative, that occurs over a finite period of time and is intended to achieve a particular aim." ;
-                                          rdfs:comment "A vivo:Project is an entity imported from VIVO and extended according to CERIF specification. It can be defined as – a project in business and science is typically defined as a collaborative enterprise, frequently involving research or design, that is carefully planned to achieve a particular aim. Its configuration is inspired by the swrc:project and takes into account cerif:Project’s data properties. It encompasses all those properties and adds some new ones, e.g. projectStatus (CLOSED, OPEN, PROPOSAL_SUBMITTED, REJECTED), roh:foreseenJustificationDate. This entity is linked with classes Organization, Person, ResearchObject, Funding, Expense, Activity o Concept. A project in ROH may require ethical validation which is expressed as roh:needsEthicalValidation set to true. A project might be correspond to a research project categorized through roh:ProjectClassification by means of object property roh:hasProjectCategorization or correspond to some grant associated to human resources (roh:HRClassification) associated through roh:hasHRClassification. Notice that a project is a proposal (PROPOSAL_SUBMITTED) until it passes to the OPEN or REJECTED status. When the project finishes it state passes to CLOSED." ;
+                                          rdfs:comment "A vivo:Project is an entity imported from VIVO and extended according to CERIF specification. It can be defined as – a project in business and science is typically defined as a collaborative enterprise, frequently involving research or design, that is carefully planned to achieve a particular aim. Its configuration is inspired by the swrc:project and takes into account cerif:Project’s data properties. It encompasses all those properties and adds object properties roh:projectStatus (roh:Closed, roh:Open, roh:ProposalSubmitted, roh:Rejected) and roh:foreseenJustificationDate. This entity is linked with classes Organization, Person, ResearchObject, Funding, Expense, Activity o Concept. A project in ROH may require ethical validation which is expressed as roh:needsEthicalValidation set to true. A project might be correspond to a research project categorized through roh:ProjectClassification by means of object property roh:hasProjectCategorization or correspond to some grant associated to human resources (roh:HRClassification) associated through roh:hasHRClassification. Notice that a project is a proposal (PROPOSAL_SUBMITTED) until it passes to the OPEN or REJECTED status. When the project finishes it state passes to CLOSED." ;
                                           rdfs:label "Project"@en ,
                                                      "Proyecto"@es .
 
@@ -6902,10 +6857,6 @@ Contents
                                                <http://purl.obolibrary.org/obo/IAO_0000115> "a reified relationship" ;
                                                rdfs:label "Relación"@es ,
                                                           "Relationship"@en .
-
-
-###  http://purl.org/roh/mirror/vivo#Report
-<http://purl.org/roh/mirror/vivo#Report> rdf:type owl:Class .
 
 
 ###  http://purl.org/roh/mirror/vivo#ResearchProposal
@@ -7358,9 +7309,25 @@ rdf:Seq rdf:type owl:Class .
 
 
 [ rdf:type owl:AllDisjointClasses ;
-  owl:members ( :BachelorDegree
+  owl:members ( :BachelorsDegree
                 :DoctoralDegree
-                :MasterDegree
+                :MastersDegree
+              )
+] .
+
+
+[ rdf:type owl:AllDisjointClasses ;
+  owl:members ( :BachelorsSupervisingRelationship
+                :MastersSupervisingRelationship
+                :PhDSupervisingRelationship
+              )
+] .
+
+
+[ rdf:type owl:AllDisjointClasses ;
+  owl:members ( :BachelorsThesis
+                :MastersThesis
+                :PhDThesis
               )
 ] .
 
@@ -7371,22 +7338,6 @@ rdf:Seq rdf:type owl:Class .
                 <http://purl.org/roh/mirror/bibo#AcademicArticle>
                 <http://purl.org/roh/mirror/vivo#ConferencePaper>
                 <http://purl.org/roh/mirror/vivo#EditorialArticle>
-              )
-] .
-
-
-[ rdf:type owl:AllDisjointClasses ;
-  owl:members ( :DegreeSupervisingRelationship
-                :MasterSupervisingRelationship
-                :PhDSupervisingRelationship
-              )
-] .
-
-
-[ rdf:type owl:AllDisjointClasses ;
-  owl:members ( :DegreeThesis
-                :MastersThesis
-                :PhDThesis
               )
 ] .
 

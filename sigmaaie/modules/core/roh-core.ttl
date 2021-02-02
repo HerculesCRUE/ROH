@@ -79,7 +79,8 @@ vivo:DateTimeInterval
         obo:IAO_0000115  "a specific period or duration, defined by (optional) start and end date/times." .
 
 :ResearchField  a   owl:Class ;
-        rdfs:label  "Research field"@en .
+        rdfs:label  "Research field"@en ;
+	rdfs:subClassOf skos:Concept .
 
 <http://purl.org/roh>
         a                  owl:Ontology ;
@@ -234,10 +235,6 @@ iao:IAO_0000030  a       owl:Class ;
 ] .
 
 terms:source  a  owl:AnnotationProperty .
-
-:TitularUniversidad  a   owl:Class ;
-        rdfs:label       "Professor titular d'universitat"@ca-ad , "Profesor titular de universidade"@gl , "Profesor titular de universidad"@es , "Profesor titular d'universidá"@ast ;
-        rdfs:subClassOf  vivo:Position .
 
 [ a            owl:AllDisjointClasses ;
   owl:members  ( :Accreditation :Activity :Expense :Funding :FundingAmount :FundingProgram :FundingSource :Reservable <http://purl.org/roh/mirror/foaf#Agent> <http://purl.org/roh/mirror/geonames#Feature> bfo:BFO_0000008 bfo:BFO_0000023 <http://purl.org/roh/mirror/obo/ero#ERO_0000005> iao:IAO_0000030 <http://purl.org/roh/mirror/vcard#Kind> vivo:AcademicDegree vivo:Project vivo:Relationship rdf:List rdf:Seq skos:Concept skos:ConceptScheme )
@@ -809,7 +806,8 @@ terms:hasPart  a      owl:ObjectProperty ;
 :Country  a             owl:Class ;
         rdfs:comment    "A region legally identified as a distinct entity in political geography."@en ;
         rdfs:label      "Herrialde"@eu , "País"@es , "País"@ca-es , "País"@ca-ad , "País"@pt , "Country"@en , "Pays"@fr ;
-        skos:prefLabel  "País"@pt , "País"@gl , "País"@es , "País"@ca-es , "Country"@en , "Herrialde"@eu , "Pays"@fr , "País"@ca-ad .
+        skos:prefLabel  "País"@pt , "País"@gl , "País"@es , "País"@ca-es , "Country"@en , "Herrialde"@eu , "Pays"@fr , "País"@ca-ad ;
+	rdfs:subClassOf skos:Concept .
 
 :FundingAmount  a        owl:Class ;
         rdfs:comment     "A roh:FundingAmount is linked to a roh:Funding which is roh:fundedBy a roh:FundingProgram and finances a Project (through roh:supports relationship). Each FundingAmount is associated to an Organization participating in the Project (through roh:grants relationship) for each project specific annuity."^^rdfs:Literal ;
@@ -926,11 +924,6 @@ vivo:Position  a         owl:Class ;
 :currency  a          owl:DatatypeProperty ;
         rdfs:comment  "Data property used by roh:Funding and roh:FundingAmount" ;
         rdfs:label    "currency"@en , "moneda"@es .
-
-:CatedraticoUniversidad
-        a                owl:Class ;
-        rdfs:label       "Catedráticu d'universidá"@ast , "Catedrático de universidade"@gl , "Catedrático de universidad"@es , "Catedràtic d'universitat"@ca-ad ;
-        rdfs:subClassOf  vivo:Position .
 
 bibo:Document  a          owl:Class ;
         rdfs:comment      "A document (noun) is a bounded physical representation of body of information designed with the capacity (and usually intent) to communicate. A document may manifest symbolic, diagrammatic or sensory-representational information."@en , "Content made available to the general public. In the case of ASIO, often scientific or academic contents published."@en , "ResearchObjects related to publication concept are based on types defined by BIBO ontology. Currently, the following set of publication-related entities are supported: bibo:Document (Article, ConferencePaper, EditorialArticle, Book, Proceedings, ConferencePaper, Chapter, Thesis)\n\nThis is a type of roh:ResearchObjects related to publication concept. It is based on types defined by BIBO ontology. Currently, the following set of publication-related entities are supported: bibo: bibo:Collection (Periodical, Journal, Magazine) and bibo:Document (Article, ConferencePaper, EditorialArticle, Book, Proceedings, ConferencePaper, Chapter, Thesis) and obo:Software. bibo:Thesis has been refined into roh:BachelorsThesis, roh:MastersThesis and roh:PhDThesis. Notably a new subclass of bibo:Collection named roh:Dossier has been created. Under such collection can be included the reports usually associated to a project, e.g.  roh:EthicalReport, roh:EvaluationSummary, roh:Justification, vivo:ResearchProposal. A roh:Dossier is bound through object property vivo:relates with a vivo:Project" ;
@@ -1670,10 +1663,6 @@ vivo:ResearchProposal
         obo:IAO_0000119   "http://neurolex.org/wiki/Category:Analysis_service_resource" ;
         owl:disjointWith  <http://purl.org/roh/mirror/obo/ero#ERO_0001262> .
 
-:DoctoralProgram  a    owl:Class ;
-        rdfs:label     "Programa de doutoramento"@pt , "Programa de doutoramento"@gl , "Programa de doctorado"@es , "Programa de doctorat"@ca-es , "Doctoral programme"@en-gb , "Programme de doctorat"@fr , "Doctoral program"@en ;
-        skos:altLabel  "PhD programme"@en-gb , "PhD program"@en-us .
-
 bibo:Collection  a        owl:Class ;
         rdfs:comment      "ResearchObjects related to publication concept are based on types defined by BIBO ontology. Currently, the following set of publication-related entities are supported: bibo: bibo:Collection (Periodical, Journal, Magazine)\n\nThis is a type of roh:ResearchObjects related to publication concept. It is based on types defined by BIBO ontology. Currently, the following set of publication-related entities are supported: bibo: bibo:Collection (Periodical, Journal, Magazine) and bibo:Document (Article, ConferencePaper, EditorialArticle, Book, Proceedings, ConferencePaper, Chapter, Thesis) and obo:Software. bibo:Thesis has been refined into roh:BachelorsThesis, roh:MastersThesis and roh:PhDThesis. Notably a new subclass of bibo:Collection named roh:Dossier has been created. Under such collection can be included the reports usually associated to a project, e.g.  roh:EthicalReport, roh:EvaluationSummary, roh:Justification, vivo:ResearchProposal. A roh:Dossier is bound through object property vivo:relates with a vivo:Project" , "A collection of Documents or Collections"@en ;
         rdfs:isDefinedBy  "http://purl.org/roh/mirror/bibo#"^^xsd:anyURI ;
@@ -2337,11 +2326,6 @@ uneskos:hasMicroThesaurus
         rdfs:label        "EthicalAudit"@en ;
         rdfs:subClassOf   :EthicalReport ;
         owl:disjointWith  :EthicalValidation .
-
-:UNESCOKnowledgeArea  a  owl:Class ;
-        rdfs:comment     "List of terms used in subject analysis and retrieval of documents and publications in the fields of education, culture, natural sciences, social and human sciences, communication and information by UNESCO."@en ;
-        rdfs:label       "UNESCO Knowledge Area"@en , "Área de Conocimiento UNESCO"@es ;
-        rdfs:subClassOf  :KnowledgeArea .
 
 [ a            owl:AllDisjointClasses ;
   owl:members  ( :Award :CourseCertificate :LanguageCertificate )
@@ -3033,10 +3017,6 @@ vivo:description  a   owl:DatatypeProperty ;
                             owl:someValuesFrom  rdfs:Literal
                           ] ;
         owl:disjointWith  bibo:Periodical .
-
-:PASlaboral  a           owl:Class ;
-        rdfs:label       "PAS laboral"@es , "PAS laboral"@ca-ad ;
-        rdfs:subClassOf  vivo:Position .
 
 :TestAnotherGovernmentAgency
         a           owl:NamedIndividual , vivo:GovernmentAgency ;
@@ -4009,10 +3989,6 @@ vivo:Relationship  a     owl:Class ;
         obo:IAO_0000112  "functions as an n-ary predicate" ;
         obo:IAO_0000115  "a reified relationship" .
 
-:PASfuncionario  a       owl:Class ;
-        rdfs:label       "PAS funcionariu"@ast , "PAS funcionario"@gl , "PAS funcionario"@es , "PAS funcionari"@ca-ad ;
-        rdfs:subClassOf  vivo:Position .
-
 skos-thes:subGroup  a  owl:AnnotationProperty .
 
 :TestChapterTwo  a                owl:NamedIndividual , bibo:Chapter ;
@@ -4259,10 +4235,6 @@ skos:inScheme  a  owl:AnnotationProperty .
 ] .
 
 iao:IAO_0000116  a  owl:AnnotationProperty .
-
-:Context  a           owl:Class ;
-        rdfs:comment  "Contexts are similar to situations or state of affairs providing interpretation coordinates for profiles. In the most simple case, these coordinates are just geographical/spatial or temporal coordinates. The ASIO core ontology does not impose a fixed definition of context. It is deliberately wide in order to enable third-parties the adequation of the meaning of context according to their modeling needs and requirements."@en ;
-        rdfs:label    "Contexto"@pt , "Contexto"@es , "Context"@en , "Context"@ca-es .
 
 :infrastructureOf  a  owl:ObjectProperty ;
         rdfs:comment  "An Infrastructure belonging to an Agent."@en ;
@@ -4533,11 +4505,6 @@ vivo:assigns  a       owl:ObjectProperty ;
         rdfs:label    "financiación pública"@es , "public funding"@en ;
         rdfs:range    xsd:boolean .
 
-:CatedraticoEscuelaUniversitaria
-        a                owl:Class ;
-        rdfs:label       "Catedráticu d'escuela universitaria"@ast , "Catedrático de escuela universitaria"@es , "Catedrático de escola universitaria"@gl , "Catedràtic d'escola universitària"@ca-ad ;
-        rdfs:subClassOf  vivo:Position .
-
 <http://prismstandard.org/namespaces/1.2/basic/startingPage>
         a                       owl:DatatypeProperty ;
         rdfs:comment            "Starting page number within a continuous page range."@en ;
@@ -4689,7 +4656,7 @@ vivo:researcherId  a        owl:DatatypeProperty ;
 :Prototype  a            owl:Class ;
         rdfs:comment     "A product prototype"@en ;
         rdfs:label       "Prototype"@en ;
-        rdfs:subClassOf  :Product , :ResearchObject .
+        rdfs:subClassOf  :Product .
 
 uneskos:hasMainConcept
         a       owl:AnnotationProperty .
