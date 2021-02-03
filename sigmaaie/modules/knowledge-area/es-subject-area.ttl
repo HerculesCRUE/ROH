@@ -1,95 +1,87 @@
-@prefix foaf:    <http://xmlns.com/foaf/0.1/#> .
-@prefix emergel:  <http://purl.org/asio/core#> .
-@prefix asio:    <http://purl.org/asio/core#> .
-@prefix my:      <http://weso.es/tablines/project/subjectAreas/resource/> .
-@prefix asioModules:  <http://purl.org/asio/modules#> .
 @prefix rdfs:    <http://www.w3.org/2000/01/rdf-schema#> .
-@prefix project:  <http://weso.es/tablines/project/subjectAreas/> .
-@prefix dcat:    <http://www.w3.org/ns/dcat#> .
 @prefix ontolex:  <http://www.w3.org/ns/lemon/ontolex#> .
-@prefix dct:     <http://purl.org/dc/terms/> .
 @prefix rdf:     <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
-@prefix provo:   <http://www.w3.org/ns/prov#> .
 @prefix skos:    <http://www.w3.org/2004/02/skos/core#> .
 @prefix unescothes:    <http://skos.um.es/unescothes/> .
-@prefix owl:     <http://www.w3.org/2002/07/owl#>
-@prefix roh:     <http://purl.org/roh#>
+@prefix owl:     <http://www.w3.org/2002/07/owl#> .
+@prefix roh:     <http://purl.org/roh#> .
+@prefix rohsubj:     <http://purl.org/roh/subject-areas#> .
 
 roh:ESSubjectArea
       a       owl:Class ;
       rdfs:label "ES Subject Area"@en ;
       rdfs:subClassOf roh:KnowledgeArea .
 
-asioModules:ES_SUBJECT_AREA_LEVEL_3_ENE
+rohsubj:ES_SUBJECT_AREA_LEVEL_3_ENE
       a       roh:ESSubjectArea ;
       rdfs:label "Energía" ;
-      asio:hasCode asioModules:ES_SUBJECT_AREA_LEVEL_3_CODE_ENE ;
-      skos:broader asioModules:ES_SUBJECT_AREA_LEVEL_2_EYT ;
-      skos:inScheme asioModules:ESSubjectAreas3rdList ;
+      roh:hasCode rohsubj:ES_SUBJECT_AREA_LEVEL_3_CODE_ENE ;
+      skos:broader rohsubj:ES_SUBJECT_AREA_LEVEL_2_EYT ;
+      skos:inScheme rohsubj:ESSubjectAreas3rdList ;
       skos:notation "ENE" ;
       skos:exactMatch unescothes:C01360 ;
       skos:prefLabel "Energia"@ca , "Energia"@pt , "Energía"@es , "Energía" , "Energy"@en , "Enerxía"@ast , "Enerxía"@gl , "Énergie"@fr .
 
-asioModules:ES_SUBJECT_AREA_LEVEL_3_ESP
+rohsubj:ES_SUBJECT_AREA_LEVEL_3_ESP
       a       roh:ESSubjectArea ;
       rdfs:label "Investigación espacial" ;
-      asio:hasCode asioModules:ES_SUBJECT_AREA_LEVEL_3_CODE_ESP ;
-      skos:broader asioModules:ES_SUBJECT_AREA_LEVEL_2_FIS ;
-      skos:inScheme asioModules:ESSubjectAreas3rdList ;
+      roh:hasCode rohsubj:ES_SUBJECT_AREA_LEVEL_3_CODE_ESP ;
+      skos:broader rohsubj:ES_SUBJECT_AREA_LEVEL_2_FIS ;
+      skos:inScheme rohsubj:ESSubjectAreas3rdList ;
       skos:notation "ESP" ;
       skos:closeMatch unescothes:C00064 ;
       skos:prefLabel "Recherche spatiale"@fr , "Investigación espacial"@ast , "Investigación espacial" , "Investigación espacial"@es , "Investigación espacial"@gl , "Recerca espacial"@ca , "Investigação espacial"@pt , "Space research"@en .
 
-asioModules:ES_SUBJECT_AREA_LEVEL_3_MT3
+rohsubj:ES_SUBJECT_AREA_LEVEL_3_MT3
       a       roh:ESSubjectArea ;
       rdfs:label "Ciencias matemáticas" ;
-      asio:hasCode asioModules:ES_SUBJECT_AREA_LEVEL_3_CODE_MT3 ;
-      skos:broader asioModules:ES_SUBJECT_AREA_LEVEL_2_MTM ;
-      skos:inScheme asioModules:ESSubjectAreas3rdList ;
+      roh:hasCode rohsubj:ES_SUBJECT_AREA_LEVEL_3_CODE_MT3 ;
+      skos:broader rohsubj:ES_SUBJECT_AREA_LEVEL_2_MTM ;
+      skos:inScheme rohsubj:ESSubjectAreas3rdList ;
       skos:notation "MT3" ;
       skos:closeMatch unescothes:C02437 ;
       skos:prefLabel "Ciências Matemáticas"@pt , "Ciències matemàtiques"@ca , "Ciencies matemátiques"@ast , "Mathematical Sciences"@en , "Sciences mathématiques"@fr , "Ciencias matemáticas" , "Ciencias matemáticas"@es , "Ciencias matemáticas"@gl .
 
-asioModules:ES_SUBJECT_AREA_LEVEL_3_MFU
+rohsubj:ES_SUBJECT_AREA_LEVEL_3_MFU
       a       roh:ESSubjectArea ;
       rdfs:label "Materiales con funcionalidad eléctrica, magnética, óptica o térmica" ;
-      asio:hasCode asioModules:ES_SUBJECT_AREA_LEVEL_3_CODE_MFU ;
-      skos:broader asioModules:ES_SUBJECT_AREA_LEVEL_2_MAT ;
-      skos:inScheme asioModules:ESSubjectAreas3rdList ;
+      roh:hasCode rohsubj:ES_SUBJECT_AREA_LEVEL_3_CODE_MFU ;
+      skos:broader rohsubj:ES_SUBJECT_AREA_LEVEL_2_MAT ;
+      skos:inScheme rohsubj:ESSubjectAreas3rdList ;
       skos:notation "MFU" ;
       skos:prefLabel "Materiais com funcionalidade elétrica, magnética, óptica ou térmica"@pt , "Materiais con funcionalidade eléctrica, magnética, óptica ou térmica"@gl , "Materiales con funcionalidad eléctrica, magnética, óptica o térmica"@es , "Materiales con funcionalidad eléctrica, magnética, óptica o térmica" , "Materiales con funcionalidad eléctrica, magnética, óptica o térmica"@ast , "Materials amb funcionalitat elèctrica, magnètica, òptica o tèrmica"@ca , "Matériaux à fonctionnalité électrique, magnétique, optique ou thermique"@fr , "Materials with electrical, magnetic, optical or thermal functionality"@en .
 
-asioModules:ES_SUBJECT_AREA_LEVEL_3_EYF
+rohsubj:ES_SUBJECT_AREA_LEVEL_3_EYF
       a       roh:ESSubjectArea ;
       rdfs:label "Empresas y finanzas" ;
-      asio:hasCode asioModules:ES_SUBJECT_AREA_LEVEL_3_CODE_EYF ;
-      skos:broader asioModules:ES_SUBJECT_AREA_LEVEL_2_ECO ;
-      skos:inScheme asioModules:ESSubjectAreas3rdList ;
+      roh:hasCode rohsubj:ES_SUBJECT_AREA_LEVEL_3_CODE_EYF ;
+      skos:broader rohsubj:ES_SUBJECT_AREA_LEVEL_2_ECO ;
+      skos:inScheme rohsubj:ESSubjectAreas3rdList ;
       skos:notation "EYF" ;
       skos:closeMatch unescothes:C01374 ;
       skos:closeMatch unescothes:C01527 ;
       skos:prefLabel "Empresas y finanzas" , "Empresas y finanzas"@es , "Business and finance"@en , "Affaires et finances"@fr , "Empreses i finances"@ca , "Negócios e finanças"@pt , "Negocios e finanzas"@gl , "Empreses y finances"@ast .
 
-asioModules:ES_SUBJECT_AREA_LEVEL_3_CODE_DPT
+rohsubj:ES_SUBJECT_AREA_LEVEL_3_CODE_DPT
       a       roh:ESSubjectArea ;
       rdfs:label "DPT" ;
-      asio:codeOf asioModules:ES_SUBJECT_AREA_LEVEL_3_DPT ;
-      skos:inScheme asioModules:ESSubjectCode3rdList ;
+      roh:codeOf rohsubj:ES_SUBJECT_AREA_LEVEL_3_DPT ;
+      skos:inScheme rohsubj:ESSubjectCode3rdList ;
       skos:prefLabel "DPT" .
 
-asioModules:ES_SUBJECT_AREA_LEVEL_3_CODE_MES
+rohsubj:ES_SUBJECT_AREA_LEVEL_3_CODE_MES
       a       roh:ESSubjectArea ;
       rdfs:label "MES" ;
-      asio:codeOf asioModules:ES_SUBJECT_AREA_LEVEL_3_MES ;
-      skos:inScheme asioModules:ESSubjectCode3rdList ;
+      roh:codeOf rohsubj:ES_SUBJECT_AREA_LEVEL_3_MES ;
+      skos:inScheme rohsubj:ESSubjectCode3rdList ;
       skos:prefLabel "MES" .
 
-asioModules:ES_SUBJECT_AREA_LEVEL_3_FEM
+rohsubj:ES_SUBJECT_AREA_LEVEL_3_FEM
       a       roh:ESSubjectArea ;
       rdfs:label "Estudios feministas, de las mujeres y de género" ;
-      asio:hasCode asioModules:ES_SUBJECT_AREA_LEVEL_3_CODE_FEM ;
-      skos:broader asioModules:ES_SUBJECT_AREA_LEVEL_2_CSO ;
-      skos:inScheme asioModules:ESSubjectAreas3rdList ;
+      roh:hasCode rohsubj:ES_SUBJECT_AREA_LEVEL_3_CODE_FEM ;
+      skos:broader rohsubj:ES_SUBJECT_AREA_LEVEL_2_CSO ;
+      skos:inScheme rohsubj:ESSubjectAreas3rdList ;
       skos:notation "FEM" ;
       skos:closeMatch unescothes:C01650 ;
       skos:closeMatch unescothes:C01651 ;
@@ -98,500 +90,500 @@ asioModules:ES_SUBJECT_AREA_LEVEL_3_FEM
       skos:closeMatch unescothes:C04347 ;
       skos:prefLabel "Estudos feministas, de mulheres e de gênero"@pt , "Estudos feministas, femininos e de xénero"@gl , "Estudios feministes, de les muyeres y de género"@ast , "Études féministes, féminines et de genre"@fr , "Estudis feministes, de les dones i de gènere"@ca , "Feminist, women's and gender studies"@en , "Estudios feministas, de las mujeres y de género" , "Estudios feministas, de las mujeres y de género"@es .
 
-asioModules:ES_SUBJECT_AREA_LEVEL_3_CTA
+rohsubj:ES_SUBJECT_AREA_LEVEL_3_CTA
       a       roh:ESSubjectArea ;
       rdfs:label "Ciencias de la Tierra y del agua" ;
-      asio:hasCode asioModules:ES_SUBJECT_AREA_LEVEL_3_CODE_CTA ;
-      skos:broader asioModules:ES_SUBJECT_AREA_LEVEL_2_CTM ;
-      skos:inScheme asioModules:ESSubjectAreas3rdList ;
+      roh:hasCode rohsubj:ES_SUBJECT_AREA_LEVEL_3_CODE_CTA ;
+      skos:broader rohsubj:ES_SUBJECT_AREA_LEVEL_2_CTM ;
+      skos:inScheme rohsubj:ESSubjectAreas3rdList ;
       skos:notation "CTA" ;
       skos:closeMatch unescothes:C01131 ;
       skos:closeMatch unescothes:C01896 ;
       skos:prefLabel "Ciències de la Terra i de l'aigua"@ca , "Earth and water sciences"@en , "Sciences de la terre et de l'eau"@fr , "Ciencias da terra e da auga"@gl , "Ciencies de la Tierra y del agua"@ast , "Ciencias de la Tierra y del agua" , "Ciencias de la Tierra y del agua"@es , "Ciências da terra e da água"@pt .
 
-asioModules:ES_SUBJECT_AREA_LEVEL_3_ARQ
+rohsubj:ES_SUBJECT_AREA_LEVEL_3_ARQ
       a       roh:ESSubjectArea ;
       rdfs:label "Arqueología" ;
-      asio:hasCode asioModules:ES_SUBJECT_AREA_LEVEL_3_CODE_ARQ ;
-      skos:broader asioModules:ES_SUBJECT_AREA_LEVEL_2_PHA ;
-      skos:inScheme asioModules:ESSubjectAreas3rdList ;
+      roh:hasCode rohsubj:ES_SUBJECT_AREA_LEVEL_3_CODE_ARQ ;
+      skos:broader rohsubj:ES_SUBJECT_AREA_LEVEL_2_PHA ;
+      skos:inScheme rohsubj:ESSubjectAreas3rdList ;
       skos:notation "ARQ" ;
       skos:prefLabel "Arqueología" , "Arqueología"@es , "Arqueología"@ast , "Arqueologia"@ca , "Arqueologia"@pt , "Archeology"@en , "Archéologie"@fr , "Arqueoloxía"@gl .
 
-asioModules:ES_SUBJECT_AREA_LEVEL_3_POL
+rohsubj:ES_SUBJECT_AREA_LEVEL_3_POL
       a       roh:ESSubjectArea ;
       rdfs:label "Investigación polar" ;
-      asio:hasCode asioModules:ES_SUBJECT_AREA_LEVEL_3_CODE_POL ;
-      skos:broader asioModules:ES_SUBJECT_AREA_LEVEL_2_CTM ;
-      skos:inScheme asioModules:ESSubjectAreas3rdList ;
+      roh:hasCode rohsubj:ES_SUBJECT_AREA_LEVEL_3_CODE_POL ;
+      skos:broader rohsubj:ES_SUBJECT_AREA_LEVEL_2_CTM ;
+      skos:inScheme rohsubj:ESSubjectAreas3rdList ;
       skos:notation "POL" ;
       skos:prefLabel "Polar research"@en , "Pesquisa polar"@pt , "Recherche polaire"@fr , "Investigación polar" , "Investigación polar"@es , "Investigación polar"@ast , "Investigación polar"@gl , "Recerca polar"@ca .
 
-asioModules:ES_SUBJECT_AREA_LEVEL_1_CODE_CMIFQ
+rohsubj:ES_SUBJECT_AREA_LEVEL_1_CODE_CMIFQ
       a       roh:ESSubjectArea ;
       rdfs:label "CMIFQ" ;
-      asio:codeOf asioModules:ES_SUBJECT_AREA_LEVEL_1_CMIFQ ;
-      skos:inScheme asioModules:ESSubjectCode1stList ;
+      roh:codeOf rohsubj:ES_SUBJECT_AREA_LEVEL_1_CMIFQ ;
+      skos:inScheme rohsubj:ESSubjectCode1stList ;
       skos:prefLabel "CMIFQ" .
 
-asioModules:ES_SUBJECT_AREA_LEVEL_3_CODE_ED3
+rohsubj:ES_SUBJECT_AREA_LEVEL_3_CODE_ED3
       a       roh:ESSubjectArea ;
       rdfs:label "ED3" ;
-      asio:codeOf asioModules:ES_SUBJECT_AREA_LEVEL_3_ED3 ;
-      skos:inScheme asioModules:ESSubjectCode3rdList ;
+      roh:codeOf rohsubj:ES_SUBJECT_AREA_LEVEL_3_ED3 ;
+      skos:inScheme rohsubj:ESSubjectCode3rdList ;
       skos:prefLabel "ED3" .
 
-asioModules:ES_SUBJECT_AREA_LEVEL_3_GEO
+rohsubj:ES_SUBJECT_AREA_LEVEL_3_GEO
       a       roh:ESSubjectArea ;
       rdfs:label "Geografía" ;
-      asio:hasCode asioModules:ES_SUBJECT_AREA_LEVEL_3_CODE_GEO ;
-      skos:broader asioModules:ES_SUBJECT_AREA_LEVEL_2_CSO ;
-      skos:inScheme asioModules:ESSubjectAreas3rdList ;
+      roh:hasCode rohsubj:ES_SUBJECT_AREA_LEVEL_3_CODE_GEO ;
+      skos:broader rohsubj:ES_SUBJECT_AREA_LEVEL_2_CSO ;
+      skos:inScheme rohsubj:ESSubjectAreas3rdList ;
       skos:notation "GEO" ;
       skos:exactMatch unescothes:C01672 ;
       skos:prefLabel "Geografia"@ca , "Geografia"@pt , "Geography"@en , "Geografía" , "Geografía"@es , "Geografía"@ast , "Géographie"@fr , "Xeografía"@gl .
 
-asioModules:ESSubjectAreas3rdList
-      a       asioModules:subjectAreas ;
+rohsubj:ESSubjectAreas3rdList
+      a       skos:ConceptScheme ;
       rdfs:label "Domains thématiques de troisième niveau de l'Agence Espagnole pour la Recherche (AEI)"@fr , "Third-level subject areas of Spain's State Research Agency (AEI)"@en , "θɜːd ˈlɛvl ˈsʌbʤɪkt ˈeərɪəz"@en-GB-fonipa , "ˈaɾeas teˈmatikas ðe terˈθer niˈβel ðe la aˈxenθja estaˈtal ðe imbestiɣ̞aˈθjon"@es-ES-fonipa , "Áreas temáticas de terceiro nivel da Axencia Estatal de Investigación (AEI)"@gl , "Dominis temàtics de tercer nivell de l'Agència Estatal de Recerca (AEI)"@ca , "duˈminis təˈmatikz ðə tərˈse niˈβeʎ ðə ɫə ʒənˈsiə əstəˈtaɫ ðə rəˈsɛrkə"@ca-CA-fonipa , "Árees temátiques de tercer nivel de l'Axencia Estatal de Investigación (AEI)"@ast , "Áreas temáticas de terceiro nível"@pt , "θɜrd ˈlɛvəl ˈsʌbʤɪkt ˈɛriə"@en-US-fonipa , "Áreas temáticas de tercer nivel de la Agencia Estatal de Investigación (AEI)"@es , "Áreas temáticas de tercer libel d'a AEI"@an , "Áreas tematicas de tresen nivel de l'AEI"@oc , "FIXME"@eu ;
       skos:prefLabel "Domains thématiques de troisième niveau de l'Agence Espagnole pour la Recherche (AEI)"@fr , "Third-level subject areas of Spain's State Research Agency (AEI)"@en , "ˈaɾeas teˈmatikas ðe terˈθer niˈβel ðe la aˈxenθja estaˈtal ðe imbestiɣ̞aˈθjon"@es-ES-fonipa , "θɜːd ˈlɛvl ˈsʌbʤɪkt ˈeərɪəz"@en-GB-fonipa , "Áreas temáticas de terceiro nivel da Axencia Estatal de Investigación (AEI)"@gl , "Dominis temàtics de tercer nivell de l'Agència Estatal de Recerca (AEI)"@ca , "θɜrd ˈlɛvəl ˈsʌbʤɪkt ˈɛriəz"@en-US-fonipa , "Árees temátiques de tercer nivel de l'Axencia Estatal de Investigación (AEI)"@ast , "duˈminis təˈmatikz ðə tərˈse niˈβeʎ ðə ɫə ʒənˈsiə əstəˈtaɫ ðə rəˈsɛrkə"@ca-CA-fonipa , "Áreas temáticas de terceiro nível"@pt , "Áreas temáticas de tercer nivel de la Agencia Estatal de Investigación (AEI)"@es , "Áreas temáticas de tercer libel d'a AEI"@an , "Áreas tematicas de tresen nivel de l'AEI"@oc , "FIXME"@eu ;
       ontolex:phoneticRep "duˈminis təˈmatikz ðə tərˈse niˈβeʎ ðə ɫə ʒənˈsiə əstəˈtaɫ ðə rəˈsɛrkə"@ca-CA-fonipa , "θɜrd ˈlɛvəl ˈsʌbʤɪkt ˈɛriə"@en-US-fonipa , "ˈaɾeas teˈmatikas ðe terˈθer niˈβel ðe la aˈxenθja estaˈtal ðe imbestiɣ̞aˈθjon"@es-ES-fonipa , "θɜːd ˈlɛvl ˈsʌbʤɪkt ˈeərɪəz"@en-GB-fonipa .
 
-asioModules:ES_SUBJECT_AREA_LEVEL_3_FFP
+rohsubj:ES_SUBJECT_AREA_LEVEL_3_FFP
       a       roh:ESSubjectArea ;
       rdfs:label "Física fundamental y de partículas" ;
-      asio:hasCode asioModules:ES_SUBJECT_AREA_LEVEL_3_CODE_FFP ;
-      skos:broader asioModules:ES_SUBJECT_AREA_LEVEL_2_FIS ;
-      skos:inScheme asioModules:ESSubjectAreas3rdList ;
+      roh:hasCode rohsubj:ES_SUBJECT_AREA_LEVEL_3_CODE_FFP ;
+      skos:broader rohsubj:ES_SUBJECT_AREA_LEVEL_2_FIS ;
+      skos:inScheme rohsubj:ESSubjectAreas3rdList ;
       skos:notation "FFP" ;
       skos:prefLabel "Fundamental and particle physics"@en , "Física fundamental y de partícules"@ast , "Física fonamental i de partícules"@ca , "Física fundamental y de partículas" , "Física fundamental y de partículas"@es , "Física fundamental e de partículas"@gl , "Física fundamental e de partículas"@pt , "Physique fondamentale et physique des particules"@fr .
 
-asioModules:ES_SUBJECT_AREA_LEVEL_3_DPT
+rohsubj:ES_SUBJECT_AREA_LEVEL_3_DPT
       a       roh:ESSubjectArea ;
       rdfs:label "Herramientas diagnósticas, pronósticas y terapéuticas" ;
-      asio:hasCode asioModules:ES_SUBJECT_AREA_LEVEL_3_CODE_DPT ;
-      skos:broader asioModules:ES_SUBJECT_AREA_LEVEL_2_BME ;
-      skos:inScheme asioModules:ESSubjectAreas3rdList ;
+      roh:hasCode rohsubj:ES_SUBJECT_AREA_LEVEL_3_CODE_DPT ;
+      skos:broader rohsubj:ES_SUBJECT_AREA_LEVEL_2_BME ;
+      skos:inScheme rohsubj:ESSubjectAreas3rdList ;
       skos:notation "DPT" ;
       skos:prefLabel "Outils diagnostiques, pronostiques et thérapeutiques"@fr , "Herramientas diagnósticas, pronósticas y terapéuticas" , "Herramientas diagnósticas, pronósticas y terapéuticas"@es , "Eines diagnòstiques, pronòstiques i terapèutiques"@ca , "Ferramentas diagnósticas, prognósticas e terapéuticas"@gl , "Ferramentas de diagnóstico, prognóstico e terapêutico"@pt , "Ferramientes diagnóstiques, pronóstiques y terapéutiques"@ast , "Diagnostic, prognostic and therapeutic tools"@en .
 
-asioModules:ES_SUBJECT_AREA_LEVEL_3_FIL
+rohsubj:ES_SUBJECT_AREA_LEVEL_3_FIL
       a       roh:ESSubjectArea ;
       rdfs:label "Filosofía" ;
-      asio:hasCode asioModules:ES_SUBJECT_AREA_LEVEL_3_CODE_FIL ;
-      skos:broader asioModules:ES_SUBJECT_AREA_LEVEL_2_MLP ;
-      skos:inScheme asioModules:ESSubjectAreas3rdList ;
+      roh:hasCode rohsubj:ES_SUBJECT_AREA_LEVEL_3_CODE_FIL ;
+      skos:broader rohsubj:ES_SUBJECT_AREA_LEVEL_2_MLP ;
+      skos:inScheme rohsubj:ESSubjectAreas3rdList ;
       skos:notation "FIL" ;
       skos:exactMatch unescothes:C02971 ;
       skos:prefLabel "Philosophy"@en , "Filosofía"@ast , "Filosofía" , "Filosofía"@es , "Filosofía"@gl , "Filosofia"@ca , "Filosofia"@pt , "Philosophie"@fr .
 
-asioModules:ES_SUBJECT_AREA_LEVEL_3_CODE_EYA
+rohsubj:ES_SUBJECT_AREA_LEVEL_3_CODE_EYA
       a       roh:ESSubjectArea ;
       rdfs:label "EYA" ;
-      asio:codeOf asioModules:ES_SUBJECT_AREA_LEVEL_3_EYA ;
-      skos:inScheme asioModules:ESSubjectCode3rdList ;
+      roh:codeOf rohsubj:ES_SUBJECT_AREA_LEVEL_3_EYA ;
+      skos:inScheme rohsubj:ESSubjectCode3rdList ;
       skos:prefLabel "EYA" .
 
-asioModules:ES_SUBJECT_AREA_LEVEL_3_AYA
+rohsubj:ES_SUBJECT_AREA_LEVEL_3_AYA
       a       roh:ESSubjectArea ;
       rdfs:label "Astronomía y astrofísica" ;
-      asio:hasCode asioModules:ES_SUBJECT_AREA_LEVEL_3_CODE_AYA ;
-      skos:broader asioModules:ES_SUBJECT_AREA_LEVEL_2_FIS ;
-      skos:inScheme asioModules:ESSubjectAreas3rdList ;
+      roh:hasCode rohsubj:ES_SUBJECT_AREA_LEVEL_3_CODE_AYA ;
+      skos:broader rohsubj:ES_SUBJECT_AREA_LEVEL_2_FIS ;
+      skos:inScheme rohsubj:ESSubjectAreas3rdList ;
       skos:notation "AYA" ;
       skos:closeMatch unescothes:C00284 ;
       skos:closeMatch unescothes:C00283 ;
       skos:prefLabel "Astronomia e astrofísica"@pt , "Astronomie et astrophysique"@fr , "Astronomía e astrofísica"@gl , "Astronomy and astrophysics"@en , "Astronomía y astrofísica" , "Astronomía y astrofísica"@es , "Astronomía y astrofísica"@ast , "Astronomia i astrofísica"@ca .
 
-asioModules:ES_SUBJECT_AREA_LEVEL_3_IIT
+rohsubj:ES_SUBJECT_AREA_LEVEL_3_IIT
       a       roh:ESSubjectArea ;
       rdfs:label "Inmunidad, infección y nuevas terapias" ;
-      asio:hasCode asioModules:ES_SUBJECT_AREA_LEVEL_3_CODE_IIT ;
-      skos:broader asioModules:ES_SUBJECT_AREA_LEVEL_2_BME ;
-      skos:inScheme asioModules:ESSubjectAreas3rdList ;
+      roh:hasCode rohsubj:ES_SUBJECT_AREA_LEVEL_3_CODE_IIT ;
+      skos:broader rohsubj:ES_SUBJECT_AREA_LEVEL_2_BME ;
+      skos:inScheme rohsubj:ESSubjectAreas3rdList ;
       skos:notation "IIT" ;
       skos:closeMatch unescothes:C01921 ;
       skos:closeMatch unescothes:C01973 ;
       skos:prefLabel "Immunité, infection et nouvelles thérapies"@fr , "Immunitat, infecció i noves teràpies"@ca , "Immunity, infection and new therapies"@en , "Inmunidade, infección e novas terapias"@gl , "Imunidade, infecção e novas terapias"@pt , "Inmunidad, infección y nuevas terapias" , "Inmunidad, infección y nuevas terapias"@es , "Inmunidad, infección y nueves terapies"@ast .
 
-asioModules:ES_SUBJECT_AREA_LEVEL_3_CODE_BDV
+rohsubj:ES_SUBJECT_AREA_LEVEL_3_CODE_BDV
       a       roh:ESSubjectArea ;
       rdfs:label "BDV" ;
-      asio:codeOf asioModules:ES_SUBJECT_AREA_LEVEL_3_BDV ;
-      skos:inScheme asioModules:ESSubjectCode3rdList ;
+      roh:codeOf rohsubj:ES_SUBJECT_AREA_LEVEL_3_BDV ;
+      skos:inScheme rohsubj:ESSubjectCode3rdList ;
       skos:prefLabel "BDV" .
 
-asioModules:ES_SUBJECT_AREA_LEVEL_3_LYL
+rohsubj:ES_SUBJECT_AREA_LEVEL_3_LYL
       a       roh:ESSubjectArea ;
       rdfs:label "Lingüística y lenguas" ;
-      asio:hasCode asioModules:ES_SUBJECT_AREA_LEVEL_3_CODE_LYL ;
-      skos:broader asioModules:ES_SUBJECT_AREA_LEVEL_2_MLP ;
-      skos:inScheme asioModules:ESSubjectAreas3rdList ;
+      roh:hasCode rohsubj:ES_SUBJECT_AREA_LEVEL_3_CODE_LYL ;
+      skos:broader rohsubj:ES_SUBJECT_AREA_LEVEL_2_MLP ;
+      skos:inScheme rohsubj:ESSubjectAreas3rdList ;
       skos:notation "LYL" ;
       skos:closeMatch unescothes:C02306 ;
       skos:prefLabel "Llingüística y lengua"@ast , "Linguística e línguas"@pt , "Lingüística i llengües"@ca , "Lingüística e linguas"@gl , "Linguistics and languages"@en , "Lingüística y lenguas" , "Lingüística y lenguas"@es , "Linguistique et langues"@fr .
 
-asioModules:ES_SUBJECT_AREA_LEVEL_3_CODE_TMA
+rohsubj:ES_SUBJECT_AREA_LEVEL_3_CODE_TMA
       a       roh:ESSubjectArea ;
       rdfs:label "TMA" ;
-      asio:codeOf asioModules:ES_SUBJECT_AREA_LEVEL_3_TMA ;
-      skos:inScheme asioModules:ESSubjectCode3rdList ;
+      roh:codeOf rohsubj:ES_SUBJECT_AREA_LEVEL_3_TMA ;
+      skos:inScheme rohsubj:ESSubjectCode3rdList ;
       skos:prefLabel "TMA" .
 
-asioModules:ES_SUBJECT_AREA_LEVEL_3_CODE_MNF
+rohsubj:ES_SUBJECT_AREA_LEVEL_3_CODE_MNF
       a       roh:ESSubjectArea ;
       rdfs:label "MNF" ;
-      asio:codeOf asioModules:ES_SUBJECT_AREA_LEVEL_3_MNF ;
-      skos:inScheme asioModules:ESSubjectCode3rdList ;
+      roh:codeOf rohsubj:ES_SUBJECT_AREA_LEVEL_3_MNF ;
+      skos:inScheme rohsubj:ESSubjectCode3rdList ;
       skos:prefLabel "MNF" .
 
-asioModules:ES_SUBJECT_AREA_LEVEL_2_CODE_FIS
+rohsubj:ES_SUBJECT_AREA_LEVEL_2_CODE_FIS
       a       roh:ESSubjectArea ;
       rdfs:label "FIS" ;
-      asio:codeOf asioModules:ES_SUBJECT_AREA_LEVEL_2_FIS ;
-      skos:inScheme asioModules:ESSubjectCode2ndList ;
+      roh:codeOf rohsubj:ES_SUBJECT_AREA_LEVEL_2_FIS ;
+      skos:inScheme rohsubj:ESSubjectCode2ndList ;
       skos:prefLabel "FIS" .
 
-asioModules:ES_SUBJECT_AREA_LEVEL_3_CODE_INF
+rohsubj:ES_SUBJECT_AREA_LEVEL_3_CODE_INF
       a       roh:ESSubjectArea ;
       rdfs:label "INF" ;
-      asio:codeOf asioModules:ES_SUBJECT_AREA_LEVEL_3_INF ;
-      skos:inScheme asioModules:ESSubjectCode3rdList ;
+      roh:codeOf rohsubj:ES_SUBJECT_AREA_LEVEL_3_INF ;
+      skos:inScheme rohsubj:ESSubjectCode3rdList ;
       skos:prefLabel "INF" .
 
-asioModules:ES_SUBJECT_AREA_LEVEL_3_MBM
+rohsubj:ES_SUBJECT_AREA_LEVEL_3_MBM
       a       roh:ESSubjectArea ;
       rdfs:label "Materiales para biomedicina" ;
-      asio:hasCode asioModules:ES_SUBJECT_AREA_LEVEL_3_CODE_MBM ;
-      skos:broader asioModules:ES_SUBJECT_AREA_LEVEL_2_MAT ;
-      skos:inScheme asioModules:ESSubjectAreas3rdList ;
+      roh:hasCode rohsubj:ES_SUBJECT_AREA_LEVEL_3_CODE_MBM ;
+      skos:broader rohsubj:ES_SUBJECT_AREA_LEVEL_2_MAT ;
+      skos:inScheme rohsubj:ESSubjectAreas3rdList ;
       skos:notation "MBM" ;
       skos:prefLabel "Materiales para biomedicina" , "Materiales para biomedicina"@es , "Materiales para biomedicina"@ast , "Materials for biomedicine"@en , "Matériaux pour la biomédecine"@fr , "Materiais para biomedicina"@gl , "Materiais para biomedicina"@pt , "Materials per a biomedicina"@ca .
 
-asioModules:ES_SUBJECT_AREA_LEVEL_3_CODE_CYA
+rohsubj:ES_SUBJECT_AREA_LEVEL_3_CODE_CYA
       a       roh:ESSubjectArea ;
       rdfs:label "CYA" ;
-      asio:codeOf asioModules:ES_SUBJECT_AREA_LEVEL_3_CYA ;
-      skos:inScheme asioModules:ESSubjectCode3rdList ;
+      roh:codeOf rohsubj:ES_SUBJECT_AREA_LEVEL_3_CYA ;
+      skos:inScheme rohsubj:ESSubjectCode3rdList ;
       skos:prefLabel "CYA" .
 
-asioModules:ES_SUBJECT_AREA_LEVEL_2_CODE_CSO
+rohsubj:ES_SUBJECT_AREA_LEVEL_2_CODE_CSO
       a       roh:ESSubjectArea ;
       rdfs:label "CSO" ;
-      asio:codeOf asioModules:ES_SUBJECT_AREA_LEVEL_2_CSO ;
-      skos:inScheme asioModules:ESSubjectCode2ndList ;
+      roh:codeOf rohsubj:ES_SUBJECT_AREA_LEVEL_2_CSO ;
+      skos:inScheme rohsubj:ESSubjectCode2ndList ;
       skos:prefLabel "CSO" .
 
-asioModules:ES_SUBJECT_AREA_LEVEL_3_CODE_ESP
+rohsubj:ES_SUBJECT_AREA_LEVEL_3_CODE_ESP
       a       roh:ESSubjectArea ;
       rdfs:label "ESP" ;
-      asio:codeOf asioModules:ES_SUBJECT_AREA_LEVEL_3_ESP ;
-      skos:inScheme asioModules:ESSubjectCode3rdList ;
+      roh:codeOf rohsubj:ES_SUBJECT_AREA_LEVEL_3_ESP ;
+      skos:inScheme rohsubj:ESSubjectCode3rdList ;
       skos:prefLabel "ESP" .
 
-asioModules:ES_SUBJECT_AREA_LEVEL_3_TRA
+rohsubj:ES_SUBJECT_AREA_LEVEL_3_TRA
       a       roh:ESSubjectArea ;
       rdfs:label "Transporte" ;
-      asio:hasCode asioModules:ES_SUBJECT_AREA_LEVEL_3_CODE_TRA ;
-      skos:broader asioModules:ES_SUBJECT_AREA_LEVEL_2_EYT ;
-      skos:inScheme asioModules:ESSubjectAreas3rdList ;
+      roh:hasCode rohsubj:ES_SUBJECT_AREA_LEVEL_3_CODE_TRA ;
+      skos:broader rohsubj:ES_SUBJECT_AREA_LEVEL_2_EYT ;
+      skos:inScheme rohsubj:ESSubjectAreas3rdList ;
       skos:notation "TRA" ;
       skos:exactMatch unescothes:C04122 ;
       skos:prefLabel "Transporte"@gl , "Transporte"@pt , "Transporte" , "Transporte"@es , "Transport"@fr , "Transport"@ca , "Transport"@en , "Tresporte"@ast .
 
-asioModules:ES_SUBJECT_AREA_LEVEL_3_CODE_FEM
+rohsubj:ES_SUBJECT_AREA_LEVEL_3_CODE_FEM
       a       roh:ESSubjectArea ;
       rdfs:label "FEM" ;
-      asio:codeOf asioModules:ES_SUBJECT_AREA_LEVEL_3_FEM ;
-      skos:inScheme asioModules:ESSubjectCode3rdList ;
+      roh:codeOf rohsubj:ES_SUBJECT_AREA_LEVEL_3_FEM ;
+      skos:inScheme rohsubj:ESSubjectCode3rdList ;
       skos:prefLabel "FEM" .
 
-asioModules:ES_SUBJECT_AREA_LEVEL_2_CTM
+rohsubj:ES_SUBJECT_AREA_LEVEL_2_CTM
       a       roh:ESSubjectArea ;
       rdfs:label "Ciencias y tecnologías medioambientales" ;
-      asio:hasCode asioModules:ES_SUBJECT_AREA_LEVEL_2_CODE_CTM ;
-      skos:broader asioModules:ES_SUBJECT_AREA_LEVEL_1_CV ;
-      skos:inScheme asioModules:ESSubjectAreas2ndList ;
+      roh:hasCode rohsubj:ES_SUBJECT_AREA_LEVEL_2_CODE_CTM ;
+      skos:broader rohsubj:ES_SUBJECT_AREA_LEVEL_1_CV ;
+      skos:inScheme rohsubj:ESSubjectAreas2ndList ;
       skos:notation "CTM" ;
       skos:closeMatch unescothes:C01397 ;
       skos:prefLabel "Ciencias y tecnologías medioambientales" , "Ciencias y tecnologías medioambientales"@es , "Ciencia e tecnoloxía ambiental"@gl , "Ciência e tecnologia ambiental"@pt , "Ciencies y tecnoloxíes medioambientales"@ast , "Ciències i tecnologies mediambientals"@ca , "Environmental science and technology"@en , "Sciences et technologies de l'environnement"@fr .
 
-asioModules:ES_SUBJECT_AREA_LEVEL_2_CODE_BIO
+rohsubj:ES_SUBJECT_AREA_LEVEL_2_CODE_BIO
       a       roh:ESSubjectArea ;
       rdfs:label "BIO" ;
-      asio:codeOf asioModules:ES_SUBJECT_AREA_LEVEL_2_BIO ;
-      skos:inScheme asioModules:ESSubjectCode2ndList ;
+      roh:codeOf rohsubj:ES_SUBJECT_AREA_LEVEL_2_BIO ;
+      skos:inScheme rohsubj:ESSubjectCode2ndList ;
       skos:prefLabel "BIO" .
 
-asioModules:ES_SUBJECT_AREA_LEVEL_2_BIO
+rohsubj:ES_SUBJECT_AREA_LEVEL_2_BIO
       a       roh:ESSubjectArea ;
       rdfs:label "Biociencias y biotecnología" ;
-      asio:hasCode asioModules:ES_SUBJECT_AREA_LEVEL_2_CODE_BIO ;
-      skos:broader asioModules:ES_SUBJECT_AREA_LEVEL_1_CV ;
-      skos:inScheme asioModules:ESSubjectAreas2ndList ;
+      roh:hasCode rohsubj:ES_SUBJECT_AREA_LEVEL_2_CODE_BIO ;
+      skos:broader rohsubj:ES_SUBJECT_AREA_LEVEL_1_CV ;
+      skos:inScheme rohsubj:ESSubjectAreas2ndList ;
       skos:notation "BIO" ;
       skos:closeMatch unescothes:C00409 ;
       skos:prefLabel "Biociencias y biotecnología" , "Biociencias y biotecnología"@es , "Biosciences and biotechnology"@en , "Biociências e biotecnologia"@pt , "Biosciences et biotechnologie"@fr , "Biociencias e biotecnoloxía"@gl , "Biociencies y biotecnoloxía"@ast , "Biociències i biotecnologia"@ca .
 
-asioModules:ES_SUBJECT_AREA_LEVEL_3_INF
+rohsubj:ES_SUBJECT_AREA_LEVEL_3_INF
       a       roh:ESSubjectArea ;
       rdfs:label "Ciencias de la computación y tecnología informática" ;
-      asio:hasCode asioModules:ES_SUBJECT_AREA_LEVEL_3_CODE_INF ;
-      skos:broader asioModules:ES_SUBJECT_AREA_LEVEL_2_TIC ;
-      skos:inScheme asioModules:ESSubjectAreas3rdList ;
+      roh:hasCode rohsubj:ES_SUBJECT_AREA_LEVEL_3_CODE_INF ;
+      skos:broader rohsubj:ES_SUBJECT_AREA_LEVEL_2_TIC ;
+      skos:inScheme rohsubj:ESSubjectAreas3rdList ;
       skos:notation "INF" ;
       skos:closeMatch unescothes:C00750 ;
       skos:prefLabel "Ciències de la computació i tecnologia informàtica"@ca , "Ciência da computação e tecnologia da computação"@pt , "Ciencias de la computación y tecnología informática"@es , "Ciencias de la computación y tecnología informática" , "Computer science and computer technology"@en , "Informática e tecnoloxía informática"@gl , "Informatique et technologie informatique"@fr , "Ciencies de la computación y tecnoloxía informática"@ast .
 
-asioModules:ES_SUBJECT_AREA_LEVEL_3_CODE_BIF
+rohsubj:ES_SUBJECT_AREA_LEVEL_3_CODE_BIF
       a       roh:ESSubjectArea ;
       rdfs:label "BIF" ;
-      asio:codeOf asioModules:ES_SUBJECT_AREA_LEVEL_3_BIF ;
-      skos:inScheme asioModules:ESSubjectCode3rdList ;
+      roh:codeOf rohsubj:ES_SUBJECT_AREA_LEVEL_3_BIF ;
+      skos:inScheme rohsubj:ESSubjectCode3rdList ;
       skos:prefLabel "BIF" .
 
-asioModules:ES_SUBJECT_AREA_LEVEL_3_CODE_FIL
+rohsubj:ES_SUBJECT_AREA_LEVEL_3_CODE_FIL
       a       roh:ESSubjectArea ;
       rdfs:label "FIL" ;
-      asio:codeOf asioModules:ES_SUBJECT_AREA_LEVEL_3_FIL ;
-      skos:inScheme asioModules:ESSubjectCode3rdList ;
+      roh:codeOf rohsubj:ES_SUBJECT_AREA_LEVEL_3_FIL ;
+      skos:inScheme rohsubj:ESSubjectCode3rdList ;
       skos:prefLabel "FIL" .
 
-asioModules:ES_SUBJECT_AREA_LEVEL_3_CODE_MT3
+rohsubj:ES_SUBJECT_AREA_LEVEL_3_CODE_MT3
       a       roh:ESSubjectArea ;
       rdfs:label "MT3" ;
-      asio:codeOf asioModules:ES_SUBJECT_AREA_LEVEL_3_MT3 ;
-      skos:inScheme asioModules:ESSubjectCode3rdList ;
+      roh:codeOf rohsubj:ES_SUBJECT_AREA_LEVEL_3_MT3 ;
+      skos:inScheme rohsubj:ESSubjectCode3rdList ;
       skos:prefLabel "MT3" .
 
-asioModules:ES_SUBJECT_AREA_LEVEL_3_CODE_MFU
+rohsubj:ES_SUBJECT_AREA_LEVEL_3_CODE_MFU
       a       roh:ESSubjectArea ;
       rdfs:label "MFU" ;
-      asio:codeOf asioModules:ES_SUBJECT_AREA_LEVEL_3_MFU ;
-      skos:inScheme asioModules:ESSubjectCode3rdList ;
+      roh:codeOf rohsubj:ES_SUBJECT_AREA_LEVEL_3_MFU ;
+      skos:inScheme rohsubj:ESSubjectCode3rdList ;
       skos:prefLabel "MFU" .
 
-asioModules:ES_SUBJECT_AREA_LEVEL_3_CODE_IBI
+rohsubj:ES_SUBJECT_AREA_LEVEL_3_CODE_IBI
       a       roh:ESSubjectArea ;
       rdfs:label "IBI" ;
-      asio:codeOf asioModules:ES_SUBJECT_AREA_LEVEL_3_IBI ;
-      skos:inScheme asioModules:ESSubjectCode3rdList ;
+      roh:codeOf rohsubj:ES_SUBJECT_AREA_LEVEL_3_IBI ;
+      skos:inScheme rohsubj:ESSubjectCode3rdList ;
       skos:prefLabel "IBI" .
 
-asioModules:ES_SUBJECT_AREA_LEVEL_2_CODE_TIC
+rohsubj:ES_SUBJECT_AREA_LEVEL_2_CODE_TIC
       a       roh:ESSubjectArea ;
       rdfs:label "TIC" ;
-      asio:codeOf asioModules:ES_SUBJECT_AREA_LEVEL_2_TIC ;
-      skos:inScheme asioModules:ESSubjectCode2ndList ;
+      roh:codeOf rohsubj:ES_SUBJECT_AREA_LEVEL_2_TIC ;
+      skos:inScheme rohsubj:ESSubjectCode2ndList ;
       skos:prefLabel "TIC" .
 
-asioModules:ES_SUBJECT_AREA_LEVEL_2_EDU
+rohsubj:ES_SUBJECT_AREA_LEVEL_2_EDU
       a       roh:ESSubjectArea ;
       rdfs:label "Ciencias de la educación" ;
-      asio:hasCode asioModules:ES_SUBJECT_AREA_LEVEL_2_CODE_EDU ;
-      skos:broader asioModules:ES_SUBJECT_AREA_LEVEL_1_CSH ;
-      skos:inScheme asioModules:ESSubjectAreas2ndList ;
+      roh:hasCode rohsubj:ES_SUBJECT_AREA_LEVEL_2_CODE_EDU ;
+      skos:broader rohsubj:ES_SUBJECT_AREA_LEVEL_1_CSH ;
+      skos:inScheme rohsubj:ESSubjectAreas2ndList ;
       skos:notation "EDU" ;
       skos:exactMatch unescothes:C01281 ;
       skos:prefLabel "Sciences de l'éducation"@fr , "Ciências da Educação"@pt , "Ciencies de la educación"@ast , "Ciències de l'educació"@ca , "Ciencias da educación"@gl , "Ciencias de la educación" , "Education sciences"@en , "Ciencias de la educación"@es .
 
-asioModules:ES_SUBJECT_AREA_LEVEL_1_CODE_CV
+rohsubj:ES_SUBJECT_AREA_LEVEL_1_CODE_CV
       a       roh:ESSubjectArea ;
       rdfs:label "CV" ;
-      asio:codeOf asioModules:ES_SUBJECT_AREA_LEVEL_1_CV ;
-      skos:inScheme asioModules:ESSubjectCode1stList ;
+      roh:codeOf rohsubj:ES_SUBJECT_AREA_LEVEL_1_CV ;
+      skos:inScheme rohsubj:ESSubjectCode1stList ;
       skos:prefLabel "CV" .
 
-asioModules:ESSubjectCode1stList
-      a       asioModules:subjectAreas ;
+rohsubj:ESSubjectCode1stList
+      a       skos:ConceptScheme ;
       rdfs:label "ˈkoðiγoz ðe las ˈaɾeas teˈmatikas ðe priˈmer niˈβel ðe la aˈxenθja estaˈtal ðe imbestiɣ̞aˈθjon"@es-ES-fonipa , "Códigos das áreas temáticas de primeiro nivel da Axencia Estatal de Investigación (AEI)"@gl , "Codis dels dominis temàtics de primer nivell de l'Agència Estatal de Recerca (AEI)"@ca , "Códigos de las áreas temáticas de primer nivel de la Agencia Estatal de Investigación (AEI)"@es , "ˈkəʊdz fɔː ðə fɜːst ˈlɛvl ˈsʌbʤɪkt ˈeərɪəz ɒv speɪnz steɪt rɪˈsɜːʧ ˈeɪʤənsi"@en-GB-fonipa , "Códigos de les árees temátiques de primer nivel"@ast , "duˈminis təˈmatikz ðə pɾiˈme niˈβeʎ ðə ɫə ʒənˈsiə əstəˈtaɫ ðə rəˈsɛrkə"@ca-CA-fonipa , "Codes for the first-level subject areas of Spain's State Research Agency (AEI)"@en , "ˈkoʊdz fɔr ðə fɜrst ˈlɛvəl ˈsʌbʤɪkt ˈɛriəz ʌv speɪnz steɪt riˈsɜrʧ ˈeɪʤənsi"@en-US-fonipa , "Códigos das áreas temáticas de primeiro nível da Agência Estadual de Pesquisa Espanhola (AEI)"@pt , "Codes des domains thématiques de premier niveau de l'Agence Espagnole pour la Recherche (AEI)"@fr ;
       skos:prefLabel "ˈkoðiγoz ðe las ˈaɾeas teˈmatikas ðe priˈmer niˈβel ðe la aˈxenθja estaˈtal ðe imbestiɣ̞aˈθjon"@es-ES-fonipa , "Códigos das áreas temáticas de primeiro nivel da Axencia Estatal de Investigación (AEI)"@gl , "Codis dels dominis temàtics de primer nivell de l'Agència Estatal de Recerca (AEI)"@ca , "Códigos de las áreas temáticas de primer nivel de la Agencia Estatal de Investigación (AEI)"@es , "Códigos de les árees temátiques de primer nivel"@ast , "ˈkəʊdz fɔː ðə fɜːst ˈlɛvl ˈsʌbʤɪkt ˈeərɪəz ɒv speɪnz steɪt rɪˈsɜːʧ ˈeɪʤənsi"@en-GB-fonipa , "duˈminis təˈmatikz ðə pɾiˈme niˈβeʎ ðə ɫə ʒənˈsiə əstəˈtaɫ ðə rəˈsɛrkə"@ca-CA-fonipa , "Codes for the first-level subject areas of Spain's State Research Agency (AEI)"@en , "ˈkoʊdz fɔr ðə fɜrst ˈlɛvəl ˈsʌbʤɪkt ˈɛriəz ʌv speɪnz steɪt riˈsɜrʧ ˈeɪʤənsi"@en-US-fonipa , "Códigos das áreas temáticas de primeiro nível da Agência Estadual de Pesquisa Espanhola (AEI)"@pt , "Codes des domains thématiques de premier niveau de l'Agence Espagnole pour la Recherche (AEI)"@fr ;
       ontolex:phoneticRep "ˈkoðiγoz ðe las ˈaɾeas teˈmatikas ðe priˈmer niˈβel ðe la aˈxenθja estaˈtal ðe imbestiɣ̞aˈθjon"@es-ES-fonipa , "ˈkəʊdz fɔː ðə fɜːst ˈlɛvl ˈsʌbʤɪkt ˈeərɪəz ɒv speɪnz steɪt rɪˈsɜːʧ ˈeɪʤənsi"@en-GB-fonipa , "duˈminis təˈmatikz ðə pɾiˈme niˈβeʎ ðə ɫə ʒənˈsiə əstəˈtaɫ ðə rəˈsɛrkə"@ca-CA-fonipa , "ˈkoʊdz fɔr ðə fɜrst ˈlɛvəl ˈsʌbʤɪkt ˈɛriəz ʌv speɪnz steɪt riˈsɜrʧ ˈeɪʤənsi"@en-US-fonipa .
 
-asioModules:ES_SUBJECT_AREA_LEVEL_3_QMC
+rohsubj:ES_SUBJECT_AREA_LEVEL_3_QMC
       a       roh:ESSubjectArea ;
       rdfs:label "Química" ;
-      asio:hasCode asioModules:ES_SUBJECT_AREA_LEVEL_3_CODE_QMC ;
-      skos:broader asioModules:ES_SUBJECT_AREA_LEVEL_2_CTQ ;
-      skos:inScheme asioModules:ESSubjectAreas3rdList ;
+      roh:hasCode rohsubj:ES_SUBJECT_AREA_LEVEL_3_CODE_QMC ;
+      skos:broader rohsubj:ES_SUBJECT_AREA_LEVEL_2_CTQ ;
+      skos:inScheme rohsubj:ESSubjectAreas3rdList ;
       skos:notation "QMC" ;
       skos:exactMatch unescothes:C00568 ;
       skos:prefLabel "Chemistry"@en , "Química"@ast , "Química" , "Química"@es , "Química"@ca , "Química"@gl , "Química"@pt , "Chimie"@fr .
 
-asioModules:ES_SUBJECT_AREA_LEVEL_3_ART
+rohsubj:ES_SUBJECT_AREA_LEVEL_3_ART
       a       roh:ESSubjectArea ;
       rdfs:label "Arte, bellas artes, museística" ;
-      asio:hasCode asioModules:ES_SUBJECT_AREA_LEVEL_3_CODE_ART ;
-      skos:broader asioModules:ES_SUBJECT_AREA_LEVEL_2_FLA ;
-      skos:inScheme asioModules:ESSubjectAreas3rdList ;
+      roh:hasCode rohsubj:ES_SUBJECT_AREA_LEVEL_3_CODE_ART ;
+      skos:broader rohsubj:ES_SUBJECT_AREA_LEVEL_2_FLA ;
+      skos:inScheme rohsubj:ESSubjectAreas3rdList ;
       skos:notation "ART" ;
       skos:closeMatch unescothes:C00267 ;
       skos:closeMatch unescothes:C02619 ;
       skos:prefLabel "Arte, belas artes, museo"@gl , "Art, beaux-arts, musée"@fr , "Arte, belles artes, museística"@ast , "Art, belles arts, museística"@ca , "Arte, belas artes, museu"@pt , "Art, fine arts, museum"@en , "Arte, bellas artes, museística" , "Arte, bellas artes, museística"@es .
 
-asioModules:ES_SUBJECT_AREA_LEVEL_3_CODE_ICA
+rohsubj:ES_SUBJECT_AREA_LEVEL_3_CODE_ICA
       a       roh:ESSubjectArea ;
       rdfs:label "ICA" ;
-      asio:codeOf asioModules:ES_SUBJECT_AREA_LEVEL_3_ICA ;
-      skos:inScheme asioModules:ESSubjectCode3rdList ;
+      roh:codeOf rohsubj:ES_SUBJECT_AREA_LEVEL_3_ICA ;
+      skos:inScheme rohsubj:ESSubjectCode3rdList ;
       skos:prefLabel "ICA" .
 
-asioModules:ES_SUBJECT_AREA_LEVEL_2_BME
+rohsubj:ES_SUBJECT_AREA_LEVEL_2_BME
       a       roh:ESSubjectArea ;
       rdfs:label "Biomedicina" ;
-      asio:hasCode asioModules:ES_SUBJECT_AREA_LEVEL_2_CODE_BME ;
-      skos:broader asioModules:ES_SUBJECT_AREA_LEVEL_1_CV ;
-      skos:inScheme asioModules:ESSubjectAreas2ndList ;
+      roh:hasCode rohsubj:ES_SUBJECT_AREA_LEVEL_2_CODE_BME ;
+      skos:broader rohsubj:ES_SUBJECT_AREA_LEVEL_1_CV ;
+      skos:inScheme rohsubj:ESSubjectAreas2ndList ;
       skos:notation "BME" ;
       skos:closeMatch unescothes:C02464 ;
       skos:prefLabel "Biomedicina"@ca , "Biomedicina"@gl , "Biomedicina"@pt , "Biomedicine"@en , "Biomédecine"@fr , "Biomedecina"@an , "Biomedicina" , "Biomedicina"@es , "Biomedicina"@ast .
 
-asioModules:ES_SUBJECT_AREA_LEVEL_3_CODE_EYF
+rohsubj:ES_SUBJECT_AREA_LEVEL_3_CODE_EYF
       a       roh:ESSubjectArea ;
       rdfs:label "EYF" ;
-      asio:codeOf asioModules:ES_SUBJECT_AREA_LEVEL_3_EYF ;
-      skos:inScheme asioModules:ESSubjectCode3rdList ;
+      roh:codeOf rohsubj:ES_SUBJECT_AREA_LEVEL_3_EYF ;
+      skos:inScheme rohsubj:ESSubjectCode3rdList ;
       skos:prefLabel "EYF" .
 
-asioModules:ES_SUBJECT_AREA_LEVEL_3_CODE_QMC
+rohsubj:ES_SUBJECT_AREA_LEVEL_3_CODE_QMC
       a       roh:ESSubjectArea ;
       rdfs:label "QMC" ;
-      asio:codeOf asioModules:ES_SUBJECT_AREA_LEVEL_3_QMC ;
-      skos:inScheme asioModules:ESSubjectCode3rdList ;
+      roh:codeOf rohsubj:ES_SUBJECT_AREA_LEVEL_3_QMC ;
+      skos:inScheme rohsubj:ESSubjectCode3rdList ;
       skos:prefLabel "QMC" .
 
-asioModules:ES_SUBJECT_AREA_LEVEL_3_CODE_CPO
+rohsubj:ES_SUBJECT_AREA_LEVEL_3_CODE_CPO
       a       roh:ESSubjectArea ;
       rdfs:label "CPO" ;
-      asio:codeOf asioModules:ES_SUBJECT_AREA_LEVEL_3_CPO ;
-      skos:inScheme asioModules:ESSubjectCode3rdList ;
+      roh:codeOf rohsubj:ES_SUBJECT_AREA_LEVEL_3_CPO ;
+      skos:inScheme rohsubj:ESSubjectCode3rdList ;
       skos:prefLabel "CPO" .
 
-asioModules:ES_SUBJECT_AREA_LEVEL_2_PHA
+rohsubj:ES_SUBJECT_AREA_LEVEL_2_PHA
       a       roh:ESSubjectArea ;
       rdfs:label "Estudios del pasado: historia y arqueología" ;
-      asio:hasCode asioModules:ES_SUBJECT_AREA_LEVEL_2_CODE_PHA ;
-      skos:broader asioModules:ES_SUBJECT_AREA_LEVEL_1_CSH ;
-      skos:inScheme asioModules:ESSubjectAreas2ndList ;
+      roh:hasCode rohsubj:ES_SUBJECT_AREA_LEVEL_2_CODE_PHA ;
+      skos:broader rohsubj:ES_SUBJECT_AREA_LEVEL_1_CSH ;
+      skos:inScheme rohsubj:ESSubjectAreas2ndList ;
       skos:notation "PHA" ;
       skos:prefLabel "Estudios del pasáu: hestoria y arqueoloxía"@ast , "Studies of the past: history and archeology"@en , "Études du passé: histoire et archéologie"@fr , "Estudios del pasado: historia y arqueología" , "Estudios del pasado: historia y arqueología"@es , "Estudis de el passat: història i arqueologia"@ca , "Estudos do pasado: historia e arqueoloxía"@gl , "Estudos do passado: história e arqueologia"@pt .
 
-asioModules:ESSubjectAreas2ndList
-      a       asioModules:subjectAreas ;
+rohsubj:ESSubjectAreas2ndList
+      a       skos:ConceptScheme ;
       rdfs:label "Áreas temáticas de segundo libel d'a AEI"@an , "Second-level subject areas of Spain's State Research Agency (AEI)"@en , "Áreas temáticas de segundo nivel da Axencia Estatal de Investigación (AEI)"@gl , "ˈaɾeas teˈmatikas ðe seˈɣ̞un̟do niˈβel ðe la aˈxenθja estaˈtal ðe imbestiɣ̞aˈθjon"@es-ES-fonipa , "duˈminis təˈmatikz ðə səˈɣon niˈβeʎ ðə ɫə ʒənˈsiə əstəˈtaɫ ðə rəˈsɛrkə"@ca-CA-fonipa , "Áreas temáticas de segundo nivel de la Agencia Estatal de Investigación (AEI)"@es , "sɛkənd ˈlɛvl ˈsʌbʤɪkt ˈeərɪəz"@en-GB-fonipa , "sɛkənd ˈlɛvəl ˈsʌbʤɪkt ˈɛriə"@en-US-fonipa , "Árees temátiques de segundu nivel de l'Axencia Estatal de Investigación (AEI)"@ast , "Dominis temàtics de segon nivell de l'Agència Estatal de Recerca (AEI)"@ca , "Áreas tematicas de segond nivel de l'AEI"@oc , "Áreas temáticas de segundo nível"@pt , "FIXME"@eu , "Domains thématiques de second niveau de l'Agence Espagnole pour la Recherche (AEI)"@fr ;
       skos:prefLabel "Áreas temáticas de segundo libel d'a AEI"@an , "Second-level subject areas of Spain's State Research Agency (AEI)"@en , "Áreas temáticas de segundo nivel da Axencia Estatal de Investigación (AEI)"@gl , "ˈaɾeas teˈmatikas ðe seˈɣ̞un̟do niˈβel ðe la aˈxenθja estaˈtal ðe imbestiɣ̞aˈθjon"@es-ES-fonipa , "duˈminis təˈmatikz ðə səˈɣon niˈβeʎ ðə ɫə ʒənˈsiə əstəˈtaɫ ðə rəˈsɛrkə"@ca-CA-fonipa , "Áreas temáticas de segundo nivel de la Agencia Estatal de Investigación (AEI)"@es , "sɛkənd ˈlɛvl ˈsʌbʤɪkt ˈeərɪəz"@en-GB-fonipa , "sɛkənd ˈlɛvəl ˈsʌbʤɪkt ˈɛriəz"@en-US-fonipa , "Árees temátiques de segundu nivel de l'Axencia Estatal de Investigación (AEI)"@ast , "Dominis temàtics de segon nivell de l'Agència Estatal de Recerca (AEI)"@ca , "Áreas tematicas de segond nivel de l'AEI"@oc , "Áreas temáticas de segundo nível"@pt , "FIXME"@eu , "Domains thématiques de second niveau de l'Agence Espagnole pour la Recherche (AEI)"@fr ;
       ontolex:phoneticRep "duˈminis təˈmatikz ðə səˈɣon niˈβeʎ ðə ɫə ʒənˈsiə əstəˈtaɫ ðə rəˈsɛrkə"@ca-CA-fonipa , "sɛkənd ˈlɛvl ˈsʌbʤɪkt ˈeərɪəz"@en-GB-fonipa , "sɛkənd ˈlɛvəl ˈsʌbʤɪkt ˈɛriə"@en-US-fonipa , "ˈaɾeas teˈmatikas ðe seˈɣ̞un̟do niˈβel ðe la aˈxenθja estaˈtal ðe imbestiɣ̞aˈθjon"@es-ES-fonipa .
 
-asioModules:ES_SUBJECT_AREA_LEVEL_3_MEN
+rohsubj:ES_SUBJECT_AREA_LEVEL_3_MEN
       a       roh:ESSubjectArea ;
       rdfs:label "Materiales para la energía y el medioambiente" ;
-      asio:hasCode asioModules:ES_SUBJECT_AREA_LEVEL_3_CODE_MEN ;
-      skos:broader asioModules:ES_SUBJECT_AREA_LEVEL_2_MAT ;
-      skos:inScheme asioModules:ESSubjectAreas3rdList ;
+      roh:hasCode rohsubj:ES_SUBJECT_AREA_LEVEL_3_CODE_MEN ;
+      skos:broader rohsubj:ES_SUBJECT_AREA_LEVEL_2_MAT ;
+      skos:inScheme rohsubj:ESSubjectAreas3rdList ;
       skos:notation "MEN" ;
       skos:prefLabel "Materiais para energia e meio ambiente"@pt , "Materials for energy and the environment"@en , "Materiais para a enerxía e o medio ambiente"@gl , "Materiales para la energía y el medioambiente"@es , "Materials per a l'energia i el medi ambient"@ca , "Materiales para la energía y el medioambiente" , "Matériaux pour l'énergie et l'environnement"@fr , "Materiales pa la enerxía y el medioambiente"@ast .
 
-asioModules:ES_SUBJECT_AREA_LEVEL_3_MAE
+rohsubj:ES_SUBJECT_AREA_LEVEL_3_MAE
       a       roh:ESSubjectArea ;
       rdfs:label "Métodos de análisis económico" ;
-      asio:hasCode asioModules:ES_SUBJECT_AREA_LEVEL_3_CODE_MAE ;
-      skos:broader asioModules:ES_SUBJECT_AREA_LEVEL_2_ECO ;
-      skos:inScheme asioModules:ESSubjectAreas3rdList ;
+      roh:hasCode rohsubj:ES_SUBJECT_AREA_LEVEL_3_CODE_MAE ;
+      skos:broader rohsubj:ES_SUBJECT_AREA_LEVEL_2_ECO ;
+      skos:inScheme rohsubj:ESSubjectAreas3rdList ;
       skos:notation "MAE" ;
       skos:closeMatch unescothes:C01147 ;
       skos:prefLabel "Economic analysis methods"@en , "Métodos de análise econômica"@pt , "Métodos de análisis económico"@es , "Métodos de análisis económico" , "Méthodes d'analyse économique"@fr , "Mètodes d'anàlisi econòmica"@ca , "Método d'analís económicu"@ast , "Métodos de análise económica"@gl .
 
-asioModules:ES_SUBJECT_AREA_LEVEL_3_FOS
+rohsubj:ES_SUBJECT_AREA_LEVEL_3_FOS
       a       roh:ESSubjectArea ;
       rdfs:label "Fisiopatología de órganos y sistemas" ;
-      asio:hasCode asioModules:ES_SUBJECT_AREA_LEVEL_3_CODE_FOS ;
-      skos:broader asioModules:ES_SUBJECT_AREA_LEVEL_2_BME ;
-      skos:inScheme asioModules:ESSubjectAreas3rdList ;
+      roh:hasCode rohsubj:ES_SUBJECT_AREA_LEVEL_3_CODE_FOS ;
+      skos:broader rohsubj:ES_SUBJECT_AREA_LEVEL_2_BME ;
+      skos:inScheme rohsubj:ESSubjectAreas3rdList ;
       skos:notation "FOS" ;
       skos:closeMatch unescothes:C02921 ;
       skos:prefLabel "Fisiopatología de órganos y sistemas" , "Fisiopatología de órganos y sistemas"@es , "Fisiopatología d'órganos y sistemes"@ast , "Physiopathologie des organes et des systèmes"@fr , "Pathophysiology of organs and systems"@en , "Fisiopatologia de órgãos e sistemas"@pt , "Fisiopatologia d'òrgans i sistemes"@ca , "Fisiopatoloxía de órganos e sistemas"@gl .
 
-asioModules:ES_SUBJECT_AREA_LEVEL_3_CODE_ALI
+rohsubj:ES_SUBJECT_AREA_LEVEL_3_CODE_ALI
       a       roh:ESSubjectArea ;
       rdfs:label "ALI" ;
-      asio:codeOf asioModules:ES_SUBJECT_AREA_LEVEL_3_ALI ;
-      skos:inScheme asioModules:ESSubjectCode3rdList ;
+      roh:codeOf rohsubj:ES_SUBJECT_AREA_LEVEL_3_ALI ;
+      skos:inScheme rohsubj:ESSubjectCode3rdList ;
       skos:prefLabel "ALI" .
 
-asioModules:ES_SUBJECT_AREA_LEVEL_3_CODE_AYF
+rohsubj:ES_SUBJECT_AREA_LEVEL_3_CODE_AYF
       a       roh:ESSubjectArea ;
       rdfs:label "AYF" ;
-      asio:codeOf asioModules:ES_SUBJECT_AREA_LEVEL_3_AYF ;
-      skos:inScheme asioModules:ESSubjectCode3rdList ;
+      roh:codeOf rohsubj:ES_SUBJECT_AREA_LEVEL_3_AYF ;
+      skos:inScheme rohsubj:ESSubjectCode3rdList ;
       skos:prefLabel "AYF" .
 
-asioModules:ES_SUBJECT_AREA_LEVEL_2_FLA
+rohsubj:ES_SUBJECT_AREA_LEVEL_2_FLA
       a       roh:ESSubjectArea ;
       rdfs:label "Cultura: filología, literatura y arte" ;
-      asio:hasCode asioModules:ES_SUBJECT_AREA_LEVEL_2_CODE_FLA ;
-      skos:broader asioModules:ES_SUBJECT_AREA_LEVEL_1_CSH ;
-      skos:inScheme asioModules:ESSubjectAreas2ndList ;
+      roh:hasCode rohsubj:ES_SUBJECT_AREA_LEVEL_2_CODE_FLA ;
+      skos:broader rohsubj:ES_SUBJECT_AREA_LEVEL_1_CSH ;
+      skos:inScheme rohsubj:ESSubjectAreas2ndList ;
       skos:notation "FLA" ;
       skos:prefLabel "Cultura: Filoloxía, Literatura e Arte"@gl , "Culture: Philology, Literature and Art"@en , "Cultura: filología, literatura y arte"@es , "Cultura: filología, literatura y arte" , "Cultura: filoloxía, lliteratura y arte"@ast , "Cultura: filologia, literatura i art"@ca , "Culture: philologie, littérature et art"@fr , "Cultura: Filologia, Literatura e Arte"@pt .
 
-asioModules:ES_SUBJECT_AREA_LEVEL_2_CODE_CTQ
+rohsubj:ES_SUBJECT_AREA_LEVEL_2_CODE_CTQ
       a       roh:ESSubjectArea ;
       rdfs:label "CTQ" ;
-      asio:codeOf asioModules:ES_SUBJECT_AREA_LEVEL_2_CTQ ;
-      skos:inScheme asioModules:ESSubjectCode2ndList ;
+      roh:codeOf rohsubj:ES_SUBJECT_AREA_LEVEL_2_CTQ ;
+      skos:inScheme rohsubj:ESSubjectCode2ndList ;
       skos:prefLabel "CTQ" .
 
-asioModules:ES_SUBJECT_AREA_LEVEL_3_COM
+rohsubj:ES_SUBJECT_AREA_LEVEL_3_COM
       a       roh:ESSubjectArea ;
       rdfs:label "Comunicación" ;
-      asio:hasCode asioModules:ES_SUBJECT_AREA_LEVEL_3_CODE_COM ;
-      skos:broader asioModules:ES_SUBJECT_AREA_LEVEL_2_CSO ;
-      skos:inScheme asioModules:ESSubjectAreas3rdList ;
+      roh:hasCode rohsubj:ES_SUBJECT_AREA_LEVEL_3_CODE_COM ;
+      skos:broader rohsubj:ES_SUBJECT_AREA_LEVEL_2_CSO ;
+      skos:inScheme rohsubj:ESSubjectAreas3rdList ;
       skos:notation "COM" ;
       skos:exactMatch unescothes:C00678 ;
       skos:prefLabel "Comunicació"@ca , "Communication"@fr , "Communication"@en , "Comunicação"@pt , "Comunicación"@ast , "Comunicación"@gl , "Comunicación" , "Comunicación"@es .
 
-asioModules:ES_SUBJECT_AREA_LEVEL_3_CODE_TRA
+rohsubj:ES_SUBJECT_AREA_LEVEL_3_CODE_TRA
       a       roh:ESSubjectArea ;
       rdfs:label "TRA" ;
-      asio:codeOf asioModules:ES_SUBJECT_AREA_LEVEL_3_TRA ;
-      skos:inScheme asioModules:ESSubjectCode3rdList ;
+      roh:codeOf rohsubj:ES_SUBJECT_AREA_LEVEL_3_TRA ;
+      skos:inScheme rohsubj:ESSubjectCode3rdList ;
       skos:prefLabel "TRA" .
 
-asioModules:ES_SUBJECT_AREA_LEVEL_3_CODE_MBM
+rohsubj:ES_SUBJECT_AREA_LEVEL_3_CODE_MBM
       a       roh:ESSubjectArea ;
       rdfs:label "MBM" ;
-      asio:codeOf asioModules:ES_SUBJECT_AREA_LEVEL_3_MBM ;
-      skos:inScheme asioModules:ESSubjectCode3rdList ;
+      roh:codeOf rohsubj:ES_SUBJECT_AREA_LEVEL_3_MBM ;
+      skos:inScheme rohsubj:ESSubjectCode3rdList ;
       skos:prefLabel "MBM" .
 
-asioModules:ES_SUBJECT_AREA_LEVEL_3_CYA
+rohsubj:ES_SUBJECT_AREA_LEVEL_3_CYA
       a       roh:ESSubjectArea ;
       rdfs:label "Clima y atmósfera" ;
-      asio:hasCode asioModules:ES_SUBJECT_AREA_LEVEL_3_CODE_CYA ;
-      skos:broader asioModules:ES_SUBJECT_AREA_LEVEL_2_CTM ;
-      skos:inScheme asioModules:ESSubjectAreas3rdList ;
+      roh:hasCode rohsubj:ES_SUBJECT_AREA_LEVEL_3_CODE_CYA ;
+      skos:broader rohsubj:ES_SUBJECT_AREA_LEVEL_2_CTM ;
+      skos:inScheme rohsubj:ESSubjectAreas3rdList ;
       skos:notation "CYA" ;
       skos:closeMatch unescothes:C00289 ;
       skos:closeMatch unescothes:C00626 ;
       skos:prefLabel "Clima i atmosfera"@ca , "Climate and atmosphere"@en , "Clima e atmosfera"@pt , "Clima e atmosfera"@gl , "Climat et atmosphère"@fr , "Clima y atmósfera" , "Clima y atmósfera"@es , "Clima y atmósfera"@ast .
 
-asioModules:ES_SUBJECT_AREA_LEVEL_3_ALI
+rohsubj:ES_SUBJECT_AREA_LEVEL_3_ALI
       a       roh:ESSubjectArea ;
       rdfs:label "Ciencias y tecnologías de alimentos" ;
-      asio:hasCode asioModules:ES_SUBJECT_AREA_LEVEL_3_CODE_ALI ;
-      skos:broader asioModules:ES_SUBJECT_AREA_LEVEL_2_CAA ;
-      skos:inScheme asioModules:ESSubjectAreas3rdList ;
+      roh:hasCode rohsubj:ES_SUBJECT_AREA_LEVEL_3_CODE_ALI ;
+      skos:broader rohsubj:ES_SUBJECT_AREA_LEVEL_2_CAA ;
+      skos:inScheme rohsubj:ESSubjectAreas3rdList ;
       skos:notation "ALI" ;
       skos:closeMatch unescothes:C01577 ;
       skos:prefLabel "Ciencias y tecnologías de alimentos" , "Ciência e tecnologia de alimentos"@pt , "Ciencias y tecnologías de alimentos"@es , "Ciencia e tecnoloxía dos alimentos"@gl , "Food science and technology"@en , "Ciències i tecnologies d'aliments"@ca , "Science et technologie alimentaire"@fr , "Ciencies y tecnoloxíes d'alimentos"@ast .
 
-asioModules:ES_SUBJECT_AREA_LEVEL_3_LFL
+rohsubj:ES_SUBJECT_AREA_LEVEL_3_LFL
       a       roh:ESSubjectArea ;
       rdfs:label "Literatura, filología, lenguas y culturas antiguas y estudios culturales" ;
-      asio:hasCode asioModules:ES_SUBJECT_AREA_LEVEL_3_CODE_LFL ;
-      skos:broader asioModules:ES_SUBJECT_AREA_LEVEL_2_FLA ;
-      skos:inScheme asioModules:ESSubjectAreas3rdList ;
+      roh:hasCode rohsubj:ES_SUBJECT_AREA_LEVEL_3_CODE_LFL ;
+      skos:broader rohsubj:ES_SUBJECT_AREA_LEVEL_2_FLA ;
+      skos:inScheme rohsubj:ESSubjectAreas3rdList ;
       skos:notation "LFL" ;
       skos:closeMatch unescothes:C02321 ;
       skos:closeMatch unescothes:C00921 ;
@@ -599,192 +591,192 @@ asioModules:ES_SUBJECT_AREA_LEVEL_3_LFL
       skos:closeMatch unescothes:C00152 ;
       skos:prefLabel "Literatura, filologia, línguas e culturas antigas e estudos culturais"@pt , "Littérature, philologie, langues et cultures anciennes et études culturelles"@fr , "Literatura, filología, lenguas y culturas antiguas y estudios culturales"@es , "Literatura, filología, lenguas y culturas antiguas y estudios culturales" , "Literatura, filoloxía, linguas e culturas antigas e estudos culturais"@gl , "Lliteratura, filoloxía, llingües y cultures antigües y estudios culturales"@ast , "Literature, philology, ancient languages and cultures and cultural studies"@en , "Literatura, filologia, llengües i cultures antigues i estudis culturals"@ca .
 
-asioModules:ES_SUBJECT_AREA_LEVEL_2_CODE_MTM
+rohsubj:ES_SUBJECT_AREA_LEVEL_2_CODE_MTM
       a       roh:ESSubjectArea ;
       rdfs:label "MTM" ;
-      asio:codeOf asioModules:ES_SUBJECT_AREA_LEVEL_2_MTM ;
-      skos:inScheme asioModules:ESSubjectCode2ndList ;
+      roh:codeOf rohsubj:ES_SUBJECT_AREA_LEVEL_2_MTM ;
+      skos:inScheme rohsubj:ESSubjectCode2ndList ;
       skos:prefLabel "MTM" .
 
-asioModules:ES_SUBJECT_AREA_LEVEL_3_CODE_MAR
+rohsubj:ES_SUBJECT_AREA_LEVEL_3_CODE_MAR
       a       roh:ESSubjectArea ;
       rdfs:label "MAR" ;
-      asio:codeOf asioModules:ES_SUBJECT_AREA_LEVEL_3_MAR ;
-      skos:inScheme asioModules:ESSubjectCode3rdList ;
+      roh:codeOf rohsubj:ES_SUBJECT_AREA_LEVEL_3_MAR ;
+      skos:inScheme rohsubj:ESSubjectCode3rdList ;
       skos:prefLabel "MAR" .
 
-asioModules:ES_SUBJECT_AREA_LEVEL_3_CODE_BMC
+rohsubj:ES_SUBJECT_AREA_LEVEL_3_CODE_BMC
       a       roh:ESSubjectArea ;
       rdfs:label "BMC" ;
-      asio:codeOf asioModules:ES_SUBJECT_AREA_LEVEL_3_BMC ;
-      skos:inScheme asioModules:ESSubjectCode3rdList ;
+      roh:codeOf rohsubj:ES_SUBJECT_AREA_LEVEL_3_BMC ;
+      skos:inScheme rohsubj:ESSubjectCode3rdList ;
       skos:prefLabel "BMC" .
 
-asioModules:ES_SUBJECT_AREA_LEVEL_2_MTM
+rohsubj:ES_SUBJECT_AREA_LEVEL_2_MTM
       a       roh:ESSubjectArea ;
       rdfs:label "Ciencias matemáticas" ;
-      asio:hasCode asioModules:ES_SUBJECT_AREA_LEVEL_2_CODE_MTM ;
-      skos:broader asioModules:ES_SUBJECT_AREA_LEVEL_1_CMIFQ ;
-      skos:inScheme asioModules:ESSubjectAreas2ndList ;
+      roh:hasCode rohsubj:ES_SUBJECT_AREA_LEVEL_2_CODE_MTM ;
+      skos:broader rohsubj:ES_SUBJECT_AREA_LEVEL_1_CMIFQ ;
+      skos:inScheme rohsubj:ESSubjectAreas2ndList ;
       skos:notation "MTM" ;
       skos:closeMatch unescothes:C02437 ;
       skos:prefLabel "Ciências Matemáticas"@pt , "Ciències matemàtiques"@ca , "Ciencies matemátiques"@ast , "Mathematical Sciences"@en , "Sciences mathématiques"@fr , "Ciencias matemáticas"@gl , "Ciencias matemáticas" , "Ciencias matemáticas"@es .
 
-asioModules:ES_SUBJECT_AREA_LEVEL_2_DER
+rohsubj:ES_SUBJECT_AREA_LEVEL_2_DER
       a       roh:ESSubjectArea ;
       rdfs:label "Derecho" ;
-      asio:hasCode asioModules:ES_SUBJECT_AREA_LEVEL_2_CODE_DER ;
-      skos:broader asioModules:ES_SUBJECT_AREA_LEVEL_1_CSH ;
-      skos:inScheme asioModules:ESSubjectAreas2ndList ;
+      roh:hasCode rohsubj:ES_SUBJECT_AREA_LEVEL_2_CODE_DER ;
+      skos:broader rohsubj:ES_SUBJECT_AREA_LEVEL_1_CSH ;
+      skos:inScheme rohsubj:ESSubjectAreas2ndList ;
       skos:notation "DER" ;
       skos:exactMatch unescothes:C02229 ;
       skos:prefLabel "Derecho " , "Derecho"@es , "Droit"@fr , "Dereito"@gl , "Dret"@ca , "Drechu"@ast , "Direito"@pt , "Law"@en .
 
-asioModules:ES_SUBJECT_AREA_LEVEL_3_CODE_POL
+rohsubj:ES_SUBJECT_AREA_LEVEL_3_CODE_POL
       a       roh:ESSubjectArea ;
       rdfs:label "POL" ;
-      asio:codeOf asioModules:ES_SUBJECT_AREA_LEVEL_3_POL ;
-      skos:inScheme asioModules:ESSubjectCode3rdList ;
+      roh:codeOf rohsubj:ES_SUBJECT_AREA_LEVEL_3_POL ;
+      skos:inScheme rohsubj:ESSubjectCode3rdList ;
       skos:prefLabel "POL" .
 
-asioModules:ES_SUBJECT_AREA_LEVEL_2_TIC
+rohsubj:ES_SUBJECT_AREA_LEVEL_2_TIC
       a       roh:ESSubjectArea ;
       rdfs:label "Tecnologías de la información y de las comunicaciones" ;
-      asio:hasCode asioModules:ES_SUBJECT_AREA_LEVEL_2_CODE_TIC ;
-      skos:broader asioModules:ES_SUBJECT_AREA_LEVEL_1_CMIFQ ;
-      skos:inScheme asioModules:ESSubjectAreas2ndList ;
+      roh:hasCode rohsubj:ES_SUBJECT_AREA_LEVEL_2_CODE_TIC ;
+      skos:broader rohsubj:ES_SUBJECT_AREA_LEVEL_1_CMIFQ ;
+      skos:inScheme rohsubj:ESSubjectAreas2ndList ;
       skos:notation "TIC" ;
       skos:closeMatch unescothes:C01995 ;
       skos:closeMatch unescothes:C00705 ;
       skos:prefLabel "Information and communication technologies"@en , "Technologies de l'information et de la communication"@fr , "Tecnoloxías da información e comunicación"@gl , "Tecnologias de informação e comunicação"@pt , "Tecnologies de la informació i de les comunicacions"@ca , "Tecnoloxíes de la información y de les comunicaciones"@ast , "Tecnologías de la información y de las comunicaciones" , "Tecnologías de la información y de las comunicaciones"@es .
 
-asioModules:ESSubjectCode2ndList
-      a       asioModules:subjectAreas ;
+rohsubj:ESSubjectCode2ndList
+      a       skos:ConceptScheme ;
       rdfs:label "duˈminis təˈmatikz ðə səˈɣon niˈβeʎ ðə ɫə ʒənˈsiə əstəˈtaɫ ðə rəˈsɛrkə"@ca-CA-fonipa , "Códigos das áreas temáticas de segundo nivel da Axencia Estatal de Investigación (AEI)"@gl , "Codes for the second-level subject areas of Spain's State Research Agency (AEI)"@en , "Códigos de les árees temátiques de segundu nivel"@ast , "Códigos de las áreas temáticas de segundo nivel de la Agencia Estatal de Investigación (AEI)"@es , "ˈkoðiγoz ðe las ˈaɾeas teˈmatikas ðe seˈɣ̞un̟do niˈβel ðe la aˈxenθja estaˈtal ðe imbestiɣ̞aˈθjon"@es-ES-fonipa , "ˈkoʊdz fɔr ðə sɛkənd ˈlɛvəl ˈsʌbʤɪkt ˈɛriəz ʌv speɪnz steɪt riˈsɜrʧ ˈeɪʤənsi"@en-US-fonipa , "ˈkəʊdz fɔː ðə sɛkənd ˈlɛvl ˈsʌbʤɪkt ˈeərɪəz ɒv speɪnz steɪt rɪˈsɜːʧ ˈeɪʤənsi"@en-GB-fonipa , "Códigos das áreas temáticas de segundo nível da Agência Estadual de Pesquisa Espanhola (AEI)"@pt , "Codis dels dominis temàtics de segon nivell de l'Agència Estatal de Recerca (AEI)"@ca , "Codes des domains thématiques de second niveau de l'Agence Espagnole pour la Recherche (AEI)"@fr ;
       skos:prefLabel "duˈminis təˈmatikz ðə səˈɣon niˈβeʎ ðə ɫə ʒənˈsiə əstəˈtaɫ ðə rəˈsɛrkə"@ca-CA-fonipa , "Códigos das áreas temáticas de segundo nivel da Axencia Estatal de Investigación (AEI)"@gl , "Códigos de les árees temátiques de segundu nivel"@ast , "Codes for the second-level subject areas of Spain's State Research Agency (AEI)"@en , "Códigos de las áreas temáticas de segundo nivel de la Agencia Estatal de Investigación (AEI)"@es , "ˈkoðiγoz ðe las ˈaɾeas teˈmatikas ðe seˈɣ̞un̟do niˈβel ðe la aˈxenθja estaˈtal ðe imbestiɣ̞aˈθjon"@es-ES-fonipa , "ˈkəʊdz fɔː ðə sɛkənd ˈlɛvl ˈsʌbʤɪkt ˈeərɪəz ɒv speɪnz steɪt rɪˈsɜːʧ ˈeɪʤənsi"@en-GB-fonipa , "ˈkoʊdz fɔr ðə sɛkənd ˈlɛvəl ˈsʌbʤɪkt ˈɛriəz ʌv speɪnz steɪt riˈsɜrʧ ˈeɪʤənsi"@en-US-fonipa , "Códigos das áreas temáticas de segundo nível da Agência Estadual de Pesquisa Espanhola (AEI)"@pt , "Codis dels dominis temàtics de segon nivell de l'Agència Estatal de Recerca (AEI)"@ca , "Codes des domains thématiques de second niveau de l'Agence Espagnole pour la Recherche (AEI)"@fr ;
       ontolex:phoneticRep "duˈminis təˈmatikz ðə səˈɣon niˈβeʎ ðə ɫə ʒənˈsiə əstəˈtaɫ ðə rəˈsɛrkə"@ca-CA-fonipa , "ˈkoðiγoz ðe las ˈaɾeas teˈmatikas ðe seˈɣ̞un̟do niˈβel ðe la aˈxenθja estaˈtal ðe imbestiɣ̞aˈθjon"@es-ES-fonipa , "ˈkəʊdz fɔː ðə sɛkənd ˈlɛvl ˈsʌbʤɪkt ˈeərɪəz ɒv speɪnz steɪt rɪˈsɜːʧ ˈeɪʤənsi"@en-GB-fonipa , "ˈkoʊdz fɔr ðə sɛkənd ˈlɛvəl ˈsʌbʤɪkt ˈɛriəz ʌv speɪnz steɪt riˈsɜrʧ ˈeɪʤənsi"@en-US-fonipa .
 
-asioModules:ES_SUBJECT_AREA_LEVEL_3_CODE_MAE
+rohsubj:ES_SUBJECT_AREA_LEVEL_3_CODE_MAE
       a       roh:ESSubjectArea ;
       rdfs:label "MAE" ;
-      asio:codeOf asioModules:ES_SUBJECT_AREA_LEVEL_3_MAE ;
-      skos:inScheme asioModules:ESSubjectCode3rdList ;
+      roh:codeOf rohsubj:ES_SUBJECT_AREA_LEVEL_3_MAE ;
+      skos:inScheme rohsubj:ESSubjectCode3rdList ;
       skos:prefLabel "MAE" .
 
-asioModules:ES_SUBJECT_AREA_LEVEL_3_CODE_IQM
+rohsubj:ES_SUBJECT_AREA_LEVEL_3_CODE_IQM
       a       roh:ESSubjectArea ;
       rdfs:label "IQM" ;
-      asio:codeOf asioModules:ES_SUBJECT_AREA_LEVEL_3_IQM ;
-      skos:inScheme asioModules:ESSubjectCode3rdList ;
+      roh:codeOf rohsubj:ES_SUBJECT_AREA_LEVEL_3_IQM ;
+      skos:inScheme rohsubj:ESSubjectCode3rdList ;
       skos:prefLabel "IQM" .
 
-asioModules:ES_SUBJECT_AREA_LEVEL_3_BIF
+rohsubj:ES_SUBJECT_AREA_LEVEL_3_BIF
       a       roh:ESSubjectArea ;
       rdfs:label "Biología integrativa y fisiología" ;
-      asio:hasCode asioModules:ES_SUBJECT_AREA_LEVEL_3_CODE_BIF ;
-      skos:broader asioModules:ES_SUBJECT_AREA_LEVEL_2_BIO ;
-      skos:inScheme asioModules:ESSubjectAreas3rdList ;
+      roh:hasCode rohsubj:ES_SUBJECT_AREA_LEVEL_3_CODE_BIF ;
+      skos:broader rohsubj:ES_SUBJECT_AREA_LEVEL_2_BIO ;
+      skos:inScheme rohsubj:ESSubjectAreas3rdList ;
       skos:notation "BIF" ;
       skos:prefLabel "Biologia e fisiologia integrativas"@pt , "Bioloxía e fisioloxía integradora"@gl , "Biologie intégrative et physiologie"@fr , "Biología integrativa y fisiología" , "Biología integrativa y fisiología"@es , "Bioloxía integrativa y fisioloxía"@ast , "Integrative biology and physiology"@en , "Biologia integrativa i fisiologia"@ca .
 
-asioModules:ES_SUBJECT_AREA_LEVEL_3_TCO
+rohsubj:ES_SUBJECT_AREA_LEVEL_3_TCO
       a       roh:ESSubjectArea ;
       rdfs:label "Tecnologías de las comunicaciones" ;
-      asio:hasCode asioModules:ES_SUBJECT_AREA_LEVEL_3_CODE_TCO ;
-      skos:broader asioModules:ES_SUBJECT_AREA_LEVEL_2_TIC ;
-      skos:inScheme asioModules:ESSubjectAreas3rdList ;
+      roh:hasCode rohsubj:ES_SUBJECT_AREA_LEVEL_3_CODE_TCO ;
+      skos:broader rohsubj:ES_SUBJECT_AREA_LEVEL_2_TIC ;
+      skos:inScheme rohsubj:ESSubjectAreas3rdList ;
       skos:notation "TCO" ;
       skos:exactMatch unescothes:C00705 ;
       skos:prefLabel "Tecnologias de comunicação"@pt , "Technologies de communication"@fr , "Tecnologies de les comunicacions"@ca , "Tecnologías de las comunicaciones" , "Tecnologías de las comunicaciones"@es , "Tecnoloxías da comunicación"@gl , "Communication technologies"@en , "Tecnoloxíes de les comunicaciones"@ast .
 
-asioModules:ES_SUBJECT_AREA_LEVEL_2_CAA
+rohsubj:ES_SUBJECT_AREA_LEVEL_2_CAA
       a       roh:ESSubjectArea ;
       rdfs:label "Ciencias agrarias y agroalimentarias" ;
-      asio:hasCode asioModules:ES_SUBJECT_AREA_LEVEL_2_CODE_CAA ;
-      skos:broader asioModules:ES_SUBJECT_AREA_LEVEL_1_CV ;
-      skos:inScheme asioModules:ESSubjectAreas2ndList ;
+      roh:hasCode rohsubj:ES_SUBJECT_AREA_LEVEL_2_CODE_CAA ;
+      skos:broader rohsubj:ES_SUBJECT_AREA_LEVEL_1_CV ;
+      skos:inScheme rohsubj:ESSubjectAreas2ndList ;
       skos:notation "CAA" ;
       skos:prefLabel "Ciencias agrícolas e agroalimentarias"@gl , "Ciencias agrarias y agroalimentarias " , "Ciencias agrarias y agroalimentarias"@es , "Sciences agronomiques et agroalimentaires"@fr , "Ciencies agraries y agroalimentarias"@ast , "Ciències agràries i agroalimentàries"@ca , "Ciências agrícolas e agroalimentares"@pt , "Agricultural and agri-food sciences"@en .
 
-asioModules:ES_SUBJECT_AREA_LEVEL_3_CODE_SOC
+rohsubj:ES_SUBJECT_AREA_LEVEL_3_CODE_SOC
       a       roh:ESSubjectArea ;
       rdfs:label "SOC" ;
-      asio:codeOf asioModules:ES_SUBJECT_AREA_LEVEL_3_SOC ;
-      skos:inScheme asioModules:ESSubjectCode3rdList ;
+      roh:codeOf rohsubj:ES_SUBJECT_AREA_LEVEL_3_SOC ;
+      skos:inScheme rohsubj:ESSubjectCode3rdList ;
       skos:prefLabel "SOC" .
 
-asioModules:ES_SUBJECT_AREA_LEVEL_3_CODE_LFL
+rohsubj:ES_SUBJECT_AREA_LEVEL_3_CODE_LFL
       a       roh:ESSubjectArea ;
       rdfs:label "LFL" ;
-      asio:codeOf asioModules:ES_SUBJECT_AREA_LEVEL_3_LFL ;
-      skos:inScheme asioModules:ESSubjectCode3rdList ;
+      roh:codeOf rohsubj:ES_SUBJECT_AREA_LEVEL_3_LFL ;
+      skos:inScheme rohsubj:ESSubjectCode3rdList ;
       skos:prefLabel "LFL" .
 
-asioModules:ES_SUBJECT_AREA_LEVEL_3_CODE_FFP
+rohsubj:ES_SUBJECT_AREA_LEVEL_3_CODE_FFP
       a       roh:ESSubjectArea ;
       rdfs:label "FFP" ;
-      asio:codeOf asioModules:ES_SUBJECT_AREA_LEVEL_3_FFP ;
-      skos:inScheme asioModules:ESSubjectCode3rdList ;
+      roh:codeOf rohsubj:ES_SUBJECT_AREA_LEVEL_3_FFP ;
+      skos:inScheme rohsubj:ESSubjectCode3rdList ;
       skos:prefLabel "FFP" .
 
-asioModules:ES_SUBJECT_AREA_LEVEL_3_IQM
+rohsubj:ES_SUBJECT_AREA_LEVEL_3_IQM
       a       roh:ESSubjectArea ;
       rdfs:label "Ingeniería química" ;
-      asio:hasCode asioModules:ES_SUBJECT_AREA_LEVEL_3_CODE_IQM ;
-      skos:broader asioModules:ES_SUBJECT_AREA_LEVEL_2_CTQ ;
-      skos:inScheme asioModules:ESSubjectAreas3rdList ;
+      roh:hasCode rohsubj:ES_SUBJECT_AREA_LEVEL_3_CODE_IQM ;
+      skos:broader rohsubj:ES_SUBJECT_AREA_LEVEL_2_CTQ ;
+      skos:inScheme rohsubj:ESSubjectAreas3rdList ;
       skos:notation "IQM" ;
       skos:exactMatch unescothes:C00565 ;
       skos:prefLabel "Enxeñaría química"@gl , "Ingeniería química" , "Ingeniería química"@es , "Ingénierie chimique"@fr , "Chemical engineering"@en , "Engenharia Química"@pt , "Enginyeria química"@ca , "Inxeniería química"@ast .
 
-asioModules:ES_SUBJECT_AREA_LEVEL_2_PSI
+rohsubj:ES_SUBJECT_AREA_LEVEL_2_PSI
       a       roh:ESSubjectArea ;
       rdfs:label "Psicología" ;
-      asio:hasCode asioModules:ES_SUBJECT_AREA_LEVEL_2_CODE_PSI ;
-      skos:broader asioModules:ES_SUBJECT_AREA_LEVEL_1_CSH ;
-      skos:inScheme asioModules:ESSubjectAreas2ndList ;
+      roh:hasCode rohsubj:ES_SUBJECT_AREA_LEVEL_2_CODE_PSI ;
+      skos:broader rohsubj:ES_SUBJECT_AREA_LEVEL_1_CSH ;
+      skos:inScheme rohsubj:ESSubjectAreas2ndList ;
       skos:notation "PSI" ;
       skos:exactMatch unescothes:C03195 ;
       skos:prefLabel "Psychologie"@fr , "Psicoloxía"@gl , "Psicoloxía"@ast , "Psychology"@en , "Psicologia"@ca , "Psicologia"@pt , "Psicología" , "Psicología"@es .
 
-asioModules:ES_SUBJECT_AREA_LEVEL_2_CSO
+rohsubj:ES_SUBJECT_AREA_LEVEL_2_CSO
       a       roh:ESSubjectArea ;
       rdfs:label "Ciencias sociales" ;
-      asio:hasCode asioModules:ES_SUBJECT_AREA_LEVEL_2_CODE_CSO ;
-      skos:broader asioModules:ES_SUBJECT_AREA_LEVEL_1_CSH ;
-      skos:inScheme asioModules:ESSubjectAreas2ndList ;
+      roh:hasCode rohsubj:ES_SUBJECT_AREA_LEVEL_2_CODE_CSO ;
+      skos:broader rohsubj:ES_SUBJECT_AREA_LEVEL_1_CSH ;
+      skos:inScheme rohsubj:ESSubjectAreas2ndList ;
       skos:notation "CSO" ;
       skos:exactMatch unescothes:C03719 ;
       skos:prefLabel "Ciencias sociais"@gl , "Ciencias sociales " , "Ciencias sociales"@es , "Sciences sociales"@fr , "Ciências Sociais"@pt , "Social Sciences"@en , "Ciències socials"@ca , "Ciencies sociales"@ast .
 
-asioModules:ES_SUBJECT_AREA_LEVEL_2_FIS
+rohsubj:ES_SUBJECT_AREA_LEVEL_2_FIS
       a       roh:ESSubjectArea ;
       rdfs:label "Ciencias físicas" ;
-      asio:hasCode asioModules:ES_SUBJECT_AREA_LEVEL_2_CODE_FIS ;
-      skos:broader asioModules:ES_SUBJECT_AREA_LEVEL_1_CMIFQ ;
-      skos:inScheme asioModules:ESSubjectAreas2ndList ;
+      roh:hasCode rohsubj:ES_SUBJECT_AREA_LEVEL_2_CODE_FIS ;
+      skos:broader rohsubj:ES_SUBJECT_AREA_LEVEL_1_CMIFQ ;
+      skos:inScheme rohsubj:ESSubjectAreas2ndList ;
       skos:notation "FIS" ;
       skos:exactMatch unescothes:COL220 ;
       skos:prefLabel "Ciencies físiques"@ast , "Physical sciences"@en , "Sciences physiques"@fr , "Ciências físicas"@pt , "Ciències físiques"@ca , "Ciencias físicas" , "Ciencias físicas"@es , "Ciencias físicas"@gl .
 
-asioModules:ESSubjectCode3rdList
-      a       asioModules:subjectAreas ;
+rohsubj:ESSubjectCode3rdList
+      a       skos:ConceptScheme ;
       rdfs:label "ˈkoʊdz fɔr ðə θɜrd ˈlɛvəl ˈsʌbʤɪkt ˈɛriəz ʌv speɪnz steɪt riˈsɜrʧ ˈeɪʤənsi"@en-US-fonipa , "Códigos das áreas temáticas de terceiro nivel da Axencia Estatal de Investigación (AEI)"@gl , "Codes for the third-level subject areas of Spain's State Research Agency (AEI)"@en , "Codes des domains thématiques de troisième niveau de l'Agence Espagnole pour la Recherche (AEI)"@fr , "duˈminis təˈmatikz ðə tərˈse niˈβeʎ ðə ɫə ʒənˈsiə əstəˈtaɫ ðə rəˈsɛrkə"@ca-CA-fonipa , "Códigos de las áreas temáticas de tercer nivel de la Agencia Estatal de Investigación (AEI)"@es , "Códigos de les árees temátiques de tercer nivel"@ast , "Códigos das áreas temáticas de terceiro nível da Agência Estadual de Pesquisa Espanhola (AEI)"@pt , "Codis dels dominis temàtics de tercer nivell de l'Agència Estatal de Recerca (AEI)"@ca , "ˈkəʊdz fɔː ðə θɜːd ˈlɛvl ˈsʌbʤɪkt ˈeərɪəz ɒv speɪnz steɪt rɪˈsɜːʧ ˈeɪʤənsi"@en-GB-fonipa , "ˈkoðiγoz ðe las ˈaɾeas teˈmatikas ðe terˈθer niˈβel ðe la aˈxenθja estaˈtal ðe imbestiɣ̞aˈθjon"@es-ES-fonipa ;
       skos:prefLabel "ˈkoʊdz fɔr ðə θɜrd ˈlɛvəl ˈsʌbʤɪkt ˈɛriəz ʌv speɪnz steɪt riˈsɜrʧ ˈeɪʤənsi"@en-US-fonipa , "Códigos das áreas temáticas de terceiro nivel da Axencia Estatal de Investigación (AEI)"@gl , "Codes for the third-level subject areas of Spain's State Research Agency (AEI)"@en , "duˈminis təˈmatikz ðə tərˈse niˈβeʎ ðə ɫə ʒənˈsiə əstəˈtaɫ ðə rəˈsɛrkə"@ca-CA-fonipa , "Codes des domains thématiques de troisième niveau de l'Agence Espagnole pour la Recherche (AEI)"@fr , "Códigos de las áreas temáticas de tercer nivel de la Agencia Estatal de Investigación (AEI)"@es , "Códigos de les árees temátiques de tercer nivel"@ast , "Códigos das áreas temáticas de terceiro nível da Agência Estadual de Pesquisa Espanhola (AEI)"@pt , "Codis dels dominis temàtics de tercer nivell de l'Agència Estatal de Recerca (AEI)"@ca , "ˈkəʊdz fɔː ðə θɜːd ˈlɛvl ˈsʌbʤɪkt ˈeərɪəz ɒv speɪnz steɪt rɪˈsɜːʧ ˈeɪʤənsi"@en-GB-fonipa , "ˈkoðiγoz ðe las ˈaɾeas teˈmatikas ðe terˈθer niˈβel ðe la aˈxenθja estaˈtal ðe imbestiɣ̞aˈθjon"@es-ES-fonipa ;
       ontolex:phoneticRep "ˈkoʊdz fɔr ðə θɜrd ˈlɛvəl ˈsʌbʤɪkt ˈɛriəz ʌv speɪnz steɪt riˈsɜrʧ ˈeɪʤənsi"@en-US-fonipa , "duˈminis təˈmatikz ðə tərˈse niˈβeʎ ðə ɫə ʒənˈsiə əstəˈtaɫ ðə rəˈsɛrkə"@ca-CA-fonipa , "ˈkəʊdz fɔː ðə θɜːd ˈlɛvl ˈsʌbʤɪkt ˈeərɪəz ɒv speɪnz steɪt rɪˈsɜːʧ ˈeɪʤənsi"@en-GB-fonipa , "ˈkoðiγoz ðe las ˈaɾeas teˈmatikas ðe terˈθer niˈβel ðe la aˈxenθja estaˈtal ðe imbestiɣ̞aˈθjon"@es-ES-fonipa .
 
-asioModules:ES_SUBJECT_AREA_LEVEL_2_CODE_FLA
+rohsubj:ES_SUBJECT_AREA_LEVEL_2_CODE_FLA
       a       roh:ESSubjectArea ;
       rdfs:label "FLA" ;
-      asio:codeOf asioModules:ES_SUBJECT_AREA_LEVEL_2_FLA ;
-      skos:inScheme asioModules:ESSubjectCode2ndList ;
+      roh:codeOf rohsubj:ES_SUBJECT_AREA_LEVEL_2_FLA ;
+      skos:inScheme rohsubj:ESSubjectCode2ndList ;
       skos:prefLabel "FLA" .
 
-asioModules:ES_SUBJECT_AREA_LEVEL_1_CMIFQ
+rohsubj:ES_SUBJECT_AREA_LEVEL_1_CMIFQ
       a       roh:ESSubjectArea ;
       rdfs:label "Ciencias matemáticas, físicas, químicas e ingenierías" ;
-      asio:hasCode asioModules:ES_SUBJECT_AREA_LEVEL_1_CODE_CMIFQ ;
-      skos:inScheme asioModules:ESSubjectAreas1stList ;
+      roh:hasCode rohsubj:ES_SUBJECT_AREA_LEVEL_1_CODE_CMIFQ ;
+      skos:inScheme rohsubj:ESSubjectAreas1stList ;
       skos:notation "CMIFQ" ;
       skos:closeMatch unescothes:C02437 ;
       skos:closeMatch unescothes:C02994 ;
@@ -793,574 +785,574 @@ asioModules:ES_SUBJECT_AREA_LEVEL_1_CMIFQ
       skos:prefLabel "Mathematical, physical, chemical and engineering sciences"@en , "ˈθjenθjaz mateˈmatikas ˈfisikas ˈkimikas e iŋxenjeˈrias"@es-ES , "Ciências matemáticas, físicas, químicas e de engenharia"@pt , "Ciencias matemáticas, físicas, químicas e ingenierías"@es , "Ciencias matemáticas, físicas, químicas e ingenierías" , "Sciencias matematicas, fisicas, quimicas y inchenierías"@an , "Céncias i ingenierías"@ext , "ˌmæθəˈmætɪkəl, ˈfɪzɪkəl, ˈkɛməkəl ænd ˈɛnʤəˈnɪrɪŋ ˈsaɪənsəz"@en-US , "Ciencies matemátiques, físiques, químiques ya inxenieríes"@ast , "Matematika, fisika, kimika eta ingeniaritza zientziak"@eu , "Ciencias matemáticas, físicas, químicas e de enxeñaría"@gl , "Sciences mathématiques, physiques, chimiques et du génie"@fr , "Sciéncias matematicas, fisicas, quimicas e engenhariá"@oc , "ˌmæθɪˈmætɪkəl, ˈfɪzɪkəl, ˈkɛmɪkəl ænd ˌɛnʤɪˈnɪərɪŋ ˈsaɪənsɪz"@en-GB , "siˈɛnsiəs mətəˈmatikəs ˈfizikəs ˈkimikəz i əɲʒiɲəˈɾiəs"@ca , "Ciències matemàtiques, físiques, químiques i enginyeries"@ca ;
       ontolex:phoneticRep "ˈθjenθjaz mateˈmatikas ˈfisikas ˈkimikas e iŋxenjeˈrias"@es-ES , "ˌmæθəˈmætɪkəl, ˈfɪzɪkəl, ˈkɛməkəl ænd ˈɛnʤəˈnɪrɪŋ ˈsaɪənsəz"@en-US , "ˌmæθɪˈmætɪkəl, ˈfɪzɪkəl, ˈkɛmɪkəl ænd ˌɛnʤɪˈnɪərɪŋ ˈsaɪənsɪz"@en-GB , "siˈɛnsiəs mətəˈmatikəs ˈfizikəs ˈkimikəz i əɲʒiɲəˈɾiəs"@ca .
 
-asioModules:ES_SUBJECT_AREA_LEVEL_1_CODE_CSH
+rohsubj:ES_SUBJECT_AREA_LEVEL_1_CODE_CSH
       a       roh:ESSubjectArea ;
       rdfs:label "CSH" ;
-      asio:codeOf asioModules:ES_SUBJECT_AREA_LEVEL_1_CSH ;
-      skos:inScheme asioModules:ESSubjectCode1stList ;
+      roh:codeOf rohsubj:ES_SUBJECT_AREA_LEVEL_1_CSH ;
+      skos:inScheme rohsubj:ESSubjectCode1stList ;
       skos:prefLabel "CSH" .
 
-asioModules:ES_SUBJECT_AREA_LEVEL_3_SOC
+rohsubj:ES_SUBJECT_AREA_LEVEL_3_SOC
       a       roh:ESSubjectArea ;
       rdfs:label "Sociología y antropología social" ;
-      asio:hasCode asioModules:ES_SUBJECT_AREA_LEVEL_3_CODE_SOC ;
-      skos:broader asioModules:ES_SUBJECT_AREA_LEVEL_2_CSO ;
-      skos:inScheme asioModules:ESSubjectAreas3rdList ;
+      roh:hasCode rohsubj:ES_SUBJECT_AREA_LEVEL_3_CODE_SOC ;
+      skos:broader rohsubj:ES_SUBJECT_AREA_LEVEL_2_CSO ;
+      skos:inScheme rohsubj:ESSubjectAreas3rdList ;
       skos:notation "SOC" ;
       skos:closeMatch unescothes:C03740 ;
       skos:closeMatch unescothes:C01430 ;
       skos:prefLabel "Sociología y antropología social" , "Sociología y antropología social"@es , "Sociologia i antropologia social"@ca , "Socioloxía e antropoloxía social"@gl , "Sociologie et anthropologie sociale"@fr , "Sociologia e antropologia social"@pt , "Socioloxía y antropoloxía social"@ast , "Sociology and social anthropology"@en .
 
-asioModules:ES_SUBJECT_AREA_LEVEL_3_CODE_DE3
+rohsubj:ES_SUBJECT_AREA_LEVEL_3_CODE_DE3
       a       roh:ESSubjectArea ;
       rdfs:label "DE3" ;
-      asio:codeOf asioModules:ES_SUBJECT_AREA_LEVEL_3_DE3 ;
-      skos:inScheme asioModules:ESSubjectCode3rdList ;
+      roh:codeOf rohsubj:ES_SUBJECT_AREA_LEVEL_3_DE3 ;
+      skos:inScheme rohsubj:ESSubjectCode3rdList ;
       skos:prefLabel "DE3" .
 
-asioModules:ES_SUBJECT_AREA_LEVEL_3_ED3
+rohsubj:ES_SUBJECT_AREA_LEVEL_3_ED3
       a       roh:ESSubjectArea ;
       rdfs:label "Ciencias de la educación" ;
-      asio:hasCode asioModules:ES_SUBJECT_AREA_LEVEL_3_CODE_ED3 ;
-      skos:broader asioModules:ES_SUBJECT_AREA_LEVEL_2_EDU ;
-      skos:inScheme asioModules:ESSubjectAreas3rdList ;
+      roh:hasCode rohsubj:ES_SUBJECT_AREA_LEVEL_3_CODE_ED3 ;
+      skos:broader rohsubj:ES_SUBJECT_AREA_LEVEL_2_EDU ;
+      skos:inScheme rohsubj:ESSubjectAreas3rdList ;
       skos:notation "ED3" ;
       skos:exactMatch unescothes:C01281 ;
       skos:prefLabel "Sciences de l'éducation"@fr , "Ciencies de la educación"@ast , "Ciências da Educação"@pt , "Ciències de l'educació"@ca , "Ciencias da educación"@gl , "Ciencias de la educación" , "Ciencias de la educación"@es , "Education sciences"@en .
 
-asioModules:ES_SUBJECT_AREA_LEVEL_2_ECO
+rohsubj:ES_SUBJECT_AREA_LEVEL_2_ECO
       a       roh:ESSubjectArea ;
       rdfs:label "Economía" ;
-      asio:hasCode asioModules:ES_SUBJECT_AREA_LEVEL_2_CODE_ECO ;
-      skos:broader asioModules:ES_SUBJECT_AREA_LEVEL_1_CSH ;
-      skos:inScheme asioModules:ESSubjectAreas2ndList ;
+      roh:hasCode rohsubj:ES_SUBJECT_AREA_LEVEL_2_CODE_ECO ;
+      skos:broader rohsubj:ES_SUBJECT_AREA_LEVEL_1_CSH ;
+      skos:inScheme rohsubj:ESSubjectAreas2ndList ;
       skos:notation "ECO" ;
       skos:exactMatch unescothes:C01180 ;
       skos:prefLabel "Économie"@fr , "Economy"@en , "Economía"@es , "Economía" , "Economía"@ast , "Economía"@gl , "Economia"@ca , "Economia"@pt .
 
-asioModules:ES_SUBJECT_AREA_LEVEL_3_FYA
+rohsubj:ES_SUBJECT_AREA_LEVEL_3_FYA
       a       roh:ESSubjectArea ;
       rdfs:label "Física y sus aplicaciones" ;
-      asio:hasCode asioModules:ES_SUBJECT_AREA_LEVEL_3_CODE_FYA ;
-      skos:broader asioModules:ES_SUBJECT_AREA_LEVEL_2_FIS ;
-      skos:inScheme asioModules:ESSubjectAreas3rdList ;
+      roh:hasCode rohsubj:ES_SUBJECT_AREA_LEVEL_3_CODE_FYA ;
+      skos:broader rohsubj:ES_SUBJECT_AREA_LEVEL_2_FIS ;
+      skos:inScheme rohsubj:ESSubjectAreas3rdList ;
       skos:notation "FYA" ;
       skos:closeMatch unescothes:C02994 ;
       skos:prefLabel "Física e as súas aplicacións"@gl , "Física y sus aplicaciones" , "Física y sus aplicaciones"@es , "Physique et ses applications"@fr , "Física e suas aplicações"@pt , "Physics and its applications"@en , "Física y les sos aplicaciones"@ast , "Física i les seves aplicacions"@ca .
 
-asioModules:ES_SUBJECT_AREA_LEVEL_3_ICA
+rohsubj:ES_SUBJECT_AREA_LEVEL_3_ICA
       a       roh:ESSubjectArea ;
       rdfs:label "Ingeniería civil y arquitectura" ;
-      asio:hasCode asioModules:ES_SUBJECT_AREA_LEVEL_3_CODE_ICA ;
-      skos:broader asioModules:ES_SUBJECT_AREA_LEVEL_2_PIN ;
-      skos:inScheme asioModules:ESSubjectAreas3rdList ;
+      roh:hasCode rohsubj:ES_SUBJECT_AREA_LEVEL_3_CODE_ICA ;
+      skos:broader rohsubj:ES_SUBJECT_AREA_LEVEL_2_PIN ;
+      skos:inScheme rohsubj:ESSubjectAreas3rdList ;
       skos:notation "ICA" ;
       skos:closeMatch unescothes:C00216 ;
       skos:closeMatch unescothes:C00606 ;
       skos:prefLabel "Ingeniería civil y arquitectura"@es , "Ingeniería civil y arquitectura" , "Ingénierie civil et architecture"@fr , "Engenharia civil e arquitetura"@pt , "Civil engineering and architecture"@en , "Inxeniería civil y arquitectura"@ast , "Enginyeria civil i arquitectura"@ca , "Enxeñaría civil e arquitectura"@gl .
 
-asioModules:ES_SUBJECT_AREA_LEVEL_2_MLP
+rohsubj:ES_SUBJECT_AREA_LEVEL_2_MLP
       a       roh:ESSubjectArea ;
       rdfs:label "Mente, lenguaje y pensamiento" ;
-      asio:hasCode asioModules:ES_SUBJECT_AREA_LEVEL_2_CODE_MLP ;
-      skos:broader asioModules:ES_SUBJECT_AREA_LEVEL_1_CSH ;
-      skos:inScheme asioModules:ESSubjectAreas2ndList ;
+      roh:hasCode rohsubj:ES_SUBJECT_AREA_LEVEL_2_CODE_MLP ;
+      skos:broader rohsubj:ES_SUBJECT_AREA_LEVEL_1_CSH ;
+      skos:inScheme rohsubj:ESSubjectAreas2ndList ;
       skos:notation "MLP" ;
       skos:closeMatch unescothes:C02537 ;
       skos:closeMatch unescothes:C04060 ;
       skos:closeMatch unescothes:C02212 ;
       skos:prefLabel "Mente, linguagem e pensamento"@pt , "Esprit, langage et pensée"@fr , "Mente, lenguaje y pensamiento"@es , "Mente, lenguaje y pensamiento" , "Mente, linguaxe e pensamento"@gl , "Mind, language and thought"@en , "Ment, llenguatge i pensament"@ca , "Mente, llinguaxe y pensamiento"@ast .
 
-asioModules:ES_SUBJECT_AREA_LEVEL_3_MAR
+rohsubj:ES_SUBJECT_AREA_LEVEL_3_MAR
       a       roh:ESSubjectArea ;
       rdfs:label "Ciencias y tecnologías marinas" ;
-      asio:hasCode asioModules:ES_SUBJECT_AREA_LEVEL_3_CODE_MAR ;
-      skos:broader asioModules:ES_SUBJECT_AREA_LEVEL_2_CTM ;
-      skos:inScheme asioModules:ESSubjectAreas3rdList ;
+      roh:hasCode rohsubj:ES_SUBJECT_AREA_LEVEL_3_CODE_MAR ;
+      skos:broader rohsubj:ES_SUBJECT_AREA_LEVEL_2_CTM ;
+      skos:inScheme rohsubj:ESSubjectAreas3rdList ;
       skos:notation "MAR" ;
       skos:closeMatch unescothes:C02814 ;
       skos:prefLabel "Ciencia e tecnoloxía mariña"@gl , "Sciences et technologies marines"@fr , "Ciencies y tecnoloxíes marines"@ast , "Marine science and technology"@en , "Ciències i tecnologies marines"@ca , "Ciência e tecnologia marinha"@pt , "Ciencias y tecnologías marinas" , "Ciencias y tecnologías marinas"@es .
 
-asioModules:ESSubjectAreas1stList
-      a       asioModules:subjectAreas ;
+rohsubj:ESSubjectAreas1stList
+      a       skos:ConceptScheme ;
       rdfs:label "ˈaɾeas teˈmatikas ðe priˈmer niˈβel ðe la aˈxenθja estaˈtal ðe imbestiɣ̞aˈθjon"@es-ES-fonipa , "Dominis temàtics de primer nivell de l'Agència Estatal de Recerca (AEI)"@ca , "fɜrst ˈlɛvəl ˈsʌbʤɪkt ˈɛriə"@en-US-fonipa , "duˈminis təˈmatikz ðə pɾiˈme niˈβeʎ ðə ɫə ʒənˈsiə əstəˈtaɫ ðə rəˈsɛrkə"@ca-CA-fonipa , "Domains thématiques de premier niveau de l'Agence Espagnole pour la Recherche (AEI)"@fr , "Áreas temáticas de primer nivel de la Agencia Estatal de Investigación (AEI)"@es , "Áreas temáticas de primer libel d'a AEI"@an , "Árees temátiques de primer nivel de l'Axencia Estatal de Investigación (AEI)"@ast , "fɜːst ˈlɛvl ˈsʌbʤɪkt ˈeərɪəz"@en-GB-fonipa , "First-level subject areas of Spain's State Research Agency (AEI)"@en , "Áreas temáticas de primeiro nível"@pt , "Áreas tematicas de primièr nivel de l'AEI"@oc , "FIXME"@eu , "Áreas temáticas de primeiro nivel da Axencia Estatal de Investigación (AEI)"@gl ;
       skos:prefLabel "ˈaɾeas teˈmatikas ðe priˈmer niˈβel ðe la aˈxenθja estaˈtal ðe imbestiɣ̞aˈθjon"@es-ES-fonipa , "Dominis temàtics de primer nivell de l'Agència Estatal de Recerca (AEI)"@ca , "duˈminis təˈmatikz ðə pɾiˈme niˈβeʎ ðə ɫə ʒənˈsiə əstəˈtaɫ ðə rəˈsɛrkə"@ca-CA-fonipa , "Domains thématiques de premier niveau de l'Agence Espagnole pour la Recherche (AEI)"@fr , "Áreas temáticas de primer nivel de la Agencia Estatal de Investigación (AEI)"@es , "Áreas temáticas de primer libel d'a AEI"@an , "fɜːst ˈlɛvl ˈsʌbʤɪkt ˈeərɪəz"@en-GB-fonipa , "Árees temátiques de primer nivel de l'Axencia Estatal de Investigación (AEI)"@ast , "First-level subject areas of Spain's State Research Agency (AEI)"@en , "Áreas temáticas de primeiro nível"@pt , "fɜrst ˈlɛvəl ˈsʌbʤɪkt ˈɛriəz"@en-US-fonipa , "Áreas tematicas de primièr nivel de l'AEI"@oc , "FIXME"@eu , "Áreas temáticas de primeiro nivel da Axencia Estatal de Investigación (AEI)"@gl ;
       ontolex:phoneticRep "fɜːst ˈlɛvl ˈsʌbʤɪkt ˈeərɪəz"@en-GB-fonipa , "ˈaɾeas teˈmatikas ðe priˈmer niˈβel ðe la aˈxenθja estaˈtal ðe imbestiɣ̞aˈθjon"@es-ES-fonipa , "fɜrst ˈlɛvəl ˈsʌbʤɪkt ˈɛriə"@en-US-fonipa , "duˈminis təˈmatikz ðə pɾiˈme niˈβeʎ ðə ɫə ʒənˈsiə əstəˈtaɫ ðə rəˈsɛrkə"@ca-CA-fonipa .
 
-asioModules:ES_SUBJECT_AREA_LEVEL_3_CODE_COM
+rohsubj:ES_SUBJECT_AREA_LEVEL_3_CODE_COM
       a       roh:ESSubjectArea ;
       rdfs:label "COM" ;
-      asio:codeOf asioModules:ES_SUBJECT_AREA_LEVEL_3_COM ;
-      skos:inScheme asioModules:ESSubjectCode3rdList ;
+      roh:codeOf rohsubj:ES_SUBJECT_AREA_LEVEL_3_COM ;
+      skos:inScheme rohsubj:ESSubjectCode3rdList ;
       skos:prefLabel "COM" .
 
-asioModules:ES_SUBJECT_AREA_LEVEL_3_CODE_ENE
+rohsubj:ES_SUBJECT_AREA_LEVEL_3_CODE_ENE
       a       roh:ESSubjectArea ;
       rdfs:label "ENE" ;
-      asio:codeOf asioModules:ES_SUBJECT_AREA_LEVEL_3_ENE ;
-      skos:inScheme asioModules:ESSubjectCode3rdList ;
+      roh:codeOf rohsubj:ES_SUBJECT_AREA_LEVEL_3_ENE ;
+      skos:inScheme rohsubj:ESSubjectCode3rdList ;
       skos:prefLabel "ENE" .
 
-asioModules:ES_SUBJECT_AREA_LEVEL_3_BMC
+rohsubj:ES_SUBJECT_AREA_LEVEL_3_BMC
       a       roh:ESSubjectArea ;
       rdfs:label "Biología molecular y celular" ;
-      asio:hasCode asioModules:ES_SUBJECT_AREA_LEVEL_3_CODE_BMC ;
-      skos:broader asioModules:ES_SUBJECT_AREA_LEVEL_2_BIO ;
-      skos:inScheme asioModules:ESSubjectAreas3rdList ;
+      roh:hasCode rohsubj:ES_SUBJECT_AREA_LEVEL_3_CODE_BMC ;
+      skos:broader rohsubj:ES_SUBJECT_AREA_LEVEL_2_BIO ;
+      skos:inScheme rohsubj:ESSubjectAreas3rdList ;
       skos:notation "BMC" ;
       skos:closeMatch unescothes:C02567 ;
       skos:closeMatch unescothes:C00536 ;
       skos:prefLabel "Biologia molecular i cel·lular"@ca , "Bioloxía molecular y celular"@ast , "Molecular and cellular biology"@en , "Biologia molecular e celular"@pt , "Biologie moléculaire et cellulaire"@fr , "Biología molecular y celular" , "Biología molecular y celular"@es , "Bioloxía molecular e celular"@gl .
 
-asioModules:ES_SUBJECT_AREA_LEVEL_3_INA
+rohsubj:ES_SUBJECT_AREA_LEVEL_3_INA
       a       roh:ESSubjectArea ;
       rdfs:label "Ingeniería mecánica, naval y aeronáutica" ;
-      asio:hasCode asioModules:ES_SUBJECT_AREA_LEVEL_3_CODE_INA ;
-      skos:broader asioModules:ES_SUBJECT_AREA_LEVEL_2_PIN ;
-      skos:inScheme asioModules:ESSubjectAreas3rdList ;
+      roh:hasCode rohsubj:ES_SUBJECT_AREA_LEVEL_3_CODE_INA ;
+      skos:broader rohsubj:ES_SUBJECT_AREA_LEVEL_2_PIN ;
+      skos:inScheme rohsubj:ESSubjectAreas3rdList ;
       skos:notation "INA" ;
       skos:closeMatch unescothes:C02447 ;
       skos:closeMatch unescothes:C02398 ;
       skos:closeMatch unescothes:C00064 ;
       skos:prefLabel "Mechanical, naval and aeronautical engineering"@en , "Ingeniería mecánica, naval y aeronáutica" , "Ingeniería mecánica, naval y aeronáutica"@es , "Enxeñaría mecánica, naval e aeronáutica"@gl , "Ingénierie mécanique, naval et aéronautique"@fr , "Enginyeria mecànica, naval i aeronàutica"@ca , "Inxeniería mecánica, naval y aeronáutica"@ast , "Engenharia mecânica, naval e aeronáutica"@pt .
 
-asioModules:ES_SUBJECT_AREA_LEVEL_3_EYA
+rohsubj:ES_SUBJECT_AREA_LEVEL_3_EYA
       a       roh:ESSubjectArea ;
       rdfs:label "Economía y sus aplicaciones" ;
-      asio:hasCode asioModules:ES_SUBJECT_AREA_LEVEL_3_CODE_EYA ;
-      skos:broader asioModules:ES_SUBJECT_AREA_LEVEL_2_ECO ;
-      skos:inScheme asioModules:ESSubjectAreas3rdList ;
+      roh:hasCode rohsubj:ES_SUBJECT_AREA_LEVEL_3_CODE_EYA ;
+      skos:broader rohsubj:ES_SUBJECT_AREA_LEVEL_2_ECO ;
+      skos:inScheme rohsubj:ESSubjectAreas3rdList ;
       skos:notation "EYA" ;
       skos:closeMatch unescothes:C01180 ;
       skos:prefLabel "Economia e suas aplicações"@pt , "Economia i les seves aplicacions"@ca , "Economía e as súas aplicacións"@gl , "Economía y sus aplicaciones" , "Economía y sus aplicaciones"@es , "Economía y les sos aplicaciones"@ast , "Economy and its applications"@en , "Économie et ses applications"@fr .
 
-asioModules:ES_SUBJECT_AREA_LEVEL_3_AYF
+rohsubj:ES_SUBJECT_AREA_LEVEL_3_AYF
       a       roh:ESSubjectArea ;
       rdfs:label "Agricultura y forestal" ;
-      asio:hasCode asioModules:ES_SUBJECT_AREA_LEVEL_3_CODE_AYF ;
-      skos:broader asioModules:ES_SUBJECT_AREA_LEVEL_2_CAA ;
-      skos:inScheme asioModules:ESSubjectAreas3rdList ;
+      roh:hasCode rohsubj:ES_SUBJECT_AREA_LEVEL_3_CODE_AYF ;
+      skos:broader rohsubj:ES_SUBJECT_AREA_LEVEL_2_CAA ;
+      skos:inScheme rohsubj:ESSubjectAreas3rdList ;
       skos:notation "AYF" ;
       skos:closeMatch unescothes:C00112 ;
       skos:closeMatch unescothes:C01594 ;
       skos:prefLabel "Agricultura i forestal"@ca , "Agriculture et foresterie"@fr , "Agricultura e silvicultura"@pt , "Agricultura e silvicultura"@gl , "Agriculture and forestry"@en , "Agricultura y forestal" , "Agricultura y forestal"@es , "Agricultura y forestal"@ast .
 
-asioModules:ES_SUBJECT_AREA_LEVEL_3_CPO
+rohsubj:ES_SUBJECT_AREA_LEVEL_3_CPO
       a       roh:ESSubjectArea ;
       rdfs:label "Ciencia política" ;
-      asio:hasCode asioModules:ES_SUBJECT_AREA_LEVEL_3_CODE_CPO ;
-      skos:broader asioModules:ES_SUBJECT_AREA_LEVEL_2_CSO ;
-      skos:inScheme asioModules:ESSubjectAreas3rdList ;
+      roh:hasCode rohsubj:ES_SUBJECT_AREA_LEVEL_3_CODE_CPO ;
+      skos:broader rohsubj:ES_SUBJECT_AREA_LEVEL_2_CSO ;
+      skos:inScheme rohsubj:ESSubjectAreas3rdList ;
       skos:notation "CPO" ;
       skos:exactMatch unescothes:C03057 ;
       skos:prefLabel "Ciencias políticas"@gl , "Ciência Política"@pt , "Ciencia política"@es , "Ciencia política" , "Ciencia política"@ast , "Ciència política"@ca , "Politic science"@en , "Sciences politiques"@fr .
 
-asioModules:ES_SUBJECT_AREA_LEVEL_3_CODE_ART
+rohsubj:ES_SUBJECT_AREA_LEVEL_3_CODE_ART
       a       roh:ESSubjectArea ;
       rdfs:label "ART" ;
-      asio:codeOf asioModules:ES_SUBJECT_AREA_LEVEL_3_ART ;
-      skos:inScheme asioModules:ESSubjectCode3rdList ;
+      roh:codeOf rohsubj:ES_SUBJECT_AREA_LEVEL_3_ART ;
+      skos:inScheme rohsubj:ESSubjectCode3rdList ;
       skos:prefLabel "ART" .
 
-asioModules:ES_SUBJECT_AREA_LEVEL_1_CV
+rohsubj:ES_SUBJECT_AREA_LEVEL_1_CV
       a       roh:ESSubjectArea ;
       rdfs:label "Ciencias de la vida" ;
-      asio:hasCode asioModules:ES_SUBJECT_AREA_LEVEL_1_CODE_CV ;
-      skos:inScheme asioModules:ESSubjectAreas1stList ;
+      roh:hasCode rohsubj:ES_SUBJECT_AREA_LEVEL_1_CODE_CV ;
+      skos:inScheme rohsubj:ESSubjectAreas1stList ;
       skos:notation "CV" ;
       skos:exactMatch unescothes:C02293 ;
       skos:prefLabel "Sciéncias de la vida"@oc , "Life sciences"@en , "Ciencies de la vida"@ast , "Ciências da vida"@pt , "Céncias de la vida"@ext , "siˈɛnsiəs ðə ɫə ˈbiðə"@ca , "Sciences de la vie"@fr , "Sciencias d'a vida"@an , "Ciencias de la vida" , "Ciencias de la vida"@es , "laɪf ˈsaɪənsəz"@en-US , "Ciències de la vida"@ca , "ˈθjen̟θjaz ðe la ˈβ̞iða"@es-ES , "Ciencias da vida"@gl , "Bizi zientziak"@eu , "laɪf ˈsaɪənsɪz"@en-GB ;
       ontolex:phoneticRep "siˈɛnsiəs ðə ɫə ˈbiðə"@ca , "laɪf ˈsaɪənsəz"@en-US , "ˈθjen̟θjaz ðe la ˈβ̞iða"@es-ES , "laɪf ˈsaɪənsɪz"@en-GB .
 
-asioModules:ES_SUBJECT_AREA_LEVEL_2_CODE_PHA
+rohsubj:ES_SUBJECT_AREA_LEVEL_2_CODE_PHA
       a       roh:ESSubjectArea ;
       rdfs:label "PHA" ;
-      asio:codeOf asioModules:ES_SUBJECT_AREA_LEVEL_2_PHA ;
-      skos:inScheme asioModules:ESSubjectCode2ndList ;
+      roh:codeOf rohsubj:ES_SUBJECT_AREA_LEVEL_2_PHA ;
+      skos:inScheme rohsubj:ESSubjectCode2ndList ;
       skos:prefLabel "PHA" .
 
-asioModules:ES_SUBJECT_AREA_LEVEL_3_CODE_IEA
+rohsubj:ES_SUBJECT_AREA_LEVEL_3_CODE_IEA
       a       roh:ESSubjectArea ;
       rdfs:label "IEA" ;
-      asio:codeOf asioModules:ES_SUBJECT_AREA_LEVEL_3_IEA ;
-      skos:inScheme asioModules:ESSubjectCode3rdList ;
+      roh:codeOf rohsubj:ES_SUBJECT_AREA_LEVEL_3_IEA ;
+      skos:inScheme rohsubj:ESSubjectCode3rdList ;
       skos:prefLabel "IEA" .
 
-asioModules:ES_SUBJECT_AREA_LEVEL_2_CTQ
+rohsubj:ES_SUBJECT_AREA_LEVEL_2_CTQ
       a       roh:ESSubjectArea ;
       rdfs:label "Ciencias y tecnologías químicas" ;
-      asio:hasCode asioModules:ES_SUBJECT_AREA_LEVEL_2_CODE_CTQ ;
-      skos:broader asioModules:ES_SUBJECT_AREA_LEVEL_1_CMIFQ ;
-      skos:inScheme asioModules:ESSubjectAreas2ndList ;
+      roh:hasCode rohsubj:ES_SUBJECT_AREA_LEVEL_2_CODE_CTQ ;
+      skos:broader rohsubj:ES_SUBJECT_AREA_LEVEL_1_CMIFQ ;
+      skos:inScheme rohsubj:ESSubjectAreas2ndList ;
       skos:notation "CTQ" ;
       skos:exactMatch unescothes:C00565 ;
       skos:prefLabel "Ciências e tecnologias químicas"@pt , "Ciencias y tecnologías químicas" , "Ciencias y tecnologías químicas"@es , "Ciencias e Tecnoloxías Químicas"@gl , "Ciencies y tecnoloxíes químiques"@ast , "Ciències i tecnologies químiques"@ca , "Chemical Sciences and Technologies"@en , "Sciences et technologies chimiques"@fr .
 
-asioModules:ES_SUBJECT_AREA_LEVEL_3_GYA
+rohsubj:ES_SUBJECT_AREA_LEVEL_3_GYA
       a       roh:ESSubjectArea ;
       rdfs:label "Ganadería y acuicultura" ;
-      asio:hasCode asioModules:ES_SUBJECT_AREA_LEVEL_3_CODE_GYA ;
-      skos:broader asioModules:ES_SUBJECT_AREA_LEVEL_2_CAA ;
-      skos:inScheme asioModules:ESSubjectAreas3rdList ;
+      roh:hasCode rohsubj:ES_SUBJECT_AREA_LEVEL_3_CODE_GYA ;
+      skos:broader rohsubj:ES_SUBJECT_AREA_LEVEL_2_CAA ;
+      skos:inScheme rohsubj:ESSubjectAreas3rdList ;
       skos:notation "GYA" ;
       skos:closeMatch unescothes:C00192 ;
       skos:closeMatch unescothes:C00165 ;
       skos:prefLabel "Ramaderia i aqüicultura"@ca , "Livestock and aquaculture"@en , "Gandería e acuicultura"@gl , "Ganadería y acuicultura" , "Ganadería y acuicultura"@es , "Ganadería y acuicultura"@ast , "Pecuária e aquicultura"@pt , "Bétail et aquaculture"@fr .
 
-asioModules:ES_SUBJECT_AREA_LEVEL_3_CODE_INA
+rohsubj:ES_SUBJECT_AREA_LEVEL_3_CODE_INA
       a       roh:ESSubjectArea ;
       rdfs:label "INA" ;
-      asio:codeOf asioModules:ES_SUBJECT_AREA_LEVEL_3_INA ;
-      skos:inScheme asioModules:ESSubjectCode3rdList ;
+      roh:codeOf rohsubj:ES_SUBJECT_AREA_LEVEL_3_INA ;
+      skos:inScheme rohsubj:ESSubjectCode3rdList ;
       skos:prefLabel "INA" .
 
-asioModules:ES_SUBJECT_AREA_LEVEL_3_IEA
+rohsubj:ES_SUBJECT_AREA_LEVEL_3_IEA
       a       roh:ESSubjectArea ;
       rdfs:label "Ingeniería eléctrica, electrónica y automática" ;
-      asio:hasCode asioModules:ES_SUBJECT_AREA_LEVEL_3_CODE_IEA ;
-      skos:broader asioModules:ES_SUBJECT_AREA_LEVEL_2_PIN ;
-      skos:inScheme asioModules:ESSubjectAreas3rdList ;
+      roh:hasCode rohsubj:ES_SUBJECT_AREA_LEVEL_3_CODE_IEA ;
+      skos:broader rohsubj:ES_SUBJECT_AREA_LEVEL_2_PIN ;
+      skos:inScheme rohsubj:ESSubjectAreas3rdList ;
       skos:notation "IEA" ;
       skos:closeMatch unescothes:C01311 ;
       skos:closeMatch unescothes:C01321 ;
       skos:closeMatch unescothes:C01363 ;
       skos:prefLabel "Enxeñaría eléctrica, electrónica e automática"@gl , "Enginyeria elèctrica, electrònica i automàtica"@ca , "Inxeniería eléctrica, electrónica y automática"@ast , "Electrical, electronic and automatic engineering"@en , "Ingénierie électrique, électronique et automatique"@fr , "Engenharia elétrica, eletrônica e automática"@pt , "Ingeniería eléctrica, electrónica y automática" , "Ingeniería eléctrica, electrónica y automática"@es .
 
-asioModules:ES_SUBJECT_AREA_LEVEL_2_EYT
+rohsubj:ES_SUBJECT_AREA_LEVEL_2_EYT
       a       roh:ESSubjectArea ;
       rdfs:label "Energía y transporte" ;
-      asio:hasCode asioModules:ES_SUBJECT_AREA_LEVEL_2_CODE_EYT ;
-      skos:broader asioModules:ES_SUBJECT_AREA_LEVEL_1_CMIFQ ;
-      skos:inScheme asioModules:ESSubjectAreas2ndList ;
+      roh:hasCode rohsubj:ES_SUBJECT_AREA_LEVEL_2_CODE_EYT ;
+      skos:broader rohsubj:ES_SUBJECT_AREA_LEVEL_1_CMIFQ ;
+      skos:inScheme rohsubj:ESSubjectAreas2ndList ;
       skos:notation "EYT" ;
       skos:closeMatch unescothes:C04122 ;
       skos:closeMatch unescothes:C01360 ;
       skos:prefLabel "Energia e transporte"@pt , "Energy and transportation"@en , "Enerxía y tresporte"@ast , "Enerxía e transporte"@gl , "Energia i transport"@ca , "Energía y transporte" , "Energía y transporte"@es , "Énergie et transports"@fr .
 
-asioModules:ES_SUBJECT_AREA_LEVEL_3_CODE_MEN
+rohsubj:ES_SUBJECT_AREA_LEVEL_3_CODE_MEN
       a       roh:ESSubjectArea ;
       rdfs:label "MEN" ;
-      asio:codeOf asioModules:ES_SUBJECT_AREA_LEVEL_3_MEN ;
-      skos:inScheme asioModules:ESSubjectCode3rdList ;
+      roh:codeOf rohsubj:ES_SUBJECT_AREA_LEVEL_3_MEN ;
+      skos:inScheme rohsubj:ESSubjectCode3rdList ;
       skos:prefLabel "MEN" .
 
-asioModules:ES_SUBJECT_AREA_LEVEL_3_CODE_FYA
+rohsubj:ES_SUBJECT_AREA_LEVEL_3_CODE_FYA
       a       roh:ESSubjectArea ;
       rdfs:label "FYA" ;
-      asio:codeOf asioModules:ES_SUBJECT_AREA_LEVEL_3_FYA ;
-      skos:inScheme asioModules:ESSubjectCode3rdList ;
+      roh:codeOf rohsubj:ES_SUBJECT_AREA_LEVEL_3_FYA ;
+      skos:inScheme rohsubj:ESSubjectCode3rdList ;
       skos:prefLabel "FYA" .
 
-asioModules:ES_SUBJECT_AREA_LEVEL_2_PIN
+rohsubj:ES_SUBJECT_AREA_LEVEL_2_PIN
       a       roh:ESSubjectArea ;
       rdfs:label "Producción industrial, ingeniería civil e ingenierías para la sociedad" ;
-      asio:hasCode asioModules:ES_SUBJECT_AREA_LEVEL_2_CODE_PIN ;
-      skos:broader asioModules:ES_SUBJECT_AREA_LEVEL_1_CMIFQ ;
-      skos:inScheme asioModules:ESSubjectAreas2ndList ;
+      roh:hasCode rohsubj:ES_SUBJECT_AREA_LEVEL_2_CODE_PIN ;
+      skos:broader rohsubj:ES_SUBJECT_AREA_LEVEL_1_CMIFQ ;
+      skos:inScheme rohsubj:ESSubjectAreas2ndList ;
       skos:notation "PIN" ;
       skos:closeMatch unescothes:C01963 ;
       skos:closeMatch unescothes:C00606 ;
       skos:prefLabel "Industrial production, civil engineering and engineering for society"@en , "Producción industrial, inxeniería civil ya inxenieríes para la sociedá"@ast , "Produción industrial, enxeñería civil e enxeñaría para a sociedade"@gl , "Producción industrial, ingeniería civil e ingenierías para la sociedad" , "Producción industrial, ingeniería civil e ingenierías para la sociedad"@es , "Production industrielle, génie civil et génie pour la société"@fr , "Produção industrial, engenharia civil e engenharia para a sociedade"@pt , "Producció industrial, enginyeria civil i enginyeries per a la societat"@ca .
 
-asioModules:ES_SUBJECT_AREA_LEVEL_2_CODE_EDU
+rohsubj:ES_SUBJECT_AREA_LEVEL_2_CODE_EDU
       a       roh:ESSubjectArea ;
       rdfs:label "EDU" ;
-      asio:codeOf asioModules:ES_SUBJECT_AREA_LEVEL_2_EDU ;
-      skos:inScheme asioModules:ESSubjectCode2ndList ;
+      roh:codeOf rohsubj:ES_SUBJECT_AREA_LEVEL_2_EDU ;
+      skos:inScheme rohsubj:ESSubjectCode2ndList ;
       skos:prefLabel "EDU" .
 
-asioModules:ES_SUBJECT_AREA_LEVEL_3_CODE_FOS
+rohsubj:ES_SUBJECT_AREA_LEVEL_3_CODE_FOS
       a       roh:ESSubjectArea ;
       rdfs:label "FOS" ;
-      asio:codeOf asioModules:ES_SUBJECT_AREA_LEVEL_3_FOS ;
-      skos:inScheme asioModules:ESSubjectCode3rdList ;
+      roh:codeOf rohsubj:ES_SUBJECT_AREA_LEVEL_3_FOS ;
+      skos:inScheme rohsubj:ESSubjectCode3rdList ;
       skos:prefLabel "FOS" .
 
-asioModules:ES_SUBJECT_AREA_LEVEL_2_CODE_EYT
+rohsubj:ES_SUBJECT_AREA_LEVEL_2_CODE_EYT
       a       roh:ESSubjectArea ;
       rdfs:label "EYT" ;
-      asio:codeOf asioModules:ES_SUBJECT_AREA_LEVEL_2_EYT ;
-      skos:inScheme asioModules:ESSubjectCode2ndList ;
+      roh:codeOf rohsubj:ES_SUBJECT_AREA_LEVEL_2_EYT ;
+      skos:inScheme rohsubj:ESSubjectCode2ndList ;
       skos:prefLabel "EYT" .
 
-asioModules:ES_SUBJECT_AREA_LEVEL_2_CODE_CAA
+rohsubj:ES_SUBJECT_AREA_LEVEL_2_CODE_CAA
       a       roh:ESSubjectArea ;
       rdfs:label "CAA" ;
-      asio:codeOf asioModules:ES_SUBJECT_AREA_LEVEL_2_CAA ;
-      skos:inScheme asioModules:ESSubjectCode2ndList ;
+      roh:codeOf rohsubj:ES_SUBJECT_AREA_LEVEL_2_CAA ;
+      skos:inScheme rohsubj:ESSubjectCode2ndList ;
       skos:prefLabel "CAA" .
 
-asioModules:ES_SUBJECT_AREA_LEVEL_3_PS3
+rohsubj:ES_SUBJECT_AREA_LEVEL_3_PS3
       a       roh:ESSubjectArea ;
       rdfs:label "Psicología" ;
-      asio:hasCode asioModules:ES_SUBJECT_AREA_LEVEL_3_CODE_PS3 ;
-      skos:broader asioModules:ES_SUBJECT_AREA_LEVEL_2_PSI ;
-      skos:inScheme asioModules:ESSubjectAreas3rdList ;
+      roh:hasCode rohsubj:ES_SUBJECT_AREA_LEVEL_3_CODE_PS3 ;
+      skos:broader rohsubj:ES_SUBJECT_AREA_LEVEL_2_PSI ;
+      skos:inScheme rohsubj:ESSubjectAreas3rdList ;
       skos:notation "PS3" ;
       skos:prefLabel "Psychologie"@fr , "Psicoloxía"@ast , "Psicoloxía"@gl , "Psychology"@en , "Psicologia"@ca , "Psicologia"@pt , "Psicología" , "Psicología"@es .
 
-asioModules:ES_SUBJECT_AREA_LEVEL_3_BTC
+rohsubj:ES_SUBJECT_AREA_LEVEL_3_BTC
       a       roh:ESSubjectArea ;
       rdfs:label "Biotecnología" ;
-      asio:hasCode asioModules:ES_SUBJECT_AREA_LEVEL_3_CODE_BTC ;
-      skos:broader asioModules:ES_SUBJECT_AREA_LEVEL_2_BIO ;
-      skos:inScheme asioModules:ESSubjectAreas3rdList ;
+      roh:hasCode rohsubj:ES_SUBJECT_AREA_LEVEL_3_CODE_BTC ;
+      skos:broader rohsubj:ES_SUBJECT_AREA_LEVEL_2_BIO ;
+      skos:inScheme rohsubj:ESSubjectAreas3rdList ;
       skos:notation "BTC" ;
       skos:exactMatch unescothes:C00409 ;
       skos:prefLabel "Biotecnologia"@ca , "Biotecnologia"@pt , "Biotecnoloxía"@gl , "Biotecnoloxía"@ast , "Biotecnología" , "Biotecnología"@es , "Biotechnologie"@fr , "Biotechnology"@en .
 
-asioModules:ES_SUBJECT_AREA_LEVEL_3_TMA
+rohsubj:ES_SUBJECT_AREA_LEVEL_3_TMA
       a       roh:ESSubjectArea ;
       rdfs:label "Tecnologías medioambientales" ;
-      asio:hasCode asioModules:ES_SUBJECT_AREA_LEVEL_3_CODE_TMA ;
-      skos:broader asioModules:ES_SUBJECT_AREA_LEVEL_2_CTM ;
-      skos:inScheme asioModules:ESSubjectAreas3rdList ;
+      roh:hasCode rohsubj:ES_SUBJECT_AREA_LEVEL_3_CODE_TMA ;
+      skos:broader rohsubj:ES_SUBJECT_AREA_LEVEL_2_CTM ;
+      skos:inScheme rohsubj:ESSubjectAreas3rdList ;
       skos:notation "TMA" ;
       skos:exactMatch unescothes:C01386 ;
       skos:prefLabel "Tecnologías medioambientales" , "Tecnologías medioambientales"@es , "Technologies environnementales"@fr , "Tecnoloxías ambientais"@gl , "Environmental technologies"@en , "Tecnoloxíes medioambientales"@ast , "Tecnologias ambientais"@pt , "Tecnologies mediambientals"@ca .
 
-asioModules:ES_SUBJECT_AREA_LEVEL_3_CODE_ARQ
+rohsubj:ES_SUBJECT_AREA_LEVEL_3_CODE_ARQ
       a       roh:ESSubjectArea ;
       rdfs:label "ARQ" ;
-      asio:codeOf asioModules:ES_SUBJECT_AREA_LEVEL_3_ARQ ;
-      skos:inScheme asioModules:ESSubjectCode3rdList ;
+      roh:codeOf rohsubj:ES_SUBJECT_AREA_LEVEL_3_ARQ ;
+      skos:inScheme rohsubj:ESSubjectCode3rdList ;
       skos:prefLabel "ARQ" .
 
-asioModules:ES_SUBJECT_AREA_LEVEL_3_CODE_GYA
+rohsubj:ES_SUBJECT_AREA_LEVEL_3_CODE_GYA
       a       roh:ESSubjectArea ;
       rdfs:label "GYA" ;
-      asio:codeOf asioModules:ES_SUBJECT_AREA_LEVEL_3_GYA ;
-      skos:inScheme asioModules:ESSubjectCode3rdList ;
+      roh:codeOf rohsubj:ES_SUBJECT_AREA_LEVEL_3_GYA ;
+      skos:inScheme rohsubj:ESSubjectCode3rdList ;
       skos:prefLabel "GYA" .
 
-asioModules:ES_SUBJECT_AREA_LEVEL_2_CODE_PIN
+rohsubj:ES_SUBJECT_AREA_LEVEL_2_CODE_PIN
       a       roh:ESSubjectArea ;
       rdfs:label "PIN" ;
-      asio:codeOf asioModules:ES_SUBJECT_AREA_LEVEL_2_PIN ;
-      skos:inScheme asioModules:ESSubjectCode2ndList ;
+      roh:codeOf rohsubj:ES_SUBJECT_AREA_LEVEL_2_PIN ;
+      skos:inScheme rohsubj:ESSubjectCode2ndList ;
       skos:prefLabel "PIN" .
 
-asioModules:ES_SUBJECT_AREA_LEVEL_1_CSH
+rohsubj:ES_SUBJECT_AREA_LEVEL_1_CSH
       a       roh:ESSubjectArea ;
       rdfs:label "Ciencias sociales y humanidades" ;
-      asio:hasCode asioModules:ES_SUBJECT_AREA_LEVEL_1_CODE_CSH ;
-      skos:inScheme asioModules:ESSubjectAreas1stList ;
+      roh:hasCode rohsubj:ES_SUBJECT_AREA_LEVEL_1_CODE_CSH ;
+      skos:inScheme rohsubj:ESSubjectAreas1stList ;
       skos:notation "CSH" ;
       skos:closeMatch unescothes:C03719 ;
       skos:prefLabel "Ciências sociais e humanas"@pt , "Sciencias socials y humanidatz"@an , "Ciències socials i humanitats"@ca , "Ciencies sociales y humanidaes"@ast , "siˈɛnsiəs susiˈaɫs i uˈmanəs"@ca , "Social sciences and humanities"@en , "Sciences sociales et humaines"@fr , "Gizarte zientziak eta giza zientziak"@eu , "ˈsəʊʃəl ˈsaɪənsɪz ænd hju(ː)ˈmænɪtiz"@en-GB , "Ciencias sociales y humanidades" , "Ciencias sociales y humanidades"@es , "ˈθjen̟θjas soˈθjales i wmaniˈðaðes"@es-ES , "Céncias socialis i humanidadis"@ext , "Sciéncias socials e humanas"@oc , "ˈsoʊʃəl ˈsaɪənsəz ænd hjuˈmænɪtiz"@en-US , "Ciencias sociais e humanidades"@gl ;
       ontolex:phoneticRep "ˈsəʊʃəl ˈsaɪənsɪz ænd hju(ː)ˈmænɪtiz"@en-GB , "siˈɛnsiəs susiˈaɫs i uˈmanəs"@ca , "ˈθjen̟θjas soˈθjales i wmaniˈðaðes"@es-ES , "ˈsoʊʃəl ˈsaɪənsəz ænd hjuˈmænɪtiz"@en-US .
 
-asioModules:ES_SUBJECT_AREA_LEVEL_3_MNF
+rohsubj:ES_SUBJECT_AREA_LEVEL_3_MNF
       a       roh:ESSubjectArea ;
       rdfs:label "Microelectrónica, nanotecnología y fotónica" ;
-      asio:hasCode asioModules:ES_SUBJECT_AREA_LEVEL_3_CODE_MNF ;
-      skos:broader asioModules:ES_SUBJECT_AREA_LEVEL_2_TIC ;
-      skos:inScheme asioModules:ESSubjectAreas3rdList ;
+      roh:hasCode rohsubj:ES_SUBJECT_AREA_LEVEL_3_CODE_MNF ;
+      skos:broader rohsubj:ES_SUBJECT_AREA_LEVEL_2_TIC ;
+      skos:inScheme rohsubj:ESSubjectAreas3rdList ;
       skos:notation "MNF" ;
       skos:closeMatch unescothes:C02659 ;
       skos:closeMatch unescothes:C02507 ;
       skos:prefLabel "Microelectrónica, nanotecnología y fotónica" , "Microelectrónica, nanotecnología y fotónica"@es , "Microelectrónica, nanotecnología y fotónica"@ast , "Microélectronique, nanotechnologie et photonique"@fr , "Microelectrónica, nanotecnoloxía e fotónica"@gl , "Microelectronics, nanotechnology and photonics"@en , "Microeletrônica, nanotecnologia e fotônica"@pt , "Microelectrònica, nanotecnologia i fotònica"@ca .
 
-asioModules:ES_SUBJECT_AREA_LEVEL_2_CODE_ECO
+rohsubj:ES_SUBJECT_AREA_LEVEL_2_CODE_ECO
       a       roh:ESSubjectArea ;
       rdfs:label "ECO" ;
-      asio:codeOf asioModules:ES_SUBJECT_AREA_LEVEL_2_ECO ;
-      skos:inScheme asioModules:ESSubjectCode2ndList ;
+      roh:codeOf rohsubj:ES_SUBJECT_AREA_LEVEL_2_ECO ;
+      skos:inScheme rohsubj:ESSubjectCode2ndList ;
       skos:prefLabel "ECO" .
 
-asioModules:ES_SUBJECT_AREA_LEVEL_3_DE3
+rohsubj:ES_SUBJECT_AREA_LEVEL_3_DE3
       a       roh:ESSubjectArea ;
       rdfs:label "Derecho" ;
-      asio:hasCode asioModules:ES_SUBJECT_AREA_LEVEL_3_CODE_DE3 ;
-      skos:broader asioModules:ES_SUBJECT_AREA_LEVEL_2_DER ;
-      skos:inScheme asioModules:ESSubjectAreas3rdList ;
+      roh:hasCode rohsubj:ES_SUBJECT_AREA_LEVEL_3_CODE_DE3 ;
+      skos:broader rohsubj:ES_SUBJECT_AREA_LEVEL_2_DER ;
+      skos:inScheme rohsubj:ESSubjectAreas3rdList ;
       skos:notation "DE3" ;
       skos:exactMatch unescothes:C02229 ;
       skos:prefLabel "Droit"@fr , "Dereito"@gl , "Dret"@ca , "Drechu"@ast , "Direito"@pt , "Derecho" , "Derecho"@es , "Law"@en .
 
-asioModules:ES_SUBJECT_AREA_LEVEL_3_CODE_PS3
+rohsubj:ES_SUBJECT_AREA_LEVEL_3_CODE_PS3
       a       roh:ESSubjectArea ;
       rdfs:label "PS3" ;
-      asio:codeOf asioModules:ES_SUBJECT_AREA_LEVEL_3_PS3 ;
-      skos:inScheme asioModules:ESSubjectCode3rdList ;
+      roh:codeOf rohsubj:ES_SUBJECT_AREA_LEVEL_3_PS3 ;
+      skos:inScheme rohsubj:ESSubjectCode3rdList ;
       skos:prefLabel "PS3" .
 
-asioModules:ES_SUBJECT_AREA_LEVEL_3_CODE_HIS
+rohsubj:ES_SUBJECT_AREA_LEVEL_3_CODE_HIS
       a       roh:ESSubjectArea ;
       rdfs:label "HIS" ;
-      asio:codeOf asioModules:ES_SUBJECT_AREA_LEVEL_3_HIS ;
-      skos:inScheme asioModules:ESSubjectCode3rdList ;
+      roh:codeOf rohsubj:ES_SUBJECT_AREA_LEVEL_3_HIS ;
+      skos:inScheme rohsubj:ESSubjectCode3rdList ;
       skos:prefLabel "HIS" .
 
-asioModules:ES_SUBJECT_AREA_LEVEL_3_CODE_IIT
+rohsubj:ES_SUBJECT_AREA_LEVEL_3_CODE_IIT
       a       roh:ESSubjectArea ;
       rdfs:label "IIT" ;
-      asio:codeOf asioModules:ES_SUBJECT_AREA_LEVEL_3_IIT ;
-      skos:inScheme asioModules:ESSubjectCode3rdList ;
+      roh:codeOf rohsubj:ES_SUBJECT_AREA_LEVEL_3_IIT ;
+      skos:inScheme rohsubj:ESSubjectCode3rdList ;
       skos:prefLabel "IIT" .
 
-asioModules:ES_SUBJECT_AREA_LEVEL_3_IBI
+rohsubj:ES_SUBJECT_AREA_LEVEL_3_IBI
       a       roh:ESSubjectArea ;
       rdfs:label "Ingeniería biomédica" ;
-      asio:hasCode asioModules:ES_SUBJECT_AREA_LEVEL_3_CODE_IBI ;
-      skos:broader asioModules:ES_SUBJECT_AREA_LEVEL_2_PIN ;
-      skos:inScheme asioModules:ESSubjectAreas3rdList ;
+      roh:hasCode rohsubj:ES_SUBJECT_AREA_LEVEL_3_CODE_IBI ;
+      skos:broader rohsubj:ES_SUBJECT_AREA_LEVEL_2_PIN ;
+      skos:inScheme rohsubj:ESSubjectAreas3rdList ;
       skos:notation "IBI" ;
       skos:exactMatch unescothes:C02465 ;
       skos:prefLabel "Enxeñaría biomédica"@gl , "Ingeniería biomédica" , "Ingeniería biomédica"@es , "Engenharia Biomédica"@pt , "Ingénierie biomédical"@fr , "Inxeniería biomédica"@ast , "Enginyeria biomèdica"@ca , "Biomedical engineering"@en .
 
-asioModules:ES_SUBJECT_AREA_LEVEL_2_CODE_DER
+rohsubj:ES_SUBJECT_AREA_LEVEL_2_CODE_DER
       a       roh:ESSubjectArea ;
       rdfs:label "DER" ;
-      asio:codeOf asioModules:ES_SUBJECT_AREA_LEVEL_2_DER ;
-      skos:inScheme asioModules:ESSubjectCode2ndList ;
+      roh:codeOf rohsubj:ES_SUBJECT_AREA_LEVEL_2_DER ;
+      skos:inScheme rohsubj:ESSubjectCode2ndList ;
       skos:prefLabel "DER" .
 
-asioModules:ES_SUBJECT_AREA_LEVEL_3_CODE_AYA
+rohsubj:ES_SUBJECT_AREA_LEVEL_3_CODE_AYA
       a       roh:ESSubjectArea ;
       rdfs:label "AYA" ;
-      asio:codeOf asioModules:ES_SUBJECT_AREA_LEVEL_3_AYA ;
-      skos:inScheme asioModules:ESSubjectCode3rdList ;
+      roh:codeOf rohsubj:ES_SUBJECT_AREA_LEVEL_3_AYA ;
+      skos:inScheme rohsubj:ESSubjectCode3rdList ;
       skos:prefLabel "AYA" .
 
-asioModules:ES_SUBJECT_AREA_LEVEL_3_CODE_ESN
+rohsubj:ES_SUBJECT_AREA_LEVEL_3_CODE_ESN
       a       roh:ESSubjectArea ;
       rdfs:label "ESN" ;
-      asio:codeOf asioModules:ES_SUBJECT_AREA_LEVEL_3_ESN ;
-      skos:inScheme asioModules:ESSubjectCode3rdList ;
+      roh:codeOf rohsubj:ES_SUBJECT_AREA_LEVEL_3_ESN ;
+      skos:inScheme rohsubj:ESSubjectCode3rdList ;
       skos:prefLabel "ESN" .
 
-asioModules:ES_SUBJECT_AREA_LEVEL_2_CODE_MAT
+rohsubj:ES_SUBJECT_AREA_LEVEL_2_CODE_MAT
       a       roh:ESSubjectArea ;
       rdfs:label "MAT" ;
-      asio:codeOf asioModules:ES_SUBJECT_AREA_LEVEL_2_MAT ;
-      skos:inScheme asioModules:ESSubjectCode2ndList ;
+      roh:codeOf rohsubj:ES_SUBJECT_AREA_LEVEL_2_MAT ;
+      skos:inScheme rohsubj:ESSubjectCode2ndList ;
       skos:prefLabel "MAT" .
 
-asioModules:ES_SUBJECT_AREA_LEVEL_3_CAN
+rohsubj:ES_SUBJECT_AREA_LEVEL_3_CAN
       a       roh:ESSubjectArea ;
       rdfs:label "Cáncer" ;
-      asio:hasCode asioModules:ES_SUBJECT_AREA_LEVEL_3_CODE_CAN ;
-      skos:broader asioModules:ES_SUBJECT_AREA_LEVEL_2_BME ;
-      skos:inScheme asioModules:ESSubjectAreas3rdList ;
+      roh:hasCode rohsubj:ES_SUBJECT_AREA_LEVEL_3_CODE_CAN ;
+      skos:broader rohsubj:ES_SUBJECT_AREA_LEVEL_2_BME ;
+      skos:inScheme rohsubj:ESSubjectAreas3rdList ;
       skos:notation "CAN" ;
       skos:exactMatch unescothes:C00499 ;
       skos:prefLabel "Câncer"@pt , "Cancer"@fr , "Cancer"@en , "Cáncer" , "Cáncer"@es , "Cáncer"@ast , "Cáncer"@gl , "Càncer"@ca .
 
-asioModules:ES_SUBJECT_AREA_LEVEL_3_CODE_BTC
+rohsubj:ES_SUBJECT_AREA_LEVEL_3_CODE_BTC
       a       roh:ESSubjectArea ;
       rdfs:label "BTC" ;
-      asio:codeOf asioModules:ES_SUBJECT_AREA_LEVEL_3_BTC ;
-      skos:inScheme asioModules:ESSubjectCode3rdList ;
+      roh:codeOf rohsubj:ES_SUBJECT_AREA_LEVEL_3_BTC ;
+      skos:inScheme rohsubj:ESSubjectCode3rdList ;
       skos:prefLabel "BTC" .
 
-asioModules:ES_SUBJECT_AREA_LEVEL_2_MAT
+rohsubj:ES_SUBJECT_AREA_LEVEL_2_MAT
       a       roh:ESSubjectArea ;
       rdfs:label "Ciencias y tecnologías de materiales" ;
-      asio:hasCode asioModules:ES_SUBJECT_AREA_LEVEL_2_CODE_MAT ;
-      skos:broader asioModules:ES_SUBJECT_AREA_LEVEL_1_CMIFQ ;
-      skos:inScheme asioModules:ESSubjectAreas2ndList ;
+      roh:hasCode rohsubj:ES_SUBJECT_AREA_LEVEL_2_CODE_MAT ;
+      skos:broader rohsubj:ES_SUBJECT_AREA_LEVEL_1_CMIFQ ;
+      skos:inScheme rohsubj:ESSubjectAreas2ndList ;
       skos:notation "MAT" ;
       skos:prefLabel "Ciències i tecnologies de materials"@ca , "Science et technologie des matériaux"@fr , "Ciência e tecnologia de materiais"@pt , "Ciencia e tecnoloxía dos materiais"@gl , "Ciencias y tecnologías de materiales" , "Ciencias y tecnologías de materiales"@es , "Materials science and technology"@en , "Ciencies y tecnoloxíes de materiales"@ast .
 
-asioModules:ES_SUBJECT_AREA_LEVEL_3_CODE_CTA
+rohsubj:ES_SUBJECT_AREA_LEVEL_3_CODE_CTA
       a       roh:ESSubjectArea ;
       rdfs:label "CTA" ;
-      asio:codeOf asioModules:ES_SUBJECT_AREA_LEVEL_3_CTA ;
-      skos:inScheme asioModules:ESSubjectCode3rdList ;
+      roh:codeOf rohsubj:ES_SUBJECT_AREA_LEVEL_3_CTA ;
+      skos:inScheme rohsubj:ESSubjectCode3rdList ;
       skos:prefLabel "CTA" .
 
-asioModules:ES_SUBJECT_AREA_LEVEL_2_CODE_PSI
+rohsubj:ES_SUBJECT_AREA_LEVEL_2_CODE_PSI
       a       roh:ESSubjectArea ;
       rdfs:label "PSI" ;
-      asio:codeOf asioModules:ES_SUBJECT_AREA_LEVEL_2_PSI ;
-      skos:inScheme asioModules:ESSubjectCode2ndList ;
+      roh:codeOf rohsubj:ES_SUBJECT_AREA_LEVEL_2_PSI ;
+      skos:inScheme rohsubj:ESSubjectCode2ndList ;
       skos:prefLabel "PSI" .
 
-asioModules:ES_SUBJECT_AREA_LEVEL_3_CODE_TCO
+rohsubj:ES_SUBJECT_AREA_LEVEL_3_CODE_TCO
       a       roh:ESSubjectArea ;
       rdfs:label "TCO" ;
-      asio:codeOf asioModules:ES_SUBJECT_AREA_LEVEL_3_TCO ;
-      skos:inScheme asioModules:ESSubjectCode3rdList ;
+      roh:codeOf rohsubj:ES_SUBJECT_AREA_LEVEL_3_TCO ;
+      skos:inScheme rohsubj:ESSubjectCode3rdList ;
       skos:prefLabel "TCO" .
 
-asioModules:ES_SUBJECT_AREA_LEVEL_2_CODE_MLP
+rohsubj:ES_SUBJECT_AREA_LEVEL_2_CODE_MLP
       a       roh:ESSubjectArea ;
       rdfs:label "MLP" ;
-      asio:codeOf asioModules:ES_SUBJECT_AREA_LEVEL_2_MLP ;
-      skos:inScheme asioModules:ESSubjectCode2ndList ;
+      roh:codeOf rohsubj:ES_SUBJECT_AREA_LEVEL_2_MLP ;
+      skos:inScheme rohsubj:ESSubjectCode2ndList ;
       skos:prefLabel "MLP" .
 
-asioModules:ES_SUBJECT_AREA_LEVEL_3_MES
+rohsubj:ES_SUBJECT_AREA_LEVEL_3_MES
       a       roh:ESSubjectArea ;
       rdfs:label "Materiales estructurales" ;
-      asio:hasCode asioModules:ES_SUBJECT_AREA_LEVEL_3_CODE_MES ;
-      skos:broader asioModules:ES_SUBJECT_AREA_LEVEL_2_MAT ;
-      skos:inScheme asioModules:ESSubjectAreas3rdList ;
+      roh:hasCode rohsubj:ES_SUBJECT_AREA_LEVEL_3_CODE_MES ;
+      skos:broader rohsubj:ES_SUBJECT_AREA_LEVEL_2_MAT ;
+      skos:inScheme rohsubj:ESSubjectAreas3rdList ;
       skos:notation "MES" ;
       skos:prefLabel "Matériaux structurels"@fr , "Materials estructurals"@ca , "Materiais estruturais"@pt , "Materiais estruturais"@gl , "Materiales estructurales" , "Materiales estructurales"@es , "Materiales estructurales"@ast , "Structural materials"@en .
 
-asioModules:ES_SUBJECT_AREA_LEVEL_2_CODE_BME
+rohsubj:ES_SUBJECT_AREA_LEVEL_2_CODE_BME
       a       roh:ESSubjectArea ;
       rdfs:label "BME" ;
-      asio:codeOf asioModules:ES_SUBJECT_AREA_LEVEL_2_BME ;
-      skos:inScheme asioModules:ESSubjectCode2ndList ;
+      roh:codeOf rohsubj:ES_SUBJECT_AREA_LEVEL_2_BME ;
+      skos:inScheme rohsubj:ESSubjectCode2ndList ;
       skos:prefLabel "BME" .
 
-asioModules:ES_SUBJECT_AREA_LEVEL_3_BDV
+rohsubj:ES_SUBJECT_AREA_LEVEL_3_BDV
       a       roh:ESSubjectArea ;
       rdfs:label "Biodiversidad" ;
-      asio:hasCode asioModules:ES_SUBJECT_AREA_LEVEL_3_CODE_BDV ;
-      skos:broader asioModules:ES_SUBJECT_AREA_LEVEL_2_CTM ;
-      skos:inScheme asioModules:ESSubjectAreas3rdList ;
+      roh:hasCode rohsubj:ES_SUBJECT_AREA_LEVEL_3_CODE_BDV ;
+      skos:broader rohsubj:ES_SUBJECT_AREA_LEVEL_2_CTM ;
+      skos:inScheme rohsubj:ESSubjectAreas3rdList ;
       skos:notation "BDV" ;
       skos:exactMatch unescothes:C00396 ;
       skos:prefLabel "Biodiversitat"@ca , "Biodiversité"@fr , "Biodiversity"@en , "Biodiversidad" , "Biodiversidad"@es , "Biodiversidad"@ast , "Biodiversidade"@gl , "Biodiversidade"@pt .
 
-asioModules:ES_SUBJECT_AREA_LEVEL_3_HIS
+rohsubj:ES_SUBJECT_AREA_LEVEL_3_HIS
       a       roh:ESSubjectArea ;
       rdfs:label "Historia" ;
-      asio:hasCode asioModules:ES_SUBJECT_AREA_LEVEL_3_CODE_HIS ;
-      skos:broader asioModules:ES_SUBJECT_AREA_LEVEL_2_PHA ;
-      skos:inScheme asioModules:ESSubjectAreas3rdList ;
+      roh:hasCode rohsubj:ES_SUBJECT_AREA_LEVEL_3_CODE_HIS ;
+      skos:broader rohsubj:ES_SUBJECT_AREA_LEVEL_2_PHA ;
+      skos:inScheme rohsubj:ESSubjectAreas3rdList ;
       skos:notation "HIS" ;
       skos:exactMatch unescothes:C01809 ;
       skos:prefLabel "Historia"@es , "Historia"@ast , "Historia"@gl , "Historia" , "History"@en , "História"@pt , "Història"@ca , "Histoire"@fr .
 
-asioModules:ES_SUBJECT_AREA_LEVEL_3_CODE_CAN
+rohsubj:ES_SUBJECT_AREA_LEVEL_3_CODE_CAN
       a       roh:ESSubjectArea ;
       rdfs:label "CAN" ;
-      asio:codeOf asioModules:ES_SUBJECT_AREA_LEVEL_3_CAN ;
-      skos:inScheme asioModules:ESSubjectCode3rdList ;
+      roh:codeOf rohsubj:ES_SUBJECT_AREA_LEVEL_3_CAN ;
+      skos:inScheme rohsubj:ESSubjectCode3rdList ;
       skos:prefLabel "CAN" .
 
-asioModules:ES_SUBJECT_AREA_LEVEL_3_CODE_LYL
+rohsubj:ES_SUBJECT_AREA_LEVEL_3_CODE_LYL
       a       roh:ESSubjectArea ;
       rdfs:label "LYL" ;
-      asio:codeOf asioModules:ES_SUBJECT_AREA_LEVEL_3_LYL ;
-      skos:inScheme asioModules:ESSubjectCode3rdList ;
+      roh:codeOf rohsubj:ES_SUBJECT_AREA_LEVEL_3_LYL ;
+      skos:inScheme rohsubj:ESSubjectCode3rdList ;
       skos:prefLabel "LYL" .
 
-asioModules:ES_SUBJECT_AREA_LEVEL_2_CODE_CTM
+rohsubj:ES_SUBJECT_AREA_LEVEL_2_CODE_CTM
       a       roh:ESSubjectArea ;
       rdfs:label "CTM" ;
-      asio:codeOf asioModules:ES_SUBJECT_AREA_LEVEL_2_CTM ;
-      skos:inScheme asioModules:ESSubjectCode2ndList ;
+      roh:codeOf rohsubj:ES_SUBJECT_AREA_LEVEL_2_CTM ;
+      skos:inScheme rohsubj:ESSubjectCode2ndList ;
       skos:prefLabel "CTM" .
 
-asioModules:ES_SUBJECT_AREA_LEVEL_3_CODE_GEO
+rohsubj:ES_SUBJECT_AREA_LEVEL_3_CODE_GEO
       a       roh:ESSubjectArea ;
       rdfs:label "GEO" ;
-      asio:codeOf asioModules:ES_SUBJECT_AREA_LEVEL_3_GEO ;
-      skos:inScheme asioModules:ESSubjectCode3rdList ;
+      roh:codeOf rohsubj:ES_SUBJECT_AREA_LEVEL_3_GEO ;
+      skos:inScheme rohsubj:ESSubjectCode3rdList ;
       skos:prefLabel "GEO" .
 
-asioModules:ES_SUBJECT_AREA_LEVEL_3_ESN
+rohsubj:ES_SUBJECT_AREA_LEVEL_3_ESN
       a       roh:ESSubjectArea ;
       rdfs:label "Enfermedades del sistema nervioso" ;
-      asio:hasCode asioModules:ES_SUBJECT_AREA_LEVEL_3_CODE_ESN ;
-      skos:broader asioModules:ES_SUBJECT_AREA_LEVEL_2_BME ;
-      skos:inScheme asioModules:ESSubjectAreas3rdList ;
+      roh:hasCode rohsubj:ES_SUBJECT_AREA_LEVEL_3_CODE_ESN ;
+      skos:broader rohsubj:ES_SUBJECT_AREA_LEVEL_2_BME ;
+      skos:inScheme rohsubj:ESSubjectAreas3rdList ;
       skos:notation "ESN" ;
       skos:exactMatch unescothes:C02702 ;
       skos:prefLabel "Maladies du système nerveux"@fr , "Nervous system diseases"@en , "Enfermedades del sistema nervioso"@es , "Enfermedades del sistema nervioso" , "Malalties de sistema nerviós"@ca , "Doenças do sistema nervoso"@pt , "Enfermedaes del sistema nerviosu"@ast , "Enfermidades do sistema nervioso"@gl .
