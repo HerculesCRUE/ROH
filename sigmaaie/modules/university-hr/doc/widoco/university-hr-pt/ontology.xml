@@ -1,0 +1,339 @@
+<?xml version="1.0"?>
+<rdf:RDF xmlns="http://purl.org/roh/university-hr/pt#"
+     xml:base="http://purl.org/roh/university-hr/pt"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:roh="http://purl.org/roh#"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     xmlns:skos="http://www.w3.org/2004/02/skos/core#"
+     xmlns:terms="http://purl.org/dc/terms/">
+    <owl:Ontology rdf:about="http://purl.org/roh/university-hr/pt">
+        <owl:versionIRI rdf:resource="http://purl.org/roh/university-hr/pt/1.0"/>
+        <terms:license rdf:resource="https://creativecommons.org/licenses/by-sa/4.0/"/>
+        <rdfs:comment xml:lang="en">The University of Murcia signed on November 29, 2017, a Covenant with the Ministry of Economy, Industry and Competitiveness backing the “HÉRCULES: Semantic University Research Data” Project with a budget of FIVE MILLION FOUR HUNDRED AND SIXTY-TWO THOUSAND SIX HUNDRED euros with an 80% of co-financiering from the European Regional Development Fund program (ERDF) within the 2014-2020 period. 
+
+The project arose as a CRUE initiative, to create the basis for a new collaboration model between universities, to develop the information management systems and with the main objective of encouraging this type of collaboration.
+
+Therefore, the purpose of this agreement was to contribute to the improvement of public services and business innovation and research through the improvement of:
+
+    efficiency in public investment by decreasing the duplication of investment in R&amp;D.
+    efficiency of research in universities.
+    scientific dissemination of research results.
+    detection of synergies in R&amp;D between universities.
+    transfer of R&amp;D results to companies.
+    efficiency in the management of research. 
+
+by creating a research management system with semantic capacities based on semantic open data and that will provide a global view of the research data contained in the Spanish University System.</rdfs:comment>
+        <rdfs:label xml:lang="en">ROH Portuguese University HR Module</rdfs:label>
+    </owl:Ontology>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Annotation properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+
+    
+
+
+    <!-- http://purl.org/dc/terms/license -->
+
+
+    <owl:AnnotationProperty rdf:about="http://purl.org/dc/terms/license"/>
+    
+
+
+    <!-- http://purl.org/roh#codeOf -->
+
+
+    <owl:AnnotationProperty rdf:about="http://purl.org/roh#codeOf"/>
+    
+
+
+    <!-- http://purl.org/roh#country -->
+
+
+    <owl:AnnotationProperty rdf:about="http://purl.org/roh#country"/>
+    
+
+
+    <!-- http://purl.org/roh#hasCode -->
+
+
+    <owl:AnnotationProperty rdf:about="http://purl.org/roh#hasCode"/>
+    
+
+
+    <!-- http://www.w3.org/2004/02/skos/core#closeMatch -->
+
+
+    <owl:AnnotationProperty rdf:about="http://www.w3.org/2004/02/skos/core#closeMatch"/>
+    
+
+
+    <!-- http://www.w3.org/2004/02/skos/core#inScheme -->
+
+
+    <owl:AnnotationProperty rdf:about="http://www.w3.org/2004/02/skos/core#inScheme"/>
+    
+
+
+    <!-- http://www.w3.org/2004/02/skos/core#notation -->
+
+
+    <owl:AnnotationProperty rdf:about="http://www.w3.org/2004/02/skos/core#notation"/>
+    
+
+
+    <!-- http://www.w3.org/2004/02/skos/core#prefLabel -->
+
+
+    <owl:AnnotationProperty rdf:about="http://www.w3.org/2004/02/skos/core#prefLabel"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+
+    
+
+
+    <!-- http://purl.org/roh/mirror/vivo#FacultyPosition -->
+
+
+    <owl:Class rdf:about="http://purl.org/roh/mirror/vivo#FacultyPosition">
+        <rdfs:label xml:lang="en">Faculty Position</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/roh/university-hr/pt#PT_UNIVERSITY_HR_PTPAS -->
+
+
+    <owl:Class rdf:about="http://purl.org/roh/university-hr/pt#PT_UNIVERSITY_HR_PTPAS">
+        <rdfs:subClassOf rdf:resource="http://purl.org/roh/mirror/vivo#FacultyPosition"/>
+        <roh:country rdf:resource="http://publications.europa.eu/resource/authority/country/PRT"/>
+        <roh:hasCode rdf:resource="http://purl.org/roh/university-hr/pt#PT_UNIVERSITY_HR_CODE_PTPAS"/>
+        <rdfs:label xml:lang="pt">Professor associado</rdfs:label>
+        <skos:closeMatch rdf:resource="http://skos.um.es/unescothes/C00015"/>
+        <skos:closeMatch rdf:resource="http://skos.um.es/unescothes/C03965"/>
+        <skos:inScheme rdf:resource="http://purl.org/roh/university-hr/pt#PTUniversityHumanResourcesList"/>
+        <skos:notation>PTPAS</skos:notation>
+        <skos:prefLabel xml:lang="eu">Irakasle elkartua</skos:prefLabel>
+        <skos:prefLabel xml:lang="es">Profesor asociado</skos:prefLabel>
+        <skos:prefLabel xml:lang="gl">Profesor asociado</skos:prefLabel>
+        <skos:prefLabel xml:lang="ast">Profesor asociáu</skos:prefLabel>
+        <skos:prefLabel xml:lang="pt">Professor associado</skos:prefLabel>
+        <skos:prefLabel xml:lang="ca">Professor associat</skos:prefLabel>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/roh/university-hr/pt#PT_UNIVERSITY_HR_PTPAU -->
+
+
+    <owl:Class rdf:about="http://purl.org/roh/university-hr/pt#PT_UNIVERSITY_HR_PTPAU">
+        <rdfs:subClassOf rdf:resource="http://purl.org/roh/mirror/vivo#FacultyPosition"/>
+        <roh:country rdf:resource="http://publications.europa.eu/resource/authority/country/PRT"/>
+        <roh:hasCode rdf:resource="http://purl.org/roh/university-hr/pt#PT_UNIVERSITY_HR_CODE_PTPAU"/>
+        <rdfs:label xml:lang="pt">Professor auxiliar</rdfs:label>
+        <skos:closeMatch rdf:resource="http://skos.um.es/unescothes/C00015"/>
+        <skos:closeMatch rdf:resource="http://skos.um.es/unescothes/C03965"/>
+        <skos:inScheme rdf:resource="http://purl.org/roh/university-hr/pt#PTUniversityHumanResourcesList"/>
+        <skos:notation>PTPAU</skos:notation>
+        <skos:prefLabel xml:lang="ast">Profesor auxiliar</skos:prefLabel>
+        <skos:prefLabel xml:lang="es">Profesor auxiliar</skos:prefLabel>
+        <skos:prefLabel xml:lang="gl">Profesor auxiliar</skos:prefLabel>
+        <skos:prefLabel xml:lang="ca">Professor auxiliar</skos:prefLabel>
+        <skos:prefLabel xml:lang="pt">Professor auxiliar</skos:prefLabel>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/roh/university-hr/pt#PT_UNIVERSITY_HR_PTPC -->
+
+
+    <owl:Class rdf:about="http://purl.org/roh/university-hr/pt#PT_UNIVERSITY_HR_PTPC">
+        <rdfs:subClassOf rdf:resource="http://purl.org/roh/mirror/vivo#FacultyPosition"/>
+        <roh:country rdf:resource="http://publications.europa.eu/resource/authority/country/PRT"/>
+        <roh:hasCode rdf:resource="http://purl.org/roh/university-hr/pt#PT_UNIVERSITY_HR_CODE_PTPC"/>
+        <rdfs:label xml:lang="pt">Professor catedrático</rdfs:label>
+        <skos:closeMatch rdf:resource="http://skos.um.es/unescothes/C00015"/>
+        <skos:closeMatch rdf:resource="http://skos.um.es/unescothes/C03965"/>
+        <skos:inScheme rdf:resource="http://purl.org/roh/university-hr/pt#PTUniversityHumanResourcesList"/>
+        <skos:notation>PTPC</skos:notation>
+        <skos:prefLabel xml:lang="es">Profesor catedrático</skos:prefLabel>
+        <skos:prefLabel xml:lang="gl">Profesor catedrático</skos:prefLabel>
+        <skos:prefLabel xml:lang="ast">Profesor catedráticu</skos:prefLabel>
+        <skos:prefLabel xml:lang="ca">Professor catedràtic</skos:prefLabel>
+        <skos:prefLabel xml:lang="pt">Professor catedrático</skos:prefLabel>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/roh/university-hr/pt#PT_UNIVERSITY_HR_PTPEM -->
+
+
+    <owl:Class rdf:about="http://purl.org/roh/university-hr/pt#PT_UNIVERSITY_HR_PTPEM">
+        <rdfs:subClassOf rdf:resource="http://purl.org/roh/mirror/vivo#FacultyPosition"/>
+        <roh:country rdf:resource="http://publications.europa.eu/resource/authority/country/PRT"/>
+        <roh:hasCode rdf:resource="http://purl.org/roh/university-hr/pt#PT_UNIVERSITY_HR_CODE_PTPEM"/>
+        <rdfs:label xml:lang="pt">Professor emérito</rdfs:label>
+        <skos:closeMatch rdf:resource="http://skos.um.es/unescothes/C00015"/>
+        <skos:closeMatch rdf:resource="http://skos.um.es/unescothes/C03965"/>
+        <skos:inScheme rdf:resource="http://purl.org/roh/university-hr/pt#PTUniversityHumanResourcesList"/>
+        <skos:notation>PTPEM</skos:notation>
+        <skos:prefLabel xml:lang="es">Profesor emérito</skos:prefLabel>
+        <skos:prefLabel xml:lang="gl">Profesor emérito</skos:prefLabel>
+        <skos:prefLabel xml:lang="ast">Profesor eméritu</skos:prefLabel>
+        <skos:prefLabel xml:lang="ca">Professor emèrit</skos:prefLabel>
+        <skos:prefLabel xml:lang="pt">Professor emérito</skos:prefLabel>
+    </owl:Class>
+    
+
+
+    <!-- http://www.w3.org/2004/02/skos/core#Concept -->
+
+
+    <owl:Class rdf:about="http://www.w3.org/2004/02/skos/core#Concept">
+        <rdfs:label xml:lang="en">Concept</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.w3.org/2004/02/skos/core#ConceptScheme -->
+
+
+    <owl:Class rdf:about="http://www.w3.org/2004/02/skos/core#ConceptScheme">
+        <rdfs:label xml:lang="en">Concept Scheme</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Individuals
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+
+    
+
+
+    <!-- http://purl.org/roh/university-hr/pt#PTUniversityHumanResourcesCodesList -->
+
+
+    <owl:NamedIndividual rdf:about="http://purl.org/roh/university-hr/pt#PTUniversityHumanResourcesCodesList">
+        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#ConceptScheme"/>
+        <rdfs:label xml:lang="fr">Codes des resources humains des universités de Portugal</rdfs:label>
+        <rdfs:label xml:lang="en">Codes for the human resources of the universities from Portugal</rdfs:label>
+        <rdfs:label xml:lang="ca">Codis dels recursos humans de les universitats de Portugal</rdfs:label>
+        <rdfs:label xml:lang="es">Códigos de los recursos humanos de las universidades de Portugal</rdfs:label>
+        <rdfs:label xml:lang="ast">Códigos de los recursos humanos de les universidaes de Portugal</rdfs:label>
+        <rdfs:label xml:lang="gl">Códigos dos recursos humanos das universidades de Portugal</rdfs:label>
+        <rdfs:label xml:lang="pt">Códigos dos recursos humanos das universidades de Portugal</rdfs:label>
+        <skos:prefLabel xml:lang="fr">Codes des resources humains des universités de Portugal</skos:prefLabel>
+        <skos:prefLabel xml:lang="en">Codes for the human resources of the universities from Portugal</skos:prefLabel>
+        <skos:prefLabel xml:lang="ca">Codis dels recursos humans de les universitats de Portugal</skos:prefLabel>
+        <skos:prefLabel xml:lang="es">Códigos de los recursos humanos de las universidades de España</skos:prefLabel>
+        <skos:prefLabel xml:lang="ast">Códigos de los recursos humanos de les universidaes de Portugal</skos:prefLabel>
+        <skos:prefLabel xml:lang="gl">Códigos dos recursos humanos das universidades de Portugal</skos:prefLabel>
+        <skos:prefLabel xml:lang="pt">Códigos dos recursos humanos das universidades de Portugal</skos:prefLabel>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://purl.org/roh/university-hr/pt#PTUniversityHumanResourcesList -->
+
+
+    <owl:NamedIndividual rdf:about="http://purl.org/roh/university-hr/pt#PTUniversityHumanResourcesList">
+        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#ConceptScheme"/>
+        <rdfs:label xml:lang="en">Human resources of the universities from Portugal</rdfs:label>
+        <rdfs:label xml:lang="gl">Recursos humanos das universidades de Portugal</rdfs:label>
+        <rdfs:label xml:lang="pt">Recursos humanos das universidades de Portugal</rdfs:label>
+        <rdfs:label xml:lang="es">Recursos humanos de las universidades de Portugal</rdfs:label>
+        <rdfs:label xml:lang="ast">Recursos humanos de les universidaes de Portugal</rdfs:label>
+        <rdfs:label xml:lang="ca">Recursos humans de les universitats de Portugal</rdfs:label>
+        <rdfs:label xml:lang="fr">Resources humains des universités de Portugal</rdfs:label>
+        <skos:prefLabel xml:lang="en">Human resources of the universities from Portugal</skos:prefLabel>
+        <skos:prefLabel xml:lang="gl">Recursos humanos das universidades de Portugal</skos:prefLabel>
+        <skos:prefLabel xml:lang="pt">Recursos humanos das universidades de Portugal</skos:prefLabel>
+        <skos:prefLabel xml:lang="es">Recursos humanos de las universidades de Portugal</skos:prefLabel>
+        <skos:prefLabel xml:lang="ast">Recursos humanos de les universidaes de Portugal</skos:prefLabel>
+        <skos:prefLabel xml:lang="ca">Recursos humans de les universitats de Portugal</skos:prefLabel>
+        <skos:prefLabel xml:lang="fr">Resources humains des universités de Portugal</skos:prefLabel>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://purl.org/roh/university-hr/pt#PT_UNIVERSITY_HR_CODE_PTPAS -->
+
+
+    <owl:NamedIndividual rdf:about="http://purl.org/roh/university-hr/pt#PT_UNIVERSITY_HR_CODE_PTPAS">
+        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+        <roh:codeOf rdf:resource="http://purl.org/roh/university-hr/pt#PT_UNIVERSITY_HR_PTPAS"/>
+        <rdfs:label>PTPAS</rdfs:label>
+        <skos:inScheme rdf:resource="http://purl.org/roh/university-hr/pt#PTUniversityHumanResourcesCodesList"/>
+        <skos:prefLabel>PTPAS</skos:prefLabel>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://purl.org/roh/university-hr/pt#PT_UNIVERSITY_HR_CODE_PTPAU -->
+
+
+    <owl:NamedIndividual rdf:about="http://purl.org/roh/university-hr/pt#PT_UNIVERSITY_HR_CODE_PTPAU">
+        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+        <roh:codeOf rdf:resource="http://purl.org/roh/university-hr/pt#PT_UNIVERSITY_HR_PTPAU"/>
+        <rdfs:label>PTPAU</rdfs:label>
+        <skos:inScheme rdf:resource="http://purl.org/roh/university-hr/pt#PTUniversityHumanResourcesCodesList"/>
+        <skos:prefLabel>PTPAU</skos:prefLabel>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://purl.org/roh/university-hr/pt#PT_UNIVERSITY_HR_CODE_PTPC -->
+
+
+    <owl:NamedIndividual rdf:about="http://purl.org/roh/university-hr/pt#PT_UNIVERSITY_HR_CODE_PTPC">
+        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+        <roh:codeOf rdf:resource="http://purl.org/roh/university-hr/pt#PT_UNIVERSITY_HR_PTPC"/>
+        <rdfs:label>PTPC</rdfs:label>
+        <skos:inScheme rdf:resource="http://purl.org/roh/university-hr/pt#PTUniversityHumanResourcesCodesList"/>
+        <skos:prefLabel>PTPC</skos:prefLabel>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://purl.org/roh/university-hr/pt#PT_UNIVERSITY_HR_CODE_PTPEM -->
+
+
+    <owl:NamedIndividual rdf:about="http://purl.org/roh/university-hr/pt#PT_UNIVERSITY_HR_CODE_PTPEM">
+        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+        <roh:codeOf rdf:resource="http://purl.org/roh/university-hr/pt#PT_UNIVERSITY_HR_PTPEM"/>
+        <rdfs:label>PTPEM</rdfs:label>
+        <skos:inScheme rdf:resource="http://purl.org/roh/university-hr/pt#PTUniversityHumanResourcesCodesList"/>
+        <skos:prefLabel>PTPEM</skos:prefLabel>
+    </owl:NamedIndividual>
+</rdf:RDF>
+
+
+
+<!-- Generated by the OWL API (version 5.1.14) https://github.com/owlcs/owlapi/ -->
+
+

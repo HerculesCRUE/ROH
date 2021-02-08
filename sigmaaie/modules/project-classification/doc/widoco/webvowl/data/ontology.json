@@ -3,14 +3,14 @@
   "header" : {
     "languages" : [ "en", "es" ],
     "baseIris" : [ "http://www.w3.org/1999/02/22-rdf-syntax-ns", "http://www.w3.org/2000/01/rdf-schema", "http://purl.org/roh", "http://www.w3.org/2004/02/skos/core" ],
-    "iri" : "http://purl.org/roh/ProjectClassification"
+    "iri" : "http://purl.org/roh/project-classification"
   },
   "namespace" : [ ],
   "class" : [ {
     "id" : "0",
     "type" : "owl:Class"
   }, {
-    "id" : "5",
+    "id" : "1",
     "type" : "owl:Class"
   }, {
     "id" : "7",
@@ -19,7 +19,7 @@
     "id" : "9",
     "type" : "owl:Class"
   }, {
-    "id" : "2",
+    "id" : "3",
     "type" : "owl:Thing"
   } ],
   "classAttribute" : [ {
@@ -39,16 +39,16 @@
         "value" : "A set of concepts, optionally including statements about semantic relationships between those concepts.",
         "type" : "label"
       } ],
-      "scopeNote" : [ {
-        "identifier" : "scopeNote",
-        "language" : "en",
-        "value" : "A concept scheme may be defined to include concepts from different sources.",
-        "type" : "label"
-      } ],
       "example" : [ {
         "identifier" : "example",
         "language" : "en",
         "value" : "Thesauri, classification schemes, subject heading lists, taxonomies, 'folksonomies', and other types of controlled vocabulary are all examples of concept schemes. Concept schemes are also embedded in glossaries and terminologies.",
+        "type" : "label"
+      } ],
+      "scopeNote" : [ {
+        "identifier" : "scopeNote",
+        "language" : "en",
+        "value" : "A concept scheme may be defined to include concepts from different sources.",
         "type" : "label"
       } ]
     },
@@ -57,8 +57,8 @@
       "en" : "Concept Scheme"
     },
     "individuals" : [ {
-      "iri" : "http://purl.org/roh/ProjectClassification#ProjectClassification",
-      "baseIri" : "http://purl.org/roh/ProjectClassification",
+      "iri" : "http://purl.org/roh/project-classification#ProjectClassification",
+      "baseIri" : "http://purl.org/roh/project-classification",
       "labels" : {
         "IRI-based" : "ProjectClassification"
       }
@@ -73,7 +73,7 @@
       "IRI-based" : "Collection"
     },
     "attributes" : [ "external" ],
-    "id" : "5"
+    "id" : "1"
   }, {
     "iri" : "http://www.w3.org/2004/02/skos/core#Concept",
     "baseIri" : "http://www.w3.org/2004/02/skos/core",
@@ -97,94 +97,94 @@
       "en" : "Concept"
     },
     "individuals" : [ {
-      "iri" : "http://purl.org/roh/ProjectClassification#RegionsofEurope",
-      "baseIri" : "http://purl.org/roh/ProjectClassification",
-      "labels" : {
-        "IRI-based" : "RegionsofEurope"
-      }
-    }, {
-      "iri" : "http://purl.org/roh/ProjectClassification#Internal",
-      "baseIri" : "http://purl.org/roh/ProjectClassification",
-      "labels" : {
-        "IRI-based" : "Internal"
-      }
-    }, {
-      "iri" : "http://purl.org/roh/ProjectClassification#SC1",
-      "baseIri" : "http://purl.org/roh/ProjectClassification",
-      "labels" : {
-        "IRI-based" : "SC1"
-      }
-    }, {
-      "iri" : "http://purl.org/roh/ProjectClassification#ExcellentScience",
-      "baseIri" : "http://purl.org/roh/ProjectClassification",
-      "labels" : {
-        "IRI-based" : "ExcellentScience"
-      }
-    }, {
-      "iri" : "http://purl.org/roh/ProjectClassification#Interreg",
-      "baseIri" : "http://purl.org/roh/ProjectClassification",
-      "labels" : {
-        "IRI-based" : "Interreg"
-      }
-    }, {
-      "iri" : "http://purl.org/roh/ProjectClassification#Regional",
-      "baseIri" : "http://purl.org/roh/ProjectClassification",
+      "iri" : "http://purl.org/roh/project-classification#Regional",
+      "baseIri" : "http://purl.org/roh/project-classification",
       "labels" : {
         "IRI-based" : "Regional"
       }
     }, {
-      "iri" : "http://purl.org/roh/ProjectClassification#SC2",
-      "baseIri" : "http://purl.org/roh/ProjectClassification",
-      "labels" : {
-        "IRI-based" : "SC2"
-      }
-    }, {
-      "iri" : "http://purl.org/roh/ProjectClassification#European",
-      "baseIri" : "http://purl.org/roh/ProjectClassification",
-      "labels" : {
-        "IRI-based" : "European"
-      }
-    }, {
-      "iri" : "http://purl.org/roh/ProjectClassification#IndividualFellowships",
-      "baseIri" : "http://purl.org/roh/ProjectClassification",
-      "labels" : {
-        "IRI-based" : "IndividualFellowships"
-      }
-    }, {
-      "iri" : "http://purl.org/roh/ProjectClassification#Sudoe",
-      "baseIri" : "http://purl.org/roh/ProjectClassification",
-      "labels" : {
-        "IRI-based" : "Sudoe"
-      }
-    }, {
-      "iri" : "http://purl.org/roh/ProjectClassification#ITN-ETN",
-      "baseIri" : "http://purl.org/roh/ProjectClassification",
-      "labels" : {
-        "IRI-based" : "ITN-ETN"
-      }
-    }, {
-      "iri" : "http://purl.org/roh/ProjectClassification#National",
-      "baseIri" : "http://purl.org/roh/ProjectClassification",
+      "iri" : "http://purl.org/roh/project-classification#National",
+      "baseIri" : "http://purl.org/roh/project-classification",
       "labels" : {
         "IRI-based" : "National"
       }
     }, {
-      "iri" : "http://purl.org/roh/ProjectClassification#International",
-      "baseIri" : "http://purl.org/roh/ProjectClassification",
+      "iri" : "http://purl.org/roh/project-classification#Internal",
+      "baseIri" : "http://purl.org/roh/project-classification",
       "labels" : {
-        "IRI-based" : "International"
+        "IRI-based" : "Internal"
       }
     }, {
-      "iri" : "http://purl.org/roh/ProjectClassification#Horizon2020",
-      "baseIri" : "http://purl.org/roh/ProjectClassification",
+      "iri" : "http://purl.org/roh/project-classification#Interreg",
+      "baseIri" : "http://purl.org/roh/project-classification",
+      "labels" : {
+        "IRI-based" : "Interreg"
+      }
+    }, {
+      "iri" : "http://purl.org/roh/project-classification#European",
+      "baseIri" : "http://purl.org/roh/project-classification",
+      "labels" : {
+        "IRI-based" : "European"
+      }
+    }, {
+      "iri" : "http://purl.org/roh/project-classification#RegionsofEurope",
+      "baseIri" : "http://purl.org/roh/project-classification",
+      "labels" : {
+        "IRI-based" : "RegionsofEurope"
+      }
+    }, {
+      "iri" : "http://purl.org/roh/project-classification#ExcellentScience",
+      "baseIri" : "http://purl.org/roh/project-classification",
+      "labels" : {
+        "IRI-based" : "ExcellentScience"
+      }
+    }, {
+      "iri" : "http://purl.org/roh/project-classification#ITN-ETN",
+      "baseIri" : "http://purl.org/roh/project-classification",
+      "labels" : {
+        "IRI-based" : "ITN-ETN"
+      }
+    }, {
+      "iri" : "http://purl.org/roh/project-classification#IndividualFellowships",
+      "baseIri" : "http://purl.org/roh/project-classification",
+      "labels" : {
+        "IRI-based" : "IndividualFellowships"
+      }
+    }, {
+      "iri" : "http://purl.org/roh/project-classification#SocietalChallenges",
+      "baseIri" : "http://purl.org/roh/project-classification",
+      "labels" : {
+        "IRI-based" : "SocietalChallenges"
+      }
+    }, {
+      "iri" : "http://purl.org/roh/project-classification#Sudoe",
+      "baseIri" : "http://purl.org/roh/project-classification",
+      "labels" : {
+        "IRI-based" : "Sudoe"
+      }
+    }, {
+      "iri" : "http://purl.org/roh/project-classification#SC2",
+      "baseIri" : "http://purl.org/roh/project-classification",
+      "labels" : {
+        "IRI-based" : "SC2"
+      }
+    }, {
+      "iri" : "http://purl.org/roh/project-classification#SC1",
+      "baseIri" : "http://purl.org/roh/project-classification",
+      "labels" : {
+        "IRI-based" : "SC1"
+      }
+    }, {
+      "iri" : "http://purl.org/roh/project-classification#Horizon2020",
+      "baseIri" : "http://purl.org/roh/project-classification",
       "labels" : {
         "IRI-based" : "Horizon2020"
       }
     }, {
-      "iri" : "http://purl.org/roh/ProjectClassification#SocietalChallenges",
-      "baseIri" : "http://purl.org/roh/ProjectClassification",
+      "iri" : "http://purl.org/roh/project-classification#International",
+      "baseIri" : "http://purl.org/roh/project-classification",
       "labels" : {
-        "IRI-based" : "SocietalChallenges"
+        "IRI-based" : "International"
       }
     } ],
     "subClasses" : [ "9" ],
@@ -200,94 +200,94 @@
       "es" : "Clasificación de Proyecto"
     },
     "individuals" : [ {
-      "iri" : "http://purl.org/roh/ProjectClassification#RegionsofEurope",
-      "baseIri" : "http://purl.org/roh/ProjectClassification",
-      "labels" : {
-        "IRI-based" : "RegionsofEurope"
-      }
-    }, {
-      "iri" : "http://purl.org/roh/ProjectClassification#Internal",
-      "baseIri" : "http://purl.org/roh/ProjectClassification",
-      "labels" : {
-        "IRI-based" : "Internal"
-      }
-    }, {
-      "iri" : "http://purl.org/roh/ProjectClassification#SC1",
-      "baseIri" : "http://purl.org/roh/ProjectClassification",
-      "labels" : {
-        "IRI-based" : "SC1"
-      }
-    }, {
-      "iri" : "http://purl.org/roh/ProjectClassification#Interreg",
-      "baseIri" : "http://purl.org/roh/ProjectClassification",
-      "labels" : {
-        "IRI-based" : "Interreg"
-      }
-    }, {
-      "iri" : "http://purl.org/roh/ProjectClassification#Regional",
-      "baseIri" : "http://purl.org/roh/ProjectClassification",
+      "iri" : "http://purl.org/roh/project-classification#Regional",
+      "baseIri" : "http://purl.org/roh/project-classification",
       "labels" : {
         "IRI-based" : "Regional"
       }
     }, {
-      "iri" : "http://purl.org/roh/ProjectClassification#ExcellentScience",
-      "baseIri" : "http://purl.org/roh/ProjectClassification",
-      "labels" : {
-        "IRI-based" : "ExcellentScience"
-      }
-    }, {
-      "iri" : "http://purl.org/roh/ProjectClassification#SC2",
-      "baseIri" : "http://purl.org/roh/ProjectClassification",
-      "labels" : {
-        "IRI-based" : "SC2"
-      }
-    }, {
-      "iri" : "http://purl.org/roh/ProjectClassification#European",
-      "baseIri" : "http://purl.org/roh/ProjectClassification",
-      "labels" : {
-        "IRI-based" : "European"
-      }
-    }, {
-      "iri" : "http://purl.org/roh/ProjectClassification#IndividualFellowships",
-      "baseIri" : "http://purl.org/roh/ProjectClassification",
-      "labels" : {
-        "IRI-based" : "IndividualFellowships"
-      }
-    }, {
-      "iri" : "http://purl.org/roh/ProjectClassification#Sudoe",
-      "baseIri" : "http://purl.org/roh/ProjectClassification",
-      "labels" : {
-        "IRI-based" : "Sudoe"
-      }
-    }, {
-      "iri" : "http://purl.org/roh/ProjectClassification#ITN-ETN",
-      "baseIri" : "http://purl.org/roh/ProjectClassification",
-      "labels" : {
-        "IRI-based" : "ITN-ETN"
-      }
-    }, {
-      "iri" : "http://purl.org/roh/ProjectClassification#National",
-      "baseIri" : "http://purl.org/roh/ProjectClassification",
+      "iri" : "http://purl.org/roh/project-classification#National",
+      "baseIri" : "http://purl.org/roh/project-classification",
       "labels" : {
         "IRI-based" : "National"
       }
     }, {
-      "iri" : "http://purl.org/roh/ProjectClassification#International",
-      "baseIri" : "http://purl.org/roh/ProjectClassification",
+      "iri" : "http://purl.org/roh/project-classification#Internal",
+      "baseIri" : "http://purl.org/roh/project-classification",
+      "labels" : {
+        "IRI-based" : "Internal"
+      }
+    }, {
+      "iri" : "http://purl.org/roh/project-classification#Interreg",
+      "baseIri" : "http://purl.org/roh/project-classification",
+      "labels" : {
+        "IRI-based" : "Interreg"
+      }
+    }, {
+      "iri" : "http://purl.org/roh/project-classification#European",
+      "baseIri" : "http://purl.org/roh/project-classification",
+      "labels" : {
+        "IRI-based" : "European"
+      }
+    }, {
+      "iri" : "http://purl.org/roh/project-classification#ExcellentScience",
+      "baseIri" : "http://purl.org/roh/project-classification",
+      "labels" : {
+        "IRI-based" : "ExcellentScience"
+      }
+    }, {
+      "iri" : "http://purl.org/roh/project-classification#RegionsofEurope",
+      "baseIri" : "http://purl.org/roh/project-classification",
+      "labels" : {
+        "IRI-based" : "RegionsofEurope"
+      }
+    }, {
+      "iri" : "http://purl.org/roh/project-classification#IndividualFellowships",
+      "baseIri" : "http://purl.org/roh/project-classification",
+      "labels" : {
+        "IRI-based" : "IndividualFellowships"
+      }
+    }, {
+      "iri" : "http://purl.org/roh/project-classification#ITN-ETN",
+      "baseIri" : "http://purl.org/roh/project-classification",
+      "labels" : {
+        "IRI-based" : "ITN-ETN"
+      }
+    }, {
+      "iri" : "http://purl.org/roh/project-classification#SocietalChallenges",
+      "baseIri" : "http://purl.org/roh/project-classification",
+      "labels" : {
+        "IRI-based" : "SocietalChallenges"
+      }
+    }, {
+      "iri" : "http://purl.org/roh/project-classification#Sudoe",
+      "baseIri" : "http://purl.org/roh/project-classification",
+      "labels" : {
+        "IRI-based" : "Sudoe"
+      }
+    }, {
+      "iri" : "http://purl.org/roh/project-classification#SC2",
+      "baseIri" : "http://purl.org/roh/project-classification",
+      "labels" : {
+        "IRI-based" : "SC2"
+      }
+    }, {
+      "iri" : "http://purl.org/roh/project-classification#SC1",
+      "baseIri" : "http://purl.org/roh/project-classification",
+      "labels" : {
+        "IRI-based" : "SC1"
+      }
+    }, {
+      "iri" : "http://purl.org/roh/project-classification#International",
+      "baseIri" : "http://purl.org/roh/project-classification",
       "labels" : {
         "IRI-based" : "International"
       }
     }, {
-      "iri" : "http://purl.org/roh/ProjectClassification#Horizon2020",
-      "baseIri" : "http://purl.org/roh/ProjectClassification",
+      "iri" : "http://purl.org/roh/project-classification#Horizon2020",
+      "baseIri" : "http://purl.org/roh/project-classification",
       "labels" : {
         "IRI-based" : "Horizon2020"
-      }
-    }, {
-      "iri" : "http://purl.org/roh/ProjectClassification#SocietalChallenges",
-      "baseIri" : "http://purl.org/roh/ProjectClassification",
-      "labels" : {
-        "IRI-based" : "SocietalChallenges"
       }
     } ],
     "attributes" : [ "external" ],
@@ -296,13 +296,13 @@
   }, {
     "iri" : "http://www.w3.org/2002/07/owl#Thing",
     "baseIri" : "http://owl2vowl.de",
-    "id" : "2",
+    "id" : "3",
     "label" : {
       "undefined" : "Thing"
     }
   } ],
   "property" : [ {
-    "id" : "1",
+    "id" : "2",
     "type" : "owl:objectProperty"
   }, {
     "id" : "6",
@@ -314,13 +314,13 @@
     "id" : "11",
     "type" : "rdfs:SubClassOf"
   }, {
-    "id" : "3",
+    "id" : "4",
     "type" : "owl:objectProperty"
   }, {
     "id" : "12",
     "type" : "owl:objectProperty"
   }, {
-    "id" : "4",
+    "id" : "5",
     "type" : "owl:objectProperty"
   }, {
     "id" : "13",
@@ -334,9 +334,9 @@
   } ],
   "propertyAttribute" : [ {
     "iri" : "http://www.w3.org/2004/02/skos/core#broader",
-    "inverse" : "3",
+    "inverse" : "4",
     "baseIri" : "http://www.w3.org/2004/02/skos/core",
-    "range" : "2",
+    "range" : "3",
     "annotations" : {
       "isDefinedBy" : [ {
         "identifier" : "isDefinedBy",
@@ -361,13 +361,13 @@
       "IRI-based" : "broader",
       "en" : "has broader"
     },
-    "superproperty" : [ "4" ],
-    "domain" : "2",
+    "superproperty" : [ "5" ],
+    "domain" : "3",
     "comment" : {
       "en" : "Broader concepts are typically rendered as parents in a concept hierarchy (tree)."
     },
-    "attributes" : [ "object", "external" ],
-    "id" : "1"
+    "attributes" : [ "external", "object" ],
+    "id" : "2"
   }, {
     "iri" : "http://www.w3.org/2004/02/skos/core#hasTopConcept",
     "inverse" : "8",
@@ -392,7 +392,7 @@
       "en" : "has top concept"
     },
     "domain" : "0",
-    "attributes" : [ "object", "external" ],
+    "attributes" : [ "external", "object" ],
     "id" : "6"
   }, {
     "range" : "0",
@@ -407,7 +407,7 @@
   }, {
     "iri" : "http://www.w3.org/2004/02/skos/core#narrower",
     "baseIri" : "http://www.w3.org/2004/02/skos/core",
-    "range" : "2",
+    "range" : "3",
     "annotations" : {
       "isDefinedBy" : [ {
         "identifier" : "isDefinedBy",
@@ -433,53 +433,53 @@
       "en" : "has narrower"
     },
     "superproperty" : [ "12" ],
-    "domain" : "2",
+    "domain" : "3",
     "comment" : {
       "en" : "Narrower concepts are typically rendered as children in a concept hierarchy (tree)."
     },
-    "attributes" : [ "object", "external" ],
-    "id" : "3"
+    "attributes" : [ "external", "object" ],
+    "id" : "4"
   }, {
     "iri" : "http://www.w3.org/2004/02/skos/core#narrowerTransitive",
     "baseIri" : "http://www.w3.org/2004/02/skos/core",
-    "range" : "2",
+    "range" : "3",
     "label" : {
       "IRI-based" : "narrowerTransitive"
     },
-    "domain" : "2",
-    "subproperty" : [ "3" ],
-    "attributes" : [ "object", "external" ],
+    "domain" : "3",
+    "subproperty" : [ "4" ],
+    "attributes" : [ "external", "object" ],
     "id" : "12"
   }, {
     "iri" : "http://www.w3.org/2004/02/skos/core#broaderTransitive",
     "baseIri" : "http://www.w3.org/2004/02/skos/core",
-    "range" : "2",
+    "range" : "3",
     "label" : {
       "IRI-based" : "broaderTransitive"
     },
-    "domain" : "2",
-    "subproperty" : [ "1" ],
-    "attributes" : [ "object", "external" ],
-    "id" : "4"
+    "domain" : "3",
+    "subproperty" : [ "2" ],
+    "attributes" : [ "external", "object" ],
+    "id" : "5"
   }, {
     "range" : "7",
-    "domain" : "5",
+    "domain" : "1",
     "attributes" : [ "object", "anonymous" ],
     "id" : "13"
   }, {
     "range" : "0",
-    "domain" : "5",
+    "domain" : "1",
     "attributes" : [ "object", "anonymous" ],
     "id" : "14"
   }, {
     "iri" : "http://www.w3.org/2004/02/skos/core#topConceptOf",
     "baseIri" : "http://www.w3.org/2004/02/skos/core",
-    "range" : "2",
+    "range" : "3",
     "label" : {
       "IRI-based" : "topConceptOf"
     },
-    "domain" : "2",
-    "attributes" : [ "object", "external" ],
+    "domain" : "3",
+    "attributes" : [ "external", "object" ],
     "id" : "8"
   } ]
 }

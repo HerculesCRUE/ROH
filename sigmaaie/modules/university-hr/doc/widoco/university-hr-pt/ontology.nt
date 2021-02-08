@@ -1,0 +1,202 @@
+<http://purl.org/roh/university-hr/pt> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Ontology> .
+<http://purl.org/roh/university-hr/pt> <http://www.w3.org/2002/07/owl#versionIRI> <http://purl.org/roh/university-hr/pt/1.0> .
+<http://purl.org/roh/university-hr/pt> <http://purl.org/dc/terms/license> <https://creativecommons.org/licenses/by-sa/4.0/> .
+<http://purl.org/roh/university-hr/pt> <http://www.w3.org/2000/01/rdf-schema#comment> "The University of Murcia signed on November 29, 2017, a Covenant with the Ministry of Economy, Industry and Competitiveness backing the “HÉRCULES: Semantic University Research Data” Project with a budget of FIVE MILLION FOUR HUNDRED AND SIXTY-TWO THOUSAND SIX HUNDRED euros with an 80% of co-financiering from the European Regional Development Fund program (ERDF) within the 2014-2020 period. \n\nThe project arose as a CRUE initiative, to create the basis for a new collaboration model between universities, to develop the information management systems and with the main objective of encouraging this type of collaboration.\n\nTherefore, the purpose of this agreement was to contribute to the improvement of public services and business innovation and research through the improvement of:\n\n    efficiency in public investment by decreasing the duplication of investment in R&D.\n    efficiency of research in universities.\n    scientific dissemination of research results.\n    detection of synergies in R&D between universities.\n    transfer of R&D results to companies.\n    efficiency in the management of research. \n\nby creating a research management system with semantic capacities based on semantic open data and that will provide a global view of the research data contained in the Spanish University System."@en .
+<http://purl.org/roh/university-hr/pt> <http://www.w3.org/2000/01/rdf-schema#label> "ROH Portuguese University HR Module"@en .
+# 
+# 
+# #################################################################
+# #
+# #    Annotation properties
+# #
+# #################################################################
+# 
+# 
+# http://purl.org/dc/terms/license
+<http://purl.org/dc/terms/license> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+# 
+# http://purl.org/roh#codeOf
+<http://purl.org/roh#codeOf> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+# 
+# http://purl.org/roh#country
+<http://purl.org/roh#country> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+# 
+# http://purl.org/roh#hasCode
+<http://purl.org/roh#hasCode> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+# 
+# http://www.w3.org/2004/02/skos/core#closeMatch
+<http://www.w3.org/2004/02/skos/core#closeMatch> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+# 
+# http://www.w3.org/2004/02/skos/core#inScheme
+<http://www.w3.org/2004/02/skos/core#inScheme> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+# 
+# http://www.w3.org/2004/02/skos/core#notation
+<http://www.w3.org/2004/02/skos/core#notation> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+# 
+# http://www.w3.org/2004/02/skos/core#prefLabel
+<http://www.w3.org/2004/02/skos/core#prefLabel> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+# 
+# 
+# 
+# #################################################################
+# #
+# #    Classes
+# #
+# #################################################################
+# 
+# 
+# http://purl.org/roh/mirror/vivo#FacultyPosition
+<http://purl.org/roh/mirror/vivo#FacultyPosition> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://purl.org/roh/mirror/vivo#FacultyPosition> <http://www.w3.org/2000/01/rdf-schema#label> "Faculty Position"@en .
+# 
+# http://purl.org/roh/university-hr/pt#PT_UNIVERSITY_HR_PTPAS
+<http://purl.org/roh/university-hr/pt#PT_UNIVERSITY_HR_PTPAS> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://purl.org/roh/university-hr/pt#PT_UNIVERSITY_HR_PTPAS> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://purl.org/roh/mirror/vivo#FacultyPosition> .
+<http://purl.org/roh/university-hr/pt#PT_UNIVERSITY_HR_PTPAS> <http://purl.org/roh#country> <http://publications.europa.eu/resource/authority/country/PRT> .
+<http://purl.org/roh/university-hr/pt#PT_UNIVERSITY_HR_PTPAS> <http://purl.org/roh#hasCode> <http://purl.org/roh/university-hr/pt#PT_UNIVERSITY_HR_CODE_PTPAS> .
+<http://purl.org/roh/university-hr/pt#PT_UNIVERSITY_HR_PTPAS> <http://www.w3.org/2000/01/rdf-schema#label> "Professor associado"@pt .
+<http://purl.org/roh/university-hr/pt#PT_UNIVERSITY_HR_PTPAS> <http://www.w3.org/2004/02/skos/core#closeMatch> <http://skos.um.es/unescothes/C00015> .
+<http://purl.org/roh/university-hr/pt#PT_UNIVERSITY_HR_PTPAS> <http://www.w3.org/2004/02/skos/core#closeMatch> <http://skos.um.es/unescothes/C03965> .
+<http://purl.org/roh/university-hr/pt#PT_UNIVERSITY_HR_PTPAS> <http://www.w3.org/2004/02/skos/core#inScheme> <http://purl.org/roh/university-hr/pt#PTUniversityHumanResourcesList> .
+<http://purl.org/roh/university-hr/pt#PT_UNIVERSITY_HR_PTPAS> <http://www.w3.org/2004/02/skos/core#notation> "PTPAS" .
+<http://purl.org/roh/university-hr/pt#PT_UNIVERSITY_HR_PTPAS> <http://www.w3.org/2004/02/skos/core#prefLabel> "Irakasle elkartua"@eu .
+<http://purl.org/roh/university-hr/pt#PT_UNIVERSITY_HR_PTPAS> <http://www.w3.org/2004/02/skos/core#prefLabel> "Profesor asociado"@es .
+<http://purl.org/roh/university-hr/pt#PT_UNIVERSITY_HR_PTPAS> <http://www.w3.org/2004/02/skos/core#prefLabel> "Profesor asociado"@gl .
+<http://purl.org/roh/university-hr/pt#PT_UNIVERSITY_HR_PTPAS> <http://www.w3.org/2004/02/skos/core#prefLabel> "Profesor asociáu"@ast .
+<http://purl.org/roh/university-hr/pt#PT_UNIVERSITY_HR_PTPAS> <http://www.w3.org/2004/02/skos/core#prefLabel> "Professor associado"@pt .
+<http://purl.org/roh/university-hr/pt#PT_UNIVERSITY_HR_PTPAS> <http://www.w3.org/2004/02/skos/core#prefLabel> "Professor associat"@ca .
+# 
+# http://purl.org/roh/university-hr/pt#PT_UNIVERSITY_HR_PTPAU
+<http://purl.org/roh/university-hr/pt#PT_UNIVERSITY_HR_PTPAU> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://purl.org/roh/university-hr/pt#PT_UNIVERSITY_HR_PTPAU> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://purl.org/roh/mirror/vivo#FacultyPosition> .
+<http://purl.org/roh/university-hr/pt#PT_UNIVERSITY_HR_PTPAU> <http://purl.org/roh#country> <http://publications.europa.eu/resource/authority/country/PRT> .
+<http://purl.org/roh/university-hr/pt#PT_UNIVERSITY_HR_PTPAU> <http://purl.org/roh#hasCode> <http://purl.org/roh/university-hr/pt#PT_UNIVERSITY_HR_CODE_PTPAU> .
+<http://purl.org/roh/university-hr/pt#PT_UNIVERSITY_HR_PTPAU> <http://www.w3.org/2000/01/rdf-schema#label> "Professor auxiliar"@pt .
+<http://purl.org/roh/university-hr/pt#PT_UNIVERSITY_HR_PTPAU> <http://www.w3.org/2004/02/skos/core#closeMatch> <http://skos.um.es/unescothes/C00015> .
+<http://purl.org/roh/university-hr/pt#PT_UNIVERSITY_HR_PTPAU> <http://www.w3.org/2004/02/skos/core#closeMatch> <http://skos.um.es/unescothes/C03965> .
+<http://purl.org/roh/university-hr/pt#PT_UNIVERSITY_HR_PTPAU> <http://www.w3.org/2004/02/skos/core#inScheme> <http://purl.org/roh/university-hr/pt#PTUniversityHumanResourcesList> .
+<http://purl.org/roh/university-hr/pt#PT_UNIVERSITY_HR_PTPAU> <http://www.w3.org/2004/02/skos/core#notation> "PTPAU" .
+<http://purl.org/roh/university-hr/pt#PT_UNIVERSITY_HR_PTPAU> <http://www.w3.org/2004/02/skos/core#prefLabel> "Profesor auxiliar"@ast .
+<http://purl.org/roh/university-hr/pt#PT_UNIVERSITY_HR_PTPAU> <http://www.w3.org/2004/02/skos/core#prefLabel> "Profesor auxiliar"@es .
+<http://purl.org/roh/university-hr/pt#PT_UNIVERSITY_HR_PTPAU> <http://www.w3.org/2004/02/skos/core#prefLabel> "Profesor auxiliar"@gl .
+<http://purl.org/roh/university-hr/pt#PT_UNIVERSITY_HR_PTPAU> <http://www.w3.org/2004/02/skos/core#prefLabel> "Professor auxiliar"@ca .
+<http://purl.org/roh/university-hr/pt#PT_UNIVERSITY_HR_PTPAU> <http://www.w3.org/2004/02/skos/core#prefLabel> "Professor auxiliar"@pt .
+# 
+# http://purl.org/roh/university-hr/pt#PT_UNIVERSITY_HR_PTPC
+<http://purl.org/roh/university-hr/pt#PT_UNIVERSITY_HR_PTPC> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://purl.org/roh/university-hr/pt#PT_UNIVERSITY_HR_PTPC> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://purl.org/roh/mirror/vivo#FacultyPosition> .
+<http://purl.org/roh/university-hr/pt#PT_UNIVERSITY_HR_PTPC> <http://purl.org/roh#country> <http://publications.europa.eu/resource/authority/country/PRT> .
+<http://purl.org/roh/university-hr/pt#PT_UNIVERSITY_HR_PTPC> <http://purl.org/roh#hasCode> <http://purl.org/roh/university-hr/pt#PT_UNIVERSITY_HR_CODE_PTPC> .
+<http://purl.org/roh/university-hr/pt#PT_UNIVERSITY_HR_PTPC> <http://www.w3.org/2000/01/rdf-schema#label> "Professor catedrático"@pt .
+<http://purl.org/roh/university-hr/pt#PT_UNIVERSITY_HR_PTPC> <http://www.w3.org/2004/02/skos/core#closeMatch> <http://skos.um.es/unescothes/C00015> .
+<http://purl.org/roh/university-hr/pt#PT_UNIVERSITY_HR_PTPC> <http://www.w3.org/2004/02/skos/core#closeMatch> <http://skos.um.es/unescothes/C03965> .
+<http://purl.org/roh/university-hr/pt#PT_UNIVERSITY_HR_PTPC> <http://www.w3.org/2004/02/skos/core#inScheme> <http://purl.org/roh/university-hr/pt#PTUniversityHumanResourcesList> .
+<http://purl.org/roh/university-hr/pt#PT_UNIVERSITY_HR_PTPC> <http://www.w3.org/2004/02/skos/core#notation> "PTPC" .
+<http://purl.org/roh/university-hr/pt#PT_UNIVERSITY_HR_PTPC> <http://www.w3.org/2004/02/skos/core#prefLabel> "Profesor catedrático"@es .
+<http://purl.org/roh/university-hr/pt#PT_UNIVERSITY_HR_PTPC> <http://www.w3.org/2004/02/skos/core#prefLabel> "Profesor catedrático"@gl .
+<http://purl.org/roh/university-hr/pt#PT_UNIVERSITY_HR_PTPC> <http://www.w3.org/2004/02/skos/core#prefLabel> "Profesor catedráticu"@ast .
+<http://purl.org/roh/university-hr/pt#PT_UNIVERSITY_HR_PTPC> <http://www.w3.org/2004/02/skos/core#prefLabel> "Professor catedràtic"@ca .
+<http://purl.org/roh/university-hr/pt#PT_UNIVERSITY_HR_PTPC> <http://www.w3.org/2004/02/skos/core#prefLabel> "Professor catedrático"@pt .
+# 
+# http://purl.org/roh/university-hr/pt#PT_UNIVERSITY_HR_PTPEM
+<http://purl.org/roh/university-hr/pt#PT_UNIVERSITY_HR_PTPEM> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://purl.org/roh/university-hr/pt#PT_UNIVERSITY_HR_PTPEM> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://purl.org/roh/mirror/vivo#FacultyPosition> .
+<http://purl.org/roh/university-hr/pt#PT_UNIVERSITY_HR_PTPEM> <http://purl.org/roh#country> <http://publications.europa.eu/resource/authority/country/PRT> .
+<http://purl.org/roh/university-hr/pt#PT_UNIVERSITY_HR_PTPEM> <http://purl.org/roh#hasCode> <http://purl.org/roh/university-hr/pt#PT_UNIVERSITY_HR_CODE_PTPEM> .
+<http://purl.org/roh/university-hr/pt#PT_UNIVERSITY_HR_PTPEM> <http://www.w3.org/2000/01/rdf-schema#label> "Professor emérito"@pt .
+<http://purl.org/roh/university-hr/pt#PT_UNIVERSITY_HR_PTPEM> <http://www.w3.org/2004/02/skos/core#closeMatch> <http://skos.um.es/unescothes/C00015> .
+<http://purl.org/roh/university-hr/pt#PT_UNIVERSITY_HR_PTPEM> <http://www.w3.org/2004/02/skos/core#closeMatch> <http://skos.um.es/unescothes/C03965> .
+<http://purl.org/roh/university-hr/pt#PT_UNIVERSITY_HR_PTPEM> <http://www.w3.org/2004/02/skos/core#inScheme> <http://purl.org/roh/university-hr/pt#PTUniversityHumanResourcesList> .
+<http://purl.org/roh/university-hr/pt#PT_UNIVERSITY_HR_PTPEM> <http://www.w3.org/2004/02/skos/core#notation> "PTPEM" .
+<http://purl.org/roh/university-hr/pt#PT_UNIVERSITY_HR_PTPEM> <http://www.w3.org/2004/02/skos/core#prefLabel> "Profesor emérito"@es .
+<http://purl.org/roh/university-hr/pt#PT_UNIVERSITY_HR_PTPEM> <http://www.w3.org/2004/02/skos/core#prefLabel> "Profesor emérito"@gl .
+<http://purl.org/roh/university-hr/pt#PT_UNIVERSITY_HR_PTPEM> <http://www.w3.org/2004/02/skos/core#prefLabel> "Profesor eméritu"@ast .
+<http://purl.org/roh/university-hr/pt#PT_UNIVERSITY_HR_PTPEM> <http://www.w3.org/2004/02/skos/core#prefLabel> "Professor emèrit"@ca .
+<http://purl.org/roh/university-hr/pt#PT_UNIVERSITY_HR_PTPEM> <http://www.w3.org/2004/02/skos/core#prefLabel> "Professor emérito"@pt .
+# 
+# http://www.w3.org/2004/02/skos/core#Concept
+<http://www.w3.org/2004/02/skos/core#Concept> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.w3.org/2004/02/skos/core#Concept> <http://www.w3.org/2000/01/rdf-schema#label> "Concept"@en .
+# 
+# http://www.w3.org/2004/02/skos/core#ConceptScheme
+<http://www.w3.org/2004/02/skos/core#ConceptScheme> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.w3.org/2004/02/skos/core#ConceptScheme> <http://www.w3.org/2000/01/rdf-schema#label> "Concept Scheme"@en .
+# 
+# 
+# 
+# #################################################################
+# #
+# #    Individuals
+# #
+# #################################################################
+# 
+# 
+# http://purl.org/roh/university-hr/pt#PTUniversityHumanResourcesCodesList
+<http://purl.org/roh/university-hr/pt#PTUniversityHumanResourcesCodesList> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://purl.org/roh/university-hr/pt#PTUniversityHumanResourcesCodesList> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2004/02/skos/core#ConceptScheme> .
+<http://purl.org/roh/university-hr/pt#PTUniversityHumanResourcesCodesList> <http://www.w3.org/2000/01/rdf-schema#label> "Codes des resources humains des universités de Portugal"@fr .
+<http://purl.org/roh/university-hr/pt#PTUniversityHumanResourcesCodesList> <http://www.w3.org/2000/01/rdf-schema#label> "Codes for the human resources of the universities from Portugal"@en .
+<http://purl.org/roh/university-hr/pt#PTUniversityHumanResourcesCodesList> <http://www.w3.org/2000/01/rdf-schema#label> "Codis dels recursos humans de les universitats de Portugal"@ca .
+<http://purl.org/roh/university-hr/pt#PTUniversityHumanResourcesCodesList> <http://www.w3.org/2000/01/rdf-schema#label> "Códigos de los recursos humanos de las universidades de Portugal"@es .
+<http://purl.org/roh/university-hr/pt#PTUniversityHumanResourcesCodesList> <http://www.w3.org/2000/01/rdf-schema#label> "Códigos de los recursos humanos de les universidaes de Portugal"@ast .
+<http://purl.org/roh/university-hr/pt#PTUniversityHumanResourcesCodesList> <http://www.w3.org/2000/01/rdf-schema#label> "Códigos dos recursos humanos das universidades de Portugal"@gl .
+<http://purl.org/roh/university-hr/pt#PTUniversityHumanResourcesCodesList> <http://www.w3.org/2000/01/rdf-schema#label> "Códigos dos recursos humanos das universidades de Portugal"@pt .
+<http://purl.org/roh/university-hr/pt#PTUniversityHumanResourcesCodesList> <http://www.w3.org/2004/02/skos/core#prefLabel> "Codes des resources humains des universités de Portugal"@fr .
+<http://purl.org/roh/university-hr/pt#PTUniversityHumanResourcesCodesList> <http://www.w3.org/2004/02/skos/core#prefLabel> "Codes for the human resources of the universities from Portugal"@en .
+<http://purl.org/roh/university-hr/pt#PTUniversityHumanResourcesCodesList> <http://www.w3.org/2004/02/skos/core#prefLabel> "Codis dels recursos humans de les universitats de Portugal"@ca .
+<http://purl.org/roh/university-hr/pt#PTUniversityHumanResourcesCodesList> <http://www.w3.org/2004/02/skos/core#prefLabel> "Códigos de los recursos humanos de las universidades de España"@es .
+<http://purl.org/roh/university-hr/pt#PTUniversityHumanResourcesCodesList> <http://www.w3.org/2004/02/skos/core#prefLabel> "Códigos de los recursos humanos de les universidaes de Portugal"@ast .
+<http://purl.org/roh/university-hr/pt#PTUniversityHumanResourcesCodesList> <http://www.w3.org/2004/02/skos/core#prefLabel> "Códigos dos recursos humanos das universidades de Portugal"@gl .
+<http://purl.org/roh/university-hr/pt#PTUniversityHumanResourcesCodesList> <http://www.w3.org/2004/02/skos/core#prefLabel> "Códigos dos recursos humanos das universidades de Portugal"@pt .
+# 
+# http://purl.org/roh/university-hr/pt#PTUniversityHumanResourcesList
+<http://purl.org/roh/university-hr/pt#PTUniversityHumanResourcesList> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://purl.org/roh/university-hr/pt#PTUniversityHumanResourcesList> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2004/02/skos/core#ConceptScheme> .
+<http://purl.org/roh/university-hr/pt#PTUniversityHumanResourcesList> <http://www.w3.org/2000/01/rdf-schema#label> "Human resources of the universities from Portugal"@en .
+<http://purl.org/roh/university-hr/pt#PTUniversityHumanResourcesList> <http://www.w3.org/2000/01/rdf-schema#label> "Recursos humanos das universidades de Portugal"@gl .
+<http://purl.org/roh/university-hr/pt#PTUniversityHumanResourcesList> <http://www.w3.org/2000/01/rdf-schema#label> "Recursos humanos das universidades de Portugal"@pt .
+<http://purl.org/roh/university-hr/pt#PTUniversityHumanResourcesList> <http://www.w3.org/2000/01/rdf-schema#label> "Recursos humanos de las universidades de Portugal"@es .
+<http://purl.org/roh/university-hr/pt#PTUniversityHumanResourcesList> <http://www.w3.org/2000/01/rdf-schema#label> "Recursos humanos de les universidaes de Portugal"@ast .
+<http://purl.org/roh/university-hr/pt#PTUniversityHumanResourcesList> <http://www.w3.org/2000/01/rdf-schema#label> "Recursos humans de les universitats de Portugal"@ca .
+<http://purl.org/roh/university-hr/pt#PTUniversityHumanResourcesList> <http://www.w3.org/2000/01/rdf-schema#label> "Resources humains des universités de Portugal"@fr .
+<http://purl.org/roh/university-hr/pt#PTUniversityHumanResourcesList> <http://www.w3.org/2004/02/skos/core#prefLabel> "Human resources of the universities from Portugal"@en .
+<http://purl.org/roh/university-hr/pt#PTUniversityHumanResourcesList> <http://www.w3.org/2004/02/skos/core#prefLabel> "Recursos humanos das universidades de Portugal"@gl .
+<http://purl.org/roh/university-hr/pt#PTUniversityHumanResourcesList> <http://www.w3.org/2004/02/skos/core#prefLabel> "Recursos humanos das universidades de Portugal"@pt .
+<http://purl.org/roh/university-hr/pt#PTUniversityHumanResourcesList> <http://www.w3.org/2004/02/skos/core#prefLabel> "Recursos humanos de las universidades de Portugal"@es .
+<http://purl.org/roh/university-hr/pt#PTUniversityHumanResourcesList> <http://www.w3.org/2004/02/skos/core#prefLabel> "Recursos humanos de les universidaes de Portugal"@ast .
+<http://purl.org/roh/university-hr/pt#PTUniversityHumanResourcesList> <http://www.w3.org/2004/02/skos/core#prefLabel> "Recursos humans de les universitats de Portugal"@ca .
+<http://purl.org/roh/university-hr/pt#PTUniversityHumanResourcesList> <http://www.w3.org/2004/02/skos/core#prefLabel> "Resources humains des universités de Portugal"@fr .
+# 
+# http://purl.org/roh/university-hr/pt#PT_UNIVERSITY_HR_CODE_PTPAS
+<http://purl.org/roh/university-hr/pt#PT_UNIVERSITY_HR_CODE_PTPAS> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://purl.org/roh/university-hr/pt#PT_UNIVERSITY_HR_CODE_PTPAS> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2004/02/skos/core#Concept> .
+<http://purl.org/roh/university-hr/pt#PT_UNIVERSITY_HR_CODE_PTPAS> <http://purl.org/roh#codeOf> <http://purl.org/roh/university-hr/pt#PT_UNIVERSITY_HR_PTPAS> .
+<http://purl.org/roh/university-hr/pt#PT_UNIVERSITY_HR_CODE_PTPAS> <http://www.w3.org/2000/01/rdf-schema#label> "PTPAS" .
+<http://purl.org/roh/university-hr/pt#PT_UNIVERSITY_HR_CODE_PTPAS> <http://www.w3.org/2004/02/skos/core#inScheme> <http://purl.org/roh/university-hr/pt#PTUniversityHumanResourcesCodesList> .
+<http://purl.org/roh/university-hr/pt#PT_UNIVERSITY_HR_CODE_PTPAS> <http://www.w3.org/2004/02/skos/core#prefLabel> "PTPAS" .
+# 
+# http://purl.org/roh/university-hr/pt#PT_UNIVERSITY_HR_CODE_PTPAU
+<http://purl.org/roh/university-hr/pt#PT_UNIVERSITY_HR_CODE_PTPAU> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://purl.org/roh/university-hr/pt#PT_UNIVERSITY_HR_CODE_PTPAU> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2004/02/skos/core#Concept> .
+<http://purl.org/roh/university-hr/pt#PT_UNIVERSITY_HR_CODE_PTPAU> <http://purl.org/roh#codeOf> <http://purl.org/roh/university-hr/pt#PT_UNIVERSITY_HR_PTPAU> .
+<http://purl.org/roh/university-hr/pt#PT_UNIVERSITY_HR_CODE_PTPAU> <http://www.w3.org/2000/01/rdf-schema#label> "PTPAU" .
+<http://purl.org/roh/university-hr/pt#PT_UNIVERSITY_HR_CODE_PTPAU> <http://www.w3.org/2004/02/skos/core#inScheme> <http://purl.org/roh/university-hr/pt#PTUniversityHumanResourcesCodesList> .
+<http://purl.org/roh/university-hr/pt#PT_UNIVERSITY_HR_CODE_PTPAU> <http://www.w3.org/2004/02/skos/core#prefLabel> "PTPAU" .
+# 
+# http://purl.org/roh/university-hr/pt#PT_UNIVERSITY_HR_CODE_PTPC
+<http://purl.org/roh/university-hr/pt#PT_UNIVERSITY_HR_CODE_PTPC> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://purl.org/roh/university-hr/pt#PT_UNIVERSITY_HR_CODE_PTPC> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2004/02/skos/core#Concept> .
+<http://purl.org/roh/university-hr/pt#PT_UNIVERSITY_HR_CODE_PTPC> <http://purl.org/roh#codeOf> <http://purl.org/roh/university-hr/pt#PT_UNIVERSITY_HR_PTPC> .
+<http://purl.org/roh/university-hr/pt#PT_UNIVERSITY_HR_CODE_PTPC> <http://www.w3.org/2000/01/rdf-schema#label> "PTPC" .
+<http://purl.org/roh/university-hr/pt#PT_UNIVERSITY_HR_CODE_PTPC> <http://www.w3.org/2004/02/skos/core#inScheme> <http://purl.org/roh/university-hr/pt#PTUniversityHumanResourcesCodesList> .
+<http://purl.org/roh/university-hr/pt#PT_UNIVERSITY_HR_CODE_PTPC> <http://www.w3.org/2004/02/skos/core#prefLabel> "PTPC" .
+# 
+# http://purl.org/roh/university-hr/pt#PT_UNIVERSITY_HR_CODE_PTPEM
+<http://purl.org/roh/university-hr/pt#PT_UNIVERSITY_HR_CODE_PTPEM> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://purl.org/roh/university-hr/pt#PT_UNIVERSITY_HR_CODE_PTPEM> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2004/02/skos/core#Concept> .
+<http://purl.org/roh/university-hr/pt#PT_UNIVERSITY_HR_CODE_PTPEM> <http://purl.org/roh#codeOf> <http://purl.org/roh/university-hr/pt#PT_UNIVERSITY_HR_PTPEM> .
+<http://purl.org/roh/university-hr/pt#PT_UNIVERSITY_HR_CODE_PTPEM> <http://www.w3.org/2000/01/rdf-schema#label> "PTPEM" .
+<http://purl.org/roh/university-hr/pt#PT_UNIVERSITY_HR_CODE_PTPEM> <http://www.w3.org/2004/02/skos/core#inScheme> <http://purl.org/roh/university-hr/pt#PTUniversityHumanResourcesCodesList> .
+<http://purl.org/roh/university-hr/pt#PT_UNIVERSITY_HR_CODE_PTPEM> <http://www.w3.org/2004/02/skos/core#prefLabel> "PTPEM" .
+# 
+# Generated by the OWL API (version 5.1.14) https://github.com/owlcs/owlapi/
