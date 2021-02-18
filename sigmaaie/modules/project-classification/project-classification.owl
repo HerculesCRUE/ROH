@@ -124,7 +124,7 @@
     <!-- http://purl.org/roh#ProjectClassification -->
 
     <owl:Class rdf:about="http://purl.org/roh#ProjectClassification">
-        <rdfs:subClassOf rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+        <rdfs:subClassOf rdf:resource="http://www.w3.org/2004/02/skos/core#ConceptScheme"/>
         <rdfs:label xml:lang="es">Clasificación de Proyecto</rdfs:label>
         <rdfs:label xml:lang="en">Project Classification</rdfs:label>
     </owl:Class>
@@ -177,7 +177,7 @@
     <!-- http://purl.org/roh/project-classification#European -->
 
     <owl:NamedIndividual rdf:about="http://purl.org/roh/project-classification#European">
-        <rdf:type rdf:resource="http://purl.org/roh#ProjectClassification"/>
+        <skos:inScheme rdf:resource="http://purl.org/roh/project-classification#ProjectClassification"/>
         <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
     </owl:NamedIndividual>
     
@@ -186,7 +186,7 @@
     <!-- http://purl.org/roh/project-classification#ExcellentScience -->
 
     <owl:NamedIndividual rdf:about="http://purl.org/roh/project-classification#ExcellentScience">
-        <rdf:type rdf:resource="http://purl.org/roh#ProjectClassification"/>
+        <skos:inScheme rdf:resource="http://purl.org/roh/project-classification#ProjectClassification"/>
         <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
         <skos:broader rdf:resource="http://purl.org/roh/project-classification#Horizon2020"/>
     </owl:NamedIndividual>
@@ -196,7 +196,7 @@
     <!-- http://purl.org/roh/project-classification#Horizon2020 -->
 
     <owl:NamedIndividual rdf:about="http://purl.org/roh/project-classification#Horizon2020">
-        <rdf:type rdf:resource="http://purl.org/roh#ProjectClassification"/>
+        <skos:inScheme rdf:resource="http://purl.org/roh/project-classification#ProjectClassification"/>
         <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
         <skos:broader rdf:resource="http://purl.org/roh/project-classification#European"/>
     </owl:NamedIndividual>
@@ -206,7 +206,7 @@
     <!-- http://purl.org/roh/project-classification#ITN-ETN -->
 
     <owl:NamedIndividual rdf:about="http://purl.org/roh/project-classification#ITN-ETN">
-        <rdf:type rdf:resource="http://purl.org/roh#ProjectClassification"/>
+        <skos:inScheme rdf:resource="http://purl.org/roh/project-classification#ProjectClassification"/>
         <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
         <skos:broader rdf:resource="http://purl.org/roh/project-classification#ExcellentScience"/>
     </owl:NamedIndividual>
@@ -216,7 +216,7 @@
     <!-- http://purl.org/roh/project-classification#IndividualFellowships -->
 
     <owl:NamedIndividual rdf:about="http://purl.org/roh/project-classification#IndividualFellowships">
-        <rdf:type rdf:resource="http://purl.org/roh#ProjectClassification"/>
+        <skos:inScheme rdf:resource="http://purl.org/roh/project-classification#ProjectClassification"/>
         <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
         <skos:broader rdf:resource="http://purl.org/roh/project-classification#ExcellentScience"/>
     </owl:NamedIndividual>
@@ -226,7 +226,7 @@
     <!-- http://purl.org/roh/project-classification#Internal -->
 
     <owl:NamedIndividual rdf:about="http://purl.org/roh/project-classification#Internal">
-        <rdf:type rdf:resource="http://purl.org/roh#ProjectClassification"/>
+        <skos:inScheme rdf:resource="http://purl.org/roh/project-classification#ProjectClassification"/>
         <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
     </owl:NamedIndividual>
     
@@ -235,7 +235,7 @@
     <!-- http://purl.org/roh/project-classification#International -->
 
     <owl:NamedIndividual rdf:about="http://purl.org/roh/project-classification#International">
-        <rdf:type rdf:resource="http://purl.org/roh#ProjectClassification"/>
+        <skos:inScheme rdf:resource="http://purl.org/roh/project-classification#ProjectClassification"/>
         <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
     </owl:NamedIndividual>
     
@@ -244,7 +244,7 @@
     <!-- http://purl.org/roh/project-classification#Interreg -->
 
     <owl:NamedIndividual rdf:about="http://purl.org/roh/project-classification#Interreg">
-        <rdf:type rdf:resource="http://purl.org/roh#ProjectClassification"/>
+        <skos:inScheme rdf:resource="http://purl.org/roh/project-classification#ProjectClassification"/>
         <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
         <skos:broader rdf:resource="http://purl.org/roh/project-classification#European"/>
     </owl:NamedIndividual>
@@ -254,7 +254,7 @@
     <!-- http://purl.org/roh/project-classification#National -->
 
     <owl:NamedIndividual rdf:about="http://purl.org/roh/project-classification#National">
-        <rdf:type rdf:resource="http://purl.org/roh#ProjectClassification"/>
+        <skos:inScheme rdf:resource="http://purl.org/roh/project-classification#ProjectClassification"/>
         <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
     </owl:NamedIndividual>
     
@@ -263,7 +263,7 @@
     <!-- http://purl.org/roh/project-classification#ProjectClassification -->
 
     <owl:NamedIndividual rdf:about="http://purl.org/roh/project-classification#ProjectClassification">
-        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#ConceptScheme"/>
+        <rdf:type rdf:resource="http://purl.org/roh#ProjectClassification"/>
         <skos:hasTopConcept rdf:resource="http://purl.org/roh/project-classification#European"/>
         <skos:hasTopConcept rdf:resource="http://purl.org/roh/project-classification#Internal"/>
         <skos:hasTopConcept rdf:resource="http://purl.org/roh/project-classification#International"/>
@@ -276,7 +276,7 @@
     <!-- http://purl.org/roh/project-classification#Regional -->
 
     <owl:NamedIndividual rdf:about="http://purl.org/roh/project-classification#Regional">
-        <rdf:type rdf:resource="http://purl.org/roh#ProjectClassification"/>
+        <skos:inScheme rdf:resource="http://purl.org/roh/project-classification#ProjectClassification"/>
         <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
     </owl:NamedIndividual>
     
@@ -285,7 +285,7 @@
     <!-- http://purl.org/roh/project-classification#RegionsofEurope -->
 
     <owl:NamedIndividual rdf:about="http://purl.org/roh/project-classification#RegionsofEurope">
-        <rdf:type rdf:resource="http://purl.org/roh#ProjectClassification"/>
+        <skos:inScheme rdf:resource="http://purl.org/roh/project-classification#ProjectClassification"/>
         <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
         <skos:broader rdf:resource="http://purl.org/roh/project-classification#Interreg"/>
     </owl:NamedIndividual>
@@ -295,7 +295,7 @@
     <!-- http://purl.org/roh/project-classification#SC1 -->
 
     <owl:NamedIndividual rdf:about="http://purl.org/roh/project-classification#SC1">
-        <rdf:type rdf:resource="http://purl.org/roh#ProjectClassification"/>
+        <skos:inScheme rdf:resource="http://purl.org/roh/project-classification#ProjectClassification"/>
         <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
         <skos:broader rdf:resource="http://purl.org/roh/project-classification#SocietalChallenges"/>
     </owl:NamedIndividual>
@@ -305,7 +305,7 @@
     <!-- http://purl.org/roh/project-classification#SC2 -->
 
     <owl:NamedIndividual rdf:about="http://purl.org/roh/project-classification#SC2">
-        <rdf:type rdf:resource="http://purl.org/roh#ProjectClassification"/>
+        <skos:inScheme rdf:resource="http://purl.org/roh/project-classification#ProjectClassification"/>
         <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
         <skos:broader rdf:resource="http://purl.org/roh/project-classification#SocietalChallenges"/>
     </owl:NamedIndividual>
@@ -315,7 +315,7 @@
     <!-- http://purl.org/roh/project-classification#SocietalChallenges -->
 
     <owl:NamedIndividual rdf:about="http://purl.org/roh/project-classification#SocietalChallenges">
-        <rdf:type rdf:resource="http://purl.org/roh#ProjectClassification"/>
+        <skos:inScheme rdf:resource="http://purl.org/roh/project-classification#ProjectClassification"/>
         <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
         <skos:broader rdf:resource="http://purl.org/roh/project-classification#Horizon2020"/>
     </owl:NamedIndividual>
@@ -325,7 +325,7 @@
     <!-- http://purl.org/roh/project-classification#Sudoe -->
 
     <owl:NamedIndividual rdf:about="http://purl.org/roh/project-classification#Sudoe">
-        <rdf:type rdf:resource="http://purl.org/roh#ProjectClassification"/>
+        <skos:inScheme rdf:resource="http://purl.org/roh/project-classification#ProjectClassification"/>
         <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
         <skos:broader rdf:resource="http://purl.org/roh/project-classification#Interreg"/>
     </owl:NamedIndividual>

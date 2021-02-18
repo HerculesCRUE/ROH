@@ -8,7 +8,12 @@
 @prefix roh: <http://purl.org/roh#> .
 @prefix rohu: <http://purl.org/roh/university-structure#> .
 
-vivo:University rdfs:subClassOf foaf:Organization .
+foaf:Organization a owl:Class ;
+        rdfs:label "Organization"@en .
+
+vivo:University a owl:Class ;
+        rdfs:label "University"@en ;
+        rdfs:subClassOf foaf:Organization .
 
 rohu:ES_UNIVERSITY_VAT_NUMBER_Q1132001G
         a               skos:Concept ;

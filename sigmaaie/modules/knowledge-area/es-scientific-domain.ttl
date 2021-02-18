@@ -9,15 +9,25 @@
 @prefix roh:     <http://purl.org/roh#> .
 
 roh:KnowledgeArea
-      a       owl:Class .
+      a       owl:Class ;
+      rdfs:subClassOf skos:ConceptScheme ;
+      rdfs:label "Knowledge Area"@en .
 
 roh:ESScientificDomain
       a       owl:Class ;
       rdfs:label "ES Scientific Domain"@en ;
       rdfs:subClassOf roh:KnowledgeArea .
 
+skos:Concept
+      a owl:Class ;
+      rdfs:label "Concept"@en .
+
+skos:ConceptScheme
+      a owl:Class ;
+      rdfs:label "Concept Scheme"@en .
+
 rohsci:ES_SCIENTIFIC_DOMAIN_LEVEL_3_MCLIJMIG
-      a       roh:ESScientificDomain ;
+      a       skos:Concept ;
       rdfs:label "Miscelánea" ;
       roh:hasCode rohsci:ES_SCIENTIFIC_DOMAIN_LEVEL_3_CODE_MCLIJMIG ;
       skos:broader rohsci:ES_SCIENTIFIC_DOMAIN_LEVEL_2_MCLI ;
@@ -26,7 +36,7 @@ rohsci:ES_SCIENTIFIC_DOMAIN_LEVEL_3_MCLIJMIG
       skos:prefLabel "Miscel·lània"@ca , "Miscellany"@en , "Diversos"@pt , "Miscelánea" , "Miscelánea"@es , "Miscelánea"@ast , "Miscelánea"@gl , "Divers"@fr .
 
 rohsci:ES_SCIENTIFIC_DOMAIN_LEVEL_3_MTMANAL
-      a       roh:ESScientificDomain ;
+      a       skos:Concept ;
       rdfs:label "Análisis numérico" ;
       roh:hasCode rohsci:ES_SCIENTIFIC_DOMAIN_LEVEL_3_CODE_MTMANAL ;
       skos:broader rohsci:ES_SCIENTIFIC_DOMAIN_LEVEL_2_MTM ;
@@ -36,14 +46,14 @@ rohsci:ES_SCIENTIFIC_DOMAIN_LEVEL_3_MTMANAL
       skos:prefLabel "Numerical analysis"@en , "Análisis numérico"@ast , "Análisis numérico" , "Análisis numérico"@es , "Análisis numérico"@an , "Análise numérica"@gl , "Análise numérica"@pt , "Analyse numérique"@fr , "Anàlisi numèrica"@ca .
 
 rohsci:ES_SCIENTIFIC_DOMAIN_LEVEL_3_CODE_CTPETR
-      a       roh:ESScientificDomain ;
+      a       skos:Concept ;
       rdfs:label "CTPETR" ;
       roh:codeOf rohsci:ES_SCIENTIFIC_DOMAIN_LEVEL_3_CTPETR ;
       skos:inScheme rohsci:ESscientificDomains3rdCodeList ;
       skos:prefLabel "CTPETR" .
 
 rohsci:ES_SCIENTIFIC_DOMAIN_LEVEL_3_FFIRKXR
-      a       roh:ESScientificDomain ;
+      a       skos:Concept ;
       rdfs:label "Literatura" ;
       roh:hasCode rohsci:ES_SCIENTIFIC_DOMAIN_LEVEL_3_CODE_FFIRKXR ;
       skos:broader rohsci:ES_SCIENTIFIC_DOMAIN_LEVEL_2_FFI ;
@@ -53,7 +63,7 @@ rohsci:ES_SCIENTIFIC_DOMAIN_LEVEL_3_FFIRKXR
       skos:prefLabel "Literature"@en , "Littérature"@fr , "Literatura"@pt , "Literatura" , "Literatura"@es , "Literatura"@gl , "Literatura"@ca , "Lliteratura"@ast .
 
 rohsci:ES_SCIENTIFIC_DOMAIN_LEVEL_3_HALMCG
-      a       roh:ESScientificDomain ;
+      a       skos:Concept ;
       rdfs:label "Historia antigua" ;
       roh:hasCode rohsci:ES_SCIENTIFIC_DOMAIN_LEVEL_3_CODE_HALMCG ;
       skos:broader rohsci:ES_SCIENTIFIC_DOMAIN_LEVEL_2_HA ;
@@ -63,21 +73,21 @@ rohsci:ES_SCIENTIFIC_DOMAIN_LEVEL_3_HALMCG
       skos:prefLabel "Histoire ancienne"@fr , "História antiga"@pt , "Historia antiga"@gl , "Historia antiga"@ast , "Història antiga"@ca , "Historia antigua" , "Historia antigua"@es , "Old history"@en .
 
 rohsci:ES_SCIENTIFIC_DOMAIN_LEVEL_3_CODE_FFIVCZF
-      a       roh:ESScientificDomain ;
+      a       skos:Concept ;
       rdfs:label "FFIVCZF" ;
       roh:codeOf rohsci:ES_SCIENTIFIC_DOMAIN_LEVEL_3_FFIVCZF ;
       skos:inScheme rohsci:ESscientificDomains3rdCodeList ;
       skos:prefLabel "FFIVCZF" .
 
 rohsci:ES_SCIENTIFIC_DOMAIN_LEVEL_2_CODE_HA
-      a       roh:ESScientificDomain ;
+      a       skos:Concept ;
       rdfs:label "HA" ;
       roh:codeOf rohsci:ES_SCIENTIFIC_DOMAIN_LEVEL_2_HA ;
       skos:inScheme rohsci:ESscientificDomains2ndCodeList ;
       skos:prefLabel "HA" .
 
 rohsci:ES_SCIENTIFIC_DOMAIN_LEVEL_3_BMEDPJHL
-      a       roh:ESScientificDomain ;
+      a       skos:Concept ;
       rdfs:label "Cardiovascular" ;
       roh:hasCode rohsci:ES_SCIENTIFIC_DOMAIN_LEVEL_3_CODE_BMEDPJHL ;
       skos:broader rohsci:ES_SCIENTIFIC_DOMAIN_LEVEL_2_BMED ;
@@ -86,49 +96,49 @@ rohsci:ES_SCIENTIFIC_DOMAIN_LEVEL_3_BMEDPJHL
       skos:prefLabel "Cardiovasculaire"@fr , "Cardiovascular"@ast , "Cardiovascular" , "Cardiovascular"@es , "Cardiovascular"@ca , "Cardiovascular"@gl , "Cardiovascular"@en , "Cardiovascular"@pt .
 
 rohsci:ES_SCIENTIFIC_DOMAIN_LEVEL_3_CODE_BFSHRRE
-      a       roh:ESScientificDomain ;
+      a       skos:Concept ;
       rdfs:label "BFSHRRE" ;
       roh:codeOf rohsci:ES_SCIENTIFIC_DOMAIN_LEVEL_3_BFSHRRE ;
       skos:inScheme rohsci:ESscientificDomains3rdCodeList ;
       skos:prefLabel "BFSHRRE" .
 
 rohsci:ES_SCIENTIFIC_DOMAIN_LEVEL_3_CODE_HAQGZR
-      a       roh:ESScientificDomain ;
+      a       skos:Concept ;
       rdfs:label "HAQGZR" ;
       roh:codeOf rohsci:ES_SCIENTIFIC_DOMAIN_LEVEL_3_HAQGZR ;
       skos:inScheme rohsci:ESscientificDomains3rdCodeList ;
       skos:prefLabel "HAQGZR" .
 
 rohsci:ES_SCIENTIFIC_DOMAIN_LEVEL_3_CODE_MTMALGE
-      a       roh:ESScientificDomain ;
+      a       skos:Concept ;
       rdfs:label "MTMALGE" ;
       roh:codeOf rohsci:ES_SCIENTIFIC_DOMAIN_LEVEL_3_MTMALGE ;
       skos:inScheme rohsci:ESscientificDomains3rdCodeList ;
       skos:prefLabel "MTMALGE" .
 
 rohsci:ES_SCIENTIFIC_DOMAIN_LEVEL_3_CODE_CTMIN
-      a       roh:ESScientificDomain ;
+      a       skos:Concept ;
       rdfs:label "CTMIN" ;
       roh:codeOf rohsci:ES_SCIENTIFIC_DOMAIN_LEVEL_3_CTMIN ;
       skos:inScheme rohsci:ESscientificDomains3rdCodeList ;
       skos:prefLabel "CTMIN" .
 
 rohsci:ES_SCIENTIFIC_DOMAIN_LEVEL_3_CODE_MCLICFDU
-      a       roh:ESScientificDomain ;
+      a       skos:Concept ;
       rdfs:label "MCLICFDU" ;
       roh:codeOf rohsci:ES_SCIENTIFIC_DOMAIN_LEVEL_3_MCLICFDU ;
       skos:inScheme rohsci:ESscientificDomains3rdCodeList ;
       skos:prefLabel "MCLICFDU" .
 
 rohsci:ES_SCIENTIFIC_DOMAIN_LEVEL_3_CODE_MTMANAM
-      a       roh:ESScientificDomain ;
+      a       skos:Concept ;
       rdfs:label "MTMANAM" ;
       roh:codeOf rohsci:ES_SCIENTIFIC_DOMAIN_LEVEL_3_MTMANAM ;
       skos:inScheme rohsci:ESscientificDomains3rdCodeList ;
       skos:prefLabel "MTMANAM" .
 
 rohsci:ES_SCIENTIFIC_DOMAIN_LEVEL_3_FFIURLV
-      a       roh:ESScientificDomain ;
+      a       skos:Concept ;
       rdfs:label "Lógica y filosofía de la ciencia" ;
       roh:hasCode rohsci:ES_SCIENTIFIC_DOMAIN_LEVEL_3_CODE_FFIURLV ;
       skos:broader rohsci:ES_SCIENTIFIC_DOMAIN_LEVEL_2_FFI ;
@@ -137,35 +147,35 @@ rohsci:ES_SCIENTIFIC_DOMAIN_LEVEL_3_FFIURLV
       skos:prefLabel "Lógica e filosofia da ciência"@pt , "Lógica y filosofía de la ciencia" , "Lógica y filosofía de la ciencia"@es , "Logique et philosophie des sciences"@fr , "Lóxica e filosofía da ciencia"@gl , "Logic and philosophy of science"@en , "Lóxica y filosofía de la ciencia"@ast , "Lògica i filosofia de la ciència"@ca .
 
 rohsci:ES_SCIENTIFIC_DOMAIN_LEVEL_3_CODE_CTGEOF
-      a       roh:ESScientificDomain ;
+      a       skos:Concept ;
       rdfs:label "CTGEOF" ;
       roh:codeOf rohsci:ES_SCIENTIFIC_DOMAIN_LEVEL_3_CTGEOF ;
       skos:inScheme rohsci:ESscientificDomains3rdCodeList ;
       skos:prefLabel "CTGEOF" .
 
 rohsci:ES_SCIENTIFIC_DOMAIN_LEVEL_3_CODE_BMEDJNIS
-      a       roh:ESScientificDomain ;
+      a       skos:Concept ;
       rdfs:label "BMEDJNIS" ;
       roh:codeOf rohsci:ES_SCIENTIFIC_DOMAIN_LEVEL_3_BMEDJNIS ;
       skos:inScheme rohsci:ESscientificDomains3rdCodeList ;
       skos:prefLabel "BMEDJNIS" .
 
 rohsci:ES_SCIENTIFIC_DOMAIN_LEVEL_3_CODE_MCLIAJCV
-      a       roh:ESScientificDomain ;
+      a       skos:Concept ;
       rdfs:label "MCLIAJCV" ;
       roh:codeOf rohsci:ES_SCIENTIFIC_DOMAIN_LEVEL_3_MCLIAJCV ;
       skos:inScheme rohsci:ESscientificDomains3rdCodeList ;
       skos:prefLabel "MCLIAJCV" .
 
 rohsci:ES_SCIENTIFIC_DOMAIN_LEVEL_2_CODE_CS
-      a       roh:ESScientificDomain ;
+      a       skos:Concept ;
       rdfs:label "CS" ;
       roh:codeOf rohsci:ES_SCIENTIFIC_DOMAIN_LEVEL_2_CS ;
       skos:inScheme rohsci:ESscientificDomains2ndCodeList ;
       skos:prefLabel "CS" .
 
 rohsci:ES_SCIENTIFIC_DOMAIN_LEVEL_3_BFSDGRC
-      a       roh:ESScientificDomain ;
+      a       skos:Concept ;
       rdfs:label "Virología" ;
       roh:hasCode rohsci:ES_SCIENTIFIC_DOMAIN_LEVEL_3_CODE_BFSDGRC ;
       skos:broader rohsci:ES_SCIENTIFIC_DOMAIN_LEVEL_2_BFS ;
@@ -175,14 +185,14 @@ rohsci:ES_SCIENTIFIC_DOMAIN_LEVEL_3_BFSDGRC
       skos:prefLabel "Viroloxía"@ast , "Viroloxía"@gl , "Virologie"@fr , "Virology"@en , "Virología" , "Virología"@es , "Virologia"@ca , "Virologia"@pt .
 
 rohsci:ES_SCIENTIFIC_DOMAIN_LEVEL_3_CODE_BFSEEAB
-      a       roh:ESScientificDomain ;
+      a       skos:Concept ;
       rdfs:label "BFSEEAB" ;
       roh:codeOf rohsci:ES_SCIENTIFIC_DOMAIN_LEVEL_3_BFSEEAB ;
       skos:inScheme rohsci:ESscientificDomains3rdCodeList ;
       skos:prefLabel "BFSEEAB" .
 
 rohsci:ES_SCIENTIFIC_DOMAIN_LEVEL_3_CTMETE
-      a       roh:ESScientificDomain ;
+      a       skos:Concept ;
       rdfs:label "Meteorología" ;
       roh:hasCode rohsci:ES_SCIENTIFIC_DOMAIN_LEVEL_3_CODE_CTMETE ;
       skos:broader rohsci:ES_SCIENTIFIC_DOMAIN_LEVEL_2_CT ;
@@ -192,7 +202,7 @@ rohsci:ES_SCIENTIFIC_DOMAIN_LEVEL_3_CTMETE
       skos:prefLabel "Meteorology"@en , "Météorologie"@fr , "Meteorología"@es , "Meteorología" , "Meteoroloxía"@ast , "Meteoroloxía"@gl , "Meteorologia"@ca , "Meteorologia"@pt , "Meteorologia"@ext .
 
 rohsci:ES_SCIENTIFIC_DOMAIN_LEVEL_2_MTM
-      a       roh:ESScientificDomain ;
+      a       skos:Concept ;
       rdfs:label "Matemáticas" ;
       roh:hasCode rohsci:ES_SCIENTIFIC_DOMAIN_LEVEL_2_CODE_MTM ;
       skos:broader rohsci:ES_SCIENTIFIC_DOMAIN_LEVEL_1_CB ;
@@ -203,7 +213,7 @@ rohsci:ES_SCIENTIFIC_DOMAIN_LEVEL_2_MTM
       skos:prefLabel "Matemàtiques"@ca , "Matemática"@pt , "Matemáticas"@gl , "Mathématiques"@fr , "Mathematics"@en , "Matemáticas" , "Matemáticas"@es , "Matemáticas"@ast .
 
 rohsci:ES_SCIENTIFIC_DOMAIN_LEVEL_2_IME
-      a       roh:ESScientificDomain ;
+      a       skos:Concept ;
       rdfs:label "Ingeniería mecánica, naval y aeronáutica" ;
       roh:hasCode rohsci:ES_SCIENTIFIC_DOMAIN_LEVEL_2_CODE_IME ;
       skos:broader rohsci:ES_SCIENTIFIC_DOMAIN_LEVEL_1_IYT ;
@@ -212,21 +222,21 @@ rohsci:ES_SCIENTIFIC_DOMAIN_LEVEL_2_IME
       skos:prefLabel "Mechanical, naval and aeronautical engineering"@en , "Ingeniería mecánica, naval y aeronáutica" , "Ingeniería mecánica, naval y aeronáutica"@es , "Enxeñaría mecánica, naval e aeronáutica"@gl , "Ingénierie mécanique, naval et aéronautique"@fr , "Enginyeria mecànica, naval i aeronàutica"@ca , "Inxeniería mecánica, naval y aeronáutica"@ast , "Engenharia mecânica, naval e aeronáutica"@pt .
 
 rohsci:ES_SCIENTIFIC_DOMAIN_LEVEL_3_CODE_CTPALE
-      a       roh:ESScientificDomain ;
+      a       skos:Concept ;
       rdfs:label "CTPALE" ;
       roh:codeOf rohsci:ES_SCIENTIFIC_DOMAIN_LEVEL_3_CTPALE ;
       skos:inScheme rohsci:ESscientificDomains3rdCodeList ;
       skos:prefLabel "CTPALE" .
 
 rohsci:ES_SCIENTIFIC_DOMAIN_LEVEL_3_CODE_CTMATE
-      a       roh:ESScientificDomain ;
+      a       skos:Concept ;
       rdfs:label "CTMATE" ;
       roh:codeOf rohsci:ES_SCIENTIFIC_DOMAIN_LEVEL_3_CTMATE ;
       skos:inScheme rohsci:ESscientificDomains3rdCodeList ;
       skos:prefLabel "CTMATE" .
 
 rohsci:ES_SCIENTIFIC_DOMAIN_LEVEL_3_BFSGSYN
-      a       roh:ESScientificDomain ;
+      a       skos:Concept ;
       rdfs:label "Bioinformática" ;
       roh:hasCode rohsci:ES_SCIENTIFIC_DOMAIN_LEVEL_3_CODE_BFSGSYN ;
       skos:broader rohsci:ES_SCIENTIFIC_DOMAIN_LEVEL_2_BFS ;
@@ -235,14 +245,14 @@ rohsci:ES_SCIENTIFIC_DOMAIN_LEVEL_3_BFSGSYN
       skos:prefLabel "Bioinformática"@gl , "Bioinformática" , "Bioinformática"@es , "Bioinformática"@ast , "Bioinformática"@pt , "Bioinformàtica"@ca , "Bioinformatics"@en , "Bioinformatique"@fr .
 
 rohsci:ES_SCIENTIFIC_DOMAIN_LEVEL_2_CODE_BVAE
-      a       roh:ESScientificDomain ;
+      a       skos:Concept ;
       rdfs:label "BVAE" ;
       roh:codeOf rohsci:ES_SCIENTIFIC_DOMAIN_LEVEL_2_BVAE ;
       skos:inScheme rohsci:ESscientificDomains2ndCodeList ;
       skos:prefLabel "BVAE" .
 
 rohsci:ES_SCIENTIFIC_DOMAIN_LEVEL_3_CTGEOD
-      a       roh:ESScientificDomain ;
+      a       skos:Concept ;
       rdfs:label "Geodinámica interna" ;
       roh:hasCode rohsci:ES_SCIENTIFIC_DOMAIN_LEVEL_3_CODE_CTGEOD ;
       skos:broader rohsci:ES_SCIENTIFIC_DOMAIN_LEVEL_2_CT ;
@@ -252,21 +262,21 @@ rohsci:ES_SCIENTIFIC_DOMAIN_LEVEL_3_CTGEOD
       skos:prefLabel "Xeodinámica interna"@gl , "Geodinâmica interna"@pt , "Geodinámica interna"@es , "Geodinámica interna" , "Xeodinámica interno"@ast , "Geodinàmica Interna"@ca , "Internal geodynamics"@en , "Géodynamique interne"@fr .
 
 rohsci:ES_SCIENTIFIC_DOMAIN_LEVEL_3_CODE_MTMTOPO
-      a       roh:ESScientificDomain ;
+      a       skos:Concept ;
       rdfs:label "MTMTOPO" ;
       roh:codeOf rohsci:ES_SCIENTIFIC_DOMAIN_LEVEL_3_MTMTOPO ;
       skos:inScheme rohsci:ESscientificDomains3rdCodeList ;
       skos:prefLabel "MTMTOPO" .
 
 rohsci:ES_SCIENTIFIC_DOMAIN_LEVEL_3_CODE_HAYSVE
-      a       roh:ESScientificDomain ;
+      a       skos:Concept ;
       rdfs:label "HAYSVE" ;
       roh:codeOf rohsci:ES_SCIENTIFIC_DOMAIN_LEVEL_3_HAYSVE ;
       skos:inScheme rohsci:ESscientificDomains3rdCodeList ;
       skos:prefLabel "HAYSVE" .
 
 rohsci:ES_SCIENTIFIC_DOMAIN_LEVEL_3_PSBODX
-      a       roh:ESScientificDomain ;
+      a       skos:Concept ;
       rdfs:label "Metodología" ;
       roh:hasCode rohsci:ES_SCIENTIFIC_DOMAIN_LEVEL_3_CODE_PSBODX ;
       skos:broader rohsci:ES_SCIENTIFIC_DOMAIN_LEVEL_2_PS ;
@@ -276,21 +286,21 @@ rohsci:ES_SCIENTIFIC_DOMAIN_LEVEL_3_PSBODX
       skos:prefLabel "Metodoloxía"@ast , "Metodoloxía"@gl , "Metodología"@es , "Metodología" , "Methodology"@en , "Metodologia"@ca , "Metodologia"@pt , "Méthodologie"@fr .
 
 rohsci:ES_SCIENTIFIC_DOMAIN_LEVEL_3_CODE_BMEDTINW
-      a       roh:ESScientificDomain ;
+      a       skos:Concept ;
       rdfs:label "BMEDTINW" ;
       roh:codeOf rohsci:ES_SCIENTIFIC_DOMAIN_LEVEL_3_BMEDTINW ;
       skos:inScheme rohsci:ESscientificDomains3rdCodeList ;
       skos:prefLabel "BMEDTINW" .
 
 rohsci:ES_SCIENTIFIC_DOMAIN_LEVEL_3_CODE_BMEDMJHF
-      a       roh:ESScientificDomain ;
+      a       skos:Concept ;
       rdfs:label "BMEDMJHF" ;
       roh:codeOf rohsci:ES_SCIENTIFIC_DOMAIN_LEVEL_3_BMEDMJHF ;
       skos:inScheme rohsci:ESscientificDomains3rdCodeList ;
       skos:prefLabel "BMEDMJHF" .
 
 rohsci:ES_SCIENTIFIC_DOMAIN_LEVEL_3_BFSCXPL
-      a       roh:ESScientificDomain ;
+      a       skos:Concept ;
       rdfs:label "Neurobiología y desarrollo" ;
       roh:hasCode rohsci:ES_SCIENTIFIC_DOMAIN_LEVEL_3_CODE_BFSCXPL ;
       skos:broader rohsci:ES_SCIENTIFIC_DOMAIN_LEVEL_2_BFS ;
@@ -299,7 +309,7 @@ rohsci:ES_SCIENTIFIC_DOMAIN_LEVEL_3_BFSCXPL
       skos:prefLabel "Neurobioloxía e desenvolvemento"@gl , "Neurobiologia i desenvolupament"@ca , "Neurobiology and Development"@en , "Neurobiologia e Desenvolvimento"@pt , "Neurobioloxía y desendolcamientu"@ast , "Neurobiología y desarrollo"@es , "Neurobiología y desarrollo" , "Neurobiologie et développement"@fr .
 
 rohsci:ES_SCIENTIFIC_DOMAIN_LEVEL_2_MCLI
-      a       roh:ESScientificDomain ;
+      a       skos:Concept ;
       rdfs:label "Medicina clínica y epidemiología" ;
       roh:hasCode rohsci:ES_SCIENTIFIC_DOMAIN_LEVEL_2_CODE_MCLI ;
       skos:broader rohsci:ES_SCIENTIFIC_DOMAIN_LEVEL_1_CVS ;
@@ -309,7 +319,7 @@ rohsci:ES_SCIENTIFIC_DOMAIN_LEVEL_2_MCLI
       skos:prefLabel "Medicina Clínica e Epidemioloxía"@gl , "Medicina clínica e epidemiologia"@pt , "Medicina clínica y epidemiología" , "Medicina clínica y epidemiología"@es , "Médecine clinique et épidémiologie"@fr , "Medicina clínica y epidemioloxía"@ast , "Clinical medicine and epidemiology"@en , "Medicina clínica i epidemiologia"@ca .
 
 rohsci:ES_SCIENTIFIC_DOMAIN_LEVEL_3_HAQGZR
-      a       roh:ESScientificDomain ;
+      a       skos:Concept ;
       rdfs:label "Prehistoria" ;
       roh:hasCode rohsci:ES_SCIENTIFIC_DOMAIN_LEVEL_3_CODE_HAQGZR ;
       skos:broader rohsci:ES_SCIENTIFIC_DOMAIN_LEVEL_2_HA ;
@@ -319,7 +329,7 @@ rohsci:ES_SCIENTIFIC_DOMAIN_LEVEL_3_HAQGZR
       skos:prefLabel "Préhistoire"@fr , "Prehistory"@en , "Prehistoria"@es , "Prehistoria" , "Prehistoria"@ast , "Prehistoria"@gl , "Pré-história"@pt , "Prehistòria"@ca .
 
 rohsci:ES_SCIENTIFIC_DOMAIN_LEVEL_3_FFIYMLQ
-      a       roh:ESScientificDomain ;
+      a       skos:Concept ;
       rdfs:label "Teoría de la literatura" ;
       roh:hasCode rohsci:ES_SCIENTIFIC_DOMAIN_LEVEL_3_CODE_FFIYMLQ ;
       skos:broader rohsci:ES_SCIENTIFIC_DOMAIN_LEVEL_2_FFI ;
@@ -328,7 +338,7 @@ rohsci:ES_SCIENTIFIC_DOMAIN_LEVEL_3_FFIYMLQ
       skos:prefLabel "Teoria de la literatura"@ca , "Théorie de la littérature"@fr , "Teoría da literatura"@gl , "Teoria da literatura"@pt , "Literature theory"@en , "Teoría de la lliteratura"@ast , "Teoría de la literatura" , "Teoría de la literatura"@es .
 
 rohsci:ES_SCIENTIFIC_DOMAIN_LEVEL_3_BMEDJNIS
-      a       roh:ESScientificDomain ;
+      a       skos:Concept ;
       rdfs:label "Inmunología" ;
       roh:hasCode rohsci:ES_SCIENTIFIC_DOMAIN_LEVEL_3_CODE_BMEDJNIS ;
       skos:broader rohsci:ES_SCIENTIFIC_DOMAIN_LEVEL_2_BMED ;
@@ -337,14 +347,14 @@ rohsci:ES_SCIENTIFIC_DOMAIN_LEVEL_3_BMEDJNIS
       skos:prefLabel "Imunologia"@pt , "Immunologia"@ca , "Inmunoloxía"@gl , "Inmunoloxía"@ast , "Immunologie"@fr , "Immunology"@en , "Inmunología" , "Inmunología"@es .
 
 rohsci:ES_SCIENTIFIC_DOMAIN_LEVEL_3_CODE_MCLIATZZ
-      a       roh:ESScientificDomain ;
+      a       skos:Concept ;
       rdfs:label "MCLIATZZ" ;
       roh:codeOf rohsci:ES_SCIENTIFIC_DOMAIN_LEVEL_3_MCLIATZZ ;
       skos:inScheme rohsci:ESscientificDomains3rdCodeList ;
       skos:prefLabel "MCLIATZZ" .
 
 rohsci:ES_SCIENTIFIC_DOMAIN_LEVEL_3_BMEDDHHL
-      a       roh:ESScientificDomain ;
+      a       skos:Concept ;
       rdfs:label "Farmacología Molecular" ;
       roh:hasCode rohsci:ES_SCIENTIFIC_DOMAIN_LEVEL_3_CODE_BMEDDHHL ;
       skos:broader rohsci:ES_SCIENTIFIC_DOMAIN_LEVEL_2_BMED ;
@@ -353,7 +363,7 @@ rohsci:ES_SCIENTIFIC_DOMAIN_LEVEL_3_BMEDDHHL
       skos:prefLabel "Farmacología Molecular" , "Farmacología Molecular"@es , "Molecular Pharmacology"@en , "Farmacoloxía Molecular"@gl , "Farmacologia Molecular"@pt , "Farmacologia Molecular"@ca , "Pharmacologie moléculaire"@fr , "Farmacoloxía molecular"@ast .
 
 rohsci:ES_SCIENTIFIC_DOMAIN_LEVEL_3_CTFISP
-      a       roh:ESScientificDomain ;
+      a       skos:Concept ;
       rdfs:label "Física de partículas" ;
       roh:hasCode rohsci:ES_SCIENTIFIC_DOMAIN_LEVEL_3_CODE_CTFISP ;
       skos:broader rohsci:ES_SCIENTIFIC_DOMAIN_LEVEL_2_FI ;
@@ -362,14 +372,14 @@ rohsci:ES_SCIENTIFIC_DOMAIN_LEVEL_3_CTFISP
       skos:prefLabel "Particle physics"@en , "Physique des particules"@fr , "Física de partículas"@es , "Física de partículas" , "Física de partículas"@gl , "Física de partículas"@pt , "Física de partícules"@ast , "Física de partícules"@ca .
 
 rohsci:ES_SCIENTIFIC_DOMAIN_LEVEL_2_CODE_DER
-      a       roh:ESScientificDomain ;
+      a       skos:Concept ;
       rdfs:label "DER" ;
       roh:codeOf rohsci:ES_SCIENTIFIC_DOMAIN_LEVEL_2_DER ;
       skos:inScheme rohsci:ESscientificDomains2ndCodeList ;
       skos:prefLabel "DER" .
 
 rohsci:ES_SCIENTIFIC_DOMAIN_LEVEL_3_HAQJKH
-      a       roh:ESScientificDomain ;
+      a       skos:Concept ;
       rdfs:label "Historia contemporánea" ;
       roh:hasCode rohsci:ES_SCIENTIFIC_DOMAIN_LEVEL_3_CODE_HAQJKH ;
       skos:broader rohsci:ES_SCIENTIFIC_DOMAIN_LEVEL_2_HA ;
@@ -378,34 +388,34 @@ rohsci:ES_SCIENTIFIC_DOMAIN_LEVEL_3_HAQJKH
       skos:prefLabel "Histoire contemporaine"@fr , "Contemporary history"@en , "Història contemporània"@ca , "Historia contemporánea" , "Historia contemporánea"@es , "Historia contemporánea"@ast , "Historia contemporánea"@gl , "História contemporânea"@pt .
 
 rohsci:ES_SCIENTIFIC_DOMAIN_LEVEL_2_CODE_CT
-      a       roh:ESScientificDomain ;
+      a       skos:Concept ;
       rdfs:label "CT" ;
       roh:codeOf rohsci:ES_SCIENTIFIC_DOMAIN_LEVEL_2_CT ;
       skos:inScheme rohsci:ESscientificDomains2ndCodeList ;
       skos:prefLabel "CT" .
 
 rohsci:ESscientificDomains3rdList
-      a       skos:ConceptScheme ;
+      a       roh:ESScientificDomain ;
       rdfs:label "Dominis científics de tercer nivell"@ca , "Third-level scientific domains"@en , "θɜrd ˈlɛvəl ˌsaɪənˈtɪfɪk doʊˈmeɪnz"@en-US-fonipa , "Áreas científicas de terceiro nível"@pt , "Árees científiques de terceru nivel"@ast , "Áreas scientificas de tresen nivel"@oc , "duˈminis siənˈtifikz ðə tərˈse niˈβeʎ"@ca-CA-fonipa , "Hirugarren mailako arlo zientifikoak"@eu , "Áreas científicas de terceiro nivel"@gl , "Áreas scientificas de tercer nivel"@an , "Áreas científicas de tercer nivel"@es , "ˈaɾeas θjen̪ˈtifikas ðe terˈθer niˈβ̞el"@es-ES-fonipa , "θɜːd ˈlɛvl ˌsaɪənˈtɪfɪk dəʊˈmeɪnz"@en-GB-fonipa , "Domains scientifiques de troisième niveau"@fr ;
       skos:prefLabel "Dominis científics de tercer nivell"@ca , "Third-level scientific domains"@en , "θɜrd ˈlɛvəl ˌsaɪənˈtɪfɪk doʊˈmeɪnz"@en-US-fonipa , "Áreas científicas de terceiro nível"@pt , "Árees científiques de terceru nivel"@ast , "Áreas scientificas de tresen nivel"@oc , "duˈminis siənˈtifikz ðə tərˈse niˈβeʎ"@ca-CA-fonipa , "Áreas científicas de terceiro nivel"@gl , "Hirugarren mailako arlo zientifikoak"@eu , "Áreas scientificas de tercer nivel"@an , "Áreas científicas de tercer nivel"@es , "ˈaɾeas θjen̪ˈtifikas ðe terˈθer niˈβ̞el"@es-ES-fonipa , "θɜːd ˈlɛvl ˌsaɪənˈtɪfɪk dəʊˈmeɪnz"@en-GB-fonipa , "Domains scientifiques de troisième niveau"@fr ;
       ontolex:phoneticRep "θɜrd ˈlɛvəl ˌsaɪənˈtɪfɪk doʊˈmeɪnz"@en-US-fonipa , "ˈaɾeas θjen̪ˈtifikas ðe terˈθer niˈβ̞el"@es-ES-fonipa , "θɜːd ˈlɛvl ˌsaɪənˈtɪfɪk dəʊˈmeɪnz"@en-GB-fonipa , "duˈminis siənˈtifikz ðə tərˈse niˈβeʎ"@ca-CA-fonipa .
 
 rohsci:ES_SCIENTIFIC_DOMAIN_LEVEL_3_CODE_QMCNANO
-      a       roh:ESScientificDomain ;
+      a       skos:Concept ;
       rdfs:label "QMCNANO" ;
       roh:codeOf rohsci:ES_SCIENTIFIC_DOMAIN_LEVEL_3_QMCNANO ;
       skos:inScheme rohsci:ESscientificDomains3rdCodeList ;
       skos:prefLabel "QMCNANO" .
 
 rohsci:ES_SCIENTIFIC_DOMAIN_LEVEL_3_CODE_BMEDIRHV
-      a       roh:ESScientificDomain ;
+      a       skos:Concept ;
       rdfs:label "BMEDIRHV" ;
       roh:codeOf rohsci:ES_SCIENTIFIC_DOMAIN_LEVEL_3_BMEDIRHV ;
       skos:inScheme rohsci:ESscientificDomains3rdCodeList ;
       skos:prefLabel "BMEDIRHV" .
 
 rohsci:ES_SCIENTIFIC_DOMAIN_LEVEL_2_COM
-      a       roh:ESScientificDomain ;
+      a       skos:Concept ;
       rdfs:label "Tecnología electrónica y de las comunicaciones" ;
       roh:hasCode rohsci:ES_SCIENTIFIC_DOMAIN_LEVEL_2_CODE_COM ;
       skos:broader rohsci:ES_SCIENTIFIC_DOMAIN_LEVEL_1_IYT ;
@@ -414,7 +424,7 @@ rohsci:ES_SCIENTIFIC_DOMAIN_LEVEL_2_COM
       skos:prefLabel "Tecnología electrónica y de las comunicaciones" , "Tecnología electrónica y de las comunicaciones"@es , "Technologie électronique et de communication"@fr , "Tecnologia eletrônica e de comunicações"@pt , "Tecnologia electrònica i de les comunicacions"@ca , "Electronic and communications technology"@en , "Tecnoloxía electrónica y de les comunicaciones"@ast , "Tecnoloxía electrónica e de comunicacións"@gl .
 
 rohsci:ES_SCIENTIFIC_DOMAIN_LEVEL_3_QMCMATM
-      a       roh:ESScientificDomain ;
+      a       skos:Concept ;
       rdfs:label "Materiales moleculares" ;
       roh:hasCode rohsci:ES_SCIENTIFIC_DOMAIN_LEVEL_3_CODE_QMCMATM ;
       skos:broader rohsci:ES_SCIENTIFIC_DOMAIN_LEVEL_2_QMC ;
@@ -423,7 +433,7 @@ rohsci:ES_SCIENTIFIC_DOMAIN_LEVEL_3_QMCMATM
       skos:prefLabel "Molecular materials"@en , "Materials moleculars"@ca , "Materiais moleculares"@pt , "Materiais moleculares"@gl , "Materiales moleculares" , "Materiales moleculares"@es , "Materiales moleculares"@ast , "Matériaux moléculaires"@fr .
 
 rohsci:ES_SCIENTIFIC_DOMAIN_LEVEL_3_BMEDYQHF
-      a       roh:ESScientificDomain ;
+      a       skos:Concept ;
       rdfs:label "Fisiología celular y de sistemas" ;
       roh:hasCode rohsci:ES_SCIENTIFIC_DOMAIN_LEVEL_3_CODE_BMEDYQHF ;
       skos:broader rohsci:ES_SCIENTIFIC_DOMAIN_LEVEL_2_BMED ;
@@ -432,7 +442,7 @@ rohsci:ES_SCIENTIFIC_DOMAIN_LEVEL_3_BMEDYQHF
       skos:prefLabel "Physiologie cellulaire et systémique"@fr , "Fisiología celular y de sistemas" , "Fisiología celular y de sistemas"@es , "Fisiologia celular e de sistemas"@pt , "Cellular and systems physiology"@en , "Fisioloxía celular e dos sistemas"@gl , "Fisiologia cel·lular i de sistemes"@ca , "Fisioloxía celular y de los sistemes"@ast .
 
 rohsci:ES_SCIENTIFIC_DOMAIN_LEVEL_3_HAMOXL
-      a       roh:ESScientificDomain ;
+      a       skos:Concept ;
       rdfs:label "Historia medieval" ;
       roh:hasCode rohsci:ES_SCIENTIFIC_DOMAIN_LEVEL_3_CODE_HAMOXL ;
       skos:broader rohsci:ES_SCIENTIFIC_DOMAIN_LEVEL_2_HA ;
@@ -441,7 +451,7 @@ rohsci:ES_SCIENTIFIC_DOMAIN_LEVEL_3_HAMOXL
       skos:prefLabel "Historia medieval" , "Historia medieval"@es , "Histoire médiévale"@fr , "Historia medieval"@ast , "Historia medieval"@gl , "História medieval"@pt , "Medieval history"@en , "Història medieval"@ca .
 
 rohsci:ES_SCIENTIFIC_DOMAIN_LEVEL_3_CTPETR
-      a       roh:ESScientificDomain ;
+      a       skos:Concept ;
       rdfs:label "Petrología" ;
       roh:hasCode rohsci:ES_SCIENTIFIC_DOMAIN_LEVEL_3_CODE_CTPETR ;
       skos:broader rohsci:ES_SCIENTIFIC_DOMAIN_LEVEL_2_CT ;
@@ -451,7 +461,7 @@ rohsci:ES_SCIENTIFIC_DOMAIN_LEVEL_3_CTPETR
       skos:prefLabel "Petrology"@en , "Petrologia"@oc , "Petrologia"@ca , "Petrologia"@pt , "Pétrologie"@fr , "Petroloxía"@ast , "Petroloxía"@gl , "Petrología" , "Petrología"@es .
 
 rohsci:ES_SCIENTIFIC_DOMAIN_LEVEL_3_MCLIQUEG
-      a       roh:ESScientificDomain ;
+      a       skos:Concept ;
       rdfs:label "Enfermedades infecciosas" ;
       roh:hasCode rohsci:ES_SCIENTIFIC_DOMAIN_LEVEL_3_CODE_MCLIQUEG ;
       skos:broader rohsci:ES_SCIENTIFIC_DOMAIN_LEVEL_2_MCLI ;
@@ -461,28 +471,28 @@ rohsci:ES_SCIENTIFIC_DOMAIN_LEVEL_3_MCLIQUEG
       skos:prefLabel "Maladies infectieuses"@fr , "Enfermedades infecciosas" , "Enfermedades infecciosas"@es , "Doenças infecciosas"@pt , "Enfermedaes infeccioses"@ast , "Infectious diseases"@en , "Enfermidades infecciosas"@gl , "Malalties infeccioses"@ca .
 
 rohsci:ES_SCIENTIFIC_DOMAIN_LEVEL_2_CODE_AGR
-      a       roh:ESScientificDomain ;
+      a       skos:Concept ;
       rdfs:label "AGR" ;
       roh:codeOf rohsci:ES_SCIENTIFIC_DOMAIN_LEVEL_2_AGR ;
       skos:inScheme rohsci:ESscientificDomains2ndCodeList ;
       skos:prefLabel "AGR" .
 
 rohsci:ES_SCIENTIFIC_DOMAIN_LEVEL_3_CODE_CTGEOD
-      a       roh:ESScientificDomain ;
+      a       skos:Concept ;
       rdfs:label "CTGEOD" ;
       roh:codeOf rohsci:ES_SCIENTIFIC_DOMAIN_LEVEL_3_CTGEOD ;
       skos:inScheme rohsci:ESscientificDomains3rdCodeList ;
       skos:prefLabel "CTGEOD" .
 
 rohsci:ES_SCIENTIFIC_DOMAIN_LEVEL_3_CODE_PSJTFX
-      a       roh:ESScientificDomain ;
+      a       skos:Concept ;
       rdfs:label "PSJTFX" ;
       roh:codeOf rohsci:ES_SCIENTIFIC_DOMAIN_LEVEL_3_PSJTFX ;
       skos:inScheme rohsci:ESscientificDomains3rdCodeList ;
       skos:prefLabel "PSJTFX" .
 
 rohsci:ES_SCIENTIFIC_DOMAIN_LEVEL_3_MTMANAM
-      a       roh:ESScientificDomain ;
+      a       skos:Concept ;
       rdfs:label "Análisis matemático" ;
       roh:hasCode rohsci:ES_SCIENTIFIC_DOMAIN_LEVEL_3_CODE_MTMANAM ;
       skos:broader rohsci:ES_SCIENTIFIC_DOMAIN_LEVEL_2_MTM ;
@@ -491,7 +501,7 @@ rohsci:ES_SCIENTIFIC_DOMAIN_LEVEL_3_MTMANAM
       skos:prefLabel "Anàlisi matemàtica"@ca , "Análisis matemático"@ast , "Análisis matemático" , "Análisis matemático"@es , "Analyse mathématique"@fr , "Mathematical analysis"@en , "Análise matemática"@gl , "Análise matemática"@pt .
 
 rohsci:ES_SCIENTIFIC_DOMAIN_LEVEL_2_HA
-      a       roh:ESScientificDomain ;
+      a       skos:Concept ;
       rdfs:label "Historia y arte" ;
       roh:hasCode rohsci:ES_SCIENTIFIC_DOMAIN_LEVEL_2_CODE_HA ;
       skos:broader rohsci:ES_SCIENTIFIC_DOMAIN_LEVEL_1_CSH ;
@@ -500,14 +510,14 @@ rohsci:ES_SCIENTIFIC_DOMAIN_LEVEL_2_HA
       skos:prefLabel "Historia y arte" , "Historia y arte"@es , "Historia y arte"@ast , "Histoire et art"@fr , "Historia e arte"@gl , "História e arte"@pt , "Història i art"@ca , "History and art"@en .
 
 rohsci:ES_SCIENTIFIC_DOMAIN_LEVEL_2_CODE_COM
-      a       roh:ESScientificDomain ;
+      a       skos:Concept ;
       rdfs:label "COM" ;
       roh:codeOf rohsci:ES_SCIENTIFIC_DOMAIN_LEVEL_2_COM ;
       skos:inScheme rohsci:ESscientificDomains2ndCodeList ;
       skos:prefLabel "COM" .
 
 rohsci:ES_SCIENTIFIC_DOMAIN_LEVEL_2_BFS
-      a       roh:ESScientificDomain ;
+      a       skos:Concept ;
       rdfs:label "Biología fundamental y de sistemas" ;
       roh:hasCode rohsci:ES_SCIENTIFIC_DOMAIN_LEVEL_2_CODE_BFS ;
       skos:broader rohsci:ES_SCIENTIFIC_DOMAIN_LEVEL_1_CVS ;
@@ -517,7 +527,7 @@ rohsci:ES_SCIENTIFIC_DOMAIN_LEVEL_2_BFS
       skos:prefLabel "Biologia fonamental i de sistemes"@ca , "Fundamentos e bioloxía dos sistemas"@gl , "Bioloxía fundamental y de sistemes"@ast , "Biologia fundamental e de sistemas"@pt , "Biología fundamental y de sistemas" , "Biología fundamental y de sistemas"@es , "Biologie fondamentale et systémique"@fr , "Fundamental and systems biology"@en .
 
 rohsci:ES_SCIENTIFIC_DOMAIN_LEVEL_3_MTMTOPO
-      a       roh:ESScientificDomain ;
+      a       skos:Concept ;
       rdfs:label "Topología" ;
       roh:hasCode rohsci:ES_SCIENTIFIC_DOMAIN_LEVEL_3_CODE_MTMTOPO ;
       skos:broader rohsci:ES_SCIENTIFIC_DOMAIN_LEVEL_2_MTM ;
@@ -527,7 +537,7 @@ rohsci:ES_SCIENTIFIC_DOMAIN_LEVEL_3_MTMTOPO
       skos:prefLabel "Topología" , "Topología"@es , "Topologia"@ca , "Topologia"@pt , "Topoloxía"@ast , "Topoloxía"@gl , "Topology"@en , "Topologie"@fr .
 
 rohsci:ES_SCIENTIFIC_DOMAIN_LEVEL_3_PSFRSQ
-      a       roh:ESScientificDomain ;
+      a       skos:Concept ;
       rdfs:label "Psicobiología" ;
       roh:hasCode rohsci:ES_SCIENTIFIC_DOMAIN_LEVEL_3_CODE_PSFRSQ ;
       skos:broader rohsci:ES_SCIENTIFIC_DOMAIN_LEVEL_2_PS ;
@@ -536,21 +546,21 @@ rohsci:ES_SCIENTIFIC_DOMAIN_LEVEL_3_PSFRSQ
       skos:prefLabel "Psicobiologia"@ca , "Psicobiologia"@pt , "Psychobiologie"@fr , "Psicobioloxía"@ast , "Psicobioloxía"@gl , "Psicobiología" , "Psicobiología"@es , "Psychobiology"@en .
 
 rohsci:ES_SCIENTIFIC_DOMAIN_LEVEL_2_CODE_BMED
-      a       roh:ESScientificDomain ;
+      a       skos:Concept ;
       rdfs:label "BMED" ;
       roh:codeOf rohsci:ES_SCIENTIFIC_DOMAIN_LEVEL_2_BMED ;
       skos:inScheme rohsci:ESscientificDomains2ndCodeList ;
       skos:prefLabel "BMED" .
 
 rohsci:ES_SCIENTIFIC_DOMAIN_LEVEL_3_CODE_HAZQGB
-      a       roh:ESScientificDomain ;
+      a       skos:Concept ;
       rdfs:label "HAZQGB" ;
       roh:codeOf rohsci:ES_SCIENTIFIC_DOMAIN_LEVEL_3_HAZQGB ;
       skos:inScheme rohsci:ESscientificDomains3rdCodeList ;
       skos:prefLabel "HAZQGB" .
 
 rohsci:ES_SCIENTIFIC_DOMAIN_LEVEL_3_CTTAFO
-      a       roh:ESScientificDomain ;
+      a       skos:Concept ;
       rdfs:label "Tafonomía" ;
       roh:hasCode rohsci:ES_SCIENTIFIC_DOMAIN_LEVEL_3_CODE_CTTAFO ;
       skos:broader rohsci:ES_SCIENTIFIC_DOMAIN_LEVEL_2_CT ;
@@ -559,14 +569,14 @@ rohsci:ES_SCIENTIFIC_DOMAIN_LEVEL_3_CTTAFO
       skos:prefLabel "Tafonomía"@gl , "Tafonomía" , "Tafonomía"@es , "Tafonomía"@ast , "Taphonomy"@en , "Tafonomia"@ca , "Tafonomia"@pt , "Taphonomie"@fr .
 
 rohsci:ES_SCIENTIFIC_DOMAIN_LEVEL_2_CODE_TQ
-      a       roh:ESScientificDomain ;
+      a       skos:Concept ;
       rdfs:label "TQ" ;
       roh:codeOf rohsci:ES_SCIENTIFIC_DOMAIN_LEVEL_2_TQ ;
       skos:inScheme rohsci:ESscientificDomains2ndCodeList ;
       skos:prefLabel "TQ" .
 
 rohsci:ES_SCIENTIFIC_DOMAIN_LEVEL_3_CTGEOF
-      a       roh:ESScientificDomain ;
+      a       skos:Concept ;
       rdfs:label "Geomorfología" , "Geofísica" ;
       roh:hasCode rohsci:ES_SCIENTIFIC_DOMAIN_LEVEL_3_CODE_CTGEOF ;
       skos:broader rohsci:ES_SCIENTIFIC_DOMAIN_LEVEL_2_CT ;
@@ -575,14 +585,14 @@ rohsci:ES_SCIENTIFIC_DOMAIN_LEVEL_3_CTGEOF
       skos:prefLabel "Xeomorfoloxía"@ast , "Xeomorfoloxía"@gl , "Géomorphologie"@fr , "Geophysics"@en , "Geomorphology"@en , "Geofísica" , "Geofísica"@es , "Geofísica"@ca , "Geofísica"@pt , "Geomorfología" , "Geomorfología"@es , "Geomorfologia"@ca , "Geomorfologia"@pt , "Xeofísica"@ast , "Xeofísica"@gl , "Géophysique"@fr .
 
 rohsci:ES_SCIENTIFIC_DOMAIN_LEVEL_3_CODE_BMEDPJHL
-      a       roh:ESScientificDomain ;
+      a       skos:Concept ;
       rdfs:label "BMEDPJHL" ;
       roh:codeOf rohsci:ES_SCIENTIFIC_DOMAIN_LEVEL_3_BMEDPJHL ;
       skos:inScheme rohsci:ESscientificDomains3rdCodeList ;
       skos:prefLabel "BMEDPJHL" .
 
 rohsci:ES_SCIENTIFIC_DOMAIN_LEVEL_2_FI
-      a       roh:ESScientificDomain ;
+      a       skos:Concept ;
       rdfs:label "Física y ciencias del espacio" ;
       roh:hasCode rohsci:ES_SCIENTIFIC_DOMAIN_LEVEL_2_CODE_FI ;
       skos:broader rohsci:ES_SCIENTIFIC_DOMAIN_LEVEL_1_CB ;
@@ -592,14 +602,14 @@ rohsci:ES_SCIENTIFIC_DOMAIN_LEVEL_2_FI
       skos:prefLabel "Physique et sciences spatiales"@fr , "Física e ciencias do espazo"@gl , "Physics and space sciences"@en , "Física i ciències de l'espai"@ca , "Física y ciencies del espaciu"@ast , "Física y ciencias del espacio" , "Física y ciencias del espacio"@es , "Física e ciências espaciais"@pt .
 
 rohsci:ES_SCIENTIFIC_DOMAIN_LEVEL_2_CODE_PS
-      a       roh:ESScientificDomain ;
+      a       skos:Concept ;
       rdfs:label "PS" ;
       roh:codeOf rohsci:ES_SCIENTIFIC_DOMAIN_LEVEL_2_PS ;
       skos:inScheme rohsci:ESscientificDomains2ndCodeList ;
       skos:prefLabel "PS" .
 
 rohsci:ES_SCIENTIFIC_DOMAIN_LEVEL_2_PS
-      a       roh:ESScientificDomain ;
+      a       skos:Concept ;
       rdfs:label "Psicología" ;
       roh:hasCode rohsci:ES_SCIENTIFIC_DOMAIN_LEVEL_2_CODE_PS ;
       skos:broader rohsci:ES_SCIENTIFIC_DOMAIN_LEVEL_1_CSH ;
@@ -608,12 +618,12 @@ rohsci:ES_SCIENTIFIC_DOMAIN_LEVEL_2_PS
       skos:prefLabel "Psychologie"@fr , "Psicoloxía"@ast , "Psicoloxía"@gl , "Psychology"@en , "Psicologia"@ca , "Psicologia"@pt , "Psicología" , "Psicología"@es .
 
 rohsci:scientificDomain3rdCodeResource
-      a       skos:ConceptScheme ;
+      a       roh:ESScientificDomain ;
       rdfs:label "Codis dels dominis científics de tercer nivell"@ca , "Códigos de las áreas científicas de tercer nivel"@es , "Codes for the third-level scientific domains"@en , "Códigos das áreas científicas de terceiro nível"@pt , "Códigos das áreas científicas de terceiro nivel"@gl , "Códigos de les árees científiques de terceru nivel"@ast ;
       skos:prefLabel "Codis dels dominis científics de tercer nivell"@ca , "Códigos de las áreas científicas de tercer nivel"@es , "Codes for the third-level scientific domains"@en , "Códigos das áreas científicas de terceiro nivel"@gl , "Códigos das áreas científicas de terceiro nível"@pt , "Códigos de les árees científiques de terceru nivel"@ast .
 
 rohsci:ES_SCIENTIFIC_DOMAIN_LEVEL_2_ICI
-      a       roh:ESScientificDomain ;
+      a       skos:Concept ;
       rdfs:label "Ingeniería civil y arquitectura" ;
       roh:hasCode rohsci:ES_SCIENTIFIC_DOMAIN_LEVEL_2_CODE_ICI ;
       skos:broader rohsci:ES_SCIENTIFIC_DOMAIN_LEVEL_1_IYT ;
@@ -622,7 +632,7 @@ rohsci:ES_SCIENTIFIC_DOMAIN_LEVEL_2_ICI
       skos:prefLabel "Ingeniería civil y arquitectura" , "Ingeniería civil y arquitectura"@es , "Civil Engineering and Architecture"@en , "Ingénierie civil et architecture"@fr , "Enxeñaría Civil e Arquitectura"@gl , "Engenharia civil e arquitetura"@pt , "Inxeniería civil y arquitectura"@ast , "Enginyeria civil i arquitectura"@ca .
 
 rohsci:ES_SCIENTIFIC_DOMAIN_LEVEL_2_ECO
-      a       roh:ESScientificDomain ;
+      a       skos:Concept ;
       rdfs:label "Economía" ;
       roh:hasCode rohsci:ES_SCIENTIFIC_DOMAIN_LEVEL_2_CODE_ECO ;
       skos:broader rohsci:ES_SCIENTIFIC_DOMAIN_LEVEL_1_CSH ;
@@ -631,14 +641,14 @@ rohsci:ES_SCIENTIFIC_DOMAIN_LEVEL_2_ECO
       skos:prefLabel "Économie"@fr , "Economy"@en , "Economía"@es , "Economía"@gl , "Economía" , "Economía"@ast , "Economia"@ca , "Economia"@pt .
 
 rohsci:ES_SCIENTIFIC_DOMAIN_LEVEL_3_CODE_PSBODX
-      a       roh:ESScientificDomain ;
+      a       skos:Concept ;
       rdfs:label "PSBODX" ;
       roh:codeOf rohsci:ES_SCIENTIFIC_DOMAIN_LEVEL_3_PSBODX ;
       skos:inScheme rohsci:ESscientificDomains3rdCodeList ;
       skos:prefLabel "PSBODX" .
 
 rohsci:ES_SCIENTIFIC_DOMAIN_LEVEL_3_CTCON
-      a       roh:ESScientificDomain ;
+      a       skos:Concept ;
       rdfs:label "Contaminación" ;
       roh:hasCode rohsci:ES_SCIENTIFIC_DOMAIN_LEVEL_3_CODE_CTCON ;
       skos:broader rohsci:ES_SCIENTIFIC_DOMAIN_LEVEL_2_CT ;
@@ -647,7 +657,7 @@ rohsci:ES_SCIENTIFIC_DOMAIN_LEVEL_3_CTCON
       skos:prefLabel "Pollution"@fr , "Pollution"@en , "Poluição"@pt , "Contaminación" , "Contaminación"@es , "Contaminación"@ast , "Contaminación"@gl , "Contaminació"@ca .
 
 rohsci:ES_SCIENTIFIC_DOMAIN_LEVEL_2_TA
-      a       roh:ESScientificDomain ;
+      a       skos:Concept ;
       rdfs:label "Ciencia y tecnología de alimentos" ;
       roh:hasCode rohsci:ES_SCIENTIFIC_DOMAIN_LEVEL_2_CODE_TA ;
       skos:broader rohsci:ES_SCIENTIFIC_DOMAIN_LEVEL_1_CVS ;
@@ -656,7 +666,7 @@ rohsci:ES_SCIENTIFIC_DOMAIN_LEVEL_2_TA
       skos:prefLabel "Ciencia e Tecnoloxía dos Alimentos"@gl , "Food Science and Technology"@en , "Ciência e tecnologia de alimentos"@pt , "Ciència i tecnologia d'aliments"@ca , "Science et technologie alimentaire"@fr , "Ciencia y tecnoloxía d'alimentos"@ast , "Ciencia y tecnología de alimentos" , "Ciencia y tecnología de alimentos"@es .
 
 rohsci:ES_SCIENTIFIC_DOMAIN_LEVEL_3_QMCQUFI
-      a       roh:ESScientificDomain ;
+      a       skos:Concept ;
       rdfs:label "Química física" ;
       roh:hasCode rohsci:ES_SCIENTIFIC_DOMAIN_LEVEL_3_CODE_QMCQUFI ;
       skos:broader rohsci:ES_SCIENTIFIC_DOMAIN_LEVEL_2_QMC ;
@@ -665,28 +675,28 @@ rohsci:ES_SCIENTIFIC_DOMAIN_LEVEL_3_QMCQUFI
       skos:prefLabel "Físico-química"@pt , "Química física"@ca , "Química física" , "Química física"@es , "Química física"@gl , "Chimie physique"@fr , "Physical chemistry"@en , "Química físico"@ast .
 
 rohsci:ES_SCIENTIFIC_DOMAIN_LEVEL_1_CODE_CB
-      a       roh:ESScientificDomain ;
+      a       skos:Concept ;
       rdfs:label "CB" ;
       roh:codeOf rohsci:ES_SCIENTIFIC_DOMAIN_LEVEL_1_CB ;
       skos:inScheme rohsci:ESDomainCode1stList ;
       skos:prefLabel "CB" .
 
 rohsci:ES_SCIENTIFIC_DOMAIN_LEVEL_2_CODE_QMC
-      a       roh:ESScientificDomain ;
+      a       skos:Concept ;
       rdfs:label "QMC" ;
       roh:codeOf rohsci:ES_SCIENTIFIC_DOMAIN_LEVEL_2_QMC ;
       skos:inScheme rohsci:ESscientificDomains2ndCodeList ;
       skos:prefLabel "QMC" .
 
 rohsci:ES_SCIENTIFIC_DOMAIN_LEVEL_2_CODE_INF
-      a       roh:ESScientificDomain ;
+      a       skos:Concept ;
       rdfs:label "INF" ;
       roh:codeOf rohsci:ES_SCIENTIFIC_DOMAIN_LEVEL_2_INF ;
       skos:inScheme rohsci:ESscientificDomains2ndCodeList ;
       skos:prefLabel "INF" .
 
 rohsci:ES_SCIENTIFIC_DOMAIN_LEVEL_3_QMCCATE
-      a       roh:ESScientificDomain ;
+      a       skos:Concept ;
       rdfs:label "Catálisis enantioselectiva" ;
       roh:hasCode rohsci:ES_SCIENTIFIC_DOMAIN_LEVEL_3_CODE_QMCCATE ;
       skos:broader rohsci:ES_SCIENTIFIC_DOMAIN_LEVEL_2_QMC ;
@@ -695,7 +705,7 @@ rohsci:ES_SCIENTIFIC_DOMAIN_LEVEL_3_QMCCATE
       skos:prefLabel "Catálisis enantioselectivo"@ast , "Catalyse énantiosélective"@fr , "Catálise enantiosseletiva"@pt , "Catálise enantioselectiva"@gl , "Catàlisi enantioselectiva"@ca , "Catálisis enantioselectiva" , "Catálisis enantioselectiva"@es , "Enantioselective catalysis"@en .
 
 rohsci:ES_SCIENTIFIC_DOMAIN_LEVEL_3_BMEDHTAZ
-      a       roh:ESScientificDomain ;
+      a       skos:Concept ;
       rdfs:label "Hepatología" ;
       roh:hasCode rohsci:ES_SCIENTIFIC_DOMAIN_LEVEL_3_CODE_BMEDHTAZ ;
       skos:broader rohsci:ES_SCIENTIFIC_DOMAIN_LEVEL_2_BMED ;
@@ -704,7 +714,7 @@ rohsci:ES_SCIENTIFIC_DOMAIN_LEVEL_3_BMEDHTAZ
       skos:prefLabel "Hepatoloxía"@ast , "Hepatoloxía"@gl , "Hépatologie"@fr , "Hepatología" , "Hepatología"@es , "Hepatology"@en , "Hepatologia"@ca , "Hepatologia"@pt .
 
 rohsci:ES_SCIENTIFIC_DOMAIN_LEVEL_3_CTESTR
-      a       roh:ESScientificDomain ;
+      a       skos:Concept ;
       rdfs:label "Estratigrafía" ;
       roh:hasCode rohsci:ES_SCIENTIFIC_DOMAIN_LEVEL_3_CODE_CTESTR ;
       skos:broader rohsci:ES_SCIENTIFIC_DOMAIN_LEVEL_2_CT ;
@@ -713,21 +723,21 @@ rohsci:ES_SCIENTIFIC_DOMAIN_LEVEL_3_CTESTR
       skos:prefLabel "Stratigraphie"@fr , "Estratigrafía" , "Estratigrafía"@es , "Estratigrafía"@gl , "Estratigrafía"@ast , "Stratigraphy"@en , "Estratigrafia"@ca , "Estratigrafia"@pt .
 
 rohsci:ES_SCIENTIFIC_DOMAIN_LEVEL_3_CODE_BMEDZYOC
-      a       roh:ESScientificDomain ;
+      a       skos:Concept ;
       rdfs:label "BMEDZYOC" ;
       roh:codeOf rohsci:ES_SCIENTIFIC_DOMAIN_LEVEL_3_BMEDZYOC ;
       skos:inScheme rohsci:ESscientificDomains3rdCodeList ;
       skos:prefLabel "BMEDZYOC" .
 
 rohsci:ES_SCIENTIFIC_DOMAIN_LEVEL_3_CODE_QMCQUAN
-      a       roh:ESScientificDomain ;
+      a       skos:Concept ;
       rdfs:label "QMCQUAN" ;
       roh:codeOf rohsci:ES_SCIENTIFIC_DOMAIN_LEVEL_3_QMCQUAN ;
       skos:inScheme rohsci:ESscientificDomains3rdCodeList ;
       skos:prefLabel "QMCQUAN" .
 
 rohsci:ES_SCIENTIFIC_DOMAIN_LEVEL_2_EDUC
-      a       roh:ESScientificDomain ;
+      a       skos:Concept ;
       rdfs:label "Ciencias de la educación" ;
       roh:hasCode rohsci:ES_SCIENTIFIC_DOMAIN_LEVEL_2_CODE_EDUC ;
       skos:broader rohsci:ES_SCIENTIFIC_DOMAIN_LEVEL_1_CSH ;
@@ -736,7 +746,7 @@ rohsci:ES_SCIENTIFIC_DOMAIN_LEVEL_2_EDUC
       skos:prefLabel "Sciences de l'éducation"@fr , "Ciencies de la educación"@ast , "Ciències de l'educació"@ca , "Ciências da educação"@pt , "Ciencias da educación"@gl , "Ciencias de la educación" , "Ciencias de la educación"@es , "Education sciences"@en .
 
 rohsci:ES_SCIENTIFIC_DOMAIN_LEVEL_3_BFSDNIG
-      a       roh:ESScientificDomain ;
+      a       skos:Concept ;
       rdfs:label "Genómica" ;
       roh:hasCode rohsci:ES_SCIENTIFIC_DOMAIN_LEVEL_3_CODE_BFSDNIG ;
       skos:broader rohsci:ES_SCIENTIFIC_DOMAIN_LEVEL_2_BFS ;
@@ -745,20 +755,20 @@ rohsci:ES_SCIENTIFIC_DOMAIN_LEVEL_3_BFSDNIG
       skos:prefLabel "Xenómica"@gl , "Xenómica"@ast , "Genómica" , "Genómica"@es , "Génomique"@fr , "Genômica"@pt , "Genòmica"@ca , "Genomics"@en .
 
 rohsci:ES_SCIENTIFIC_DOMAIN_LEVEL_2_CODE_FI
-      a       roh:ESScientificDomain ;
+      a       skos:Concept ;
       rdfs:label "FI" ;
       roh:codeOf rohsci:ES_SCIENTIFIC_DOMAIN_LEVEL_2_FI ;
       skos:inScheme rohsci:ESscientificDomains2ndCodeList ;
       skos:prefLabel "FI" .
 
 rohsci:ESDomainCode1stList
-      a       skos:ConceptScheme ;
+      a       roh:ESScientificDomain ;
       rdfs:label "Códigos de las áreas científicas de primer nivel"@es , "kəʊdz fɔː ðə fɜːst ˈlɛvl ˌsaɪənˈtɪfɪk dəʊˈmeɪnz"@en-GB-fonipa , "'ko ði γoz ðe las 'a ɾe as θjen̪ 'ti fi kas ðe pri 'mer ni 'βel"@es-ES-fonipa , "Códigos de les árees científiques de primer nivel"@ast , "Códigos das áreas científicas de primeiro nível"@pt , "Codes for the first-level scientific domains"@en , "Codes des domains scientífiques de premier niveau"@fr , "koʊdz fɔr ðə fɜrst ˈlɛvəl ˌsaɪənˈtɪfɪk doʊˈmeɪnz"@en-US-fonipa , "Códigos das áreas científicas de primeiro nivel"@gl , "Codis dels dominis científics de primer nivell"@ca ;
       skos:prefLabel "Códigos de las áreas científicas de primer nivel"@es , "'ko ði γoz ðe las 'a ɾe as θjen̪ 'ti fi kas ðe pri 'mer ni 'βel"@es-ES-fonipa , "kəʊdz fɔː ðə fɜːst ˈlɛvl ˌsaɪənˈtɪfɪk dəʊˈmeɪnz"@en-GB-fonipa , "Códigos de les árees científiques de primer nivel"@ast , "Códigos das áreas científicas de primeiro nível"@pt , "Codes for the first-level scientific domains"@en , "Codes des domains scientífiques de premier niveau"@fr , "koʊdz fɔr ðə fɜrst ˈlɛvəl ˌsaɪənˈtɪfɪk doʊˈmeɪnz"@en-US-fonipa , "Códigos das áreas científicas de primeiro nivel"@gl , "Codis dels dominis científics de primer nivell"@ca ;
       ontolex:phoneticRep "kəʊdz fɔː ðə fɜːst ˈlɛvl ˌsaɪənˈtɪfɪk dəʊˈmeɪnz"@en-GB-fonipa , "koʊdz fɔr ðə fɜrst ˈlɛvəl ˌsaɪənˈtɪfɪk doʊˈmeɪnz"@en-US-fonipa , "'ko ði γoz ðe las 'a ɾe as θjen̪ 'ti fi kas"@es-ES-fonipa .
 
 rohsci:ES_SCIENTIFIC_DOMAIN_LEVEL_3_QMCORGA
-      a       roh:ESScientificDomain ;
+      a       skos:Concept ;
       rdfs:label "Química orgánica" ;
       roh:hasCode rohsci:ES_SCIENTIFIC_DOMAIN_LEVEL_3_CODE_QMCORGA ;
       skos:broader rohsci:ES_SCIENTIFIC_DOMAIN_LEVEL_2_QMC ;
@@ -767,7 +777,7 @@ rohsci:ES_SCIENTIFIC_DOMAIN_LEVEL_3_QMCORGA
       skos:prefLabel "Organic chemistry"@en , "Química orgànica"@ca , "Química orgánica"@es , "Química orgánica" , "Química orgánica"@gl , "Chimie organique"@fr , "Quimica Organica"@pt , "Química orgánico"@ast .
 
 rohsci:ES_SCIENTIFIC_DOMAIN_LEVEL_3_MTMESTA
-      a       roh:ESScientificDomain ;
+      a       skos:Concept ;
       rdfs:label "Estadística" ;
       roh:hasCode rohsci:ES_SCIENTIFIC_DOMAIN_LEVEL_3_CODE_MTMESTA ;
       skos:broader rohsci:ES_SCIENTIFIC_DOMAIN_LEVEL_2_MTM ;
@@ -776,7 +786,7 @@ rohsci:ES_SCIENTIFIC_DOMAIN_LEVEL_3_MTMESTA
       skos:prefLabel "Statistiques"@fr , "Statistics"@en , "Estadística"@ast , "Estadística"@es , "Estadística"@ca , "Estadística" , "Estatística"@gl , "Estatística"@pt .
 
 rohsci:ES_SCIENTIFIC_DOMAIN_LEVEL_3_HAYSVE
-      a       roh:ESScientificDomain ;
+      a       skos:Concept ;
       rdfs:label "Arqueología" ;
       roh:hasCode rohsci:ES_SCIENTIFIC_DOMAIN_LEVEL_3_CODE_HAYSVE ;
       skos:broader rohsci:ES_SCIENTIFIC_DOMAIN_LEVEL_2_HA ;
@@ -785,7 +795,7 @@ rohsci:ES_SCIENTIFIC_DOMAIN_LEVEL_3_HAYSVE
       skos:prefLabel "Arqueología" , "Arqueología"@es , "Arqueologia"@pt , "Arqueologia"@ca , "Archeology"@en , "Archéologie"@fr , "Arqueoloxía"@ast , "Arqueoloxía"@gl .
 
 rohsci:ES_SCIENTIFIC_DOMAIN_LEVEL_3_BMEDMJHF
-      a       roh:ESScientificDomain ;
+      a       skos:Concept ;
       rdfs:label "Muerte celular" ;
       roh:hasCode rohsci:ES_SCIENTIFIC_DOMAIN_LEVEL_3_CODE_BMEDMJHF ;
       skos:broader rohsci:ES_SCIENTIFIC_DOMAIN_LEVEL_2_BMED ;
@@ -794,7 +804,7 @@ rohsci:ES_SCIENTIFIC_DOMAIN_LEVEL_3_BMEDMJHF
       skos:prefLabel "Mort cellulaire"@fr , "Cell death"@en , "Morte celular"@pt , "Morte celular"@gl , "Muerte celular"@ast , "Muerte celular" , "Muerte celular"@es , "Mort cel·lular"@ca .
 
 rohsci:ES_SCIENTIFIC_DOMAIN_LEVEL_3_BVAEWIUP
-      a       roh:ESScientificDomain ;
+      a       skos:Concept ;
       rdfs:label "Microbiología" ;
       roh:hasCode rohsci:ES_SCIENTIFIC_DOMAIN_LEVEL_3_CODE_BVAEWIUP ;
       skos:broader rohsci:ES_SCIENTIFIC_DOMAIN_LEVEL_2_BVAE ;
@@ -803,7 +813,7 @@ rohsci:ES_SCIENTIFIC_DOMAIN_LEVEL_3_BVAEWIUP
       skos:prefLabel "Microbioloxía"@ast , "Microbioloxía"@gl , "Microbiologie"@fr , "Microbiologia"@ca , "Microbiologia"@pt , "Microbiology"@en , "Microbiología" , "Microbiología"@es .
 
 rohsci:ES_SCIENTIFIC_DOMAIN_LEVEL_3_MTMALGE
-      a       roh:ESScientificDomain ;
+      a       skos:Concept ;
       rdfs:label "Álgebra" ;
       roh:hasCode rohsci:ES_SCIENTIFIC_DOMAIN_LEVEL_3_CODE_MTMALGE ;
       skos:broader rohsci:ES_SCIENTIFIC_DOMAIN_LEVEL_2_MTM ;
@@ -812,7 +822,7 @@ rohsci:ES_SCIENTIFIC_DOMAIN_LEVEL_3_MTMALGE
       skos:prefLabel "Algèbre"@fr , "Algebra"@en , "Àlgebra"@ca , "Álgebra" , "Álgebra"@es , "Álgebra"@pt , "Álxebra"@ast , "Álxebra"@gl .
 
 rohsci:ES_SCIENTIFIC_DOMAIN_LEVEL_3_CTCLIM
-      a       roh:ESScientificDomain ;
+      a       skos:Concept ;
       rdfs:label "Climatología y atmósfera" ;
       roh:hasCode rohsci:ES_SCIENTIFIC_DOMAIN_LEVEL_3_CODE_CTCLIM ;
       skos:broader rohsci:ES_SCIENTIFIC_DOMAIN_LEVEL_2_CT ;
@@ -821,7 +831,7 @@ rohsci:ES_SCIENTIFIC_DOMAIN_LEVEL_3_CTCLIM
       skos:prefLabel "Climatologie et atmosphère"@fr , "Climatoloxía e Atmósfera"@gl , "Climatologia e atmosfera"@pt , "Climatología y atmósfera" , "Climatología y atmósfera"@es , "Climatoloxía y atmósfera"@ast , "Climatology and atmosphere"@en , "Climatologia i atmosfera"@ca .
 
 rohsci:ES_SCIENTIFIC_DOMAIN_LEVEL_3_BMEDOFOI
-      a       roh:ESScientificDomain ;
+      a       skos:Concept ;
       rdfs:label "Anatomía" ;
       roh:hasCode rohsci:ES_SCIENTIFIC_DOMAIN_LEVEL_3_CODE_BMEDOFOI ;
       skos:broader rohsci:ES_SCIENTIFIC_DOMAIN_LEVEL_2_BMED ;
@@ -830,7 +840,7 @@ rohsci:ES_SCIENTIFIC_DOMAIN_LEVEL_3_BMEDOFOI
       skos:prefLabel "Anatomy"@en , "Anatomia"@ca , "Anatomia"@pt , "Anatomía" , "Anatomía"@es , "Anatomía"@ast , "Anatomía"@gl , "Anatomie"@fr .
 
 rohsci:ES_SCIENTIFIC_DOMAIN_LEVEL_3_FFIVNPK
-      a       roh:ESScientificDomain ;
+      a       skos:Concept ;
       rdfs:label "Ética y filosofía política" ;
       roh:hasCode rohsci:ES_SCIENTIFIC_DOMAIN_LEVEL_3_CODE_FFIVNPK ;
       skos:broader rohsci:ES_SCIENTIFIC_DOMAIN_LEVEL_2_FFI ;
@@ -839,28 +849,28 @@ rohsci:ES_SCIENTIFIC_DOMAIN_LEVEL_3_FFIVNPK
       skos:prefLabel "Ética e filosofía política"@gl , "Ethics and political philosophy"@en , "Ethique et philosophie politique"@fr , "Ética y filosofía política" , "Ética y filosofía política"@es , "Ética y filosofía política"@ast , "Ética e filosofia política"@pt , "Ètica i filosofia política"@ca .
 
 rohsci:ES_SCIENTIFIC_DOMAIN_LEVEL_3_CODE_QMCQUSU
-      a       roh:ESScientificDomain ;
+      a       skos:Concept ;
       rdfs:label "QMCQUSU" ;
       roh:codeOf rohsci:ES_SCIENTIFIC_DOMAIN_LEVEL_3_QMCQUSU ;
       skos:inScheme rohsci:ESscientificDomains3rdCodeList ;
       skos:prefLabel "QMCQUSU" .
 
 rohsci:ES_SCIENTIFIC_DOMAIN_LEVEL_3_CODE_BFSHQCF
-      a       roh:ESScientificDomain ;
+      a       skos:Concept ;
       rdfs:label "BFSHQCF" ;
       roh:codeOf rohsci:ES_SCIENTIFIC_DOMAIN_LEVEL_3_BFSHQCF ;
       skos:inScheme rohsci:ESscientificDomains3rdCodeList ;
       skos:prefLabel "BFSHQCF" .
 
 rohsci:ES_SCIENTIFIC_DOMAIN_LEVEL_3_CODE_CTFISE
-      a       roh:ESScientificDomain ;
+      a       skos:Concept ;
       rdfs:label "CTFISE" ;
       roh:codeOf rohsci:ES_SCIENTIFIC_DOMAIN_LEVEL_3_CTFISE ;
       skos:inScheme rohsci:ESscientificDomains3rdCodeList ;
       skos:prefLabel "CTFISE" .
 
 rohsci:ES_SCIENTIFIC_DOMAIN_LEVEL_3_MCLIAJCV
-      a       roh:ESScientificDomain ;
+      a       skos:Concept ;
       rdfs:label "Enfermedades metabólicas" ;
       roh:hasCode rohsci:ES_SCIENTIFIC_DOMAIN_LEVEL_3_CODE_MCLIAJCV ;
       skos:broader rohsci:ES_SCIENTIFIC_DOMAIN_LEVEL_2_MCLI ;
@@ -869,14 +879,14 @@ rohsci:ES_SCIENTIFIC_DOMAIN_LEVEL_3_MCLIAJCV
       skos:prefLabel "Metabolic diseases"@en , "Enfermidades metabólicas"@gl , "Doenças metabólicas"@pt , "Enfermedaes metabóliques"@ast , "Enfermedades metabólicas" , "Enfermedades metabólicas"@es , "Malalties metabòliques"@ca , "Maladies métaboliques"@fr .
 
 rohsci:ES_SCIENTIFIC_DOMAIN_LEVEL_3_CODE_MCLIAVLC
-      a       roh:ESScientificDomain ;
+      a       skos:Concept ;
       rdfs:label "MCLIAVLC" ;
       roh:codeOf rohsci:ES_SCIENTIFIC_DOMAIN_LEVEL_3_MCLIAVLC ;
       skos:inScheme rohsci:ESscientificDomains3rdCodeList ;
       skos:prefLabel "MCLIAVLC" .
 
 rohsci:ES_SCIENTIFIC_DOMAIN_LEVEL_3_CTFISA
-      a       roh:ESScientificDomain ;
+      a       skos:Concept ;
       rdfs:label "Física atómica, molecular y óptica" ;
       roh:hasCode rohsci:ES_SCIENTIFIC_DOMAIN_LEVEL_3_CODE_CTFISA ;
       skos:broader rohsci:ES_SCIENTIFIC_DOMAIN_LEVEL_2_FI ;
@@ -885,7 +895,7 @@ rohsci:ES_SCIENTIFIC_DOMAIN_LEVEL_3_CTFISA
       skos:prefLabel "Física atómica, molecular y óptica" , "Física atómica, molecular y óptica"@es , "Física atómica, molecular y óptica"@ast , "Atomic, molecular and optical physics"@en , "Physique atomique, moléculaire et optique"@fr , "Física atòmica, molecular i òptica"@ca , "Física atômica, molecular e óptica"@pt , "Física atómica, molecular e óptica"@gl .
 
 rohsci:ES_SCIENTIFIC_DOMAIN_LEVEL_3_CTPALE
-      a       roh:ESScientificDomain ;
+      a       skos:Concept ;
       rdfs:label "Paleobiología" ;
       roh:hasCode rohsci:ES_SCIENTIFIC_DOMAIN_LEVEL_3_CODE_CTPALE ;
       skos:broader rohsci:ES_SCIENTIFIC_DOMAIN_LEVEL_2_CT ;
@@ -894,7 +904,7 @@ rohsci:ES_SCIENTIFIC_DOMAIN_LEVEL_3_CTPALE
       skos:prefLabel "Paleobiology"@en , "Paleobiología" , "Paleobiología"@es , "Paleobiologia"@ca , "Paleobiologia"@pt , "Paleobiologia"@oc , "Paléobiologie"@fr , "Paleobioloxía"@ast , "Paleobioloxía"@gl .
 
 rohsci:ES_SCIENTIFIC_DOMAIN_LEVEL_3_BFSTSEI
-      a       roh:ESScientificDomain ;
+      a       skos:Concept ;
       rdfs:label "Inmunología" ;
       roh:hasCode rohsci:ES_SCIENTIFIC_DOMAIN_LEVEL_3_CODE_BFSTSEI ;
       skos:broader rohsci:ES_SCIENTIFIC_DOMAIN_LEVEL_2_BFS ;
@@ -903,7 +913,7 @@ rohsci:ES_SCIENTIFIC_DOMAIN_LEVEL_3_BFSTSEI
       skos:prefLabel "Imunologia"@pt , "Immunologia"@ca , "Inmunoloxía"@gl , "Inmunoloxía"@ast , "Immunologie"@fr , "Immunology"@en , "Inmunología" , "Inmunología"@es .
 
 rohsci:ES_SCIENTIFIC_DOMAIN_LEVEL_2_CS
-      a       roh:ESScientificDomain ;
+      a       skos:Concept ;
       rdfs:label "Ciencias sociales" ;
       roh:hasCode rohsci:ES_SCIENTIFIC_DOMAIN_LEVEL_2_CODE_CS ;
       skos:broader rohsci:ES_SCIENTIFIC_DOMAIN_LEVEL_1_CSH ;
@@ -912,7 +922,7 @@ rohsci:ES_SCIENTIFIC_DOMAIN_LEVEL_2_CS
       skos:prefLabel "Ciências sociais"@pt , "Ciencias sociais"@gl , "Sciences sociales"@fr , "Social Sciences"@en , "Ciències socials"@ca , "Ciencias sociales" , "Ciencias sociales"@es , "Ciencies sociales"@ast .
 
 rohsci:ES_SCIENTIFIC_DOMAIN_LEVEL_3_MCLICFDU
-      a       roh:ESScientificDomain ;
+      a       skos:Concept ;
       rdfs:label "Cáncer" ;
       roh:hasCode rohsci:ES_SCIENTIFIC_DOMAIN_LEVEL_3_CODE_MCLICFDU ;
       skos:broader rohsci:ES_SCIENTIFIC_DOMAIN_LEVEL_2_MCLI ;
@@ -921,14 +931,14 @@ rohsci:ES_SCIENTIFIC_DOMAIN_LEVEL_3_MCLICFDU
       skos:prefLabel "Câncer"@pt , "Cancer"@fr , "Cancer"@en , "Cáncer"@gl , "Cáncer" , "Cáncer"@es , "Cáncer"@ast , "Càncer"@ca .
 
 rohsci:ES_SCIENTIFIC_DOMAIN_LEVEL_3_CODE_BMEDAYJV
-      a       roh:ESScientificDomain ;
+      a       skos:Concept ;
       rdfs:label "BMEDAYJV" ;
       roh:codeOf rohsci:ES_SCIENTIFIC_DOMAIN_LEVEL_3_BMEDAYJV ;
       skos:inScheme rohsci:ESscientificDomains3rdCodeList ;
       skos:prefLabel "BMEDAYJV" .
 
 rohsci:ES_SCIENTIFIC_DOMAIN_LEVEL_2_FFI
-      a       roh:ESScientificDomain ;
+      a       skos:Concept ;
       rdfs:label "Filología y filosofía" ;
       roh:hasCode rohsci:ES_SCIENTIFIC_DOMAIN_LEVEL_2_CODE_FFI ;
       skos:broader rohsci:ES_SCIENTIFIC_DOMAIN_LEVEL_1_CSH ;
@@ -937,7 +947,7 @@ rohsci:ES_SCIENTIFIC_DOMAIN_LEVEL_2_FFI
       skos:prefLabel "Filologia i filosofia"@ca , "Philology and philosophy"@en , "Philologie et philosophie"@fr , "Filologia e filosofia"@pt , "Filoloxía e filosofía"@gl , "Filoloxía y filosofía"@ast , "Filología y filosofía" , "Filología y filosofía"@es .
 
 rohsci:ES_SCIENTIFIC_DOMAIN_LEVEL_3_MCLIATZZ
-      a       roh:ESScientificDomain ;
+      a       skos:Concept ;
       rdfs:label "Psiquiatría" ;
       roh:hasCode rohsci:ES_SCIENTIFIC_DOMAIN_LEVEL_3_CODE_MCLIATZZ ;
       skos:broader rohsci:ES_SCIENTIFIC_DOMAIN_LEVEL_2_MCLI ;
@@ -946,14 +956,14 @@ rohsci:ES_SCIENTIFIC_DOMAIN_LEVEL_3_MCLIATZZ
       skos:prefLabel "Psiquiatría"@gl , "Psiquiatría" , "Psiquiatría"@es , "Psiquiatría"@ast , "Psychiatrie"@fr , "Psychiatry"@en , "Psiquiatria"@ca , "Psiquiatria"@pt .
 
 rohsci:ES_SCIENTIFIC_DOMAIN_LEVEL_3_CODE_BFSOWHX
-      a       roh:ESScientificDomain ;
+      a       skos:Concept ;
       rdfs:label "BFSOWHX" ;
       roh:codeOf rohsci:ES_SCIENTIFIC_DOMAIN_LEVEL_3_BFSOWHX ;
       skos:inScheme rohsci:ESscientificDomains3rdCodeList ;
       skos:prefLabel "BFSOWHX" .
 
 rohsci:ES_SCIENTIFIC_DOMAIN_LEVEL_3_CTFIST
-      a       roh:ESScientificDomain ;
+      a       skos:Concept ;
       rdfs:label "Física teórica" ;
       roh:hasCode rohsci:ES_SCIENTIFIC_DOMAIN_LEVEL_3_CODE_CTFIST ;
       skos:broader rohsci:ES_SCIENTIFIC_DOMAIN_LEVEL_2_FI ;
@@ -962,14 +972,14 @@ rohsci:ES_SCIENTIFIC_DOMAIN_LEVEL_3_CTFIST
       skos:prefLabel "Theoretical physics"@en , "Physique théorique"@fr , "Física teórica"@es , "Física teórica" , "Física teórica"@ast , "Física teórica"@gl , "Física teórica"@pt , "Física teórica"@an , "Física teòrica"@ca .
 
 rohsci:ES_SCIENTIFIC_DOMAIN_LEVEL_3_CODE_CTFISP
-      a       roh:ESScientificDomain ;
+      a       skos:Concept ;
       rdfs:label "CTFISP" ;
       roh:codeOf rohsci:ES_SCIENTIFIC_DOMAIN_LEVEL_3_CTFISP ;
       skos:inScheme rohsci:ESscientificDomains3rdCodeList ;
       skos:prefLabel "CTFISP" .
 
 rohsci:ES_SCIENTIFIC_DOMAIN_LEVEL_1_CSH
-      a       roh:ESScientificDomain ;
+      a       skos:Concept ;
       rdfs:label "Ciencias sociales y humanidades" ;
       roh:hasCode rohsci:ES_SCIENTIFIC_DOMAIN_LEVEL_1_CODE_CSH ;
       skos:inScheme rohsci:ESscientificDomains1stList ;
@@ -978,28 +988,28 @@ rohsci:ES_SCIENTIFIC_DOMAIN_LEVEL_1_CSH
       ontolex:phoneticRep "ˈsəʊʃəl ˈsaɪənsɪz ænd hju(ː)ˈmænɪtiz"@en-GB , "siˈɛnsiəs susiˈaɫs i uməniˈtats"@ca , "ˈsoʊʃəl ˈsaɪənsəz ænd hjuˈmænɪtiz"@en-US , "θjen̪ θjas so 'θja les i w ma ni 'ða ðes"@es .
 
 rohsci:ES_SCIENTIFIC_DOMAIN_LEVEL_2_CODE_MTM
-      a       roh:ESScientificDomain ;
+      a       skos:Concept ;
       rdfs:label "MTM" ;
       roh:codeOf rohsci:ES_SCIENTIFIC_DOMAIN_LEVEL_2_MTM ;
       skos:inScheme rohsci:ESscientificDomains2ndCodeList ;
       skos:prefLabel "MTM" .
 
 rohsci:ES_SCIENTIFIC_DOMAIN_LEVEL_2_CODE_
-      a       roh:ESScientificDomain ;
+      a       skos:Concept ;
       rdfs:label "" ;
       roh:codeOf rohsci:ES_SCIENTIFIC_DOMAIN_LEVEL_2_ ;
       skos:inScheme rohsci:ESscientificDomains2ndCodeList ;
       skos:prefLabel "" .
 
 rohsci:ES_SCIENTIFIC_DOMAIN_LEVEL_3_CODE_CTHIDRO
-      a       roh:ESScientificDomain ;
+      a       skos:Concept ;
       rdfs:label "CTHIDRO" ;
       roh:codeOf rohsci:ES_SCIENTIFIC_DOMAIN_LEVEL_3_CTHIDRO ;
       skos:inScheme rohsci:ESscientificDomains3rdCodeList ;
       skos:prefLabel "CTHIDRO" .
 
 rohsci:ES_SCIENTIFIC_DOMAIN_LEVEL_3_QMCQBIT
-      a       roh:ESScientificDomain ;
+      a       skos:Concept ;
       rdfs:label "Química biotecnológica" ;
       roh:hasCode rohsci:ES_SCIENTIFIC_DOMAIN_LEVEL_3_CODE_QMCQBIT ;
       skos:broader rohsci:ES_SCIENTIFIC_DOMAIN_LEVEL_2_QMC ;
@@ -1008,7 +1018,7 @@ rohsci:ES_SCIENTIFIC_DOMAIN_LEVEL_3_QMCQBIT
       skos:prefLabel "Química de la biotecnoloxía"@ast , "Biotechnology chemistry"@en , "Química biotecnológica"@es , "Química biotecnológica" , "Química da biotecnoloxía"@gl , "Chimie des biotechnologies"@fr , "Química da biotecnologia"@pt , "Química biotecnològica"@ca .
 
 rohsci:ES_SCIENTIFIC_DOMAIN_LEVEL_3_HAZQGB
-      a       roh:ESScientificDomain ;
+      a       skos:Concept ;
       rdfs:label "Arte" ;
       roh:hasCode rohsci:ES_SCIENTIFIC_DOMAIN_LEVEL_3_CODE_HAZQGB ;
       skos:broader rohsci:ES_SCIENTIFIC_DOMAIN_LEVEL_2_HA ;
@@ -1017,7 +1027,7 @@ rohsci:ES_SCIENTIFIC_DOMAIN_LEVEL_3_HAZQGB
       skos:prefLabel "Arte"@gl , "Arte" , "Arte"@es , "Arte"@ast , "Arte"@pt , "Art"@fr , "Art"@ca , "Art"@en .
 
 rohsci:ES_SCIENTIFIC_DOMAIN_LEVEL_1_IYT
-      a       roh:ESScientificDomain ;
+      a       skos:Concept ;
       rdfs:label "Ingenierías y tecnologías" ;
       roh:hasCode rohsci:ES_SCIENTIFIC_DOMAIN_LEVEL_1_CODE_IYT ;
       skos:inScheme rohsci:ESscientificDomains1stList ;
@@ -1026,14 +1036,14 @@ rohsci:ES_SCIENTIFIC_DOMAIN_LEVEL_1_IYT
       ontolex:phoneticRep "ˈɛnʤəˈnɪrɪŋ ænd tɛkˈnɑləʤiz"@en-US , "ˌɛnʤɪˈnɪərɪŋ ænd tɛkˈnɒləʤiz"@en-GB , "iŋ xe nje 'ɾi as i tek no lo 'xi as"@es , "əɲʒiɲəˈɾiə i təɡnuluˈʒiəs"@ca .
 
 rohsci:ES_SCIENTIFIC_DOMAIN_LEVEL_3_CODE_QMCORGA
-      a       roh:ESScientificDomain ;
+      a       skos:Concept ;
       rdfs:label "QMCORGA" ;
       roh:codeOf rohsci:ES_SCIENTIFIC_DOMAIN_LEVEL_3_QMCORGA ;
       skos:inScheme rohsci:ESscientificDomains3rdCodeList ;
       skos:prefLabel "QMCORGA" .
 
 rohsci:ES_SCIENTIFIC_DOMAIN_LEVEL_3_BMEDLFCH
-      a       roh:ESScientificDomain ;
+      a       skos:Concept ;
       rdfs:label "Endocrinología" ;
       roh:hasCode rohsci:ES_SCIENTIFIC_DOMAIN_LEVEL_3_CODE_BMEDLFCH ;
       skos:broader rohsci:ES_SCIENTIFIC_DOMAIN_LEVEL_2_BMED ;
@@ -1042,7 +1052,7 @@ rohsci:ES_SCIENTIFIC_DOMAIN_LEVEL_3_BMEDLFCH
       skos:prefLabel "Endocrinología" , "Endocrinología"@es , "Endocrinologia"@pt , "Endocrinologia"@ca , "Endocrinoloxía"@ast , "Endocrinoloxía"@gl , "Endocrinology"@en , "Endocrinologie"@fr .
 
 rohsci:ES_SCIENTIFIC_DOMAIN_LEVEL_2_CT
-      a       roh:ESScientificDomain ;
+      a       skos:Concept ;
       rdfs:label "Ciencias de la tierra" ;
       roh:hasCode rohsci:ES_SCIENTIFIC_DOMAIN_LEVEL_2_CODE_CT ;
       skos:broader rohsci:ES_SCIENTIFIC_DOMAIN_LEVEL_1_CB ;
@@ -1052,7 +1062,7 @@ rohsci:ES_SCIENTIFIC_DOMAIN_LEVEL_2_CT
       skos:prefLabel "Ciencias de la tierra" , "Ciencias de la tierra"@es , "Ciencias da terra"@gl , "Ciències de la terra"@ca , "Ciências da terra"@pt , "Ciencies de la tierra"@ast , "Earth sciences"@en , "Sciences de la terre"@fr .
 
 rohsci:ES_SCIENTIFIC_DOMAIN_LEVEL_2_TQ
-      a       roh:ESScientificDomain ;
+      a       skos:Concept ;
       rdfs:label "Tecnología química" ;
       roh:hasCode rohsci:ES_SCIENTIFIC_DOMAIN_LEVEL_2_CODE_TQ ;
       skos:broader rohsci:ES_SCIENTIFIC_DOMAIN_LEVEL_1_IYT ;
@@ -1061,7 +1071,7 @@ rohsci:ES_SCIENTIFIC_DOMAIN_LEVEL_2_TQ
       skos:prefLabel "Technologie chimique"@fr , "Tecnologia química"@pt , "Chemical technology"@en , "tecnologia química"@ca , "Tecnología química" , "Tecnología química"@es , "Tecnoloxía química"@ast , "Tecnoloxía química"@gl .
 
 rohsci:ES_SCIENTIFIC_DOMAIN_LEVEL_2_IEL
-      a       roh:ESScientificDomain ;
+      a       skos:Concept ;
       rdfs:label "Ingeniería eléctrica, electrónica y automática" ;
       roh:hasCode rohsci:ES_SCIENTIFIC_DOMAIN_LEVEL_2_CODE_IEL ;
       skos:broader rohsci:ES_SCIENTIFIC_DOMAIN_LEVEL_1_IYT ;
@@ -1070,28 +1080,28 @@ rohsci:ES_SCIENTIFIC_DOMAIN_LEVEL_2_IEL
       skos:prefLabel "Enxeñaría eléctrica, electrónica e automática"@gl , "Enginyeria elèctrica, electrònica i automàtica"@ca , "Inxeniería eléctrica, electrónica y automática"@ast , "Electrical, electronic and automatic engineering"@en , "Ingénierie électrique, électronique et automatique"@fr , "Engenharia elétrica, eletrônica e automática"@pt , "Ingeniería eléctrica, electrónica y automática" , "Ingeniería eléctrica, electrónica y automática"@es .
 
 rohsci:ES_SCIENTIFIC_DOMAIN_LEVEL_3_CODE_BMEDLFCH
-      a       roh:ESScientificDomain ;
+      a       skos:Concept ;
       rdfs:label "BMEDLFCH" ;
       roh:codeOf rohsci:ES_SCIENTIFIC_DOMAIN_LEVEL_3_BMEDLFCH ;
       skos:inScheme rohsci:ESscientificDomains3rdCodeList ;
       skos:prefLabel "BMEDLFCH" .
 
 rohsci:ES_SCIENTIFIC_DOMAIN_LEVEL_3_CODE_PSDSJH
-      a       roh:ESScientificDomain ;
+      a       skos:Concept ;
       rdfs:label "PSDSJH" ;
       roh:codeOf rohsci:ES_SCIENTIFIC_DOMAIN_LEVEL_3_PSDSJH ;
       skos:inScheme rohsci:ESscientificDomains3rdCodeList ;
       skos:prefLabel "PSDSJH" .
 
 rohsci:ES_SCIENTIFIC_DOMAIN_LEVEL_1_CODE_IYT
-      a       roh:ESScientificDomain ;
+      a       skos:Concept ;
       rdfs:label "IYT" ;
       roh:codeOf rohsci:ES_SCIENTIFIC_DOMAIN_LEVEL_1_IYT ;
       skos:inScheme rohsci:ESDomainCode1stList ;
       skos:prefLabel "IYT" .
 
 rohsci:ES_SCIENTIFIC_DOMAIN_LEVEL_3_MCLIOCBV
-      a       roh:ESScientificDomain ;
+      a       skos:Concept ;
       rdfs:label "Enfermedades cardiovasculares" ;
       roh:hasCode rohsci:ES_SCIENTIFIC_DOMAIN_LEVEL_3_CODE_MCLIOCBV ;
       skos:broader rohsci:ES_SCIENTIFIC_DOMAIN_LEVEL_2_MCLI ;
@@ -1100,14 +1110,14 @@ rohsci:ES_SCIENTIFIC_DOMAIN_LEVEL_3_MCLIOCBV
       skos:prefLabel "Doenças cardiovasculares"@pt , "Enfermidades cardiovasculares"@gl , "Cardiovascular diseases"@en , "Malalties cardiovasculars"@ca , "Maladies cardiovasculaires"@fr , "Enfermedades cardiovasculares" , "Enfermedades cardiovasculares"@es , "Enfermedaes cardiovasculares"@ast .
 
 rohsci:ES_SCIENTIFIC_DOMAIN_LEVEL_2_CODE_IME
-      a       roh:ESScientificDomain ;
+      a       skos:Concept ;
       rdfs:label "IME" ;
       roh:codeOf rohsci:ES_SCIENTIFIC_DOMAIN_LEVEL_2_IME ;
       skos:inScheme rohsci:ESscientificDomains2ndCodeList ;
       skos:prefLabel "IME" .
 
 rohsci:ES_SCIENTIFIC_DOMAIN_LEVEL_3_PSNRWD
-      a       roh:ESScientificDomain ;
+      a       skos:Concept ;
       rdfs:label "Psicología básica" ;
       roh:hasCode rohsci:ES_SCIENTIFIC_DOMAIN_LEVEL_3_CODE_PSNRWD ;
       skos:broader rohsci:ES_SCIENTIFIC_DOMAIN_LEVEL_2_PS ;
@@ -1116,21 +1126,21 @@ rohsci:ES_SCIENTIFIC_DOMAIN_LEVEL_3_PSNRWD
       skos:prefLabel "Psicologia básica"@pt , "Psicologia bàsica"@ca , "Psicoloxía básico"@ast , "Psicología básica" , "Psicología básica"@es , "Basic psychology"@en , "Psicoloxía básica"@gl , "Psychologie de base"@fr .
 
 rohsci:ES_SCIENTIFIC_DOMAIN_LEVEL_3_CODE_MTMMATE
-      a       roh:ESScientificDomain ;
+      a       skos:Concept ;
       rdfs:label "MTMMATE" ;
       roh:codeOf rohsci:ES_SCIENTIFIC_DOMAIN_LEVEL_3_MTMMATE ;
       skos:inScheme rohsci:ESscientificDomains3rdCodeList ;
       skos:prefLabel "MTMMATE" .
 
 rohsci:ES_SCIENTIFIC_DOMAIN_LEVEL_2_CODE_ICI
-      a       roh:ESScientificDomain ;
+      a       skos:Concept ;
       rdfs:label "ICI" ;
       roh:codeOf rohsci:ES_SCIENTIFIC_DOMAIN_LEVEL_2_ICI ;
       skos:inScheme rohsci:ESscientificDomains2ndCodeList ;
       skos:prefLabel "ICI" .
 
 rohsci:ES_SCIENTIFIC_DOMAIN_LEVEL_3_MCLIHKZZ
-      a       roh:ESScientificDomain ;
+      a       skos:Concept ;
       rdfs:label "Servicios de salud" ;
       roh:hasCode rohsci:ES_SCIENTIFIC_DOMAIN_LEVEL_3_CODE_MCLIHKZZ ;
       skos:broader rohsci:ES_SCIENTIFIC_DOMAIN_LEVEL_2_MCLI ;
@@ -1139,7 +1149,7 @@ rohsci:ES_SCIENTIFIC_DOMAIN_LEVEL_3_MCLIHKZZ
       skos:prefLabel "Serveis de salut"@ca , "Health services"@en , "Servicios de salud"@es , "Servicios de salud" , "Serviços de saúde"@pt , "Servizos sanitarios"@gl , "Services de santé"@fr , "Servicios sanitarios"@ast .
 
 rohsci:ES_SCIENTIFIC_DOMAIN_LEVEL_3_MCLIAVLC
-      a       roh:ESScientificDomain ;
+      a       skos:Concept ;
       rdfs:label "Neurología" ;
       roh:hasCode rohsci:ES_SCIENTIFIC_DOMAIN_LEVEL_3_CODE_MCLIAVLC ;
       skos:broader rohsci:ES_SCIENTIFIC_DOMAIN_LEVEL_2_MCLI ;
@@ -1148,7 +1158,7 @@ rohsci:ES_SCIENTIFIC_DOMAIN_LEVEL_3_MCLIAVLC
       skos:prefLabel "Neurologia"@ca , "Neurologia"@pt , "Neurology"@en , "Neurología" , "Neurología"@es , "Neuroloxía"@ast , "Neuroloxía"@gl , "Neurologie"@fr .
 
 rohsci:ES_SCIENTIFIC_DOMAIN_LEVEL_3_HAYOHM
-      a       roh:ESScientificDomain ;
+      a       skos:Concept ;
       rdfs:label "Historia moderna" ;
       roh:hasCode rohsci:ES_SCIENTIFIC_DOMAIN_LEVEL_3_CODE_HAYOHM ;
       skos:broader rohsci:ES_SCIENTIFIC_DOMAIN_LEVEL_2_HA ;
@@ -1157,35 +1167,35 @@ rohsci:ES_SCIENTIFIC_DOMAIN_LEVEL_3_HAYOHM
       skos:prefLabel "História moderna"@pt , "Modern history"@en , "Histoire moderne"@fr , "Historia moderna" , "Historia moderna"@es , "Historia moderna"@ast , "Historia moderna"@gl , "Història moderna"@ca .
 
 rohsci:ES_SCIENTIFIC_DOMAIN_LEVEL_3_CODE_BFSCXPL
-      a       roh:ESScientificDomain ;
+      a       skos:Concept ;
       rdfs:label "BFSCXPL" ;
       roh:codeOf rohsci:ES_SCIENTIFIC_DOMAIN_LEVEL_3_BFSCXPL ;
       skos:inScheme rohsci:ESscientificDomains3rdCodeList ;
       skos:prefLabel "BFSCXPL" .
 
 rohsci:ES_SCIENTIFIC_DOMAIN_LEVEL_2_CODE_GAN
-      a       roh:ESScientificDomain ;
+      a       skos:Concept ;
       rdfs:label "GAN" ;
       roh:codeOf rohsci:ES_SCIENTIFIC_DOMAIN_LEVEL_2_GAN ;
       skos:inScheme rohsci:ESscientificDomains2ndCodeList ;
       skos:prefLabel "GAN" .
 
 rohsci:ES_SCIENTIFIC_DOMAIN_LEVEL_2_CODE_TM
-      a       roh:ESScientificDomain ;
+      a       skos:Concept ;
       rdfs:label "TM" ;
       roh:codeOf rohsci:ES_SCIENTIFIC_DOMAIN_LEVEL_2_TM ;
       skos:inScheme rohsci:ESscientificDomains2ndCodeList ;
       skos:prefLabel "TM" .
 
 rohsci:ES_SCIENTIFIC_DOMAIN_LEVEL_3_CODE_MTMANAL
-      a       roh:ESScientificDomain ;
+      a       skos:Concept ;
       rdfs:label "MTMANAL" ;
       roh:codeOf rohsci:ES_SCIENTIFIC_DOMAIN_LEVEL_3_MTMANAL ;
       skos:inScheme rohsci:ESscientificDomains3rdCodeList ;
       skos:prefLabel "MTMANAL" .
 
 rohsci:ES_SCIENTIFIC_DOMAIN_LEVEL_3_BFSJJXW
-      a       roh:ESScientificDomain ;
+      a       skos:Concept ;
       rdfs:label "Plantas" ;
       roh:hasCode rohsci:ES_SCIENTIFIC_DOMAIN_LEVEL_3_CODE_BFSJJXW ;
       skos:broader rohsci:ES_SCIENTIFIC_DOMAIN_LEVEL_2_BFS ;
@@ -1194,7 +1204,7 @@ rohsci:ES_SCIENTIFIC_DOMAIN_LEVEL_3_BFSJJXW
       skos:prefLabel "Plants"@en , "Plantes"@ca , "Plantes"@fr , "Plantes"@ast , "Plantas" , "Plantas"@es , "Plantas"@gl , "Plantas"@pt .
 
 rohsci:ES_SCIENTIFIC_DOMAIN_LEVEL_3_CTSEDI
-      a       roh:ESScientificDomain ;
+      a       skos:Concept ;
       rdfs:label "Sedimentología" ;
       roh:hasCode rohsci:ES_SCIENTIFIC_DOMAIN_LEVEL_3_CODE_CTSEDI ;
       skos:broader rohsci:ES_SCIENTIFIC_DOMAIN_LEVEL_2_CT ;
@@ -1203,7 +1213,7 @@ rohsci:ES_SCIENTIFIC_DOMAIN_LEVEL_3_CTSEDI
       skos:prefLabel "Sedimentología" , "Sedimentología"@es , "Sedimentologia"@ca , "Sedimentologia"@pt , "Sédimentologie"@fr , "Sedimentoloxía"@ast , "Sedimentoloxía"@gl , "Sedimentology"@en .
 
 rohsci:ES_SCIENTIFIC_DOMAIN_LEVEL_3_QMCAMBI
-      a       roh:ESScientificDomain ;
+      a       skos:Concept ;
       rdfs:label "Química ambiental" ;
       roh:hasCode rohsci:ES_SCIENTIFIC_DOMAIN_LEVEL_3_CODE_QMCAMBI ;
       skos:broader rohsci:ES_SCIENTIFIC_DOMAIN_LEVEL_2_QMC ;
@@ -1212,14 +1222,14 @@ rohsci:ES_SCIENTIFIC_DOMAIN_LEVEL_3_QMCAMBI
       skos:prefLabel "Química ambiental"@ca , "Química ambiental" , "Química ambiental"@es , "Química ambiental"@ast , "Química ambiental"@gl , "Química ambiental"@pt , "Chimie environnementale"@fr , "Enviromental chemistry"@en .
 
 rohsci:ES_SCIENTIFIC_DOMAIN_LEVEL_2_CODE_BFS
-      a       roh:ESScientificDomain ;
+      a       skos:Concept ;
       rdfs:label "BFS" ;
       roh:codeOf rohsci:ES_SCIENTIFIC_DOMAIN_LEVEL_2_BFS ;
       skos:inScheme rohsci:ESscientificDomains2ndCodeList ;
       skos:prefLabel "BFS" .
 
 rohsci:ES_SCIENTIFIC_DOMAIN_LEVEL_2_AGR
-      a       roh:ESScientificDomain ;
+      a       skos:Concept ;
       rdfs:label "Agricultura" ;
       roh:hasCode rohsci:ES_SCIENTIFIC_DOMAIN_LEVEL_2_CODE_AGR ;
       skos:broader rohsci:ES_SCIENTIFIC_DOMAIN_LEVEL_1_CVS ;
@@ -1228,14 +1238,14 @@ rohsci:ES_SCIENTIFIC_DOMAIN_LEVEL_2_AGR
       skos:prefLabel "Agriculture"@fr , "farming"@en , "Agricultura"@pt , "Agricultura"@gl , "Agricultura" , "Agricultura"@es , "Agricultura"@ast , "Agricultura"@ca .
 
 rohsci:ES_SCIENTIFIC_DOMAIN_LEVEL_3_CODE_QMCCATE
-      a       roh:ESScientificDomain ;
+      a       skos:Concept ;
       rdfs:label "QMCCATE" ;
       roh:codeOf rohsci:ES_SCIENTIFIC_DOMAIN_LEVEL_3_QMCCATE ;
       skos:inScheme rohsci:ESscientificDomains3rdCodeList ;
       skos:prefLabel "QMCCATE" .
 
 rohsci:ES_SCIENTIFIC_DOMAIN_LEVEL_3_MCLINMLH
-      a       roh:ESScientificDomain ;
+      a       skos:Concept ;
       rdfs:label "Cirugía y maxilofacial" ;
       roh:hasCode rohsci:ES_SCIENTIFIC_DOMAIN_LEVEL_3_CODE_MCLINMLH ;
       skos:broader rohsci:ES_SCIENTIFIC_DOMAIN_LEVEL_2_MCLI ;
@@ -1244,7 +1254,7 @@ rohsci:ES_SCIENTIFIC_DOMAIN_LEVEL_3_MCLINMLH
       skos:prefLabel "Cirurgia i maxil·lofacial"@ca , "Chirurgie et maxillo-faciale"@fr , "Surgery and maxillofacial"@en , "Cirurxía y maxilofacial"@ast , "Cirurxía e maxilofacial"@gl , "Cirurgia e maxilofacial"@pt , "Cirugía y maxilofacial" , "Cirugía y maxilofacial"@es .
 
 rohsci:ES_SCIENTIFIC_DOMAIN_LEVEL_3_CTHIDRO
-      a       roh:ESScientificDomain ;
+      a       skos:Concept ;
       rdfs:label "Hidrología" ;
       roh:hasCode rohsci:ES_SCIENTIFIC_DOMAIN_LEVEL_3_CODE_CTHIDRO ;
       skos:broader rohsci:ES_SCIENTIFIC_DOMAIN_LEVEL_2_CT ;
@@ -1253,14 +1263,14 @@ rohsci:ES_SCIENTIFIC_DOMAIN_LEVEL_3_CTHIDRO
       skos:prefLabel "Hidroloxía"@ast , "Hidroloxía"@gl , "Hidrologia"@pt , "Hidrologia"@ca , "Hydrologie"@fr , "Hidrología" , "Hidrología"@es , "Hydrology"@en .
 
 rohsci:ES_SCIENTIFIC_DOMAIN_LEVEL_3_CODE_BMEDYQHF
-      a       roh:ESScientificDomain ;
+      a       skos:Concept ;
       rdfs:label "BMEDYQHF" ;
       roh:codeOf rohsci:ES_SCIENTIFIC_DOMAIN_LEVEL_3_BMEDYQHF ;
       skos:inScheme rohsci:ESscientificDomains3rdCodeList ;
       skos:prefLabel "BMEDYQHF" .
 
 rohsci:ES_SCIENTIFIC_DOMAIN_LEVEL_3_BMEDRCYB
-      a       roh:ESScientificDomain ;
+      a       skos:Concept ;
       rdfs:label "Neurociencias" ;
       roh:hasCode rohsci:ES_SCIENTIFIC_DOMAIN_LEVEL_3_CODE_BMEDRCYB ;
       skos:broader rohsci:ES_SCIENTIFIC_DOMAIN_LEVEL_2_BMED ;
@@ -1269,14 +1279,14 @@ rohsci:ES_SCIENTIFIC_DOMAIN_LEVEL_3_BMEDRCYB
       skos:prefLabel "Neurociencias" , "Neurociencias"@es , "Neurociencias"@gl , "Neurociencies"@ast , "Neurosciences"@fr , "Neurosciences"@en , "Neurociències"@ca , "Neurociências"@pt .
 
 rohsci:ES_SCIENTIFIC_DOMAIN_LEVEL_3_CODE_BMEDOFOI
-      a       roh:ESScientificDomain ;
+      a       skos:Concept ;
       rdfs:label "BMEDOFOI" ;
       roh:codeOf rohsci:ES_SCIENTIFIC_DOMAIN_LEVEL_3_BMEDOFOI ;
       skos:inScheme rohsci:ESscientificDomains3rdCodeList ;
       skos:prefLabel "BMEDOFOI" .
 
 rohsci:ES_SCIENTIFIC_DOMAIN_LEVEL_3_CTFISE
-      a       roh:ESScientificDomain ;
+      a       skos:Concept ;
       rdfs:label "Física, estadística, biofísica y física no lineal" ;
       roh:hasCode rohsci:ES_SCIENTIFIC_DOMAIN_LEVEL_3_CODE_CTFISE ;
       skos:broader rohsci:ES_SCIENTIFIC_DOMAIN_LEVEL_2_FI ;
@@ -1285,7 +1295,7 @@ rohsci:ES_SCIENTIFIC_DOMAIN_LEVEL_3_CTFISE
       skos:prefLabel "Física, estatísticas, biofísica e física non lineal"@gl , "Física, estadística, biofísica y física non lineal"@ast , "Physics, statistics, biophysics and nonlinear physics"@en , "Physique, statistique, biophysique et physique non linéaire"@fr , "Física, estatística, biofísica e física não linear"@pt , "Física, estadística, biofísica y física no lineal" , "Física, estadística, biofísica y física no lineal"@es , "Física, estadística, biofísica i física no lineal"@ca .
 
 rohsci:ES_SCIENTIFIC_DOMAIN_LEVEL_3_BFSDXWB
-      a       roh:ESScientificDomain ;
+      a       skos:Concept ;
       rdfs:label "Genética de poblaciones" ;
       roh:hasCode rohsci:ES_SCIENTIFIC_DOMAIN_LEVEL_3_CODE_BFSDXWB ;
       skos:broader rohsci:ES_SCIENTIFIC_DOMAIN_LEVEL_2_BFS ;
@@ -1294,7 +1304,7 @@ rohsci:ES_SCIENTIFIC_DOMAIN_LEVEL_3_BFSDXWB
       skos:prefLabel "Population's genetics"@en , "Genética de Populações"@pt , "Xenética de población"@ast , "Genètica de poblacions"@ca , "Genética de poblaciones" , "Genética de poblaciones"@es , "Xenética de poboación"@gl , "Génétique des populations"@fr .
 
 rohsci:ES_SCIENTIFIC_DOMAIN_LEVEL_3_QMCQUSU
-      a       roh:ESScientificDomain ;
+      a       skos:Concept ;
       rdfs:label "Química supramolecular" ;
       roh:hasCode rohsci:ES_SCIENTIFIC_DOMAIN_LEVEL_3_CODE_QMCQUSU ;
       skos:broader rohsci:ES_SCIENTIFIC_DOMAIN_LEVEL_2_QMC ;
@@ -1303,35 +1313,35 @@ rohsci:ES_SCIENTIFIC_DOMAIN_LEVEL_3_QMCQUSU
       skos:prefLabel "Química supramolecular"@ca , "Química supramolecular" , "Química supramolecular"@es , "Química supramolecular"@ast , "Química supramolecular"@gl , "Química supramolecular"@pt , "Chimie supramoléculaire"@fr , "Supramolecular chemistry"@en .
 
 rohsci:ES_SCIENTIFIC_DOMAIN_LEVEL_3_CODE_BFSGSYN
-      a       roh:ESScientificDomain ;
+      a       skos:Concept ;
       rdfs:label "BFSGSYN" ;
       roh:codeOf rohsci:ES_SCIENTIFIC_DOMAIN_LEVEL_3_BFSGSYN ;
       skos:inScheme rohsci:ESscientificDomains3rdCodeList ;
       skos:prefLabel "BFSGSYN" .
 
 rohsci:ES_SCIENTIFIC_DOMAIN_LEVEL_3_CODE_CTCON
-      a       roh:ESScientificDomain ;
+      a       skos:Concept ;
       rdfs:label "CTCON" ;
       roh:codeOf rohsci:ES_SCIENTIFIC_DOMAIN_LEVEL_3_CTCON ;
       skos:inScheme rohsci:ESscientificDomains3rdCodeList ;
       skos:prefLabel "CTCON" .
 
 rohsci:ES_SCIENTIFIC_DOMAIN_LEVEL_3_CODE_BFSJEYV
-      a       roh:ESScientificDomain ;
+      a       skos:Concept ;
       rdfs:label "BFSJEYV" ;
       roh:codeOf rohsci:ES_SCIENTIFIC_DOMAIN_LEVEL_3_BFSJEYV ;
       skos:inScheme rohsci:ESscientificDomains3rdCodeList ;
       skos:prefLabel "BFSJEYV" .
 
 rohsci:ES_SCIENTIFIC_DOMAIN_LEVEL_3_CODE_BFSCVHN
-      a       roh:ESScientificDomain ;
+      a       skos:Concept ;
       rdfs:label "BFSCVHN" ;
       roh:codeOf rohsci:ES_SCIENTIFIC_DOMAIN_LEVEL_3_BFSCVHN ;
       skos:inScheme rohsci:ESscientificDomains3rdCodeList ;
       skos:prefLabel "BFSCVHN" .
 
 rohsci:ES_SCIENTIFIC_DOMAIN_LEVEL_3_MTMGEOM
-      a       roh:ESScientificDomain ;
+      a       skos:Concept ;
       rdfs:label "Geometría" ;
       roh:hasCode rohsci:ES_SCIENTIFIC_DOMAIN_LEVEL_3_CODE_MTMGEOM ;
       skos:broader rohsci:ES_SCIENTIFIC_DOMAIN_LEVEL_2_MTM ;
@@ -1340,42 +1350,42 @@ rohsci:ES_SCIENTIFIC_DOMAIN_LEVEL_3_MTMGEOM
       skos:prefLabel "Geometría" , "Geometría"@es , "Géométrie"@fr , "Xeometría"@ast , "Xeometría"@gl , "Geometria"@ca , "Geometria"@pt , "Geometry"@en .
 
 rohsci:ES_SCIENTIFIC_DOMAIN_LEVEL_1_CODE_CSH
-      a       roh:ESScientificDomain ;
+      a       skos:Concept ;
       rdfs:label "CSH" ;
       roh:codeOf rohsci:ES_SCIENTIFIC_DOMAIN_LEVEL_1_CSH ;
       skos:inScheme rohsci:ESDomainCode1stList ;
       skos:prefLabel "CSH" .
 
 rohsci:ES_SCIENTIFIC_DOMAIN_LEVEL_3_CODE_FFIYMLQ
-      a       roh:ESScientificDomain ;
+      a       skos:Concept ;
       rdfs:label "FFIYMLQ" ;
       roh:codeOf rohsci:ES_SCIENTIFIC_DOMAIN_LEVEL_3_FFIYMLQ ;
       skos:inScheme rohsci:ESscientificDomains3rdCodeList ;
       skos:prefLabel "FFIYMLQ" .
 
 rohsci:ES_SCIENTIFIC_DOMAIN_LEVEL_3_CODE_MTMESTA
-      a       roh:ESScientificDomain ;
+      a       skos:Concept ;
       rdfs:label "MTMESTA" ;
       roh:codeOf rohsci:ES_SCIENTIFIC_DOMAIN_LEVEL_3_MTMESTA ;
       skos:inScheme rohsci:ESscientificDomains3rdCodeList ;
       skos:prefLabel "MTMESTA" .
 
 rohsci:ES_SCIENTIFIC_DOMAIN_LEVEL_3_CODE_MCLIBGSE
-      a       roh:ESScientificDomain ;
+      a       skos:Concept ;
       rdfs:label "MCLIBGSE" ;
       roh:codeOf rohsci:ES_SCIENTIFIC_DOMAIN_LEVEL_3_MCLIBGSE ;
       skos:inScheme rohsci:ESscientificDomains3rdCodeList ;
       skos:prefLabel "MCLIBGSE" .
 
 rohsci:ES_SCIENTIFIC_DOMAIN_LEVEL_3_CODE_HAQJKH
-      a       roh:ESScientificDomain ;
+      a       skos:Concept ;
       rdfs:label "HAQJKH" ;
       roh:codeOf rohsci:ES_SCIENTIFIC_DOMAIN_LEVEL_3_HAQJKH ;
       skos:inScheme rohsci:ESscientificDomains3rdCodeList ;
       skos:prefLabel "HAQJKH" .
 
 rohsci:ES_SCIENTIFIC_DOMAIN_LEVEL_3_BFSCVHN
-      a       roh:ESScientificDomain ;
+      a       skos:Concept ;
       rdfs:label "Biotecnología" ;
       roh:hasCode rohsci:ES_SCIENTIFIC_DOMAIN_LEVEL_3_CODE_BFSCVHN ;
       skos:broader rohsci:ES_SCIENTIFIC_DOMAIN_LEVEL_2_BFS ;
@@ -1384,14 +1394,14 @@ rohsci:ES_SCIENTIFIC_DOMAIN_LEVEL_3_BFSCVHN
       skos:prefLabel "Biotecnologia"@ca , "Biotecnologia"@pt , "Biotecnoloxía"@gl , "Biotecnoloxía"@ast , "Biotecnología" , "Biotecnología"@es , "Biotechnologie"@fr , "Biotechnology"@en .
 
 rohsci:ES_SCIENTIFIC_DOMAIN_LEVEL_3_CODE_CTFISA
-      a       roh:ESScientificDomain ;
+      a       skos:Concept ;
       rdfs:label "CTFISA" ;
       roh:codeOf rohsci:ES_SCIENTIFIC_DOMAIN_LEVEL_3_CTFISA ;
       skos:inScheme rohsci:ESscientificDomains3rdCodeList ;
       skos:prefLabel "CTFISA" .
 
 rohsci:ES_SCIENTIFIC_DOMAIN_LEVEL_2_TM
-      a       roh:ESScientificDomain ;
+      a       skos:Concept ;
       rdfs:label "Ciencia y tecnología de materiales" ;
       roh:hasCode rohsci:ES_SCIENTIFIC_DOMAIN_LEVEL_2_CODE_TM ;
       skos:broader rohsci:ES_SCIENTIFIC_DOMAIN_LEVEL_1_IYT ;
@@ -1400,7 +1410,7 @@ rohsci:ES_SCIENTIFIC_DOMAIN_LEVEL_2_TM
       skos:prefLabel "Science et technologie des matériaux"@fr , "Ciència i tecnologia de materials"@ca , "Ciencia y tecnología de materiales"@es , "Ciencia y tecnología de materiales" , "Science and technology of materials"@en , "Ciencia y tecnoloxía de materiales"@ast , "Ciência e tecnologia de materiais"@pt , "Ciencia e tecnoloxía dos materiais"@gl .
 
 rohsci:ES_SCIENTIFIC_DOMAIN_LEVEL_3_QMCCATA
-      a       roh:ESScientificDomain ;
+      a       skos:Concept ;
       rdfs:label "Catálisis" ;
       roh:hasCode rohsci:ES_SCIENTIFIC_DOMAIN_LEVEL_3_CODE_QMCCATA ;
       skos:broader rohsci:ES_SCIENTIFIC_DOMAIN_LEVEL_2_QMC ;
@@ -1409,42 +1419,42 @@ rohsci:ES_SCIENTIFIC_DOMAIN_LEVEL_3_QMCCATA
       skos:prefLabel "Catálisis"@an , "Catálisis" , "Catálisis"@es , "Catálisis"@ast , "Catalysis"@en , "Catálise"@gl , "Catálise"@pt , "Catàlisi"@ca , "Catalyse"@fr .
 
 rohsci:ES_SCIENTIFIC_DOMAIN_LEVEL_3_CODE_CTTAFO
-      a       roh:ESScientificDomain ;
+      a       skos:Concept ;
       rdfs:label "CTTAFO" ;
       roh:codeOf rohsci:ES_SCIENTIFIC_DOMAIN_LEVEL_3_CTTAFO ;
       skos:inScheme rohsci:ESscientificDomains3rdCodeList ;
       skos:prefLabel "CTTAFO" .
 
 rohsci:ES_SCIENTIFIC_DOMAIN_LEVEL_3_CODE_BFSTSEI
-      a       roh:ESScientificDomain ;
+      a       skos:Concept ;
       rdfs:label "BFSTSEI" ;
       roh:codeOf rohsci:ES_SCIENTIFIC_DOMAIN_LEVEL_3_BFSTSEI ;
       skos:inScheme rohsci:ESscientificDomains3rdCodeList ;
       skos:prefLabel "BFSTSEI" .
 
 rohsci:ES_SCIENTIFIC_DOMAIN_LEVEL_3_CODE_QMCQBIT
-      a       roh:ESScientificDomain ;
+      a       skos:Concept ;
       rdfs:label "QMCQBIT" ;
       roh:codeOf rohsci:ES_SCIENTIFIC_DOMAIN_LEVEL_3_QMCQBIT ;
       skos:inScheme rohsci:ESscientificDomains3rdCodeList ;
       skos:prefLabel "QMCQBIT" .
 
 rohsci:ES_SCIENTIFIC_DOMAIN_LEVEL_3_CODE_FFIQIYR
-      a       roh:ESScientificDomain ;
+      a       skos:Concept ;
       rdfs:label "FFIQIYR" ;
       roh:codeOf rohsci:ES_SCIENTIFIC_DOMAIN_LEVEL_3_FFIQIYR ;
       skos:inScheme rohsci:ESscientificDomains3rdCodeList ;
       skos:prefLabel "FFIQIYR" .
 
 rohsci:ES_SCIENTIFIC_DOMAIN_LEVEL_3_CODE_FFIYJTK
-      a       roh:ESScientificDomain ;
+      a       skos:Concept ;
       rdfs:label "FFIYJTK" ;
       roh:codeOf rohsci:ES_SCIENTIFIC_DOMAIN_LEVEL_3_FFIYJTK ;
       skos:inScheme rohsci:ESscientificDomains3rdCodeList ;
       skos:prefLabel "FFIYJTK" .
 
 rohsci:ES_SCIENTIFIC_DOMAIN_LEVEL_3_BFSEEAB
-      a       roh:ESScientificDomain ;
+      a       skos:Concept ;
       rdfs:label "Diferenciación" ;
       roh:hasCode rohsci:ES_SCIENTIFIC_DOMAIN_LEVEL_3_CODE_BFSEEAB ;
       skos:broader rohsci:ES_SCIENTIFIC_DOMAIN_LEVEL_2_BFS ;
@@ -1453,28 +1463,28 @@ rohsci:ES_SCIENTIFIC_DOMAIN_LEVEL_3_BFSEEAB
       skos:prefLabel "Differentiation"@en , "Différenciation"@fr , "Diferenciação"@pt , "Diferenciació"@ca , "Diferenciación" , "Diferenciación"@es , "Diferenciación"@ast , "Diferenciación"@gl .
 
 rohsci:ES_SCIENTIFIC_DOMAIN_LEVEL_3_CODE_FFIVVJH
-      a       roh:ESScientificDomain ;
+      a       skos:Concept ;
       rdfs:label "FFIVVJH" ;
       roh:codeOf rohsci:ES_SCIENTIFIC_DOMAIN_LEVEL_3_FFIVVJH ;
       skos:inScheme rohsci:ESscientificDomains3rdCodeList ;
       skos:prefLabel "FFIVVJH" .
 
 rohsci:ES_SCIENTIFIC_DOMAIN_LEVEL_3_CODE_BFSSBGU
-      a       roh:ESScientificDomain ;
+      a       skos:Concept ;
       rdfs:label "BFSSBGU" ;
       roh:codeOf rohsci:ES_SCIENTIFIC_DOMAIN_LEVEL_3_BFSSBGU ;
       skos:inScheme rohsci:ESscientificDomains3rdCodeList ;
       skos:prefLabel "BFSSBGU" .
 
 rohsci:ES_SCIENTIFIC_DOMAIN_LEVEL_3_CODE_HALMCG
-      a       roh:ESScientificDomain ;
+      a       skos:Concept ;
       rdfs:label "HALMCG" ;
       roh:codeOf rohsci:ES_SCIENTIFIC_DOMAIN_LEVEL_3_HALMCG ;
       skos:inScheme rohsci:ESscientificDomains3rdCodeList ;
       skos:prefLabel "HALMCG" .
 
 rohsci:ES_SCIENTIFIC_DOMAIN_LEVEL_3_BFSJEYV
-      a       roh:ESScientificDomain ;
+      a       skos:Concept ;
       rdfs:label "Cáncer" ;
       roh:hasCode rohsci:ES_SCIENTIFIC_DOMAIN_LEVEL_3_CODE_BFSJEYV ;
       skos:broader rohsci:ES_SCIENTIFIC_DOMAIN_LEVEL_2_BFS ;
@@ -1483,14 +1493,14 @@ rohsci:ES_SCIENTIFIC_DOMAIN_LEVEL_3_BFSJEYV
       skos:prefLabel "Câncer"@pt , "Cancer"@fr , "Cancer"@en , "Cáncer" , "Cáncer"@es , "Cáncer"@ast , "Cáncer"@gl , "Càncer"@ca .
 
 rohsci:ES_SCIENTIFIC_DOMAIN_LEVEL_3_CODE_BFSJJXW
-      a       roh:ESScientificDomain ;
+      a       skos:Concept ;
       rdfs:label "BFSJJXW" ;
       roh:codeOf rohsci:ES_SCIENTIFIC_DOMAIN_LEVEL_3_BFSJJXW ;
       skos:inScheme rohsci:ESscientificDomains3rdCodeList ;
       skos:prefLabel "BFSJJXW" .
 
 rohsci:ES_SCIENTIFIC_DOMAIN_LEVEL_3_MCLIBGSE
-      a       roh:ESScientificDomain ;
+      a       skos:Concept ;
       rdfs:label "Epidemiología" ;
       roh:hasCode rohsci:ES_SCIENTIFIC_DOMAIN_LEVEL_3_CODE_MCLIBGSE ;
       skos:broader rohsci:ES_SCIENTIFIC_DOMAIN_LEVEL_2_MCLI ;
@@ -1499,21 +1509,21 @@ rohsci:ES_SCIENTIFIC_DOMAIN_LEVEL_3_MCLIBGSE
       skos:prefLabel "Epidemiology"@en , "Epidemiología" , "Epidemiología"@es , "Epidemioloxía"@ast , "Epidemioloxía"@gl , "Epidémiologie"@fr , "Epidemiologia"@ca , "Epidemiologia"@pt .
 
 rohsci:ES_SCIENTIFIC_DOMAIN_LEVEL_3_CODE_CTFIST
-      a       roh:ESScientificDomain ;
+      a       skos:Concept ;
       rdfs:label "CTFIST" ;
       roh:codeOf rohsci:ES_SCIENTIFIC_DOMAIN_LEVEL_3_CTFIST ;
       skos:inScheme rohsci:ESscientificDomains3rdCodeList ;
       skos:prefLabel "CTFIST" .
 
 rohsci:ES_SCIENTIFIC_DOMAIN_LEVEL_3_CODE_QMCQUIO
-      a       roh:ESScientificDomain ;
+      a       skos:Concept ;
       rdfs:label "QMCQUIO" ;
       roh:codeOf rohsci:ES_SCIENTIFIC_DOMAIN_LEVEL_3_QMCQUIO ;
       skos:inScheme rohsci:ESscientificDomains3rdCodeList ;
       skos:prefLabel "QMCQUIO" .
 
 rohsci:ES_SCIENTIFIC_DOMAIN_LEVEL_2_BVAE
-      a       roh:ESScientificDomain ;
+      a       skos:Concept ;
       rdfs:label "Biología vegetal, animal y ecología" ;
       roh:hasCode rohsci:ES_SCIENTIFIC_DOMAIN_LEVEL_2_CODE_BVAE ;
       skos:broader rohsci:ES_SCIENTIFIC_DOMAIN_LEVEL_1_CVS ;
@@ -1522,14 +1532,14 @@ rohsci:ES_SCIENTIFIC_DOMAIN_LEVEL_2_BVAE
       skos:prefLabel "Biología vegetal, animal y ecología" , "Biología vegetal, animal y ecología"@es , "Bioloxía vexetal, animal e ecolóxica"@gl , "Biologia vegetal, animal e ecológica"@pt , "Biologie végétale, animale et écologique"@fr , "Plant, animal and ecology biology"@en , "Bioloxía vexetal, animal y ecoloxía"@ast , "Biologia vegetal, animal i ecologia"@ca .
 
 rohsci:ES_SCIENTIFIC_DOMAIN_LEVEL_3_CODE_BMEDRCYB
-      a       roh:ESScientificDomain ;
+      a       skos:Concept ;
       rdfs:label "BMEDRCYB" ;
       roh:codeOf rohsci:ES_SCIENTIFIC_DOMAIN_LEVEL_3_BMEDRCYB ;
       skos:inScheme rohsci:ESscientificDomains3rdCodeList ;
       skos:prefLabel "BMEDRCYB" .
 
 rohsci:ES_SCIENTIFIC_DOMAIN_LEVEL_3_BFSHQCF
-      a       roh:ESScientificDomain ;
+      a       skos:Concept ;
       rdfs:label "Microbiología" ;
       roh:hasCode rohsci:ES_SCIENTIFIC_DOMAIN_LEVEL_3_CODE_BFSHQCF ;
       skos:broader rohsci:ES_SCIENTIFIC_DOMAIN_LEVEL_2_BFS ;
@@ -1538,14 +1548,14 @@ rohsci:ES_SCIENTIFIC_DOMAIN_LEVEL_3_BFSHQCF
       skos:prefLabel "Microbioloxía"@ast , "Microbioloxía"@gl , "Microbiologie"@fr , "Microbiologia"@ca , "Microbiologia"@pt , "Microbiología" , "Microbiología"@es , "Microbiology"@en .
 
 rohsci:ES_SCIENTIFIC_DOMAIN_LEVEL_2_CODE_MCLI
-      a       roh:ESScientificDomain ;
+      a       skos:Concept ;
       rdfs:label "MCLI" ;
       roh:codeOf rohsci:ES_SCIENTIFIC_DOMAIN_LEVEL_2_MCLI ;
       skos:inScheme rohsci:ESscientificDomains2ndCodeList ;
       skos:prefLabel "MCLI" .
 
 rohsci:ES_SCIENTIFIC_DOMAIN_LEVEL_3_QMCQUBI
-      a       roh:ESScientificDomain ;
+      a       skos:Concept ;
       rdfs:label "Química biológica" ;
       roh:hasCode rohsci:ES_SCIENTIFIC_DOMAIN_LEVEL_3_CODE_QMCQUBI ;
       skos:broader rohsci:ES_SCIENTIFIC_DOMAIN_LEVEL_2_QMC ;
@@ -1554,7 +1564,7 @@ rohsci:ES_SCIENTIFIC_DOMAIN_LEVEL_3_QMCQUBI
       skos:prefLabel "Química biolóxico"@ast , "Biological Chemistry"@en , "Química biológica"@es , "Química biológica" , "Química biológica"@pt , "Química biolóxica"@gl , "Chimie biologique"@fr , "Química biològica"@ca .
 
 rohsci:ES_SCIENTIFIC_DOMAIN_LEVEL_3_FFIVCZF
-      a       roh:ESScientificDomain ;
+      a       skos:Concept ;
       rdfs:label "Estética" ;
       roh:hasCode rohsci:ES_SCIENTIFIC_DOMAIN_LEVEL_3_CODE_FFIVCZF ;
       skos:broader rohsci:ES_SCIENTIFIC_DOMAIN_LEVEL_2_FFI ;
@@ -1563,42 +1573,42 @@ rohsci:ES_SCIENTIFIC_DOMAIN_LEVEL_3_FFIVCZF
       skos:prefLabel "Esthetics"@en , "Estética"@ast , "Estética" , "Estética"@es , "Estética"@gl , "Estética"@pt , "Estètica"@ca , "Esthétique"@fr .
 
 rohsci:ES_SCIENTIFIC_DOMAIN_LEVEL_3_CODE_MTMGEOM
-      a       roh:ESScientificDomain ;
+      a       skos:Concept ;
       rdfs:label "MTMGEOM" ;
       roh:codeOf rohsci:ES_SCIENTIFIC_DOMAIN_LEVEL_3_MTMGEOM ;
       skos:inScheme rohsci:ESscientificDomains3rdCodeList ;
       skos:prefLabel "MTMGEOM" .
 
 rohsci:ES_SCIENTIFIC_DOMAIN_LEVEL_3_CODE_FFIRKXR
-      a       roh:ESScientificDomain ;
+      a       skos:Concept ;
       rdfs:label "FFIRKXR" ;
       roh:codeOf rohsci:ES_SCIENTIFIC_DOMAIN_LEVEL_3_FFIRKXR ;
       skos:inScheme rohsci:ESscientificDomains3rdCodeList ;
       skos:prefLabel "FFIRKXR" .
 
 rohsci:ES_SCIENTIFIC_DOMAIN_LEVEL_3_CODE_QMCQUIN
-      a       roh:ESScientificDomain ;
+      a       skos:Concept ;
       rdfs:label "QMCQUIN" ;
       roh:codeOf rohsci:ES_SCIENTIFIC_DOMAIN_LEVEL_3_QMCQUIN ;
       skos:inScheme rohsci:ESscientificDomains3rdCodeList ;
       skos:prefLabel "QMCQUIN" .
 
 rohsci:ES_SCIENTIFIC_DOMAIN_LEVEL_1_CODE_CVS
-      a       roh:ESScientificDomain ;
+      a       skos:Concept ;
       rdfs:label "CVS" ;
       roh:codeOf rohsci:ES_SCIENTIFIC_DOMAIN_LEVEL_1_CVS ;
       skos:inScheme rohsci:ESDomainCode1stList ;
       skos:prefLabel "CVS" .
 
 rohsci:ES_SCIENTIFIC_DOMAIN_LEVEL_3_CODE_CTASTR
-      a       roh:ESScientificDomain ;
+      a       skos:Concept ;
       rdfs:label "CTASTR" ;
       roh:codeOf rohsci:ES_SCIENTIFIC_DOMAIN_LEVEL_3_CTASTR ;
       skos:inScheme rohsci:ESscientificDomains3rdCodeList ;
       skos:prefLabel "CTASTR" .
 
 rohsci:ES_SCIENTIFIC_DOMAIN_LEVEL_3_FFIYJTK
-      a       roh:ESScientificDomain ;
+      a       skos:Concept ;
       rdfs:label "Estudios culturales y teorías culturales" ;
       roh:hasCode rohsci:ES_SCIENTIFIC_DOMAIN_LEVEL_3_CODE_FFIYJTK ;
       skos:broader rohsci:ES_SCIENTIFIC_DOMAIN_LEVEL_2_FFI ;
@@ -1607,14 +1617,14 @@ rohsci:ES_SCIENTIFIC_DOMAIN_LEVEL_3_FFIYJTK
       skos:prefLabel "Estudios culturales y teoríes culturales"@ast , "Estudos culturais e teorias culturais"@pt , "Estudios culturales y teorías culturales"@es , "Estudios culturales y teorías culturales" , "Estudis culturals i teories culturals"@ca , "Cultural studies and cultural theories"@en , "Études culturelles et théories culturelles"@fr , "Estudos culturais e teorías culturais"@gl .
 
 rohsci:ES_SCIENTIFIC_DOMAIN_LEVEL_3_CODE_BFSDNIG
-      a       roh:ESScientificDomain ;
+      a       skos:Concept ;
       rdfs:label "BFSDNIG" ;
       roh:codeOf rohsci:ES_SCIENTIFIC_DOMAIN_LEVEL_3_BFSDNIG ;
       skos:inScheme rohsci:ESscientificDomains3rdCodeList ;
       skos:prefLabel "BFSDNIG" .
 
 rohsci:ES_SCIENTIFIC_DOMAIN_LEVEL_1_CVS
-      a       roh:ESScientificDomain ;
+      a       skos:Concept ;
       rdfs:label "Ciencias de la vida y de la salud" ;
       roh:hasCode rohsci:ES_SCIENTIFIC_DOMAIN_LEVEL_1_CODE_CVS ;
       skos:inScheme rohsci:ESscientificDomains1stList ;
@@ -1623,7 +1633,7 @@ rohsci:ES_SCIENTIFIC_DOMAIN_LEVEL_1_CVS
       ontolex:phoneticRep "'θjen̪ θjaz ðe la 'βi ða i ðe la sa 'luð"@es , "laɪf ænd hɛlθ ˈsaɪənsɪz"@en-GB , "siˈɛnsiəs ðə ɫə ˈβiðə i ðə ɫə səˈɫut"@ca , "laɪf ænd hɛlθ ˈsaɪənsəz"@en-US .
 
 rohsci:ES_SCIENTIFIC_DOMAIN_LEVEL_3_CTASTR
-      a       roh:ESScientificDomain ;
+      a       skos:Concept ;
       rdfs:label "Astronomía y Astrofísica" ;
       roh:hasCode rohsci:ES_SCIENTIFIC_DOMAIN_LEVEL_3_CODE_CTASTR ;
       skos:broader rohsci:ES_SCIENTIFIC_DOMAIN_LEVEL_2_FI ;
@@ -1632,7 +1642,7 @@ rohsci:ES_SCIENTIFIC_DOMAIN_LEVEL_3_CTASTR
       skos:prefLabel "Astronomie et astrophysique"@fr , "Astronomia i Astrofísica"@ca , "Astronomía y Astrofísica"@es , "Astronomía y Astrofísica" , "Astronomía y Astrofísica"@ast , "Astronomia e Astrofísica"@pt , "Astronomy and Astrophysics"@en , "Astronomía e Astrofísica"@gl .
 
 rohsci:ES_SCIENTIFIC_DOMAIN_LEVEL_3_QMCNANO
-      a       roh:ESScientificDomain ;
+      a       skos:Concept ;
       rdfs:label "Nanoquímica" ;
       roh:hasCode rohsci:ES_SCIENTIFIC_DOMAIN_LEVEL_3_CODE_QMCNANO ;
       skos:broader rohsci:ES_SCIENTIFIC_DOMAIN_LEVEL_2_QMC ;
@@ -1641,7 +1651,7 @@ rohsci:ES_SCIENTIFIC_DOMAIN_LEVEL_3_QMCNANO
       skos:prefLabel "Nanochemistry"@en , "Nanochemistry"@pt , "Nanochimie"@fr , "Nanoquímica" , "Nanoquímica"@es , "Nanoquímica"@ast , "Nanoquímica"@ca , "Nanoquímica"@gl .
 
 rohsci:ES_SCIENTIFIC_DOMAIN_LEVEL_3_PSAZSJ
-      a       roh:ESScientificDomain ;
+      a       skos:Concept ;
       rdfs:label "Psicología evolutiva y de la educación" ;
       roh:hasCode rohsci:ES_SCIENTIFIC_DOMAIN_LEVEL_3_CODE_PSAZSJ ;
       skos:broader rohsci:ES_SCIENTIFIC_DOMAIN_LEVEL_2_PS ;
@@ -1650,14 +1660,14 @@ rohsci:ES_SCIENTIFIC_DOMAIN_LEVEL_3_PSAZSJ
       skos:prefLabel "Evolutionary and educational psychology"@en , "Psicología evolutiva y de la educación" , "Psicología evolutiva y de la educación"@es , "Psicologia evolutiva i de l'educació"@ca , "Psicoloxía evolutiva e educativa"@gl , "Psicologia evolutiva e educacional"@pt , "Psychologie évolutive et pédagogique"@fr , "Psicoloxía evolutiva y educativa"@ast .
 
 rohsci:ES_SCIENTIFIC_DOMAIN_LEVEL_3_CODE_MTMINVO
-      a       roh:ESScientificDomain ;
+      a       skos:Concept ;
       rdfs:label "MTMINVO" ;
       roh:codeOf rohsci:ES_SCIENTIFIC_DOMAIN_LEVEL_3_MTMINVO ;
       skos:inScheme rohsci:ESscientificDomains3rdCodeList ;
       skos:prefLabel "MTMINVO" .
 
 rohsci:ES_SCIENTIFIC_DOMAIN_LEVEL_3_CTMIN
-      a       roh:ESScientificDomain ;
+      a       skos:Concept ;
       rdfs:label "Mineralogía" ;
       roh:hasCode rohsci:ES_SCIENTIFIC_DOMAIN_LEVEL_3_CODE_CTMIN ;
       skos:broader rohsci:ES_SCIENTIFIC_DOMAIN_LEVEL_2_CT ;
@@ -1666,7 +1676,7 @@ rohsci:ES_SCIENTIFIC_DOMAIN_LEVEL_3_CTMIN
       skos:prefLabel "Mineraloxía"@ast , "Mineraloxía"@gl , "Mineralogía"@es , "Mineralogía" , "Minéralogie"@fr , "Mineralogy"@en , "Mineralogia"@ca , "Mineralogia"@pt , "Mineralogia"@eu , "Mineralogia"@oc .
 
 rohsci:ES_SCIENTIFIC_DOMAIN_LEVEL_3_FFIQIYR
-      a       roh:ESScientificDomain ;
+      a       skos:Concept ;
       rdfs:label "Literatura comparada" ;
       roh:hasCode rohsci:ES_SCIENTIFIC_DOMAIN_LEVEL_3_CODE_FFIQIYR ;
       skos:broader rohsci:ES_SCIENTIFIC_DOMAIN_LEVEL_2_FFI ;
@@ -1675,7 +1685,7 @@ rohsci:ES_SCIENTIFIC_DOMAIN_LEVEL_3_FFIQIYR
       skos:prefLabel "Littérature comparée"@fr , "Comparative literature"@en , "Lliteratura comparao"@ast , "Literatura comparada"@ca , "Literatura comparada"@gl , "Literatura comparada"@pt , "Literatura comparada" , "Literatura comparada"@es .
 
 rohsci:ES_SCIENTIFIC_DOMAIN_LEVEL_1_CB
-      a       roh:ESScientificDomain ;
+      a       skos:Concept ;
       rdfs:label "Ciencias básicas" ;
       roh:hasCode rohsci:ES_SCIENTIFIC_DOMAIN_LEVEL_1_CODE_CB ;
       skos:inScheme rohsci:ESscientificDomains1stList ;
@@ -1684,7 +1694,7 @@ rohsci:ES_SCIENTIFIC_DOMAIN_LEVEL_1_CB
       ontolex:phoneticRep "siˈɛnsiəs ˈbəzikəs"@ca , "ˈbeɪsɪk ˈsaɪənsɪz"@en-GB , "θjen̪ θjaz 'βa si kas"@es , "ˈbeɪsɪk ˈsaɪənsəz"@en-US .
 
 rohsci:ES_SCIENTIFIC_DOMAIN_LEVEL_2_DER
-      a       roh:ESScientificDomain ;
+      a       skos:Concept ;
       rdfs:label "Derecho" ;
       roh:hasCode rohsci:ES_SCIENTIFIC_DOMAIN_LEVEL_2_CODE_DER ;
       skos:broader rohsci:ES_SCIENTIFIC_DOMAIN_LEVEL_1_CSH ;
@@ -1693,14 +1703,14 @@ rohsci:ES_SCIENTIFIC_DOMAIN_LEVEL_2_DER
       skos:prefLabel "Droit"@fr , "Dereito"@gl , "Dret"@ca , "Drechu"@ast , "Direito"@pt , "Law"@en , "Derecho" , "Derecho"@es .
 
 rohsci:ES_SCIENTIFIC_DOMAIN_LEVEL_3_CODE_BMEDMJZM
-      a       roh:ESScientificDomain ;
+      a       skos:Concept ;
       rdfs:label "BMEDMJZM" ;
       roh:codeOf rohsci:ES_SCIENTIFIC_DOMAIN_LEVEL_3_BMEDMJZM ;
       skos:inScheme rohsci:ESscientificDomains3rdCodeList ;
       skos:prefLabel "BMEDMJZM" .
 
 rohsci:ES_SCIENTIFIC_DOMAIN_LEVEL_3_BMEDIRHV
-      a       roh:ESScientificDomain ;
+      a       skos:Concept ;
       rdfs:label "Microbiología" ;
       roh:hasCode rohsci:ES_SCIENTIFIC_DOMAIN_LEVEL_3_CODE_BMEDIRHV ;
       skos:broader rohsci:ES_SCIENTIFIC_DOMAIN_LEVEL_2_BMED ;
@@ -1709,7 +1719,7 @@ rohsci:ES_SCIENTIFIC_DOMAIN_LEVEL_3_BMEDIRHV
       skos:prefLabel "Microbioloxía"@ast , "Microbioloxía"@gl , "Microbiologie"@fr , "Microbiologia"@ca , "Microbiologia"@pt , "Microbiología" , "Microbiología"@es , "Microbiology"@en .
 
 rohsci:ES_SCIENTIFIC_DOMAIN_LEVEL_3_FFIVVJH
-      a       roh:ESScientificDomain ;
+      a       skos:Concept ;
       rdfs:label "Metafísica y teoría del conocimiento" ;
       roh:hasCode rohsci:ES_SCIENTIFIC_DOMAIN_LEVEL_3_CODE_FFIVVJH ;
       skos:broader rohsci:ES_SCIENTIFIC_DOMAIN_LEVEL_2_FFI ;
@@ -1718,7 +1728,7 @@ rohsci:ES_SCIENTIFIC_DOMAIN_LEVEL_3_FFIVVJH
       skos:prefLabel "Metafísica y teoría del conocimientu"@ast , "Metaphysics and knowledge theory"@en , "Métaphysique et théorie des connaissances"@fr , "Metafísica e teoria do conhecimento"@pt , "Metafísica e teoría do coñecemento"@gl , "Metafísica y teoría del conocimiento"@es , "Metafísica y teoría del conocimiento" , "Metafísica i teoria de el coneixement"@ca .
 
 rohsci:ES_SCIENTIFIC_DOMAIN_LEVEL_3_BMEDMJZM
-      a       roh:ESScientificDomain ;
+      a       skos:Concept ;
       rdfs:label "Genética" ;
       roh:hasCode rohsci:ES_SCIENTIFIC_DOMAIN_LEVEL_3_CODE_BMEDMJZM ;
       skos:broader rohsci:ES_SCIENTIFIC_DOMAIN_LEVEL_2_BMED ;
@@ -1727,35 +1737,35 @@ rohsci:ES_SCIENTIFIC_DOMAIN_LEVEL_3_BMEDMJZM
       skos:prefLabel "Genética" , "Genética"@es , "Genètica"@ca , "Génétique"@fr , "Genetics"@en , "Xenética"@ast , "Xenética"@gl , "Genetics"@pt .
 
 rohsci:ES_SCIENTIFIC_DOMAIN_LEVEL_3_CODE_CTESTR
-      a       roh:ESScientificDomain ;
+      a       skos:Concept ;
       rdfs:label "CTESTR" ;
       roh:codeOf rohsci:ES_SCIENTIFIC_DOMAIN_LEVEL_3_CTESTR ;
       skos:inScheme rohsci:ESscientificDomains3rdCodeList ;
       skos:prefLabel "CTESTR" .
 
 rohsci:ES_SCIENTIFIC_DOMAIN_LEVEL_3_CODE_QMCCATA
-      a       roh:ESScientificDomain ;
+      a       skos:Concept ;
       rdfs:label "QMCCATA" ;
       roh:codeOf rohsci:ES_SCIENTIFIC_DOMAIN_LEVEL_3_QMCCATA ;
       skos:inScheme rohsci:ESscientificDomains3rdCodeList ;
       skos:prefLabel "QMCCATA" .
 
 rohsci:ES_SCIENTIFIC_DOMAIN_LEVEL_3_CODE_CTMETE
-      a       roh:ESScientificDomain ;
+      a       skos:Concept ;
       rdfs:label "CTMETE" ;
       roh:codeOf rohsci:ES_SCIENTIFIC_DOMAIN_LEVEL_3_CTMETE ;
       skos:inScheme rohsci:ESscientificDomains3rdCodeList ;
       skos:prefLabel "CTMETE" .
 
 rohsci:ES_SCIENTIFIC_DOMAIN_LEVEL_2_CODE_FFI
-      a       roh:ESScientificDomain ;
+      a       skos:Concept ;
       rdfs:label "FFI" ;
       roh:codeOf rohsci:ES_SCIENTIFIC_DOMAIN_LEVEL_2_FFI ;
       skos:inScheme rohsci:ESscientificDomains2ndCodeList ;
       skos:prefLabel "FFI" .
 
 rohsci:ES_SCIENTIFIC_DOMAIN_LEVEL_3_MTMINVO
-      a       roh:ESScientificDomain ;
+      a       skos:Concept ;
       rdfs:label "Investigación operativa" ;
       roh:hasCode rohsci:ES_SCIENTIFIC_DOMAIN_LEVEL_3_CODE_MTMINVO ;
       skos:broader rohsci:ES_SCIENTIFIC_DOMAIN_LEVEL_2_MTM ;
@@ -1764,28 +1774,28 @@ rohsci:ES_SCIENTIFIC_DOMAIN_LEVEL_3_MTMINVO
       skos:prefLabel "Investigación operativa"@es , "Investigación operativa"@gl , "Recherche opérationnelle"@fr , "Investigación operativa" , "Operative investigation"@en , "Investigació operativa"@ca , "Pesquisa operacional"@pt , "Investigación operativo"@ast .
 
 rohsci:ES_SCIENTIFIC_DOMAIN_LEVEL_3_CODE_BVAEWIUP
-      a       roh:ESScientificDomain ;
+      a       skos:Concept ;
       rdfs:label "BVAEWIUP" ;
       roh:codeOf rohsci:ES_SCIENTIFIC_DOMAIN_LEVEL_3_BVAEWIUP ;
       skos:inScheme rohsci:ESscientificDomains3rdCodeList ;
       skos:prefLabel "BVAEWIUP" .
 
 rohsci:ES_SCIENTIFIC_DOMAIN_LEVEL_3_CODE_PSFRSQ
-      a       roh:ESScientificDomain ;
+      a       skos:Concept ;
       rdfs:label "PSFRSQ" ;
       roh:codeOf rohsci:ES_SCIENTIFIC_DOMAIN_LEVEL_3_PSFRSQ ;
       skos:inScheme rohsci:ESscientificDomains3rdCodeList ;
       skos:prefLabel "PSFRSQ" .
 
 rohsci:ES_SCIENTIFIC_DOMAIN_LEVEL_3_CODE_CTCLIM
-      a       roh:ESScientificDomain ;
+      a       skos:Concept ;
       rdfs:label "CTCLIM" ;
       roh:codeOf rohsci:ES_SCIENTIFIC_DOMAIN_LEVEL_3_CTCLIM ;
       skos:inScheme rohsci:ESscientificDomains3rdCodeList ;
       skos:prefLabel "CTCLIM" .
 
 rohsci:ES_SCIENTIFIC_DOMAIN_LEVEL_3_CTGEOQ
-      a       roh:ESScientificDomain ;
+      a       skos:Concept ;
       rdfs:label "Geoquímica ambiental" ;
       roh:hasCode rohsci:ES_SCIENTIFIC_DOMAIN_LEVEL_3_CODE_CTGEOQ ;
       skos:broader rohsci:ES_SCIENTIFIC_DOMAIN_LEVEL_2_CT ;
@@ -1794,7 +1804,7 @@ rohsci:ES_SCIENTIFIC_DOMAIN_LEVEL_3_CTGEOQ
       skos:prefLabel "Xeoquímica Ambiental"@gl , "Environmental geochemistry"@en , "Xeoquímica ambiental"@ast , "Géochimie environnementale"@fr , "Geoquímica ambiental"@es , "Geoquímica ambiental"@ca , "Geoquímica ambiental"@pt , "Geoquímica ambiental" .
 
 rohsci:ES_SCIENTIFIC_DOMAIN_LEVEL_3_PSJTFX
-      a       roh:ESScientificDomain ;
+      a       skos:Concept ;
       rdfs:label "Personalidad, evaluación y tratamientos psicológicos" ;
       roh:hasCode rohsci:ES_SCIENTIFIC_DOMAIN_LEVEL_3_CODE_PSJTFX ;
       skos:broader rohsci:ES_SCIENTIFIC_DOMAIN_LEVEL_2_PS ;
@@ -1803,7 +1813,7 @@ rohsci:ES_SCIENTIFIC_DOMAIN_LEVEL_3_PSJTFX
       skos:prefLabel "Personalidade, avaliação e tratamentos psicológicos"@pt , "Personalidad, evaluación y tratamientos psicológicos" , "Personalidad, evaluación y tratamientos psicológicos"@es , "Personalidade, avaliación e tratamentos psicolóxicos"@gl , "Personalitat, avaluació i tractaments psicològics"@ca , "Personnalité, évaluation et traitements psychologiques"@fr , "Personalidá, avaliación y tratamientos psicolóxicos"@ast , "Personality, evaluation and psychological treatments"@en .
 
 rohsci:ES_SCIENTIFIC_DOMAIN_LEVEL_3_BMEDTINW
-      a       roh:ESScientificDomain ;
+      a       skos:Concept ;
       rdfs:label "Descubrimiento de fármacos" ;
       roh:hasCode rohsci:ES_SCIENTIFIC_DOMAIN_LEVEL_3_CODE_BMEDTINW ;
       skos:broader rohsci:ES_SCIENTIFIC_DOMAIN_LEVEL_2_BMED ;
@@ -1812,7 +1822,7 @@ rohsci:ES_SCIENTIFIC_DOMAIN_LEVEL_3_BMEDTINW
       skos:prefLabel "Descobriment de fàrmacs"@ca , "Drug Discovery"@en , "Descubrimientu de medicamentos"@ast , "Descubrimento de medicamentos"@gl , "Découverte de médicaments"@fr , "Descoberta de medicamentos"@pt , "Descubrimiento de fármacos"@es , "Descubrimiento de fármacos" .
 
 rohsci:ES_SCIENTIFIC_DOMAIN_LEVEL_3_BMEDMHOU
-      a       roh:ESScientificDomain ;
+      a       skos:Concept ;
       rdfs:label "Enfermedades metabólicas" ;
       roh:hasCode rohsci:ES_SCIENTIFIC_DOMAIN_LEVEL_3_CODE_BMEDMHOU ;
       skos:broader rohsci:ES_SCIENTIFIC_DOMAIN_LEVEL_2_BMED ;
@@ -1821,28 +1831,28 @@ rohsci:ES_SCIENTIFIC_DOMAIN_LEVEL_3_BMEDMHOU
       skos:prefLabel "Metabolic diseases"@en , "Enfermidades metabólicas"@gl , "Doenças metabólicas"@pt , "Enfermedaes metabóliques"@ast , "Enfermedades metabólicas" , "Enfermedades metabólicas"@es , "Malalties metabòliques"@ca , "Maladies métaboliques"@fr .
 
 rohsci:ES_SCIENTIFIC_DOMAIN_LEVEL_3_CODE_PSAZSJ
-      a       roh:ESScientificDomain ;
+      a       skos:Concept ;
       rdfs:label "PSAZSJ" ;
       roh:codeOf rohsci:ES_SCIENTIFIC_DOMAIN_LEVEL_3_PSAZSJ ;
       skos:inScheme rohsci:ESscientificDomains3rdCodeList ;
       skos:prefLabel "PSAZSJ" .
 
 rohsci:ES_SCIENTIFIC_DOMAIN_LEVEL_3_CODE_BMEDHTAZ
-      a       roh:ESScientificDomain ;
+      a       skos:Concept ;
       rdfs:label "BMEDHTAZ" ;
       roh:codeOf rohsci:ES_SCIENTIFIC_DOMAIN_LEVEL_3_BMEDHTAZ ;
       skos:inScheme rohsci:ESscientificDomains3rdCodeList ;
       skos:prefLabel "BMEDHTAZ" .
 
 rohsci:ES_SCIENTIFIC_DOMAIN_LEVEL_3_CODE_FFIURLV
-      a       roh:ESScientificDomain ;
+      a       skos:Concept ;
       rdfs:label "FFIURLV" ;
       roh:codeOf rohsci:ES_SCIENTIFIC_DOMAIN_LEVEL_3_FFIURLV ;
       skos:inScheme rohsci:ESscientificDomains3rdCodeList ;
       skos:prefLabel "FFIURLV" .
 
 rohsci:ES_SCIENTIFIC_DOMAIN_LEVEL_2_GAN
-      a       roh:ESScientificDomain ;
+      a       skos:Concept ;
       rdfs:label "Ganadería y pesca" ;
       roh:hasCode rohsci:ES_SCIENTIFIC_DOMAIN_LEVEL_2_CODE_GAN ;
       skos:broader rohsci:ES_SCIENTIFIC_DOMAIN_LEVEL_1_CVS ;
@@ -1851,14 +1861,14 @@ rohsci:ES_SCIENTIFIC_DOMAIN_LEVEL_2_GAN
       skos:prefLabel "Pecuária e pesca"@pt , "Ganadería y pesca"@ast , "Ganadería y pesca" , "Ganadería y pesca"@es , "Gandería e pesca"@gl , "Ramaderia i pesca"@ca , "Bétail et pêche"@fr , "Livestock and fishing"@en .
 
 rohsci:ES_SCIENTIFIC_DOMAIN_LEVEL_2_CODE_IEL
-      a       roh:ESScientificDomain ;
+      a       skos:Concept ;
       rdfs:label "IEL" ;
       roh:codeOf rohsci:ES_SCIENTIFIC_DOMAIN_LEVEL_2_IEL ;
       skos:inScheme rohsci:ESscientificDomains2ndCodeList ;
       skos:prefLabel "IEL" .
 
 rohsci:ES_SCIENTIFIC_DOMAIN_LEVEL_3_QMCQUIO
-      a       roh:ESScientificDomain ;
+      a       skos:Concept ;
       rdfs:label "Química organometálica" ;
       roh:hasCode rohsci:ES_SCIENTIFIC_DOMAIN_LEVEL_3_CODE_QMCQUIO ;
       skos:broader rohsci:ES_SCIENTIFIC_DOMAIN_LEVEL_2_QMC ;
@@ -1867,35 +1877,35 @@ rohsci:ES_SCIENTIFIC_DOMAIN_LEVEL_3_QMCQUIO
       skos:prefLabel "Química organometálico"@ast , "Organometallic chemistry"@en , "Química organometàl·lica"@ca , "Chimie organométallique"@fr , "Química organometálica"@gl , "Química organometálica"@pt , "Química organometálica" , "Química organometálica"@es .
 
 rohsci:ES_SCIENTIFIC_DOMAIN_LEVEL_3_CODE_FFIVNPK
-      a       roh:ESScientificDomain ;
+      a       skos:Concept ;
       rdfs:label "FFIVNPK" ;
       roh:codeOf rohsci:ES_SCIENTIFIC_DOMAIN_LEVEL_3_FFIVNPK ;
       skos:inScheme rohsci:ESscientificDomains3rdCodeList ;
       skos:prefLabel "FFIVNPK" .
 
 rohsci:ES_SCIENTIFIC_DOMAIN_LEVEL_3_CODE_MCLIJMIG
-      a       roh:ESScientificDomain ;
+      a       skos:Concept ;
       rdfs:label "MCLIJMIG" ;
       roh:codeOf rohsci:ES_SCIENTIFIC_DOMAIN_LEVEL_3_MCLIJMIG ;
       skos:inScheme rohsci:ESscientificDomains3rdCodeList ;
       skos:prefLabel "MCLIJMIG" .
 
 rohsci:ES_SCIENTIFIC_DOMAIN_LEVEL_3_CODE_MCLIHKZZ
-      a       roh:ESScientificDomain ;
+      a       skos:Concept ;
       rdfs:label "MCLIHKZZ" ;
       roh:codeOf rohsci:ES_SCIENTIFIC_DOMAIN_LEVEL_3_MCLIHKZZ ;
       skos:inScheme rohsci:ESscientificDomains3rdCodeList ;
       skos:prefLabel "MCLIHKZZ" .
 
 rohsci:ES_SCIENTIFIC_DOMAIN_LEVEL_2_CODE_EDUC
-      a       roh:ESScientificDomain ;
+      a       skos:Concept ;
       rdfs:label "EDUC" ;
       roh:codeOf rohsci:ES_SCIENTIFIC_DOMAIN_LEVEL_2_EDUC ;
       skos:inScheme rohsci:ESscientificDomains2ndCodeList ;
       skos:prefLabel "EDUC" .
 
 rohsci:ES_SCIENTIFIC_DOMAIN_LEVEL_3_MTMMATE
-      a       roh:ESScientificDomain ;
+      a       skos:Concept ;
       rdfs:label "Matemática aplicada" ;
       roh:hasCode rohsci:ES_SCIENTIFIC_DOMAIN_LEVEL_3_CODE_MTMMATE ;
       skos:broader rohsci:ES_SCIENTIFIC_DOMAIN_LEVEL_2_MTM ;
@@ -1904,27 +1914,27 @@ rohsci:ES_SCIENTIFIC_DOMAIN_LEVEL_3_MTMMATE
       skos:prefLabel "Matemáticas Aplicadas"@gl , "Matemática aplicao"@ast , "Matemática aplicada"@es , "Matemática aplicada" , "Matemática aplicada"@an , "Matemática Aplicada"@pt , "Mathématiques appliquées"@fr , "Applied Mathematics"@en , "Matemàtica aplicada"@ca .
 
 rohsci:ESscientificDomains1stList
-      a       skos:ConceptScheme ;
+      a       roh:ESScientificDomain ;
       rdfs:label "Árees científiques de primer nivel"@ast , "Goi mailako arlo zientifikoak"@eu , "Áreas científicas de primeiro nível"@pt , "Áreas científicas de primer nivel"@es , "First-level scientific domains"@en , "ˈaɾeas θjen̪ˈtifikas ðe priˈmer niˈβel"@es-ES-fonipa , "fɜrst ˈlɛvəl ˌsaɪənˈtɪfɪk doʊˈmeɪnz"@en-US-fonipa , "Dominis científics de primer nivell"@ca , "Áreas scientificas de primièr nivel"@oc , "Domains scientifiques de premier niveau"@fr , "Áreas scientificas de primer libel"@an , "Áreas científicas de primeiro nivel"@gl , "duˈminis siənˈtifikz ðə pɾiˈme niˈβeʎ"@ca-CA-fonipa , "fɜːst ˈlɛvl ˌsaɪənˈtɪfɪk dəʊˈmeɪnz"@en-GB-fonipa ;
       skos:prefLabel "Árees científiques de primer nivel"@ast , "Áreas científicas de primer nivel"@es , "Áreas científicas de primeiro nível"@pt , "Goi mailako arlo zientifikoak"@eu , "First-level scientific domains"@en , "ˈaɾeas θjen̪ˈtifikas ðe priˈmer niˈβel"@es-ES-fonipa , "fɜrst ˈlɛvəl ˌsaɪənˈtɪfɪk doʊˈmeɪnz"@en-US-fonipa , "Dominis científics de primer nivell"@ca , "Áreas scientificas de primièr nivel"@oc , "Domains scientifiques de premier niveau"@fr , "Áreas scientificas de primer libel"@an , "Áreas científicas de primeiro nivel"@gl , "duˈminis siənˈtifikz ðə pɾiˈme niˈβeʎ"@ca-CA-fonipa , "fɜːst ˈlɛvl ˌsaɪənˈtɪfɪk dəʊˈmeɪnz"@en-GB-fonipa ;
       ontolex:phoneticRep "ˌsaɪənˈtɪfɪk dəʊˈmeɪnz"@en-GB-fonipa , "fɜrst ˈlɛvəl ˌsaɪənˈtɪfɪk doʊˈmeɪnz"@en-US-fonipa , "'ˈaɾeas θjen̪ˈtifikas ðe priˈmer niˈβel"@es-ES-fonipa , "duˈminis siənˈtifikz ðə pɾiˈme niˈβeʎ"@ca-CA-fonipa .
 
 rohsci:ES_SCIENTIFIC_DOMAIN_LEVEL_2_CODE_TA
-      a       roh:ESScientificDomain ;
+      a       skos:Concept ;
       rdfs:label "TA" ;
       roh:codeOf rohsci:ES_SCIENTIFIC_DOMAIN_LEVEL_2_TA ;
       skos:inScheme rohsci:ESscientificDomains2ndCodeList ;
       skos:prefLabel "TA" .
 
 rohsci:ES_SCIENTIFIC_DOMAIN_LEVEL_3_CODE_QMCAMBI
-      a       roh:ESScientificDomain ;
+      a       skos:Concept ;
       rdfs:label "QMCAMBI" ;
       roh:codeOf rohsci:ES_SCIENTIFIC_DOMAIN_LEVEL_3_QMCAMBI ;
       skos:inScheme rohsci:ESscientificDomains3rdCodeList ;
       skos:prefLabel "QMCAMBI" .
 
 rohsci:ES_SCIENTIFIC_DOMAIN_LEVEL_3_BFSSBGU
-      a       roh:ESScientificDomain ;
+      a       skos:Concept ;
       rdfs:label "Biología celular" ;
       roh:hasCode rohsci:ES_SCIENTIFIC_DOMAIN_LEVEL_3_CODE_BFSSBGU ;
       skos:broader rohsci:ES_SCIENTIFIC_DOMAIN_LEVEL_2_BFS ;
@@ -1933,7 +1943,7 @@ rohsci:ES_SCIENTIFIC_DOMAIN_LEVEL_3_BFSSBGU
       skos:prefLabel "Biologia cel·lular"@ca , "Biologie cellulaire"@fr , "Bioloxía celular"@gl , "Bioloxía celular"@ast , "Cell biology"@en , "Biología celular" , "Biología celular"@es , "Biologia celular"@pt .
 
 rohsci:ES_SCIENTIFIC_DOMAIN_LEVEL_2_INF
-      a       roh:ESScientificDomain ;
+      a       skos:Concept ;
       rdfs:label "Ciencias de la computación y tecnología informática" ;
       roh:hasCode rohsci:ES_SCIENTIFIC_DOMAIN_LEVEL_2_CODE_INF ;
       skos:broader rohsci:ES_SCIENTIFIC_DOMAIN_LEVEL_1_IYT ;
@@ -1942,20 +1952,20 @@ rohsci:ES_SCIENTIFIC_DOMAIN_LEVEL_2_INF
       skos:prefLabel "Ciències de la computació i tecnologia informàtica"@ca , "Ciência da computação e tecnologia da computação"@pt , "Ciencias de la computación y tecnología informática"@es , "Ciencias de la computación y tecnología informática" , "Computer science and computer technology"@en , "Informática e tecnoloxía informática"@gl , "Informatique et technologie informatique"@fr , "Ciencies de la computación y tecnoloxía informática"@ast .
 
 rohsci:ES_SCIENTIFIC_DOMAIN_LEVEL_2_CODE_ECO
-      a       roh:ESScientificDomain ;
+      a       skos:Concept ;
       rdfs:label "ECO" ;
       roh:codeOf rohsci:ES_SCIENTIFIC_DOMAIN_LEVEL_2_ECO ;
       skos:inScheme rohsci:ESscientificDomains2ndCodeList ;
       skos:prefLabel "ECO" .
 
 rohsci:ESscientificDomains2ndList
-      a       skos:ConceptScheme ;
+      a       roh:ESScientificDomain ;
       rdfs:label "Áreas scientificas de segundo nivel"@an , "Second-level scientific domains"@en , "Áreas científicas de segundo nível"@pt , "Dominis científics de segon nivell"@ca , "Bigarren mailako arlo zientifikoak"@eu , "Domains scientifiques de deuxième niveau"@fr , "ˈaɾeas θjen̪ˈtifikas ðe seˈɣ̞un̟do niˈβ̞el"@es-ES-fonipa , "Áreas scientificas de segond nivel"@oc , "ˈsɛkənd ˈlɛvəl ˌsaɪənˈtɪfɪk doʊˈmeɪnz"@en-US-fonipa , "Árees científiques de segundu nivel"@ast , "duˈminis siənˈtifikz ðə səˈɣon niˈβeʎ"@ca-CA-fonipa , "ˈsɛkənd ˈlɛvl ˌsaɪənˈtɪfɪk dəʊˈmeɪnz"@en-GB-fonipa , "Áreas científicas de segundo nivel"@es , "Áreas científicas de segundo nivel"@gl ;
       skos:prefLabel "Áreas scientificas de segundo nivel"@an , "Second-level scientific domains"@en , "Áreas científicas de segundo nível"@pt , "Dominis científics de segon nivell"@ca , "Bigarren mailako arlo zientifikoak"@eu , "Domains scientifiques de deuxième niveau"@fr , "ˈaɾeas θjen̪ˈtifikas ðe seˈɣ̞un̟do niˈβ̞el"@es-ES-fonipa , "Áreas scientificas de segond nivel"@oc , "ˈsɛkənd ˈlɛvəl ˌsaɪənˈtɪfɪk doʊˈmeɪnz"@en-US-fonipa , "Árees científiques de segundu nivel"@ast , "duˈminis siənˈtifikz ðə səˈɣon niˈβeʎ"@ca-CA-fonipa , "ˈsɛkənd ˈlɛvl ˌsaɪənˈtɪfɪk dəʊˈmeɪnz"@en-GB-fonipa , "Áreas científicas de segundo nivel"@es , "Áreas científicas de segundo nivel"@gl ;
       ontolex:phoneticRep "ˈaɾeas θjen̪ˈtifikas ðe seˈɣ̞un̟do niˈβ̞el"@es-ES-fonipa , "ˈsɛkənd ˈlɛvəl ˌsaɪənˈtɪfɪk doʊˈmeɪnz"@en-US-fonipa , "duˈminis siənˈtifikz ðə səˈɣon niˈβeʎ"@ca-CA-fonipa , "ˈsɛkənd ˈlɛvl ˌsaɪənˈtɪfɪk dəʊˈmeɪnz"@en-GB-fonipa .
 
 rohsci:ES_SCIENTIFIC_DOMAIN_LEVEL_3_QMCQUIN
-      a       roh:ESScientificDomain ;
+      a       skos:Concept ;
       rdfs:label "Química inorgánica" ;
       roh:hasCode rohsci:ES_SCIENTIFIC_DOMAIN_LEVEL_3_CODE_QMCQUIN ;
       skos:broader rohsci:ES_SCIENTIFIC_DOMAIN_LEVEL_2_QMC ;
@@ -1964,28 +1974,28 @@ rohsci:ES_SCIENTIFIC_DOMAIN_LEVEL_3_QMCQUIN
       skos:prefLabel "Chimie inorganique"@fr , "Inorganic chemistry"@en , "Química inorgánica"@es , "Química inorgánica" , "Química inorgánica"@gl , "Química inorgánico"@ast , "Química inorgânica"@pt , "Química inorgànica"@ca .
 
 rohsci:ES_SCIENTIFIC_DOMAIN_LEVEL_3_CODE_BFSDXWB
-      a       roh:ESScientificDomain ;
+      a       skos:Concept ;
       rdfs:label "BFSDXWB" ;
       roh:codeOf rohsci:ES_SCIENTIFIC_DOMAIN_LEVEL_3_BFSDXWB ;
       skos:inScheme rohsci:ESscientificDomains3rdCodeList ;
       skos:prefLabel "BFSDXWB" .
 
 rohsci:ES_SCIENTIFIC_DOMAIN_LEVEL_3_CODE_BMEDMHOU
-      a       roh:ESScientificDomain ;
+      a       skos:Concept ;
       rdfs:label "BMEDMHOU" ;
       roh:codeOf rohsci:ES_SCIENTIFIC_DOMAIN_LEVEL_3_BMEDMHOU ;
       skos:inScheme rohsci:ESscientificDomains3rdCodeList ;
       skos:prefLabel "BMEDMHOU" .
 
 rohsci:ES_SCIENTIFIC_DOMAIN_LEVEL_3_CODE_PSNRWD
-      a       roh:ESScientificDomain ;
+      a       skos:Concept ;
       rdfs:label "PSNRWD" ;
       roh:codeOf rohsci:ES_SCIENTIFIC_DOMAIN_LEVEL_3_PSNRWD ;
       skos:inScheme rohsci:ESscientificDomains3rdCodeList ;
       skos:prefLabel "PSNRWD" .
 
 rohsci:ES_SCIENTIFIC_DOMAIN_LEVEL_3_BFSHRRE
-      a       roh:ESScientificDomain ;
+      a       skos:Concept ;
       rdfs:label "Metabolismo" ;
       roh:hasCode rohsci:ES_SCIENTIFIC_DOMAIN_LEVEL_3_CODE_BFSHRRE ;
       skos:broader rohsci:ES_SCIENTIFIC_DOMAIN_LEVEL_2_BFS ;
@@ -1994,28 +2004,28 @@ rohsci:ES_SCIENTIFIC_DOMAIN_LEVEL_3_BFSHRRE
       skos:prefLabel "Metabolism"@en , "Metabolisme"@ca , "Metabolismo"@es , "Metabolismo" , "Metabolismo"@gl , "Metabolismo"@pt , "Métabolisme"@fr , "Metabolismu"@ast .
 
 rohsci:ES_SCIENTIFIC_DOMAIN_LEVEL_3_CODE_HAYOHM
-      a       roh:ESScientificDomain ;
+      a       skos:Concept ;
       rdfs:label "HAYOHM" ;
       roh:codeOf rohsci:ES_SCIENTIFIC_DOMAIN_LEVEL_3_HAYOHM ;
       skos:inScheme rohsci:ESscientificDomains3rdCodeList ;
       skos:prefLabel "HAYOHM" .
 
 rohsci:ES_SCIENTIFIC_DOMAIN_LEVEL_3_CODE_QMCQUBI
-      a       roh:ESScientificDomain ;
+      a       skos:Concept ;
       rdfs:label "QMCQUBI" ;
       roh:codeOf rohsci:ES_SCIENTIFIC_DOMAIN_LEVEL_3_QMCQUBI ;
       skos:inScheme rohsci:ESscientificDomains3rdCodeList ;
       skos:prefLabel "QMCQUBI" .
 
 rohsci:ES_SCIENTIFIC_DOMAIN_LEVEL_3_CODE_BMEDRYDY
-      a       roh:ESScientificDomain ;
+      a       skos:Concept ;
       rdfs:label "BMEDRYDY" ;
       roh:codeOf rohsci:ES_SCIENTIFIC_DOMAIN_LEVEL_3_BMEDRYDY ;
       skos:inScheme rohsci:ESscientificDomains3rdCodeList ;
       skos:prefLabel "BMEDRYDY" .
 
 rohsci:ES_SCIENTIFIC_DOMAIN_LEVEL_3_BMEDRYDY
-      a       roh:ESScientificDomain ;
+      a       skos:Concept ;
       rdfs:label "Cáncer" ;
       roh:hasCode rohsci:ES_SCIENTIFIC_DOMAIN_LEVEL_3_CODE_BMEDRYDY ;
       skos:broader rohsci:ES_SCIENTIFIC_DOMAIN_LEVEL_2_BMED ;
@@ -2024,7 +2034,7 @@ rohsci:ES_SCIENTIFIC_DOMAIN_LEVEL_3_BMEDRYDY
       skos:prefLabel "Câncer"@pt , "Cancer"@fr , "Cancer"@en , "Cáncer" , "Cáncer"@es , "Cáncer"@ast , "Cáncer"@gl , "Càncer"@ca .
 
 rohsci:ES_SCIENTIFIC_DOMAIN_LEVEL_3_QMCQUAN
-      a       roh:ESScientificDomain ;
+      a       skos:Concept ;
       rdfs:label "Química analítica" ;
       roh:hasCode rohsci:ES_SCIENTIFIC_DOMAIN_LEVEL_3_CODE_QMCQUAN ;
       skos:broader rohsci:ES_SCIENTIFIC_DOMAIN_LEVEL_2_QMC ;
@@ -2033,12 +2043,12 @@ rohsci:ES_SCIENTIFIC_DOMAIN_LEVEL_3_QMCQUAN
       skos:prefLabel "Química analítico"@ast , "Química analítica"@ca , "Química analítica" , "Química analítica"@es , "Química analítica"@gl , "Química analítica"@pt , "Chimie analytique"@fr , "Analytic chemistry"@en .
 
 rohsci:ESscientificDomains2ndCodeList
-      a       skos:ConceptScheme ;
+      a       roh:ESScientificDomain ;
       rdfs:label "Codes for the second-level scientific domains"@en , "Códigos das áreas científicas de segundo nível"@pt , "Códigos de les árees científiques de segundu nivel"@ast , "Códigos de las áreas científicas de segundo nivel"@es , "Codis dels dominis científics de segon nivell"@ca , "Códigos das áreas científicas de segundo nivel"@gl ;
       skos:prefLabel "Codes for the second-level scientific domains"@en , "Códigos das áreas científicas de segundo nível"@pt , "Códigos de las áreas científicas de segundo nivel"@es , "Códigos de les árees científiques de segundu nivel"@ast , "Codis dels dominis científics de segon nivell"@ca , "Códigos das áreas científicas de segundo nivel"@gl .
 
 rohsci:ES_SCIENTIFIC_DOMAIN_LEVEL_3_PSDSJH
-      a       roh:ESScientificDomain ;
+      a       skos:Concept ;
       rdfs:label "Psicología social" ;
       roh:hasCode rohsci:ES_SCIENTIFIC_DOMAIN_LEVEL_3_CODE_PSDSJH ;
       skos:broader rohsci:ES_SCIENTIFIC_DOMAIN_LEVEL_2_PS ;
@@ -2047,7 +2057,7 @@ rohsci:ES_SCIENTIFIC_DOMAIN_LEVEL_3_PSDSJH
       skos:prefLabel "Psychologie sociale"@fr , "Psicología social" , "Psicología social"@es , "Social psychology"@en , "Psicoloxía social"@ast , "Psicoloxía social"@gl , "Psicologia social"@ca , "Psicologia social"@pt .
 
 rohsci:ES_SCIENTIFIC_DOMAIN_LEVEL_3_BMEDAYJV
-      a       roh:ESScientificDomain ;
+      a       skos:Concept ;
       rdfs:label "Farmacología general y de sistemas" ;
       roh:hasCode rohsci:ES_SCIENTIFIC_DOMAIN_LEVEL_3_CODE_BMEDAYJV ;
       skos:broader rohsci:ES_SCIENTIFIC_DOMAIN_LEVEL_2_BMED ;
@@ -2056,14 +2066,14 @@ rohsci:ES_SCIENTIFIC_DOMAIN_LEVEL_3_BMEDAYJV
       skos:prefLabel "Pharmacologie générale et systémique"@fr , "Farmacología general y de sistemas" , "Farmacología general y de sistemas"@es , "Farmacologia general i de sistemes"@ca , "Farmacoloxía xeneral y de sistemas"@ast , "General and systems pharmacology"@en , "Farmacologia geral e de sistemas"@pt , "Farmacoloxía xeral e de sistemas"@gl .
 
 rohsci:ES_SCIENTIFIC_DOMAIN_LEVEL_3_CODE_HAMOXL
-      a       roh:ESScientificDomain ;
+      a       skos:Concept ;
       rdfs:label "HAMOXL" ;
       roh:codeOf rohsci:ES_SCIENTIFIC_DOMAIN_LEVEL_3_HAMOXL ;
       skos:inScheme rohsci:ESscientificDomains3rdCodeList ;
       skos:prefLabel "HAMOXL" .
 
 rohsci:ES_SCIENTIFIC_DOMAIN_LEVEL_3_BFSOWHX
-      a       roh:ESScientificDomain ;
+      a       skos:Concept ;
       rdfs:label "Biología estructural" ;
       roh:hasCode rohsci:ES_SCIENTIFIC_DOMAIN_LEVEL_3_CODE_BFSOWHX ;
       skos:broader rohsci:ES_SCIENTIFIC_DOMAIN_LEVEL_2_BFS ;
@@ -2072,14 +2082,14 @@ rohsci:ES_SCIENTIFIC_DOMAIN_LEVEL_3_BFSOWHX
       skos:prefLabel "Biologia estructural"@ca , "Structural biology"@en , "Biología estructural"@es , "Biología estructural" , "Biologia estrutural"@pt , "Bioloxía estrutural"@gl , "Bioloxía estrutural"@ast , "Biologie structurale"@fr .
 
 rohsci:ES_SCIENTIFIC_DOMAIN_LEVEL_3_CODE_QMCQUFI
-      a       roh:ESScientificDomain ;
+      a       skos:Concept ;
       rdfs:label "QMCQUFI" ;
       roh:codeOf rohsci:ES_SCIENTIFIC_DOMAIN_LEVEL_3_QMCQUFI ;
       skos:inScheme rohsci:ESscientificDomains3rdCodeList ;
       skos:prefLabel "QMCQUFI" .
 
 rohsci:ES_SCIENTIFIC_DOMAIN_LEVEL_3_BMEDZYOC
-      a       roh:ESScientificDomain ;
+      a       skos:Concept ;
       rdfs:label "Biología celular y molecular" ;
       roh:hasCode rohsci:ES_SCIENTIFIC_DOMAIN_LEVEL_3_CODE_BMEDZYOC ;
       skos:broader rohsci:ES_SCIENTIFIC_DOMAIN_LEVEL_2_BMED ;
@@ -2088,21 +2098,21 @@ rohsci:ES_SCIENTIFIC_DOMAIN_LEVEL_3_BMEDZYOC
       skos:prefLabel "Cellular and molecular biology"@en , "Biologie cellulaire et moléculaire"@fr , "Biologia cel·lular i molecular"@ca , "Biologia celular e molecular"@pt , "Biología celular y molecular" , "Biología celular y molecular"@es , "Bioloxía celular y molecular"@ast , "Bioloxía celular e molecular"@gl .
 
 rohsci:ES_SCIENTIFIC_DOMAIN_LEVEL_3_CODE_BMEDDHHL
-      a       roh:ESScientificDomain ;
+      a       skos:Concept ;
       rdfs:label "BMEDDHHL" ;
       roh:codeOf rohsci:ES_SCIENTIFIC_DOMAIN_LEVEL_3_BMEDDHHL ;
       skos:inScheme rohsci:ESscientificDomains3rdCodeList ;
       skos:prefLabel "BMEDDHHL" .
 
 rohsci:ES_SCIENTIFIC_DOMAIN_LEVEL_3_CODE_MCLIQUEG
-      a       roh:ESScientificDomain ;
+      a       skos:Concept ;
       rdfs:label "MCLIQUEG" ;
       roh:codeOf rohsci:ES_SCIENTIFIC_DOMAIN_LEVEL_3_MCLIQUEG ;
       skos:inScheme rohsci:ESscientificDomains3rdCodeList ;
       skos:prefLabel "MCLIQUEG" .
 
 rohsci:ES_SCIENTIFIC_DOMAIN_LEVEL_2_QMC
-      a       roh:ESScientificDomain ;
+      a       skos:Concept ;
       rdfs:label "Química" ;
       roh:hasCode rohsci:ES_SCIENTIFIC_DOMAIN_LEVEL_2_CODE_QMC ;
       skos:broader rohsci:ES_SCIENTIFIC_DOMAIN_LEVEL_1_CB ;
@@ -2112,14 +2122,14 @@ rohsci:ES_SCIENTIFIC_DOMAIN_LEVEL_2_QMC
       skos:prefLabel "Chemistry"@en , "Química" , "Química"@es , "Química"@ast , "Química"@ca , "Química"@gl , "Química"@pt , "Chimie"@fr .
 
 rohsci:ES_SCIENTIFIC_DOMAIN_LEVEL_3_CODE_CTGEOQ
-      a       roh:ESScientificDomain ;
+      a       skos:Concept ;
       rdfs:label "CTGEOQ" ;
       roh:codeOf rohsci:ES_SCIENTIFIC_DOMAIN_LEVEL_3_CTGEOQ ;
       skos:inScheme rohsci:ESscientificDomains3rdCodeList ;
       skos:prefLabel "CTGEOQ" .
 
 rohsci:ES_SCIENTIFIC_DOMAIN_LEVEL_3_CTMATE
-      a       roh:ESScientificDomain ;
+      a       skos:Concept ;
       rdfs:label "Materia condensada" ;
       roh:hasCode rohsci:ES_SCIENTIFIC_DOMAIN_LEVEL_3_CODE_CTMATE ;
       skos:broader rohsci:ES_SCIENTIFIC_DOMAIN_LEVEL_2_FI ;
@@ -2128,42 +2138,42 @@ rohsci:ES_SCIENTIFIC_DOMAIN_LEVEL_3_CTMATE
       skos:prefLabel "Matéria condensada"@pt , "Materia condensao"@ast , "Condensed matter"@en , "Matière condensée"@fr , "Matèria condensada"@ca , "Materia condensada" , "Materia condensada"@es , "Materia condensada"@gl , "Materia condensada"@an .
 
 rohsci:ES_SCIENTIFIC_DOMAIN_LEVEL_3_CODE_QMCMATM
-      a       roh:ESScientificDomain ;
+      a       skos:Concept ;
       rdfs:label "QMCMATM" ;
       roh:codeOf rohsci:ES_SCIENTIFIC_DOMAIN_LEVEL_3_QMCMATM ;
       skos:inScheme rohsci:ESscientificDomains3rdCodeList ;
       skos:prefLabel "QMCMATM" .
 
 rohsci:ES_SCIENTIFIC_DOMAIN_LEVEL_3_CODE_MCLINMLH
-      a       roh:ESScientificDomain ;
+      a       skos:Concept ;
       rdfs:label "MCLINMLH" ;
       roh:codeOf rohsci:ES_SCIENTIFIC_DOMAIN_LEVEL_3_MCLINMLH ;
       skos:inScheme rohsci:ESscientificDomains3rdCodeList ;
       skos:prefLabel "MCLINMLH" .
 
 rohsci:ES_SCIENTIFIC_DOMAIN_LEVEL_3_CODE_BFSDGRC
-      a       roh:ESScientificDomain ;
+      a       skos:Concept ;
       rdfs:label "BFSDGRC" ;
       roh:codeOf rohsci:ES_SCIENTIFIC_DOMAIN_LEVEL_3_BFSDGRC ;
       skos:inScheme rohsci:ESscientificDomains3rdCodeList ;
       skos:prefLabel "BFSDGRC" .
 
 rohsci:ES_SCIENTIFIC_DOMAIN_LEVEL_3_CODE_CTSEDI
-      a       roh:ESScientificDomain ;
+      a       skos:Concept ;
       rdfs:label "CTSEDI" ;
       roh:codeOf rohsci:ES_SCIENTIFIC_DOMAIN_LEVEL_3_CTSEDI ;
       skos:inScheme rohsci:ESscientificDomains3rdCodeList ;
       skos:prefLabel "CTSEDI" .
 
 rohsci:ES_SCIENTIFIC_DOMAIN_LEVEL_3_CODE_MCLIOCBV
-      a       roh:ESScientificDomain ;
+      a       skos:Concept ;
       rdfs:label "MCLIOCBV" ;
       roh:codeOf rohsci:ES_SCIENTIFIC_DOMAIN_LEVEL_3_MCLIOCBV ;
       skos:inScheme rohsci:ESscientificDomains3rdCodeList ;
       skos:prefLabel "MCLIOCBV" .
 
 rohsci:ES_SCIENTIFIC_DOMAIN_LEVEL_2_BMED
-      a       roh:ESScientificDomain ;
+      a       skos:Concept ;
       rdfs:label "Biomedicina" ;
       roh:hasCode rohsci:ES_SCIENTIFIC_DOMAIN_LEVEL_2_CODE_BMED ;
       skos:broader rohsci:ES_SCIENTIFIC_DOMAIN_LEVEL_1_CVS ;
