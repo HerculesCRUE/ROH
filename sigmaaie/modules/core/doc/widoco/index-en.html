@@ -6,7 +6,7 @@
 
 
 <!-- SCHEMA.ORG METADATA -->
-<script type="application/ld+json">{"@context":"http://schema.org","@type":"TechArticle","url":"http://purl.org/roh","image":"http://vowl.visualdataweb.org/webvowl/#iri=http://purl.org/roh","name":"The ROH ontology", "headline":"The University of Murcia signed on November 29, 2017, a Covenant with the Ministry of Economy, Industry and Competitiveness backing the “HÉRCULES: Semantic University Research Data” Project with a budget of FIVE MILLION FOUR HUNDRED AND SIXTY-TWO THOUSAND SIX HUNDRED euros with an 80% of co-financiering from the European Regional Development Fund program (ERDF) within the 2014-2020 period. ", "datePublished":"Tue Feb 02 17:58:30 EET 2021", "version":"0.0.1", "license":"https://creativecommons.org/publicdomain/zero/1.0/"}</script>
+<script type="application/ld+json">{"@context":"http://schema.org","@type":"TechArticle","url":"http://purl.org/roh","image":"http://vowl.visualdataweb.org/webvowl/#iri=http://purl.org/roh","name":"The ROH ontology", "headline":"The University of Murcia signed on November 29, 2017, a Covenant with the Ministry of Economy, Industry and Competitiveness backing the “HÉRCULES: Semantic University Research Data” Project with a budget of FIVE MILLION FOUR HUNDRED AND SIXTY-TWO THOUSAND SIX HUNDRED euros with an 80% of co-financiering from the European Regional Development Fund program (ERDF) within the 2014-2020 period. ", "datePublished":"Fri Feb 19 15:36:48 EET 2021", "version":"0.0.1", "license":"https://creativecommons.org/publicdomain/zero/1.0/", "author":[{"@type":"Person","name":"Mikel Emaldi, Emilio Rubiera Azcona"}], "contributor":[{"@type":"Person","name":"Iñigo Apellániz, Diego López de Ipiña, Esteban Sota, Álvaro Palacios, Alejandro González Hevia, José Emilio Labra Gayo"}]}</script>
 
 <script src="resources/jquery.js"></script> 
 <script src="resources/marked.min.js"></script> 
@@ -60,14 +60,15 @@ function loadTOC(){
 <dd><a href="http://purl.org/roh">http://purl.org/roh</a></dd>
 <dt>Revision:</dt>
 <dd>0.0.1</dd>
-<dt>Publisher:</dt>
-<dd><a href="null">null</a>, (<a href="null">null</a>)</dd>
+<dt>Authors:</dt>
+<dd>Mikel Emaldi, Emilio Rubiera Azcona</dd>
+
+<dt>Contributors:</dt>
+<dd>Iñigo Apellániz, Diego López de Ipiña, Esteban Sota, Álvaro Palacios, Alejandro González Hevia, José Emilio Labra Gayo</dd>
+
 <dt>Download serialization:</dt><dd><span><a href="ontology.json" target="_blank"><img src="https://img.shields.io/badge/Format-JSON_LD-blue.svg" alt="JSON-LD" /></a> </span><span><a href="ontology.xml" target="_blank"><img src="https://img.shields.io/badge/Format-RDF/XML-blue.svg" alt="RDF/XML" /></a> </span><span><a href="ontology.nt" target="_blank"><img src="https://img.shields.io/badge/Format-N_Triples-blue.svg" alt="N-Triples" /></a> </span><span><a href="ontology.ttl" target="_blank"><img src="https://img.shields.io/badge/Format-TTL-blue.svg" alt="TTL" /></a> </span></dd><dt>License: </dt><dd><a href="https://creativecommons.org/publicdomain/zero/1.0/" target="_blank"><img src="https://img.shields.io/badge/License-https://creativecommons.org/publicdomain/zero/1.0/-blue.svg" alt="https://creativecommons.org/publicdomain/zero/1.0/" /></a>
-<a href="https://creativecommons.org/publicdomain/zero/1.0/" rel="license" target="_blank">
-<img src="null" style="border-width:0" alt="License" />
-</a>
-<br/></dd><dt>Visualization:</dt><dd><a href="webvowl/index.html#" target="_blank"><img src="https://img.shields.io/badge/Visualize_with-WebVowl-blue.svg" alt="Visualize with WebVowl" /></a></dd>
-<dt>Evaluation:</dt><dd><a href="OOPSEvaluation/OOPSeval.html#" target="_blank"><img src="https://img.shields.io/badge/Evaluate_with-OOPS! (OntOlogy Pitfall Scanner!)-blue.svg" alt="Evaluate with OOPS!" /></a></dd></dl>
+</dd><dt>Visualization:</dt><dd><a href="webvowl/index.html#" target="_blank"><img src="https://img.shields.io/badge/Visualize_with-WebVowl-blue.svg" alt="Visualize with WebVowl" /></a></dd>
+<!-- <dt>Evaluation:</dt><dd><a href="OOPSEvaluation/OOPSeval.html#" target="_blank"><img src="https://img.shields.io/badge/Evaluate_with-OOPS! (OntOlogy Pitfall Scanner!)-blue.svg" alt="Evaluate with OOPS!" /></a></dd> --></dl>
 
 <hr/>
 </div>
@@ -111,7 +112,6 @@ This is a place holder text for the introduction. The introduction should briefl
 <tr><td><b>bfo</b></td><td>&lt;http://purl.org/roh/mirror/obo/bfo&gt;</td></tr>
 <tr><td><b>vcard</b></td><td>&lt;http://purl.org/roh/mirror/vcard&gt;</td></tr>
 <tr><td><b>vitro</b></td><td>&lt;http://vitro.mannlib.cornell.edu/ns/vitro/0.7&gt;</td></tr>
-<tr><td><b>core</b></td><td>&lt;http://purl.org/hercules/asio/core&gt;</td></tr>
 <tr><td><b>skos1</b></td><td>&lt;http://purl.org/roh/mirror/skos&gt;</td></tr>
 <tr><td><b>rdf</b></td><td>&lt;http://www.w3.org/1999/02/22-rdf-syntax-ns&gt;</td></tr>
 <tr><td><b>bibo</b></td><td>&lt;http://purl.org/roh/mirror/bibo&gt;</td></tr>
@@ -294,6 +294,10 @@ This ontology has the following classes and properties.</span>
    </li>
    <li>
       <a href="#http://www.w3.org/2004/02/skos/core#Concept" title="http://www.w3.org/2004/02/skos/core#Concept">Concept</a>
+   </li>
+   <li>
+      <a href="#http://www.w3.org/2004/02/skos/core#ConceptScheme"
+         title="http://www.w3.org/2004/02/skos/core#ConceptScheme">Concept Scheme</a>
    </li>
    <li>
       <a href="#/mirror/bibo#Conference" title="http://purl.org/roh/mirror/bibo#Conference">Conference</a>
@@ -808,9 +812,6 @@ This ontology has the following classes and properties.</span>
       <a href="#ResearchContribution" title="http://purl.org/roh#ResearchContribution">Research contribution</a>
    </li>
    <li>
-      <a href="#ResearchField" title="http://purl.org/roh#ResearchField">Research field</a>
-   </li>
-   <li>
       <a href="#ResearchGroupMetric" title="http://purl.org/roh#ResearchGroupMetric">Research Group Metric</a>
    </li>
    <li>
@@ -1151,7 +1152,7 @@ This ontology has the following classes and properties.</span>
       <a href="#hasCode" title="http://purl.org/roh#hasCode">has Code</a>
    </li>
    <li>
-      <a href="#hasCompanyCategorization" title="http://purl.org/roh#hasCompanyCategorization">has company categorization</a>
+      <a href="#hasCompanyClassification" title="http://purl.org/roh#hasCompanyClassification">has company classification</a>
    </li>
    <li>
       <a href="#hasContactInfo" title="http://purl.org/roh#hasContactInfo">has contact info</a>
@@ -1197,16 +1198,13 @@ This ontology has the following classes and properties.</span>
       <a href="#hasPosition" title="http://purl.org/roh#hasPosition">has position</a>
    </li>
    <li>
-      <a href="#hasProjectCategorization" title="http://purl.org/roh#hasProjectCategorization">has project categorization</a>
+      <a href="#hasProjectClassification" title="http://purl.org/roh#hasProjectClassification">has project categorization</a>
    </li>
    <li>
-      <a href="#hasPropertyCategorization" title="http://purl.org/roh#hasPropertyCategorization">has property categorization</a>
+      <a href="#hasPropertyClassification" title="http://purl.org/roh#hasPropertyClassification">has property classification</a>
    </li>
    <li>
       <a href="#hasResearchContribution" title="http://purl.org/roh#hasResearchContribution">has research contribution</a>
-   </li>
-   <li>
-      <a href="#hasResearchField" title="http://purl.org/roh#hasResearchField">has research field</a>
    </li>
    <li>
       <a href="#hasResearchLine" title="http://purl.org/roh#hasResearchLine">has research line</a>
@@ -1364,7 +1362,7 @@ This ontology has the following classes and properties.</span>
       <a href="#produces" title="http://purl.org/roh#produces">produces</a>
    </li>
    <li>
-      <a href="#projectCategorizationOf" title="http://purl.org/roh#projectCategorizationOf">project categorization of</a>
+      <a href="#projectClassificationOf" title="http://purl.org/roh#projectClassificationOf">project categorization of</a>
    </li>
    <li>
       <a href="#projectCoordinator" title="http://purl.org/roh#projectCoordinator">project coordinator</a>
@@ -1906,6 +1904,10 @@ This section provides details for each class and property defined by The ROH ont
          <a href="#http://www.w3.org/2004/02/skos/core#Concept" title="http://www.w3.org/2004/02/skos/core#Concept">Concept</a>
       </li>
       <li>
+         <a href="#http://www.w3.org/2004/02/skos/core#ConceptScheme"
+            title="http://www.w3.org/2004/02/skos/core#ConceptScheme">Concept Scheme</a>
+      </li>
+      <li>
          <a href="#/mirror/bibo#Conference" title="http://purl.org/roh/mirror/bibo#Conference">Conference</a>
       </li>
       <li>
@@ -2418,9 +2420,6 @@ This section provides details for each class and property defined by The ROH ont
          <a href="#ResearchContribution" title="http://purl.org/roh#ResearchContribution">Research contribution</a>
       </li>
       <li>
-         <a href="#ResearchField" title="http://purl.org/roh#ResearchField">Research field</a>
-      </li>
-      <li>
          <a href="#ResearchGroupMetric" title="http://purl.org/roh#ResearchGroupMetric">Research Group Metric</a>
       </li>
       <li>
@@ -2689,8 +2688,8 @@ This section provides details for each class and property defined by The ROH ont
             <sup class="type-c" title="class">c</sup>, <span class="dotted" title="http://www.w3.org/1999/02/22-rdf-syntax-ns#List">list</span>
             <sup class="type-c" title="class">c</sup>, <span class="dotted" title="http://www.w3.org/1999/02/22-rdf-syntax-ns#Seq">seq</span>
             <sup class="type-c" title="class">c</sup>, <a href="#http://www.w3.org/2004/02/skos/core#Concept" title="http://www.w3.org/2004/02/skos/core#Concept">Concept</a>
-            <sup class="type-c" title="class">c</sup>, <span class="dotted"
-                  title="http://www.w3.org/2004/02/skos/core#ConceptScheme">concept scheme</span>
+            <sup class="type-c" title="class">c</sup>, <a href="#http://www.w3.org/2004/02/skos/core#ConceptScheme"
+               title="http://www.w3.org/2004/02/skos/core#ConceptScheme">Concept Scheme</a>
             <sup class="type-c" title="class">c</sup>, <a href="#Accreditation" title="http://purl.org/roh#Accreditation">Accreditation</a>
             <sup class="type-c" title="class">c</sup>, <a href="#Activity" title="http://purl.org/roh#Activity">Activity</a>
             <sup class="type-c" title="class">c</sup>, <a href="#Expense" title="http://purl.org/roh#Expense">Expense</a>
@@ -2711,8 +2710,8 @@ This section provides details for each class and property defined by The ROH ont
             <sup class="type-c" title="class">c</sup>, <span class="dotted" title="http://www.w3.org/1999/02/22-rdf-syntax-ns#List">list</span>
             <sup class="type-c" title="class">c</sup>, <span class="dotted" title="http://www.w3.org/1999/02/22-rdf-syntax-ns#Seq">seq</span>
             <sup class="type-c" title="class">c</sup>, <a href="#http://www.w3.org/2004/02/skos/core#Concept" title="http://www.w3.org/2004/02/skos/core#Concept">Concept</a>
-            <sup class="type-c" title="class">c</sup>, <span class="dotted"
-                  title="http://www.w3.org/2004/02/skos/core#ConceptScheme">concept scheme</span>
+            <sup class="type-c" title="class">c</sup>, <a href="#http://www.w3.org/2004/02/skos/core#ConceptScheme"
+               title="http://www.w3.org/2004/02/skos/core#ConceptScheme">Concept Scheme</a>
             <sup class="type-c" title="class">c</sup>
          </dd>
       </dl>
@@ -3130,8 +3129,8 @@ Besides, an instance of a foaf:Person / roh:Researcher is associated to the foll
             <sup class="type-c" title="class">c</sup>, <span class="dotted" title="http://www.w3.org/1999/02/22-rdf-syntax-ns#List">list</span>
             <sup class="type-c" title="class">c</sup>, <span class="dotted" title="http://www.w3.org/1999/02/22-rdf-syntax-ns#Seq">seq</span>
             <sup class="type-c" title="class">c</sup>, <a href="#http://www.w3.org/2004/02/skos/core#Concept" title="http://www.w3.org/2004/02/skos/core#Concept">Concept</a>
-            <sup class="type-c" title="class">c</sup>, <span class="dotted"
-                  title="http://www.w3.org/2004/02/skos/core#ConceptScheme">concept scheme</span>
+            <sup class="type-c" title="class">c</sup>, <a href="#http://www.w3.org/2004/02/skos/core#ConceptScheme"
+               title="http://www.w3.org/2004/02/skos/core#ConceptScheme">Concept Scheme</a>
             <sup class="type-c" title="class">c</sup>, <a href="#Accreditation" title="http://purl.org/roh#Accreditation">Accreditation</a>
             <sup class="type-c" title="class">c</sup>, <a href="#Activity" title="http://purl.org/roh#Activity">Activity</a>
             <sup class="type-c" title="class">c</sup>, <a href="#Expense" title="http://purl.org/roh#Expense">Expense</a>
@@ -3152,8 +3151,8 @@ Besides, an instance of a foaf:Person / roh:Researcher is associated to the foll
             <sup class="type-c" title="class">c</sup>, <span class="dotted" title="http://www.w3.org/1999/02/22-rdf-syntax-ns#List">list</span>
             <sup class="type-c" title="class">c</sup>, <span class="dotted" title="http://www.w3.org/1999/02/22-rdf-syntax-ns#Seq">seq</span>
             <sup class="type-c" title="class">c</sup>, <a href="#http://www.w3.org/2004/02/skos/core#Concept" title="http://www.w3.org/2004/02/skos/core#Concept">Concept</a>
-            <sup class="type-c" title="class">c</sup>, <span class="dotted"
-                  title="http://www.w3.org/2004/02/skos/core#ConceptScheme">concept scheme</span>
+            <sup class="type-c" title="class">c</sup>, <a href="#http://www.w3.org/2004/02/skos/core#ConceptScheme"
+               title="http://www.w3.org/2004/02/skos/core#ConceptScheme">Concept Scheme</a>
             <sup class="type-c" title="class">c</sup>
          </dd>
       </dl>
@@ -3328,13 +3327,28 @@ Besides, an instance of a foaf:Person / roh:Researcher is associated to the foll
       <dl class="description">
          <dt>has super-classes</dt>
          <dd>
-            <a href="#http://www.w3.org/2004/02/skos/core#Concept" title="http://www.w3.org/2004/02/skos/core#Concept">Concept</a>
+            <a href="#http://www.w3.org/2004/02/skos/core#ConceptScheme"
+               title="http://www.w3.org/2004/02/skos/core#ConceptScheme">Concept Scheme</a>
             <sup class="type-c" title="class">c</sup>
          </dd>
          <dt>has sub-classes</dt>
          <dd>
             <a href="#BachelorsDegreeSubject" title="http://purl.org/roh#BachelorsDegreeSubject">Bachelor's degree subject</a>
             <sup class="type-c" title="class">c</sup>, <a href="#MastersDegreeSubject" title="http://purl.org/roh#MastersDegreeSubject">Master's degree subject</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+         <dt>is disjoint with</dt>
+         <dd>
+            <a href="#CompanyClassification" title="http://purl.org/roh#CompanyClassification">Company Classification</a>
+            <sup class="type-c" title="class">c</sup>, <a href="#Country" title="http://purl.org/roh#Country">Country Country</a>
+            <sup class="type-c" title="class">c</sup>, <a href="#ExpenseClassification" title="http://purl.org/roh#ExpenseClassification">Expense Classification</a>
+            <sup class="type-c" title="class">c</sup>, <a href="#FundingProgramClassification"
+               title="http://purl.org/roh#FundingProgramClassification">Funding Program Classification</a>
+            <sup class="type-c" title="class">c</sup>, <a href="#HRClassification" title="http://purl.org/roh#HRClassification">Human Resource Classification</a>
+            <sup class="type-c" title="class">c</sup>, <a href="#KnowledgeArea" title="http://purl.org/roh#KnowledgeArea">Knowledge Area</a>
+            <sup class="type-c" title="class">c</sup>, <a href="#ProjectClassification" title="http://purl.org/roh#ProjectClassification">Project Classification</a>
+            <sup class="type-c" title="class">c</sup>, <a href="#PropertyClassification" title="http://purl.org/roh#PropertyClassification">Property Classification</a>
+            <sup class="type-c" title="class">c</sup>, <a href="#ResearchProblem" title="http://purl.org/roh#ResearchProblem">Research problem Research problem</a>
             <sup class="type-c" title="class">c</sup>
          </dd>
       </dl>
@@ -3472,8 +3486,8 @@ Besides, an instance of a foaf:Person / roh:Researcher is associated to the foll
             <sup class="type-c" title="class">c</sup>, <span class="dotted" title="http://www.w3.org/1999/02/22-rdf-syntax-ns#List">list</span>
             <sup class="type-c" title="class">c</sup>, <span class="dotted" title="http://www.w3.org/1999/02/22-rdf-syntax-ns#Seq">seq</span>
             <sup class="type-c" title="class">c</sup>, <a href="#http://www.w3.org/2004/02/skos/core#Concept" title="http://www.w3.org/2004/02/skos/core#Concept">Concept</a>
-            <sup class="type-c" title="class">c</sup>, <span class="dotted"
-                  title="http://www.w3.org/2004/02/skos/core#ConceptScheme">concept scheme</span>
+            <sup class="type-c" title="class">c</sup>, <a href="#http://www.w3.org/2004/02/skos/core#ConceptScheme"
+               title="http://www.w3.org/2004/02/skos/core#ConceptScheme">Concept Scheme</a>
             <sup class="type-c" title="class">c</sup>, <a href="#Activity" title="http://purl.org/roh#Activity">Activity</a>
             <sup class="type-c" title="class">c</sup>, <a href="#Expense" title="http://purl.org/roh#Expense">Expense</a>
             <sup class="type-c" title="class">c</sup>, <a href="#Funding" title="http://purl.org/roh#Funding">Funding</a>
@@ -3494,8 +3508,8 @@ Besides, an instance of a foaf:Person / roh:Researcher is associated to the foll
             <sup class="type-c" title="class">c</sup>, <span class="dotted" title="http://www.w3.org/1999/02/22-rdf-syntax-ns#List">list</span>
             <sup class="type-c" title="class">c</sup>, <span class="dotted" title="http://www.w3.org/1999/02/22-rdf-syntax-ns#Seq">seq</span>
             <sup class="type-c" title="class">c</sup>, <a href="#http://www.w3.org/2004/02/skos/core#Concept" title="http://www.w3.org/2004/02/skos/core#Concept">Concept</a>
-            <sup class="type-c" title="class">c</sup>, <span class="dotted"
-                  title="http://www.w3.org/2004/02/skos/core#ConceptScheme">concept scheme</span>
+            <sup class="type-c" title="class">c</sup>, <a href="#http://www.w3.org/2004/02/skos/core#ConceptScheme"
+               title="http://www.w3.org/2004/02/skos/core#ConceptScheme">Concept Scheme</a>
             <sup class="type-c" title="class">c</sup>
          </dd>
       </dl>
@@ -3621,8 +3635,8 @@ The previous short definition was: "An arbitrary classification of a space/time 
             <sup class="type-c" title="class">c</sup>, <span class="dotted" title="http://www.w3.org/1999/02/22-rdf-syntax-ns#List">list</span>
             <sup class="type-c" title="class">c</sup>, <span class="dotted" title="http://www.w3.org/1999/02/22-rdf-syntax-ns#Seq">seq</span>
             <sup class="type-c" title="class">c</sup>, <a href="#http://www.w3.org/2004/02/skos/core#Concept" title="http://www.w3.org/2004/02/skos/core#Concept">Concept</a>
-            <sup class="type-c" title="class">c</sup>, <span class="dotted"
-                  title="http://www.w3.org/2004/02/skos/core#ConceptScheme">concept scheme</span>
+            <sup class="type-c" title="class">c</sup>, <a href="#http://www.w3.org/2004/02/skos/core#ConceptScheme"
+               title="http://www.w3.org/2004/02/skos/core#ConceptScheme">Concept Scheme</a>
             <sup class="type-c" title="class">c</sup>, <a href="#Accreditation" title="http://purl.org/roh#Accreditation">Accreditation</a>
             <sup class="type-c" title="class">c</sup>, <a href="#Expense" title="http://purl.org/roh#Expense">Expense</a>
             <sup class="type-c" title="class">c</sup>, <a href="#Funding" title="http://purl.org/roh#Funding">Funding</a>
@@ -3643,8 +3657,8 @@ The previous short definition was: "An arbitrary classification of a space/time 
             <sup class="type-c" title="class">c</sup>, <span class="dotted" title="http://www.w3.org/1999/02/22-rdf-syntax-ns#List">list</span>
             <sup class="type-c" title="class">c</sup>, <span class="dotted" title="http://www.w3.org/1999/02/22-rdf-syntax-ns#Seq">seq</span>
             <sup class="type-c" title="class">c</sup>, <a href="#http://www.w3.org/2004/02/skos/core#Concept" title="http://www.w3.org/2004/02/skos/core#Concept">Concept</a>
-            <sup class="type-c" title="class">c</sup>, <span class="dotted"
-                  title="http://www.w3.org/2004/02/skos/core#ConceptScheme">concept scheme</span>
+            <sup class="type-c" title="class">c</sup>, <a href="#http://www.w3.org/2004/02/skos/core#ConceptScheme"
+               title="http://www.w3.org/2004/02/skos/core#ConceptScheme">Concept Scheme</a>
             <sup class="type-c" title="class">c</sup>
          </dd>
       </dl>
@@ -3682,8 +3696,8 @@ The previous short definition was: "An arbitrary classification of a space/time 
       <dl class="description">
          <dt>has super-classes</dt>
          <dd>
-            <span class="dotted"
-                  title="http://www.w3.org/2004/02/skos/core#ConceptScheme">concept scheme</span>
+            <a href="#http://www.w3.org/2004/02/skos/core#ConceptScheme"
+               title="http://www.w3.org/2004/02/skos/core#ConceptScheme">Concept Scheme</a>
             <sup class="type-c" title="class">c</sup>
          </dd>
       </dl>
@@ -4790,13 +4804,23 @@ The previous short definition was: "An arbitrary classification of a space/time 
       <dl class="description">
          <dt>has super-classes</dt>
          <dd>
-            <a href="#http://www.w3.org/2004/02/skos/core#Concept" title="http://www.w3.org/2004/02/skos/core#Concept">Concept</a>
+            <a href="#http://www.w3.org/2004/02/skos/core#ConceptScheme"
+               title="http://www.w3.org/2004/02/skos/core#ConceptScheme">Concept Scheme</a>
             <sup class="type-c" title="class">c</sup>
          </dd>
-         <dt>is in range of</dt>
+         <dt>is disjoint with</dt>
          <dd>
-            <a href="#hasCompanyCategorization" title="http://purl.org/roh#hasCompanyCategorization">has company categorization</a>
-            <sup class="type-op" title="object property">op</sup>
+            <a href="#AcademicSubject" title="http://purl.org/roh#AcademicSubject">Academic subject</a>
+            <sup class="type-c" title="class">c</sup>, <a href="#Country" title="http://purl.org/roh#Country">Country Country</a>
+            <sup class="type-c" title="class">c</sup>, <a href="#ExpenseClassification" title="http://purl.org/roh#ExpenseClassification">Expense Classification</a>
+            <sup class="type-c" title="class">c</sup>, <a href="#FundingProgramClassification"
+               title="http://purl.org/roh#FundingProgramClassification">Funding Program Classification</a>
+            <sup class="type-c" title="class">c</sup>, <a href="#HRClassification" title="http://purl.org/roh#HRClassification">Human Resource Classification</a>
+            <sup class="type-c" title="class">c</sup>, <a href="#KnowledgeArea" title="http://purl.org/roh#KnowledgeArea">Knowledge Area</a>
+            <sup class="type-c" title="class">c</sup>, <a href="#ProjectClassification" title="http://purl.org/roh#ProjectClassification">Project Classification</a>
+            <sup class="type-c" title="class">c</sup>, <a href="#PropertyClassification" title="http://purl.org/roh#PropertyClassification">Property Classification</a>
+            <sup class="type-c" title="class">c</sup>, <a href="#ResearchProblem" title="http://purl.org/roh#ResearchProblem">Research problem Research problem</a>
+            <sup class="type-c" title="class">c</sup>
          </dd>
       </dl>
    </div>
@@ -4839,7 +4863,7 @@ The previous short definition was: "An arbitrary classification of a space/time 
          </dd>
          <dt>is in domain of</dt>
          <dd>
-            <a href="#hasCompanyCategorization" title="http://purl.org/roh#hasCompanyCategorization">has company categorization</a>
+            <a href="#hasCompanyClassification" title="http://purl.org/roh#hasCompanyClassification">has company classification</a>
             <sup class="type-op" title="object property">op</sup>, <a href="#isSpinfoffOf" title="http://purl.org/roh#isSpinfoffOf">is spinoff of</a>
             <sup class="type-op" title="object property">op</sup>, <a href="#publicCompany" title="http://purl.org/roh#publicCompany">public company</a>
             <sup class="type-dp" title="data property">dp</sup>
@@ -4926,34 +4950,16 @@ The previous short definition was: "An arbitrary classification of a space/time 
          </dd>
       </dl>
       <dl class="description">
-         <dt>has sub-classes</dt>
-         <dd>
-            <a href="#AcademicSubject" title="http://purl.org/roh#AcademicSubject">Academic subject</a>
-            <sup class="type-c" title="class">c</sup>, <a href="#CompanyClassification" title="http://purl.org/roh#CompanyClassification">Company Classification</a>
-            <sup class="type-c" title="class">c</sup>, <a href="#Country" title="http://purl.org/roh#Country">Country Country</a>
-            <sup class="type-c" title="class">c</sup>, <a href="#ExpenseClassification" title="http://purl.org/roh#ExpenseClassification">Expense Classification</a>
-            <sup class="type-c" title="class">c</sup>, <a href="#FundingProgramClassification"
-               title="http://purl.org/roh#FundingProgramClassification">Funding Program Classification</a>
-            <sup class="type-c" title="class">c</sup>, <a href="#HRClassification" title="http://purl.org/roh#HRClassification">Human Resource Classification</a>
-            <sup class="type-c" title="class">c</sup>, <a href="#KnowledgeArea" title="http://purl.org/roh#KnowledgeArea">Knowledge Area</a>
-            <sup class="type-c" title="class">c</sup>, <a href="#ProjectClassification" title="http://purl.org/roh#ProjectClassification">Project Classification</a>
-            <sup class="type-c" title="class">c</sup>, <a href="#PropertyClassification" title="http://purl.org/roh#PropertyClassification">Property Classification</a>
-            <sup class="type-c" title="class">c</sup>, <a href="#ResearchField" title="http://purl.org/roh#ResearchField">Research field</a>
-            <sup class="type-c" title="class">c</sup>, <a href="#ResearchProblem" title="http://purl.org/roh#ResearchProblem">Research problem Research problem</a>
-            <sup class="type-c" title="class">c</sup>
-         </dd>
          <dt>is in domain of</dt>
          <dd>
             <a href="#codeOf" title="http://purl.org/roh#codeOf">code of</a>
             <sup class="type-op" title="object property">op</sup>, <a href="#hasCode" title="http://purl.org/roh#hasCode">has Code</a>
-            <sup class="type-op" title="object property">op</sup>, <a href="#knowledgeAreaOf" title="http://purl.org/roh#knowledgeAreaOf">knowledge area of</a>
             <sup class="type-op" title="object property">op</sup>
          </dd>
          <dt>is in range of</dt>
          <dd>
             <a href="#codeOf" title="http://purl.org/roh#codeOf">code of</a>
             <sup class="type-op" title="object property">op</sup>, <a href="#hasCode" title="http://purl.org/roh#hasCode">has Code</a>
-            <sup class="type-op" title="object property">op</sup>, <a href="#hasKnowledgeArea" title="http://purl.org/roh#hasKnowledgeArea">has knowledge area</a>
             <sup class="type-op" title="object property">op</sup>, <a href="#hasResearchLine" title="http://purl.org/roh#hasResearchLine">has research line</a>
             <sup class="type-op" title="object property">op</sup>, <a href="#hasScientificDomain" title="http://purl.org/roh#hasScientificDomain">has scientific domain</a>
             <sup class="type-op" title="object property">op</sup>
@@ -4984,8 +4990,8 @@ The previous short definition was: "An arbitrary classification of a space/time 
             <sup class="type-c" title="class">c</sup>, <a href="#/mirror/vivo#Relationship" title="http://purl.org/roh/mirror/vivo#Relationship">Relationship</a>
             <sup class="type-c" title="class">c</sup>, <span class="dotted" title="http://www.w3.org/1999/02/22-rdf-syntax-ns#List">list</span>
             <sup class="type-c" title="class">c</sup>, <span class="dotted" title="http://www.w3.org/1999/02/22-rdf-syntax-ns#Seq">seq</span>
-            <sup class="type-c" title="class">c</sup>, <span class="dotted"
-                  title="http://www.w3.org/2004/02/skos/core#ConceptScheme">concept scheme</span>
+            <sup class="type-c" title="class">c</sup>, <a href="#http://www.w3.org/2004/02/skos/core#ConceptScheme"
+               title="http://www.w3.org/2004/02/skos/core#ConceptScheme">Concept Scheme</a>
             <sup class="type-c" title="class">c</sup>, <a href="#Accreditation" title="http://purl.org/roh#Accreditation">Accreditation</a>
             <sup class="type-c" title="class">c</sup>, <a href="#Activity" title="http://purl.org/roh#Activity">Activity</a>
             <sup class="type-c" title="class">c</sup>, <a href="#Expense" title="http://purl.org/roh#Expense">Expense</a>
@@ -5006,8 +5012,84 @@ The previous short definition was: "An arbitrary classification of a space/time 
             <sup class="type-c" title="class">c</sup>, <a href="#/mirror/vivo#Relationship" title="http://purl.org/roh/mirror/vivo#Relationship">Relationship</a>
             <sup class="type-c" title="class">c</sup>, <span class="dotted" title="http://www.w3.org/1999/02/22-rdf-syntax-ns#List">list</span>
             <sup class="type-c" title="class">c</sup>, <span class="dotted" title="http://www.w3.org/1999/02/22-rdf-syntax-ns#Seq">seq</span>
-            <sup class="type-c" title="class">c</sup>, <span class="dotted"
-                  title="http://www.w3.org/2004/02/skos/core#ConceptScheme">concept scheme</span>
+            <sup class="type-c" title="class">c</sup>, <a href="#http://www.w3.org/2004/02/skos/core#ConceptScheme"
+               title="http://www.w3.org/2004/02/skos/core#ConceptScheme">Concept Scheme</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="http://www.w3.org/2004/02/skos/core#ConceptScheme">
+      <h3>Concept Scheme<sup class="type-c" title="class">c</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://www.w3.org/2004/02/skos/core#ConceptScheme</p>
+      <dl class="description">
+         <dt>has sub-classes</dt>
+         <dd>
+            <a href="#AcademicSubject" title="http://purl.org/roh#AcademicSubject">Academic subject</a>
+            <sup class="type-c" title="class">c</sup>, <a href="#AdministrativeEntity" title="http://purl.org/roh#AdministrativeEntity">Administrative entities Administrative entities</a>
+            <sup class="type-c" title="class">c</sup>, <a href="#CompanyClassification" title="http://purl.org/roh#CompanyClassification">Company Classification</a>
+            <sup class="type-c" title="class">c</sup>, <a href="#Country" title="http://purl.org/roh#Country">Country Country</a>
+            <sup class="type-c" title="class">c</sup>, <a href="#ExpenseClassification" title="http://purl.org/roh#ExpenseClassification">Expense Classification</a>
+            <sup class="type-c" title="class">c</sup>, <a href="#FundingProgramClassification"
+               title="http://purl.org/roh#FundingProgramClassification">Funding Program Classification</a>
+            <sup class="type-c" title="class">c</sup>, <a href="#HRClassification" title="http://purl.org/roh#HRClassification">Human Resource Classification</a>
+            <sup class="type-c" title="class">c</sup>, <a href="#KnowledgeArea" title="http://purl.org/roh#KnowledgeArea">Knowledge Area</a>
+            <sup class="type-c" title="class">c</sup>, <a href="#ProjectClassification" title="http://purl.org/roh#ProjectClassification">Project Classification</a>
+            <sup class="type-c" title="class">c</sup>, <a href="#PropertyClassification" title="http://purl.org/roh#PropertyClassification">Property Classification</a>
+            <sup class="type-c" title="class">c</sup>, <a href="#ResearchProblem" title="http://purl.org/roh#ResearchProblem">Research problem Research problem</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+         <dt>is disjoint with</dt>
+         <dd>
+            <a href="#Accreditation" title="http://purl.org/roh#Accreditation">Accreditation</a>
+            <sup class="type-c" title="class">c</sup>, <a href="#Activity" title="http://purl.org/roh#Activity">Activity</a>
+            <sup class="type-c" title="class">c</sup>, <a href="#Expense" title="http://purl.org/roh#Expense">Expense</a>
+            <sup class="type-c" title="class">c</sup>, <a href="#Funding" title="http://purl.org/roh#Funding">Funding</a>
+            <sup class="type-c" title="class">c</sup>, <a href="#FundingAmount" title="http://purl.org/roh#FundingAmount">Funding Amount</a>
+            <sup class="type-c" title="class">c</sup>, <a href="#FundingProgram" title="http://purl.org/roh#FundingProgram">Funding Program</a>
+            <sup class="type-c" title="class">c</sup>, <a href="#FundingSource" title="http://purl.org/roh#FundingSource">Funding Source</a>
+            <sup class="type-c" title="class">c</sup>, <a href="#PatentApplication" title="http://purl.org/roh#PatentApplication">Patent Application</a>
+            <sup class="type-c" title="class">c</sup>, <a href="#Reservable" title="http://purl.org/roh#Reservable">Reservable</a>
+            <sup class="type-c" title="class">c</sup>, <a href="#/mirror/foaf#Agent" title="http://purl.org/roh/mirror/foaf#Agent"> Agent</a>
+            <sup class="type-c" title="class">c</sup>, <a href="#/mirror/geonames#Feature" title="http://purl.org/roh/mirror/geonames#Feature">Feature</a>
+            <sup class="type-c" title="class">c</sup>, <a href="#/mirror/obo/bfo#BFO_0000008" title="http://purl.org/roh/mirror/obo/bfo#BFO_0000008">Temporal Region</a>
+            <sup class="type-c" title="class">c</sup>, <a href="#/mirror/obo/bfo#BFO_0000023" title="http://purl.org/roh/mirror/obo/bfo#BFO_0000023">Role</a>
+            <sup class="type-c" title="class">c</sup>, <a href="#/mirror/obo/ero#ERO_0000005" title="http://purl.org/roh/mirror/obo/ero#ERO_0000005">Service</a>
+            <sup class="type-c" title="class">c</sup>, <a href="#/mirror/obo/iao#IAO_0000030" title="http://purl.org/roh/mirror/obo/iao#IAO_0000030">Information Content Entity</a>
+            <sup class="type-c" title="class">c</sup>, <span class="dotted" title="http://purl.org/roh/mirror/vcard#Address">address</span>
+            <sup class="type-c" title="class">c</sup>, <span class="dotted" title="http://purl.org/roh/mirror/vcard#Email">email</span>
+            <sup class="type-c" title="class">c</sup>, <a href="#/mirror/vcard#Kind" title="http://purl.org/roh/mirror/vcard#Kind">Kind</a>
+            <sup class="type-c" title="class">c</sup>, <span class="dotted" title="http://purl.org/roh/mirror/vcard#Name">name</span>
+            <sup class="type-c" title="class">c</sup>, <a href="#/mirror/vivo#AcademicDegree" title="http://purl.org/roh/mirror/vivo#AcademicDegree">Academic Degree</a>
+            <sup class="type-c" title="class">c</sup>, <a href="#/mirror/vivo#Project" title="http://purl.org/roh/mirror/vivo#Project">Project</a>
+            <sup class="type-c" title="class">c</sup>, <a href="#/mirror/vivo#Relationship" title="http://purl.org/roh/mirror/vivo#Relationship">Relationship</a>
+            <sup class="type-c" title="class">c</sup>, <span class="dotted" title="http://www.w3.org/1999/02/22-rdf-syntax-ns#List">list</span>
+            <sup class="type-c" title="class">c</sup>, <span class="dotted" title="http://www.w3.org/1999/02/22-rdf-syntax-ns#Seq">seq</span>
+            <sup class="type-c" title="class">c</sup>, <a href="#http://www.w3.org/2004/02/skos/core#Concept" title="http://www.w3.org/2004/02/skos/core#Concept">Concept</a>
+            <sup class="type-c" title="class">c</sup>, <a href="#Accreditation" title="http://purl.org/roh#Accreditation">Accreditation</a>
+            <sup class="type-c" title="class">c</sup>, <a href="#Activity" title="http://purl.org/roh#Activity">Activity</a>
+            <sup class="type-c" title="class">c</sup>, <a href="#Expense" title="http://purl.org/roh#Expense">Expense</a>
+            <sup class="type-c" title="class">c</sup>, <a href="#Funding" title="http://purl.org/roh#Funding">Funding</a>
+            <sup class="type-c" title="class">c</sup>, <a href="#FundingAmount" title="http://purl.org/roh#FundingAmount">Funding Amount</a>
+            <sup class="type-c" title="class">c</sup>, <a href="#FundingProgram" title="http://purl.org/roh#FundingProgram">Funding Program</a>
+            <sup class="type-c" title="class">c</sup>, <a href="#FundingSource" title="http://purl.org/roh#FundingSource">Funding Source</a>
+            <sup class="type-c" title="class">c</sup>, <a href="#Reservable" title="http://purl.org/roh#Reservable">Reservable</a>
+            <sup class="type-c" title="class">c</sup>, <a href="#/mirror/foaf#Agent" title="http://purl.org/roh/mirror/foaf#Agent"> Agent</a>
+            <sup class="type-c" title="class">c</sup>, <a href="#/mirror/geonames#Feature" title="http://purl.org/roh/mirror/geonames#Feature">Feature</a>
+            <sup class="type-c" title="class">c</sup>, <a href="#/mirror/obo/bfo#BFO_0000008" title="http://purl.org/roh/mirror/obo/bfo#BFO_0000008">Temporal Region</a>
+            <sup class="type-c" title="class">c</sup>, <a href="#/mirror/obo/bfo#BFO_0000023" title="http://purl.org/roh/mirror/obo/bfo#BFO_0000023">Role</a>
+            <sup class="type-c" title="class">c</sup>, <a href="#/mirror/obo/ero#ERO_0000005" title="http://purl.org/roh/mirror/obo/ero#ERO_0000005">Service</a>
+            <sup class="type-c" title="class">c</sup>, <a href="#/mirror/obo/iao#IAO_0000030" title="http://purl.org/roh/mirror/obo/iao#IAO_0000030">Information Content Entity</a>
+            <sup class="type-c" title="class">c</sup>, <a href="#/mirror/vcard#Kind" title="http://purl.org/roh/mirror/vcard#Kind">Kind</a>
+            <sup class="type-c" title="class">c</sup>, <a href="#/mirror/vivo#AcademicDegree" title="http://purl.org/roh/mirror/vivo#AcademicDegree">Academic Degree</a>
+            <sup class="type-c" title="class">c</sup>, <a href="#/mirror/vivo#Project" title="http://purl.org/roh/mirror/vivo#Project">Project</a>
+            <sup class="type-c" title="class">c</sup>, <a href="#/mirror/vivo#Relationship" title="http://purl.org/roh/mirror/vivo#Relationship">Relationship</a>
+            <sup class="type-c" title="class">c</sup>, <span class="dotted" title="http://www.w3.org/1999/02/22-rdf-syntax-ns#List">list</span>
+            <sup class="type-c" title="class">c</sup>, <span class="dotted" title="http://www.w3.org/1999/02/22-rdf-syntax-ns#Seq">seq</span>
+            <sup class="type-c" title="class">c</sup>, <a href="#http://www.w3.org/2004/02/skos/core#Concept" title="http://www.w3.org/2004/02/skos/core#Concept">Concept</a>
             <sup class="type-c" title="class">c</sup>
          </dd>
       </dl>
@@ -5266,14 +5348,23 @@ The previous short definition was: "An arbitrary classification of a space/time 
       <dl class="description">
          <dt>has super-classes</dt>
          <dd>
-            <a href="#http://www.w3.org/2004/02/skos/core#Concept" title="http://www.w3.org/2004/02/skos/core#Concept">Concept</a>
+            <a href="#http://www.w3.org/2004/02/skos/core#ConceptScheme"
+               title="http://www.w3.org/2004/02/skos/core#ConceptScheme">Concept Scheme</a>
             <sup class="type-c" title="class">c</sup>
          </dd>
-         <dt>is in range of</dt>
+         <dt>is disjoint with</dt>
          <dd>
-            <a href="#country" title="http://purl.org/roh#country">country</a>
-            <sup class="type-op" title="object property">op</sup>, <a href="#patentCountry" title="http://purl.org/roh#patentCountry">patent country</a>
-            <sup class="type-op" title="object property">op</sup>
+            <a href="#AcademicSubject" title="http://purl.org/roh#AcademicSubject">Academic subject</a>
+            <sup class="type-c" title="class">c</sup>, <a href="#CompanyClassification" title="http://purl.org/roh#CompanyClassification">Company Classification</a>
+            <sup class="type-c" title="class">c</sup>, <a href="#ExpenseClassification" title="http://purl.org/roh#ExpenseClassification">Expense Classification</a>
+            <sup class="type-c" title="class">c</sup>, <a href="#FundingProgramClassification"
+               title="http://purl.org/roh#FundingProgramClassification">Funding Program Classification</a>
+            <sup class="type-c" title="class">c</sup>, <a href="#HRClassification" title="http://purl.org/roh#HRClassification">Human Resource Classification</a>
+            <sup class="type-c" title="class">c</sup>, <a href="#KnowledgeArea" title="http://purl.org/roh#KnowledgeArea">Knowledge Area</a>
+            <sup class="type-c" title="class">c</sup>, <a href="#ProjectClassification" title="http://purl.org/roh#ProjectClassification">Project Classification</a>
+            <sup class="type-c" title="class">c</sup>, <a href="#PropertyClassification" title="http://purl.org/roh#PropertyClassification">Property Classification</a>
+            <sup class="type-c" title="class">c</sup>, <a href="#ResearchProblem" title="http://purl.org/roh#ResearchProblem">Research problem Research problem</a>
+            <sup class="type-c" title="class">c</sup>
          </dd>
       </dl>
    </div>
@@ -6482,8 +6573,8 @@ A vivo:Equipment, subclasss of roh:Infrastructure, belongs to a foaf:Organizatio
             <sup class="type-c" title="class">c</sup>, <span class="dotted" title="http://www.w3.org/1999/02/22-rdf-syntax-ns#List">list</span>
             <sup class="type-c" title="class">c</sup>, <span class="dotted" title="http://www.w3.org/1999/02/22-rdf-syntax-ns#Seq">seq</span>
             <sup class="type-c" title="class">c</sup>, <a href="#http://www.w3.org/2004/02/skos/core#Concept" title="http://www.w3.org/2004/02/skos/core#Concept">Concept</a>
-            <sup class="type-c" title="class">c</sup>, <span class="dotted"
-                  title="http://www.w3.org/2004/02/skos/core#ConceptScheme">concept scheme</span>
+            <sup class="type-c" title="class">c</sup>, <a href="#http://www.w3.org/2004/02/skos/core#ConceptScheme"
+               title="http://www.w3.org/2004/02/skos/core#ConceptScheme">Concept Scheme</a>
             <sup class="type-c" title="class">c</sup>, <a href="#Accreditation" title="http://purl.org/roh#Accreditation">Accreditation</a>
             <sup class="type-c" title="class">c</sup>, <a href="#Activity" title="http://purl.org/roh#Activity">Activity</a>
             <sup class="type-c" title="class">c</sup>, <a href="#Funding" title="http://purl.org/roh#Funding">Funding</a>
@@ -6504,8 +6595,8 @@ A vivo:Equipment, subclasss of roh:Infrastructure, belongs to a foaf:Organizatio
             <sup class="type-c" title="class">c</sup>, <span class="dotted" title="http://www.w3.org/1999/02/22-rdf-syntax-ns#List">list</span>
             <sup class="type-c" title="class">c</sup>, <span class="dotted" title="http://www.w3.org/1999/02/22-rdf-syntax-ns#Seq">seq</span>
             <sup class="type-c" title="class">c</sup>, <a href="#http://www.w3.org/2004/02/skos/core#Concept" title="http://www.w3.org/2004/02/skos/core#Concept">Concept</a>
-            <sup class="type-c" title="class">c</sup>, <span class="dotted"
-                  title="http://www.w3.org/2004/02/skos/core#ConceptScheme">concept scheme</span>
+            <sup class="type-c" title="class">c</sup>, <a href="#http://www.w3.org/2004/02/skos/core#ConceptScheme"
+               title="http://www.w3.org/2004/02/skos/core#ConceptScheme">Concept Scheme</a>
             <sup class="type-c" title="class">c</sup>
          </dd>
       </dl>
@@ -6520,22 +6611,22 @@ A vivo:Equipment, subclasss of roh:Infrastructure, belongs to a foaf:Organizatio
       <dl class="description">
          <dt>has super-classes</dt>
          <dd>
-            <a href="#http://www.w3.org/2004/02/skos/core#Concept" title="http://www.w3.org/2004/02/skos/core#Concept">Concept</a>
+            <a href="#http://www.w3.org/2004/02/skos/core#ConceptScheme"
+               title="http://www.w3.org/2004/02/skos/core#ConceptScheme">Concept Scheme</a>
             <sup class="type-c" title="class">c</sup>
          </dd>
          <dt>is disjoint with</dt>
          <dd>
-            <a href="#FundingProgramClassification"
-               title="http://purl.org/roh#FundingProgramClassification">Funding Program Classification</a>
-            <sup class="type-c" title="class">c</sup>, <a href="#HRClassification" title="http://purl.org/roh#HRClassification">Human Resource Classification</a>
-            <sup class="type-c" title="class">c</sup>, <a href="#KnowledgeArea" title="http://purl.org/roh#KnowledgeArea">Knowledge Area</a>
-            <sup class="type-c" title="class">c</sup>, <a href="#ProjectClassification" title="http://purl.org/roh#ProjectClassification">Project Classification</a>
+            <a href="#AcademicSubject" title="http://purl.org/roh#AcademicSubject">Academic subject</a>
+            <sup class="type-c" title="class">c</sup>, <a href="#CompanyClassification" title="http://purl.org/roh#CompanyClassification">Company Classification</a>
+            <sup class="type-c" title="class">c</sup>, <a href="#Country" title="http://purl.org/roh#Country">Country Country</a>
             <sup class="type-c" title="class">c</sup>, <a href="#FundingProgramClassification"
                title="http://purl.org/roh#FundingProgramClassification">Funding Program Classification</a>
             <sup class="type-c" title="class">c</sup>, <a href="#HRClassification" title="http://purl.org/roh#HRClassification">Human Resource Classification</a>
             <sup class="type-c" title="class">c</sup>, <a href="#KnowledgeArea" title="http://purl.org/roh#KnowledgeArea">Knowledge Area</a>
             <sup class="type-c" title="class">c</sup>, <a href="#ProjectClassification" title="http://purl.org/roh#ProjectClassification">Project Classification</a>
             <sup class="type-c" title="class">c</sup>, <a href="#PropertyClassification" title="http://purl.org/roh#PropertyClassification">Property Classification</a>
+            <sup class="type-c" title="class">c</sup>, <a href="#ResearchProblem" title="http://purl.org/roh#ResearchProblem">Research problem Research problem</a>
             <sup class="type-c" title="class">c</sup>
          </dd>
       </dl>
@@ -6835,8 +6926,8 @@ A vivo:Equipment, subclasss of roh:Infrastructure, belongs to a foaf:Organizatio
             <sup class="type-c" title="class">c</sup>, <span class="dotted" title="http://www.w3.org/1999/02/22-rdf-syntax-ns#List">list</span>
             <sup class="type-c" title="class">c</sup>, <span class="dotted" title="http://www.w3.org/1999/02/22-rdf-syntax-ns#Seq">seq</span>
             <sup class="type-c" title="class">c</sup>, <a href="#http://www.w3.org/2004/02/skos/core#Concept" title="http://www.w3.org/2004/02/skos/core#Concept">Concept</a>
-            <sup class="type-c" title="class">c</sup>, <span class="dotted"
-                  title="http://www.w3.org/2004/02/skos/core#ConceptScheme">concept scheme</span>
+            <sup class="type-c" title="class">c</sup>, <a href="#http://www.w3.org/2004/02/skos/core#ConceptScheme"
+               title="http://www.w3.org/2004/02/skos/core#ConceptScheme">Concept Scheme</a>
             <sup class="type-c" title="class">c</sup>, <a href="#Accreditation" title="http://purl.org/roh#Accreditation">Accreditation</a>
             <sup class="type-c" title="class">c</sup>, <a href="#Activity" title="http://purl.org/roh#Activity">Activity</a>
             <sup class="type-c" title="class">c</sup>, <a href="#Expense" title="http://purl.org/roh#Expense">Expense</a>
@@ -6857,8 +6948,8 @@ A vivo:Equipment, subclasss of roh:Infrastructure, belongs to a foaf:Organizatio
             <sup class="type-c" title="class">c</sup>, <span class="dotted" title="http://www.w3.org/1999/02/22-rdf-syntax-ns#List">list</span>
             <sup class="type-c" title="class">c</sup>, <span class="dotted" title="http://www.w3.org/1999/02/22-rdf-syntax-ns#Seq">seq</span>
             <sup class="type-c" title="class">c</sup>, <a href="#http://www.w3.org/2004/02/skos/core#Concept" title="http://www.w3.org/2004/02/skos/core#Concept">Concept</a>
-            <sup class="type-c" title="class">c</sup>, <span class="dotted"
-                  title="http://www.w3.org/2004/02/skos/core#ConceptScheme">concept scheme</span>
+            <sup class="type-c" title="class">c</sup>, <a href="#http://www.w3.org/2004/02/skos/core#ConceptScheme"
+               title="http://www.w3.org/2004/02/skos/core#ConceptScheme">Concept Scheme</a>
             <sup class="type-c" title="class">c</sup>
          </dd>
       </dl>
@@ -6992,8 +7083,8 @@ A vivo:Equipment, subclasss of roh:Infrastructure, belongs to a foaf:Organizatio
             <sup class="type-c" title="class">c</sup>, <span class="dotted" title="http://www.w3.org/1999/02/22-rdf-syntax-ns#List">list</span>
             <sup class="type-c" title="class">c</sup>, <span class="dotted" title="http://www.w3.org/1999/02/22-rdf-syntax-ns#Seq">seq</span>
             <sup class="type-c" title="class">c</sup>, <a href="#http://www.w3.org/2004/02/skos/core#Concept" title="http://www.w3.org/2004/02/skos/core#Concept">Concept</a>
-            <sup class="type-c" title="class">c</sup>, <span class="dotted"
-                  title="http://www.w3.org/2004/02/skos/core#ConceptScheme">concept scheme</span>
+            <sup class="type-c" title="class">c</sup>, <a href="#http://www.w3.org/2004/02/skos/core#ConceptScheme"
+               title="http://www.w3.org/2004/02/skos/core#ConceptScheme">Concept Scheme</a>
             <sup class="type-c" title="class">c</sup>, <a href="#Accreditation" title="http://purl.org/roh#Accreditation">Accreditation</a>
             <sup class="type-c" title="class">c</sup>, <a href="#Activity" title="http://purl.org/roh#Activity">Activity</a>
             <sup class="type-c" title="class">c</sup>, <a href="#Expense" title="http://purl.org/roh#Expense">Expense</a>
@@ -7014,8 +7105,8 @@ A vivo:Equipment, subclasss of roh:Infrastructure, belongs to a foaf:Organizatio
             <sup class="type-c" title="class">c</sup>, <span class="dotted" title="http://www.w3.org/1999/02/22-rdf-syntax-ns#List">list</span>
             <sup class="type-c" title="class">c</sup>, <span class="dotted" title="http://www.w3.org/1999/02/22-rdf-syntax-ns#Seq">seq</span>
             <sup class="type-c" title="class">c</sup>, <a href="#http://www.w3.org/2004/02/skos/core#Concept" title="http://www.w3.org/2004/02/skos/core#Concept">Concept</a>
-            <sup class="type-c" title="class">c</sup>, <span class="dotted"
-                  title="http://www.w3.org/2004/02/skos/core#ConceptScheme">concept scheme</span>
+            <sup class="type-c" title="class">c</sup>, <a href="#http://www.w3.org/2004/02/skos/core#ConceptScheme"
+               title="http://www.w3.org/2004/02/skos/core#ConceptScheme">Concept Scheme</a>
             <sup class="type-c" title="class">c</sup>
          </dd>
       </dl>
@@ -7069,8 +7160,8 @@ A vivo:Equipment, subclasss of roh:Infrastructure, belongs to a foaf:Organizatio
             <sup class="type-c" title="class">c</sup>, <span class="dotted" title="http://www.w3.org/1999/02/22-rdf-syntax-ns#List">list</span>
             <sup class="type-c" title="class">c</sup>, <span class="dotted" title="http://www.w3.org/1999/02/22-rdf-syntax-ns#Seq">seq</span>
             <sup class="type-c" title="class">c</sup>, <a href="#http://www.w3.org/2004/02/skos/core#Concept" title="http://www.w3.org/2004/02/skos/core#Concept">Concept</a>
-            <sup class="type-c" title="class">c</sup>, <span class="dotted"
-                  title="http://www.w3.org/2004/02/skos/core#ConceptScheme">concept scheme</span>
+            <sup class="type-c" title="class">c</sup>, <a href="#http://www.w3.org/2004/02/skos/core#ConceptScheme"
+               title="http://www.w3.org/2004/02/skos/core#ConceptScheme">Concept Scheme</a>
             <sup class="type-c" title="class">c</sup>, <a href="#Accreditation" title="http://purl.org/roh#Accreditation">Accreditation</a>
             <sup class="type-c" title="class">c</sup>, <a href="#Activity" title="http://purl.org/roh#Activity">Activity</a>
             <sup class="type-c" title="class">c</sup>, <a href="#Expense" title="http://purl.org/roh#Expense">Expense</a>
@@ -7091,8 +7182,8 @@ A vivo:Equipment, subclasss of roh:Infrastructure, belongs to a foaf:Organizatio
             <sup class="type-c" title="class">c</sup>, <span class="dotted" title="http://www.w3.org/1999/02/22-rdf-syntax-ns#List">list</span>
             <sup class="type-c" title="class">c</sup>, <span class="dotted" title="http://www.w3.org/1999/02/22-rdf-syntax-ns#Seq">seq</span>
             <sup class="type-c" title="class">c</sup>, <a href="#http://www.w3.org/2004/02/skos/core#Concept" title="http://www.w3.org/2004/02/skos/core#Concept">Concept</a>
-            <sup class="type-c" title="class">c</sup>, <span class="dotted"
-                  title="http://www.w3.org/2004/02/skos/core#ConceptScheme">concept scheme</span>
+            <sup class="type-c" title="class">c</sup>, <a href="#http://www.w3.org/2004/02/skos/core#ConceptScheme"
+               title="http://www.w3.org/2004/02/skos/core#ConceptScheme">Concept Scheme</a>
             <sup class="type-c" title="class">c</sup>
          </dd>
       </dl>
@@ -7202,8 +7293,8 @@ A vivo:Equipment, subclasss of roh:Infrastructure, belongs to a foaf:Organizatio
             <sup class="type-c" title="class">c</sup>, <span class="dotted" title="http://www.w3.org/1999/02/22-rdf-syntax-ns#List">list</span>
             <sup class="type-c" title="class">c</sup>, <span class="dotted" title="http://www.w3.org/1999/02/22-rdf-syntax-ns#Seq">seq</span>
             <sup class="type-c" title="class">c</sup>, <a href="#http://www.w3.org/2004/02/skos/core#Concept" title="http://www.w3.org/2004/02/skos/core#Concept">Concept</a>
-            <sup class="type-c" title="class">c</sup>, <span class="dotted"
-                  title="http://www.w3.org/2004/02/skos/core#ConceptScheme">concept scheme</span>
+            <sup class="type-c" title="class">c</sup>, <a href="#http://www.w3.org/2004/02/skos/core#ConceptScheme"
+               title="http://www.w3.org/2004/02/skos/core#ConceptScheme">Concept Scheme</a>
             <sup class="type-c" title="class">c</sup>, <a href="#Accreditation" title="http://purl.org/roh#Accreditation">Accreditation</a>
             <sup class="type-c" title="class">c</sup>, <a href="#Activity" title="http://purl.org/roh#Activity">Activity</a>
             <sup class="type-c" title="class">c</sup>, <a href="#Expense" title="http://purl.org/roh#Expense">Expense</a>
@@ -7224,8 +7315,8 @@ A vivo:Equipment, subclasss of roh:Infrastructure, belongs to a foaf:Organizatio
             <sup class="type-c" title="class">c</sup>, <span class="dotted" title="http://www.w3.org/1999/02/22-rdf-syntax-ns#List">list</span>
             <sup class="type-c" title="class">c</sup>, <span class="dotted" title="http://www.w3.org/1999/02/22-rdf-syntax-ns#Seq">seq</span>
             <sup class="type-c" title="class">c</sup>, <a href="#http://www.w3.org/2004/02/skos/core#Concept" title="http://www.w3.org/2004/02/skos/core#Concept">Concept</a>
-            <sup class="type-c" title="class">c</sup>, <span class="dotted"
-                  title="http://www.w3.org/2004/02/skos/core#ConceptScheme">concept scheme</span>
+            <sup class="type-c" title="class">c</sup>, <a href="#http://www.w3.org/2004/02/skos/core#ConceptScheme"
+               title="http://www.w3.org/2004/02/skos/core#ConceptScheme">Concept Scheme</a>
             <sup class="type-c" title="class">c</sup>
          </dd>
       </dl>
@@ -7240,29 +7331,21 @@ A vivo:Equipment, subclasss of roh:Infrastructure, belongs to a foaf:Organizatio
       <dl class="description">
          <dt>has super-classes</dt>
          <dd>
-            <a href="#http://www.w3.org/2004/02/skos/core#Concept" title="http://www.w3.org/2004/02/skos/core#Concept">Concept</a>
+            <a href="#http://www.w3.org/2004/02/skos/core#ConceptScheme"
+               title="http://www.w3.org/2004/02/skos/core#ConceptScheme">Concept Scheme</a>
             <sup class="type-c" title="class">c</sup>
-         </dd>
-         <dt>is in range of</dt>
-         <dd>
-            <a href="#hasFundingProgramClassification"
-               title="http://purl.org/roh#hasFundingProgramClassification">has Funding Program Classification</a>
-            <sup class="type-op" title="object property">op</sup>
          </dd>
          <dt>is disjoint with</dt>
          <dd>
-            <a href="#ExpenseClassification" title="http://purl.org/roh#ExpenseClassification">Expense Classification</a>
-            <sup class="type-c" title="class">c</sup>, <a href="#HRClassification" title="http://purl.org/roh#HRClassification">Human Resource Classification</a>
-            <sup class="type-c" title="class">c</sup>, <a href="#KnowledgeArea" title="http://purl.org/roh#KnowledgeArea">Knowledge Area</a>
-            <sup class="type-c" title="class">c</sup>, <a href="#ProjectClassification" title="http://purl.org/roh#ProjectClassification">Project Classification</a>
+            <a href="#AcademicSubject" title="http://purl.org/roh#AcademicSubject">Academic subject</a>
+            <sup class="type-c" title="class">c</sup>, <a href="#CompanyClassification" title="http://purl.org/roh#CompanyClassification">Company Classification</a>
+            <sup class="type-c" title="class">c</sup>, <a href="#Country" title="http://purl.org/roh#Country">Country Country</a>
             <sup class="type-c" title="class">c</sup>, <a href="#ExpenseClassification" title="http://purl.org/roh#ExpenseClassification">Expense Classification</a>
             <sup class="type-c" title="class">c</sup>, <a href="#HRClassification" title="http://purl.org/roh#HRClassification">Human Resource Classification</a>
             <sup class="type-c" title="class">c</sup>, <a href="#KnowledgeArea" title="http://purl.org/roh#KnowledgeArea">Knowledge Area</a>
             <sup class="type-c" title="class">c</sup>, <a href="#ProjectClassification" title="http://purl.org/roh#ProjectClassification">Project Classification</a>
             <sup class="type-c" title="class">c</sup>, <a href="#PropertyClassification" title="http://purl.org/roh#PropertyClassification">Property Classification</a>
-            <sup class="type-c" title="class">c</sup>, <a href="#HRClassification" title="http://purl.org/roh#HRClassification">Human Resource Classification</a>
-            <sup class="type-c" title="class">c</sup>, <a href="#KnowledgeArea" title="http://purl.org/roh#KnowledgeArea">Knowledge Area</a>
-            <sup class="type-c" title="class">c</sup>, <a href="#ProjectClassification" title="http://purl.org/roh#ProjectClassification">Project Classification</a>
+            <sup class="type-c" title="class">c</sup>, <a href="#ResearchProblem" title="http://purl.org/roh#ResearchProblem">Research problem Research problem</a>
             <sup class="type-c" title="class">c</sup>
          </dd>
       </dl>
@@ -7382,8 +7465,8 @@ A roh:FundingSource roh:feeds a roh:Funding with funds to sponsor some projects.
             <sup class="type-c" title="class">c</sup>, <span class="dotted" title="http://www.w3.org/1999/02/22-rdf-syntax-ns#List">list</span>
             <sup class="type-c" title="class">c</sup>, <span class="dotted" title="http://www.w3.org/1999/02/22-rdf-syntax-ns#Seq">seq</span>
             <sup class="type-c" title="class">c</sup>, <a href="#http://www.w3.org/2004/02/skos/core#Concept" title="http://www.w3.org/2004/02/skos/core#Concept">Concept</a>
-            <sup class="type-c" title="class">c</sup>, <span class="dotted"
-                  title="http://www.w3.org/2004/02/skos/core#ConceptScheme">concept scheme</span>
+            <sup class="type-c" title="class">c</sup>, <a href="#http://www.w3.org/2004/02/skos/core#ConceptScheme"
+               title="http://www.w3.org/2004/02/skos/core#ConceptScheme">Concept Scheme</a>
             <sup class="type-c" title="class">c</sup>, <a href="#Accreditation" title="http://purl.org/roh#Accreditation">Accreditation</a>
             <sup class="type-c" title="class">c</sup>, <a href="#Activity" title="http://purl.org/roh#Activity">Activity</a>
             <sup class="type-c" title="class">c</sup>, <a href="#Expense" title="http://purl.org/roh#Expense">Expense</a>
@@ -7404,8 +7487,8 @@ A roh:FundingSource roh:feeds a roh:Funding with funds to sponsor some projects.
             <sup class="type-c" title="class">c</sup>, <span class="dotted" title="http://www.w3.org/1999/02/22-rdf-syntax-ns#List">list</span>
             <sup class="type-c" title="class">c</sup>, <span class="dotted" title="http://www.w3.org/1999/02/22-rdf-syntax-ns#Seq">seq</span>
             <sup class="type-c" title="class">c</sup>, <a href="#http://www.w3.org/2004/02/skos/core#Concept" title="http://www.w3.org/2004/02/skos/core#Concept">Concept</a>
-            <sup class="type-c" title="class">c</sup>, <span class="dotted"
-                  title="http://www.w3.org/2004/02/skos/core#ConceptScheme">concept scheme</span>
+            <sup class="type-c" title="class">c</sup>, <a href="#http://www.w3.org/2004/02/skos/core#ConceptScheme"
+               title="http://www.w3.org/2004/02/skos/core#ConceptScheme">Concept Scheme</a>
             <sup class="type-c" title="class">c</sup>
          </dd>
       </dl>
@@ -7690,38 +7773,22 @@ A roh:FundingSource roh:feeds a roh:Funding with funds to sponsor some projects.
       <dl class="description">
          <dt>has super-classes</dt>
          <dd>
-            <a href="#http://www.w3.org/2004/02/skos/core#Concept" title="http://www.w3.org/2004/02/skos/core#Concept">Concept</a>
+            <a href="#http://www.w3.org/2004/02/skos/core#ConceptScheme"
+               title="http://www.w3.org/2004/02/skos/core#ConceptScheme">Concept Scheme</a>
             <sup class="type-c" title="class">c</sup>
-         </dd>
-         <dt>is in domain of</dt>
-         <dd>
-            <a href="#hrClassificationOf" title="http://purl.org/roh#hrClassificationOf">HR classification of</a>
-            <sup class="type-op" title="object property">op</sup>
-         </dd>
-         <dt>is in range of</dt>
-         <dd>
-            <a href="#hasHRClassification" title="http://purl.org/roh#hasHRClassification">has HR classification</a>
-            <sup class="type-op" title="object property">op</sup>
          </dd>
          <dt>is disjoint with</dt>
          <dd>
-            <a href="#ExpenseClassification" title="http://purl.org/roh#ExpenseClassification">Expense Classification</a>
-            <sup class="type-c" title="class">c</sup>, <a href="#FundingProgramClassification"
-               title="http://purl.org/roh#FundingProgramClassification">Funding Program Classification</a>
-            <sup class="type-c" title="class">c</sup>, <a href="#KnowledgeArea" title="http://purl.org/roh#KnowledgeArea">Knowledge Area</a>
-            <sup class="type-c" title="class">c</sup>, <a href="#ProjectClassification" title="http://purl.org/roh#ProjectClassification">Project Classification</a>
+            <a href="#AcademicSubject" title="http://purl.org/roh#AcademicSubject">Academic subject</a>
+            <sup class="type-c" title="class">c</sup>, <a href="#CompanyClassification" title="http://purl.org/roh#CompanyClassification">Company Classification</a>
+            <sup class="type-c" title="class">c</sup>, <a href="#Country" title="http://purl.org/roh#Country">Country Country</a>
             <sup class="type-c" title="class">c</sup>, <a href="#ExpenseClassification" title="http://purl.org/roh#ExpenseClassification">Expense Classification</a>
             <sup class="type-c" title="class">c</sup>, <a href="#FundingProgramClassification"
                title="http://purl.org/roh#FundingProgramClassification">Funding Program Classification</a>
             <sup class="type-c" title="class">c</sup>, <a href="#KnowledgeArea" title="http://purl.org/roh#KnowledgeArea">Knowledge Area</a>
             <sup class="type-c" title="class">c</sup>, <a href="#ProjectClassification" title="http://purl.org/roh#ProjectClassification">Project Classification</a>
             <sup class="type-c" title="class">c</sup>, <a href="#PropertyClassification" title="http://purl.org/roh#PropertyClassification">Property Classification</a>
-            <sup class="type-c" title="class">c</sup>, <a href="#FundingProgramClassification"
-               title="http://purl.org/roh#FundingProgramClassification">Funding Program Classification</a>
-            <sup class="type-c" title="class">c</sup>, <a href="#KnowledgeArea" title="http://purl.org/roh#KnowledgeArea">Knowledge Area</a>
-            <sup class="type-c" title="class">c</sup>, <a href="#ProjectClassification" title="http://purl.org/roh#ProjectClassification">Project Classification</a>
-            <sup class="type-c" title="class">c</sup>, <a href="#KnowledgeArea" title="http://purl.org/roh#KnowledgeArea">Knowledge Area</a>
-            <sup class="type-c" title="class">c</sup>, <a href="#ProjectClassification" title="http://purl.org/roh#ProjectClassification">Project Classification</a>
+            <sup class="type-c" title="class">c</sup>, <a href="#ResearchProblem" title="http://purl.org/roh#ResearchProblem">Research problem Research problem</a>
             <sup class="type-c" title="class">c</sup>
          </dd>
       </dl>
@@ -7849,8 +7916,8 @@ A roh:FundingSource roh:feeds a roh:Funding with funds to sponsor some projects.
             <sup class="type-c" title="class">c</sup>, <span class="dotted" title="http://www.w3.org/1999/02/22-rdf-syntax-ns#List">list</span>
             <sup class="type-c" title="class">c</sup>, <span class="dotted" title="http://www.w3.org/1999/02/22-rdf-syntax-ns#Seq">seq</span>
             <sup class="type-c" title="class">c</sup>, <a href="#http://www.w3.org/2004/02/skos/core#Concept" title="http://www.w3.org/2004/02/skos/core#Concept">Concept</a>
-            <sup class="type-c" title="class">c</sup>, <span class="dotted"
-                  title="http://www.w3.org/2004/02/skos/core#ConceptScheme">concept scheme</span>
+            <sup class="type-c" title="class">c</sup>, <a href="#http://www.w3.org/2004/02/skos/core#ConceptScheme"
+               title="http://www.w3.org/2004/02/skos/core#ConceptScheme">Concept Scheme</a>
             <sup class="type-c" title="class">c</sup>, <a href="#Accreditation" title="http://purl.org/roh#Accreditation">Accreditation</a>
             <sup class="type-c" title="class">c</sup>, <a href="#Activity" title="http://purl.org/roh#Activity">Activity</a>
             <sup class="type-c" title="class">c</sup>, <a href="#Expense" title="http://purl.org/roh#Expense">Expense</a>
@@ -7871,8 +7938,8 @@ A roh:FundingSource roh:feeds a roh:Funding with funds to sponsor some projects.
             <sup class="type-c" title="class">c</sup>, <span class="dotted" title="http://www.w3.org/1999/02/22-rdf-syntax-ns#List">list</span>
             <sup class="type-c" title="class">c</sup>, <span class="dotted" title="http://www.w3.org/1999/02/22-rdf-syntax-ns#Seq">seq</span>
             <sup class="type-c" title="class">c</sup>, <a href="#http://www.w3.org/2004/02/skos/core#Concept" title="http://www.w3.org/2004/02/skos/core#Concept">Concept</a>
-            <sup class="type-c" title="class">c</sup>, <span class="dotted"
-                  title="http://www.w3.org/2004/02/skos/core#ConceptScheme">concept scheme</span>
+            <sup class="type-c" title="class">c</sup>, <a href="#http://www.w3.org/2004/02/skos/core#ConceptScheme"
+               title="http://www.w3.org/2004/02/skos/core#ConceptScheme">Concept Scheme</a>
             <sup class="type-c" title="class">c</sup>
          </dd>
       </dl>
@@ -8314,8 +8381,8 @@ A roh:FundingSource roh:feeds a roh:Funding with funds to sponsor some projects.
             <sup class="type-c" title="class">c</sup>, <span class="dotted" title="http://www.w3.org/1999/02/22-rdf-syntax-ns#List">list</span>
             <sup class="type-c" title="class">c</sup>, <span class="dotted" title="http://www.w3.org/1999/02/22-rdf-syntax-ns#Seq">seq</span>
             <sup class="type-c" title="class">c</sup>, <a href="#http://www.w3.org/2004/02/skos/core#Concept" title="http://www.w3.org/2004/02/skos/core#Concept">Concept</a>
-            <sup class="type-c" title="class">c</sup>, <span class="dotted"
-                  title="http://www.w3.org/2004/02/skos/core#ConceptScheme">concept scheme</span>
+            <sup class="type-c" title="class">c</sup>, <a href="#http://www.w3.org/2004/02/skos/core#ConceptScheme"
+               title="http://www.w3.org/2004/02/skos/core#ConceptScheme">Concept Scheme</a>
             <sup class="type-c" title="class">c</sup>, <a href="#Accreditation" title="http://purl.org/roh#Accreditation">Accreditation</a>
             <sup class="type-c" title="class">c</sup>, <a href="#Activity" title="http://purl.org/roh#Activity">Activity</a>
             <sup class="type-c" title="class">c</sup>, <a href="#Expense" title="http://purl.org/roh#Expense">Expense</a>
@@ -8336,8 +8403,8 @@ A roh:FundingSource roh:feeds a roh:Funding with funds to sponsor some projects.
             <sup class="type-c" title="class">c</sup>, <span class="dotted" title="http://www.w3.org/1999/02/22-rdf-syntax-ns#List">list</span>
             <sup class="type-c" title="class">c</sup>, <span class="dotted" title="http://www.w3.org/1999/02/22-rdf-syntax-ns#Seq">seq</span>
             <sup class="type-c" title="class">c</sup>, <a href="#http://www.w3.org/2004/02/skos/core#Concept" title="http://www.w3.org/2004/02/skos/core#Concept">Concept</a>
-            <sup class="type-c" title="class">c</sup>, <span class="dotted"
-                  title="http://www.w3.org/2004/02/skos/core#ConceptScheme">concept scheme</span>
+            <sup class="type-c" title="class">c</sup>, <a href="#http://www.w3.org/2004/02/skos/core#ConceptScheme"
+               title="http://www.w3.org/2004/02/skos/core#ConceptScheme">Concept Scheme</a>
             <sup class="type-c" title="class">c</sup>
          </dd>
       </dl>
@@ -8355,34 +8422,23 @@ A roh:FundingSource roh:feeds a roh:Funding with funds to sponsor some projects.
       <dl class="description">
          <dt>has super-classes</dt>
          <dd>
-            <a href="#http://www.w3.org/2004/02/skos/core#Concept" title="http://www.w3.org/2004/02/skos/core#Concept">Concept</a>
+            <a href="#http://www.w3.org/2004/02/skos/core#ConceptScheme"
+               title="http://www.w3.org/2004/02/skos/core#ConceptScheme">Concept Scheme</a>
             <sup class="type-c" title="class">c</sup>
-         </dd>
-         <dt>is in range of</dt>
-         <dd>
-            <a href="#teaches" title="http://purl.org/roh#teaches">teaches</a>
-            <sup class="type-op" title="object property">op</sup>
          </dd>
          <dt>is disjoint with</dt>
          <dd>
             <a href="#ProjectClassification" title="http://purl.org/roh#ProjectClassification">Project Classification</a>
-            <sup class="type-c" title="class">c</sup>, <a href="#ExpenseClassification" title="http://purl.org/roh#ExpenseClassification">Expense Classification</a>
-            <sup class="type-c" title="class">c</sup>, <a href="#FundingProgramClassification"
-               title="http://purl.org/roh#FundingProgramClassification">Funding Program Classification</a>
-            <sup class="type-c" title="class">c</sup>, <a href="#HRClassification" title="http://purl.org/roh#HRClassification">Human Resource Classification</a>
-            <sup class="type-c" title="class">c</sup>, <a href="#ProjectClassification" title="http://purl.org/roh#ProjectClassification">Project Classification</a>
+            <sup class="type-c" title="class">c</sup>, <a href="#AcademicSubject" title="http://purl.org/roh#AcademicSubject">Academic subject</a>
+            <sup class="type-c" title="class">c</sup>, <a href="#CompanyClassification" title="http://purl.org/roh#CompanyClassification">Company Classification</a>
+            <sup class="type-c" title="class">c</sup>, <a href="#Country" title="http://purl.org/roh#Country">Country Country</a>
             <sup class="type-c" title="class">c</sup>, <a href="#ExpenseClassification" title="http://purl.org/roh#ExpenseClassification">Expense Classification</a>
             <sup class="type-c" title="class">c</sup>, <a href="#FundingProgramClassification"
                title="http://purl.org/roh#FundingProgramClassification">Funding Program Classification</a>
             <sup class="type-c" title="class">c</sup>, <a href="#HRClassification" title="http://purl.org/roh#HRClassification">Human Resource Classification</a>
             <sup class="type-c" title="class">c</sup>, <a href="#ProjectClassification" title="http://purl.org/roh#ProjectClassification">Project Classification</a>
             <sup class="type-c" title="class">c</sup>, <a href="#PropertyClassification" title="http://purl.org/roh#PropertyClassification">Property Classification</a>
-            <sup class="type-c" title="class">c</sup>, <a href="#FundingProgramClassification"
-               title="http://purl.org/roh#FundingProgramClassification">Funding Program Classification</a>
-            <sup class="type-c" title="class">c</sup>, <a href="#HRClassification" title="http://purl.org/roh#HRClassification">Human Resource Classification</a>
-            <sup class="type-c" title="class">c</sup>, <a href="#ProjectClassification" title="http://purl.org/roh#ProjectClassification">Project Classification</a>
-            <sup class="type-c" title="class">c</sup>, <a href="#HRClassification" title="http://purl.org/roh#HRClassification">Human Resource Classification</a>
-            <sup class="type-c" title="class">c</sup>, <a href="#ProjectClassification" title="http://purl.org/roh#ProjectClassification">Project Classification</a>
+            <sup class="type-c" title="class">c</sup>, <a href="#ResearchProblem" title="http://purl.org/roh#ResearchProblem">Research problem Research problem</a>
             <sup class="type-c" title="class">c</sup>
          </dd>
       </dl>
@@ -9635,8 +9691,8 @@ A roh:FundingSource roh:feeds a roh:Funding with funds to sponsor some projects.
             <sup class="type-c" title="class">c</sup>, <span class="dotted" title="http://www.w3.org/1999/02/22-rdf-syntax-ns#List">list</span>
             <sup class="type-c" title="class">c</sup>, <span class="dotted" title="http://www.w3.org/1999/02/22-rdf-syntax-ns#Seq">seq</span>
             <sup class="type-c" title="class">c</sup>, <a href="#http://www.w3.org/2004/02/skos/core#Concept" title="http://www.w3.org/2004/02/skos/core#Concept">Concept</a>
-            <sup class="type-c" title="class">c</sup>, <span class="dotted"
-                  title="http://www.w3.org/2004/02/skos/core#ConceptScheme">concept scheme</span>
+            <sup class="type-c" title="class">c</sup>, <a href="#http://www.w3.org/2004/02/skos/core#ConceptScheme"
+               title="http://www.w3.org/2004/02/skos/core#ConceptScheme">Concept Scheme</a>
             <sup class="type-c" title="class">c</sup>
          </dd>
       </dl>
@@ -10357,15 +10413,15 @@ Contents
          <span class="markdown">A product as outcome of a project.</span>
       </div>
       <dl class="description">
-         <dt>has super-classes</dt>
-         <dd>
-            <a href="#ResearchObject" title="http://purl.org/roh#ResearchObject">Research Object</a>
-            <sup class="type-c" title="class">c</sup>
-         </dd>
          <dt>has sub-classes</dt>
          <dd>
             <a href="#Prototype" title="http://purl.org/roh#Prototype">Prototype</a>
             <sup class="type-c" title="class">c</sup>
+         </dd>
+         <dt>is in domain of</dt>
+         <dd>
+            <a href="#hasTRL" title="http://purl.org/roh#hasTRL">has TRL</a>
+            <sup class="type-dp" title="data property">dp</sup>
          </dd>
       </dl>
    </div>
@@ -10396,7 +10452,7 @@ Contents
          <span class="markdown">An endeavor, frequently collaborative, that occurs over a finite period of time and is intended to achieve a particular aim.</span>
       </div>
       <div class="comment">
-         <span class="markdown">A vivo:Project is an entity imported from VIVO and extended according to CERIF specification. It can be defined as – a project in business and science is typically defined as a collaborative enterprise, frequently involving research or design, that is carefully planned to achieve a particular aim. Its configuration is inspired by the swrc:project and takes into account cerif:Project’s data properties. It encompasses all those properties and adds object properties roh:projectStatus (roh:Closed, roh:Open, roh:ProposalSubmitted, roh:Rejected) and roh:foreseenJustificationDate. This entity is linked with classes Organization, Person, ResearchObject, Funding, Expense, Activity o Concept. A project in ROH may require ethical validation which is expressed as roh:needsEthicalValidation set to true. A project might be correspond to a research project categorized through roh:ProjectClassification by means of object property roh:hasProjectCategorization or correspond to some grant associated to human resources (roh:HRClassification) associated through roh:hasHRClassification. Notice that a project is a proposal (PROPOSAL_SUBMITTED) until it passes to the OPEN or REJECTED status. When the project finishes it state passes to CLOSED.</span>
+         <span class="markdown">A vivo:Project is an entity imported from VIVO and extended according to CERIF specification. It can be defined as – a project in business and science is typically defined as a collaborative enterprise, frequently involving research or design, that is carefully planned to achieve a particular aim. Its configuration is inspired by the swrc:project and takes into account cerif:Project’s data properties. It encompasses all those properties and adds object properties roh:projectStatus (roh:Closed, roh:Open, roh:ProposalSubmitted, roh:Rejected) and roh:foreseenJustificationDate. This entity is linked with classes Organization, Person, ResearchObject, Funding, Expense, Activity o Concept. A project in ROH may require ethical validation which is expressed as roh:needsEthicalValidation set to true. A project might be correspond to a research project categorized through roh:ProjectClassification by means of object property roh:hasProjectClassification or correspond to some grant associated to human resources (roh:HRClassification) associated through roh:hasHRClassification. Notice that a project is a proposal (PROPOSAL_SUBMITTED) until it passes to the OPEN or REJECTED status. When the project finishes it state passes to CLOSED.</span>
       </div>
       <dl>
          <dt>Example</dt>
@@ -10414,7 +10470,7 @@ Contents
          <dd>
             <a href="#coordinatedBy" title="http://purl.org/roh#coordinatedBy">coordinated by</a>
             <sup class="type-op" title="object property">op</sup>, <a href="#foreseenJustificationDate" title="http://purl.org/roh#foreseenJustificationDate">foreseen justification date</a>
-            <sup class="type-op" title="object property">op</sup>, <a href="#hasProjectCategorization" title="http://purl.org/roh#hasProjectCategorization">has project categorization</a>
+            <sup class="type-op" title="object property">op</sup>, <a href="#hasProjectClassification" title="http://purl.org/roh#hasProjectClassification">has project categorization</a>
             <sup class="type-op" title="object property">op</sup>, <a href="#isCompetitive" title="http://purl.org/roh#isCompetitive">is competitive</a>
             <sup class="type-dp" title="data property">dp</sup>, <a href="#needsEthicalValidation" title="http://purl.org/roh#needsEthicalValidation">needs ethical validation</a>
             <sup class="type-dp" title="data property">dp</sup>, <a href="#projectID" title="http://purl.org/roh#projectID">project ID</a>
@@ -10425,7 +10481,7 @@ Contents
          </dd>
          <dt>is in range of</dt>
          <dd>
-            <a href="#projectCategorizationOf" title="http://purl.org/roh#projectCategorizationOf">project categorization of</a>
+            <a href="#projectClassificationOf" title="http://purl.org/roh#projectClassificationOf">project categorization of</a>
             <sup class="type-op" title="object property">op</sup>, <a href="#projectCoordinator" title="http://purl.org/roh#projectCoordinator">project coordinator</a>
             <sup class="type-op" title="object property">op</sup>
          </dd>
@@ -10460,8 +10516,8 @@ Contents
             <sup class="type-c" title="class">c</sup>, <span class="dotted" title="http://www.w3.org/1999/02/22-rdf-syntax-ns#List">list</span>
             <sup class="type-c" title="class">c</sup>, <span class="dotted" title="http://www.w3.org/1999/02/22-rdf-syntax-ns#Seq">seq</span>
             <sup class="type-c" title="class">c</sup>, <a href="#http://www.w3.org/2004/02/skos/core#Concept" title="http://www.w3.org/2004/02/skos/core#Concept">Concept</a>
-            <sup class="type-c" title="class">c</sup>, <span class="dotted"
-                  title="http://www.w3.org/2004/02/skos/core#ConceptScheme">concept scheme</span>
+            <sup class="type-c" title="class">c</sup>, <a href="#http://www.w3.org/2004/02/skos/core#ConceptScheme"
+               title="http://www.w3.org/2004/02/skos/core#ConceptScheme">Concept Scheme</a>
             <sup class="type-c" title="class">c</sup>, <a href="#Accreditation" title="http://purl.org/roh#Accreditation">Accreditation</a>
             <sup class="type-c" title="class">c</sup>, <a href="#Activity" title="http://purl.org/roh#Activity">Activity</a>
             <sup class="type-c" title="class">c</sup>, <a href="#Expense" title="http://purl.org/roh#Expense">Expense</a>
@@ -10482,8 +10538,8 @@ Contents
             <sup class="type-c" title="class">c</sup>, <span class="dotted" title="http://www.w3.org/1999/02/22-rdf-syntax-ns#List">list</span>
             <sup class="type-c" title="class">c</sup>, <span class="dotted" title="http://www.w3.org/1999/02/22-rdf-syntax-ns#Seq">seq</span>
             <sup class="type-c" title="class">c</sup>, <a href="#http://www.w3.org/2004/02/skos/core#Concept" title="http://www.w3.org/2004/02/skos/core#Concept">Concept</a>
-            <sup class="type-c" title="class">c</sup>, <span class="dotted"
-                  title="http://www.w3.org/2004/02/skos/core#ConceptScheme">concept scheme</span>
+            <sup class="type-c" title="class">c</sup>, <a href="#http://www.w3.org/2004/02/skos/core#ConceptScheme"
+               title="http://www.w3.org/2004/02/skos/core#ConceptScheme">Concept Scheme</a>
             <sup class="type-c" title="class">c</sup>
          </dd>
       </dl>
@@ -10498,39 +10554,23 @@ Contents
       <dl class="description">
          <dt>has super-classes</dt>
          <dd>
-            <a href="#http://www.w3.org/2004/02/skos/core#Concept" title="http://www.w3.org/2004/02/skos/core#Concept">Concept</a>
+            <a href="#http://www.w3.org/2004/02/skos/core#ConceptScheme"
+               title="http://www.w3.org/2004/02/skos/core#ConceptScheme">Concept Scheme</a>
             <sup class="type-c" title="class">c</sup>
-         </dd>
-         <dt>is in domain of</dt>
-         <dd>
-            <a href="#projectCategorizationOf" title="http://purl.org/roh#projectCategorizationOf">project categorization of</a>
-            <sup class="type-op" title="object property">op</sup>
-         </dd>
-         <dt>is in range of</dt>
-         <dd>
-            <a href="#hasProjectCategorization" title="http://purl.org/roh#hasProjectCategorization">has project categorization</a>
-            <sup class="type-op" title="object property">op</sup>
          </dd>
          <dt>is disjoint with</dt>
          <dd>
             <a href="#KnowledgeArea" title="http://purl.org/roh#KnowledgeArea">Knowledge Area</a>
-            <sup class="type-c" title="class">c</sup>, <a href="#ExpenseClassification" title="http://purl.org/roh#ExpenseClassification">Expense Classification</a>
-            <sup class="type-c" title="class">c</sup>, <a href="#FundingProgramClassification"
-               title="http://purl.org/roh#FundingProgramClassification">Funding Program Classification</a>
-            <sup class="type-c" title="class">c</sup>, <a href="#HRClassification" title="http://purl.org/roh#HRClassification">Human Resource Classification</a>
-            <sup class="type-c" title="class">c</sup>, <a href="#KnowledgeArea" title="http://purl.org/roh#KnowledgeArea">Knowledge Area</a>
+            <sup class="type-c" title="class">c</sup>, <a href="#AcademicSubject" title="http://purl.org/roh#AcademicSubject">Academic subject</a>
+            <sup class="type-c" title="class">c</sup>, <a href="#CompanyClassification" title="http://purl.org/roh#CompanyClassification">Company Classification</a>
+            <sup class="type-c" title="class">c</sup>, <a href="#Country" title="http://purl.org/roh#Country">Country Country</a>
             <sup class="type-c" title="class">c</sup>, <a href="#ExpenseClassification" title="http://purl.org/roh#ExpenseClassification">Expense Classification</a>
             <sup class="type-c" title="class">c</sup>, <a href="#FundingProgramClassification"
                title="http://purl.org/roh#FundingProgramClassification">Funding Program Classification</a>
             <sup class="type-c" title="class">c</sup>, <a href="#HRClassification" title="http://purl.org/roh#HRClassification">Human Resource Classification</a>
             <sup class="type-c" title="class">c</sup>, <a href="#KnowledgeArea" title="http://purl.org/roh#KnowledgeArea">Knowledge Area</a>
             <sup class="type-c" title="class">c</sup>, <a href="#PropertyClassification" title="http://purl.org/roh#PropertyClassification">Property Classification</a>
-            <sup class="type-c" title="class">c</sup>, <a href="#FundingProgramClassification"
-               title="http://purl.org/roh#FundingProgramClassification">Funding Program Classification</a>
-            <sup class="type-c" title="class">c</sup>, <a href="#HRClassification" title="http://purl.org/roh#HRClassification">Human Resource Classification</a>
-            <sup class="type-c" title="class">c</sup>, <a href="#KnowledgeArea" title="http://purl.org/roh#KnowledgeArea">Knowledge Area</a>
-            <sup class="type-c" title="class">c</sup>, <a href="#HRClassification" title="http://purl.org/roh#HRClassification">Human Resource Classification</a>
-            <sup class="type-c" title="class">c</sup>, <a href="#KnowledgeArea" title="http://purl.org/roh#KnowledgeArea">Knowledge Area</a>
+            <sup class="type-c" title="class">c</sup>, <a href="#ResearchProblem" title="http://purl.org/roh#ResearchProblem">Research problem Research problem</a>
             <sup class="type-c" title="class">c</sup>
          </dd>
       </dl>
@@ -10596,17 +10636,22 @@ Contents
       <dl class="description">
          <dt>has super-classes</dt>
          <dd>
-            <a href="#http://www.w3.org/2004/02/skos/core#Concept" title="http://www.w3.org/2004/02/skos/core#Concept">Concept</a>
+            <a href="#http://www.w3.org/2004/02/skos/core#ConceptScheme"
+               title="http://www.w3.org/2004/02/skos/core#ConceptScheme">Concept Scheme</a>
             <sup class="type-c" title="class">c</sup>
          </dd>
          <dt>is disjoint with</dt>
          <dd>
-            <a href="#ExpenseClassification" title="http://purl.org/roh#ExpenseClassification">Expense Classification</a>
+            <a href="#AcademicSubject" title="http://purl.org/roh#AcademicSubject">Academic subject</a>
+            <sup class="type-c" title="class">c</sup>, <a href="#CompanyClassification" title="http://purl.org/roh#CompanyClassification">Company Classification</a>
+            <sup class="type-c" title="class">c</sup>, <a href="#Country" title="http://purl.org/roh#Country">Country Country</a>
+            <sup class="type-c" title="class">c</sup>, <a href="#ExpenseClassification" title="http://purl.org/roh#ExpenseClassification">Expense Classification</a>
             <sup class="type-c" title="class">c</sup>, <a href="#FundingProgramClassification"
                title="http://purl.org/roh#FundingProgramClassification">Funding Program Classification</a>
             <sup class="type-c" title="class">c</sup>, <a href="#HRClassification" title="http://purl.org/roh#HRClassification">Human Resource Classification</a>
             <sup class="type-c" title="class">c</sup>, <a href="#KnowledgeArea" title="http://purl.org/roh#KnowledgeArea">Knowledge Area</a>
             <sup class="type-c" title="class">c</sup>, <a href="#ProjectClassification" title="http://purl.org/roh#ProjectClassification">Project Classification</a>
+            <sup class="type-c" title="class">c</sup>, <a href="#ResearchProblem" title="http://purl.org/roh#ResearchProblem">Research problem Research problem</a>
             <sup class="type-c" title="class">c</sup>
          </dd>
       </dl>
@@ -10641,11 +10686,6 @@ Contents
          <dd>
             <a href="#Product" title="http://purl.org/roh#Product">Product</a>
             <sup class="type-c" title="class">c</sup>
-         </dd>
-         <dt>is in domain of</dt>
-         <dd>
-            <a href="#hasTRL" title="http://purl.org/roh#hasTRL">has TRL</a>
-            <sup class="type-dp" title="data property">dp</sup>
          </dd>
       </dl>
    </div>
@@ -10806,8 +10846,8 @@ Contents
             <sup class="type-c" title="class">c</sup>, <span class="dotted" title="http://www.w3.org/1999/02/22-rdf-syntax-ns#List">list</span>
             <sup class="type-c" title="class">c</sup>, <span class="dotted" title="http://www.w3.org/1999/02/22-rdf-syntax-ns#Seq">seq</span>
             <sup class="type-c" title="class">c</sup>, <a href="#http://www.w3.org/2004/02/skos/core#Concept" title="http://www.w3.org/2004/02/skos/core#Concept">Concept</a>
-            <sup class="type-c" title="class">c</sup>, <span class="dotted"
-                  title="http://www.w3.org/2004/02/skos/core#ConceptScheme">concept scheme</span>
+            <sup class="type-c" title="class">c</sup>, <a href="#http://www.w3.org/2004/02/skos/core#ConceptScheme"
+               title="http://www.w3.org/2004/02/skos/core#ConceptScheme">Concept Scheme</a>
             <sup class="type-c" title="class">c</sup>, <a href="#Accreditation" title="http://purl.org/roh#Accreditation">Accreditation</a>
             <sup class="type-c" title="class">c</sup>, <a href="#Activity" title="http://purl.org/roh#Activity">Activity</a>
             <sup class="type-c" title="class">c</sup>, <a href="#Expense" title="http://purl.org/roh#Expense">Expense</a>
@@ -10828,8 +10868,8 @@ Contents
             <sup class="type-c" title="class">c</sup>, <span class="dotted" title="http://www.w3.org/1999/02/22-rdf-syntax-ns#List">list</span>
             <sup class="type-c" title="class">c</sup>, <span class="dotted" title="http://www.w3.org/1999/02/22-rdf-syntax-ns#Seq">seq</span>
             <sup class="type-c" title="class">c</sup>, <a href="#http://www.w3.org/2004/02/skos/core#Concept" title="http://www.w3.org/2004/02/skos/core#Concept">Concept</a>
-            <sup class="type-c" title="class">c</sup>, <span class="dotted"
-                  title="http://www.w3.org/2004/02/skos/core#ConceptScheme">concept scheme</span>
+            <sup class="type-c" title="class">c</sup>, <a href="#http://www.w3.org/2004/02/skos/core#ConceptScheme"
+               title="http://www.w3.org/2004/02/skos/core#ConceptScheme">Concept Scheme</a>
             <sup class="type-c" title="class">c</sup>
          </dd>
       </dl>
@@ -10953,21 +10993,6 @@ Contents
             <sup class="type-op" title="object property">op</sup>, <a href="#employs" title="http://purl.org/roh#employs">employs</a>
             <sup class="type-op" title="object property">op</sup>, <a href="#utilizes" title="http://purl.org/roh#utilizes">utilizes</a>
             <sup class="type-op" title="object property">op</sup>
-         </dd>
-      </dl>
-   </div>
-   <div class="entity" id="ResearchField">
-      <h3>Research field<sup class="type-c" title="class">c</sup>
-         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a>
-         </span>
-      </h3>
-      <p>
-         <strong>IRI:</strong> http://purl.org/roh#ResearchField</p>
-      <dl class="description">
-         <dt>has super-classes</dt>
-         <dd>
-            <a href="#http://www.w3.org/2004/02/skos/core#Concept" title="http://www.w3.org/2004/02/skos/core#Concept">Concept</a>
-            <sup class="type-c" title="class">c</sup>
          </dd>
       </dl>
    </div>
@@ -11124,7 +11149,11 @@ Contents
             <sup class="type-op" title="object property">op</sup> 
             <span class="logic">some</span> 
             <a href="#http://www.w3.org/2004/02/skos/core#Concept" title="http://www.w3.org/2004/02/skos/core#Concept">Concept</a>
-            <sup class="type-c" title="class">c</sup>)) <span class="logic">and</span> (<a href="#correspondingAuthor" title="http://purl.org/roh#correspondingAuthor">corresponding author</a>
+            <sup class="type-c" title="class">c</sup> 
+            <span class="logic">and</span> (<span class="dotted" title="http://www.w3.org/2004/02/skos/core#inScheme">in scheme</span> 
+            <span class="logic">some</span> 
+            <a href="#KnowledgeArea" title="http://purl.org/roh#KnowledgeArea">Knowledge Area</a>
+            <sup class="type-c" title="class">c</sup>))) <span class="logic">and</span> (<a href="#correspondingAuthor" title="http://purl.org/roh#correspondingAuthor">corresponding author</a>
             <sup class="type-op" title="object property">op</sup> 
             <span class="logic">only</span> 
             <a href="#/mirror/foaf#Person" title="http://purl.org/roh/mirror/foaf#Person"> Person</a>
@@ -11132,18 +11161,17 @@ Contents
             <sup class="type-op" title="object property">op</sup> 
             <span class="logic">only</span> 
             <a href="#http://www.w3.org/2004/02/skos/core#Concept" title="http://www.w3.org/2004/02/skos/core#Concept">Concept</a>
-            <sup class="type-c" title="class">c</sup>)) <span class="logic">or</span> (<a href="#producedBy" title="http://purl.org/roh#producedBy">produced by</a>
+            <sup class="type-c" title="class">c</sup> 
+            <span class="logic">and</span> (<span class="dotted" title="http://www.w3.org/2004/02/skos/core#inScheme">in scheme</span> 
+            <span class="logic">some</span> 
+            <a href="#KnowledgeArea" title="http://purl.org/roh#KnowledgeArea">Knowledge Area</a>
+            <sup class="type-c" title="class">c</sup>))) <span class="logic">or</span> (<a href="#producedBy" title="http://purl.org/roh#producedBy">produced by</a>
             <sup class="type-op" title="object property">op</sup> 
             <span class="logic">only</span> 
             <a href="#/mirror/vivo#Project" title="http://purl.org/roh/mirror/vivo#Project">Project</a>
             <sup class="type-c" title="class">c</sup>)</dd>
          <dt>has super-classes</dt>
          <dd/>
-         <dt>has sub-classes</dt>
-         <dd>
-            <a href="#Product" title="http://purl.org/roh#Product">Product</a>
-            <sup class="type-c" title="class">c</sup>
-         </dd>
       </dl>
    </div>
    <div class="entity" id="ResearchObjectExpense">
@@ -11182,13 +11210,23 @@ Contents
       <dl class="description">
          <dt>has super-classes</dt>
          <dd>
-            <a href="#http://www.w3.org/2004/02/skos/core#Concept" title="http://www.w3.org/2004/02/skos/core#Concept">Concept</a>
+            <a href="#http://www.w3.org/2004/02/skos/core#ConceptScheme"
+               title="http://www.w3.org/2004/02/skos/core#ConceptScheme">Concept Scheme</a>
             <sup class="type-c" title="class">c</sup>
          </dd>
-         <dt>is in range of</dt>
+         <dt>is disjoint with</dt>
          <dd>
-            <a href="#addresses" title="http://purl.org/roh#addresses">addresses</a>
-            <sup class="type-op" title="object property">op</sup>
+            <a href="#AcademicSubject" title="http://purl.org/roh#AcademicSubject">Academic subject</a>
+            <sup class="type-c" title="class">c</sup>, <a href="#CompanyClassification" title="http://purl.org/roh#CompanyClassification">Company Classification</a>
+            <sup class="type-c" title="class">c</sup>, <a href="#Country" title="http://purl.org/roh#Country">Country Country</a>
+            <sup class="type-c" title="class">c</sup>, <a href="#ExpenseClassification" title="http://purl.org/roh#ExpenseClassification">Expense Classification</a>
+            <sup class="type-c" title="class">c</sup>, <a href="#FundingProgramClassification"
+               title="http://purl.org/roh#FundingProgramClassification">Funding Program Classification</a>
+            <sup class="type-c" title="class">c</sup>, <a href="#HRClassification" title="http://purl.org/roh#HRClassification">Human Resource Classification</a>
+            <sup class="type-c" title="class">c</sup>, <a href="#KnowledgeArea" title="http://purl.org/roh#KnowledgeArea">Knowledge Area</a>
+            <sup class="type-c" title="class">c</sup>, <a href="#ProjectClassification" title="http://purl.org/roh#ProjectClassification">Project Classification</a>
+            <sup class="type-c" title="class">c</sup>, <a href="#PropertyClassification" title="http://purl.org/roh#PropertyClassification">Property Classification</a>
+            <sup class="type-c" title="class">c</sup>
          </dd>
       </dl>
    </div>
@@ -11383,8 +11421,8 @@ Contents
             <sup class="type-c" title="class">c</sup>, <span class="dotted" title="http://www.w3.org/1999/02/22-rdf-syntax-ns#List">list</span>
             <sup class="type-c" title="class">c</sup>, <span class="dotted" title="http://www.w3.org/1999/02/22-rdf-syntax-ns#Seq">seq</span>
             <sup class="type-c" title="class">c</sup>, <a href="#http://www.w3.org/2004/02/skos/core#Concept" title="http://www.w3.org/2004/02/skos/core#Concept">Concept</a>
-            <sup class="type-c" title="class">c</sup>, <span class="dotted"
-                  title="http://www.w3.org/2004/02/skos/core#ConceptScheme">concept scheme</span>
+            <sup class="type-c" title="class">c</sup>, <a href="#http://www.w3.org/2004/02/skos/core#ConceptScheme"
+               title="http://www.w3.org/2004/02/skos/core#ConceptScheme">Concept Scheme</a>
             <sup class="type-c" title="class">c</sup>, <a href="#Accreditation" title="http://purl.org/roh#Accreditation">Accreditation</a>
             <sup class="type-c" title="class">c</sup>, <a href="#Activity" title="http://purl.org/roh#Activity">Activity</a>
             <sup class="type-c" title="class">c</sup>, <a href="#Expense" title="http://purl.org/roh#Expense">Expense</a>
@@ -11405,8 +11443,8 @@ Contents
             <sup class="type-c" title="class">c</sup>, <span class="dotted" title="http://www.w3.org/1999/02/22-rdf-syntax-ns#List">list</span>
             <sup class="type-c" title="class">c</sup>, <span class="dotted" title="http://www.w3.org/1999/02/22-rdf-syntax-ns#Seq">seq</span>
             <sup class="type-c" title="class">c</sup>, <a href="#http://www.w3.org/2004/02/skos/core#Concept" title="http://www.w3.org/2004/02/skos/core#Concept">Concept</a>
-            <sup class="type-c" title="class">c</sup>, <span class="dotted"
-                  title="http://www.w3.org/2004/02/skos/core#ConceptScheme">concept scheme</span>
+            <sup class="type-c" title="class">c</sup>, <a href="#http://www.w3.org/2004/02/skos/core#ConceptScheme"
+               title="http://www.w3.org/2004/02/skos/core#ConceptScheme">Concept Scheme</a>
             <sup class="type-c" title="class">c</sup>
          </dd>
       </dl>
@@ -11658,8 +11696,8 @@ Based on obo-bfo:Role also used in VIVO, it defines roles. The object property r
             <sup class="type-c" title="class">c</sup>, <span class="dotted" title="http://www.w3.org/1999/02/22-rdf-syntax-ns#List">list</span>
             <sup class="type-c" title="class">c</sup>, <span class="dotted" title="http://www.w3.org/1999/02/22-rdf-syntax-ns#Seq">seq</span>
             <sup class="type-c" title="class">c</sup>, <a href="#http://www.w3.org/2004/02/skos/core#Concept" title="http://www.w3.org/2004/02/skos/core#Concept">Concept</a>
-            <sup class="type-c" title="class">c</sup>, <span class="dotted"
-                  title="http://www.w3.org/2004/02/skos/core#ConceptScheme">concept scheme</span>
+            <sup class="type-c" title="class">c</sup>, <a href="#http://www.w3.org/2004/02/skos/core#ConceptScheme"
+               title="http://www.w3.org/2004/02/skos/core#ConceptScheme">Concept Scheme</a>
             <sup class="type-c" title="class">c</sup>, <a href="#Accreditation" title="http://purl.org/roh#Accreditation">Accreditation</a>
             <sup class="type-c" title="class">c</sup>, <a href="#Activity" title="http://purl.org/roh#Activity">Activity</a>
             <sup class="type-c" title="class">c</sup>, <a href="#Expense" title="http://purl.org/roh#Expense">Expense</a>
@@ -11680,8 +11718,8 @@ Based on obo-bfo:Role also used in VIVO, it defines roles. The object property r
             <sup class="type-c" title="class">c</sup>, <span class="dotted" title="http://www.w3.org/1999/02/22-rdf-syntax-ns#List">list</span>
             <sup class="type-c" title="class">c</sup>, <span class="dotted" title="http://www.w3.org/1999/02/22-rdf-syntax-ns#Seq">seq</span>
             <sup class="type-c" title="class">c</sup>, <a href="#http://www.w3.org/2004/02/skos/core#Concept" title="http://www.w3.org/2004/02/skos/core#Concept">Concept</a>
-            <sup class="type-c" title="class">c</sup>, <span class="dotted"
-                  title="http://www.w3.org/2004/02/skos/core#ConceptScheme">concept scheme</span>
+            <sup class="type-c" title="class">c</sup>, <a href="#http://www.w3.org/2004/02/skos/core#ConceptScheme"
+               title="http://www.w3.org/2004/02/skos/core#ConceptScheme">Concept Scheme</a>
             <sup class="type-c" title="class">c</sup>
          </dd>
       </dl>
@@ -11803,8 +11841,8 @@ Based on obo-bfo:Role also used in VIVO, it defines roles. The object property r
             <sup class="type-c" title="class">c</sup>, <span class="dotted" title="http://www.w3.org/1999/02/22-rdf-syntax-ns#List">list</span>
             <sup class="type-c" title="class">c</sup>, <span class="dotted" title="http://www.w3.org/1999/02/22-rdf-syntax-ns#Seq">seq</span>
             <sup class="type-c" title="class">c</sup>, <a href="#http://www.w3.org/2004/02/skos/core#Concept" title="http://www.w3.org/2004/02/skos/core#Concept">Concept</a>
-            <sup class="type-c" title="class">c</sup>, <span class="dotted"
-                  title="http://www.w3.org/2004/02/skos/core#ConceptScheme">concept scheme</span>
+            <sup class="type-c" title="class">c</sup>, <a href="#http://www.w3.org/2004/02/skos/core#ConceptScheme"
+               title="http://www.w3.org/2004/02/skos/core#ConceptScheme">Concept Scheme</a>
             <sup class="type-c" title="class">c</sup>, <a href="#Accreditation" title="http://purl.org/roh#Accreditation">Accreditation</a>
             <sup class="type-c" title="class">c</sup>, <a href="#Activity" title="http://purl.org/roh#Activity">Activity</a>
             <sup class="type-c" title="class">c</sup>, <a href="#Expense" title="http://purl.org/roh#Expense">Expense</a>
@@ -11825,8 +11863,8 @@ Based on obo-bfo:Role also used in VIVO, it defines roles. The object property r
             <sup class="type-c" title="class">c</sup>, <span class="dotted" title="http://www.w3.org/1999/02/22-rdf-syntax-ns#List">list</span>
             <sup class="type-c" title="class">c</sup>, <span class="dotted" title="http://www.w3.org/1999/02/22-rdf-syntax-ns#Seq">seq</span>
             <sup class="type-c" title="class">c</sup>, <a href="#http://www.w3.org/2004/02/skos/core#Concept" title="http://www.w3.org/2004/02/skos/core#Concept">Concept</a>
-            <sup class="type-c" title="class">c</sup>, <span class="dotted"
-                  title="http://www.w3.org/2004/02/skos/core#ConceptScheme">concept scheme</span>
+            <sup class="type-c" title="class">c</sup>, <a href="#http://www.w3.org/2004/02/skos/core#ConceptScheme"
+               title="http://www.w3.org/2004/02/skos/core#ConceptScheme">Concept Scheme</a>
             <sup class="type-c" title="class">c</sup>
          </dd>
       </dl>
@@ -12462,8 +12500,8 @@ Based on obo-bfo:Role also used in VIVO, it defines roles. The object property r
             <sup class="type-c" title="class">c</sup>, <span class="dotted" title="http://www.w3.org/1999/02/22-rdf-syntax-ns#List">list</span>
             <sup class="type-c" title="class">c</sup>, <span class="dotted" title="http://www.w3.org/1999/02/22-rdf-syntax-ns#Seq">seq</span>
             <sup class="type-c" title="class">c</sup>, <a href="#http://www.w3.org/2004/02/skos/core#Concept" title="http://www.w3.org/2004/02/skos/core#Concept">Concept</a>
-            <sup class="type-c" title="class">c</sup>, <span class="dotted"
-                  title="http://www.w3.org/2004/02/skos/core#ConceptScheme">concept scheme</span>
+            <sup class="type-c" title="class">c</sup>, <a href="#http://www.w3.org/2004/02/skos/core#ConceptScheme"
+               title="http://www.w3.org/2004/02/skos/core#ConceptScheme">Concept Scheme</a>
             <sup class="type-c" title="class">c</sup>, <a href="#Accreditation" title="http://purl.org/roh#Accreditation">Accreditation</a>
             <sup class="type-c" title="class">c</sup>, <a href="#Activity" title="http://purl.org/roh#Activity">Activity</a>
             <sup class="type-c" title="class">c</sup>, <a href="#Expense" title="http://purl.org/roh#Expense">Expense</a>
@@ -12484,8 +12522,8 @@ Based on obo-bfo:Role also used in VIVO, it defines roles. The object property r
             <sup class="type-c" title="class">c</sup>, <span class="dotted" title="http://www.w3.org/1999/02/22-rdf-syntax-ns#List">list</span>
             <sup class="type-c" title="class">c</sup>, <span class="dotted" title="http://www.w3.org/1999/02/22-rdf-syntax-ns#Seq">seq</span>
             <sup class="type-c" title="class">c</sup>, <a href="#http://www.w3.org/2004/02/skos/core#Concept" title="http://www.w3.org/2004/02/skos/core#Concept">Concept</a>
-            <sup class="type-c" title="class">c</sup>, <span class="dotted"
-                  title="http://www.w3.org/2004/02/skos/core#ConceptScheme">concept scheme</span>
+            <sup class="type-c" title="class">c</sup>, <a href="#http://www.w3.org/2004/02/skos/core#ConceptScheme"
+               title="http://www.w3.org/2004/02/skos/core#ConceptScheme">Concept Scheme</a>
             <sup class="type-c" title="class">c</sup>
          </dd>
       </dl>
@@ -13315,7 +13353,7 @@ Based on obo-bfo:Role also used in VIVO, it defines roles. The object property r
          <a href="#hasCode" title="http://purl.org/roh#hasCode">has Code</a>
       </li>
       <li>
-         <a href="#hasCompanyCategorization" title="http://purl.org/roh#hasCompanyCategorization">has company categorization</a>
+         <a href="#hasCompanyClassification" title="http://purl.org/roh#hasCompanyClassification">has company classification</a>
       </li>
       <li>
          <a href="#hasContactInfo" title="http://purl.org/roh#hasContactInfo">has contact info</a>
@@ -13361,16 +13399,13 @@ Based on obo-bfo:Role also used in VIVO, it defines roles. The object property r
          <a href="#hasPosition" title="http://purl.org/roh#hasPosition">has position</a>
       </li>
       <li>
-         <a href="#hasProjectCategorization" title="http://purl.org/roh#hasProjectCategorization">has project categorization</a>
+         <a href="#hasProjectClassification" title="http://purl.org/roh#hasProjectClassification">has project categorization</a>
       </li>
       <li>
-         <a href="#hasPropertyCategorization" title="http://purl.org/roh#hasPropertyCategorization">has property categorization</a>
+         <a href="#hasPropertyClassification" title="http://purl.org/roh#hasPropertyClassification">has property classification</a>
       </li>
       <li>
          <a href="#hasResearchContribution" title="http://purl.org/roh#hasResearchContribution">has research contribution</a>
-      </li>
-      <li>
-         <a href="#hasResearchField" title="http://purl.org/roh#hasResearchField">has research field</a>
       </li>
       <li>
          <a href="#hasResearchLine" title="http://purl.org/roh#hasResearchLine">has research line</a>
@@ -13528,7 +13563,7 @@ Based on obo-bfo:Role also used in VIVO, it defines roles. The object property r
          <a href="#produces" title="http://purl.org/roh#produces">produces</a>
       </li>
       <li>
-         <a href="#projectCategorizationOf" title="http://purl.org/roh#projectCategorizationOf">project categorization of</a>
+         <a href="#projectClassificationOf" title="http://purl.org/roh#projectClassificationOf">project categorization of</a>
       </li>
       <li>
          <a href="#projectCoordinator" title="http://purl.org/roh#projectCoordinator">project coordinator</a>
@@ -13700,9 +13735,12 @@ Based on obo-bfo:Role also used in VIVO, it defines roles. The object property r
             </dd>
             <dt>has range</dt>
             <dd>
+               <a href="#http://www.w3.org/2004/02/skos/core#Concept" title="http://www.w3.org/2004/02/skos/core#Concept">Concept</a>
+               <sup class="type-c" title="class">c</sup> 
+               <span class="logic">and</span> (<span class="dotted" title="http://www.w3.org/2004/02/skos/core#inScheme">in scheme</span> 
+               <span class="logic">some</span> 
                <a href="#ResearchProblem" title="http://purl.org/roh#ResearchProblem">Research problem Research problem</a>
-               <sup class="type-c" title="class">c</sup>
-            </dd>
+               <sup class="type-c" title="class">c</sup>)</dd>
          </dl>
       </div>
    </div>
@@ -14349,9 +14387,12 @@ Based on obo-bfo:Role also used in VIVO, it defines roles. The object property r
          <dl>
             <dt>has range</dt>
             <dd>
+               <a href="#http://www.w3.org/2004/02/skos/core#Concept" title="http://www.w3.org/2004/02/skos/core#Concept">Concept</a>
+               <sup class="type-c" title="class">c</sup> 
+               <span class="logic">and</span> (<span class="dotted" title="http://www.w3.org/2004/02/skos/core#inScheme">in scheme</span> 
+               <span class="logic">some</span> 
                <a href="#Country" title="http://purl.org/roh#Country">Country Country</a>
-               <sup class="type-c" title="class">c</sup>
-            </dd>
+               <sup class="type-c" title="class">c</sup>)</dd>
          </dl>
       </div>
    </div>
@@ -14952,13 +14993,13 @@ Based on obo-bfo:Role also used in VIVO, it defines roles. The object property r
          </dl>
       </div>
    </div>
-   <div class="entity" id="hasCompanyCategorization">
-      <h3>has company categorization<sup class="type-op" title="object property">op</sup>
+   <div class="entity" id="hasCompanyClassification">
+      <h3>has company classification<sup class="type-op" title="object property">op</sup>
          <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a>
          </span>
       </h3>
       <p>
-         <strong>IRI:</strong> http://purl.org/roh#hasCompanyCategorization</p>
+         <strong>IRI:</strong> http://purl.org/roh#hasCompanyClassification</p>
       <div class="description">
          <dl>
             <dt>has domain</dt>
@@ -14968,9 +15009,12 @@ Based on obo-bfo:Role also used in VIVO, it defines roles. The object property r
             </dd>
             <dt>has range</dt>
             <dd>
+               <a href="#http://www.w3.org/2004/02/skos/core#Concept" title="http://www.w3.org/2004/02/skos/core#Concept">Concept</a>
+               <sup class="type-c" title="class">c</sup> 
+               <span class="logic">and</span> (<span class="dotted" title="http://www.w3.org/2004/02/skos/core#inScheme">in scheme</span> 
+               <span class="logic">some</span> 
                <a href="#CompanyClassification" title="http://purl.org/roh#CompanyClassification">Company Classification</a>
-               <sup class="type-c" title="class">c</sup>
-            </dd>
+               <sup class="type-c" title="class">c</sup>)</dd>
          </dl>
       </div>
    </div>
@@ -15097,6 +15141,18 @@ Based on obo-bfo:Role also used in VIVO, it defines roles. The object property r
       </h3>
       <p>
          <strong>IRI:</strong> http://purl.org/roh#hasExpenseClassification</p>
+      <div class="description">
+         <dl>
+            <dt>has range</dt>
+            <dd>
+               <a href="#http://www.w3.org/2004/02/skos/core#Concept" title="http://www.w3.org/2004/02/skos/core#Concept">Concept</a>
+               <sup class="type-c" title="class">c</sup> 
+               <span class="logic">and</span> (<span class="dotted" title="http://www.w3.org/2004/02/skos/core#inScheme">in scheme</span> 
+               <span class="logic">some</span> 
+               <a href="#ExpenseClassification" title="http://purl.org/roh#ExpenseClassification">Expense Classification</a>
+               <sup class="type-c" title="class">c</sup>)</dd>
+         </dl>
+      </div>
    </div>
    <div class="entity" id="hasFundingProgramClassification">
       <h3>has Funding Program Classification<sup class="type-op" title="object property">op</sup>
@@ -15114,10 +15170,13 @@ Based on obo-bfo:Role also used in VIVO, it defines roles. The object property r
             </dd>
             <dt>has range</dt>
             <dd>
+               <a href="#http://www.w3.org/2004/02/skos/core#Concept" title="http://www.w3.org/2004/02/skos/core#Concept">Concept</a>
+               <sup class="type-c" title="class">c</sup> 
+               <span class="logic">and</span> (<span class="dotted" title="http://www.w3.org/2004/02/skos/core#inScheme">in scheme</span> 
+               <span class="logic">some</span> 
                <a href="#FundingProgramClassification"
                   title="http://purl.org/roh#FundingProgramClassification">Funding Program Classification</a>
-               <sup class="type-c" title="class">c</sup>
-            </dd>
+               <sup class="type-c" title="class">c</sup>)</dd>
          </dl>
       </div>
    </div>
@@ -15135,9 +15194,12 @@ Based on obo-bfo:Role also used in VIVO, it defines roles. The object property r
          <dl>
             <dt>has range</dt>
             <dd>
+               <a href="#http://www.w3.org/2004/02/skos/core#Concept" title="http://www.w3.org/2004/02/skos/core#Concept">Concept</a>
+               <sup class="type-c" title="class">c</sup> 
+               <span class="logic">and</span> (<span class="dotted" title="http://www.w3.org/2004/02/skos/core#inScheme">in scheme</span> 
+               <span class="logic">some</span> 
                <a href="#HRClassification" title="http://purl.org/roh#HRClassification">Human Resource Classification</a>
-               <sup class="type-c" title="class">c</sup>
-            </dd>
+               <sup class="type-c" title="class">c</sup>)</dd>
             <dt>is inverse of</dt>
             <dd>
                <a href="#hrClassificationOf" title="http://purl.org/roh#hrClassificationOf">HR classification of</a>
@@ -15161,8 +15223,11 @@ Based on obo-bfo:Role also used in VIVO, it defines roles. The object property r
             <dt>has range</dt>
             <dd>
                <a href="#http://www.w3.org/2004/02/skos/core#Concept" title="http://www.w3.org/2004/02/skos/core#Concept">Concept</a>
-               <sup class="type-c" title="class">c</sup>
-            </dd>
+               <sup class="type-c" title="class">c</sup> 
+               <span class="logic">and</span> (<span class="dotted" title="http://www.w3.org/2004/02/skos/core#inScheme">in scheme</span> 
+               <span class="logic">some</span> 
+               <a href="#KnowledgeArea" title="http://purl.org/roh#KnowledgeArea">Knowledge Area</a>
+               <sup class="type-c" title="class">c</sup>)</dd>
             <dt>is inverse of</dt>
             <dd>
                <a href="#knowledgeAreaOf" title="http://purl.org/roh#knowledgeAreaOf">knowledge area of</a>
@@ -15310,13 +15375,13 @@ Based on obo-bfo:Role also used in VIVO, it defines roles. The object property r
          </dl>
       </div>
    </div>
-   <div class="entity" id="hasProjectCategorization">
+   <div class="entity" id="hasProjectClassification">
       <h3>has project categorization<sup class="type-op" title="object property">op</sup>
          <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a>
          </span>
       </h3>
       <p>
-         <strong>IRI:</strong> http://purl.org/roh#hasProjectCategorization</p>
+         <strong>IRI:</strong> http://purl.org/roh#hasProjectClassification</p>
       <div class="comment">
          <span class="markdown">A Project is categorized by different Project Classifications.</span>
       </div>
@@ -15329,24 +15394,39 @@ Based on obo-bfo:Role also used in VIVO, it defines roles. The object property r
             </dd>
             <dt>has range</dt>
             <dd>
+               <a href="#http://www.w3.org/2004/02/skos/core#Concept" title="http://www.w3.org/2004/02/skos/core#Concept">Concept</a>
+               <sup class="type-c" title="class">c</sup> 
+               <span class="logic">and</span> (<span class="dotted" title="http://www.w3.org/2004/02/skos/core#inScheme">in scheme</span> 
+               <span class="logic">some</span> 
                <a href="#ProjectClassification" title="http://purl.org/roh#ProjectClassification">Project Classification</a>
-               <sup class="type-c" title="class">c</sup>
-            </dd>
+               <sup class="type-c" title="class">c</sup>)</dd>
             <dt>is inverse of</dt>
             <dd>
-               <a href="#projectCategorizationOf" title="http://purl.org/roh#projectCategorizationOf">project categorization of</a>
+               <a href="#projectClassificationOf" title="http://purl.org/roh#projectClassificationOf">project categorization of</a>
                <sup class="type-op" title="object property">op</sup>
             </dd>
          </dl>
       </div>
    </div>
-   <div class="entity" id="hasPropertyCategorization">
-      <h3>has property categorization<sup class="type-op" title="object property">op</sup>
+   <div class="entity" id="hasPropertyClassification">
+      <h3>has property classification<sup class="type-op" title="object property">op</sup>
          <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a>
          </span>
       </h3>
       <p>
-         <strong>IRI:</strong> http://purl.org/roh#hasPropertyCategorization</p>
+         <strong>IRI:</strong> http://purl.org/roh#hasPropertyClassification</p>
+      <div class="description">
+         <dl>
+            <dt>has range</dt>
+            <dd>
+               <a href="#http://www.w3.org/2004/02/skos/core#Concept" title="http://www.w3.org/2004/02/skos/core#Concept">Concept</a>
+               <sup class="type-c" title="class">c</sup> 
+               <span class="logic">and</span> (<span class="dotted" title="http://www.w3.org/2004/02/skos/core#inScheme">in scheme</span> 
+               <span class="logic">some</span> 
+               <a href="#PropertyClassification" title="http://purl.org/roh#PropertyClassification">Property Classification</a>
+               <sup class="type-c" title="class">c</sup>)</dd>
+         </dl>
+      </div>
    </div>
    <div class="entity" id="hasResearchContribution">
       <h3>has research contribution<sup class="type-op" title="object property">op</sup>
@@ -15355,14 +15435,6 @@ Based on obo-bfo:Role also used in VIVO, it defines roles. The object property r
       </h3>
       <p>
          <strong>IRI:</strong> http://purl.org/roh#hasResearchContribution</p>
-   </div>
-   <div class="entity" id="hasResearchField">
-      <h3>has research field<sup class="type-op" title="object property">op</sup>
-         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a>
-         </span>
-      </h3>
-      <p>
-         <strong>IRI:</strong> http://purl.org/roh#hasResearchField</p>
    </div>
    <div class="entity" id="hasResearchLine">
       <h3>has research line<sup class="type-op" title="object property">op</sup>
@@ -15552,9 +15624,12 @@ Based on obo-bfo:Role also used in VIVO, it defines roles. The object property r
          <dl>
             <dt>has domain</dt>
             <dd>
+               <a href="#http://www.w3.org/2004/02/skos/core#Concept" title="http://www.w3.org/2004/02/skos/core#Concept">Concept</a>
+               <sup class="type-c" title="class">c</sup> 
+               <span class="logic">and</span> (<span class="dotted" title="http://www.w3.org/2004/02/skos/core#inScheme">in scheme</span> 
+               <span class="logic">some</span> 
                <a href="#HRClassification" title="http://purl.org/roh#HRClassification">Human Resource Classification</a>
-               <sup class="type-c" title="class">c</sup>
-            </dd>
+               <sup class="type-c" title="class">c</sup>)</dd>
             <dt>is inverse of</dt>
             <dd>
                <a href="#hasHRClassification" title="http://purl.org/roh#hasHRClassification">has HR classification</a>
@@ -15993,8 +16068,11 @@ Based on obo-bfo:Role also used in VIVO, it defines roles. The object property r
             <dt>has domain</dt>
             <dd>
                <a href="#http://www.w3.org/2004/02/skos/core#Concept" title="http://www.w3.org/2004/02/skos/core#Concept">Concept</a>
-               <sup class="type-c" title="class">c</sup>
-            </dd>
+               <sup class="type-c" title="class">c</sup> 
+               <span class="logic">and</span> (<span class="dotted" title="http://www.w3.org/2004/02/skos/core#inScheme">in scheme</span> 
+               <span class="logic">some</span> 
+               <a href="#KnowledgeArea" title="http://purl.org/roh#KnowledgeArea">Knowledge Area</a>
+               <sup class="type-c" title="class">c</sup>)</dd>
             <dt>is inverse of</dt>
             <dd>
                <a href="#hasKnowledgeArea" title="http://purl.org/roh#hasKnowledgeArea">has knowledge area</a>
@@ -16391,9 +16469,12 @@ Based on obo-bfo:Role also used in VIVO, it defines roles. The object property r
             </dd>
             <dt>has range</dt>
             <dd>
+               <a href="#http://www.w3.org/2004/02/skos/core#Concept" title="http://www.w3.org/2004/02/skos/core#Concept">Concept</a>
+               <sup class="type-c" title="class">c</sup> 
+               <span class="logic">and</span> (<span class="dotted" title="http://www.w3.org/2004/02/skos/core#inScheme">in scheme</span> 
+               <span class="logic">some</span> 
                <a href="#Country" title="http://purl.org/roh#Country">Country Country</a>
-               <sup class="type-c" title="class">c</sup>
-            </dd>
+               <sup class="type-c" title="class">c</sup>)</dd>
          </dl>
       </div>
    </div>
@@ -16612,13 +16693,13 @@ Based on obo-bfo:Role also used in VIVO, it defines roles. The object property r
          </dl>
       </div>
    </div>
-   <div class="entity" id="projectCategorizationOf">
+   <div class="entity" id="projectClassificationOf">
       <h3>project categorization of<sup class="type-op" title="object property">op</sup>
          <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a>
          </span>
       </h3>
       <p>
-         <strong>IRI:</strong> http://purl.org/roh#projectCategorizationOf</p>
+         <strong>IRI:</strong> http://purl.org/roh#projectClassificationOf</p>
       <div class="comment">
          <span class="markdown">A Project Classification which categorizes a Project.</span>
       </div>
@@ -16626,9 +16707,12 @@ Based on obo-bfo:Role also used in VIVO, it defines roles. The object property r
          <dl>
             <dt>has domain</dt>
             <dd>
+               <a href="#http://www.w3.org/2004/02/skos/core#Concept" title="http://www.w3.org/2004/02/skos/core#Concept">Concept</a>
+               <sup class="type-c" title="class">c</sup> 
+               <span class="logic">and</span> (<span class="dotted" title="http://www.w3.org/2004/02/skos/core#inScheme">in scheme</span> 
+               <span class="logic">some</span> 
                <a href="#ProjectClassification" title="http://purl.org/roh#ProjectClassification">Project Classification</a>
-               <sup class="type-c" title="class">c</sup>
-            </dd>
+               <sup class="type-c" title="class">c</sup>)</dd>
             <dt>has range</dt>
             <dd>
                <a href="#/mirror/vivo#Project" title="http://purl.org/roh/mirror/vivo#Project">Project</a>
@@ -16636,7 +16720,7 @@ Based on obo-bfo:Role also used in VIVO, it defines roles. The object property r
             </dd>
             <dt>is inverse of</dt>
             <dd>
-               <a href="#hasProjectCategorization" title="http://purl.org/roh#hasProjectCategorization">has project categorization</a>
+               <a href="#hasProjectClassification" title="http://purl.org/roh#hasProjectClassification">has project categorization</a>
                <sup class="type-op" title="object property">op</sup>
             </dd>
          </dl>
@@ -17504,9 +17588,12 @@ Based on obo-bfo:Role also used in VIVO, it defines roles. The object property r
             </dd>
             <dt>has range</dt>
             <dd>
+               <a href="#http://www.w3.org/2004/02/skos/core#Concept" title="http://www.w3.org/2004/02/skos/core#Concept">Concept</a>
+               <sup class="type-c" title="class">c</sup> 
+               <span class="logic">and</span> (<span class="dotted" title="http://www.w3.org/2004/02/skos/core#inScheme">in scheme</span> 
+               <span class="logic">some</span> 
                <a href="#KnowledgeArea" title="http://purl.org/roh#KnowledgeArea">Knowledge Area</a>
-               <sup class="type-c" title="class">c</sup>
-            </dd>
+               <sup class="type-c" title="class">c</sup>)</dd>
             <dt>is inverse of</dt>
             <dd>
                <a href="#taughtBy" title="http://purl.org/roh#taughtBy">taught by</a>
@@ -18298,7 +18385,7 @@ Based on obo-bfo:Role also used in VIVO, it defines roles. The object property r
          <dl>
             <dt>has domain</dt>
             <dd>
-               <a href="#Prototype" title="http://purl.org/roh#Prototype">Prototype</a>
+               <a href="#Product" title="http://purl.org/roh#Product">Product</a>
                <sup class="type-c" title="class">c</sup>
             </dd>
             <dt>has range</dt>

@@ -7,10 +7,15 @@
 @base <http://purl.org/roh> .
 
 <http://purl.org/roh> rdf:type owl:Ontology ;
-                       owl:versionIRI <http://purl.org/hercules/asio/core/0.0.1> ;
+                       owl:versionIRI <http://purl.org/roh/0.2> ;
                        <http://purl.org/dc/elements/1.1/contributor> "Alejandro González Hevia" ,
-                                                                     "José Emilio Labra Gayo" ;
-                       <http://purl.org/dc/elements/1.1/creator> "Emilio Rubiera Azcona" ;
+                                                                     "Diego López de Ipiña" ,
+                                                                     "Esteban Sota" ,
+                                                                     "Iñigo Apellániz" ,
+                                                                     "José Emilio Labra Gayo" ,
+                                                                     "Álvaro Palacios" ;
+                       <http://purl.org/dc/elements/1.1/creator> "Emilio Rubiera Azcona" ,
+                                                                 "Mikel Emaldi" ;
                        <http://purl.org/dc/elements/1.1/description> "An ontology to address the Research Management of the CRUE's Spanish University System (Sistema Universitario Español) by applying an encompassing model not only capable of addressing the universities of the CRUE but also more belonging to the European Union." ;
                        <http://purl.org/dc/elements/1.1/title> "The ASIO ontology" ;
                        <http://purl.org/dc/terms/license> <https://creativecommons.org/licenses/by-sa/4.0/> ,
@@ -359,7 +364,14 @@ by creating a research management system with semantic capacities based on seman
 ###  http://purl.org/roh#addresses
 :addresses rdf:type owl:ObjectProperty ;
            rdfs:domain :ResearchContribution ;
-           rdfs:range :ResearchProblem ;
+           rdfs:range [ owl:intersectionOf ( <http://www.w3.org/2004/02/skos/core#Concept>
+                                             [ rdf:type owl:Restriction ;
+                                               owl:onProperty <http://www.w3.org/2004/02/skos/core#inScheme> ;
+                                               owl:someValuesFrom :ResearchProblem
+                                             ]
+                                           ) ;
+                        rdf:type owl:Class
+                      ] ;
            rdfs:label "addresses"@en .
 
 
@@ -538,7 +550,14 @@ by creating a research management system with semantic capacities based on seman
 
 ###  http://purl.org/roh#country
 :country rdf:type owl:ObjectProperty ;
-         rdfs:range :Country ;
+         rdfs:range [ owl:intersectionOf ( <http://www.w3.org/2004/02/skos/core#Concept>
+                                           [ rdf:type owl:Restriction ;
+                                             owl:onProperty <http://www.w3.org/2004/02/skos/core#inScheme> ;
+                                             owl:someValuesFrom :Country
+                                           ]
+                                         ) ;
+                      rdf:type owl:Class
+                    ] ;
          rdfs:comment "This property indicates the nationality of a resource. The domain is not set so unpredicted resources within the ontology could be attached to countries."@en ;
          rdfs:label "country"@en ,
                     "país"@es .
@@ -667,11 +686,18 @@ by creating a research management system with semantic capacities based on seman
          rdfs:label "has Code"@en .
 
 
-###  http://purl.org/roh#hasCompanyCategorization
-:hasCompanyCategorization rdf:type owl:ObjectProperty ;
+###  http://purl.org/roh#hasCompanyClassification
+:hasCompanyClassification rdf:type owl:ObjectProperty ;
                           rdfs:domain <http://purl.org/roh/mirror/vivo#Company> ;
-                          rdfs:range :CompanyClassification ;
-                          rdfs:label "has company categorization"@en .
+                          rdfs:range [ owl:intersectionOf ( <http://www.w3.org/2004/02/skos/core#Concept>
+                                                            [ rdf:type owl:Restriction ;
+                                                              owl:onProperty <http://www.w3.org/2004/02/skos/core#inScheme> ;
+                                                              owl:someValuesFrom :CompanyClassification
+                                                            ]
+                                                          ) ;
+                                       rdf:type owl:Class
+                                     ] ;
+                          rdfs:label "has company classification"@en .
 
 
 ###  http://purl.org/roh#hasContactInfo
@@ -693,20 +719,42 @@ by creating a research management system with semantic capacities based on seman
 
 ###  http://purl.org/roh#hasExpenseClassification
 :hasExpenseClassification rdf:type owl:ObjectProperty ;
+                          rdfs:range [ owl:intersectionOf ( <http://www.w3.org/2004/02/skos/core#Concept>
+                                                            [ rdf:type owl:Restriction ;
+                                                              owl:onProperty <http://www.w3.org/2004/02/skos/core#inScheme> ;
+                                                              owl:someValuesFrom :ExpenseClassification
+                                                            ]
+                                                          ) ;
+                                       rdf:type owl:Class
+                                     ] ;
                           rdfs:label "has Expense Classification"@en .
 
 
 ###  http://purl.org/roh#hasFundingProgramClassification
 :hasFundingProgramClassification rdf:type owl:ObjectProperty ;
                                  rdfs:domain :FundingProgram ;
-                                 rdfs:range :FundingProgramClassification ;
+                                 rdfs:range [ owl:intersectionOf ( <http://www.w3.org/2004/02/skos/core#Concept>
+                                                                   [ rdf:type owl:Restriction ;
+                                                                     owl:onProperty <http://www.w3.org/2004/02/skos/core#inScheme> ;
+                                                                     owl:someValuesFrom :FundingProgramClassification
+                                                                   ]
+                                                                 ) ;
+                                              rdf:type owl:Class
+                                            ] ;
                                  rdfs:label "has Funding Program Classification" .
 
 
 ###  http://purl.org/roh#hasHRClassification
 :hasHRClassification rdf:type owl:ObjectProperty ;
                      owl:inverseOf :hrClassificationOf ;
-                     rdfs:range :HRClassification ;
+                     rdfs:range [ owl:intersectionOf ( <http://www.w3.org/2004/02/skos/core#Concept>
+                                                       [ rdf:type owl:Restriction ;
+                                                         owl:onProperty <http://www.w3.org/2004/02/skos/core#inScheme> ;
+                                                         owl:someValuesFrom :HRClassification
+                                                       ]
+                                                     ) ;
+                                  rdf:type owl:Class
+                                ] ;
                      rdfs:comment "The position a person has inside its organization."@en ;
                      rdfs:label "clasificado en RRHH como"@es ,
                                 "has HR classification"@en .
@@ -715,7 +763,14 @@ by creating a research management system with semantic capacities based on seman
 ###  http://purl.org/roh#hasKnowledgeArea
 :hasKnowledgeArea rdf:type owl:ObjectProperty ;
                   owl:inverseOf :knowledgeAreaOf ;
-                  rdfs:range <http://www.w3.org/2004/02/skos/core#Concept> ;
+                  rdfs:range [ owl:intersectionOf ( <http://www.w3.org/2004/02/skos/core#Concept>
+                                                    [ rdf:type owl:Restriction ;
+                                                      owl:onProperty <http://www.w3.org/2004/02/skos/core#inScheme> ;
+                                                      owl:someValuesFrom :KnowledgeArea
+                                                    ]
+                                                  ) ;
+                               rdf:type owl:Class
+                             ] ;
                   rdfs:comment "Some entity related to any Concept."@en ;
                   rdfs:label "has knowledge area"@en ,
                              "tiene area de conocimiento"@es .
@@ -747,29 +802,39 @@ by creating a research management system with semantic capacities based on seman
                         "tiene plaza"@es .
 
 
-###  http://purl.org/roh#hasProjectCategorization
-:hasProjectCategorization rdf:type owl:ObjectProperty ;
-                          owl:inverseOf :projectCategorizationOf ;
+###  http://purl.org/roh#hasProjectClassification
+:hasProjectClassification rdf:type owl:ObjectProperty ;
+                          owl:inverseOf :projectClassificationOf ;
                           rdfs:domain <http://purl.org/roh/mirror/vivo#Project> ;
-                          rdfs:range :ProjectClassification ;
+                          rdfs:range [ owl:intersectionOf ( <http://www.w3.org/2004/02/skos/core#Concept>
+                                                            [ rdf:type owl:Restriction ;
+                                                              owl:onProperty <http://www.w3.org/2004/02/skos/core#inScheme> ;
+                                                              owl:someValuesFrom :ProjectClassification
+                                                            ]
+                                                          ) ;
+                                       rdf:type owl:Class
+                                     ] ;
                           rdfs:comment "A Project is categorized by different Project Classifications."@en ;
                           rdfs:label "has project categorization"@en ,
                                      "tiene categorizacion proyecto"@es .
 
 
-###  http://purl.org/roh#hasPropertyCategorization
-:hasPropertyCategorization rdf:type owl:ObjectProperty ;
-                           rdfs:label "has property categorization"@en .
+###  http://purl.org/roh#hasPropertyClassification
+:hasPropertyClassification rdf:type owl:ObjectProperty ;
+                           rdfs:range [ owl:intersectionOf ( <http://www.w3.org/2004/02/skos/core#Concept>
+                                                             [ rdf:type owl:Restriction ;
+                                                               owl:onProperty <http://www.w3.org/2004/02/skos/core#inScheme> ;
+                                                               owl:someValuesFrom :PropertyClassification
+                                                             ]
+                                                           ) ;
+                                        rdf:type owl:Class
+                                      ] ;
+                           rdfs:label "has property classification"@en .
 
 
 ###  http://purl.org/roh#hasResearchContribution
 :hasResearchContribution rdf:type owl:ObjectProperty ;
                          rdfs:label "has research contribution"@en .
-
-
-###  http://purl.org/roh#hasResearchField
-:hasResearchField rdf:type owl:ObjectProperty ;
-                  rdfs:label "has research field"@en .
 
 
 ###  http://purl.org/roh#hasResearchLine
@@ -825,7 +890,14 @@ by creating a research management system with semantic capacities based on seman
 
 ###  http://purl.org/roh#hrClassificationOf
 :hrClassificationOf rdf:type owl:ObjectProperty ;
-                    rdfs:domain :HRClassification ;
+                    rdfs:domain [ owl:intersectionOf ( <http://www.w3.org/2004/02/skos/core#Concept>
+                                                       [ rdf:type owl:Restriction ;
+                                                         owl:onProperty <http://www.w3.org/2004/02/skos/core#inScheme> ;
+                                                         owl:someValuesFrom :HRClassification
+                                                       ]
+                                                     ) ;
+                                  rdf:type owl:Class
+                                ] ;
                     rdfs:comment "The classification of the position of a Person."@en ;
                     rdfs:label "HR classification of"@en ,
                                "clasificación de RRHH de"@es .
@@ -933,7 +1005,14 @@ by creating a research management system with semantic capacities based on seman
 
 ###  http://purl.org/roh#knowledgeAreaOf
 :knowledgeAreaOf rdf:type owl:ObjectProperty ;
-                 rdfs:domain <http://www.w3.org/2004/02/skos/core#Concept> ;
+                 rdfs:domain [ owl:intersectionOf ( <http://www.w3.org/2004/02/skos/core#Concept>
+                                                    [ rdf:type owl:Restriction ;
+                                                      owl:onProperty <http://www.w3.org/2004/02/skos/core#inScheme> ;
+                                                      owl:someValuesFrom :KnowledgeArea
+                                                    ]
+                                                  ) ;
+                               rdf:type owl:Class
+                             ] ;
                  rdfs:comment "A skos:Concept which is the knowledge area of some entity."@en ;
                  rdfs:label "area de conocimiento de"@es ,
                             "knowledge area of"@en .
@@ -1002,7 +1081,14 @@ by creating a research management system with semantic capacities based on seman
 ###  http://purl.org/roh#patentCountry
 :patentCountry rdf:type owl:ObjectProperty ;
                rdfs:domain <http://purl.org/roh/mirror/bibo#Patent> ;
-               rdfs:range :Country ;
+               rdfs:range [ owl:intersectionOf ( <http://www.w3.org/2004/02/skos/core#Concept>
+                                                 [ rdf:type owl:Restriction ;
+                                                   owl:onProperty <http://www.w3.org/2004/02/skos/core#inScheme> ;
+                                                   owl:someValuesFrom :Country
+                                                 ]
+                                               ) ;
+                            rdf:type owl:Class
+                          ] ;
                rdfs:label "patent country"@en .
 
 
@@ -1058,9 +1144,16 @@ by creating a research management system with semantic capacities based on seman
                      "produces"@en .
 
 
-###  http://purl.org/roh#projectCategorizationOf
-:projectCategorizationOf rdf:type owl:ObjectProperty ;
-                         rdfs:domain :ProjectClassification ;
+###  http://purl.org/roh#projectClassificationOf
+:projectClassificationOf rdf:type owl:ObjectProperty ;
+                         rdfs:domain [ owl:intersectionOf ( <http://www.w3.org/2004/02/skos/core#Concept>
+                                                            [ rdf:type owl:Restriction ;
+                                                              owl:onProperty <http://www.w3.org/2004/02/skos/core#inScheme> ;
+                                                              owl:someValuesFrom :ProjectClassification
+                                                            ]
+                                                          ) ;
+                                       rdf:type owl:Class
+                                     ] ;
                          rdfs:range <http://purl.org/roh/mirror/vivo#Project> ;
                          rdfs:comment "A Project Classification which categorizes a Project."@en ;
                          rdfs:label "categorización de proyecto de"@es ,
@@ -1219,7 +1312,14 @@ by creating a research management system with semantic capacities based on seman
 ###  http://purl.org/roh#teaches
 :teaches rdf:type owl:ObjectProperty ;
          rdfs:domain <http://purl.org/roh/mirror/foaf#Person> ;
-         rdfs:range :KnowledgeArea ;
+         rdfs:range [ owl:intersectionOf ( <http://www.w3.org/2004/02/skos/core#Concept>
+                                           [ rdf:type owl:Restriction ;
+                                             owl:onProperty <http://www.w3.org/2004/02/skos/core#inScheme> ;
+                                             owl:someValuesFrom :KnowledgeArea
+                                           ]
+                                         ) ;
+                      rdf:type owl:Class
+                    ] ;
          rdfs:label "teaches"@en .
 
 
@@ -1826,7 +1926,7 @@ by creating a research management system with semantic capacities based on seman
 
 ###  http://purl.org/roh#hasTRL
 :hasTRL rdf:type owl:DatatypeProperty ;
-        rdfs:domain :Prototype ;
+        rdfs:domain :Product ;
         rdfs:range xsd:integer ;
         rdfs:comment "A prototype has a given technology readiness level"@en ;
         rdfs:label "has TRL"@en .
@@ -2561,7 +2661,7 @@ Definition source: http://isiwebofknowledge.com/researcherid/""" ;
 
 ###  http://purl.org/roh#AcademicSubject
 :AcademicSubject rdf:type owl:Class ;
-                 rdfs:subClassOf <http://www.w3.org/2004/02/skos/core#Concept> ;
+                 rdfs:subClassOf <http://www.w3.org/2004/02/skos/core#ConceptScheme> ;
                  rdfs:comment "Matière académique"@fr ;
                  rdfs:label "Academic subject"@en ,
                             "Asignatura académica"@es ,
@@ -2928,7 +3028,7 @@ The previous short definition was: \"An arbitrary classification of a space/time
 
 ###  http://purl.org/roh#CompanyClassification
 :CompanyClassification rdf:type owl:Class ;
-                       rdfs:subClassOf <http://www.w3.org/2004/02/skos/core#Concept> ;
+                       rdfs:subClassOf <http://www.w3.org/2004/02/skos/core#ConceptScheme> ;
                        rdfs:label "Company Classification"@en .
 
 
@@ -2940,7 +3040,7 @@ The previous short definition was: \"An arbitrary classification of a space/time
 
 ###  http://purl.org/roh#Country
 :Country rdf:type owl:Class ;
-         rdfs:subClassOf <http://www.w3.org/2004/02/skos/core#Concept> ;
+         rdfs:subClassOf <http://www.w3.org/2004/02/skos/core#ConceptScheme> ;
          rdfs:comment "A region legally identified as a distinct entity in political geography."@en ;
          rdfs:label "Country"@en ,
                     "Herrialde"@eu ,
@@ -3193,7 +3293,14 @@ The previous short definition was: \"An arbitrary classification of a space/time
 :Expense rdf:type owl:Class ;
          rdfs:subClassOf [ rdf:type owl:Restriction ;
                            owl:onProperty :hasExpenseClassification ;
-                           owl:allValuesFrom :ExpenseClassification
+                           owl:allValuesFrom [ owl:intersectionOf ( <http://www.w3.org/2004/02/skos/core#Concept>
+                                                                    [ rdf:type owl:Restriction ;
+                                                                      owl:onProperty <http://www.w3.org/2004/02/skos/core#inScheme> ;
+                                                                      owl:someValuesFrom :ExpenseClassification
+                                                                    ]
+                                                                  ) ;
+                                               rdf:type owl:Class
+                                             ]
                          ] ,
                          [ rdf:type owl:Restriction ;
                            owl:onProperty <http://purl.org/roh/mirror/vivo#dateTimeValue> ;
@@ -3226,7 +3333,7 @@ The previous short definition was: \"An arbitrary classification of a space/time
 
 ###  http://purl.org/roh#ExpenseClassification
 :ExpenseClassification rdf:type owl:Class ;
-                       rdfs:subClassOf <http://www.w3.org/2004/02/skos/core#Concept> ;
+                       rdfs:subClassOf <http://www.w3.org/2004/02/skos/core#ConceptScheme> ;
                        rdfs:label "Expense Classification"@en .
 
 
@@ -3262,7 +3369,14 @@ The previous short definition was: \"An arbitrary classification of a space/time
 :Funding rdf:type owl:Class ;
          rdfs:subClassOf [ rdf:type owl:Restriction ;
                            owl:onProperty :hasKnowledgeArea ;
-                           owl:someValuesFrom :KnowledgeArea
+                           owl:someValuesFrom [ owl:intersectionOf ( <http://www.w3.org/2004/02/skos/core#Concept>
+                                                                     [ rdf:type owl:Restriction ;
+                                                                       owl:onProperty <http://www.w3.org/2004/02/skos/core#inScheme> ;
+                                                                       owl:someValuesFrom :KnowledgeArea
+                                                                     ]
+                                                                   ) ;
+                                                rdf:type owl:Class
+                                              ]
                          ] ,
                          [ rdf:type owl:Restriction ;
                            owl:onProperty :fundedBy ;
@@ -3274,7 +3388,14 @@ The previous short definition was: \"An arbitrary classification of a space/time
                          ] ,
                          [ rdf:type owl:Restriction ;
                            owl:onProperty :hasKnowledgeArea ;
-                           owl:allValuesFrom :KnowledgeArea
+                           owl:allValuesFrom [ owl:intersectionOf ( <http://www.w3.org/2004/02/skos/core#Concept>
+                                                                    [ rdf:type owl:Restriction ;
+                                                                      owl:onProperty <http://www.w3.org/2004/02/skos/core#inScheme> ;
+                                                                      owl:someValuesFrom :KnowledgeArea
+                                                                    ]
+                                                                  ) ;
+                                               rdf:type owl:Class
+                                             ]
                          ] ,
                          [ rdf:type owl:Restriction ;
                            owl:onProperty <http://purl.org/roh/mirror/obo/ro#BFO_0000051> ;
@@ -3336,7 +3457,14 @@ The previous short definition was: \"An arbitrary classification of a space/time
                                 ] ,
                                 [ rdf:type owl:Restriction ;
                                   owl:onProperty :hasFundingProgramClassification ;
-                                  owl:allValuesFrom :FundingProgramClassification
+                                  owl:allValuesFrom [ owl:intersectionOf ( <http://www.w3.org/2004/02/skos/core#Concept>
+                                                                           [ rdf:type owl:Restriction ;
+                                                                             owl:onProperty <http://www.w3.org/2004/02/skos/core#inScheme> ;
+                                                                             owl:someValuesFrom :FundingProgramClassification
+                                                                           ]
+                                                                         ) ;
+                                                      rdf:type owl:Class
+                                                    ]
                                 ] ,
                                 [ rdf:type owl:Restriction ;
                                   owl:onProperty :promotedBy ;
@@ -3379,7 +3507,7 @@ The previous short definition was: \"An arbitrary classification of a space/time
 
 ###  http://purl.org/roh#FundingProgramClassification
 :FundingProgramClassification rdf:type owl:Class ;
-                              rdfs:subClassOf <http://www.w3.org/2004/02/skos/core#Concept> ;
+                              rdfs:subClassOf <http://www.w3.org/2004/02/skos/core#ConceptScheme> ;
                               rdfs:label "Funding Program Classification"@en .
 
 
@@ -3407,7 +3535,7 @@ A roh:FundingSource roh:feeds a roh:Funding with funds to sponsor some projects.
 
 ###  http://purl.org/roh#HRClassification
 :HRClassification rdf:type owl:Class ;
-                  rdfs:subClassOf <http://www.w3.org/2004/02/skos/core#Concept> ;
+                  rdfs:subClassOf <http://www.w3.org/2004/02/skos/core#ConceptScheme> ;
                   rdfs:label "Human Resource Classification"@en .
 
 
@@ -3423,11 +3551,25 @@ A roh:FundingSource roh:feeds a roh:Funding with funds to sponsor some projects.
                            ] ,
                            [ rdf:type owl:Restriction ;
                              owl:onProperty :hasKnowledgeArea ;
-                             owl:allValuesFrom <http://www.w3.org/2004/02/skos/core#Concept>
+                             owl:allValuesFrom [ owl:intersectionOf ( <http://www.w3.org/2004/02/skos/core#Concept>
+                                                                      [ rdf:type owl:Restriction ;
+                                                                        owl:onProperty <http://www.w3.org/2004/02/skos/core#inScheme> ;
+                                                                        owl:someValuesFrom :KnowledgeArea
+                                                                      ]
+                                                                    ) ;
+                                                 rdf:type owl:Class
+                                               ]
                            ] ,
                            [ rdf:type owl:Restriction ;
-                             owl:onProperty :hasPropertyCategorization ;
-                             owl:allValuesFrom :PropertyClassification
+                             owl:onProperty :hasPropertyClassification ;
+                             owl:allValuesFrom [ owl:intersectionOf ( <http://www.w3.org/2004/02/skos/core#Concept>
+                                                                      [ rdf:type owl:Restriction ;
+                                                                        owl:onProperty <http://www.w3.org/2004/02/skos/core#inScheme> ;
+                                                                        owl:someValuesFrom :PropertyClassification
+                                                                      ]
+                                                                    ) ;
+                                                 rdf:type owl:Class
+                                               ]
                            ] ,
                            [ rdf:type owl:Restriction ;
                              owl:onProperty :isSupportedBy ;
@@ -3511,7 +3653,7 @@ A roh:FundingSource roh:feeds a roh:Funding with funds to sponsor some projects.
 
 ###  http://purl.org/roh#KnowledgeArea
 :KnowledgeArea rdf:type owl:Class ;
-               rdfs:subClassOf <http://www.w3.org/2004/02/skos/core#Concept> ;
+               rdfs:subClassOf <http://www.w3.org/2004/02/skos/core#ConceptScheme> ;
                owl:disjointWith :ProjectClassification ;
                rdfs:comment "ROH will be populated with instance data of UNESCO skos concepts. A Person, Activity, Project and Organization can be qualified by a KnowledgeArea" ;
                rdfs:label "Knowledge Area"@en ,
@@ -3898,7 +4040,6 @@ A roh:FundingSource roh:feeds a roh:Funding with funds to sponsor some projects.
 
 ###  http://purl.org/roh#Product
 :Product rdf:type owl:Class ;
-         rdfs:subClassOf :ResearchObject ;
          rdfs:comment "A product as outcome of a project."@en ;
          rdfs:label "Product"@en .
 
@@ -3912,7 +4053,7 @@ A roh:FundingSource roh:feeds a roh:Funding with funds to sponsor some projects.
 
 ###  http://purl.org/roh#ProjectClassification
 :ProjectClassification rdf:type owl:Class ;
-                       rdfs:subClassOf <http://www.w3.org/2004/02/skos/core#Concept> ;
+                       rdfs:subClassOf <http://www.w3.org/2004/02/skos/core#ConceptScheme> ;
                        rdfs:label "Clasificación de Proyecto"@es ,
                                   "Project Classification"@en .
 
@@ -3935,7 +4076,7 @@ A roh:FundingSource roh:feeds a roh:Funding with funds to sponsor some projects.
 
 ###  http://purl.org/roh#PropertyClassification
 :PropertyClassification rdf:type owl:Class ;
-                        rdfs:subClassOf <http://www.w3.org/2004/02/skos/core#Concept> ;
+                        rdfs:subClassOf <http://www.w3.org/2004/02/skos/core#ConceptScheme> ;
                         rdfs:label "Property Classification"@en .
 
 
@@ -4018,12 +4159,6 @@ A roh:FundingSource roh:feeds a roh:Funding with funds to sponsor some projects.
                       rdfs:label "Research contribution"@en .
 
 
-###  http://purl.org/roh#ResearchField
-:ResearchField rdf:type owl:Class ;
-               rdfs:subClassOf <http://www.w3.org/2004/02/skos/core#Concept> ;
-               rdfs:label "Research field"@en .
-
-
 ###  http://purl.org/roh#ResearchGroup
 :ResearchGroup rdf:type owl:Class ;
                rdfs:subClassOf <http://purl.org/roh/mirror/foaf#Organization> ,
@@ -4095,7 +4230,14 @@ A roh:FundingSource roh:feeds a roh:Funding with funds to sponsor some projects.
                                                                                                   ]
                                                                                                   [ rdf:type owl:Restriction ;
                                                                                                     owl:onProperty :hasKnowledgeArea ;
-                                                                                                    owl:someValuesFrom <http://www.w3.org/2004/02/skos/core#Concept>
+                                                                                                    owl:someValuesFrom [ owl:intersectionOf ( <http://www.w3.org/2004/02/skos/core#Concept>
+                                                                                                                                              [ rdf:type owl:Restriction ;
+                                                                                                                                                owl:onProperty <http://www.w3.org/2004/02/skos/core#inScheme> ;
+                                                                                                                                                owl:someValuesFrom :KnowledgeArea
+                                                                                                                                              ]
+                                                                                                                                            ) ;
+                                                                                                                         rdf:type owl:Class
+                                                                                                                       ]
                                                                                                   ]
                                                                                                 ) ;
                                                                              rdf:type owl:Class
@@ -4106,7 +4248,14 @@ A roh:FundingSource roh:feeds a roh:Funding with funds to sponsor some projects.
                                                                            ]
                                                                            [ rdf:type owl:Restriction ;
                                                                              owl:onProperty :hasKnowledgeArea ;
-                                                                             owl:allValuesFrom <http://www.w3.org/2004/02/skos/core#Concept>
+                                                                             owl:allValuesFrom [ owl:intersectionOf ( <http://www.w3.org/2004/02/skos/core#Concept>
+                                                                                                                      [ rdf:type owl:Restriction ;
+                                                                                                                        owl:onProperty <http://www.w3.org/2004/02/skos/core#inScheme> ;
+                                                                                                                        owl:someValuesFrom :KnowledgeArea
+                                                                                                                      ]
+                                                                                                                    ) ;
+                                                                                                 rdf:type owl:Class
+                                                                                               ]
                                                                            ]
                                                                          ) ;
                                                       rdf:type owl:Class
@@ -4139,7 +4288,7 @@ A roh:FundingSource roh:feeds a roh:Funding with funds to sponsor some projects.
 
 ###  http://purl.org/roh#ResearchProblem
 :ResearchProblem rdf:type owl:Class ;
-                 rdfs:subClassOf <http://www.w3.org/2004/02/skos/core#Concept> ;
+                 rdfs:subClassOf <http://www.w3.org/2004/02/skos/core#ConceptScheme> ;
                  rdfs:label "Research problem"@en ;
                  <http://www.w3.org/2004/02/skos/core#prefLabel> "Research problem"@en .
 
@@ -4885,7 +5034,14 @@ This is a type of roh:ResearchObjects related to publication concept. It is base
                                                          ] ,
                                                          [ rdf:type owl:Restriction ;
                                                            owl:onProperty :hasKnowledgeArea ;
-                                                           owl:allValuesFrom :KnowledgeArea
+                                                           owl:allValuesFrom [ owl:intersectionOf ( <http://www.w3.org/2004/02/skos/core#Concept>
+                                                                                                    [ rdf:type owl:Restriction ;
+                                                                                                      owl:onProperty <http://www.w3.org/2004/02/skos/core#inScheme> ;
+                                                                                                      owl:someValuesFrom :KnowledgeArea
+                                                                                                    ]
+                                                                                                  ) ;
+                                                                               rdf:type owl:Class
+                                                                             ]
                                                          ] ,
                                                          [ rdf:type owl:Restriction ;
                                                            owl:onProperty :ownerOrganization ;
@@ -5119,7 +5275,14 @@ This is a type of roh:ResearchObjects related to publication concept. It is base
                                                                ] ,
                                                                [ rdf:type owl:Restriction ;
                                                                  owl:onProperty :hasKnowledgeArea ;
-                                                                 owl:allValuesFrom <http://www.w3.org/2004/02/skos/core#Concept>
+                                                                 owl:allValuesFrom [ owl:intersectionOf ( <http://www.w3.org/2004/02/skos/core#Concept>
+                                                                                                          [ rdf:type owl:Restriction ;
+                                                                                                            owl:onProperty <http://www.w3.org/2004/02/skos/core#inScheme> ;
+                                                                                                            owl:someValuesFrom :KnowledgeArea
+                                                                                                          ]
+                                                                                                        ) ;
+                                                                                     rdf:type owl:Class
+                                                                                   ]
                                                                ] ,
                                                                [ rdf:type owl:Restriction ;
                                                                  owl:onProperty :hasReservable ;
@@ -5243,7 +5406,14 @@ Besides, an instance of a foaf:Organization is associated to the following entit
                                                          ] ,
                                                          [ rdf:type owl:Restriction ;
                                                            owl:onProperty :hasKnowledgeArea ;
-                                                           owl:allValuesFrom <http://www.w3.org/2004/02/skos/core#Concept>
+                                                           owl:allValuesFrom [ owl:intersectionOf ( <http://www.w3.org/2004/02/skos/core#Concept>
+                                                                                                    [ rdf:type owl:Restriction ;
+                                                                                                      owl:onProperty <http://www.w3.org/2004/02/skos/core#inScheme> ;
+                                                                                                      owl:someValuesFrom :KnowledgeArea
+                                                                                                    ]
+                                                                                                  ) ;
+                                                                               rdf:type owl:Class
+                                                                             ]
                                                          ] ,
                                                          [ rdf:type owl:Restriction ;
                                                            owl:onProperty :hasPosition ;
@@ -5380,7 +5550,14 @@ Besides, an instance of a foaf:Person / roh:Researcher is associated to the foll
                                                                  ] ,
                                                                  [ rdf:type owl:Restriction ;
                                                                    owl:onProperty :hasKnowledgeArea ;
-                                                                   owl:allValuesFrom :KnowledgeArea
+                                                                   owl:allValuesFrom [ owl:intersectionOf ( <http://www.w3.org/2004/02/skos/core#Concept>
+                                                                                                            [ rdf:type owl:Restriction ;
+                                                                                                              owl:onProperty <http://www.w3.org/2004/02/skos/core#inScheme> ;
+                                                                                                              owl:someValuesFrom :KnowledgeArea
+                                                                                                            ]
+                                                                                                          ) ;
+                                                                                       rdf:type owl:Class
+                                                                                     ]
                                                                  ] ,
                                                                  [ rdf:type owl:Restriction ;
                                                                    owl:onProperty <http://purl.org/roh/mirror/obo/ro#RO_0000052> ;
@@ -6156,8 +6333,15 @@ Based on obo-bfo:Role also used in VIVO, it defines roles. The object property r
 <http://purl.org/roh/mirror/vivo#Company> rdf:type owl:Class ;
                                           rdfs:subClassOf <http://purl.org/roh/mirror/foaf#Organization> ,
                                                           [ rdf:type owl:Restriction ;
-                                                            owl:onProperty :hasCompanyCategorization ;
-                                                            owl:allValuesFrom :CompanyClassification
+                                                            owl:onProperty :hasCompanyClassification ;
+                                                            owl:allValuesFrom [ owl:intersectionOf ( <http://www.w3.org/2004/02/skos/core#Concept>
+                                                                                                     [ rdf:type owl:Restriction ;
+                                                                                                       owl:onProperty <http://www.w3.org/2004/02/skos/core#inScheme> ;
+                                                                                                       owl:someValuesFrom :CompanyClassification
+                                                                                                     ]
+                                                                                                   ) ;
+                                                                                rdf:type owl:Class
+                                                                              ]
                                                           ] ,
                                                           [ rdf:type owl:Restriction ;
                                                             owl:onProperty :publicCompany ;
@@ -6329,7 +6513,14 @@ Based on obo-bfo:Role also used in VIVO, it defines roles. The object property r
                                                    rdfs:subClassOf <http://purl.org/roh/mirror/obo/bfo#BFO_0000038> ,
                                                                    [ rdf:type owl:Restriction ;
                                                                      owl:onProperty :hasKnowledgeArea ;
-                                                                     owl:allValuesFrom :KnowledgeArea
+                                                                     owl:allValuesFrom [ owl:intersectionOf ( <http://www.w3.org/2004/02/skos/core#Concept>
+                                                                                                              [ rdf:type owl:Restriction ;
+                                                                                                                owl:onProperty <http://www.w3.org/2004/02/skos/core#inScheme> ;
+                                                                                                                owl:someValuesFrom :KnowledgeArea
+                                                                                                              ]
+                                                                                                            ) ;
+                                                                                         rdf:type owl:Class
+                                                                                       ]
                                                                    ] ,
                                                                    [ rdf:type owl:Restriction ;
                                                                      owl:onProperty <http://purl.org/roh/mirror/vivo#end> ;
@@ -6747,15 +6938,36 @@ Contents
                                                           ] ,
                                                           [ rdf:type owl:Restriction ;
                                                             owl:onProperty :hasHRClassification ;
-                                                            owl:allValuesFrom :HRClassification
+                                                            owl:allValuesFrom [ owl:intersectionOf ( <http://www.w3.org/2004/02/skos/core#Concept>
+                                                                                                     [ rdf:type owl:Restriction ;
+                                                                                                       owl:onProperty <http://www.w3.org/2004/02/skos/core#inScheme> ;
+                                                                                                       owl:someValuesFrom :HRClassification
+                                                                                                     ]
+                                                                                                   ) ;
+                                                                                rdf:type owl:Class
+                                                                              ]
                                                           ] ,
                                                           [ rdf:type owl:Restriction ;
                                                             owl:onProperty :hasKnowledgeArea ;
-                                                            owl:allValuesFrom <http://www.w3.org/2004/02/skos/core#Concept>
+                                                            owl:allValuesFrom [ owl:intersectionOf ( <http://www.w3.org/2004/02/skos/core#Concept>
+                                                                                                     [ rdf:type owl:Restriction ;
+                                                                                                       owl:onProperty <http://www.w3.org/2004/02/skos/core#inScheme> ;
+                                                                                                       owl:someValuesFrom :KnowledgeArea
+                                                                                                     ]
+                                                                                                   ) ;
+                                                                                rdf:type owl:Class
+                                                                              ]
                                                           ] ,
                                                           [ rdf:type owl:Restriction ;
-                                                            owl:onProperty :hasProjectCategorization ;
-                                                            owl:allValuesFrom :ProjectClassification
+                                                            owl:onProperty :hasProjectClassification ;
+                                                            owl:allValuesFrom [ owl:intersectionOf ( <http://www.w3.org/2004/02/skos/core#Concept>
+                                                                                                     [ rdf:type owl:Restriction ;
+                                                                                                       owl:onProperty <http://www.w3.org/2004/02/skos/core#inScheme> ;
+                                                                                                       owl:someValuesFrom :ProjectClassification
+                                                                                                     ]
+                                                                                                   ) ;
+                                                                                rdf:type owl:Class
+                                                                              ]
                                                           ] ,
                                                           [ rdf:type owl:Restriction ;
                                                             owl:onProperty :isSupportedBy ;
@@ -6846,7 +7058,7 @@ Contents
                                                           ] ;
                                           <http://purl.obolibrary.org/obo/IAO_0000112> "An endeavor, frequently collaborative, that occurs over a finite period of time and is intended to achieve a particular aim." ;
                                           <http://purl.obolibrary.org/obo/IAO_0000115> "An endeavor, frequently collaborative, that occurs over a finite period of time and is intended to achieve a particular aim." ;
-                                          rdfs:comment "A vivo:Project is an entity imported from VIVO and extended according to CERIF specification. It can be defined as – a project in business and science is typically defined as a collaborative enterprise, frequently involving research or design, that is carefully planned to achieve a particular aim. Its configuration is inspired by the swrc:project and takes into account cerif:Project’s data properties. It encompasses all those properties and adds object properties roh:projectStatus (roh:Closed, roh:Open, roh:ProposalSubmitted, roh:Rejected) and roh:foreseenJustificationDate. This entity is linked with classes Organization, Person, ResearchObject, Funding, Expense, Activity o Concept. A project in ROH may require ethical validation which is expressed as roh:needsEthicalValidation set to true. A project might be correspond to a research project categorized through roh:ProjectClassification by means of object property roh:hasProjectCategorization or correspond to some grant associated to human resources (roh:HRClassification) associated through roh:hasHRClassification. Notice that a project is a proposal (PROPOSAL_SUBMITTED) until it passes to the OPEN or REJECTED status. When the project finishes it state passes to CLOSED." ;
+                                          rdfs:comment "A vivo:Project is an entity imported from VIVO and extended according to CERIF specification. It can be defined as – a project in business and science is typically defined as a collaborative enterprise, frequently involving research or design, that is carefully planned to achieve a particular aim. Its configuration is inspired by the swrc:project and takes into account cerif:Project’s data properties. It encompasses all those properties and adds object properties roh:projectStatus (roh:Closed, roh:Open, roh:ProposalSubmitted, roh:Rejected) and roh:foreseenJustificationDate. This entity is linked with classes Organization, Person, ResearchObject, Funding, Expense, Activity o Concept. A project in ROH may require ethical validation which is expressed as roh:needsEthicalValidation set to true. A project might be correspond to a research project categorized through roh:ProjectClassification by means of object property roh:hasProjectClassification or correspond to some grant associated to human resources (roh:HRClassification) associated through roh:hasHRClassification. Notice that a project is a proposal (PROPOSAL_SUBMITTED) until it passes to the OPEN or REJECTED status. When the project finishes it state passes to CLOSED." ;
                                           rdfs:label "Project"@en ,
                                                      "Proyecto"@es .
 
@@ -6956,7 +7168,8 @@ rdf:Seq rdf:type owl:Class .
 
 
 ###  http://www.w3.org/2004/02/skos/core#ConceptScheme
-<http://www.w3.org/2004/02/skos/core#ConceptScheme> rdf:type owl:Class .
+<http://www.w3.org/2004/02/skos/core#ConceptScheme> rdf:type owl:Class ;
+                                                    rdfs:label "Concept Scheme"@en .
 
 
 #################################################################
@@ -7194,6 +7407,21 @@ rdf:Seq rdf:type owl:Class .
 
 
 [ rdf:type owl:AllDisjointClasses ;
+  owl:members ( :AcademicSubject
+                :CompanyClassification
+                :Country
+                :ExpenseClassification
+                :FundingProgramClassification
+                :HRClassification
+                :KnowledgeArea
+                :ProjectClassification
+                :PropertyClassification
+                :ResearchProblem
+              )
+] .
+
+
+[ rdf:type owl:AllDisjointClasses ;
   owl:members ( :Accreditation
                 :Activity
                 :Expense
@@ -7375,48 +7603,10 @@ rdf:Seq rdf:type owl:Class .
 
 
 [ rdf:type owl:AllDisjointClasses ;
-  owl:members ( :ExpenseClassification
-                :FundingProgramClassification
-                :HRClassification
-                :KnowledgeArea
-                :ProjectClassification
-              )
-] .
-
-
-[ rdf:type owl:AllDisjointClasses ;
-  owl:members ( :ExpenseClassification
-                :FundingProgramClassification
-                :HRClassification
-                :KnowledgeArea
-                :ProjectClassification
-                :PropertyClassification
-              )
-] .
-
-
-[ rdf:type owl:AllDisjointClasses ;
-  owl:members ( :FundingProgramClassification
-                :HRClassification
-                :KnowledgeArea
-                :ProjectClassification
-              )
-] .
-
-
-[ rdf:type owl:AllDisjointClasses ;
   owl:members ( :Grant
                 :Loan
                 :Outsourcing
                 :RefundableAdvance
-              )
-] .
-
-
-[ rdf:type owl:AllDisjointClasses ;
-  owl:members ( :HRClassification
-                :KnowledgeArea
-                :ProjectClassification
               )
 ] .
 
