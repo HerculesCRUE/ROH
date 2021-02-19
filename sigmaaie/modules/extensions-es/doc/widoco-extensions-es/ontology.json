@@ -957,7 +957,7 @@
   } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@language" : "en",
-    "@value" : "ROH Spanish Extensions Modules"
+    "@value" : "ROH Spanish Extensions Module"
   } ],
   "http://www.w3.org/2002/07/owl#versionIRI" : [ {
     "@id" : "http://purl.org/roh/es/1.0"
@@ -1357,30 +1357,6 @@
     "@id" : "http://purl.org/roh#KnowledgeArea"
   } ]
 }, {
-  "@id" : "http://purl.org/roh/es#FomentoInvestigacionCientificoTecnica",
-  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
-  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
-    "@id" : "http://purl.org/roh/es#PlanEstatal2013-2016"
-  } ],
-  "http://www.w3.org/2002/07/owl#disjointWith" : [ {
-    "@id" : "http://purl.org/roh/es#PromocionTalento"
-  } ]
-}, {
-  "@id" : "http://purl.org/roh/es#FormacionI+D+i",
-  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
-  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
-    "@id" : "http://purl.org/roh/es#FormacionTalento"
-  } ]
-}, {
-  "@id" : "http://purl.org/roh/es#FormacionTalento",
-  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
-  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
-    "@id" : "http://purl.org/roh/es#PlanEstatal2017-2020"
-  } ],
-  "http://www.w3.org/2002/07/owl#disjointWith" : [ {
-    "@id" : "http://purl.org/roh/es#GeneracionConocimiento"
-  } ]
-}, {
   "@id" : "http://purl.org/roh/es#Gas",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
@@ -1425,17 +1401,7 @@
   } ]
 }, {
   "@id" : "http://purl.org/roh/es#GeneracionConocimiento",
-  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
-  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
-    "@language" : "es",
-    "@value" : "Generación de Conocimiento"
-  }, {
-    "@language" : "en",
-    "@value" : "Knowledge Generation"
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
-    "@id" : "http://purl.org/roh/es#PlanEstatal2017-2020"
-  } ]
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ]
 }, {
   "@id" : "http://purl.org/roh/es#General",
   "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://purl.org/roh/es#IVA" ],
@@ -1683,15 +1649,6 @@
     "@id" : "_:genid39"
   } ]
 }, {
-  "@id" : "http://purl.org/roh/es#Movilidad",
-  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
-  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
-    "@id" : "http://purl.org/roh/es#FormacionTalento"
-  } ],
-  "http://www.w3.org/2002/07/owl#disjointWith" : [ {
-    "@id" : "http://purl.org/roh/es#FormacionI+D+i"
-  } ]
-}, {
   "@id" : "http://purl.org/roh/es#OtrasComunicaciones",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
@@ -1798,21 +1755,6 @@
     "@value" : "Plan E"
   } ]
 }, {
-  "@id" : "http://purl.org/roh/es#PlanEstatal2013-2016",
-  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
-  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
-    "@id" : "http://purl.org/roh/project-classification#National"
-  } ],
-  "http://www.w3.org/2002/07/owl#disjointWith" : [ {
-    "@id" : "http://purl.org/roh/es#PlanEstatal2017-2020"
-  } ]
-}, {
-  "@id" : "http://purl.org/roh/es#PlanEstatal2017-2020",
-  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
-  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
-    "@id" : "http://purl.org/roh/project-classification#National"
-  } ]
-}, {
   "@id" : "http://purl.org/roh/es#Prensa",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
@@ -1868,12 +1810,6 @@
   } ],
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
     "@id" : "http://purl.org/roh#AcademicAccreditation"
-  } ]
-}, {
-  "@id" : "http://purl.org/roh/es#PromocionTalento",
-  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
-  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
-    "@id" : "http://purl.org/roh/es#PlanEstatal2013-2016"
   } ]
 }, {
   "@id" : "http://purl.org/roh/es#PropiedadIndustrial",
@@ -2104,36 +2040,6 @@
     "@id" : "_:genid63"
   }, {
     "@id" : "_:genid64"
-  } ]
-}, {
-  "@id" : "http://purl.org/roh/es#SubprogramaEstatalFormacion",
-  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
-  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
-    "@id" : "http://purl.org/roh/es#PromocionTalento"
-  } ],
-  "http://www.w3.org/2002/07/owl#disjointWith" : [ {
-    "@id" : "http://purl.org/roh/es#SubprogramaEstatalIncorporacion"
-  } ]
-}, {
-  "@id" : "http://purl.org/roh/es#SubprogramaEstatalIncorporacion",
-  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
-  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
-    "@id" : "http://purl.org/roh/es#PromocionTalento"
-  } ]
-}, {
-  "@id" : "http://purl.org/roh/es#SubprogramaFortalecimientoInstitucional",
-  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
-  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
-    "@id" : "http://purl.org/roh/es#FomentoInvestigacionCientificoTecnica"
-  } ],
-  "http://www.w3.org/2002/07/owl#disjointWith" : [ {
-    "@id" : "http://purl.org/roh/es#SubprogramaGeneracionConocimiento"
-  } ]
-}, {
-  "@id" : "http://purl.org/roh/es#SubprogramaGeneracionConocimiento",
-  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
-  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
-    "@id" : "http://purl.org/roh/es#FomentoInvestigacionCientificoTecnica"
   } ]
 }, {
   "@id" : "http://purl.org/roh/es#Suministros",

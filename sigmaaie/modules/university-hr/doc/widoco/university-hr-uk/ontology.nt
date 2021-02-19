@@ -48,16 +48,19 @@
 # #################################################################
 # 
 # 
-# http://purl.org/roh/mirror/vivo#AcademicPosition
-<http://purl.org/roh/mirror/vivo#AcademicPosition> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
-<http://purl.org/roh/mirror/vivo#AcademicPosition> <http://www.w3.org/2000/01/rdf-schema#label> "Academic Position"@en .
+# http://purl.org/roh#ResearcherPosition
+<http://purl.org/roh#ResearcherPosition> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://purl.org/roh#ResearcherPosition> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://purl.org/roh/mirror/vivo#Position> .
+<http://purl.org/roh#ResearcherPosition> <http://www.w3.org/2000/01/rdf-schema#label> "Researcher Position"@en .
 # 
 # http://purl.org/roh/mirror/vivo#FacultyAdministrativePosition
 <http://purl.org/roh/mirror/vivo#FacultyAdministrativePosition> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://purl.org/roh/mirror/vivo#FacultyAdministrativePosition> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://purl.org/roh/mirror/vivo#Position> .
 <http://purl.org/roh/mirror/vivo#FacultyAdministrativePosition> <http://www.w3.org/2000/01/rdf-schema#label> "Faculty Administrative Position"@en .
 # 
 # http://purl.org/roh/mirror/vivo#FacultyPosition
 <http://purl.org/roh/mirror/vivo#FacultyPosition> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://purl.org/roh/mirror/vivo#FacultyPosition> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://purl.org/roh/mirror/vivo#Position> .
 <http://purl.org/roh/mirror/vivo#FacultyPosition> <http://www.w3.org/2000/01/rdf-schema#label> "Faculty Position"@en .
 # 
 # http://purl.org/roh/mirror/vivo#Position
@@ -162,7 +165,7 @@
 # 
 # http://purl.org/roh/university-hr/uk#GB_UNIVERSITY_HR_GBRPROF
 <http://purl.org/roh/university-hr/uk#GB_UNIVERSITY_HR_GBRPROF> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
-<http://purl.org/roh/university-hr/uk#GB_UNIVERSITY_HR_GBRPROF> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://purl.org/roh/mirror/vivo#FacultyPosition> .
+<http://purl.org/roh/university-hr/uk#GB_UNIVERSITY_HR_GBRPROF> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://purl.org/roh#ResearcherPosition> .
 <http://purl.org/roh/university-hr/uk#GB_UNIVERSITY_HR_GBRPROF> <http://purl.org/roh#country> <http://publications.europa.eu/resource/authority/country/GBR> .
 <http://purl.org/roh/university-hr/uk#GB_UNIVERSITY_HR_GBRPROF> <http://purl.org/roh#hasCode> <http://purl.org/roh/university-hr/uk#GB_UNIVERSITY_HR_CODE_GBRPROF> .
 <http://purl.org/roh/university-hr/uk#GB_UNIVERSITY_HR_GBRPROF> <http://www.w3.org/2000/01/rdf-schema#label> "Professorial research fellow"@en .
@@ -175,7 +178,7 @@
 # 
 # http://purl.org/roh/university-hr/uk#GB_UNIVERSITY_HR_GBRREAASS
 <http://purl.org/roh/university-hr/uk#GB_UNIVERSITY_HR_GBRREAASS> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
-<http://purl.org/roh/university-hr/uk#GB_UNIVERSITY_HR_GBRREAASS> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://purl.org/roh/mirror/vivo#Position> .
+<http://purl.org/roh/university-hr/uk#GB_UNIVERSITY_HR_GBRREAASS> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://purl.org/roh#ResearcherPosition> .
 <http://purl.org/roh/university-hr/uk#GB_UNIVERSITY_HR_GBRREAASS> <http://purl.org/roh#country> <http://publications.europa.eu/resource/authority/country/GBR> .
 <http://purl.org/roh/university-hr/uk#GB_UNIVERSITY_HR_GBRREAASS> <http://purl.org/roh#hasCode> <http://purl.org/roh/university-hr/uk#GB_UNIVERSITY_HR_CODE_GBRREAASS> .
 <http://purl.org/roh/university-hr/uk#GB_UNIVERSITY_HR_GBRREAASS> <http://www.w3.org/2000/01/rdf-schema#label> "Research assistant"@en .
@@ -186,7 +189,7 @@
 # 
 # http://purl.org/roh/university-hr/uk#GB_UNIVERSITY_HR_GBRREAFEL
 <http://purl.org/roh/university-hr/uk#GB_UNIVERSITY_HR_GBRREAFEL> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
-<http://purl.org/roh/university-hr/uk#GB_UNIVERSITY_HR_GBRREAFEL> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://purl.org/roh/mirror/vivo#AcademicPosition> .
+<http://purl.org/roh/university-hr/uk#GB_UNIVERSITY_HR_GBRREAFEL> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://purl.org/roh#ResearcherPosition> .
 <http://purl.org/roh/university-hr/uk#GB_UNIVERSITY_HR_GBRREAFEL> <http://purl.org/roh#country> <http://publications.europa.eu/resource/authority/country/GBR> .
 <http://purl.org/roh/university-hr/uk#GB_UNIVERSITY_HR_GBRREAFEL> <http://purl.org/roh#hasCode> <http://purl.org/roh/university-hr/uk#GB_UNIVERSITY_HR_CODE_GBRREAFEL> .
 <http://purl.org/roh/university-hr/uk#GB_UNIVERSITY_HR_GBRREAFEL> <http://www.w3.org/2000/01/rdf-schema#label> "Research fellow"@en .
@@ -197,7 +200,7 @@
 # 
 # http://purl.org/roh/university-hr/uk#GB_UNIVERSITY_HR_GBRSENREAFEL
 <http://purl.org/roh/university-hr/uk#GB_UNIVERSITY_HR_GBRSENREAFEL> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
-<http://purl.org/roh/university-hr/uk#GB_UNIVERSITY_HR_GBRSENREAFEL> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://purl.org/roh/mirror/vivo#AcademicPosition> .
+<http://purl.org/roh/university-hr/uk#GB_UNIVERSITY_HR_GBRSENREAFEL> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://purl.org/roh#ResearcherPosition> .
 <http://purl.org/roh/university-hr/uk#GB_UNIVERSITY_HR_GBRSENREAFEL> <http://purl.org/roh#country> <http://publications.europa.eu/resource/authority/country/GBR> .
 <http://purl.org/roh/university-hr/uk#GB_UNIVERSITY_HR_GBRSENREAFEL> <http://purl.org/roh#hasCode> <http://purl.org/roh/university-hr/uk#GB_UNIVERSITY_HR_CODE_GBRSENREAFEL> .
 <http://purl.org/roh/university-hr/uk#GB_UNIVERSITY_HR_GBRSENREAFEL> <http://www.w3.org/2000/01/rdf-schema#label> "Senior research fellow"@en .

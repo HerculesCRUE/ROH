@@ -60,6 +60,7 @@
 
 ###  http://purl.org/roh#KnowledgeArea
 <http://purl.org/roh#KnowledgeArea> rdf:type owl:Class ;
+                                    rdfs:subClassOf <http://www.w3.org/2004/02/skos/core#ConceptScheme> ;
                                     rdfs:label "Knowledge Area"@en .
 
 
@@ -79,7 +80,7 @@
 
 ###  http://purl.org/roh/subject-areas#ESSubjectAreas1stList
 <http://purl.org/roh/subject-areas#ESSubjectAreas1stList> rdf:type owl:NamedIndividual ,
-                                                                   <http://www.w3.org/2004/02/skos/core#ConceptScheme> ;
+                                                                   <http://purl.org/roh#ESSubjectArea> ;
                                                           rdfs:label "Domains thématiques de premier niveau de l'Agence Espagnole pour la Recherche (AEI)"@fr ,
                                                                      "Dominis temàtics de primer nivell de l'Agència Estatal de Recerca (AEI)"@ca ,
                                                                      "FIXME"@eu ,
@@ -116,7 +117,7 @@
 
 ###  http://purl.org/roh/subject-areas#ESSubjectAreas2ndList
 <http://purl.org/roh/subject-areas#ESSubjectAreas2ndList> rdf:type owl:NamedIndividual ,
-                                                                   <http://www.w3.org/2004/02/skos/core#ConceptScheme> ;
+                                                                   <http://purl.org/roh#ESSubjectArea> ;
                                                           rdfs:label "Domains thématiques de second niveau de l'Agence Espagnole pour la Recherche (AEI)"@fr ,
                                                                      "Dominis temàtics de segon nivell de l'Agència Estatal de Recerca (AEI)"@ca ,
                                                                      "FIXME"@eu ,
@@ -153,7 +154,7 @@
 
 ###  http://purl.org/roh/subject-areas#ESSubjectAreas3rdList
 <http://purl.org/roh/subject-areas#ESSubjectAreas3rdList> rdf:type owl:NamedIndividual ,
-                                                                   <http://www.w3.org/2004/02/skos/core#ConceptScheme> ;
+                                                                   <http://www.w3.org/2004/02/skos/core#Concept> ;
                                                           rdfs:label "Domains thématiques de troisième niveau de l'Agence Espagnole pour la Recherche (AEI)"@fr ,
                                                                      "Dominis temàtics de tercer nivell de l'Agència Estatal de Recerca (AEI)"@ca ,
                                                                      "FIXME"@eu ,
@@ -190,7 +191,7 @@
 
 ###  http://purl.org/roh/subject-areas#ESSubjectCode1stList
 <http://purl.org/roh/subject-areas#ESSubjectCode1stList> rdf:type owl:NamedIndividual ,
-                                                                  <http://www.w3.org/2004/02/skos/core#ConceptScheme> ;
+                                                                  <http://www.w3.org/2004/02/skos/core#Concept> ;
                                                          rdfs:label "Codes des domains thématiques de premier niveau de l'Agence Espagnole pour la Recherche (AEI)"@fr ,
                                                                     "Codes for the first-level subject areas of Spain's State Research Agency (AEI)"@en ,
                                                                     "Codis dels dominis temàtics de primer nivell de l'Agència Estatal de Recerca (AEI)"@ca ,
@@ -221,7 +222,7 @@
 
 ###  http://purl.org/roh/subject-areas#ESSubjectCode2ndList
 <http://purl.org/roh/subject-areas#ESSubjectCode2ndList> rdf:type owl:NamedIndividual ,
-                                                                  <http://www.w3.org/2004/02/skos/core#ConceptScheme> ;
+                                                                  <http://purl.org/roh#ESSubjectArea> ;
                                                          rdfs:label "Codes des domains thématiques de second niveau de l'Agence Espagnole pour la Recherche (AEI)"@fr ,
                                                                     "Codes for the second-level subject areas of Spain's State Research Agency (AEI)"@en ,
                                                                     "Codis dels dominis temàtics de segon nivell de l'Agència Estatal de Recerca (AEI)"@ca ,
@@ -252,7 +253,7 @@
 
 ###  http://purl.org/roh/subject-areas#ESSubjectCode3rdList
 <http://purl.org/roh/subject-areas#ESSubjectCode3rdList> rdf:type owl:NamedIndividual ,
-                                                                  <http://www.w3.org/2004/02/skos/core#ConceptScheme> ;
+                                                                  <http://purl.org/roh#ESSubjectArea> ;
                                                          rdfs:label "Codes des domains thématiques de troisième niveau de l'Agence Espagnole pour la Recherche (AEI)"@fr ,
                                                                     "Codes for the third-level subject areas of Spain's State Research Agency (AEI)"@en ,
                                                                     "Codis dels dominis temàtics de tercer nivell de l'Agència Estatal de Recerca (AEI)"@ca ,
@@ -283,7 +284,7 @@
 
 ###  http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_1_CMIFQ
 <http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_1_CMIFQ> rdf:type owl:NamedIndividual ,
-                                                                           <http://purl.org/roh#ESSubjectArea> ;
+                                                                           <http://www.w3.org/2004/02/skos/core#Concept> ;
                                                                   <http://purl.org/roh#hasCode> <http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_1_CODE_CMIFQ> ;
                                                                   rdfs:label "Ciencias matemáticas, físicas, químicas e ingenierías" ;
                                                                   <http://www.w3.org/2004/02/skos/core#closeMatch> <http://skos.um.es/unescothes/C00568> ,
@@ -316,7 +317,7 @@
 
 ###  http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_1_CODE_CMIFQ
 <http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_1_CODE_CMIFQ> rdf:type owl:NamedIndividual ,
-                                                                                <http://purl.org/roh#ESSubjectArea> ;
+                                                                                <http://www.w3.org/2004/02/skos/core#Concept> ;
                                                                        <http://purl.org/roh#codeOf> <http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_1_CMIFQ> ;
                                                                        rdfs:label "CMIFQ" ;
                                                                        <http://www.w3.org/2004/02/skos/core#inScheme> <http://purl.org/roh/subject-areas#ESSubjectCode1stList> ;
@@ -325,7 +326,7 @@
 
 ###  http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_1_CODE_CSH
 <http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_1_CODE_CSH> rdf:type owl:NamedIndividual ,
-                                                                              <http://purl.org/roh#ESSubjectArea> ;
+                                                                              <http://www.w3.org/2004/02/skos/core#Concept> ;
                                                                      <http://purl.org/roh#codeOf> <http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_1_CSH> ;
                                                                      rdfs:label "CSH" ;
                                                                      <http://www.w3.org/2004/02/skos/core#inScheme> <http://purl.org/roh/subject-areas#ESSubjectCode1stList> ;
@@ -334,7 +335,7 @@
 
 ###  http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_1_CODE_CV
 <http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_1_CODE_CV> rdf:type owl:NamedIndividual ,
-                                                                             <http://purl.org/roh#ESSubjectArea> ;
+                                                                             <http://www.w3.org/2004/02/skos/core#Concept> ;
                                                                     <http://purl.org/roh#codeOf> <http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_1_CV> ;
                                                                     rdfs:label "CV" ;
                                                                     <http://www.w3.org/2004/02/skos/core#inScheme> <http://purl.org/roh/subject-areas#ESSubjectCode1stList> ;
@@ -343,7 +344,7 @@
 
 ###  http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_1_CSH
 <http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_1_CSH> rdf:type owl:NamedIndividual ,
-                                                                         <http://purl.org/roh#ESSubjectArea> ;
+                                                                         <http://www.w3.org/2004/02/skos/core#Concept> ;
                                                                 <http://purl.org/roh#hasCode> <http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_1_CODE_CSH> ;
                                                                 rdfs:label "Ciencias sociales y humanidades" ;
                                                                 <http://www.w3.org/2004/02/skos/core#closeMatch> <http://skos.um.es/unescothes/C03719> ;
@@ -373,7 +374,7 @@
 
 ###  http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_1_CV
 <http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_1_CV> rdf:type owl:NamedIndividual ,
-                                                                        <http://purl.org/roh#ESSubjectArea> ;
+                                                                        <http://www.w3.org/2004/02/skos/core#Concept> ;
                                                                <http://purl.org/roh#hasCode> <http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_1_CODE_CV> ;
                                                                rdfs:label "Ciencias de la vida" ;
                                                                <http://www.w3.org/2004/02/skos/core#exactMatch> <http://skos.um.es/unescothes/C02293> ;
@@ -403,7 +404,7 @@
 
 ###  http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_2_BIO
 <http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_2_BIO> rdf:type owl:NamedIndividual ,
-                                                                         <http://purl.org/roh#ESSubjectArea> ;
+                                                                         <http://www.w3.org/2004/02/skos/core#Concept> ;
                                                                 <http://purl.org/roh#hasCode> <http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_2_CODE_BIO> ;
                                                                 rdfs:label "Biociencias y biotecnología" ;
                                                                 <http://www.w3.org/2004/02/skos/core#broader> <http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_1_CV> ;
@@ -422,7 +423,7 @@
 
 ###  http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_2_BME
 <http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_2_BME> rdf:type owl:NamedIndividual ,
-                                                                         <http://purl.org/roh#ESSubjectArea> ;
+                                                                         <http://www.w3.org/2004/02/skos/core#Concept> ;
                                                                 <http://purl.org/roh#hasCode> <http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_2_CODE_BME> ;
                                                                 rdfs:label "Biomedicina" ;
                                                                 <http://www.w3.org/2004/02/skos/core#broader> <http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_1_CV> ;
@@ -442,7 +443,7 @@
 
 ###  http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_2_CAA
 <http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_2_CAA> rdf:type owl:NamedIndividual ,
-                                                                         <http://purl.org/roh#ESSubjectArea> ;
+                                                                         <http://www.w3.org/2004/02/skos/core#Concept> ;
                                                                 <http://purl.org/roh#hasCode> <http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_2_CODE_CAA> ;
                                                                 rdfs:label "Ciencias agrarias y agroalimentarias" ;
                                                                 <http://www.w3.org/2004/02/skos/core#broader> <http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_1_CV> ;
@@ -460,7 +461,7 @@
 
 ###  http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_2_CODE_BIO
 <http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_2_CODE_BIO> rdf:type owl:NamedIndividual ,
-                                                                              <http://purl.org/roh#ESSubjectArea> ;
+                                                                              <http://www.w3.org/2004/02/skos/core#Concept> ;
                                                                      <http://purl.org/roh#codeOf> <http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_2_BIO> ;
                                                                      rdfs:label "BIO" ;
                                                                      <http://www.w3.org/2004/02/skos/core#inScheme> <http://purl.org/roh/subject-areas#ESSubjectCode2ndList> ;
@@ -469,7 +470,7 @@
 
 ###  http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_2_CODE_BME
 <http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_2_CODE_BME> rdf:type owl:NamedIndividual ,
-                                                                              <http://purl.org/roh#ESSubjectArea> ;
+                                                                              <http://www.w3.org/2004/02/skos/core#Concept> ;
                                                                      <http://purl.org/roh#codeOf> <http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_2_BME> ;
                                                                      rdfs:label "BME" ;
                                                                      <http://www.w3.org/2004/02/skos/core#inScheme> <http://purl.org/roh/subject-areas#ESSubjectCode2ndList> ;
@@ -478,7 +479,7 @@
 
 ###  http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_2_CODE_CAA
 <http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_2_CODE_CAA> rdf:type owl:NamedIndividual ,
-                                                                              <http://purl.org/roh#ESSubjectArea> ;
+                                                                              <http://www.w3.org/2004/02/skos/core#Concept> ;
                                                                      <http://purl.org/roh#codeOf> <http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_2_CAA> ;
                                                                      rdfs:label "CAA" ;
                                                                      <http://www.w3.org/2004/02/skos/core#inScheme> <http://purl.org/roh/subject-areas#ESSubjectCode2ndList> ;
@@ -487,7 +488,7 @@
 
 ###  http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_2_CODE_CSO
 <http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_2_CODE_CSO> rdf:type owl:NamedIndividual ,
-                                                                              <http://purl.org/roh#ESSubjectArea> ;
+                                                                              <http://www.w3.org/2004/02/skos/core#Concept> ;
                                                                      <http://purl.org/roh#codeOf> <http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_2_CSO> ;
                                                                      rdfs:label "CSO" ;
                                                                      <http://www.w3.org/2004/02/skos/core#inScheme> <http://purl.org/roh/subject-areas#ESSubjectCode2ndList> ;
@@ -496,7 +497,7 @@
 
 ###  http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_2_CODE_CTM
 <http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_2_CODE_CTM> rdf:type owl:NamedIndividual ,
-                                                                              <http://purl.org/roh#ESSubjectArea> ;
+                                                                              <http://www.w3.org/2004/02/skos/core#Concept> ;
                                                                      <http://purl.org/roh#codeOf> <http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_2_CTM> ;
                                                                      rdfs:label "CTM" ;
                                                                      <http://www.w3.org/2004/02/skos/core#inScheme> <http://purl.org/roh/subject-areas#ESSubjectCode2ndList> ;
@@ -505,7 +506,7 @@
 
 ###  http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_2_CODE_CTQ
 <http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_2_CODE_CTQ> rdf:type owl:NamedIndividual ,
-                                                                              <http://purl.org/roh#ESSubjectArea> ;
+                                                                              <http://www.w3.org/2004/02/skos/core#Concept> ;
                                                                      <http://purl.org/roh#codeOf> <http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_2_CTQ> ;
                                                                      rdfs:label "CTQ" ;
                                                                      <http://www.w3.org/2004/02/skos/core#inScheme> <http://purl.org/roh/subject-areas#ESSubjectCode2ndList> ;
@@ -514,7 +515,7 @@
 
 ###  http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_2_CODE_DER
 <http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_2_CODE_DER> rdf:type owl:NamedIndividual ,
-                                                                              <http://purl.org/roh#ESSubjectArea> ;
+                                                                              <http://www.w3.org/2004/02/skos/core#Concept> ;
                                                                      <http://purl.org/roh#codeOf> <http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_2_DER> ;
                                                                      rdfs:label "DER" ;
                                                                      <http://www.w3.org/2004/02/skos/core#inScheme> <http://purl.org/roh/subject-areas#ESSubjectCode2ndList> ;
@@ -523,7 +524,7 @@
 
 ###  http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_2_CODE_ECO
 <http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_2_CODE_ECO> rdf:type owl:NamedIndividual ,
-                                                                              <http://purl.org/roh#ESSubjectArea> ;
+                                                                              <http://www.w3.org/2004/02/skos/core#Concept> ;
                                                                      <http://purl.org/roh#codeOf> <http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_2_ECO> ;
                                                                      rdfs:label "ECO" ;
                                                                      <http://www.w3.org/2004/02/skos/core#inScheme> <http://purl.org/roh/subject-areas#ESSubjectCode2ndList> ;
@@ -532,7 +533,7 @@
 
 ###  http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_2_CODE_EDU
 <http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_2_CODE_EDU> rdf:type owl:NamedIndividual ,
-                                                                              <http://purl.org/roh#ESSubjectArea> ;
+                                                                              <http://www.w3.org/2004/02/skos/core#Concept> ;
                                                                      <http://purl.org/roh#codeOf> <http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_2_EDU> ;
                                                                      rdfs:label "EDU" ;
                                                                      <http://www.w3.org/2004/02/skos/core#inScheme> <http://purl.org/roh/subject-areas#ESSubjectCode2ndList> ;
@@ -541,7 +542,7 @@
 
 ###  http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_2_CODE_EYT
 <http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_2_CODE_EYT> rdf:type owl:NamedIndividual ,
-                                                                              <http://purl.org/roh#ESSubjectArea> ;
+                                                                              <http://www.w3.org/2004/02/skos/core#Concept> ;
                                                                      <http://purl.org/roh#codeOf> <http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_2_EYT> ;
                                                                      rdfs:label "EYT" ;
                                                                      <http://www.w3.org/2004/02/skos/core#inScheme> <http://purl.org/roh/subject-areas#ESSubjectCode2ndList> ;
@@ -550,7 +551,7 @@
 
 ###  http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_2_CODE_FIS
 <http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_2_CODE_FIS> rdf:type owl:NamedIndividual ,
-                                                                              <http://purl.org/roh#ESSubjectArea> ;
+                                                                              <http://www.w3.org/2004/02/skos/core#Concept> ;
                                                                      <http://purl.org/roh#codeOf> <http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_2_FIS> ;
                                                                      rdfs:label "FIS" ;
                                                                      <http://www.w3.org/2004/02/skos/core#inScheme> <http://purl.org/roh/subject-areas#ESSubjectCode2ndList> ;
@@ -559,7 +560,7 @@
 
 ###  http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_2_CODE_FLA
 <http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_2_CODE_FLA> rdf:type owl:NamedIndividual ,
-                                                                              <http://purl.org/roh#ESSubjectArea> ;
+                                                                              <http://www.w3.org/2004/02/skos/core#Concept> ;
                                                                      <http://purl.org/roh#codeOf> <http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_2_FLA> ;
                                                                      rdfs:label "FLA" ;
                                                                      <http://www.w3.org/2004/02/skos/core#inScheme> <http://purl.org/roh/subject-areas#ESSubjectCode2ndList> ;
@@ -568,7 +569,7 @@
 
 ###  http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_2_CODE_MAT
 <http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_2_CODE_MAT> rdf:type owl:NamedIndividual ,
-                                                                              <http://purl.org/roh#ESSubjectArea> ;
+                                                                              <http://www.w3.org/2004/02/skos/core#Concept> ;
                                                                      <http://purl.org/roh#codeOf> <http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_2_MAT> ;
                                                                      rdfs:label "MAT" ;
                                                                      <http://www.w3.org/2004/02/skos/core#inScheme> <http://purl.org/roh/subject-areas#ESSubjectCode2ndList> ;
@@ -577,7 +578,7 @@
 
 ###  http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_2_CODE_MLP
 <http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_2_CODE_MLP> rdf:type owl:NamedIndividual ,
-                                                                              <http://purl.org/roh#ESSubjectArea> ;
+                                                                              <http://www.w3.org/2004/02/skos/core#Concept> ;
                                                                      <http://purl.org/roh#codeOf> <http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_2_MLP> ;
                                                                      rdfs:label "MLP" ;
                                                                      <http://www.w3.org/2004/02/skos/core#inScheme> <http://purl.org/roh/subject-areas#ESSubjectCode2ndList> ;
@@ -586,7 +587,7 @@
 
 ###  http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_2_CODE_MTM
 <http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_2_CODE_MTM> rdf:type owl:NamedIndividual ,
-                                                                              <http://purl.org/roh#ESSubjectArea> ;
+                                                                              <http://www.w3.org/2004/02/skos/core#Concept> ;
                                                                      <http://purl.org/roh#codeOf> <http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_2_MTM> ;
                                                                      rdfs:label "MTM" ;
                                                                      <http://www.w3.org/2004/02/skos/core#inScheme> <http://purl.org/roh/subject-areas#ESSubjectCode2ndList> ;
@@ -595,7 +596,7 @@
 
 ###  http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_2_CODE_PHA
 <http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_2_CODE_PHA> rdf:type owl:NamedIndividual ,
-                                                                              <http://purl.org/roh#ESSubjectArea> ;
+                                                                              <http://www.w3.org/2004/02/skos/core#Concept> ;
                                                                      <http://purl.org/roh#codeOf> <http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_2_PHA> ;
                                                                      rdfs:label "PHA" ;
                                                                      <http://www.w3.org/2004/02/skos/core#inScheme> <http://purl.org/roh/subject-areas#ESSubjectCode2ndList> ;
@@ -604,7 +605,7 @@
 
 ###  http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_2_CODE_PIN
 <http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_2_CODE_PIN> rdf:type owl:NamedIndividual ,
-                                                                              <http://purl.org/roh#ESSubjectArea> ;
+                                                                              <http://www.w3.org/2004/02/skos/core#Concept> ;
                                                                      <http://purl.org/roh#codeOf> <http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_2_PIN> ;
                                                                      rdfs:label "PIN" ;
                                                                      <http://www.w3.org/2004/02/skos/core#inScheme> <http://purl.org/roh/subject-areas#ESSubjectCode2ndList> ;
@@ -613,7 +614,7 @@
 
 ###  http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_2_CODE_PSI
 <http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_2_CODE_PSI> rdf:type owl:NamedIndividual ,
-                                                                              <http://purl.org/roh#ESSubjectArea> ;
+                                                                              <http://www.w3.org/2004/02/skos/core#Concept> ;
                                                                      <http://purl.org/roh#codeOf> <http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_2_PSI> ;
                                                                      rdfs:label "PSI" ;
                                                                      <http://www.w3.org/2004/02/skos/core#inScheme> <http://purl.org/roh/subject-areas#ESSubjectCode2ndList> ;
@@ -622,7 +623,7 @@
 
 ###  http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_2_CODE_TIC
 <http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_2_CODE_TIC> rdf:type owl:NamedIndividual ,
-                                                                              <http://purl.org/roh#ESSubjectArea> ;
+                                                                              <http://www.w3.org/2004/02/skos/core#Concept> ;
                                                                      <http://purl.org/roh#codeOf> <http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_2_TIC> ;
                                                                      rdfs:label "TIC" ;
                                                                      <http://www.w3.org/2004/02/skos/core#inScheme> <http://purl.org/roh/subject-areas#ESSubjectCode2ndList> ;
@@ -631,7 +632,7 @@
 
 ###  http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_2_CSO
 <http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_2_CSO> rdf:type owl:NamedIndividual ,
-                                                                         <http://purl.org/roh#ESSubjectArea> ;
+                                                                         <http://www.w3.org/2004/02/skos/core#Concept> ;
                                                                 <http://purl.org/roh#hasCode> <http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_2_CODE_CSO> ;
                                                                 rdfs:label "Ciencias sociales" ;
                                                                 <http://www.w3.org/2004/02/skos/core#broader> <http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_1_CSH> ;
@@ -650,7 +651,7 @@
 
 ###  http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_2_CTM
 <http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_2_CTM> rdf:type owl:NamedIndividual ,
-                                                                         <http://purl.org/roh#ESSubjectArea> ;
+                                                                         <http://www.w3.org/2004/02/skos/core#Concept> ;
                                                                 <http://purl.org/roh#hasCode> <http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_2_CODE_CTM> ;
                                                                 rdfs:label "Ciencias y tecnologías medioambientales" ;
                                                                 <http://www.w3.org/2004/02/skos/core#broader> <http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_1_CV> ;
@@ -669,7 +670,7 @@
 
 ###  http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_2_CTQ
 <http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_2_CTQ> rdf:type owl:NamedIndividual ,
-                                                                         <http://purl.org/roh#ESSubjectArea> ;
+                                                                         <http://www.w3.org/2004/02/skos/core#Concept> ;
                                                                 <http://purl.org/roh#hasCode> <http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_2_CODE_CTQ> ;
                                                                 rdfs:label "Ciencias y tecnologías químicas" ;
                                                                 <http://www.w3.org/2004/02/skos/core#broader> <http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_1_CMIFQ> ;
@@ -688,7 +689,7 @@
 
 ###  http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_2_DER
 <http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_2_DER> rdf:type owl:NamedIndividual ,
-                                                                         <http://purl.org/roh#ESSubjectArea> ;
+                                                                         <http://www.w3.org/2004/02/skos/core#Concept> ;
                                                                 <http://purl.org/roh#hasCode> <http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_2_CODE_DER> ;
                                                                 rdfs:label "Derecho" ;
                                                                 <http://www.w3.org/2004/02/skos/core#broader> <http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_1_CSH> ;
@@ -707,7 +708,7 @@
 
 ###  http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_2_ECO
 <http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_2_ECO> rdf:type owl:NamedIndividual ,
-                                                                         <http://purl.org/roh#ESSubjectArea> ;
+                                                                         <http://www.w3.org/2004/02/skos/core#Concept> ;
                                                                 <http://purl.org/roh#hasCode> <http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_2_CODE_ECO> ;
                                                                 rdfs:label "Economía" ;
                                                                 <http://www.w3.org/2004/02/skos/core#broader> <http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_1_CSH> ;
@@ -726,7 +727,7 @@
 
 ###  http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_2_EDU
 <http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_2_EDU> rdf:type owl:NamedIndividual ,
-                                                                         <http://purl.org/roh#ESSubjectArea> ;
+                                                                         <http://www.w3.org/2004/02/skos/core#Concept> ;
                                                                 <http://purl.org/roh#hasCode> <http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_2_CODE_EDU> ;
                                                                 rdfs:label "Ciencias de la educación" ;
                                                                 <http://www.w3.org/2004/02/skos/core#broader> <http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_1_CSH> ;
@@ -745,7 +746,7 @@
 
 ###  http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_2_EYT
 <http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_2_EYT> rdf:type owl:NamedIndividual ,
-                                                                         <http://purl.org/roh#ESSubjectArea> ;
+                                                                         <http://www.w3.org/2004/02/skos/core#Concept> ;
                                                                 <http://purl.org/roh#hasCode> <http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_2_CODE_EYT> ;
                                                                 rdfs:label "Energía y transporte" ;
                                                                 <http://www.w3.org/2004/02/skos/core#broader> <http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_1_CMIFQ> ;
@@ -765,7 +766,7 @@
 
 ###  http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_2_FIS
 <http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_2_FIS> rdf:type owl:NamedIndividual ,
-                                                                         <http://purl.org/roh#ESSubjectArea> ;
+                                                                         <http://www.w3.org/2004/02/skos/core#Concept> ;
                                                                 <http://purl.org/roh#hasCode> <http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_2_CODE_FIS> ;
                                                                 rdfs:label "Ciencias físicas" ;
                                                                 <http://www.w3.org/2004/02/skos/core#broader> <http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_1_CMIFQ> ;
@@ -784,7 +785,7 @@
 
 ###  http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_2_FLA
 <http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_2_FLA> rdf:type owl:NamedIndividual ,
-                                                                         <http://purl.org/roh#ESSubjectArea> ;
+                                                                         <http://www.w3.org/2004/02/skos/core#Concept> ;
                                                                 <http://purl.org/roh#hasCode> <http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_2_CODE_FLA> ;
                                                                 rdfs:label "Cultura: filología, literatura y arte" ;
                                                                 <http://www.w3.org/2004/02/skos/core#broader> <http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_1_CSH> ;
@@ -802,7 +803,7 @@
 
 ###  http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_2_MAT
 <http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_2_MAT> rdf:type owl:NamedIndividual ,
-                                                                         <http://purl.org/roh#ESSubjectArea> ;
+                                                                         <http://www.w3.org/2004/02/skos/core#Concept> ;
                                                                 <http://purl.org/roh#hasCode> <http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_2_CODE_MAT> ;
                                                                 rdfs:label "Ciencias y tecnologías de materiales" ;
                                                                 <http://www.w3.org/2004/02/skos/core#broader> <http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_1_CMIFQ> ;
@@ -820,7 +821,7 @@
 
 ###  http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_2_MLP
 <http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_2_MLP> rdf:type owl:NamedIndividual ,
-                                                                         <http://purl.org/roh#ESSubjectArea> ;
+                                                                         <http://www.w3.org/2004/02/skos/core#Concept> ;
                                                                 <http://purl.org/roh#hasCode> <http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_2_CODE_MLP> ;
                                                                 rdfs:label "Mente, lenguaje y pensamiento" ;
                                                                 <http://www.w3.org/2004/02/skos/core#broader> <http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_1_CSH> ;
@@ -841,7 +842,7 @@
 
 ###  http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_2_MTM
 <http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_2_MTM> rdf:type owl:NamedIndividual ,
-                                                                         <http://purl.org/roh#ESSubjectArea> ;
+                                                                         <http://www.w3.org/2004/02/skos/core#Concept> ;
                                                                 <http://purl.org/roh#hasCode> <http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_2_CODE_MTM> ;
                                                                 rdfs:label "Ciencias matemáticas" ;
                                                                 <http://www.w3.org/2004/02/skos/core#broader> <http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_1_CMIFQ> ;
@@ -860,7 +861,7 @@
 
 ###  http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_2_PHA
 <http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_2_PHA> rdf:type owl:NamedIndividual ,
-                                                                         <http://purl.org/roh#ESSubjectArea> ;
+                                                                         <http://www.w3.org/2004/02/skos/core#Concept> ;
                                                                 <http://purl.org/roh#hasCode> <http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_2_CODE_PHA> ;
                                                                 rdfs:label "Estudios del pasado: historia y arqueología" ;
                                                                 <http://www.w3.org/2004/02/skos/core#broader> <http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_1_CSH> ;
@@ -878,7 +879,7 @@
 
 ###  http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_2_PIN
 <http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_2_PIN> rdf:type owl:NamedIndividual ,
-                                                                         <http://purl.org/roh#ESSubjectArea> ;
+                                                                         <http://www.w3.org/2004/02/skos/core#Concept> ;
                                                                 <http://purl.org/roh#hasCode> <http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_2_CODE_PIN> ;
                                                                 rdfs:label "Producción industrial, ingeniería civil e ingenierías para la sociedad" ;
                                                                 <http://www.w3.org/2004/02/skos/core#broader> <http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_1_CMIFQ> ;
@@ -898,7 +899,7 @@
 
 ###  http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_2_PSI
 <http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_2_PSI> rdf:type owl:NamedIndividual ,
-                                                                         <http://purl.org/roh#ESSubjectArea> ;
+                                                                         <http://www.w3.org/2004/02/skos/core#Concept> ;
                                                                 <http://purl.org/roh#hasCode> <http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_2_CODE_PSI> ;
                                                                 rdfs:label "Psicología" ;
                                                                 <http://www.w3.org/2004/02/skos/core#broader> <http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_1_CSH> ;
@@ -917,7 +918,7 @@
 
 ###  http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_2_TIC
 <http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_2_TIC> rdf:type owl:NamedIndividual ,
-                                                                         <http://purl.org/roh#ESSubjectArea> ;
+                                                                         <http://www.w3.org/2004/02/skos/core#Concept> ;
                                                                 <http://purl.org/roh#hasCode> <http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_2_CODE_TIC> ;
                                                                 rdfs:label "Tecnologías de la información y de las comunicaciones" ;
                                                                 <http://www.w3.org/2004/02/skos/core#broader> <http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_1_CMIFQ> ;
@@ -937,7 +938,7 @@
 
 ###  http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_3_ALI
 <http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_3_ALI> rdf:type owl:NamedIndividual ,
-                                                                         <http://purl.org/roh#ESSubjectArea> ;
+                                                                         <http://www.w3.org/2004/02/skos/core#Concept> ;
                                                                 <http://purl.org/roh#hasCode> <http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_3_CODE_ALI> ;
                                                                 rdfs:label "Ciencias y tecnologías de alimentos" ;
                                                                 <http://www.w3.org/2004/02/skos/core#broader> <http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_2_CAA> ;
@@ -956,7 +957,7 @@
 
 ###  http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_3_ARQ
 <http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_3_ARQ> rdf:type owl:NamedIndividual ,
-                                                                         <http://purl.org/roh#ESSubjectArea> ;
+                                                                         <http://www.w3.org/2004/02/skos/core#Concept> ;
                                                                 <http://purl.org/roh#hasCode> <http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_3_CODE_ARQ> ;
                                                                 rdfs:label "Arqueología" ;
                                                                 <http://www.w3.org/2004/02/skos/core#broader> <http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_2_PHA> ;
@@ -974,7 +975,7 @@
 
 ###  http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_3_ART
 <http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_3_ART> rdf:type owl:NamedIndividual ,
-                                                                         <http://purl.org/roh#ESSubjectArea> ;
+                                                                         <http://www.w3.org/2004/02/skos/core#Concept> ;
                                                                 <http://purl.org/roh#hasCode> <http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_3_CODE_ART> ;
                                                                 rdfs:label "Arte, bellas artes, museística" ;
                                                                 <http://www.w3.org/2004/02/skos/core#broader> <http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_2_FLA> ;
@@ -994,7 +995,7 @@
 
 ###  http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_3_AYA
 <http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_3_AYA> rdf:type owl:NamedIndividual ,
-                                                                         <http://purl.org/roh#ESSubjectArea> ;
+                                                                         <http://www.w3.org/2004/02/skos/core#Concept> ;
                                                                 <http://purl.org/roh#hasCode> <http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_3_CODE_AYA> ;
                                                                 rdfs:label "Astronomía y astrofísica" ;
                                                                 <http://www.w3.org/2004/02/skos/core#broader> <http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_2_FIS> ;
@@ -1014,7 +1015,7 @@
 
 ###  http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_3_AYF
 <http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_3_AYF> rdf:type owl:NamedIndividual ,
-                                                                         <http://purl.org/roh#ESSubjectArea> ;
+                                                                         <http://www.w3.org/2004/02/skos/core#Concept> ;
                                                                 <http://purl.org/roh#hasCode> <http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_3_CODE_AYF> ;
                                                                 rdfs:label "Agricultura y forestal" ;
                                                                 <http://www.w3.org/2004/02/skos/core#broader> <http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_2_CAA> ;
@@ -1034,7 +1035,7 @@
 
 ###  http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_3_BDV
 <http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_3_BDV> rdf:type owl:NamedIndividual ,
-                                                                         <http://purl.org/roh#ESSubjectArea> ;
+                                                                         <http://www.w3.org/2004/02/skos/core#Concept> ;
                                                                 <http://purl.org/roh#hasCode> <http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_3_CODE_BDV> ;
                                                                 rdfs:label "Biodiversidad" ;
                                                                 <http://www.w3.org/2004/02/skos/core#broader> <http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_2_CTM> ;
@@ -1053,7 +1054,7 @@
 
 ###  http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_3_BIF
 <http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_3_BIF> rdf:type owl:NamedIndividual ,
-                                                                         <http://purl.org/roh#ESSubjectArea> ;
+                                                                         <http://www.w3.org/2004/02/skos/core#Concept> ;
                                                                 <http://purl.org/roh#hasCode> <http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_3_CODE_BIF> ;
                                                                 rdfs:label "Biología integrativa y fisiología" ;
                                                                 <http://www.w3.org/2004/02/skos/core#broader> <http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_2_BIO> ;
@@ -1071,7 +1072,7 @@
 
 ###  http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_3_BMC
 <http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_3_BMC> rdf:type owl:NamedIndividual ,
-                                                                         <http://purl.org/roh#ESSubjectArea> ;
+                                                                         <http://www.w3.org/2004/02/skos/core#Concept> ;
                                                                 <http://purl.org/roh#hasCode> <http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_3_CODE_BMC> ;
                                                                 rdfs:label "Biología molecular y celular" ;
                                                                 <http://www.w3.org/2004/02/skos/core#broader> <http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_2_BIO> ;
@@ -1091,7 +1092,7 @@
 
 ###  http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_3_BTC
 <http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_3_BTC> rdf:type owl:NamedIndividual ,
-                                                                         <http://purl.org/roh#ESSubjectArea> ;
+                                                                         <http://www.w3.org/2004/02/skos/core#Concept> ;
                                                                 <http://purl.org/roh#hasCode> <http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_3_CODE_BTC> ;
                                                                 rdfs:label "Biotecnología" ;
                                                                 <http://www.w3.org/2004/02/skos/core#broader> <http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_2_BIO> ;
@@ -1110,7 +1111,7 @@
 
 ###  http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_3_CAN
 <http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_3_CAN> rdf:type owl:NamedIndividual ,
-                                                                         <http://purl.org/roh#ESSubjectArea> ;
+                                                                         <http://www.w3.org/2004/02/skos/core#Concept> ;
                                                                 <http://purl.org/roh#hasCode> <http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_3_CODE_CAN> ;
                                                                 rdfs:label "Cáncer" ;
                                                                 <http://www.w3.org/2004/02/skos/core#broader> <http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_2_BME> ;
@@ -1129,7 +1130,7 @@
 
 ###  http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_3_CODE_ALI
 <http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_3_CODE_ALI> rdf:type owl:NamedIndividual ,
-                                                                              <http://purl.org/roh#ESSubjectArea> ;
+                                                                              <http://www.w3.org/2004/02/skos/core#Concept> ;
                                                                      <http://purl.org/roh#codeOf> <http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_3_ALI> ;
                                                                      rdfs:label "ALI" ;
                                                                      <http://www.w3.org/2004/02/skos/core#inScheme> <http://purl.org/roh/subject-areas#ESSubjectCode3rdList> ;
@@ -1138,7 +1139,7 @@
 
 ###  http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_3_CODE_ARQ
 <http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_3_CODE_ARQ> rdf:type owl:NamedIndividual ,
-                                                                              <http://purl.org/roh#ESSubjectArea> ;
+                                                                              <http://www.w3.org/2004/02/skos/core#Concept> ;
                                                                      <http://purl.org/roh#codeOf> <http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_3_ARQ> ;
                                                                      rdfs:label "ARQ" ;
                                                                      <http://www.w3.org/2004/02/skos/core#inScheme> <http://purl.org/roh/subject-areas#ESSubjectCode3rdList> ;
@@ -1147,7 +1148,7 @@
 
 ###  http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_3_CODE_ART
 <http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_3_CODE_ART> rdf:type owl:NamedIndividual ,
-                                                                              <http://purl.org/roh#ESSubjectArea> ;
+                                                                              <http://www.w3.org/2004/02/skos/core#Concept> ;
                                                                      <http://purl.org/roh#codeOf> <http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_3_ART> ;
                                                                      rdfs:label "ART" ;
                                                                      <http://www.w3.org/2004/02/skos/core#inScheme> <http://purl.org/roh/subject-areas#ESSubjectCode3rdList> ;
@@ -1156,7 +1157,7 @@
 
 ###  http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_3_CODE_AYA
 <http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_3_CODE_AYA> rdf:type owl:NamedIndividual ,
-                                                                              <http://purl.org/roh#ESSubjectArea> ;
+                                                                              <http://www.w3.org/2004/02/skos/core#Concept> ;
                                                                      <http://purl.org/roh#codeOf> <http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_3_AYA> ;
                                                                      rdfs:label "AYA" ;
                                                                      <http://www.w3.org/2004/02/skos/core#inScheme> <http://purl.org/roh/subject-areas#ESSubjectCode3rdList> ;
@@ -1165,7 +1166,7 @@
 
 ###  http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_3_CODE_AYF
 <http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_3_CODE_AYF> rdf:type owl:NamedIndividual ,
-                                                                              <http://purl.org/roh#ESSubjectArea> ;
+                                                                              <http://www.w3.org/2004/02/skos/core#Concept> ;
                                                                      <http://purl.org/roh#codeOf> <http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_3_AYF> ;
                                                                      rdfs:label "AYF" ;
                                                                      <http://www.w3.org/2004/02/skos/core#inScheme> <http://purl.org/roh/subject-areas#ESSubjectCode3rdList> ;
@@ -1174,7 +1175,7 @@
 
 ###  http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_3_CODE_BDV
 <http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_3_CODE_BDV> rdf:type owl:NamedIndividual ,
-                                                                              <http://purl.org/roh#ESSubjectArea> ;
+                                                                              <http://www.w3.org/2004/02/skos/core#Concept> ;
                                                                      <http://purl.org/roh#codeOf> <http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_3_BDV> ;
                                                                      rdfs:label "BDV" ;
                                                                      <http://www.w3.org/2004/02/skos/core#inScheme> <http://purl.org/roh/subject-areas#ESSubjectCode3rdList> ;
@@ -1183,7 +1184,7 @@
 
 ###  http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_3_CODE_BIF
 <http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_3_CODE_BIF> rdf:type owl:NamedIndividual ,
-                                                                              <http://purl.org/roh#ESSubjectArea> ;
+                                                                              <http://www.w3.org/2004/02/skos/core#Concept> ;
                                                                      <http://purl.org/roh#codeOf> <http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_3_BIF> ;
                                                                      rdfs:label "BIF" ;
                                                                      <http://www.w3.org/2004/02/skos/core#inScheme> <http://purl.org/roh/subject-areas#ESSubjectCode3rdList> ;
@@ -1192,7 +1193,7 @@
 
 ###  http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_3_CODE_BMC
 <http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_3_CODE_BMC> rdf:type owl:NamedIndividual ,
-                                                                              <http://purl.org/roh#ESSubjectArea> ;
+                                                                              <http://www.w3.org/2004/02/skos/core#Concept> ;
                                                                      <http://purl.org/roh#codeOf> <http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_3_BMC> ;
                                                                      rdfs:label "BMC" ;
                                                                      <http://www.w3.org/2004/02/skos/core#inScheme> <http://purl.org/roh/subject-areas#ESSubjectCode3rdList> ;
@@ -1201,7 +1202,7 @@
 
 ###  http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_3_CODE_BTC
 <http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_3_CODE_BTC> rdf:type owl:NamedIndividual ,
-                                                                              <http://purl.org/roh#ESSubjectArea> ;
+                                                                              <http://www.w3.org/2004/02/skos/core#Concept> ;
                                                                      <http://purl.org/roh#codeOf> <http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_3_BTC> ;
                                                                      rdfs:label "BTC" ;
                                                                      <http://www.w3.org/2004/02/skos/core#inScheme> <http://purl.org/roh/subject-areas#ESSubjectCode3rdList> ;
@@ -1210,7 +1211,7 @@
 
 ###  http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_3_CODE_CAN
 <http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_3_CODE_CAN> rdf:type owl:NamedIndividual ,
-                                                                              <http://purl.org/roh#ESSubjectArea> ;
+                                                                              <http://www.w3.org/2004/02/skos/core#Concept> ;
                                                                      <http://purl.org/roh#codeOf> <http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_3_CAN> ;
                                                                      rdfs:label "CAN" ;
                                                                      <http://www.w3.org/2004/02/skos/core#inScheme> <http://purl.org/roh/subject-areas#ESSubjectCode3rdList> ;
@@ -1219,7 +1220,7 @@
 
 ###  http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_3_CODE_COM
 <http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_3_CODE_COM> rdf:type owl:NamedIndividual ,
-                                                                              <http://purl.org/roh#ESSubjectArea> ;
+                                                                              <http://www.w3.org/2004/02/skos/core#Concept> ;
                                                                      <http://purl.org/roh#codeOf> <http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_3_COM> ;
                                                                      rdfs:label "COM" ;
                                                                      <http://www.w3.org/2004/02/skos/core#inScheme> <http://purl.org/roh/subject-areas#ESSubjectCode3rdList> ;
@@ -1228,7 +1229,7 @@
 
 ###  http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_3_CODE_CPO
 <http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_3_CODE_CPO> rdf:type owl:NamedIndividual ,
-                                                                              <http://purl.org/roh#ESSubjectArea> ;
+                                                                              <http://www.w3.org/2004/02/skos/core#Concept> ;
                                                                      <http://purl.org/roh#codeOf> <http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_3_CPO> ;
                                                                      rdfs:label "CPO" ;
                                                                      <http://www.w3.org/2004/02/skos/core#inScheme> <http://purl.org/roh/subject-areas#ESSubjectCode3rdList> ;
@@ -1237,7 +1238,7 @@
 
 ###  http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_3_CODE_CTA
 <http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_3_CODE_CTA> rdf:type owl:NamedIndividual ,
-                                                                              <http://purl.org/roh#ESSubjectArea> ;
+                                                                              <http://www.w3.org/2004/02/skos/core#Concept> ;
                                                                      <http://purl.org/roh#codeOf> <http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_3_CTA> ;
                                                                      rdfs:label "CTA" ;
                                                                      <http://www.w3.org/2004/02/skos/core#inScheme> <http://purl.org/roh/subject-areas#ESSubjectCode3rdList> ;
@@ -1246,7 +1247,7 @@
 
 ###  http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_3_CODE_CYA
 <http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_3_CODE_CYA> rdf:type owl:NamedIndividual ,
-                                                                              <http://purl.org/roh#ESSubjectArea> ;
+                                                                              <http://www.w3.org/2004/02/skos/core#Concept> ;
                                                                      <http://purl.org/roh#codeOf> <http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_3_CYA> ;
                                                                      rdfs:label "CYA" ;
                                                                      <http://www.w3.org/2004/02/skos/core#inScheme> <http://purl.org/roh/subject-areas#ESSubjectCode3rdList> ;
@@ -1255,7 +1256,7 @@
 
 ###  http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_3_CODE_DE3
 <http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_3_CODE_DE3> rdf:type owl:NamedIndividual ,
-                                                                              <http://purl.org/roh#ESSubjectArea> ;
+                                                                              <http://www.w3.org/2004/02/skos/core#Concept> ;
                                                                      <http://purl.org/roh#codeOf> <http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_3_DE3> ;
                                                                      rdfs:label "DE3" ;
                                                                      <http://www.w3.org/2004/02/skos/core#inScheme> <http://purl.org/roh/subject-areas#ESSubjectCode3rdList> ;
@@ -1264,7 +1265,7 @@
 
 ###  http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_3_CODE_DPT
 <http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_3_CODE_DPT> rdf:type owl:NamedIndividual ,
-                                                                              <http://purl.org/roh#ESSubjectArea> ;
+                                                                              <http://www.w3.org/2004/02/skos/core#Concept> ;
                                                                      <http://purl.org/roh#codeOf> <http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_3_DPT> ;
                                                                      rdfs:label "DPT" ;
                                                                      <http://www.w3.org/2004/02/skos/core#inScheme> <http://purl.org/roh/subject-areas#ESSubjectCode3rdList> ;
@@ -1273,7 +1274,7 @@
 
 ###  http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_3_CODE_ED3
 <http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_3_CODE_ED3> rdf:type owl:NamedIndividual ,
-                                                                              <http://purl.org/roh#ESSubjectArea> ;
+                                                                              <http://www.w3.org/2004/02/skos/core#Concept> ;
                                                                      <http://purl.org/roh#codeOf> <http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_3_ED3> ;
                                                                      rdfs:label "ED3" ;
                                                                      <http://www.w3.org/2004/02/skos/core#inScheme> <http://purl.org/roh/subject-areas#ESSubjectCode3rdList> ;
@@ -1282,7 +1283,7 @@
 
 ###  http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_3_CODE_ENE
 <http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_3_CODE_ENE> rdf:type owl:NamedIndividual ,
-                                                                              <http://purl.org/roh#ESSubjectArea> ;
+                                                                              <http://www.w3.org/2004/02/skos/core#Concept> ;
                                                                      <http://purl.org/roh#codeOf> <http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_3_ENE> ;
                                                                      rdfs:label "ENE" ;
                                                                      <http://www.w3.org/2004/02/skos/core#inScheme> <http://purl.org/roh/subject-areas#ESSubjectCode3rdList> ;
@@ -1291,7 +1292,7 @@
 
 ###  http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_3_CODE_ESN
 <http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_3_CODE_ESN> rdf:type owl:NamedIndividual ,
-                                                                              <http://purl.org/roh#ESSubjectArea> ;
+                                                                              <http://www.w3.org/2004/02/skos/core#Concept> ;
                                                                      <http://purl.org/roh#codeOf> <http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_3_ESN> ;
                                                                      rdfs:label "ESN" ;
                                                                      <http://www.w3.org/2004/02/skos/core#inScheme> <http://purl.org/roh/subject-areas#ESSubjectCode3rdList> ;
@@ -1300,7 +1301,7 @@
 
 ###  http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_3_CODE_ESP
 <http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_3_CODE_ESP> rdf:type owl:NamedIndividual ,
-                                                                              <http://purl.org/roh#ESSubjectArea> ;
+                                                                              <http://www.w3.org/2004/02/skos/core#Concept> ;
                                                                      <http://purl.org/roh#codeOf> <http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_3_ESP> ;
                                                                      rdfs:label "ESP" ;
                                                                      <http://www.w3.org/2004/02/skos/core#inScheme> <http://purl.org/roh/subject-areas#ESSubjectCode3rdList> ;
@@ -1309,7 +1310,7 @@
 
 ###  http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_3_CODE_EYA
 <http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_3_CODE_EYA> rdf:type owl:NamedIndividual ,
-                                                                              <http://purl.org/roh#ESSubjectArea> ;
+                                                                              <http://www.w3.org/2004/02/skos/core#Concept> ;
                                                                      <http://purl.org/roh#codeOf> <http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_3_EYA> ;
                                                                      rdfs:label "EYA" ;
                                                                      <http://www.w3.org/2004/02/skos/core#inScheme> <http://purl.org/roh/subject-areas#ESSubjectCode3rdList> ;
@@ -1318,7 +1319,7 @@
 
 ###  http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_3_CODE_EYF
 <http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_3_CODE_EYF> rdf:type owl:NamedIndividual ,
-                                                                              <http://purl.org/roh#ESSubjectArea> ;
+                                                                              <http://www.w3.org/2004/02/skos/core#Concept> ;
                                                                      <http://purl.org/roh#codeOf> <http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_3_EYF> ;
                                                                      rdfs:label "EYF" ;
                                                                      <http://www.w3.org/2004/02/skos/core#inScheme> <http://purl.org/roh/subject-areas#ESSubjectCode3rdList> ;
@@ -1327,7 +1328,7 @@
 
 ###  http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_3_CODE_FEM
 <http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_3_CODE_FEM> rdf:type owl:NamedIndividual ,
-                                                                              <http://purl.org/roh#ESSubjectArea> ;
+                                                                              <http://www.w3.org/2004/02/skos/core#Concept> ;
                                                                      <http://purl.org/roh#codeOf> <http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_3_FEM> ;
                                                                      rdfs:label "FEM" ;
                                                                      <http://www.w3.org/2004/02/skos/core#inScheme> <http://purl.org/roh/subject-areas#ESSubjectCode3rdList> ;
@@ -1336,7 +1337,7 @@
 
 ###  http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_3_CODE_FFP
 <http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_3_CODE_FFP> rdf:type owl:NamedIndividual ,
-                                                                              <http://purl.org/roh#ESSubjectArea> ;
+                                                                              <http://www.w3.org/2004/02/skos/core#Concept> ;
                                                                      <http://purl.org/roh#codeOf> <http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_3_FFP> ;
                                                                      rdfs:label "FFP" ;
                                                                      <http://www.w3.org/2004/02/skos/core#inScheme> <http://purl.org/roh/subject-areas#ESSubjectCode3rdList> ;
@@ -1345,7 +1346,7 @@
 
 ###  http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_3_CODE_FIL
 <http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_3_CODE_FIL> rdf:type owl:NamedIndividual ,
-                                                                              <http://purl.org/roh#ESSubjectArea> ;
+                                                                              <http://www.w3.org/2004/02/skos/core#Concept> ;
                                                                      <http://purl.org/roh#codeOf> <http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_3_FIL> ;
                                                                      rdfs:label "FIL" ;
                                                                      <http://www.w3.org/2004/02/skos/core#inScheme> <http://purl.org/roh/subject-areas#ESSubjectCode3rdList> ;
@@ -1354,7 +1355,7 @@
 
 ###  http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_3_CODE_FOS
 <http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_3_CODE_FOS> rdf:type owl:NamedIndividual ,
-                                                                              <http://purl.org/roh#ESSubjectArea> ;
+                                                                              <http://www.w3.org/2004/02/skos/core#Concept> ;
                                                                      <http://purl.org/roh#codeOf> <http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_3_FOS> ;
                                                                      rdfs:label "FOS" ;
                                                                      <http://www.w3.org/2004/02/skos/core#inScheme> <http://purl.org/roh/subject-areas#ESSubjectCode3rdList> ;
@@ -1363,7 +1364,7 @@
 
 ###  http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_3_CODE_FYA
 <http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_3_CODE_FYA> rdf:type owl:NamedIndividual ,
-                                                                              <http://purl.org/roh#ESSubjectArea> ;
+                                                                              <http://www.w3.org/2004/02/skos/core#Concept> ;
                                                                      <http://purl.org/roh#codeOf> <http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_3_FYA> ;
                                                                      rdfs:label "FYA" ;
                                                                      <http://www.w3.org/2004/02/skos/core#inScheme> <http://purl.org/roh/subject-areas#ESSubjectCode3rdList> ;
@@ -1372,7 +1373,7 @@
 
 ###  http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_3_CODE_GEO
 <http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_3_CODE_GEO> rdf:type owl:NamedIndividual ,
-                                                                              <http://purl.org/roh#ESSubjectArea> ;
+                                                                              <http://www.w3.org/2004/02/skos/core#Concept> ;
                                                                      <http://purl.org/roh#codeOf> <http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_3_GEO> ;
                                                                      rdfs:label "GEO" ;
                                                                      <http://www.w3.org/2004/02/skos/core#inScheme> <http://purl.org/roh/subject-areas#ESSubjectCode3rdList> ;
@@ -1381,7 +1382,7 @@
 
 ###  http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_3_CODE_GYA
 <http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_3_CODE_GYA> rdf:type owl:NamedIndividual ,
-                                                                              <http://purl.org/roh#ESSubjectArea> ;
+                                                                              <http://www.w3.org/2004/02/skos/core#Concept> ;
                                                                      <http://purl.org/roh#codeOf> <http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_3_GYA> ;
                                                                      rdfs:label "GYA" ;
                                                                      <http://www.w3.org/2004/02/skos/core#inScheme> <http://purl.org/roh/subject-areas#ESSubjectCode3rdList> ;
@@ -1390,7 +1391,7 @@
 
 ###  http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_3_CODE_HIS
 <http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_3_CODE_HIS> rdf:type owl:NamedIndividual ,
-                                                                              <http://purl.org/roh#ESSubjectArea> ;
+                                                                              <http://www.w3.org/2004/02/skos/core#Concept> ;
                                                                      <http://purl.org/roh#codeOf> <http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_3_HIS> ;
                                                                      rdfs:label "HIS" ;
                                                                      <http://www.w3.org/2004/02/skos/core#inScheme> <http://purl.org/roh/subject-areas#ESSubjectCode3rdList> ;
@@ -1399,7 +1400,7 @@
 
 ###  http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_3_CODE_IBI
 <http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_3_CODE_IBI> rdf:type owl:NamedIndividual ,
-                                                                              <http://purl.org/roh#ESSubjectArea> ;
+                                                                              <http://www.w3.org/2004/02/skos/core#Concept> ;
                                                                      <http://purl.org/roh#codeOf> <http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_3_IBI> ;
                                                                      rdfs:label "IBI" ;
                                                                      <http://www.w3.org/2004/02/skos/core#inScheme> <http://purl.org/roh/subject-areas#ESSubjectCode3rdList> ;
@@ -1408,7 +1409,7 @@
 
 ###  http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_3_CODE_ICA
 <http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_3_CODE_ICA> rdf:type owl:NamedIndividual ,
-                                                                              <http://purl.org/roh#ESSubjectArea> ;
+                                                                              <http://www.w3.org/2004/02/skos/core#Concept> ;
                                                                      <http://purl.org/roh#codeOf> <http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_3_ICA> ;
                                                                      rdfs:label "ICA" ;
                                                                      <http://www.w3.org/2004/02/skos/core#inScheme> <http://purl.org/roh/subject-areas#ESSubjectCode3rdList> ;
@@ -1417,7 +1418,7 @@
 
 ###  http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_3_CODE_IEA
 <http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_3_CODE_IEA> rdf:type owl:NamedIndividual ,
-                                                                              <http://purl.org/roh#ESSubjectArea> ;
+                                                                              <http://www.w3.org/2004/02/skos/core#Concept> ;
                                                                      <http://purl.org/roh#codeOf> <http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_3_IEA> ;
                                                                      rdfs:label "IEA" ;
                                                                      <http://www.w3.org/2004/02/skos/core#inScheme> <http://purl.org/roh/subject-areas#ESSubjectCode3rdList> ;
@@ -1426,7 +1427,7 @@
 
 ###  http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_3_CODE_IIT
 <http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_3_CODE_IIT> rdf:type owl:NamedIndividual ,
-                                                                              <http://purl.org/roh#ESSubjectArea> ;
+                                                                              <http://www.w3.org/2004/02/skos/core#Concept> ;
                                                                      <http://purl.org/roh#codeOf> <http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_3_IIT> ;
                                                                      rdfs:label "IIT" ;
                                                                      <http://www.w3.org/2004/02/skos/core#inScheme> <http://purl.org/roh/subject-areas#ESSubjectCode3rdList> ;
@@ -1435,7 +1436,7 @@
 
 ###  http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_3_CODE_INA
 <http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_3_CODE_INA> rdf:type owl:NamedIndividual ,
-                                                                              <http://purl.org/roh#ESSubjectArea> ;
+                                                                              <http://www.w3.org/2004/02/skos/core#Concept> ;
                                                                      <http://purl.org/roh#codeOf> <http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_3_INA> ;
                                                                      rdfs:label "INA" ;
                                                                      <http://www.w3.org/2004/02/skos/core#inScheme> <http://purl.org/roh/subject-areas#ESSubjectCode3rdList> ;
@@ -1444,7 +1445,7 @@
 
 ###  http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_3_CODE_INF
 <http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_3_CODE_INF> rdf:type owl:NamedIndividual ,
-                                                                              <http://purl.org/roh#ESSubjectArea> ;
+                                                                              <http://www.w3.org/2004/02/skos/core#Concept> ;
                                                                      <http://purl.org/roh#codeOf> <http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_3_INF> ;
                                                                      rdfs:label "INF" ;
                                                                      <http://www.w3.org/2004/02/skos/core#inScheme> <http://purl.org/roh/subject-areas#ESSubjectCode3rdList> ;
@@ -1453,7 +1454,7 @@
 
 ###  http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_3_CODE_IQM
 <http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_3_CODE_IQM> rdf:type owl:NamedIndividual ,
-                                                                              <http://purl.org/roh#ESSubjectArea> ;
+                                                                              <http://www.w3.org/2004/02/skos/core#Concept> ;
                                                                      <http://purl.org/roh#codeOf> <http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_3_IQM> ;
                                                                      rdfs:label "IQM" ;
                                                                      <http://www.w3.org/2004/02/skos/core#inScheme> <http://purl.org/roh/subject-areas#ESSubjectCode3rdList> ;
@@ -1462,7 +1463,7 @@
 
 ###  http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_3_CODE_LFL
 <http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_3_CODE_LFL> rdf:type owl:NamedIndividual ,
-                                                                              <http://purl.org/roh#ESSubjectArea> ;
+                                                                              <http://www.w3.org/2004/02/skos/core#Concept> ;
                                                                      <http://purl.org/roh#codeOf> <http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_3_LFL> ;
                                                                      rdfs:label "LFL" ;
                                                                      <http://www.w3.org/2004/02/skos/core#inScheme> <http://purl.org/roh/subject-areas#ESSubjectCode3rdList> ;
@@ -1471,7 +1472,7 @@
 
 ###  http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_3_CODE_LYL
 <http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_3_CODE_LYL> rdf:type owl:NamedIndividual ,
-                                                                              <http://purl.org/roh#ESSubjectArea> ;
+                                                                              <http://www.w3.org/2004/02/skos/core#Concept> ;
                                                                      <http://purl.org/roh#codeOf> <http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_3_LYL> ;
                                                                      rdfs:label "LYL" ;
                                                                      <http://www.w3.org/2004/02/skos/core#inScheme> <http://purl.org/roh/subject-areas#ESSubjectCode3rdList> ;
@@ -1480,7 +1481,7 @@
 
 ###  http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_3_CODE_MAE
 <http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_3_CODE_MAE> rdf:type owl:NamedIndividual ,
-                                                                              <http://purl.org/roh#ESSubjectArea> ;
+                                                                              <http://www.w3.org/2004/02/skos/core#Concept> ;
                                                                      <http://purl.org/roh#codeOf> <http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_3_MAE> ;
                                                                      rdfs:label "MAE" ;
                                                                      <http://www.w3.org/2004/02/skos/core#inScheme> <http://purl.org/roh/subject-areas#ESSubjectCode3rdList> ;
@@ -1489,7 +1490,7 @@
 
 ###  http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_3_CODE_MAR
 <http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_3_CODE_MAR> rdf:type owl:NamedIndividual ,
-                                                                              <http://purl.org/roh#ESSubjectArea> ;
+                                                                              <http://www.w3.org/2004/02/skos/core#Concept> ;
                                                                      <http://purl.org/roh#codeOf> <http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_3_MAR> ;
                                                                      rdfs:label "MAR" ;
                                                                      <http://www.w3.org/2004/02/skos/core#inScheme> <http://purl.org/roh/subject-areas#ESSubjectCode3rdList> ;
@@ -1498,7 +1499,7 @@
 
 ###  http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_3_CODE_MBM
 <http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_3_CODE_MBM> rdf:type owl:NamedIndividual ,
-                                                                              <http://purl.org/roh#ESSubjectArea> ;
+                                                                              <http://www.w3.org/2004/02/skos/core#Concept> ;
                                                                      <http://purl.org/roh#codeOf> <http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_3_MBM> ;
                                                                      rdfs:label "MBM" ;
                                                                      <http://www.w3.org/2004/02/skos/core#inScheme> <http://purl.org/roh/subject-areas#ESSubjectCode3rdList> ;
@@ -1507,7 +1508,7 @@
 
 ###  http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_3_CODE_MEN
 <http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_3_CODE_MEN> rdf:type owl:NamedIndividual ,
-                                                                              <http://purl.org/roh#ESSubjectArea> ;
+                                                                              <http://www.w3.org/2004/02/skos/core#Concept> ;
                                                                      <http://purl.org/roh#codeOf> <http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_3_MEN> ;
                                                                      rdfs:label "MEN" ;
                                                                      <http://www.w3.org/2004/02/skos/core#inScheme> <http://purl.org/roh/subject-areas#ESSubjectCode3rdList> ;
@@ -1516,7 +1517,7 @@
 
 ###  http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_3_CODE_MES
 <http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_3_CODE_MES> rdf:type owl:NamedIndividual ,
-                                                                              <http://purl.org/roh#ESSubjectArea> ;
+                                                                              <http://www.w3.org/2004/02/skos/core#Concept> ;
                                                                      <http://purl.org/roh#codeOf> <http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_3_MES> ;
                                                                      rdfs:label "MES" ;
                                                                      <http://www.w3.org/2004/02/skos/core#inScheme> <http://purl.org/roh/subject-areas#ESSubjectCode3rdList> ;
@@ -1525,7 +1526,7 @@
 
 ###  http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_3_CODE_MFU
 <http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_3_CODE_MFU> rdf:type owl:NamedIndividual ,
-                                                                              <http://purl.org/roh#ESSubjectArea> ;
+                                                                              <http://www.w3.org/2004/02/skos/core#Concept> ;
                                                                      <http://purl.org/roh#codeOf> <http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_3_MFU> ;
                                                                      rdfs:label "MFU" ;
                                                                      <http://www.w3.org/2004/02/skos/core#inScheme> <http://purl.org/roh/subject-areas#ESSubjectCode3rdList> ;
@@ -1534,7 +1535,7 @@
 
 ###  http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_3_CODE_MNF
 <http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_3_CODE_MNF> rdf:type owl:NamedIndividual ,
-                                                                              <http://purl.org/roh#ESSubjectArea> ;
+                                                                              <http://www.w3.org/2004/02/skos/core#Concept> ;
                                                                      <http://purl.org/roh#codeOf> <http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_3_MNF> ;
                                                                      rdfs:label "MNF" ;
                                                                      <http://www.w3.org/2004/02/skos/core#inScheme> <http://purl.org/roh/subject-areas#ESSubjectCode3rdList> ;
@@ -1543,7 +1544,7 @@
 
 ###  http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_3_CODE_MT3
 <http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_3_CODE_MT3> rdf:type owl:NamedIndividual ,
-                                                                              <http://purl.org/roh#ESSubjectArea> ;
+                                                                              <http://www.w3.org/2004/02/skos/core#Concept> ;
                                                                      <http://purl.org/roh#codeOf> <http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_3_MT3> ;
                                                                      rdfs:label "MT3" ;
                                                                      <http://www.w3.org/2004/02/skos/core#inScheme> <http://purl.org/roh/subject-areas#ESSubjectCode3rdList> ;
@@ -1552,7 +1553,7 @@
 
 ###  http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_3_CODE_POL
 <http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_3_CODE_POL> rdf:type owl:NamedIndividual ,
-                                                                              <http://purl.org/roh#ESSubjectArea> ;
+                                                                              <http://www.w3.org/2004/02/skos/core#Concept> ;
                                                                      <http://purl.org/roh#codeOf> <http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_3_POL> ;
                                                                      rdfs:label "POL" ;
                                                                      <http://www.w3.org/2004/02/skos/core#inScheme> <http://purl.org/roh/subject-areas#ESSubjectCode3rdList> ;
@@ -1561,7 +1562,7 @@
 
 ###  http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_3_CODE_PS3
 <http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_3_CODE_PS3> rdf:type owl:NamedIndividual ,
-                                                                              <http://purl.org/roh#ESSubjectArea> ;
+                                                                              <http://www.w3.org/2004/02/skos/core#Concept> ;
                                                                      <http://purl.org/roh#codeOf> <http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_3_PS3> ;
                                                                      rdfs:label "PS3" ;
                                                                      <http://www.w3.org/2004/02/skos/core#inScheme> <http://purl.org/roh/subject-areas#ESSubjectCode3rdList> ;
@@ -1570,7 +1571,7 @@
 
 ###  http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_3_CODE_QMC
 <http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_3_CODE_QMC> rdf:type owl:NamedIndividual ,
-                                                                              <http://purl.org/roh#ESSubjectArea> ;
+                                                                              <http://www.w3.org/2004/02/skos/core#Concept> ;
                                                                      <http://purl.org/roh#codeOf> <http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_3_QMC> ;
                                                                      rdfs:label "QMC" ;
                                                                      <http://www.w3.org/2004/02/skos/core#inScheme> <http://purl.org/roh/subject-areas#ESSubjectCode3rdList> ;
@@ -1579,7 +1580,7 @@
 
 ###  http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_3_CODE_SOC
 <http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_3_CODE_SOC> rdf:type owl:NamedIndividual ,
-                                                                              <http://purl.org/roh#ESSubjectArea> ;
+                                                                              <http://www.w3.org/2004/02/skos/core#Concept> ;
                                                                      <http://purl.org/roh#codeOf> <http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_3_SOC> ;
                                                                      rdfs:label "SOC" ;
                                                                      <http://www.w3.org/2004/02/skos/core#inScheme> <http://purl.org/roh/subject-areas#ESSubjectCode3rdList> ;
@@ -1588,7 +1589,7 @@
 
 ###  http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_3_CODE_TCO
 <http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_3_CODE_TCO> rdf:type owl:NamedIndividual ,
-                                                                              <http://purl.org/roh#ESSubjectArea> ;
+                                                                              <http://www.w3.org/2004/02/skos/core#Concept> ;
                                                                      <http://purl.org/roh#codeOf> <http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_3_TCO> ;
                                                                      rdfs:label "TCO" ;
                                                                      <http://www.w3.org/2004/02/skos/core#inScheme> <http://purl.org/roh/subject-areas#ESSubjectCode3rdList> ;
@@ -1597,7 +1598,7 @@
 
 ###  http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_3_CODE_TMA
 <http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_3_CODE_TMA> rdf:type owl:NamedIndividual ,
-                                                                              <http://purl.org/roh#ESSubjectArea> ;
+                                                                              <http://www.w3.org/2004/02/skos/core#Concept> ;
                                                                      <http://purl.org/roh#codeOf> <http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_3_TMA> ;
                                                                      rdfs:label "TMA" ;
                                                                      <http://www.w3.org/2004/02/skos/core#inScheme> <http://purl.org/roh/subject-areas#ESSubjectCode3rdList> ;
@@ -1606,7 +1607,7 @@
 
 ###  http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_3_CODE_TRA
 <http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_3_CODE_TRA> rdf:type owl:NamedIndividual ,
-                                                                              <http://purl.org/roh#ESSubjectArea> ;
+                                                                              <http://www.w3.org/2004/02/skos/core#Concept> ;
                                                                      <http://purl.org/roh#codeOf> <http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_3_TRA> ;
                                                                      rdfs:label "TRA" ;
                                                                      <http://www.w3.org/2004/02/skos/core#inScheme> <http://purl.org/roh/subject-areas#ESSubjectCode3rdList> ;
@@ -1615,7 +1616,7 @@
 
 ###  http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_3_COM
 <http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_3_COM> rdf:type owl:NamedIndividual ,
-                                                                         <http://purl.org/roh#ESSubjectArea> ;
+                                                                         <http://www.w3.org/2004/02/skos/core#Concept> ;
                                                                 <http://purl.org/roh#hasCode> <http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_3_CODE_COM> ;
                                                                 rdfs:label "Comunicación" ;
                                                                 <http://www.w3.org/2004/02/skos/core#broader> <http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_2_CSO> ;
@@ -1634,7 +1635,7 @@
 
 ###  http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_3_CPO
 <http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_3_CPO> rdf:type owl:NamedIndividual ,
-                                                                         <http://purl.org/roh#ESSubjectArea> ;
+                                                                         <http://www.w3.org/2004/02/skos/core#Concept> ;
                                                                 <http://purl.org/roh#hasCode> <http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_3_CODE_CPO> ;
                                                                 rdfs:label "Ciencia política" ;
                                                                 <http://www.w3.org/2004/02/skos/core#broader> <http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_2_CSO> ;
@@ -1653,7 +1654,7 @@
 
 ###  http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_3_CTA
 <http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_3_CTA> rdf:type owl:NamedIndividual ,
-                                                                         <http://purl.org/roh#ESSubjectArea> ;
+                                                                         <http://www.w3.org/2004/02/skos/core#Concept> ;
                                                                 <http://purl.org/roh#hasCode> <http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_3_CODE_CTA> ;
                                                                 rdfs:label "Ciencias de la Tierra y del agua" ;
                                                                 <http://www.w3.org/2004/02/skos/core#broader> <http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_2_CTM> ;
@@ -1673,7 +1674,7 @@
 
 ###  http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_3_CYA
 <http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_3_CYA> rdf:type owl:NamedIndividual ,
-                                                                         <http://purl.org/roh#ESSubjectArea> ;
+                                                                         <http://www.w3.org/2004/02/skos/core#Concept> ;
                                                                 <http://purl.org/roh#hasCode> <http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_3_CODE_CYA> ;
                                                                 rdfs:label "Clima y atmósfera" ;
                                                                 <http://www.w3.org/2004/02/skos/core#broader> <http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_2_CTM> ;
@@ -1693,7 +1694,7 @@
 
 ###  http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_3_DE3
 <http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_3_DE3> rdf:type owl:NamedIndividual ,
-                                                                         <http://purl.org/roh#ESSubjectArea> ;
+                                                                         <http://www.w3.org/2004/02/skos/core#Concept> ;
                                                                 <http://purl.org/roh#hasCode> <http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_3_CODE_DE3> ;
                                                                 rdfs:label "Derecho" ;
                                                                 <http://www.w3.org/2004/02/skos/core#broader> <http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_2_DER> ;
@@ -1712,7 +1713,7 @@
 
 ###  http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_3_DPT
 <http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_3_DPT> rdf:type owl:NamedIndividual ,
-                                                                         <http://purl.org/roh#ESSubjectArea> ;
+                                                                         <http://www.w3.org/2004/02/skos/core#Concept> ;
                                                                 <http://purl.org/roh#hasCode> <http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_3_CODE_DPT> ;
                                                                 rdfs:label "Herramientas diagnósticas, pronósticas y terapéuticas" ;
                                                                 <http://www.w3.org/2004/02/skos/core#broader> <http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_2_BME> ;
@@ -1730,7 +1731,7 @@
 
 ###  http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_3_ED3
 <http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_3_ED3> rdf:type owl:NamedIndividual ,
-                                                                         <http://purl.org/roh#ESSubjectArea> ;
+                                                                         <http://www.w3.org/2004/02/skos/core#Concept> ;
                                                                 <http://purl.org/roh#hasCode> <http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_3_CODE_ED3> ;
                                                                 rdfs:label "Ciencias de la educación" ;
                                                                 <http://www.w3.org/2004/02/skos/core#broader> <http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_2_EDU> ;
@@ -1749,7 +1750,7 @@
 
 ###  http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_3_ENE
 <http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_3_ENE> rdf:type owl:NamedIndividual ,
-                                                                         <http://purl.org/roh#ESSubjectArea> ;
+                                                                         <http://www.w3.org/2004/02/skos/core#Concept> ;
                                                                 <http://purl.org/roh#hasCode> <http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_3_CODE_ENE> ;
                                                                 rdfs:label "Energía" ;
                                                                 <http://www.w3.org/2004/02/skos/core#broader> <http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_2_EYT> ;
@@ -1768,7 +1769,7 @@
 
 ###  http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_3_ESN
 <http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_3_ESN> rdf:type owl:NamedIndividual ,
-                                                                         <http://purl.org/roh#ESSubjectArea> ;
+                                                                         <http://www.w3.org/2004/02/skos/core#Concept> ;
                                                                 <http://purl.org/roh#hasCode> <http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_3_CODE_ESN> ;
                                                                 rdfs:label "Enfermedades del sistema nervioso" ;
                                                                 <http://www.w3.org/2004/02/skos/core#broader> <http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_2_BME> ;
@@ -1787,7 +1788,7 @@
 
 ###  http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_3_ESP
 <http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_3_ESP> rdf:type owl:NamedIndividual ,
-                                                                         <http://purl.org/roh#ESSubjectArea> ;
+                                                                         <http://www.w3.org/2004/02/skos/core#Concept> ;
                                                                 <http://purl.org/roh#hasCode> <http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_3_CODE_ESP> ;
                                                                 rdfs:label "Investigación espacial" ;
                                                                 <http://www.w3.org/2004/02/skos/core#broader> <http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_2_FIS> ;
@@ -1806,7 +1807,7 @@
 
 ###  http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_3_EYA
 <http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_3_EYA> rdf:type owl:NamedIndividual ,
-                                                                         <http://purl.org/roh#ESSubjectArea> ;
+                                                                         <http://www.w3.org/2004/02/skos/core#Concept> ;
                                                                 <http://purl.org/roh#hasCode> <http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_3_CODE_EYA> ;
                                                                 rdfs:label "Economía y sus aplicaciones" ;
                                                                 <http://www.w3.org/2004/02/skos/core#broader> <http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_2_ECO> ;
@@ -1825,7 +1826,7 @@
 
 ###  http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_3_EYF
 <http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_3_EYF> rdf:type owl:NamedIndividual ,
-                                                                         <http://purl.org/roh#ESSubjectArea> ;
+                                                                         <http://www.w3.org/2004/02/skos/core#Concept> ;
                                                                 <http://purl.org/roh#hasCode> <http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_3_CODE_EYF> ;
                                                                 rdfs:label "Empresas y finanzas" ;
                                                                 <http://www.w3.org/2004/02/skos/core#broader> <http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_2_ECO> ;
@@ -1845,7 +1846,7 @@
 
 ###  http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_3_FEM
 <http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_3_FEM> rdf:type owl:NamedIndividual ,
-                                                                         <http://purl.org/roh#ESSubjectArea> ;
+                                                                         <http://www.w3.org/2004/02/skos/core#Concept> ;
                                                                 <http://purl.org/roh#hasCode> <http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_3_CODE_FEM> ;
                                                                 rdfs:label "Estudios feministas, de las mujeres y de género" ;
                                                                 <http://www.w3.org/2004/02/skos/core#broader> <http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_2_CSO> ;
@@ -1868,7 +1869,7 @@
 
 ###  http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_3_FFP
 <http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_3_FFP> rdf:type owl:NamedIndividual ,
-                                                                         <http://purl.org/roh#ESSubjectArea> ;
+                                                                         <http://www.w3.org/2004/02/skos/core#Concept> ;
                                                                 <http://purl.org/roh#hasCode> <http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_3_CODE_FFP> ;
                                                                 rdfs:label "Física fundamental y de partículas" ;
                                                                 <http://www.w3.org/2004/02/skos/core#broader> <http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_2_FIS> ;
@@ -1886,7 +1887,7 @@
 
 ###  http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_3_FIL
 <http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_3_FIL> rdf:type owl:NamedIndividual ,
-                                                                         <http://purl.org/roh#ESSubjectArea> ;
+                                                                         <http://www.w3.org/2004/02/skos/core#Concept> ;
                                                                 <http://purl.org/roh#hasCode> <http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_3_CODE_FIL> ;
                                                                 rdfs:label "Filosofía" ;
                                                                 <http://www.w3.org/2004/02/skos/core#broader> <http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_2_MLP> ;
@@ -1905,7 +1906,7 @@
 
 ###  http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_3_FOS
 <http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_3_FOS> rdf:type owl:NamedIndividual ,
-                                                                         <http://purl.org/roh#ESSubjectArea> ;
+                                                                         <http://www.w3.org/2004/02/skos/core#Concept> ;
                                                                 <http://purl.org/roh#hasCode> <http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_3_CODE_FOS> ;
                                                                 rdfs:label "Fisiopatología de órganos y sistemas" ;
                                                                 <http://www.w3.org/2004/02/skos/core#broader> <http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_2_BME> ;
@@ -1924,7 +1925,7 @@
 
 ###  http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_3_FYA
 <http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_3_FYA> rdf:type owl:NamedIndividual ,
-                                                                         <http://purl.org/roh#ESSubjectArea> ;
+                                                                         <http://www.w3.org/2004/02/skos/core#Concept> ;
                                                                 <http://purl.org/roh#hasCode> <http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_3_CODE_FYA> ;
                                                                 rdfs:label "Física y sus aplicaciones" ;
                                                                 <http://www.w3.org/2004/02/skos/core#broader> <http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_2_FIS> ;
@@ -1943,7 +1944,7 @@
 
 ###  http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_3_GEO
 <http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_3_GEO> rdf:type owl:NamedIndividual ,
-                                                                         <http://purl.org/roh#ESSubjectArea> ;
+                                                                         <http://www.w3.org/2004/02/skos/core#Concept> ;
                                                                 <http://purl.org/roh#hasCode> <http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_3_CODE_GEO> ;
                                                                 rdfs:label "Geografía" ;
                                                                 <http://www.w3.org/2004/02/skos/core#broader> <http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_2_CSO> ;
@@ -1962,7 +1963,7 @@
 
 ###  http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_3_GYA
 <http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_3_GYA> rdf:type owl:NamedIndividual ,
-                                                                         <http://purl.org/roh#ESSubjectArea> ;
+                                                                         <http://www.w3.org/2004/02/skos/core#Concept> ;
                                                                 <http://purl.org/roh#hasCode> <http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_3_CODE_GYA> ;
                                                                 rdfs:label "Ganadería y acuicultura" ;
                                                                 <http://www.w3.org/2004/02/skos/core#broader> <http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_2_CAA> ;
@@ -1982,7 +1983,7 @@
 
 ###  http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_3_HIS
 <http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_3_HIS> rdf:type owl:NamedIndividual ,
-                                                                         <http://purl.org/roh#ESSubjectArea> ;
+                                                                         <http://www.w3.org/2004/02/skos/core#Concept> ;
                                                                 <http://purl.org/roh#hasCode> <http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_3_CODE_HIS> ;
                                                                 rdfs:label "Historia" ;
                                                                 <http://www.w3.org/2004/02/skos/core#broader> <http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_2_PHA> ;
@@ -2001,7 +2002,7 @@
 
 ###  http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_3_IBI
 <http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_3_IBI> rdf:type owl:NamedIndividual ,
-                                                                         <http://purl.org/roh#ESSubjectArea> ;
+                                                                         <http://www.w3.org/2004/02/skos/core#Concept> ;
                                                                 <http://purl.org/roh#hasCode> <http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_3_CODE_IBI> ;
                                                                 rdfs:label "Ingeniería biomédica" ;
                                                                 <http://www.w3.org/2004/02/skos/core#broader> <http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_2_PIN> ;
@@ -2020,7 +2021,7 @@
 
 ###  http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_3_ICA
 <http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_3_ICA> rdf:type owl:NamedIndividual ,
-                                                                         <http://purl.org/roh#ESSubjectArea> ;
+                                                                         <http://www.w3.org/2004/02/skos/core#Concept> ;
                                                                 <http://purl.org/roh#hasCode> <http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_3_CODE_ICA> ;
                                                                 rdfs:label "Ingeniería civil y arquitectura" ;
                                                                 <http://www.w3.org/2004/02/skos/core#broader> <http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_2_PIN> ;
@@ -2040,7 +2041,7 @@
 
 ###  http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_3_IEA
 <http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_3_IEA> rdf:type owl:NamedIndividual ,
-                                                                         <http://purl.org/roh#ESSubjectArea> ;
+                                                                         <http://www.w3.org/2004/02/skos/core#Concept> ;
                                                                 <http://purl.org/roh#hasCode> <http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_3_CODE_IEA> ;
                                                                 rdfs:label "Ingeniería eléctrica, electrónica y automática" ;
                                                                 <http://www.w3.org/2004/02/skos/core#broader> <http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_2_PIN> ;
@@ -2061,7 +2062,7 @@
 
 ###  http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_3_IIT
 <http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_3_IIT> rdf:type owl:NamedIndividual ,
-                                                                         <http://purl.org/roh#ESSubjectArea> ;
+                                                                         <http://www.w3.org/2004/02/skos/core#Concept> ;
                                                                 <http://purl.org/roh#hasCode> <http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_3_CODE_IIT> ;
                                                                 rdfs:label "Inmunidad, infección y nuevas terapias" ;
                                                                 <http://www.w3.org/2004/02/skos/core#broader> <http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_2_BME> ;
@@ -2081,7 +2082,7 @@
 
 ###  http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_3_INA
 <http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_3_INA> rdf:type owl:NamedIndividual ,
-                                                                         <http://purl.org/roh#ESSubjectArea> ;
+                                                                         <http://www.w3.org/2004/02/skos/core#Concept> ;
                                                                 <http://purl.org/roh#hasCode> <http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_3_CODE_INA> ;
                                                                 rdfs:label "Ingeniería mecánica, naval y aeronáutica" ;
                                                                 <http://www.w3.org/2004/02/skos/core#broader> <http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_2_PIN> ;
@@ -2102,7 +2103,7 @@
 
 ###  http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_3_INF
 <http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_3_INF> rdf:type owl:NamedIndividual ,
-                                                                         <http://purl.org/roh#ESSubjectArea> ;
+                                                                         <http://www.w3.org/2004/02/skos/core#Concept> ;
                                                                 <http://purl.org/roh#hasCode> <http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_3_CODE_INF> ;
                                                                 rdfs:label "Ciencias de la computación y tecnología informática" ;
                                                                 <http://www.w3.org/2004/02/skos/core#broader> <http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_2_TIC> ;
@@ -2121,7 +2122,7 @@
 
 ###  http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_3_IQM
 <http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_3_IQM> rdf:type owl:NamedIndividual ,
-                                                                         <http://purl.org/roh#ESSubjectArea> ;
+                                                                         <http://www.w3.org/2004/02/skos/core#Concept> ;
                                                                 <http://purl.org/roh#hasCode> <http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_3_CODE_IQM> ;
                                                                 rdfs:label "Ingeniería química" ;
                                                                 <http://www.w3.org/2004/02/skos/core#broader> <http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_2_CTQ> ;
@@ -2140,7 +2141,7 @@
 
 ###  http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_3_LFL
 <http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_3_LFL> rdf:type owl:NamedIndividual ,
-                                                                         <http://purl.org/roh#ESSubjectArea> ;
+                                                                         <http://www.w3.org/2004/02/skos/core#Concept> ;
                                                                 <http://purl.org/roh#hasCode> <http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_3_CODE_LFL> ;
                                                                 rdfs:label "Literatura, filología, lenguas y culturas antiguas y estudios culturales" ;
                                                                 <http://www.w3.org/2004/02/skos/core#broader> <http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_2_FLA> ;
@@ -2162,7 +2163,7 @@
 
 ###  http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_3_LYL
 <http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_3_LYL> rdf:type owl:NamedIndividual ,
-                                                                         <http://purl.org/roh#ESSubjectArea> ;
+                                                                         <http://www.w3.org/2004/02/skos/core#Concept> ;
                                                                 <http://purl.org/roh#hasCode> <http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_3_CODE_LYL> ;
                                                                 rdfs:label "Lingüística y lenguas" ;
                                                                 <http://www.w3.org/2004/02/skos/core#broader> <http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_2_MLP> ;
@@ -2181,7 +2182,7 @@
 
 ###  http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_3_MAE
 <http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_3_MAE> rdf:type owl:NamedIndividual ,
-                                                                         <http://purl.org/roh#ESSubjectArea> ;
+                                                                         <http://www.w3.org/2004/02/skos/core#Concept> ;
                                                                 <http://purl.org/roh#hasCode> <http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_3_CODE_MAE> ;
                                                                 rdfs:label "Métodos de análisis económico" ;
                                                                 <http://www.w3.org/2004/02/skos/core#broader> <http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_2_ECO> ;
@@ -2200,7 +2201,7 @@
 
 ###  http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_3_MAR
 <http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_3_MAR> rdf:type owl:NamedIndividual ,
-                                                                         <http://purl.org/roh#ESSubjectArea> ;
+                                                                         <http://www.w3.org/2004/02/skos/core#Concept> ;
                                                                 <http://purl.org/roh#hasCode> <http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_3_CODE_MAR> ;
                                                                 rdfs:label "Ciencias y tecnologías marinas" ;
                                                                 <http://www.w3.org/2004/02/skos/core#broader> <http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_2_CTM> ;
@@ -2219,7 +2220,7 @@
 
 ###  http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_3_MBM
 <http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_3_MBM> rdf:type owl:NamedIndividual ,
-                                                                         <http://purl.org/roh#ESSubjectArea> ;
+                                                                         <http://www.w3.org/2004/02/skos/core#Concept> ;
                                                                 <http://purl.org/roh#hasCode> <http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_3_CODE_MBM> ;
                                                                 rdfs:label "Materiales para biomedicina" ;
                                                                 <http://www.w3.org/2004/02/skos/core#broader> <http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_2_MAT> ;
@@ -2237,7 +2238,7 @@
 
 ###  http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_3_MEN
 <http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_3_MEN> rdf:type owl:NamedIndividual ,
-                                                                         <http://purl.org/roh#ESSubjectArea> ;
+                                                                         <http://www.w3.org/2004/02/skos/core#Concept> ;
                                                                 <http://purl.org/roh#hasCode> <http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_3_CODE_MEN> ;
                                                                 rdfs:label "Materiales para la energía y el medioambiente" ;
                                                                 <http://www.w3.org/2004/02/skos/core#broader> <http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_2_MAT> ;
@@ -2255,7 +2256,7 @@
 
 ###  http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_3_MES
 <http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_3_MES> rdf:type owl:NamedIndividual ,
-                                                                         <http://purl.org/roh#ESSubjectArea> ;
+                                                                         <http://www.w3.org/2004/02/skos/core#Concept> ;
                                                                 <http://purl.org/roh#hasCode> <http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_3_CODE_MES> ;
                                                                 rdfs:label "Materiales estructurales" ;
                                                                 <http://www.w3.org/2004/02/skos/core#broader> <http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_2_MAT> ;
@@ -2273,7 +2274,7 @@
 
 ###  http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_3_MFU
 <http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_3_MFU> rdf:type owl:NamedIndividual ,
-                                                                         <http://purl.org/roh#ESSubjectArea> ;
+                                                                         <http://www.w3.org/2004/02/skos/core#Concept> ;
                                                                 <http://purl.org/roh#hasCode> <http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_3_CODE_MFU> ;
                                                                 rdfs:label "Materiales con funcionalidad eléctrica, magnética, óptica o térmica" ;
                                                                 <http://www.w3.org/2004/02/skos/core#broader> <http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_2_MAT> ;
@@ -2291,7 +2292,7 @@
 
 ###  http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_3_MNF
 <http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_3_MNF> rdf:type owl:NamedIndividual ,
-                                                                         <http://purl.org/roh#ESSubjectArea> ;
+                                                                         <http://www.w3.org/2004/02/skos/core#Concept> ;
                                                                 <http://purl.org/roh#hasCode> <http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_3_CODE_MNF> ;
                                                                 rdfs:label "Microelectrónica, nanotecnología y fotónica" ;
                                                                 <http://www.w3.org/2004/02/skos/core#broader> <http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_2_TIC> ;
@@ -2311,7 +2312,7 @@
 
 ###  http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_3_MT3
 <http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_3_MT3> rdf:type owl:NamedIndividual ,
-                                                                         <http://purl.org/roh#ESSubjectArea> ;
+                                                                         <http://www.w3.org/2004/02/skos/core#Concept> ;
                                                                 <http://purl.org/roh#hasCode> <http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_3_CODE_MT3> ;
                                                                 rdfs:label "Ciencias matemáticas" ;
                                                                 <http://www.w3.org/2004/02/skos/core#broader> <http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_2_MTM> ;
@@ -2330,7 +2331,7 @@
 
 ###  http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_3_POL
 <http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_3_POL> rdf:type owl:NamedIndividual ,
-                                                                         <http://purl.org/roh#ESSubjectArea> ;
+                                                                         <http://www.w3.org/2004/02/skos/core#Concept> ;
                                                                 <http://purl.org/roh#hasCode> <http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_3_CODE_POL> ;
                                                                 rdfs:label "Investigación polar" ;
                                                                 <http://www.w3.org/2004/02/skos/core#broader> <http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_2_CTM> ;
@@ -2348,7 +2349,7 @@
 
 ###  http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_3_PS3
 <http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_3_PS3> rdf:type owl:NamedIndividual ,
-                                                                         <http://purl.org/roh#ESSubjectArea> ;
+                                                                         <http://www.w3.org/2004/02/skos/core#Concept> ;
                                                                 <http://purl.org/roh#hasCode> <http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_3_CODE_PS3> ;
                                                                 rdfs:label "Psicología" ;
                                                                 <http://www.w3.org/2004/02/skos/core#broader> <http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_2_PSI> ;
@@ -2366,7 +2367,7 @@
 
 ###  http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_3_QMC
 <http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_3_QMC> rdf:type owl:NamedIndividual ,
-                                                                         <http://purl.org/roh#ESSubjectArea> ;
+                                                                         <http://www.w3.org/2004/02/skos/core#Concept> ;
                                                                 <http://purl.org/roh#hasCode> <http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_3_CODE_QMC> ;
                                                                 rdfs:label "Química" ;
                                                                 <http://www.w3.org/2004/02/skos/core#broader> <http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_2_CTQ> ;
@@ -2385,7 +2386,7 @@
 
 ###  http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_3_SOC
 <http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_3_SOC> rdf:type owl:NamedIndividual ,
-                                                                         <http://purl.org/roh#ESSubjectArea> ;
+                                                                         <http://www.w3.org/2004/02/skos/core#Concept> ;
                                                                 <http://purl.org/roh#hasCode> <http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_3_CODE_SOC> ;
                                                                 rdfs:label "Sociología y antropología social" ;
                                                                 <http://www.w3.org/2004/02/skos/core#broader> <http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_2_CSO> ;
@@ -2405,7 +2406,7 @@
 
 ###  http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_3_TCO
 <http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_3_TCO> rdf:type owl:NamedIndividual ,
-                                                                         <http://purl.org/roh#ESSubjectArea> ;
+                                                                         <http://www.w3.org/2004/02/skos/core#Concept> ;
                                                                 <http://purl.org/roh#hasCode> <http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_3_CODE_TCO> ;
                                                                 rdfs:label "Tecnologías de las comunicaciones" ;
                                                                 <http://www.w3.org/2004/02/skos/core#broader> <http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_2_TIC> ;
@@ -2424,7 +2425,7 @@
 
 ###  http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_3_TMA
 <http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_3_TMA> rdf:type owl:NamedIndividual ,
-                                                                         <http://purl.org/roh#ESSubjectArea> ;
+                                                                         <http://www.w3.org/2004/02/skos/core#Concept> ;
                                                                 <http://purl.org/roh#hasCode> <http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_3_CODE_TMA> ;
                                                                 rdfs:label "Tecnologías medioambientales" ;
                                                                 <http://www.w3.org/2004/02/skos/core#broader> <http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_2_CTM> ;
@@ -2443,7 +2444,7 @@
 
 ###  http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_3_TRA
 <http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_3_TRA> rdf:type owl:NamedIndividual ,
-                                                                         <http://purl.org/roh#ESSubjectArea> ;
+                                                                         <http://www.w3.org/2004/02/skos/core#Concept> ;
                                                                 <http://purl.org/roh#hasCode> <http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_3_CODE_TRA> ;
                                                                 rdfs:label "Transporte" ;
                                                                 <http://www.w3.org/2004/02/skos/core#broader> <http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_2_EYT> ;

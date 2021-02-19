@@ -69,18 +69,21 @@ by creating a research management system with semantic capacities based on seman
 #    Classes
 #################################################################
 
-###  http://purl.org/roh/mirror/vivo#AcademicPosition
-<http://purl.org/roh/mirror/vivo#AcademicPosition> rdf:type owl:Class ;
-                                                   rdfs:label "Academic Position"@en .
+###  http://purl.org/roh#ResearcherPosition
+<http://purl.org/roh#ResearcherPosition> rdf:type owl:Class ;
+                                         rdfs:subClassOf <http://purl.org/roh/mirror/vivo#Position> ;
+                                         rdfs:label "Researcher Position"@en .
 
 
 ###  http://purl.org/roh/mirror/vivo#FacultyAdministrativePosition
 <http://purl.org/roh/mirror/vivo#FacultyAdministrativePosition> rdf:type owl:Class ;
+                                                                rdfs:subClassOf <http://purl.org/roh/mirror/vivo#Position> ;
                                                                 rdfs:label "Faculty Administrative Position"@en .
 
 
 ###  http://purl.org/roh/mirror/vivo#FacultyPosition
 <http://purl.org/roh/mirror/vivo#FacultyPosition> rdf:type owl:Class ;
+                                                  rdfs:subClassOf <http://purl.org/roh/mirror/vivo#Position> ;
                                                   rdfs:label "Faculty Position"@en .
 
 
@@ -196,7 +199,7 @@ by creating a research management system with semantic capacities based on seman
 
 ###  http://purl.org/roh/university-hr/uk#GB_UNIVERSITY_HR_GBRPROF
 :GB_UNIVERSITY_HR_GBRPROF rdf:type owl:Class ;
-                          rdfs:subClassOf <http://purl.org/roh/mirror/vivo#FacultyPosition> ;
+                          rdfs:subClassOf <http://purl.org/roh#ResearcherPosition> ;
                           <http://purl.org/roh#country> <http://publications.europa.eu/resource/authority/country/GBR> ;
                           <http://purl.org/roh#hasCode> :GB_UNIVERSITY_HR_CODE_GBRPROF ;
                           rdfs:label "Professorial research fellow"@en ;
@@ -210,7 +213,7 @@ by creating a research management system with semantic capacities based on seman
 
 ###  http://purl.org/roh/university-hr/uk#GB_UNIVERSITY_HR_GBRREAASS
 :GB_UNIVERSITY_HR_GBRREAASS rdf:type owl:Class ;
-                            rdfs:subClassOf <http://purl.org/roh/mirror/vivo#Position> ;
+                            rdfs:subClassOf <http://purl.org/roh#ResearcherPosition> ;
                             <http://purl.org/roh#country> <http://publications.europa.eu/resource/authority/country/GBR> ;
                             <http://purl.org/roh#hasCode> :GB_UNIVERSITY_HR_CODE_GBRREAASS ;
                             rdfs:label "Research assistant"@en ;
@@ -222,7 +225,7 @@ by creating a research management system with semantic capacities based on seman
 
 ###  http://purl.org/roh/university-hr/uk#GB_UNIVERSITY_HR_GBRREAFEL
 :GB_UNIVERSITY_HR_GBRREAFEL rdf:type owl:Class ;
-                            rdfs:subClassOf <http://purl.org/roh/mirror/vivo#AcademicPosition> ;
+                            rdfs:subClassOf <http://purl.org/roh#ResearcherPosition> ;
                             <http://purl.org/roh#country> <http://publications.europa.eu/resource/authority/country/GBR> ;
                             <http://purl.org/roh#hasCode> :GB_UNIVERSITY_HR_CODE_GBRREAFEL ;
                             rdfs:label "Research fellow"@en ;
@@ -234,7 +237,7 @@ by creating a research management system with semantic capacities based on seman
 
 ###  http://purl.org/roh/university-hr/uk#GB_UNIVERSITY_HR_GBRSENREAFEL
 :GB_UNIVERSITY_HR_GBRSENREAFEL rdf:type owl:Class ;
-                               rdfs:subClassOf <http://purl.org/roh/mirror/vivo#AcademicPosition> ;
+                               rdfs:subClassOf <http://purl.org/roh#ResearcherPosition> ;
                                <http://purl.org/roh#country> <http://publications.europa.eu/resource/authority/country/GBR> ;
                                <http://purl.org/roh#hasCode> :GB_UNIVERSITY_HR_CODE_GBRSENREAFEL ;
                                rdfs:label "Senior research fellow"@en ;

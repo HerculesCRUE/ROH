@@ -17,6 +17,9 @@
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@language" : "en",
     "@value" : "Knowledge Area"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "http://www.w3.org/2004/02/skos/core#ConceptScheme"
   } ]
 }, {
   "@id" : "http://purl.org/roh#codeOf",
@@ -26,7 +29,7 @@
   "@type" : [ "http://www.w3.org/2002/07/owl#AnnotationProperty" ]
 }, {
   "@id" : "http://purl.org/roh/subject-areas#ESSubjectAreas1stList",
-  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://www.w3.org/2004/02/skos/core#ConceptScheme" ],
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://purl.org/roh#ESSubjectArea" ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@language" : "fr",
     "@value" : "Domains thématiques de premier niveau de l'Agence Espagnole pour la Recherche (AEI)"
@@ -128,7 +131,7 @@
   } ]
 }, {
   "@id" : "http://purl.org/roh/subject-areas#ESSubjectAreas2ndList",
-  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://www.w3.org/2004/02/skos/core#ConceptScheme" ],
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://purl.org/roh#ESSubjectArea" ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@language" : "fr",
     "@value" : "Domains thématiques de second niveau de l'Agence Espagnole pour la Recherche (AEI)"
@@ -230,7 +233,7 @@
   } ]
 }, {
   "@id" : "http://purl.org/roh/subject-areas#ESSubjectAreas3rdList",
-  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://www.w3.org/2004/02/skos/core#ConceptScheme" ],
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://www.w3.org/2004/02/skos/core#Concept" ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@language" : "fr",
     "@value" : "Domains thématiques de troisième niveau de l'Agence Espagnole pour la Recherche (AEI)"
@@ -332,7 +335,7 @@
   } ]
 }, {
   "@id" : "http://purl.org/roh/subject-areas#ESSubjectCode1stList",
-  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://www.w3.org/2004/02/skos/core#ConceptScheme" ],
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://www.w3.org/2004/02/skos/core#Concept" ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@language" : "fr",
     "@value" : "Codes des domains thématiques de premier niveau de l'Agence Espagnole pour la Recherche (AEI)"
@@ -416,7 +419,7 @@
   } ]
 }, {
   "@id" : "http://purl.org/roh/subject-areas#ESSubjectCode2ndList",
-  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://www.w3.org/2004/02/skos/core#ConceptScheme" ],
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://purl.org/roh#ESSubjectArea" ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@language" : "fr",
     "@value" : "Codes des domains thématiques de second niveau de l'Agence Espagnole pour la Recherche (AEI)"
@@ -500,7 +503,7 @@
   } ]
 }, {
   "@id" : "http://purl.org/roh/subject-areas#ESSubjectCode3rdList",
-  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://www.w3.org/2004/02/skos/core#ConceptScheme" ],
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://purl.org/roh#ESSubjectArea" ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@language" : "fr",
     "@value" : "Codes des domains thématiques de troisième niveau de l'Agence Espagnole pour la Recherche (AEI)"
@@ -584,7 +587,7 @@
   } ]
 }, {
   "@id" : "http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_1_CMIFQ",
-  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://purl.org/roh#ESSubjectArea" ],
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://www.w3.org/2004/02/skos/core#Concept" ],
   "http://purl.org/roh#hasCode" : [ {
     "@id" : "http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_1_CODE_CMIFQ"
   } ],
@@ -669,7 +672,7 @@
   } ]
 }, {
   "@id" : "http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_1_CODE_CMIFQ",
-  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://purl.org/roh#ESSubjectArea" ],
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://www.w3.org/2004/02/skos/core#Concept" ],
   "http://purl.org/roh#codeOf" : [ {
     "@id" : "http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_1_CMIFQ"
   } ],
@@ -684,7 +687,7 @@
   } ]
 }, {
   "@id" : "http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_1_CODE_CSH",
-  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://purl.org/roh#ESSubjectArea" ],
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://www.w3.org/2004/02/skos/core#Concept" ],
   "http://purl.org/roh#codeOf" : [ {
     "@id" : "http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_1_CSH"
   } ],
@@ -699,7 +702,7 @@
   } ]
 }, {
   "@id" : "http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_1_CODE_CV",
-  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://purl.org/roh#ESSubjectArea" ],
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://www.w3.org/2004/02/skos/core#Concept" ],
   "http://purl.org/roh#codeOf" : [ {
     "@id" : "http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_1_CV"
   } ],
@@ -714,7 +717,7 @@
   } ]
 }, {
   "@id" : "http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_1_CSH",
-  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://purl.org/roh#ESSubjectArea" ],
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://www.w3.org/2004/02/skos/core#Concept" ],
   "http://purl.org/roh#hasCode" : [ {
     "@id" : "http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_1_CODE_CSH"
   } ],
@@ -793,7 +796,7 @@
   } ]
 }, {
   "@id" : "http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_1_CV",
-  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://purl.org/roh#ESSubjectArea" ],
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://www.w3.org/2004/02/skos/core#Concept" ],
   "http://purl.org/roh#hasCode" : [ {
     "@id" : "http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_1_CODE_CV"
   } ],
@@ -872,7 +875,7 @@
   } ]
 }, {
   "@id" : "http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_2_BIO",
-  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://purl.org/roh#ESSubjectArea" ],
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://www.w3.org/2004/02/skos/core#Concept" ],
   "http://purl.org/roh#hasCode" : [ {
     "@id" : "http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_2_CODE_BIO"
   } ],
@@ -917,7 +920,7 @@
   } ]
 }, {
   "@id" : "http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_2_BME",
-  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://purl.org/roh#ESSubjectArea" ],
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://www.w3.org/2004/02/skos/core#Concept" ],
   "http://purl.org/roh#hasCode" : [ {
     "@id" : "http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_2_CODE_BME"
   } ],
@@ -965,7 +968,7 @@
   } ]
 }, {
   "@id" : "http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_2_CAA",
-  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://purl.org/roh#ESSubjectArea" ],
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://www.w3.org/2004/02/skos/core#Concept" ],
   "http://purl.org/roh#hasCode" : [ {
     "@id" : "http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_2_CODE_CAA"
   } ],
@@ -1007,7 +1010,7 @@
   } ]
 }, {
   "@id" : "http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_2_CODE_BIO",
-  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://purl.org/roh#ESSubjectArea" ],
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://www.w3.org/2004/02/skos/core#Concept" ],
   "http://purl.org/roh#codeOf" : [ {
     "@id" : "http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_2_BIO"
   } ],
@@ -1022,7 +1025,7 @@
   } ]
 }, {
   "@id" : "http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_2_CODE_BME",
-  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://purl.org/roh#ESSubjectArea" ],
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://www.w3.org/2004/02/skos/core#Concept" ],
   "http://purl.org/roh#codeOf" : [ {
     "@id" : "http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_2_BME"
   } ],
@@ -1037,7 +1040,7 @@
   } ]
 }, {
   "@id" : "http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_2_CODE_CAA",
-  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://purl.org/roh#ESSubjectArea" ],
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://www.w3.org/2004/02/skos/core#Concept" ],
   "http://purl.org/roh#codeOf" : [ {
     "@id" : "http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_2_CAA"
   } ],
@@ -1052,7 +1055,7 @@
   } ]
 }, {
   "@id" : "http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_2_CODE_CSO",
-  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://purl.org/roh#ESSubjectArea" ],
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://www.w3.org/2004/02/skos/core#Concept" ],
   "http://purl.org/roh#codeOf" : [ {
     "@id" : "http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_2_CSO"
   } ],
@@ -1067,7 +1070,7 @@
   } ]
 }, {
   "@id" : "http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_2_CODE_CTM",
-  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://purl.org/roh#ESSubjectArea" ],
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://www.w3.org/2004/02/skos/core#Concept" ],
   "http://purl.org/roh#codeOf" : [ {
     "@id" : "http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_2_CTM"
   } ],
@@ -1082,7 +1085,7 @@
   } ]
 }, {
   "@id" : "http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_2_CODE_CTQ",
-  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://purl.org/roh#ESSubjectArea" ],
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://www.w3.org/2004/02/skos/core#Concept" ],
   "http://purl.org/roh#codeOf" : [ {
     "@id" : "http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_2_CTQ"
   } ],
@@ -1097,7 +1100,7 @@
   } ]
 }, {
   "@id" : "http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_2_CODE_DER",
-  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://purl.org/roh#ESSubjectArea" ],
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://www.w3.org/2004/02/skos/core#Concept" ],
   "http://purl.org/roh#codeOf" : [ {
     "@id" : "http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_2_DER"
   } ],
@@ -1112,7 +1115,7 @@
   } ]
 }, {
   "@id" : "http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_2_CODE_ECO",
-  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://purl.org/roh#ESSubjectArea" ],
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://www.w3.org/2004/02/skos/core#Concept" ],
   "http://purl.org/roh#codeOf" : [ {
     "@id" : "http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_2_ECO"
   } ],
@@ -1127,7 +1130,7 @@
   } ]
 }, {
   "@id" : "http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_2_CODE_EDU",
-  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://purl.org/roh#ESSubjectArea" ],
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://www.w3.org/2004/02/skos/core#Concept" ],
   "http://purl.org/roh#codeOf" : [ {
     "@id" : "http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_2_EDU"
   } ],
@@ -1142,7 +1145,7 @@
   } ]
 }, {
   "@id" : "http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_2_CODE_EYT",
-  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://purl.org/roh#ESSubjectArea" ],
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://www.w3.org/2004/02/skos/core#Concept" ],
   "http://purl.org/roh#codeOf" : [ {
     "@id" : "http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_2_EYT"
   } ],
@@ -1157,7 +1160,7 @@
   } ]
 }, {
   "@id" : "http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_2_CODE_FIS",
-  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://purl.org/roh#ESSubjectArea" ],
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://www.w3.org/2004/02/skos/core#Concept" ],
   "http://purl.org/roh#codeOf" : [ {
     "@id" : "http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_2_FIS"
   } ],
@@ -1172,7 +1175,7 @@
   } ]
 }, {
   "@id" : "http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_2_CODE_FLA",
-  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://purl.org/roh#ESSubjectArea" ],
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://www.w3.org/2004/02/skos/core#Concept" ],
   "http://purl.org/roh#codeOf" : [ {
     "@id" : "http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_2_FLA"
   } ],
@@ -1187,7 +1190,7 @@
   } ]
 }, {
   "@id" : "http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_2_CODE_MAT",
-  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://purl.org/roh#ESSubjectArea" ],
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://www.w3.org/2004/02/skos/core#Concept" ],
   "http://purl.org/roh#codeOf" : [ {
     "@id" : "http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_2_MAT"
   } ],
@@ -1202,7 +1205,7 @@
   } ]
 }, {
   "@id" : "http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_2_CODE_MLP",
-  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://purl.org/roh#ESSubjectArea" ],
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://www.w3.org/2004/02/skos/core#Concept" ],
   "http://purl.org/roh#codeOf" : [ {
     "@id" : "http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_2_MLP"
   } ],
@@ -1217,7 +1220,7 @@
   } ]
 }, {
   "@id" : "http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_2_CODE_MTM",
-  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://purl.org/roh#ESSubjectArea" ],
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://www.w3.org/2004/02/skos/core#Concept" ],
   "http://purl.org/roh#codeOf" : [ {
     "@id" : "http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_2_MTM"
   } ],
@@ -1232,7 +1235,7 @@
   } ]
 }, {
   "@id" : "http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_2_CODE_PHA",
-  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://purl.org/roh#ESSubjectArea" ],
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://www.w3.org/2004/02/skos/core#Concept" ],
   "http://purl.org/roh#codeOf" : [ {
     "@id" : "http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_2_PHA"
   } ],
@@ -1247,7 +1250,7 @@
   } ]
 }, {
   "@id" : "http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_2_CODE_PIN",
-  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://purl.org/roh#ESSubjectArea" ],
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://www.w3.org/2004/02/skos/core#Concept" ],
   "http://purl.org/roh#codeOf" : [ {
     "@id" : "http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_2_PIN"
   } ],
@@ -1262,7 +1265,7 @@
   } ]
 }, {
   "@id" : "http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_2_CODE_PSI",
-  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://purl.org/roh#ESSubjectArea" ],
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://www.w3.org/2004/02/skos/core#Concept" ],
   "http://purl.org/roh#codeOf" : [ {
     "@id" : "http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_2_PSI"
   } ],
@@ -1277,7 +1280,7 @@
   } ]
 }, {
   "@id" : "http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_2_CODE_TIC",
-  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://purl.org/roh#ESSubjectArea" ],
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://www.w3.org/2004/02/skos/core#Concept" ],
   "http://purl.org/roh#codeOf" : [ {
     "@id" : "http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_2_TIC"
   } ],
@@ -1292,7 +1295,7 @@
   } ]
 }, {
   "@id" : "http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_2_CSO",
-  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://purl.org/roh#ESSubjectArea" ],
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://www.w3.org/2004/02/skos/core#Concept" ],
   "http://purl.org/roh#hasCode" : [ {
     "@id" : "http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_2_CODE_CSO"
   } ],
@@ -1337,7 +1340,7 @@
   } ]
 }, {
   "@id" : "http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_2_CTM",
-  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://purl.org/roh#ESSubjectArea" ],
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://www.w3.org/2004/02/skos/core#Concept" ],
   "http://purl.org/roh#hasCode" : [ {
     "@id" : "http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_2_CODE_CTM"
   } ],
@@ -1382,7 +1385,7 @@
   } ]
 }, {
   "@id" : "http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_2_CTQ",
-  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://purl.org/roh#ESSubjectArea" ],
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://www.w3.org/2004/02/skos/core#Concept" ],
   "http://purl.org/roh#hasCode" : [ {
     "@id" : "http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_2_CODE_CTQ"
   } ],
@@ -1427,7 +1430,7 @@
   } ]
 }, {
   "@id" : "http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_2_DER",
-  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://purl.org/roh#ESSubjectArea" ],
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://www.w3.org/2004/02/skos/core#Concept" ],
   "http://purl.org/roh#hasCode" : [ {
     "@id" : "http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_2_CODE_DER"
   } ],
@@ -1472,7 +1475,7 @@
   } ]
 }, {
   "@id" : "http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_2_ECO",
-  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://purl.org/roh#ESSubjectArea" ],
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://www.w3.org/2004/02/skos/core#Concept" ],
   "http://purl.org/roh#hasCode" : [ {
     "@id" : "http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_2_CODE_ECO"
   } ],
@@ -1517,7 +1520,7 @@
   } ]
 }, {
   "@id" : "http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_2_EDU",
-  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://purl.org/roh#ESSubjectArea" ],
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://www.w3.org/2004/02/skos/core#Concept" ],
   "http://purl.org/roh#hasCode" : [ {
     "@id" : "http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_2_CODE_EDU"
   } ],
@@ -1562,7 +1565,7 @@
   } ]
 }, {
   "@id" : "http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_2_EYT",
-  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://purl.org/roh#ESSubjectArea" ],
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://www.w3.org/2004/02/skos/core#Concept" ],
   "http://purl.org/roh#hasCode" : [ {
     "@id" : "http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_2_CODE_EYT"
   } ],
@@ -1609,7 +1612,7 @@
   } ]
 }, {
   "@id" : "http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_2_FIS",
-  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://purl.org/roh#ESSubjectArea" ],
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://www.w3.org/2004/02/skos/core#Concept" ],
   "http://purl.org/roh#hasCode" : [ {
     "@id" : "http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_2_CODE_FIS"
   } ],
@@ -1654,7 +1657,7 @@
   } ]
 }, {
   "@id" : "http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_2_FLA",
-  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://purl.org/roh#ESSubjectArea" ],
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://www.w3.org/2004/02/skos/core#Concept" ],
   "http://purl.org/roh#hasCode" : [ {
     "@id" : "http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_2_CODE_FLA"
   } ],
@@ -1696,7 +1699,7 @@
   } ]
 }, {
   "@id" : "http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_2_MAT",
-  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://purl.org/roh#ESSubjectArea" ],
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://www.w3.org/2004/02/skos/core#Concept" ],
   "http://purl.org/roh#hasCode" : [ {
     "@id" : "http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_2_CODE_MAT"
   } ],
@@ -1738,7 +1741,7 @@
   } ]
 }, {
   "@id" : "http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_2_MLP",
-  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://purl.org/roh#ESSubjectArea" ],
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://www.w3.org/2004/02/skos/core#Concept" ],
   "http://purl.org/roh#hasCode" : [ {
     "@id" : "http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_2_CODE_MLP"
   } ],
@@ -1787,7 +1790,7 @@
   } ]
 }, {
   "@id" : "http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_2_MTM",
-  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://purl.org/roh#ESSubjectArea" ],
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://www.w3.org/2004/02/skos/core#Concept" ],
   "http://purl.org/roh#hasCode" : [ {
     "@id" : "http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_2_CODE_MTM"
   } ],
@@ -1832,7 +1835,7 @@
   } ]
 }, {
   "@id" : "http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_2_PHA",
-  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://purl.org/roh#ESSubjectArea" ],
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://www.w3.org/2004/02/skos/core#Concept" ],
   "http://purl.org/roh#hasCode" : [ {
     "@id" : "http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_2_CODE_PHA"
   } ],
@@ -1874,7 +1877,7 @@
   } ]
 }, {
   "@id" : "http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_2_PIN",
-  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://purl.org/roh#ESSubjectArea" ],
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://www.w3.org/2004/02/skos/core#Concept" ],
   "http://purl.org/roh#hasCode" : [ {
     "@id" : "http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_2_CODE_PIN"
   } ],
@@ -1921,7 +1924,7 @@
   } ]
 }, {
   "@id" : "http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_2_PSI",
-  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://purl.org/roh#ESSubjectArea" ],
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://www.w3.org/2004/02/skos/core#Concept" ],
   "http://purl.org/roh#hasCode" : [ {
     "@id" : "http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_2_CODE_PSI"
   } ],
@@ -1966,7 +1969,7 @@
   } ]
 }, {
   "@id" : "http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_2_TIC",
-  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://purl.org/roh#ESSubjectArea" ],
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://www.w3.org/2004/02/skos/core#Concept" ],
   "http://purl.org/roh#hasCode" : [ {
     "@id" : "http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_2_CODE_TIC"
   } ],
@@ -2013,7 +2016,7 @@
   } ]
 }, {
   "@id" : "http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_3_ALI",
-  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://purl.org/roh#ESSubjectArea" ],
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://www.w3.org/2004/02/skos/core#Concept" ],
   "http://purl.org/roh#hasCode" : [ {
     "@id" : "http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_3_CODE_ALI"
   } ],
@@ -2058,7 +2061,7 @@
   } ]
 }, {
   "@id" : "http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_3_ARQ",
-  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://purl.org/roh#ESSubjectArea" ],
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://www.w3.org/2004/02/skos/core#Concept" ],
   "http://purl.org/roh#hasCode" : [ {
     "@id" : "http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_3_CODE_ARQ"
   } ],
@@ -2100,7 +2103,7 @@
   } ]
 }, {
   "@id" : "http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_3_ART",
-  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://purl.org/roh#ESSubjectArea" ],
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://www.w3.org/2004/02/skos/core#Concept" ],
   "http://purl.org/roh#hasCode" : [ {
     "@id" : "http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_3_CODE_ART"
   } ],
@@ -2147,7 +2150,7 @@
   } ]
 }, {
   "@id" : "http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_3_AYA",
-  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://purl.org/roh#ESSubjectArea" ],
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://www.w3.org/2004/02/skos/core#Concept" ],
   "http://purl.org/roh#hasCode" : [ {
     "@id" : "http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_3_CODE_AYA"
   } ],
@@ -2194,7 +2197,7 @@
   } ]
 }, {
   "@id" : "http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_3_AYF",
-  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://purl.org/roh#ESSubjectArea" ],
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://www.w3.org/2004/02/skos/core#Concept" ],
   "http://purl.org/roh#hasCode" : [ {
     "@id" : "http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_3_CODE_AYF"
   } ],
@@ -2241,7 +2244,7 @@
   } ]
 }, {
   "@id" : "http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_3_BDV",
-  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://purl.org/roh#ESSubjectArea" ],
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://www.w3.org/2004/02/skos/core#Concept" ],
   "http://purl.org/roh#hasCode" : [ {
     "@id" : "http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_3_CODE_BDV"
   } ],
@@ -2286,7 +2289,7 @@
   } ]
 }, {
   "@id" : "http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_3_BIF",
-  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://purl.org/roh#ESSubjectArea" ],
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://www.w3.org/2004/02/skos/core#Concept" ],
   "http://purl.org/roh#hasCode" : [ {
     "@id" : "http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_3_CODE_BIF"
   } ],
@@ -2328,7 +2331,7 @@
   } ]
 }, {
   "@id" : "http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_3_BMC",
-  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://purl.org/roh#ESSubjectArea" ],
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://www.w3.org/2004/02/skos/core#Concept" ],
   "http://purl.org/roh#hasCode" : [ {
     "@id" : "http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_3_CODE_BMC"
   } ],
@@ -2375,7 +2378,7 @@
   } ]
 }, {
   "@id" : "http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_3_BTC",
-  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://purl.org/roh#ESSubjectArea" ],
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://www.w3.org/2004/02/skos/core#Concept" ],
   "http://purl.org/roh#hasCode" : [ {
     "@id" : "http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_3_CODE_BTC"
   } ],
@@ -2420,7 +2423,7 @@
   } ]
 }, {
   "@id" : "http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_3_CAN",
-  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://purl.org/roh#ESSubjectArea" ],
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://www.w3.org/2004/02/skos/core#Concept" ],
   "http://purl.org/roh#hasCode" : [ {
     "@id" : "http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_3_CODE_CAN"
   } ],
@@ -2465,7 +2468,7 @@
   } ]
 }, {
   "@id" : "http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_3_CODE_ALI",
-  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://purl.org/roh#ESSubjectArea" ],
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://www.w3.org/2004/02/skos/core#Concept" ],
   "http://purl.org/roh#codeOf" : [ {
     "@id" : "http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_3_ALI"
   } ],
@@ -2480,7 +2483,7 @@
   } ]
 }, {
   "@id" : "http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_3_CODE_ARQ",
-  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://purl.org/roh#ESSubjectArea" ],
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://www.w3.org/2004/02/skos/core#Concept" ],
   "http://purl.org/roh#codeOf" : [ {
     "@id" : "http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_3_ARQ"
   } ],
@@ -2495,7 +2498,7 @@
   } ]
 }, {
   "@id" : "http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_3_CODE_ART",
-  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://purl.org/roh#ESSubjectArea" ],
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://www.w3.org/2004/02/skos/core#Concept" ],
   "http://purl.org/roh#codeOf" : [ {
     "@id" : "http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_3_ART"
   } ],
@@ -2510,7 +2513,7 @@
   } ]
 }, {
   "@id" : "http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_3_CODE_AYA",
-  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://purl.org/roh#ESSubjectArea" ],
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://www.w3.org/2004/02/skos/core#Concept" ],
   "http://purl.org/roh#codeOf" : [ {
     "@id" : "http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_3_AYA"
   } ],
@@ -2525,7 +2528,7 @@
   } ]
 }, {
   "@id" : "http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_3_CODE_AYF",
-  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://purl.org/roh#ESSubjectArea" ],
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://www.w3.org/2004/02/skos/core#Concept" ],
   "http://purl.org/roh#codeOf" : [ {
     "@id" : "http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_3_AYF"
   } ],
@@ -2540,7 +2543,7 @@
   } ]
 }, {
   "@id" : "http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_3_CODE_BDV",
-  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://purl.org/roh#ESSubjectArea" ],
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://www.w3.org/2004/02/skos/core#Concept" ],
   "http://purl.org/roh#codeOf" : [ {
     "@id" : "http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_3_BDV"
   } ],
@@ -2555,7 +2558,7 @@
   } ]
 }, {
   "@id" : "http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_3_CODE_BIF",
-  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://purl.org/roh#ESSubjectArea" ],
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://www.w3.org/2004/02/skos/core#Concept" ],
   "http://purl.org/roh#codeOf" : [ {
     "@id" : "http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_3_BIF"
   } ],
@@ -2570,7 +2573,7 @@
   } ]
 }, {
   "@id" : "http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_3_CODE_BMC",
-  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://purl.org/roh#ESSubjectArea" ],
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://www.w3.org/2004/02/skos/core#Concept" ],
   "http://purl.org/roh#codeOf" : [ {
     "@id" : "http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_3_BMC"
   } ],
@@ -2585,7 +2588,7 @@
   } ]
 }, {
   "@id" : "http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_3_CODE_BTC",
-  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://purl.org/roh#ESSubjectArea" ],
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://www.w3.org/2004/02/skos/core#Concept" ],
   "http://purl.org/roh#codeOf" : [ {
     "@id" : "http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_3_BTC"
   } ],
@@ -2600,7 +2603,7 @@
   } ]
 }, {
   "@id" : "http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_3_CODE_CAN",
-  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://purl.org/roh#ESSubjectArea" ],
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://www.w3.org/2004/02/skos/core#Concept" ],
   "http://purl.org/roh#codeOf" : [ {
     "@id" : "http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_3_CAN"
   } ],
@@ -2615,7 +2618,7 @@
   } ]
 }, {
   "@id" : "http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_3_CODE_COM",
-  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://purl.org/roh#ESSubjectArea" ],
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://www.w3.org/2004/02/skos/core#Concept" ],
   "http://purl.org/roh#codeOf" : [ {
     "@id" : "http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_3_COM"
   } ],
@@ -2630,7 +2633,7 @@
   } ]
 }, {
   "@id" : "http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_3_CODE_CPO",
-  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://purl.org/roh#ESSubjectArea" ],
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://www.w3.org/2004/02/skos/core#Concept" ],
   "http://purl.org/roh#codeOf" : [ {
     "@id" : "http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_3_CPO"
   } ],
@@ -2645,7 +2648,7 @@
   } ]
 }, {
   "@id" : "http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_3_CODE_CTA",
-  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://purl.org/roh#ESSubjectArea" ],
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://www.w3.org/2004/02/skos/core#Concept" ],
   "http://purl.org/roh#codeOf" : [ {
     "@id" : "http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_3_CTA"
   } ],
@@ -2660,7 +2663,7 @@
   } ]
 }, {
   "@id" : "http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_3_CODE_CYA",
-  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://purl.org/roh#ESSubjectArea" ],
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://www.w3.org/2004/02/skos/core#Concept" ],
   "http://purl.org/roh#codeOf" : [ {
     "@id" : "http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_3_CYA"
   } ],
@@ -2675,7 +2678,7 @@
   } ]
 }, {
   "@id" : "http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_3_CODE_DE3",
-  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://purl.org/roh#ESSubjectArea" ],
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://www.w3.org/2004/02/skos/core#Concept" ],
   "http://purl.org/roh#codeOf" : [ {
     "@id" : "http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_3_DE3"
   } ],
@@ -2690,7 +2693,7 @@
   } ]
 }, {
   "@id" : "http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_3_CODE_DPT",
-  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://purl.org/roh#ESSubjectArea" ],
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://www.w3.org/2004/02/skos/core#Concept" ],
   "http://purl.org/roh#codeOf" : [ {
     "@id" : "http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_3_DPT"
   } ],
@@ -2705,7 +2708,7 @@
   } ]
 }, {
   "@id" : "http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_3_CODE_ED3",
-  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://purl.org/roh#ESSubjectArea" ],
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://www.w3.org/2004/02/skos/core#Concept" ],
   "http://purl.org/roh#codeOf" : [ {
     "@id" : "http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_3_ED3"
   } ],
@@ -2720,7 +2723,7 @@
   } ]
 }, {
   "@id" : "http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_3_CODE_ENE",
-  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://purl.org/roh#ESSubjectArea" ],
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://www.w3.org/2004/02/skos/core#Concept" ],
   "http://purl.org/roh#codeOf" : [ {
     "@id" : "http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_3_ENE"
   } ],
@@ -2735,7 +2738,7 @@
   } ]
 }, {
   "@id" : "http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_3_CODE_ESN",
-  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://purl.org/roh#ESSubjectArea" ],
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://www.w3.org/2004/02/skos/core#Concept" ],
   "http://purl.org/roh#codeOf" : [ {
     "@id" : "http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_3_ESN"
   } ],
@@ -2750,7 +2753,7 @@
   } ]
 }, {
   "@id" : "http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_3_CODE_ESP",
-  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://purl.org/roh#ESSubjectArea" ],
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://www.w3.org/2004/02/skos/core#Concept" ],
   "http://purl.org/roh#codeOf" : [ {
     "@id" : "http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_3_ESP"
   } ],
@@ -2765,7 +2768,7 @@
   } ]
 }, {
   "@id" : "http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_3_CODE_EYA",
-  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://purl.org/roh#ESSubjectArea" ],
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://www.w3.org/2004/02/skos/core#Concept" ],
   "http://purl.org/roh#codeOf" : [ {
     "@id" : "http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_3_EYA"
   } ],
@@ -2780,7 +2783,7 @@
   } ]
 }, {
   "@id" : "http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_3_CODE_EYF",
-  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://purl.org/roh#ESSubjectArea" ],
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://www.w3.org/2004/02/skos/core#Concept" ],
   "http://purl.org/roh#codeOf" : [ {
     "@id" : "http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_3_EYF"
   } ],
@@ -2795,7 +2798,7 @@
   } ]
 }, {
   "@id" : "http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_3_CODE_FEM",
-  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://purl.org/roh#ESSubjectArea" ],
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://www.w3.org/2004/02/skos/core#Concept" ],
   "http://purl.org/roh#codeOf" : [ {
     "@id" : "http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_3_FEM"
   } ],
@@ -2810,7 +2813,7 @@
   } ]
 }, {
   "@id" : "http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_3_CODE_FFP",
-  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://purl.org/roh#ESSubjectArea" ],
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://www.w3.org/2004/02/skos/core#Concept" ],
   "http://purl.org/roh#codeOf" : [ {
     "@id" : "http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_3_FFP"
   } ],
@@ -2825,7 +2828,7 @@
   } ]
 }, {
   "@id" : "http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_3_CODE_FIL",
-  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://purl.org/roh#ESSubjectArea" ],
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://www.w3.org/2004/02/skos/core#Concept" ],
   "http://purl.org/roh#codeOf" : [ {
     "@id" : "http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_3_FIL"
   } ],
@@ -2840,7 +2843,7 @@
   } ]
 }, {
   "@id" : "http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_3_CODE_FOS",
-  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://purl.org/roh#ESSubjectArea" ],
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://www.w3.org/2004/02/skos/core#Concept" ],
   "http://purl.org/roh#codeOf" : [ {
     "@id" : "http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_3_FOS"
   } ],
@@ -2855,7 +2858,7 @@
   } ]
 }, {
   "@id" : "http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_3_CODE_FYA",
-  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://purl.org/roh#ESSubjectArea" ],
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://www.w3.org/2004/02/skos/core#Concept" ],
   "http://purl.org/roh#codeOf" : [ {
     "@id" : "http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_3_FYA"
   } ],
@@ -2870,7 +2873,7 @@
   } ]
 }, {
   "@id" : "http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_3_CODE_GEO",
-  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://purl.org/roh#ESSubjectArea" ],
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://www.w3.org/2004/02/skos/core#Concept" ],
   "http://purl.org/roh#codeOf" : [ {
     "@id" : "http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_3_GEO"
   } ],
@@ -2885,7 +2888,7 @@
   } ]
 }, {
   "@id" : "http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_3_CODE_GYA",
-  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://purl.org/roh#ESSubjectArea" ],
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://www.w3.org/2004/02/skos/core#Concept" ],
   "http://purl.org/roh#codeOf" : [ {
     "@id" : "http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_3_GYA"
   } ],
@@ -2900,7 +2903,7 @@
   } ]
 }, {
   "@id" : "http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_3_CODE_HIS",
-  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://purl.org/roh#ESSubjectArea" ],
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://www.w3.org/2004/02/skos/core#Concept" ],
   "http://purl.org/roh#codeOf" : [ {
     "@id" : "http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_3_HIS"
   } ],
@@ -2915,7 +2918,7 @@
   } ]
 }, {
   "@id" : "http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_3_CODE_IBI",
-  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://purl.org/roh#ESSubjectArea" ],
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://www.w3.org/2004/02/skos/core#Concept" ],
   "http://purl.org/roh#codeOf" : [ {
     "@id" : "http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_3_IBI"
   } ],
@@ -2930,7 +2933,7 @@
   } ]
 }, {
   "@id" : "http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_3_CODE_ICA",
-  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://purl.org/roh#ESSubjectArea" ],
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://www.w3.org/2004/02/skos/core#Concept" ],
   "http://purl.org/roh#codeOf" : [ {
     "@id" : "http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_3_ICA"
   } ],
@@ -2945,7 +2948,7 @@
   } ]
 }, {
   "@id" : "http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_3_CODE_IEA",
-  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://purl.org/roh#ESSubjectArea" ],
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://www.w3.org/2004/02/skos/core#Concept" ],
   "http://purl.org/roh#codeOf" : [ {
     "@id" : "http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_3_IEA"
   } ],
@@ -2960,7 +2963,7 @@
   } ]
 }, {
   "@id" : "http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_3_CODE_IIT",
-  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://purl.org/roh#ESSubjectArea" ],
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://www.w3.org/2004/02/skos/core#Concept" ],
   "http://purl.org/roh#codeOf" : [ {
     "@id" : "http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_3_IIT"
   } ],
@@ -2975,7 +2978,7 @@
   } ]
 }, {
   "@id" : "http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_3_CODE_INA",
-  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://purl.org/roh#ESSubjectArea" ],
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://www.w3.org/2004/02/skos/core#Concept" ],
   "http://purl.org/roh#codeOf" : [ {
     "@id" : "http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_3_INA"
   } ],
@@ -2990,7 +2993,7 @@
   } ]
 }, {
   "@id" : "http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_3_CODE_INF",
-  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://purl.org/roh#ESSubjectArea" ],
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://www.w3.org/2004/02/skos/core#Concept" ],
   "http://purl.org/roh#codeOf" : [ {
     "@id" : "http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_3_INF"
   } ],
@@ -3005,7 +3008,7 @@
   } ]
 }, {
   "@id" : "http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_3_CODE_IQM",
-  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://purl.org/roh#ESSubjectArea" ],
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://www.w3.org/2004/02/skos/core#Concept" ],
   "http://purl.org/roh#codeOf" : [ {
     "@id" : "http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_3_IQM"
   } ],
@@ -3020,7 +3023,7 @@
   } ]
 }, {
   "@id" : "http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_3_CODE_LFL",
-  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://purl.org/roh#ESSubjectArea" ],
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://www.w3.org/2004/02/skos/core#Concept" ],
   "http://purl.org/roh#codeOf" : [ {
     "@id" : "http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_3_LFL"
   } ],
@@ -3035,7 +3038,7 @@
   } ]
 }, {
   "@id" : "http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_3_CODE_LYL",
-  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://purl.org/roh#ESSubjectArea" ],
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://www.w3.org/2004/02/skos/core#Concept" ],
   "http://purl.org/roh#codeOf" : [ {
     "@id" : "http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_3_LYL"
   } ],
@@ -3050,7 +3053,7 @@
   } ]
 }, {
   "@id" : "http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_3_CODE_MAE",
-  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://purl.org/roh#ESSubjectArea" ],
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://www.w3.org/2004/02/skos/core#Concept" ],
   "http://purl.org/roh#codeOf" : [ {
     "@id" : "http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_3_MAE"
   } ],
@@ -3065,7 +3068,7 @@
   } ]
 }, {
   "@id" : "http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_3_CODE_MAR",
-  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://purl.org/roh#ESSubjectArea" ],
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://www.w3.org/2004/02/skos/core#Concept" ],
   "http://purl.org/roh#codeOf" : [ {
     "@id" : "http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_3_MAR"
   } ],
@@ -3080,7 +3083,7 @@
   } ]
 }, {
   "@id" : "http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_3_CODE_MBM",
-  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://purl.org/roh#ESSubjectArea" ],
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://www.w3.org/2004/02/skos/core#Concept" ],
   "http://purl.org/roh#codeOf" : [ {
     "@id" : "http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_3_MBM"
   } ],
@@ -3095,7 +3098,7 @@
   } ]
 }, {
   "@id" : "http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_3_CODE_MEN",
-  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://purl.org/roh#ESSubjectArea" ],
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://www.w3.org/2004/02/skos/core#Concept" ],
   "http://purl.org/roh#codeOf" : [ {
     "@id" : "http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_3_MEN"
   } ],
@@ -3110,7 +3113,7 @@
   } ]
 }, {
   "@id" : "http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_3_CODE_MES",
-  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://purl.org/roh#ESSubjectArea" ],
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://www.w3.org/2004/02/skos/core#Concept" ],
   "http://purl.org/roh#codeOf" : [ {
     "@id" : "http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_3_MES"
   } ],
@@ -3125,7 +3128,7 @@
   } ]
 }, {
   "@id" : "http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_3_CODE_MFU",
-  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://purl.org/roh#ESSubjectArea" ],
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://www.w3.org/2004/02/skos/core#Concept" ],
   "http://purl.org/roh#codeOf" : [ {
     "@id" : "http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_3_MFU"
   } ],
@@ -3140,7 +3143,7 @@
   } ]
 }, {
   "@id" : "http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_3_CODE_MNF",
-  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://purl.org/roh#ESSubjectArea" ],
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://www.w3.org/2004/02/skos/core#Concept" ],
   "http://purl.org/roh#codeOf" : [ {
     "@id" : "http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_3_MNF"
   } ],
@@ -3155,7 +3158,7 @@
   } ]
 }, {
   "@id" : "http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_3_CODE_MT3",
-  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://purl.org/roh#ESSubjectArea" ],
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://www.w3.org/2004/02/skos/core#Concept" ],
   "http://purl.org/roh#codeOf" : [ {
     "@id" : "http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_3_MT3"
   } ],
@@ -3170,7 +3173,7 @@
   } ]
 }, {
   "@id" : "http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_3_CODE_POL",
-  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://purl.org/roh#ESSubjectArea" ],
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://www.w3.org/2004/02/skos/core#Concept" ],
   "http://purl.org/roh#codeOf" : [ {
     "@id" : "http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_3_POL"
   } ],
@@ -3185,7 +3188,7 @@
   } ]
 }, {
   "@id" : "http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_3_CODE_PS3",
-  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://purl.org/roh#ESSubjectArea" ],
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://www.w3.org/2004/02/skos/core#Concept" ],
   "http://purl.org/roh#codeOf" : [ {
     "@id" : "http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_3_PS3"
   } ],
@@ -3200,7 +3203,7 @@
   } ]
 }, {
   "@id" : "http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_3_CODE_QMC",
-  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://purl.org/roh#ESSubjectArea" ],
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://www.w3.org/2004/02/skos/core#Concept" ],
   "http://purl.org/roh#codeOf" : [ {
     "@id" : "http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_3_QMC"
   } ],
@@ -3215,7 +3218,7 @@
   } ]
 }, {
   "@id" : "http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_3_CODE_SOC",
-  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://purl.org/roh#ESSubjectArea" ],
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://www.w3.org/2004/02/skos/core#Concept" ],
   "http://purl.org/roh#codeOf" : [ {
     "@id" : "http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_3_SOC"
   } ],
@@ -3230,7 +3233,7 @@
   } ]
 }, {
   "@id" : "http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_3_CODE_TCO",
-  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://purl.org/roh#ESSubjectArea" ],
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://www.w3.org/2004/02/skos/core#Concept" ],
   "http://purl.org/roh#codeOf" : [ {
     "@id" : "http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_3_TCO"
   } ],
@@ -3245,7 +3248,7 @@
   } ]
 }, {
   "@id" : "http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_3_CODE_TMA",
-  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://purl.org/roh#ESSubjectArea" ],
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://www.w3.org/2004/02/skos/core#Concept" ],
   "http://purl.org/roh#codeOf" : [ {
     "@id" : "http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_3_TMA"
   } ],
@@ -3260,7 +3263,7 @@
   } ]
 }, {
   "@id" : "http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_3_CODE_TRA",
-  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://purl.org/roh#ESSubjectArea" ],
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://www.w3.org/2004/02/skos/core#Concept" ],
   "http://purl.org/roh#codeOf" : [ {
     "@id" : "http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_3_TRA"
   } ],
@@ -3275,7 +3278,7 @@
   } ]
 }, {
   "@id" : "http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_3_COM",
-  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://purl.org/roh#ESSubjectArea" ],
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://www.w3.org/2004/02/skos/core#Concept" ],
   "http://purl.org/roh#hasCode" : [ {
     "@id" : "http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_3_CODE_COM"
   } ],
@@ -3320,7 +3323,7 @@
   } ]
 }, {
   "@id" : "http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_3_CPO",
-  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://purl.org/roh#ESSubjectArea" ],
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://www.w3.org/2004/02/skos/core#Concept" ],
   "http://purl.org/roh#hasCode" : [ {
     "@id" : "http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_3_CODE_CPO"
   } ],
@@ -3365,7 +3368,7 @@
   } ]
 }, {
   "@id" : "http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_3_CTA",
-  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://purl.org/roh#ESSubjectArea" ],
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://www.w3.org/2004/02/skos/core#Concept" ],
   "http://purl.org/roh#hasCode" : [ {
     "@id" : "http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_3_CODE_CTA"
   } ],
@@ -3412,7 +3415,7 @@
   } ]
 }, {
   "@id" : "http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_3_CYA",
-  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://purl.org/roh#ESSubjectArea" ],
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://www.w3.org/2004/02/skos/core#Concept" ],
   "http://purl.org/roh#hasCode" : [ {
     "@id" : "http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_3_CODE_CYA"
   } ],
@@ -3459,7 +3462,7 @@
   } ]
 }, {
   "@id" : "http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_3_DE3",
-  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://purl.org/roh#ESSubjectArea" ],
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://www.w3.org/2004/02/skos/core#Concept" ],
   "http://purl.org/roh#hasCode" : [ {
     "@id" : "http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_3_CODE_DE3"
   } ],
@@ -3504,7 +3507,7 @@
   } ]
 }, {
   "@id" : "http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_3_DPT",
-  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://purl.org/roh#ESSubjectArea" ],
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://www.w3.org/2004/02/skos/core#Concept" ],
   "http://purl.org/roh#hasCode" : [ {
     "@id" : "http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_3_CODE_DPT"
   } ],
@@ -3546,7 +3549,7 @@
   } ]
 }, {
   "@id" : "http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_3_ED3",
-  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://purl.org/roh#ESSubjectArea" ],
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://www.w3.org/2004/02/skos/core#Concept" ],
   "http://purl.org/roh#hasCode" : [ {
     "@id" : "http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_3_CODE_ED3"
   } ],
@@ -3591,7 +3594,7 @@
   } ]
 }, {
   "@id" : "http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_3_ENE",
-  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://purl.org/roh#ESSubjectArea" ],
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://www.w3.org/2004/02/skos/core#Concept" ],
   "http://purl.org/roh#hasCode" : [ {
     "@id" : "http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_3_CODE_ENE"
   } ],
@@ -3636,7 +3639,7 @@
   } ]
 }, {
   "@id" : "http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_3_ESN",
-  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://purl.org/roh#ESSubjectArea" ],
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://www.w3.org/2004/02/skos/core#Concept" ],
   "http://purl.org/roh#hasCode" : [ {
     "@id" : "http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_3_CODE_ESN"
   } ],
@@ -3681,7 +3684,7 @@
   } ]
 }, {
   "@id" : "http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_3_ESP",
-  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://purl.org/roh#ESSubjectArea" ],
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://www.w3.org/2004/02/skos/core#Concept" ],
   "http://purl.org/roh#hasCode" : [ {
     "@id" : "http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_3_CODE_ESP"
   } ],
@@ -3726,7 +3729,7 @@
   } ]
 }, {
   "@id" : "http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_3_EYA",
-  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://purl.org/roh#ESSubjectArea" ],
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://www.w3.org/2004/02/skos/core#Concept" ],
   "http://purl.org/roh#hasCode" : [ {
     "@id" : "http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_3_CODE_EYA"
   } ],
@@ -3771,7 +3774,7 @@
   } ]
 }, {
   "@id" : "http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_3_EYF",
-  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://purl.org/roh#ESSubjectArea" ],
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://www.w3.org/2004/02/skos/core#Concept" ],
   "http://purl.org/roh#hasCode" : [ {
     "@id" : "http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_3_CODE_EYF"
   } ],
@@ -3818,7 +3821,7 @@
   } ]
 }, {
   "@id" : "http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_3_FEM",
-  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://purl.org/roh#ESSubjectArea" ],
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://www.w3.org/2004/02/skos/core#Concept" ],
   "http://purl.org/roh#hasCode" : [ {
     "@id" : "http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_3_CODE_FEM"
   } ],
@@ -3871,7 +3874,7 @@
   } ]
 }, {
   "@id" : "http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_3_FFP",
-  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://purl.org/roh#ESSubjectArea" ],
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://www.w3.org/2004/02/skos/core#Concept" ],
   "http://purl.org/roh#hasCode" : [ {
     "@id" : "http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_3_CODE_FFP"
   } ],
@@ -3913,7 +3916,7 @@
   } ]
 }, {
   "@id" : "http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_3_FIL",
-  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://purl.org/roh#ESSubjectArea" ],
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://www.w3.org/2004/02/skos/core#Concept" ],
   "http://purl.org/roh#hasCode" : [ {
     "@id" : "http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_3_CODE_FIL"
   } ],
@@ -3958,7 +3961,7 @@
   } ]
 }, {
   "@id" : "http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_3_FOS",
-  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://purl.org/roh#ESSubjectArea" ],
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://www.w3.org/2004/02/skos/core#Concept" ],
   "http://purl.org/roh#hasCode" : [ {
     "@id" : "http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_3_CODE_FOS"
   } ],
@@ -4003,7 +4006,7 @@
   } ]
 }, {
   "@id" : "http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_3_FYA",
-  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://purl.org/roh#ESSubjectArea" ],
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://www.w3.org/2004/02/skos/core#Concept" ],
   "http://purl.org/roh#hasCode" : [ {
     "@id" : "http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_3_CODE_FYA"
   } ],
@@ -4048,7 +4051,7 @@
   } ]
 }, {
   "@id" : "http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_3_GEO",
-  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://purl.org/roh#ESSubjectArea" ],
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://www.w3.org/2004/02/skos/core#Concept" ],
   "http://purl.org/roh#hasCode" : [ {
     "@id" : "http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_3_CODE_GEO"
   } ],
@@ -4093,7 +4096,7 @@
   } ]
 }, {
   "@id" : "http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_3_GYA",
-  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://purl.org/roh#ESSubjectArea" ],
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://www.w3.org/2004/02/skos/core#Concept" ],
   "http://purl.org/roh#hasCode" : [ {
     "@id" : "http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_3_CODE_GYA"
   } ],
@@ -4140,7 +4143,7 @@
   } ]
 }, {
   "@id" : "http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_3_HIS",
-  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://purl.org/roh#ESSubjectArea" ],
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://www.w3.org/2004/02/skos/core#Concept" ],
   "http://purl.org/roh#hasCode" : [ {
     "@id" : "http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_3_CODE_HIS"
   } ],
@@ -4185,7 +4188,7 @@
   } ]
 }, {
   "@id" : "http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_3_IBI",
-  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://purl.org/roh#ESSubjectArea" ],
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://www.w3.org/2004/02/skos/core#Concept" ],
   "http://purl.org/roh#hasCode" : [ {
     "@id" : "http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_3_CODE_IBI"
   } ],
@@ -4230,7 +4233,7 @@
   } ]
 }, {
   "@id" : "http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_3_ICA",
-  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://purl.org/roh#ESSubjectArea" ],
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://www.w3.org/2004/02/skos/core#Concept" ],
   "http://purl.org/roh#hasCode" : [ {
     "@id" : "http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_3_CODE_ICA"
   } ],
@@ -4277,7 +4280,7 @@
   } ]
 }, {
   "@id" : "http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_3_IEA",
-  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://purl.org/roh#ESSubjectArea" ],
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://www.w3.org/2004/02/skos/core#Concept" ],
   "http://purl.org/roh#hasCode" : [ {
     "@id" : "http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_3_CODE_IEA"
   } ],
@@ -4326,7 +4329,7 @@
   } ]
 }, {
   "@id" : "http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_3_IIT",
-  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://purl.org/roh#ESSubjectArea" ],
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://www.w3.org/2004/02/skos/core#Concept" ],
   "http://purl.org/roh#hasCode" : [ {
     "@id" : "http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_3_CODE_IIT"
   } ],
@@ -4373,7 +4376,7 @@
   } ]
 }, {
   "@id" : "http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_3_INA",
-  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://purl.org/roh#ESSubjectArea" ],
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://www.w3.org/2004/02/skos/core#Concept" ],
   "http://purl.org/roh#hasCode" : [ {
     "@id" : "http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_3_CODE_INA"
   } ],
@@ -4422,7 +4425,7 @@
   } ]
 }, {
   "@id" : "http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_3_INF",
-  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://purl.org/roh#ESSubjectArea" ],
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://www.w3.org/2004/02/skos/core#Concept" ],
   "http://purl.org/roh#hasCode" : [ {
     "@id" : "http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_3_CODE_INF"
   } ],
@@ -4467,7 +4470,7 @@
   } ]
 }, {
   "@id" : "http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_3_IQM",
-  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://purl.org/roh#ESSubjectArea" ],
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://www.w3.org/2004/02/skos/core#Concept" ],
   "http://purl.org/roh#hasCode" : [ {
     "@id" : "http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_3_CODE_IQM"
   } ],
@@ -4512,7 +4515,7 @@
   } ]
 }, {
   "@id" : "http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_3_LFL",
-  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://purl.org/roh#ESSubjectArea" ],
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://www.w3.org/2004/02/skos/core#Concept" ],
   "http://purl.org/roh#hasCode" : [ {
     "@id" : "http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_3_CODE_LFL"
   } ],
@@ -4563,7 +4566,7 @@
   } ]
 }, {
   "@id" : "http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_3_LYL",
-  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://purl.org/roh#ESSubjectArea" ],
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://www.w3.org/2004/02/skos/core#Concept" ],
   "http://purl.org/roh#hasCode" : [ {
     "@id" : "http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_3_CODE_LYL"
   } ],
@@ -4608,7 +4611,7 @@
   } ]
 }, {
   "@id" : "http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_3_MAE",
-  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://purl.org/roh#ESSubjectArea" ],
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://www.w3.org/2004/02/skos/core#Concept" ],
   "http://purl.org/roh#hasCode" : [ {
     "@id" : "http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_3_CODE_MAE"
   } ],
@@ -4653,7 +4656,7 @@
   } ]
 }, {
   "@id" : "http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_3_MAR",
-  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://purl.org/roh#ESSubjectArea" ],
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://www.w3.org/2004/02/skos/core#Concept" ],
   "http://purl.org/roh#hasCode" : [ {
     "@id" : "http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_3_CODE_MAR"
   } ],
@@ -4698,7 +4701,7 @@
   } ]
 }, {
   "@id" : "http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_3_MBM",
-  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://purl.org/roh#ESSubjectArea" ],
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://www.w3.org/2004/02/skos/core#Concept" ],
   "http://purl.org/roh#hasCode" : [ {
     "@id" : "http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_3_CODE_MBM"
   } ],
@@ -4740,7 +4743,7 @@
   } ]
 }, {
   "@id" : "http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_3_MEN",
-  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://purl.org/roh#ESSubjectArea" ],
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://www.w3.org/2004/02/skos/core#Concept" ],
   "http://purl.org/roh#hasCode" : [ {
     "@id" : "http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_3_CODE_MEN"
   } ],
@@ -4782,7 +4785,7 @@
   } ]
 }, {
   "@id" : "http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_3_MES",
-  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://purl.org/roh#ESSubjectArea" ],
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://www.w3.org/2004/02/skos/core#Concept" ],
   "http://purl.org/roh#hasCode" : [ {
     "@id" : "http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_3_CODE_MES"
   } ],
@@ -4824,7 +4827,7 @@
   } ]
 }, {
   "@id" : "http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_3_MFU",
-  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://purl.org/roh#ESSubjectArea" ],
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://www.w3.org/2004/02/skos/core#Concept" ],
   "http://purl.org/roh#hasCode" : [ {
     "@id" : "http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_3_CODE_MFU"
   } ],
@@ -4866,7 +4869,7 @@
   } ]
 }, {
   "@id" : "http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_3_MNF",
-  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://purl.org/roh#ESSubjectArea" ],
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://www.w3.org/2004/02/skos/core#Concept" ],
   "http://purl.org/roh#hasCode" : [ {
     "@id" : "http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_3_CODE_MNF"
   } ],
@@ -4913,7 +4916,7 @@
   } ]
 }, {
   "@id" : "http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_3_MT3",
-  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://purl.org/roh#ESSubjectArea" ],
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://www.w3.org/2004/02/skos/core#Concept" ],
   "http://purl.org/roh#hasCode" : [ {
     "@id" : "http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_3_CODE_MT3"
   } ],
@@ -4958,7 +4961,7 @@
   } ]
 }, {
   "@id" : "http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_3_POL",
-  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://purl.org/roh#ESSubjectArea" ],
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://www.w3.org/2004/02/skos/core#Concept" ],
   "http://purl.org/roh#hasCode" : [ {
     "@id" : "http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_3_CODE_POL"
   } ],
@@ -5000,7 +5003,7 @@
   } ]
 }, {
   "@id" : "http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_3_PS3",
-  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://purl.org/roh#ESSubjectArea" ],
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://www.w3.org/2004/02/skos/core#Concept" ],
   "http://purl.org/roh#hasCode" : [ {
     "@id" : "http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_3_CODE_PS3"
   } ],
@@ -5042,7 +5045,7 @@
   } ]
 }, {
   "@id" : "http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_3_QMC",
-  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://purl.org/roh#ESSubjectArea" ],
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://www.w3.org/2004/02/skos/core#Concept" ],
   "http://purl.org/roh#hasCode" : [ {
     "@id" : "http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_3_CODE_QMC"
   } ],
@@ -5087,7 +5090,7 @@
   } ]
 }, {
   "@id" : "http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_3_SOC",
-  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://purl.org/roh#ESSubjectArea" ],
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://www.w3.org/2004/02/skos/core#Concept" ],
   "http://purl.org/roh#hasCode" : [ {
     "@id" : "http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_3_CODE_SOC"
   } ],
@@ -5134,7 +5137,7 @@
   } ]
 }, {
   "@id" : "http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_3_TCO",
-  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://purl.org/roh#ESSubjectArea" ],
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://www.w3.org/2004/02/skos/core#Concept" ],
   "http://purl.org/roh#hasCode" : [ {
     "@id" : "http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_3_CODE_TCO"
   } ],
@@ -5179,7 +5182,7 @@
   } ]
 }, {
   "@id" : "http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_3_TMA",
-  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://purl.org/roh#ESSubjectArea" ],
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://www.w3.org/2004/02/skos/core#Concept" ],
   "http://purl.org/roh#hasCode" : [ {
     "@id" : "http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_3_CODE_TMA"
   } ],
@@ -5224,7 +5227,7 @@
   } ]
 }, {
   "@id" : "http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_3_TRA",
-  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://purl.org/roh#ESSubjectArea" ],
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://www.w3.org/2004/02/skos/core#Concept" ],
   "http://purl.org/roh#hasCode" : [ {
     "@id" : "http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_3_CODE_TRA"
   } ],

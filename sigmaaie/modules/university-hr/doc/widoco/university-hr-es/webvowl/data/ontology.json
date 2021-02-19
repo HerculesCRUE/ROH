@@ -24,9 +24,6 @@
     "id" : "3",
     "type" : "owl:Class"
   }, {
-    "id" : "6",
-    "type" : "owl:Class"
-  }, {
     "id" : "7",
     "type" : "owl:Class"
   }, {
@@ -42,19 +39,19 @@
     "id" : "11",
     "type" : "owl:Class"
   }, {
-    "id" : "15",
+    "id" : "12",
+    "type" : "owl:Class"
+  }, {
+    "id" : "16",
     "type" : "owl:Class"
   }, {
     "id" : "27",
     "type" : "owl:Class"
   }, {
-    "id" : "21",
+    "id" : "24",
     "type" : "owl:Class"
   }, {
-    "id" : "31",
-    "type" : "owl:Class"
-  }, {
-    "id" : "33",
+    "id" : "32",
     "type" : "owl:Class"
   }, {
     "id" : "34",
@@ -66,43 +63,46 @@
     "id" : "36",
     "type" : "owl:Class"
   }, {
-    "id" : "41",
-    "type" : "owl:Class"
-  }, {
-    "id" : "46",
-    "type" : "owl:Class"
-  }, {
-    "id" : "14",
+    "id" : "1",
     "type" : "owl:Class"
   }, {
     "id" : "4",
     "type" : "owl:Class"
   }, {
+    "id" : "40",
+    "type" : "owl:Class"
+  }, {
+    "id" : "46",
+    "type" : "owl:Class"
+  }, {
+    "id" : "22",
+    "type" : "owl:Class"
+  }, {
+    "id" : "5",
+    "type" : "owl:Class"
+  }, {
     "id" : "55",
     "type" : "owl:Class"
   }, {
-    "id" : "32",
+    "id" : "33",
     "type" : "owl:Class"
   }, {
     "id" : "57",
     "type" : "owl:Class"
   }, {
-    "id" : "17",
+    "id" : "20",
     "type" : "owl:Class"
   }, {
     "id" : "58",
     "type" : "owl:Class"
   }, {
-    "id" : "39",
-    "type" : "owl:Class"
-  }, {
-    "id" : "26",
+    "id" : "42",
     "type" : "owl:Class"
   }, {
     "id" : "59",
     "type" : "owl:Class"
   }, {
-    "id" : "19",
+    "id" : "29",
     "type" : "owl:Class"
   }, {
     "id" : "52",
@@ -111,31 +111,34 @@
     "id" : "56",
     "type" : "owl:Class"
   }, {
-    "id" : "38",
+    "id" : "70",
     "type" : "owl:Class"
   }, {
-    "id" : "5",
+    "id" : "6",
     "type" : "owl:Class"
   }, {
     "id" : "2",
     "type" : "owl:Class"
   }, {
-    "id" : "23",
+    "id" : "18",
     "type" : "owl:Class"
   }, {
-    "id" : "43",
+    "id" : "38",
     "type" : "owl:Class"
   }, {
     "id" : "50",
     "type" : "owl:Class"
   }, {
-    "id" : "1",
-    "type" : "owl:Class"
-  }, {
     "id" : "54",
     "type" : "owl:Class"
   }, {
-    "id" : "29",
+    "id" : "14",
+    "type" : "owl:Class"
+  }, {
+    "id" : "31",
+    "type" : "owl:Class"
+  }, {
+    "id" : "44",
     "type" : "owl:Class"
   } ],
   "classAttribute" : [ {
@@ -143,11 +146,14 @@
     "baseIri" : "http://purl.org/roh/mirror/vivo",
     "instances" : 0,
     "label" : {
-      "IRI-based" : "FacultyPosition"
+      "IRI-based" : "FacultyPosition",
+      "en" : "Faculty Position",
+      "es" : "Posición en Facultad"
     },
-    "subClasses" : [ "4", "5" ],
+    "subClasses" : [ "5", "6" ],
     "attributes" : [ "external" ],
-    "id" : "3"
+    "id" : "3",
+    "superClasses" : [ "4" ]
   }, {
     "iri" : "http://purl.org/roh/university-hr/es#ES_UNIVERSITY_HR_ESLPCNP",
     "baseIri" : "http://purl.org/roh/university-hr/es",
@@ -190,18 +196,8 @@
       } ],
       "prefLabel" : [ {
         "identifier" : "prefLabel",
-        "language" : "ast",
-        "value" : "Profesor collaborador non permanente",
-        "type" : "label"
-      }, {
-        "identifier" : "prefLabel",
-        "language" : "eu",
-        "value" : "Unibertsitateko kolaboratzailea (Ez--iraunkorra)",
-        "type" : "label"
-      }, {
-        "identifier" : "prefLabel",
-        "language" : "gl",
-        "value" : "Profesor colaborador non permanente",
+        "language" : "es",
+        "value" : "Profesor colaborador no permanente",
         "type" : "label"
       }, {
         "identifier" : "prefLabel",
@@ -210,8 +206,18 @@
         "type" : "label"
       }, {
         "identifier" : "prefLabel",
-        "language" : "es",
-        "value" : "Profesor colaborador no permanente",
+        "language" : "ast",
+        "value" : "Profesor collaborador non permanente",
+        "type" : "label"
+      }, {
+        "identifier" : "prefLabel",
+        "language" : "gl",
+        "value" : "Profesor colaborador non permanente",
+        "type" : "label"
+      }, {
+        "identifier" : "prefLabel",
+        "language" : "eu",
+        "value" : "Unibertsitateko kolaboratzailea (Ez--iraunkorra)",
         "type" : "label"
       } ]
     },
@@ -219,8 +225,8 @@
       "IRI-based" : "ES_UNIVERSITY_HR_ESLPCNP",
       "es" : "Profesor colaborador no permanente"
     },
-    "id" : "6",
-    "superClasses" : [ "4" ]
+    "id" : "7",
+    "superClasses" : [ "5" ]
   }, {
     "iri" : "http://purl.org/roh/university-hr/es#ProfesorTitularDeEscuelaUniversitaria",
     "baseIri" : "http://purl.org/roh/university-hr/es",
@@ -232,12 +238,6 @@
         "value" : "http://publications.europa.eu/resource/authority/country/ESP",
         "type" : "iri"
       } ],
-      "inScheme" : [ {
-        "identifier" : "inScheme",
-        "language" : "undefined",
-        "value" : "http://purl.org/roh/university-hr/es#ESUniversityHumanResourcesList",
-        "type" : "iri"
-      } ],
       "closeMatch" : [ {
         "identifier" : "closeMatch",
         "language" : "undefined",
@@ -247,6 +247,12 @@
         "identifier" : "closeMatch",
         "language" : "undefined",
         "value" : "http://skos.um.es/unescothes/C03965",
+        "type" : "iri"
+      } ],
+      "inScheme" : [ {
+        "identifier" : "inScheme",
+        "language" : "undefined",
+        "value" : "http://purl.org/roh/university-hr/es#ESUniversityHumanResourcesList",
         "type" : "iri"
       } ],
       "hasCode" : [ {
@@ -263,8 +269,18 @@
       } ],
       "prefLabel" : [ {
         "identifier" : "prefLabel",
+        "language" : "ast",
+        "value" : "Profesor titular d’escuela universitaria",
+        "type" : "label"
+      }, {
+        "identifier" : "prefLabel",
         "language" : "es",
         "value" : "Profesor titular de escuela universitaria",
+        "type" : "label"
+      }, {
+        "identifier" : "prefLabel",
+        "language" : "gl",
+        "value" : "Profesor titular de escola universitaria",
         "type" : "label"
       }, {
         "identifier" : "prefLabel",
@@ -273,28 +289,18 @@
         "type" : "label"
       }, {
         "identifier" : "prefLabel",
-        "language" : "ast",
-        "value" : "Profesor titular d’escuela universitaria",
-        "type" : "label"
-      }, {
-        "identifier" : "prefLabel",
         "language" : "eu",
         "value" : "Eskolako irakasle titutarra",
-        "type" : "label"
-      }, {
-        "identifier" : "prefLabel",
-        "language" : "gl",
-        "value" : "Profesor titular de escola universitaria",
         "type" : "label"
       } ]
     },
     "label" : {
       "IRI-based" : "ProfesorTitularDeEscuelaUniversitaria",
       "en" : "University School Reader",
-      "es" : "Profesor Titular de Escuela Universitaria"
+      "es" : "Profesor titular de escuela universitaria"
     },
-    "id" : "7",
-    "superClasses" : [ "5" ]
+    "id" : "8",
+    "superClasses" : [ "6" ]
   }, {
     "iri" : "http://purl.org/roh/university-hr/es#ES_UNIVERSITY_HR_ESDECA",
     "baseIri" : "http://purl.org/roh/university-hr/es",
@@ -306,16 +312,16 @@
         "value" : "http://publications.europa.eu/resource/authority/country/ESP",
         "type" : "iri"
       } ],
-      "inScheme" : [ {
-        "identifier" : "inScheme",
-        "language" : "undefined",
-        "value" : "http://purl.org/roh/university-hr/es#ESUniversityHumanResourcesList",
-        "type" : "iri"
-      } ],
       "closeMatch" : [ {
         "identifier" : "closeMatch",
         "language" : "undefined",
         "value" : "http://purl.org/roh/university-hr/uk#GB_UNIVERSITY_HR_GBDEAN",
+        "type" : "iri"
+      } ],
+      "inScheme" : [ {
+        "identifier" : "inScheme",
+        "language" : "undefined",
+        "value" : "http://purl.org/roh/university-hr/es#ESUniversityHumanResourcesList",
         "type" : "iri"
       } ],
       "hasCode" : [ {
@@ -337,11 +343,6 @@
         "type" : "label"
       }, {
         "identifier" : "prefLabel",
-        "language" : "eu",
-        "value" : "Dekanoa",
-        "type" : "label"
-      }, {
-        "identifier" : "prefLabel",
         "language" : "gl",
         "value" : "Decano",
         "type" : "label"
@@ -349,6 +350,11 @@
         "identifier" : "prefLabel",
         "language" : "ca",
         "value" : "Degà",
+        "type" : "label"
+      }, {
+        "identifier" : "prefLabel",
+        "language" : "eu",
+        "value" : "Dekanoa",
         "type" : "label"
       }, {
         "identifier" : "prefLabel",
@@ -361,7 +367,7 @@
       "IRI-based" : "ES_UNIVERSITY_HR_ESDECA",
       "es" : "Decano"
     },
-    "id" : "8",
+    "id" : "9",
     "superClasses" : [ "2" ]
   }, {
     "iri" : "http://www.w3.org/2004/02/skos/core#Concept",
@@ -534,33 +540,6 @@
         "undefined" : "ESPASF"
       }
     }, {
-      "iri" : "http://purl.org/roh/university-hr/es#ES_UNIVERSITY_HR_CODE_ESLPI",
-      "baseIri" : "http://purl.org/roh/university-hr/es",
-      "annotations" : {
-        "inScheme" : [ {
-          "identifier" : "inScheme",
-          "language" : "undefined",
-          "value" : "http://purl.org/roh/university-hr/es#ESUniversityHumanResourcesCodesList",
-          "type" : "iri"
-        } ],
-        "prefLabel" : [ {
-          "identifier" : "prefLabel",
-          "language" : "undefined",
-          "value" : "ESLPI",
-          "type" : "label"
-        } ],
-        "codeOf" : [ {
-          "identifier" : "codeOf",
-          "language" : "undefined",
-          "value" : "http://purl.org/roh/university-hr/es#ES_UNIVERSITY_HR_ESLPI",
-          "type" : "iri"
-        } ]
-      },
-      "labels" : {
-        "IRI-based" : "ES_UNIVERSITY_HR_CODE_ESLPI",
-        "undefined" : "ESLPI"
-      }
-    }, {
       "iri" : "http://purl.org/roh/university-hr/es#ES_UNIVERSITY_HR_CODE_ESFPTU",
       "baseIri" : "http://purl.org/roh/university-hr/es",
       "annotations" : {
@@ -586,6 +565,33 @@
       "labels" : {
         "IRI-based" : "ES_UNIVERSITY_HR_CODE_ESFPTU",
         "undefined" : "ESFPTU"
+      }
+    }, {
+      "iri" : "http://purl.org/roh/university-hr/es#ES_UNIVERSITY_HR_CODE_ESLPI",
+      "baseIri" : "http://purl.org/roh/university-hr/es",
+      "annotations" : {
+        "inScheme" : [ {
+          "identifier" : "inScheme",
+          "language" : "undefined",
+          "value" : "http://purl.org/roh/university-hr/es#ESUniversityHumanResourcesCodesList",
+          "type" : "iri"
+        } ],
+        "prefLabel" : [ {
+          "identifier" : "prefLabel",
+          "language" : "undefined",
+          "value" : "ESLPI",
+          "type" : "label"
+        } ],
+        "codeOf" : [ {
+          "identifier" : "codeOf",
+          "language" : "undefined",
+          "value" : "http://purl.org/roh/university-hr/es#ES_UNIVERSITY_HR_ESLPI",
+          "type" : "iri"
+        } ]
+      },
+      "labels" : {
+        "IRI-based" : "ES_UNIVERSITY_HR_CODE_ESLPI",
+        "undefined" : "ESLPI"
       }
     }, {
       "iri" : "http://purl.org/roh/university-hr/es#ES_UNIVERSITY_HR_CODE_ESLI",
@@ -723,33 +729,6 @@
         "undefined" : "ESJEFDEP"
       }
     }, {
-      "iri" : "http://purl.org/roh/university-hr/es#ES_UNIVERSITY_HR_CODE_ESFEU",
-      "baseIri" : "http://purl.org/roh/university-hr/es",
-      "annotations" : {
-        "inScheme" : [ {
-          "identifier" : "inScheme",
-          "language" : "undefined",
-          "value" : "http://purl.org/roh/university-hr/es#ESUniversityHumanResourcesCodesList",
-          "type" : "iri"
-        } ],
-        "prefLabel" : [ {
-          "identifier" : "prefLabel",
-          "language" : "undefined",
-          "value" : "ESFEU",
-          "type" : "label"
-        } ],
-        "codeOf" : [ {
-          "identifier" : "codeOf",
-          "language" : "undefined",
-          "value" : "http://purl.org/roh/university-hr/es#ProfesorTitularDeEscuelaUniversitaria",
-          "type" : "iri"
-        } ]
-      },
-      "labels" : {
-        "IRI-based" : "ES_UNIVERSITY_HR_CODE_ESFEU",
-        "undefined" : "ESFEU"
-      }
-    }, {
       "iri" : "http://purl.org/roh/university-hr/es#ES_UNIVERSITY_HR_CODE_ESFPCU",
       "baseIri" : "http://purl.org/roh/university-hr/es",
       "annotations" : {
@@ -775,6 +754,33 @@
       "labels" : {
         "IRI-based" : "ES_UNIVERSITY_HR_CODE_ESFPCU",
         "undefined" : "ESFPCU"
+      }
+    }, {
+      "iri" : "http://purl.org/roh/university-hr/es#ES_UNIVERSITY_HR_CODE_ESFEU",
+      "baseIri" : "http://purl.org/roh/university-hr/es",
+      "annotations" : {
+        "inScheme" : [ {
+          "identifier" : "inScheme",
+          "language" : "undefined",
+          "value" : "http://purl.org/roh/university-hr/es#ESUniversityHumanResourcesCodesList",
+          "type" : "iri"
+        } ],
+        "prefLabel" : [ {
+          "identifier" : "prefLabel",
+          "language" : "undefined",
+          "value" : "ESFEU",
+          "type" : "label"
+        } ],
+        "codeOf" : [ {
+          "identifier" : "codeOf",
+          "language" : "undefined",
+          "value" : "http://purl.org/roh/university-hr/es#ProfesorTitularDeEscuelaUniversitaria",
+          "type" : "iri"
+        } ]
+      },
+      "labels" : {
+        "IRI-based" : "ES_UNIVERSITY_HR_CODE_ESFEU",
+        "undefined" : "ESFEU"
       }
     }, {
       "iri" : "http://purl.org/roh/university-hr/es#ES_UNIVERSITY_HR_CODE_ESLPAS",
@@ -966,33 +972,6 @@
         "undefined" : "ESLPAM"
       }
     }, {
-      "iri" : "http://purl.org/roh/university-hr/es#ES_UNIVERSITY_HR_CODE_ESPLEM",
-      "baseIri" : "http://purl.org/roh/university-hr/es",
-      "annotations" : {
-        "inScheme" : [ {
-          "identifier" : "inScheme",
-          "language" : "undefined",
-          "value" : "http://purl.org/roh/university-hr/es#ESUniversityHumanResourcesCodesList",
-          "type" : "iri"
-        } ],
-        "prefLabel" : [ {
-          "identifier" : "prefLabel",
-          "language" : "undefined",
-          "value" : "ESPLEM",
-          "type" : "label"
-        } ],
-        "codeOf" : [ {
-          "identifier" : "codeOf",
-          "language" : "undefined",
-          "value" : "http://purl.org/roh/university-hr/es#ProfesorEmerito",
-          "type" : "iri"
-        } ]
-      },
-      "labels" : {
-        "IRI-based" : "ES_UNIVERSITY_HR_CODE_ESPLEM",
-        "undefined" : "ESPLEM"
-      }
-    }, {
       "iri" : "http://purl.org/roh/university-hr/es#ES_UNIVERSITY_HR_CODE_ESRECT",
       "baseIri" : "http://purl.org/roh/university-hr/es",
       "annotations" : {
@@ -1018,6 +997,33 @@
       "labels" : {
         "IRI-based" : "ES_UNIVERSITY_HR_CODE_ESRECT",
         "undefined" : "ESRECT"
+      }
+    }, {
+      "iri" : "http://purl.org/roh/university-hr/es#ES_UNIVERSITY_HR_CODE_ESPLEM",
+      "baseIri" : "http://purl.org/roh/university-hr/es",
+      "annotations" : {
+        "inScheme" : [ {
+          "identifier" : "inScheme",
+          "language" : "undefined",
+          "value" : "http://purl.org/roh/university-hr/es#ESUniversityHumanResourcesCodesList",
+          "type" : "iri"
+        } ],
+        "prefLabel" : [ {
+          "identifier" : "prefLabel",
+          "language" : "undefined",
+          "value" : "ESPLEM",
+          "type" : "label"
+        } ],
+        "codeOf" : [ {
+          "identifier" : "codeOf",
+          "language" : "undefined",
+          "value" : "http://purl.org/roh/university-hr/es#ProfesorEmerito",
+          "type" : "iri"
+        } ]
+      },
+      "labels" : {
+        "IRI-based" : "ES_UNIVERSITY_HR_CODE_ESPLEM",
+        "undefined" : "ESPLEM"
       }
     }, {
       "iri" : "http://purl.org/roh/university-hr/es#ES_UNIVERSITY_HR_CODE_ESLPCD",
@@ -1183,7 +1189,7 @@
       }
     } ],
     "attributes" : [ "external" ],
-    "id" : "9"
+    "id" : "10"
   }, {
     "iri" : "http://purl.org/roh/university-hr/es#ES_UNIVERSITY_HR_ESVIREC",
     "baseIri" : "http://purl.org/roh/university-hr/es",
@@ -1195,16 +1201,16 @@
         "value" : "http://publications.europa.eu/resource/authority/country/ESP",
         "type" : "iri"
       } ],
-      "closeMatch" : [ {
-        "identifier" : "closeMatch",
-        "language" : "undefined",
-        "value" : "http://purl.org/roh/university-hr/uk#GB_UNIVERSITY_HR_GBCHAN",
-        "type" : "iri"
-      } ],
       "inScheme" : [ {
         "identifier" : "inScheme",
         "language" : "undefined",
         "value" : "http://purl.org/roh/university-hr/es#ESUniversityHumanResourcesList",
+        "type" : "iri"
+      } ],
+      "closeMatch" : [ {
+        "identifier" : "closeMatch",
+        "language" : "undefined",
+        "value" : "http://purl.org/roh/university-hr/uk#GB_UNIVERSITY_HR_GBCHAN",
         "type" : "iri"
       } ],
       "hasCode" : [ {
@@ -1221,18 +1227,18 @@
       } ],
       "prefLabel" : [ {
         "identifier" : "prefLabel",
-        "language" : "gl",
-        "value" : "Vicerrector",
-        "type" : "label"
-      }, {
-        "identifier" : "prefLabel",
-        "language" : "ast",
-        "value" : "Vicerrector",
-        "type" : "label"
-      }, {
-        "identifier" : "prefLabel",
         "language" : "ca",
         "value" : "Vicerector",
+        "type" : "label"
+      }, {
+        "identifier" : "prefLabel",
+        "language" : "es",
+        "value" : "Vicerrector",
+        "type" : "label"
+      }, {
+        "identifier" : "prefLabel",
+        "language" : "gl",
+        "value" : "Vicerrector",
         "type" : "label"
       }, {
         "identifier" : "prefLabel",
@@ -1241,7 +1247,7 @@
         "type" : "label"
       }, {
         "identifier" : "prefLabel",
-        "language" : "es",
+        "language" : "ast",
         "value" : "Vicerrector",
         "type" : "label"
       } ]
@@ -1250,7 +1256,7 @@
       "IRI-based" : "ES_UNIVERSITY_HR_ESVIREC",
       "es" : "Vicerrector"
     },
-    "id" : "10",
+    "id" : "11",
     "superClasses" : [ "2" ]
   }, {
     "iri" : "http://purl.org/roh/university-hr/es#ES_UNIVERSITY_HR_ESLPAM",
@@ -1266,12 +1272,12 @@
       "closeMatch" : [ {
         "identifier" : "closeMatch",
         "language" : "undefined",
-        "value" : "http://skos.um.es/unescothes/C00015",
+        "value" : "http://skos.um.es/unescothes/C03965",
         "type" : "iri"
       }, {
         "identifier" : "closeMatch",
         "language" : "undefined",
-        "value" : "http://skos.um.es/unescothes/C03965",
+        "value" : "http://skos.um.es/unescothes/C00015",
         "type" : "iri"
       } ],
       "inScheme" : [ {
@@ -1294,7 +1300,17 @@
       } ],
       "prefLabel" : [ {
         "identifier" : "prefLabel",
+        "language" : "ast",
+        "value" : "Profesor asociáu mélicu",
+        "type" : "label"
+      }, {
+        "identifier" : "prefLabel",
         "language" : "es",
+        "value" : "Profesor asociado médico",
+        "type" : "label"
+      }, {
+        "identifier" : "prefLabel",
+        "language" : "gl",
         "value" : "Profesor asociado médico",
         "type" : "label"
       }, {
@@ -1302,24 +1318,14 @@
         "language" : "ca",
         "value" : "Professor associat mèdic",
         "type" : "label"
-      }, {
-        "identifier" : "prefLabel",
-        "language" : "ast",
-        "value" : "Profesor asociáu mélicu",
-        "type" : "label"
-      }, {
-        "identifier" : "prefLabel",
-        "language" : "gl",
-        "value" : "Profesor asociado médico",
-        "type" : "label"
       } ]
     },
     "label" : {
       "IRI-based" : "ES_UNIVERSITY_HR_ESLPAM",
       "es" : "Profesor asociado médico"
     },
-    "id" : "11",
-    "superClasses" : [ "4" ]
+    "id" : "12",
+    "superClasses" : [ "5" ]
   }, {
     "iri" : "http://purl.org/roh/university-hr/es#ES_UNIVERSITY_HR_ESLPAG",
     "baseIri" : "http://purl.org/roh/university-hr/es",
@@ -1331,12 +1337,6 @@
         "value" : "http://publications.europa.eu/resource/authority/country/ESP",
         "type" : "iri"
       } ],
-      "inScheme" : [ {
-        "identifier" : "inScheme",
-        "language" : "undefined",
-        "value" : "http://purl.org/roh/university-hr/es#ESUniversityHumanResourcesList",
-        "type" : "iri"
-      } ],
       "closeMatch" : [ {
         "identifier" : "closeMatch",
         "language" : "undefined",
@@ -1346,6 +1346,12 @@
         "identifier" : "closeMatch",
         "language" : "undefined",
         "value" : "http://skos.um.es/unescothes/C03965",
+        "type" : "iri"
+      } ],
+      "inScheme" : [ {
+        "identifier" : "inScheme",
+        "language" : "undefined",
+        "value" : "http://purl.org/roh/university-hr/es#ESUniversityHumanResourcesList",
         "type" : "iri"
       } ],
       "hasCode" : [ {
@@ -1362,17 +1368,7 @@
       } ],
       "prefLabel" : [ {
         "identifier" : "prefLabel",
-        "language" : "ast",
-        "value" : "Profesor agregáu",
-        "type" : "label"
-      }, {
-        "identifier" : "prefLabel",
-        "language" : "eu",
-        "value" : "Irakasle agregatua",
-        "type" : "label"
-      }, {
-        "identifier" : "prefLabel",
-        "language" : "gl",
+        "language" : "es",
         "value" : "Profesor agregado",
         "type" : "label"
       }, {
@@ -1382,7 +1378,17 @@
         "type" : "label"
       }, {
         "identifier" : "prefLabel",
-        "language" : "es",
+        "language" : "eu",
+        "value" : "Irakasle agregatua",
+        "type" : "label"
+      }, {
+        "identifier" : "prefLabel",
+        "language" : "ast",
+        "value" : "Profesor agregáu",
+        "type" : "label"
+      }, {
+        "identifier" : "prefLabel",
+        "language" : "gl",
         "value" : "Profesor agregado",
         "type" : "label"
       } ]
@@ -1391,8 +1397,8 @@
       "IRI-based" : "ES_UNIVERSITY_HR_ESLPAG",
       "es" : "Profesor agregado"
     },
-    "id" : "15",
-    "superClasses" : [ "5" ]
+    "id" : "16",
+    "superClasses" : [ "6" ]
   }, {
     "iri" : "http://purl.org/roh/university-hr/es#ES_UNIVERSITY_HR_ESVIDEC",
     "baseIri" : "http://purl.org/roh/university-hr/es",
@@ -1424,13 +1430,8 @@
       } ],
       "prefLabel" : [ {
         "identifier" : "prefLabel",
-        "language" : "ast",
-        "value" : "Vicedecanu",
-        "type" : "label"
-      }, {
-        "identifier" : "prefLabel",
-        "language" : "eu",
-        "value" : "Dekanordea",
+        "language" : "es",
+        "value" : "Vicedecano",
         "type" : "label"
       }, {
         "identifier" : "prefLabel",
@@ -1439,13 +1440,18 @@
         "type" : "label"
       }, {
         "identifier" : "prefLabel",
+        "language" : "ast",
+        "value" : "Vicedecanu",
+        "type" : "label"
+      }, {
+        "identifier" : "prefLabel",
         "language" : "gl",
         "value" : "Vicedecano",
         "type" : "label"
       }, {
         "identifier" : "prefLabel",
-        "language" : "es",
-        "value" : "Vicedecano",
+        "language" : "eu",
+        "value" : "Dekanordea",
         "type" : "label"
       } ]
     },
@@ -1466,21 +1472,21 @@
         "value" : "http://publications.europa.eu/resource/authority/country/ESP",
         "type" : "iri"
       } ],
-      "closeMatch" : [ {
-        "identifier" : "closeMatch",
-        "language" : "undefined",
-        "value" : "http://skos.um.es/unescothes/C03965",
-        "type" : "iri"
-      }, {
-        "identifier" : "closeMatch",
-        "language" : "undefined",
-        "value" : "http://skos.um.es/unescothes/C00015",
-        "type" : "iri"
-      } ],
       "inScheme" : [ {
         "identifier" : "inScheme",
         "language" : "undefined",
         "value" : "http://purl.org/roh/university-hr/es#ESUniversityHumanResourcesList",
+        "type" : "iri"
+      } ],
+      "closeMatch" : [ {
+        "identifier" : "closeMatch",
+        "language" : "undefined",
+        "value" : "http://skos.um.es/unescothes/C00015",
+        "type" : "iri"
+      }, {
+        "identifier" : "closeMatch",
+        "language" : "undefined",
+        "value" : "http://skos.um.es/unescothes/C03965",
         "type" : "iri"
       } ],
       "hasCode" : [ {
@@ -1502,7 +1508,7 @@
         "type" : "label"
       }, {
         "identifier" : "prefLabel",
-        "language" : "gl",
+        "language" : "es",
         "value" : "Profesor catedrático laboral",
         "type" : "label"
       }, {
@@ -1512,7 +1518,7 @@
         "type" : "label"
       }, {
         "identifier" : "prefLabel",
-        "language" : "es",
+        "language" : "gl",
         "value" : "Profesor catedrático laboral",
         "type" : "label"
       } ],
@@ -1527,8 +1533,8 @@
       "IRI-based" : "ES_UNIVERSITY_HR_ESLPC",
       "es" : "Profesor catedrático laboral"
     },
-    "id" : "21",
-    "superClasses" : [ "5" ]
+    "id" : "24",
+    "superClasses" : [ "6" ]
   }, {
     "iri" : "http://purl.org/roh/university-hr/es#ES_UNIVERSITY_HR_ESPASF",
     "baseIri" : "http://purl.org/roh/university-hr/es",
@@ -1560,8 +1566,13 @@
       } ],
       "prefLabel" : [ {
         "identifier" : "prefLabel",
-        "language" : "ast",
-        "value" : "Personal d'alministración y servicios funcionario",
+        "language" : "gl",
+        "value" : "Persoal de administración e servizos funcionario",
+        "type" : "label"
+      }, {
+        "identifier" : "prefLabel",
+        "language" : "eu",
+        "value" : "Karrerako Funtzionarioak",
         "type" : "label"
       }, {
         "identifier" : "prefLabel",
@@ -1575,13 +1586,8 @@
         "type" : "label"
       }, {
         "identifier" : "prefLabel",
-        "language" : "gl",
-        "value" : "Persoal de administración e servizos funcionario",
-        "type" : "label"
-      }, {
-        "identifier" : "prefLabel",
-        "language" : "eu",
-        "value" : "Karrerako Funtzionarioak",
+        "language" : "ast",
+        "value" : "Personal d'alministración y servicios funcionario",
         "type" : "label"
       } ]
     },
@@ -1589,8 +1595,8 @@
       "IRI-based" : "ES_UNIVERSITY_HR_ESPASF",
       "es" : "Personal de administración y servicios funcionario"
     },
-    "id" : "31",
-    "superClasses" : [ "32" ]
+    "id" : "32",
+    "superClasses" : [ "33" ]
   }, {
     "iri" : "http://purl.org/roh/university-hr/es#ES_UNIVERSITY_HR_ESLPI",
     "baseIri" : "http://purl.org/roh/university-hr/es",
@@ -1605,12 +1611,12 @@
       "closeMatch" : [ {
         "identifier" : "closeMatch",
         "language" : "undefined",
-        "value" : "http://skos.um.es/unescothes/C03965",
+        "value" : "http://skos.um.es/unescothes/C00015",
         "type" : "iri"
       }, {
         "identifier" : "closeMatch",
         "language" : "undefined",
-        "value" : "http://skos.um.es/unescothes/C00015",
+        "value" : "http://skos.um.es/unescothes/C03965",
         "type" : "iri"
       } ],
       "inScheme" : [ {
@@ -1633,8 +1639,13 @@
       } ],
       "prefLabel" : [ {
         "identifier" : "prefLabel",
-        "language" : "es",
+        "language" : "gl",
         "value" : "Profesor laboral interino",
+        "type" : "label"
+      }, {
+        "identifier" : "prefLabel",
+        "language" : "ast",
+        "value" : "Profesor llaboral interín",
         "type" : "label"
       }, {
         "identifier" : "prefLabel",
@@ -1648,12 +1659,7 @@
         "type" : "label"
       }, {
         "identifier" : "prefLabel",
-        "language" : "ast",
-        "value" : "Profesor llaboral interín",
-        "type" : "label"
-      }, {
-        "identifier" : "prefLabel",
-        "language" : "gl",
+        "language" : "es",
         "value" : "Profesor laboral interino",
         "type" : "label"
       } ]
@@ -1662,8 +1668,8 @@
       "IRI-based" : "ES_UNIVERSITY_HR_ESLPI",
       "es" : "Profesor laboral interino"
     },
-    "id" : "33",
-    "superClasses" : [ "4" ]
+    "id" : "34",
+    "superClasses" : [ "5" ]
   }, {
     "iri" : "http://www.w3.org/2004/02/skos/core#ConceptScheme",
     "baseIri" : "http://www.w3.org/2004/02/skos/core",
@@ -1678,8 +1684,8 @@
       "annotations" : {
         "prefLabel" : [ {
           "identifier" : "prefLabel",
-          "language" : "ast",
-          "value" : "Recursos humanos de les universidaes d'España",
+          "language" : "gl",
+          "value" : "Recursos humanos das universidades de España",
           "type" : "label"
         }, {
           "identifier" : "prefLabel",
@@ -1688,18 +1694,13 @@
           "type" : "label"
         }, {
           "identifier" : "prefLabel",
+          "language" : "en",
+          "value" : "Human resources of the universities from Spain",
+          "type" : "label"
+        }, {
+          "identifier" : "prefLabel",
           "language" : "ca",
           "value" : "Recursos humans de les universitats d'Espanya",
-          "type" : "label"
-        }, {
-          "identifier" : "prefLabel",
-          "language" : "gl",
-          "value" : "Recursos humanos das universidades de España",
-          "type" : "label"
-        }, {
-          "identifier" : "prefLabel",
-          "language" : "es",
-          "value" : "Recursos humanos de las universidades de España",
           "type" : "label"
         }, {
           "identifier" : "prefLabel",
@@ -1708,8 +1709,13 @@
           "type" : "label"
         }, {
           "identifier" : "prefLabel",
-          "language" : "en",
-          "value" : "Human resources of the universities from Spain",
+          "language" : "ast",
+          "value" : "Recursos humanos de les universidaes d'España",
+          "type" : "label"
+        }, {
+          "identifier" : "prefLabel",
+          "language" : "es",
+          "value" : "Recursos humanos de las universidades de España",
           "type" : "label"
         } ]
       },
@@ -1729,28 +1735,13 @@
       "annotations" : {
         "prefLabel" : [ {
           "identifier" : "prefLabel",
-          "language" : "es",
-          "value" : "Códigos de los recursos humanos de las universidades de España",
-          "type" : "label"
-        }, {
-          "identifier" : "prefLabel",
-          "language" : "ast",
-          "value" : "Códigos de los recursos humanos de les universidaes d'España",
-          "type" : "label"
-        }, {
-          "identifier" : "prefLabel",
-          "language" : "gl",
-          "value" : "Códigos dos recursos humanos das universidades de España",
-          "type" : "label"
-        }, {
-          "identifier" : "prefLabel",
-          "language" : "pt",
-          "value" : "Códigos dos recursos humanos das universidades de Espanha",
-          "type" : "label"
-        }, {
-          "identifier" : "prefLabel",
           "language" : "ca",
           "value" : "Codis dels recursos humans de les universitats d'Espanya",
+          "type" : "label"
+        }, {
+          "identifier" : "prefLabel",
+          "language" : "en",
+          "value" : "Codes for the human resources of the universities from Spain",
           "type" : "label"
         }, {
           "identifier" : "prefLabel",
@@ -1759,8 +1750,23 @@
           "type" : "label"
         }, {
           "identifier" : "prefLabel",
-          "language" : "en",
-          "value" : "Codes for the human resources of the universities from Spain",
+          "language" : "gl",
+          "value" : "Códigos dos recursos humanos das universidades de España",
+          "type" : "label"
+        }, {
+          "identifier" : "prefLabel",
+          "language" : "ast",
+          "value" : "Códigos de los recursos humanos de les universidaes d'España",
+          "type" : "label"
+        }, {
+          "identifier" : "prefLabel",
+          "language" : "es",
+          "value" : "Códigos de los recursos humanos de las universidades de España",
+          "type" : "label"
+        }, {
+          "identifier" : "prefLabel",
+          "language" : "pt",
+          "value" : "Códigos dos recursos humanos das universidades de Espanha",
           "type" : "label"
         } ]
       },
@@ -1771,12 +1777,12 @@
         "gl" : "Códigos dos recursos humanos das universidades de España",
         "en" : "Codes for the human resources of the universities from Spain",
         "fr" : "Codes des resources humains des universités d'Espagne",
-        "es" : "Códigos de los recursos humanos de las universidades de España",
-        "ca" : "Codis dels recursos humans de les universitats d'Espanya"
+        "ca" : "Codis dels recursos humans de les universitats d'Espanya",
+        "es" : "Códigos de los recursos humanos de las universidades de España"
       }
     } ],
     "attributes" : [ "external" ],
-    "id" : "34"
+    "id" : "35"
   }, {
     "iri" : "http://purl.org/roh/university-hr/es#ES_UNIVERSITY_HR_ESLPL",
     "baseIri" : "http://purl.org/roh/university-hr/es",
@@ -1819,7 +1825,12 @@
       } ],
       "prefLabel" : [ {
         "identifier" : "prefLabel",
-        "language" : "es",
+        "language" : "eu",
+        "value" : "Irakurlea",
+        "type" : "label"
+      }, {
+        "identifier" : "prefLabel",
+        "language" : "gl",
         "value" : "Profesor lector",
         "type" : "label"
       }, {
@@ -1829,17 +1840,12 @@
         "type" : "label"
       }, {
         "identifier" : "prefLabel",
-        "language" : "ast",
+        "language" : "es",
         "value" : "Profesor lector",
         "type" : "label"
       }, {
         "identifier" : "prefLabel",
-        "language" : "eu",
-        "value" : "Irakurlea",
-        "type" : "label"
-      }, {
-        "identifier" : "prefLabel",
-        "language" : "gl",
+        "language" : "ast",
         "value" : "Profesor lector",
         "type" : "label"
       } ]
@@ -1848,8 +1854,8 @@
       "IRI-based" : "ES_UNIVERSITY_HR_ESLPL",
       "es" : "Profesor lector"
     },
-    "id" : "35",
-    "superClasses" : [ "4" ]
+    "id" : "36",
+    "superClasses" : [ "5" ]
   }, {
     "iri" : "http://purl.org/roh/university-hr/es#ES_UNIVERSITY_HR_ESSECGE",
     "baseIri" : "http://purl.org/roh/university-hr/es",
@@ -1881,8 +1887,13 @@
       } ],
       "prefLabel" : [ {
         "identifier" : "prefLabel",
-        "language" : "ca",
-        "value" : "Secretari general",
+        "language" : "gl",
+        "value" : "Secretario xeral",
+        "type" : "label"
+      }, {
+        "identifier" : "prefLabel",
+        "language" : "es",
+        "value" : "Secretario general",
         "type" : "label"
       }, {
         "identifier" : "prefLabel",
@@ -1891,18 +1902,13 @@
         "type" : "label"
       }, {
         "identifier" : "prefLabel",
-        "language" : "gl",
-        "value" : "Secretario xeral",
+        "language" : "ca",
+        "value" : "Secretari general",
         "type" : "label"
       }, {
         "identifier" : "prefLabel",
         "language" : "eu",
         "value" : "Idazkari Nagusia",
-        "type" : "label"
-      }, {
-        "identifier" : "prefLabel",
-        "language" : "es",
-        "value" : "Secretario general",
         "type" : "label"
       } ]
     },
@@ -1910,8 +1916,20 @@
       "IRI-based" : "ES_UNIVERSITY_HR_ESSECGE",
       "es" : "Secretario general"
     },
-    "id" : "36",
+    "id" : "1",
     "superClasses" : [ "2" ]
+  }, {
+    "iri" : "http://purl.org/roh/mirror/vivo#Position",
+    "baseIri" : "http://purl.org/roh/mirror/vivo",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "Position",
+      "en" : "Position",
+      "es" : "Posición"
+    },
+    "subClasses" : [ "3", "33", "44", "2" ],
+    "attributes" : [ "external" ],
+    "id" : "4"
   }, {
     "iri" : "http://purl.org/roh/university-hr/es#ES_UNIVERSITY_HR_ESPASL",
     "baseIri" : "http://purl.org/roh/university-hr/es",
@@ -1953,8 +1971,8 @@
         "type" : "label"
       }, {
         "identifier" : "prefLabel",
-        "language" : "eu",
-        "value" : "Lan kontratudun langile finkoak",
+        "language" : "gl",
+        "value" : "Persoal de administración e servizos laboral",
         "type" : "label"
       }, {
         "identifier" : "prefLabel",
@@ -1963,8 +1981,8 @@
         "type" : "label"
       }, {
         "identifier" : "prefLabel",
-        "language" : "gl",
-        "value" : "Persoal de administración e servizos laboral",
+        "language" : "eu",
+        "value" : "Lan kontratudun langile finkoak",
         "type" : "label"
       } ]
     },
@@ -1972,8 +1990,8 @@
       "IRI-based" : "ES_UNIVERSITY_HR_ESPASL",
       "es" : "Personal de administración y servicios laboral"
     },
-    "id" : "41",
-    "superClasses" : [ "32" ]
+    "id" : "40",
+    "superClasses" : [ "33" ]
   }, {
     "iri" : "http://purl.org/roh/university-hr/es#ES_UNIVERSITY_HR_ESFIVEFNP",
     "baseIri" : "http://purl.org/roh/university-hr/es",
@@ -1985,16 +2003,16 @@
         "value" : "http://publications.europa.eu/resource/authority/country/ESP",
         "type" : "iri"
       } ],
-      "inScheme" : [ {
-        "identifier" : "inScheme",
-        "language" : "undefined",
-        "value" : "http://purl.org/roh/university-hr/es#ESUniversityHumanResourcesList",
-        "type" : "iri"
-      } ],
       "closeMatch" : [ {
         "identifier" : "closeMatch",
         "language" : "undefined",
         "value" : "http://skos.um.es/unescothes/C00015",
+        "type" : "iri"
+      } ],
+      "inScheme" : [ {
+        "identifier" : "inScheme",
+        "language" : "undefined",
+        "value" : "http://purl.org/roh/university-hr/es#ESUniversityHumanResourcesList",
         "type" : "iri"
       } ],
       "hasCode" : [ {
@@ -2011,8 +2029,18 @@
       } ],
       "prefLabel" : [ {
         "identifier" : "prefLabel",
+        "language" : "ca",
+        "value" : "Professor Ivef no permanent",
+        "type" : "label"
+      }, {
+        "identifier" : "prefLabel",
         "language" : "gl",
         "value" : "Profesor Ivef no permanente",
+        "type" : "label"
+      }, {
+        "identifier" : "prefLabel",
+        "language" : "eu",
+        "value" : "SHEE Iraskaslea (Ez--Iraunkorra)",
         "type" : "label"
       }, {
         "identifier" : "prefLabel",
@@ -2023,16 +2051,6 @@
         "identifier" : "prefLabel",
         "language" : "ast",
         "value" : "Profesor Ivef no permanente",
-        "type" : "label"
-      }, {
-        "identifier" : "prefLabel",
-        "language" : "eu",
-        "value" : "SHEE Iraskaslea (Ez--Iraunkorra)",
-        "type" : "label"
-      }, {
-        "identifier" : "prefLabel",
-        "language" : "ca",
-        "value" : "Professor Ivef no permanent",
         "type" : "label"
       } ],
       "geoDivision" : [ {
@@ -2047,7 +2065,7 @@
       "es" : "Profesor Ivef no permanente"
     },
     "id" : "46",
-    "superClasses" : [ "4" ]
+    "superClasses" : [ "5" ]
   }, {
     "iri" : "http://purl.org/roh/university-hr/es#ES_UNIVERSITY_HR_ESRECT",
     "baseIri" : "http://purl.org/roh/university-hr/es",
@@ -2085,17 +2103,17 @@
       } ],
       "prefLabel" : [ {
         "identifier" : "prefLabel",
-        "language" : "ca",
-        "value" : "Rector",
-        "type" : "label"
-      }, {
-        "identifier" : "prefLabel",
         "language" : "ast",
         "value" : "Rector",
         "type" : "label"
       }, {
         "identifier" : "prefLabel",
-        "language" : "es",
+        "language" : "ca",
+        "value" : "Rector",
+        "type" : "label"
+      }, {
+        "identifier" : "prefLabel",
+        "language" : "gl",
         "value" : "Rector",
         "type" : "label"
       }, {
@@ -2105,7 +2123,7 @@
         "type" : "label"
       }, {
         "identifier" : "prefLabel",
-        "language" : "gl",
+        "language" : "es",
         "value" : "Rector",
         "type" : "label"
       } ]
@@ -2114,7 +2132,7 @@
       "IRI-based" : "ES_UNIVERSITY_HR_ESRECT",
       "es" : "Rector"
     },
-    "id" : "14",
+    "id" : "22",
     "superClasses" : [ "2" ]
   }, {
     "iri" : "http://purl.org/roh/university-hr/es#PDIContratado",
@@ -2125,11 +2143,11 @@
       "en" : "Hired PDI",
       "es" : "PDI Contratado"
     },
-    "subClasses" : [ "55", "56", "33", "6", "57", "35", "58", "11", "59", "50", "54", "52", "46" ],
+    "subClasses" : [ "55", "56", "34", "7", "57", "36", "58", "12", "59", "50", "54", "52", "46" ],
     "comment" : {
       "es" : "Personal temporal de una universidad."
     },
-    "id" : "4",
+    "id" : "5",
     "superClasses" : [ "3" ]
   }, {
     "iri" : "http://purl.org/roh/university-hr/es#ES_UNIVERSITY_HR_ESLPADJ",
@@ -2178,11 +2196,6 @@
         "type" : "label"
       }, {
         "identifier" : "prefLabel",
-        "language" : "es",
-        "value" : "Profesor adjunto",
-        "type" : "label"
-      }, {
-        "identifier" : "prefLabel",
         "language" : "ca",
         "value" : "Professor adjunt",
         "type" : "label"
@@ -2196,6 +2209,11 @@
         "language" : "ast",
         "value" : "Profesor adxuntu",
         "type" : "label"
+      }, {
+        "identifier" : "prefLabel",
+        "language" : "es",
+        "value" : "Profesor adjunto",
+        "type" : "label"
       } ]
     },
     "label" : {
@@ -2203,18 +2221,20 @@
       "es" : "Profesor adjunto"
     },
     "id" : "55",
-    "superClasses" : [ "4" ]
+    "superClasses" : [ "5" ]
   }, {
     "iri" : "http://purl.org/roh/mirror/vivo#NonAcademicPosition",
     "baseIri" : "http://purl.org/roh/mirror/vivo",
     "instances" : 0,
     "label" : {
       "IRI-based" : "NonAcademicPosition",
-      "en" : "Non-Academic Position"
+      "en" : "Non-Academic Position",
+      "es" : "Posición no Académica"
     },
-    "subClasses" : [ "31", "41" ],
+    "subClasses" : [ "32", "40" ],
     "attributes" : [ "external" ],
-    "id" : "32"
+    "id" : "33",
+    "superClasses" : [ "4" ]
   }, {
     "iri" : "http://purl.org/roh/university-hr/es#Ayudante",
     "baseIri" : "http://purl.org/roh/university-hr/es",
@@ -2228,7 +2248,7 @@
       "es" : "Los ayudantes serán contratados entre quienes hayan superado todas las materias de estudio que se determinen en los criterios a que hace referencia el artículo 38 y con la finalidad principal de completar su formación investigadora. La contratación será con dedicación a tiempo completo, por una duración no superior a cuatro años improrrogables. Los ayudantes también podrán colaborar en tareas docentes en los términos que establezcan los Estatutos."
     },
     "id" : "57",
-    "superClasses" : [ "4" ]
+    "superClasses" : [ "5" ]
   }, {
     "iri" : "http://purl.org/roh/university-hr/es#ES_UNIVERSITY_HR_ESFIVEFP",
     "baseIri" : "http://purl.org/roh/university-hr/es",
@@ -2240,21 +2260,21 @@
         "value" : "http://publications.europa.eu/resource/authority/country/ESP",
         "type" : "iri"
       } ],
-      "inScheme" : [ {
-        "identifier" : "inScheme",
-        "language" : "undefined",
-        "value" : "http://purl.org/roh/university-hr/es#ESUniversityHumanResourcesList",
-        "type" : "iri"
-      } ],
       "closeMatch" : [ {
         "identifier" : "closeMatch",
         "language" : "undefined",
-        "value" : "http://skos.um.es/unescothes/C00015",
+        "value" : "http://skos.um.es/unescothes/C03965",
         "type" : "iri"
       }, {
         "identifier" : "closeMatch",
         "language" : "undefined",
-        "value" : "http://skos.um.es/unescothes/C03965",
+        "value" : "http://skos.um.es/unescothes/C00015",
+        "type" : "iri"
+      } ],
+      "inScheme" : [ {
+        "identifier" : "inScheme",
+        "language" : "undefined",
+        "value" : "http://purl.org/roh/university-hr/es#ESUniversityHumanResourcesList",
         "type" : "iri"
       } ],
       "hasCode" : [ {
@@ -2271,8 +2291,13 @@
       } ],
       "prefLabel" : [ {
         "identifier" : "prefLabel",
-        "language" : "eu",
-        "value" : "SHEE Irakaslea (Iraunkorra)",
+        "language" : "ca",
+        "value" : "Professor Ivef permanent",
+        "type" : "label"
+      }, {
+        "identifier" : "prefLabel",
+        "language" : "es",
+        "value" : "Profesor Ivef permanente",
         "type" : "label"
       }, {
         "identifier" : "prefLabel",
@@ -2286,13 +2311,8 @@
         "type" : "label"
       }, {
         "identifier" : "prefLabel",
-        "language" : "es",
-        "value" : "Profesor Ivef permanente",
-        "type" : "label"
-      }, {
-        "identifier" : "prefLabel",
-        "language" : "ca",
-        "value" : "Professor Ivef permanent",
+        "language" : "eu",
+        "value" : "SHEE Irakaslea (Iraunkorra)",
         "type" : "label"
       } ],
       "geoDivision" : [ {
@@ -2306,8 +2326,8 @@
       "IRI-based" : "ES_UNIVERSITY_HR_ESFIVEFP",
       "es" : "Profesor Ivef permanente"
     },
-    "id" : "17",
-    "superClasses" : [ "5" ]
+    "id" : "20",
+    "superClasses" : [ "6" ]
   }, {
     "iri" : "http://purl.org/roh/university-hr/es#ProfesorContratadoDoctor",
     "baseIri" : "http://purl.org/roh/university-hr/es",
@@ -2319,12 +2339,6 @@
         "value" : "http://publications.europa.eu/resource/authority/country/ESP",
         "type" : "iri"
       } ],
-      "inScheme" : [ {
-        "identifier" : "inScheme",
-        "language" : "undefined",
-        "value" : "http://purl.org/roh/university-hr/es#ESUniversityHumanResourcesList",
-        "type" : "iri"
-      } ],
       "closeMatch" : [ {
         "identifier" : "closeMatch",
         "language" : "undefined",
@@ -2334,6 +2348,12 @@
         "identifier" : "closeMatch",
         "language" : "undefined",
         "value" : "http://skos.um.es/unescothes/C03965",
+        "type" : "iri"
+      } ],
+      "inScheme" : [ {
+        "identifier" : "inScheme",
+        "language" : "undefined",
+        "value" : "http://purl.org/roh/university-hr/es#ESUniversityHumanResourcesList",
         "type" : "iri"
       } ],
       "hasCode" : [ {
@@ -2350,46 +2370,36 @@
       } ],
       "prefLabel" : [ {
         "identifier" : "prefLabel",
-        "language" : "gl",
-        "value" : "Profesor contratado doutor",
-        "type" : "label"
-      }, {
-        "identifier" : "prefLabel",
         "language" : "es",
         "value" : "Profesor contratado doctor",
         "type" : "label"
       }, {
         "identifier" : "prefLabel",
-        "language" : "ca",
-        "value" : "Professor contractat doctor",
+        "language" : "gl",
+        "value" : "Profesor contratado doutor",
         "type" : "label"
       }, {
         "identifier" : "prefLabel",
         "language" : "ast",
         "value" : "Profesor contratáu doctor",
         "type" : "label"
+      }, {
+        "identifier" : "prefLabel",
+        "language" : "ca",
+        "value" : "Professor contractat doctor",
+        "type" : "label"
       } ]
     },
     "label" : {
       "IRI-based" : "ProfesorContratadoDoctor",
       "en" : "Hired Professor Doctorr",
-      "es" : "Profesor contratado doctor"
+      "es" : "Profesor Contratado Doctor"
     },
     "comment" : {
       "es" : "La contratación de Profesoras y Profesores Contratados Doctores se ajustará a las siguientes reglas:\na) El contrato se celebrará con doctores que reciban la evaluación positiva por parte de la Agencia Nacional de Evaluación de la Calidad y Acreditación o del órgano de evaluación externo que la ley de la Comunidad Autónoma determine.\nb) La finalidad del contrato será la de desarrollar, con plena capacidad docente e investigadora, tareas de docencia y de investigación, o prioritariamente de investigación.\nc) El contrato será de carácter indefinido y con dedicación a tiempo completo."
     },
     "id" : "58",
-    "superClasses" : [ "4" ]
-  }, {
-    "iri" : "http://purl.org/roh/mirror/vivo#AcademicPosition",
-    "baseIri" : "http://purl.org/roh/mirror/vivo",
-    "instances" : 0,
-    "label" : {
-      "IRI-based" : "AcademicPosition"
-    },
-    "subClasses" : [ "38" ],
-    "attributes" : [ "external" ],
-    "id" : "39"
+    "superClasses" : [ "5" ]
   }, {
     "iri" : "http://purl.org/roh/university-hr/es#ES_UNIVERSITY_HR_ESLPCP",
     "baseIri" : "http://purl.org/roh/university-hr/es",
@@ -2401,6 +2411,12 @@
         "value" : "http://publications.europa.eu/resource/authority/country/ESP",
         "type" : "iri"
       } ],
+      "inScheme" : [ {
+        "identifier" : "inScheme",
+        "language" : "undefined",
+        "value" : "http://purl.org/roh/university-hr/es#ESUniversityHumanResourcesList",
+        "type" : "iri"
+      } ],
       "closeMatch" : [ {
         "identifier" : "closeMatch",
         "language" : "undefined",
@@ -2410,12 +2426,6 @@
         "identifier" : "closeMatch",
         "language" : "undefined",
         "value" : "http://skos.um.es/unescothes/C00015",
-        "type" : "iri"
-      } ],
-      "inScheme" : [ {
-        "identifier" : "inScheme",
-        "language" : "undefined",
-        "value" : "http://purl.org/roh/university-hr/es#ESUniversityHumanResourcesList",
         "type" : "iri"
       } ],
       "hasCode" : [ {
@@ -2432,7 +2442,7 @@
       } ],
       "prefLabel" : [ {
         "identifier" : "prefLabel",
-        "language" : "gl",
+        "language" : "es",
         "value" : "Profesor colaborador permanente",
         "type" : "label"
       }, {
@@ -2442,13 +2452,13 @@
         "type" : "label"
       }, {
         "identifier" : "prefLabel",
-        "language" : "es",
-        "value" : "Profesor colaborador permanente",
+        "language" : "ca",
+        "value" : "Professor col·laborador permanent",
         "type" : "label"
       }, {
         "identifier" : "prefLabel",
-        "language" : "ca",
-        "value" : "Professor col·laborador permanent",
+        "language" : "gl",
+        "value" : "Profesor colaborador permanente",
         "type" : "label"
       }, {
         "identifier" : "prefLabel",
@@ -2461,8 +2471,8 @@
       "IRI-based" : "ES_UNIVERSITY_HR_ESLPCP",
       "es" : "Profesor colaborador permanente"
     },
-    "id" : "26",
-    "superClasses" : [ "5" ]
+    "id" : "42",
+    "superClasses" : [ "6" ]
   }, {
     "iri" : "http://purl.org/roh/university-hr/es#ProfesorVisitante",
     "baseIri" : "http://purl.org/roh/university-hr/es",
@@ -2511,8 +2521,8 @@
       } ],
       "prefLabel" : [ {
         "identifier" : "prefLabel",
-        "language" : "ca",
-        "value" : "Professor visitant",
+        "language" : "es",
+        "value" : "Profesor visitante",
         "type" : "label"
       }, {
         "identifier" : "prefLabel",
@@ -2521,13 +2531,13 @@
         "type" : "label"
       }, {
         "identifier" : "prefLabel",
-        "language" : "es",
-        "value" : "Profesor visitante",
+        "language" : "eu",
+        "value" : "Irakasle bisitaria",
         "type" : "label"
       }, {
         "identifier" : "prefLabel",
-        "language" : "eu",
-        "value" : "Irakasle bisitaria",
+        "language" : "ca",
+        "value" : "Professor visitant",
         "type" : "label"
       }, {
         "identifier" : "prefLabel",
@@ -2545,7 +2555,7 @@
       "es" : "La contratación de Profesoras y Profesores Visitantes se ajustará a las siguientes reglas:\na) El contrato se podrá celebrar con profesores o investigadores de reconocido prestigio de otras universidades y centros de investigación, tanto españoles como extranjeros.\nb) La finalidad del contrato será la de desarrollar tareas docentes o investigadoras a través de las que se aporten los conocimientos y la experiencia docente e investigadora de los indicados profesores a la universidad.\nc) El contrato será de carácter temporal con la duración que se acuerde entre las partes y dedicación a tiempo parcial o completo"
     },
     "id" : "59",
-    "superClasses" : [ "4" ]
+    "superClasses" : [ "5" ]
   }, {
     "iri" : "http://purl.org/roh/university-hr/es#CatedraticoDeUniversidad",
     "baseIri" : "http://purl.org/roh/university-hr/es",
@@ -2557,12 +2567,6 @@
         "value" : "http://publications.europa.eu/resource/authority/country/ESP",
         "type" : "iri"
       } ],
-      "inScheme" : [ {
-        "identifier" : "inScheme",
-        "language" : "undefined",
-        "value" : "http://purl.org/roh/university-hr/es#ESUniversityHumanResourcesList",
-        "type" : "iri"
-      } ],
       "closeMatch" : [ {
         "identifier" : "closeMatch",
         "language" : "undefined",
@@ -2572,6 +2576,12 @@
         "identifier" : "closeMatch",
         "language" : "undefined",
         "value" : "http://skos.um.es/unescothes/C03965",
+        "type" : "iri"
+      } ],
+      "inScheme" : [ {
+        "identifier" : "inScheme",
+        "language" : "undefined",
+        "value" : "http://purl.org/roh/university-hr/es#ESUniversityHumanResourcesList",
         "type" : "iri"
       } ],
       "hasCode" : [ {
@@ -2588,8 +2598,8 @@
       } ],
       "prefLabel" : [ {
         "identifier" : "prefLabel",
-        "language" : "ca",
-        "value" : "Professor catedràtic d'universitat",
+        "language" : "eu",
+        "value" : "Unibertsitateko katedraduna",
         "type" : "label"
       }, {
         "identifier" : "prefLabel",
@@ -2598,8 +2608,18 @@
         "type" : "label"
       }, {
         "identifier" : "prefLabel",
+        "language" : "ca",
+        "value" : "Professor catedràtic d'universitat",
+        "type" : "label"
+      }, {
+        "identifier" : "prefLabel",
         "language" : "ast",
         "value" : "Profesor catedráticu d'universidá",
+        "type" : "label"
+      }, {
+        "identifier" : "prefLabel",
+        "language" : "gl",
+        "value" : "Profesor catedrático de universidade",
         "type" : "label"
       }, {
         "identifier" : "prefLabel",
@@ -2608,28 +2628,18 @@
         "type" : "label"
       }, {
         "identifier" : "prefLabel",
-        "language" : "eu",
-        "value" : "Unibertsitateko katedraduna",
-        "type" : "label"
-      }, {
-        "identifier" : "prefLabel",
         "language" : "pt",
         "value" : "Professor catedrático de universidade",
-        "type" : "label"
-      }, {
-        "identifier" : "prefLabel",
-        "language" : "gl",
-        "value" : "Profesor catedrático de universidade",
         "type" : "label"
       } ]
     },
     "label" : {
       "IRI-based" : "CatedraticoDeUniversidad",
       "en" : "University Professor",
-      "es" : "Profesor catedrático de universidad"
+      "es" : "Catedrático de Universidad"
     },
-    "id" : "19",
-    "superClasses" : [ "5" ]
+    "id" : "29",
+    "superClasses" : [ "6" ]
   }, {
     "iri" : "http://purl.org/roh/university-hr/es#ProfesorEmerito",
     "baseIri" : "http://purl.org/roh/university-hr/es",
@@ -2649,12 +2659,12 @@
       }, {
         "identifier" : "closeMatch",
         "language" : "undefined",
-        "value" : "http://skos.um.es/unescothes/C03965",
+        "value" : "http://purl.org/roh/university-hr/pt#PT_UNIVERSITY_HR_PTPEM",
         "type" : "iri"
       }, {
         "identifier" : "closeMatch",
         "language" : "undefined",
-        "value" : "http://purl.org/roh/university-hr/pt#PT_UNIVERSITY_HR_PTPEM",
+        "value" : "http://skos.um.es/unescothes/C03965",
         "type" : "iri"
       } ],
       "inScheme" : [ {
@@ -2687,8 +2697,8 @@
         "type" : "label"
       }, {
         "identifier" : "prefLabel",
-        "language" : "ast",
-        "value" : "Profesor eméritu",
+        "language" : "eu",
+        "value" : "Irakasle emeritua",
         "type" : "label"
       }, {
         "identifier" : "prefLabel",
@@ -2697,21 +2707,21 @@
         "type" : "label"
       }, {
         "identifier" : "prefLabel",
-        "language" : "eu",
-        "value" : "Irakasle emeritua",
+        "language" : "ast",
+        "value" : "Profesor eméritu",
         "type" : "label"
       } ]
     },
     "label" : {
       "IRI-based" : "ProfesorEmerito",
       "en" : "Professor Emeritus",
-      "es" : "Profesor emérito"
+      "es" : "Profesor Emérito"
     },
     "comment" : {
       "es" : "Las universidades, de acuerdo con sus estatutos, podrán nombrar a Profesores Eméritos entre profesoras y profesores jubilados que hayan prestado servicios destacados a la universidad"
     },
     "id" : "52",
-    "superClasses" : [ "4" ]
+    "superClasses" : [ "5" ]
   }, {
     "iri" : "http://purl.org/roh/university-hr/es#ES_UNIVERSITY_HR_ESLPAY",
     "baseIri" : "http://purl.org/roh/university-hr/es",
@@ -2726,12 +2736,12 @@
       "closeMatch" : [ {
         "identifier" : "closeMatch",
         "language" : "undefined",
-        "value" : "http://skos.um.es/unescothes/C03965",
+        "value" : "http://skos.um.es/unescothes/C00015",
         "type" : "iri"
       }, {
         "identifier" : "closeMatch",
         "language" : "undefined",
-        "value" : "http://skos.um.es/unescothes/C00015",
+        "value" : "http://skos.um.es/unescothes/C03965",
         "type" : "iri"
       } ],
       "inScheme" : [ {
@@ -2764,6 +2774,11 @@
         "type" : "label"
       }, {
         "identifier" : "prefLabel",
+        "language" : "gl",
+        "value" : "Profesor axudante",
+        "type" : "label"
+      }, {
+        "identifier" : "prefLabel",
         "language" : "es",
         "value" : "Profesor ayudante",
         "type" : "label"
@@ -2772,11 +2787,6 @@
         "language" : "ast",
         "value" : "Profesor ayudante",
         "type" : "label"
-      }, {
-        "identifier" : "prefLabel",
-        "language" : "gl",
-        "value" : "Profesor axudante",
-        "type" : "label"
       } ]
     },
     "label" : {
@@ -2784,7 +2794,7 @@
       "es" : "Profesor ayudante"
     },
     "id" : "56",
-    "superClasses" : [ "4" ]
+    "superClasses" : [ "5" ]
   }, {
     "iri" : "http://purl.org/roh/university-hr/es#ES_UNIVERSITY_HR_ESLI",
     "baseIri" : "http://purl.org/roh/university-hr/es",
@@ -2796,16 +2806,16 @@
         "value" : "http://publications.europa.eu/resource/authority/country/ESP",
         "type" : "iri"
       } ],
-      "closeMatch" : [ {
-        "identifier" : "closeMatch",
-        "language" : "undefined",
-        "value" : "http://skos.um.es/unescothes/C03376",
-        "type" : "iri"
-      } ],
       "inScheme" : [ {
         "identifier" : "inScheme",
         "language" : "undefined",
         "value" : "http://purl.org/roh/university-hr/es#ESUniversityHumanResourcesList",
+        "type" : "iri"
+      } ],
+      "closeMatch" : [ {
+        "identifier" : "closeMatch",
+        "language" : "undefined",
+        "value" : "http://skos.um.es/unescothes/C03376",
         "type" : "iri"
       } ],
       "hasCode" : [ {
@@ -2822,7 +2832,12 @@
       } ],
       "prefLabel" : [ {
         "identifier" : "prefLabel",
-        "language" : "ast",
+        "language" : "eu",
+        "value" : "Ikertzaileak",
+        "type" : "label"
+      }, {
+        "identifier" : "prefLabel",
+        "language" : "ca",
         "value" : "Investigador",
         "type" : "label"
       }, {
@@ -2832,17 +2847,12 @@
         "type" : "label"
       }, {
         "identifier" : "prefLabel",
-        "language" : "eu",
-        "value" : "Ikertzaileak",
-        "type" : "label"
-      }, {
-        "identifier" : "prefLabel",
         "language" : "gl",
         "value" : "Investigador",
         "type" : "label"
       }, {
         "identifier" : "prefLabel",
-        "language" : "ca",
+        "language" : "ast",
         "value" : "Investigador",
         "type" : "label"
       } ]
@@ -2851,8 +2861,8 @@
       "IRI-based" : "ES_UNIVERSITY_HR_ESLI",
       "es" : "Investigador"
     },
-    "id" : "38",
-    "superClasses" : [ "39" ]
+    "id" : "70",
+    "superClasses" : [ "44" ]
   }, {
     "iri" : "http://purl.org/roh/university-hr/es#CuerpoDocente",
     "baseIri" : "http://purl.org/roh/university-hr/es",
@@ -2862,11 +2872,11 @@
       "en" : "Faculty",
       "es" : "Cuerpo Docente"
     },
-    "subClasses" : [ "43", "26", "7", "15", "29", "19", "17", "23", "21" ],
+    "subClasses" : [ "38", "42", "8", "16", "31", "29", "20", "18", "24" ],
     "comment" : {
       "es" : "Personal funcionario o permanente de una universidad."
     },
-    "id" : "5",
+    "id" : "6",
     "superClasses" : [ "3" ]
   }, {
     "iri" : "http://purl.org/roh/mirror/vivo#FacultyAdministrativePosition",
@@ -2874,11 +2884,13 @@
     "instances" : 0,
     "label" : {
       "IRI-based" : "FacultyAdministrativePosition",
-      "en" : "Faculty Administrative Position"
+      "en" : "Faculty Administrative Position",
+      "es" : "Posición Administrativa en Facultad"
     },
-    "subClasses" : [ "14", "8", "1", "36", "10", "27" ],
+    "subClasses" : [ "22", "9", "14", "1", "11", "27" ],
     "attributes" : [ "external" ],
-    "id" : "2"
+    "id" : "2",
+    "superClasses" : [ "4" ]
   }, {
     "iri" : "http://purl.org/roh/university-hr/es#ES_UNIVERSITY_HR_ESFPTN",
     "baseIri" : "http://purl.org/roh/university-hr/es",
@@ -2893,12 +2905,12 @@
       "closeMatch" : [ {
         "identifier" : "closeMatch",
         "language" : "undefined",
-        "value" : "http://skos.um.es/unescothes/C03965",
+        "value" : "http://skos.um.es/unescothes/C00015",
         "type" : "iri"
       }, {
         "identifier" : "closeMatch",
         "language" : "undefined",
-        "value" : "http://skos.um.es/unescothes/C00015",
+        "value" : "http://skos.um.es/unescothes/C03965",
         "type" : "iri"
       } ],
       "inScheme" : [ {
@@ -2921,8 +2933,8 @@
       } ],
       "prefLabel" : [ {
         "identifier" : "prefLabel",
-        "language" : "es",
-        "value" : "Profesor titular de escuela de náutica",
+        "language" : "gl",
+        "value" : "Profesor titular de escola de náutica",
         "type" : "label"
       }, {
         "identifier" : "prefLabel",
@@ -2936,13 +2948,13 @@
         "type" : "label"
       }, {
         "identifier" : "prefLabel",
-        "language" : "gl",
-        "value" : "Profesor titular de escola de náutica",
+        "language" : "eu",
+        "value" : "Nautika Eskola Ofizialeko Irakasle numerarioa",
         "type" : "label"
       }, {
         "identifier" : "prefLabel",
-        "language" : "eu",
-        "value" : "Nautika Eskola Ofizialeko Irakasle numerarioa",
+        "language" : "es",
+        "value" : "Profesor titular de escuela de náutica",
         "type" : "label"
       } ],
       "geoDivision" : [ {
@@ -2956,8 +2968,8 @@
       "IRI-based" : "ES_UNIVERSITY_HR_ESFPTN",
       "es" : "Profesor titular de escuela de náutica"
     },
-    "id" : "23",
-    "superClasses" : [ "5" ]
+    "id" : "18",
+    "superClasses" : [ "6" ]
   }, {
     "iri" : "http://purl.org/roh/university-hr/es#CatedraticoDeEscuelaUniversitaria",
     "baseIri" : "http://purl.org/roh/university-hr/es",
@@ -2978,12 +2990,12 @@
       "closeMatch" : [ {
         "identifier" : "closeMatch",
         "language" : "undefined",
-        "value" : "http://skos.um.es/unescothes/C00015",
+        "value" : "http://skos.um.es/unescothes/C03965",
         "type" : "iri"
       }, {
         "identifier" : "closeMatch",
         "language" : "undefined",
-        "value" : "http://skos.um.es/unescothes/C03965",
+        "value" : "http://skos.um.es/unescothes/C00015",
         "type" : "iri"
       } ],
       "hasCode" : [ {
@@ -3000,13 +3012,8 @@
       } ],
       "prefLabel" : [ {
         "identifier" : "prefLabel",
-        "language" : "ast",
-        "value" : "Profesor catedráticu d'escuela universitaria",
-        "type" : "label"
-      }, {
-        "identifier" : "prefLabel",
-        "language" : "eu",
-        "value" : "Unibertsitateko Eskolako Katedraduna",
+        "language" : "gl",
+        "value" : "Profesor catedrático de escola universitaria",
         "type" : "label"
       }, {
         "identifier" : "prefLabel",
@@ -3015,8 +3022,13 @@
         "type" : "label"
       }, {
         "identifier" : "prefLabel",
-        "language" : "gl",
-        "value" : "Profesor catedrático de escola universitaria",
+        "language" : "eu",
+        "value" : "Unibertsitateko Eskolako Katedraduna",
+        "type" : "label"
+      }, {
+        "identifier" : "prefLabel",
+        "language" : "ast",
+        "value" : "Profesor catedráticu d'escuela universitaria",
         "type" : "label"
       }, {
         "identifier" : "prefLabel",
@@ -3030,8 +3042,8 @@
       "en" : "University School Professor",
       "es" : "Profesor catedrático de escuela universitaria"
     },
-    "id" : "43",
-    "superClasses" : [ "5" ]
+    "id" : "38",
+    "superClasses" : [ "6" ]
   }, {
     "iri" : "http://purl.org/roh/university-hr/es#ProfesorAsociado",
     "baseIri" : "http://purl.org/roh/university-hr/es",
@@ -3041,12 +3053,6 @@
         "identifier" : "country",
         "language" : "undefined",
         "value" : "http://publications.europa.eu/resource/authority/country/ESP",
-        "type" : "iri"
-      } ],
-      "inScheme" : [ {
-        "identifier" : "inScheme",
-        "language" : "undefined",
-        "value" : "http://purl.org/roh/university-hr/es#ESUniversityHumanResourcesList",
         "type" : "iri"
       } ],
       "closeMatch" : [ {
@@ -3059,6 +3065,12 @@
         "language" : "undefined",
         "value" : "C03965",
         "type" : "label"
+      } ],
+      "inScheme" : [ {
+        "identifier" : "inScheme",
+        "language" : "undefined",
+        "value" : "http://purl.org/roh/university-hr/es#ESUniversityHumanResourcesList",
+        "type" : "iri"
       } ],
       "hasCode" : [ {
         "identifier" : "hasCode",
@@ -3074,8 +3086,8 @@
       } ],
       "prefLabel" : [ {
         "identifier" : "prefLabel",
-        "language" : "es",
-        "value" : "Profesor asociado",
+        "language" : "ca",
+        "value" : "Professor associat",
         "type" : "label"
       }, {
         "identifier" : "prefLabel",
@@ -3089,8 +3101,8 @@
         "type" : "label"
       }, {
         "identifier" : "prefLabel",
-        "language" : "ca",
-        "value" : "Professor associat",
+        "language" : "es",
+        "value" : "Profesor asociado",
         "type" : "label"
       }, {
         "identifier" : "prefLabel",
@@ -3108,75 +3120,7 @@
       "es" : "La contratación de Profesoras y Profesores Asociados se ajustará a las siguientes reglas:\na) El contrato se podrá celebrar con especialistas de reconocida competencia que acrediten ejercer su actividad profesional fuera del ámbito académico universitario.\nb) La finalidad del contrato será la de desarrollar tareas docentes a través de las que se aporten sus conocimientos y experiencia profesionales a la universidad.\nc) El contrato será de carácter temporal y con dedicación a tiempo parcial.\nd) La duración del contrato será trimestral, semestral o anual, y se podrá renovar por períodos de igual duración, siempre que se siga acreditando el ejercicio de la actividad profesional fuera del ámbito académico universitario."
     },
     "id" : "50",
-    "superClasses" : [ "4" ]
-  }, {
-    "iri" : "http://purl.org/roh/university-hr/es#ES_UNIVERSITY_HR_ESJEFDEP",
-    "baseIri" : "http://purl.org/roh/university-hr/es",
-    "instances" : 0,
-    "annotations" : {
-      "country" : [ {
-        "identifier" : "country",
-        "language" : "undefined",
-        "value" : "http://publications.europa.eu/resource/authority/country/ESP",
-        "type" : "iri"
-      } ],
-      "inScheme" : [ {
-        "identifier" : "inScheme",
-        "language" : "undefined",
-        "value" : "http://purl.org/roh/university-hr/es#ESUniversityHumanResourcesList",
-        "type" : "iri"
-      } ],
-      "closeMatch" : [ {
-        "identifier" : "closeMatch",
-        "language" : "undefined",
-        "value" : "http://purl.org/roh/university-hr/uk#GB_UNIVERSITY_GBHEADDEP",
-        "type" : "iri"
-      } ],
-      "hasCode" : [ {
-        "identifier" : "hasCode",
-        "language" : "undefined",
-        "value" : "http://purl.org/roh/university-hr/es#ES_UNIVERSITY_HR_CODE_ESJEFDEP",
-        "type" : "iri"
-      } ],
-      "notation" : [ {
-        "identifier" : "notation",
-        "language" : "undefined",
-        "value" : "ESJEFDEP",
-        "type" : "label"
-      } ],
-      "prefLabel" : [ {
-        "identifier" : "prefLabel",
-        "language" : "es",
-        "value" : "Director de departamento",
-        "type" : "label"
-      }, {
-        "identifier" : "prefLabel",
-        "language" : "eu",
-        "value" : "Saileko Zuzendaria",
-        "type" : "label"
-      }, {
-        "identifier" : "prefLabel",
-        "language" : "gl",
-        "value" : "Director de departamento",
-        "type" : "label"
-      }, {
-        "identifier" : "prefLabel",
-        "language" : "ca",
-        "value" : "Director de departament",
-        "type" : "label"
-      }, {
-        "identifier" : "prefLabel",
-        "language" : "ast",
-        "value" : "Director de departamentu",
-        "type" : "label"
-      } ]
-    },
-    "label" : {
-      "IRI-based" : "ES_UNIVERSITY_HR_ESJEFDEP",
-      "es" : "Director de departamento"
-    },
-    "id" : "1",
-    "superClasses" : [ "2" ]
+    "superClasses" : [ "5" ]
   }, {
     "iri" : "http://purl.org/roh/university-hr/es#ProfesorAyudanteDoctor",
     "baseIri" : "http://purl.org/roh/university-hr/es",
@@ -3219,8 +3163,8 @@
       } ],
       "prefLabel" : [ {
         "identifier" : "prefLabel",
-        "language" : "gl",
-        "value" : "Profesor axudante doutor",
+        "language" : "es",
+        "value" : "Profesor ayudante doctor",
         "type" : "label"
       }, {
         "identifier" : "prefLabel",
@@ -3229,26 +3173,94 @@
         "type" : "label"
       }, {
         "identifier" : "prefLabel",
-        "language" : "ca",
-        "value" : "Professor ajudant doctor",
+        "language" : "gl",
+        "value" : "Profesor axudante doutor",
         "type" : "label"
       }, {
         "identifier" : "prefLabel",
-        "language" : "es",
-        "value" : "Profesor ayudante doctor",
+        "language" : "ca",
+        "value" : "Professor ajudant doctor",
         "type" : "label"
       } ]
     },
     "label" : {
       "IRI-based" : "ProfesorAyudanteDoctor",
       "en" : "Assistant Professor Doctor",
-      "es" : "Profesor ayudante doctor"
+      "es" : "Profesor Ayudante Doctor"
     },
     "comment" : {
       "es" : "La contratación de Profesoras y Profesores Ayudantes Doctores se ajustará a las siguientes reglas:\na) El contrato se celebrará con doctores. La contratación exigirá la previa evaluación positiva de su actividad por parte de la Agencia Nacional de Evaluación de la Calidad y Acreditación o del órgano de evaluación externa que la ley de la Comunidad Autónoma determine, y será mérito preferente la estancia del candidato en universidades o centros de investigación de reconocido prestigio, españoles o extranjeros, distintos de la universidad que lleve a cabo la contratación.\nb) La finalidad del contrato será la de desarrollar tareas docentes y de investigación.\nc) El contrato será de carácter temporal y con dedicación a tiempo completo.\nd) La duración del contrato no podrá ser inferior a un año ni superior a cinco, pudiendo prorrogarse o renovarse si se hubiera concertado por duración inferior a la máxima, siempre que la duración total no exceda de los indicados cinco años. En cualquier caso, el tiempo total de duración conjunta entre esta figura contractual y la prevista en el artículo anterior, en la misma o distinta universidad, no podrá exceder de ocho años. Las situaciones de incapacidad temporal, maternidad y adopción o acogimiento durante el período de duración del contrato, interrumpirán su cómputo"
     },
     "id" : "54",
-    "superClasses" : [ "4" ]
+    "superClasses" : [ "5" ]
+  }, {
+    "iri" : "http://purl.org/roh/university-hr/es#ES_UNIVERSITY_HR_ESJEFDEP",
+    "baseIri" : "http://purl.org/roh/university-hr/es",
+    "instances" : 0,
+    "annotations" : {
+      "country" : [ {
+        "identifier" : "country",
+        "language" : "undefined",
+        "value" : "http://publications.europa.eu/resource/authority/country/ESP",
+        "type" : "iri"
+      } ],
+      "closeMatch" : [ {
+        "identifier" : "closeMatch",
+        "language" : "undefined",
+        "value" : "http://purl.org/roh/university-hr/uk#GB_UNIVERSITY_GBHEADDEP",
+        "type" : "iri"
+      } ],
+      "inScheme" : [ {
+        "identifier" : "inScheme",
+        "language" : "undefined",
+        "value" : "http://purl.org/roh/university-hr/es#ESUniversityHumanResourcesList",
+        "type" : "iri"
+      } ],
+      "hasCode" : [ {
+        "identifier" : "hasCode",
+        "language" : "undefined",
+        "value" : "http://purl.org/roh/university-hr/es#ES_UNIVERSITY_HR_CODE_ESJEFDEP",
+        "type" : "iri"
+      } ],
+      "notation" : [ {
+        "identifier" : "notation",
+        "language" : "undefined",
+        "value" : "ESJEFDEP",
+        "type" : "label"
+      } ],
+      "prefLabel" : [ {
+        "identifier" : "prefLabel",
+        "language" : "ast",
+        "value" : "Director de departamentu",
+        "type" : "label"
+      }, {
+        "identifier" : "prefLabel",
+        "language" : "ca",
+        "value" : "Director de departament",
+        "type" : "label"
+      }, {
+        "identifier" : "prefLabel",
+        "language" : "es",
+        "value" : "Director de departamento",
+        "type" : "label"
+      }, {
+        "identifier" : "prefLabel",
+        "language" : "gl",
+        "value" : "Director de departamento",
+        "type" : "label"
+      }, {
+        "identifier" : "prefLabel",
+        "language" : "eu",
+        "value" : "Saileko Zuzendaria",
+        "type" : "label"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "ES_UNIVERSITY_HR_ESJEFDEP",
+      "es" : "Director de departamento"
+    },
+    "id" : "14",
+    "superClasses" : [ "2" ]
   }, {
     "iri" : "http://purl.org/roh/university-hr/es#ProfesorTitularDeUniversidad",
     "baseIri" : "http://purl.org/roh/university-hr/es",
@@ -3269,12 +3281,12 @@
       "closeMatch" : [ {
         "identifier" : "closeMatch",
         "language" : "undefined",
-        "value" : "http://skos.um.es/unescothes/C00015",
+        "value" : "http://skos.um.es/unescothes/C03965",
         "type" : "iri"
       }, {
         "identifier" : "closeMatch",
         "language" : "undefined",
-        "value" : "http://skos.um.es/unescothes/C03965",
+        "value" : "http://skos.um.es/unescothes/C00015",
         "type" : "iri"
       } ],
       "hasCode" : [ {
@@ -3291,18 +3303,23 @@
       } ],
       "prefLabel" : [ {
         "identifier" : "prefLabel",
-        "language" : "es",
-        "value" : "Profesor titular de universidad",
-        "type" : "label"
-      }, {
-        "identifier" : "prefLabel",
         "language" : "pt",
         "value" : "Professor titular de universidade",
         "type" : "label"
       }, {
         "identifier" : "prefLabel",
+        "language" : "gl",
+        "value" : "Profesor titular de universidade",
+        "type" : "label"
+      }, {
+        "identifier" : "prefLabel",
         "language" : "ca",
         "value" : "Professor titular d'universitat",
+        "type" : "label"
+      }, {
+        "identifier" : "prefLabel",
+        "language" : "fr",
+        "value" : "Professeur titulaire d'université",
         "type" : "label"
       }, {
         "identifier" : "prefLabel",
@@ -3316,13 +3333,8 @@
         "type" : "label"
       }, {
         "identifier" : "prefLabel",
-        "language" : "fr",
-        "value" : "Professeur titulaire d'université",
-        "type" : "label"
-      }, {
-        "identifier" : "prefLabel",
-        "language" : "gl",
-        "value" : "Profesor titular de universidade",
+        "language" : "es",
+        "value" : "Profesor titular de universidad",
         "type" : "label"
       } ]
     },
@@ -3331,35 +3343,48 @@
       "en" : "Associate Professor",
       "es" : "Profesor Titular de Universidad"
     },
-    "id" : "29",
-    "superClasses" : [ "5" ]
+    "id" : "31",
+    "superClasses" : [ "6" ]
+  }, {
+    "iri" : "http://purl.org/roh/mirror/vivo#NonFacultyAcademicPosition",
+    "baseIri" : "http://purl.org/roh/mirror/vivo",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "NonFacultyAcademicPosition",
+      "en" : "Non-Faculty Academic Position",
+      "es" : "Posición Académica no de Facultad"
+    },
+    "subClasses" : [ "70" ],
+    "attributes" : [ "external" ],
+    "id" : "44",
+    "superClasses" : [ "4" ]
   } ],
   "property" : [ {
     "id" : "0",
     "type" : "rdfs:SubClassOf"
   }, {
-    "id" : "12",
-    "type" : "rdfs:SubClassOf"
-  }, {
     "id" : "13",
     "type" : "rdfs:SubClassOf"
   }, {
-    "id" : "16",
+    "id" : "15",
     "type" : "rdfs:SubClassOf"
   }, {
-    "id" : "18",
+    "id" : "17",
     "type" : "rdfs:SubClassOf"
   }, {
-    "id" : "20",
+    "id" : "19",
     "type" : "rdfs:SubClassOf"
   }, {
-    "id" : "22",
+    "id" : "21",
     "type" : "rdfs:SubClassOf"
   }, {
-    "id" : "24",
+    "id" : "23",
     "type" : "rdfs:SubClassOf"
   }, {
     "id" : "25",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "26",
     "type" : "rdfs:SubClassOf"
   }, {
     "id" : "28",
@@ -3371,13 +3396,13 @@
     "id" : "37",
     "type" : "rdfs:SubClassOf"
   }, {
-    "id" : "40",
+    "id" : "39",
     "type" : "rdfs:SubClassOf"
   }, {
-    "id" : "42",
+    "id" : "41",
     "type" : "rdfs:SubClassOf"
   }, {
-    "id" : "44",
+    "id" : "43",
     "type" : "rdfs:SubClassOf"
   }, {
     "id" : "45",
@@ -3428,13 +3453,25 @@
     "id" : "69",
     "type" : "rdfs:SubClassOf"
   }, {
-    "id" : "70",
-    "type" : "rdfs:SubClassOf"
-  }, {
     "id" : "71",
     "type" : "rdfs:SubClassOf"
   }, {
     "id" : "72",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "73",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "74",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "75",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "76",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "77",
     "type" : "rdfs:SubClassOf"
   } ],
   "propertyAttribute" : [ {
@@ -3444,168 +3481,188 @@
     "id" : "0"
   }, {
     "range" : "2",
-    "domain" : "8",
-    "attributes" : [ "object", "anonymous" ],
-    "id" : "12"
-  }, {
-    "range" : "2",
     "domain" : "14",
     "attributes" : [ "object", "anonymous" ],
     "id" : "13"
   }, {
-    "range" : "5",
-    "domain" : "17",
+    "range" : "2",
+    "domain" : "9",
     "attributes" : [ "object", "anonymous" ],
-    "id" : "16"
+    "id" : "15"
   }, {
-    "range" : "5",
-    "domain" : "19",
+    "range" : "6",
+    "domain" : "18",
     "attributes" : [ "object", "anonymous" ],
-    "id" : "18"
+    "id" : "17"
   }, {
-    "range" : "5",
-    "domain" : "21",
+    "range" : "6",
+    "domain" : "20",
     "attributes" : [ "object", "anonymous" ],
-    "id" : "20"
+    "id" : "19"
   }, {
-    "range" : "5",
-    "domain" : "23",
+    "range" : "2",
+    "domain" : "22",
     "attributes" : [ "object", "anonymous" ],
-    "id" : "22"
+    "id" : "21"
   }, {
-    "range" : "5",
-    "domain" : "7",
+    "range" : "6",
+    "domain" : "24",
     "attributes" : [ "object", "anonymous" ],
-    "id" : "24"
+    "id" : "23"
   }, {
-    "range" : "5",
-    "domain" : "26",
+    "range" : "6",
+    "domain" : "16",
     "attributes" : [ "object", "anonymous" ],
     "id" : "25"
   }, {
-    "range" : "5",
+    "range" : "6",
+    "domain" : "8",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "26"
+  }, {
+    "range" : "6",
     "domain" : "29",
     "attributes" : [ "object", "anonymous" ],
     "id" : "28"
   }, {
-    "range" : "5",
-    "domain" : "15",
+    "range" : "6",
+    "domain" : "31",
     "attributes" : [ "object", "anonymous" ],
     "id" : "30"
   }, {
-    "range" : "39",
+    "range" : "6",
     "domain" : "38",
     "attributes" : [ "object", "anonymous" ],
     "id" : "37"
   }, {
-    "range" : "32",
-    "domain" : "41",
+    "range" : "33",
+    "domain" : "40",
     "attributes" : [ "object", "anonymous" ],
-    "id" : "40"
+    "id" : "39"
   }, {
-    "range" : "5",
-    "domain" : "43",
+    "range" : "6",
+    "domain" : "42",
     "attributes" : [ "object", "anonymous" ],
-    "id" : "42"
+    "id" : "41"
   }, {
     "range" : "3",
-    "domain" : "4",
+    "domain" : "5",
     "attributes" : [ "object", "anonymous" ],
-    "id" : "44"
+    "id" : "43"
   }, {
-    "range" : "4",
+    "range" : "5",
     "domain" : "46",
     "attributes" : [ "object", "anonymous" ],
     "id" : "45"
   }, {
-    "range" : "32",
-    "domain" : "31",
+    "range" : "33",
+    "domain" : "32",
     "attributes" : [ "object", "anonymous" ],
     "id" : "47"
   }, {
     "range" : "3",
-    "domain" : "5",
+    "domain" : "6",
     "attributes" : [ "object", "anonymous" ],
     "id" : "48"
   }, {
-    "range" : "4",
+    "range" : "5",
     "domain" : "50",
     "attributes" : [ "object", "anonymous" ],
     "id" : "49"
   }, {
-    "range" : "4",
+    "range" : "5",
     "domain" : "52",
     "attributes" : [ "object", "anonymous" ],
     "id" : "51"
   }, {
-    "range" : "4",
+    "range" : "5",
     "domain" : "54",
     "attributes" : [ "object", "anonymous" ],
     "id" : "53"
   }, {
-    "range" : "4",
+    "range" : "5",
     "domain" : "56",
     "attributes" : [ "object", "anonymous" ],
     "id" : "60"
   }, {
-    "range" : "4",
-    "domain" : "33",
+    "range" : "5",
+    "domain" : "34",
     "attributes" : [ "object", "anonymous" ],
     "id" : "61"
   }, {
-    "range" : "4",
-    "domain" : "6",
+    "range" : "5",
+    "domain" : "7",
     "attributes" : [ "object", "anonymous" ],
     "id" : "62"
   }, {
-    "range" : "4",
+    "range" : "5",
     "domain" : "57",
     "attributes" : [ "object", "anonymous" ],
     "id" : "63"
   }, {
-    "range" : "4",
-    "domain" : "35",
+    "range" : "5",
+    "domain" : "36",
     "attributes" : [ "object", "anonymous" ],
     "id" : "64"
   }, {
-    "range" : "4",
+    "range" : "5",
     "domain" : "58",
     "attributes" : [ "object", "anonymous" ],
     "id" : "65"
   }, {
-    "range" : "4",
-    "domain" : "11",
+    "range" : "5",
+    "domain" : "12",
     "attributes" : [ "object", "anonymous" ],
     "id" : "66"
   }, {
-    "range" : "4",
+    "range" : "5",
     "domain" : "59",
     "attributes" : [ "object", "anonymous" ],
     "id" : "67"
   }, {
-    "range" : "4",
-    "domain" : "5",
+    "range" : "5",
+    "domain" : "6",
     "attributes" : [ "object", "anonymous" ],
     "id" : "68"
   }, {
-    "range" : "4",
+    "range" : "5",
     "domain" : "55",
     "attributes" : [ "object", "anonymous" ],
     "id" : "69"
   }, {
-    "range" : "2",
-    "domain" : "10",
-    "attributes" : [ "object", "anonymous" ],
-    "id" : "70"
-  }, {
-    "range" : "2",
-    "domain" : "36",
+    "range" : "4",
+    "domain" : "2",
     "attributes" : [ "object", "anonymous" ],
     "id" : "71"
+  }, {
+    "range" : "4",
+    "domain" : "44",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "72"
+  }, {
+    "range" : "44",
+    "domain" : "70",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "73"
   }, {
     "range" : "2",
     "domain" : "27",
     "attributes" : [ "object", "anonymous" ],
-    "id" : "72"
+    "id" : "74"
+  }, {
+    "range" : "2",
+    "domain" : "11",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "75"
+  }, {
+    "range" : "4",
+    "domain" : "33",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "76"
+  }, {
+    "range" : "4",
+    "domain" : "3",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "77"
   } ]
 }

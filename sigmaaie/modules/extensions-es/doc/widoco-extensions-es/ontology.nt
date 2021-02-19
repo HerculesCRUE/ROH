@@ -2,7 +2,7 @@
 <http://purl.org/roh/es#> <http://www.w3.org/2002/07/owl#versionIRI> <http://purl.org/roh/es/1.0> .
 <http://purl.org/roh/es#> <http://purl.org/dc/terms/license> <https://creativecommons.org/licenses/by-sa/4.0/> .
 <http://purl.org/roh/es#> <http://www.w3.org/2000/01/rdf-schema#comment> "The University of Murcia signed on November 29, 2017, a Covenant with the Ministry of Economy, Industry and Competitiveness backing the “HÉRCULES: Semantic University Research Data” Project with a budget of FIVE MILLION FOUR HUNDRED AND SIXTY-TWO THOUSAND SIX HUNDRED euros with an 80% of co-financiering from the European Regional Development Fund program (ERDF) within the 2014-2020 period. \n\nThe project arose as a CRUE initiative, to create the basis for a new collaboration model between universities, to develop the information management systems and with the main objective of encouraging this type of collaboration.\n\nTherefore, the purpose of this agreement was to contribute to the improvement of public services and business innovation and research through the improvement of:\n\n    efficiency in public investment by decreasing the duplication of investment in R&D.\n    efficiency of research in universities.\n    scientific dissemination of research results.\n    detection of synergies in R&D between universities.\n    transfer of R&D results to companies.\n    efficiency in the management of research. \n\nby creating a research management system with semantic capacities based on semantic open data and that will provide a global view of the research data contained in the Spanish University System."@en .
-<http://purl.org/roh/es#> <http://www.w3.org/2000/01/rdf-schema#label> "ROH Spanish Extensions Modules"@en .
+<http://purl.org/roh/es#> <http://www.w3.org/2000/01/rdf-schema#label> "ROH Spanish Extensions Module"@en .
 # 
 # 
 # #################################################################
@@ -410,16 +410,6 @@ _:genid25 <http://www.w3.org/2002/07/owl#hasValue> "6216"^^<http://www.w3.org/20
 <http://purl.org/roh/es#FECYTKnowledgeArea> <http://www.w3.org/2000/01/rdf-schema#label> "FECYT Knowledge Area"@en .
 <http://purl.org/roh/es#FECYTKnowledgeArea> <http://www.w3.org/2000/01/rdf-schema#label> "Área de Conocimiento de FECYT"@es .
 # 
-# http://purl.org/roh/es#FomentoInvestigacionCientificoTecnica
-<http://purl.org/roh/es#FomentoInvestigacionCientificoTecnica> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
-<http://purl.org/roh/es#FomentoInvestigacionCientificoTecnica> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://purl.org/roh/es#PlanEstatal2013-2016> .
-<http://purl.org/roh/es#FomentoInvestigacionCientificoTecnica> <http://www.w3.org/2002/07/owl#disjointWith> <http://purl.org/roh/es#PromocionTalento> .
-# 
-# http://purl.org/roh/es#FormacionTalento
-<http://purl.org/roh/es#FormacionTalento> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
-<http://purl.org/roh/es#FormacionTalento> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://purl.org/roh/es#PlanEstatal2017-2020> .
-<http://purl.org/roh/es#FormacionTalento> <http://www.w3.org/2002/07/owl#disjointWith> <http://purl.org/roh/es#GeneracionConocimiento> .
-# 
 # http://purl.org/roh/es#Gas
 <http://purl.org/roh/es#Gas> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
 <http://purl.org/roh/es#Gas> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://purl.org/roh/es#Suministros> .
@@ -448,9 +438,6 @@ _:genid27 <http://www.w3.org/2002/07/owl#hasValue> "620"^^<http://www.w3.org/200
 # 
 # http://purl.org/roh/es#GeneracionConocimiento
 <http://purl.org/roh/es#GeneracionConocimiento> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
-<http://purl.org/roh/es#GeneracionConocimiento> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://purl.org/roh/es#PlanEstatal2017-2020> .
-<http://purl.org/roh/es#GeneracionConocimiento> <http://www.w3.org/2000/01/rdf-schema#label> "Generación de Conocimiento"@es .
-<http://purl.org/roh/es#GeneracionConocimiento> <http://www.w3.org/2000/01/rdf-schema#label> "Knowledge Generation"@en .
 # 
 # http://purl.org/roh/es#IRNR
 <http://purl.org/roh/es#IRNR> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
@@ -594,11 +581,6 @@ _:genid39 <http://www.w3.org/2002/07/owl#hasValue> "6215"^^<http://www.w3.org/20
 <http://purl.org/roh/es#MobiliarioCompras> <http://www.w3.org/2000/01/rdf-schema#label> "Furniture"@en .
 <http://purl.org/roh/es#MobiliarioCompras> <http://www.w3.org/2000/01/rdf-schema#label> "Mobiliario"@es .
 # 
-# http://purl.org/roh/es#Movilidad
-<http://purl.org/roh/es#Movilidad> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
-<http://purl.org/roh/es#Movilidad> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://purl.org/roh/es#FormacionTalento> .
-<http://purl.org/roh/es#Movilidad> <http://www.w3.org/2002/07/owl#disjointWith> <http://purl.org/roh/es#FormacionI+D+i> .
-# 
 # http://purl.org/roh/es#OtrasComunicaciones
 <http://purl.org/roh/es#OtrasComunicaciones> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
 <http://purl.org/roh/es#OtrasComunicaciones> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://purl.org/roh/es#ComunicacionesYOtrosServicios> .
@@ -663,15 +645,6 @@ _:genid46 <http://www.w3.org/2002/07/owl#hasValue> "678"^^<http://www.w3.org/200
 <http://purl.org/roh/es#Perdidas> <http://www.w3.org/2000/01/rdf-schema#label> "LOSSES ON NON-CURRENT ASSETS, OTHER ORDINARY MANAGEMENT EXPENSES AND EXCEPTIONAL EXPENSES"@en .
 <http://purl.org/roh/es#Perdidas> <http://www.w3.org/2000/01/rdf-schema#label> "PÉRDIDAS PROCEDENTES DE ACTIVOS NO CORRIENTES, OTROS GASTOS DE GESTIÓN ORDINARIA Y GASTOS EXCEPCIONALES"@es .
 # 
-# http://purl.org/roh/es#PlanEstatal2013-2016
-<http://purl.org/roh/es#PlanEstatal2013-2016> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
-<http://purl.org/roh/es#PlanEstatal2013-2016> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://purl.org/roh/project-classification#National> .
-<http://purl.org/roh/es#PlanEstatal2013-2016> <http://www.w3.org/2002/07/owl#disjointWith> <http://purl.org/roh/es#PlanEstatal2017-2020> .
-# 
-# http://purl.org/roh/es#PlanEstatal2017-2020
-<http://purl.org/roh/es#PlanEstatal2017-2020> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
-<http://purl.org/roh/es#PlanEstatal2017-2020> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://purl.org/roh/project-classification#National> .
-# 
 # http://purl.org/roh/es#Prensa
 <http://purl.org/roh/es#Prensa> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
 <http://purl.org/roh/es#Prensa> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://purl.org/roh/es#ComunicacionesYOtrosServicios> .
@@ -697,10 +670,6 @@ _:genid48 <http://www.w3.org/2002/07/owl#hasValue> "625"^^<http://www.w3.org/200
 <http://purl.org/roh/es#ProfesorUniversidadPrivada> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://purl.org/roh#AcademicAccreditation> .
 <http://purl.org/roh/es#ProfesorUniversidadPrivada> <http://www.w3.org/2000/01/rdf-schema#label> "Private University Professor"@en .
 <http://purl.org/roh/es#ProfesorUniversidadPrivada> <http://www.w3.org/2000/01/rdf-schema#label> "Profesor de Universidad Privada"@es .
-# 
-# http://purl.org/roh/es#PromocionTalento
-<http://purl.org/roh/es#PromocionTalento> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
-<http://purl.org/roh/es#PromocionTalento> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://purl.org/roh/es#PlanEstatal2013-2016> .
 # 
 # http://purl.org/roh/es#PropiedadIndustrial
 <http://purl.org/roh/es#PropiedadIndustrial> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
@@ -855,24 +824,6 @@ _:genid64 <http://www.w3.org/2002/07/owl#allValuesFrom> <http://purl.org/roh/mir
 <http://purl.org/roh/es#Sexenio> <http://www.w3.org/2000/01/rdf-schema#label> "Sexenio"@es .
 <http://purl.org/roh/es#Sexenio> <http://www.w3.org/2000/01/rdf-schema#label> "Sexennial"@en .
 # 
-# http://purl.org/roh/es#SubprogramaEstatalFormacion
-<http://purl.org/roh/es#SubprogramaEstatalFormacion> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
-<http://purl.org/roh/es#SubprogramaEstatalFormacion> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://purl.org/roh/es#PromocionTalento> .
-<http://purl.org/roh/es#SubprogramaEstatalFormacion> <http://www.w3.org/2002/07/owl#disjointWith> <http://purl.org/roh/es#SubprogramaEstatalIncorporacion> .
-# 
-# http://purl.org/roh/es#SubprogramaEstatalIncorporacion
-<http://purl.org/roh/es#SubprogramaEstatalIncorporacion> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
-<http://purl.org/roh/es#SubprogramaEstatalIncorporacion> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://purl.org/roh/es#PromocionTalento> .
-# 
-# http://purl.org/roh/es#SubprogramaFortalecimientoInstitucional
-<http://purl.org/roh/es#SubprogramaFortalecimientoInstitucional> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
-<http://purl.org/roh/es#SubprogramaFortalecimientoInstitucional> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://purl.org/roh/es#FomentoInvestigacionCientificoTecnica> .
-<http://purl.org/roh/es#SubprogramaFortalecimientoInstitucional> <http://www.w3.org/2002/07/owl#disjointWith> <http://purl.org/roh/es#SubprogramaGeneracionConocimiento> .
-# 
-# http://purl.org/roh/es#SubprogramaGeneracionConocimiento
-<http://purl.org/roh/es#SubprogramaGeneracionConocimiento> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
-<http://purl.org/roh/es#SubprogramaGeneracionConocimiento> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://purl.org/roh/es#FomentoInvestigacionCientificoTecnica> .
-# 
 # http://purl.org/roh/es#Suministros
 <http://purl.org/roh/es#Suministros> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
 <http://purl.org/roh/es#Suministros> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://purl.org/roh/es#ServiciosExteriores> .
@@ -964,10 +915,6 @@ _:genid72 <http://www.w3.org/2002/07/owl#onProperty> <http://purl.org/roh/es#cod
 _:genid72 <http://www.w3.org/2002/07/owl#hasValue> "630"^^<http://www.w3.org/2001/XMLSchema#int> .
 <http://purl.org/roh/es#TributosLocales> <http://www.w3.org/2000/01/rdf-schema#label> "Local taxes"@en .
 <http://purl.org/roh/es#TributosLocales> <http://www.w3.org/2000/01/rdf-schema#label> "Tributos de carácter local"@es .
-# 
-# http://purl.org/roh/es#FormacionI+D+i
-<http://purl.org/roh/es#FormacionI+D+i> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
-<http://purl.org/roh/es#FormacionI+D+i> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://purl.org/roh/es#FormacionTalento> .
 # 
 # http://purl.org/roh/mirror/vivo#DateTimeInterval
 <http://purl.org/roh/mirror/vivo#DateTimeInterval> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .

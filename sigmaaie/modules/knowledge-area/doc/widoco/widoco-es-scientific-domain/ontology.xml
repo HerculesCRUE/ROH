@@ -121,6 +121,7 @@
 
 
     <Class rdf:about="http://purl.org/roh#KnowledgeArea">
+        <rdfs:subClassOf rdf:resource="http://www.w3.org/2004/02/skos/core#ConceptScheme"/>
         <rdfs:label xml:lang="en">Knowledge Area</rdfs:label>
     </Class>
     
@@ -135,19 +136,12 @@
     
 
 
-    <!-- http://www.w3.org/2004/02/skos/core#ConceptScehem -->
-
-
-    <Class rdf:about="http://www.w3.org/2004/02/skos/core#ConceptScehem">
-        <rdfs:label xml:lang="en">Concept Scheme</rdfs:label>
-    </Class>
-    
-
-
     <!-- http://www.w3.org/2004/02/skos/core#ConceptScheme -->
 
 
-    <Class rdf:about="http://www.w3.org/2004/02/skos/core#ConceptScheme"/>
+    <Class rdf:about="http://www.w3.org/2004/02/skos/core#ConceptScheme">
+        <rdfs:label xml:lang="en">Concept Scheme</rdfs:label>
+    </Class>
     
 
 
@@ -167,7 +161,7 @@
 
 
     <NamedIndividual rdf:about="http://purl.org/roh/scientific-domain#ESDomainCode1stList">
-        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#ConceptScheme"/>
+        <rdf:type rdf:resource="http://purl.org/roh#ESScientificDomain"/>
         <rdfs:label xml:lang="es-es-fonipa">&apos;ko ði γoz ðe las &apos;a ɾe as θjen̪ &apos;ti fi kas ðe pri &apos;mer ni &apos;βel</rdfs:label>
         <rdfs:label xml:lang="fr">Codes des domains scientífiques de premier niveau</rdfs:label>
         <rdfs:label xml:lang="en">Codes for the first-level scientific domains</rdfs:label>
@@ -199,7 +193,7 @@
 
 
     <NamedIndividual rdf:about="http://purl.org/roh/scientific-domain#ES_SCIENTIFIC_DOMAIN_LEVEL_1_CB">
-        <rdf:type rdf:resource="http://purl.org/roh#ESScientificDomain"/>
+        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
         <roh:hasCode rdf:resource="http://purl.org/roh/scientific-domain#ES_SCIENTIFIC_DOMAIN_LEVEL_1_CODE_CB"/>
         <rdfs:label>Ciencias básicas</rdfs:label>
         <skos:inScheme rdf:resource="http://purl.org/roh/scientific-domain#ESscientificDomains1stList"/>
@@ -232,7 +226,7 @@
 
 
     <NamedIndividual rdf:about="http://purl.org/roh/scientific-domain#ES_SCIENTIFIC_DOMAIN_LEVEL_1_CODE_CB">
-        <rdf:type rdf:resource="http://purl.org/roh#ESScientificDomain"/>
+        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
         <roh:codeOf rdf:resource="http://purl.org/roh/scientific-domain#ES_SCIENTIFIC_DOMAIN_LEVEL_1_CB"/>
         <rdfs:label>CB</rdfs:label>
         <skos:inScheme rdf:resource="http://purl.org/roh/scientific-domain#ESDomainCode1stList"/>
@@ -245,7 +239,7 @@
 
 
     <NamedIndividual rdf:about="http://purl.org/roh/scientific-domain#ES_SCIENTIFIC_DOMAIN_LEVEL_1_CODE_CSH">
-        <rdf:type rdf:resource="http://purl.org/roh#ESScientificDomain"/>
+        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
         <roh:codeOf rdf:resource="http://purl.org/roh/scientific-domain#ES_SCIENTIFIC_DOMAIN_LEVEL_1_CSH"/>
         <rdfs:label>CSH</rdfs:label>
         <skos:inScheme rdf:resource="http://purl.org/roh/scientific-domain#ESDomainCode1stList"/>
@@ -258,7 +252,7 @@
 
 
     <NamedIndividual rdf:about="http://purl.org/roh/scientific-domain#ES_SCIENTIFIC_DOMAIN_LEVEL_1_CODE_CVS">
-        <rdf:type rdf:resource="http://purl.org/roh#ESScientificDomain"/>
+        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
         <roh:codeOf rdf:resource="http://purl.org/roh/scientific-domain#ES_SCIENTIFIC_DOMAIN_LEVEL_1_CVS"/>
         <rdfs:label>CVS</rdfs:label>
         <skos:inScheme rdf:resource="http://purl.org/roh/scientific-domain#ESDomainCode1stList"/>
@@ -271,7 +265,7 @@
 
 
     <NamedIndividual rdf:about="http://purl.org/roh/scientific-domain#ES_SCIENTIFIC_DOMAIN_LEVEL_1_CODE_IYT">
-        <rdf:type rdf:resource="http://purl.org/roh#ESScientificDomain"/>
+        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
         <roh:codeOf rdf:resource="http://purl.org/roh/scientific-domain#ES_SCIENTIFIC_DOMAIN_LEVEL_1_IYT"/>
         <rdfs:label>IYT</rdfs:label>
         <skos:inScheme rdf:resource="http://purl.org/roh/scientific-domain#ESDomainCode1stList"/>
@@ -284,7 +278,7 @@
 
 
     <NamedIndividual rdf:about="http://purl.org/roh/scientific-domain#ES_SCIENTIFIC_DOMAIN_LEVEL_1_CSH">
-        <rdf:type rdf:resource="http://purl.org/roh#ESScientificDomain"/>
+        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
         <roh:hasCode rdf:resource="http://purl.org/roh/scientific-domain#ES_SCIENTIFIC_DOMAIN_LEVEL_1_CODE_CSH"/>
         <rdfs:label>Ciencias sociales y humanidades</rdfs:label>
         <skos:inScheme rdf:resource="http://purl.org/roh/scientific-domain#ESscientificDomains1stList"/>
@@ -317,7 +311,7 @@
 
 
     <NamedIndividual rdf:about="http://purl.org/roh/scientific-domain#ES_SCIENTIFIC_DOMAIN_LEVEL_1_CVS">
-        <rdf:type rdf:resource="http://purl.org/roh#ESScientificDomain"/>
+        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
         <roh:hasCode rdf:resource="http://purl.org/roh/scientific-domain#ES_SCIENTIFIC_DOMAIN_LEVEL_1_CODE_CVS"/>
         <rdfs:label>Ciencias de la vida y de la salud</rdfs:label>
         <skos:inScheme rdf:resource="http://purl.org/roh/scientific-domain#ESscientificDomains1stList"/>
@@ -350,7 +344,7 @@
 
 
     <NamedIndividual rdf:about="http://purl.org/roh/scientific-domain#ES_SCIENTIFIC_DOMAIN_LEVEL_1_IYT">
-        <rdf:type rdf:resource="http://purl.org/roh#ESScientificDomain"/>
+        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
         <roh:hasCode rdf:resource="http://purl.org/roh/scientific-domain#ES_SCIENTIFIC_DOMAIN_LEVEL_1_CODE_IYT"/>
         <rdfs:label>Ingenierías y tecnologías</rdfs:label>
         <skos:inScheme rdf:resource="http://purl.org/roh/scientific-domain#ESscientificDomains1stList"/>
@@ -383,7 +377,7 @@
 
 
     <NamedIndividual rdf:about="http://purl.org/roh/scientific-domain#ES_SCIENTIFIC_DOMAIN_LEVEL_2_AGR">
-        <rdf:type rdf:resource="http://purl.org/roh#ESScientificDomain"/>
+        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
         <roh:hasCode rdf:resource="http://purl.org/roh/scientific-domain#ES_SCIENTIFIC_DOMAIN_LEVEL_2_CODE_AGR"/>
         <rdfs:label>Agricultura</rdfs:label>
         <skos:broader rdf:resource="http://purl.org/roh/scientific-domain#ES_SCIENTIFIC_DOMAIN_LEVEL_1_CVS"/>
@@ -405,7 +399,7 @@
 
 
     <NamedIndividual rdf:about="http://purl.org/roh/scientific-domain#ES_SCIENTIFIC_DOMAIN_LEVEL_2_BFS">
-        <rdf:type rdf:resource="http://purl.org/roh#ESScientificDomain"/>
+        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
         <roh:hasCode rdf:resource="http://purl.org/roh/scientific-domain#ES_SCIENTIFIC_DOMAIN_LEVEL_2_CODE_BFS"/>
         <rdfs:label>Biología fundamental y de sistemas</rdfs:label>
         <skos:broader rdf:resource="http://purl.org/roh/scientific-domain#ES_SCIENTIFIC_DOMAIN_LEVEL_1_CVS"/>
@@ -430,7 +424,7 @@
 
 
     <NamedIndividual rdf:about="http://purl.org/roh/scientific-domain#ES_SCIENTIFIC_DOMAIN_LEVEL_2_BMED">
-        <rdf:type rdf:resource="http://purl.org/roh#ESScientificDomain"/>
+        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
         <roh:hasCode rdf:resource="http://purl.org/roh/scientific-domain#ES_SCIENTIFIC_DOMAIN_LEVEL_2_CODE_BMED"/>
         <rdfs:label>Biomedicina</rdfs:label>
         <skos:broader rdf:resource="http://purl.org/roh/scientific-domain#ES_SCIENTIFIC_DOMAIN_LEVEL_1_CVS"/>
@@ -455,7 +449,7 @@
 
 
     <NamedIndividual rdf:about="http://purl.org/roh/scientific-domain#ES_SCIENTIFIC_DOMAIN_LEVEL_2_BVAE">
-        <rdf:type rdf:resource="http://purl.org/roh#ESScientificDomain"/>
+        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
         <roh:hasCode rdf:resource="http://purl.org/roh/scientific-domain#ES_SCIENTIFIC_DOMAIN_LEVEL_2_CODE_BVAE"/>
         <rdfs:label>Biología vegetal, animal y ecología</rdfs:label>
         <skos:broader rdf:resource="http://purl.org/roh/scientific-domain#ES_SCIENTIFIC_DOMAIN_LEVEL_1_CVS"/>
@@ -477,7 +471,7 @@
 
 
     <NamedIndividual rdf:about="http://purl.org/roh/scientific-domain#ES_SCIENTIFIC_DOMAIN_LEVEL_2_CODE_">
-        <rdf:type rdf:resource="http://purl.org/roh#ESScientificDomain"/>
+        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
         <roh:codeOf rdf:resource="http://purl.org/roh/scientific-domain#ES_SCIENTIFIC_DOMAIN_LEVEL_2_"/>
         <rdfs:label></rdfs:label>
         <skos:inScheme rdf:resource="http://purl.org/roh/scientific-domain#ESscientificDomains2ndCodeList"/>
@@ -490,7 +484,7 @@
 
 
     <NamedIndividual rdf:about="http://purl.org/roh/scientific-domain#ES_SCIENTIFIC_DOMAIN_LEVEL_2_CODE_AGR">
-        <rdf:type rdf:resource="http://purl.org/roh#ESScientificDomain"/>
+        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
         <roh:codeOf rdf:resource="http://purl.org/roh/scientific-domain#ES_SCIENTIFIC_DOMAIN_LEVEL_2_AGR"/>
         <rdfs:label>AGR</rdfs:label>
         <skos:inScheme rdf:resource="http://purl.org/roh/scientific-domain#ESscientificDomains2ndCodeList"/>
@@ -503,7 +497,7 @@
 
 
     <NamedIndividual rdf:about="http://purl.org/roh/scientific-domain#ES_SCIENTIFIC_DOMAIN_LEVEL_2_CODE_BFS">
-        <rdf:type rdf:resource="http://purl.org/roh#ESScientificDomain"/>
+        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
         <roh:codeOf rdf:resource="http://purl.org/roh/scientific-domain#ES_SCIENTIFIC_DOMAIN_LEVEL_2_BFS"/>
         <rdfs:label>BFS</rdfs:label>
         <skos:inScheme rdf:resource="http://purl.org/roh/scientific-domain#ESscientificDomains2ndCodeList"/>
@@ -516,7 +510,7 @@
 
 
     <NamedIndividual rdf:about="http://purl.org/roh/scientific-domain#ES_SCIENTIFIC_DOMAIN_LEVEL_2_CODE_BMED">
-        <rdf:type rdf:resource="http://purl.org/roh#ESScientificDomain"/>
+        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
         <roh:codeOf rdf:resource="http://purl.org/roh/scientific-domain#ES_SCIENTIFIC_DOMAIN_LEVEL_2_BMED"/>
         <rdfs:label>BMED</rdfs:label>
         <skos:inScheme rdf:resource="http://purl.org/roh/scientific-domain#ESscientificDomains2ndCodeList"/>
@@ -529,7 +523,7 @@
 
 
     <NamedIndividual rdf:about="http://purl.org/roh/scientific-domain#ES_SCIENTIFIC_DOMAIN_LEVEL_2_CODE_BVAE">
-        <rdf:type rdf:resource="http://purl.org/roh#ESScientificDomain"/>
+        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
         <roh:codeOf rdf:resource="http://purl.org/roh/scientific-domain#ES_SCIENTIFIC_DOMAIN_LEVEL_2_BVAE"/>
         <rdfs:label>BVAE</rdfs:label>
         <skos:inScheme rdf:resource="http://purl.org/roh/scientific-domain#ESscientificDomains2ndCodeList"/>
@@ -542,7 +536,7 @@
 
 
     <NamedIndividual rdf:about="http://purl.org/roh/scientific-domain#ES_SCIENTIFIC_DOMAIN_LEVEL_2_CODE_COM">
-        <rdf:type rdf:resource="http://purl.org/roh#ESScientificDomain"/>
+        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
         <roh:codeOf rdf:resource="http://purl.org/roh/scientific-domain#ES_SCIENTIFIC_DOMAIN_LEVEL_2_COM"/>
         <rdfs:label>COM</rdfs:label>
         <skos:inScheme rdf:resource="http://purl.org/roh/scientific-domain#ESscientificDomains2ndCodeList"/>
@@ -555,7 +549,7 @@
 
 
     <NamedIndividual rdf:about="http://purl.org/roh/scientific-domain#ES_SCIENTIFIC_DOMAIN_LEVEL_2_CODE_CS">
-        <rdf:type rdf:resource="http://purl.org/roh#ESScientificDomain"/>
+        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
         <roh:codeOf rdf:resource="http://purl.org/roh/scientific-domain#ES_SCIENTIFIC_DOMAIN_LEVEL_2_CS"/>
         <rdfs:label>CS</rdfs:label>
         <skos:inScheme rdf:resource="http://purl.org/roh/scientific-domain#ESscientificDomains2ndCodeList"/>
@@ -568,7 +562,7 @@
 
 
     <NamedIndividual rdf:about="http://purl.org/roh/scientific-domain#ES_SCIENTIFIC_DOMAIN_LEVEL_2_CODE_CT">
-        <rdf:type rdf:resource="http://purl.org/roh#ESScientificDomain"/>
+        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
         <roh:codeOf rdf:resource="http://purl.org/roh/scientific-domain#ES_SCIENTIFIC_DOMAIN_LEVEL_2_CT"/>
         <rdfs:label>CT</rdfs:label>
         <skos:inScheme rdf:resource="http://purl.org/roh/scientific-domain#ESscientificDomains2ndCodeList"/>
@@ -581,7 +575,7 @@
 
 
     <NamedIndividual rdf:about="http://purl.org/roh/scientific-domain#ES_SCIENTIFIC_DOMAIN_LEVEL_2_CODE_DER">
-        <rdf:type rdf:resource="http://purl.org/roh#ESScientificDomain"/>
+        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
         <roh:codeOf rdf:resource="http://purl.org/roh/scientific-domain#ES_SCIENTIFIC_DOMAIN_LEVEL_2_DER"/>
         <rdfs:label>DER</rdfs:label>
         <skos:inScheme rdf:resource="http://purl.org/roh/scientific-domain#ESscientificDomains2ndCodeList"/>
@@ -594,7 +588,7 @@
 
 
     <NamedIndividual rdf:about="http://purl.org/roh/scientific-domain#ES_SCIENTIFIC_DOMAIN_LEVEL_2_CODE_ECO">
-        <rdf:type rdf:resource="http://purl.org/roh#ESScientificDomain"/>
+        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
         <roh:codeOf rdf:resource="http://purl.org/roh/scientific-domain#ES_SCIENTIFIC_DOMAIN_LEVEL_2_ECO"/>
         <rdfs:label>ECO</rdfs:label>
         <skos:inScheme rdf:resource="http://purl.org/roh/scientific-domain#ESscientificDomains2ndCodeList"/>
@@ -607,7 +601,7 @@
 
 
     <NamedIndividual rdf:about="http://purl.org/roh/scientific-domain#ES_SCIENTIFIC_DOMAIN_LEVEL_2_CODE_EDUC">
-        <rdf:type rdf:resource="http://purl.org/roh#ESScientificDomain"/>
+        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
         <roh:codeOf rdf:resource="http://purl.org/roh/scientific-domain#ES_SCIENTIFIC_DOMAIN_LEVEL_2_EDUC"/>
         <rdfs:label>EDUC</rdfs:label>
         <skos:inScheme rdf:resource="http://purl.org/roh/scientific-domain#ESscientificDomains2ndCodeList"/>
@@ -620,7 +614,7 @@
 
 
     <NamedIndividual rdf:about="http://purl.org/roh/scientific-domain#ES_SCIENTIFIC_DOMAIN_LEVEL_2_CODE_FFI">
-        <rdf:type rdf:resource="http://purl.org/roh#ESScientificDomain"/>
+        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
         <roh:codeOf rdf:resource="http://purl.org/roh/scientific-domain#ES_SCIENTIFIC_DOMAIN_LEVEL_2_FFI"/>
         <rdfs:label>FFI</rdfs:label>
         <skos:inScheme rdf:resource="http://purl.org/roh/scientific-domain#ESscientificDomains2ndCodeList"/>
@@ -633,7 +627,7 @@
 
 
     <NamedIndividual rdf:about="http://purl.org/roh/scientific-domain#ES_SCIENTIFIC_DOMAIN_LEVEL_2_CODE_FI">
-        <rdf:type rdf:resource="http://purl.org/roh#ESScientificDomain"/>
+        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
         <roh:codeOf rdf:resource="http://purl.org/roh/scientific-domain#ES_SCIENTIFIC_DOMAIN_LEVEL_2_FI"/>
         <rdfs:label>FI</rdfs:label>
         <skos:inScheme rdf:resource="http://purl.org/roh/scientific-domain#ESscientificDomains2ndCodeList"/>
@@ -646,7 +640,7 @@
 
 
     <NamedIndividual rdf:about="http://purl.org/roh/scientific-domain#ES_SCIENTIFIC_DOMAIN_LEVEL_2_CODE_GAN">
-        <rdf:type rdf:resource="http://purl.org/roh#ESScientificDomain"/>
+        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
         <roh:codeOf rdf:resource="http://purl.org/roh/scientific-domain#ES_SCIENTIFIC_DOMAIN_LEVEL_2_GAN"/>
         <rdfs:label>GAN</rdfs:label>
         <skos:inScheme rdf:resource="http://purl.org/roh/scientific-domain#ESscientificDomains2ndCodeList"/>
@@ -659,7 +653,7 @@
 
 
     <NamedIndividual rdf:about="http://purl.org/roh/scientific-domain#ES_SCIENTIFIC_DOMAIN_LEVEL_2_CODE_HA">
-        <rdf:type rdf:resource="http://purl.org/roh#ESScientificDomain"/>
+        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
         <roh:codeOf rdf:resource="http://purl.org/roh/scientific-domain#ES_SCIENTIFIC_DOMAIN_LEVEL_2_HA"/>
         <rdfs:label>HA</rdfs:label>
         <skos:inScheme rdf:resource="http://purl.org/roh/scientific-domain#ESscientificDomains2ndCodeList"/>
@@ -672,7 +666,7 @@
 
 
     <NamedIndividual rdf:about="http://purl.org/roh/scientific-domain#ES_SCIENTIFIC_DOMAIN_LEVEL_2_CODE_ICI">
-        <rdf:type rdf:resource="http://purl.org/roh#ESScientificDomain"/>
+        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
         <roh:codeOf rdf:resource="http://purl.org/roh/scientific-domain#ES_SCIENTIFIC_DOMAIN_LEVEL_2_ICI"/>
         <rdfs:label>ICI</rdfs:label>
         <skos:inScheme rdf:resource="http://purl.org/roh/scientific-domain#ESscientificDomains2ndCodeList"/>
@@ -685,7 +679,7 @@
 
 
     <NamedIndividual rdf:about="http://purl.org/roh/scientific-domain#ES_SCIENTIFIC_DOMAIN_LEVEL_2_CODE_IEL">
-        <rdf:type rdf:resource="http://purl.org/roh#ESScientificDomain"/>
+        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
         <roh:codeOf rdf:resource="http://purl.org/roh/scientific-domain#ES_SCIENTIFIC_DOMAIN_LEVEL_2_IEL"/>
         <rdfs:label>IEL</rdfs:label>
         <skos:inScheme rdf:resource="http://purl.org/roh/scientific-domain#ESscientificDomains2ndCodeList"/>
@@ -698,7 +692,7 @@
 
 
     <NamedIndividual rdf:about="http://purl.org/roh/scientific-domain#ES_SCIENTIFIC_DOMAIN_LEVEL_2_CODE_IME">
-        <rdf:type rdf:resource="http://purl.org/roh#ESScientificDomain"/>
+        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
         <roh:codeOf rdf:resource="http://purl.org/roh/scientific-domain#ES_SCIENTIFIC_DOMAIN_LEVEL_2_IME"/>
         <rdfs:label>IME</rdfs:label>
         <skos:inScheme rdf:resource="http://purl.org/roh/scientific-domain#ESscientificDomains2ndCodeList"/>
@@ -711,7 +705,7 @@
 
 
     <NamedIndividual rdf:about="http://purl.org/roh/scientific-domain#ES_SCIENTIFIC_DOMAIN_LEVEL_2_CODE_INF">
-        <rdf:type rdf:resource="http://purl.org/roh#ESScientificDomain"/>
+        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
         <roh:codeOf rdf:resource="http://purl.org/roh/scientific-domain#ES_SCIENTIFIC_DOMAIN_LEVEL_2_INF"/>
         <rdfs:label>INF</rdfs:label>
         <skos:inScheme rdf:resource="http://purl.org/roh/scientific-domain#ESscientificDomains2ndCodeList"/>
@@ -724,7 +718,7 @@
 
 
     <NamedIndividual rdf:about="http://purl.org/roh/scientific-domain#ES_SCIENTIFIC_DOMAIN_LEVEL_2_CODE_MCLI">
-        <rdf:type rdf:resource="http://purl.org/roh#ESScientificDomain"/>
+        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
         <roh:codeOf rdf:resource="http://purl.org/roh/scientific-domain#ES_SCIENTIFIC_DOMAIN_LEVEL_2_MCLI"/>
         <rdfs:label>MCLI</rdfs:label>
         <skos:inScheme rdf:resource="http://purl.org/roh/scientific-domain#ESscientificDomains2ndCodeList"/>
@@ -737,7 +731,7 @@
 
 
     <NamedIndividual rdf:about="http://purl.org/roh/scientific-domain#ES_SCIENTIFIC_DOMAIN_LEVEL_2_CODE_MTM">
-        <rdf:type rdf:resource="http://purl.org/roh#ESScientificDomain"/>
+        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
         <roh:codeOf rdf:resource="http://purl.org/roh/scientific-domain#ES_SCIENTIFIC_DOMAIN_LEVEL_2_MTM"/>
         <rdfs:label>MTM</rdfs:label>
         <skos:inScheme rdf:resource="http://purl.org/roh/scientific-domain#ESscientificDomains2ndCodeList"/>
@@ -750,7 +744,7 @@
 
 
     <NamedIndividual rdf:about="http://purl.org/roh/scientific-domain#ES_SCIENTIFIC_DOMAIN_LEVEL_2_CODE_PS">
-        <rdf:type rdf:resource="http://purl.org/roh#ESScientificDomain"/>
+        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
         <roh:codeOf rdf:resource="http://purl.org/roh/scientific-domain#ES_SCIENTIFIC_DOMAIN_LEVEL_2_PS"/>
         <rdfs:label>PS</rdfs:label>
         <skos:inScheme rdf:resource="http://purl.org/roh/scientific-domain#ESscientificDomains2ndCodeList"/>
@@ -763,7 +757,7 @@
 
 
     <NamedIndividual rdf:about="http://purl.org/roh/scientific-domain#ES_SCIENTIFIC_DOMAIN_LEVEL_2_CODE_QMC">
-        <rdf:type rdf:resource="http://purl.org/roh#ESScientificDomain"/>
+        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
         <roh:codeOf rdf:resource="http://purl.org/roh/scientific-domain#ES_SCIENTIFIC_DOMAIN_LEVEL_2_QMC"/>
         <rdfs:label>QMC</rdfs:label>
         <skos:inScheme rdf:resource="http://purl.org/roh/scientific-domain#ESscientificDomains2ndCodeList"/>
@@ -776,7 +770,7 @@
 
 
     <NamedIndividual rdf:about="http://purl.org/roh/scientific-domain#ES_SCIENTIFIC_DOMAIN_LEVEL_2_CODE_TA">
-        <rdf:type rdf:resource="http://purl.org/roh#ESScientificDomain"/>
+        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
         <roh:codeOf rdf:resource="http://purl.org/roh/scientific-domain#ES_SCIENTIFIC_DOMAIN_LEVEL_2_TA"/>
         <rdfs:label>TA</rdfs:label>
         <skos:inScheme rdf:resource="http://purl.org/roh/scientific-domain#ESscientificDomains2ndCodeList"/>
@@ -789,7 +783,7 @@
 
 
     <NamedIndividual rdf:about="http://purl.org/roh/scientific-domain#ES_SCIENTIFIC_DOMAIN_LEVEL_2_CODE_TM">
-        <rdf:type rdf:resource="http://purl.org/roh#ESScientificDomain"/>
+        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
         <roh:codeOf rdf:resource="http://purl.org/roh/scientific-domain#ES_SCIENTIFIC_DOMAIN_LEVEL_2_TM"/>
         <rdfs:label>TM</rdfs:label>
         <skos:inScheme rdf:resource="http://purl.org/roh/scientific-domain#ESscientificDomains2ndCodeList"/>
@@ -802,7 +796,7 @@
 
 
     <NamedIndividual rdf:about="http://purl.org/roh/scientific-domain#ES_SCIENTIFIC_DOMAIN_LEVEL_2_CODE_TQ">
-        <rdf:type rdf:resource="http://purl.org/roh#ESScientificDomain"/>
+        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
         <roh:codeOf rdf:resource="http://purl.org/roh/scientific-domain#ES_SCIENTIFIC_DOMAIN_LEVEL_2_TQ"/>
         <rdfs:label>TQ</rdfs:label>
         <skos:inScheme rdf:resource="http://purl.org/roh/scientific-domain#ESscientificDomains2ndCodeList"/>
@@ -815,7 +809,7 @@
 
 
     <NamedIndividual rdf:about="http://purl.org/roh/scientific-domain#ES_SCIENTIFIC_DOMAIN_LEVEL_2_COM">
-        <rdf:type rdf:resource="http://purl.org/roh#ESScientificDomain"/>
+        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
         <roh:hasCode rdf:resource="http://purl.org/roh/scientific-domain#ES_SCIENTIFIC_DOMAIN_LEVEL_2_CODE_COM"/>
         <rdfs:label>Tecnología electrónica y de las comunicaciones</rdfs:label>
         <skos:broader rdf:resource="http://purl.org/roh/scientific-domain#ES_SCIENTIFIC_DOMAIN_LEVEL_1_IYT"/>
@@ -837,7 +831,7 @@
 
 
     <NamedIndividual rdf:about="http://purl.org/roh/scientific-domain#ES_SCIENTIFIC_DOMAIN_LEVEL_2_CS">
-        <rdf:type rdf:resource="http://purl.org/roh#ESScientificDomain"/>
+        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
         <roh:hasCode rdf:resource="http://purl.org/roh/scientific-domain#ES_SCIENTIFIC_DOMAIN_LEVEL_2_CODE_CS"/>
         <rdfs:label>Ciencias sociales</rdfs:label>
         <skos:broader rdf:resource="http://purl.org/roh/scientific-domain#ES_SCIENTIFIC_DOMAIN_LEVEL_1_CSH"/>
@@ -859,7 +853,7 @@
 
 
     <NamedIndividual rdf:about="http://purl.org/roh/scientific-domain#ES_SCIENTIFIC_DOMAIN_LEVEL_2_CT">
-        <rdf:type rdf:resource="http://purl.org/roh#ESScientificDomain"/>
+        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
         <roh:hasCode rdf:resource="http://purl.org/roh/scientific-domain#ES_SCIENTIFIC_DOMAIN_LEVEL_2_CODE_CT"/>
         <rdfs:label>Ciencias de la tierra</rdfs:label>
         <skos:broader rdf:resource="http://purl.org/roh/scientific-domain#ES_SCIENTIFIC_DOMAIN_LEVEL_1_CB"/>
@@ -884,7 +878,7 @@
 
 
     <NamedIndividual rdf:about="http://purl.org/roh/scientific-domain#ES_SCIENTIFIC_DOMAIN_LEVEL_2_DER">
-        <rdf:type rdf:resource="http://purl.org/roh#ESScientificDomain"/>
+        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
         <roh:hasCode rdf:resource="http://purl.org/roh/scientific-domain#ES_SCIENTIFIC_DOMAIN_LEVEL_2_CODE_DER"/>
         <rdfs:label>Derecho</rdfs:label>
         <skos:broader rdf:resource="http://purl.org/roh/scientific-domain#ES_SCIENTIFIC_DOMAIN_LEVEL_1_CSH"/>
@@ -906,7 +900,7 @@
 
 
     <NamedIndividual rdf:about="http://purl.org/roh/scientific-domain#ES_SCIENTIFIC_DOMAIN_LEVEL_2_ECO">
-        <rdf:type rdf:resource="http://purl.org/roh#ESScientificDomain"/>
+        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
         <roh:hasCode rdf:resource="http://purl.org/roh/scientific-domain#ES_SCIENTIFIC_DOMAIN_LEVEL_2_CODE_ECO"/>
         <rdfs:label>Economía</rdfs:label>
         <skos:broader rdf:resource="http://purl.org/roh/scientific-domain#ES_SCIENTIFIC_DOMAIN_LEVEL_1_CSH"/>
@@ -928,7 +922,7 @@
 
 
     <NamedIndividual rdf:about="http://purl.org/roh/scientific-domain#ES_SCIENTIFIC_DOMAIN_LEVEL_2_EDUC">
-        <rdf:type rdf:resource="http://purl.org/roh#ESScientificDomain"/>
+        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
         <roh:hasCode rdf:resource="http://purl.org/roh/scientific-domain#ES_SCIENTIFIC_DOMAIN_LEVEL_2_CODE_EDUC"/>
         <rdfs:label>Ciencias de la educación</rdfs:label>
         <skos:broader rdf:resource="http://purl.org/roh/scientific-domain#ES_SCIENTIFIC_DOMAIN_LEVEL_1_CSH"/>
@@ -950,7 +944,7 @@
 
 
     <NamedIndividual rdf:about="http://purl.org/roh/scientific-domain#ES_SCIENTIFIC_DOMAIN_LEVEL_2_FFI">
-        <rdf:type rdf:resource="http://purl.org/roh#ESScientificDomain"/>
+        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
         <roh:hasCode rdf:resource="http://purl.org/roh/scientific-domain#ES_SCIENTIFIC_DOMAIN_LEVEL_2_CODE_FFI"/>
         <rdfs:label>Filología y filosofía</rdfs:label>
         <skos:broader rdf:resource="http://purl.org/roh/scientific-domain#ES_SCIENTIFIC_DOMAIN_LEVEL_1_CSH"/>
@@ -972,7 +966,7 @@
 
 
     <NamedIndividual rdf:about="http://purl.org/roh/scientific-domain#ES_SCIENTIFIC_DOMAIN_LEVEL_2_FI">
-        <rdf:type rdf:resource="http://purl.org/roh#ESScientificDomain"/>
+        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
         <roh:hasCode rdf:resource="http://purl.org/roh/scientific-domain#ES_SCIENTIFIC_DOMAIN_LEVEL_2_CODE_FI"/>
         <rdfs:label>Física y ciencias del espacio</rdfs:label>
         <skos:broader rdf:resource="http://purl.org/roh/scientific-domain#ES_SCIENTIFIC_DOMAIN_LEVEL_1_CB"/>
@@ -997,7 +991,7 @@
 
 
     <NamedIndividual rdf:about="http://purl.org/roh/scientific-domain#ES_SCIENTIFIC_DOMAIN_LEVEL_2_GAN">
-        <rdf:type rdf:resource="http://purl.org/roh#ESScientificDomain"/>
+        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
         <roh:hasCode rdf:resource="http://purl.org/roh/scientific-domain#ES_SCIENTIFIC_DOMAIN_LEVEL_2_CODE_GAN"/>
         <rdfs:label>Ganadería y pesca</rdfs:label>
         <skos:broader rdf:resource="http://purl.org/roh/scientific-domain#ES_SCIENTIFIC_DOMAIN_LEVEL_1_CVS"/>
@@ -1019,7 +1013,7 @@
 
 
     <NamedIndividual rdf:about="http://purl.org/roh/scientific-domain#ES_SCIENTIFIC_DOMAIN_LEVEL_2_HA">
-        <rdf:type rdf:resource="http://purl.org/roh#ESScientificDomain"/>
+        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
         <roh:hasCode rdf:resource="http://purl.org/roh/scientific-domain#ES_SCIENTIFIC_DOMAIN_LEVEL_2_CODE_HA"/>
         <rdfs:label>Historia y arte</rdfs:label>
         <skos:broader rdf:resource="http://purl.org/roh/scientific-domain#ES_SCIENTIFIC_DOMAIN_LEVEL_1_CSH"/>
@@ -1041,7 +1035,7 @@
 
 
     <NamedIndividual rdf:about="http://purl.org/roh/scientific-domain#ES_SCIENTIFIC_DOMAIN_LEVEL_2_ICI">
-        <rdf:type rdf:resource="http://purl.org/roh#ESScientificDomain"/>
+        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
         <roh:hasCode rdf:resource="http://purl.org/roh/scientific-domain#ES_SCIENTIFIC_DOMAIN_LEVEL_2_CODE_ICI"/>
         <rdfs:label>Ingeniería civil y arquitectura</rdfs:label>
         <skos:broader rdf:resource="http://purl.org/roh/scientific-domain#ES_SCIENTIFIC_DOMAIN_LEVEL_1_IYT"/>
@@ -1063,7 +1057,7 @@
 
 
     <NamedIndividual rdf:about="http://purl.org/roh/scientific-domain#ES_SCIENTIFIC_DOMAIN_LEVEL_2_IEL">
-        <rdf:type rdf:resource="http://purl.org/roh#ESScientificDomain"/>
+        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
         <roh:hasCode rdf:resource="http://purl.org/roh/scientific-domain#ES_SCIENTIFIC_DOMAIN_LEVEL_2_CODE_IEL"/>
         <rdfs:label>Ingeniería eléctrica, electrónica y automática</rdfs:label>
         <skos:broader rdf:resource="http://purl.org/roh/scientific-domain#ES_SCIENTIFIC_DOMAIN_LEVEL_1_IYT"/>
@@ -1085,7 +1079,7 @@
 
 
     <NamedIndividual rdf:about="http://purl.org/roh/scientific-domain#ES_SCIENTIFIC_DOMAIN_LEVEL_2_IME">
-        <rdf:type rdf:resource="http://purl.org/roh#ESScientificDomain"/>
+        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
         <roh:hasCode rdf:resource="http://purl.org/roh/scientific-domain#ES_SCIENTIFIC_DOMAIN_LEVEL_2_CODE_IME"/>
         <rdfs:label>Ingeniería mecánica, naval y aeronáutica</rdfs:label>
         <skos:broader rdf:resource="http://purl.org/roh/scientific-domain#ES_SCIENTIFIC_DOMAIN_LEVEL_1_IYT"/>
@@ -1107,7 +1101,7 @@
 
 
     <NamedIndividual rdf:about="http://purl.org/roh/scientific-domain#ES_SCIENTIFIC_DOMAIN_LEVEL_2_INF">
-        <rdf:type rdf:resource="http://purl.org/roh#ESScientificDomain"/>
+        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
         <roh:hasCode rdf:resource="http://purl.org/roh/scientific-domain#ES_SCIENTIFIC_DOMAIN_LEVEL_2_CODE_INF"/>
         <rdfs:label>Ciencias de la computación y tecnología informática</rdfs:label>
         <skos:broader rdf:resource="http://purl.org/roh/scientific-domain#ES_SCIENTIFIC_DOMAIN_LEVEL_1_IYT"/>
@@ -1129,7 +1123,7 @@
 
 
     <NamedIndividual rdf:about="http://purl.org/roh/scientific-domain#ES_SCIENTIFIC_DOMAIN_LEVEL_2_MCLI">
-        <rdf:type rdf:resource="http://purl.org/roh#ESScientificDomain"/>
+        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
         <roh:hasCode rdf:resource="http://purl.org/roh/scientific-domain#ES_SCIENTIFIC_DOMAIN_LEVEL_2_CODE_MCLI"/>
         <rdfs:label>Medicina clínica y epidemiología</rdfs:label>
         <skos:broader rdf:resource="http://purl.org/roh/scientific-domain#ES_SCIENTIFIC_DOMAIN_LEVEL_1_CVS"/>
@@ -1154,7 +1148,7 @@
 
 
     <NamedIndividual rdf:about="http://purl.org/roh/scientific-domain#ES_SCIENTIFIC_DOMAIN_LEVEL_2_MTM">
-        <rdf:type rdf:resource="http://purl.org/roh#ESScientificDomain"/>
+        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
         <roh:hasCode rdf:resource="http://purl.org/roh/scientific-domain#ES_SCIENTIFIC_DOMAIN_LEVEL_2_CODE_MTM"/>
         <rdfs:label>Matemáticas</rdfs:label>
         <skos:broader rdf:resource="http://purl.org/roh/scientific-domain#ES_SCIENTIFIC_DOMAIN_LEVEL_1_CB"/>
@@ -1180,7 +1174,7 @@
 
 
     <NamedIndividual rdf:about="http://purl.org/roh/scientific-domain#ES_SCIENTIFIC_DOMAIN_LEVEL_2_PS">
-        <rdf:type rdf:resource="http://purl.org/roh#ESScientificDomain"/>
+        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
         <roh:hasCode rdf:resource="http://purl.org/roh/scientific-domain#ES_SCIENTIFIC_DOMAIN_LEVEL_2_CODE_PS"/>
         <rdfs:label>Psicología</rdfs:label>
         <skos:broader rdf:resource="http://purl.org/roh/scientific-domain#ES_SCIENTIFIC_DOMAIN_LEVEL_1_CSH"/>
@@ -1202,7 +1196,7 @@
 
 
     <NamedIndividual rdf:about="http://purl.org/roh/scientific-domain#ES_SCIENTIFIC_DOMAIN_LEVEL_2_QMC">
-        <rdf:type rdf:resource="http://purl.org/roh#ESScientificDomain"/>
+        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
         <roh:hasCode rdf:resource="http://purl.org/roh/scientific-domain#ES_SCIENTIFIC_DOMAIN_LEVEL_2_CODE_QMC"/>
         <rdfs:label>Química</rdfs:label>
         <skos:broader rdf:resource="http://purl.org/roh/scientific-domain#ES_SCIENTIFIC_DOMAIN_LEVEL_1_CB"/>
@@ -1227,7 +1221,7 @@
 
 
     <NamedIndividual rdf:about="http://purl.org/roh/scientific-domain#ES_SCIENTIFIC_DOMAIN_LEVEL_2_TA">
-        <rdf:type rdf:resource="http://purl.org/roh#ESScientificDomain"/>
+        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
         <roh:hasCode rdf:resource="http://purl.org/roh/scientific-domain#ES_SCIENTIFIC_DOMAIN_LEVEL_2_CODE_TA"/>
         <rdfs:label>Ciencia y tecnología de alimentos</rdfs:label>
         <skos:broader rdf:resource="http://purl.org/roh/scientific-domain#ES_SCIENTIFIC_DOMAIN_LEVEL_1_CVS"/>
@@ -1249,7 +1243,7 @@
 
 
     <NamedIndividual rdf:about="http://purl.org/roh/scientific-domain#ES_SCIENTIFIC_DOMAIN_LEVEL_2_TM">
-        <rdf:type rdf:resource="http://purl.org/roh#ESScientificDomain"/>
+        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
         <roh:hasCode rdf:resource="http://purl.org/roh/scientific-domain#ES_SCIENTIFIC_DOMAIN_LEVEL_2_CODE_TM"/>
         <rdfs:label>Ciencia y tecnología de materiales</rdfs:label>
         <skos:broader rdf:resource="http://purl.org/roh/scientific-domain#ES_SCIENTIFIC_DOMAIN_LEVEL_1_IYT"/>
@@ -1271,7 +1265,7 @@
 
 
     <NamedIndividual rdf:about="http://purl.org/roh/scientific-domain#ES_SCIENTIFIC_DOMAIN_LEVEL_2_TQ">
-        <rdf:type rdf:resource="http://purl.org/roh#ESScientificDomain"/>
+        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
         <roh:hasCode rdf:resource="http://purl.org/roh/scientific-domain#ES_SCIENTIFIC_DOMAIN_LEVEL_2_CODE_TQ"/>
         <rdfs:label>Tecnología química</rdfs:label>
         <skos:broader rdf:resource="http://purl.org/roh/scientific-domain#ES_SCIENTIFIC_DOMAIN_LEVEL_1_IYT"/>
@@ -1293,7 +1287,7 @@
 
 
     <NamedIndividual rdf:about="http://purl.org/roh/scientific-domain#ES_SCIENTIFIC_DOMAIN_LEVEL_3_BFSCVHN">
-        <rdf:type rdf:resource="http://purl.org/roh#ESScientificDomain"/>
+        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
         <roh:hasCode rdf:resource="http://purl.org/roh/scientific-domain#ES_SCIENTIFIC_DOMAIN_LEVEL_3_CODE_BFSCVHN"/>
         <rdfs:label>Biotecnología</rdfs:label>
         <skos:broader rdf:resource="http://purl.org/roh/scientific-domain#ES_SCIENTIFIC_DOMAIN_LEVEL_2_BFS"/>
@@ -1315,7 +1309,7 @@
 
 
     <NamedIndividual rdf:about="http://purl.org/roh/scientific-domain#ES_SCIENTIFIC_DOMAIN_LEVEL_3_BFSCXPL">
-        <rdf:type rdf:resource="http://purl.org/roh#ESScientificDomain"/>
+        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
         <roh:hasCode rdf:resource="http://purl.org/roh/scientific-domain#ES_SCIENTIFIC_DOMAIN_LEVEL_3_CODE_BFSCXPL"/>
         <rdfs:label>Neurobiología y desarrollo</rdfs:label>
         <skos:broader rdf:resource="http://purl.org/roh/scientific-domain#ES_SCIENTIFIC_DOMAIN_LEVEL_2_BFS"/>
@@ -1337,7 +1331,7 @@
 
 
     <NamedIndividual rdf:about="http://purl.org/roh/scientific-domain#ES_SCIENTIFIC_DOMAIN_LEVEL_3_BFSDGRC">
-        <rdf:type rdf:resource="http://purl.org/roh#ESScientificDomain"/>
+        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
         <roh:hasCode rdf:resource="http://purl.org/roh/scientific-domain#ES_SCIENTIFIC_DOMAIN_LEVEL_3_CODE_BFSDGRC"/>
         <rdfs:label>Virología</rdfs:label>
         <skos:broader rdf:resource="http://purl.org/roh/scientific-domain#ES_SCIENTIFIC_DOMAIN_LEVEL_2_BFS"/>
@@ -1360,7 +1354,7 @@
 
 
     <NamedIndividual rdf:about="http://purl.org/roh/scientific-domain#ES_SCIENTIFIC_DOMAIN_LEVEL_3_BFSDNIG">
-        <rdf:type rdf:resource="http://purl.org/roh#ESScientificDomain"/>
+        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
         <roh:hasCode rdf:resource="http://purl.org/roh/scientific-domain#ES_SCIENTIFIC_DOMAIN_LEVEL_3_CODE_BFSDNIG"/>
         <rdfs:label>Genómica</rdfs:label>
         <skos:broader rdf:resource="http://purl.org/roh/scientific-domain#ES_SCIENTIFIC_DOMAIN_LEVEL_2_BFS"/>
@@ -1382,7 +1376,7 @@
 
 
     <NamedIndividual rdf:about="http://purl.org/roh/scientific-domain#ES_SCIENTIFIC_DOMAIN_LEVEL_3_BFSDXWB">
-        <rdf:type rdf:resource="http://purl.org/roh#ESScientificDomain"/>
+        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
         <roh:hasCode rdf:resource="http://purl.org/roh/scientific-domain#ES_SCIENTIFIC_DOMAIN_LEVEL_3_CODE_BFSDXWB"/>
         <rdfs:label>Genética de poblaciones</rdfs:label>
         <skos:broader rdf:resource="http://purl.org/roh/scientific-domain#ES_SCIENTIFIC_DOMAIN_LEVEL_2_BFS"/>
@@ -1404,7 +1398,7 @@
 
 
     <NamedIndividual rdf:about="http://purl.org/roh/scientific-domain#ES_SCIENTIFIC_DOMAIN_LEVEL_3_BFSEEAB">
-        <rdf:type rdf:resource="http://purl.org/roh#ESScientificDomain"/>
+        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
         <roh:hasCode rdf:resource="http://purl.org/roh/scientific-domain#ES_SCIENTIFIC_DOMAIN_LEVEL_3_CODE_BFSEEAB"/>
         <rdfs:label>Diferenciación</rdfs:label>
         <skos:broader rdf:resource="http://purl.org/roh/scientific-domain#ES_SCIENTIFIC_DOMAIN_LEVEL_2_BFS"/>
@@ -1426,7 +1420,7 @@
 
 
     <NamedIndividual rdf:about="http://purl.org/roh/scientific-domain#ES_SCIENTIFIC_DOMAIN_LEVEL_3_BFSGSYN">
-        <rdf:type rdf:resource="http://purl.org/roh#ESScientificDomain"/>
+        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
         <roh:hasCode rdf:resource="http://purl.org/roh/scientific-domain#ES_SCIENTIFIC_DOMAIN_LEVEL_3_CODE_BFSGSYN"/>
         <rdfs:label>Bioinformática</rdfs:label>
         <skos:broader rdf:resource="http://purl.org/roh/scientific-domain#ES_SCIENTIFIC_DOMAIN_LEVEL_2_BFS"/>
@@ -1448,7 +1442,7 @@
 
 
     <NamedIndividual rdf:about="http://purl.org/roh/scientific-domain#ES_SCIENTIFIC_DOMAIN_LEVEL_3_BFSHQCF">
-        <rdf:type rdf:resource="http://purl.org/roh#ESScientificDomain"/>
+        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
         <roh:hasCode rdf:resource="http://purl.org/roh/scientific-domain#ES_SCIENTIFIC_DOMAIN_LEVEL_3_CODE_BFSHQCF"/>
         <rdfs:label>Microbiología</rdfs:label>
         <skos:broader rdf:resource="http://purl.org/roh/scientific-domain#ES_SCIENTIFIC_DOMAIN_LEVEL_2_BFS"/>
@@ -1470,7 +1464,7 @@
 
 
     <NamedIndividual rdf:about="http://purl.org/roh/scientific-domain#ES_SCIENTIFIC_DOMAIN_LEVEL_3_BFSHRRE">
-        <rdf:type rdf:resource="http://purl.org/roh#ESScientificDomain"/>
+        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
         <roh:hasCode rdf:resource="http://purl.org/roh/scientific-domain#ES_SCIENTIFIC_DOMAIN_LEVEL_3_CODE_BFSHRRE"/>
         <rdfs:label>Metabolismo</rdfs:label>
         <skos:broader rdf:resource="http://purl.org/roh/scientific-domain#ES_SCIENTIFIC_DOMAIN_LEVEL_2_BFS"/>
@@ -1492,7 +1486,7 @@
 
 
     <NamedIndividual rdf:about="http://purl.org/roh/scientific-domain#ES_SCIENTIFIC_DOMAIN_LEVEL_3_BFSJEYV">
-        <rdf:type rdf:resource="http://purl.org/roh#ESScientificDomain"/>
+        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
         <roh:hasCode rdf:resource="http://purl.org/roh/scientific-domain#ES_SCIENTIFIC_DOMAIN_LEVEL_3_CODE_BFSJEYV"/>
         <rdfs:label>Cáncer</rdfs:label>
         <skos:broader rdf:resource="http://purl.org/roh/scientific-domain#ES_SCIENTIFIC_DOMAIN_LEVEL_2_BFS"/>
@@ -1514,7 +1508,7 @@
 
 
     <NamedIndividual rdf:about="http://purl.org/roh/scientific-domain#ES_SCIENTIFIC_DOMAIN_LEVEL_3_BFSJJXW">
-        <rdf:type rdf:resource="http://purl.org/roh#ESScientificDomain"/>
+        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
         <roh:hasCode rdf:resource="http://purl.org/roh/scientific-domain#ES_SCIENTIFIC_DOMAIN_LEVEL_3_CODE_BFSJJXW"/>
         <rdfs:label>Plantas</rdfs:label>
         <skos:broader rdf:resource="http://purl.org/roh/scientific-domain#ES_SCIENTIFIC_DOMAIN_LEVEL_2_BFS"/>
@@ -1536,7 +1530,7 @@
 
 
     <NamedIndividual rdf:about="http://purl.org/roh/scientific-domain#ES_SCIENTIFIC_DOMAIN_LEVEL_3_BFSOWHX">
-        <rdf:type rdf:resource="http://purl.org/roh#ESScientificDomain"/>
+        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
         <roh:hasCode rdf:resource="http://purl.org/roh/scientific-domain#ES_SCIENTIFIC_DOMAIN_LEVEL_3_CODE_BFSOWHX"/>
         <rdfs:label>Biología estructural</rdfs:label>
         <skos:broader rdf:resource="http://purl.org/roh/scientific-domain#ES_SCIENTIFIC_DOMAIN_LEVEL_2_BFS"/>
@@ -1558,7 +1552,7 @@
 
 
     <NamedIndividual rdf:about="http://purl.org/roh/scientific-domain#ES_SCIENTIFIC_DOMAIN_LEVEL_3_BFSSBGU">
-        <rdf:type rdf:resource="http://purl.org/roh#ESScientificDomain"/>
+        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
         <roh:hasCode rdf:resource="http://purl.org/roh/scientific-domain#ES_SCIENTIFIC_DOMAIN_LEVEL_3_CODE_BFSSBGU"/>
         <rdfs:label>Biología celular</rdfs:label>
         <skos:broader rdf:resource="http://purl.org/roh/scientific-domain#ES_SCIENTIFIC_DOMAIN_LEVEL_2_BFS"/>
@@ -1580,7 +1574,7 @@
 
 
     <NamedIndividual rdf:about="http://purl.org/roh/scientific-domain#ES_SCIENTIFIC_DOMAIN_LEVEL_3_BFSTSEI">
-        <rdf:type rdf:resource="http://purl.org/roh#ESScientificDomain"/>
+        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
         <roh:hasCode rdf:resource="http://purl.org/roh/scientific-domain#ES_SCIENTIFIC_DOMAIN_LEVEL_3_CODE_BFSTSEI"/>
         <rdfs:label>Inmunología</rdfs:label>
         <skos:broader rdf:resource="http://purl.org/roh/scientific-domain#ES_SCIENTIFIC_DOMAIN_LEVEL_2_BFS"/>
@@ -1602,7 +1596,7 @@
 
 
     <NamedIndividual rdf:about="http://purl.org/roh/scientific-domain#ES_SCIENTIFIC_DOMAIN_LEVEL_3_BMEDAYJV">
-        <rdf:type rdf:resource="http://purl.org/roh#ESScientificDomain"/>
+        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
         <roh:hasCode rdf:resource="http://purl.org/roh/scientific-domain#ES_SCIENTIFIC_DOMAIN_LEVEL_3_CODE_BMEDAYJV"/>
         <rdfs:label>Farmacología general y de sistemas</rdfs:label>
         <skos:broader rdf:resource="http://purl.org/roh/scientific-domain#ES_SCIENTIFIC_DOMAIN_LEVEL_2_BMED"/>
@@ -1624,7 +1618,7 @@
 
 
     <NamedIndividual rdf:about="http://purl.org/roh/scientific-domain#ES_SCIENTIFIC_DOMAIN_LEVEL_3_BMEDDHHL">
-        <rdf:type rdf:resource="http://purl.org/roh#ESScientificDomain"/>
+        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
         <roh:hasCode rdf:resource="http://purl.org/roh/scientific-domain#ES_SCIENTIFIC_DOMAIN_LEVEL_3_CODE_BMEDDHHL"/>
         <rdfs:label>Farmacología Molecular</rdfs:label>
         <skos:broader rdf:resource="http://purl.org/roh/scientific-domain#ES_SCIENTIFIC_DOMAIN_LEVEL_2_BMED"/>
@@ -1646,7 +1640,7 @@
 
 
     <NamedIndividual rdf:about="http://purl.org/roh/scientific-domain#ES_SCIENTIFIC_DOMAIN_LEVEL_3_BMEDHTAZ">
-        <rdf:type rdf:resource="http://purl.org/roh#ESScientificDomain"/>
+        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
         <roh:hasCode rdf:resource="http://purl.org/roh/scientific-domain#ES_SCIENTIFIC_DOMAIN_LEVEL_3_CODE_BMEDHTAZ"/>
         <rdfs:label>Hepatología</rdfs:label>
         <skos:broader rdf:resource="http://purl.org/roh/scientific-domain#ES_SCIENTIFIC_DOMAIN_LEVEL_2_BMED"/>
@@ -1668,7 +1662,7 @@
 
 
     <NamedIndividual rdf:about="http://purl.org/roh/scientific-domain#ES_SCIENTIFIC_DOMAIN_LEVEL_3_BMEDIRHV">
-        <rdf:type rdf:resource="http://purl.org/roh#ESScientificDomain"/>
+        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
         <roh:hasCode rdf:resource="http://purl.org/roh/scientific-domain#ES_SCIENTIFIC_DOMAIN_LEVEL_3_CODE_BMEDIRHV"/>
         <rdfs:label>Microbiología</rdfs:label>
         <skos:broader rdf:resource="http://purl.org/roh/scientific-domain#ES_SCIENTIFIC_DOMAIN_LEVEL_2_BMED"/>
@@ -1690,7 +1684,7 @@
 
 
     <NamedIndividual rdf:about="http://purl.org/roh/scientific-domain#ES_SCIENTIFIC_DOMAIN_LEVEL_3_BMEDJNIS">
-        <rdf:type rdf:resource="http://purl.org/roh#ESScientificDomain"/>
+        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
         <roh:hasCode rdf:resource="http://purl.org/roh/scientific-domain#ES_SCIENTIFIC_DOMAIN_LEVEL_3_CODE_BMEDJNIS"/>
         <rdfs:label>Inmunología</rdfs:label>
         <skos:broader rdf:resource="http://purl.org/roh/scientific-domain#ES_SCIENTIFIC_DOMAIN_LEVEL_2_BMED"/>
@@ -1712,7 +1706,7 @@
 
 
     <NamedIndividual rdf:about="http://purl.org/roh/scientific-domain#ES_SCIENTIFIC_DOMAIN_LEVEL_3_BMEDLFCH">
-        <rdf:type rdf:resource="http://purl.org/roh#ESScientificDomain"/>
+        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
         <roh:hasCode rdf:resource="http://purl.org/roh/scientific-domain#ES_SCIENTIFIC_DOMAIN_LEVEL_3_CODE_BMEDLFCH"/>
         <rdfs:label>Endocrinología</rdfs:label>
         <skos:broader rdf:resource="http://purl.org/roh/scientific-domain#ES_SCIENTIFIC_DOMAIN_LEVEL_2_BMED"/>
@@ -1734,7 +1728,7 @@
 
 
     <NamedIndividual rdf:about="http://purl.org/roh/scientific-domain#ES_SCIENTIFIC_DOMAIN_LEVEL_3_BMEDMHOU">
-        <rdf:type rdf:resource="http://purl.org/roh#ESScientificDomain"/>
+        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
         <roh:hasCode rdf:resource="http://purl.org/roh/scientific-domain#ES_SCIENTIFIC_DOMAIN_LEVEL_3_CODE_BMEDMHOU"/>
         <rdfs:label>Enfermedades metabólicas</rdfs:label>
         <skos:broader rdf:resource="http://purl.org/roh/scientific-domain#ES_SCIENTIFIC_DOMAIN_LEVEL_2_BMED"/>
@@ -1756,7 +1750,7 @@
 
 
     <NamedIndividual rdf:about="http://purl.org/roh/scientific-domain#ES_SCIENTIFIC_DOMAIN_LEVEL_3_BMEDMJHF">
-        <rdf:type rdf:resource="http://purl.org/roh#ESScientificDomain"/>
+        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
         <roh:hasCode rdf:resource="http://purl.org/roh/scientific-domain#ES_SCIENTIFIC_DOMAIN_LEVEL_3_CODE_BMEDMJHF"/>
         <rdfs:label>Muerte celular</rdfs:label>
         <skos:broader rdf:resource="http://purl.org/roh/scientific-domain#ES_SCIENTIFIC_DOMAIN_LEVEL_2_BMED"/>
@@ -1778,7 +1772,7 @@
 
 
     <NamedIndividual rdf:about="http://purl.org/roh/scientific-domain#ES_SCIENTIFIC_DOMAIN_LEVEL_3_BMEDMJZM">
-        <rdf:type rdf:resource="http://purl.org/roh#ESScientificDomain"/>
+        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
         <roh:hasCode rdf:resource="http://purl.org/roh/scientific-domain#ES_SCIENTIFIC_DOMAIN_LEVEL_3_CODE_BMEDMJZM"/>
         <rdfs:label>Genética</rdfs:label>
         <skos:broader rdf:resource="http://purl.org/roh/scientific-domain#ES_SCIENTIFIC_DOMAIN_LEVEL_2_BMED"/>
@@ -1800,7 +1794,7 @@
 
 
     <NamedIndividual rdf:about="http://purl.org/roh/scientific-domain#ES_SCIENTIFIC_DOMAIN_LEVEL_3_BMEDOFOI">
-        <rdf:type rdf:resource="http://purl.org/roh#ESScientificDomain"/>
+        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
         <roh:hasCode rdf:resource="http://purl.org/roh/scientific-domain#ES_SCIENTIFIC_DOMAIN_LEVEL_3_CODE_BMEDOFOI"/>
         <rdfs:label>Anatomía</rdfs:label>
         <skos:broader rdf:resource="http://purl.org/roh/scientific-domain#ES_SCIENTIFIC_DOMAIN_LEVEL_2_BMED"/>
@@ -1822,7 +1816,7 @@
 
 
     <NamedIndividual rdf:about="http://purl.org/roh/scientific-domain#ES_SCIENTIFIC_DOMAIN_LEVEL_3_BMEDPJHL">
-        <rdf:type rdf:resource="http://purl.org/roh#ESScientificDomain"/>
+        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
         <roh:hasCode rdf:resource="http://purl.org/roh/scientific-domain#ES_SCIENTIFIC_DOMAIN_LEVEL_3_CODE_BMEDPJHL"/>
         <rdfs:label>Cardiovascular</rdfs:label>
         <skos:broader rdf:resource="http://purl.org/roh/scientific-domain#ES_SCIENTIFIC_DOMAIN_LEVEL_2_BMED"/>
@@ -1844,7 +1838,7 @@
 
 
     <NamedIndividual rdf:about="http://purl.org/roh/scientific-domain#ES_SCIENTIFIC_DOMAIN_LEVEL_3_BMEDRCYB">
-        <rdf:type rdf:resource="http://purl.org/roh#ESScientificDomain"/>
+        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
         <roh:hasCode rdf:resource="http://purl.org/roh/scientific-domain#ES_SCIENTIFIC_DOMAIN_LEVEL_3_CODE_BMEDRCYB"/>
         <rdfs:label>Neurociencias</rdfs:label>
         <skos:broader rdf:resource="http://purl.org/roh/scientific-domain#ES_SCIENTIFIC_DOMAIN_LEVEL_2_BMED"/>
@@ -1866,7 +1860,7 @@
 
 
     <NamedIndividual rdf:about="http://purl.org/roh/scientific-domain#ES_SCIENTIFIC_DOMAIN_LEVEL_3_BMEDRYDY">
-        <rdf:type rdf:resource="http://purl.org/roh#ESScientificDomain"/>
+        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
         <roh:hasCode rdf:resource="http://purl.org/roh/scientific-domain#ES_SCIENTIFIC_DOMAIN_LEVEL_3_CODE_BMEDRYDY"/>
         <rdfs:label>Cáncer</rdfs:label>
         <skos:broader rdf:resource="http://purl.org/roh/scientific-domain#ES_SCIENTIFIC_DOMAIN_LEVEL_2_BMED"/>
@@ -1888,7 +1882,7 @@
 
 
     <NamedIndividual rdf:about="http://purl.org/roh/scientific-domain#ES_SCIENTIFIC_DOMAIN_LEVEL_3_BMEDTINW">
-        <rdf:type rdf:resource="http://purl.org/roh#ESScientificDomain"/>
+        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
         <roh:hasCode rdf:resource="http://purl.org/roh/scientific-domain#ES_SCIENTIFIC_DOMAIN_LEVEL_3_CODE_BMEDTINW"/>
         <rdfs:label>Descubrimiento de fármacos</rdfs:label>
         <skos:broader rdf:resource="http://purl.org/roh/scientific-domain#ES_SCIENTIFIC_DOMAIN_LEVEL_2_BMED"/>
@@ -1910,7 +1904,7 @@
 
 
     <NamedIndividual rdf:about="http://purl.org/roh/scientific-domain#ES_SCIENTIFIC_DOMAIN_LEVEL_3_BMEDYQHF">
-        <rdf:type rdf:resource="http://purl.org/roh#ESScientificDomain"/>
+        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
         <roh:hasCode rdf:resource="http://purl.org/roh/scientific-domain#ES_SCIENTIFIC_DOMAIN_LEVEL_3_CODE_BMEDYQHF"/>
         <rdfs:label>Fisiología celular y de sistemas</rdfs:label>
         <skos:broader rdf:resource="http://purl.org/roh/scientific-domain#ES_SCIENTIFIC_DOMAIN_LEVEL_2_BMED"/>
@@ -1932,7 +1926,7 @@
 
 
     <NamedIndividual rdf:about="http://purl.org/roh/scientific-domain#ES_SCIENTIFIC_DOMAIN_LEVEL_3_BMEDZYOC">
-        <rdf:type rdf:resource="http://purl.org/roh#ESScientificDomain"/>
+        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
         <roh:hasCode rdf:resource="http://purl.org/roh/scientific-domain#ES_SCIENTIFIC_DOMAIN_LEVEL_3_CODE_BMEDZYOC"/>
         <rdfs:label>Biología celular y molecular</rdfs:label>
         <skos:broader rdf:resource="http://purl.org/roh/scientific-domain#ES_SCIENTIFIC_DOMAIN_LEVEL_2_BMED"/>
@@ -1954,7 +1948,7 @@
 
 
     <NamedIndividual rdf:about="http://purl.org/roh/scientific-domain#ES_SCIENTIFIC_DOMAIN_LEVEL_3_BVAEWIUP">
-        <rdf:type rdf:resource="http://purl.org/roh#ESScientificDomain"/>
+        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
         <roh:hasCode rdf:resource="http://purl.org/roh/scientific-domain#ES_SCIENTIFIC_DOMAIN_LEVEL_3_CODE_BVAEWIUP"/>
         <rdfs:label>Microbiología</rdfs:label>
         <skos:broader rdf:resource="http://purl.org/roh/scientific-domain#ES_SCIENTIFIC_DOMAIN_LEVEL_2_BVAE"/>
@@ -1976,7 +1970,7 @@
 
 
     <NamedIndividual rdf:about="http://purl.org/roh/scientific-domain#ES_SCIENTIFIC_DOMAIN_LEVEL_3_CODE_BFSCVHN">
-        <rdf:type rdf:resource="http://purl.org/roh#ESScientificDomain"/>
+        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
         <roh:codeOf rdf:resource="http://purl.org/roh/scientific-domain#ES_SCIENTIFIC_DOMAIN_LEVEL_3_BFSCVHN"/>
         <rdfs:label>BFSCVHN</rdfs:label>
         <skos:inScheme rdf:resource="http://purl.org/roh/scientific-domain#ESscientificDomains3rdCodeList"/>
@@ -1989,7 +1983,7 @@
 
 
     <NamedIndividual rdf:about="http://purl.org/roh/scientific-domain#ES_SCIENTIFIC_DOMAIN_LEVEL_3_CODE_BFSCXPL">
-        <rdf:type rdf:resource="http://purl.org/roh#ESScientificDomain"/>
+        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
         <roh:codeOf rdf:resource="http://purl.org/roh/scientific-domain#ES_SCIENTIFIC_DOMAIN_LEVEL_3_BFSCXPL"/>
         <rdfs:label>BFSCXPL</rdfs:label>
         <skos:inScheme rdf:resource="http://purl.org/roh/scientific-domain#ESscientificDomains3rdCodeList"/>
@@ -2002,7 +1996,7 @@
 
 
     <NamedIndividual rdf:about="http://purl.org/roh/scientific-domain#ES_SCIENTIFIC_DOMAIN_LEVEL_3_CODE_BFSDGRC">
-        <rdf:type rdf:resource="http://purl.org/roh#ESScientificDomain"/>
+        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
         <roh:codeOf rdf:resource="http://purl.org/roh/scientific-domain#ES_SCIENTIFIC_DOMAIN_LEVEL_3_BFSDGRC"/>
         <rdfs:label>BFSDGRC</rdfs:label>
         <skos:inScheme rdf:resource="http://purl.org/roh/scientific-domain#ESscientificDomains3rdCodeList"/>
@@ -2015,7 +2009,7 @@
 
 
     <NamedIndividual rdf:about="http://purl.org/roh/scientific-domain#ES_SCIENTIFIC_DOMAIN_LEVEL_3_CODE_BFSDNIG">
-        <rdf:type rdf:resource="http://purl.org/roh#ESScientificDomain"/>
+        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
         <roh:codeOf rdf:resource="http://purl.org/roh/scientific-domain#ES_SCIENTIFIC_DOMAIN_LEVEL_3_BFSDNIG"/>
         <rdfs:label>BFSDNIG</rdfs:label>
         <skos:inScheme rdf:resource="http://purl.org/roh/scientific-domain#ESscientificDomains3rdCodeList"/>
@@ -2028,7 +2022,7 @@
 
 
     <NamedIndividual rdf:about="http://purl.org/roh/scientific-domain#ES_SCIENTIFIC_DOMAIN_LEVEL_3_CODE_BFSDXWB">
-        <rdf:type rdf:resource="http://purl.org/roh#ESScientificDomain"/>
+        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
         <roh:codeOf rdf:resource="http://purl.org/roh/scientific-domain#ES_SCIENTIFIC_DOMAIN_LEVEL_3_BFSDXWB"/>
         <rdfs:label>BFSDXWB</rdfs:label>
         <skos:inScheme rdf:resource="http://purl.org/roh/scientific-domain#ESscientificDomains3rdCodeList"/>
@@ -2041,7 +2035,7 @@
 
 
     <NamedIndividual rdf:about="http://purl.org/roh/scientific-domain#ES_SCIENTIFIC_DOMAIN_LEVEL_3_CODE_BFSEEAB">
-        <rdf:type rdf:resource="http://purl.org/roh#ESScientificDomain"/>
+        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
         <roh:codeOf rdf:resource="http://purl.org/roh/scientific-domain#ES_SCIENTIFIC_DOMAIN_LEVEL_3_BFSEEAB"/>
         <rdfs:label>BFSEEAB</rdfs:label>
         <skos:inScheme rdf:resource="http://purl.org/roh/scientific-domain#ESscientificDomains3rdCodeList"/>
@@ -2054,7 +2048,7 @@
 
 
     <NamedIndividual rdf:about="http://purl.org/roh/scientific-domain#ES_SCIENTIFIC_DOMAIN_LEVEL_3_CODE_BFSGSYN">
-        <rdf:type rdf:resource="http://purl.org/roh#ESScientificDomain"/>
+        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
         <roh:codeOf rdf:resource="http://purl.org/roh/scientific-domain#ES_SCIENTIFIC_DOMAIN_LEVEL_3_BFSGSYN"/>
         <rdfs:label>BFSGSYN</rdfs:label>
         <skos:inScheme rdf:resource="http://purl.org/roh/scientific-domain#ESscientificDomains3rdCodeList"/>
@@ -2067,7 +2061,7 @@
 
 
     <NamedIndividual rdf:about="http://purl.org/roh/scientific-domain#ES_SCIENTIFIC_DOMAIN_LEVEL_3_CODE_BFSHQCF">
-        <rdf:type rdf:resource="http://purl.org/roh#ESScientificDomain"/>
+        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
         <roh:codeOf rdf:resource="http://purl.org/roh/scientific-domain#ES_SCIENTIFIC_DOMAIN_LEVEL_3_BFSHQCF"/>
         <rdfs:label>BFSHQCF</rdfs:label>
         <skos:inScheme rdf:resource="http://purl.org/roh/scientific-domain#ESscientificDomains3rdCodeList"/>
@@ -2080,7 +2074,7 @@
 
 
     <NamedIndividual rdf:about="http://purl.org/roh/scientific-domain#ES_SCIENTIFIC_DOMAIN_LEVEL_3_CODE_BFSHRRE">
-        <rdf:type rdf:resource="http://purl.org/roh#ESScientificDomain"/>
+        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
         <roh:codeOf rdf:resource="http://purl.org/roh/scientific-domain#ES_SCIENTIFIC_DOMAIN_LEVEL_3_BFSHRRE"/>
         <rdfs:label>BFSHRRE</rdfs:label>
         <skos:inScheme rdf:resource="http://purl.org/roh/scientific-domain#ESscientificDomains3rdCodeList"/>
@@ -2093,7 +2087,7 @@
 
 
     <NamedIndividual rdf:about="http://purl.org/roh/scientific-domain#ES_SCIENTIFIC_DOMAIN_LEVEL_3_CODE_BFSJEYV">
-        <rdf:type rdf:resource="http://purl.org/roh#ESScientificDomain"/>
+        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
         <roh:codeOf rdf:resource="http://purl.org/roh/scientific-domain#ES_SCIENTIFIC_DOMAIN_LEVEL_3_BFSJEYV"/>
         <rdfs:label>BFSJEYV</rdfs:label>
         <skos:inScheme rdf:resource="http://purl.org/roh/scientific-domain#ESscientificDomains3rdCodeList"/>
@@ -2106,7 +2100,7 @@
 
 
     <NamedIndividual rdf:about="http://purl.org/roh/scientific-domain#ES_SCIENTIFIC_DOMAIN_LEVEL_3_CODE_BFSJJXW">
-        <rdf:type rdf:resource="http://purl.org/roh#ESScientificDomain"/>
+        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
         <roh:codeOf rdf:resource="http://purl.org/roh/scientific-domain#ES_SCIENTIFIC_DOMAIN_LEVEL_3_BFSJJXW"/>
         <rdfs:label>BFSJJXW</rdfs:label>
         <skos:inScheme rdf:resource="http://purl.org/roh/scientific-domain#ESscientificDomains3rdCodeList"/>
@@ -2119,7 +2113,7 @@
 
 
     <NamedIndividual rdf:about="http://purl.org/roh/scientific-domain#ES_SCIENTIFIC_DOMAIN_LEVEL_3_CODE_BFSOWHX">
-        <rdf:type rdf:resource="http://purl.org/roh#ESScientificDomain"/>
+        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
         <roh:codeOf rdf:resource="http://purl.org/roh/scientific-domain#ES_SCIENTIFIC_DOMAIN_LEVEL_3_BFSOWHX"/>
         <rdfs:label>BFSOWHX</rdfs:label>
         <skos:inScheme rdf:resource="http://purl.org/roh/scientific-domain#ESscientificDomains3rdCodeList"/>
@@ -2132,7 +2126,7 @@
 
 
     <NamedIndividual rdf:about="http://purl.org/roh/scientific-domain#ES_SCIENTIFIC_DOMAIN_LEVEL_3_CODE_BFSSBGU">
-        <rdf:type rdf:resource="http://purl.org/roh#ESScientificDomain"/>
+        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
         <roh:codeOf rdf:resource="http://purl.org/roh/scientific-domain#ES_SCIENTIFIC_DOMAIN_LEVEL_3_BFSSBGU"/>
         <rdfs:label>BFSSBGU</rdfs:label>
         <skos:inScheme rdf:resource="http://purl.org/roh/scientific-domain#ESscientificDomains3rdCodeList"/>
@@ -2145,7 +2139,7 @@
 
 
     <NamedIndividual rdf:about="http://purl.org/roh/scientific-domain#ES_SCIENTIFIC_DOMAIN_LEVEL_3_CODE_BFSTSEI">
-        <rdf:type rdf:resource="http://purl.org/roh#ESScientificDomain"/>
+        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
         <roh:codeOf rdf:resource="http://purl.org/roh/scientific-domain#ES_SCIENTIFIC_DOMAIN_LEVEL_3_BFSTSEI"/>
         <rdfs:label>BFSTSEI</rdfs:label>
         <skos:inScheme rdf:resource="http://purl.org/roh/scientific-domain#ESscientificDomains3rdCodeList"/>
@@ -2158,7 +2152,7 @@
 
 
     <NamedIndividual rdf:about="http://purl.org/roh/scientific-domain#ES_SCIENTIFIC_DOMAIN_LEVEL_3_CODE_BMEDAYJV">
-        <rdf:type rdf:resource="http://purl.org/roh#ESScientificDomain"/>
+        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
         <roh:codeOf rdf:resource="http://purl.org/roh/scientific-domain#ES_SCIENTIFIC_DOMAIN_LEVEL_3_BMEDAYJV"/>
         <rdfs:label>BMEDAYJV</rdfs:label>
         <skos:inScheme rdf:resource="http://purl.org/roh/scientific-domain#ESscientificDomains3rdCodeList"/>
@@ -2171,7 +2165,7 @@
 
 
     <NamedIndividual rdf:about="http://purl.org/roh/scientific-domain#ES_SCIENTIFIC_DOMAIN_LEVEL_3_CODE_BMEDDHHL">
-        <rdf:type rdf:resource="http://purl.org/roh#ESScientificDomain"/>
+        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
         <roh:codeOf rdf:resource="http://purl.org/roh/scientific-domain#ES_SCIENTIFIC_DOMAIN_LEVEL_3_BMEDDHHL"/>
         <rdfs:label>BMEDDHHL</rdfs:label>
         <skos:inScheme rdf:resource="http://purl.org/roh/scientific-domain#ESscientificDomains3rdCodeList"/>
@@ -2184,7 +2178,7 @@
 
 
     <NamedIndividual rdf:about="http://purl.org/roh/scientific-domain#ES_SCIENTIFIC_DOMAIN_LEVEL_3_CODE_BMEDHTAZ">
-        <rdf:type rdf:resource="http://purl.org/roh#ESScientificDomain"/>
+        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
         <roh:codeOf rdf:resource="http://purl.org/roh/scientific-domain#ES_SCIENTIFIC_DOMAIN_LEVEL_3_BMEDHTAZ"/>
         <rdfs:label>BMEDHTAZ</rdfs:label>
         <skos:inScheme rdf:resource="http://purl.org/roh/scientific-domain#ESscientificDomains3rdCodeList"/>
@@ -2197,7 +2191,7 @@
 
 
     <NamedIndividual rdf:about="http://purl.org/roh/scientific-domain#ES_SCIENTIFIC_DOMAIN_LEVEL_3_CODE_BMEDIRHV">
-        <rdf:type rdf:resource="http://purl.org/roh#ESScientificDomain"/>
+        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
         <roh:codeOf rdf:resource="http://purl.org/roh/scientific-domain#ES_SCIENTIFIC_DOMAIN_LEVEL_3_BMEDIRHV"/>
         <rdfs:label>BMEDIRHV</rdfs:label>
         <skos:inScheme rdf:resource="http://purl.org/roh/scientific-domain#ESscientificDomains3rdCodeList"/>
@@ -2210,7 +2204,7 @@
 
 
     <NamedIndividual rdf:about="http://purl.org/roh/scientific-domain#ES_SCIENTIFIC_DOMAIN_LEVEL_3_CODE_BMEDJNIS">
-        <rdf:type rdf:resource="http://purl.org/roh#ESScientificDomain"/>
+        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
         <roh:codeOf rdf:resource="http://purl.org/roh/scientific-domain#ES_SCIENTIFIC_DOMAIN_LEVEL_3_BMEDJNIS"/>
         <rdfs:label>BMEDJNIS</rdfs:label>
         <skos:inScheme rdf:resource="http://purl.org/roh/scientific-domain#ESscientificDomains3rdCodeList"/>
@@ -2223,7 +2217,7 @@
 
 
     <NamedIndividual rdf:about="http://purl.org/roh/scientific-domain#ES_SCIENTIFIC_DOMAIN_LEVEL_3_CODE_BMEDLFCH">
-        <rdf:type rdf:resource="http://purl.org/roh#ESScientificDomain"/>
+        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
         <roh:codeOf rdf:resource="http://purl.org/roh/scientific-domain#ES_SCIENTIFIC_DOMAIN_LEVEL_3_BMEDLFCH"/>
         <rdfs:label>BMEDLFCH</rdfs:label>
         <skos:inScheme rdf:resource="http://purl.org/roh/scientific-domain#ESscientificDomains3rdCodeList"/>
@@ -2236,7 +2230,7 @@
 
 
     <NamedIndividual rdf:about="http://purl.org/roh/scientific-domain#ES_SCIENTIFIC_DOMAIN_LEVEL_3_CODE_BMEDMHOU">
-        <rdf:type rdf:resource="http://purl.org/roh#ESScientificDomain"/>
+        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
         <roh:codeOf rdf:resource="http://purl.org/roh/scientific-domain#ES_SCIENTIFIC_DOMAIN_LEVEL_3_BMEDMHOU"/>
         <rdfs:label>BMEDMHOU</rdfs:label>
         <skos:inScheme rdf:resource="http://purl.org/roh/scientific-domain#ESscientificDomains3rdCodeList"/>
@@ -2249,7 +2243,7 @@
 
 
     <NamedIndividual rdf:about="http://purl.org/roh/scientific-domain#ES_SCIENTIFIC_DOMAIN_LEVEL_3_CODE_BMEDMJHF">
-        <rdf:type rdf:resource="http://purl.org/roh#ESScientificDomain"/>
+        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
         <roh:codeOf rdf:resource="http://purl.org/roh/scientific-domain#ES_SCIENTIFIC_DOMAIN_LEVEL_3_BMEDMJHF"/>
         <rdfs:label>BMEDMJHF</rdfs:label>
         <skos:inScheme rdf:resource="http://purl.org/roh/scientific-domain#ESscientificDomains3rdCodeList"/>
@@ -2262,7 +2256,7 @@
 
 
     <NamedIndividual rdf:about="http://purl.org/roh/scientific-domain#ES_SCIENTIFIC_DOMAIN_LEVEL_3_CODE_BMEDMJZM">
-        <rdf:type rdf:resource="http://purl.org/roh#ESScientificDomain"/>
+        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
         <roh:codeOf rdf:resource="http://purl.org/roh/scientific-domain#ES_SCIENTIFIC_DOMAIN_LEVEL_3_BMEDMJZM"/>
         <rdfs:label>BMEDMJZM</rdfs:label>
         <skos:inScheme rdf:resource="http://purl.org/roh/scientific-domain#ESscientificDomains3rdCodeList"/>
@@ -2275,7 +2269,7 @@
 
 
     <NamedIndividual rdf:about="http://purl.org/roh/scientific-domain#ES_SCIENTIFIC_DOMAIN_LEVEL_3_CODE_BMEDOFOI">
-        <rdf:type rdf:resource="http://purl.org/roh#ESScientificDomain"/>
+        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
         <roh:codeOf rdf:resource="http://purl.org/roh/scientific-domain#ES_SCIENTIFIC_DOMAIN_LEVEL_3_BMEDOFOI"/>
         <rdfs:label>BMEDOFOI</rdfs:label>
         <skos:inScheme rdf:resource="http://purl.org/roh/scientific-domain#ESscientificDomains3rdCodeList"/>
@@ -2288,7 +2282,7 @@
 
 
     <NamedIndividual rdf:about="http://purl.org/roh/scientific-domain#ES_SCIENTIFIC_DOMAIN_LEVEL_3_CODE_BMEDPJHL">
-        <rdf:type rdf:resource="http://purl.org/roh#ESScientificDomain"/>
+        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
         <roh:codeOf rdf:resource="http://purl.org/roh/scientific-domain#ES_SCIENTIFIC_DOMAIN_LEVEL_3_BMEDPJHL"/>
         <rdfs:label>BMEDPJHL</rdfs:label>
         <skos:inScheme rdf:resource="http://purl.org/roh/scientific-domain#ESscientificDomains3rdCodeList"/>
@@ -2301,7 +2295,7 @@
 
 
     <NamedIndividual rdf:about="http://purl.org/roh/scientific-domain#ES_SCIENTIFIC_DOMAIN_LEVEL_3_CODE_BMEDRCYB">
-        <rdf:type rdf:resource="http://purl.org/roh#ESScientificDomain"/>
+        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
         <roh:codeOf rdf:resource="http://purl.org/roh/scientific-domain#ES_SCIENTIFIC_DOMAIN_LEVEL_3_BMEDRCYB"/>
         <rdfs:label>BMEDRCYB</rdfs:label>
         <skos:inScheme rdf:resource="http://purl.org/roh/scientific-domain#ESscientificDomains3rdCodeList"/>
@@ -2314,7 +2308,7 @@
 
 
     <NamedIndividual rdf:about="http://purl.org/roh/scientific-domain#ES_SCIENTIFIC_DOMAIN_LEVEL_3_CODE_BMEDRYDY">
-        <rdf:type rdf:resource="http://purl.org/roh#ESScientificDomain"/>
+        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
         <roh:codeOf rdf:resource="http://purl.org/roh/scientific-domain#ES_SCIENTIFIC_DOMAIN_LEVEL_3_BMEDRYDY"/>
         <rdfs:label>BMEDRYDY</rdfs:label>
         <skos:inScheme rdf:resource="http://purl.org/roh/scientific-domain#ESscientificDomains3rdCodeList"/>
@@ -2327,7 +2321,7 @@
 
 
     <NamedIndividual rdf:about="http://purl.org/roh/scientific-domain#ES_SCIENTIFIC_DOMAIN_LEVEL_3_CODE_BMEDTINW">
-        <rdf:type rdf:resource="http://purl.org/roh#ESScientificDomain"/>
+        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
         <roh:codeOf rdf:resource="http://purl.org/roh/scientific-domain#ES_SCIENTIFIC_DOMAIN_LEVEL_3_BMEDTINW"/>
         <rdfs:label>BMEDTINW</rdfs:label>
         <skos:inScheme rdf:resource="http://purl.org/roh/scientific-domain#ESscientificDomains3rdCodeList"/>
@@ -2340,7 +2334,7 @@
 
 
     <NamedIndividual rdf:about="http://purl.org/roh/scientific-domain#ES_SCIENTIFIC_DOMAIN_LEVEL_3_CODE_BMEDYQHF">
-        <rdf:type rdf:resource="http://purl.org/roh#ESScientificDomain"/>
+        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
         <roh:codeOf rdf:resource="http://purl.org/roh/scientific-domain#ES_SCIENTIFIC_DOMAIN_LEVEL_3_BMEDYQHF"/>
         <rdfs:label>BMEDYQHF</rdfs:label>
         <skos:inScheme rdf:resource="http://purl.org/roh/scientific-domain#ESscientificDomains3rdCodeList"/>
@@ -2353,7 +2347,7 @@
 
 
     <NamedIndividual rdf:about="http://purl.org/roh/scientific-domain#ES_SCIENTIFIC_DOMAIN_LEVEL_3_CODE_BMEDZYOC">
-        <rdf:type rdf:resource="http://purl.org/roh#ESScientificDomain"/>
+        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
         <roh:codeOf rdf:resource="http://purl.org/roh/scientific-domain#ES_SCIENTIFIC_DOMAIN_LEVEL_3_BMEDZYOC"/>
         <rdfs:label>BMEDZYOC</rdfs:label>
         <skos:inScheme rdf:resource="http://purl.org/roh/scientific-domain#ESscientificDomains3rdCodeList"/>
@@ -2366,7 +2360,7 @@
 
 
     <NamedIndividual rdf:about="http://purl.org/roh/scientific-domain#ES_SCIENTIFIC_DOMAIN_LEVEL_3_CODE_BVAEWIUP">
-        <rdf:type rdf:resource="http://purl.org/roh#ESScientificDomain"/>
+        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
         <roh:codeOf rdf:resource="http://purl.org/roh/scientific-domain#ES_SCIENTIFIC_DOMAIN_LEVEL_3_BVAEWIUP"/>
         <rdfs:label>BVAEWIUP</rdfs:label>
         <skos:inScheme rdf:resource="http://purl.org/roh/scientific-domain#ESscientificDomains3rdCodeList"/>
@@ -2379,7 +2373,7 @@
 
 
     <NamedIndividual rdf:about="http://purl.org/roh/scientific-domain#ES_SCIENTIFIC_DOMAIN_LEVEL_3_CODE_CTASTR">
-        <rdf:type rdf:resource="http://purl.org/roh#ESScientificDomain"/>
+        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
         <roh:codeOf rdf:resource="http://purl.org/roh/scientific-domain#ES_SCIENTIFIC_DOMAIN_LEVEL_3_CTASTR"/>
         <rdfs:label>CTASTR</rdfs:label>
         <skos:inScheme rdf:resource="http://purl.org/roh/scientific-domain#ESscientificDomains3rdCodeList"/>
@@ -2392,7 +2386,7 @@
 
 
     <NamedIndividual rdf:about="http://purl.org/roh/scientific-domain#ES_SCIENTIFIC_DOMAIN_LEVEL_3_CODE_CTCLIM">
-        <rdf:type rdf:resource="http://purl.org/roh#ESScientificDomain"/>
+        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
         <roh:codeOf rdf:resource="http://purl.org/roh/scientific-domain#ES_SCIENTIFIC_DOMAIN_LEVEL_3_CTCLIM"/>
         <rdfs:label>CTCLIM</rdfs:label>
         <skos:inScheme rdf:resource="http://purl.org/roh/scientific-domain#ESscientificDomains3rdCodeList"/>
@@ -2405,7 +2399,7 @@
 
 
     <NamedIndividual rdf:about="http://purl.org/roh/scientific-domain#ES_SCIENTIFIC_DOMAIN_LEVEL_3_CODE_CTCON">
-        <rdf:type rdf:resource="http://purl.org/roh#ESScientificDomain"/>
+        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
         <roh:codeOf rdf:resource="http://purl.org/roh/scientific-domain#ES_SCIENTIFIC_DOMAIN_LEVEL_3_CTCON"/>
         <rdfs:label>CTCON</rdfs:label>
         <skos:inScheme rdf:resource="http://purl.org/roh/scientific-domain#ESscientificDomains3rdCodeList"/>
@@ -2418,7 +2412,7 @@
 
 
     <NamedIndividual rdf:about="http://purl.org/roh/scientific-domain#ES_SCIENTIFIC_DOMAIN_LEVEL_3_CODE_CTESTR">
-        <rdf:type rdf:resource="http://purl.org/roh#ESScientificDomain"/>
+        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
         <roh:codeOf rdf:resource="http://purl.org/roh/scientific-domain#ES_SCIENTIFIC_DOMAIN_LEVEL_3_CTESTR"/>
         <rdfs:label>CTESTR</rdfs:label>
         <skos:inScheme rdf:resource="http://purl.org/roh/scientific-domain#ESscientificDomains3rdCodeList"/>
@@ -2431,7 +2425,7 @@
 
 
     <NamedIndividual rdf:about="http://purl.org/roh/scientific-domain#ES_SCIENTIFIC_DOMAIN_LEVEL_3_CODE_CTFISA">
-        <rdf:type rdf:resource="http://purl.org/roh#ESScientificDomain"/>
+        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
         <roh:codeOf rdf:resource="http://purl.org/roh/scientific-domain#ES_SCIENTIFIC_DOMAIN_LEVEL_3_CTFISA"/>
         <rdfs:label>CTFISA</rdfs:label>
         <skos:inScheme rdf:resource="http://purl.org/roh/scientific-domain#ESscientificDomains3rdCodeList"/>
@@ -2444,7 +2438,7 @@
 
 
     <NamedIndividual rdf:about="http://purl.org/roh/scientific-domain#ES_SCIENTIFIC_DOMAIN_LEVEL_3_CODE_CTFISE">
-        <rdf:type rdf:resource="http://purl.org/roh#ESScientificDomain"/>
+        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
         <roh:codeOf rdf:resource="http://purl.org/roh/scientific-domain#ES_SCIENTIFIC_DOMAIN_LEVEL_3_CTFISE"/>
         <rdfs:label>CTFISE</rdfs:label>
         <skos:inScheme rdf:resource="http://purl.org/roh/scientific-domain#ESscientificDomains3rdCodeList"/>
@@ -2457,7 +2451,7 @@
 
 
     <NamedIndividual rdf:about="http://purl.org/roh/scientific-domain#ES_SCIENTIFIC_DOMAIN_LEVEL_3_CODE_CTFISP">
-        <rdf:type rdf:resource="http://purl.org/roh#ESScientificDomain"/>
+        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
         <roh:codeOf rdf:resource="http://purl.org/roh/scientific-domain#ES_SCIENTIFIC_DOMAIN_LEVEL_3_CTFISP"/>
         <rdfs:label>CTFISP</rdfs:label>
         <skos:inScheme rdf:resource="http://purl.org/roh/scientific-domain#ESscientificDomains3rdCodeList"/>
@@ -2470,7 +2464,7 @@
 
 
     <NamedIndividual rdf:about="http://purl.org/roh/scientific-domain#ES_SCIENTIFIC_DOMAIN_LEVEL_3_CODE_CTFIST">
-        <rdf:type rdf:resource="http://purl.org/roh#ESScientificDomain"/>
+        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
         <roh:codeOf rdf:resource="http://purl.org/roh/scientific-domain#ES_SCIENTIFIC_DOMAIN_LEVEL_3_CTFIST"/>
         <rdfs:label>CTFIST</rdfs:label>
         <skos:inScheme rdf:resource="http://purl.org/roh/scientific-domain#ESscientificDomains3rdCodeList"/>
@@ -2483,7 +2477,7 @@
 
 
     <NamedIndividual rdf:about="http://purl.org/roh/scientific-domain#ES_SCIENTIFIC_DOMAIN_LEVEL_3_CODE_CTGEOD">
-        <rdf:type rdf:resource="http://purl.org/roh#ESScientificDomain"/>
+        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
         <roh:codeOf rdf:resource="http://purl.org/roh/scientific-domain#ES_SCIENTIFIC_DOMAIN_LEVEL_3_CTGEOD"/>
         <rdfs:label>CTGEOD</rdfs:label>
         <skos:inScheme rdf:resource="http://purl.org/roh/scientific-domain#ESscientificDomains3rdCodeList"/>
@@ -2496,7 +2490,7 @@
 
 
     <NamedIndividual rdf:about="http://purl.org/roh/scientific-domain#ES_SCIENTIFIC_DOMAIN_LEVEL_3_CODE_CTGEOF">
-        <rdf:type rdf:resource="http://purl.org/roh#ESScientificDomain"/>
+        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
         <roh:codeOf rdf:resource="http://purl.org/roh/scientific-domain#ES_SCIENTIFIC_DOMAIN_LEVEL_3_CTGEOF"/>
         <rdfs:label>CTGEOF</rdfs:label>
         <skos:inScheme rdf:resource="http://purl.org/roh/scientific-domain#ESscientificDomains3rdCodeList"/>
@@ -2509,7 +2503,7 @@
 
 
     <NamedIndividual rdf:about="http://purl.org/roh/scientific-domain#ES_SCIENTIFIC_DOMAIN_LEVEL_3_CODE_CTGEOQ">
-        <rdf:type rdf:resource="http://purl.org/roh#ESScientificDomain"/>
+        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
         <roh:codeOf rdf:resource="http://purl.org/roh/scientific-domain#ES_SCIENTIFIC_DOMAIN_LEVEL_3_CTGEOQ"/>
         <rdfs:label>CTGEOQ</rdfs:label>
         <skos:inScheme rdf:resource="http://purl.org/roh/scientific-domain#ESscientificDomains3rdCodeList"/>
@@ -2522,7 +2516,7 @@
 
 
     <NamedIndividual rdf:about="http://purl.org/roh/scientific-domain#ES_SCIENTIFIC_DOMAIN_LEVEL_3_CODE_CTHIDRO">
-        <rdf:type rdf:resource="http://purl.org/roh#ESScientificDomain"/>
+        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
         <roh:codeOf rdf:resource="http://purl.org/roh/scientific-domain#ES_SCIENTIFIC_DOMAIN_LEVEL_3_CTHIDRO"/>
         <rdfs:label>CTHIDRO</rdfs:label>
         <skos:inScheme rdf:resource="http://purl.org/roh/scientific-domain#ESscientificDomains3rdCodeList"/>
@@ -2535,7 +2529,7 @@
 
 
     <NamedIndividual rdf:about="http://purl.org/roh/scientific-domain#ES_SCIENTIFIC_DOMAIN_LEVEL_3_CODE_CTMATE">
-        <rdf:type rdf:resource="http://purl.org/roh#ESScientificDomain"/>
+        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
         <roh:codeOf rdf:resource="http://purl.org/roh/scientific-domain#ES_SCIENTIFIC_DOMAIN_LEVEL_3_CTMATE"/>
         <rdfs:label>CTMATE</rdfs:label>
         <skos:inScheme rdf:resource="http://purl.org/roh/scientific-domain#ESscientificDomains3rdCodeList"/>
@@ -2548,7 +2542,7 @@
 
 
     <NamedIndividual rdf:about="http://purl.org/roh/scientific-domain#ES_SCIENTIFIC_DOMAIN_LEVEL_3_CODE_CTMETE">
-        <rdf:type rdf:resource="http://purl.org/roh#ESScientificDomain"/>
+        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
         <roh:codeOf rdf:resource="http://purl.org/roh/scientific-domain#ES_SCIENTIFIC_DOMAIN_LEVEL_3_CTMETE"/>
         <rdfs:label>CTMETE</rdfs:label>
         <skos:inScheme rdf:resource="http://purl.org/roh/scientific-domain#ESscientificDomains3rdCodeList"/>
@@ -2561,7 +2555,7 @@
 
 
     <NamedIndividual rdf:about="http://purl.org/roh/scientific-domain#ES_SCIENTIFIC_DOMAIN_LEVEL_3_CODE_CTMIN">
-        <rdf:type rdf:resource="http://purl.org/roh#ESScientificDomain"/>
+        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
         <roh:codeOf rdf:resource="http://purl.org/roh/scientific-domain#ES_SCIENTIFIC_DOMAIN_LEVEL_3_CTMIN"/>
         <rdfs:label>CTMIN</rdfs:label>
         <skos:inScheme rdf:resource="http://purl.org/roh/scientific-domain#ESscientificDomains3rdCodeList"/>
@@ -2574,7 +2568,7 @@
 
 
     <NamedIndividual rdf:about="http://purl.org/roh/scientific-domain#ES_SCIENTIFIC_DOMAIN_LEVEL_3_CODE_CTPALE">
-        <rdf:type rdf:resource="http://purl.org/roh#ESScientificDomain"/>
+        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
         <roh:codeOf rdf:resource="http://purl.org/roh/scientific-domain#ES_SCIENTIFIC_DOMAIN_LEVEL_3_CTPALE"/>
         <rdfs:label>CTPALE</rdfs:label>
         <skos:inScheme rdf:resource="http://purl.org/roh/scientific-domain#ESscientificDomains3rdCodeList"/>
@@ -2587,7 +2581,7 @@
 
 
     <NamedIndividual rdf:about="http://purl.org/roh/scientific-domain#ES_SCIENTIFIC_DOMAIN_LEVEL_3_CODE_CTPETR">
-        <rdf:type rdf:resource="http://purl.org/roh#ESScientificDomain"/>
+        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
         <roh:codeOf rdf:resource="http://purl.org/roh/scientific-domain#ES_SCIENTIFIC_DOMAIN_LEVEL_3_CTPETR"/>
         <rdfs:label>CTPETR</rdfs:label>
         <skos:inScheme rdf:resource="http://purl.org/roh/scientific-domain#ESscientificDomains3rdCodeList"/>
@@ -2600,7 +2594,7 @@
 
 
     <NamedIndividual rdf:about="http://purl.org/roh/scientific-domain#ES_SCIENTIFIC_DOMAIN_LEVEL_3_CODE_CTSEDI">
-        <rdf:type rdf:resource="http://purl.org/roh#ESScientificDomain"/>
+        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
         <roh:codeOf rdf:resource="http://purl.org/roh/scientific-domain#ES_SCIENTIFIC_DOMAIN_LEVEL_3_CTSEDI"/>
         <rdfs:label>CTSEDI</rdfs:label>
         <skos:inScheme rdf:resource="http://purl.org/roh/scientific-domain#ESscientificDomains3rdCodeList"/>
@@ -2613,7 +2607,7 @@
 
 
     <NamedIndividual rdf:about="http://purl.org/roh/scientific-domain#ES_SCIENTIFIC_DOMAIN_LEVEL_3_CODE_CTTAFO">
-        <rdf:type rdf:resource="http://purl.org/roh#ESScientificDomain"/>
+        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
         <roh:codeOf rdf:resource="http://purl.org/roh/scientific-domain#ES_SCIENTIFIC_DOMAIN_LEVEL_3_CTTAFO"/>
         <rdfs:label>CTTAFO</rdfs:label>
         <skos:inScheme rdf:resource="http://purl.org/roh/scientific-domain#ESscientificDomains3rdCodeList"/>
@@ -2626,7 +2620,7 @@
 
 
     <NamedIndividual rdf:about="http://purl.org/roh/scientific-domain#ES_SCIENTIFIC_DOMAIN_LEVEL_3_CODE_FFIQIYR">
-        <rdf:type rdf:resource="http://purl.org/roh#ESScientificDomain"/>
+        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
         <roh:codeOf rdf:resource="http://purl.org/roh/scientific-domain#ES_SCIENTIFIC_DOMAIN_LEVEL_3_FFIQIYR"/>
         <rdfs:label>FFIQIYR</rdfs:label>
         <skos:inScheme rdf:resource="http://purl.org/roh/scientific-domain#ESscientificDomains3rdCodeList"/>
@@ -2639,7 +2633,7 @@
 
 
     <NamedIndividual rdf:about="http://purl.org/roh/scientific-domain#ES_SCIENTIFIC_DOMAIN_LEVEL_3_CODE_FFIRKXR">
-        <rdf:type rdf:resource="http://purl.org/roh#ESScientificDomain"/>
+        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
         <roh:codeOf rdf:resource="http://purl.org/roh/scientific-domain#ES_SCIENTIFIC_DOMAIN_LEVEL_3_FFIRKXR"/>
         <rdfs:label>FFIRKXR</rdfs:label>
         <skos:inScheme rdf:resource="http://purl.org/roh/scientific-domain#ESscientificDomains3rdCodeList"/>
@@ -2652,7 +2646,7 @@
 
 
     <NamedIndividual rdf:about="http://purl.org/roh/scientific-domain#ES_SCIENTIFIC_DOMAIN_LEVEL_3_CODE_FFIURLV">
-        <rdf:type rdf:resource="http://purl.org/roh#ESScientificDomain"/>
+        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
         <roh:codeOf rdf:resource="http://purl.org/roh/scientific-domain#ES_SCIENTIFIC_DOMAIN_LEVEL_3_FFIURLV"/>
         <rdfs:label>FFIURLV</rdfs:label>
         <skos:inScheme rdf:resource="http://purl.org/roh/scientific-domain#ESscientificDomains3rdCodeList"/>
@@ -2665,7 +2659,7 @@
 
 
     <NamedIndividual rdf:about="http://purl.org/roh/scientific-domain#ES_SCIENTIFIC_DOMAIN_LEVEL_3_CODE_FFIVCZF">
-        <rdf:type rdf:resource="http://purl.org/roh#ESScientificDomain"/>
+        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
         <roh:codeOf rdf:resource="http://purl.org/roh/scientific-domain#ES_SCIENTIFIC_DOMAIN_LEVEL_3_FFIVCZF"/>
         <rdfs:label>FFIVCZF</rdfs:label>
         <skos:inScheme rdf:resource="http://purl.org/roh/scientific-domain#ESscientificDomains3rdCodeList"/>
@@ -2678,7 +2672,7 @@
 
 
     <NamedIndividual rdf:about="http://purl.org/roh/scientific-domain#ES_SCIENTIFIC_DOMAIN_LEVEL_3_CODE_FFIVNPK">
-        <rdf:type rdf:resource="http://purl.org/roh#ESScientificDomain"/>
+        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
         <roh:codeOf rdf:resource="http://purl.org/roh/scientific-domain#ES_SCIENTIFIC_DOMAIN_LEVEL_3_FFIVNPK"/>
         <rdfs:label>FFIVNPK</rdfs:label>
         <skos:inScheme rdf:resource="http://purl.org/roh/scientific-domain#ESscientificDomains3rdCodeList"/>
@@ -2691,7 +2685,7 @@
 
 
     <NamedIndividual rdf:about="http://purl.org/roh/scientific-domain#ES_SCIENTIFIC_DOMAIN_LEVEL_3_CODE_FFIVVJH">
-        <rdf:type rdf:resource="http://purl.org/roh#ESScientificDomain"/>
+        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
         <roh:codeOf rdf:resource="http://purl.org/roh/scientific-domain#ES_SCIENTIFIC_DOMAIN_LEVEL_3_FFIVVJH"/>
         <rdfs:label>FFIVVJH</rdfs:label>
         <skos:inScheme rdf:resource="http://purl.org/roh/scientific-domain#ESscientificDomains3rdCodeList"/>
@@ -2704,7 +2698,7 @@
 
 
     <NamedIndividual rdf:about="http://purl.org/roh/scientific-domain#ES_SCIENTIFIC_DOMAIN_LEVEL_3_CODE_FFIYJTK">
-        <rdf:type rdf:resource="http://purl.org/roh#ESScientificDomain"/>
+        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
         <roh:codeOf rdf:resource="http://purl.org/roh/scientific-domain#ES_SCIENTIFIC_DOMAIN_LEVEL_3_FFIYJTK"/>
         <rdfs:label>FFIYJTK</rdfs:label>
         <skos:inScheme rdf:resource="http://purl.org/roh/scientific-domain#ESscientificDomains3rdCodeList"/>
@@ -2717,7 +2711,7 @@
 
 
     <NamedIndividual rdf:about="http://purl.org/roh/scientific-domain#ES_SCIENTIFIC_DOMAIN_LEVEL_3_CODE_FFIYMLQ">
-        <rdf:type rdf:resource="http://purl.org/roh#ESScientificDomain"/>
+        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
         <roh:codeOf rdf:resource="http://purl.org/roh/scientific-domain#ES_SCIENTIFIC_DOMAIN_LEVEL_3_FFIYMLQ"/>
         <rdfs:label>FFIYMLQ</rdfs:label>
         <skos:inScheme rdf:resource="http://purl.org/roh/scientific-domain#ESscientificDomains3rdCodeList"/>
@@ -2730,7 +2724,7 @@
 
 
     <NamedIndividual rdf:about="http://purl.org/roh/scientific-domain#ES_SCIENTIFIC_DOMAIN_LEVEL_3_CODE_HALMCG">
-        <rdf:type rdf:resource="http://purl.org/roh#ESScientificDomain"/>
+        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
         <roh:codeOf rdf:resource="http://purl.org/roh/scientific-domain#ES_SCIENTIFIC_DOMAIN_LEVEL_3_HALMCG"/>
         <rdfs:label>HALMCG</rdfs:label>
         <skos:inScheme rdf:resource="http://purl.org/roh/scientific-domain#ESscientificDomains3rdCodeList"/>
@@ -2743,7 +2737,7 @@
 
 
     <NamedIndividual rdf:about="http://purl.org/roh/scientific-domain#ES_SCIENTIFIC_DOMAIN_LEVEL_3_CODE_HAMOXL">
-        <rdf:type rdf:resource="http://purl.org/roh#ESScientificDomain"/>
+        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
         <roh:codeOf rdf:resource="http://purl.org/roh/scientific-domain#ES_SCIENTIFIC_DOMAIN_LEVEL_3_HAMOXL"/>
         <rdfs:label>HAMOXL</rdfs:label>
         <skos:inScheme rdf:resource="http://purl.org/roh/scientific-domain#ESscientificDomains3rdCodeList"/>
@@ -2756,7 +2750,7 @@
 
 
     <NamedIndividual rdf:about="http://purl.org/roh/scientific-domain#ES_SCIENTIFIC_DOMAIN_LEVEL_3_CODE_HAQGZR">
-        <rdf:type rdf:resource="http://purl.org/roh#ESScientificDomain"/>
+        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
         <roh:codeOf rdf:resource="http://purl.org/roh/scientific-domain#ES_SCIENTIFIC_DOMAIN_LEVEL_3_HAQGZR"/>
         <rdfs:label>HAQGZR</rdfs:label>
         <skos:inScheme rdf:resource="http://purl.org/roh/scientific-domain#ESscientificDomains3rdCodeList"/>
@@ -2769,7 +2763,7 @@
 
 
     <NamedIndividual rdf:about="http://purl.org/roh/scientific-domain#ES_SCIENTIFIC_DOMAIN_LEVEL_3_CODE_HAQJKH">
-        <rdf:type rdf:resource="http://purl.org/roh#ESScientificDomain"/>
+        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
         <roh:codeOf rdf:resource="http://purl.org/roh/scientific-domain#ES_SCIENTIFIC_DOMAIN_LEVEL_3_HAQJKH"/>
         <rdfs:label>HAQJKH</rdfs:label>
         <skos:inScheme rdf:resource="http://purl.org/roh/scientific-domain#ESscientificDomains3rdCodeList"/>
@@ -2782,7 +2776,7 @@
 
 
     <NamedIndividual rdf:about="http://purl.org/roh/scientific-domain#ES_SCIENTIFIC_DOMAIN_LEVEL_3_CODE_HAYOHM">
-        <rdf:type rdf:resource="http://purl.org/roh#ESScientificDomain"/>
+        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
         <roh:codeOf rdf:resource="http://purl.org/roh/scientific-domain#ES_SCIENTIFIC_DOMAIN_LEVEL_3_HAYOHM"/>
         <rdfs:label>HAYOHM</rdfs:label>
         <skos:inScheme rdf:resource="http://purl.org/roh/scientific-domain#ESscientificDomains3rdCodeList"/>
@@ -2795,7 +2789,7 @@
 
 
     <NamedIndividual rdf:about="http://purl.org/roh/scientific-domain#ES_SCIENTIFIC_DOMAIN_LEVEL_3_CODE_HAYSVE">
-        <rdf:type rdf:resource="http://purl.org/roh#ESScientificDomain"/>
+        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
         <roh:codeOf rdf:resource="http://purl.org/roh/scientific-domain#ES_SCIENTIFIC_DOMAIN_LEVEL_3_HAYSVE"/>
         <rdfs:label>HAYSVE</rdfs:label>
         <skos:inScheme rdf:resource="http://purl.org/roh/scientific-domain#ESscientificDomains3rdCodeList"/>
@@ -2808,7 +2802,7 @@
 
 
     <NamedIndividual rdf:about="http://purl.org/roh/scientific-domain#ES_SCIENTIFIC_DOMAIN_LEVEL_3_CODE_HAZQGB">
-        <rdf:type rdf:resource="http://purl.org/roh#ESScientificDomain"/>
+        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
         <roh:codeOf rdf:resource="http://purl.org/roh/scientific-domain#ES_SCIENTIFIC_DOMAIN_LEVEL_3_HAZQGB"/>
         <rdfs:label>HAZQGB</rdfs:label>
         <skos:inScheme rdf:resource="http://purl.org/roh/scientific-domain#ESscientificDomains3rdCodeList"/>
@@ -2821,7 +2815,7 @@
 
 
     <NamedIndividual rdf:about="http://purl.org/roh/scientific-domain#ES_SCIENTIFIC_DOMAIN_LEVEL_3_CODE_MCLIAJCV">
-        <rdf:type rdf:resource="http://purl.org/roh#ESScientificDomain"/>
+        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
         <roh:codeOf rdf:resource="http://purl.org/roh/scientific-domain#ES_SCIENTIFIC_DOMAIN_LEVEL_3_MCLIAJCV"/>
         <rdfs:label>MCLIAJCV</rdfs:label>
         <skos:inScheme rdf:resource="http://purl.org/roh/scientific-domain#ESscientificDomains3rdCodeList"/>
@@ -2834,7 +2828,7 @@
 
 
     <NamedIndividual rdf:about="http://purl.org/roh/scientific-domain#ES_SCIENTIFIC_DOMAIN_LEVEL_3_CODE_MCLIATZZ">
-        <rdf:type rdf:resource="http://purl.org/roh#ESScientificDomain"/>
+        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
         <roh:codeOf rdf:resource="http://purl.org/roh/scientific-domain#ES_SCIENTIFIC_DOMAIN_LEVEL_3_MCLIATZZ"/>
         <rdfs:label>MCLIATZZ</rdfs:label>
         <skos:inScheme rdf:resource="http://purl.org/roh/scientific-domain#ESscientificDomains3rdCodeList"/>
@@ -2847,7 +2841,7 @@
 
 
     <NamedIndividual rdf:about="http://purl.org/roh/scientific-domain#ES_SCIENTIFIC_DOMAIN_LEVEL_3_CODE_MCLIAVLC">
-        <rdf:type rdf:resource="http://purl.org/roh#ESScientificDomain"/>
+        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
         <roh:codeOf rdf:resource="http://purl.org/roh/scientific-domain#ES_SCIENTIFIC_DOMAIN_LEVEL_3_MCLIAVLC"/>
         <rdfs:label>MCLIAVLC</rdfs:label>
         <skos:inScheme rdf:resource="http://purl.org/roh/scientific-domain#ESscientificDomains3rdCodeList"/>
@@ -2860,7 +2854,7 @@
 
 
     <NamedIndividual rdf:about="http://purl.org/roh/scientific-domain#ES_SCIENTIFIC_DOMAIN_LEVEL_3_CODE_MCLIBGSE">
-        <rdf:type rdf:resource="http://purl.org/roh#ESScientificDomain"/>
+        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
         <roh:codeOf rdf:resource="http://purl.org/roh/scientific-domain#ES_SCIENTIFIC_DOMAIN_LEVEL_3_MCLIBGSE"/>
         <rdfs:label>MCLIBGSE</rdfs:label>
         <skos:inScheme rdf:resource="http://purl.org/roh/scientific-domain#ESscientificDomains3rdCodeList"/>
@@ -2873,7 +2867,7 @@
 
 
     <NamedIndividual rdf:about="http://purl.org/roh/scientific-domain#ES_SCIENTIFIC_DOMAIN_LEVEL_3_CODE_MCLICFDU">
-        <rdf:type rdf:resource="http://purl.org/roh#ESScientificDomain"/>
+        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
         <roh:codeOf rdf:resource="http://purl.org/roh/scientific-domain#ES_SCIENTIFIC_DOMAIN_LEVEL_3_MCLICFDU"/>
         <rdfs:label>MCLICFDU</rdfs:label>
         <skos:inScheme rdf:resource="http://purl.org/roh/scientific-domain#ESscientificDomains3rdCodeList"/>
@@ -2886,7 +2880,7 @@
 
 
     <NamedIndividual rdf:about="http://purl.org/roh/scientific-domain#ES_SCIENTIFIC_DOMAIN_LEVEL_3_CODE_MCLIHKZZ">
-        <rdf:type rdf:resource="http://purl.org/roh#ESScientificDomain"/>
+        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
         <roh:codeOf rdf:resource="http://purl.org/roh/scientific-domain#ES_SCIENTIFIC_DOMAIN_LEVEL_3_MCLIHKZZ"/>
         <rdfs:label>MCLIHKZZ</rdfs:label>
         <skos:inScheme rdf:resource="http://purl.org/roh/scientific-domain#ESscientificDomains3rdCodeList"/>
@@ -2899,7 +2893,7 @@
 
 
     <NamedIndividual rdf:about="http://purl.org/roh/scientific-domain#ES_SCIENTIFIC_DOMAIN_LEVEL_3_CODE_MCLIJMIG">
-        <rdf:type rdf:resource="http://purl.org/roh#ESScientificDomain"/>
+        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
         <roh:codeOf rdf:resource="http://purl.org/roh/scientific-domain#ES_SCIENTIFIC_DOMAIN_LEVEL_3_MCLIJMIG"/>
         <rdfs:label>MCLIJMIG</rdfs:label>
         <skos:inScheme rdf:resource="http://purl.org/roh/scientific-domain#ESscientificDomains3rdCodeList"/>
@@ -2912,7 +2906,7 @@
 
 
     <NamedIndividual rdf:about="http://purl.org/roh/scientific-domain#ES_SCIENTIFIC_DOMAIN_LEVEL_3_CODE_MCLINMLH">
-        <rdf:type rdf:resource="http://purl.org/roh#ESScientificDomain"/>
+        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
         <roh:codeOf rdf:resource="http://purl.org/roh/scientific-domain#ES_SCIENTIFIC_DOMAIN_LEVEL_3_MCLINMLH"/>
         <rdfs:label>MCLINMLH</rdfs:label>
         <skos:inScheme rdf:resource="http://purl.org/roh/scientific-domain#ESscientificDomains3rdCodeList"/>
@@ -2925,7 +2919,7 @@
 
 
     <NamedIndividual rdf:about="http://purl.org/roh/scientific-domain#ES_SCIENTIFIC_DOMAIN_LEVEL_3_CODE_MCLIOCBV">
-        <rdf:type rdf:resource="http://purl.org/roh#ESScientificDomain"/>
+        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
         <roh:codeOf rdf:resource="http://purl.org/roh/scientific-domain#ES_SCIENTIFIC_DOMAIN_LEVEL_3_MCLIOCBV"/>
         <rdfs:label>MCLIOCBV</rdfs:label>
         <skos:inScheme rdf:resource="http://purl.org/roh/scientific-domain#ESscientificDomains3rdCodeList"/>
@@ -2938,7 +2932,7 @@
 
 
     <NamedIndividual rdf:about="http://purl.org/roh/scientific-domain#ES_SCIENTIFIC_DOMAIN_LEVEL_3_CODE_MCLIQUEG">
-        <rdf:type rdf:resource="http://purl.org/roh#ESScientificDomain"/>
+        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
         <roh:codeOf rdf:resource="http://purl.org/roh/scientific-domain#ES_SCIENTIFIC_DOMAIN_LEVEL_3_MCLIQUEG"/>
         <rdfs:label>MCLIQUEG</rdfs:label>
         <skos:inScheme rdf:resource="http://purl.org/roh/scientific-domain#ESscientificDomains3rdCodeList"/>
@@ -2951,7 +2945,7 @@
 
 
     <NamedIndividual rdf:about="http://purl.org/roh/scientific-domain#ES_SCIENTIFIC_DOMAIN_LEVEL_3_CODE_MTMALGE">
-        <rdf:type rdf:resource="http://purl.org/roh#ESScientificDomain"/>
+        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
         <roh:codeOf rdf:resource="http://purl.org/roh/scientific-domain#ES_SCIENTIFIC_DOMAIN_LEVEL_3_MTMALGE"/>
         <rdfs:label>MTMALGE</rdfs:label>
         <skos:inScheme rdf:resource="http://purl.org/roh/scientific-domain#ESscientificDomains3rdCodeList"/>
@@ -2964,7 +2958,7 @@
 
 
     <NamedIndividual rdf:about="http://purl.org/roh/scientific-domain#ES_SCIENTIFIC_DOMAIN_LEVEL_3_CODE_MTMANAL">
-        <rdf:type rdf:resource="http://purl.org/roh#ESScientificDomain"/>
+        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
         <roh:codeOf rdf:resource="http://purl.org/roh/scientific-domain#ES_SCIENTIFIC_DOMAIN_LEVEL_3_MTMANAL"/>
         <rdfs:label>MTMANAL</rdfs:label>
         <skos:inScheme rdf:resource="http://purl.org/roh/scientific-domain#ESscientificDomains3rdCodeList"/>
@@ -2977,7 +2971,7 @@
 
 
     <NamedIndividual rdf:about="http://purl.org/roh/scientific-domain#ES_SCIENTIFIC_DOMAIN_LEVEL_3_CODE_MTMANAM">
-        <rdf:type rdf:resource="http://purl.org/roh#ESScientificDomain"/>
+        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
         <roh:codeOf rdf:resource="http://purl.org/roh/scientific-domain#ES_SCIENTIFIC_DOMAIN_LEVEL_3_MTMANAM"/>
         <rdfs:label>MTMANAM</rdfs:label>
         <skos:inScheme rdf:resource="http://purl.org/roh/scientific-domain#ESscientificDomains3rdCodeList"/>
@@ -2990,7 +2984,7 @@
 
 
     <NamedIndividual rdf:about="http://purl.org/roh/scientific-domain#ES_SCIENTIFIC_DOMAIN_LEVEL_3_CODE_MTMESTA">
-        <rdf:type rdf:resource="http://purl.org/roh#ESScientificDomain"/>
+        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
         <roh:codeOf rdf:resource="http://purl.org/roh/scientific-domain#ES_SCIENTIFIC_DOMAIN_LEVEL_3_MTMESTA"/>
         <rdfs:label>MTMESTA</rdfs:label>
         <skos:inScheme rdf:resource="http://purl.org/roh/scientific-domain#ESscientificDomains3rdCodeList"/>
@@ -3003,7 +2997,7 @@
 
 
     <NamedIndividual rdf:about="http://purl.org/roh/scientific-domain#ES_SCIENTIFIC_DOMAIN_LEVEL_3_CODE_MTMGEOM">
-        <rdf:type rdf:resource="http://purl.org/roh#ESScientificDomain"/>
+        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
         <roh:codeOf rdf:resource="http://purl.org/roh/scientific-domain#ES_SCIENTIFIC_DOMAIN_LEVEL_3_MTMGEOM"/>
         <rdfs:label>MTMGEOM</rdfs:label>
         <skos:inScheme rdf:resource="http://purl.org/roh/scientific-domain#ESscientificDomains3rdCodeList"/>
@@ -3016,7 +3010,7 @@
 
 
     <NamedIndividual rdf:about="http://purl.org/roh/scientific-domain#ES_SCIENTIFIC_DOMAIN_LEVEL_3_CODE_MTMINVO">
-        <rdf:type rdf:resource="http://purl.org/roh#ESScientificDomain"/>
+        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
         <roh:codeOf rdf:resource="http://purl.org/roh/scientific-domain#ES_SCIENTIFIC_DOMAIN_LEVEL_3_MTMINVO"/>
         <rdfs:label>MTMINVO</rdfs:label>
         <skos:inScheme rdf:resource="http://purl.org/roh/scientific-domain#ESscientificDomains3rdCodeList"/>
@@ -3029,7 +3023,7 @@
 
 
     <NamedIndividual rdf:about="http://purl.org/roh/scientific-domain#ES_SCIENTIFIC_DOMAIN_LEVEL_3_CODE_MTMMATE">
-        <rdf:type rdf:resource="http://purl.org/roh#ESScientificDomain"/>
+        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
         <roh:codeOf rdf:resource="http://purl.org/roh/scientific-domain#ES_SCIENTIFIC_DOMAIN_LEVEL_3_MTMMATE"/>
         <rdfs:label>MTMMATE</rdfs:label>
         <skos:inScheme rdf:resource="http://purl.org/roh/scientific-domain#ESscientificDomains3rdCodeList"/>
@@ -3042,7 +3036,7 @@
 
 
     <NamedIndividual rdf:about="http://purl.org/roh/scientific-domain#ES_SCIENTIFIC_DOMAIN_LEVEL_3_CODE_MTMTOPO">
-        <rdf:type rdf:resource="http://purl.org/roh#ESScientificDomain"/>
+        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
         <roh:codeOf rdf:resource="http://purl.org/roh/scientific-domain#ES_SCIENTIFIC_DOMAIN_LEVEL_3_MTMTOPO"/>
         <rdfs:label>MTMTOPO</rdfs:label>
         <skos:inScheme rdf:resource="http://purl.org/roh/scientific-domain#ESscientificDomains3rdCodeList"/>
@@ -3055,7 +3049,7 @@
 
 
     <NamedIndividual rdf:about="http://purl.org/roh/scientific-domain#ES_SCIENTIFIC_DOMAIN_LEVEL_3_CODE_PSAZSJ">
-        <rdf:type rdf:resource="http://purl.org/roh#ESScientificDomain"/>
+        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
         <roh:codeOf rdf:resource="http://purl.org/roh/scientific-domain#ES_SCIENTIFIC_DOMAIN_LEVEL_3_PSAZSJ"/>
         <rdfs:label>PSAZSJ</rdfs:label>
         <skos:inScheme rdf:resource="http://purl.org/roh/scientific-domain#ESscientificDomains3rdCodeList"/>
@@ -3068,7 +3062,7 @@
 
 
     <NamedIndividual rdf:about="http://purl.org/roh/scientific-domain#ES_SCIENTIFIC_DOMAIN_LEVEL_3_CODE_PSBODX">
-        <rdf:type rdf:resource="http://purl.org/roh#ESScientificDomain"/>
+        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
         <roh:codeOf rdf:resource="http://purl.org/roh/scientific-domain#ES_SCIENTIFIC_DOMAIN_LEVEL_3_PSBODX"/>
         <rdfs:label>PSBODX</rdfs:label>
         <skos:inScheme rdf:resource="http://purl.org/roh/scientific-domain#ESscientificDomains3rdCodeList"/>
@@ -3081,7 +3075,7 @@
 
 
     <NamedIndividual rdf:about="http://purl.org/roh/scientific-domain#ES_SCIENTIFIC_DOMAIN_LEVEL_3_CODE_PSDSJH">
-        <rdf:type rdf:resource="http://purl.org/roh#ESScientificDomain"/>
+        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
         <roh:codeOf rdf:resource="http://purl.org/roh/scientific-domain#ES_SCIENTIFIC_DOMAIN_LEVEL_3_PSDSJH"/>
         <rdfs:label>PSDSJH</rdfs:label>
         <skos:inScheme rdf:resource="http://purl.org/roh/scientific-domain#ESscientificDomains3rdCodeList"/>
@@ -3094,7 +3088,7 @@
 
 
     <NamedIndividual rdf:about="http://purl.org/roh/scientific-domain#ES_SCIENTIFIC_DOMAIN_LEVEL_3_CODE_PSFRSQ">
-        <rdf:type rdf:resource="http://purl.org/roh#ESScientificDomain"/>
+        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
         <roh:codeOf rdf:resource="http://purl.org/roh/scientific-domain#ES_SCIENTIFIC_DOMAIN_LEVEL_3_PSFRSQ"/>
         <rdfs:label>PSFRSQ</rdfs:label>
         <skos:inScheme rdf:resource="http://purl.org/roh/scientific-domain#ESscientificDomains3rdCodeList"/>
@@ -3107,7 +3101,7 @@
 
 
     <NamedIndividual rdf:about="http://purl.org/roh/scientific-domain#ES_SCIENTIFIC_DOMAIN_LEVEL_3_CODE_PSJTFX">
-        <rdf:type rdf:resource="http://purl.org/roh#ESScientificDomain"/>
+        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
         <roh:codeOf rdf:resource="http://purl.org/roh/scientific-domain#ES_SCIENTIFIC_DOMAIN_LEVEL_3_PSJTFX"/>
         <rdfs:label>PSJTFX</rdfs:label>
         <skos:inScheme rdf:resource="http://purl.org/roh/scientific-domain#ESscientificDomains3rdCodeList"/>
@@ -3120,7 +3114,7 @@
 
 
     <NamedIndividual rdf:about="http://purl.org/roh/scientific-domain#ES_SCIENTIFIC_DOMAIN_LEVEL_3_CODE_PSNRWD">
-        <rdf:type rdf:resource="http://purl.org/roh#ESScientificDomain"/>
+        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
         <roh:codeOf rdf:resource="http://purl.org/roh/scientific-domain#ES_SCIENTIFIC_DOMAIN_LEVEL_3_PSNRWD"/>
         <rdfs:label>PSNRWD</rdfs:label>
         <skos:inScheme rdf:resource="http://purl.org/roh/scientific-domain#ESscientificDomains3rdCodeList"/>
@@ -3133,7 +3127,7 @@
 
 
     <NamedIndividual rdf:about="http://purl.org/roh/scientific-domain#ES_SCIENTIFIC_DOMAIN_LEVEL_3_CODE_QMCAMBI">
-        <rdf:type rdf:resource="http://purl.org/roh#ESScientificDomain"/>
+        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
         <roh:codeOf rdf:resource="http://purl.org/roh/scientific-domain#ES_SCIENTIFIC_DOMAIN_LEVEL_3_QMCAMBI"/>
         <rdfs:label>QMCAMBI</rdfs:label>
         <skos:inScheme rdf:resource="http://purl.org/roh/scientific-domain#ESscientificDomains3rdCodeList"/>
@@ -3146,7 +3140,7 @@
 
 
     <NamedIndividual rdf:about="http://purl.org/roh/scientific-domain#ES_SCIENTIFIC_DOMAIN_LEVEL_3_CODE_QMCCATA">
-        <rdf:type rdf:resource="http://purl.org/roh#ESScientificDomain"/>
+        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
         <roh:codeOf rdf:resource="http://purl.org/roh/scientific-domain#ES_SCIENTIFIC_DOMAIN_LEVEL_3_QMCCATA"/>
         <rdfs:label>QMCCATA</rdfs:label>
         <skos:inScheme rdf:resource="http://purl.org/roh/scientific-domain#ESscientificDomains3rdCodeList"/>
@@ -3159,7 +3153,7 @@
 
 
     <NamedIndividual rdf:about="http://purl.org/roh/scientific-domain#ES_SCIENTIFIC_DOMAIN_LEVEL_3_CODE_QMCCATE">
-        <rdf:type rdf:resource="http://purl.org/roh#ESScientificDomain"/>
+        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
         <roh:codeOf rdf:resource="http://purl.org/roh/scientific-domain#ES_SCIENTIFIC_DOMAIN_LEVEL_3_QMCCATE"/>
         <rdfs:label>QMCCATE</rdfs:label>
         <skos:inScheme rdf:resource="http://purl.org/roh/scientific-domain#ESscientificDomains3rdCodeList"/>
@@ -3172,7 +3166,7 @@
 
 
     <NamedIndividual rdf:about="http://purl.org/roh/scientific-domain#ES_SCIENTIFIC_DOMAIN_LEVEL_3_CODE_QMCMATM">
-        <rdf:type rdf:resource="http://purl.org/roh#ESScientificDomain"/>
+        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
         <roh:codeOf rdf:resource="http://purl.org/roh/scientific-domain#ES_SCIENTIFIC_DOMAIN_LEVEL_3_QMCMATM"/>
         <rdfs:label>QMCMATM</rdfs:label>
         <skos:inScheme rdf:resource="http://purl.org/roh/scientific-domain#ESscientificDomains3rdCodeList"/>
@@ -3185,7 +3179,7 @@
 
 
     <NamedIndividual rdf:about="http://purl.org/roh/scientific-domain#ES_SCIENTIFIC_DOMAIN_LEVEL_3_CODE_QMCNANO">
-        <rdf:type rdf:resource="http://purl.org/roh#ESScientificDomain"/>
+        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
         <roh:codeOf rdf:resource="http://purl.org/roh/scientific-domain#ES_SCIENTIFIC_DOMAIN_LEVEL_3_QMCNANO"/>
         <rdfs:label>QMCNANO</rdfs:label>
         <skos:inScheme rdf:resource="http://purl.org/roh/scientific-domain#ESscientificDomains3rdCodeList"/>
@@ -3198,7 +3192,7 @@
 
 
     <NamedIndividual rdf:about="http://purl.org/roh/scientific-domain#ES_SCIENTIFIC_DOMAIN_LEVEL_3_CODE_QMCORGA">
-        <rdf:type rdf:resource="http://purl.org/roh#ESScientificDomain"/>
+        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
         <roh:codeOf rdf:resource="http://purl.org/roh/scientific-domain#ES_SCIENTIFIC_DOMAIN_LEVEL_3_QMCORGA"/>
         <rdfs:label>QMCORGA</rdfs:label>
         <skos:inScheme rdf:resource="http://purl.org/roh/scientific-domain#ESscientificDomains3rdCodeList"/>
@@ -3211,7 +3205,7 @@
 
 
     <NamedIndividual rdf:about="http://purl.org/roh/scientific-domain#ES_SCIENTIFIC_DOMAIN_LEVEL_3_CODE_QMCQBIT">
-        <rdf:type rdf:resource="http://purl.org/roh#ESScientificDomain"/>
+        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
         <roh:codeOf rdf:resource="http://purl.org/roh/scientific-domain#ES_SCIENTIFIC_DOMAIN_LEVEL_3_QMCQBIT"/>
         <rdfs:label>QMCQBIT</rdfs:label>
         <skos:inScheme rdf:resource="http://purl.org/roh/scientific-domain#ESscientificDomains3rdCodeList"/>
@@ -3224,7 +3218,7 @@
 
 
     <NamedIndividual rdf:about="http://purl.org/roh/scientific-domain#ES_SCIENTIFIC_DOMAIN_LEVEL_3_CODE_QMCQUAN">
-        <rdf:type rdf:resource="http://purl.org/roh#ESScientificDomain"/>
+        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
         <roh:codeOf rdf:resource="http://purl.org/roh/scientific-domain#ES_SCIENTIFIC_DOMAIN_LEVEL_3_QMCQUAN"/>
         <rdfs:label>QMCQUAN</rdfs:label>
         <skos:inScheme rdf:resource="http://purl.org/roh/scientific-domain#ESscientificDomains3rdCodeList"/>
@@ -3237,7 +3231,7 @@
 
 
     <NamedIndividual rdf:about="http://purl.org/roh/scientific-domain#ES_SCIENTIFIC_DOMAIN_LEVEL_3_CODE_QMCQUBI">
-        <rdf:type rdf:resource="http://purl.org/roh#ESScientificDomain"/>
+        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
         <roh:codeOf rdf:resource="http://purl.org/roh/scientific-domain#ES_SCIENTIFIC_DOMAIN_LEVEL_3_QMCQUBI"/>
         <rdfs:label>QMCQUBI</rdfs:label>
         <skos:inScheme rdf:resource="http://purl.org/roh/scientific-domain#ESscientificDomains3rdCodeList"/>
@@ -3250,7 +3244,7 @@
 
 
     <NamedIndividual rdf:about="http://purl.org/roh/scientific-domain#ES_SCIENTIFIC_DOMAIN_LEVEL_3_CODE_QMCQUFI">
-        <rdf:type rdf:resource="http://purl.org/roh#ESScientificDomain"/>
+        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
         <roh:codeOf rdf:resource="http://purl.org/roh/scientific-domain#ES_SCIENTIFIC_DOMAIN_LEVEL_3_QMCQUFI"/>
         <rdfs:label>QMCQUFI</rdfs:label>
         <skos:inScheme rdf:resource="http://purl.org/roh/scientific-domain#ESscientificDomains3rdCodeList"/>
@@ -3263,7 +3257,7 @@
 
 
     <NamedIndividual rdf:about="http://purl.org/roh/scientific-domain#ES_SCIENTIFIC_DOMAIN_LEVEL_3_CODE_QMCQUIN">
-        <rdf:type rdf:resource="http://purl.org/roh#ESScientificDomain"/>
+        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
         <roh:codeOf rdf:resource="http://purl.org/roh/scientific-domain#ES_SCIENTIFIC_DOMAIN_LEVEL_3_QMCQUIN"/>
         <rdfs:label>QMCQUIN</rdfs:label>
         <skos:inScheme rdf:resource="http://purl.org/roh/scientific-domain#ESscientificDomains3rdCodeList"/>
@@ -3276,7 +3270,7 @@
 
 
     <NamedIndividual rdf:about="http://purl.org/roh/scientific-domain#ES_SCIENTIFIC_DOMAIN_LEVEL_3_CODE_QMCQUIO">
-        <rdf:type rdf:resource="http://purl.org/roh#ESScientificDomain"/>
+        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
         <roh:codeOf rdf:resource="http://purl.org/roh/scientific-domain#ES_SCIENTIFIC_DOMAIN_LEVEL_3_QMCQUIO"/>
         <rdfs:label>QMCQUIO</rdfs:label>
         <skos:inScheme rdf:resource="http://purl.org/roh/scientific-domain#ESscientificDomains3rdCodeList"/>
@@ -3289,7 +3283,7 @@
 
 
     <NamedIndividual rdf:about="http://purl.org/roh/scientific-domain#ES_SCIENTIFIC_DOMAIN_LEVEL_3_CODE_QMCQUSU">
-        <rdf:type rdf:resource="http://purl.org/roh#ESScientificDomain"/>
+        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
         <roh:codeOf rdf:resource="http://purl.org/roh/scientific-domain#ES_SCIENTIFIC_DOMAIN_LEVEL_3_QMCQUSU"/>
         <rdfs:label>QMCQUSU</rdfs:label>
         <skos:inScheme rdf:resource="http://purl.org/roh/scientific-domain#ESscientificDomains3rdCodeList"/>
@@ -3302,7 +3296,7 @@
 
 
     <NamedIndividual rdf:about="http://purl.org/roh/scientific-domain#ES_SCIENTIFIC_DOMAIN_LEVEL_3_CTASTR">
-        <rdf:type rdf:resource="http://purl.org/roh#ESScientificDomain"/>
+        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
         <roh:hasCode rdf:resource="http://purl.org/roh/scientific-domain#ES_SCIENTIFIC_DOMAIN_LEVEL_3_CODE_CTASTR"/>
         <rdfs:label>Astronomía y Astrofísica</rdfs:label>
         <skos:broader rdf:resource="http://purl.org/roh/scientific-domain#ES_SCIENTIFIC_DOMAIN_LEVEL_2_FI"/>
@@ -3324,7 +3318,7 @@
 
 
     <NamedIndividual rdf:about="http://purl.org/roh/scientific-domain#ES_SCIENTIFIC_DOMAIN_LEVEL_3_CTCLIM">
-        <rdf:type rdf:resource="http://purl.org/roh#ESScientificDomain"/>
+        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
         <roh:hasCode rdf:resource="http://purl.org/roh/scientific-domain#ES_SCIENTIFIC_DOMAIN_LEVEL_3_CODE_CTCLIM"/>
         <rdfs:label>Climatología y atmósfera</rdfs:label>
         <skos:broader rdf:resource="http://purl.org/roh/scientific-domain#ES_SCIENTIFIC_DOMAIN_LEVEL_2_CT"/>
@@ -3346,7 +3340,7 @@
 
 
     <NamedIndividual rdf:about="http://purl.org/roh/scientific-domain#ES_SCIENTIFIC_DOMAIN_LEVEL_3_CTCON">
-        <rdf:type rdf:resource="http://purl.org/roh#ESScientificDomain"/>
+        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
         <roh:hasCode rdf:resource="http://purl.org/roh/scientific-domain#ES_SCIENTIFIC_DOMAIN_LEVEL_3_CODE_CTCON"/>
         <rdfs:label>Contaminación</rdfs:label>
         <skos:broader rdf:resource="http://purl.org/roh/scientific-domain#ES_SCIENTIFIC_DOMAIN_LEVEL_2_CT"/>
@@ -3368,7 +3362,7 @@
 
 
     <NamedIndividual rdf:about="http://purl.org/roh/scientific-domain#ES_SCIENTIFIC_DOMAIN_LEVEL_3_CTESTR">
-        <rdf:type rdf:resource="http://purl.org/roh#ESScientificDomain"/>
+        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
         <roh:hasCode rdf:resource="http://purl.org/roh/scientific-domain#ES_SCIENTIFIC_DOMAIN_LEVEL_3_CODE_CTESTR"/>
         <rdfs:label>Estratigrafía</rdfs:label>
         <skos:broader rdf:resource="http://purl.org/roh/scientific-domain#ES_SCIENTIFIC_DOMAIN_LEVEL_2_CT"/>
@@ -3390,7 +3384,7 @@
 
 
     <NamedIndividual rdf:about="http://purl.org/roh/scientific-domain#ES_SCIENTIFIC_DOMAIN_LEVEL_3_CTFISA">
-        <rdf:type rdf:resource="http://purl.org/roh#ESScientificDomain"/>
+        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
         <roh:hasCode rdf:resource="http://purl.org/roh/scientific-domain#ES_SCIENTIFIC_DOMAIN_LEVEL_3_CODE_CTFISA"/>
         <rdfs:label>Física atómica, molecular y óptica</rdfs:label>
         <skos:broader rdf:resource="http://purl.org/roh/scientific-domain#ES_SCIENTIFIC_DOMAIN_LEVEL_2_FI"/>
@@ -3412,7 +3406,7 @@
 
 
     <NamedIndividual rdf:about="http://purl.org/roh/scientific-domain#ES_SCIENTIFIC_DOMAIN_LEVEL_3_CTFISE">
-        <rdf:type rdf:resource="http://purl.org/roh#ESScientificDomain"/>
+        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
         <roh:hasCode rdf:resource="http://purl.org/roh/scientific-domain#ES_SCIENTIFIC_DOMAIN_LEVEL_3_CODE_CTFISE"/>
         <rdfs:label>Física, estadística, biofísica y física no lineal</rdfs:label>
         <skos:broader rdf:resource="http://purl.org/roh/scientific-domain#ES_SCIENTIFIC_DOMAIN_LEVEL_2_FI"/>
@@ -3434,7 +3428,7 @@
 
 
     <NamedIndividual rdf:about="http://purl.org/roh/scientific-domain#ES_SCIENTIFIC_DOMAIN_LEVEL_3_CTFISP">
-        <rdf:type rdf:resource="http://purl.org/roh#ESScientificDomain"/>
+        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
         <roh:hasCode rdf:resource="http://purl.org/roh/scientific-domain#ES_SCIENTIFIC_DOMAIN_LEVEL_3_CODE_CTFISP"/>
         <rdfs:label>Física de partículas</rdfs:label>
         <skos:broader rdf:resource="http://purl.org/roh/scientific-domain#ES_SCIENTIFIC_DOMAIN_LEVEL_2_FI"/>
@@ -3456,7 +3450,7 @@
 
 
     <NamedIndividual rdf:about="http://purl.org/roh/scientific-domain#ES_SCIENTIFIC_DOMAIN_LEVEL_3_CTFIST">
-        <rdf:type rdf:resource="http://purl.org/roh#ESScientificDomain"/>
+        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
         <roh:hasCode rdf:resource="http://purl.org/roh/scientific-domain#ES_SCIENTIFIC_DOMAIN_LEVEL_3_CODE_CTFIST"/>
         <rdfs:label>Física teórica</rdfs:label>
         <skos:broader rdf:resource="http://purl.org/roh/scientific-domain#ES_SCIENTIFIC_DOMAIN_LEVEL_2_FI"/>
@@ -3479,7 +3473,7 @@
 
 
     <NamedIndividual rdf:about="http://purl.org/roh/scientific-domain#ES_SCIENTIFIC_DOMAIN_LEVEL_3_CTGEOD">
-        <rdf:type rdf:resource="http://purl.org/roh#ESScientificDomain"/>
+        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
         <roh:hasCode rdf:resource="http://purl.org/roh/scientific-domain#ES_SCIENTIFIC_DOMAIN_LEVEL_3_CODE_CTGEOD"/>
         <rdfs:label>Geodinámica interna</rdfs:label>
         <skos:broader rdf:resource="http://purl.org/roh/scientific-domain#ES_SCIENTIFIC_DOMAIN_LEVEL_2_CT"/>
@@ -3502,7 +3496,7 @@
 
 
     <NamedIndividual rdf:about="http://purl.org/roh/scientific-domain#ES_SCIENTIFIC_DOMAIN_LEVEL_3_CTGEOF">
-        <rdf:type rdf:resource="http://purl.org/roh#ESScientificDomain"/>
+        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
         <roh:hasCode rdf:resource="http://purl.org/roh/scientific-domain#ES_SCIENTIFIC_DOMAIN_LEVEL_3_CODE_CTGEOF"/>
         <rdfs:label>Geofísica</rdfs:label>
         <rdfs:label>Geomorfología</rdfs:label>
@@ -3533,7 +3527,7 @@
 
 
     <NamedIndividual rdf:about="http://purl.org/roh/scientific-domain#ES_SCIENTIFIC_DOMAIN_LEVEL_3_CTGEOQ">
-        <rdf:type rdf:resource="http://purl.org/roh#ESScientificDomain"/>
+        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
         <roh:hasCode rdf:resource="http://purl.org/roh/scientific-domain#ES_SCIENTIFIC_DOMAIN_LEVEL_3_CODE_CTGEOQ"/>
         <rdfs:label>Geoquímica ambiental</rdfs:label>
         <skos:broader rdf:resource="http://purl.org/roh/scientific-domain#ES_SCIENTIFIC_DOMAIN_LEVEL_2_CT"/>
@@ -3555,7 +3549,7 @@
 
 
     <NamedIndividual rdf:about="http://purl.org/roh/scientific-domain#ES_SCIENTIFIC_DOMAIN_LEVEL_3_CTHIDRO">
-        <rdf:type rdf:resource="http://purl.org/roh#ESScientificDomain"/>
+        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
         <roh:hasCode rdf:resource="http://purl.org/roh/scientific-domain#ES_SCIENTIFIC_DOMAIN_LEVEL_3_CODE_CTHIDRO"/>
         <rdfs:label>Hidrología</rdfs:label>
         <skos:broader rdf:resource="http://purl.org/roh/scientific-domain#ES_SCIENTIFIC_DOMAIN_LEVEL_2_CT"/>
@@ -3577,7 +3571,7 @@
 
 
     <NamedIndividual rdf:about="http://purl.org/roh/scientific-domain#ES_SCIENTIFIC_DOMAIN_LEVEL_3_CTMATE">
-        <rdf:type rdf:resource="http://purl.org/roh#ESScientificDomain"/>
+        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
         <roh:hasCode rdf:resource="http://purl.org/roh/scientific-domain#ES_SCIENTIFIC_DOMAIN_LEVEL_3_CODE_CTMATE"/>
         <rdfs:label>Materia condensada</rdfs:label>
         <skos:broader rdf:resource="http://purl.org/roh/scientific-domain#ES_SCIENTIFIC_DOMAIN_LEVEL_2_FI"/>
@@ -3600,7 +3594,7 @@
 
 
     <NamedIndividual rdf:about="http://purl.org/roh/scientific-domain#ES_SCIENTIFIC_DOMAIN_LEVEL_3_CTMETE">
-        <rdf:type rdf:resource="http://purl.org/roh#ESScientificDomain"/>
+        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
         <roh:hasCode rdf:resource="http://purl.org/roh/scientific-domain#ES_SCIENTIFIC_DOMAIN_LEVEL_3_CODE_CTMETE"/>
         <rdfs:label>Meteorología</rdfs:label>
         <skos:broader rdf:resource="http://purl.org/roh/scientific-domain#ES_SCIENTIFIC_DOMAIN_LEVEL_2_CT"/>
@@ -3624,7 +3618,7 @@
 
 
     <NamedIndividual rdf:about="http://purl.org/roh/scientific-domain#ES_SCIENTIFIC_DOMAIN_LEVEL_3_CTMIN">
-        <rdf:type rdf:resource="http://purl.org/roh#ESScientificDomain"/>
+        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
         <roh:hasCode rdf:resource="http://purl.org/roh/scientific-domain#ES_SCIENTIFIC_DOMAIN_LEVEL_3_CODE_CTMIN"/>
         <rdfs:label>Mineralogía</rdfs:label>
         <skos:broader rdf:resource="http://purl.org/roh/scientific-domain#ES_SCIENTIFIC_DOMAIN_LEVEL_2_CT"/>
@@ -3648,7 +3642,7 @@
 
 
     <NamedIndividual rdf:about="http://purl.org/roh/scientific-domain#ES_SCIENTIFIC_DOMAIN_LEVEL_3_CTPALE">
-        <rdf:type rdf:resource="http://purl.org/roh#ESScientificDomain"/>
+        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
         <roh:hasCode rdf:resource="http://purl.org/roh/scientific-domain#ES_SCIENTIFIC_DOMAIN_LEVEL_3_CODE_CTPALE"/>
         <rdfs:label>Paleobiología</rdfs:label>
         <skos:broader rdf:resource="http://purl.org/roh/scientific-domain#ES_SCIENTIFIC_DOMAIN_LEVEL_2_CT"/>
@@ -3671,7 +3665,7 @@
 
 
     <NamedIndividual rdf:about="http://purl.org/roh/scientific-domain#ES_SCIENTIFIC_DOMAIN_LEVEL_3_CTPETR">
-        <rdf:type rdf:resource="http://purl.org/roh#ESScientificDomain"/>
+        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
         <roh:hasCode rdf:resource="http://purl.org/roh/scientific-domain#ES_SCIENTIFIC_DOMAIN_LEVEL_3_CODE_CTPETR"/>
         <rdfs:label>Petrología</rdfs:label>
         <skos:broader rdf:resource="http://purl.org/roh/scientific-domain#ES_SCIENTIFIC_DOMAIN_LEVEL_2_CT"/>
@@ -3695,7 +3689,7 @@
 
 
     <NamedIndividual rdf:about="http://purl.org/roh/scientific-domain#ES_SCIENTIFIC_DOMAIN_LEVEL_3_CTSEDI">
-        <rdf:type rdf:resource="http://purl.org/roh#ESScientificDomain"/>
+        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
         <roh:hasCode rdf:resource="http://purl.org/roh/scientific-domain#ES_SCIENTIFIC_DOMAIN_LEVEL_3_CODE_CTSEDI"/>
         <rdfs:label>Sedimentología</rdfs:label>
         <skos:broader rdf:resource="http://purl.org/roh/scientific-domain#ES_SCIENTIFIC_DOMAIN_LEVEL_2_CT"/>
@@ -3717,7 +3711,7 @@
 
 
     <NamedIndividual rdf:about="http://purl.org/roh/scientific-domain#ES_SCIENTIFIC_DOMAIN_LEVEL_3_CTTAFO">
-        <rdf:type rdf:resource="http://purl.org/roh#ESScientificDomain"/>
+        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
         <roh:hasCode rdf:resource="http://purl.org/roh/scientific-domain#ES_SCIENTIFIC_DOMAIN_LEVEL_3_CODE_CTTAFO"/>
         <rdfs:label>Tafonomía</rdfs:label>
         <skos:broader rdf:resource="http://purl.org/roh/scientific-domain#ES_SCIENTIFIC_DOMAIN_LEVEL_2_CT"/>
@@ -3739,7 +3733,7 @@
 
 
     <NamedIndividual rdf:about="http://purl.org/roh/scientific-domain#ES_SCIENTIFIC_DOMAIN_LEVEL_3_FFIQIYR">
-        <rdf:type rdf:resource="http://purl.org/roh#ESScientificDomain"/>
+        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
         <roh:hasCode rdf:resource="http://purl.org/roh/scientific-domain#ES_SCIENTIFIC_DOMAIN_LEVEL_3_CODE_FFIQIYR"/>
         <rdfs:label>Literatura comparada</rdfs:label>
         <skos:broader rdf:resource="http://purl.org/roh/scientific-domain#ES_SCIENTIFIC_DOMAIN_LEVEL_2_FFI"/>
@@ -3761,7 +3755,7 @@
 
 
     <NamedIndividual rdf:about="http://purl.org/roh/scientific-domain#ES_SCIENTIFIC_DOMAIN_LEVEL_3_FFIRKXR">
-        <rdf:type rdf:resource="http://purl.org/roh#ESScientificDomain"/>
+        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
         <roh:hasCode rdf:resource="http://purl.org/roh/scientific-domain#ES_SCIENTIFIC_DOMAIN_LEVEL_3_CODE_FFIRKXR"/>
         <rdfs:label>Literatura</rdfs:label>
         <skos:broader rdf:resource="http://purl.org/roh/scientific-domain#ES_SCIENTIFIC_DOMAIN_LEVEL_2_FFI"/>
@@ -3784,7 +3778,7 @@
 
 
     <NamedIndividual rdf:about="http://purl.org/roh/scientific-domain#ES_SCIENTIFIC_DOMAIN_LEVEL_3_FFIURLV">
-        <rdf:type rdf:resource="http://purl.org/roh#ESScientificDomain"/>
+        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
         <roh:hasCode rdf:resource="http://purl.org/roh/scientific-domain#ES_SCIENTIFIC_DOMAIN_LEVEL_3_CODE_FFIURLV"/>
         <rdfs:label>Lógica y filosofía de la ciencia</rdfs:label>
         <skos:broader rdf:resource="http://purl.org/roh/scientific-domain#ES_SCIENTIFIC_DOMAIN_LEVEL_2_FFI"/>
@@ -3806,7 +3800,7 @@
 
 
     <NamedIndividual rdf:about="http://purl.org/roh/scientific-domain#ES_SCIENTIFIC_DOMAIN_LEVEL_3_FFIVCZF">
-        <rdf:type rdf:resource="http://purl.org/roh#ESScientificDomain"/>
+        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
         <roh:hasCode rdf:resource="http://purl.org/roh/scientific-domain#ES_SCIENTIFIC_DOMAIN_LEVEL_3_CODE_FFIVCZF"/>
         <rdfs:label>Estética</rdfs:label>
         <skos:broader rdf:resource="http://purl.org/roh/scientific-domain#ES_SCIENTIFIC_DOMAIN_LEVEL_2_FFI"/>
@@ -3828,7 +3822,7 @@
 
 
     <NamedIndividual rdf:about="http://purl.org/roh/scientific-domain#ES_SCIENTIFIC_DOMAIN_LEVEL_3_FFIVNPK">
-        <rdf:type rdf:resource="http://purl.org/roh#ESScientificDomain"/>
+        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
         <roh:hasCode rdf:resource="http://purl.org/roh/scientific-domain#ES_SCIENTIFIC_DOMAIN_LEVEL_3_CODE_FFIVNPK"/>
         <rdfs:label>Ética y filosofía política</rdfs:label>
         <skos:broader rdf:resource="http://purl.org/roh/scientific-domain#ES_SCIENTIFIC_DOMAIN_LEVEL_2_FFI"/>
@@ -3850,7 +3844,7 @@
 
 
     <NamedIndividual rdf:about="http://purl.org/roh/scientific-domain#ES_SCIENTIFIC_DOMAIN_LEVEL_3_FFIVVJH">
-        <rdf:type rdf:resource="http://purl.org/roh#ESScientificDomain"/>
+        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
         <roh:hasCode rdf:resource="http://purl.org/roh/scientific-domain#ES_SCIENTIFIC_DOMAIN_LEVEL_3_CODE_FFIVVJH"/>
         <rdfs:label>Metafísica y teoría del conocimiento</rdfs:label>
         <skos:broader rdf:resource="http://purl.org/roh/scientific-domain#ES_SCIENTIFIC_DOMAIN_LEVEL_2_FFI"/>
@@ -3872,7 +3866,7 @@
 
 
     <NamedIndividual rdf:about="http://purl.org/roh/scientific-domain#ES_SCIENTIFIC_DOMAIN_LEVEL_3_FFIYJTK">
-        <rdf:type rdf:resource="http://purl.org/roh#ESScientificDomain"/>
+        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
         <roh:hasCode rdf:resource="http://purl.org/roh/scientific-domain#ES_SCIENTIFIC_DOMAIN_LEVEL_3_CODE_FFIYJTK"/>
         <rdfs:label>Estudios culturales y teorías culturales</rdfs:label>
         <skos:broader rdf:resource="http://purl.org/roh/scientific-domain#ES_SCIENTIFIC_DOMAIN_LEVEL_2_FFI"/>
@@ -3894,7 +3888,7 @@
 
 
     <NamedIndividual rdf:about="http://purl.org/roh/scientific-domain#ES_SCIENTIFIC_DOMAIN_LEVEL_3_FFIYMLQ">
-        <rdf:type rdf:resource="http://purl.org/roh#ESScientificDomain"/>
+        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
         <roh:hasCode rdf:resource="http://purl.org/roh/scientific-domain#ES_SCIENTIFIC_DOMAIN_LEVEL_3_CODE_FFIYMLQ"/>
         <rdfs:label>Teoría de la literatura</rdfs:label>
         <skos:broader rdf:resource="http://purl.org/roh/scientific-domain#ES_SCIENTIFIC_DOMAIN_LEVEL_2_FFI"/>
@@ -3916,7 +3910,7 @@
 
 
     <NamedIndividual rdf:about="http://purl.org/roh/scientific-domain#ES_SCIENTIFIC_DOMAIN_LEVEL_3_HALMCG">
-        <rdf:type rdf:resource="http://purl.org/roh#ESScientificDomain"/>
+        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
         <roh:hasCode rdf:resource="http://purl.org/roh/scientific-domain#ES_SCIENTIFIC_DOMAIN_LEVEL_3_CODE_HALMCG"/>
         <rdfs:label>Historia antigua</rdfs:label>
         <skos:broader rdf:resource="http://purl.org/roh/scientific-domain#ES_SCIENTIFIC_DOMAIN_LEVEL_2_HA"/>
@@ -3939,7 +3933,7 @@
 
 
     <NamedIndividual rdf:about="http://purl.org/roh/scientific-domain#ES_SCIENTIFIC_DOMAIN_LEVEL_3_HAMOXL">
-        <rdf:type rdf:resource="http://purl.org/roh#ESScientificDomain"/>
+        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
         <roh:hasCode rdf:resource="http://purl.org/roh/scientific-domain#ES_SCIENTIFIC_DOMAIN_LEVEL_3_CODE_HAMOXL"/>
         <rdfs:label>Historia medieval</rdfs:label>
         <skos:broader rdf:resource="http://purl.org/roh/scientific-domain#ES_SCIENTIFIC_DOMAIN_LEVEL_2_HA"/>
@@ -3961,7 +3955,7 @@
 
 
     <NamedIndividual rdf:about="http://purl.org/roh/scientific-domain#ES_SCIENTIFIC_DOMAIN_LEVEL_3_HAQGZR">
-        <rdf:type rdf:resource="http://purl.org/roh#ESScientificDomain"/>
+        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
         <roh:hasCode rdf:resource="http://purl.org/roh/scientific-domain#ES_SCIENTIFIC_DOMAIN_LEVEL_3_CODE_HAQGZR"/>
         <rdfs:label>Prehistoria</rdfs:label>
         <skos:broader rdf:resource="http://purl.org/roh/scientific-domain#ES_SCIENTIFIC_DOMAIN_LEVEL_2_HA"/>
@@ -3984,7 +3978,7 @@
 
 
     <NamedIndividual rdf:about="http://purl.org/roh/scientific-domain#ES_SCIENTIFIC_DOMAIN_LEVEL_3_HAQJKH">
-        <rdf:type rdf:resource="http://purl.org/roh#ESScientificDomain"/>
+        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
         <roh:hasCode rdf:resource="http://purl.org/roh/scientific-domain#ES_SCIENTIFIC_DOMAIN_LEVEL_3_CODE_HAQJKH"/>
         <rdfs:label>Historia contemporánea</rdfs:label>
         <skos:broader rdf:resource="http://purl.org/roh/scientific-domain#ES_SCIENTIFIC_DOMAIN_LEVEL_2_HA"/>
@@ -4006,7 +4000,7 @@
 
 
     <NamedIndividual rdf:about="http://purl.org/roh/scientific-domain#ES_SCIENTIFIC_DOMAIN_LEVEL_3_HAYOHM">
-        <rdf:type rdf:resource="http://purl.org/roh#ESScientificDomain"/>
+        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
         <roh:hasCode rdf:resource="http://purl.org/roh/scientific-domain#ES_SCIENTIFIC_DOMAIN_LEVEL_3_CODE_HAYOHM"/>
         <rdfs:label>Historia moderna</rdfs:label>
         <skos:broader rdf:resource="http://purl.org/roh/scientific-domain#ES_SCIENTIFIC_DOMAIN_LEVEL_2_HA"/>
@@ -4028,7 +4022,7 @@
 
 
     <NamedIndividual rdf:about="http://purl.org/roh/scientific-domain#ES_SCIENTIFIC_DOMAIN_LEVEL_3_HAYSVE">
-        <rdf:type rdf:resource="http://purl.org/roh#ESScientificDomain"/>
+        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
         <roh:hasCode rdf:resource="http://purl.org/roh/scientific-domain#ES_SCIENTIFIC_DOMAIN_LEVEL_3_CODE_HAYSVE"/>
         <rdfs:label>Arqueología</rdfs:label>
         <skos:broader rdf:resource="http://purl.org/roh/scientific-domain#ES_SCIENTIFIC_DOMAIN_LEVEL_2_HA"/>
@@ -4050,7 +4044,7 @@
 
 
     <NamedIndividual rdf:about="http://purl.org/roh/scientific-domain#ES_SCIENTIFIC_DOMAIN_LEVEL_3_HAZQGB">
-        <rdf:type rdf:resource="http://purl.org/roh#ESScientificDomain"/>
+        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
         <roh:hasCode rdf:resource="http://purl.org/roh/scientific-domain#ES_SCIENTIFIC_DOMAIN_LEVEL_3_CODE_HAZQGB"/>
         <rdfs:label>Arte</rdfs:label>
         <skos:broader rdf:resource="http://purl.org/roh/scientific-domain#ES_SCIENTIFIC_DOMAIN_LEVEL_2_HA"/>
@@ -4072,7 +4066,7 @@
 
 
     <NamedIndividual rdf:about="http://purl.org/roh/scientific-domain#ES_SCIENTIFIC_DOMAIN_LEVEL_3_MCLIAJCV">
-        <rdf:type rdf:resource="http://purl.org/roh#ESScientificDomain"/>
+        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
         <roh:hasCode rdf:resource="http://purl.org/roh/scientific-domain#ES_SCIENTIFIC_DOMAIN_LEVEL_3_CODE_MCLIAJCV"/>
         <rdfs:label>Enfermedades metabólicas</rdfs:label>
         <skos:broader rdf:resource="http://purl.org/roh/scientific-domain#ES_SCIENTIFIC_DOMAIN_LEVEL_2_MCLI"/>
@@ -4094,7 +4088,7 @@
 
 
     <NamedIndividual rdf:about="http://purl.org/roh/scientific-domain#ES_SCIENTIFIC_DOMAIN_LEVEL_3_MCLIATZZ">
-        <rdf:type rdf:resource="http://purl.org/roh#ESScientificDomain"/>
+        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
         <roh:hasCode rdf:resource="http://purl.org/roh/scientific-domain#ES_SCIENTIFIC_DOMAIN_LEVEL_3_CODE_MCLIATZZ"/>
         <rdfs:label>Psiquiatría</rdfs:label>
         <skos:broader rdf:resource="http://purl.org/roh/scientific-domain#ES_SCIENTIFIC_DOMAIN_LEVEL_2_MCLI"/>
@@ -4116,7 +4110,7 @@
 
 
     <NamedIndividual rdf:about="http://purl.org/roh/scientific-domain#ES_SCIENTIFIC_DOMAIN_LEVEL_3_MCLIAVLC">
-        <rdf:type rdf:resource="http://purl.org/roh#ESScientificDomain"/>
+        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
         <roh:hasCode rdf:resource="http://purl.org/roh/scientific-domain#ES_SCIENTIFIC_DOMAIN_LEVEL_3_CODE_MCLIAVLC"/>
         <rdfs:label>Neurología</rdfs:label>
         <skos:broader rdf:resource="http://purl.org/roh/scientific-domain#ES_SCIENTIFIC_DOMAIN_LEVEL_2_MCLI"/>
@@ -4138,7 +4132,7 @@
 
 
     <NamedIndividual rdf:about="http://purl.org/roh/scientific-domain#ES_SCIENTIFIC_DOMAIN_LEVEL_3_MCLIBGSE">
-        <rdf:type rdf:resource="http://purl.org/roh#ESScientificDomain"/>
+        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
         <roh:hasCode rdf:resource="http://purl.org/roh/scientific-domain#ES_SCIENTIFIC_DOMAIN_LEVEL_3_CODE_MCLIBGSE"/>
         <rdfs:label>Epidemiología</rdfs:label>
         <skos:broader rdf:resource="http://purl.org/roh/scientific-domain#ES_SCIENTIFIC_DOMAIN_LEVEL_2_MCLI"/>
@@ -4160,7 +4154,7 @@
 
 
     <NamedIndividual rdf:about="http://purl.org/roh/scientific-domain#ES_SCIENTIFIC_DOMAIN_LEVEL_3_MCLICFDU">
-        <rdf:type rdf:resource="http://purl.org/roh#ESScientificDomain"/>
+        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
         <roh:hasCode rdf:resource="http://purl.org/roh/scientific-domain#ES_SCIENTIFIC_DOMAIN_LEVEL_3_CODE_MCLICFDU"/>
         <rdfs:label>Cáncer</rdfs:label>
         <skos:broader rdf:resource="http://purl.org/roh/scientific-domain#ES_SCIENTIFIC_DOMAIN_LEVEL_2_MCLI"/>
@@ -4182,7 +4176,7 @@
 
 
     <NamedIndividual rdf:about="http://purl.org/roh/scientific-domain#ES_SCIENTIFIC_DOMAIN_LEVEL_3_MCLIHKZZ">
-        <rdf:type rdf:resource="http://purl.org/roh#ESScientificDomain"/>
+        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
         <roh:hasCode rdf:resource="http://purl.org/roh/scientific-domain#ES_SCIENTIFIC_DOMAIN_LEVEL_3_CODE_MCLIHKZZ"/>
         <rdfs:label>Servicios de salud</rdfs:label>
         <skos:broader rdf:resource="http://purl.org/roh/scientific-domain#ES_SCIENTIFIC_DOMAIN_LEVEL_2_MCLI"/>
@@ -4204,7 +4198,7 @@
 
 
     <NamedIndividual rdf:about="http://purl.org/roh/scientific-domain#ES_SCIENTIFIC_DOMAIN_LEVEL_3_MCLIJMIG">
-        <rdf:type rdf:resource="http://purl.org/roh#ESScientificDomain"/>
+        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
         <roh:hasCode rdf:resource="http://purl.org/roh/scientific-domain#ES_SCIENTIFIC_DOMAIN_LEVEL_3_CODE_MCLIJMIG"/>
         <rdfs:label>Miscelánea</rdfs:label>
         <skos:broader rdf:resource="http://purl.org/roh/scientific-domain#ES_SCIENTIFIC_DOMAIN_LEVEL_2_MCLI"/>
@@ -4226,7 +4220,7 @@
 
 
     <NamedIndividual rdf:about="http://purl.org/roh/scientific-domain#ES_SCIENTIFIC_DOMAIN_LEVEL_3_MCLINMLH">
-        <rdf:type rdf:resource="http://purl.org/roh#ESScientificDomain"/>
+        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
         <roh:hasCode rdf:resource="http://purl.org/roh/scientific-domain#ES_SCIENTIFIC_DOMAIN_LEVEL_3_CODE_MCLINMLH"/>
         <rdfs:label>Cirugía y maxilofacial</rdfs:label>
         <skos:broader rdf:resource="http://purl.org/roh/scientific-domain#ES_SCIENTIFIC_DOMAIN_LEVEL_2_MCLI"/>
@@ -4248,7 +4242,7 @@
 
 
     <NamedIndividual rdf:about="http://purl.org/roh/scientific-domain#ES_SCIENTIFIC_DOMAIN_LEVEL_3_MCLIOCBV">
-        <rdf:type rdf:resource="http://purl.org/roh#ESScientificDomain"/>
+        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
         <roh:hasCode rdf:resource="http://purl.org/roh/scientific-domain#ES_SCIENTIFIC_DOMAIN_LEVEL_3_CODE_MCLIOCBV"/>
         <rdfs:label>Enfermedades cardiovasculares</rdfs:label>
         <skos:broader rdf:resource="http://purl.org/roh/scientific-domain#ES_SCIENTIFIC_DOMAIN_LEVEL_2_MCLI"/>
@@ -4270,7 +4264,7 @@
 
 
     <NamedIndividual rdf:about="http://purl.org/roh/scientific-domain#ES_SCIENTIFIC_DOMAIN_LEVEL_3_MCLIQUEG">
-        <rdf:type rdf:resource="http://purl.org/roh#ESScientificDomain"/>
+        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
         <roh:hasCode rdf:resource="http://purl.org/roh/scientific-domain#ES_SCIENTIFIC_DOMAIN_LEVEL_3_CODE_MCLIQUEG"/>
         <rdfs:label>Enfermedades infecciosas</rdfs:label>
         <skos:broader rdf:resource="http://purl.org/roh/scientific-domain#ES_SCIENTIFIC_DOMAIN_LEVEL_2_MCLI"/>
@@ -4293,7 +4287,7 @@
 
 
     <NamedIndividual rdf:about="http://purl.org/roh/scientific-domain#ES_SCIENTIFIC_DOMAIN_LEVEL_3_MTMALGE">
-        <rdf:type rdf:resource="http://purl.org/roh#ESScientificDomain"/>
+        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
         <roh:hasCode rdf:resource="http://purl.org/roh/scientific-domain#ES_SCIENTIFIC_DOMAIN_LEVEL_3_CODE_MTMALGE"/>
         <rdfs:label>Álgebra</rdfs:label>
         <skos:broader rdf:resource="http://purl.org/roh/scientific-domain#ES_SCIENTIFIC_DOMAIN_LEVEL_2_MTM"/>
@@ -4315,7 +4309,7 @@
 
 
     <NamedIndividual rdf:about="http://purl.org/roh/scientific-domain#ES_SCIENTIFIC_DOMAIN_LEVEL_3_MTMANAL">
-        <rdf:type rdf:resource="http://purl.org/roh#ESScientificDomain"/>
+        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
         <roh:hasCode rdf:resource="http://purl.org/roh/scientific-domain#ES_SCIENTIFIC_DOMAIN_LEVEL_3_CODE_MTMANAL"/>
         <rdfs:label>Análisis numérico</rdfs:label>
         <skos:broader rdf:resource="http://purl.org/roh/scientific-domain#ES_SCIENTIFIC_DOMAIN_LEVEL_2_MTM"/>
@@ -4339,7 +4333,7 @@
 
 
     <NamedIndividual rdf:about="http://purl.org/roh/scientific-domain#ES_SCIENTIFIC_DOMAIN_LEVEL_3_MTMANAM">
-        <rdf:type rdf:resource="http://purl.org/roh#ESScientificDomain"/>
+        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
         <roh:hasCode rdf:resource="http://purl.org/roh/scientific-domain#ES_SCIENTIFIC_DOMAIN_LEVEL_3_CODE_MTMANAM"/>
         <rdfs:label>Análisis matemático</rdfs:label>
         <skos:broader rdf:resource="http://purl.org/roh/scientific-domain#ES_SCIENTIFIC_DOMAIN_LEVEL_2_MTM"/>
@@ -4361,7 +4355,7 @@
 
 
     <NamedIndividual rdf:about="http://purl.org/roh/scientific-domain#ES_SCIENTIFIC_DOMAIN_LEVEL_3_MTMESTA">
-        <rdf:type rdf:resource="http://purl.org/roh#ESScientificDomain"/>
+        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
         <roh:hasCode rdf:resource="http://purl.org/roh/scientific-domain#ES_SCIENTIFIC_DOMAIN_LEVEL_3_CODE_MTMESTA"/>
         <rdfs:label>Estadística</rdfs:label>
         <skos:broader rdf:resource="http://purl.org/roh/scientific-domain#ES_SCIENTIFIC_DOMAIN_LEVEL_2_MTM"/>
@@ -4383,7 +4377,7 @@
 
 
     <NamedIndividual rdf:about="http://purl.org/roh/scientific-domain#ES_SCIENTIFIC_DOMAIN_LEVEL_3_MTMGEOM">
-        <rdf:type rdf:resource="http://purl.org/roh#ESScientificDomain"/>
+        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
         <roh:hasCode rdf:resource="http://purl.org/roh/scientific-domain#ES_SCIENTIFIC_DOMAIN_LEVEL_3_CODE_MTMGEOM"/>
         <rdfs:label>Geometría</rdfs:label>
         <skos:broader rdf:resource="http://purl.org/roh/scientific-domain#ES_SCIENTIFIC_DOMAIN_LEVEL_2_MTM"/>
@@ -4405,7 +4399,7 @@
 
 
     <NamedIndividual rdf:about="http://purl.org/roh/scientific-domain#ES_SCIENTIFIC_DOMAIN_LEVEL_3_MTMINVO">
-        <rdf:type rdf:resource="http://purl.org/roh#ESScientificDomain"/>
+        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
         <roh:hasCode rdf:resource="http://purl.org/roh/scientific-domain#ES_SCIENTIFIC_DOMAIN_LEVEL_3_CODE_MTMINVO"/>
         <rdfs:label>Investigación operativa</rdfs:label>
         <skos:broader rdf:resource="http://purl.org/roh/scientific-domain#ES_SCIENTIFIC_DOMAIN_LEVEL_2_MTM"/>
@@ -4427,7 +4421,7 @@
 
 
     <NamedIndividual rdf:about="http://purl.org/roh/scientific-domain#ES_SCIENTIFIC_DOMAIN_LEVEL_3_MTMMATE">
-        <rdf:type rdf:resource="http://purl.org/roh#ESScientificDomain"/>
+        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
         <roh:hasCode rdf:resource="http://purl.org/roh/scientific-domain#ES_SCIENTIFIC_DOMAIN_LEVEL_3_CODE_MTMMATE"/>
         <rdfs:label>Matemática aplicada</rdfs:label>
         <skos:broader rdf:resource="http://purl.org/roh/scientific-domain#ES_SCIENTIFIC_DOMAIN_LEVEL_2_MTM"/>
@@ -4450,7 +4444,7 @@
 
 
     <NamedIndividual rdf:about="http://purl.org/roh/scientific-domain#ES_SCIENTIFIC_DOMAIN_LEVEL_3_MTMTOPO">
-        <rdf:type rdf:resource="http://purl.org/roh#ESScientificDomain"/>
+        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
         <roh:hasCode rdf:resource="http://purl.org/roh/scientific-domain#ES_SCIENTIFIC_DOMAIN_LEVEL_3_CODE_MTMTOPO"/>
         <rdfs:label>Topología</rdfs:label>
         <skos:broader rdf:resource="http://purl.org/roh/scientific-domain#ES_SCIENTIFIC_DOMAIN_LEVEL_2_MTM"/>
@@ -4473,7 +4467,7 @@
 
 
     <NamedIndividual rdf:about="http://purl.org/roh/scientific-domain#ES_SCIENTIFIC_DOMAIN_LEVEL_3_PSAZSJ">
-        <rdf:type rdf:resource="http://purl.org/roh#ESScientificDomain"/>
+        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
         <roh:hasCode rdf:resource="http://purl.org/roh/scientific-domain#ES_SCIENTIFIC_DOMAIN_LEVEL_3_CODE_PSAZSJ"/>
         <rdfs:label>Psicología evolutiva y de la educación</rdfs:label>
         <skos:broader rdf:resource="http://purl.org/roh/scientific-domain#ES_SCIENTIFIC_DOMAIN_LEVEL_2_PS"/>
@@ -4495,7 +4489,7 @@
 
 
     <NamedIndividual rdf:about="http://purl.org/roh/scientific-domain#ES_SCIENTIFIC_DOMAIN_LEVEL_3_PSBODX">
-        <rdf:type rdf:resource="http://purl.org/roh#ESScientificDomain"/>
+        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
         <roh:hasCode rdf:resource="http://purl.org/roh/scientific-domain#ES_SCIENTIFIC_DOMAIN_LEVEL_3_CODE_PSBODX"/>
         <rdfs:label>Metodología</rdfs:label>
         <skos:broader rdf:resource="http://purl.org/roh/scientific-domain#ES_SCIENTIFIC_DOMAIN_LEVEL_2_PS"/>
@@ -4518,7 +4512,7 @@
 
 
     <NamedIndividual rdf:about="http://purl.org/roh/scientific-domain#ES_SCIENTIFIC_DOMAIN_LEVEL_3_PSDSJH">
-        <rdf:type rdf:resource="http://purl.org/roh#ESScientificDomain"/>
+        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
         <roh:hasCode rdf:resource="http://purl.org/roh/scientific-domain#ES_SCIENTIFIC_DOMAIN_LEVEL_3_CODE_PSDSJH"/>
         <rdfs:label>Psicología social</rdfs:label>
         <skos:broader rdf:resource="http://purl.org/roh/scientific-domain#ES_SCIENTIFIC_DOMAIN_LEVEL_2_PS"/>
@@ -4540,7 +4534,7 @@
 
 
     <NamedIndividual rdf:about="http://purl.org/roh/scientific-domain#ES_SCIENTIFIC_DOMAIN_LEVEL_3_PSFRSQ">
-        <rdf:type rdf:resource="http://purl.org/roh#ESScientificDomain"/>
+        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
         <roh:hasCode rdf:resource="http://purl.org/roh/scientific-domain#ES_SCIENTIFIC_DOMAIN_LEVEL_3_CODE_PSFRSQ"/>
         <rdfs:label>Psicobiología</rdfs:label>
         <skos:broader rdf:resource="http://purl.org/roh/scientific-domain#ES_SCIENTIFIC_DOMAIN_LEVEL_2_PS"/>
@@ -4562,7 +4556,7 @@
 
 
     <NamedIndividual rdf:about="http://purl.org/roh/scientific-domain#ES_SCIENTIFIC_DOMAIN_LEVEL_3_PSJTFX">
-        <rdf:type rdf:resource="http://purl.org/roh#ESScientificDomain"/>
+        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
         <roh:hasCode rdf:resource="http://purl.org/roh/scientific-domain#ES_SCIENTIFIC_DOMAIN_LEVEL_3_CODE_PSJTFX"/>
         <rdfs:label>Personalidad, evaluación y tratamientos psicológicos</rdfs:label>
         <skos:broader rdf:resource="http://purl.org/roh/scientific-domain#ES_SCIENTIFIC_DOMAIN_LEVEL_2_PS"/>
@@ -4584,7 +4578,7 @@
 
 
     <NamedIndividual rdf:about="http://purl.org/roh/scientific-domain#ES_SCIENTIFIC_DOMAIN_LEVEL_3_PSNRWD">
-        <rdf:type rdf:resource="http://purl.org/roh#ESScientificDomain"/>
+        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
         <roh:hasCode rdf:resource="http://purl.org/roh/scientific-domain#ES_SCIENTIFIC_DOMAIN_LEVEL_3_CODE_PSNRWD"/>
         <rdfs:label>Psicología básica</rdfs:label>
         <skos:broader rdf:resource="http://purl.org/roh/scientific-domain#ES_SCIENTIFIC_DOMAIN_LEVEL_2_PS"/>
@@ -4606,7 +4600,7 @@
 
 
     <NamedIndividual rdf:about="http://purl.org/roh/scientific-domain#ES_SCIENTIFIC_DOMAIN_LEVEL_3_QMCAMBI">
-        <rdf:type rdf:resource="http://purl.org/roh#ESScientificDomain"/>
+        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
         <roh:hasCode rdf:resource="http://purl.org/roh/scientific-domain#ES_SCIENTIFIC_DOMAIN_LEVEL_3_CODE_QMCAMBI"/>
         <rdfs:label>Química ambiental</rdfs:label>
         <skos:broader rdf:resource="http://purl.org/roh/scientific-domain#ES_SCIENTIFIC_DOMAIN_LEVEL_2_QMC"/>
@@ -4628,7 +4622,7 @@
 
 
     <NamedIndividual rdf:about="http://purl.org/roh/scientific-domain#ES_SCIENTIFIC_DOMAIN_LEVEL_3_QMCCATA">
-        <rdf:type rdf:resource="http://purl.org/roh#ESScientificDomain"/>
+        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
         <roh:hasCode rdf:resource="http://purl.org/roh/scientific-domain#ES_SCIENTIFIC_DOMAIN_LEVEL_3_CODE_QMCCATA"/>
         <rdfs:label>Catálisis</rdfs:label>
         <skos:broader rdf:resource="http://purl.org/roh/scientific-domain#ES_SCIENTIFIC_DOMAIN_LEVEL_2_QMC"/>
@@ -4651,7 +4645,7 @@
 
 
     <NamedIndividual rdf:about="http://purl.org/roh/scientific-domain#ES_SCIENTIFIC_DOMAIN_LEVEL_3_QMCCATE">
-        <rdf:type rdf:resource="http://purl.org/roh#ESScientificDomain"/>
+        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
         <roh:hasCode rdf:resource="http://purl.org/roh/scientific-domain#ES_SCIENTIFIC_DOMAIN_LEVEL_3_CODE_QMCCATE"/>
         <rdfs:label>Catálisis enantioselectiva</rdfs:label>
         <skos:broader rdf:resource="http://purl.org/roh/scientific-domain#ES_SCIENTIFIC_DOMAIN_LEVEL_2_QMC"/>
@@ -4673,7 +4667,7 @@
 
 
     <NamedIndividual rdf:about="http://purl.org/roh/scientific-domain#ES_SCIENTIFIC_DOMAIN_LEVEL_3_QMCMATM">
-        <rdf:type rdf:resource="http://purl.org/roh#ESScientificDomain"/>
+        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
         <roh:hasCode rdf:resource="http://purl.org/roh/scientific-domain#ES_SCIENTIFIC_DOMAIN_LEVEL_3_CODE_QMCMATM"/>
         <rdfs:label>Materiales moleculares</rdfs:label>
         <skos:broader rdf:resource="http://purl.org/roh/scientific-domain#ES_SCIENTIFIC_DOMAIN_LEVEL_2_QMC"/>
@@ -4695,7 +4689,7 @@
 
 
     <NamedIndividual rdf:about="http://purl.org/roh/scientific-domain#ES_SCIENTIFIC_DOMAIN_LEVEL_3_QMCNANO">
-        <rdf:type rdf:resource="http://purl.org/roh#ESScientificDomain"/>
+        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
         <roh:hasCode rdf:resource="http://purl.org/roh/scientific-domain#ES_SCIENTIFIC_DOMAIN_LEVEL_3_CODE_QMCNANO"/>
         <rdfs:label>Nanoquímica</rdfs:label>
         <skos:broader rdf:resource="http://purl.org/roh/scientific-domain#ES_SCIENTIFIC_DOMAIN_LEVEL_2_QMC"/>
@@ -4717,7 +4711,7 @@
 
 
     <NamedIndividual rdf:about="http://purl.org/roh/scientific-domain#ES_SCIENTIFIC_DOMAIN_LEVEL_3_QMCORGA">
-        <rdf:type rdf:resource="http://purl.org/roh#ESScientificDomain"/>
+        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
         <roh:hasCode rdf:resource="http://purl.org/roh/scientific-domain#ES_SCIENTIFIC_DOMAIN_LEVEL_3_CODE_QMCORGA"/>
         <rdfs:label>Química orgánica</rdfs:label>
         <skos:broader rdf:resource="http://purl.org/roh/scientific-domain#ES_SCIENTIFIC_DOMAIN_LEVEL_2_QMC"/>
@@ -4739,7 +4733,7 @@
 
 
     <NamedIndividual rdf:about="http://purl.org/roh/scientific-domain#ES_SCIENTIFIC_DOMAIN_LEVEL_3_QMCQBIT">
-        <rdf:type rdf:resource="http://purl.org/roh#ESScientificDomain"/>
+        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
         <roh:hasCode rdf:resource="http://purl.org/roh/scientific-domain#ES_SCIENTIFIC_DOMAIN_LEVEL_3_CODE_QMCQBIT"/>
         <rdfs:label>Química biotecnológica</rdfs:label>
         <skos:broader rdf:resource="http://purl.org/roh/scientific-domain#ES_SCIENTIFIC_DOMAIN_LEVEL_2_QMC"/>
@@ -4761,7 +4755,7 @@
 
 
     <NamedIndividual rdf:about="http://purl.org/roh/scientific-domain#ES_SCIENTIFIC_DOMAIN_LEVEL_3_QMCQUAN">
-        <rdf:type rdf:resource="http://purl.org/roh#ESScientificDomain"/>
+        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
         <roh:hasCode rdf:resource="http://purl.org/roh/scientific-domain#ES_SCIENTIFIC_DOMAIN_LEVEL_3_CODE_QMCQUAN"/>
         <rdfs:label>Química analítica</rdfs:label>
         <skos:broader rdf:resource="http://purl.org/roh/scientific-domain#ES_SCIENTIFIC_DOMAIN_LEVEL_2_QMC"/>
@@ -4783,7 +4777,7 @@
 
 
     <NamedIndividual rdf:about="http://purl.org/roh/scientific-domain#ES_SCIENTIFIC_DOMAIN_LEVEL_3_QMCQUBI">
-        <rdf:type rdf:resource="http://purl.org/roh#ESScientificDomain"/>
+        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
         <roh:hasCode rdf:resource="http://purl.org/roh/scientific-domain#ES_SCIENTIFIC_DOMAIN_LEVEL_3_CODE_QMCQUBI"/>
         <rdfs:label>Química biológica</rdfs:label>
         <skos:broader rdf:resource="http://purl.org/roh/scientific-domain#ES_SCIENTIFIC_DOMAIN_LEVEL_2_QMC"/>
@@ -4805,7 +4799,7 @@
 
 
     <NamedIndividual rdf:about="http://purl.org/roh/scientific-domain#ES_SCIENTIFIC_DOMAIN_LEVEL_3_QMCQUFI">
-        <rdf:type rdf:resource="http://purl.org/roh#ESScientificDomain"/>
+        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
         <roh:hasCode rdf:resource="http://purl.org/roh/scientific-domain#ES_SCIENTIFIC_DOMAIN_LEVEL_3_CODE_QMCQUFI"/>
         <rdfs:label>Química física</rdfs:label>
         <skos:broader rdf:resource="http://purl.org/roh/scientific-domain#ES_SCIENTIFIC_DOMAIN_LEVEL_2_QMC"/>
@@ -4827,7 +4821,7 @@
 
 
     <NamedIndividual rdf:about="http://purl.org/roh/scientific-domain#ES_SCIENTIFIC_DOMAIN_LEVEL_3_QMCQUIN">
-        <rdf:type rdf:resource="http://purl.org/roh#ESScientificDomain"/>
+        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
         <roh:hasCode rdf:resource="http://purl.org/roh/scientific-domain#ES_SCIENTIFIC_DOMAIN_LEVEL_3_CODE_QMCQUIN"/>
         <rdfs:label>Química inorgánica</rdfs:label>
         <skos:broader rdf:resource="http://purl.org/roh/scientific-domain#ES_SCIENTIFIC_DOMAIN_LEVEL_2_QMC"/>
@@ -4849,7 +4843,7 @@
 
 
     <NamedIndividual rdf:about="http://purl.org/roh/scientific-domain#ES_SCIENTIFIC_DOMAIN_LEVEL_3_QMCQUIO">
-        <rdf:type rdf:resource="http://purl.org/roh#ESScientificDomain"/>
+        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
         <roh:hasCode rdf:resource="http://purl.org/roh/scientific-domain#ES_SCIENTIFIC_DOMAIN_LEVEL_3_CODE_QMCQUIO"/>
         <rdfs:label>Química organometálica</rdfs:label>
         <skos:broader rdf:resource="http://purl.org/roh/scientific-domain#ES_SCIENTIFIC_DOMAIN_LEVEL_2_QMC"/>
@@ -4871,7 +4865,7 @@
 
 
     <NamedIndividual rdf:about="http://purl.org/roh/scientific-domain#ES_SCIENTIFIC_DOMAIN_LEVEL_3_QMCQUSU">
-        <rdf:type rdf:resource="http://purl.org/roh#ESScientificDomain"/>
+        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
         <roh:hasCode rdf:resource="http://purl.org/roh/scientific-domain#ES_SCIENTIFIC_DOMAIN_LEVEL_3_CODE_QMCQUSU"/>
         <rdfs:label>Química supramolecular</rdfs:label>
         <skos:broader rdf:resource="http://purl.org/roh/scientific-domain#ES_SCIENTIFIC_DOMAIN_LEVEL_2_QMC"/>
@@ -4893,7 +4887,7 @@
 
 
     <NamedIndividual rdf:about="http://purl.org/roh/scientific-domain#ESscientificDomains1stList">
-        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#ConceptScheme"/>
+        <rdf:type rdf:resource="http://purl.org/roh#ESScientificDomain"/>
         <rdfs:label xml:lang="fr">Domains scientifiques de premier niveau</rdfs:label>
         <rdfs:label xml:lang="ca">Dominis científics de primer nivell</rdfs:label>
         <rdfs:label xml:lang="en">First-level scientific domains</rdfs:label>
@@ -4934,7 +4928,7 @@
 
 
     <NamedIndividual rdf:about="http://purl.org/roh/scientific-domain#ESscientificDomains2ndCodeList">
-        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#ConceptScheme"/>
+        <rdf:type rdf:resource="http://purl.org/roh#ESScientificDomain"/>
         <rdfs:label xml:lang="en">Codes for the second-level scientific domains</rdfs:label>
         <rdfs:label xml:lang="ca">Codis dels dominis científics de segon nivell</rdfs:label>
         <rdfs:label xml:lang="gl">Códigos das áreas científicas de segundo nivel</rdfs:label>
@@ -4955,7 +4949,7 @@
 
 
     <NamedIndividual rdf:about="http://purl.org/roh/scientific-domain#ESscientificDomains2ndList">
-        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#ConceptScheme"/>
+        <rdf:type rdf:resource="http://purl.org/roh#ESScientificDomain"/>
         <rdfs:label xml:lang="eu">Bigarren mailako arlo zientifikoak</rdfs:label>
         <rdfs:label xml:lang="fr">Domains scientifiques de deuxième niveau</rdfs:label>
         <rdfs:label xml:lang="ca">Dominis científics de segon nivell</rdfs:label>
@@ -4996,7 +4990,7 @@
 
 
     <NamedIndividual rdf:about="http://purl.org/roh/scientific-domain#ESscientificDomains3rdList">
-        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#ConceptScheme"/>
+        <rdf:type rdf:resource="http://purl.org/roh#ESScientificDomain"/>
         <rdfs:label xml:lang="fr">Domains scientifiques de troisième niveau</rdfs:label>
         <rdfs:label xml:lang="ca">Dominis científics de tercer nivell</rdfs:label>
         <rdfs:label xml:lang="eu">Hirugarren mailako arlo zientifikoak</rdfs:label>
@@ -5037,7 +5031,7 @@
 
 
     <NamedIndividual rdf:about="http://purl.org/roh/scientific-domain#scientificDomain3rdCodeResource">
-        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#ConceptScheme"/>
+        <rdf:type rdf:resource="http://purl.org/roh#ESScientificDomain"/>
         <rdfs:label xml:lang="en">Codes for the third-level scientific domains</rdfs:label>
         <rdfs:label xml:lang="ca">Codis dels dominis científics de tercer nivell</rdfs:label>
         <rdfs:label xml:lang="gl">Códigos das áreas científicas de terceiro nivel</rdfs:label>

@@ -51,6 +51,7 @@ _:genid1 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/20
 # 
 # http://purl.org/roh#KnowledgeArea
 <http://purl.org/roh#KnowledgeArea> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://purl.org/roh#KnowledgeArea> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.w3.org/2004/02/skos/core#ConceptScheme> .
 <http://purl.org/roh#KnowledgeArea> <http://www.w3.org/2000/01/rdf-schema#label> "Knowledge Area"@en .
 # 
 # http://www.w3.org/2004/02/skos/core#Concept
@@ -72,7 +73,7 @@ _:genid1 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/20
 # 
 # http://purl.org/roh/subject-areas#ESSubjectAreas1stList
 <http://purl.org/roh/subject-areas#ESSubjectAreas1stList> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
-<http://purl.org/roh/subject-areas#ESSubjectAreas1stList> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2004/02/skos/core#ConceptScheme> .
+<http://purl.org/roh/subject-areas#ESSubjectAreas1stList> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://purl.org/roh#ESSubjectArea> .
 <http://purl.org/roh/subject-areas#ESSubjectAreas1stList> <http://www.w3.org/2000/01/rdf-schema#label> "Domains thématiques de premier niveau de l'Agence Espagnole pour la Recherche (AEI)"@fr .
 <http://purl.org/roh/subject-areas#ESSubjectAreas1stList> <http://www.w3.org/2000/01/rdf-schema#label> "Dominis temàtics de primer nivell de l'Agència Estatal de Recerca (AEI)"@ca .
 <http://purl.org/roh/subject-areas#ESSubjectAreas1stList> <http://www.w3.org/2000/01/rdf-schema#label> "FIXME"@eu .
@@ -108,7 +109,7 @@ _:genid1 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/20
 # 
 # http://purl.org/roh/subject-areas#ESSubjectAreas2ndList
 <http://purl.org/roh/subject-areas#ESSubjectAreas2ndList> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
-<http://purl.org/roh/subject-areas#ESSubjectAreas2ndList> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2004/02/skos/core#ConceptScheme> .
+<http://purl.org/roh/subject-areas#ESSubjectAreas2ndList> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://purl.org/roh#ESSubjectArea> .
 <http://purl.org/roh/subject-areas#ESSubjectAreas2ndList> <http://www.w3.org/2000/01/rdf-schema#label> "Domains thématiques de second niveau de l'Agence Espagnole pour la Recherche (AEI)"@fr .
 <http://purl.org/roh/subject-areas#ESSubjectAreas2ndList> <http://www.w3.org/2000/01/rdf-schema#label> "Dominis temàtics de segon nivell de l'Agència Estatal de Recerca (AEI)"@ca .
 <http://purl.org/roh/subject-areas#ESSubjectAreas2ndList> <http://www.w3.org/2000/01/rdf-schema#label> "FIXME"@eu .
@@ -144,7 +145,7 @@ _:genid1 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/20
 # 
 # http://purl.org/roh/subject-areas#ESSubjectAreas3rdList
 <http://purl.org/roh/subject-areas#ESSubjectAreas3rdList> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
-<http://purl.org/roh/subject-areas#ESSubjectAreas3rdList> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2004/02/skos/core#ConceptScheme> .
+<http://purl.org/roh/subject-areas#ESSubjectAreas3rdList> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2004/02/skos/core#Concept> .
 <http://purl.org/roh/subject-areas#ESSubjectAreas3rdList> <http://www.w3.org/2000/01/rdf-schema#label> "Domains thématiques de troisième niveau de l'Agence Espagnole pour la Recherche (AEI)"@fr .
 <http://purl.org/roh/subject-areas#ESSubjectAreas3rdList> <http://www.w3.org/2000/01/rdf-schema#label> "Dominis temàtics de tercer nivell de l'Agència Estatal de Recerca (AEI)"@ca .
 <http://purl.org/roh/subject-areas#ESSubjectAreas3rdList> <http://www.w3.org/2000/01/rdf-schema#label> "FIXME"@eu .
@@ -180,7 +181,7 @@ _:genid1 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/20
 # 
 # http://purl.org/roh/subject-areas#ESSubjectCode1stList
 <http://purl.org/roh/subject-areas#ESSubjectCode1stList> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
-<http://purl.org/roh/subject-areas#ESSubjectCode1stList> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2004/02/skos/core#ConceptScheme> .
+<http://purl.org/roh/subject-areas#ESSubjectCode1stList> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2004/02/skos/core#Concept> .
 <http://purl.org/roh/subject-areas#ESSubjectCode1stList> <http://www.w3.org/2000/01/rdf-schema#label> "Codes des domains thématiques de premier niveau de l'Agence Espagnole pour la Recherche (AEI)"@fr .
 <http://purl.org/roh/subject-areas#ESSubjectCode1stList> <http://www.w3.org/2000/01/rdf-schema#label> "Codes for the first-level subject areas of Spain's State Research Agency (AEI)"@en .
 <http://purl.org/roh/subject-areas#ESSubjectCode1stList> <http://www.w3.org/2000/01/rdf-schema#label> "Codis dels dominis temàtics de primer nivell de l'Agència Estatal de Recerca (AEI)"@ca .
@@ -210,7 +211,7 @@ _:genid1 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/20
 # 
 # http://purl.org/roh/subject-areas#ESSubjectCode2ndList
 <http://purl.org/roh/subject-areas#ESSubjectCode2ndList> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
-<http://purl.org/roh/subject-areas#ESSubjectCode2ndList> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2004/02/skos/core#ConceptScheme> .
+<http://purl.org/roh/subject-areas#ESSubjectCode2ndList> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://purl.org/roh#ESSubjectArea> .
 <http://purl.org/roh/subject-areas#ESSubjectCode2ndList> <http://www.w3.org/2000/01/rdf-schema#label> "Codes des domains thématiques de second niveau de l'Agence Espagnole pour la Recherche (AEI)"@fr .
 <http://purl.org/roh/subject-areas#ESSubjectCode2ndList> <http://www.w3.org/2000/01/rdf-schema#label> "Codes for the second-level subject areas of Spain's State Research Agency (AEI)"@en .
 <http://purl.org/roh/subject-areas#ESSubjectCode2ndList> <http://www.w3.org/2000/01/rdf-schema#label> "Codis dels dominis temàtics de segon nivell de l'Agència Estatal de Recerca (AEI)"@ca .
@@ -240,7 +241,7 @@ _:genid1 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/20
 # 
 # http://purl.org/roh/subject-areas#ESSubjectCode3rdList
 <http://purl.org/roh/subject-areas#ESSubjectCode3rdList> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
-<http://purl.org/roh/subject-areas#ESSubjectCode3rdList> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2004/02/skos/core#ConceptScheme> .
+<http://purl.org/roh/subject-areas#ESSubjectCode3rdList> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://purl.org/roh#ESSubjectArea> .
 <http://purl.org/roh/subject-areas#ESSubjectCode3rdList> <http://www.w3.org/2000/01/rdf-schema#label> "Codes des domains thématiques de troisième niveau de l'Agence Espagnole pour la Recherche (AEI)"@fr .
 <http://purl.org/roh/subject-areas#ESSubjectCode3rdList> <http://www.w3.org/2000/01/rdf-schema#label> "Codes for the third-level subject areas of Spain's State Research Agency (AEI)"@en .
 <http://purl.org/roh/subject-areas#ESSubjectCode3rdList> <http://www.w3.org/2000/01/rdf-schema#label> "Codis dels dominis temàtics de tercer nivell de l'Agència Estatal de Recerca (AEI)"@ca .
@@ -270,7 +271,7 @@ _:genid1 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/20
 # 
 # http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_1_CMIFQ
 <http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_1_CMIFQ> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
-<http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_1_CMIFQ> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://purl.org/roh#ESSubjectArea> .
+<http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_1_CMIFQ> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2004/02/skos/core#Concept> .
 <http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_1_CMIFQ> <http://purl.org/roh#hasCode> <http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_1_CODE_CMIFQ> .
 <http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_1_CMIFQ> <http://www.w3.org/2000/01/rdf-schema#label> "Ciencias matemáticas, físicas, químicas e ingenierías" .
 <http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_1_CMIFQ> <http://www.w3.org/2004/02/skos/core#closeMatch> <http://skos.um.es/unescothes/C00568> .
@@ -302,7 +303,7 @@ _:genid1 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/20
 # 
 # http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_1_CODE_CMIFQ
 <http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_1_CODE_CMIFQ> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
-<http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_1_CODE_CMIFQ> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://purl.org/roh#ESSubjectArea> .
+<http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_1_CODE_CMIFQ> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2004/02/skos/core#Concept> .
 <http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_1_CODE_CMIFQ> <http://purl.org/roh#codeOf> <http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_1_CMIFQ> .
 <http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_1_CODE_CMIFQ> <http://www.w3.org/2000/01/rdf-schema#label> "CMIFQ" .
 <http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_1_CODE_CMIFQ> <http://www.w3.org/2004/02/skos/core#inScheme> <http://purl.org/roh/subject-areas#ESSubjectCode1stList> .
@@ -310,7 +311,7 @@ _:genid1 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/20
 # 
 # http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_1_CODE_CSH
 <http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_1_CODE_CSH> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
-<http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_1_CODE_CSH> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://purl.org/roh#ESSubjectArea> .
+<http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_1_CODE_CSH> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2004/02/skos/core#Concept> .
 <http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_1_CODE_CSH> <http://purl.org/roh#codeOf> <http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_1_CSH> .
 <http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_1_CODE_CSH> <http://www.w3.org/2000/01/rdf-schema#label> "CSH" .
 <http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_1_CODE_CSH> <http://www.w3.org/2004/02/skos/core#inScheme> <http://purl.org/roh/subject-areas#ESSubjectCode1stList> .
@@ -318,7 +319,7 @@ _:genid1 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/20
 # 
 # http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_1_CODE_CV
 <http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_1_CODE_CV> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
-<http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_1_CODE_CV> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://purl.org/roh#ESSubjectArea> .
+<http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_1_CODE_CV> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2004/02/skos/core#Concept> .
 <http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_1_CODE_CV> <http://purl.org/roh#codeOf> <http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_1_CV> .
 <http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_1_CODE_CV> <http://www.w3.org/2000/01/rdf-schema#label> "CV" .
 <http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_1_CODE_CV> <http://www.w3.org/2004/02/skos/core#inScheme> <http://purl.org/roh/subject-areas#ESSubjectCode1stList> .
@@ -326,7 +327,7 @@ _:genid1 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/20
 # 
 # http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_1_CSH
 <http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_1_CSH> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
-<http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_1_CSH> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://purl.org/roh#ESSubjectArea> .
+<http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_1_CSH> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2004/02/skos/core#Concept> .
 <http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_1_CSH> <http://purl.org/roh#hasCode> <http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_1_CODE_CSH> .
 <http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_1_CSH> <http://www.w3.org/2000/01/rdf-schema#label> "Ciencias sociales y humanidades" .
 <http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_1_CSH> <http://www.w3.org/2004/02/skos/core#closeMatch> <http://skos.um.es/unescothes/C03719> .
@@ -355,7 +356,7 @@ _:genid1 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/20
 # 
 # http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_1_CV
 <http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_1_CV> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
-<http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_1_CV> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://purl.org/roh#ESSubjectArea> .
+<http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_1_CV> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2004/02/skos/core#Concept> .
 <http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_1_CV> <http://purl.org/roh#hasCode> <http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_1_CODE_CV> .
 <http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_1_CV> <http://www.w3.org/2000/01/rdf-schema#label> "Ciencias de la vida" .
 <http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_1_CV> <http://www.w3.org/2004/02/skos/core#exactMatch> <http://skos.um.es/unescothes/C02293> .
@@ -384,7 +385,7 @@ _:genid1 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/20
 # 
 # http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_2_BIO
 <http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_2_BIO> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
-<http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_2_BIO> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://purl.org/roh#ESSubjectArea> .
+<http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_2_BIO> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2004/02/skos/core#Concept> .
 <http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_2_BIO> <http://purl.org/roh#hasCode> <http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_2_CODE_BIO> .
 <http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_2_BIO> <http://www.w3.org/2000/01/rdf-schema#label> "Biociencias y biotecnología" .
 <http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_2_BIO> <http://www.w3.org/2004/02/skos/core#broader> <http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_1_CV> .
@@ -402,7 +403,7 @@ _:genid1 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/20
 # 
 # http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_2_BME
 <http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_2_BME> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
-<http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_2_BME> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://purl.org/roh#ESSubjectArea> .
+<http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_2_BME> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2004/02/skos/core#Concept> .
 <http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_2_BME> <http://purl.org/roh#hasCode> <http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_2_CODE_BME> .
 <http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_2_BME> <http://www.w3.org/2000/01/rdf-schema#label> "Biomedicina" .
 <http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_2_BME> <http://www.w3.org/2004/02/skos/core#broader> <http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_1_CV> .
@@ -421,7 +422,7 @@ _:genid1 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/20
 # 
 # http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_2_CAA
 <http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_2_CAA> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
-<http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_2_CAA> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://purl.org/roh#ESSubjectArea> .
+<http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_2_CAA> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2004/02/skos/core#Concept> .
 <http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_2_CAA> <http://purl.org/roh#hasCode> <http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_2_CODE_CAA> .
 <http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_2_CAA> <http://www.w3.org/2000/01/rdf-schema#label> "Ciencias agrarias y agroalimentarias" .
 <http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_2_CAA> <http://www.w3.org/2004/02/skos/core#broader> <http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_1_CV> .
@@ -438,7 +439,7 @@ _:genid1 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/20
 # 
 # http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_2_CODE_BIO
 <http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_2_CODE_BIO> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
-<http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_2_CODE_BIO> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://purl.org/roh#ESSubjectArea> .
+<http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_2_CODE_BIO> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2004/02/skos/core#Concept> .
 <http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_2_CODE_BIO> <http://purl.org/roh#codeOf> <http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_2_BIO> .
 <http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_2_CODE_BIO> <http://www.w3.org/2000/01/rdf-schema#label> "BIO" .
 <http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_2_CODE_BIO> <http://www.w3.org/2004/02/skos/core#inScheme> <http://purl.org/roh/subject-areas#ESSubjectCode2ndList> .
@@ -446,7 +447,7 @@ _:genid1 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/20
 # 
 # http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_2_CODE_BME
 <http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_2_CODE_BME> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
-<http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_2_CODE_BME> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://purl.org/roh#ESSubjectArea> .
+<http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_2_CODE_BME> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2004/02/skos/core#Concept> .
 <http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_2_CODE_BME> <http://purl.org/roh#codeOf> <http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_2_BME> .
 <http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_2_CODE_BME> <http://www.w3.org/2000/01/rdf-schema#label> "BME" .
 <http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_2_CODE_BME> <http://www.w3.org/2004/02/skos/core#inScheme> <http://purl.org/roh/subject-areas#ESSubjectCode2ndList> .
@@ -454,7 +455,7 @@ _:genid1 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/20
 # 
 # http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_2_CODE_CAA
 <http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_2_CODE_CAA> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
-<http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_2_CODE_CAA> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://purl.org/roh#ESSubjectArea> .
+<http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_2_CODE_CAA> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2004/02/skos/core#Concept> .
 <http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_2_CODE_CAA> <http://purl.org/roh#codeOf> <http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_2_CAA> .
 <http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_2_CODE_CAA> <http://www.w3.org/2000/01/rdf-schema#label> "CAA" .
 <http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_2_CODE_CAA> <http://www.w3.org/2004/02/skos/core#inScheme> <http://purl.org/roh/subject-areas#ESSubjectCode2ndList> .
@@ -462,7 +463,7 @@ _:genid1 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/20
 # 
 # http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_2_CODE_CSO
 <http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_2_CODE_CSO> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
-<http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_2_CODE_CSO> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://purl.org/roh#ESSubjectArea> .
+<http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_2_CODE_CSO> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2004/02/skos/core#Concept> .
 <http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_2_CODE_CSO> <http://purl.org/roh#codeOf> <http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_2_CSO> .
 <http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_2_CODE_CSO> <http://www.w3.org/2000/01/rdf-schema#label> "CSO" .
 <http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_2_CODE_CSO> <http://www.w3.org/2004/02/skos/core#inScheme> <http://purl.org/roh/subject-areas#ESSubjectCode2ndList> .
@@ -470,7 +471,7 @@ _:genid1 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/20
 # 
 # http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_2_CODE_CTM
 <http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_2_CODE_CTM> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
-<http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_2_CODE_CTM> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://purl.org/roh#ESSubjectArea> .
+<http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_2_CODE_CTM> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2004/02/skos/core#Concept> .
 <http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_2_CODE_CTM> <http://purl.org/roh#codeOf> <http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_2_CTM> .
 <http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_2_CODE_CTM> <http://www.w3.org/2000/01/rdf-schema#label> "CTM" .
 <http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_2_CODE_CTM> <http://www.w3.org/2004/02/skos/core#inScheme> <http://purl.org/roh/subject-areas#ESSubjectCode2ndList> .
@@ -478,7 +479,7 @@ _:genid1 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/20
 # 
 # http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_2_CODE_CTQ
 <http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_2_CODE_CTQ> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
-<http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_2_CODE_CTQ> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://purl.org/roh#ESSubjectArea> .
+<http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_2_CODE_CTQ> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2004/02/skos/core#Concept> .
 <http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_2_CODE_CTQ> <http://purl.org/roh#codeOf> <http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_2_CTQ> .
 <http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_2_CODE_CTQ> <http://www.w3.org/2000/01/rdf-schema#label> "CTQ" .
 <http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_2_CODE_CTQ> <http://www.w3.org/2004/02/skos/core#inScheme> <http://purl.org/roh/subject-areas#ESSubjectCode2ndList> .
@@ -486,7 +487,7 @@ _:genid1 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/20
 # 
 # http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_2_CODE_DER
 <http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_2_CODE_DER> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
-<http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_2_CODE_DER> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://purl.org/roh#ESSubjectArea> .
+<http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_2_CODE_DER> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2004/02/skos/core#Concept> .
 <http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_2_CODE_DER> <http://purl.org/roh#codeOf> <http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_2_DER> .
 <http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_2_CODE_DER> <http://www.w3.org/2000/01/rdf-schema#label> "DER" .
 <http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_2_CODE_DER> <http://www.w3.org/2004/02/skos/core#inScheme> <http://purl.org/roh/subject-areas#ESSubjectCode2ndList> .
@@ -494,7 +495,7 @@ _:genid1 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/20
 # 
 # http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_2_CODE_ECO
 <http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_2_CODE_ECO> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
-<http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_2_CODE_ECO> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://purl.org/roh#ESSubjectArea> .
+<http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_2_CODE_ECO> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2004/02/skos/core#Concept> .
 <http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_2_CODE_ECO> <http://purl.org/roh#codeOf> <http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_2_ECO> .
 <http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_2_CODE_ECO> <http://www.w3.org/2000/01/rdf-schema#label> "ECO" .
 <http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_2_CODE_ECO> <http://www.w3.org/2004/02/skos/core#inScheme> <http://purl.org/roh/subject-areas#ESSubjectCode2ndList> .
@@ -502,7 +503,7 @@ _:genid1 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/20
 # 
 # http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_2_CODE_EDU
 <http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_2_CODE_EDU> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
-<http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_2_CODE_EDU> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://purl.org/roh#ESSubjectArea> .
+<http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_2_CODE_EDU> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2004/02/skos/core#Concept> .
 <http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_2_CODE_EDU> <http://purl.org/roh#codeOf> <http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_2_EDU> .
 <http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_2_CODE_EDU> <http://www.w3.org/2000/01/rdf-schema#label> "EDU" .
 <http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_2_CODE_EDU> <http://www.w3.org/2004/02/skos/core#inScheme> <http://purl.org/roh/subject-areas#ESSubjectCode2ndList> .
@@ -510,7 +511,7 @@ _:genid1 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/20
 # 
 # http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_2_CODE_EYT
 <http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_2_CODE_EYT> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
-<http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_2_CODE_EYT> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://purl.org/roh#ESSubjectArea> .
+<http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_2_CODE_EYT> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2004/02/skos/core#Concept> .
 <http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_2_CODE_EYT> <http://purl.org/roh#codeOf> <http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_2_EYT> .
 <http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_2_CODE_EYT> <http://www.w3.org/2000/01/rdf-schema#label> "EYT" .
 <http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_2_CODE_EYT> <http://www.w3.org/2004/02/skos/core#inScheme> <http://purl.org/roh/subject-areas#ESSubjectCode2ndList> .
@@ -518,7 +519,7 @@ _:genid1 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/20
 # 
 # http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_2_CODE_FIS
 <http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_2_CODE_FIS> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
-<http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_2_CODE_FIS> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://purl.org/roh#ESSubjectArea> .
+<http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_2_CODE_FIS> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2004/02/skos/core#Concept> .
 <http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_2_CODE_FIS> <http://purl.org/roh#codeOf> <http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_2_FIS> .
 <http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_2_CODE_FIS> <http://www.w3.org/2000/01/rdf-schema#label> "FIS" .
 <http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_2_CODE_FIS> <http://www.w3.org/2004/02/skos/core#inScheme> <http://purl.org/roh/subject-areas#ESSubjectCode2ndList> .
@@ -526,7 +527,7 @@ _:genid1 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/20
 # 
 # http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_2_CODE_FLA
 <http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_2_CODE_FLA> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
-<http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_2_CODE_FLA> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://purl.org/roh#ESSubjectArea> .
+<http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_2_CODE_FLA> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2004/02/skos/core#Concept> .
 <http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_2_CODE_FLA> <http://purl.org/roh#codeOf> <http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_2_FLA> .
 <http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_2_CODE_FLA> <http://www.w3.org/2000/01/rdf-schema#label> "FLA" .
 <http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_2_CODE_FLA> <http://www.w3.org/2004/02/skos/core#inScheme> <http://purl.org/roh/subject-areas#ESSubjectCode2ndList> .
@@ -534,7 +535,7 @@ _:genid1 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/20
 # 
 # http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_2_CODE_MAT
 <http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_2_CODE_MAT> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
-<http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_2_CODE_MAT> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://purl.org/roh#ESSubjectArea> .
+<http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_2_CODE_MAT> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2004/02/skos/core#Concept> .
 <http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_2_CODE_MAT> <http://purl.org/roh#codeOf> <http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_2_MAT> .
 <http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_2_CODE_MAT> <http://www.w3.org/2000/01/rdf-schema#label> "MAT" .
 <http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_2_CODE_MAT> <http://www.w3.org/2004/02/skos/core#inScheme> <http://purl.org/roh/subject-areas#ESSubjectCode2ndList> .
@@ -542,7 +543,7 @@ _:genid1 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/20
 # 
 # http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_2_CODE_MLP
 <http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_2_CODE_MLP> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
-<http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_2_CODE_MLP> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://purl.org/roh#ESSubjectArea> .
+<http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_2_CODE_MLP> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2004/02/skos/core#Concept> .
 <http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_2_CODE_MLP> <http://purl.org/roh#codeOf> <http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_2_MLP> .
 <http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_2_CODE_MLP> <http://www.w3.org/2000/01/rdf-schema#label> "MLP" .
 <http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_2_CODE_MLP> <http://www.w3.org/2004/02/skos/core#inScheme> <http://purl.org/roh/subject-areas#ESSubjectCode2ndList> .
@@ -550,7 +551,7 @@ _:genid1 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/20
 # 
 # http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_2_CODE_MTM
 <http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_2_CODE_MTM> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
-<http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_2_CODE_MTM> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://purl.org/roh#ESSubjectArea> .
+<http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_2_CODE_MTM> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2004/02/skos/core#Concept> .
 <http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_2_CODE_MTM> <http://purl.org/roh#codeOf> <http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_2_MTM> .
 <http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_2_CODE_MTM> <http://www.w3.org/2000/01/rdf-schema#label> "MTM" .
 <http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_2_CODE_MTM> <http://www.w3.org/2004/02/skos/core#inScheme> <http://purl.org/roh/subject-areas#ESSubjectCode2ndList> .
@@ -558,7 +559,7 @@ _:genid1 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/20
 # 
 # http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_2_CODE_PHA
 <http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_2_CODE_PHA> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
-<http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_2_CODE_PHA> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://purl.org/roh#ESSubjectArea> .
+<http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_2_CODE_PHA> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2004/02/skos/core#Concept> .
 <http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_2_CODE_PHA> <http://purl.org/roh#codeOf> <http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_2_PHA> .
 <http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_2_CODE_PHA> <http://www.w3.org/2000/01/rdf-schema#label> "PHA" .
 <http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_2_CODE_PHA> <http://www.w3.org/2004/02/skos/core#inScheme> <http://purl.org/roh/subject-areas#ESSubjectCode2ndList> .
@@ -566,7 +567,7 @@ _:genid1 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/20
 # 
 # http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_2_CODE_PIN
 <http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_2_CODE_PIN> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
-<http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_2_CODE_PIN> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://purl.org/roh#ESSubjectArea> .
+<http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_2_CODE_PIN> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2004/02/skos/core#Concept> .
 <http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_2_CODE_PIN> <http://purl.org/roh#codeOf> <http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_2_PIN> .
 <http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_2_CODE_PIN> <http://www.w3.org/2000/01/rdf-schema#label> "PIN" .
 <http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_2_CODE_PIN> <http://www.w3.org/2004/02/skos/core#inScheme> <http://purl.org/roh/subject-areas#ESSubjectCode2ndList> .
@@ -574,7 +575,7 @@ _:genid1 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/20
 # 
 # http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_2_CODE_PSI
 <http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_2_CODE_PSI> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
-<http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_2_CODE_PSI> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://purl.org/roh#ESSubjectArea> .
+<http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_2_CODE_PSI> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2004/02/skos/core#Concept> .
 <http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_2_CODE_PSI> <http://purl.org/roh#codeOf> <http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_2_PSI> .
 <http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_2_CODE_PSI> <http://www.w3.org/2000/01/rdf-schema#label> "PSI" .
 <http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_2_CODE_PSI> <http://www.w3.org/2004/02/skos/core#inScheme> <http://purl.org/roh/subject-areas#ESSubjectCode2ndList> .
@@ -582,7 +583,7 @@ _:genid1 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/20
 # 
 # http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_2_CODE_TIC
 <http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_2_CODE_TIC> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
-<http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_2_CODE_TIC> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://purl.org/roh#ESSubjectArea> .
+<http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_2_CODE_TIC> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2004/02/skos/core#Concept> .
 <http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_2_CODE_TIC> <http://purl.org/roh#codeOf> <http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_2_TIC> .
 <http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_2_CODE_TIC> <http://www.w3.org/2000/01/rdf-schema#label> "TIC" .
 <http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_2_CODE_TIC> <http://www.w3.org/2004/02/skos/core#inScheme> <http://purl.org/roh/subject-areas#ESSubjectCode2ndList> .
@@ -590,7 +591,7 @@ _:genid1 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/20
 # 
 # http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_2_CSO
 <http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_2_CSO> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
-<http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_2_CSO> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://purl.org/roh#ESSubjectArea> .
+<http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_2_CSO> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2004/02/skos/core#Concept> .
 <http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_2_CSO> <http://purl.org/roh#hasCode> <http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_2_CODE_CSO> .
 <http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_2_CSO> <http://www.w3.org/2000/01/rdf-schema#label> "Ciencias sociales" .
 <http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_2_CSO> <http://www.w3.org/2004/02/skos/core#broader> <http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_1_CSH> .
@@ -608,7 +609,7 @@ _:genid1 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/20
 # 
 # http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_2_CTM
 <http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_2_CTM> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
-<http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_2_CTM> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://purl.org/roh#ESSubjectArea> .
+<http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_2_CTM> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2004/02/skos/core#Concept> .
 <http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_2_CTM> <http://purl.org/roh#hasCode> <http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_2_CODE_CTM> .
 <http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_2_CTM> <http://www.w3.org/2000/01/rdf-schema#label> "Ciencias y tecnologías medioambientales" .
 <http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_2_CTM> <http://www.w3.org/2004/02/skos/core#broader> <http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_1_CV> .
@@ -626,7 +627,7 @@ _:genid1 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/20
 # 
 # http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_2_CTQ
 <http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_2_CTQ> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
-<http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_2_CTQ> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://purl.org/roh#ESSubjectArea> .
+<http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_2_CTQ> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2004/02/skos/core#Concept> .
 <http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_2_CTQ> <http://purl.org/roh#hasCode> <http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_2_CODE_CTQ> .
 <http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_2_CTQ> <http://www.w3.org/2000/01/rdf-schema#label> "Ciencias y tecnologías químicas" .
 <http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_2_CTQ> <http://www.w3.org/2004/02/skos/core#broader> <http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_1_CMIFQ> .
@@ -644,7 +645,7 @@ _:genid1 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/20
 # 
 # http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_2_DER
 <http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_2_DER> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
-<http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_2_DER> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://purl.org/roh#ESSubjectArea> .
+<http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_2_DER> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2004/02/skos/core#Concept> .
 <http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_2_DER> <http://purl.org/roh#hasCode> <http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_2_CODE_DER> .
 <http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_2_DER> <http://www.w3.org/2000/01/rdf-schema#label> "Derecho" .
 <http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_2_DER> <http://www.w3.org/2004/02/skos/core#broader> <http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_1_CSH> .
@@ -662,7 +663,7 @@ _:genid1 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/20
 # 
 # http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_2_ECO
 <http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_2_ECO> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
-<http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_2_ECO> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://purl.org/roh#ESSubjectArea> .
+<http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_2_ECO> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2004/02/skos/core#Concept> .
 <http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_2_ECO> <http://purl.org/roh#hasCode> <http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_2_CODE_ECO> .
 <http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_2_ECO> <http://www.w3.org/2000/01/rdf-schema#label> "Economía" .
 <http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_2_ECO> <http://www.w3.org/2004/02/skos/core#broader> <http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_1_CSH> .
@@ -680,7 +681,7 @@ _:genid1 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/20
 # 
 # http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_2_EDU
 <http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_2_EDU> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
-<http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_2_EDU> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://purl.org/roh#ESSubjectArea> .
+<http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_2_EDU> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2004/02/skos/core#Concept> .
 <http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_2_EDU> <http://purl.org/roh#hasCode> <http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_2_CODE_EDU> .
 <http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_2_EDU> <http://www.w3.org/2000/01/rdf-schema#label> "Ciencias de la educación" .
 <http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_2_EDU> <http://www.w3.org/2004/02/skos/core#broader> <http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_1_CSH> .
@@ -698,7 +699,7 @@ _:genid1 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/20
 # 
 # http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_2_EYT
 <http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_2_EYT> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
-<http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_2_EYT> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://purl.org/roh#ESSubjectArea> .
+<http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_2_EYT> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2004/02/skos/core#Concept> .
 <http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_2_EYT> <http://purl.org/roh#hasCode> <http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_2_CODE_EYT> .
 <http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_2_EYT> <http://www.w3.org/2000/01/rdf-schema#label> "Energía y transporte" .
 <http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_2_EYT> <http://www.w3.org/2004/02/skos/core#broader> <http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_1_CMIFQ> .
@@ -717,7 +718,7 @@ _:genid1 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/20
 # 
 # http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_2_FIS
 <http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_2_FIS> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
-<http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_2_FIS> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://purl.org/roh#ESSubjectArea> .
+<http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_2_FIS> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2004/02/skos/core#Concept> .
 <http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_2_FIS> <http://purl.org/roh#hasCode> <http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_2_CODE_FIS> .
 <http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_2_FIS> <http://www.w3.org/2000/01/rdf-schema#label> "Ciencias físicas" .
 <http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_2_FIS> <http://www.w3.org/2004/02/skos/core#broader> <http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_1_CMIFQ> .
@@ -735,7 +736,7 @@ _:genid1 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/20
 # 
 # http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_2_FLA
 <http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_2_FLA> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
-<http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_2_FLA> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://purl.org/roh#ESSubjectArea> .
+<http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_2_FLA> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2004/02/skos/core#Concept> .
 <http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_2_FLA> <http://purl.org/roh#hasCode> <http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_2_CODE_FLA> .
 <http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_2_FLA> <http://www.w3.org/2000/01/rdf-schema#label> "Cultura: filología, literatura y arte" .
 <http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_2_FLA> <http://www.w3.org/2004/02/skos/core#broader> <http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_1_CSH> .
@@ -752,7 +753,7 @@ _:genid1 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/20
 # 
 # http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_2_MAT
 <http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_2_MAT> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
-<http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_2_MAT> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://purl.org/roh#ESSubjectArea> .
+<http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_2_MAT> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2004/02/skos/core#Concept> .
 <http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_2_MAT> <http://purl.org/roh#hasCode> <http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_2_CODE_MAT> .
 <http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_2_MAT> <http://www.w3.org/2000/01/rdf-schema#label> "Ciencias y tecnologías de materiales" .
 <http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_2_MAT> <http://www.w3.org/2004/02/skos/core#broader> <http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_1_CMIFQ> .
@@ -769,7 +770,7 @@ _:genid1 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/20
 # 
 # http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_2_MLP
 <http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_2_MLP> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
-<http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_2_MLP> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://purl.org/roh#ESSubjectArea> .
+<http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_2_MLP> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2004/02/skos/core#Concept> .
 <http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_2_MLP> <http://purl.org/roh#hasCode> <http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_2_CODE_MLP> .
 <http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_2_MLP> <http://www.w3.org/2000/01/rdf-schema#label> "Mente, lenguaje y pensamiento" .
 <http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_2_MLP> <http://www.w3.org/2004/02/skos/core#broader> <http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_1_CSH> .
@@ -789,7 +790,7 @@ _:genid1 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/20
 # 
 # http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_2_MTM
 <http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_2_MTM> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
-<http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_2_MTM> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://purl.org/roh#ESSubjectArea> .
+<http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_2_MTM> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2004/02/skos/core#Concept> .
 <http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_2_MTM> <http://purl.org/roh#hasCode> <http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_2_CODE_MTM> .
 <http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_2_MTM> <http://www.w3.org/2000/01/rdf-schema#label> "Ciencias matemáticas" .
 <http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_2_MTM> <http://www.w3.org/2004/02/skos/core#broader> <http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_1_CMIFQ> .
@@ -807,7 +808,7 @@ _:genid1 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/20
 # 
 # http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_2_PHA
 <http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_2_PHA> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
-<http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_2_PHA> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://purl.org/roh#ESSubjectArea> .
+<http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_2_PHA> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2004/02/skos/core#Concept> .
 <http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_2_PHA> <http://purl.org/roh#hasCode> <http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_2_CODE_PHA> .
 <http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_2_PHA> <http://www.w3.org/2000/01/rdf-schema#label> "Estudios del pasado: historia y arqueología" .
 <http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_2_PHA> <http://www.w3.org/2004/02/skos/core#broader> <http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_1_CSH> .
@@ -824,7 +825,7 @@ _:genid1 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/20
 # 
 # http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_2_PIN
 <http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_2_PIN> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
-<http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_2_PIN> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://purl.org/roh#ESSubjectArea> .
+<http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_2_PIN> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2004/02/skos/core#Concept> .
 <http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_2_PIN> <http://purl.org/roh#hasCode> <http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_2_CODE_PIN> .
 <http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_2_PIN> <http://www.w3.org/2000/01/rdf-schema#label> "Producción industrial, ingeniería civil e ingenierías para la sociedad" .
 <http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_2_PIN> <http://www.w3.org/2004/02/skos/core#broader> <http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_1_CMIFQ> .
@@ -843,7 +844,7 @@ _:genid1 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/20
 # 
 # http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_2_PSI
 <http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_2_PSI> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
-<http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_2_PSI> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://purl.org/roh#ESSubjectArea> .
+<http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_2_PSI> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2004/02/skos/core#Concept> .
 <http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_2_PSI> <http://purl.org/roh#hasCode> <http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_2_CODE_PSI> .
 <http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_2_PSI> <http://www.w3.org/2000/01/rdf-schema#label> "Psicología" .
 <http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_2_PSI> <http://www.w3.org/2004/02/skos/core#broader> <http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_1_CSH> .
@@ -861,7 +862,7 @@ _:genid1 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/20
 # 
 # http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_2_TIC
 <http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_2_TIC> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
-<http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_2_TIC> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://purl.org/roh#ESSubjectArea> .
+<http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_2_TIC> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2004/02/skos/core#Concept> .
 <http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_2_TIC> <http://purl.org/roh#hasCode> <http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_2_CODE_TIC> .
 <http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_2_TIC> <http://www.w3.org/2000/01/rdf-schema#label> "Tecnologías de la información y de las comunicaciones" .
 <http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_2_TIC> <http://www.w3.org/2004/02/skos/core#broader> <http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_1_CMIFQ> .
@@ -880,7 +881,7 @@ _:genid1 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/20
 # 
 # http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_3_ALI
 <http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_3_ALI> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
-<http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_3_ALI> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://purl.org/roh#ESSubjectArea> .
+<http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_3_ALI> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2004/02/skos/core#Concept> .
 <http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_3_ALI> <http://purl.org/roh#hasCode> <http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_3_CODE_ALI> .
 <http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_3_ALI> <http://www.w3.org/2000/01/rdf-schema#label> "Ciencias y tecnologías de alimentos" .
 <http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_3_ALI> <http://www.w3.org/2004/02/skos/core#broader> <http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_2_CAA> .
@@ -898,7 +899,7 @@ _:genid1 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/20
 # 
 # http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_3_ARQ
 <http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_3_ARQ> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
-<http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_3_ARQ> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://purl.org/roh#ESSubjectArea> .
+<http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_3_ARQ> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2004/02/skos/core#Concept> .
 <http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_3_ARQ> <http://purl.org/roh#hasCode> <http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_3_CODE_ARQ> .
 <http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_3_ARQ> <http://www.w3.org/2000/01/rdf-schema#label> "Arqueología" .
 <http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_3_ARQ> <http://www.w3.org/2004/02/skos/core#broader> <http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_2_PHA> .
@@ -915,7 +916,7 @@ _:genid1 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/20
 # 
 # http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_3_ART
 <http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_3_ART> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
-<http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_3_ART> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://purl.org/roh#ESSubjectArea> .
+<http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_3_ART> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2004/02/skos/core#Concept> .
 <http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_3_ART> <http://purl.org/roh#hasCode> <http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_3_CODE_ART> .
 <http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_3_ART> <http://www.w3.org/2000/01/rdf-schema#label> "Arte, bellas artes, museística" .
 <http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_3_ART> <http://www.w3.org/2004/02/skos/core#broader> <http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_2_FLA> .
@@ -934,7 +935,7 @@ _:genid1 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/20
 # 
 # http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_3_AYA
 <http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_3_AYA> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
-<http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_3_AYA> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://purl.org/roh#ESSubjectArea> .
+<http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_3_AYA> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2004/02/skos/core#Concept> .
 <http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_3_AYA> <http://purl.org/roh#hasCode> <http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_3_CODE_AYA> .
 <http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_3_AYA> <http://www.w3.org/2000/01/rdf-schema#label> "Astronomía y astrofísica" .
 <http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_3_AYA> <http://www.w3.org/2004/02/skos/core#broader> <http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_2_FIS> .
@@ -953,7 +954,7 @@ _:genid1 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/20
 # 
 # http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_3_AYF
 <http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_3_AYF> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
-<http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_3_AYF> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://purl.org/roh#ESSubjectArea> .
+<http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_3_AYF> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2004/02/skos/core#Concept> .
 <http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_3_AYF> <http://purl.org/roh#hasCode> <http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_3_CODE_AYF> .
 <http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_3_AYF> <http://www.w3.org/2000/01/rdf-schema#label> "Agricultura y forestal" .
 <http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_3_AYF> <http://www.w3.org/2004/02/skos/core#broader> <http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_2_CAA> .
@@ -972,7 +973,7 @@ _:genid1 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/20
 # 
 # http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_3_BDV
 <http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_3_BDV> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
-<http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_3_BDV> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://purl.org/roh#ESSubjectArea> .
+<http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_3_BDV> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2004/02/skos/core#Concept> .
 <http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_3_BDV> <http://purl.org/roh#hasCode> <http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_3_CODE_BDV> .
 <http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_3_BDV> <http://www.w3.org/2000/01/rdf-schema#label> "Biodiversidad" .
 <http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_3_BDV> <http://www.w3.org/2004/02/skos/core#broader> <http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_2_CTM> .
@@ -990,7 +991,7 @@ _:genid1 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/20
 # 
 # http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_3_BIF
 <http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_3_BIF> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
-<http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_3_BIF> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://purl.org/roh#ESSubjectArea> .
+<http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_3_BIF> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2004/02/skos/core#Concept> .
 <http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_3_BIF> <http://purl.org/roh#hasCode> <http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_3_CODE_BIF> .
 <http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_3_BIF> <http://www.w3.org/2000/01/rdf-schema#label> "Biología integrativa y fisiología" .
 <http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_3_BIF> <http://www.w3.org/2004/02/skos/core#broader> <http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_2_BIO> .
@@ -1007,7 +1008,7 @@ _:genid1 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/20
 # 
 # http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_3_BMC
 <http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_3_BMC> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
-<http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_3_BMC> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://purl.org/roh#ESSubjectArea> .
+<http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_3_BMC> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2004/02/skos/core#Concept> .
 <http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_3_BMC> <http://purl.org/roh#hasCode> <http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_3_CODE_BMC> .
 <http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_3_BMC> <http://www.w3.org/2000/01/rdf-schema#label> "Biología molecular y celular" .
 <http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_3_BMC> <http://www.w3.org/2004/02/skos/core#broader> <http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_2_BIO> .
@@ -1026,7 +1027,7 @@ _:genid1 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/20
 # 
 # http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_3_BTC
 <http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_3_BTC> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
-<http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_3_BTC> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://purl.org/roh#ESSubjectArea> .
+<http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_3_BTC> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2004/02/skos/core#Concept> .
 <http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_3_BTC> <http://purl.org/roh#hasCode> <http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_3_CODE_BTC> .
 <http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_3_BTC> <http://www.w3.org/2000/01/rdf-schema#label> "Biotecnología" .
 <http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_3_BTC> <http://www.w3.org/2004/02/skos/core#broader> <http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_2_BIO> .
@@ -1044,7 +1045,7 @@ _:genid1 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/20
 # 
 # http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_3_CAN
 <http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_3_CAN> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
-<http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_3_CAN> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://purl.org/roh#ESSubjectArea> .
+<http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_3_CAN> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2004/02/skos/core#Concept> .
 <http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_3_CAN> <http://purl.org/roh#hasCode> <http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_3_CODE_CAN> .
 <http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_3_CAN> <http://www.w3.org/2000/01/rdf-schema#label> "Cáncer" .
 <http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_3_CAN> <http://www.w3.org/2004/02/skos/core#broader> <http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_2_BME> .
@@ -1062,7 +1063,7 @@ _:genid1 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/20
 # 
 # http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_3_CODE_ALI
 <http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_3_CODE_ALI> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
-<http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_3_CODE_ALI> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://purl.org/roh#ESSubjectArea> .
+<http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_3_CODE_ALI> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2004/02/skos/core#Concept> .
 <http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_3_CODE_ALI> <http://purl.org/roh#codeOf> <http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_3_ALI> .
 <http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_3_CODE_ALI> <http://www.w3.org/2000/01/rdf-schema#label> "ALI" .
 <http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_3_CODE_ALI> <http://www.w3.org/2004/02/skos/core#inScheme> <http://purl.org/roh/subject-areas#ESSubjectCode3rdList> .
@@ -1070,7 +1071,7 @@ _:genid1 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/20
 # 
 # http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_3_CODE_ARQ
 <http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_3_CODE_ARQ> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
-<http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_3_CODE_ARQ> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://purl.org/roh#ESSubjectArea> .
+<http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_3_CODE_ARQ> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2004/02/skos/core#Concept> .
 <http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_3_CODE_ARQ> <http://purl.org/roh#codeOf> <http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_3_ARQ> .
 <http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_3_CODE_ARQ> <http://www.w3.org/2000/01/rdf-schema#label> "ARQ" .
 <http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_3_CODE_ARQ> <http://www.w3.org/2004/02/skos/core#inScheme> <http://purl.org/roh/subject-areas#ESSubjectCode3rdList> .
@@ -1078,7 +1079,7 @@ _:genid1 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/20
 # 
 # http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_3_CODE_ART
 <http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_3_CODE_ART> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
-<http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_3_CODE_ART> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://purl.org/roh#ESSubjectArea> .
+<http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_3_CODE_ART> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2004/02/skos/core#Concept> .
 <http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_3_CODE_ART> <http://purl.org/roh#codeOf> <http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_3_ART> .
 <http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_3_CODE_ART> <http://www.w3.org/2000/01/rdf-schema#label> "ART" .
 <http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_3_CODE_ART> <http://www.w3.org/2004/02/skos/core#inScheme> <http://purl.org/roh/subject-areas#ESSubjectCode3rdList> .
@@ -1086,7 +1087,7 @@ _:genid1 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/20
 # 
 # http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_3_CODE_AYA
 <http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_3_CODE_AYA> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
-<http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_3_CODE_AYA> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://purl.org/roh#ESSubjectArea> .
+<http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_3_CODE_AYA> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2004/02/skos/core#Concept> .
 <http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_3_CODE_AYA> <http://purl.org/roh#codeOf> <http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_3_AYA> .
 <http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_3_CODE_AYA> <http://www.w3.org/2000/01/rdf-schema#label> "AYA" .
 <http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_3_CODE_AYA> <http://www.w3.org/2004/02/skos/core#inScheme> <http://purl.org/roh/subject-areas#ESSubjectCode3rdList> .
@@ -1094,7 +1095,7 @@ _:genid1 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/20
 # 
 # http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_3_CODE_AYF
 <http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_3_CODE_AYF> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
-<http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_3_CODE_AYF> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://purl.org/roh#ESSubjectArea> .
+<http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_3_CODE_AYF> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2004/02/skos/core#Concept> .
 <http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_3_CODE_AYF> <http://purl.org/roh#codeOf> <http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_3_AYF> .
 <http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_3_CODE_AYF> <http://www.w3.org/2000/01/rdf-schema#label> "AYF" .
 <http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_3_CODE_AYF> <http://www.w3.org/2004/02/skos/core#inScheme> <http://purl.org/roh/subject-areas#ESSubjectCode3rdList> .
@@ -1102,7 +1103,7 @@ _:genid1 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/20
 # 
 # http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_3_CODE_BDV
 <http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_3_CODE_BDV> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
-<http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_3_CODE_BDV> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://purl.org/roh#ESSubjectArea> .
+<http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_3_CODE_BDV> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2004/02/skos/core#Concept> .
 <http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_3_CODE_BDV> <http://purl.org/roh#codeOf> <http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_3_BDV> .
 <http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_3_CODE_BDV> <http://www.w3.org/2000/01/rdf-schema#label> "BDV" .
 <http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_3_CODE_BDV> <http://www.w3.org/2004/02/skos/core#inScheme> <http://purl.org/roh/subject-areas#ESSubjectCode3rdList> .
@@ -1110,7 +1111,7 @@ _:genid1 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/20
 # 
 # http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_3_CODE_BIF
 <http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_3_CODE_BIF> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
-<http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_3_CODE_BIF> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://purl.org/roh#ESSubjectArea> .
+<http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_3_CODE_BIF> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2004/02/skos/core#Concept> .
 <http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_3_CODE_BIF> <http://purl.org/roh#codeOf> <http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_3_BIF> .
 <http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_3_CODE_BIF> <http://www.w3.org/2000/01/rdf-schema#label> "BIF" .
 <http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_3_CODE_BIF> <http://www.w3.org/2004/02/skos/core#inScheme> <http://purl.org/roh/subject-areas#ESSubjectCode3rdList> .
@@ -1118,7 +1119,7 @@ _:genid1 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/20
 # 
 # http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_3_CODE_BMC
 <http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_3_CODE_BMC> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
-<http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_3_CODE_BMC> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://purl.org/roh#ESSubjectArea> .
+<http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_3_CODE_BMC> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2004/02/skos/core#Concept> .
 <http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_3_CODE_BMC> <http://purl.org/roh#codeOf> <http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_3_BMC> .
 <http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_3_CODE_BMC> <http://www.w3.org/2000/01/rdf-schema#label> "BMC" .
 <http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_3_CODE_BMC> <http://www.w3.org/2004/02/skos/core#inScheme> <http://purl.org/roh/subject-areas#ESSubjectCode3rdList> .
@@ -1126,7 +1127,7 @@ _:genid1 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/20
 # 
 # http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_3_CODE_BTC
 <http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_3_CODE_BTC> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
-<http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_3_CODE_BTC> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://purl.org/roh#ESSubjectArea> .
+<http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_3_CODE_BTC> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2004/02/skos/core#Concept> .
 <http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_3_CODE_BTC> <http://purl.org/roh#codeOf> <http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_3_BTC> .
 <http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_3_CODE_BTC> <http://www.w3.org/2000/01/rdf-schema#label> "BTC" .
 <http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_3_CODE_BTC> <http://www.w3.org/2004/02/skos/core#inScheme> <http://purl.org/roh/subject-areas#ESSubjectCode3rdList> .
@@ -1134,7 +1135,7 @@ _:genid1 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/20
 # 
 # http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_3_CODE_CAN
 <http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_3_CODE_CAN> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
-<http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_3_CODE_CAN> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://purl.org/roh#ESSubjectArea> .
+<http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_3_CODE_CAN> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2004/02/skos/core#Concept> .
 <http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_3_CODE_CAN> <http://purl.org/roh#codeOf> <http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_3_CAN> .
 <http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_3_CODE_CAN> <http://www.w3.org/2000/01/rdf-schema#label> "CAN" .
 <http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_3_CODE_CAN> <http://www.w3.org/2004/02/skos/core#inScheme> <http://purl.org/roh/subject-areas#ESSubjectCode3rdList> .
@@ -1142,7 +1143,7 @@ _:genid1 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/20
 # 
 # http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_3_CODE_COM
 <http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_3_CODE_COM> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
-<http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_3_CODE_COM> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://purl.org/roh#ESSubjectArea> .
+<http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_3_CODE_COM> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2004/02/skos/core#Concept> .
 <http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_3_CODE_COM> <http://purl.org/roh#codeOf> <http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_3_COM> .
 <http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_3_CODE_COM> <http://www.w3.org/2000/01/rdf-schema#label> "COM" .
 <http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_3_CODE_COM> <http://www.w3.org/2004/02/skos/core#inScheme> <http://purl.org/roh/subject-areas#ESSubjectCode3rdList> .
@@ -1150,7 +1151,7 @@ _:genid1 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/20
 # 
 # http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_3_CODE_CPO
 <http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_3_CODE_CPO> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
-<http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_3_CODE_CPO> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://purl.org/roh#ESSubjectArea> .
+<http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_3_CODE_CPO> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2004/02/skos/core#Concept> .
 <http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_3_CODE_CPO> <http://purl.org/roh#codeOf> <http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_3_CPO> .
 <http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_3_CODE_CPO> <http://www.w3.org/2000/01/rdf-schema#label> "CPO" .
 <http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_3_CODE_CPO> <http://www.w3.org/2004/02/skos/core#inScheme> <http://purl.org/roh/subject-areas#ESSubjectCode3rdList> .
@@ -1158,7 +1159,7 @@ _:genid1 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/20
 # 
 # http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_3_CODE_CTA
 <http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_3_CODE_CTA> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
-<http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_3_CODE_CTA> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://purl.org/roh#ESSubjectArea> .
+<http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_3_CODE_CTA> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2004/02/skos/core#Concept> .
 <http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_3_CODE_CTA> <http://purl.org/roh#codeOf> <http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_3_CTA> .
 <http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_3_CODE_CTA> <http://www.w3.org/2000/01/rdf-schema#label> "CTA" .
 <http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_3_CODE_CTA> <http://www.w3.org/2004/02/skos/core#inScheme> <http://purl.org/roh/subject-areas#ESSubjectCode3rdList> .
@@ -1166,7 +1167,7 @@ _:genid1 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/20
 # 
 # http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_3_CODE_CYA
 <http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_3_CODE_CYA> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
-<http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_3_CODE_CYA> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://purl.org/roh#ESSubjectArea> .
+<http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_3_CODE_CYA> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2004/02/skos/core#Concept> .
 <http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_3_CODE_CYA> <http://purl.org/roh#codeOf> <http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_3_CYA> .
 <http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_3_CODE_CYA> <http://www.w3.org/2000/01/rdf-schema#label> "CYA" .
 <http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_3_CODE_CYA> <http://www.w3.org/2004/02/skos/core#inScheme> <http://purl.org/roh/subject-areas#ESSubjectCode3rdList> .
@@ -1174,7 +1175,7 @@ _:genid1 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/20
 # 
 # http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_3_CODE_DE3
 <http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_3_CODE_DE3> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
-<http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_3_CODE_DE3> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://purl.org/roh#ESSubjectArea> .
+<http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_3_CODE_DE3> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2004/02/skos/core#Concept> .
 <http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_3_CODE_DE3> <http://purl.org/roh#codeOf> <http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_3_DE3> .
 <http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_3_CODE_DE3> <http://www.w3.org/2000/01/rdf-schema#label> "DE3" .
 <http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_3_CODE_DE3> <http://www.w3.org/2004/02/skos/core#inScheme> <http://purl.org/roh/subject-areas#ESSubjectCode3rdList> .
@@ -1182,7 +1183,7 @@ _:genid1 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/20
 # 
 # http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_3_CODE_DPT
 <http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_3_CODE_DPT> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
-<http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_3_CODE_DPT> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://purl.org/roh#ESSubjectArea> .
+<http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_3_CODE_DPT> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2004/02/skos/core#Concept> .
 <http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_3_CODE_DPT> <http://purl.org/roh#codeOf> <http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_3_DPT> .
 <http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_3_CODE_DPT> <http://www.w3.org/2000/01/rdf-schema#label> "DPT" .
 <http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_3_CODE_DPT> <http://www.w3.org/2004/02/skos/core#inScheme> <http://purl.org/roh/subject-areas#ESSubjectCode3rdList> .
@@ -1190,7 +1191,7 @@ _:genid1 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/20
 # 
 # http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_3_CODE_ED3
 <http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_3_CODE_ED3> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
-<http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_3_CODE_ED3> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://purl.org/roh#ESSubjectArea> .
+<http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_3_CODE_ED3> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2004/02/skos/core#Concept> .
 <http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_3_CODE_ED3> <http://purl.org/roh#codeOf> <http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_3_ED3> .
 <http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_3_CODE_ED3> <http://www.w3.org/2000/01/rdf-schema#label> "ED3" .
 <http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_3_CODE_ED3> <http://www.w3.org/2004/02/skos/core#inScheme> <http://purl.org/roh/subject-areas#ESSubjectCode3rdList> .
@@ -1198,7 +1199,7 @@ _:genid1 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/20
 # 
 # http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_3_CODE_ENE
 <http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_3_CODE_ENE> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
-<http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_3_CODE_ENE> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://purl.org/roh#ESSubjectArea> .
+<http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_3_CODE_ENE> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2004/02/skos/core#Concept> .
 <http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_3_CODE_ENE> <http://purl.org/roh#codeOf> <http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_3_ENE> .
 <http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_3_CODE_ENE> <http://www.w3.org/2000/01/rdf-schema#label> "ENE" .
 <http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_3_CODE_ENE> <http://www.w3.org/2004/02/skos/core#inScheme> <http://purl.org/roh/subject-areas#ESSubjectCode3rdList> .
@@ -1206,7 +1207,7 @@ _:genid1 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/20
 # 
 # http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_3_CODE_ESN
 <http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_3_CODE_ESN> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
-<http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_3_CODE_ESN> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://purl.org/roh#ESSubjectArea> .
+<http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_3_CODE_ESN> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2004/02/skos/core#Concept> .
 <http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_3_CODE_ESN> <http://purl.org/roh#codeOf> <http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_3_ESN> .
 <http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_3_CODE_ESN> <http://www.w3.org/2000/01/rdf-schema#label> "ESN" .
 <http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_3_CODE_ESN> <http://www.w3.org/2004/02/skos/core#inScheme> <http://purl.org/roh/subject-areas#ESSubjectCode3rdList> .
@@ -1214,7 +1215,7 @@ _:genid1 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/20
 # 
 # http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_3_CODE_ESP
 <http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_3_CODE_ESP> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
-<http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_3_CODE_ESP> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://purl.org/roh#ESSubjectArea> .
+<http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_3_CODE_ESP> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2004/02/skos/core#Concept> .
 <http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_3_CODE_ESP> <http://purl.org/roh#codeOf> <http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_3_ESP> .
 <http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_3_CODE_ESP> <http://www.w3.org/2000/01/rdf-schema#label> "ESP" .
 <http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_3_CODE_ESP> <http://www.w3.org/2004/02/skos/core#inScheme> <http://purl.org/roh/subject-areas#ESSubjectCode3rdList> .
@@ -1222,7 +1223,7 @@ _:genid1 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/20
 # 
 # http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_3_CODE_EYA
 <http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_3_CODE_EYA> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
-<http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_3_CODE_EYA> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://purl.org/roh#ESSubjectArea> .
+<http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_3_CODE_EYA> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2004/02/skos/core#Concept> .
 <http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_3_CODE_EYA> <http://purl.org/roh#codeOf> <http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_3_EYA> .
 <http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_3_CODE_EYA> <http://www.w3.org/2000/01/rdf-schema#label> "EYA" .
 <http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_3_CODE_EYA> <http://www.w3.org/2004/02/skos/core#inScheme> <http://purl.org/roh/subject-areas#ESSubjectCode3rdList> .
@@ -1230,7 +1231,7 @@ _:genid1 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/20
 # 
 # http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_3_CODE_EYF
 <http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_3_CODE_EYF> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
-<http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_3_CODE_EYF> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://purl.org/roh#ESSubjectArea> .
+<http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_3_CODE_EYF> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2004/02/skos/core#Concept> .
 <http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_3_CODE_EYF> <http://purl.org/roh#codeOf> <http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_3_EYF> .
 <http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_3_CODE_EYF> <http://www.w3.org/2000/01/rdf-schema#label> "EYF" .
 <http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_3_CODE_EYF> <http://www.w3.org/2004/02/skos/core#inScheme> <http://purl.org/roh/subject-areas#ESSubjectCode3rdList> .
@@ -1238,7 +1239,7 @@ _:genid1 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/20
 # 
 # http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_3_CODE_FEM
 <http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_3_CODE_FEM> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
-<http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_3_CODE_FEM> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://purl.org/roh#ESSubjectArea> .
+<http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_3_CODE_FEM> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2004/02/skos/core#Concept> .
 <http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_3_CODE_FEM> <http://purl.org/roh#codeOf> <http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_3_FEM> .
 <http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_3_CODE_FEM> <http://www.w3.org/2000/01/rdf-schema#label> "FEM" .
 <http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_3_CODE_FEM> <http://www.w3.org/2004/02/skos/core#inScheme> <http://purl.org/roh/subject-areas#ESSubjectCode3rdList> .
@@ -1246,7 +1247,7 @@ _:genid1 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/20
 # 
 # http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_3_CODE_FFP
 <http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_3_CODE_FFP> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
-<http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_3_CODE_FFP> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://purl.org/roh#ESSubjectArea> .
+<http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_3_CODE_FFP> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2004/02/skos/core#Concept> .
 <http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_3_CODE_FFP> <http://purl.org/roh#codeOf> <http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_3_FFP> .
 <http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_3_CODE_FFP> <http://www.w3.org/2000/01/rdf-schema#label> "FFP" .
 <http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_3_CODE_FFP> <http://www.w3.org/2004/02/skos/core#inScheme> <http://purl.org/roh/subject-areas#ESSubjectCode3rdList> .
@@ -1254,7 +1255,7 @@ _:genid1 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/20
 # 
 # http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_3_CODE_FIL
 <http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_3_CODE_FIL> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
-<http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_3_CODE_FIL> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://purl.org/roh#ESSubjectArea> .
+<http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_3_CODE_FIL> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2004/02/skos/core#Concept> .
 <http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_3_CODE_FIL> <http://purl.org/roh#codeOf> <http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_3_FIL> .
 <http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_3_CODE_FIL> <http://www.w3.org/2000/01/rdf-schema#label> "FIL" .
 <http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_3_CODE_FIL> <http://www.w3.org/2004/02/skos/core#inScheme> <http://purl.org/roh/subject-areas#ESSubjectCode3rdList> .
@@ -1262,7 +1263,7 @@ _:genid1 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/20
 # 
 # http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_3_CODE_FOS
 <http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_3_CODE_FOS> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
-<http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_3_CODE_FOS> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://purl.org/roh#ESSubjectArea> .
+<http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_3_CODE_FOS> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2004/02/skos/core#Concept> .
 <http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_3_CODE_FOS> <http://purl.org/roh#codeOf> <http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_3_FOS> .
 <http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_3_CODE_FOS> <http://www.w3.org/2000/01/rdf-schema#label> "FOS" .
 <http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_3_CODE_FOS> <http://www.w3.org/2004/02/skos/core#inScheme> <http://purl.org/roh/subject-areas#ESSubjectCode3rdList> .
@@ -1270,7 +1271,7 @@ _:genid1 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/20
 # 
 # http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_3_CODE_FYA
 <http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_3_CODE_FYA> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
-<http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_3_CODE_FYA> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://purl.org/roh#ESSubjectArea> .
+<http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_3_CODE_FYA> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2004/02/skos/core#Concept> .
 <http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_3_CODE_FYA> <http://purl.org/roh#codeOf> <http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_3_FYA> .
 <http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_3_CODE_FYA> <http://www.w3.org/2000/01/rdf-schema#label> "FYA" .
 <http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_3_CODE_FYA> <http://www.w3.org/2004/02/skos/core#inScheme> <http://purl.org/roh/subject-areas#ESSubjectCode3rdList> .
@@ -1278,7 +1279,7 @@ _:genid1 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/20
 # 
 # http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_3_CODE_GEO
 <http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_3_CODE_GEO> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
-<http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_3_CODE_GEO> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://purl.org/roh#ESSubjectArea> .
+<http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_3_CODE_GEO> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2004/02/skos/core#Concept> .
 <http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_3_CODE_GEO> <http://purl.org/roh#codeOf> <http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_3_GEO> .
 <http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_3_CODE_GEO> <http://www.w3.org/2000/01/rdf-schema#label> "GEO" .
 <http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_3_CODE_GEO> <http://www.w3.org/2004/02/skos/core#inScheme> <http://purl.org/roh/subject-areas#ESSubjectCode3rdList> .
@@ -1286,7 +1287,7 @@ _:genid1 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/20
 # 
 # http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_3_CODE_GYA
 <http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_3_CODE_GYA> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
-<http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_3_CODE_GYA> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://purl.org/roh#ESSubjectArea> .
+<http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_3_CODE_GYA> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2004/02/skos/core#Concept> .
 <http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_3_CODE_GYA> <http://purl.org/roh#codeOf> <http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_3_GYA> .
 <http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_3_CODE_GYA> <http://www.w3.org/2000/01/rdf-schema#label> "GYA" .
 <http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_3_CODE_GYA> <http://www.w3.org/2004/02/skos/core#inScheme> <http://purl.org/roh/subject-areas#ESSubjectCode3rdList> .
@@ -1294,7 +1295,7 @@ _:genid1 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/20
 # 
 # http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_3_CODE_HIS
 <http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_3_CODE_HIS> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
-<http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_3_CODE_HIS> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://purl.org/roh#ESSubjectArea> .
+<http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_3_CODE_HIS> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2004/02/skos/core#Concept> .
 <http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_3_CODE_HIS> <http://purl.org/roh#codeOf> <http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_3_HIS> .
 <http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_3_CODE_HIS> <http://www.w3.org/2000/01/rdf-schema#label> "HIS" .
 <http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_3_CODE_HIS> <http://www.w3.org/2004/02/skos/core#inScheme> <http://purl.org/roh/subject-areas#ESSubjectCode3rdList> .
@@ -1302,7 +1303,7 @@ _:genid1 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/20
 # 
 # http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_3_CODE_IBI
 <http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_3_CODE_IBI> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
-<http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_3_CODE_IBI> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://purl.org/roh#ESSubjectArea> .
+<http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_3_CODE_IBI> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2004/02/skos/core#Concept> .
 <http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_3_CODE_IBI> <http://purl.org/roh#codeOf> <http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_3_IBI> .
 <http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_3_CODE_IBI> <http://www.w3.org/2000/01/rdf-schema#label> "IBI" .
 <http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_3_CODE_IBI> <http://www.w3.org/2004/02/skos/core#inScheme> <http://purl.org/roh/subject-areas#ESSubjectCode3rdList> .
@@ -1310,7 +1311,7 @@ _:genid1 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/20
 # 
 # http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_3_CODE_ICA
 <http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_3_CODE_ICA> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
-<http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_3_CODE_ICA> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://purl.org/roh#ESSubjectArea> .
+<http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_3_CODE_ICA> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2004/02/skos/core#Concept> .
 <http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_3_CODE_ICA> <http://purl.org/roh#codeOf> <http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_3_ICA> .
 <http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_3_CODE_ICA> <http://www.w3.org/2000/01/rdf-schema#label> "ICA" .
 <http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_3_CODE_ICA> <http://www.w3.org/2004/02/skos/core#inScheme> <http://purl.org/roh/subject-areas#ESSubjectCode3rdList> .
@@ -1318,7 +1319,7 @@ _:genid1 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/20
 # 
 # http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_3_CODE_IEA
 <http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_3_CODE_IEA> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
-<http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_3_CODE_IEA> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://purl.org/roh#ESSubjectArea> .
+<http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_3_CODE_IEA> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2004/02/skos/core#Concept> .
 <http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_3_CODE_IEA> <http://purl.org/roh#codeOf> <http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_3_IEA> .
 <http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_3_CODE_IEA> <http://www.w3.org/2000/01/rdf-schema#label> "IEA" .
 <http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_3_CODE_IEA> <http://www.w3.org/2004/02/skos/core#inScheme> <http://purl.org/roh/subject-areas#ESSubjectCode3rdList> .
@@ -1326,7 +1327,7 @@ _:genid1 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/20
 # 
 # http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_3_CODE_IIT
 <http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_3_CODE_IIT> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
-<http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_3_CODE_IIT> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://purl.org/roh#ESSubjectArea> .
+<http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_3_CODE_IIT> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2004/02/skos/core#Concept> .
 <http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_3_CODE_IIT> <http://purl.org/roh#codeOf> <http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_3_IIT> .
 <http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_3_CODE_IIT> <http://www.w3.org/2000/01/rdf-schema#label> "IIT" .
 <http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_3_CODE_IIT> <http://www.w3.org/2004/02/skos/core#inScheme> <http://purl.org/roh/subject-areas#ESSubjectCode3rdList> .
@@ -1334,7 +1335,7 @@ _:genid1 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/20
 # 
 # http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_3_CODE_INA
 <http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_3_CODE_INA> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
-<http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_3_CODE_INA> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://purl.org/roh#ESSubjectArea> .
+<http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_3_CODE_INA> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2004/02/skos/core#Concept> .
 <http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_3_CODE_INA> <http://purl.org/roh#codeOf> <http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_3_INA> .
 <http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_3_CODE_INA> <http://www.w3.org/2000/01/rdf-schema#label> "INA" .
 <http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_3_CODE_INA> <http://www.w3.org/2004/02/skos/core#inScheme> <http://purl.org/roh/subject-areas#ESSubjectCode3rdList> .
@@ -1342,7 +1343,7 @@ _:genid1 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/20
 # 
 # http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_3_CODE_INF
 <http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_3_CODE_INF> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
-<http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_3_CODE_INF> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://purl.org/roh#ESSubjectArea> .
+<http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_3_CODE_INF> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2004/02/skos/core#Concept> .
 <http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_3_CODE_INF> <http://purl.org/roh#codeOf> <http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_3_INF> .
 <http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_3_CODE_INF> <http://www.w3.org/2000/01/rdf-schema#label> "INF" .
 <http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_3_CODE_INF> <http://www.w3.org/2004/02/skos/core#inScheme> <http://purl.org/roh/subject-areas#ESSubjectCode3rdList> .
@@ -1350,7 +1351,7 @@ _:genid1 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/20
 # 
 # http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_3_CODE_IQM
 <http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_3_CODE_IQM> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
-<http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_3_CODE_IQM> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://purl.org/roh#ESSubjectArea> .
+<http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_3_CODE_IQM> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2004/02/skos/core#Concept> .
 <http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_3_CODE_IQM> <http://purl.org/roh#codeOf> <http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_3_IQM> .
 <http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_3_CODE_IQM> <http://www.w3.org/2000/01/rdf-schema#label> "IQM" .
 <http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_3_CODE_IQM> <http://www.w3.org/2004/02/skos/core#inScheme> <http://purl.org/roh/subject-areas#ESSubjectCode3rdList> .
@@ -1358,7 +1359,7 @@ _:genid1 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/20
 # 
 # http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_3_CODE_LFL
 <http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_3_CODE_LFL> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
-<http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_3_CODE_LFL> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://purl.org/roh#ESSubjectArea> .
+<http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_3_CODE_LFL> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2004/02/skos/core#Concept> .
 <http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_3_CODE_LFL> <http://purl.org/roh#codeOf> <http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_3_LFL> .
 <http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_3_CODE_LFL> <http://www.w3.org/2000/01/rdf-schema#label> "LFL" .
 <http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_3_CODE_LFL> <http://www.w3.org/2004/02/skos/core#inScheme> <http://purl.org/roh/subject-areas#ESSubjectCode3rdList> .
@@ -1366,7 +1367,7 @@ _:genid1 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/20
 # 
 # http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_3_CODE_LYL
 <http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_3_CODE_LYL> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
-<http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_3_CODE_LYL> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://purl.org/roh#ESSubjectArea> .
+<http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_3_CODE_LYL> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2004/02/skos/core#Concept> .
 <http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_3_CODE_LYL> <http://purl.org/roh#codeOf> <http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_3_LYL> .
 <http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_3_CODE_LYL> <http://www.w3.org/2000/01/rdf-schema#label> "LYL" .
 <http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_3_CODE_LYL> <http://www.w3.org/2004/02/skos/core#inScheme> <http://purl.org/roh/subject-areas#ESSubjectCode3rdList> .
@@ -1374,7 +1375,7 @@ _:genid1 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/20
 # 
 # http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_3_CODE_MAE
 <http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_3_CODE_MAE> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
-<http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_3_CODE_MAE> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://purl.org/roh#ESSubjectArea> .
+<http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_3_CODE_MAE> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2004/02/skos/core#Concept> .
 <http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_3_CODE_MAE> <http://purl.org/roh#codeOf> <http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_3_MAE> .
 <http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_3_CODE_MAE> <http://www.w3.org/2000/01/rdf-schema#label> "MAE" .
 <http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_3_CODE_MAE> <http://www.w3.org/2004/02/skos/core#inScheme> <http://purl.org/roh/subject-areas#ESSubjectCode3rdList> .
@@ -1382,7 +1383,7 @@ _:genid1 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/20
 # 
 # http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_3_CODE_MAR
 <http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_3_CODE_MAR> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
-<http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_3_CODE_MAR> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://purl.org/roh#ESSubjectArea> .
+<http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_3_CODE_MAR> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2004/02/skos/core#Concept> .
 <http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_3_CODE_MAR> <http://purl.org/roh#codeOf> <http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_3_MAR> .
 <http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_3_CODE_MAR> <http://www.w3.org/2000/01/rdf-schema#label> "MAR" .
 <http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_3_CODE_MAR> <http://www.w3.org/2004/02/skos/core#inScheme> <http://purl.org/roh/subject-areas#ESSubjectCode3rdList> .
@@ -1390,7 +1391,7 @@ _:genid1 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/20
 # 
 # http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_3_CODE_MBM
 <http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_3_CODE_MBM> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
-<http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_3_CODE_MBM> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://purl.org/roh#ESSubjectArea> .
+<http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_3_CODE_MBM> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2004/02/skos/core#Concept> .
 <http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_3_CODE_MBM> <http://purl.org/roh#codeOf> <http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_3_MBM> .
 <http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_3_CODE_MBM> <http://www.w3.org/2000/01/rdf-schema#label> "MBM" .
 <http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_3_CODE_MBM> <http://www.w3.org/2004/02/skos/core#inScheme> <http://purl.org/roh/subject-areas#ESSubjectCode3rdList> .
@@ -1398,7 +1399,7 @@ _:genid1 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/20
 # 
 # http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_3_CODE_MEN
 <http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_3_CODE_MEN> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
-<http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_3_CODE_MEN> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://purl.org/roh#ESSubjectArea> .
+<http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_3_CODE_MEN> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2004/02/skos/core#Concept> .
 <http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_3_CODE_MEN> <http://purl.org/roh#codeOf> <http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_3_MEN> .
 <http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_3_CODE_MEN> <http://www.w3.org/2000/01/rdf-schema#label> "MEN" .
 <http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_3_CODE_MEN> <http://www.w3.org/2004/02/skos/core#inScheme> <http://purl.org/roh/subject-areas#ESSubjectCode3rdList> .
@@ -1406,7 +1407,7 @@ _:genid1 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/20
 # 
 # http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_3_CODE_MES
 <http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_3_CODE_MES> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
-<http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_3_CODE_MES> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://purl.org/roh#ESSubjectArea> .
+<http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_3_CODE_MES> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2004/02/skos/core#Concept> .
 <http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_3_CODE_MES> <http://purl.org/roh#codeOf> <http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_3_MES> .
 <http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_3_CODE_MES> <http://www.w3.org/2000/01/rdf-schema#label> "MES" .
 <http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_3_CODE_MES> <http://www.w3.org/2004/02/skos/core#inScheme> <http://purl.org/roh/subject-areas#ESSubjectCode3rdList> .
@@ -1414,7 +1415,7 @@ _:genid1 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/20
 # 
 # http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_3_CODE_MFU
 <http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_3_CODE_MFU> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
-<http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_3_CODE_MFU> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://purl.org/roh#ESSubjectArea> .
+<http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_3_CODE_MFU> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2004/02/skos/core#Concept> .
 <http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_3_CODE_MFU> <http://purl.org/roh#codeOf> <http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_3_MFU> .
 <http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_3_CODE_MFU> <http://www.w3.org/2000/01/rdf-schema#label> "MFU" .
 <http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_3_CODE_MFU> <http://www.w3.org/2004/02/skos/core#inScheme> <http://purl.org/roh/subject-areas#ESSubjectCode3rdList> .
@@ -1422,7 +1423,7 @@ _:genid1 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/20
 # 
 # http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_3_CODE_MNF
 <http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_3_CODE_MNF> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
-<http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_3_CODE_MNF> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://purl.org/roh#ESSubjectArea> .
+<http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_3_CODE_MNF> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2004/02/skos/core#Concept> .
 <http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_3_CODE_MNF> <http://purl.org/roh#codeOf> <http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_3_MNF> .
 <http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_3_CODE_MNF> <http://www.w3.org/2000/01/rdf-schema#label> "MNF" .
 <http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_3_CODE_MNF> <http://www.w3.org/2004/02/skos/core#inScheme> <http://purl.org/roh/subject-areas#ESSubjectCode3rdList> .
@@ -1430,7 +1431,7 @@ _:genid1 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/20
 # 
 # http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_3_CODE_MT3
 <http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_3_CODE_MT3> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
-<http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_3_CODE_MT3> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://purl.org/roh#ESSubjectArea> .
+<http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_3_CODE_MT3> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2004/02/skos/core#Concept> .
 <http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_3_CODE_MT3> <http://purl.org/roh#codeOf> <http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_3_MT3> .
 <http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_3_CODE_MT3> <http://www.w3.org/2000/01/rdf-schema#label> "MT3" .
 <http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_3_CODE_MT3> <http://www.w3.org/2004/02/skos/core#inScheme> <http://purl.org/roh/subject-areas#ESSubjectCode3rdList> .
@@ -1438,7 +1439,7 @@ _:genid1 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/20
 # 
 # http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_3_CODE_POL
 <http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_3_CODE_POL> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
-<http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_3_CODE_POL> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://purl.org/roh#ESSubjectArea> .
+<http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_3_CODE_POL> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2004/02/skos/core#Concept> .
 <http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_3_CODE_POL> <http://purl.org/roh#codeOf> <http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_3_POL> .
 <http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_3_CODE_POL> <http://www.w3.org/2000/01/rdf-schema#label> "POL" .
 <http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_3_CODE_POL> <http://www.w3.org/2004/02/skos/core#inScheme> <http://purl.org/roh/subject-areas#ESSubjectCode3rdList> .
@@ -1446,7 +1447,7 @@ _:genid1 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/20
 # 
 # http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_3_CODE_PS3
 <http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_3_CODE_PS3> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
-<http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_3_CODE_PS3> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://purl.org/roh#ESSubjectArea> .
+<http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_3_CODE_PS3> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2004/02/skos/core#Concept> .
 <http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_3_CODE_PS3> <http://purl.org/roh#codeOf> <http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_3_PS3> .
 <http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_3_CODE_PS3> <http://www.w3.org/2000/01/rdf-schema#label> "PS3" .
 <http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_3_CODE_PS3> <http://www.w3.org/2004/02/skos/core#inScheme> <http://purl.org/roh/subject-areas#ESSubjectCode3rdList> .
@@ -1454,7 +1455,7 @@ _:genid1 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/20
 # 
 # http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_3_CODE_QMC
 <http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_3_CODE_QMC> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
-<http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_3_CODE_QMC> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://purl.org/roh#ESSubjectArea> .
+<http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_3_CODE_QMC> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2004/02/skos/core#Concept> .
 <http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_3_CODE_QMC> <http://purl.org/roh#codeOf> <http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_3_QMC> .
 <http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_3_CODE_QMC> <http://www.w3.org/2000/01/rdf-schema#label> "QMC" .
 <http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_3_CODE_QMC> <http://www.w3.org/2004/02/skos/core#inScheme> <http://purl.org/roh/subject-areas#ESSubjectCode3rdList> .
@@ -1462,7 +1463,7 @@ _:genid1 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/20
 # 
 # http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_3_CODE_SOC
 <http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_3_CODE_SOC> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
-<http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_3_CODE_SOC> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://purl.org/roh#ESSubjectArea> .
+<http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_3_CODE_SOC> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2004/02/skos/core#Concept> .
 <http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_3_CODE_SOC> <http://purl.org/roh#codeOf> <http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_3_SOC> .
 <http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_3_CODE_SOC> <http://www.w3.org/2000/01/rdf-schema#label> "SOC" .
 <http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_3_CODE_SOC> <http://www.w3.org/2004/02/skos/core#inScheme> <http://purl.org/roh/subject-areas#ESSubjectCode3rdList> .
@@ -1470,7 +1471,7 @@ _:genid1 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/20
 # 
 # http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_3_CODE_TCO
 <http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_3_CODE_TCO> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
-<http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_3_CODE_TCO> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://purl.org/roh#ESSubjectArea> .
+<http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_3_CODE_TCO> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2004/02/skos/core#Concept> .
 <http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_3_CODE_TCO> <http://purl.org/roh#codeOf> <http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_3_TCO> .
 <http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_3_CODE_TCO> <http://www.w3.org/2000/01/rdf-schema#label> "TCO" .
 <http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_3_CODE_TCO> <http://www.w3.org/2004/02/skos/core#inScheme> <http://purl.org/roh/subject-areas#ESSubjectCode3rdList> .
@@ -1478,7 +1479,7 @@ _:genid1 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/20
 # 
 # http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_3_CODE_TMA
 <http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_3_CODE_TMA> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
-<http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_3_CODE_TMA> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://purl.org/roh#ESSubjectArea> .
+<http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_3_CODE_TMA> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2004/02/skos/core#Concept> .
 <http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_3_CODE_TMA> <http://purl.org/roh#codeOf> <http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_3_TMA> .
 <http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_3_CODE_TMA> <http://www.w3.org/2000/01/rdf-schema#label> "TMA" .
 <http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_3_CODE_TMA> <http://www.w3.org/2004/02/skos/core#inScheme> <http://purl.org/roh/subject-areas#ESSubjectCode3rdList> .
@@ -1486,7 +1487,7 @@ _:genid1 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/20
 # 
 # http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_3_CODE_TRA
 <http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_3_CODE_TRA> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
-<http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_3_CODE_TRA> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://purl.org/roh#ESSubjectArea> .
+<http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_3_CODE_TRA> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2004/02/skos/core#Concept> .
 <http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_3_CODE_TRA> <http://purl.org/roh#codeOf> <http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_3_TRA> .
 <http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_3_CODE_TRA> <http://www.w3.org/2000/01/rdf-schema#label> "TRA" .
 <http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_3_CODE_TRA> <http://www.w3.org/2004/02/skos/core#inScheme> <http://purl.org/roh/subject-areas#ESSubjectCode3rdList> .
@@ -1494,7 +1495,7 @@ _:genid1 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/20
 # 
 # http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_3_COM
 <http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_3_COM> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
-<http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_3_COM> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://purl.org/roh#ESSubjectArea> .
+<http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_3_COM> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2004/02/skos/core#Concept> .
 <http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_3_COM> <http://purl.org/roh#hasCode> <http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_3_CODE_COM> .
 <http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_3_COM> <http://www.w3.org/2000/01/rdf-schema#label> "Comunicación" .
 <http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_3_COM> <http://www.w3.org/2004/02/skos/core#broader> <http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_2_CSO> .
@@ -1512,7 +1513,7 @@ _:genid1 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/20
 # 
 # http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_3_CPO
 <http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_3_CPO> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
-<http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_3_CPO> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://purl.org/roh#ESSubjectArea> .
+<http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_3_CPO> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2004/02/skos/core#Concept> .
 <http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_3_CPO> <http://purl.org/roh#hasCode> <http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_3_CODE_CPO> .
 <http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_3_CPO> <http://www.w3.org/2000/01/rdf-schema#label> "Ciencia política" .
 <http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_3_CPO> <http://www.w3.org/2004/02/skos/core#broader> <http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_2_CSO> .
@@ -1530,7 +1531,7 @@ _:genid1 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/20
 # 
 # http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_3_CTA
 <http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_3_CTA> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
-<http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_3_CTA> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://purl.org/roh#ESSubjectArea> .
+<http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_3_CTA> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2004/02/skos/core#Concept> .
 <http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_3_CTA> <http://purl.org/roh#hasCode> <http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_3_CODE_CTA> .
 <http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_3_CTA> <http://www.w3.org/2000/01/rdf-schema#label> "Ciencias de la Tierra y del agua" .
 <http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_3_CTA> <http://www.w3.org/2004/02/skos/core#broader> <http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_2_CTM> .
@@ -1549,7 +1550,7 @@ _:genid1 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/20
 # 
 # http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_3_CYA
 <http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_3_CYA> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
-<http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_3_CYA> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://purl.org/roh#ESSubjectArea> .
+<http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_3_CYA> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2004/02/skos/core#Concept> .
 <http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_3_CYA> <http://purl.org/roh#hasCode> <http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_3_CODE_CYA> .
 <http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_3_CYA> <http://www.w3.org/2000/01/rdf-schema#label> "Clima y atmósfera" .
 <http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_3_CYA> <http://www.w3.org/2004/02/skos/core#broader> <http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_2_CTM> .
@@ -1568,7 +1569,7 @@ _:genid1 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/20
 # 
 # http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_3_DE3
 <http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_3_DE3> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
-<http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_3_DE3> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://purl.org/roh#ESSubjectArea> .
+<http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_3_DE3> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2004/02/skos/core#Concept> .
 <http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_3_DE3> <http://purl.org/roh#hasCode> <http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_3_CODE_DE3> .
 <http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_3_DE3> <http://www.w3.org/2000/01/rdf-schema#label> "Derecho" .
 <http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_3_DE3> <http://www.w3.org/2004/02/skos/core#broader> <http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_2_DER> .
@@ -1586,7 +1587,7 @@ _:genid1 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/20
 # 
 # http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_3_DPT
 <http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_3_DPT> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
-<http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_3_DPT> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://purl.org/roh#ESSubjectArea> .
+<http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_3_DPT> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2004/02/skos/core#Concept> .
 <http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_3_DPT> <http://purl.org/roh#hasCode> <http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_3_CODE_DPT> .
 <http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_3_DPT> <http://www.w3.org/2000/01/rdf-schema#label> "Herramientas diagnósticas, pronósticas y terapéuticas" .
 <http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_3_DPT> <http://www.w3.org/2004/02/skos/core#broader> <http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_2_BME> .
@@ -1603,7 +1604,7 @@ _:genid1 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/20
 # 
 # http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_3_ED3
 <http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_3_ED3> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
-<http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_3_ED3> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://purl.org/roh#ESSubjectArea> .
+<http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_3_ED3> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2004/02/skos/core#Concept> .
 <http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_3_ED3> <http://purl.org/roh#hasCode> <http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_3_CODE_ED3> .
 <http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_3_ED3> <http://www.w3.org/2000/01/rdf-schema#label> "Ciencias de la educación" .
 <http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_3_ED3> <http://www.w3.org/2004/02/skos/core#broader> <http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_2_EDU> .
@@ -1621,7 +1622,7 @@ _:genid1 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/20
 # 
 # http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_3_ENE
 <http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_3_ENE> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
-<http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_3_ENE> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://purl.org/roh#ESSubjectArea> .
+<http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_3_ENE> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2004/02/skos/core#Concept> .
 <http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_3_ENE> <http://purl.org/roh#hasCode> <http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_3_CODE_ENE> .
 <http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_3_ENE> <http://www.w3.org/2000/01/rdf-schema#label> "Energía" .
 <http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_3_ENE> <http://www.w3.org/2004/02/skos/core#broader> <http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_2_EYT> .
@@ -1639,7 +1640,7 @@ _:genid1 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/20
 # 
 # http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_3_ESN
 <http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_3_ESN> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
-<http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_3_ESN> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://purl.org/roh#ESSubjectArea> .
+<http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_3_ESN> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2004/02/skos/core#Concept> .
 <http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_3_ESN> <http://purl.org/roh#hasCode> <http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_3_CODE_ESN> .
 <http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_3_ESN> <http://www.w3.org/2000/01/rdf-schema#label> "Enfermedades del sistema nervioso" .
 <http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_3_ESN> <http://www.w3.org/2004/02/skos/core#broader> <http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_2_BME> .
@@ -1657,7 +1658,7 @@ _:genid1 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/20
 # 
 # http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_3_ESP
 <http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_3_ESP> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
-<http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_3_ESP> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://purl.org/roh#ESSubjectArea> .
+<http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_3_ESP> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2004/02/skos/core#Concept> .
 <http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_3_ESP> <http://purl.org/roh#hasCode> <http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_3_CODE_ESP> .
 <http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_3_ESP> <http://www.w3.org/2000/01/rdf-schema#label> "Investigación espacial" .
 <http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_3_ESP> <http://www.w3.org/2004/02/skos/core#broader> <http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_2_FIS> .
@@ -1675,7 +1676,7 @@ _:genid1 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/20
 # 
 # http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_3_EYA
 <http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_3_EYA> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
-<http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_3_EYA> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://purl.org/roh#ESSubjectArea> .
+<http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_3_EYA> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2004/02/skos/core#Concept> .
 <http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_3_EYA> <http://purl.org/roh#hasCode> <http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_3_CODE_EYA> .
 <http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_3_EYA> <http://www.w3.org/2000/01/rdf-schema#label> "Economía y sus aplicaciones" .
 <http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_3_EYA> <http://www.w3.org/2004/02/skos/core#broader> <http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_2_ECO> .
@@ -1693,7 +1694,7 @@ _:genid1 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/20
 # 
 # http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_3_EYF
 <http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_3_EYF> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
-<http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_3_EYF> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://purl.org/roh#ESSubjectArea> .
+<http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_3_EYF> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2004/02/skos/core#Concept> .
 <http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_3_EYF> <http://purl.org/roh#hasCode> <http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_3_CODE_EYF> .
 <http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_3_EYF> <http://www.w3.org/2000/01/rdf-schema#label> "Empresas y finanzas" .
 <http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_3_EYF> <http://www.w3.org/2004/02/skos/core#broader> <http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_2_ECO> .
@@ -1712,7 +1713,7 @@ _:genid1 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/20
 # 
 # http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_3_FEM
 <http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_3_FEM> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
-<http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_3_FEM> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://purl.org/roh#ESSubjectArea> .
+<http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_3_FEM> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2004/02/skos/core#Concept> .
 <http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_3_FEM> <http://purl.org/roh#hasCode> <http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_3_CODE_FEM> .
 <http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_3_FEM> <http://www.w3.org/2000/01/rdf-schema#label> "Estudios feministas, de las mujeres y de género" .
 <http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_3_FEM> <http://www.w3.org/2004/02/skos/core#broader> <http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_2_CSO> .
@@ -1734,7 +1735,7 @@ _:genid1 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/20
 # 
 # http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_3_FFP
 <http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_3_FFP> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
-<http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_3_FFP> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://purl.org/roh#ESSubjectArea> .
+<http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_3_FFP> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2004/02/skos/core#Concept> .
 <http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_3_FFP> <http://purl.org/roh#hasCode> <http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_3_CODE_FFP> .
 <http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_3_FFP> <http://www.w3.org/2000/01/rdf-schema#label> "Física fundamental y de partículas" .
 <http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_3_FFP> <http://www.w3.org/2004/02/skos/core#broader> <http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_2_FIS> .
@@ -1751,7 +1752,7 @@ _:genid1 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/20
 # 
 # http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_3_FIL
 <http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_3_FIL> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
-<http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_3_FIL> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://purl.org/roh#ESSubjectArea> .
+<http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_3_FIL> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2004/02/skos/core#Concept> .
 <http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_3_FIL> <http://purl.org/roh#hasCode> <http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_3_CODE_FIL> .
 <http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_3_FIL> <http://www.w3.org/2000/01/rdf-schema#label> "Filosofía" .
 <http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_3_FIL> <http://www.w3.org/2004/02/skos/core#broader> <http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_2_MLP> .
@@ -1769,7 +1770,7 @@ _:genid1 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/20
 # 
 # http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_3_FOS
 <http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_3_FOS> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
-<http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_3_FOS> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://purl.org/roh#ESSubjectArea> .
+<http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_3_FOS> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2004/02/skos/core#Concept> .
 <http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_3_FOS> <http://purl.org/roh#hasCode> <http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_3_CODE_FOS> .
 <http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_3_FOS> <http://www.w3.org/2000/01/rdf-schema#label> "Fisiopatología de órganos y sistemas" .
 <http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_3_FOS> <http://www.w3.org/2004/02/skos/core#broader> <http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_2_BME> .
@@ -1787,7 +1788,7 @@ _:genid1 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/20
 # 
 # http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_3_FYA
 <http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_3_FYA> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
-<http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_3_FYA> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://purl.org/roh#ESSubjectArea> .
+<http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_3_FYA> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2004/02/skos/core#Concept> .
 <http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_3_FYA> <http://purl.org/roh#hasCode> <http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_3_CODE_FYA> .
 <http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_3_FYA> <http://www.w3.org/2000/01/rdf-schema#label> "Física y sus aplicaciones" .
 <http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_3_FYA> <http://www.w3.org/2004/02/skos/core#broader> <http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_2_FIS> .
@@ -1805,7 +1806,7 @@ _:genid1 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/20
 # 
 # http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_3_GEO
 <http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_3_GEO> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
-<http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_3_GEO> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://purl.org/roh#ESSubjectArea> .
+<http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_3_GEO> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2004/02/skos/core#Concept> .
 <http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_3_GEO> <http://purl.org/roh#hasCode> <http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_3_CODE_GEO> .
 <http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_3_GEO> <http://www.w3.org/2000/01/rdf-schema#label> "Geografía" .
 <http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_3_GEO> <http://www.w3.org/2004/02/skos/core#broader> <http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_2_CSO> .
@@ -1823,7 +1824,7 @@ _:genid1 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/20
 # 
 # http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_3_GYA
 <http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_3_GYA> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
-<http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_3_GYA> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://purl.org/roh#ESSubjectArea> .
+<http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_3_GYA> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2004/02/skos/core#Concept> .
 <http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_3_GYA> <http://purl.org/roh#hasCode> <http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_3_CODE_GYA> .
 <http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_3_GYA> <http://www.w3.org/2000/01/rdf-schema#label> "Ganadería y acuicultura" .
 <http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_3_GYA> <http://www.w3.org/2004/02/skos/core#broader> <http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_2_CAA> .
@@ -1842,7 +1843,7 @@ _:genid1 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/20
 # 
 # http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_3_HIS
 <http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_3_HIS> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
-<http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_3_HIS> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://purl.org/roh#ESSubjectArea> .
+<http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_3_HIS> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2004/02/skos/core#Concept> .
 <http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_3_HIS> <http://purl.org/roh#hasCode> <http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_3_CODE_HIS> .
 <http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_3_HIS> <http://www.w3.org/2000/01/rdf-schema#label> "Historia" .
 <http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_3_HIS> <http://www.w3.org/2004/02/skos/core#broader> <http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_2_PHA> .
@@ -1860,7 +1861,7 @@ _:genid1 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/20
 # 
 # http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_3_IBI
 <http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_3_IBI> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
-<http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_3_IBI> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://purl.org/roh#ESSubjectArea> .
+<http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_3_IBI> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2004/02/skos/core#Concept> .
 <http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_3_IBI> <http://purl.org/roh#hasCode> <http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_3_CODE_IBI> .
 <http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_3_IBI> <http://www.w3.org/2000/01/rdf-schema#label> "Ingeniería biomédica" .
 <http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_3_IBI> <http://www.w3.org/2004/02/skos/core#broader> <http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_2_PIN> .
@@ -1878,7 +1879,7 @@ _:genid1 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/20
 # 
 # http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_3_ICA
 <http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_3_ICA> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
-<http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_3_ICA> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://purl.org/roh#ESSubjectArea> .
+<http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_3_ICA> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2004/02/skos/core#Concept> .
 <http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_3_ICA> <http://purl.org/roh#hasCode> <http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_3_CODE_ICA> .
 <http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_3_ICA> <http://www.w3.org/2000/01/rdf-schema#label> "Ingeniería civil y arquitectura" .
 <http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_3_ICA> <http://www.w3.org/2004/02/skos/core#broader> <http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_2_PIN> .
@@ -1897,7 +1898,7 @@ _:genid1 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/20
 # 
 # http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_3_IEA
 <http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_3_IEA> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
-<http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_3_IEA> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://purl.org/roh#ESSubjectArea> .
+<http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_3_IEA> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2004/02/skos/core#Concept> .
 <http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_3_IEA> <http://purl.org/roh#hasCode> <http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_3_CODE_IEA> .
 <http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_3_IEA> <http://www.w3.org/2000/01/rdf-schema#label> "Ingeniería eléctrica, electrónica y automática" .
 <http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_3_IEA> <http://www.w3.org/2004/02/skos/core#broader> <http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_2_PIN> .
@@ -1917,7 +1918,7 @@ _:genid1 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/20
 # 
 # http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_3_IIT
 <http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_3_IIT> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
-<http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_3_IIT> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://purl.org/roh#ESSubjectArea> .
+<http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_3_IIT> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2004/02/skos/core#Concept> .
 <http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_3_IIT> <http://purl.org/roh#hasCode> <http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_3_CODE_IIT> .
 <http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_3_IIT> <http://www.w3.org/2000/01/rdf-schema#label> "Inmunidad, infección y nuevas terapias" .
 <http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_3_IIT> <http://www.w3.org/2004/02/skos/core#broader> <http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_2_BME> .
@@ -1936,7 +1937,7 @@ _:genid1 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/20
 # 
 # http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_3_INA
 <http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_3_INA> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
-<http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_3_INA> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://purl.org/roh#ESSubjectArea> .
+<http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_3_INA> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2004/02/skos/core#Concept> .
 <http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_3_INA> <http://purl.org/roh#hasCode> <http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_3_CODE_INA> .
 <http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_3_INA> <http://www.w3.org/2000/01/rdf-schema#label> "Ingeniería mecánica, naval y aeronáutica" .
 <http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_3_INA> <http://www.w3.org/2004/02/skos/core#broader> <http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_2_PIN> .
@@ -1956,7 +1957,7 @@ _:genid1 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/20
 # 
 # http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_3_INF
 <http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_3_INF> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
-<http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_3_INF> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://purl.org/roh#ESSubjectArea> .
+<http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_3_INF> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2004/02/skos/core#Concept> .
 <http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_3_INF> <http://purl.org/roh#hasCode> <http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_3_CODE_INF> .
 <http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_3_INF> <http://www.w3.org/2000/01/rdf-schema#label> "Ciencias de la computación y tecnología informática" .
 <http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_3_INF> <http://www.w3.org/2004/02/skos/core#broader> <http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_2_TIC> .
@@ -1974,7 +1975,7 @@ _:genid1 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/20
 # 
 # http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_3_IQM
 <http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_3_IQM> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
-<http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_3_IQM> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://purl.org/roh#ESSubjectArea> .
+<http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_3_IQM> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2004/02/skos/core#Concept> .
 <http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_3_IQM> <http://purl.org/roh#hasCode> <http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_3_CODE_IQM> .
 <http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_3_IQM> <http://www.w3.org/2000/01/rdf-schema#label> "Ingeniería química" .
 <http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_3_IQM> <http://www.w3.org/2004/02/skos/core#broader> <http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_2_CTQ> .
@@ -1992,7 +1993,7 @@ _:genid1 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/20
 # 
 # http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_3_LFL
 <http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_3_LFL> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
-<http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_3_LFL> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://purl.org/roh#ESSubjectArea> .
+<http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_3_LFL> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2004/02/skos/core#Concept> .
 <http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_3_LFL> <http://purl.org/roh#hasCode> <http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_3_CODE_LFL> .
 <http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_3_LFL> <http://www.w3.org/2000/01/rdf-schema#label> "Literatura, filología, lenguas y culturas antiguas y estudios culturales" .
 <http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_3_LFL> <http://www.w3.org/2004/02/skos/core#broader> <http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_2_FLA> .
@@ -2013,7 +2014,7 @@ _:genid1 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/20
 # 
 # http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_3_LYL
 <http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_3_LYL> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
-<http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_3_LYL> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://purl.org/roh#ESSubjectArea> .
+<http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_3_LYL> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2004/02/skos/core#Concept> .
 <http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_3_LYL> <http://purl.org/roh#hasCode> <http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_3_CODE_LYL> .
 <http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_3_LYL> <http://www.w3.org/2000/01/rdf-schema#label> "Lingüística y lenguas" .
 <http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_3_LYL> <http://www.w3.org/2004/02/skos/core#broader> <http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_2_MLP> .
@@ -2031,7 +2032,7 @@ _:genid1 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/20
 # 
 # http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_3_MAE
 <http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_3_MAE> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
-<http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_3_MAE> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://purl.org/roh#ESSubjectArea> .
+<http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_3_MAE> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2004/02/skos/core#Concept> .
 <http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_3_MAE> <http://purl.org/roh#hasCode> <http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_3_CODE_MAE> .
 <http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_3_MAE> <http://www.w3.org/2000/01/rdf-schema#label> "Métodos de análisis económico" .
 <http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_3_MAE> <http://www.w3.org/2004/02/skos/core#broader> <http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_2_ECO> .
@@ -2049,7 +2050,7 @@ _:genid1 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/20
 # 
 # http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_3_MAR
 <http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_3_MAR> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
-<http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_3_MAR> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://purl.org/roh#ESSubjectArea> .
+<http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_3_MAR> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2004/02/skos/core#Concept> .
 <http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_3_MAR> <http://purl.org/roh#hasCode> <http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_3_CODE_MAR> .
 <http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_3_MAR> <http://www.w3.org/2000/01/rdf-schema#label> "Ciencias y tecnologías marinas" .
 <http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_3_MAR> <http://www.w3.org/2004/02/skos/core#broader> <http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_2_CTM> .
@@ -2067,7 +2068,7 @@ _:genid1 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/20
 # 
 # http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_3_MBM
 <http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_3_MBM> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
-<http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_3_MBM> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://purl.org/roh#ESSubjectArea> .
+<http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_3_MBM> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2004/02/skos/core#Concept> .
 <http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_3_MBM> <http://purl.org/roh#hasCode> <http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_3_CODE_MBM> .
 <http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_3_MBM> <http://www.w3.org/2000/01/rdf-schema#label> "Materiales para biomedicina" .
 <http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_3_MBM> <http://www.w3.org/2004/02/skos/core#broader> <http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_2_MAT> .
@@ -2084,7 +2085,7 @@ _:genid1 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/20
 # 
 # http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_3_MEN
 <http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_3_MEN> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
-<http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_3_MEN> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://purl.org/roh#ESSubjectArea> .
+<http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_3_MEN> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2004/02/skos/core#Concept> .
 <http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_3_MEN> <http://purl.org/roh#hasCode> <http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_3_CODE_MEN> .
 <http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_3_MEN> <http://www.w3.org/2000/01/rdf-schema#label> "Materiales para la energía y el medioambiente" .
 <http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_3_MEN> <http://www.w3.org/2004/02/skos/core#broader> <http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_2_MAT> .
@@ -2101,7 +2102,7 @@ _:genid1 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/20
 # 
 # http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_3_MES
 <http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_3_MES> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
-<http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_3_MES> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://purl.org/roh#ESSubjectArea> .
+<http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_3_MES> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2004/02/skos/core#Concept> .
 <http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_3_MES> <http://purl.org/roh#hasCode> <http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_3_CODE_MES> .
 <http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_3_MES> <http://www.w3.org/2000/01/rdf-schema#label> "Materiales estructurales" .
 <http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_3_MES> <http://www.w3.org/2004/02/skos/core#broader> <http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_2_MAT> .
@@ -2118,7 +2119,7 @@ _:genid1 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/20
 # 
 # http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_3_MFU
 <http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_3_MFU> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
-<http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_3_MFU> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://purl.org/roh#ESSubjectArea> .
+<http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_3_MFU> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2004/02/skos/core#Concept> .
 <http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_3_MFU> <http://purl.org/roh#hasCode> <http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_3_CODE_MFU> .
 <http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_3_MFU> <http://www.w3.org/2000/01/rdf-schema#label> "Materiales con funcionalidad eléctrica, magnética, óptica o térmica" .
 <http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_3_MFU> <http://www.w3.org/2004/02/skos/core#broader> <http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_2_MAT> .
@@ -2135,7 +2136,7 @@ _:genid1 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/20
 # 
 # http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_3_MNF
 <http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_3_MNF> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
-<http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_3_MNF> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://purl.org/roh#ESSubjectArea> .
+<http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_3_MNF> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2004/02/skos/core#Concept> .
 <http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_3_MNF> <http://purl.org/roh#hasCode> <http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_3_CODE_MNF> .
 <http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_3_MNF> <http://www.w3.org/2000/01/rdf-schema#label> "Microelectrónica, nanotecnología y fotónica" .
 <http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_3_MNF> <http://www.w3.org/2004/02/skos/core#broader> <http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_2_TIC> .
@@ -2154,7 +2155,7 @@ _:genid1 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/20
 # 
 # http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_3_MT3
 <http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_3_MT3> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
-<http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_3_MT3> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://purl.org/roh#ESSubjectArea> .
+<http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_3_MT3> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2004/02/skos/core#Concept> .
 <http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_3_MT3> <http://purl.org/roh#hasCode> <http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_3_CODE_MT3> .
 <http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_3_MT3> <http://www.w3.org/2000/01/rdf-schema#label> "Ciencias matemáticas" .
 <http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_3_MT3> <http://www.w3.org/2004/02/skos/core#broader> <http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_2_MTM> .
@@ -2172,7 +2173,7 @@ _:genid1 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/20
 # 
 # http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_3_POL
 <http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_3_POL> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
-<http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_3_POL> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://purl.org/roh#ESSubjectArea> .
+<http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_3_POL> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2004/02/skos/core#Concept> .
 <http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_3_POL> <http://purl.org/roh#hasCode> <http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_3_CODE_POL> .
 <http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_3_POL> <http://www.w3.org/2000/01/rdf-schema#label> "Investigación polar" .
 <http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_3_POL> <http://www.w3.org/2004/02/skos/core#broader> <http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_2_CTM> .
@@ -2189,7 +2190,7 @@ _:genid1 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/20
 # 
 # http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_3_PS3
 <http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_3_PS3> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
-<http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_3_PS3> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://purl.org/roh#ESSubjectArea> .
+<http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_3_PS3> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2004/02/skos/core#Concept> .
 <http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_3_PS3> <http://purl.org/roh#hasCode> <http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_3_CODE_PS3> .
 <http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_3_PS3> <http://www.w3.org/2000/01/rdf-schema#label> "Psicología" .
 <http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_3_PS3> <http://www.w3.org/2004/02/skos/core#broader> <http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_2_PSI> .
@@ -2206,7 +2207,7 @@ _:genid1 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/20
 # 
 # http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_3_QMC
 <http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_3_QMC> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
-<http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_3_QMC> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://purl.org/roh#ESSubjectArea> .
+<http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_3_QMC> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2004/02/skos/core#Concept> .
 <http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_3_QMC> <http://purl.org/roh#hasCode> <http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_3_CODE_QMC> .
 <http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_3_QMC> <http://www.w3.org/2000/01/rdf-schema#label> "Química" .
 <http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_3_QMC> <http://www.w3.org/2004/02/skos/core#broader> <http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_2_CTQ> .
@@ -2224,7 +2225,7 @@ _:genid1 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/20
 # 
 # http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_3_SOC
 <http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_3_SOC> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
-<http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_3_SOC> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://purl.org/roh#ESSubjectArea> .
+<http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_3_SOC> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2004/02/skos/core#Concept> .
 <http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_3_SOC> <http://purl.org/roh#hasCode> <http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_3_CODE_SOC> .
 <http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_3_SOC> <http://www.w3.org/2000/01/rdf-schema#label> "Sociología y antropología social" .
 <http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_3_SOC> <http://www.w3.org/2004/02/skos/core#broader> <http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_2_CSO> .
@@ -2243,7 +2244,7 @@ _:genid1 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/20
 # 
 # http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_3_TCO
 <http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_3_TCO> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
-<http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_3_TCO> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://purl.org/roh#ESSubjectArea> .
+<http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_3_TCO> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2004/02/skos/core#Concept> .
 <http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_3_TCO> <http://purl.org/roh#hasCode> <http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_3_CODE_TCO> .
 <http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_3_TCO> <http://www.w3.org/2000/01/rdf-schema#label> "Tecnologías de las comunicaciones" .
 <http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_3_TCO> <http://www.w3.org/2004/02/skos/core#broader> <http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_2_TIC> .
@@ -2261,7 +2262,7 @@ _:genid1 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/20
 # 
 # http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_3_TMA
 <http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_3_TMA> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
-<http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_3_TMA> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://purl.org/roh#ESSubjectArea> .
+<http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_3_TMA> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2004/02/skos/core#Concept> .
 <http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_3_TMA> <http://purl.org/roh#hasCode> <http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_3_CODE_TMA> .
 <http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_3_TMA> <http://www.w3.org/2000/01/rdf-schema#label> "Tecnologías medioambientales" .
 <http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_3_TMA> <http://www.w3.org/2004/02/skos/core#broader> <http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_2_CTM> .
@@ -2279,7 +2280,7 @@ _:genid1 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/20
 # 
 # http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_3_TRA
 <http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_3_TRA> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
-<http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_3_TRA> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://purl.org/roh#ESSubjectArea> .
+<http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_3_TRA> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2004/02/skos/core#Concept> .
 <http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_3_TRA> <http://purl.org/roh#hasCode> <http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_3_CODE_TRA> .
 <http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_3_TRA> <http://www.w3.org/2000/01/rdf-schema#label> "Transporte" .
 <http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_3_TRA> <http://www.w3.org/2004/02/skos/core#broader> <http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_2_EYT> .

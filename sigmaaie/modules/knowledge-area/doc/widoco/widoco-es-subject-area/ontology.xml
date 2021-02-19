@@ -114,6 +114,7 @@
 
 
     <Class rdf:about="http://purl.org/roh#KnowledgeArea">
+        <rdfs:subClassOf rdf:resource="http://www.w3.org/2004/02/skos/core#ConceptScheme"/>
         <rdfs:label xml:lang="en">Knowledge Area</rdfs:label>
     </Class>
     
@@ -153,7 +154,7 @@
 
 
     <NamedIndividual rdf:about="http://purl.org/roh/subject-areas#ESSubjectAreas1stList">
-        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#ConceptScheme"/>
+        <rdf:type rdf:resource="http://purl.org/roh#ESSubjectArea"/>
         <rdfs:label xml:lang="fr">Domains thématiques de premier niveau de l&apos;Agence Espagnole pour la Recherche (AEI)</rdfs:label>
         <rdfs:label xml:lang="ca">Dominis temàtics de primer nivell de l&apos;Agència Estatal de Recerca (AEI)</rdfs:label>
         <rdfs:label xml:lang="eu">FIXME</rdfs:label>
@@ -194,7 +195,7 @@
 
 
     <NamedIndividual rdf:about="http://purl.org/roh/subject-areas#ESSubjectAreas2ndList">
-        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#ConceptScheme"/>
+        <rdf:type rdf:resource="http://purl.org/roh#ESSubjectArea"/>
         <rdfs:label xml:lang="fr">Domains thématiques de second niveau de l&apos;Agence Espagnole pour la Recherche (AEI)</rdfs:label>
         <rdfs:label xml:lang="ca">Dominis temàtics de segon nivell de l&apos;Agència Estatal de Recerca (AEI)</rdfs:label>
         <rdfs:label xml:lang="eu">FIXME</rdfs:label>
@@ -235,7 +236,7 @@
 
 
     <NamedIndividual rdf:about="http://purl.org/roh/subject-areas#ESSubjectAreas3rdList">
-        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#ConceptScheme"/>
+        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
         <rdfs:label xml:lang="fr">Domains thématiques de troisième niveau de l&apos;Agence Espagnole pour la Recherche (AEI)</rdfs:label>
         <rdfs:label xml:lang="ca">Dominis temàtics de tercer nivell de l&apos;Agència Estatal de Recerca (AEI)</rdfs:label>
         <rdfs:label xml:lang="eu">FIXME</rdfs:label>
@@ -276,7 +277,7 @@
 
 
     <NamedIndividual rdf:about="http://purl.org/roh/subject-areas#ESSubjectCode1stList">
-        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#ConceptScheme"/>
+        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
         <rdfs:label xml:lang="fr">Codes des domains thématiques de premier niveau de l&apos;Agence Espagnole pour la Recherche (AEI)</rdfs:label>
         <rdfs:label xml:lang="en">Codes for the first-level subject areas of Spain&apos;s State Research Agency (AEI)</rdfs:label>
         <rdfs:label xml:lang="ca">Codis dels dominis temàtics de primer nivell de l&apos;Agència Estatal de Recerca (AEI)</rdfs:label>
@@ -311,7 +312,7 @@
 
 
     <NamedIndividual rdf:about="http://purl.org/roh/subject-areas#ESSubjectCode2ndList">
-        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#ConceptScheme"/>
+        <rdf:type rdf:resource="http://purl.org/roh#ESSubjectArea"/>
         <rdfs:label xml:lang="fr">Codes des domains thématiques de second niveau de l&apos;Agence Espagnole pour la Recherche (AEI)</rdfs:label>
         <rdfs:label xml:lang="en">Codes for the second-level subject areas of Spain&apos;s State Research Agency (AEI)</rdfs:label>
         <rdfs:label xml:lang="ca">Codis dels dominis temàtics de segon nivell de l&apos;Agència Estatal de Recerca (AEI)</rdfs:label>
@@ -346,7 +347,7 @@
 
 
     <NamedIndividual rdf:about="http://purl.org/roh/subject-areas#ESSubjectCode3rdList">
-        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#ConceptScheme"/>
+        <rdf:type rdf:resource="http://purl.org/roh#ESSubjectArea"/>
         <rdfs:label xml:lang="fr">Codes des domains thématiques de troisième niveau de l&apos;Agence Espagnole pour la Recherche (AEI)</rdfs:label>
         <rdfs:label xml:lang="en">Codes for the third-level subject areas of Spain&apos;s State Research Agency (AEI)</rdfs:label>
         <rdfs:label xml:lang="ca">Codis dels dominis temàtics de tercer nivell de l&apos;Agència Estatal de Recerca (AEI)</rdfs:label>
@@ -381,7 +382,7 @@
 
 
     <NamedIndividual rdf:about="http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_1_CMIFQ">
-        <rdf:type rdf:resource="http://purl.org/roh#ESSubjectArea"/>
+        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
         <roh:hasCode rdf:resource="http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_1_CODE_CMIFQ"/>
         <rdfs:label>Ciencias matemáticas, físicas, químicas e ingenierías</rdfs:label>
         <skos:closeMatch rdf:resource="http://skos.um.es/unescothes/C00568"/>
@@ -418,7 +419,7 @@
 
 
     <NamedIndividual rdf:about="http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_1_CODE_CMIFQ">
-        <rdf:type rdf:resource="http://purl.org/roh#ESSubjectArea"/>
+        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
         <roh:codeOf rdf:resource="http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_1_CMIFQ"/>
         <rdfs:label>CMIFQ</rdfs:label>
         <skos:inScheme rdf:resource="http://purl.org/roh/subject-areas#ESSubjectCode1stList"/>
@@ -431,7 +432,7 @@
 
 
     <NamedIndividual rdf:about="http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_1_CODE_CSH">
-        <rdf:type rdf:resource="http://purl.org/roh#ESSubjectArea"/>
+        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
         <roh:codeOf rdf:resource="http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_1_CSH"/>
         <rdfs:label>CSH</rdfs:label>
         <skos:inScheme rdf:resource="http://purl.org/roh/subject-areas#ESSubjectCode1stList"/>
@@ -444,7 +445,7 @@
 
 
     <NamedIndividual rdf:about="http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_1_CODE_CV">
-        <rdf:type rdf:resource="http://purl.org/roh#ESSubjectArea"/>
+        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
         <roh:codeOf rdf:resource="http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_1_CV"/>
         <rdfs:label>CV</rdfs:label>
         <skos:inScheme rdf:resource="http://purl.org/roh/subject-areas#ESSubjectCode1stList"/>
@@ -457,7 +458,7 @@
 
 
     <NamedIndividual rdf:about="http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_1_CSH">
-        <rdf:type rdf:resource="http://purl.org/roh#ESSubjectArea"/>
+        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
         <roh:hasCode rdf:resource="http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_1_CODE_CSH"/>
         <rdfs:label>Ciencias sociales y humanidades</rdfs:label>
         <skos:closeMatch rdf:resource="http://skos.um.es/unescothes/C03719"/>
@@ -491,7 +492,7 @@
 
 
     <NamedIndividual rdf:about="http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_1_CV">
-        <rdf:type rdf:resource="http://purl.org/roh#ESSubjectArea"/>
+        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
         <roh:hasCode rdf:resource="http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_1_CODE_CV"/>
         <rdfs:label>Ciencias de la vida</rdfs:label>
         <skos:exactMatch rdf:resource="http://skos.um.es/unescothes/C02293"/>
@@ -525,7 +526,7 @@
 
 
     <NamedIndividual rdf:about="http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_2_BIO">
-        <rdf:type rdf:resource="http://purl.org/roh#ESSubjectArea"/>
+        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
         <roh:hasCode rdf:resource="http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_2_CODE_BIO"/>
         <rdfs:label>Biociencias y biotecnología</rdfs:label>
         <skos:broader rdf:resource="http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_1_CV"/>
@@ -548,7 +549,7 @@
 
 
     <NamedIndividual rdf:about="http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_2_BME">
-        <rdf:type rdf:resource="http://purl.org/roh#ESSubjectArea"/>
+        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
         <roh:hasCode rdf:resource="http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_2_CODE_BME"/>
         <rdfs:label>Biomedicina</rdfs:label>
         <skos:broader rdf:resource="http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_1_CV"/>
@@ -572,7 +573,7 @@
 
 
     <NamedIndividual rdf:about="http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_2_CAA">
-        <rdf:type rdf:resource="http://purl.org/roh#ESSubjectArea"/>
+        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
         <roh:hasCode rdf:resource="http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_2_CODE_CAA"/>
         <rdfs:label>Ciencias agrarias y agroalimentarias</rdfs:label>
         <skos:broader rdf:resource="http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_1_CV"/>
@@ -594,7 +595,7 @@
 
 
     <NamedIndividual rdf:about="http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_2_CODE_BIO">
-        <rdf:type rdf:resource="http://purl.org/roh#ESSubjectArea"/>
+        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
         <roh:codeOf rdf:resource="http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_2_BIO"/>
         <rdfs:label>BIO</rdfs:label>
         <skos:inScheme rdf:resource="http://purl.org/roh/subject-areas#ESSubjectCode2ndList"/>
@@ -607,7 +608,7 @@
 
 
     <NamedIndividual rdf:about="http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_2_CODE_BME">
-        <rdf:type rdf:resource="http://purl.org/roh#ESSubjectArea"/>
+        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
         <roh:codeOf rdf:resource="http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_2_BME"/>
         <rdfs:label>BME</rdfs:label>
         <skos:inScheme rdf:resource="http://purl.org/roh/subject-areas#ESSubjectCode2ndList"/>
@@ -620,7 +621,7 @@
 
 
     <NamedIndividual rdf:about="http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_2_CODE_CAA">
-        <rdf:type rdf:resource="http://purl.org/roh#ESSubjectArea"/>
+        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
         <roh:codeOf rdf:resource="http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_2_CAA"/>
         <rdfs:label>CAA</rdfs:label>
         <skos:inScheme rdf:resource="http://purl.org/roh/subject-areas#ESSubjectCode2ndList"/>
@@ -633,7 +634,7 @@
 
 
     <NamedIndividual rdf:about="http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_2_CODE_CSO">
-        <rdf:type rdf:resource="http://purl.org/roh#ESSubjectArea"/>
+        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
         <roh:codeOf rdf:resource="http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_2_CSO"/>
         <rdfs:label>CSO</rdfs:label>
         <skos:inScheme rdf:resource="http://purl.org/roh/subject-areas#ESSubjectCode2ndList"/>
@@ -646,7 +647,7 @@
 
 
     <NamedIndividual rdf:about="http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_2_CODE_CTM">
-        <rdf:type rdf:resource="http://purl.org/roh#ESSubjectArea"/>
+        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
         <roh:codeOf rdf:resource="http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_2_CTM"/>
         <rdfs:label>CTM</rdfs:label>
         <skos:inScheme rdf:resource="http://purl.org/roh/subject-areas#ESSubjectCode2ndList"/>
@@ -659,7 +660,7 @@
 
 
     <NamedIndividual rdf:about="http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_2_CODE_CTQ">
-        <rdf:type rdf:resource="http://purl.org/roh#ESSubjectArea"/>
+        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
         <roh:codeOf rdf:resource="http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_2_CTQ"/>
         <rdfs:label>CTQ</rdfs:label>
         <skos:inScheme rdf:resource="http://purl.org/roh/subject-areas#ESSubjectCode2ndList"/>
@@ -672,7 +673,7 @@
 
 
     <NamedIndividual rdf:about="http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_2_CODE_DER">
-        <rdf:type rdf:resource="http://purl.org/roh#ESSubjectArea"/>
+        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
         <roh:codeOf rdf:resource="http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_2_DER"/>
         <rdfs:label>DER</rdfs:label>
         <skos:inScheme rdf:resource="http://purl.org/roh/subject-areas#ESSubjectCode2ndList"/>
@@ -685,7 +686,7 @@
 
 
     <NamedIndividual rdf:about="http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_2_CODE_ECO">
-        <rdf:type rdf:resource="http://purl.org/roh#ESSubjectArea"/>
+        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
         <roh:codeOf rdf:resource="http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_2_ECO"/>
         <rdfs:label>ECO</rdfs:label>
         <skos:inScheme rdf:resource="http://purl.org/roh/subject-areas#ESSubjectCode2ndList"/>
@@ -698,7 +699,7 @@
 
 
     <NamedIndividual rdf:about="http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_2_CODE_EDU">
-        <rdf:type rdf:resource="http://purl.org/roh#ESSubjectArea"/>
+        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
         <roh:codeOf rdf:resource="http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_2_EDU"/>
         <rdfs:label>EDU</rdfs:label>
         <skos:inScheme rdf:resource="http://purl.org/roh/subject-areas#ESSubjectCode2ndList"/>
@@ -711,7 +712,7 @@
 
 
     <NamedIndividual rdf:about="http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_2_CODE_EYT">
-        <rdf:type rdf:resource="http://purl.org/roh#ESSubjectArea"/>
+        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
         <roh:codeOf rdf:resource="http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_2_EYT"/>
         <rdfs:label>EYT</rdfs:label>
         <skos:inScheme rdf:resource="http://purl.org/roh/subject-areas#ESSubjectCode2ndList"/>
@@ -724,7 +725,7 @@
 
 
     <NamedIndividual rdf:about="http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_2_CODE_FIS">
-        <rdf:type rdf:resource="http://purl.org/roh#ESSubjectArea"/>
+        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
         <roh:codeOf rdf:resource="http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_2_FIS"/>
         <rdfs:label>FIS</rdfs:label>
         <skos:inScheme rdf:resource="http://purl.org/roh/subject-areas#ESSubjectCode2ndList"/>
@@ -737,7 +738,7 @@
 
 
     <NamedIndividual rdf:about="http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_2_CODE_FLA">
-        <rdf:type rdf:resource="http://purl.org/roh#ESSubjectArea"/>
+        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
         <roh:codeOf rdf:resource="http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_2_FLA"/>
         <rdfs:label>FLA</rdfs:label>
         <skos:inScheme rdf:resource="http://purl.org/roh/subject-areas#ESSubjectCode2ndList"/>
@@ -750,7 +751,7 @@
 
 
     <NamedIndividual rdf:about="http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_2_CODE_MAT">
-        <rdf:type rdf:resource="http://purl.org/roh#ESSubjectArea"/>
+        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
         <roh:codeOf rdf:resource="http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_2_MAT"/>
         <rdfs:label>MAT</rdfs:label>
         <skos:inScheme rdf:resource="http://purl.org/roh/subject-areas#ESSubjectCode2ndList"/>
@@ -763,7 +764,7 @@
 
 
     <NamedIndividual rdf:about="http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_2_CODE_MLP">
-        <rdf:type rdf:resource="http://purl.org/roh#ESSubjectArea"/>
+        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
         <roh:codeOf rdf:resource="http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_2_MLP"/>
         <rdfs:label>MLP</rdfs:label>
         <skos:inScheme rdf:resource="http://purl.org/roh/subject-areas#ESSubjectCode2ndList"/>
@@ -776,7 +777,7 @@
 
 
     <NamedIndividual rdf:about="http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_2_CODE_MTM">
-        <rdf:type rdf:resource="http://purl.org/roh#ESSubjectArea"/>
+        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
         <roh:codeOf rdf:resource="http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_2_MTM"/>
         <rdfs:label>MTM</rdfs:label>
         <skos:inScheme rdf:resource="http://purl.org/roh/subject-areas#ESSubjectCode2ndList"/>
@@ -789,7 +790,7 @@
 
 
     <NamedIndividual rdf:about="http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_2_CODE_PHA">
-        <rdf:type rdf:resource="http://purl.org/roh#ESSubjectArea"/>
+        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
         <roh:codeOf rdf:resource="http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_2_PHA"/>
         <rdfs:label>PHA</rdfs:label>
         <skos:inScheme rdf:resource="http://purl.org/roh/subject-areas#ESSubjectCode2ndList"/>
@@ -802,7 +803,7 @@
 
 
     <NamedIndividual rdf:about="http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_2_CODE_PIN">
-        <rdf:type rdf:resource="http://purl.org/roh#ESSubjectArea"/>
+        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
         <roh:codeOf rdf:resource="http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_2_PIN"/>
         <rdfs:label>PIN</rdfs:label>
         <skos:inScheme rdf:resource="http://purl.org/roh/subject-areas#ESSubjectCode2ndList"/>
@@ -815,7 +816,7 @@
 
 
     <NamedIndividual rdf:about="http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_2_CODE_PSI">
-        <rdf:type rdf:resource="http://purl.org/roh#ESSubjectArea"/>
+        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
         <roh:codeOf rdf:resource="http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_2_PSI"/>
         <rdfs:label>PSI</rdfs:label>
         <skos:inScheme rdf:resource="http://purl.org/roh/subject-areas#ESSubjectCode2ndList"/>
@@ -828,7 +829,7 @@
 
 
     <NamedIndividual rdf:about="http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_2_CODE_TIC">
-        <rdf:type rdf:resource="http://purl.org/roh#ESSubjectArea"/>
+        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
         <roh:codeOf rdf:resource="http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_2_TIC"/>
         <rdfs:label>TIC</rdfs:label>
         <skos:inScheme rdf:resource="http://purl.org/roh/subject-areas#ESSubjectCode2ndList"/>
@@ -841,7 +842,7 @@
 
 
     <NamedIndividual rdf:about="http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_2_CSO">
-        <rdf:type rdf:resource="http://purl.org/roh#ESSubjectArea"/>
+        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
         <roh:hasCode rdf:resource="http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_2_CODE_CSO"/>
         <rdfs:label>Ciencias sociales</rdfs:label>
         <skos:broader rdf:resource="http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_1_CSH"/>
@@ -864,7 +865,7 @@
 
 
     <NamedIndividual rdf:about="http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_2_CTM">
-        <rdf:type rdf:resource="http://purl.org/roh#ESSubjectArea"/>
+        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
         <roh:hasCode rdf:resource="http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_2_CODE_CTM"/>
         <rdfs:label>Ciencias y tecnologías medioambientales</rdfs:label>
         <skos:broader rdf:resource="http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_1_CV"/>
@@ -887,7 +888,7 @@
 
 
     <NamedIndividual rdf:about="http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_2_CTQ">
-        <rdf:type rdf:resource="http://purl.org/roh#ESSubjectArea"/>
+        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
         <roh:hasCode rdf:resource="http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_2_CODE_CTQ"/>
         <rdfs:label>Ciencias y tecnologías químicas</rdfs:label>
         <skos:broader rdf:resource="http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_1_CMIFQ"/>
@@ -910,7 +911,7 @@
 
 
     <NamedIndividual rdf:about="http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_2_DER">
-        <rdf:type rdf:resource="http://purl.org/roh#ESSubjectArea"/>
+        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
         <roh:hasCode rdf:resource="http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_2_CODE_DER"/>
         <rdfs:label>Derecho</rdfs:label>
         <skos:broader rdf:resource="http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_1_CSH"/>
@@ -933,7 +934,7 @@
 
 
     <NamedIndividual rdf:about="http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_2_ECO">
-        <rdf:type rdf:resource="http://purl.org/roh#ESSubjectArea"/>
+        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
         <roh:hasCode rdf:resource="http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_2_CODE_ECO"/>
         <rdfs:label>Economía</rdfs:label>
         <skos:broader rdf:resource="http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_1_CSH"/>
@@ -956,7 +957,7 @@
 
 
     <NamedIndividual rdf:about="http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_2_EDU">
-        <rdf:type rdf:resource="http://purl.org/roh#ESSubjectArea"/>
+        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
         <roh:hasCode rdf:resource="http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_2_CODE_EDU"/>
         <rdfs:label>Ciencias de la educación</rdfs:label>
         <skos:broader rdf:resource="http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_1_CSH"/>
@@ -979,7 +980,7 @@
 
 
     <NamedIndividual rdf:about="http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_2_EYT">
-        <rdf:type rdf:resource="http://purl.org/roh#ESSubjectArea"/>
+        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
         <roh:hasCode rdf:resource="http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_2_CODE_EYT"/>
         <rdfs:label>Energía y transporte</rdfs:label>
         <skos:broader rdf:resource="http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_1_CMIFQ"/>
@@ -1003,7 +1004,7 @@
 
 
     <NamedIndividual rdf:about="http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_2_FIS">
-        <rdf:type rdf:resource="http://purl.org/roh#ESSubjectArea"/>
+        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
         <roh:hasCode rdf:resource="http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_2_CODE_FIS"/>
         <rdfs:label>Ciencias físicas</rdfs:label>
         <skos:broader rdf:resource="http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_1_CMIFQ"/>
@@ -1026,7 +1027,7 @@
 
 
     <NamedIndividual rdf:about="http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_2_FLA">
-        <rdf:type rdf:resource="http://purl.org/roh#ESSubjectArea"/>
+        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
         <roh:hasCode rdf:resource="http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_2_CODE_FLA"/>
         <rdfs:label>Cultura: filología, literatura y arte</rdfs:label>
         <skos:broader rdf:resource="http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_1_CSH"/>
@@ -1048,7 +1049,7 @@
 
 
     <NamedIndividual rdf:about="http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_2_MAT">
-        <rdf:type rdf:resource="http://purl.org/roh#ESSubjectArea"/>
+        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
         <roh:hasCode rdf:resource="http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_2_CODE_MAT"/>
         <rdfs:label>Ciencias y tecnologías de materiales</rdfs:label>
         <skos:broader rdf:resource="http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_1_CMIFQ"/>
@@ -1070,7 +1071,7 @@
 
 
     <NamedIndividual rdf:about="http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_2_MLP">
-        <rdf:type rdf:resource="http://purl.org/roh#ESSubjectArea"/>
+        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
         <roh:hasCode rdf:resource="http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_2_CODE_MLP"/>
         <rdfs:label>Mente, lenguaje y pensamiento</rdfs:label>
         <skos:broader rdf:resource="http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_1_CSH"/>
@@ -1095,7 +1096,7 @@
 
 
     <NamedIndividual rdf:about="http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_2_MTM">
-        <rdf:type rdf:resource="http://purl.org/roh#ESSubjectArea"/>
+        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
         <roh:hasCode rdf:resource="http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_2_CODE_MTM"/>
         <rdfs:label>Ciencias matemáticas</rdfs:label>
         <skos:broader rdf:resource="http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_1_CMIFQ"/>
@@ -1118,7 +1119,7 @@
 
 
     <NamedIndividual rdf:about="http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_2_PHA">
-        <rdf:type rdf:resource="http://purl.org/roh#ESSubjectArea"/>
+        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
         <roh:hasCode rdf:resource="http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_2_CODE_PHA"/>
         <rdfs:label>Estudios del pasado: historia y arqueología</rdfs:label>
         <skos:broader rdf:resource="http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_1_CSH"/>
@@ -1140,7 +1141,7 @@
 
 
     <NamedIndividual rdf:about="http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_2_PIN">
-        <rdf:type rdf:resource="http://purl.org/roh#ESSubjectArea"/>
+        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
         <roh:hasCode rdf:resource="http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_2_CODE_PIN"/>
         <rdfs:label>Producción industrial, ingeniería civil e ingenierías para la sociedad</rdfs:label>
         <skos:broader rdf:resource="http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_1_CMIFQ"/>
@@ -1164,7 +1165,7 @@
 
 
     <NamedIndividual rdf:about="http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_2_PSI">
-        <rdf:type rdf:resource="http://purl.org/roh#ESSubjectArea"/>
+        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
         <roh:hasCode rdf:resource="http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_2_CODE_PSI"/>
         <rdfs:label>Psicología</rdfs:label>
         <skos:broader rdf:resource="http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_1_CSH"/>
@@ -1187,7 +1188,7 @@
 
 
     <NamedIndividual rdf:about="http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_2_TIC">
-        <rdf:type rdf:resource="http://purl.org/roh#ESSubjectArea"/>
+        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
         <roh:hasCode rdf:resource="http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_2_CODE_TIC"/>
         <rdfs:label>Tecnologías de la información y de las comunicaciones</rdfs:label>
         <skos:broader rdf:resource="http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_1_CMIFQ"/>
@@ -1211,7 +1212,7 @@
 
 
     <NamedIndividual rdf:about="http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_3_ALI">
-        <rdf:type rdf:resource="http://purl.org/roh#ESSubjectArea"/>
+        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
         <roh:hasCode rdf:resource="http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_3_CODE_ALI"/>
         <rdfs:label>Ciencias y tecnologías de alimentos</rdfs:label>
         <skos:broader rdf:resource="http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_2_CAA"/>
@@ -1234,7 +1235,7 @@
 
 
     <NamedIndividual rdf:about="http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_3_ARQ">
-        <rdf:type rdf:resource="http://purl.org/roh#ESSubjectArea"/>
+        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
         <roh:hasCode rdf:resource="http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_3_CODE_ARQ"/>
         <rdfs:label>Arqueología</rdfs:label>
         <skos:broader rdf:resource="http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_2_PHA"/>
@@ -1256,7 +1257,7 @@
 
 
     <NamedIndividual rdf:about="http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_3_ART">
-        <rdf:type rdf:resource="http://purl.org/roh#ESSubjectArea"/>
+        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
         <roh:hasCode rdf:resource="http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_3_CODE_ART"/>
         <rdfs:label>Arte, bellas artes, museística</rdfs:label>
         <skos:broader rdf:resource="http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_2_FLA"/>
@@ -1280,7 +1281,7 @@
 
 
     <NamedIndividual rdf:about="http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_3_AYA">
-        <rdf:type rdf:resource="http://purl.org/roh#ESSubjectArea"/>
+        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
         <roh:hasCode rdf:resource="http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_3_CODE_AYA"/>
         <rdfs:label>Astronomía y astrofísica</rdfs:label>
         <skos:broader rdf:resource="http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_2_FIS"/>
@@ -1304,7 +1305,7 @@
 
 
     <NamedIndividual rdf:about="http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_3_AYF">
-        <rdf:type rdf:resource="http://purl.org/roh#ESSubjectArea"/>
+        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
         <roh:hasCode rdf:resource="http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_3_CODE_AYF"/>
         <rdfs:label>Agricultura y forestal</rdfs:label>
         <skos:broader rdf:resource="http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_2_CAA"/>
@@ -1328,7 +1329,7 @@
 
 
     <NamedIndividual rdf:about="http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_3_BDV">
-        <rdf:type rdf:resource="http://purl.org/roh#ESSubjectArea"/>
+        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
         <roh:hasCode rdf:resource="http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_3_CODE_BDV"/>
         <rdfs:label>Biodiversidad</rdfs:label>
         <skos:broader rdf:resource="http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_2_CTM"/>
@@ -1351,7 +1352,7 @@
 
 
     <NamedIndividual rdf:about="http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_3_BIF">
-        <rdf:type rdf:resource="http://purl.org/roh#ESSubjectArea"/>
+        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
         <roh:hasCode rdf:resource="http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_3_CODE_BIF"/>
         <rdfs:label>Biología integrativa y fisiología</rdfs:label>
         <skos:broader rdf:resource="http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_2_BIO"/>
@@ -1373,7 +1374,7 @@
 
 
     <NamedIndividual rdf:about="http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_3_BMC">
-        <rdf:type rdf:resource="http://purl.org/roh#ESSubjectArea"/>
+        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
         <roh:hasCode rdf:resource="http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_3_CODE_BMC"/>
         <rdfs:label>Biología molecular y celular</rdfs:label>
         <skos:broader rdf:resource="http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_2_BIO"/>
@@ -1397,7 +1398,7 @@
 
 
     <NamedIndividual rdf:about="http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_3_BTC">
-        <rdf:type rdf:resource="http://purl.org/roh#ESSubjectArea"/>
+        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
         <roh:hasCode rdf:resource="http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_3_CODE_BTC"/>
         <rdfs:label>Biotecnología</rdfs:label>
         <skos:broader rdf:resource="http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_2_BIO"/>
@@ -1420,7 +1421,7 @@
 
 
     <NamedIndividual rdf:about="http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_3_CAN">
-        <rdf:type rdf:resource="http://purl.org/roh#ESSubjectArea"/>
+        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
         <roh:hasCode rdf:resource="http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_3_CODE_CAN"/>
         <rdfs:label>Cáncer</rdfs:label>
         <skos:broader rdf:resource="http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_2_BME"/>
@@ -1443,7 +1444,7 @@
 
 
     <NamedIndividual rdf:about="http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_3_CODE_ALI">
-        <rdf:type rdf:resource="http://purl.org/roh#ESSubjectArea"/>
+        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
         <roh:codeOf rdf:resource="http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_3_ALI"/>
         <rdfs:label>ALI</rdfs:label>
         <skos:inScheme rdf:resource="http://purl.org/roh/subject-areas#ESSubjectCode3rdList"/>
@@ -1456,7 +1457,7 @@
 
 
     <NamedIndividual rdf:about="http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_3_CODE_ARQ">
-        <rdf:type rdf:resource="http://purl.org/roh#ESSubjectArea"/>
+        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
         <roh:codeOf rdf:resource="http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_3_ARQ"/>
         <rdfs:label>ARQ</rdfs:label>
         <skos:inScheme rdf:resource="http://purl.org/roh/subject-areas#ESSubjectCode3rdList"/>
@@ -1469,7 +1470,7 @@
 
 
     <NamedIndividual rdf:about="http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_3_CODE_ART">
-        <rdf:type rdf:resource="http://purl.org/roh#ESSubjectArea"/>
+        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
         <roh:codeOf rdf:resource="http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_3_ART"/>
         <rdfs:label>ART</rdfs:label>
         <skos:inScheme rdf:resource="http://purl.org/roh/subject-areas#ESSubjectCode3rdList"/>
@@ -1482,7 +1483,7 @@
 
 
     <NamedIndividual rdf:about="http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_3_CODE_AYA">
-        <rdf:type rdf:resource="http://purl.org/roh#ESSubjectArea"/>
+        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
         <roh:codeOf rdf:resource="http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_3_AYA"/>
         <rdfs:label>AYA</rdfs:label>
         <skos:inScheme rdf:resource="http://purl.org/roh/subject-areas#ESSubjectCode3rdList"/>
@@ -1495,7 +1496,7 @@
 
 
     <NamedIndividual rdf:about="http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_3_CODE_AYF">
-        <rdf:type rdf:resource="http://purl.org/roh#ESSubjectArea"/>
+        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
         <roh:codeOf rdf:resource="http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_3_AYF"/>
         <rdfs:label>AYF</rdfs:label>
         <skos:inScheme rdf:resource="http://purl.org/roh/subject-areas#ESSubjectCode3rdList"/>
@@ -1508,7 +1509,7 @@
 
 
     <NamedIndividual rdf:about="http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_3_CODE_BDV">
-        <rdf:type rdf:resource="http://purl.org/roh#ESSubjectArea"/>
+        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
         <roh:codeOf rdf:resource="http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_3_BDV"/>
         <rdfs:label>BDV</rdfs:label>
         <skos:inScheme rdf:resource="http://purl.org/roh/subject-areas#ESSubjectCode3rdList"/>
@@ -1521,7 +1522,7 @@
 
 
     <NamedIndividual rdf:about="http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_3_CODE_BIF">
-        <rdf:type rdf:resource="http://purl.org/roh#ESSubjectArea"/>
+        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
         <roh:codeOf rdf:resource="http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_3_BIF"/>
         <rdfs:label>BIF</rdfs:label>
         <skos:inScheme rdf:resource="http://purl.org/roh/subject-areas#ESSubjectCode3rdList"/>
@@ -1534,7 +1535,7 @@
 
 
     <NamedIndividual rdf:about="http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_3_CODE_BMC">
-        <rdf:type rdf:resource="http://purl.org/roh#ESSubjectArea"/>
+        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
         <roh:codeOf rdf:resource="http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_3_BMC"/>
         <rdfs:label>BMC</rdfs:label>
         <skos:inScheme rdf:resource="http://purl.org/roh/subject-areas#ESSubjectCode3rdList"/>
@@ -1547,7 +1548,7 @@
 
 
     <NamedIndividual rdf:about="http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_3_CODE_BTC">
-        <rdf:type rdf:resource="http://purl.org/roh#ESSubjectArea"/>
+        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
         <roh:codeOf rdf:resource="http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_3_BTC"/>
         <rdfs:label>BTC</rdfs:label>
         <skos:inScheme rdf:resource="http://purl.org/roh/subject-areas#ESSubjectCode3rdList"/>
@@ -1560,7 +1561,7 @@
 
 
     <NamedIndividual rdf:about="http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_3_CODE_CAN">
-        <rdf:type rdf:resource="http://purl.org/roh#ESSubjectArea"/>
+        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
         <roh:codeOf rdf:resource="http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_3_CAN"/>
         <rdfs:label>CAN</rdfs:label>
         <skos:inScheme rdf:resource="http://purl.org/roh/subject-areas#ESSubjectCode3rdList"/>
@@ -1573,7 +1574,7 @@
 
 
     <NamedIndividual rdf:about="http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_3_CODE_COM">
-        <rdf:type rdf:resource="http://purl.org/roh#ESSubjectArea"/>
+        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
         <roh:codeOf rdf:resource="http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_3_COM"/>
         <rdfs:label>COM</rdfs:label>
         <skos:inScheme rdf:resource="http://purl.org/roh/subject-areas#ESSubjectCode3rdList"/>
@@ -1586,7 +1587,7 @@
 
 
     <NamedIndividual rdf:about="http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_3_CODE_CPO">
-        <rdf:type rdf:resource="http://purl.org/roh#ESSubjectArea"/>
+        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
         <roh:codeOf rdf:resource="http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_3_CPO"/>
         <rdfs:label>CPO</rdfs:label>
         <skos:inScheme rdf:resource="http://purl.org/roh/subject-areas#ESSubjectCode3rdList"/>
@@ -1599,7 +1600,7 @@
 
 
     <NamedIndividual rdf:about="http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_3_CODE_CTA">
-        <rdf:type rdf:resource="http://purl.org/roh#ESSubjectArea"/>
+        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
         <roh:codeOf rdf:resource="http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_3_CTA"/>
         <rdfs:label>CTA</rdfs:label>
         <skos:inScheme rdf:resource="http://purl.org/roh/subject-areas#ESSubjectCode3rdList"/>
@@ -1612,7 +1613,7 @@
 
 
     <NamedIndividual rdf:about="http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_3_CODE_CYA">
-        <rdf:type rdf:resource="http://purl.org/roh#ESSubjectArea"/>
+        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
         <roh:codeOf rdf:resource="http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_3_CYA"/>
         <rdfs:label>CYA</rdfs:label>
         <skos:inScheme rdf:resource="http://purl.org/roh/subject-areas#ESSubjectCode3rdList"/>
@@ -1625,7 +1626,7 @@
 
 
     <NamedIndividual rdf:about="http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_3_CODE_DE3">
-        <rdf:type rdf:resource="http://purl.org/roh#ESSubjectArea"/>
+        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
         <roh:codeOf rdf:resource="http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_3_DE3"/>
         <rdfs:label>DE3</rdfs:label>
         <skos:inScheme rdf:resource="http://purl.org/roh/subject-areas#ESSubjectCode3rdList"/>
@@ -1638,7 +1639,7 @@
 
 
     <NamedIndividual rdf:about="http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_3_CODE_DPT">
-        <rdf:type rdf:resource="http://purl.org/roh#ESSubjectArea"/>
+        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
         <roh:codeOf rdf:resource="http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_3_DPT"/>
         <rdfs:label>DPT</rdfs:label>
         <skos:inScheme rdf:resource="http://purl.org/roh/subject-areas#ESSubjectCode3rdList"/>
@@ -1651,7 +1652,7 @@
 
 
     <NamedIndividual rdf:about="http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_3_CODE_ED3">
-        <rdf:type rdf:resource="http://purl.org/roh#ESSubjectArea"/>
+        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
         <roh:codeOf rdf:resource="http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_3_ED3"/>
         <rdfs:label>ED3</rdfs:label>
         <skos:inScheme rdf:resource="http://purl.org/roh/subject-areas#ESSubjectCode3rdList"/>
@@ -1664,7 +1665,7 @@
 
 
     <NamedIndividual rdf:about="http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_3_CODE_ENE">
-        <rdf:type rdf:resource="http://purl.org/roh#ESSubjectArea"/>
+        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
         <roh:codeOf rdf:resource="http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_3_ENE"/>
         <rdfs:label>ENE</rdfs:label>
         <skos:inScheme rdf:resource="http://purl.org/roh/subject-areas#ESSubjectCode3rdList"/>
@@ -1677,7 +1678,7 @@
 
 
     <NamedIndividual rdf:about="http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_3_CODE_ESN">
-        <rdf:type rdf:resource="http://purl.org/roh#ESSubjectArea"/>
+        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
         <roh:codeOf rdf:resource="http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_3_ESN"/>
         <rdfs:label>ESN</rdfs:label>
         <skos:inScheme rdf:resource="http://purl.org/roh/subject-areas#ESSubjectCode3rdList"/>
@@ -1690,7 +1691,7 @@
 
 
     <NamedIndividual rdf:about="http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_3_CODE_ESP">
-        <rdf:type rdf:resource="http://purl.org/roh#ESSubjectArea"/>
+        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
         <roh:codeOf rdf:resource="http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_3_ESP"/>
         <rdfs:label>ESP</rdfs:label>
         <skos:inScheme rdf:resource="http://purl.org/roh/subject-areas#ESSubjectCode3rdList"/>
@@ -1703,7 +1704,7 @@
 
 
     <NamedIndividual rdf:about="http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_3_CODE_EYA">
-        <rdf:type rdf:resource="http://purl.org/roh#ESSubjectArea"/>
+        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
         <roh:codeOf rdf:resource="http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_3_EYA"/>
         <rdfs:label>EYA</rdfs:label>
         <skos:inScheme rdf:resource="http://purl.org/roh/subject-areas#ESSubjectCode3rdList"/>
@@ -1716,7 +1717,7 @@
 
 
     <NamedIndividual rdf:about="http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_3_CODE_EYF">
-        <rdf:type rdf:resource="http://purl.org/roh#ESSubjectArea"/>
+        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
         <roh:codeOf rdf:resource="http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_3_EYF"/>
         <rdfs:label>EYF</rdfs:label>
         <skos:inScheme rdf:resource="http://purl.org/roh/subject-areas#ESSubjectCode3rdList"/>
@@ -1729,7 +1730,7 @@
 
 
     <NamedIndividual rdf:about="http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_3_CODE_FEM">
-        <rdf:type rdf:resource="http://purl.org/roh#ESSubjectArea"/>
+        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
         <roh:codeOf rdf:resource="http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_3_FEM"/>
         <rdfs:label>FEM</rdfs:label>
         <skos:inScheme rdf:resource="http://purl.org/roh/subject-areas#ESSubjectCode3rdList"/>
@@ -1742,7 +1743,7 @@
 
 
     <NamedIndividual rdf:about="http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_3_CODE_FFP">
-        <rdf:type rdf:resource="http://purl.org/roh#ESSubjectArea"/>
+        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
         <roh:codeOf rdf:resource="http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_3_FFP"/>
         <rdfs:label>FFP</rdfs:label>
         <skos:inScheme rdf:resource="http://purl.org/roh/subject-areas#ESSubjectCode3rdList"/>
@@ -1755,7 +1756,7 @@
 
 
     <NamedIndividual rdf:about="http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_3_CODE_FIL">
-        <rdf:type rdf:resource="http://purl.org/roh#ESSubjectArea"/>
+        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
         <roh:codeOf rdf:resource="http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_3_FIL"/>
         <rdfs:label>FIL</rdfs:label>
         <skos:inScheme rdf:resource="http://purl.org/roh/subject-areas#ESSubjectCode3rdList"/>
@@ -1768,7 +1769,7 @@
 
 
     <NamedIndividual rdf:about="http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_3_CODE_FOS">
-        <rdf:type rdf:resource="http://purl.org/roh#ESSubjectArea"/>
+        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
         <roh:codeOf rdf:resource="http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_3_FOS"/>
         <rdfs:label>FOS</rdfs:label>
         <skos:inScheme rdf:resource="http://purl.org/roh/subject-areas#ESSubjectCode3rdList"/>
@@ -1781,7 +1782,7 @@
 
 
     <NamedIndividual rdf:about="http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_3_CODE_FYA">
-        <rdf:type rdf:resource="http://purl.org/roh#ESSubjectArea"/>
+        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
         <roh:codeOf rdf:resource="http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_3_FYA"/>
         <rdfs:label>FYA</rdfs:label>
         <skos:inScheme rdf:resource="http://purl.org/roh/subject-areas#ESSubjectCode3rdList"/>
@@ -1794,7 +1795,7 @@
 
 
     <NamedIndividual rdf:about="http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_3_CODE_GEO">
-        <rdf:type rdf:resource="http://purl.org/roh#ESSubjectArea"/>
+        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
         <roh:codeOf rdf:resource="http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_3_GEO"/>
         <rdfs:label>GEO</rdfs:label>
         <skos:inScheme rdf:resource="http://purl.org/roh/subject-areas#ESSubjectCode3rdList"/>
@@ -1807,7 +1808,7 @@
 
 
     <NamedIndividual rdf:about="http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_3_CODE_GYA">
-        <rdf:type rdf:resource="http://purl.org/roh#ESSubjectArea"/>
+        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
         <roh:codeOf rdf:resource="http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_3_GYA"/>
         <rdfs:label>GYA</rdfs:label>
         <skos:inScheme rdf:resource="http://purl.org/roh/subject-areas#ESSubjectCode3rdList"/>
@@ -1820,7 +1821,7 @@
 
 
     <NamedIndividual rdf:about="http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_3_CODE_HIS">
-        <rdf:type rdf:resource="http://purl.org/roh#ESSubjectArea"/>
+        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
         <roh:codeOf rdf:resource="http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_3_HIS"/>
         <rdfs:label>HIS</rdfs:label>
         <skos:inScheme rdf:resource="http://purl.org/roh/subject-areas#ESSubjectCode3rdList"/>
@@ -1833,7 +1834,7 @@
 
 
     <NamedIndividual rdf:about="http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_3_CODE_IBI">
-        <rdf:type rdf:resource="http://purl.org/roh#ESSubjectArea"/>
+        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
         <roh:codeOf rdf:resource="http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_3_IBI"/>
         <rdfs:label>IBI</rdfs:label>
         <skos:inScheme rdf:resource="http://purl.org/roh/subject-areas#ESSubjectCode3rdList"/>
@@ -1846,7 +1847,7 @@
 
 
     <NamedIndividual rdf:about="http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_3_CODE_ICA">
-        <rdf:type rdf:resource="http://purl.org/roh#ESSubjectArea"/>
+        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
         <roh:codeOf rdf:resource="http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_3_ICA"/>
         <rdfs:label>ICA</rdfs:label>
         <skos:inScheme rdf:resource="http://purl.org/roh/subject-areas#ESSubjectCode3rdList"/>
@@ -1859,7 +1860,7 @@
 
 
     <NamedIndividual rdf:about="http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_3_CODE_IEA">
-        <rdf:type rdf:resource="http://purl.org/roh#ESSubjectArea"/>
+        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
         <roh:codeOf rdf:resource="http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_3_IEA"/>
         <rdfs:label>IEA</rdfs:label>
         <skos:inScheme rdf:resource="http://purl.org/roh/subject-areas#ESSubjectCode3rdList"/>
@@ -1872,7 +1873,7 @@
 
 
     <NamedIndividual rdf:about="http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_3_CODE_IIT">
-        <rdf:type rdf:resource="http://purl.org/roh#ESSubjectArea"/>
+        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
         <roh:codeOf rdf:resource="http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_3_IIT"/>
         <rdfs:label>IIT</rdfs:label>
         <skos:inScheme rdf:resource="http://purl.org/roh/subject-areas#ESSubjectCode3rdList"/>
@@ -1885,7 +1886,7 @@
 
 
     <NamedIndividual rdf:about="http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_3_CODE_INA">
-        <rdf:type rdf:resource="http://purl.org/roh#ESSubjectArea"/>
+        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
         <roh:codeOf rdf:resource="http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_3_INA"/>
         <rdfs:label>INA</rdfs:label>
         <skos:inScheme rdf:resource="http://purl.org/roh/subject-areas#ESSubjectCode3rdList"/>
@@ -1898,7 +1899,7 @@
 
 
     <NamedIndividual rdf:about="http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_3_CODE_INF">
-        <rdf:type rdf:resource="http://purl.org/roh#ESSubjectArea"/>
+        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
         <roh:codeOf rdf:resource="http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_3_INF"/>
         <rdfs:label>INF</rdfs:label>
         <skos:inScheme rdf:resource="http://purl.org/roh/subject-areas#ESSubjectCode3rdList"/>
@@ -1911,7 +1912,7 @@
 
 
     <NamedIndividual rdf:about="http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_3_CODE_IQM">
-        <rdf:type rdf:resource="http://purl.org/roh#ESSubjectArea"/>
+        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
         <roh:codeOf rdf:resource="http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_3_IQM"/>
         <rdfs:label>IQM</rdfs:label>
         <skos:inScheme rdf:resource="http://purl.org/roh/subject-areas#ESSubjectCode3rdList"/>
@@ -1924,7 +1925,7 @@
 
 
     <NamedIndividual rdf:about="http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_3_CODE_LFL">
-        <rdf:type rdf:resource="http://purl.org/roh#ESSubjectArea"/>
+        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
         <roh:codeOf rdf:resource="http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_3_LFL"/>
         <rdfs:label>LFL</rdfs:label>
         <skos:inScheme rdf:resource="http://purl.org/roh/subject-areas#ESSubjectCode3rdList"/>
@@ -1937,7 +1938,7 @@
 
 
     <NamedIndividual rdf:about="http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_3_CODE_LYL">
-        <rdf:type rdf:resource="http://purl.org/roh#ESSubjectArea"/>
+        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
         <roh:codeOf rdf:resource="http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_3_LYL"/>
         <rdfs:label>LYL</rdfs:label>
         <skos:inScheme rdf:resource="http://purl.org/roh/subject-areas#ESSubjectCode3rdList"/>
@@ -1950,7 +1951,7 @@
 
 
     <NamedIndividual rdf:about="http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_3_CODE_MAE">
-        <rdf:type rdf:resource="http://purl.org/roh#ESSubjectArea"/>
+        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
         <roh:codeOf rdf:resource="http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_3_MAE"/>
         <rdfs:label>MAE</rdfs:label>
         <skos:inScheme rdf:resource="http://purl.org/roh/subject-areas#ESSubjectCode3rdList"/>
@@ -1963,7 +1964,7 @@
 
 
     <NamedIndividual rdf:about="http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_3_CODE_MAR">
-        <rdf:type rdf:resource="http://purl.org/roh#ESSubjectArea"/>
+        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
         <roh:codeOf rdf:resource="http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_3_MAR"/>
         <rdfs:label>MAR</rdfs:label>
         <skos:inScheme rdf:resource="http://purl.org/roh/subject-areas#ESSubjectCode3rdList"/>
@@ -1976,7 +1977,7 @@
 
 
     <NamedIndividual rdf:about="http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_3_CODE_MBM">
-        <rdf:type rdf:resource="http://purl.org/roh#ESSubjectArea"/>
+        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
         <roh:codeOf rdf:resource="http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_3_MBM"/>
         <rdfs:label>MBM</rdfs:label>
         <skos:inScheme rdf:resource="http://purl.org/roh/subject-areas#ESSubjectCode3rdList"/>
@@ -1989,7 +1990,7 @@
 
 
     <NamedIndividual rdf:about="http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_3_CODE_MEN">
-        <rdf:type rdf:resource="http://purl.org/roh#ESSubjectArea"/>
+        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
         <roh:codeOf rdf:resource="http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_3_MEN"/>
         <rdfs:label>MEN</rdfs:label>
         <skos:inScheme rdf:resource="http://purl.org/roh/subject-areas#ESSubjectCode3rdList"/>
@@ -2002,7 +2003,7 @@
 
 
     <NamedIndividual rdf:about="http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_3_CODE_MES">
-        <rdf:type rdf:resource="http://purl.org/roh#ESSubjectArea"/>
+        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
         <roh:codeOf rdf:resource="http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_3_MES"/>
         <rdfs:label>MES</rdfs:label>
         <skos:inScheme rdf:resource="http://purl.org/roh/subject-areas#ESSubjectCode3rdList"/>
@@ -2015,7 +2016,7 @@
 
 
     <NamedIndividual rdf:about="http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_3_CODE_MFU">
-        <rdf:type rdf:resource="http://purl.org/roh#ESSubjectArea"/>
+        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
         <roh:codeOf rdf:resource="http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_3_MFU"/>
         <rdfs:label>MFU</rdfs:label>
         <skos:inScheme rdf:resource="http://purl.org/roh/subject-areas#ESSubjectCode3rdList"/>
@@ -2028,7 +2029,7 @@
 
 
     <NamedIndividual rdf:about="http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_3_CODE_MNF">
-        <rdf:type rdf:resource="http://purl.org/roh#ESSubjectArea"/>
+        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
         <roh:codeOf rdf:resource="http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_3_MNF"/>
         <rdfs:label>MNF</rdfs:label>
         <skos:inScheme rdf:resource="http://purl.org/roh/subject-areas#ESSubjectCode3rdList"/>
@@ -2041,7 +2042,7 @@
 
 
     <NamedIndividual rdf:about="http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_3_CODE_MT3">
-        <rdf:type rdf:resource="http://purl.org/roh#ESSubjectArea"/>
+        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
         <roh:codeOf rdf:resource="http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_3_MT3"/>
         <rdfs:label>MT3</rdfs:label>
         <skos:inScheme rdf:resource="http://purl.org/roh/subject-areas#ESSubjectCode3rdList"/>
@@ -2054,7 +2055,7 @@
 
 
     <NamedIndividual rdf:about="http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_3_CODE_POL">
-        <rdf:type rdf:resource="http://purl.org/roh#ESSubjectArea"/>
+        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
         <roh:codeOf rdf:resource="http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_3_POL"/>
         <rdfs:label>POL</rdfs:label>
         <skos:inScheme rdf:resource="http://purl.org/roh/subject-areas#ESSubjectCode3rdList"/>
@@ -2067,7 +2068,7 @@
 
 
     <NamedIndividual rdf:about="http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_3_CODE_PS3">
-        <rdf:type rdf:resource="http://purl.org/roh#ESSubjectArea"/>
+        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
         <roh:codeOf rdf:resource="http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_3_PS3"/>
         <rdfs:label>PS3</rdfs:label>
         <skos:inScheme rdf:resource="http://purl.org/roh/subject-areas#ESSubjectCode3rdList"/>
@@ -2080,7 +2081,7 @@
 
 
     <NamedIndividual rdf:about="http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_3_CODE_QMC">
-        <rdf:type rdf:resource="http://purl.org/roh#ESSubjectArea"/>
+        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
         <roh:codeOf rdf:resource="http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_3_QMC"/>
         <rdfs:label>QMC</rdfs:label>
         <skos:inScheme rdf:resource="http://purl.org/roh/subject-areas#ESSubjectCode3rdList"/>
@@ -2093,7 +2094,7 @@
 
 
     <NamedIndividual rdf:about="http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_3_CODE_SOC">
-        <rdf:type rdf:resource="http://purl.org/roh#ESSubjectArea"/>
+        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
         <roh:codeOf rdf:resource="http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_3_SOC"/>
         <rdfs:label>SOC</rdfs:label>
         <skos:inScheme rdf:resource="http://purl.org/roh/subject-areas#ESSubjectCode3rdList"/>
@@ -2106,7 +2107,7 @@
 
 
     <NamedIndividual rdf:about="http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_3_CODE_TCO">
-        <rdf:type rdf:resource="http://purl.org/roh#ESSubjectArea"/>
+        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
         <roh:codeOf rdf:resource="http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_3_TCO"/>
         <rdfs:label>TCO</rdfs:label>
         <skos:inScheme rdf:resource="http://purl.org/roh/subject-areas#ESSubjectCode3rdList"/>
@@ -2119,7 +2120,7 @@
 
 
     <NamedIndividual rdf:about="http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_3_CODE_TMA">
-        <rdf:type rdf:resource="http://purl.org/roh#ESSubjectArea"/>
+        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
         <roh:codeOf rdf:resource="http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_3_TMA"/>
         <rdfs:label>TMA</rdfs:label>
         <skos:inScheme rdf:resource="http://purl.org/roh/subject-areas#ESSubjectCode3rdList"/>
@@ -2132,7 +2133,7 @@
 
 
     <NamedIndividual rdf:about="http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_3_CODE_TRA">
-        <rdf:type rdf:resource="http://purl.org/roh#ESSubjectArea"/>
+        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
         <roh:codeOf rdf:resource="http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_3_TRA"/>
         <rdfs:label>TRA</rdfs:label>
         <skos:inScheme rdf:resource="http://purl.org/roh/subject-areas#ESSubjectCode3rdList"/>
@@ -2145,7 +2146,7 @@
 
 
     <NamedIndividual rdf:about="http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_3_COM">
-        <rdf:type rdf:resource="http://purl.org/roh#ESSubjectArea"/>
+        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
         <roh:hasCode rdf:resource="http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_3_CODE_COM"/>
         <rdfs:label>Comunicación</rdfs:label>
         <skos:broader rdf:resource="http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_2_CSO"/>
@@ -2168,7 +2169,7 @@
 
 
     <NamedIndividual rdf:about="http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_3_CPO">
-        <rdf:type rdf:resource="http://purl.org/roh#ESSubjectArea"/>
+        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
         <roh:hasCode rdf:resource="http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_3_CODE_CPO"/>
         <rdfs:label>Ciencia política</rdfs:label>
         <skos:broader rdf:resource="http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_2_CSO"/>
@@ -2191,7 +2192,7 @@
 
 
     <NamedIndividual rdf:about="http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_3_CTA">
-        <rdf:type rdf:resource="http://purl.org/roh#ESSubjectArea"/>
+        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
         <roh:hasCode rdf:resource="http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_3_CODE_CTA"/>
         <rdfs:label>Ciencias de la Tierra y del agua</rdfs:label>
         <skos:broader rdf:resource="http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_2_CTM"/>
@@ -2215,7 +2216,7 @@
 
 
     <NamedIndividual rdf:about="http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_3_CYA">
-        <rdf:type rdf:resource="http://purl.org/roh#ESSubjectArea"/>
+        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
         <roh:hasCode rdf:resource="http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_3_CODE_CYA"/>
         <rdfs:label>Clima y atmósfera</rdfs:label>
         <skos:broader rdf:resource="http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_2_CTM"/>
@@ -2239,7 +2240,7 @@
 
 
     <NamedIndividual rdf:about="http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_3_DE3">
-        <rdf:type rdf:resource="http://purl.org/roh#ESSubjectArea"/>
+        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
         <roh:hasCode rdf:resource="http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_3_CODE_DE3"/>
         <rdfs:label>Derecho</rdfs:label>
         <skos:broader rdf:resource="http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_2_DER"/>
@@ -2262,7 +2263,7 @@
 
 
     <NamedIndividual rdf:about="http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_3_DPT">
-        <rdf:type rdf:resource="http://purl.org/roh#ESSubjectArea"/>
+        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
         <roh:hasCode rdf:resource="http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_3_CODE_DPT"/>
         <rdfs:label>Herramientas diagnósticas, pronósticas y terapéuticas</rdfs:label>
         <skos:broader rdf:resource="http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_2_BME"/>
@@ -2284,7 +2285,7 @@
 
 
     <NamedIndividual rdf:about="http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_3_ED3">
-        <rdf:type rdf:resource="http://purl.org/roh#ESSubjectArea"/>
+        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
         <roh:hasCode rdf:resource="http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_3_CODE_ED3"/>
         <rdfs:label>Ciencias de la educación</rdfs:label>
         <skos:broader rdf:resource="http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_2_EDU"/>
@@ -2307,7 +2308,7 @@
 
 
     <NamedIndividual rdf:about="http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_3_ENE">
-        <rdf:type rdf:resource="http://purl.org/roh#ESSubjectArea"/>
+        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
         <roh:hasCode rdf:resource="http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_3_CODE_ENE"/>
         <rdfs:label>Energía</rdfs:label>
         <skos:broader rdf:resource="http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_2_EYT"/>
@@ -2330,7 +2331,7 @@
 
 
     <NamedIndividual rdf:about="http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_3_ESN">
-        <rdf:type rdf:resource="http://purl.org/roh#ESSubjectArea"/>
+        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
         <roh:hasCode rdf:resource="http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_3_CODE_ESN"/>
         <rdfs:label>Enfermedades del sistema nervioso</rdfs:label>
         <skos:broader rdf:resource="http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_2_BME"/>
@@ -2353,7 +2354,7 @@
 
 
     <NamedIndividual rdf:about="http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_3_ESP">
-        <rdf:type rdf:resource="http://purl.org/roh#ESSubjectArea"/>
+        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
         <roh:hasCode rdf:resource="http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_3_CODE_ESP"/>
         <rdfs:label>Investigación espacial</rdfs:label>
         <skos:broader rdf:resource="http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_2_FIS"/>
@@ -2376,7 +2377,7 @@
 
 
     <NamedIndividual rdf:about="http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_3_EYA">
-        <rdf:type rdf:resource="http://purl.org/roh#ESSubjectArea"/>
+        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
         <roh:hasCode rdf:resource="http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_3_CODE_EYA"/>
         <rdfs:label>Economía y sus aplicaciones</rdfs:label>
         <skos:broader rdf:resource="http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_2_ECO"/>
@@ -2399,7 +2400,7 @@
 
 
     <NamedIndividual rdf:about="http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_3_EYF">
-        <rdf:type rdf:resource="http://purl.org/roh#ESSubjectArea"/>
+        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
         <roh:hasCode rdf:resource="http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_3_CODE_EYF"/>
         <rdfs:label>Empresas y finanzas</rdfs:label>
         <skos:broader rdf:resource="http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_2_ECO"/>
@@ -2423,7 +2424,7 @@
 
 
     <NamedIndividual rdf:about="http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_3_FEM">
-        <rdf:type rdf:resource="http://purl.org/roh#ESSubjectArea"/>
+        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
         <roh:hasCode rdf:resource="http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_3_CODE_FEM"/>
         <rdfs:label>Estudios feministas, de las mujeres y de género</rdfs:label>
         <skos:broader rdf:resource="http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_2_CSO"/>
@@ -2450,7 +2451,7 @@
 
 
     <NamedIndividual rdf:about="http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_3_FFP">
-        <rdf:type rdf:resource="http://purl.org/roh#ESSubjectArea"/>
+        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
         <roh:hasCode rdf:resource="http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_3_CODE_FFP"/>
         <rdfs:label>Física fundamental y de partículas</rdfs:label>
         <skos:broader rdf:resource="http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_2_FIS"/>
@@ -2472,7 +2473,7 @@
 
 
     <NamedIndividual rdf:about="http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_3_FIL">
-        <rdf:type rdf:resource="http://purl.org/roh#ESSubjectArea"/>
+        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
         <roh:hasCode rdf:resource="http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_3_CODE_FIL"/>
         <rdfs:label>Filosofía</rdfs:label>
         <skos:broader rdf:resource="http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_2_MLP"/>
@@ -2495,7 +2496,7 @@
 
 
     <NamedIndividual rdf:about="http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_3_FOS">
-        <rdf:type rdf:resource="http://purl.org/roh#ESSubjectArea"/>
+        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
         <roh:hasCode rdf:resource="http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_3_CODE_FOS"/>
         <rdfs:label>Fisiopatología de órganos y sistemas</rdfs:label>
         <skos:broader rdf:resource="http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_2_BME"/>
@@ -2518,7 +2519,7 @@
 
 
     <NamedIndividual rdf:about="http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_3_FYA">
-        <rdf:type rdf:resource="http://purl.org/roh#ESSubjectArea"/>
+        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
         <roh:hasCode rdf:resource="http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_3_CODE_FYA"/>
         <rdfs:label>Física y sus aplicaciones</rdfs:label>
         <skos:broader rdf:resource="http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_2_FIS"/>
@@ -2541,7 +2542,7 @@
 
 
     <NamedIndividual rdf:about="http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_3_GEO">
-        <rdf:type rdf:resource="http://purl.org/roh#ESSubjectArea"/>
+        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
         <roh:hasCode rdf:resource="http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_3_CODE_GEO"/>
         <rdfs:label>Geografía</rdfs:label>
         <skos:broader rdf:resource="http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_2_CSO"/>
@@ -2564,7 +2565,7 @@
 
 
     <NamedIndividual rdf:about="http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_3_GYA">
-        <rdf:type rdf:resource="http://purl.org/roh#ESSubjectArea"/>
+        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
         <roh:hasCode rdf:resource="http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_3_CODE_GYA"/>
         <rdfs:label>Ganadería y acuicultura</rdfs:label>
         <skos:broader rdf:resource="http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_2_CAA"/>
@@ -2588,7 +2589,7 @@
 
 
     <NamedIndividual rdf:about="http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_3_HIS">
-        <rdf:type rdf:resource="http://purl.org/roh#ESSubjectArea"/>
+        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
         <roh:hasCode rdf:resource="http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_3_CODE_HIS"/>
         <rdfs:label>Historia</rdfs:label>
         <skos:broader rdf:resource="http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_2_PHA"/>
@@ -2611,7 +2612,7 @@
 
 
     <NamedIndividual rdf:about="http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_3_IBI">
-        <rdf:type rdf:resource="http://purl.org/roh#ESSubjectArea"/>
+        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
         <roh:hasCode rdf:resource="http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_3_CODE_IBI"/>
         <rdfs:label>Ingeniería biomédica</rdfs:label>
         <skos:broader rdf:resource="http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_2_PIN"/>
@@ -2634,7 +2635,7 @@
 
 
     <NamedIndividual rdf:about="http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_3_ICA">
-        <rdf:type rdf:resource="http://purl.org/roh#ESSubjectArea"/>
+        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
         <roh:hasCode rdf:resource="http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_3_CODE_ICA"/>
         <rdfs:label>Ingeniería civil y arquitectura</rdfs:label>
         <skos:broader rdf:resource="http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_2_PIN"/>
@@ -2658,7 +2659,7 @@
 
 
     <NamedIndividual rdf:about="http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_3_IEA">
-        <rdf:type rdf:resource="http://purl.org/roh#ESSubjectArea"/>
+        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
         <roh:hasCode rdf:resource="http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_3_CODE_IEA"/>
         <rdfs:label>Ingeniería eléctrica, electrónica y automática</rdfs:label>
         <skos:broader rdf:resource="http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_2_PIN"/>
@@ -2683,7 +2684,7 @@
 
 
     <NamedIndividual rdf:about="http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_3_IIT">
-        <rdf:type rdf:resource="http://purl.org/roh#ESSubjectArea"/>
+        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
         <roh:hasCode rdf:resource="http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_3_CODE_IIT"/>
         <rdfs:label>Inmunidad, infección y nuevas terapias</rdfs:label>
         <skos:broader rdf:resource="http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_2_BME"/>
@@ -2707,7 +2708,7 @@
 
 
     <NamedIndividual rdf:about="http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_3_INA">
-        <rdf:type rdf:resource="http://purl.org/roh#ESSubjectArea"/>
+        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
         <roh:hasCode rdf:resource="http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_3_CODE_INA"/>
         <rdfs:label>Ingeniería mecánica, naval y aeronáutica</rdfs:label>
         <skos:broader rdf:resource="http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_2_PIN"/>
@@ -2732,7 +2733,7 @@
 
 
     <NamedIndividual rdf:about="http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_3_INF">
-        <rdf:type rdf:resource="http://purl.org/roh#ESSubjectArea"/>
+        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
         <roh:hasCode rdf:resource="http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_3_CODE_INF"/>
         <rdfs:label>Ciencias de la computación y tecnología informática</rdfs:label>
         <skos:broader rdf:resource="http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_2_TIC"/>
@@ -2755,7 +2756,7 @@
 
 
     <NamedIndividual rdf:about="http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_3_IQM">
-        <rdf:type rdf:resource="http://purl.org/roh#ESSubjectArea"/>
+        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
         <roh:hasCode rdf:resource="http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_3_CODE_IQM"/>
         <rdfs:label>Ingeniería química</rdfs:label>
         <skos:broader rdf:resource="http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_2_CTQ"/>
@@ -2778,7 +2779,7 @@
 
 
     <NamedIndividual rdf:about="http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_3_LFL">
-        <rdf:type rdf:resource="http://purl.org/roh#ESSubjectArea"/>
+        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
         <roh:hasCode rdf:resource="http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_3_CODE_LFL"/>
         <rdfs:label>Literatura, filología, lenguas y culturas antiguas y estudios culturales</rdfs:label>
         <skos:broader rdf:resource="http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_2_FLA"/>
@@ -2804,7 +2805,7 @@
 
 
     <NamedIndividual rdf:about="http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_3_LYL">
-        <rdf:type rdf:resource="http://purl.org/roh#ESSubjectArea"/>
+        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
         <roh:hasCode rdf:resource="http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_3_CODE_LYL"/>
         <rdfs:label>Lingüística y lenguas</rdfs:label>
         <skos:broader rdf:resource="http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_2_MLP"/>
@@ -2827,7 +2828,7 @@
 
 
     <NamedIndividual rdf:about="http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_3_MAE">
-        <rdf:type rdf:resource="http://purl.org/roh#ESSubjectArea"/>
+        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
         <roh:hasCode rdf:resource="http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_3_CODE_MAE"/>
         <rdfs:label>Métodos de análisis económico</rdfs:label>
         <skos:broader rdf:resource="http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_2_ECO"/>
@@ -2850,7 +2851,7 @@
 
 
     <NamedIndividual rdf:about="http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_3_MAR">
-        <rdf:type rdf:resource="http://purl.org/roh#ESSubjectArea"/>
+        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
         <roh:hasCode rdf:resource="http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_3_CODE_MAR"/>
         <rdfs:label>Ciencias y tecnologías marinas</rdfs:label>
         <skos:broader rdf:resource="http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_2_CTM"/>
@@ -2873,7 +2874,7 @@
 
 
     <NamedIndividual rdf:about="http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_3_MBM">
-        <rdf:type rdf:resource="http://purl.org/roh#ESSubjectArea"/>
+        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
         <roh:hasCode rdf:resource="http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_3_CODE_MBM"/>
         <rdfs:label>Materiales para biomedicina</rdfs:label>
         <skos:broader rdf:resource="http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_2_MAT"/>
@@ -2895,7 +2896,7 @@
 
 
     <NamedIndividual rdf:about="http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_3_MEN">
-        <rdf:type rdf:resource="http://purl.org/roh#ESSubjectArea"/>
+        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
         <roh:hasCode rdf:resource="http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_3_CODE_MEN"/>
         <rdfs:label>Materiales para la energía y el medioambiente</rdfs:label>
         <skos:broader rdf:resource="http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_2_MAT"/>
@@ -2917,7 +2918,7 @@
 
 
     <NamedIndividual rdf:about="http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_3_MES">
-        <rdf:type rdf:resource="http://purl.org/roh#ESSubjectArea"/>
+        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
         <roh:hasCode rdf:resource="http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_3_CODE_MES"/>
         <rdfs:label>Materiales estructurales</rdfs:label>
         <skos:broader rdf:resource="http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_2_MAT"/>
@@ -2939,7 +2940,7 @@
 
 
     <NamedIndividual rdf:about="http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_3_MFU">
-        <rdf:type rdf:resource="http://purl.org/roh#ESSubjectArea"/>
+        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
         <roh:hasCode rdf:resource="http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_3_CODE_MFU"/>
         <rdfs:label>Materiales con funcionalidad eléctrica, magnética, óptica o térmica</rdfs:label>
         <skos:broader rdf:resource="http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_2_MAT"/>
@@ -2961,7 +2962,7 @@
 
 
     <NamedIndividual rdf:about="http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_3_MNF">
-        <rdf:type rdf:resource="http://purl.org/roh#ESSubjectArea"/>
+        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
         <roh:hasCode rdf:resource="http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_3_CODE_MNF"/>
         <rdfs:label>Microelectrónica, nanotecnología y fotónica</rdfs:label>
         <skos:broader rdf:resource="http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_2_TIC"/>
@@ -2985,7 +2986,7 @@
 
 
     <NamedIndividual rdf:about="http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_3_MT3">
-        <rdf:type rdf:resource="http://purl.org/roh#ESSubjectArea"/>
+        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
         <roh:hasCode rdf:resource="http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_3_CODE_MT3"/>
         <rdfs:label>Ciencias matemáticas</rdfs:label>
         <skos:broader rdf:resource="http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_2_MTM"/>
@@ -3008,7 +3009,7 @@
 
 
     <NamedIndividual rdf:about="http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_3_POL">
-        <rdf:type rdf:resource="http://purl.org/roh#ESSubjectArea"/>
+        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
         <roh:hasCode rdf:resource="http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_3_CODE_POL"/>
         <rdfs:label>Investigación polar</rdfs:label>
         <skos:broader rdf:resource="http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_2_CTM"/>
@@ -3030,7 +3031,7 @@
 
 
     <NamedIndividual rdf:about="http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_3_PS3">
-        <rdf:type rdf:resource="http://purl.org/roh#ESSubjectArea"/>
+        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
         <roh:hasCode rdf:resource="http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_3_CODE_PS3"/>
         <rdfs:label>Psicología</rdfs:label>
         <skos:broader rdf:resource="http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_2_PSI"/>
@@ -3052,7 +3053,7 @@
 
 
     <NamedIndividual rdf:about="http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_3_QMC">
-        <rdf:type rdf:resource="http://purl.org/roh#ESSubjectArea"/>
+        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
         <roh:hasCode rdf:resource="http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_3_CODE_QMC"/>
         <rdfs:label>Química</rdfs:label>
         <skos:broader rdf:resource="http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_2_CTQ"/>
@@ -3075,7 +3076,7 @@
 
 
     <NamedIndividual rdf:about="http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_3_SOC">
-        <rdf:type rdf:resource="http://purl.org/roh#ESSubjectArea"/>
+        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
         <roh:hasCode rdf:resource="http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_3_CODE_SOC"/>
         <rdfs:label>Sociología y antropología social</rdfs:label>
         <skos:broader rdf:resource="http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_2_CSO"/>
@@ -3099,7 +3100,7 @@
 
 
     <NamedIndividual rdf:about="http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_3_TCO">
-        <rdf:type rdf:resource="http://purl.org/roh#ESSubjectArea"/>
+        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
         <roh:hasCode rdf:resource="http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_3_CODE_TCO"/>
         <rdfs:label>Tecnologías de las comunicaciones</rdfs:label>
         <skos:broader rdf:resource="http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_2_TIC"/>
@@ -3122,7 +3123,7 @@
 
 
     <NamedIndividual rdf:about="http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_3_TMA">
-        <rdf:type rdf:resource="http://purl.org/roh#ESSubjectArea"/>
+        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
         <roh:hasCode rdf:resource="http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_3_CODE_TMA"/>
         <rdfs:label>Tecnologías medioambientales</rdfs:label>
         <skos:broader rdf:resource="http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_2_CTM"/>
@@ -3145,7 +3146,7 @@
 
 
     <NamedIndividual rdf:about="http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_3_TRA">
-        <rdf:type rdf:resource="http://purl.org/roh#ESSubjectArea"/>
+        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
         <roh:hasCode rdf:resource="http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_3_CODE_TRA"/>
         <rdfs:label>Transporte</rdfs:label>
         <skos:broader rdf:resource="http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_2_EYT"/>

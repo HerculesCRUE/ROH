@@ -118,11 +118,12 @@ by creating a research management system with semantic capacities based on seman
     
 
 
-    <!-- http://purl.org/roh/mirror/vivo#AcademicPosition -->
+    <!-- http://purl.org/roh#ResearcherPosition -->
 
 
-    <owl:Class rdf:about="http://purl.org/roh/mirror/vivo#AcademicPosition">
-        <rdfs:label xml:lang="en">Academic Position</rdfs:label>
+    <owl:Class rdf:about="http://purl.org/roh#ResearcherPosition">
+        <rdfs:subClassOf rdf:resource="http://purl.org/roh/mirror/vivo#Position"/>
+        <rdfs:label xml:lang="en">Researcher Position</rdfs:label>
     </owl:Class>
     
 
@@ -131,6 +132,7 @@ by creating a research management system with semantic capacities based on seman
 
 
     <owl:Class rdf:about="http://purl.org/roh/mirror/vivo#FacultyAdministrativePosition">
+        <rdfs:subClassOf rdf:resource="http://purl.org/roh/mirror/vivo#Position"/>
         <rdfs:label xml:lang="en">Faculty Administrative Position</rdfs:label>
     </owl:Class>
     
@@ -140,6 +142,7 @@ by creating a research management system with semantic capacities based on seman
 
 
     <owl:Class rdf:about="http://purl.org/roh/mirror/vivo#FacultyPosition">
+        <rdfs:subClassOf rdf:resource="http://purl.org/roh/mirror/vivo#Position"/>
         <rdfs:label xml:lang="en">Faculty Position</rdfs:label>
     </owl:Class>
     
@@ -299,7 +302,7 @@ by creating a research management system with semantic capacities based on seman
 
 
     <owl:Class rdf:about="http://purl.org/roh/university-hr/uk#GB_UNIVERSITY_HR_GBRPROF">
-        <rdfs:subClassOf rdf:resource="http://purl.org/roh/mirror/vivo#FacultyPosition"/>
+        <rdfs:subClassOf rdf:resource="http://purl.org/roh#ResearcherPosition"/>
         <roh:country rdf:resource="http://publications.europa.eu/resource/authority/country/GBR"/>
         <roh:hasCode rdf:resource="http://purl.org/roh/university-hr/uk#GB_UNIVERSITY_HR_CODE_GBRPROF"/>
         <rdfs:label xml:lang="en">Professorial research fellow</rdfs:label>
@@ -317,7 +320,7 @@ by creating a research management system with semantic capacities based on seman
 
 
     <owl:Class rdf:about="http://purl.org/roh/university-hr/uk#GB_UNIVERSITY_HR_GBRREAASS">
-        <rdfs:subClassOf rdf:resource="http://purl.org/roh/mirror/vivo#Position"/>
+        <rdfs:subClassOf rdf:resource="http://purl.org/roh#ResearcherPosition"/>
         <roh:country rdf:resource="http://publications.europa.eu/resource/authority/country/GBR"/>
         <roh:hasCode rdf:resource="http://purl.org/roh/university-hr/uk#GB_UNIVERSITY_HR_CODE_GBRREAASS"/>
         <rdfs:label xml:lang="en">Research assistant</rdfs:label>
@@ -333,7 +336,7 @@ by creating a research management system with semantic capacities based on seman
 
 
     <owl:Class rdf:about="http://purl.org/roh/university-hr/uk#GB_UNIVERSITY_HR_GBRREAFEL">
-        <rdfs:subClassOf rdf:resource="http://purl.org/roh/mirror/vivo#AcademicPosition"/>
+        <rdfs:subClassOf rdf:resource="http://purl.org/roh#ResearcherPosition"/>
         <roh:country rdf:resource="http://publications.europa.eu/resource/authority/country/GBR"/>
         <roh:hasCode rdf:resource="http://purl.org/roh/university-hr/uk#GB_UNIVERSITY_HR_CODE_GBRREAFEL"/>
         <rdfs:label xml:lang="en">Research fellow</rdfs:label>
@@ -349,7 +352,7 @@ by creating a research management system with semantic capacities based on seman
 
 
     <owl:Class rdf:about="http://purl.org/roh/university-hr/uk#GB_UNIVERSITY_HR_GBRSENREAFEL">
-        <rdfs:subClassOf rdf:resource="http://purl.org/roh/mirror/vivo#AcademicPosition"/>
+        <rdfs:subClassOf rdf:resource="http://purl.org/roh#ResearcherPosition"/>
         <roh:country rdf:resource="http://publications.europa.eu/resource/authority/country/GBR"/>
         <roh:hasCode rdf:resource="http://purl.org/roh/university-hr/uk#GB_UNIVERSITY_HR_CODE_GBRSENREAFEL"/>
         <rdfs:label xml:lang="en">Senior research fellow</rdfs:label>

@@ -17,6 +17,9 @@
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@language" : "en",
     "@value" : "Knowledge Area"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "http://www.w3.org/2004/02/skos/core#ConceptScheme"
   } ]
 }, {
   "@id" : "http://purl.org/roh#codeOf",
@@ -26,7 +29,7 @@
   "@type" : [ "http://www.w3.org/2002/07/owl#AnnotationProperty" ]
 }, {
   "@id" : "http://purl.org/roh/scientific-domain#ESDomainCode1stList",
-  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://www.w3.org/2004/02/skos/core#ConceptScheme" ],
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://purl.org/roh#ESScientificDomain" ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@language" : "es-es-fonipa",
     "@value" : "'ko ði γoz ðe las 'a ɾe as θjen̪ 'ti fi kas ðe pri 'mer ni 'βel"
@@ -101,7 +104,7 @@
   } ]
 }, {
   "@id" : "http://purl.org/roh/scientific-domain#ES_SCIENTIFIC_DOMAIN_LEVEL_1_CB",
-  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://purl.org/roh#ESScientificDomain" ],
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://www.w3.org/2004/02/skos/core#Concept" ],
   "http://purl.org/roh#hasCode" : [ {
     "@id" : "http://purl.org/roh/scientific-domain#ES_SCIENTIFIC_DOMAIN_LEVEL_1_CODE_CB"
   } ],
@@ -177,7 +180,7 @@
   } ]
 }, {
   "@id" : "http://purl.org/roh/scientific-domain#ES_SCIENTIFIC_DOMAIN_LEVEL_1_CODE_CB",
-  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://purl.org/roh#ESScientificDomain" ],
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://www.w3.org/2004/02/skos/core#Concept" ],
   "http://purl.org/roh#codeOf" : [ {
     "@id" : "http://purl.org/roh/scientific-domain#ES_SCIENTIFIC_DOMAIN_LEVEL_1_CB"
   } ],
@@ -192,7 +195,7 @@
   } ]
 }, {
   "@id" : "http://purl.org/roh/scientific-domain#ES_SCIENTIFIC_DOMAIN_LEVEL_1_CODE_CSH",
-  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://purl.org/roh#ESScientificDomain" ],
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://www.w3.org/2004/02/skos/core#Concept" ],
   "http://purl.org/roh#codeOf" : [ {
     "@id" : "http://purl.org/roh/scientific-domain#ES_SCIENTIFIC_DOMAIN_LEVEL_1_CSH"
   } ],
@@ -207,7 +210,7 @@
   } ]
 }, {
   "@id" : "http://purl.org/roh/scientific-domain#ES_SCIENTIFIC_DOMAIN_LEVEL_1_CODE_CVS",
-  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://purl.org/roh#ESScientificDomain" ],
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://www.w3.org/2004/02/skos/core#Concept" ],
   "http://purl.org/roh#codeOf" : [ {
     "@id" : "http://purl.org/roh/scientific-domain#ES_SCIENTIFIC_DOMAIN_LEVEL_1_CVS"
   } ],
@@ -222,7 +225,7 @@
   } ]
 }, {
   "@id" : "http://purl.org/roh/scientific-domain#ES_SCIENTIFIC_DOMAIN_LEVEL_1_CODE_IYT",
-  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://purl.org/roh#ESScientificDomain" ],
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://www.w3.org/2004/02/skos/core#Concept" ],
   "http://purl.org/roh#codeOf" : [ {
     "@id" : "http://purl.org/roh/scientific-domain#ES_SCIENTIFIC_DOMAIN_LEVEL_1_IYT"
   } ],
@@ -237,7 +240,7 @@
   } ]
 }, {
   "@id" : "http://purl.org/roh/scientific-domain#ES_SCIENTIFIC_DOMAIN_LEVEL_1_CSH",
-  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://purl.org/roh#ESScientificDomain" ],
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://www.w3.org/2004/02/skos/core#Concept" ],
   "http://purl.org/roh#hasCode" : [ {
     "@id" : "http://purl.org/roh/scientific-domain#ES_SCIENTIFIC_DOMAIN_LEVEL_1_CODE_CSH"
   } ],
@@ -313,7 +316,7 @@
   } ]
 }, {
   "@id" : "http://purl.org/roh/scientific-domain#ES_SCIENTIFIC_DOMAIN_LEVEL_1_CVS",
-  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://purl.org/roh#ESScientificDomain" ],
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://www.w3.org/2004/02/skos/core#Concept" ],
   "http://purl.org/roh#hasCode" : [ {
     "@id" : "http://purl.org/roh/scientific-domain#ES_SCIENTIFIC_DOMAIN_LEVEL_1_CODE_CVS"
   } ],
@@ -389,7 +392,7 @@
   } ]
 }, {
   "@id" : "http://purl.org/roh/scientific-domain#ES_SCIENTIFIC_DOMAIN_LEVEL_1_IYT",
-  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://purl.org/roh#ESScientificDomain" ],
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://www.w3.org/2004/02/skos/core#Concept" ],
   "http://purl.org/roh#hasCode" : [ {
     "@id" : "http://purl.org/roh/scientific-domain#ES_SCIENTIFIC_DOMAIN_LEVEL_1_CODE_IYT"
   } ],
@@ -465,7 +468,7 @@
   } ]
 }, {
   "@id" : "http://purl.org/roh/scientific-domain#ES_SCIENTIFIC_DOMAIN_LEVEL_2_AGR",
-  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://purl.org/roh#ESScientificDomain" ],
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://www.w3.org/2004/02/skos/core#Concept" ],
   "http://purl.org/roh#hasCode" : [ {
     "@id" : "http://purl.org/roh/scientific-domain#ES_SCIENTIFIC_DOMAIN_LEVEL_2_CODE_AGR"
   } ],
@@ -507,7 +510,7 @@
   } ]
 }, {
   "@id" : "http://purl.org/roh/scientific-domain#ES_SCIENTIFIC_DOMAIN_LEVEL_2_BFS",
-  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://purl.org/roh#ESScientificDomain" ],
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://www.w3.org/2004/02/skos/core#Concept" ],
   "http://purl.org/roh#hasCode" : [ {
     "@id" : "http://purl.org/roh/scientific-domain#ES_SCIENTIFIC_DOMAIN_LEVEL_2_CODE_BFS"
   } ],
@@ -559,7 +562,7 @@
   } ]
 }, {
   "@id" : "http://purl.org/roh/scientific-domain#ES_SCIENTIFIC_DOMAIN_LEVEL_2_BMED",
-  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://purl.org/roh#ESScientificDomain" ],
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://www.w3.org/2004/02/skos/core#Concept" ],
   "http://purl.org/roh#hasCode" : [ {
     "@id" : "http://purl.org/roh/scientific-domain#ES_SCIENTIFIC_DOMAIN_LEVEL_2_CODE_BMED"
   } ],
@@ -611,7 +614,7 @@
   } ]
 }, {
   "@id" : "http://purl.org/roh/scientific-domain#ES_SCIENTIFIC_DOMAIN_LEVEL_2_BVAE",
-  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://purl.org/roh#ESScientificDomain" ],
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://www.w3.org/2004/02/skos/core#Concept" ],
   "http://purl.org/roh#hasCode" : [ {
     "@id" : "http://purl.org/roh/scientific-domain#ES_SCIENTIFIC_DOMAIN_LEVEL_2_CODE_BVAE"
   } ],
@@ -653,7 +656,7 @@
   } ]
 }, {
   "@id" : "http://purl.org/roh/scientific-domain#ES_SCIENTIFIC_DOMAIN_LEVEL_2_CODE_",
-  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://purl.org/roh#ESScientificDomain" ],
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://www.w3.org/2004/02/skos/core#Concept" ],
   "http://purl.org/roh#codeOf" : [ {
     "@id" : "http://purl.org/roh/scientific-domain#ES_SCIENTIFIC_DOMAIN_LEVEL_2_"
   } ],
@@ -668,7 +671,7 @@
   } ]
 }, {
   "@id" : "http://purl.org/roh/scientific-domain#ES_SCIENTIFIC_DOMAIN_LEVEL_2_CODE_AGR",
-  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://purl.org/roh#ESScientificDomain" ],
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://www.w3.org/2004/02/skos/core#Concept" ],
   "http://purl.org/roh#codeOf" : [ {
     "@id" : "http://purl.org/roh/scientific-domain#ES_SCIENTIFIC_DOMAIN_LEVEL_2_AGR"
   } ],
@@ -683,7 +686,7 @@
   } ]
 }, {
   "@id" : "http://purl.org/roh/scientific-domain#ES_SCIENTIFIC_DOMAIN_LEVEL_2_CODE_BFS",
-  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://purl.org/roh#ESScientificDomain" ],
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://www.w3.org/2004/02/skos/core#Concept" ],
   "http://purl.org/roh#codeOf" : [ {
     "@id" : "http://purl.org/roh/scientific-domain#ES_SCIENTIFIC_DOMAIN_LEVEL_2_BFS"
   } ],
@@ -698,7 +701,7 @@
   } ]
 }, {
   "@id" : "http://purl.org/roh/scientific-domain#ES_SCIENTIFIC_DOMAIN_LEVEL_2_CODE_BMED",
-  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://purl.org/roh#ESScientificDomain" ],
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://www.w3.org/2004/02/skos/core#Concept" ],
   "http://purl.org/roh#codeOf" : [ {
     "@id" : "http://purl.org/roh/scientific-domain#ES_SCIENTIFIC_DOMAIN_LEVEL_2_BMED"
   } ],
@@ -713,7 +716,7 @@
   } ]
 }, {
   "@id" : "http://purl.org/roh/scientific-domain#ES_SCIENTIFIC_DOMAIN_LEVEL_2_CODE_BVAE",
-  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://purl.org/roh#ESScientificDomain" ],
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://www.w3.org/2004/02/skos/core#Concept" ],
   "http://purl.org/roh#codeOf" : [ {
     "@id" : "http://purl.org/roh/scientific-domain#ES_SCIENTIFIC_DOMAIN_LEVEL_2_BVAE"
   } ],
@@ -728,7 +731,7 @@
   } ]
 }, {
   "@id" : "http://purl.org/roh/scientific-domain#ES_SCIENTIFIC_DOMAIN_LEVEL_2_CODE_COM",
-  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://purl.org/roh#ESScientificDomain" ],
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://www.w3.org/2004/02/skos/core#Concept" ],
   "http://purl.org/roh#codeOf" : [ {
     "@id" : "http://purl.org/roh/scientific-domain#ES_SCIENTIFIC_DOMAIN_LEVEL_2_COM"
   } ],
@@ -743,7 +746,7 @@
   } ]
 }, {
   "@id" : "http://purl.org/roh/scientific-domain#ES_SCIENTIFIC_DOMAIN_LEVEL_2_CODE_CS",
-  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://purl.org/roh#ESScientificDomain" ],
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://www.w3.org/2004/02/skos/core#Concept" ],
   "http://purl.org/roh#codeOf" : [ {
     "@id" : "http://purl.org/roh/scientific-domain#ES_SCIENTIFIC_DOMAIN_LEVEL_2_CS"
   } ],
@@ -758,7 +761,7 @@
   } ]
 }, {
   "@id" : "http://purl.org/roh/scientific-domain#ES_SCIENTIFIC_DOMAIN_LEVEL_2_CODE_CT",
-  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://purl.org/roh#ESScientificDomain" ],
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://www.w3.org/2004/02/skos/core#Concept" ],
   "http://purl.org/roh#codeOf" : [ {
     "@id" : "http://purl.org/roh/scientific-domain#ES_SCIENTIFIC_DOMAIN_LEVEL_2_CT"
   } ],
@@ -773,7 +776,7 @@
   } ]
 }, {
   "@id" : "http://purl.org/roh/scientific-domain#ES_SCIENTIFIC_DOMAIN_LEVEL_2_CODE_DER",
-  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://purl.org/roh#ESScientificDomain" ],
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://www.w3.org/2004/02/skos/core#Concept" ],
   "http://purl.org/roh#codeOf" : [ {
     "@id" : "http://purl.org/roh/scientific-domain#ES_SCIENTIFIC_DOMAIN_LEVEL_2_DER"
   } ],
@@ -788,7 +791,7 @@
   } ]
 }, {
   "@id" : "http://purl.org/roh/scientific-domain#ES_SCIENTIFIC_DOMAIN_LEVEL_2_CODE_ECO",
-  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://purl.org/roh#ESScientificDomain" ],
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://www.w3.org/2004/02/skos/core#Concept" ],
   "http://purl.org/roh#codeOf" : [ {
     "@id" : "http://purl.org/roh/scientific-domain#ES_SCIENTIFIC_DOMAIN_LEVEL_2_ECO"
   } ],
@@ -803,7 +806,7 @@
   } ]
 }, {
   "@id" : "http://purl.org/roh/scientific-domain#ES_SCIENTIFIC_DOMAIN_LEVEL_2_CODE_EDUC",
-  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://purl.org/roh#ESScientificDomain" ],
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://www.w3.org/2004/02/skos/core#Concept" ],
   "http://purl.org/roh#codeOf" : [ {
     "@id" : "http://purl.org/roh/scientific-domain#ES_SCIENTIFIC_DOMAIN_LEVEL_2_EDUC"
   } ],
@@ -818,7 +821,7 @@
   } ]
 }, {
   "@id" : "http://purl.org/roh/scientific-domain#ES_SCIENTIFIC_DOMAIN_LEVEL_2_CODE_FFI",
-  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://purl.org/roh#ESScientificDomain" ],
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://www.w3.org/2004/02/skos/core#Concept" ],
   "http://purl.org/roh#codeOf" : [ {
     "@id" : "http://purl.org/roh/scientific-domain#ES_SCIENTIFIC_DOMAIN_LEVEL_2_FFI"
   } ],
@@ -833,7 +836,7 @@
   } ]
 }, {
   "@id" : "http://purl.org/roh/scientific-domain#ES_SCIENTIFIC_DOMAIN_LEVEL_2_CODE_FI",
-  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://purl.org/roh#ESScientificDomain" ],
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://www.w3.org/2004/02/skos/core#Concept" ],
   "http://purl.org/roh#codeOf" : [ {
     "@id" : "http://purl.org/roh/scientific-domain#ES_SCIENTIFIC_DOMAIN_LEVEL_2_FI"
   } ],
@@ -848,7 +851,7 @@
   } ]
 }, {
   "@id" : "http://purl.org/roh/scientific-domain#ES_SCIENTIFIC_DOMAIN_LEVEL_2_CODE_GAN",
-  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://purl.org/roh#ESScientificDomain" ],
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://www.w3.org/2004/02/skos/core#Concept" ],
   "http://purl.org/roh#codeOf" : [ {
     "@id" : "http://purl.org/roh/scientific-domain#ES_SCIENTIFIC_DOMAIN_LEVEL_2_GAN"
   } ],
@@ -863,7 +866,7 @@
   } ]
 }, {
   "@id" : "http://purl.org/roh/scientific-domain#ES_SCIENTIFIC_DOMAIN_LEVEL_2_CODE_HA",
-  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://purl.org/roh#ESScientificDomain" ],
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://www.w3.org/2004/02/skos/core#Concept" ],
   "http://purl.org/roh#codeOf" : [ {
     "@id" : "http://purl.org/roh/scientific-domain#ES_SCIENTIFIC_DOMAIN_LEVEL_2_HA"
   } ],
@@ -878,7 +881,7 @@
   } ]
 }, {
   "@id" : "http://purl.org/roh/scientific-domain#ES_SCIENTIFIC_DOMAIN_LEVEL_2_CODE_ICI",
-  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://purl.org/roh#ESScientificDomain" ],
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://www.w3.org/2004/02/skos/core#Concept" ],
   "http://purl.org/roh#codeOf" : [ {
     "@id" : "http://purl.org/roh/scientific-domain#ES_SCIENTIFIC_DOMAIN_LEVEL_2_ICI"
   } ],
@@ -893,7 +896,7 @@
   } ]
 }, {
   "@id" : "http://purl.org/roh/scientific-domain#ES_SCIENTIFIC_DOMAIN_LEVEL_2_CODE_IEL",
-  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://purl.org/roh#ESScientificDomain" ],
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://www.w3.org/2004/02/skos/core#Concept" ],
   "http://purl.org/roh#codeOf" : [ {
     "@id" : "http://purl.org/roh/scientific-domain#ES_SCIENTIFIC_DOMAIN_LEVEL_2_IEL"
   } ],
@@ -908,7 +911,7 @@
   } ]
 }, {
   "@id" : "http://purl.org/roh/scientific-domain#ES_SCIENTIFIC_DOMAIN_LEVEL_2_CODE_IME",
-  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://purl.org/roh#ESScientificDomain" ],
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://www.w3.org/2004/02/skos/core#Concept" ],
   "http://purl.org/roh#codeOf" : [ {
     "@id" : "http://purl.org/roh/scientific-domain#ES_SCIENTIFIC_DOMAIN_LEVEL_2_IME"
   } ],
@@ -923,7 +926,7 @@
   } ]
 }, {
   "@id" : "http://purl.org/roh/scientific-domain#ES_SCIENTIFIC_DOMAIN_LEVEL_2_CODE_INF",
-  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://purl.org/roh#ESScientificDomain" ],
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://www.w3.org/2004/02/skos/core#Concept" ],
   "http://purl.org/roh#codeOf" : [ {
     "@id" : "http://purl.org/roh/scientific-domain#ES_SCIENTIFIC_DOMAIN_LEVEL_2_INF"
   } ],
@@ -938,7 +941,7 @@
   } ]
 }, {
   "@id" : "http://purl.org/roh/scientific-domain#ES_SCIENTIFIC_DOMAIN_LEVEL_2_CODE_MCLI",
-  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://purl.org/roh#ESScientificDomain" ],
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://www.w3.org/2004/02/skos/core#Concept" ],
   "http://purl.org/roh#codeOf" : [ {
     "@id" : "http://purl.org/roh/scientific-domain#ES_SCIENTIFIC_DOMAIN_LEVEL_2_MCLI"
   } ],
@@ -953,7 +956,7 @@
   } ]
 }, {
   "@id" : "http://purl.org/roh/scientific-domain#ES_SCIENTIFIC_DOMAIN_LEVEL_2_CODE_MTM",
-  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://purl.org/roh#ESScientificDomain" ],
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://www.w3.org/2004/02/skos/core#Concept" ],
   "http://purl.org/roh#codeOf" : [ {
     "@id" : "http://purl.org/roh/scientific-domain#ES_SCIENTIFIC_DOMAIN_LEVEL_2_MTM"
   } ],
@@ -968,7 +971,7 @@
   } ]
 }, {
   "@id" : "http://purl.org/roh/scientific-domain#ES_SCIENTIFIC_DOMAIN_LEVEL_2_CODE_PS",
-  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://purl.org/roh#ESScientificDomain" ],
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://www.w3.org/2004/02/skos/core#Concept" ],
   "http://purl.org/roh#codeOf" : [ {
     "@id" : "http://purl.org/roh/scientific-domain#ES_SCIENTIFIC_DOMAIN_LEVEL_2_PS"
   } ],
@@ -983,7 +986,7 @@
   } ]
 }, {
   "@id" : "http://purl.org/roh/scientific-domain#ES_SCIENTIFIC_DOMAIN_LEVEL_2_CODE_QMC",
-  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://purl.org/roh#ESScientificDomain" ],
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://www.w3.org/2004/02/skos/core#Concept" ],
   "http://purl.org/roh#codeOf" : [ {
     "@id" : "http://purl.org/roh/scientific-domain#ES_SCIENTIFIC_DOMAIN_LEVEL_2_QMC"
   } ],
@@ -998,7 +1001,7 @@
   } ]
 }, {
   "@id" : "http://purl.org/roh/scientific-domain#ES_SCIENTIFIC_DOMAIN_LEVEL_2_CODE_TA",
-  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://purl.org/roh#ESScientificDomain" ],
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://www.w3.org/2004/02/skos/core#Concept" ],
   "http://purl.org/roh#codeOf" : [ {
     "@id" : "http://purl.org/roh/scientific-domain#ES_SCIENTIFIC_DOMAIN_LEVEL_2_TA"
   } ],
@@ -1013,7 +1016,7 @@
   } ]
 }, {
   "@id" : "http://purl.org/roh/scientific-domain#ES_SCIENTIFIC_DOMAIN_LEVEL_2_CODE_TM",
-  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://purl.org/roh#ESScientificDomain" ],
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://www.w3.org/2004/02/skos/core#Concept" ],
   "http://purl.org/roh#codeOf" : [ {
     "@id" : "http://purl.org/roh/scientific-domain#ES_SCIENTIFIC_DOMAIN_LEVEL_2_TM"
   } ],
@@ -1028,7 +1031,7 @@
   } ]
 }, {
   "@id" : "http://purl.org/roh/scientific-domain#ES_SCIENTIFIC_DOMAIN_LEVEL_2_CODE_TQ",
-  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://purl.org/roh#ESScientificDomain" ],
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://www.w3.org/2004/02/skos/core#Concept" ],
   "http://purl.org/roh#codeOf" : [ {
     "@id" : "http://purl.org/roh/scientific-domain#ES_SCIENTIFIC_DOMAIN_LEVEL_2_TQ"
   } ],
@@ -1043,7 +1046,7 @@
   } ]
 }, {
   "@id" : "http://purl.org/roh/scientific-domain#ES_SCIENTIFIC_DOMAIN_LEVEL_2_COM",
-  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://purl.org/roh#ESScientificDomain" ],
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://www.w3.org/2004/02/skos/core#Concept" ],
   "http://purl.org/roh#hasCode" : [ {
     "@id" : "http://purl.org/roh/scientific-domain#ES_SCIENTIFIC_DOMAIN_LEVEL_2_CODE_COM"
   } ],
@@ -1085,7 +1088,7 @@
   } ]
 }, {
   "@id" : "http://purl.org/roh/scientific-domain#ES_SCIENTIFIC_DOMAIN_LEVEL_2_CS",
-  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://purl.org/roh#ESScientificDomain" ],
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://www.w3.org/2004/02/skos/core#Concept" ],
   "http://purl.org/roh#hasCode" : [ {
     "@id" : "http://purl.org/roh/scientific-domain#ES_SCIENTIFIC_DOMAIN_LEVEL_2_CODE_CS"
   } ],
@@ -1127,7 +1130,7 @@
   } ]
 }, {
   "@id" : "http://purl.org/roh/scientific-domain#ES_SCIENTIFIC_DOMAIN_LEVEL_2_CT",
-  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://purl.org/roh#ESScientificDomain" ],
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://www.w3.org/2004/02/skos/core#Concept" ],
   "http://purl.org/roh#hasCode" : [ {
     "@id" : "http://purl.org/roh/scientific-domain#ES_SCIENTIFIC_DOMAIN_LEVEL_2_CODE_CT"
   } ],
@@ -1179,7 +1182,7 @@
   } ]
 }, {
   "@id" : "http://purl.org/roh/scientific-domain#ES_SCIENTIFIC_DOMAIN_LEVEL_2_DER",
-  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://purl.org/roh#ESScientificDomain" ],
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://www.w3.org/2004/02/skos/core#Concept" ],
   "http://purl.org/roh#hasCode" : [ {
     "@id" : "http://purl.org/roh/scientific-domain#ES_SCIENTIFIC_DOMAIN_LEVEL_2_CODE_DER"
   } ],
@@ -1221,7 +1224,7 @@
   } ]
 }, {
   "@id" : "http://purl.org/roh/scientific-domain#ES_SCIENTIFIC_DOMAIN_LEVEL_2_ECO",
-  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://purl.org/roh#ESScientificDomain" ],
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://www.w3.org/2004/02/skos/core#Concept" ],
   "http://purl.org/roh#hasCode" : [ {
     "@id" : "http://purl.org/roh/scientific-domain#ES_SCIENTIFIC_DOMAIN_LEVEL_2_CODE_ECO"
   } ],
@@ -1263,7 +1266,7 @@
   } ]
 }, {
   "@id" : "http://purl.org/roh/scientific-domain#ES_SCIENTIFIC_DOMAIN_LEVEL_2_EDUC",
-  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://purl.org/roh#ESScientificDomain" ],
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://www.w3.org/2004/02/skos/core#Concept" ],
   "http://purl.org/roh#hasCode" : [ {
     "@id" : "http://purl.org/roh/scientific-domain#ES_SCIENTIFIC_DOMAIN_LEVEL_2_CODE_EDUC"
   } ],
@@ -1305,7 +1308,7 @@
   } ]
 }, {
   "@id" : "http://purl.org/roh/scientific-domain#ES_SCIENTIFIC_DOMAIN_LEVEL_2_FFI",
-  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://purl.org/roh#ESScientificDomain" ],
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://www.w3.org/2004/02/skos/core#Concept" ],
   "http://purl.org/roh#hasCode" : [ {
     "@id" : "http://purl.org/roh/scientific-domain#ES_SCIENTIFIC_DOMAIN_LEVEL_2_CODE_FFI"
   } ],
@@ -1347,7 +1350,7 @@
   } ]
 }, {
   "@id" : "http://purl.org/roh/scientific-domain#ES_SCIENTIFIC_DOMAIN_LEVEL_2_FI",
-  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://purl.org/roh#ESScientificDomain" ],
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://www.w3.org/2004/02/skos/core#Concept" ],
   "http://purl.org/roh#hasCode" : [ {
     "@id" : "http://purl.org/roh/scientific-domain#ES_SCIENTIFIC_DOMAIN_LEVEL_2_CODE_FI"
   } ],
@@ -1399,7 +1402,7 @@
   } ]
 }, {
   "@id" : "http://purl.org/roh/scientific-domain#ES_SCIENTIFIC_DOMAIN_LEVEL_2_GAN",
-  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://purl.org/roh#ESScientificDomain" ],
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://www.w3.org/2004/02/skos/core#Concept" ],
   "http://purl.org/roh#hasCode" : [ {
     "@id" : "http://purl.org/roh/scientific-domain#ES_SCIENTIFIC_DOMAIN_LEVEL_2_CODE_GAN"
   } ],
@@ -1441,7 +1444,7 @@
   } ]
 }, {
   "@id" : "http://purl.org/roh/scientific-domain#ES_SCIENTIFIC_DOMAIN_LEVEL_2_HA",
-  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://purl.org/roh#ESScientificDomain" ],
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://www.w3.org/2004/02/skos/core#Concept" ],
   "http://purl.org/roh#hasCode" : [ {
     "@id" : "http://purl.org/roh/scientific-domain#ES_SCIENTIFIC_DOMAIN_LEVEL_2_CODE_HA"
   } ],
@@ -1483,7 +1486,7 @@
   } ]
 }, {
   "@id" : "http://purl.org/roh/scientific-domain#ES_SCIENTIFIC_DOMAIN_LEVEL_2_ICI",
-  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://purl.org/roh#ESScientificDomain" ],
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://www.w3.org/2004/02/skos/core#Concept" ],
   "http://purl.org/roh#hasCode" : [ {
     "@id" : "http://purl.org/roh/scientific-domain#ES_SCIENTIFIC_DOMAIN_LEVEL_2_CODE_ICI"
   } ],
@@ -1525,7 +1528,7 @@
   } ]
 }, {
   "@id" : "http://purl.org/roh/scientific-domain#ES_SCIENTIFIC_DOMAIN_LEVEL_2_IEL",
-  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://purl.org/roh#ESScientificDomain" ],
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://www.w3.org/2004/02/skos/core#Concept" ],
   "http://purl.org/roh#hasCode" : [ {
     "@id" : "http://purl.org/roh/scientific-domain#ES_SCIENTIFIC_DOMAIN_LEVEL_2_CODE_IEL"
   } ],
@@ -1567,7 +1570,7 @@
   } ]
 }, {
   "@id" : "http://purl.org/roh/scientific-domain#ES_SCIENTIFIC_DOMAIN_LEVEL_2_IME",
-  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://purl.org/roh#ESScientificDomain" ],
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://www.w3.org/2004/02/skos/core#Concept" ],
   "http://purl.org/roh#hasCode" : [ {
     "@id" : "http://purl.org/roh/scientific-domain#ES_SCIENTIFIC_DOMAIN_LEVEL_2_CODE_IME"
   } ],
@@ -1609,7 +1612,7 @@
   } ]
 }, {
   "@id" : "http://purl.org/roh/scientific-domain#ES_SCIENTIFIC_DOMAIN_LEVEL_2_INF",
-  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://purl.org/roh#ESScientificDomain" ],
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://www.w3.org/2004/02/skos/core#Concept" ],
   "http://purl.org/roh#hasCode" : [ {
     "@id" : "http://purl.org/roh/scientific-domain#ES_SCIENTIFIC_DOMAIN_LEVEL_2_CODE_INF"
   } ],
@@ -1651,7 +1654,7 @@
   } ]
 }, {
   "@id" : "http://purl.org/roh/scientific-domain#ES_SCIENTIFIC_DOMAIN_LEVEL_2_MCLI",
-  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://purl.org/roh#ESScientificDomain" ],
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://www.w3.org/2004/02/skos/core#Concept" ],
   "http://purl.org/roh#hasCode" : [ {
     "@id" : "http://purl.org/roh/scientific-domain#ES_SCIENTIFIC_DOMAIN_LEVEL_2_CODE_MCLI"
   } ],
@@ -1703,7 +1706,7 @@
   } ]
 }, {
   "@id" : "http://purl.org/roh/scientific-domain#ES_SCIENTIFIC_DOMAIN_LEVEL_2_MTM",
-  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://purl.org/roh#ESScientificDomain" ],
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://www.w3.org/2004/02/skos/core#Concept" ],
   "http://purl.org/roh#hasCode" : [ {
     "@id" : "http://purl.org/roh/scientific-domain#ES_SCIENTIFIC_DOMAIN_LEVEL_2_CODE_MTM"
   } ],
@@ -1758,7 +1761,7 @@
   } ]
 }, {
   "@id" : "http://purl.org/roh/scientific-domain#ES_SCIENTIFIC_DOMAIN_LEVEL_2_PS",
-  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://purl.org/roh#ESScientificDomain" ],
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://www.w3.org/2004/02/skos/core#Concept" ],
   "http://purl.org/roh#hasCode" : [ {
     "@id" : "http://purl.org/roh/scientific-domain#ES_SCIENTIFIC_DOMAIN_LEVEL_2_CODE_PS"
   } ],
@@ -1800,7 +1803,7 @@
   } ]
 }, {
   "@id" : "http://purl.org/roh/scientific-domain#ES_SCIENTIFIC_DOMAIN_LEVEL_2_QMC",
-  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://purl.org/roh#ESScientificDomain" ],
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://www.w3.org/2004/02/skos/core#Concept" ],
   "http://purl.org/roh#hasCode" : [ {
     "@id" : "http://purl.org/roh/scientific-domain#ES_SCIENTIFIC_DOMAIN_LEVEL_2_CODE_QMC"
   } ],
@@ -1852,7 +1855,7 @@
   } ]
 }, {
   "@id" : "http://purl.org/roh/scientific-domain#ES_SCIENTIFIC_DOMAIN_LEVEL_2_TA",
-  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://purl.org/roh#ESScientificDomain" ],
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://www.w3.org/2004/02/skos/core#Concept" ],
   "http://purl.org/roh#hasCode" : [ {
     "@id" : "http://purl.org/roh/scientific-domain#ES_SCIENTIFIC_DOMAIN_LEVEL_2_CODE_TA"
   } ],
@@ -1894,7 +1897,7 @@
   } ]
 }, {
   "@id" : "http://purl.org/roh/scientific-domain#ES_SCIENTIFIC_DOMAIN_LEVEL_2_TM",
-  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://purl.org/roh#ESScientificDomain" ],
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://www.w3.org/2004/02/skos/core#Concept" ],
   "http://purl.org/roh#hasCode" : [ {
     "@id" : "http://purl.org/roh/scientific-domain#ES_SCIENTIFIC_DOMAIN_LEVEL_2_CODE_TM"
   } ],
@@ -1936,7 +1939,7 @@
   } ]
 }, {
   "@id" : "http://purl.org/roh/scientific-domain#ES_SCIENTIFIC_DOMAIN_LEVEL_2_TQ",
-  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://purl.org/roh#ESScientificDomain" ],
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://www.w3.org/2004/02/skos/core#Concept" ],
   "http://purl.org/roh#hasCode" : [ {
     "@id" : "http://purl.org/roh/scientific-domain#ES_SCIENTIFIC_DOMAIN_LEVEL_2_CODE_TQ"
   } ],
@@ -1978,7 +1981,7 @@
   } ]
 }, {
   "@id" : "http://purl.org/roh/scientific-domain#ES_SCIENTIFIC_DOMAIN_LEVEL_3_BFSCVHN",
-  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://purl.org/roh#ESScientificDomain" ],
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://www.w3.org/2004/02/skos/core#Concept" ],
   "http://purl.org/roh#hasCode" : [ {
     "@id" : "http://purl.org/roh/scientific-domain#ES_SCIENTIFIC_DOMAIN_LEVEL_3_CODE_BFSCVHN"
   } ],
@@ -2020,7 +2023,7 @@
   } ]
 }, {
   "@id" : "http://purl.org/roh/scientific-domain#ES_SCIENTIFIC_DOMAIN_LEVEL_3_BFSCXPL",
-  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://purl.org/roh#ESScientificDomain" ],
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://www.w3.org/2004/02/skos/core#Concept" ],
   "http://purl.org/roh#hasCode" : [ {
     "@id" : "http://purl.org/roh/scientific-domain#ES_SCIENTIFIC_DOMAIN_LEVEL_3_CODE_BFSCXPL"
   } ],
@@ -2062,7 +2065,7 @@
   } ]
 }, {
   "@id" : "http://purl.org/roh/scientific-domain#ES_SCIENTIFIC_DOMAIN_LEVEL_3_BFSDGRC",
-  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://purl.org/roh#ESScientificDomain" ],
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://www.w3.org/2004/02/skos/core#Concept" ],
   "http://purl.org/roh#hasCode" : [ {
     "@id" : "http://purl.org/roh/scientific-domain#ES_SCIENTIFIC_DOMAIN_LEVEL_3_CODE_BFSDGRC"
   } ],
@@ -2107,7 +2110,7 @@
   } ]
 }, {
   "@id" : "http://purl.org/roh/scientific-domain#ES_SCIENTIFIC_DOMAIN_LEVEL_3_BFSDNIG",
-  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://purl.org/roh#ESScientificDomain" ],
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://www.w3.org/2004/02/skos/core#Concept" ],
   "http://purl.org/roh#hasCode" : [ {
     "@id" : "http://purl.org/roh/scientific-domain#ES_SCIENTIFIC_DOMAIN_LEVEL_3_CODE_BFSDNIG"
   } ],
@@ -2149,7 +2152,7 @@
   } ]
 }, {
   "@id" : "http://purl.org/roh/scientific-domain#ES_SCIENTIFIC_DOMAIN_LEVEL_3_BFSDXWB",
-  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://purl.org/roh#ESScientificDomain" ],
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://www.w3.org/2004/02/skos/core#Concept" ],
   "http://purl.org/roh#hasCode" : [ {
     "@id" : "http://purl.org/roh/scientific-domain#ES_SCIENTIFIC_DOMAIN_LEVEL_3_CODE_BFSDXWB"
   } ],
@@ -2191,7 +2194,7 @@
   } ]
 }, {
   "@id" : "http://purl.org/roh/scientific-domain#ES_SCIENTIFIC_DOMAIN_LEVEL_3_BFSEEAB",
-  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://purl.org/roh#ESScientificDomain" ],
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://www.w3.org/2004/02/skos/core#Concept" ],
   "http://purl.org/roh#hasCode" : [ {
     "@id" : "http://purl.org/roh/scientific-domain#ES_SCIENTIFIC_DOMAIN_LEVEL_3_CODE_BFSEEAB"
   } ],
@@ -2233,7 +2236,7 @@
   } ]
 }, {
   "@id" : "http://purl.org/roh/scientific-domain#ES_SCIENTIFIC_DOMAIN_LEVEL_3_BFSGSYN",
-  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://purl.org/roh#ESScientificDomain" ],
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://www.w3.org/2004/02/skos/core#Concept" ],
   "http://purl.org/roh#hasCode" : [ {
     "@id" : "http://purl.org/roh/scientific-domain#ES_SCIENTIFIC_DOMAIN_LEVEL_3_CODE_BFSGSYN"
   } ],
@@ -2275,7 +2278,7 @@
   } ]
 }, {
   "@id" : "http://purl.org/roh/scientific-domain#ES_SCIENTIFIC_DOMAIN_LEVEL_3_BFSHQCF",
-  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://purl.org/roh#ESScientificDomain" ],
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://www.w3.org/2004/02/skos/core#Concept" ],
   "http://purl.org/roh#hasCode" : [ {
     "@id" : "http://purl.org/roh/scientific-domain#ES_SCIENTIFIC_DOMAIN_LEVEL_3_CODE_BFSHQCF"
   } ],
@@ -2317,7 +2320,7 @@
   } ]
 }, {
   "@id" : "http://purl.org/roh/scientific-domain#ES_SCIENTIFIC_DOMAIN_LEVEL_3_BFSHRRE",
-  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://purl.org/roh#ESScientificDomain" ],
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://www.w3.org/2004/02/skos/core#Concept" ],
   "http://purl.org/roh#hasCode" : [ {
     "@id" : "http://purl.org/roh/scientific-domain#ES_SCIENTIFIC_DOMAIN_LEVEL_3_CODE_BFSHRRE"
   } ],
@@ -2359,7 +2362,7 @@
   } ]
 }, {
   "@id" : "http://purl.org/roh/scientific-domain#ES_SCIENTIFIC_DOMAIN_LEVEL_3_BFSJEYV",
-  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://purl.org/roh#ESScientificDomain" ],
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://www.w3.org/2004/02/skos/core#Concept" ],
   "http://purl.org/roh#hasCode" : [ {
     "@id" : "http://purl.org/roh/scientific-domain#ES_SCIENTIFIC_DOMAIN_LEVEL_3_CODE_BFSJEYV"
   } ],
@@ -2401,7 +2404,7 @@
   } ]
 }, {
   "@id" : "http://purl.org/roh/scientific-domain#ES_SCIENTIFIC_DOMAIN_LEVEL_3_BFSJJXW",
-  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://purl.org/roh#ESScientificDomain" ],
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://www.w3.org/2004/02/skos/core#Concept" ],
   "http://purl.org/roh#hasCode" : [ {
     "@id" : "http://purl.org/roh/scientific-domain#ES_SCIENTIFIC_DOMAIN_LEVEL_3_CODE_BFSJJXW"
   } ],
@@ -2443,7 +2446,7 @@
   } ]
 }, {
   "@id" : "http://purl.org/roh/scientific-domain#ES_SCIENTIFIC_DOMAIN_LEVEL_3_BFSOWHX",
-  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://purl.org/roh#ESScientificDomain" ],
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://www.w3.org/2004/02/skos/core#Concept" ],
   "http://purl.org/roh#hasCode" : [ {
     "@id" : "http://purl.org/roh/scientific-domain#ES_SCIENTIFIC_DOMAIN_LEVEL_3_CODE_BFSOWHX"
   } ],
@@ -2485,7 +2488,7 @@
   } ]
 }, {
   "@id" : "http://purl.org/roh/scientific-domain#ES_SCIENTIFIC_DOMAIN_LEVEL_3_BFSSBGU",
-  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://purl.org/roh#ESScientificDomain" ],
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://www.w3.org/2004/02/skos/core#Concept" ],
   "http://purl.org/roh#hasCode" : [ {
     "@id" : "http://purl.org/roh/scientific-domain#ES_SCIENTIFIC_DOMAIN_LEVEL_3_CODE_BFSSBGU"
   } ],
@@ -2527,7 +2530,7 @@
   } ]
 }, {
   "@id" : "http://purl.org/roh/scientific-domain#ES_SCIENTIFIC_DOMAIN_LEVEL_3_BFSTSEI",
-  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://purl.org/roh#ESScientificDomain" ],
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://www.w3.org/2004/02/skos/core#Concept" ],
   "http://purl.org/roh#hasCode" : [ {
     "@id" : "http://purl.org/roh/scientific-domain#ES_SCIENTIFIC_DOMAIN_LEVEL_3_CODE_BFSTSEI"
   } ],
@@ -2569,7 +2572,7 @@
   } ]
 }, {
   "@id" : "http://purl.org/roh/scientific-domain#ES_SCIENTIFIC_DOMAIN_LEVEL_3_BMEDAYJV",
-  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://purl.org/roh#ESScientificDomain" ],
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://www.w3.org/2004/02/skos/core#Concept" ],
   "http://purl.org/roh#hasCode" : [ {
     "@id" : "http://purl.org/roh/scientific-domain#ES_SCIENTIFIC_DOMAIN_LEVEL_3_CODE_BMEDAYJV"
   } ],
@@ -2611,7 +2614,7 @@
   } ]
 }, {
   "@id" : "http://purl.org/roh/scientific-domain#ES_SCIENTIFIC_DOMAIN_LEVEL_3_BMEDDHHL",
-  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://purl.org/roh#ESScientificDomain" ],
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://www.w3.org/2004/02/skos/core#Concept" ],
   "http://purl.org/roh#hasCode" : [ {
     "@id" : "http://purl.org/roh/scientific-domain#ES_SCIENTIFIC_DOMAIN_LEVEL_3_CODE_BMEDDHHL"
   } ],
@@ -2653,7 +2656,7 @@
   } ]
 }, {
   "@id" : "http://purl.org/roh/scientific-domain#ES_SCIENTIFIC_DOMAIN_LEVEL_3_BMEDHTAZ",
-  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://purl.org/roh#ESScientificDomain" ],
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://www.w3.org/2004/02/skos/core#Concept" ],
   "http://purl.org/roh#hasCode" : [ {
     "@id" : "http://purl.org/roh/scientific-domain#ES_SCIENTIFIC_DOMAIN_LEVEL_3_CODE_BMEDHTAZ"
   } ],
@@ -2695,7 +2698,7 @@
   } ]
 }, {
   "@id" : "http://purl.org/roh/scientific-domain#ES_SCIENTIFIC_DOMAIN_LEVEL_3_BMEDIRHV",
-  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://purl.org/roh#ESScientificDomain" ],
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://www.w3.org/2004/02/skos/core#Concept" ],
   "http://purl.org/roh#hasCode" : [ {
     "@id" : "http://purl.org/roh/scientific-domain#ES_SCIENTIFIC_DOMAIN_LEVEL_3_CODE_BMEDIRHV"
   } ],
@@ -2737,7 +2740,7 @@
   } ]
 }, {
   "@id" : "http://purl.org/roh/scientific-domain#ES_SCIENTIFIC_DOMAIN_LEVEL_3_BMEDJNIS",
-  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://purl.org/roh#ESScientificDomain" ],
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://www.w3.org/2004/02/skos/core#Concept" ],
   "http://purl.org/roh#hasCode" : [ {
     "@id" : "http://purl.org/roh/scientific-domain#ES_SCIENTIFIC_DOMAIN_LEVEL_3_CODE_BMEDJNIS"
   } ],
@@ -2779,7 +2782,7 @@
   } ]
 }, {
   "@id" : "http://purl.org/roh/scientific-domain#ES_SCIENTIFIC_DOMAIN_LEVEL_3_BMEDLFCH",
-  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://purl.org/roh#ESScientificDomain" ],
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://www.w3.org/2004/02/skos/core#Concept" ],
   "http://purl.org/roh#hasCode" : [ {
     "@id" : "http://purl.org/roh/scientific-domain#ES_SCIENTIFIC_DOMAIN_LEVEL_3_CODE_BMEDLFCH"
   } ],
@@ -2821,7 +2824,7 @@
   } ]
 }, {
   "@id" : "http://purl.org/roh/scientific-domain#ES_SCIENTIFIC_DOMAIN_LEVEL_3_BMEDMHOU",
-  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://purl.org/roh#ESScientificDomain" ],
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://www.w3.org/2004/02/skos/core#Concept" ],
   "http://purl.org/roh#hasCode" : [ {
     "@id" : "http://purl.org/roh/scientific-domain#ES_SCIENTIFIC_DOMAIN_LEVEL_3_CODE_BMEDMHOU"
   } ],
@@ -2863,7 +2866,7 @@
   } ]
 }, {
   "@id" : "http://purl.org/roh/scientific-domain#ES_SCIENTIFIC_DOMAIN_LEVEL_3_BMEDMJHF",
-  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://purl.org/roh#ESScientificDomain" ],
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://www.w3.org/2004/02/skos/core#Concept" ],
   "http://purl.org/roh#hasCode" : [ {
     "@id" : "http://purl.org/roh/scientific-domain#ES_SCIENTIFIC_DOMAIN_LEVEL_3_CODE_BMEDMJHF"
   } ],
@@ -2905,7 +2908,7 @@
   } ]
 }, {
   "@id" : "http://purl.org/roh/scientific-domain#ES_SCIENTIFIC_DOMAIN_LEVEL_3_BMEDMJZM",
-  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://purl.org/roh#ESScientificDomain" ],
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://www.w3.org/2004/02/skos/core#Concept" ],
   "http://purl.org/roh#hasCode" : [ {
     "@id" : "http://purl.org/roh/scientific-domain#ES_SCIENTIFIC_DOMAIN_LEVEL_3_CODE_BMEDMJZM"
   } ],
@@ -2947,7 +2950,7 @@
   } ]
 }, {
   "@id" : "http://purl.org/roh/scientific-domain#ES_SCIENTIFIC_DOMAIN_LEVEL_3_BMEDOFOI",
-  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://purl.org/roh#ESScientificDomain" ],
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://www.w3.org/2004/02/skos/core#Concept" ],
   "http://purl.org/roh#hasCode" : [ {
     "@id" : "http://purl.org/roh/scientific-domain#ES_SCIENTIFIC_DOMAIN_LEVEL_3_CODE_BMEDOFOI"
   } ],
@@ -2989,7 +2992,7 @@
   } ]
 }, {
   "@id" : "http://purl.org/roh/scientific-domain#ES_SCIENTIFIC_DOMAIN_LEVEL_3_BMEDPJHL",
-  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://purl.org/roh#ESScientificDomain" ],
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://www.w3.org/2004/02/skos/core#Concept" ],
   "http://purl.org/roh#hasCode" : [ {
     "@id" : "http://purl.org/roh/scientific-domain#ES_SCIENTIFIC_DOMAIN_LEVEL_3_CODE_BMEDPJHL"
   } ],
@@ -3031,7 +3034,7 @@
   } ]
 }, {
   "@id" : "http://purl.org/roh/scientific-domain#ES_SCIENTIFIC_DOMAIN_LEVEL_3_BMEDRCYB",
-  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://purl.org/roh#ESScientificDomain" ],
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://www.w3.org/2004/02/skos/core#Concept" ],
   "http://purl.org/roh#hasCode" : [ {
     "@id" : "http://purl.org/roh/scientific-domain#ES_SCIENTIFIC_DOMAIN_LEVEL_3_CODE_BMEDRCYB"
   } ],
@@ -3073,7 +3076,7 @@
   } ]
 }, {
   "@id" : "http://purl.org/roh/scientific-domain#ES_SCIENTIFIC_DOMAIN_LEVEL_3_BMEDRYDY",
-  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://purl.org/roh#ESScientificDomain" ],
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://www.w3.org/2004/02/skos/core#Concept" ],
   "http://purl.org/roh#hasCode" : [ {
     "@id" : "http://purl.org/roh/scientific-domain#ES_SCIENTIFIC_DOMAIN_LEVEL_3_CODE_BMEDRYDY"
   } ],
@@ -3115,7 +3118,7 @@
   } ]
 }, {
   "@id" : "http://purl.org/roh/scientific-domain#ES_SCIENTIFIC_DOMAIN_LEVEL_3_BMEDTINW",
-  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://purl.org/roh#ESScientificDomain" ],
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://www.w3.org/2004/02/skos/core#Concept" ],
   "http://purl.org/roh#hasCode" : [ {
     "@id" : "http://purl.org/roh/scientific-domain#ES_SCIENTIFIC_DOMAIN_LEVEL_3_CODE_BMEDTINW"
   } ],
@@ -3157,7 +3160,7 @@
   } ]
 }, {
   "@id" : "http://purl.org/roh/scientific-domain#ES_SCIENTIFIC_DOMAIN_LEVEL_3_BMEDYQHF",
-  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://purl.org/roh#ESScientificDomain" ],
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://www.w3.org/2004/02/skos/core#Concept" ],
   "http://purl.org/roh#hasCode" : [ {
     "@id" : "http://purl.org/roh/scientific-domain#ES_SCIENTIFIC_DOMAIN_LEVEL_3_CODE_BMEDYQHF"
   } ],
@@ -3199,7 +3202,7 @@
   } ]
 }, {
   "@id" : "http://purl.org/roh/scientific-domain#ES_SCIENTIFIC_DOMAIN_LEVEL_3_BMEDZYOC",
-  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://purl.org/roh#ESScientificDomain" ],
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://www.w3.org/2004/02/skos/core#Concept" ],
   "http://purl.org/roh#hasCode" : [ {
     "@id" : "http://purl.org/roh/scientific-domain#ES_SCIENTIFIC_DOMAIN_LEVEL_3_CODE_BMEDZYOC"
   } ],
@@ -3241,7 +3244,7 @@
   } ]
 }, {
   "@id" : "http://purl.org/roh/scientific-domain#ES_SCIENTIFIC_DOMAIN_LEVEL_3_BVAEWIUP",
-  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://purl.org/roh#ESScientificDomain" ],
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://www.w3.org/2004/02/skos/core#Concept" ],
   "http://purl.org/roh#hasCode" : [ {
     "@id" : "http://purl.org/roh/scientific-domain#ES_SCIENTIFIC_DOMAIN_LEVEL_3_CODE_BVAEWIUP"
   } ],
@@ -3283,7 +3286,7 @@
   } ]
 }, {
   "@id" : "http://purl.org/roh/scientific-domain#ES_SCIENTIFIC_DOMAIN_LEVEL_3_CODE_BFSCVHN",
-  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://purl.org/roh#ESScientificDomain" ],
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://www.w3.org/2004/02/skos/core#Concept" ],
   "http://purl.org/roh#codeOf" : [ {
     "@id" : "http://purl.org/roh/scientific-domain#ES_SCIENTIFIC_DOMAIN_LEVEL_3_BFSCVHN"
   } ],
@@ -3298,7 +3301,7 @@
   } ]
 }, {
   "@id" : "http://purl.org/roh/scientific-domain#ES_SCIENTIFIC_DOMAIN_LEVEL_3_CODE_BFSCXPL",
-  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://purl.org/roh#ESScientificDomain" ],
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://www.w3.org/2004/02/skos/core#Concept" ],
   "http://purl.org/roh#codeOf" : [ {
     "@id" : "http://purl.org/roh/scientific-domain#ES_SCIENTIFIC_DOMAIN_LEVEL_3_BFSCXPL"
   } ],
@@ -3313,7 +3316,7 @@
   } ]
 }, {
   "@id" : "http://purl.org/roh/scientific-domain#ES_SCIENTIFIC_DOMAIN_LEVEL_3_CODE_BFSDGRC",
-  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://purl.org/roh#ESScientificDomain" ],
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://www.w3.org/2004/02/skos/core#Concept" ],
   "http://purl.org/roh#codeOf" : [ {
     "@id" : "http://purl.org/roh/scientific-domain#ES_SCIENTIFIC_DOMAIN_LEVEL_3_BFSDGRC"
   } ],
@@ -3328,7 +3331,7 @@
   } ]
 }, {
   "@id" : "http://purl.org/roh/scientific-domain#ES_SCIENTIFIC_DOMAIN_LEVEL_3_CODE_BFSDNIG",
-  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://purl.org/roh#ESScientificDomain" ],
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://www.w3.org/2004/02/skos/core#Concept" ],
   "http://purl.org/roh#codeOf" : [ {
     "@id" : "http://purl.org/roh/scientific-domain#ES_SCIENTIFIC_DOMAIN_LEVEL_3_BFSDNIG"
   } ],
@@ -3343,7 +3346,7 @@
   } ]
 }, {
   "@id" : "http://purl.org/roh/scientific-domain#ES_SCIENTIFIC_DOMAIN_LEVEL_3_CODE_BFSDXWB",
-  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://purl.org/roh#ESScientificDomain" ],
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://www.w3.org/2004/02/skos/core#Concept" ],
   "http://purl.org/roh#codeOf" : [ {
     "@id" : "http://purl.org/roh/scientific-domain#ES_SCIENTIFIC_DOMAIN_LEVEL_3_BFSDXWB"
   } ],
@@ -3358,7 +3361,7 @@
   } ]
 }, {
   "@id" : "http://purl.org/roh/scientific-domain#ES_SCIENTIFIC_DOMAIN_LEVEL_3_CODE_BFSEEAB",
-  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://purl.org/roh#ESScientificDomain" ],
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://www.w3.org/2004/02/skos/core#Concept" ],
   "http://purl.org/roh#codeOf" : [ {
     "@id" : "http://purl.org/roh/scientific-domain#ES_SCIENTIFIC_DOMAIN_LEVEL_3_BFSEEAB"
   } ],
@@ -3373,7 +3376,7 @@
   } ]
 }, {
   "@id" : "http://purl.org/roh/scientific-domain#ES_SCIENTIFIC_DOMAIN_LEVEL_3_CODE_BFSGSYN",
-  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://purl.org/roh#ESScientificDomain" ],
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://www.w3.org/2004/02/skos/core#Concept" ],
   "http://purl.org/roh#codeOf" : [ {
     "@id" : "http://purl.org/roh/scientific-domain#ES_SCIENTIFIC_DOMAIN_LEVEL_3_BFSGSYN"
   } ],
@@ -3388,7 +3391,7 @@
   } ]
 }, {
   "@id" : "http://purl.org/roh/scientific-domain#ES_SCIENTIFIC_DOMAIN_LEVEL_3_CODE_BFSHQCF",
-  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://purl.org/roh#ESScientificDomain" ],
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://www.w3.org/2004/02/skos/core#Concept" ],
   "http://purl.org/roh#codeOf" : [ {
     "@id" : "http://purl.org/roh/scientific-domain#ES_SCIENTIFIC_DOMAIN_LEVEL_3_BFSHQCF"
   } ],
@@ -3403,7 +3406,7 @@
   } ]
 }, {
   "@id" : "http://purl.org/roh/scientific-domain#ES_SCIENTIFIC_DOMAIN_LEVEL_3_CODE_BFSHRRE",
-  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://purl.org/roh#ESScientificDomain" ],
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://www.w3.org/2004/02/skos/core#Concept" ],
   "http://purl.org/roh#codeOf" : [ {
     "@id" : "http://purl.org/roh/scientific-domain#ES_SCIENTIFIC_DOMAIN_LEVEL_3_BFSHRRE"
   } ],
@@ -3418,7 +3421,7 @@
   } ]
 }, {
   "@id" : "http://purl.org/roh/scientific-domain#ES_SCIENTIFIC_DOMAIN_LEVEL_3_CODE_BFSJEYV",
-  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://purl.org/roh#ESScientificDomain" ],
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://www.w3.org/2004/02/skos/core#Concept" ],
   "http://purl.org/roh#codeOf" : [ {
     "@id" : "http://purl.org/roh/scientific-domain#ES_SCIENTIFIC_DOMAIN_LEVEL_3_BFSJEYV"
   } ],
@@ -3433,7 +3436,7 @@
   } ]
 }, {
   "@id" : "http://purl.org/roh/scientific-domain#ES_SCIENTIFIC_DOMAIN_LEVEL_3_CODE_BFSJJXW",
-  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://purl.org/roh#ESScientificDomain" ],
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://www.w3.org/2004/02/skos/core#Concept" ],
   "http://purl.org/roh#codeOf" : [ {
     "@id" : "http://purl.org/roh/scientific-domain#ES_SCIENTIFIC_DOMAIN_LEVEL_3_BFSJJXW"
   } ],
@@ -3448,7 +3451,7 @@
   } ]
 }, {
   "@id" : "http://purl.org/roh/scientific-domain#ES_SCIENTIFIC_DOMAIN_LEVEL_3_CODE_BFSOWHX",
-  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://purl.org/roh#ESScientificDomain" ],
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://www.w3.org/2004/02/skos/core#Concept" ],
   "http://purl.org/roh#codeOf" : [ {
     "@id" : "http://purl.org/roh/scientific-domain#ES_SCIENTIFIC_DOMAIN_LEVEL_3_BFSOWHX"
   } ],
@@ -3463,7 +3466,7 @@
   } ]
 }, {
   "@id" : "http://purl.org/roh/scientific-domain#ES_SCIENTIFIC_DOMAIN_LEVEL_3_CODE_BFSSBGU",
-  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://purl.org/roh#ESScientificDomain" ],
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://www.w3.org/2004/02/skos/core#Concept" ],
   "http://purl.org/roh#codeOf" : [ {
     "@id" : "http://purl.org/roh/scientific-domain#ES_SCIENTIFIC_DOMAIN_LEVEL_3_BFSSBGU"
   } ],
@@ -3478,7 +3481,7 @@
   } ]
 }, {
   "@id" : "http://purl.org/roh/scientific-domain#ES_SCIENTIFIC_DOMAIN_LEVEL_3_CODE_BFSTSEI",
-  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://purl.org/roh#ESScientificDomain" ],
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://www.w3.org/2004/02/skos/core#Concept" ],
   "http://purl.org/roh#codeOf" : [ {
     "@id" : "http://purl.org/roh/scientific-domain#ES_SCIENTIFIC_DOMAIN_LEVEL_3_BFSTSEI"
   } ],
@@ -3493,7 +3496,7 @@
   } ]
 }, {
   "@id" : "http://purl.org/roh/scientific-domain#ES_SCIENTIFIC_DOMAIN_LEVEL_3_CODE_BMEDAYJV",
-  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://purl.org/roh#ESScientificDomain" ],
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://www.w3.org/2004/02/skos/core#Concept" ],
   "http://purl.org/roh#codeOf" : [ {
     "@id" : "http://purl.org/roh/scientific-domain#ES_SCIENTIFIC_DOMAIN_LEVEL_3_BMEDAYJV"
   } ],
@@ -3508,7 +3511,7 @@
   } ]
 }, {
   "@id" : "http://purl.org/roh/scientific-domain#ES_SCIENTIFIC_DOMAIN_LEVEL_3_CODE_BMEDDHHL",
-  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://purl.org/roh#ESScientificDomain" ],
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://www.w3.org/2004/02/skos/core#Concept" ],
   "http://purl.org/roh#codeOf" : [ {
     "@id" : "http://purl.org/roh/scientific-domain#ES_SCIENTIFIC_DOMAIN_LEVEL_3_BMEDDHHL"
   } ],
@@ -3523,7 +3526,7 @@
   } ]
 }, {
   "@id" : "http://purl.org/roh/scientific-domain#ES_SCIENTIFIC_DOMAIN_LEVEL_3_CODE_BMEDHTAZ",
-  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://purl.org/roh#ESScientificDomain" ],
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://www.w3.org/2004/02/skos/core#Concept" ],
   "http://purl.org/roh#codeOf" : [ {
     "@id" : "http://purl.org/roh/scientific-domain#ES_SCIENTIFIC_DOMAIN_LEVEL_3_BMEDHTAZ"
   } ],
@@ -3538,7 +3541,7 @@
   } ]
 }, {
   "@id" : "http://purl.org/roh/scientific-domain#ES_SCIENTIFIC_DOMAIN_LEVEL_3_CODE_BMEDIRHV",
-  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://purl.org/roh#ESScientificDomain" ],
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://www.w3.org/2004/02/skos/core#Concept" ],
   "http://purl.org/roh#codeOf" : [ {
     "@id" : "http://purl.org/roh/scientific-domain#ES_SCIENTIFIC_DOMAIN_LEVEL_3_BMEDIRHV"
   } ],
@@ -3553,7 +3556,7 @@
   } ]
 }, {
   "@id" : "http://purl.org/roh/scientific-domain#ES_SCIENTIFIC_DOMAIN_LEVEL_3_CODE_BMEDJNIS",
-  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://purl.org/roh#ESScientificDomain" ],
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://www.w3.org/2004/02/skos/core#Concept" ],
   "http://purl.org/roh#codeOf" : [ {
     "@id" : "http://purl.org/roh/scientific-domain#ES_SCIENTIFIC_DOMAIN_LEVEL_3_BMEDJNIS"
   } ],
@@ -3568,7 +3571,7 @@
   } ]
 }, {
   "@id" : "http://purl.org/roh/scientific-domain#ES_SCIENTIFIC_DOMAIN_LEVEL_3_CODE_BMEDLFCH",
-  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://purl.org/roh#ESScientificDomain" ],
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://www.w3.org/2004/02/skos/core#Concept" ],
   "http://purl.org/roh#codeOf" : [ {
     "@id" : "http://purl.org/roh/scientific-domain#ES_SCIENTIFIC_DOMAIN_LEVEL_3_BMEDLFCH"
   } ],
@@ -3583,7 +3586,7 @@
   } ]
 }, {
   "@id" : "http://purl.org/roh/scientific-domain#ES_SCIENTIFIC_DOMAIN_LEVEL_3_CODE_BMEDMHOU",
-  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://purl.org/roh#ESScientificDomain" ],
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://www.w3.org/2004/02/skos/core#Concept" ],
   "http://purl.org/roh#codeOf" : [ {
     "@id" : "http://purl.org/roh/scientific-domain#ES_SCIENTIFIC_DOMAIN_LEVEL_3_BMEDMHOU"
   } ],
@@ -3598,7 +3601,7 @@
   } ]
 }, {
   "@id" : "http://purl.org/roh/scientific-domain#ES_SCIENTIFIC_DOMAIN_LEVEL_3_CODE_BMEDMJHF",
-  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://purl.org/roh#ESScientificDomain" ],
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://www.w3.org/2004/02/skos/core#Concept" ],
   "http://purl.org/roh#codeOf" : [ {
     "@id" : "http://purl.org/roh/scientific-domain#ES_SCIENTIFIC_DOMAIN_LEVEL_3_BMEDMJHF"
   } ],
@@ -3613,7 +3616,7 @@
   } ]
 }, {
   "@id" : "http://purl.org/roh/scientific-domain#ES_SCIENTIFIC_DOMAIN_LEVEL_3_CODE_BMEDMJZM",
-  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://purl.org/roh#ESScientificDomain" ],
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://www.w3.org/2004/02/skos/core#Concept" ],
   "http://purl.org/roh#codeOf" : [ {
     "@id" : "http://purl.org/roh/scientific-domain#ES_SCIENTIFIC_DOMAIN_LEVEL_3_BMEDMJZM"
   } ],
@@ -3628,7 +3631,7 @@
   } ]
 }, {
   "@id" : "http://purl.org/roh/scientific-domain#ES_SCIENTIFIC_DOMAIN_LEVEL_3_CODE_BMEDOFOI",
-  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://purl.org/roh#ESScientificDomain" ],
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://www.w3.org/2004/02/skos/core#Concept" ],
   "http://purl.org/roh#codeOf" : [ {
     "@id" : "http://purl.org/roh/scientific-domain#ES_SCIENTIFIC_DOMAIN_LEVEL_3_BMEDOFOI"
   } ],
@@ -3643,7 +3646,7 @@
   } ]
 }, {
   "@id" : "http://purl.org/roh/scientific-domain#ES_SCIENTIFIC_DOMAIN_LEVEL_3_CODE_BMEDPJHL",
-  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://purl.org/roh#ESScientificDomain" ],
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://www.w3.org/2004/02/skos/core#Concept" ],
   "http://purl.org/roh#codeOf" : [ {
     "@id" : "http://purl.org/roh/scientific-domain#ES_SCIENTIFIC_DOMAIN_LEVEL_3_BMEDPJHL"
   } ],
@@ -3658,7 +3661,7 @@
   } ]
 }, {
   "@id" : "http://purl.org/roh/scientific-domain#ES_SCIENTIFIC_DOMAIN_LEVEL_3_CODE_BMEDRCYB",
-  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://purl.org/roh#ESScientificDomain" ],
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://www.w3.org/2004/02/skos/core#Concept" ],
   "http://purl.org/roh#codeOf" : [ {
     "@id" : "http://purl.org/roh/scientific-domain#ES_SCIENTIFIC_DOMAIN_LEVEL_3_BMEDRCYB"
   } ],
@@ -3673,7 +3676,7 @@
   } ]
 }, {
   "@id" : "http://purl.org/roh/scientific-domain#ES_SCIENTIFIC_DOMAIN_LEVEL_3_CODE_BMEDRYDY",
-  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://purl.org/roh#ESScientificDomain" ],
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://www.w3.org/2004/02/skos/core#Concept" ],
   "http://purl.org/roh#codeOf" : [ {
     "@id" : "http://purl.org/roh/scientific-domain#ES_SCIENTIFIC_DOMAIN_LEVEL_3_BMEDRYDY"
   } ],
@@ -3688,7 +3691,7 @@
   } ]
 }, {
   "@id" : "http://purl.org/roh/scientific-domain#ES_SCIENTIFIC_DOMAIN_LEVEL_3_CODE_BMEDTINW",
-  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://purl.org/roh#ESScientificDomain" ],
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://www.w3.org/2004/02/skos/core#Concept" ],
   "http://purl.org/roh#codeOf" : [ {
     "@id" : "http://purl.org/roh/scientific-domain#ES_SCIENTIFIC_DOMAIN_LEVEL_3_BMEDTINW"
   } ],
@@ -3703,7 +3706,7 @@
   } ]
 }, {
   "@id" : "http://purl.org/roh/scientific-domain#ES_SCIENTIFIC_DOMAIN_LEVEL_3_CODE_BMEDYQHF",
-  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://purl.org/roh#ESScientificDomain" ],
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://www.w3.org/2004/02/skos/core#Concept" ],
   "http://purl.org/roh#codeOf" : [ {
     "@id" : "http://purl.org/roh/scientific-domain#ES_SCIENTIFIC_DOMAIN_LEVEL_3_BMEDYQHF"
   } ],
@@ -3718,7 +3721,7 @@
   } ]
 }, {
   "@id" : "http://purl.org/roh/scientific-domain#ES_SCIENTIFIC_DOMAIN_LEVEL_3_CODE_BMEDZYOC",
-  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://purl.org/roh#ESScientificDomain" ],
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://www.w3.org/2004/02/skos/core#Concept" ],
   "http://purl.org/roh#codeOf" : [ {
     "@id" : "http://purl.org/roh/scientific-domain#ES_SCIENTIFIC_DOMAIN_LEVEL_3_BMEDZYOC"
   } ],
@@ -3733,7 +3736,7 @@
   } ]
 }, {
   "@id" : "http://purl.org/roh/scientific-domain#ES_SCIENTIFIC_DOMAIN_LEVEL_3_CODE_BVAEWIUP",
-  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://purl.org/roh#ESScientificDomain" ],
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://www.w3.org/2004/02/skos/core#Concept" ],
   "http://purl.org/roh#codeOf" : [ {
     "@id" : "http://purl.org/roh/scientific-domain#ES_SCIENTIFIC_DOMAIN_LEVEL_3_BVAEWIUP"
   } ],
@@ -3748,7 +3751,7 @@
   } ]
 }, {
   "@id" : "http://purl.org/roh/scientific-domain#ES_SCIENTIFIC_DOMAIN_LEVEL_3_CODE_CTASTR",
-  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://purl.org/roh#ESScientificDomain" ],
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://www.w3.org/2004/02/skos/core#Concept" ],
   "http://purl.org/roh#codeOf" : [ {
     "@id" : "http://purl.org/roh/scientific-domain#ES_SCIENTIFIC_DOMAIN_LEVEL_3_CTASTR"
   } ],
@@ -3763,7 +3766,7 @@
   } ]
 }, {
   "@id" : "http://purl.org/roh/scientific-domain#ES_SCIENTIFIC_DOMAIN_LEVEL_3_CODE_CTCLIM",
-  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://purl.org/roh#ESScientificDomain" ],
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://www.w3.org/2004/02/skos/core#Concept" ],
   "http://purl.org/roh#codeOf" : [ {
     "@id" : "http://purl.org/roh/scientific-domain#ES_SCIENTIFIC_DOMAIN_LEVEL_3_CTCLIM"
   } ],
@@ -3778,7 +3781,7 @@
   } ]
 }, {
   "@id" : "http://purl.org/roh/scientific-domain#ES_SCIENTIFIC_DOMAIN_LEVEL_3_CODE_CTCON",
-  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://purl.org/roh#ESScientificDomain" ],
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://www.w3.org/2004/02/skos/core#Concept" ],
   "http://purl.org/roh#codeOf" : [ {
     "@id" : "http://purl.org/roh/scientific-domain#ES_SCIENTIFIC_DOMAIN_LEVEL_3_CTCON"
   } ],
@@ -3793,7 +3796,7 @@
   } ]
 }, {
   "@id" : "http://purl.org/roh/scientific-domain#ES_SCIENTIFIC_DOMAIN_LEVEL_3_CODE_CTESTR",
-  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://purl.org/roh#ESScientificDomain" ],
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://www.w3.org/2004/02/skos/core#Concept" ],
   "http://purl.org/roh#codeOf" : [ {
     "@id" : "http://purl.org/roh/scientific-domain#ES_SCIENTIFIC_DOMAIN_LEVEL_3_CTESTR"
   } ],
@@ -3808,7 +3811,7 @@
   } ]
 }, {
   "@id" : "http://purl.org/roh/scientific-domain#ES_SCIENTIFIC_DOMAIN_LEVEL_3_CODE_CTFISA",
-  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://purl.org/roh#ESScientificDomain" ],
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://www.w3.org/2004/02/skos/core#Concept" ],
   "http://purl.org/roh#codeOf" : [ {
     "@id" : "http://purl.org/roh/scientific-domain#ES_SCIENTIFIC_DOMAIN_LEVEL_3_CTFISA"
   } ],
@@ -3823,7 +3826,7 @@
   } ]
 }, {
   "@id" : "http://purl.org/roh/scientific-domain#ES_SCIENTIFIC_DOMAIN_LEVEL_3_CODE_CTFISE",
-  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://purl.org/roh#ESScientificDomain" ],
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://www.w3.org/2004/02/skos/core#Concept" ],
   "http://purl.org/roh#codeOf" : [ {
     "@id" : "http://purl.org/roh/scientific-domain#ES_SCIENTIFIC_DOMAIN_LEVEL_3_CTFISE"
   } ],
@@ -3838,7 +3841,7 @@
   } ]
 }, {
   "@id" : "http://purl.org/roh/scientific-domain#ES_SCIENTIFIC_DOMAIN_LEVEL_3_CODE_CTFISP",
-  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://purl.org/roh#ESScientificDomain" ],
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://www.w3.org/2004/02/skos/core#Concept" ],
   "http://purl.org/roh#codeOf" : [ {
     "@id" : "http://purl.org/roh/scientific-domain#ES_SCIENTIFIC_DOMAIN_LEVEL_3_CTFISP"
   } ],
@@ -3853,7 +3856,7 @@
   } ]
 }, {
   "@id" : "http://purl.org/roh/scientific-domain#ES_SCIENTIFIC_DOMAIN_LEVEL_3_CODE_CTFIST",
-  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://purl.org/roh#ESScientificDomain" ],
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://www.w3.org/2004/02/skos/core#Concept" ],
   "http://purl.org/roh#codeOf" : [ {
     "@id" : "http://purl.org/roh/scientific-domain#ES_SCIENTIFIC_DOMAIN_LEVEL_3_CTFIST"
   } ],
@@ -3868,7 +3871,7 @@
   } ]
 }, {
   "@id" : "http://purl.org/roh/scientific-domain#ES_SCIENTIFIC_DOMAIN_LEVEL_3_CODE_CTGEOD",
-  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://purl.org/roh#ESScientificDomain" ],
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://www.w3.org/2004/02/skos/core#Concept" ],
   "http://purl.org/roh#codeOf" : [ {
     "@id" : "http://purl.org/roh/scientific-domain#ES_SCIENTIFIC_DOMAIN_LEVEL_3_CTGEOD"
   } ],
@@ -3883,7 +3886,7 @@
   } ]
 }, {
   "@id" : "http://purl.org/roh/scientific-domain#ES_SCIENTIFIC_DOMAIN_LEVEL_3_CODE_CTGEOF",
-  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://purl.org/roh#ESScientificDomain" ],
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://www.w3.org/2004/02/skos/core#Concept" ],
   "http://purl.org/roh#codeOf" : [ {
     "@id" : "http://purl.org/roh/scientific-domain#ES_SCIENTIFIC_DOMAIN_LEVEL_3_CTGEOF"
   } ],
@@ -3898,7 +3901,7 @@
   } ]
 }, {
   "@id" : "http://purl.org/roh/scientific-domain#ES_SCIENTIFIC_DOMAIN_LEVEL_3_CODE_CTGEOQ",
-  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://purl.org/roh#ESScientificDomain" ],
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://www.w3.org/2004/02/skos/core#Concept" ],
   "http://purl.org/roh#codeOf" : [ {
     "@id" : "http://purl.org/roh/scientific-domain#ES_SCIENTIFIC_DOMAIN_LEVEL_3_CTGEOQ"
   } ],
@@ -3913,7 +3916,7 @@
   } ]
 }, {
   "@id" : "http://purl.org/roh/scientific-domain#ES_SCIENTIFIC_DOMAIN_LEVEL_3_CODE_CTHIDRO",
-  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://purl.org/roh#ESScientificDomain" ],
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://www.w3.org/2004/02/skos/core#Concept" ],
   "http://purl.org/roh#codeOf" : [ {
     "@id" : "http://purl.org/roh/scientific-domain#ES_SCIENTIFIC_DOMAIN_LEVEL_3_CTHIDRO"
   } ],
@@ -3928,7 +3931,7 @@
   } ]
 }, {
   "@id" : "http://purl.org/roh/scientific-domain#ES_SCIENTIFIC_DOMAIN_LEVEL_3_CODE_CTMATE",
-  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://purl.org/roh#ESScientificDomain" ],
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://www.w3.org/2004/02/skos/core#Concept" ],
   "http://purl.org/roh#codeOf" : [ {
     "@id" : "http://purl.org/roh/scientific-domain#ES_SCIENTIFIC_DOMAIN_LEVEL_3_CTMATE"
   } ],
@@ -3943,7 +3946,7 @@
   } ]
 }, {
   "@id" : "http://purl.org/roh/scientific-domain#ES_SCIENTIFIC_DOMAIN_LEVEL_3_CODE_CTMETE",
-  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://purl.org/roh#ESScientificDomain" ],
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://www.w3.org/2004/02/skos/core#Concept" ],
   "http://purl.org/roh#codeOf" : [ {
     "@id" : "http://purl.org/roh/scientific-domain#ES_SCIENTIFIC_DOMAIN_LEVEL_3_CTMETE"
   } ],
@@ -3958,7 +3961,7 @@
   } ]
 }, {
   "@id" : "http://purl.org/roh/scientific-domain#ES_SCIENTIFIC_DOMAIN_LEVEL_3_CODE_CTMIN",
-  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://purl.org/roh#ESScientificDomain" ],
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://www.w3.org/2004/02/skos/core#Concept" ],
   "http://purl.org/roh#codeOf" : [ {
     "@id" : "http://purl.org/roh/scientific-domain#ES_SCIENTIFIC_DOMAIN_LEVEL_3_CTMIN"
   } ],
@@ -3973,7 +3976,7 @@
   } ]
 }, {
   "@id" : "http://purl.org/roh/scientific-domain#ES_SCIENTIFIC_DOMAIN_LEVEL_3_CODE_CTPALE",
-  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://purl.org/roh#ESScientificDomain" ],
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://www.w3.org/2004/02/skos/core#Concept" ],
   "http://purl.org/roh#codeOf" : [ {
     "@id" : "http://purl.org/roh/scientific-domain#ES_SCIENTIFIC_DOMAIN_LEVEL_3_CTPALE"
   } ],
@@ -3988,7 +3991,7 @@
   } ]
 }, {
   "@id" : "http://purl.org/roh/scientific-domain#ES_SCIENTIFIC_DOMAIN_LEVEL_3_CODE_CTPETR",
-  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://purl.org/roh#ESScientificDomain" ],
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://www.w3.org/2004/02/skos/core#Concept" ],
   "http://purl.org/roh#codeOf" : [ {
     "@id" : "http://purl.org/roh/scientific-domain#ES_SCIENTIFIC_DOMAIN_LEVEL_3_CTPETR"
   } ],
@@ -4003,7 +4006,7 @@
   } ]
 }, {
   "@id" : "http://purl.org/roh/scientific-domain#ES_SCIENTIFIC_DOMAIN_LEVEL_3_CODE_CTSEDI",
-  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://purl.org/roh#ESScientificDomain" ],
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://www.w3.org/2004/02/skos/core#Concept" ],
   "http://purl.org/roh#codeOf" : [ {
     "@id" : "http://purl.org/roh/scientific-domain#ES_SCIENTIFIC_DOMAIN_LEVEL_3_CTSEDI"
   } ],
@@ -4018,7 +4021,7 @@
   } ]
 }, {
   "@id" : "http://purl.org/roh/scientific-domain#ES_SCIENTIFIC_DOMAIN_LEVEL_3_CODE_CTTAFO",
-  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://purl.org/roh#ESScientificDomain" ],
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://www.w3.org/2004/02/skos/core#Concept" ],
   "http://purl.org/roh#codeOf" : [ {
     "@id" : "http://purl.org/roh/scientific-domain#ES_SCIENTIFIC_DOMAIN_LEVEL_3_CTTAFO"
   } ],
@@ -4033,7 +4036,7 @@
   } ]
 }, {
   "@id" : "http://purl.org/roh/scientific-domain#ES_SCIENTIFIC_DOMAIN_LEVEL_3_CODE_FFIQIYR",
-  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://purl.org/roh#ESScientificDomain" ],
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://www.w3.org/2004/02/skos/core#Concept" ],
   "http://purl.org/roh#codeOf" : [ {
     "@id" : "http://purl.org/roh/scientific-domain#ES_SCIENTIFIC_DOMAIN_LEVEL_3_FFIQIYR"
   } ],
@@ -4048,7 +4051,7 @@
   } ]
 }, {
   "@id" : "http://purl.org/roh/scientific-domain#ES_SCIENTIFIC_DOMAIN_LEVEL_3_CODE_FFIRKXR",
-  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://purl.org/roh#ESScientificDomain" ],
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://www.w3.org/2004/02/skos/core#Concept" ],
   "http://purl.org/roh#codeOf" : [ {
     "@id" : "http://purl.org/roh/scientific-domain#ES_SCIENTIFIC_DOMAIN_LEVEL_3_FFIRKXR"
   } ],
@@ -4063,7 +4066,7 @@
   } ]
 }, {
   "@id" : "http://purl.org/roh/scientific-domain#ES_SCIENTIFIC_DOMAIN_LEVEL_3_CODE_FFIURLV",
-  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://purl.org/roh#ESScientificDomain" ],
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://www.w3.org/2004/02/skos/core#Concept" ],
   "http://purl.org/roh#codeOf" : [ {
     "@id" : "http://purl.org/roh/scientific-domain#ES_SCIENTIFIC_DOMAIN_LEVEL_3_FFIURLV"
   } ],
@@ -4078,7 +4081,7 @@
   } ]
 }, {
   "@id" : "http://purl.org/roh/scientific-domain#ES_SCIENTIFIC_DOMAIN_LEVEL_3_CODE_FFIVCZF",
-  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://purl.org/roh#ESScientificDomain" ],
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://www.w3.org/2004/02/skos/core#Concept" ],
   "http://purl.org/roh#codeOf" : [ {
     "@id" : "http://purl.org/roh/scientific-domain#ES_SCIENTIFIC_DOMAIN_LEVEL_3_FFIVCZF"
   } ],
@@ -4093,7 +4096,7 @@
   } ]
 }, {
   "@id" : "http://purl.org/roh/scientific-domain#ES_SCIENTIFIC_DOMAIN_LEVEL_3_CODE_FFIVNPK",
-  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://purl.org/roh#ESScientificDomain" ],
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://www.w3.org/2004/02/skos/core#Concept" ],
   "http://purl.org/roh#codeOf" : [ {
     "@id" : "http://purl.org/roh/scientific-domain#ES_SCIENTIFIC_DOMAIN_LEVEL_3_FFIVNPK"
   } ],
@@ -4108,7 +4111,7 @@
   } ]
 }, {
   "@id" : "http://purl.org/roh/scientific-domain#ES_SCIENTIFIC_DOMAIN_LEVEL_3_CODE_FFIVVJH",
-  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://purl.org/roh#ESScientificDomain" ],
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://www.w3.org/2004/02/skos/core#Concept" ],
   "http://purl.org/roh#codeOf" : [ {
     "@id" : "http://purl.org/roh/scientific-domain#ES_SCIENTIFIC_DOMAIN_LEVEL_3_FFIVVJH"
   } ],
@@ -4123,7 +4126,7 @@
   } ]
 }, {
   "@id" : "http://purl.org/roh/scientific-domain#ES_SCIENTIFIC_DOMAIN_LEVEL_3_CODE_FFIYJTK",
-  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://purl.org/roh#ESScientificDomain" ],
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://www.w3.org/2004/02/skos/core#Concept" ],
   "http://purl.org/roh#codeOf" : [ {
     "@id" : "http://purl.org/roh/scientific-domain#ES_SCIENTIFIC_DOMAIN_LEVEL_3_FFIYJTK"
   } ],
@@ -4138,7 +4141,7 @@
   } ]
 }, {
   "@id" : "http://purl.org/roh/scientific-domain#ES_SCIENTIFIC_DOMAIN_LEVEL_3_CODE_FFIYMLQ",
-  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://purl.org/roh#ESScientificDomain" ],
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://www.w3.org/2004/02/skos/core#Concept" ],
   "http://purl.org/roh#codeOf" : [ {
     "@id" : "http://purl.org/roh/scientific-domain#ES_SCIENTIFIC_DOMAIN_LEVEL_3_FFIYMLQ"
   } ],
@@ -4153,7 +4156,7 @@
   } ]
 }, {
   "@id" : "http://purl.org/roh/scientific-domain#ES_SCIENTIFIC_DOMAIN_LEVEL_3_CODE_HALMCG",
-  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://purl.org/roh#ESScientificDomain" ],
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://www.w3.org/2004/02/skos/core#Concept" ],
   "http://purl.org/roh#codeOf" : [ {
     "@id" : "http://purl.org/roh/scientific-domain#ES_SCIENTIFIC_DOMAIN_LEVEL_3_HALMCG"
   } ],
@@ -4168,7 +4171,7 @@
   } ]
 }, {
   "@id" : "http://purl.org/roh/scientific-domain#ES_SCIENTIFIC_DOMAIN_LEVEL_3_CODE_HAMOXL",
-  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://purl.org/roh#ESScientificDomain" ],
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://www.w3.org/2004/02/skos/core#Concept" ],
   "http://purl.org/roh#codeOf" : [ {
     "@id" : "http://purl.org/roh/scientific-domain#ES_SCIENTIFIC_DOMAIN_LEVEL_3_HAMOXL"
   } ],
@@ -4183,7 +4186,7 @@
   } ]
 }, {
   "@id" : "http://purl.org/roh/scientific-domain#ES_SCIENTIFIC_DOMAIN_LEVEL_3_CODE_HAQGZR",
-  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://purl.org/roh#ESScientificDomain" ],
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://www.w3.org/2004/02/skos/core#Concept" ],
   "http://purl.org/roh#codeOf" : [ {
     "@id" : "http://purl.org/roh/scientific-domain#ES_SCIENTIFIC_DOMAIN_LEVEL_3_HAQGZR"
   } ],
@@ -4198,7 +4201,7 @@
   } ]
 }, {
   "@id" : "http://purl.org/roh/scientific-domain#ES_SCIENTIFIC_DOMAIN_LEVEL_3_CODE_HAQJKH",
-  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://purl.org/roh#ESScientificDomain" ],
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://www.w3.org/2004/02/skos/core#Concept" ],
   "http://purl.org/roh#codeOf" : [ {
     "@id" : "http://purl.org/roh/scientific-domain#ES_SCIENTIFIC_DOMAIN_LEVEL_3_HAQJKH"
   } ],
@@ -4213,7 +4216,7 @@
   } ]
 }, {
   "@id" : "http://purl.org/roh/scientific-domain#ES_SCIENTIFIC_DOMAIN_LEVEL_3_CODE_HAYOHM",
-  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://purl.org/roh#ESScientificDomain" ],
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://www.w3.org/2004/02/skos/core#Concept" ],
   "http://purl.org/roh#codeOf" : [ {
     "@id" : "http://purl.org/roh/scientific-domain#ES_SCIENTIFIC_DOMAIN_LEVEL_3_HAYOHM"
   } ],
@@ -4228,7 +4231,7 @@
   } ]
 }, {
   "@id" : "http://purl.org/roh/scientific-domain#ES_SCIENTIFIC_DOMAIN_LEVEL_3_CODE_HAYSVE",
-  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://purl.org/roh#ESScientificDomain" ],
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://www.w3.org/2004/02/skos/core#Concept" ],
   "http://purl.org/roh#codeOf" : [ {
     "@id" : "http://purl.org/roh/scientific-domain#ES_SCIENTIFIC_DOMAIN_LEVEL_3_HAYSVE"
   } ],
@@ -4243,7 +4246,7 @@
   } ]
 }, {
   "@id" : "http://purl.org/roh/scientific-domain#ES_SCIENTIFIC_DOMAIN_LEVEL_3_CODE_HAZQGB",
-  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://purl.org/roh#ESScientificDomain" ],
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://www.w3.org/2004/02/skos/core#Concept" ],
   "http://purl.org/roh#codeOf" : [ {
     "@id" : "http://purl.org/roh/scientific-domain#ES_SCIENTIFIC_DOMAIN_LEVEL_3_HAZQGB"
   } ],
@@ -4258,7 +4261,7 @@
   } ]
 }, {
   "@id" : "http://purl.org/roh/scientific-domain#ES_SCIENTIFIC_DOMAIN_LEVEL_3_CODE_MCLIAJCV",
-  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://purl.org/roh#ESScientificDomain" ],
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://www.w3.org/2004/02/skos/core#Concept" ],
   "http://purl.org/roh#codeOf" : [ {
     "@id" : "http://purl.org/roh/scientific-domain#ES_SCIENTIFIC_DOMAIN_LEVEL_3_MCLIAJCV"
   } ],
@@ -4273,7 +4276,7 @@
   } ]
 }, {
   "@id" : "http://purl.org/roh/scientific-domain#ES_SCIENTIFIC_DOMAIN_LEVEL_3_CODE_MCLIATZZ",
-  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://purl.org/roh#ESScientificDomain" ],
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://www.w3.org/2004/02/skos/core#Concept" ],
   "http://purl.org/roh#codeOf" : [ {
     "@id" : "http://purl.org/roh/scientific-domain#ES_SCIENTIFIC_DOMAIN_LEVEL_3_MCLIATZZ"
   } ],
@@ -4288,7 +4291,7 @@
   } ]
 }, {
   "@id" : "http://purl.org/roh/scientific-domain#ES_SCIENTIFIC_DOMAIN_LEVEL_3_CODE_MCLIAVLC",
-  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://purl.org/roh#ESScientificDomain" ],
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://www.w3.org/2004/02/skos/core#Concept" ],
   "http://purl.org/roh#codeOf" : [ {
     "@id" : "http://purl.org/roh/scientific-domain#ES_SCIENTIFIC_DOMAIN_LEVEL_3_MCLIAVLC"
   } ],
@@ -4303,7 +4306,7 @@
   } ]
 }, {
   "@id" : "http://purl.org/roh/scientific-domain#ES_SCIENTIFIC_DOMAIN_LEVEL_3_CODE_MCLIBGSE",
-  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://purl.org/roh#ESScientificDomain" ],
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://www.w3.org/2004/02/skos/core#Concept" ],
   "http://purl.org/roh#codeOf" : [ {
     "@id" : "http://purl.org/roh/scientific-domain#ES_SCIENTIFIC_DOMAIN_LEVEL_3_MCLIBGSE"
   } ],
@@ -4318,7 +4321,7 @@
   } ]
 }, {
   "@id" : "http://purl.org/roh/scientific-domain#ES_SCIENTIFIC_DOMAIN_LEVEL_3_CODE_MCLICFDU",
-  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://purl.org/roh#ESScientificDomain" ],
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://www.w3.org/2004/02/skos/core#Concept" ],
   "http://purl.org/roh#codeOf" : [ {
     "@id" : "http://purl.org/roh/scientific-domain#ES_SCIENTIFIC_DOMAIN_LEVEL_3_MCLICFDU"
   } ],
@@ -4333,7 +4336,7 @@
   } ]
 }, {
   "@id" : "http://purl.org/roh/scientific-domain#ES_SCIENTIFIC_DOMAIN_LEVEL_3_CODE_MCLIHKZZ",
-  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://purl.org/roh#ESScientificDomain" ],
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://www.w3.org/2004/02/skos/core#Concept" ],
   "http://purl.org/roh#codeOf" : [ {
     "@id" : "http://purl.org/roh/scientific-domain#ES_SCIENTIFIC_DOMAIN_LEVEL_3_MCLIHKZZ"
   } ],
@@ -4348,7 +4351,7 @@
   } ]
 }, {
   "@id" : "http://purl.org/roh/scientific-domain#ES_SCIENTIFIC_DOMAIN_LEVEL_3_CODE_MCLIJMIG",
-  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://purl.org/roh#ESScientificDomain" ],
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://www.w3.org/2004/02/skos/core#Concept" ],
   "http://purl.org/roh#codeOf" : [ {
     "@id" : "http://purl.org/roh/scientific-domain#ES_SCIENTIFIC_DOMAIN_LEVEL_3_MCLIJMIG"
   } ],
@@ -4363,7 +4366,7 @@
   } ]
 }, {
   "@id" : "http://purl.org/roh/scientific-domain#ES_SCIENTIFIC_DOMAIN_LEVEL_3_CODE_MCLINMLH",
-  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://purl.org/roh#ESScientificDomain" ],
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://www.w3.org/2004/02/skos/core#Concept" ],
   "http://purl.org/roh#codeOf" : [ {
     "@id" : "http://purl.org/roh/scientific-domain#ES_SCIENTIFIC_DOMAIN_LEVEL_3_MCLINMLH"
   } ],
@@ -4378,7 +4381,7 @@
   } ]
 }, {
   "@id" : "http://purl.org/roh/scientific-domain#ES_SCIENTIFIC_DOMAIN_LEVEL_3_CODE_MCLIOCBV",
-  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://purl.org/roh#ESScientificDomain" ],
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://www.w3.org/2004/02/skos/core#Concept" ],
   "http://purl.org/roh#codeOf" : [ {
     "@id" : "http://purl.org/roh/scientific-domain#ES_SCIENTIFIC_DOMAIN_LEVEL_3_MCLIOCBV"
   } ],
@@ -4393,7 +4396,7 @@
   } ]
 }, {
   "@id" : "http://purl.org/roh/scientific-domain#ES_SCIENTIFIC_DOMAIN_LEVEL_3_CODE_MCLIQUEG",
-  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://purl.org/roh#ESScientificDomain" ],
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://www.w3.org/2004/02/skos/core#Concept" ],
   "http://purl.org/roh#codeOf" : [ {
     "@id" : "http://purl.org/roh/scientific-domain#ES_SCIENTIFIC_DOMAIN_LEVEL_3_MCLIQUEG"
   } ],
@@ -4408,7 +4411,7 @@
   } ]
 }, {
   "@id" : "http://purl.org/roh/scientific-domain#ES_SCIENTIFIC_DOMAIN_LEVEL_3_CODE_MTMALGE",
-  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://purl.org/roh#ESScientificDomain" ],
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://www.w3.org/2004/02/skos/core#Concept" ],
   "http://purl.org/roh#codeOf" : [ {
     "@id" : "http://purl.org/roh/scientific-domain#ES_SCIENTIFIC_DOMAIN_LEVEL_3_MTMALGE"
   } ],
@@ -4423,7 +4426,7 @@
   } ]
 }, {
   "@id" : "http://purl.org/roh/scientific-domain#ES_SCIENTIFIC_DOMAIN_LEVEL_3_CODE_MTMANAL",
-  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://purl.org/roh#ESScientificDomain" ],
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://www.w3.org/2004/02/skos/core#Concept" ],
   "http://purl.org/roh#codeOf" : [ {
     "@id" : "http://purl.org/roh/scientific-domain#ES_SCIENTIFIC_DOMAIN_LEVEL_3_MTMANAL"
   } ],
@@ -4438,7 +4441,7 @@
   } ]
 }, {
   "@id" : "http://purl.org/roh/scientific-domain#ES_SCIENTIFIC_DOMAIN_LEVEL_3_CODE_MTMANAM",
-  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://purl.org/roh#ESScientificDomain" ],
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://www.w3.org/2004/02/skos/core#Concept" ],
   "http://purl.org/roh#codeOf" : [ {
     "@id" : "http://purl.org/roh/scientific-domain#ES_SCIENTIFIC_DOMAIN_LEVEL_3_MTMANAM"
   } ],
@@ -4453,7 +4456,7 @@
   } ]
 }, {
   "@id" : "http://purl.org/roh/scientific-domain#ES_SCIENTIFIC_DOMAIN_LEVEL_3_CODE_MTMESTA",
-  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://purl.org/roh#ESScientificDomain" ],
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://www.w3.org/2004/02/skos/core#Concept" ],
   "http://purl.org/roh#codeOf" : [ {
     "@id" : "http://purl.org/roh/scientific-domain#ES_SCIENTIFIC_DOMAIN_LEVEL_3_MTMESTA"
   } ],
@@ -4468,7 +4471,7 @@
   } ]
 }, {
   "@id" : "http://purl.org/roh/scientific-domain#ES_SCIENTIFIC_DOMAIN_LEVEL_3_CODE_MTMGEOM",
-  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://purl.org/roh#ESScientificDomain" ],
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://www.w3.org/2004/02/skos/core#Concept" ],
   "http://purl.org/roh#codeOf" : [ {
     "@id" : "http://purl.org/roh/scientific-domain#ES_SCIENTIFIC_DOMAIN_LEVEL_3_MTMGEOM"
   } ],
@@ -4483,7 +4486,7 @@
   } ]
 }, {
   "@id" : "http://purl.org/roh/scientific-domain#ES_SCIENTIFIC_DOMAIN_LEVEL_3_CODE_MTMINVO",
-  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://purl.org/roh#ESScientificDomain" ],
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://www.w3.org/2004/02/skos/core#Concept" ],
   "http://purl.org/roh#codeOf" : [ {
     "@id" : "http://purl.org/roh/scientific-domain#ES_SCIENTIFIC_DOMAIN_LEVEL_3_MTMINVO"
   } ],
@@ -4498,7 +4501,7 @@
   } ]
 }, {
   "@id" : "http://purl.org/roh/scientific-domain#ES_SCIENTIFIC_DOMAIN_LEVEL_3_CODE_MTMMATE",
-  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://purl.org/roh#ESScientificDomain" ],
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://www.w3.org/2004/02/skos/core#Concept" ],
   "http://purl.org/roh#codeOf" : [ {
     "@id" : "http://purl.org/roh/scientific-domain#ES_SCIENTIFIC_DOMAIN_LEVEL_3_MTMMATE"
   } ],
@@ -4513,7 +4516,7 @@
   } ]
 }, {
   "@id" : "http://purl.org/roh/scientific-domain#ES_SCIENTIFIC_DOMAIN_LEVEL_3_CODE_MTMTOPO",
-  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://purl.org/roh#ESScientificDomain" ],
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://www.w3.org/2004/02/skos/core#Concept" ],
   "http://purl.org/roh#codeOf" : [ {
     "@id" : "http://purl.org/roh/scientific-domain#ES_SCIENTIFIC_DOMAIN_LEVEL_3_MTMTOPO"
   } ],
@@ -4528,7 +4531,7 @@
   } ]
 }, {
   "@id" : "http://purl.org/roh/scientific-domain#ES_SCIENTIFIC_DOMAIN_LEVEL_3_CODE_PSAZSJ",
-  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://purl.org/roh#ESScientificDomain" ],
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://www.w3.org/2004/02/skos/core#Concept" ],
   "http://purl.org/roh#codeOf" : [ {
     "@id" : "http://purl.org/roh/scientific-domain#ES_SCIENTIFIC_DOMAIN_LEVEL_3_PSAZSJ"
   } ],
@@ -4543,7 +4546,7 @@
   } ]
 }, {
   "@id" : "http://purl.org/roh/scientific-domain#ES_SCIENTIFIC_DOMAIN_LEVEL_3_CODE_PSBODX",
-  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://purl.org/roh#ESScientificDomain" ],
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://www.w3.org/2004/02/skos/core#Concept" ],
   "http://purl.org/roh#codeOf" : [ {
     "@id" : "http://purl.org/roh/scientific-domain#ES_SCIENTIFIC_DOMAIN_LEVEL_3_PSBODX"
   } ],
@@ -4558,7 +4561,7 @@
   } ]
 }, {
   "@id" : "http://purl.org/roh/scientific-domain#ES_SCIENTIFIC_DOMAIN_LEVEL_3_CODE_PSDSJH",
-  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://purl.org/roh#ESScientificDomain" ],
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://www.w3.org/2004/02/skos/core#Concept" ],
   "http://purl.org/roh#codeOf" : [ {
     "@id" : "http://purl.org/roh/scientific-domain#ES_SCIENTIFIC_DOMAIN_LEVEL_3_PSDSJH"
   } ],
@@ -4573,7 +4576,7 @@
   } ]
 }, {
   "@id" : "http://purl.org/roh/scientific-domain#ES_SCIENTIFIC_DOMAIN_LEVEL_3_CODE_PSFRSQ",
-  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://purl.org/roh#ESScientificDomain" ],
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://www.w3.org/2004/02/skos/core#Concept" ],
   "http://purl.org/roh#codeOf" : [ {
     "@id" : "http://purl.org/roh/scientific-domain#ES_SCIENTIFIC_DOMAIN_LEVEL_3_PSFRSQ"
   } ],
@@ -4588,7 +4591,7 @@
   } ]
 }, {
   "@id" : "http://purl.org/roh/scientific-domain#ES_SCIENTIFIC_DOMAIN_LEVEL_3_CODE_PSJTFX",
-  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://purl.org/roh#ESScientificDomain" ],
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://www.w3.org/2004/02/skos/core#Concept" ],
   "http://purl.org/roh#codeOf" : [ {
     "@id" : "http://purl.org/roh/scientific-domain#ES_SCIENTIFIC_DOMAIN_LEVEL_3_PSJTFX"
   } ],
@@ -4603,7 +4606,7 @@
   } ]
 }, {
   "@id" : "http://purl.org/roh/scientific-domain#ES_SCIENTIFIC_DOMAIN_LEVEL_3_CODE_PSNRWD",
-  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://purl.org/roh#ESScientificDomain" ],
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://www.w3.org/2004/02/skos/core#Concept" ],
   "http://purl.org/roh#codeOf" : [ {
     "@id" : "http://purl.org/roh/scientific-domain#ES_SCIENTIFIC_DOMAIN_LEVEL_3_PSNRWD"
   } ],
@@ -4618,7 +4621,7 @@
   } ]
 }, {
   "@id" : "http://purl.org/roh/scientific-domain#ES_SCIENTIFIC_DOMAIN_LEVEL_3_CODE_QMCAMBI",
-  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://purl.org/roh#ESScientificDomain" ],
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://www.w3.org/2004/02/skos/core#Concept" ],
   "http://purl.org/roh#codeOf" : [ {
     "@id" : "http://purl.org/roh/scientific-domain#ES_SCIENTIFIC_DOMAIN_LEVEL_3_QMCAMBI"
   } ],
@@ -4633,7 +4636,7 @@
   } ]
 }, {
   "@id" : "http://purl.org/roh/scientific-domain#ES_SCIENTIFIC_DOMAIN_LEVEL_3_CODE_QMCCATA",
-  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://purl.org/roh#ESScientificDomain" ],
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://www.w3.org/2004/02/skos/core#Concept" ],
   "http://purl.org/roh#codeOf" : [ {
     "@id" : "http://purl.org/roh/scientific-domain#ES_SCIENTIFIC_DOMAIN_LEVEL_3_QMCCATA"
   } ],
@@ -4648,7 +4651,7 @@
   } ]
 }, {
   "@id" : "http://purl.org/roh/scientific-domain#ES_SCIENTIFIC_DOMAIN_LEVEL_3_CODE_QMCCATE",
-  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://purl.org/roh#ESScientificDomain" ],
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://www.w3.org/2004/02/skos/core#Concept" ],
   "http://purl.org/roh#codeOf" : [ {
     "@id" : "http://purl.org/roh/scientific-domain#ES_SCIENTIFIC_DOMAIN_LEVEL_3_QMCCATE"
   } ],
@@ -4663,7 +4666,7 @@
   } ]
 }, {
   "@id" : "http://purl.org/roh/scientific-domain#ES_SCIENTIFIC_DOMAIN_LEVEL_3_CODE_QMCMATM",
-  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://purl.org/roh#ESScientificDomain" ],
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://www.w3.org/2004/02/skos/core#Concept" ],
   "http://purl.org/roh#codeOf" : [ {
     "@id" : "http://purl.org/roh/scientific-domain#ES_SCIENTIFIC_DOMAIN_LEVEL_3_QMCMATM"
   } ],
@@ -4678,7 +4681,7 @@
   } ]
 }, {
   "@id" : "http://purl.org/roh/scientific-domain#ES_SCIENTIFIC_DOMAIN_LEVEL_3_CODE_QMCNANO",
-  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://purl.org/roh#ESScientificDomain" ],
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://www.w3.org/2004/02/skos/core#Concept" ],
   "http://purl.org/roh#codeOf" : [ {
     "@id" : "http://purl.org/roh/scientific-domain#ES_SCIENTIFIC_DOMAIN_LEVEL_3_QMCNANO"
   } ],
@@ -4693,7 +4696,7 @@
   } ]
 }, {
   "@id" : "http://purl.org/roh/scientific-domain#ES_SCIENTIFIC_DOMAIN_LEVEL_3_CODE_QMCORGA",
-  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://purl.org/roh#ESScientificDomain" ],
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://www.w3.org/2004/02/skos/core#Concept" ],
   "http://purl.org/roh#codeOf" : [ {
     "@id" : "http://purl.org/roh/scientific-domain#ES_SCIENTIFIC_DOMAIN_LEVEL_3_QMCORGA"
   } ],
@@ -4708,7 +4711,7 @@
   } ]
 }, {
   "@id" : "http://purl.org/roh/scientific-domain#ES_SCIENTIFIC_DOMAIN_LEVEL_3_CODE_QMCQBIT",
-  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://purl.org/roh#ESScientificDomain" ],
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://www.w3.org/2004/02/skos/core#Concept" ],
   "http://purl.org/roh#codeOf" : [ {
     "@id" : "http://purl.org/roh/scientific-domain#ES_SCIENTIFIC_DOMAIN_LEVEL_3_QMCQBIT"
   } ],
@@ -4723,7 +4726,7 @@
   } ]
 }, {
   "@id" : "http://purl.org/roh/scientific-domain#ES_SCIENTIFIC_DOMAIN_LEVEL_3_CODE_QMCQUAN",
-  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://purl.org/roh#ESScientificDomain" ],
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://www.w3.org/2004/02/skos/core#Concept" ],
   "http://purl.org/roh#codeOf" : [ {
     "@id" : "http://purl.org/roh/scientific-domain#ES_SCIENTIFIC_DOMAIN_LEVEL_3_QMCQUAN"
   } ],
@@ -4738,7 +4741,7 @@
   } ]
 }, {
   "@id" : "http://purl.org/roh/scientific-domain#ES_SCIENTIFIC_DOMAIN_LEVEL_3_CODE_QMCQUBI",
-  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://purl.org/roh#ESScientificDomain" ],
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://www.w3.org/2004/02/skos/core#Concept" ],
   "http://purl.org/roh#codeOf" : [ {
     "@id" : "http://purl.org/roh/scientific-domain#ES_SCIENTIFIC_DOMAIN_LEVEL_3_QMCQUBI"
   } ],
@@ -4753,7 +4756,7 @@
   } ]
 }, {
   "@id" : "http://purl.org/roh/scientific-domain#ES_SCIENTIFIC_DOMAIN_LEVEL_3_CODE_QMCQUFI",
-  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://purl.org/roh#ESScientificDomain" ],
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://www.w3.org/2004/02/skos/core#Concept" ],
   "http://purl.org/roh#codeOf" : [ {
     "@id" : "http://purl.org/roh/scientific-domain#ES_SCIENTIFIC_DOMAIN_LEVEL_3_QMCQUFI"
   } ],
@@ -4768,7 +4771,7 @@
   } ]
 }, {
   "@id" : "http://purl.org/roh/scientific-domain#ES_SCIENTIFIC_DOMAIN_LEVEL_3_CODE_QMCQUIN",
-  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://purl.org/roh#ESScientificDomain" ],
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://www.w3.org/2004/02/skos/core#Concept" ],
   "http://purl.org/roh#codeOf" : [ {
     "@id" : "http://purl.org/roh/scientific-domain#ES_SCIENTIFIC_DOMAIN_LEVEL_3_QMCQUIN"
   } ],
@@ -4783,7 +4786,7 @@
   } ]
 }, {
   "@id" : "http://purl.org/roh/scientific-domain#ES_SCIENTIFIC_DOMAIN_LEVEL_3_CODE_QMCQUIO",
-  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://purl.org/roh#ESScientificDomain" ],
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://www.w3.org/2004/02/skos/core#Concept" ],
   "http://purl.org/roh#codeOf" : [ {
     "@id" : "http://purl.org/roh/scientific-domain#ES_SCIENTIFIC_DOMAIN_LEVEL_3_QMCQUIO"
   } ],
@@ -4798,7 +4801,7 @@
   } ]
 }, {
   "@id" : "http://purl.org/roh/scientific-domain#ES_SCIENTIFIC_DOMAIN_LEVEL_3_CODE_QMCQUSU",
-  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://purl.org/roh#ESScientificDomain" ],
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://www.w3.org/2004/02/skos/core#Concept" ],
   "http://purl.org/roh#codeOf" : [ {
     "@id" : "http://purl.org/roh/scientific-domain#ES_SCIENTIFIC_DOMAIN_LEVEL_3_QMCQUSU"
   } ],
@@ -4813,7 +4816,7 @@
   } ]
 }, {
   "@id" : "http://purl.org/roh/scientific-domain#ES_SCIENTIFIC_DOMAIN_LEVEL_3_CTASTR",
-  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://purl.org/roh#ESScientificDomain" ],
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://www.w3.org/2004/02/skos/core#Concept" ],
   "http://purl.org/roh#hasCode" : [ {
     "@id" : "http://purl.org/roh/scientific-domain#ES_SCIENTIFIC_DOMAIN_LEVEL_3_CODE_CTASTR"
   } ],
@@ -4855,7 +4858,7 @@
   } ]
 }, {
   "@id" : "http://purl.org/roh/scientific-domain#ES_SCIENTIFIC_DOMAIN_LEVEL_3_CTCLIM",
-  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://purl.org/roh#ESScientificDomain" ],
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://www.w3.org/2004/02/skos/core#Concept" ],
   "http://purl.org/roh#hasCode" : [ {
     "@id" : "http://purl.org/roh/scientific-domain#ES_SCIENTIFIC_DOMAIN_LEVEL_3_CODE_CTCLIM"
   } ],
@@ -4897,7 +4900,7 @@
   } ]
 }, {
   "@id" : "http://purl.org/roh/scientific-domain#ES_SCIENTIFIC_DOMAIN_LEVEL_3_CTCON",
-  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://purl.org/roh#ESScientificDomain" ],
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://www.w3.org/2004/02/skos/core#Concept" ],
   "http://purl.org/roh#hasCode" : [ {
     "@id" : "http://purl.org/roh/scientific-domain#ES_SCIENTIFIC_DOMAIN_LEVEL_3_CODE_CTCON"
   } ],
@@ -4939,7 +4942,7 @@
   } ]
 }, {
   "@id" : "http://purl.org/roh/scientific-domain#ES_SCIENTIFIC_DOMAIN_LEVEL_3_CTESTR",
-  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://purl.org/roh#ESScientificDomain" ],
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://www.w3.org/2004/02/skos/core#Concept" ],
   "http://purl.org/roh#hasCode" : [ {
     "@id" : "http://purl.org/roh/scientific-domain#ES_SCIENTIFIC_DOMAIN_LEVEL_3_CODE_CTESTR"
   } ],
@@ -4981,7 +4984,7 @@
   } ]
 }, {
   "@id" : "http://purl.org/roh/scientific-domain#ES_SCIENTIFIC_DOMAIN_LEVEL_3_CTFISA",
-  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://purl.org/roh#ESScientificDomain" ],
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://www.w3.org/2004/02/skos/core#Concept" ],
   "http://purl.org/roh#hasCode" : [ {
     "@id" : "http://purl.org/roh/scientific-domain#ES_SCIENTIFIC_DOMAIN_LEVEL_3_CODE_CTFISA"
   } ],
@@ -5023,7 +5026,7 @@
   } ]
 }, {
   "@id" : "http://purl.org/roh/scientific-domain#ES_SCIENTIFIC_DOMAIN_LEVEL_3_CTFISE",
-  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://purl.org/roh#ESScientificDomain" ],
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://www.w3.org/2004/02/skos/core#Concept" ],
   "http://purl.org/roh#hasCode" : [ {
     "@id" : "http://purl.org/roh/scientific-domain#ES_SCIENTIFIC_DOMAIN_LEVEL_3_CODE_CTFISE"
   } ],
@@ -5065,7 +5068,7 @@
   } ]
 }, {
   "@id" : "http://purl.org/roh/scientific-domain#ES_SCIENTIFIC_DOMAIN_LEVEL_3_CTFISP",
-  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://purl.org/roh#ESScientificDomain" ],
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://www.w3.org/2004/02/skos/core#Concept" ],
   "http://purl.org/roh#hasCode" : [ {
     "@id" : "http://purl.org/roh/scientific-domain#ES_SCIENTIFIC_DOMAIN_LEVEL_3_CODE_CTFISP"
   } ],
@@ -5107,7 +5110,7 @@
   } ]
 }, {
   "@id" : "http://purl.org/roh/scientific-domain#ES_SCIENTIFIC_DOMAIN_LEVEL_3_CTFIST",
-  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://purl.org/roh#ESScientificDomain" ],
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://www.w3.org/2004/02/skos/core#Concept" ],
   "http://purl.org/roh#hasCode" : [ {
     "@id" : "http://purl.org/roh/scientific-domain#ES_SCIENTIFIC_DOMAIN_LEVEL_3_CODE_CTFIST"
   } ],
@@ -5152,7 +5155,7 @@
   } ]
 }, {
   "@id" : "http://purl.org/roh/scientific-domain#ES_SCIENTIFIC_DOMAIN_LEVEL_3_CTGEOD",
-  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://purl.org/roh#ESScientificDomain" ],
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://www.w3.org/2004/02/skos/core#Concept" ],
   "http://purl.org/roh#hasCode" : [ {
     "@id" : "http://purl.org/roh/scientific-domain#ES_SCIENTIFIC_DOMAIN_LEVEL_3_CODE_CTGEOD"
   } ],
@@ -5197,7 +5200,7 @@
   } ]
 }, {
   "@id" : "http://purl.org/roh/scientific-domain#ES_SCIENTIFIC_DOMAIN_LEVEL_3_CTGEOF",
-  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://purl.org/roh#ESScientificDomain" ],
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://www.w3.org/2004/02/skos/core#Concept" ],
   "http://purl.org/roh#hasCode" : [ {
     "@id" : "http://purl.org/roh/scientific-domain#ES_SCIENTIFIC_DOMAIN_LEVEL_3_CODE_CTGEOF"
   } ],
@@ -5264,7 +5267,7 @@
   } ]
 }, {
   "@id" : "http://purl.org/roh/scientific-domain#ES_SCIENTIFIC_DOMAIN_LEVEL_3_CTGEOQ",
-  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://purl.org/roh#ESScientificDomain" ],
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://www.w3.org/2004/02/skos/core#Concept" ],
   "http://purl.org/roh#hasCode" : [ {
     "@id" : "http://purl.org/roh/scientific-domain#ES_SCIENTIFIC_DOMAIN_LEVEL_3_CODE_CTGEOQ"
   } ],
@@ -5306,7 +5309,7 @@
   } ]
 }, {
   "@id" : "http://purl.org/roh/scientific-domain#ES_SCIENTIFIC_DOMAIN_LEVEL_3_CTHIDRO",
-  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://purl.org/roh#ESScientificDomain" ],
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://www.w3.org/2004/02/skos/core#Concept" ],
   "http://purl.org/roh#hasCode" : [ {
     "@id" : "http://purl.org/roh/scientific-domain#ES_SCIENTIFIC_DOMAIN_LEVEL_3_CODE_CTHIDRO"
   } ],
@@ -5348,7 +5351,7 @@
   } ]
 }, {
   "@id" : "http://purl.org/roh/scientific-domain#ES_SCIENTIFIC_DOMAIN_LEVEL_3_CTMATE",
-  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://purl.org/roh#ESScientificDomain" ],
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://www.w3.org/2004/02/skos/core#Concept" ],
   "http://purl.org/roh#hasCode" : [ {
     "@id" : "http://purl.org/roh/scientific-domain#ES_SCIENTIFIC_DOMAIN_LEVEL_3_CODE_CTMATE"
   } ],
@@ -5393,7 +5396,7 @@
   } ]
 }, {
   "@id" : "http://purl.org/roh/scientific-domain#ES_SCIENTIFIC_DOMAIN_LEVEL_3_CTMETE",
-  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://purl.org/roh#ESScientificDomain" ],
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://www.w3.org/2004/02/skos/core#Concept" ],
   "http://purl.org/roh#hasCode" : [ {
     "@id" : "http://purl.org/roh/scientific-domain#ES_SCIENTIFIC_DOMAIN_LEVEL_3_CODE_CTMETE"
   } ],
@@ -5441,7 +5444,7 @@
   } ]
 }, {
   "@id" : "http://purl.org/roh/scientific-domain#ES_SCIENTIFIC_DOMAIN_LEVEL_3_CTMIN",
-  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://purl.org/roh#ESScientificDomain" ],
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://www.w3.org/2004/02/skos/core#Concept" ],
   "http://purl.org/roh#hasCode" : [ {
     "@id" : "http://purl.org/roh/scientific-domain#ES_SCIENTIFIC_DOMAIN_LEVEL_3_CODE_CTMIN"
   } ],
@@ -5489,7 +5492,7 @@
   } ]
 }, {
   "@id" : "http://purl.org/roh/scientific-domain#ES_SCIENTIFIC_DOMAIN_LEVEL_3_CTPALE",
-  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://purl.org/roh#ESScientificDomain" ],
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://www.w3.org/2004/02/skos/core#Concept" ],
   "http://purl.org/roh#hasCode" : [ {
     "@id" : "http://purl.org/roh/scientific-domain#ES_SCIENTIFIC_DOMAIN_LEVEL_3_CODE_CTPALE"
   } ],
@@ -5534,7 +5537,7 @@
   } ]
 }, {
   "@id" : "http://purl.org/roh/scientific-domain#ES_SCIENTIFIC_DOMAIN_LEVEL_3_CTPETR",
-  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://purl.org/roh#ESScientificDomain" ],
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://www.w3.org/2004/02/skos/core#Concept" ],
   "http://purl.org/roh#hasCode" : [ {
     "@id" : "http://purl.org/roh/scientific-domain#ES_SCIENTIFIC_DOMAIN_LEVEL_3_CODE_CTPETR"
   } ],
@@ -5582,7 +5585,7 @@
   } ]
 }, {
   "@id" : "http://purl.org/roh/scientific-domain#ES_SCIENTIFIC_DOMAIN_LEVEL_3_CTSEDI",
-  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://purl.org/roh#ESScientificDomain" ],
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://www.w3.org/2004/02/skos/core#Concept" ],
   "http://purl.org/roh#hasCode" : [ {
     "@id" : "http://purl.org/roh/scientific-domain#ES_SCIENTIFIC_DOMAIN_LEVEL_3_CODE_CTSEDI"
   } ],
@@ -5624,7 +5627,7 @@
   } ]
 }, {
   "@id" : "http://purl.org/roh/scientific-domain#ES_SCIENTIFIC_DOMAIN_LEVEL_3_CTTAFO",
-  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://purl.org/roh#ESScientificDomain" ],
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://www.w3.org/2004/02/skos/core#Concept" ],
   "http://purl.org/roh#hasCode" : [ {
     "@id" : "http://purl.org/roh/scientific-domain#ES_SCIENTIFIC_DOMAIN_LEVEL_3_CODE_CTTAFO"
   } ],
@@ -5666,7 +5669,7 @@
   } ]
 }, {
   "@id" : "http://purl.org/roh/scientific-domain#ES_SCIENTIFIC_DOMAIN_LEVEL_3_FFIQIYR",
-  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://purl.org/roh#ESScientificDomain" ],
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://www.w3.org/2004/02/skos/core#Concept" ],
   "http://purl.org/roh#hasCode" : [ {
     "@id" : "http://purl.org/roh/scientific-domain#ES_SCIENTIFIC_DOMAIN_LEVEL_3_CODE_FFIQIYR"
   } ],
@@ -5708,7 +5711,7 @@
   } ]
 }, {
   "@id" : "http://purl.org/roh/scientific-domain#ES_SCIENTIFIC_DOMAIN_LEVEL_3_FFIRKXR",
-  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://purl.org/roh#ESScientificDomain" ],
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://www.w3.org/2004/02/skos/core#Concept" ],
   "http://purl.org/roh#hasCode" : [ {
     "@id" : "http://purl.org/roh/scientific-domain#ES_SCIENTIFIC_DOMAIN_LEVEL_3_CODE_FFIRKXR"
   } ],
@@ -5753,7 +5756,7 @@
   } ]
 }, {
   "@id" : "http://purl.org/roh/scientific-domain#ES_SCIENTIFIC_DOMAIN_LEVEL_3_FFIURLV",
-  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://purl.org/roh#ESScientificDomain" ],
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://www.w3.org/2004/02/skos/core#Concept" ],
   "http://purl.org/roh#hasCode" : [ {
     "@id" : "http://purl.org/roh/scientific-domain#ES_SCIENTIFIC_DOMAIN_LEVEL_3_CODE_FFIURLV"
   } ],
@@ -5795,7 +5798,7 @@
   } ]
 }, {
   "@id" : "http://purl.org/roh/scientific-domain#ES_SCIENTIFIC_DOMAIN_LEVEL_3_FFIVCZF",
-  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://purl.org/roh#ESScientificDomain" ],
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://www.w3.org/2004/02/skos/core#Concept" ],
   "http://purl.org/roh#hasCode" : [ {
     "@id" : "http://purl.org/roh/scientific-domain#ES_SCIENTIFIC_DOMAIN_LEVEL_3_CODE_FFIVCZF"
   } ],
@@ -5837,7 +5840,7 @@
   } ]
 }, {
   "@id" : "http://purl.org/roh/scientific-domain#ES_SCIENTIFIC_DOMAIN_LEVEL_3_FFIVNPK",
-  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://purl.org/roh#ESScientificDomain" ],
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://www.w3.org/2004/02/skos/core#Concept" ],
   "http://purl.org/roh#hasCode" : [ {
     "@id" : "http://purl.org/roh/scientific-domain#ES_SCIENTIFIC_DOMAIN_LEVEL_3_CODE_FFIVNPK"
   } ],
@@ -5879,7 +5882,7 @@
   } ]
 }, {
   "@id" : "http://purl.org/roh/scientific-domain#ES_SCIENTIFIC_DOMAIN_LEVEL_3_FFIVVJH",
-  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://purl.org/roh#ESScientificDomain" ],
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://www.w3.org/2004/02/skos/core#Concept" ],
   "http://purl.org/roh#hasCode" : [ {
     "@id" : "http://purl.org/roh/scientific-domain#ES_SCIENTIFIC_DOMAIN_LEVEL_3_CODE_FFIVVJH"
   } ],
@@ -5921,7 +5924,7 @@
   } ]
 }, {
   "@id" : "http://purl.org/roh/scientific-domain#ES_SCIENTIFIC_DOMAIN_LEVEL_3_FFIYJTK",
-  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://purl.org/roh#ESScientificDomain" ],
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://www.w3.org/2004/02/skos/core#Concept" ],
   "http://purl.org/roh#hasCode" : [ {
     "@id" : "http://purl.org/roh/scientific-domain#ES_SCIENTIFIC_DOMAIN_LEVEL_3_CODE_FFIYJTK"
   } ],
@@ -5963,7 +5966,7 @@
   } ]
 }, {
   "@id" : "http://purl.org/roh/scientific-domain#ES_SCIENTIFIC_DOMAIN_LEVEL_3_FFIYMLQ",
-  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://purl.org/roh#ESScientificDomain" ],
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://www.w3.org/2004/02/skos/core#Concept" ],
   "http://purl.org/roh#hasCode" : [ {
     "@id" : "http://purl.org/roh/scientific-domain#ES_SCIENTIFIC_DOMAIN_LEVEL_3_CODE_FFIYMLQ"
   } ],
@@ -6005,7 +6008,7 @@
   } ]
 }, {
   "@id" : "http://purl.org/roh/scientific-domain#ES_SCIENTIFIC_DOMAIN_LEVEL_3_HALMCG",
-  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://purl.org/roh#ESScientificDomain" ],
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://www.w3.org/2004/02/skos/core#Concept" ],
   "http://purl.org/roh#hasCode" : [ {
     "@id" : "http://purl.org/roh/scientific-domain#ES_SCIENTIFIC_DOMAIN_LEVEL_3_CODE_HALMCG"
   } ],
@@ -6050,7 +6053,7 @@
   } ]
 }, {
   "@id" : "http://purl.org/roh/scientific-domain#ES_SCIENTIFIC_DOMAIN_LEVEL_3_HAMOXL",
-  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://purl.org/roh#ESScientificDomain" ],
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://www.w3.org/2004/02/skos/core#Concept" ],
   "http://purl.org/roh#hasCode" : [ {
     "@id" : "http://purl.org/roh/scientific-domain#ES_SCIENTIFIC_DOMAIN_LEVEL_3_CODE_HAMOXL"
   } ],
@@ -6092,7 +6095,7 @@
   } ]
 }, {
   "@id" : "http://purl.org/roh/scientific-domain#ES_SCIENTIFIC_DOMAIN_LEVEL_3_HAQGZR",
-  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://purl.org/roh#ESScientificDomain" ],
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://www.w3.org/2004/02/skos/core#Concept" ],
   "http://purl.org/roh#hasCode" : [ {
     "@id" : "http://purl.org/roh/scientific-domain#ES_SCIENTIFIC_DOMAIN_LEVEL_3_CODE_HAQGZR"
   } ],
@@ -6137,7 +6140,7 @@
   } ]
 }, {
   "@id" : "http://purl.org/roh/scientific-domain#ES_SCIENTIFIC_DOMAIN_LEVEL_3_HAQJKH",
-  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://purl.org/roh#ESScientificDomain" ],
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://www.w3.org/2004/02/skos/core#Concept" ],
   "http://purl.org/roh#hasCode" : [ {
     "@id" : "http://purl.org/roh/scientific-domain#ES_SCIENTIFIC_DOMAIN_LEVEL_3_CODE_HAQJKH"
   } ],
@@ -6179,7 +6182,7 @@
   } ]
 }, {
   "@id" : "http://purl.org/roh/scientific-domain#ES_SCIENTIFIC_DOMAIN_LEVEL_3_HAYOHM",
-  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://purl.org/roh#ESScientificDomain" ],
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://www.w3.org/2004/02/skos/core#Concept" ],
   "http://purl.org/roh#hasCode" : [ {
     "@id" : "http://purl.org/roh/scientific-domain#ES_SCIENTIFIC_DOMAIN_LEVEL_3_CODE_HAYOHM"
   } ],
@@ -6221,7 +6224,7 @@
   } ]
 }, {
   "@id" : "http://purl.org/roh/scientific-domain#ES_SCIENTIFIC_DOMAIN_LEVEL_3_HAYSVE",
-  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://purl.org/roh#ESScientificDomain" ],
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://www.w3.org/2004/02/skos/core#Concept" ],
   "http://purl.org/roh#hasCode" : [ {
     "@id" : "http://purl.org/roh/scientific-domain#ES_SCIENTIFIC_DOMAIN_LEVEL_3_CODE_HAYSVE"
   } ],
@@ -6263,7 +6266,7 @@
   } ]
 }, {
   "@id" : "http://purl.org/roh/scientific-domain#ES_SCIENTIFIC_DOMAIN_LEVEL_3_HAZQGB",
-  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://purl.org/roh#ESScientificDomain" ],
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://www.w3.org/2004/02/skos/core#Concept" ],
   "http://purl.org/roh#hasCode" : [ {
     "@id" : "http://purl.org/roh/scientific-domain#ES_SCIENTIFIC_DOMAIN_LEVEL_3_CODE_HAZQGB"
   } ],
@@ -6305,7 +6308,7 @@
   } ]
 }, {
   "@id" : "http://purl.org/roh/scientific-domain#ES_SCIENTIFIC_DOMAIN_LEVEL_3_MCLIAJCV",
-  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://purl.org/roh#ESScientificDomain" ],
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://www.w3.org/2004/02/skos/core#Concept" ],
   "http://purl.org/roh#hasCode" : [ {
     "@id" : "http://purl.org/roh/scientific-domain#ES_SCIENTIFIC_DOMAIN_LEVEL_3_CODE_MCLIAJCV"
   } ],
@@ -6347,7 +6350,7 @@
   } ]
 }, {
   "@id" : "http://purl.org/roh/scientific-domain#ES_SCIENTIFIC_DOMAIN_LEVEL_3_MCLIATZZ",
-  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://purl.org/roh#ESScientificDomain" ],
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://www.w3.org/2004/02/skos/core#Concept" ],
   "http://purl.org/roh#hasCode" : [ {
     "@id" : "http://purl.org/roh/scientific-domain#ES_SCIENTIFIC_DOMAIN_LEVEL_3_CODE_MCLIATZZ"
   } ],
@@ -6389,7 +6392,7 @@
   } ]
 }, {
   "@id" : "http://purl.org/roh/scientific-domain#ES_SCIENTIFIC_DOMAIN_LEVEL_3_MCLIAVLC",
-  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://purl.org/roh#ESScientificDomain" ],
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://www.w3.org/2004/02/skos/core#Concept" ],
   "http://purl.org/roh#hasCode" : [ {
     "@id" : "http://purl.org/roh/scientific-domain#ES_SCIENTIFIC_DOMAIN_LEVEL_3_CODE_MCLIAVLC"
   } ],
@@ -6431,7 +6434,7 @@
   } ]
 }, {
   "@id" : "http://purl.org/roh/scientific-domain#ES_SCIENTIFIC_DOMAIN_LEVEL_3_MCLIBGSE",
-  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://purl.org/roh#ESScientificDomain" ],
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://www.w3.org/2004/02/skos/core#Concept" ],
   "http://purl.org/roh#hasCode" : [ {
     "@id" : "http://purl.org/roh/scientific-domain#ES_SCIENTIFIC_DOMAIN_LEVEL_3_CODE_MCLIBGSE"
   } ],
@@ -6473,7 +6476,7 @@
   } ]
 }, {
   "@id" : "http://purl.org/roh/scientific-domain#ES_SCIENTIFIC_DOMAIN_LEVEL_3_MCLICFDU",
-  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://purl.org/roh#ESScientificDomain" ],
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://www.w3.org/2004/02/skos/core#Concept" ],
   "http://purl.org/roh#hasCode" : [ {
     "@id" : "http://purl.org/roh/scientific-domain#ES_SCIENTIFIC_DOMAIN_LEVEL_3_CODE_MCLICFDU"
   } ],
@@ -6515,7 +6518,7 @@
   } ]
 }, {
   "@id" : "http://purl.org/roh/scientific-domain#ES_SCIENTIFIC_DOMAIN_LEVEL_3_MCLIHKZZ",
-  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://purl.org/roh#ESScientificDomain" ],
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://www.w3.org/2004/02/skos/core#Concept" ],
   "http://purl.org/roh#hasCode" : [ {
     "@id" : "http://purl.org/roh/scientific-domain#ES_SCIENTIFIC_DOMAIN_LEVEL_3_CODE_MCLIHKZZ"
   } ],
@@ -6557,7 +6560,7 @@
   } ]
 }, {
   "@id" : "http://purl.org/roh/scientific-domain#ES_SCIENTIFIC_DOMAIN_LEVEL_3_MCLIJMIG",
-  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://purl.org/roh#ESScientificDomain" ],
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://www.w3.org/2004/02/skos/core#Concept" ],
   "http://purl.org/roh#hasCode" : [ {
     "@id" : "http://purl.org/roh/scientific-domain#ES_SCIENTIFIC_DOMAIN_LEVEL_3_CODE_MCLIJMIG"
   } ],
@@ -6599,7 +6602,7 @@
   } ]
 }, {
   "@id" : "http://purl.org/roh/scientific-domain#ES_SCIENTIFIC_DOMAIN_LEVEL_3_MCLINMLH",
-  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://purl.org/roh#ESScientificDomain" ],
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://www.w3.org/2004/02/skos/core#Concept" ],
   "http://purl.org/roh#hasCode" : [ {
     "@id" : "http://purl.org/roh/scientific-domain#ES_SCIENTIFIC_DOMAIN_LEVEL_3_CODE_MCLINMLH"
   } ],
@@ -6641,7 +6644,7 @@
   } ]
 }, {
   "@id" : "http://purl.org/roh/scientific-domain#ES_SCIENTIFIC_DOMAIN_LEVEL_3_MCLIOCBV",
-  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://purl.org/roh#ESScientificDomain" ],
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://www.w3.org/2004/02/skos/core#Concept" ],
   "http://purl.org/roh#hasCode" : [ {
     "@id" : "http://purl.org/roh/scientific-domain#ES_SCIENTIFIC_DOMAIN_LEVEL_3_CODE_MCLIOCBV"
   } ],
@@ -6683,7 +6686,7 @@
   } ]
 }, {
   "@id" : "http://purl.org/roh/scientific-domain#ES_SCIENTIFIC_DOMAIN_LEVEL_3_MCLIQUEG",
-  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://purl.org/roh#ESScientificDomain" ],
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://www.w3.org/2004/02/skos/core#Concept" ],
   "http://purl.org/roh#hasCode" : [ {
     "@id" : "http://purl.org/roh/scientific-domain#ES_SCIENTIFIC_DOMAIN_LEVEL_3_CODE_MCLIQUEG"
   } ],
@@ -6728,7 +6731,7 @@
   } ]
 }, {
   "@id" : "http://purl.org/roh/scientific-domain#ES_SCIENTIFIC_DOMAIN_LEVEL_3_MTMALGE",
-  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://purl.org/roh#ESScientificDomain" ],
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://www.w3.org/2004/02/skos/core#Concept" ],
   "http://purl.org/roh#hasCode" : [ {
     "@id" : "http://purl.org/roh/scientific-domain#ES_SCIENTIFIC_DOMAIN_LEVEL_3_CODE_MTMALGE"
   } ],
@@ -6770,7 +6773,7 @@
   } ]
 }, {
   "@id" : "http://purl.org/roh/scientific-domain#ES_SCIENTIFIC_DOMAIN_LEVEL_3_MTMANAL",
-  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://purl.org/roh#ESScientificDomain" ],
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://www.w3.org/2004/02/skos/core#Concept" ],
   "http://purl.org/roh#hasCode" : [ {
     "@id" : "http://purl.org/roh/scientific-domain#ES_SCIENTIFIC_DOMAIN_LEVEL_3_CODE_MTMANAL"
   } ],
@@ -6818,7 +6821,7 @@
   } ]
 }, {
   "@id" : "http://purl.org/roh/scientific-domain#ES_SCIENTIFIC_DOMAIN_LEVEL_3_MTMANAM",
-  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://purl.org/roh#ESScientificDomain" ],
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://www.w3.org/2004/02/skos/core#Concept" ],
   "http://purl.org/roh#hasCode" : [ {
     "@id" : "http://purl.org/roh/scientific-domain#ES_SCIENTIFIC_DOMAIN_LEVEL_3_CODE_MTMANAM"
   } ],
@@ -6860,7 +6863,7 @@
   } ]
 }, {
   "@id" : "http://purl.org/roh/scientific-domain#ES_SCIENTIFIC_DOMAIN_LEVEL_3_MTMESTA",
-  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://purl.org/roh#ESScientificDomain" ],
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://www.w3.org/2004/02/skos/core#Concept" ],
   "http://purl.org/roh#hasCode" : [ {
     "@id" : "http://purl.org/roh/scientific-domain#ES_SCIENTIFIC_DOMAIN_LEVEL_3_CODE_MTMESTA"
   } ],
@@ -6902,7 +6905,7 @@
   } ]
 }, {
   "@id" : "http://purl.org/roh/scientific-domain#ES_SCIENTIFIC_DOMAIN_LEVEL_3_MTMGEOM",
-  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://purl.org/roh#ESScientificDomain" ],
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://www.w3.org/2004/02/skos/core#Concept" ],
   "http://purl.org/roh#hasCode" : [ {
     "@id" : "http://purl.org/roh/scientific-domain#ES_SCIENTIFIC_DOMAIN_LEVEL_3_CODE_MTMGEOM"
   } ],
@@ -6944,7 +6947,7 @@
   } ]
 }, {
   "@id" : "http://purl.org/roh/scientific-domain#ES_SCIENTIFIC_DOMAIN_LEVEL_3_MTMINVO",
-  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://purl.org/roh#ESScientificDomain" ],
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://www.w3.org/2004/02/skos/core#Concept" ],
   "http://purl.org/roh#hasCode" : [ {
     "@id" : "http://purl.org/roh/scientific-domain#ES_SCIENTIFIC_DOMAIN_LEVEL_3_CODE_MTMINVO"
   } ],
@@ -6986,7 +6989,7 @@
   } ]
 }, {
   "@id" : "http://purl.org/roh/scientific-domain#ES_SCIENTIFIC_DOMAIN_LEVEL_3_MTMMATE",
-  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://purl.org/roh#ESScientificDomain" ],
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://www.w3.org/2004/02/skos/core#Concept" ],
   "http://purl.org/roh#hasCode" : [ {
     "@id" : "http://purl.org/roh/scientific-domain#ES_SCIENTIFIC_DOMAIN_LEVEL_3_CODE_MTMMATE"
   } ],
@@ -7031,7 +7034,7 @@
   } ]
 }, {
   "@id" : "http://purl.org/roh/scientific-domain#ES_SCIENTIFIC_DOMAIN_LEVEL_3_MTMTOPO",
-  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://purl.org/roh#ESScientificDomain" ],
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://www.w3.org/2004/02/skos/core#Concept" ],
   "http://purl.org/roh#hasCode" : [ {
     "@id" : "http://purl.org/roh/scientific-domain#ES_SCIENTIFIC_DOMAIN_LEVEL_3_CODE_MTMTOPO"
   } ],
@@ -7076,7 +7079,7 @@
   } ]
 }, {
   "@id" : "http://purl.org/roh/scientific-domain#ES_SCIENTIFIC_DOMAIN_LEVEL_3_PSAZSJ",
-  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://purl.org/roh#ESScientificDomain" ],
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://www.w3.org/2004/02/skos/core#Concept" ],
   "http://purl.org/roh#hasCode" : [ {
     "@id" : "http://purl.org/roh/scientific-domain#ES_SCIENTIFIC_DOMAIN_LEVEL_3_CODE_PSAZSJ"
   } ],
@@ -7118,7 +7121,7 @@
   } ]
 }, {
   "@id" : "http://purl.org/roh/scientific-domain#ES_SCIENTIFIC_DOMAIN_LEVEL_3_PSBODX",
-  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://purl.org/roh#ESScientificDomain" ],
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://www.w3.org/2004/02/skos/core#Concept" ],
   "http://purl.org/roh#hasCode" : [ {
     "@id" : "http://purl.org/roh/scientific-domain#ES_SCIENTIFIC_DOMAIN_LEVEL_3_CODE_PSBODX"
   } ],
@@ -7163,7 +7166,7 @@
   } ]
 }, {
   "@id" : "http://purl.org/roh/scientific-domain#ES_SCIENTIFIC_DOMAIN_LEVEL_3_PSDSJH",
-  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://purl.org/roh#ESScientificDomain" ],
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://www.w3.org/2004/02/skos/core#Concept" ],
   "http://purl.org/roh#hasCode" : [ {
     "@id" : "http://purl.org/roh/scientific-domain#ES_SCIENTIFIC_DOMAIN_LEVEL_3_CODE_PSDSJH"
   } ],
@@ -7205,7 +7208,7 @@
   } ]
 }, {
   "@id" : "http://purl.org/roh/scientific-domain#ES_SCIENTIFIC_DOMAIN_LEVEL_3_PSFRSQ",
-  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://purl.org/roh#ESScientificDomain" ],
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://www.w3.org/2004/02/skos/core#Concept" ],
   "http://purl.org/roh#hasCode" : [ {
     "@id" : "http://purl.org/roh/scientific-domain#ES_SCIENTIFIC_DOMAIN_LEVEL_3_CODE_PSFRSQ"
   } ],
@@ -7247,7 +7250,7 @@
   } ]
 }, {
   "@id" : "http://purl.org/roh/scientific-domain#ES_SCIENTIFIC_DOMAIN_LEVEL_3_PSJTFX",
-  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://purl.org/roh#ESScientificDomain" ],
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://www.w3.org/2004/02/skos/core#Concept" ],
   "http://purl.org/roh#hasCode" : [ {
     "@id" : "http://purl.org/roh/scientific-domain#ES_SCIENTIFIC_DOMAIN_LEVEL_3_CODE_PSJTFX"
   } ],
@@ -7289,7 +7292,7 @@
   } ]
 }, {
   "@id" : "http://purl.org/roh/scientific-domain#ES_SCIENTIFIC_DOMAIN_LEVEL_3_PSNRWD",
-  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://purl.org/roh#ESScientificDomain" ],
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://www.w3.org/2004/02/skos/core#Concept" ],
   "http://purl.org/roh#hasCode" : [ {
     "@id" : "http://purl.org/roh/scientific-domain#ES_SCIENTIFIC_DOMAIN_LEVEL_3_CODE_PSNRWD"
   } ],
@@ -7331,7 +7334,7 @@
   } ]
 }, {
   "@id" : "http://purl.org/roh/scientific-domain#ES_SCIENTIFIC_DOMAIN_LEVEL_3_QMCAMBI",
-  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://purl.org/roh#ESScientificDomain" ],
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://www.w3.org/2004/02/skos/core#Concept" ],
   "http://purl.org/roh#hasCode" : [ {
     "@id" : "http://purl.org/roh/scientific-domain#ES_SCIENTIFIC_DOMAIN_LEVEL_3_CODE_QMCAMBI"
   } ],
@@ -7373,7 +7376,7 @@
   } ]
 }, {
   "@id" : "http://purl.org/roh/scientific-domain#ES_SCIENTIFIC_DOMAIN_LEVEL_3_QMCCATA",
-  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://purl.org/roh#ESScientificDomain" ],
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://www.w3.org/2004/02/skos/core#Concept" ],
   "http://purl.org/roh#hasCode" : [ {
     "@id" : "http://purl.org/roh/scientific-domain#ES_SCIENTIFIC_DOMAIN_LEVEL_3_CODE_QMCCATA"
   } ],
@@ -7418,7 +7421,7 @@
   } ]
 }, {
   "@id" : "http://purl.org/roh/scientific-domain#ES_SCIENTIFIC_DOMAIN_LEVEL_3_QMCCATE",
-  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://purl.org/roh#ESScientificDomain" ],
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://www.w3.org/2004/02/skos/core#Concept" ],
   "http://purl.org/roh#hasCode" : [ {
     "@id" : "http://purl.org/roh/scientific-domain#ES_SCIENTIFIC_DOMAIN_LEVEL_3_CODE_QMCCATE"
   } ],
@@ -7460,7 +7463,7 @@
   } ]
 }, {
   "@id" : "http://purl.org/roh/scientific-domain#ES_SCIENTIFIC_DOMAIN_LEVEL_3_QMCMATM",
-  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://purl.org/roh#ESScientificDomain" ],
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://www.w3.org/2004/02/skos/core#Concept" ],
   "http://purl.org/roh#hasCode" : [ {
     "@id" : "http://purl.org/roh/scientific-domain#ES_SCIENTIFIC_DOMAIN_LEVEL_3_CODE_QMCMATM"
   } ],
@@ -7502,7 +7505,7 @@
   } ]
 }, {
   "@id" : "http://purl.org/roh/scientific-domain#ES_SCIENTIFIC_DOMAIN_LEVEL_3_QMCNANO",
-  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://purl.org/roh#ESScientificDomain" ],
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://www.w3.org/2004/02/skos/core#Concept" ],
   "http://purl.org/roh#hasCode" : [ {
     "@id" : "http://purl.org/roh/scientific-domain#ES_SCIENTIFIC_DOMAIN_LEVEL_3_CODE_QMCNANO"
   } ],
@@ -7544,7 +7547,7 @@
   } ]
 }, {
   "@id" : "http://purl.org/roh/scientific-domain#ES_SCIENTIFIC_DOMAIN_LEVEL_3_QMCORGA",
-  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://purl.org/roh#ESScientificDomain" ],
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://www.w3.org/2004/02/skos/core#Concept" ],
   "http://purl.org/roh#hasCode" : [ {
     "@id" : "http://purl.org/roh/scientific-domain#ES_SCIENTIFIC_DOMAIN_LEVEL_3_CODE_QMCORGA"
   } ],
@@ -7586,7 +7589,7 @@
   } ]
 }, {
   "@id" : "http://purl.org/roh/scientific-domain#ES_SCIENTIFIC_DOMAIN_LEVEL_3_QMCQBIT",
-  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://purl.org/roh#ESScientificDomain" ],
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://www.w3.org/2004/02/skos/core#Concept" ],
   "http://purl.org/roh#hasCode" : [ {
     "@id" : "http://purl.org/roh/scientific-domain#ES_SCIENTIFIC_DOMAIN_LEVEL_3_CODE_QMCQBIT"
   } ],
@@ -7628,7 +7631,7 @@
   } ]
 }, {
   "@id" : "http://purl.org/roh/scientific-domain#ES_SCIENTIFIC_DOMAIN_LEVEL_3_QMCQUAN",
-  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://purl.org/roh#ESScientificDomain" ],
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://www.w3.org/2004/02/skos/core#Concept" ],
   "http://purl.org/roh#hasCode" : [ {
     "@id" : "http://purl.org/roh/scientific-domain#ES_SCIENTIFIC_DOMAIN_LEVEL_3_CODE_QMCQUAN"
   } ],
@@ -7670,7 +7673,7 @@
   } ]
 }, {
   "@id" : "http://purl.org/roh/scientific-domain#ES_SCIENTIFIC_DOMAIN_LEVEL_3_QMCQUBI",
-  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://purl.org/roh#ESScientificDomain" ],
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://www.w3.org/2004/02/skos/core#Concept" ],
   "http://purl.org/roh#hasCode" : [ {
     "@id" : "http://purl.org/roh/scientific-domain#ES_SCIENTIFIC_DOMAIN_LEVEL_3_CODE_QMCQUBI"
   } ],
@@ -7712,7 +7715,7 @@
   } ]
 }, {
   "@id" : "http://purl.org/roh/scientific-domain#ES_SCIENTIFIC_DOMAIN_LEVEL_3_QMCQUFI",
-  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://purl.org/roh#ESScientificDomain" ],
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://www.w3.org/2004/02/skos/core#Concept" ],
   "http://purl.org/roh#hasCode" : [ {
     "@id" : "http://purl.org/roh/scientific-domain#ES_SCIENTIFIC_DOMAIN_LEVEL_3_CODE_QMCQUFI"
   } ],
@@ -7754,7 +7757,7 @@
   } ]
 }, {
   "@id" : "http://purl.org/roh/scientific-domain#ES_SCIENTIFIC_DOMAIN_LEVEL_3_QMCQUIN",
-  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://purl.org/roh#ESScientificDomain" ],
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://www.w3.org/2004/02/skos/core#Concept" ],
   "http://purl.org/roh#hasCode" : [ {
     "@id" : "http://purl.org/roh/scientific-domain#ES_SCIENTIFIC_DOMAIN_LEVEL_3_CODE_QMCQUIN"
   } ],
@@ -7796,7 +7799,7 @@
   } ]
 }, {
   "@id" : "http://purl.org/roh/scientific-domain#ES_SCIENTIFIC_DOMAIN_LEVEL_3_QMCQUIO",
-  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://purl.org/roh#ESScientificDomain" ],
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://www.w3.org/2004/02/skos/core#Concept" ],
   "http://purl.org/roh#hasCode" : [ {
     "@id" : "http://purl.org/roh/scientific-domain#ES_SCIENTIFIC_DOMAIN_LEVEL_3_CODE_QMCQUIO"
   } ],
@@ -7838,7 +7841,7 @@
   } ]
 }, {
   "@id" : "http://purl.org/roh/scientific-domain#ES_SCIENTIFIC_DOMAIN_LEVEL_3_QMCQUSU",
-  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://purl.org/roh#ESScientificDomain" ],
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://www.w3.org/2004/02/skos/core#Concept" ],
   "http://purl.org/roh#hasCode" : [ {
     "@id" : "http://purl.org/roh/scientific-domain#ES_SCIENTIFIC_DOMAIN_LEVEL_3_CODE_QMCQUSU"
   } ],
@@ -7880,7 +7883,7 @@
   } ]
 }, {
   "@id" : "http://purl.org/roh/scientific-domain#ESscientificDomains1stList",
-  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://www.w3.org/2004/02/skos/core#ConceptScheme" ],
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://purl.org/roh#ESScientificDomain" ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@language" : "fr",
     "@value" : "Domains scientifiques de premier niveau"
@@ -7982,7 +7985,7 @@
   } ]
 }, {
   "@id" : "http://purl.org/roh/scientific-domain#ESscientificDomains2ndCodeList",
-  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://www.w3.org/2004/02/skos/core#ConceptScheme" ],
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://purl.org/roh#ESScientificDomain" ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@language" : "en",
     "@value" : "Codes for the second-level scientific domains"
@@ -8023,7 +8026,7 @@
   } ]
 }, {
   "@id" : "http://purl.org/roh/scientific-domain#ESscientificDomains2ndList",
-  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://www.w3.org/2004/02/skos/core#ConceptScheme" ],
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://purl.org/roh#ESScientificDomain" ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@language" : "eu",
     "@value" : "Bigarren mailako arlo zientifikoak"
@@ -8125,7 +8128,7 @@
   } ]
 }, {
   "@id" : "http://purl.org/roh/scientific-domain#ESscientificDomains3rdList",
-  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://www.w3.org/2004/02/skos/core#ConceptScheme" ],
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://purl.org/roh#ESScientificDomain" ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@language" : "fr",
     "@value" : "Domains scientifiques de troisième niveau"
@@ -8227,7 +8230,7 @@
   } ]
 }, {
   "@id" : "http://purl.org/roh/scientific-domain#scientificDomain3rdCodeResource",
-  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://www.w3.org/2004/02/skos/core#ConceptScheme" ],
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://purl.org/roh#ESScientificDomain" ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@language" : "en",
     "@value" : "Codes for the third-level scientific domains"
@@ -8274,15 +8277,12 @@
     "@value" : "Concept"
   } ]
 }, {
-  "@id" : "http://www.w3.org/2004/02/skos/core#ConceptScehem",
+  "@id" : "http://www.w3.org/2004/02/skos/core#ConceptScheme",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@language" : "en",
     "@value" : "Concept Scheme"
   } ]
-}, {
-  "@id" : "http://www.w3.org/2004/02/skos/core#ConceptScheme",
-  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ]
 }, {
   "@id" : "http://www.w3.org/2004/02/skos/core#broader",
   "@type" : [ "http://www.w3.org/2002/07/owl#AnnotationProperty" ]

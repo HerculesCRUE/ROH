@@ -2,6 +2,16 @@
   "@id" : "http://purl.org/dc/terms/license",
   "@type" : [ "http://www.w3.org/2002/07/owl#AnnotationProperty" ]
 }, {
+  "@id" : "http://purl.org/roh#ResearcherPosition",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "Researcher Position"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "http://purl.org/roh/mirror/vivo#Position"
+  } ]
+}, {
   "@id" : "http://purl.org/roh#codeOf",
   "@type" : [ "http://www.w3.org/2002/07/owl#AnnotationProperty" ]
 }, {
@@ -11,18 +21,14 @@
   "@id" : "http://purl.org/roh#hasCode",
   "@type" : [ "http://www.w3.org/2002/07/owl#AnnotationProperty" ]
 }, {
-  "@id" : "http://purl.org/roh/mirror/vivo#AcademicPosition",
-  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
-  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
-    "@language" : "en",
-    "@value" : "Academic Position"
-  } ]
-}, {
   "@id" : "http://purl.org/roh/mirror/vivo#FacultyAdministrativePosition",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@language" : "en",
     "@value" : "Faculty Administrative Position"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "http://purl.org/roh/mirror/vivo#Position"
   } ]
 }, {
   "@id" : "http://purl.org/roh/mirror/vivo#FacultyPosition",
@@ -30,6 +36,9 @@
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@language" : "en",
     "@value" : "Faculty Position"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "http://purl.org/roh/mirror/vivo#Position"
   } ]
 }, {
   "@id" : "http://purl.org/roh/mirror/vivo#Position",
@@ -730,7 +739,7 @@
     "@value" : "Professorial research fellow"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
-    "@id" : "http://purl.org/roh/mirror/vivo#FacultyPosition"
+    "@id" : "http://purl.org/roh#ResearcherPosition"
   } ],
   "http://www.w3.org/2004/02/skos/core#closeMatch" : [ {
     "@id" : "http://skos.um.es/unescothes/C00015"
@@ -763,7 +772,7 @@
     "@value" : "Research assistant"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
-    "@id" : "http://purl.org/roh/mirror/vivo#Position"
+    "@id" : "http://purl.org/roh#ResearcherPosition"
   } ],
   "http://www.w3.org/2004/02/skos/core#closeMatch" : [ {
     "@id" : "http://skos.um.es/unescothes/C03376"
@@ -792,7 +801,7 @@
     "@value" : "Research fellow"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
-    "@id" : "http://purl.org/roh/mirror/vivo#AcademicPosition"
+    "@id" : "http://purl.org/roh#ResearcherPosition"
   } ],
   "http://www.w3.org/2004/02/skos/core#closeMatch" : [ {
     "@id" : "http://skos.um.es/unescothes/C03376"
@@ -821,7 +830,7 @@
     "@value" : "Senior research fellow"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
-    "@id" : "http://purl.org/roh/mirror/vivo#AcademicPosition"
+    "@id" : "http://purl.org/roh#ResearcherPosition"
   } ],
   "http://www.w3.org/2004/02/skos/core#closeMatch" : [ {
     "@id" : "http://skos.um.es/unescothes/C03376"

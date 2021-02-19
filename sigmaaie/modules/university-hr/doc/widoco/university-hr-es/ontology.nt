@@ -51,19 +51,34 @@
 # #################################################################
 # 
 # 
-# http://purl.org/roh/mirror/vivo#AcademicPosition
-<http://purl.org/roh/mirror/vivo#AcademicPosition> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
-# 
 # http://purl.org/roh/mirror/vivo#FacultyAdministrativePosition
 <http://purl.org/roh/mirror/vivo#FacultyAdministrativePosition> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://purl.org/roh/mirror/vivo#FacultyAdministrativePosition> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://purl.org/roh/mirror/vivo#Position> .
 <http://purl.org/roh/mirror/vivo#FacultyAdministrativePosition> <http://www.w3.org/2000/01/rdf-schema#label> "Faculty Administrative Position"@en .
+<http://purl.org/roh/mirror/vivo#FacultyAdministrativePosition> <http://www.w3.org/2000/01/rdf-schema#label> "Posición Administrativa en Facultad"@es .
 # 
 # http://purl.org/roh/mirror/vivo#FacultyPosition
 <http://purl.org/roh/mirror/vivo#FacultyPosition> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://purl.org/roh/mirror/vivo#FacultyPosition> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://purl.org/roh/mirror/vivo#Position> .
+<http://purl.org/roh/mirror/vivo#FacultyPosition> <http://www.w3.org/2000/01/rdf-schema#label> "Faculty Position"@en .
+<http://purl.org/roh/mirror/vivo#FacultyPosition> <http://www.w3.org/2000/01/rdf-schema#label> "Posición en Facultad"@es .
 # 
 # http://purl.org/roh/mirror/vivo#NonAcademicPosition
 <http://purl.org/roh/mirror/vivo#NonAcademicPosition> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://purl.org/roh/mirror/vivo#NonAcademicPosition> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://purl.org/roh/mirror/vivo#Position> .
 <http://purl.org/roh/mirror/vivo#NonAcademicPosition> <http://www.w3.org/2000/01/rdf-schema#label> "Non-Academic Position"@en .
+<http://purl.org/roh/mirror/vivo#NonAcademicPosition> <http://www.w3.org/2000/01/rdf-schema#label> "Posición no Académica"@es .
+# 
+# http://purl.org/roh/mirror/vivo#NonFacultyAcademicPosition
+<http://purl.org/roh/mirror/vivo#NonFacultyAcademicPosition> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://purl.org/roh/mirror/vivo#NonFacultyAcademicPosition> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://purl.org/roh/mirror/vivo#Position> .
+<http://purl.org/roh/mirror/vivo#NonFacultyAcademicPosition> <http://www.w3.org/2000/01/rdf-schema#label> "Non-Faculty Academic Position"@en .
+<http://purl.org/roh/mirror/vivo#NonFacultyAcademicPosition> <http://www.w3.org/2000/01/rdf-schema#label> "Posición Académica no de Facultad"@es .
+# 
+# http://purl.org/roh/mirror/vivo#Position
+<http://purl.org/roh/mirror/vivo#Position> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://purl.org/roh/mirror/vivo#Position> <http://www.w3.org/2000/01/rdf-schema#label> "Posición"@es .
+<http://purl.org/roh/mirror/vivo#Position> <http://www.w3.org/2000/01/rdf-schema#label> "Position"@en .
 # 
 # http://purl.org/roh/university-hr/es#Ayudante
 <http://purl.org/roh/university-hr/es#Ayudante> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
@@ -200,7 +215,7 @@
 # 
 # http://purl.org/roh/university-hr/es#ES_UNIVERSITY_HR_ESLI
 <http://purl.org/roh/university-hr/es#ES_UNIVERSITY_HR_ESLI> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
-<http://purl.org/roh/university-hr/es#ES_UNIVERSITY_HR_ESLI> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://purl.org/roh/mirror/vivo#AcademicPosition> .
+<http://purl.org/roh/university-hr/es#ES_UNIVERSITY_HR_ESLI> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://purl.org/roh/mirror/vivo#NonFacultyAcademicPosition> .
 <http://purl.org/roh/university-hr/es#ES_UNIVERSITY_HR_ESLI> <http://purl.org/roh#country> <http://publications.europa.eu/resource/authority/country/ESP> .
 <http://purl.org/roh/university-hr/es#ES_UNIVERSITY_HR_ESLI> <http://purl.org/roh#hasCode> <http://purl.org/roh/university-hr/es#ES_UNIVERSITY_HR_CODE_ESLI> .
 <http://purl.org/roh/university-hr/es#ES_UNIVERSITY_HR_ESLI> <http://www.w3.org/2000/01/rdf-schema#label> "Investigador"@es .

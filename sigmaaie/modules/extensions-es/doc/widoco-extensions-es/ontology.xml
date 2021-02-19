@@ -29,7 +29,7 @@ Therefore, the purpose of this agreement was to contribute to the improvement of
     efficiency in the management of research. 
 
 by creating a research management system with semantic capacities based on semantic open data and that will provide a global view of the research data contained in the Spanish University System.</rdfs:comment>
-        <rdfs:label xml:lang="en">ROH Spanish Extensions Modules</rdfs:label>
+        <rdfs:label xml:lang="en">ROH Spanish Extensions Module</rdfs:label>
     </owl:Ontology>
     
 
@@ -761,26 +761,6 @@ by creating a research management system with semantic capacities based on seman
     
 
 
-    <!-- http://purl.org/roh/es#FomentoInvestigacionCientificoTecnica -->
-
-
-    <owl:Class rdf:about="http://purl.org/roh/es#FomentoInvestigacionCientificoTecnica">
-        <rdfs:subClassOf rdf:resource="http://purl.org/roh/es#PlanEstatal2013-2016"/>
-        <owl:disjointWith rdf:resource="http://purl.org/roh/es#PromocionTalento"/>
-    </owl:Class>
-    
-
-
-    <!-- http://purl.org/roh/es#FormacionTalento -->
-
-
-    <owl:Class rdf:about="http://purl.org/roh/es#FormacionTalento">
-        <rdfs:subClassOf rdf:resource="http://purl.org/roh/es#PlanEstatal2017-2020"/>
-        <owl:disjointWith rdf:resource="http://purl.org/roh/es#GeneracionConocimiento"/>
-    </owl:Class>
-    
-
-
     <!-- http://purl.org/roh/es#Gas -->
 
 
@@ -829,11 +809,7 @@ by creating a research management system with semantic capacities based on seman
     <!-- http://purl.org/roh/es#GeneracionConocimiento -->
 
 
-    <owl:Class rdf:about="http://purl.org/roh/es#GeneracionConocimiento">
-        <rdfs:subClassOf rdf:resource="http://purl.org/roh/es#PlanEstatal2017-2020"/>
-        <rdfs:label xml:lang="es">Generación de Conocimiento</rdfs:label>
-        <rdfs:label xml:lang="en">Knowledge Generation</rdfs:label>
-    </owl:Class>
+    <owl:Class rdf:about="http://purl.org/roh/es#GeneracionConocimiento"/>
     
 
 
@@ -1083,16 +1059,6 @@ by creating a research management system with semantic capacities based on seman
     
 
 
-    <!-- http://purl.org/roh/es#Movilidad -->
-
-
-    <owl:Class rdf:about="http://purl.org/roh/es#Movilidad">
-        <rdfs:subClassOf rdf:resource="http://purl.org/roh/es#FormacionTalento"/>
-        <owl:disjointWith rdf:resource="http://purl.org/roh/es#FormacionI+D+i"/>
-    </owl:Class>
-    
-
-
     <!-- http://purl.org/roh/es#OtrasComunicaciones -->
 
 
@@ -1201,25 +1167,6 @@ by creating a research management system with semantic capacities based on seman
     
 
 
-    <!-- http://purl.org/roh/es#PlanEstatal2013-2016 -->
-
-
-    <owl:Class rdf:about="http://purl.org/roh/es#PlanEstatal2013-2016">
-        <rdfs:subClassOf rdf:resource="http://purl.org/roh/project-classification#National"/>
-        <owl:disjointWith rdf:resource="http://purl.org/roh/es#PlanEstatal2017-2020"/>
-    </owl:Class>
-    
-
-
-    <!-- http://purl.org/roh/es#PlanEstatal2017-2020 -->
-
-
-    <owl:Class rdf:about="http://purl.org/roh/es#PlanEstatal2017-2020">
-        <rdfs:subClassOf rdf:resource="http://purl.org/roh/project-classification#National"/>
-    </owl:Class>
-    
-
-
     <!-- http://purl.org/roh/es#Prensa -->
 
 
@@ -1261,15 +1208,6 @@ by creating a research management system with semantic capacities based on seman
         <rdfs:subClassOf rdf:resource="http://purl.org/roh#AcademicAccreditation"/>
         <rdfs:label xml:lang="en">Private University Professor</rdfs:label>
         <rdfs:label xml:lang="es">Profesor de Universidad Privada</rdfs:label>
-    </owl:Class>
-    
-
-
-    <!-- http://purl.org/roh/es#PromocionTalento -->
-
-
-    <owl:Class rdf:about="http://purl.org/roh/es#PromocionTalento">
-        <rdfs:subClassOf rdf:resource="http://purl.org/roh/es#PlanEstatal2013-2016"/>
     </owl:Class>
     
 
@@ -1534,44 +1472,6 @@ by creating a research management system with semantic capacities based on seman
     
 
 
-    <!-- http://purl.org/roh/es#SubprogramaEstatalFormacion -->
-
-
-    <owl:Class rdf:about="http://purl.org/roh/es#SubprogramaEstatalFormacion">
-        <rdfs:subClassOf rdf:resource="http://purl.org/roh/es#PromocionTalento"/>
-        <owl:disjointWith rdf:resource="http://purl.org/roh/es#SubprogramaEstatalIncorporacion"/>
-    </owl:Class>
-    
-
-
-    <!-- http://purl.org/roh/es#SubprogramaEstatalIncorporacion -->
-
-
-    <owl:Class rdf:about="http://purl.org/roh/es#SubprogramaEstatalIncorporacion">
-        <rdfs:subClassOf rdf:resource="http://purl.org/roh/es#PromocionTalento"/>
-    </owl:Class>
-    
-
-
-    <!-- http://purl.org/roh/es#SubprogramaFortalecimientoInstitucional -->
-
-
-    <owl:Class rdf:about="http://purl.org/roh/es#SubprogramaFortalecimientoInstitucional">
-        <rdfs:subClassOf rdf:resource="http://purl.org/roh/es#FomentoInvestigacionCientificoTecnica"/>
-        <owl:disjointWith rdf:resource="http://purl.org/roh/es#SubprogramaGeneracionConocimiento"/>
-    </owl:Class>
-    
-
-
-    <!-- http://purl.org/roh/es#SubprogramaGeneracionConocimiento -->
-
-
-    <owl:Class rdf:about="http://purl.org/roh/es#SubprogramaGeneracionConocimiento">
-        <rdfs:subClassOf rdf:resource="http://purl.org/roh/es#FomentoInvestigacionCientificoTecnica"/>
-    </owl:Class>
-    
-
-
     <!-- http://purl.org/roh/es#Suministros -->
 
 
@@ -1726,15 +1626,6 @@ by creating a research management system with semantic capacities based on seman
         </rdfs:subClassOf>
         <rdfs:label xml:lang="en">Local taxes</rdfs:label>
         <rdfs:label xml:lang="es">Tributos de carácter local</rdfs:label>
-    </owl:Class>
-    
-
-
-    <!-- http://purl.org/roh/es#FormacionI+D+i -->
-
-
-    <owl:Class rdf:about="http://purl.org/roh/es#FormacionI+D+i">
-        <rdfs:subClassOf rdf:resource="http://purl.org/roh/es#FormacionTalento"/>
     </owl:Class>
     
 

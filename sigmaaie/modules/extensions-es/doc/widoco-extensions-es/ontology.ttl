@@ -23,7 +23,7 @@ Therefore, the purpose of this agreement was to contribute to the improvement of
     efficiency in the management of research. 
 
 by creating a research management system with semantic capacities based on semantic open data and that will provide a global view of the research data contained in the Spanish University System."""@en ;
-                           rdfs:label "ROH Spanish Extensions Modules"@en .
+                           rdfs:label "ROH Spanish Extensions Module"@en .
 
 #################################################################
 #    Annotation properties
@@ -467,18 +467,6 @@ by creating a research management system with semantic capacities based on seman
                                "Área de Conocimiento de FECYT"@es .
 
 
-###  http://purl.org/roh/es#FomentoInvestigacionCientificoTecnica
-:FomentoInvestigacionCientificoTecnica rdf:type owl:Class ;
-                                       rdfs:subClassOf :PlanEstatal2013-2016 ;
-                                       owl:disjointWith :PromocionTalento .
-
-
-###  http://purl.org/roh/es#FormacionTalento
-:FormacionTalento rdf:type owl:Class ;
-                  rdfs:subClassOf :PlanEstatal2017-2020 ;
-                  owl:disjointWith :GeneracionConocimiento .
-
-
 ###  http://purl.org/roh/es#Gas
 :Gas rdf:type owl:Class ;
      rdfs:subClassOf :Suministros ,
@@ -509,10 +497,7 @@ by creating a research management system with semantic capacities based on seman
 
 
 ###  http://purl.org/roh/es#GeneracionConocimiento
-:GeneracionConocimiento rdf:type owl:Class ;
-                        rdfs:subClassOf :PlanEstatal2017-2020 ;
-                        rdfs:label "Generación de Conocimiento"@es ,
-                                   "Knowledge Generation"@en .
+:GeneracionConocimiento rdf:type owl:Class .
 
 
 ###  http://purl.org/roh/es#IRNR
@@ -673,12 +658,6 @@ by creating a research management system with semantic capacities based on seman
                               "Mobiliario"@es .
 
 
-###  http://purl.org/roh/es#Movilidad
-:Movilidad rdf:type owl:Class ;
-           rdfs:subClassOf :FormacionTalento ;
-           owl:disjointWith <http://purl.org/roh/es#FormacionI+D+i> .
-
-
 ###  http://purl.org/roh/es#OtrasComunicaciones
 :OtrasComunicaciones rdf:type owl:Class ;
                      rdfs:subClassOf :ComunicacionesYOtrosServicios ,
@@ -749,17 +728,6 @@ by creating a research management system with semantic capacities based on seman
                      "PÉRDIDAS PROCEDENTES DE ACTIVOS NO CORRIENTES, OTROS GASTOS DE GESTIÓN ORDINARIA Y GASTOS EXCEPCIONALES"@es .
 
 
-###  http://purl.org/roh/es#PlanEstatal2013-2016
-:PlanEstatal2013-2016 rdf:type owl:Class ;
-                      rdfs:subClassOf <http://purl.org/roh/project-classification#National> ;
-                      owl:disjointWith :PlanEstatal2017-2020 .
-
-
-###  http://purl.org/roh/es#PlanEstatal2017-2020
-:PlanEstatal2017-2020 rdf:type owl:Class ;
-                      rdfs:subClassOf <http://purl.org/roh/project-classification#National> .
-
-
 ###  http://purl.org/roh/es#Prensa
 :Prensa rdf:type owl:Class ;
         rdfs:subClassOf :ComunicacionesYOtrosServicios ,
@@ -787,11 +755,6 @@ by creating a research management system with semantic capacities based on seman
                             rdfs:subClassOf <http://purl.org/roh#AcademicAccreditation> ;
                             rdfs:label "Private University Professor"@en ,
                                        "Profesor de Universidad Privada"@es .
-
-
-###  http://purl.org/roh/es#PromocionTalento
-:PromocionTalento rdf:type owl:Class ;
-                  rdfs:subClassOf :PlanEstatal2013-2016 .
 
 
 ###  http://purl.org/roh/es#PropiedadIndustrial
@@ -962,28 +925,6 @@ by creating a research management system with semantic capacities based on seman
                     "Sexennial"@en .
 
 
-###  http://purl.org/roh/es#SubprogramaEstatalFormacion
-:SubprogramaEstatalFormacion rdf:type owl:Class ;
-                             rdfs:subClassOf :PromocionTalento ;
-                             owl:disjointWith :SubprogramaEstatalIncorporacion .
-
-
-###  http://purl.org/roh/es#SubprogramaEstatalIncorporacion
-:SubprogramaEstatalIncorporacion rdf:type owl:Class ;
-                                 rdfs:subClassOf :PromocionTalento .
-
-
-###  http://purl.org/roh/es#SubprogramaFortalecimientoInstitucional
-:SubprogramaFortalecimientoInstitucional rdf:type owl:Class ;
-                                         rdfs:subClassOf :FomentoInvestigacionCientificoTecnica ;
-                                         owl:disjointWith :SubprogramaGeneracionConocimiento .
-
-
-###  http://purl.org/roh/es#SubprogramaGeneracionConocimiento
-:SubprogramaGeneracionConocimiento rdf:type owl:Class ;
-                                   rdfs:subClassOf :FomentoInvestigacionCientificoTecnica .
-
-
 ###  http://purl.org/roh/es#Suministros
 :Suministros rdf:type owl:Class ;
              rdfs:subClassOf :ServiciosExteriores ,
@@ -1084,11 +1025,6 @@ by creating a research management system with semantic capacities based on seman
                                  ] ;
                  rdfs:label "Local taxes"@en ,
                             "Tributos de carácter local"@es .
-
-
-###  http://purl.org/roh/es#FormacionI+D+i
-<http://purl.org/roh/es#FormacionI+D+i> rdf:type owl:Class ;
-                                        rdfs:subClassOf :FormacionTalento .
 
 
 ###  http://purl.org/roh/mirror/vivo#DateTimeInterval

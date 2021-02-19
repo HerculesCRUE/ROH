@@ -73,22 +73,38 @@ by creating a research management system with semantic capacities based on seman
 #    Classes
 #################################################################
 
-###  http://purl.org/roh/mirror/vivo#AcademicPosition
-<http://purl.org/roh/mirror/vivo#AcademicPosition> rdf:type owl:Class .
-
-
 ###  http://purl.org/roh/mirror/vivo#FacultyAdministrativePosition
 <http://purl.org/roh/mirror/vivo#FacultyAdministrativePosition> rdf:type owl:Class ;
-                                                                rdfs:label "Faculty Administrative Position"@en .
+                                                                rdfs:subClassOf <http://purl.org/roh/mirror/vivo#Position> ;
+                                                                rdfs:label "Faculty Administrative Position"@en ,
+                                                                           "Posición Administrativa en Facultad"@es .
 
 
 ###  http://purl.org/roh/mirror/vivo#FacultyPosition
-<http://purl.org/roh/mirror/vivo#FacultyPosition> rdf:type owl:Class .
+<http://purl.org/roh/mirror/vivo#FacultyPosition> rdf:type owl:Class ;
+                                                  rdfs:subClassOf <http://purl.org/roh/mirror/vivo#Position> ;
+                                                  rdfs:label "Faculty Position"@en ,
+                                                             "Posición en Facultad"@es .
 
 
 ###  http://purl.org/roh/mirror/vivo#NonAcademicPosition
 <http://purl.org/roh/mirror/vivo#NonAcademicPosition> rdf:type owl:Class ;
-                                                      rdfs:label "Non-Academic Position"@en .
+                                                      rdfs:subClassOf <http://purl.org/roh/mirror/vivo#Position> ;
+                                                      rdfs:label "Non-Academic Position"@en ,
+                                                                 "Posición no Académica"@es .
+
+
+###  http://purl.org/roh/mirror/vivo#NonFacultyAcademicPosition
+<http://purl.org/roh/mirror/vivo#NonFacultyAcademicPosition> rdf:type owl:Class ;
+                                                             rdfs:subClassOf <http://purl.org/roh/mirror/vivo#Position> ;
+                                                             rdfs:label "Non-Faculty Academic Position"@en ,
+                                                                        "Posición Académica no de Facultad"@es .
+
+
+###  http://purl.org/roh/mirror/vivo#Position
+<http://purl.org/roh/mirror/vivo#Position> rdf:type owl:Class ;
+                                           rdfs:label "Posición"@es ,
+                                                      "Position"@en .
 
 
 ###  http://purl.org/roh/university-hr/es#Ayudante
@@ -235,7 +251,7 @@ by creating a research management system with semantic capacities based on seman
 
 ###  http://purl.org/roh/university-hr/es#ES_UNIVERSITY_HR_ESLI
 :ES_UNIVERSITY_HR_ESLI rdf:type owl:Class ;
-                       rdfs:subClassOf <http://purl.org/roh/mirror/vivo#AcademicPosition> ;
+                       rdfs:subClassOf <http://purl.org/roh/mirror/vivo#NonFacultyAcademicPosition> ;
                        <http://purl.org/roh#country> <http://publications.europa.eu/resource/authority/country/ESP> ;
                        <http://purl.org/roh#hasCode> :ES_UNIVERSITY_HR_CODE_ESLI ;
                        rdfs:label "Investigador"@es ;

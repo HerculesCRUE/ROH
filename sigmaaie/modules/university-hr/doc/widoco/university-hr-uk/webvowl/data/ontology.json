@@ -2,7 +2,7 @@
   "_comment" : "Created with OWL2VOWL (version 0.3.5), http://vowl.visualdataweb.org",
   "header" : {
     "languages" : [ "ast", "pt", "gl", "en", "fr", "es", "ca", "undefined" ],
-    "baseIris" : [ "http://purl.org/roh/university-hr/uk", "http://www.w3.org/1999/02/22-rdf-syntax-ns", "http://purl.org/roh/mirror/vivo", "http://www.w3.org/2000/01/rdf-schema", "http://www.w3.org/2001/XMLSchema", "http://www.w3.org/2004/02/skos/core" ],
+    "baseIris" : [ "http://purl.org/roh/university-hr/uk", "http://www.w3.org/1999/02/22-rdf-syntax-ns", "http://purl.org/roh/mirror/vivo", "http://www.w3.org/2000/01/rdf-schema", "http://www.w3.org/2001/XMLSchema", "http://purl.org/roh", "http://www.w3.org/2004/02/skos/core" ],
     "iri" : "http://purl.org/roh/university-hr/uk",
     "labels" : {
       "en" : "ROH UK University HR Module"
@@ -27,16 +27,16 @@
     "id" : "11",
     "type" : "owl:Class"
   }, {
-    "id" : "13",
+    "id" : "12",
     "type" : "owl:Class"
   }, {
     "id" : "14",
     "type" : "owl:Class"
   }, {
-    "id" : "16",
+    "id" : "9",
     "type" : "owl:Class"
   }, {
-    "id" : "9",
+    "id" : "16",
     "type" : "owl:Class"
   }, {
     "id" : "17",
@@ -45,61 +45,61 @@
     "id" : "10",
     "type" : "owl:Class"
   }, {
-    "id" : "21",
+    "id" : "23",
     "type" : "owl:Class"
   }, {
-    "id" : "22",
-    "type" : "owl:Class"
-  }, {
-    "id" : "5",
-    "type" : "owl:Class"
-  }, {
-    "id" : "2",
-    "type" : "owl:Class"
-  }, {
-    "id" : "20",
-    "type" : "owl:Class"
-  }, {
-    "id" : "26",
-    "type" : "owl:Class"
-  }, {
-    "id" : "1",
-    "type" : "owl:Class"
-  }, {
-    "id" : "3",
-    "type" : "owl:Class"
-  }, {
-    "id" : "32",
-    "type" : "owl:Class"
-  }, {
-    "id" : "19",
-    "type" : "owl:Class"
-  }, {
-    "id" : "12",
-    "type" : "owl:Class"
-  }, {
-    "id" : "4",
-    "type" : "owl:Class"
-  }, {
-    "id" : "35",
-    "type" : "owl:Class"
-  }, {
-    "id" : "28",
-    "type" : "owl:Class"
-  }, {
-    "id" : "15",
-    "type" : "owl:Class"
-  }, {
-    "id" : "37",
+    "id" : "24",
     "type" : "owl:Class"
   }, {
     "id" : "6",
     "type" : "owl:Class"
   }, {
-    "id" : "8",
+    "id" : "3",
+    "type" : "owl:Class"
+  }, {
+    "id" : "1",
+    "type" : "owl:Class"
+  }, {
+    "id" : "20",
+    "type" : "owl:Class"
+  }, {
+    "id" : "2",
+    "type" : "owl:Class"
+  }, {
+    "id" : "4",
+    "type" : "owl:Class"
+  }, {
+    "id" : "32",
+    "type" : "owl:Class"
+  }, {
+    "id" : "13",
+    "type" : "owl:Class"
+  }, {
+    "id" : "38",
+    "type" : "owl:Class"
+  }, {
+    "id" : "5",
+    "type" : "owl:Class"
+  }, {
+    "id" : "30",
+    "type" : "owl:Class"
+  }, {
+    "id" : "34",
+    "type" : "owl:Class"
+  }, {
+    "id" : "15",
+    "type" : "owl:Class"
+  }, {
+    "id" : "36",
     "type" : "owl:Class"
   }, {
     "id" : "7",
+    "type" : "owl:Class"
+  }, {
+    "id" : "8",
+    "type" : "owl:Class"
+  }, {
+    "id" : "40",
     "type" : "owl:Class"
   } ],
   "classAttribute" : [ {
@@ -110,57 +110,10 @@
       "IRI-based" : "FacultyPosition",
       "en" : "Faculty Position"
     },
-    "subClasses" : [ "1", "2", "3", "4", "5", "6", "7", "8", "9", "10" ],
+    "subClasses" : [ "2", "3", "4", "5", "6", "7", "8", "9", "10" ],
     "attributes" : [ "external" ],
-    "id" : "0"
-  }, {
-    "iri" : "http://purl.org/roh/university-hr/uk#GB_UNIVERSITY_HR_GBRSENREAFEL",
-    "baseIri" : "http://purl.org/roh/university-hr/uk",
-    "instances" : 0,
-    "annotations" : {
-      "country" : [ {
-        "identifier" : "country",
-        "language" : "undefined",
-        "value" : "http://publications.europa.eu/resource/authority/country/GBR",
-        "type" : "iri"
-      } ],
-      "closeMatch" : [ {
-        "identifier" : "closeMatch",
-        "language" : "undefined",
-        "value" : "http://skos.um.es/unescothes/C03376",
-        "type" : "iri"
-      } ],
-      "inScheme" : [ {
-        "identifier" : "inScheme",
-        "language" : "undefined",
-        "value" : "http://purl.org/roh/university-hr/uk#GBUniversityHumanResourcesList",
-        "type" : "iri"
-      } ],
-      "hasCode" : [ {
-        "identifier" : "hasCode",
-        "language" : "undefined",
-        "value" : "http://purl.org/roh/university-hr/uk#GB_UNIVERSITY_HR_CODE_GBRSENREAFEL",
-        "type" : "iri"
-      } ],
-      "notation" : [ {
-        "identifier" : "notation",
-        "language" : "undefined",
-        "value" : "GBRSENREAFEL",
-        "type" : "label"
-      } ],
-      "prefLabel" : [ {
-        "identifier" : "prefLabel",
-        "language" : "en",
-        "value" : "Senior research fellow",
-        "type" : "label"
-      } ]
-    },
-    "label" : {
-      "IRI-based" : "GB_UNIVERSITY_HR_GBRSENREAFEL",
-      "en" : "Senior research fellow"
-    },
-    "id" : "11",
-    "superClasses" : [ "12" ]
+    "id" : "0",
+    "superClasses" : [ "1" ]
   }, {
     "iri" : "http://www.w3.org/2004/02/skos/core#Concept",
     "baseIri" : "http://www.w3.org/2004/02/skos/core",
@@ -359,33 +312,6 @@
         "undefined" : "GBPROVICCHAN"
       }
     }, {
-      "iri" : "http://purl.org/roh/university-hr/uk#GB_UNIVERSITY_HR_CODE_GBRREAFEL",
-      "baseIri" : "http://purl.org/roh/university-hr/uk",
-      "annotations" : {
-        "inScheme" : [ {
-          "identifier" : "inScheme",
-          "language" : "undefined",
-          "value" : "http://purl.org/roh/university-hr/uk#GBUniversityHumanResourcesCodesList",
-          "type" : "iri"
-        } ],
-        "prefLabel" : [ {
-          "identifier" : "prefLabel",
-          "language" : "undefined",
-          "value" : "GBRREAFEL",
-          "type" : "label"
-        } ],
-        "codeOf" : [ {
-          "identifier" : "codeOf",
-          "language" : "undefined",
-          "value" : "http://purl.org/roh/university-hr/uk#GB_UNIVERSITY_HR_GBRREAFEL",
-          "type" : "iri"
-        } ]
-      },
-      "labels" : {
-        "IRI-based" : "GB_UNIVERSITY_HR_CODE_GBRREAFEL",
-        "undefined" : "GBRREAFEL"
-      }
-    }, {
       "iri" : "http://purl.org/roh/university-hr/uk#GB_UNIVERSITY_HR_CODE_GBDEPDIR",
       "baseIri" : "http://purl.org/roh/university-hr/uk",
       "annotations" : {
@@ -411,6 +337,33 @@
       "labels" : {
         "IRI-based" : "GB_UNIVERSITY_HR_CODE_GBDEPDIR",
         "undefined" : "GBDEPDIR"
+      }
+    }, {
+      "iri" : "http://purl.org/roh/university-hr/uk#GB_UNIVERSITY_HR_CODE_GBRREAFEL",
+      "baseIri" : "http://purl.org/roh/university-hr/uk",
+      "annotations" : {
+        "inScheme" : [ {
+          "identifier" : "inScheme",
+          "language" : "undefined",
+          "value" : "http://purl.org/roh/university-hr/uk#GBUniversityHumanResourcesCodesList",
+          "type" : "iri"
+        } ],
+        "prefLabel" : [ {
+          "identifier" : "prefLabel",
+          "language" : "undefined",
+          "value" : "GBRREAFEL",
+          "type" : "label"
+        } ],
+        "codeOf" : [ {
+          "identifier" : "codeOf",
+          "language" : "undefined",
+          "value" : "http://purl.org/roh/university-hr/uk#GB_UNIVERSITY_HR_GBRREAFEL",
+          "type" : "iri"
+        } ]
+      },
+      "labels" : {
+        "IRI-based" : "GB_UNIVERSITY_HR_CODE_GBRREAFEL",
+        "undefined" : "GBRREAFEL"
       }
     }, {
       "iri" : "http://purl.org/roh/university-hr/uk#GB_UNIVERSITY_HR_CODE_GBVICCHAN",
@@ -548,33 +501,6 @@
         "undefined" : "GBRTSENLEC"
       }
     }, {
-      "iri" : "http://purl.org/roh/university-hr/uk#GB_UNIVERSITY_HR_CODE_GBRTREAD",
-      "baseIri" : "http://purl.org/roh/university-hr/uk",
-      "annotations" : {
-        "inScheme" : [ {
-          "identifier" : "inScheme",
-          "language" : "undefined",
-          "value" : "http://purl.org/roh/university-hr/uk#GBUniversityHumanResourcesCodesList",
-          "type" : "iri"
-        } ],
-        "prefLabel" : [ {
-          "identifier" : "prefLabel",
-          "language" : "undefined",
-          "value" : "GBRTREAD",
-          "type" : "label"
-        } ],
-        "codeOf" : [ {
-          "identifier" : "codeOf",
-          "language" : "undefined",
-          "value" : "http://purl.org/roh/university-hr/uk#GB_UNIVERSITY_HR_GBRTREAD",
-          "type" : "iri"
-        } ]
-      },
-      "labels" : {
-        "IRI-based" : "GB_UNIVERSITY_HR_CODE_GBRTREAD",
-        "undefined" : "GBRTREAD"
-      }
-    }, {
       "iri" : "http://purl.org/roh/university-hr/uk#GB_UNIVERSITY_HR_CODE_GBRTPROF",
       "baseIri" : "http://purl.org/roh/university-hr/uk",
       "annotations" : {
@@ -600,6 +526,33 @@
       "labels" : {
         "IRI-based" : "GB_UNIVERSITY_HR_CODE_GBRTPROF",
         "undefined" : "GBRTPROF"
+      }
+    }, {
+      "iri" : "http://purl.org/roh/university-hr/uk#GB_UNIVERSITY_HR_CODE_GBRTREAD",
+      "baseIri" : "http://purl.org/roh/university-hr/uk",
+      "annotations" : {
+        "inScheme" : [ {
+          "identifier" : "inScheme",
+          "language" : "undefined",
+          "value" : "http://purl.org/roh/university-hr/uk#GBUniversityHumanResourcesCodesList",
+          "type" : "iri"
+        } ],
+        "prefLabel" : [ {
+          "identifier" : "prefLabel",
+          "language" : "undefined",
+          "value" : "GBRTREAD",
+          "type" : "label"
+        } ],
+        "codeOf" : [ {
+          "identifier" : "codeOf",
+          "language" : "undefined",
+          "value" : "http://purl.org/roh/university-hr/uk#GB_UNIVERSITY_HR_GBRTREAD",
+          "type" : "iri"
+        } ]
+      },
+      "labels" : {
+        "IRI-based" : "GB_UNIVERSITY_HR_CODE_GBRTREAD",
+        "undefined" : "GBRTREAD"
       }
     }, {
       "iri" : "http://purl.org/roh/university-hr/uk#GB_UNIVERSITY_HR_CODE_GBRTLEC",
@@ -738,7 +691,55 @@
       }
     } ],
     "attributes" : [ "external" ],
-    "id" : "13"
+    "id" : "11"
+  }, {
+    "iri" : "http://purl.org/roh/university-hr/uk#GB_UNIVERSITY_HR_GBRSENREAFEL",
+    "baseIri" : "http://purl.org/roh/university-hr/uk",
+    "instances" : 0,
+    "annotations" : {
+      "country" : [ {
+        "identifier" : "country",
+        "language" : "undefined",
+        "value" : "http://publications.europa.eu/resource/authority/country/GBR",
+        "type" : "iri"
+      } ],
+      "closeMatch" : [ {
+        "identifier" : "closeMatch",
+        "language" : "undefined",
+        "value" : "http://skos.um.es/unescothes/C03376",
+        "type" : "iri"
+      } ],
+      "inScheme" : [ {
+        "identifier" : "inScheme",
+        "language" : "undefined",
+        "value" : "http://purl.org/roh/university-hr/uk#GBUniversityHumanResourcesList",
+        "type" : "iri"
+      } ],
+      "hasCode" : [ {
+        "identifier" : "hasCode",
+        "language" : "undefined",
+        "value" : "http://purl.org/roh/university-hr/uk#GB_UNIVERSITY_HR_CODE_GBRSENREAFEL",
+        "type" : "iri"
+      } ],
+      "notation" : [ {
+        "identifier" : "notation",
+        "language" : "undefined",
+        "value" : "GBRSENREAFEL",
+        "type" : "label"
+      } ],
+      "prefLabel" : [ {
+        "identifier" : "prefLabel",
+        "language" : "en",
+        "value" : "Senior research fellow",
+        "type" : "label"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "GB_UNIVERSITY_HR_GBRSENREAFEL",
+      "en" : "Senior research fellow"
+    },
+    "id" : "12",
+    "superClasses" : [ "13" ]
   }, {
     "iri" : "http://purl.org/roh/university-hr/uk#GB_UNIVERSITY_HR_GBDEAN",
     "baseIri" : "http://purl.org/roh/university-hr/uk",
@@ -782,6 +783,65 @@
     "id" : "14",
     "superClasses" : [ "15" ]
   }, {
+    "iri" : "http://purl.org/roh/university-hr/uk#GB_UNIVERSITY_HR_GBRTREAD",
+    "baseIri" : "http://purl.org/roh/university-hr/uk",
+    "instances" : 0,
+    "annotations" : {
+      "country" : [ {
+        "identifier" : "country",
+        "language" : "undefined",
+        "value" : "http://publications.europa.eu/resource/authority/country/GBR",
+        "type" : "iri"
+      } ],
+      "closeMatch" : [ {
+        "identifier" : "closeMatch",
+        "language" : "undefined",
+        "value" : "http://skos.um.es/unescothes/C03965",
+        "type" : "iri"
+      }, {
+        "identifier" : "closeMatch",
+        "language" : "undefined",
+        "value" : "http://skos.um.es/unescothes/C00015",
+        "type" : "iri"
+      } ],
+      "inScheme" : [ {
+        "identifier" : "inScheme",
+        "language" : "undefined",
+        "value" : "http://purl.org/roh/university-hr/uk#GBUniversityHumanResourcesList",
+        "type" : "iri"
+      } ],
+      "hasCode" : [ {
+        "identifier" : "hasCode",
+        "language" : "undefined",
+        "value" : "http://purl.org/roh/university-hr/uk#GB_UNIVERSITY_HR_CODE_GBRTREAD",
+        "type" : "iri"
+      } ],
+      "notation" : [ {
+        "identifier" : "notation",
+        "language" : "undefined",
+        "value" : "GBRTREAD",
+        "type" : "label"
+      } ],
+      "prefLabel" : [ {
+        "identifier" : "prefLabel",
+        "language" : "en",
+        "value" : "Reader",
+        "type" : "label"
+      } ],
+      "altLabel" : [ {
+        "identifier" : "altLabel",
+        "language" : "en",
+        "value" : "Principal lecturer",
+        "type" : "label"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "GB_UNIVERSITY_HR_GBRTREAD",
+      "en" : "Reader"
+    },
+    "id" : "9",
+    "superClasses" : [ "0" ]
+  }, {
     "iri" : "http://purl.org/roh/university-hr/uk#GB_UNIVERSITY_HR_GBPROVICCHAN",
     "baseIri" : "http://purl.org/roh/university-hr/uk",
     "instances" : 0,
@@ -823,65 +883,6 @@
     },
     "id" : "16",
     "superClasses" : [ "15" ]
-  }, {
-    "iri" : "http://purl.org/roh/university-hr/uk#GB_UNIVERSITY_HR_GBRTREAD",
-    "baseIri" : "http://purl.org/roh/university-hr/uk",
-    "instances" : 0,
-    "annotations" : {
-      "country" : [ {
-        "identifier" : "country",
-        "language" : "undefined",
-        "value" : "http://publications.europa.eu/resource/authority/country/GBR",
-        "type" : "iri"
-      } ],
-      "closeMatch" : [ {
-        "identifier" : "closeMatch",
-        "language" : "undefined",
-        "value" : "http://skos.um.es/unescothes/C00015",
-        "type" : "iri"
-      }, {
-        "identifier" : "closeMatch",
-        "language" : "undefined",
-        "value" : "http://skos.um.es/unescothes/C03965",
-        "type" : "iri"
-      } ],
-      "inScheme" : [ {
-        "identifier" : "inScheme",
-        "language" : "undefined",
-        "value" : "http://purl.org/roh/university-hr/uk#GBUniversityHumanResourcesList",
-        "type" : "iri"
-      } ],
-      "hasCode" : [ {
-        "identifier" : "hasCode",
-        "language" : "undefined",
-        "value" : "http://purl.org/roh/university-hr/uk#GB_UNIVERSITY_HR_CODE_GBRTREAD",
-        "type" : "iri"
-      } ],
-      "notation" : [ {
-        "identifier" : "notation",
-        "language" : "undefined",
-        "value" : "GBRTREAD",
-        "type" : "label"
-      } ],
-      "prefLabel" : [ {
-        "identifier" : "prefLabel",
-        "language" : "en",
-        "value" : "Reader",
-        "type" : "label"
-      } ],
-      "altLabel" : [ {
-        "identifier" : "altLabel",
-        "language" : "en",
-        "value" : "Principal lecturer",
-        "type" : "label"
-      } ]
-    },
-    "label" : {
-      "IRI-based" : "GB_UNIVERSITY_HR_GBRTREAD",
-      "en" : "Reader"
-    },
-    "id" : "9",
-    "superClasses" : [ "0" ]
   }, {
     "iri" : "http://purl.org/roh/university-hr/uk#GB_UNIVERSITY_HR_GBCHAN",
     "baseIri" : "http://purl.org/roh/university-hr/uk",
@@ -991,13 +992,13 @@
       "annotations" : {
         "prefLabel" : [ {
           "identifier" : "prefLabel",
-          "language" : "ast",
-          "value" : "Recursos humanos de les universidaes del Reinu Xuníu",
+          "language" : "es",
+          "value" : "Recursos humanos de las universidades del Reino Unido",
           "type" : "label"
         }, {
           "identifier" : "prefLabel",
-          "language" : "gl",
-          "value" : "Recursos humanos das universidades do Reino Unido",
+          "language" : "fr",
+          "value" : "Resources humains des universités du Royaume Uni",
           "type" : "label"
         }, {
           "identifier" : "prefLabel",
@@ -1006,8 +1007,13 @@
           "type" : "label"
         }, {
           "identifier" : "prefLabel",
-          "language" : "es",
-          "value" : "Recursos humanos de las universidades del Reino Unido",
+          "language" : "ca",
+          "value" : "Recursos humans de les universitats del Regne Unit",
+          "type" : "label"
+        }, {
+          "identifier" : "prefLabel",
+          "language" : "ast",
+          "value" : "Recursos humanos de les universidaes del Reinu Xuníu",
           "type" : "label"
         }, {
           "identifier" : "prefLabel",
@@ -1016,13 +1022,8 @@
           "type" : "label"
         }, {
           "identifier" : "prefLabel",
-          "language" : "ca",
-          "value" : "Recursos humans de les universitats del Regne Unit",
-          "type" : "label"
-        }, {
-          "identifier" : "prefLabel",
-          "language" : "fr",
-          "value" : "Resources humains des universités du Royaume Uni",
+          "language" : "gl",
+          "value" : "Recursos humanos das universidades do Reino Unido",
           "type" : "label"
         } ]
       },
@@ -1042,13 +1043,8 @@
       "annotations" : {
         "prefLabel" : [ {
           "identifier" : "prefLabel",
-          "language" : "es",
-          "value" : "Códigos de los recursos humanos de las universidades del Reino Unido",
-          "type" : "label"
-        }, {
-          "identifier" : "prefLabel",
-          "language" : "en",
-          "value" : "Codes for the human resources of the universities from the United Kingdom",
+          "language" : "fr",
+          "value" : "Codes des resources humains des universités du Royaume Uni",
           "type" : "label"
         }, {
           "identifier" : "prefLabel",
@@ -1057,8 +1053,8 @@
           "type" : "label"
         }, {
           "identifier" : "prefLabel",
-          "language" : "fr",
-          "value" : "Codes des resources humains des universités du Royaume Uni",
+          "language" : "en",
+          "value" : "Codes for the human resources of the universities from the United Kingdom",
           "type" : "label"
         }, {
           "identifier" : "prefLabel",
@@ -1067,13 +1063,18 @@
           "type" : "label"
         }, {
           "identifier" : "prefLabel",
-          "language" : "ca",
-          "value" : "Codis dels recursos humans de les universitats del Regne Unit",
+          "language" : "es",
+          "value" : "Códigos de los recursos humanos de las universidades del Reino Unido",
           "type" : "label"
         }, {
           "identifier" : "prefLabel",
           "language" : "gl",
           "value" : "Códigos dos recursos humanos das universidades do Reino Unido",
+          "type" : "label"
+        }, {
+          "identifier" : "prefLabel",
+          "language" : "ca",
+          "value" : "Codis dels recursos humans de les universitats del Regne Unit",
           "type" : "label"
         } ]
       },
@@ -1084,12 +1085,12 @@
         "gl" : "Códigos dos recursos humanos das universidades do Reino Unido",
         "en" : "Codes for the human resources of the universities from the United Kingdom",
         "fr" : "Codes des resources humains des universités du Royaume Uni",
-        "es" : "Códigos de los recursos humanos de las universidades del Reino Unido",
-        "ca" : "Codis dels recursos humans de les universitats del Regne Unit"
+        "ca" : "Codis dels recursos humans de les universitats del Regne Unit",
+        "es" : "Códigos de los recursos humanos de las universidades del Reino Unido"
       }
     } ],
     "attributes" : [ "external" ],
-    "id" : "21"
+    "id" : "23"
   }, {
     "iri" : "http://purl.org/roh/university-hr/uk#GB_UNIVERSITY_HR_GBVICCHAN",
     "baseIri" : "http://purl.org/roh/university-hr/uk",
@@ -1136,7 +1137,7 @@
       "IRI-based" : "GB_UNIVERSITY_HR_GBVICCHAN",
       "en" : "Vice-chancellor"
     },
-    "id" : "22",
+    "id" : "24",
     "superClasses" : [ "15" ]
   }, {
     "iri" : "http://purl.org/roh/university-hr/uk#GB_UNIVERSITY_HR_GBRTSENLEC",
@@ -1189,7 +1190,7 @@
       "IRI-based" : "GB_UNIVERSITY_HR_GBRTSENLEC",
       "en" : "Senior lecturer"
     },
-    "id" : "5",
+    "id" : "6",
     "superClasses" : [ "0" ]
   }, {
     "iri" : "http://purl.org/roh/university-hr/uk#GB_UNIVERSITY_HR_GBEPROF",
@@ -1202,6 +1203,12 @@
         "value" : "http://publications.europa.eu/resource/authority/country/GBR",
         "type" : "iri"
       } ],
+      "inScheme" : [ {
+        "identifier" : "inScheme",
+        "language" : "undefined",
+        "value" : "http://purl.org/roh/university-hr/uk#GBUniversityHumanResourcesList",
+        "type" : "iri"
+      } ],
       "closeMatch" : [ {
         "identifier" : "closeMatch",
         "language" : "undefined",
@@ -1211,12 +1218,6 @@
         "identifier" : "closeMatch",
         "language" : "undefined",
         "value" : "http://skos.um.es/unescothes/C00015",
-        "type" : "iri"
-      } ],
-      "inScheme" : [ {
-        "identifier" : "inScheme",
-        "language" : "undefined",
-        "value" : "http://purl.org/roh/university-hr/uk#GBUniversityHumanResourcesList",
         "type" : "iri"
       } ],
       "hasCode" : [ {
@@ -1242,7 +1243,7 @@
       "IRI-based" : "GB_UNIVERSITY_HR_GBEPROF",
       "en" : "Emeritus professor"
     },
-    "id" : "2",
+    "id" : "3",
     "superClasses" : [ "0" ]
   }, {
     "iri" : "http://purl.org/roh/mirror/vivo#Position",
@@ -1252,9 +1253,9 @@
       "IRI-based" : "Position",
       "en" : "Position"
     },
-    "subClasses" : [ "19" ],
+    "subClasses" : [ "0", "13", "15" ],
     "attributes" : [ "external" ],
-    "id" : "20"
+    "id" : "1"
   }, {
     "iri" : "http://purl.org/roh/university-hr/uk#GB_UNIVERSITY_HR_GBDEPDIR",
     "baseIri" : "http://purl.org/roh/university-hr/uk",
@@ -1301,7 +1302,7 @@
       "IRI-based" : "GB_UNIVERSITY_HR_GBDEPDIR",
       "en" : "Department director of studies"
     },
-    "id" : "26",
+    "id" : "20",
     "superClasses" : [ "15" ]
   }, {
     "iri" : "http://purl.org/roh/university-hr/uk#GB_UNIVERSITY_HR_GBRTLEC",
@@ -1314,12 +1315,6 @@
         "value" : "http://publications.europa.eu/resource/authority/country/GBR",
         "type" : "iri"
       } ],
-      "inScheme" : [ {
-        "identifier" : "inScheme",
-        "language" : "undefined",
-        "value" : "http://purl.org/roh/university-hr/uk#GBUniversityHumanResourcesList",
-        "type" : "iri"
-      } ],
       "closeMatch" : [ {
         "identifier" : "closeMatch",
         "language" : "undefined",
@@ -1329,6 +1324,12 @@
         "identifier" : "closeMatch",
         "language" : "undefined",
         "value" : "http://skos.um.es/unescothes/C03965",
+        "type" : "iri"
+      } ],
+      "inScheme" : [ {
+        "identifier" : "inScheme",
+        "language" : "undefined",
+        "value" : "http://purl.org/roh/university-hr/uk#GBUniversityHumanResourcesList",
         "type" : "iri"
       } ],
       "hasCode" : [ {
@@ -1354,7 +1355,7 @@
       "IRI-based" : "GB_UNIVERSITY_HR_GBRTLEC",
       "en" : "Lecturer"
     },
-    "id" : "1",
+    "id" : "2",
     "superClasses" : [ "0" ]
   }, {
     "iri" : "http://purl.org/roh/university-hr/uk#GB_UNIVERSITY_HR_GBRTPROF",
@@ -1370,12 +1371,12 @@
       "closeMatch" : [ {
         "identifier" : "closeMatch",
         "language" : "undefined",
-        "value" : "http://skos.um.es/unescothes/C03965",
+        "value" : "http://skos.um.es/unescothes/C00015",
         "type" : "iri"
       }, {
         "identifier" : "closeMatch",
         "language" : "undefined",
-        "value" : "http://skos.um.es/unescothes/C00015",
+        "value" : "http://skos.um.es/unescothes/C03965",
         "type" : "iri"
       } ],
       "inScheme" : [ {
@@ -1407,7 +1408,7 @@
       "IRI-based" : "GB_UNIVERSITY_HR_GBRTPROF",
       "en" : "Professor"
     },
-    "id" : "3",
+    "id" : "4",
     "superClasses" : [ "0" ]
   }, {
     "iri" : "http://purl.org/roh/university-hr/uk#GB_UNIVERSITY_HR_GBHEADDEP",
@@ -1458,6 +1459,18 @@
     "id" : "32",
     "superClasses" : [ "15" ]
   }, {
+    "iri" : "http://purl.org/roh#ResearcherPosition",
+    "baseIri" : "http://purl.org/roh",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "ResearcherPosition",
+      "en" : "Researcher Position"
+    },
+    "subClasses" : [ "12", "36", "40", "38" ],
+    "attributes" : [ "external" ],
+    "id" : "13",
+    "superClasses" : [ "1" ]
+  }, {
     "iri" : "http://purl.org/roh/university-hr/uk#GB_UNIVERSITY_HR_GBRREAASS",
     "baseIri" : "http://purl.org/roh/university-hr/uk",
     "instances" : 0,
@@ -1503,19 +1516,8 @@
       "IRI-based" : "GB_UNIVERSITY_HR_GBRREAASS",
       "en" : "Research assistant"
     },
-    "id" : "19",
-    "superClasses" : [ "20" ]
-  }, {
-    "iri" : "http://purl.org/roh/mirror/vivo#AcademicPosition",
-    "baseIri" : "http://purl.org/roh/mirror/vivo",
-    "instances" : 0,
-    "label" : {
-      "IRI-based" : "AcademicPosition",
-      "en" : "Academic Position"
-    },
-    "subClasses" : [ "11", "37" ],
-    "attributes" : [ "external" ],
-    "id" : "12"
+    "id" : "38",
+    "superClasses" : [ "13" ]
   }, {
     "iri" : "http://purl.org/roh/university-hr/uk#GB_UNIVERSITY_HR_GBRTCLLEC",
     "baseIri" : "http://purl.org/roh/university-hr/uk",
@@ -1530,12 +1532,12 @@
       "closeMatch" : [ {
         "identifier" : "closeMatch",
         "language" : "undefined",
-        "value" : "http://skos.um.es/unescothes/C03965",
+        "value" : "http://skos.um.es/unescothes/C00015",
         "type" : "iri"
       }, {
         "identifier" : "closeMatch",
         "language" : "undefined",
-        "value" : "http://skos.um.es/unescothes/C00015",
+        "value" : "http://skos.um.es/unescothes/C03965",
         "type" : "iri"
       } ],
       "inScheme" : [ {
@@ -1567,7 +1569,7 @@
       "IRI-based" : "GB_UNIVERSITY_HR_GBRTCLLEC",
       "en" : "Clinical lecturer"
     },
-    "id" : "4",
+    "id" : "5",
     "superClasses" : [ "0" ]
   }, {
     "iri" : "http://purl.org/roh/university-hr/uk#GB_UNIVERSITY_HR_GBPROCHAN",
@@ -1609,7 +1611,7 @@
       "IRI-based" : "GB_UNIVERSITY_HR_GBPROCHAN",
       "en" : "Pro-chancellor"
     },
-    "id" : "35",
+    "id" : "30",
     "superClasses" : [ "15" ]
   }, {
     "iri" : "http://purl.org/roh/university-hr/uk#GB_UNIVERSITY_HR_GBDEPVICHAN",
@@ -1651,7 +1653,7 @@
       "IRI-based" : "GB_UNIVERSITY_HR_GBDEPVICHAN",
       "en" : "Deputy vice-chancellor"
     },
-    "id" : "28",
+    "id" : "34",
     "superClasses" : [ "15" ]
   }, {
     "iri" : "http://purl.org/roh/mirror/vivo#FacultyAdministrativePosition",
@@ -1661,9 +1663,10 @@
       "IRI-based" : "FacultyAdministrativePosition",
       "en" : "Faculty Administrative Position"
     },
-    "subClasses" : [ "35", "22", "28", "32", "14", "16", "17", "26" ],
+    "subClasses" : [ "30", "24", "34", "32", "14", "16", "17", "20" ],
     "attributes" : [ "external" ],
-    "id" : "15"
+    "id" : "15",
+    "superClasses" : [ "1" ]
   }, {
     "iri" : "http://purl.org/roh/university-hr/uk#GB_UNIVERSITY_HR_GBRREAFEL",
     "baseIri" : "http://purl.org/roh/university-hr/uk",
@@ -1675,16 +1678,16 @@
         "value" : "http://publications.europa.eu/resource/authority/country/GBR",
         "type" : "iri"
       } ],
-      "inScheme" : [ {
-        "identifier" : "inScheme",
-        "language" : "undefined",
-        "value" : "http://purl.org/roh/university-hr/uk#GBUniversityHumanResourcesList",
-        "type" : "iri"
-      } ],
       "closeMatch" : [ {
         "identifier" : "closeMatch",
         "language" : "undefined",
         "value" : "http://skos.um.es/unescothes/C03376",
+        "type" : "iri"
+      } ],
+      "inScheme" : [ {
+        "identifier" : "inScheme",
+        "language" : "undefined",
+        "value" : "http://purl.org/roh/university-hr/uk#GBUniversityHumanResourcesList",
         "type" : "iri"
       } ],
       "hasCode" : [ {
@@ -1710,8 +1713,8 @@
       "IRI-based" : "GB_UNIVERSITY_HR_GBRREAFEL",
       "en" : "Research fellow"
     },
-    "id" : "37",
-    "superClasses" : [ "12" ]
+    "id" : "36",
+    "superClasses" : [ "13" ]
   }, {
     "iri" : "http://purl.org/roh/university-hr/uk#GB_UNIVERSITY_HR_GBEREAD",
     "baseIri" : "http://purl.org/roh/university-hr/uk",
@@ -1763,7 +1766,7 @@
       "IRI-based" : "GB_UNIVERSITY_HR_GBEREAD",
       "en" : "Emeritus reader"
     },
-    "id" : "6",
+    "id" : "7",
     "superClasses" : [ "0" ]
   }, {
     "iri" : "http://purl.org/roh/university-hr/uk#GB_UNIVERSITY_HR_GBRTASSLEC",
@@ -1843,12 +1846,12 @@
       }, {
         "identifier" : "closeMatch",
         "language" : "undefined",
-        "value" : "http://skos.um.es/unescothes/C03965",
+        "value" : "http://skos.um.es/unescothes/C03376",
         "type" : "iri"
       }, {
         "identifier" : "closeMatch",
         "language" : "undefined",
-        "value" : "http://skos.um.es/unescothes/C03376",
+        "value" : "http://skos.um.es/unescothes/C03965",
         "type" : "iri"
       } ],
       "inScheme" : [ {
@@ -1880,29 +1883,35 @@
       "IRI-based" : "GB_UNIVERSITY_HR_GBRPROF",
       "en" : "Professorial research fellow"
     },
-    "id" : "7",
-    "superClasses" : [ "0" ]
+    "id" : "40",
+    "superClasses" : [ "13" ]
   } ],
   "property" : [ {
     "id" : "18",
     "type" : "rdfs:SubClassOf"
   }, {
-    "id" : "23",
+    "id" : "19",
     "type" : "rdfs:SubClassOf"
   }, {
-    "id" : "24",
+    "id" : "21",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "22",
     "type" : "rdfs:SubClassOf"
   }, {
     "id" : "25",
     "type" : "rdfs:SubClassOf"
   }, {
+    "id" : "26",
+    "type" : "rdfs:SubClassOf"
+  }, {
     "id" : "27",
     "type" : "rdfs:SubClassOf"
   }, {
-    "id" : "29",
+    "id" : "28",
     "type" : "rdfs:SubClassOf"
   }, {
-    "id" : "30",
+    "id" : "29",
     "type" : "rdfs:SubClassOf"
   }, {
     "id" : "31",
@@ -1911,19 +1920,13 @@
     "id" : "33",
     "type" : "rdfs:SubClassOf"
   }, {
-    "id" : "34",
+    "id" : "35",
     "type" : "rdfs:SubClassOf"
   }, {
-    "id" : "36",
-    "type" : "rdfs:SubClassOf"
-  }, {
-    "id" : "38",
+    "id" : "37",
     "type" : "rdfs:SubClassOf"
   }, {
     "id" : "39",
-    "type" : "rdfs:SubClassOf"
-  }, {
-    "id" : "40",
     "type" : "rdfs:SubClassOf"
   }, {
     "id" : "41",
@@ -1946,111 +1949,135 @@
   }, {
     "id" : "47",
     "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "48",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "49",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "50",
+    "type" : "rdfs:SubClassOf"
   } ],
   "propertyAttribute" : [ {
-    "range" : "20",
-    "domain" : "19",
+    "range" : "1",
+    "domain" : "0",
     "attributes" : [ "object", "anonymous" ],
     "id" : "18"
   }, {
     "range" : "15",
-    "domain" : "17",
+    "domain" : "20",
     "attributes" : [ "object", "anonymous" ],
-    "id" : "23"
+    "id" : "19"
+  }, {
+    "range" : "1",
+    "domain" : "15",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "21"
+  }, {
+    "range" : "1",
+    "domain" : "13",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "22"
   }, {
     "range" : "15",
     "domain" : "16",
     "attributes" : [ "object", "anonymous" ],
-    "id" : "24"
-  }, {
-    "range" : "15",
-    "domain" : "26",
-    "attributes" : [ "object", "anonymous" ],
     "id" : "25"
-  }, {
-    "range" : "15",
-    "domain" : "28",
-    "attributes" : [ "object", "anonymous" ],
-    "id" : "27"
-  }, {
-    "range" : "15",
-    "domain" : "22",
-    "attributes" : [ "object", "anonymous" ],
-    "id" : "29"
   }, {
     "range" : "15",
     "domain" : "14",
     "attributes" : [ "object", "anonymous" ],
-    "id" : "30"
+    "id" : "26"
+  }, {
+    "range" : "15",
+    "domain" : "17",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "27"
+  }, {
+    "range" : "15",
+    "domain" : "24",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "28"
+  }, {
+    "range" : "15",
+    "domain" : "30",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "29"
   }, {
     "range" : "15",
     "domain" : "32",
     "attributes" : [ "object", "anonymous" ],
     "id" : "31"
   }, {
-    "range" : "12",
-    "domain" : "11",
+    "range" : "15",
+    "domain" : "34",
     "attributes" : [ "object", "anonymous" ],
     "id" : "33"
   }, {
-    "range" : "15",
-    "domain" : "35",
+    "range" : "13",
+    "domain" : "36",
     "attributes" : [ "object", "anonymous" ],
-    "id" : "34"
+    "id" : "35"
   }, {
-    "range" : "12",
-    "domain" : "37",
+    "range" : "13",
+    "domain" : "38",
     "attributes" : [ "object", "anonymous" ],
-    "id" : "36"
+    "id" : "37"
   }, {
-    "range" : "0",
-    "domain" : "3",
-    "attributes" : [ "object", "anonymous" ],
-    "id" : "38"
-  }, {
-    "range" : "0",
-    "domain" : "4",
+    "range" : "13",
+    "domain" : "40",
     "attributes" : [ "object", "anonymous" ],
     "id" : "39"
   }, {
     "range" : "0",
-    "domain" : "5",
-    "attributes" : [ "object", "anonymous" ],
-    "id" : "40"
-  }, {
-    "range" : "0",
-    "domain" : "6",
+    "domain" : "4",
     "attributes" : [ "object", "anonymous" ],
     "id" : "41"
   }, {
     "range" : "0",
-    "domain" : "7",
+    "domain" : "5",
     "attributes" : [ "object", "anonymous" ],
     "id" : "42"
   }, {
     "range" : "0",
-    "domain" : "8",
+    "domain" : "6",
     "attributes" : [ "object", "anonymous" ],
     "id" : "43"
   }, {
     "range" : "0",
-    "domain" : "9",
+    "domain" : "7",
     "attributes" : [ "object", "anonymous" ],
     "id" : "44"
   }, {
     "range" : "0",
-    "domain" : "10",
+    "domain" : "8",
     "attributes" : [ "object", "anonymous" ],
     "id" : "45"
   }, {
     "range" : "0",
-    "domain" : "1",
+    "domain" : "9",
     "attributes" : [ "object", "anonymous" ],
     "id" : "46"
   }, {
     "range" : "0",
-    "domain" : "2",
+    "domain" : "10",
     "attributes" : [ "object", "anonymous" ],
     "id" : "47"
+  }, {
+    "range" : "13",
+    "domain" : "12",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "48"
+  }, {
+    "range" : "0",
+    "domain" : "2",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "49"
+  }, {
+    "range" : "0",
+    "domain" : "3",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "50"
   } ]
 }
