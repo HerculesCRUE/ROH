@@ -56,10 +56,6 @@ rohp:National
 :code   a           owl:DatatypeProperty ;
         rdfs:label  "code"@en , "código"@es .
 
-:SubprogramaGeneracionConocimiento
-        a                owl:Class ;
-        rdfs:subClassOf  :FomentoInvestigacionCientificoTecnica .
-
 :Mobiliario  a           owl:Class ;
         rdfs:label       "Furniture"@en , "Mobiliario"@es ;
         rdfs:subClassOf  :InmovilizacionesMateriales ;
@@ -67,15 +63,6 @@ rohp:National
                            owl:hasValue    "216"^^xsd:int ;
                            owl:onProperty  :code
                          ] .
-
-:FomentoInvestigacionCientificoTecnica
-        a                 owl:Class ;
-        rdfs:subClassOf   :PlanEstatal2013-2016 ;
-        owl:disjointWith  :PromocionTalento .
-
-:SubprogramaEstatalIncorporacion
-        a                owl:Class ;
-        rdfs:subClassOf  :PromocionTalento .
 
 :ProfesorUniversidadPrivada
         a                owl:Class ;
@@ -306,11 +293,6 @@ iao:IAO_0000111  a  owl:AnnotationProperty .
                            owl:onProperty  :code
                          ] .
 
-:GeneracionConocimiento
-        a                owl:Class ;
-        rdfs:label       "Generación de Conocimiento"@es , "Knowledge Generation"@en ;
-        rdfs:subClassOf  :PlanEstatal2017-2020 .
-
 :OtrasComunicaciones  a  owl:Class ;
         rdfs:label       "Other communications"@en , "Otras comunicaciones"@es ;
         rdfs:subClassOf  :ComunicacionesYOtrosServicios ;
@@ -408,11 +390,6 @@ skos1:definition  a  owl:AnnotationProperty .
 
 iao:IAO_0000117  a  owl:AnnotationProperty .
 
-:SubprogramaFortalecimientoInstitucional
-        a                 owl:Class ;
-        rdfs:subClassOf   :FomentoInvestigacionCientificoTecnica ;
-        owl:disjointWith  :SubprogramaGeneracionConocimiento .
-
 :ReparacionOtroInmovilizadoMaterial
         a                owl:Class ;
         rdfs:label       "Other tangible fixed assets"@en , "Otro inmovilizado material"@es ;
@@ -458,11 +435,6 @@ iao:IAO_0000112  a  owl:AnnotationProperty .
                            owl:allValuesFrom  vivo:DateTimeInterval ;
                            owl:onProperty     vivo:dateTimeInterval
                          ] .
-
-:PlanEstatal2013-2016
-        a                 owl:Class ;
-        rdfs:subClassOf   rohp:National ;
-        owl:disjointWith  :PlanEstatal2017-2020 .
 
 [ a            owl:AllDisjointClasses ;
   owl:members  ( :BienesDelPatrimonioHistorico :Construcciones :ElementosDeTransporte :EquiposParaProcesosDeInformacion :InstalacionesTecnicas :MaquinariaYUtillaje :Mobiliario :OtroInmovilizadoMaterial :TerrenosYBienesNaturales )
@@ -560,11 +532,6 @@ iao:IAO_0000118  a  owl:AnnotationProperty .
 :GastosExcepcionales  a  owl:Class ;
         rdfs:label       "Exceptional expenses"@en , "Gastos excepcionales"@es ;
         rdfs:subClassOf  :Perdidas .
-
-:SubprogramaEstatalFormacion
-        a                 owl:Class ;
-        rdfs:subClassOf   :PromocionTalento ;
-        owl:disjointWith  :SubprogramaEstatalIncorporacion .
 
 :PropiedadIndustrial  a  owl:Class ;
         rdfs:label       "Industrial and intellectual property"@en , "Propiedad industrial e intelectual"@es ;
@@ -689,20 +656,9 @@ iao:IAO_0000118  a  owl:AnnotationProperty .
 
 obo:IAO_0000111  a  owl:AnnotationProperty .
 
-:PromocionTalento  a     owl:Class ;
-        rdfs:subClassOf  :PlanEstatal2013-2016 .
-
-:PlanEstatal2017-2020
-        a                owl:Class ;
-        rdfs:subClassOf  rohp:National .
-
 :AyudanteDoctor  a       owl:Class ;
         rdfs:label       "Assistant Doctor"@en , "Ayudante Doctor"@es ;
         rdfs:subClassOf  roh:AcademicAccreditation .
-
-:Movilidad  a             owl:Class ;
-        rdfs:subClassOf   :FormacionTalento ;
-        owl:disjointWith  <http://purl.org/roh/es#FormacionI+D+i> .
 
 :TributosLocales  a      owl:Class ;
         rdfs:label       "Local taxes"@en , "Tributos de carácter local"@es ;
@@ -803,10 +759,6 @@ obo:IAO_0000117  a  owl:AnnotationProperty .
                            owl:onProperty  :code
                          ] .
 
-<http://purl.org/roh/es#FormacionI+D+i>
-        a                owl:Class ;
-        rdfs:subClassOf  :FormacionTalento .
-
 :EquiposParaProcesosDeInformacion
         a                owl:Class ;
         rdfs:label       "Equipment for information processes"@en , "Equipos para procesos de información"@es ;
@@ -873,10 +825,6 @@ obo:IAO_0000112  a  owl:AnnotationProperty .
                            owl:hasValue    "218"^^xsd:int ;
                            owl:onProperty  :code
                          ] .
-
-:FormacionTalento  a      owl:Class ;
-        rdfs:subClassOf   :PlanEstatal2017-2020 ;
-        owl:disjointWith  :GeneracionConocimiento .
 
 :ServiciosDeProfesionalesIndependientes
         a                owl:Class ;

@@ -20,17 +20,19 @@ vivo:Position
         a       owl:Class ;
 	rdfs:label "Position"@en .
 
-vivo:AcademicPosition
-        a       owl:Class ;
-	rdfs:label "Academic Position"@en .
-
 vivo:FacultyPosition
         a       owl:Class ;
-	rdfs:label "Faculty Position"@en .
+	rdfs:label "Faculty Position"@en ;
+        rdfs:subClassOf  vivo:Position .
 
 vivo:FacultyAdministrativePosition
         a       owl:Class ;
-	rdfs:label "Faculty Administrative Position"@en .
+	rdfs:label "Faculty Administrative Position"@en ;
+        rdfs:subClassOf  vivo:Position .
+
+roh:ResearcherPosition  a   owl:Class ;
+        rdfs:label       "Researcher Position"@en ;
+        rdfs:subClassOf  vivo:Position .
 
 skos:Concept
         a       owl:Class ;
@@ -264,7 +266,7 @@ skos:ConceptScheme
 :GB_UNIVERSITY_HR_GBRSENREAFEL
         a                owl:Class ;
         rdfs:label       "Senior research fellow"@en ;
-        rdfs:subClassOf  vivo:AcademicPosition ;
+        rdfs:subClassOf  roh:ResearcherPosition ;
         roh:country     euCountry:GBR ;
         roh:hasCode     :GB_UNIVERSITY_HR_CODE_GBRSENREAFEL ;
         skos:closeMatch  unescothes:C03376 ;
@@ -292,7 +294,7 @@ skos:ConceptScheme
 :GB_UNIVERSITY_HR_GBRREAASS
         a                owl:Class ;
         rdfs:label       "Research assistant"@en ;
-        rdfs:subClassOf  vivo:Position ;
+        rdfs:subClassOf  roh:ResearcherPosition ;
         roh:country     euCountry:GBR ;
         roh:hasCode     :GB_UNIVERSITY_HR_CODE_GBRREAASS ;
         skos:closeMatch  unescothes:C03376 ;
@@ -388,7 +390,7 @@ skos:ConceptScheme
 :GB_UNIVERSITY_HR_GBRPROF
         a                owl:Class ;
         rdfs:label       "Professorial research fellow"@en ;
-        rdfs:subClassOf  vivo:FacultyPosition ;
+        rdfs:subClassOf  roh:ResearcherPosition ;
         roh:country     euCountry:GBR ;
         roh:hasCode     :GB_UNIVERSITY_HR_CODE_GBRPROF ;
         skos:closeMatch  unescothes:C03376 , unescothes:C00015 , unescothes:C03965 ;
@@ -410,7 +412,7 @@ skos:ConceptScheme
 :GB_UNIVERSITY_HR_GBRREAFEL
         a                owl:Class ;
         rdfs:label       "Research fellow"@en ;
-        rdfs:subClassOf  vivo:AcademicPosition ;
+        rdfs:subClassOf  roh:ResearcherPosition ;
         roh:country     euCountry:GBR ;
         roh:hasCode     :GB_UNIVERSITY_HR_CODE_GBRREAFEL ;
         skos:closeMatch  unescothes:C03376 ;

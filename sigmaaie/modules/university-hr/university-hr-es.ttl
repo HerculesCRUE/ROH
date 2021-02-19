@@ -23,13 +23,27 @@
 
 roh:geoDivision a owl:AnnotationProperty .
 
+vivo:Position  a         owl:Class ;
+	rdfs:label       "Position"@en , "Posición"@es .
+
+vivo:FacultyPosition  a  owl:Class ;
+        rdfs:label       "Faculty Position"@en , "Posición en Facultad"@es ;
+	rdfs:subClassOf  vivo:Position .
+
 vivo:NonAcademicPosition
         a       owl:Class ;
-	rdfs:label "Non-Academic Position"@en .
+	rdfs:label "Non-Academic Position"@en , "Posición no Académica"@es ;
+	rdfs:subClassOf  vivo:Position .
+
+vivo:NonFacultyAcademicPosition
+        a                owl:Class ;
+        rdfs:label       "Non-Faculty Academic Position"@en , "Posición Académica no de Facultad"@es ;
+        rdfs:subClassOf  vivo:Position .
 
 vivo:FacultyAdministrativePosition
-        a       owl:Class ;
-	rdfs:label "Faculty Administrative Position"@en .
+        a                owl:Class ;
+        rdfs:label       "Faculty Administrative Position"@en , "Posición Administrativa en Facultad"@es ;
+        rdfs:subClassOf  vivo:Position .
 
 skos:Concept
         a       owl:Class ;
@@ -368,7 +382,7 @@ skos:ConceptScheme
 :ES_UNIVERSITY_HR_ESLI
         a                owl:Class ;
         rdfs:label       "Investigador"@es ;
-        rdfs:subClassOf  vivo:AcademicPosition ;
+        rdfs:subClassOf  vivo:NonFacultyAcademicPosition ;
         roh:country     euCountry:ESP ;
         roh:hasCode     :ES_UNIVERSITY_HR_CODE_ESLI ;
         skos:closeMatch  unescothes:C03376 ;
