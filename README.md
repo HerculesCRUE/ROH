@@ -1,5 +1,5 @@
 # ROH
-Research Domain Ontology
+Research Domain Ontologies
 
 * Q5 - Listado de los centros/estructuras de investigación que hayan realizado proyectos y su respectiva convocatoria: https://tinyurl.com/y4v39hy3
 * Q7
