@@ -870,7 +870,7 @@ terms:hasPart rdf:type owl:ObjectProperty ;
 
 ###  http://purl.org/roh#hasReservable
 :hasReservable rdf:type owl:ObjectProperty ;
-               owl:inverseOf :infrastructureOf ;
+               owl:inverseOf :reservableOf ;
                rdfs:domain <http://purl.org/roh/mirror/foaf#Agent> ;
                rdfs:range :Reservable ;
                rdfs:comment "An Agent who owns an infrastructure."@en ;
@@ -922,15 +922,6 @@ terms:hasPart rdf:type owl:ObjectProperty ;
 ###  http://purl.org/roh#i10-index
 :i10-index rdf:type owl:ObjectProperty ;
            rdfs:domain :AuthorMetric .
-
-
-###  http://purl.org/roh#infrastructureOf
-:infrastructureOf rdf:type owl:ObjectProperty ;
-                  rdfs:domain :Reservable ;
-                  rdfs:range <http://purl.org/roh/mirror/foaf#Agent> ;
-                  rdfs:comment "An Infrastructure belonging to an Agent."@en ;
-                  rdfs:label "infrastructura de"@es ,
-                             "infrastructure of"@en .
 
 
 ###  http://purl.org/roh#isAdvisedBy
@@ -1241,6 +1232,15 @@ terms:hasPart rdf:type owl:ObjectProperty ;
                      ] ;
           rdfs:comment "This property relates roles and their requisites, i.e. other roles."@en ;
           rdfs:label "requires"@en .
+
+
+###  http://purl.org/roh#reservableOf
+:reservableOf rdf:type owl:ObjectProperty ;
+              rdfs:domain :Reservable ;
+              rdfs:range <http://purl.org/roh/mirror/foaf#Agent> ;
+              rdfs:comment "An Infrastructure belonging to an Agent."@en ;
+              rdfs:label "reservable de"@es ,
+                         "reservable of"@en .
 
 
 ###  http://purl.org/roh#reviews
@@ -4306,7 +4306,7 @@ A roh:FundingSource roh:feeds a roh:Funding with funds to sponsor some projects.
                               owl:someValuesFrom vivo:DateTimeInterval
                             ] ,
                             [ rdf:type owl:Restriction ;
-                              owl:onProperty :infrastructureOf ;
+                              owl:onProperty :reservableOf ;
                               owl:allValuesFrom <http://purl.org/roh/mirror/foaf#Agent>
                             ] ,
                             [ rdf:type owl:Restriction ;
