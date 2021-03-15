@@ -1731,14 +1731,6 @@ vivo:hasPublicationVenue rdf:type owl:ObjectProperty ;
                                     "published in"@en .
 
 
-###  http://purl.org/roh/mirror/vivo#hasSubjectArea
-vivo:hasSubjectArea rdf:type owl:ObjectProperty ;
-                    owl:inverseOf vivo:subjectAreaOf ;
-                    rdfs:comment "An entity which is related to some KnowledgeArea or skos:Concept."@en ;
-                    rdfs:label "has subject area"@en ,
-                               "tiene materia"@es .
-
-
 ###  http://purl.org/roh/mirror/vivo#hasSuccessorOrganization
 vivo:hasSuccessorOrganization rdf:type owl:ObjectProperty ,
                                        owl:TransitiveProperty ;
@@ -1797,13 +1789,6 @@ vivo:start rdf:type owl:ObjectProperty ;
            rdfs:comment "The date/time value in which something starts."@en ;
            rdfs:label "comienzo"@es ,
                       "start"@en .
-
-
-###  http://purl.org/roh/mirror/vivo#subjectAreaOf
-vivo:subjectAreaOf rdf:type owl:ObjectProperty ;
-                   rdfs:comment "Some Entity which is the research area of another Entity."@en ;
-                   rdfs:label "subject area of"@en ,
-                              "área temática de"@es .
 
 
 ###  http://purl.org/roh/mirror/vivo#supportedInformationResource
@@ -2711,16 +2696,16 @@ obo:BFO_0000040 rdf:type owl:Class .
 ###  http://purl.org/roh#Accreditation
 :Accreditation rdf:type owl:Class ;
                rdfs:subClassOf [ rdf:type owl:Restriction ;
+                                 owl:onProperty :hasKnowledgeArea ;
+                                 owl:allValuesFrom skos:Concept
+                               ] ,
+                               [ rdf:type owl:Restriction ;
                                  owl:onProperty vivo:dateIssued ;
                                  owl:allValuesFrom vivo:DateTimeValue
                                ] ,
                                [ rdf:type owl:Restriction ;
                                  owl:onProperty vivo:hasGoverningAuthority ;
                                  owl:allValuesFrom <http://purl.org/roh/mirror/foaf#Organization>
-                               ] ,
-                               [ rdf:type owl:Restriction ;
-                                 owl:onProperty vivo:hasSubjectArea ;
-                                 owl:allValuesFrom skos:Concept
                                ] ,
                                [ rdf:type owl:Restriction ;
                                  owl:onProperty <http://purl.org/roh/mirror/foaf#title> ;
@@ -2764,6 +2749,10 @@ obo:BFO_0000040 rdf:type owl:Class .
 :Activity rdf:type owl:Class ;
           rdfs:subClassOf bfo:BFO_0000015 ,
                           [ rdf:type owl:Restriction ;
+                            owl:onProperty :hasKnowledgeArea ;
+                            owl:allValuesFrom skos:Concept
+                          ] ,
+                          [ rdf:type owl:Restriction ;
                             owl:onProperty :participatedBy ;
                             owl:allValuesFrom <http://purl.org/roh/mirror/foaf#Agent>
                           ] ,
@@ -2778,10 +2767,6 @@ obo:BFO_0000040 rdf:type owl:Class .
                           [ rdf:type owl:Restriction ;
                             owl:onProperty vivo:dateTimeInterval ;
                             owl:allValuesFrom vivo:DateTimeInterval
-                          ] ,
-                          [ rdf:type owl:Restriction ;
-                            owl:onProperty vivo:hasSubjectArea ;
-                            owl:allValuesFrom skos:Concept
                           ] ,
                           [ rdf:type owl:Restriction ;
                             owl:onProperty vivo:relates ;
@@ -4405,12 +4390,12 @@ A roh:FundingSource roh:feeds a roh:Funding with funds to sponsor some projects.
                                            owl:someValuesFrom <http://purl.org/roh/mirror/foaf#Organization>
                                          ] ,
                                          [ rdf:type owl:Restriction ;
-                                           owl:onProperty vivo:dateTimeInterval ;
-                                           owl:allValuesFrom vivo:DateTimeInterval
+                                           owl:onProperty :hasKnowledgeArea ;
+                                           owl:allValuesFrom skos:Concept
                                          ] ,
                                          [ rdf:type owl:Restriction ;
-                                           owl:onProperty vivo:hasSubjectArea ;
-                                           owl:allValuesFrom skos:Concept
+                                           owl:onProperty vivo:dateTimeInterval ;
+                                           owl:allValuesFrom vivo:DateTimeInterval
                                          ] ;
                          obo:IAO_0000115 "A dual relationship of one organization offering a service to another organization, typically including start and end dates" ;
                          rdfs:label "Reservation Relationship"@en .
@@ -6216,12 +6201,12 @@ vivo:AdvisingRelationship rdf:type owl:Class ;
                                             owl:someValuesFrom vivo:AdvisorRole
                                           ] ,
                                           [ rdf:type owl:Restriction ;
-                                            owl:onProperty vivo:dateTimeInterval ;
-                                            owl:allValuesFrom vivo:DateTimeInterval
+                                            owl:onProperty :hasKnowledgeArea ;
+                                            owl:allValuesFrom skos:Concept
                                           ] ,
                                           [ rdf:type owl:Restriction ;
-                                            owl:onProperty vivo:hasSubjectArea ;
-                                            owl:allValuesFrom owl:Thing
+                                            owl:onProperty vivo:dateTimeInterval ;
+                                            owl:allValuesFrom vivo:DateTimeInterval
                                           ] ;
                           obo:IAO_0000115 "A dual relationship of one person being advised or mentored by another person, typically including start and end dates" ;
                           rdfs:label "Advising Relationship"@en ,
@@ -6470,16 +6455,16 @@ vivo:Contract rdf:type owl:Class ;
                                 owl:allValuesFrom owl:Thing
                               ] ,
                               [ rdf:type owl:Restriction ;
+                                owl:onProperty :hasKnowledgeArea ;
+                                owl:allValuesFrom skos:Concept
+                              ] ,
+                              [ rdf:type owl:Restriction ;
                                 owl:onProperty vivo:assignedBy ;
                                 owl:allValuesFrom <http://purl.org/roh/mirror/foaf#Organization>
                               ] ,
                               [ rdf:type owl:Restriction ;
                                 owl:onProperty vivo:dateTimeInterval ;
                                 owl:allValuesFrom vivo:DateTimeInterval
-                              ] ,
-                              [ rdf:type owl:Restriction ;
-                                owl:onProperty vivo:hasSubjectArea ;
-                                owl:allValuesFrom skos:Concept
                               ] ,
                               [ rdf:type owl:Restriction ;
                                 owl:onProperty vivo:relates ;
