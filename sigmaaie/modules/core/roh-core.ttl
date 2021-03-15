@@ -1020,7 +1020,6 @@ terms:hasPart rdf:type owl:ObjectProperty ;
 
 ###  http://purl.org/roh#metricOf
 :metricOf rdf:type owl:ObjectProperty ;
-          rdfs:subPropertyOf iao:IAO_0000136 ;
           rdfs:domain :Metric ;
           rdfs:comment "relates a Metric to the entity it describes"@en ;
           rdfs:label "metric of"@en ,
@@ -1496,11 +1495,6 @@ bfo:BFO_0000055 rdf:type owl:ObjectProperty ;
                 rdfs:isDefinedBy obo:bfo.owl ;
                 rdfs:label "realiza"@es ,
                            "realizes"@en .
-
-
-###  http://purl.org/roh/mirror/obo/iao#IAO_0000136
-iao:IAO_0000136 rdf:type owl:ObjectProperty ;
-                rdfs:domain iao:IAO_0000030 .
 
 
 ###  http://purl.org/roh/mirror/obo/ro#BFO_0000050
@@ -4094,10 +4088,6 @@ A roh:FundingSource roh:feeds a roh:Funding with funds to sponsor some projects.
 :PublicationMetric rdf:type owl:Class ;
                    rdfs:subClassOf :Metric ,
                                    [ rdf:type owl:Restriction ;
-                                     owl:onProperty :metricOf ;
-                                     owl:allValuesFrom iao:IAO_0000136
-                                   ] ,
-                                   [ rdf:type owl:Restriction ;
                                      owl:onProperty :citationCount ;
                                      owl:allValuesFrom xsd:integer
                                    ] ,
@@ -6031,10 +6021,6 @@ iao:IAO_0000109 rdf:type owl:Class ;
                 rdfs:label "Measurement Datum"@en .
 
 
-###  http://purl.org/roh/mirror/obo/iao#IAO_0000136
-iao:IAO_0000136 rdf:type owl:Class .
-
-
 ###  http://purl.org/roh/mirror/obo/iao#IAO_0000582
 iao:IAO_0000582 rdf:type owl:Class ;
                 rdfs:subClassOf iao:IAO_0000109 ;
@@ -7376,11 +7362,6 @@ skos:ConceptScheme rdf:type owl:Class ;
 
 bfo:BFO_0000004 rdfs:label "independent continuant"@en ,
                            "continuador independiente"@es .
-
-
-iao:IAO_0000136 iao:IAO_0000115 "is_about is a (currently) primitive relation that relates an information artifact to an entity."@en ;
-                rdfs:label "is about"@en ;
-                iao:IAO_0000114 iao:IAO_0000125 .
 
 
 #################################################################
