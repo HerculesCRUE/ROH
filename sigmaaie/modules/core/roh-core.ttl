@@ -40,8 +40,18 @@
 
 <http://purl.org/roh> rdf:type owl:Ontology ;
                        owl:versionIRI <http://purl.org/roh/0.2> ;
-                       dc:contributor "Esteban Sota" ;
-                       terms:license <https://creativecommons.org/publicdomain/zero/1.0/> ;
+                       dc:contributor "Alejandro González Hevia" ,
+                                      "Diego López de Ipiña" ,
+                                      "Esteban Sota" ,
+                                      "Iñigo Apellániz" ,
+                                      "José Emilio Labra Gayo" ,
+                                      "Álvaro Palacios" ;
+                       dc:creator "Emilio Rubiera Azcona" ,
+                                  "Mikel Emaldi" ;
+                       dc:description "An ontology to address the Research Management of the CRUE's Spanish University System (Sistema Universitario Español) by applying an encompassing model not only capable of addressing the universities of the CRUE but also more belonging to the European Union." ;
+                       dc:title "The ASIO ontology" ;
+                       terms:license <https://creativecommons.org/licenses/by-sa/4.0/> ,
+                                     <https://creativecommons.org/publicdomain/zero/1.0/> ;
                        rdfs:comment """The University of Murcia signed on November 29, 2017, a Covenant with the Ministry of Economy, Industry and Competitiveness backing the “HÉRCULES: Semantic University Research Data” Project with a budget of FIVE MILLION FOUR HUNDRED AND SIXTY-TWO THOUSAND SIX HUNDRED euros with an 80% of co-financiering from the European Regional Development Fund program (ERDF) within the 2014-2020 period. 
 
 The project arose as a CRUE initiative, to create the basis for a new collaboration model between universities, to develop the information management systems and with the main objective of encouraging this type of collaboration.
@@ -56,19 +66,9 @@ Therefore, the purpose of this agreement was to contribute to the improvement of
     efficiency in the management of research. 
 
 by creating a research management system with semantic capacities based on semantic open data and that will provide a global view of the research data contained in the Spanish University System."""@en ;
-                       dc:contributor "Alejandro González Hevia" ;
-                       dc:title "The ASIO ontology" ;
                        owl:versionInfo "0.0.1" ;
-                       dc:contributor "José Emilio Labra Gayo" ,
-                                      "Iñigo Apellániz" ,
-                                      "Álvaro Palacios" ;
-                       foaf:primaryTopic <http://purl.org/roh> ;
-                       dc:description "An ontology to address the Research Management of the CRUE's Spanish University System (Sistema Universitario Español) by applying an encompassing model not only capable of addressing the universities of the CRUE but also more belonging to the European Union." ;
-                       terms:license <https://creativecommons.org/licenses/by-sa/4.0/> ;
                        schema:identifier <http://purl.org/roh> ;
-                       dc:creator "Mikel Emaldi" ;
-                       dc:contributor "Diego López de Ipiña" ;
-                       dc:creator "Emilio Rubiera Azcona" .
+                       foaf:primaryTopic <http://purl.org/roh> .
 
 #################################################################
 #    Annotation properties
@@ -5261,6 +5261,10 @@ bibo:Workshop rdf:type owl:Class ;
                                                           owl:allValuesFrom vivo:Relationship
                                                         ] ,
                                                         [ rdf:type owl:Restriction ;
+                                                          owl:onProperty :researchLine ;
+                                                          owl:allValuesFrom xsd:string
+                                                        ] ,
+                                                        [ rdf:type owl:Restriction ;
                                                           owl:onProperty vivo:freetextKeyword ;
                                                           owl:allValuesFrom xsd:string
                                                         ] ;
@@ -5478,10 +5482,6 @@ Besides, an instance of a foaf:Organization is associated to the following entit
                                                          [ rdf:type owl:Restriction ;
                                                            owl:onProperty vivo:eligibleFor ;
                                                            owl:allValuesFrom :Accreditation
-                                                         ] ,
-                                                         [ rdf:type owl:Restriction ;
-                                                           owl:onProperty :researchLine ;
-                                                           owl:allValuesFrom xsd:string
                                                          ] ,
                                                          [ rdf:type owl:Restriction ;
                                                            owl:onProperty :taxID ;
@@ -7201,8 +7201,7 @@ skos:Concept rdf:type owl:Class ;
 
 ###  http://www.w3.org/2004/02/skos/core#ConceptScheme
 skos:ConceptScheme rdf:type owl:Class ;
-             rdfs:label "Concept Scheme"@en .
-
+                   rdfs:label "Concept Scheme"@en .
 
 
 #################################################################
@@ -7416,8 +7415,8 @@ skos:ConceptScheme rdf:type owl:Class ;
            rdfs:comment "A property to express the i10-index of an author."@en .
 
 
-bfo:BFO_0000004 rdfs:label "continuador independiente"@es ,
-                           "independent continuant"@en .
+bfo:BFO_0000004 rdfs:label "independent continuant"@en ,
+                           "continuador independiente"@es .
 
 
 iao:IAO_0000136 iao:IAO_0000115 "is_about is a (currently) primitive relation that relates an information artifact to an entity."@en ;
@@ -7864,4 +7863,4 @@ iao:IAO_0000136 iao:IAO_0000115 "is_about is a (currently) primitive relation th
 ] .
 
 
-###  Generated by the OWL API (version 4.2.8.20170104-2310) https://github.com/owlcs/owlapi
+###  Generated by the OWL API (version 4.5.9.2019-02-01T07:24:44Z) https://github.com/owlcs/owlapi
