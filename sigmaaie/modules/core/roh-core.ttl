@@ -869,14 +869,6 @@ terms:hasPart rdf:type owl:ObjectProperty ;
                          rdfs:label "has research contribution"@en .
 
 
-###  http://purl.org/roh#hasResearchLine
-:hasResearchLine rdf:type owl:ObjectProperty ;
-                 rdfs:domain <http://purl.org/roh/mirror/foaf#Agent> ;
-                 rdfs:range skos:Concept ;
-                 rdfs:comment "a property linking organizations or groups with scientific domains"@en ;
-                 rdfs:label "has research line"@en .
-
-
 ###  http://purl.org/roh#hasReservable
 :hasReservable rdf:type owl:ObjectProperty ;
                owl:inverseOf :infrastructureOf ;
@@ -901,13 +893,6 @@ terms:hasPart rdf:type owl:ObjectProperty ;
 :hasScientificDomain rdf:type owl:ObjectProperty ;
                      rdfs:range skos:Concept ;
                      rdfs:label "has scientific domain"@en .
-
-
-###  http://purl.org/roh#hasSealOfQuality
-:hasSealOfQuality rdf:type owl:ObjectProperty ;
-                  rdfs:domain <http://purl.org/roh/mirror/foaf#Agent> ;
-                  rdfs:range :ResearchInstitute ;
-                  rdfs:label "has seal of quality"@en .
 
 
 ###  http://purl.org/roh#hasSpinoff
@@ -965,13 +950,6 @@ terms:hasPart rdf:type owl:ObjectProperty ;
              rdf:type owl:FunctionalProperty ;
              rdfs:range <http://purl.org/roh/mirror/foaf#Agent> ;
              rdfs:label "is awarded by"@en .
-
-
-###  http://purl.org/roh#isCoauthoredBy
-:isCoauthoredBy rdf:type owl:ObjectProperty ;
-                rdfs:domain bibo:Document ;
-                rdfs:range <http://purl.org/roh/mirror/foaf#Agent> ;
-                rdfs:label "is co-authored by"@en .
 
 
 ###  http://purl.org/roh#isFundedBy
