@@ -3522,10 +3522,6 @@ A roh:FundingSource roh:feeds a roh:Funding with funds to sponsor some projects.
 ###  http://purl.org/roh#Invention
 :Invention rdf:type owl:Class ;
            rdfs:subClassOf [ rdf:type owl:Restriction ;
-                             owl:onProperty terms:hasPart ;
-                             owl:allValuesFrom :PatentApplication
-                           ] ,
-                           [ rdf:type owl:Restriction ;
                              owl:onProperty :fundedBy ;
                              owl:allValuesFrom :FundingProgram
                            ] ,
@@ -3575,6 +3571,10 @@ A roh:FundingSource roh:feeds a roh:Funding with funds to sponsor some projects.
                            [ rdf:type owl:Restriction ;
                              owl:onProperty <http://purl.org/roh/mirror/geonames#locatedIn> ;
                              owl:allValuesFrom <http://purl.org/roh/mirror/geonames#Feature>
+                           ] ,
+                           [ rdf:type owl:Restriction ;
+                             owl:onProperty ro:BFO_0000051 ;
+                             owl:allValuesFrom :PatentApplication
                            ] ,
                            [ rdf:type owl:Restriction ;
                              owl:onProperty vivo:relatedBy ;
@@ -4723,11 +4723,11 @@ bibo:Chapter rdf:type owl:Class ;
 bibo:CollectedDocument rdf:type owl:Class ;
                        rdfs:subClassOf bibo:Document ,
                                        [ rdf:type owl:Restriction ;
-                                         owl:onProperty terms:hasPart ;
+                                         owl:onProperty ro:BFO_0000051 ;
                                          owl:allValuesFrom bibo:Document
                                        ] ,
                                        [ rdf:type owl:Restriction ;
-                                         owl:onProperty terms:hasPart ;
+                                         owl:onProperty ro:BFO_0000051 ;
                                          owl:minCardinality "1"^^xsd:nonNegativeInteger
                                        ] ;
                        rdfs:comment "A document consisting of collections of previously published works."@en ,
@@ -4952,11 +4952,11 @@ bibo:Interview rdf:type owl:Class ;
 bibo:Issue rdf:type owl:Class ;
            rdfs:subClassOf bibo:CollectedDocument ,
                            [ rdf:type owl:Restriction ;
-                             owl:onProperty terms:hasPart ;
+                             owl:onProperty ro:BFO_0000051 ;
                              owl:allValuesFrom bibo:Article
                            ] ,
                            [ rdf:type owl:Restriction ;
-                             owl:onProperty terms:hasPart ;
+                             owl:onProperty ro:BFO_0000051 ;
                              owl:minCardinality "1"^^xsd:nonNegativeInteger
                            ] ;
            rdfs:comment "something that is printed or published and distributed, esp. a given number of a periodical"@en ;
