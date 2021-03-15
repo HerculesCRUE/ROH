@@ -541,7 +541,6 @@ terms:hasPart rdf:type owl:ObjectProperty ;
 
 ###  http://purl.org/roh#coordinatedBy
 :coordinatedBy rdf:type owl:ObjectProperty ;
-               owl:inverseOf :projectCoordinator ;
                rdfs:domain vivo:Project ;
                rdfs:range <http://purl.org/roh/mirror/foaf#Agent> ;
                rdfs:comment "inverse property of 'project coordinator'"@en ;
@@ -1168,14 +1167,6 @@ terms:hasPart rdf:type owl:ObjectProperty ;
                          rdfs:comment "A Project Classification which categorizes a Project."@en ;
                          rdfs:label "categorización de proyecto de"@es ,
                                     "project categorization of"@en .
-
-
-###  http://purl.org/roh#projectCoordinator
-:projectCoordinator rdf:type owl:ObjectProperty ;
-                    rdfs:domain <http://purl.org/roh/mirror/foaf#Agent> ;
-                    rdfs:range vivo:Project ;
-                    rdfs:comment "A property to link an agent (person or organisation) with a project in the role of coordinator."@en ;
-                    rdfs:label "project coordinator"@en .
 
 
 ###  http://purl.org/roh#projectStatus
