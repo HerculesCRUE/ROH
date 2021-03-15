@@ -3960,7 +3960,15 @@ A roh:FundingSource roh:feeds a roh:Funding with funds to sponsor some projects.
 
 ###  http://purl.org/roh#PersonContract
 :PersonContract rdf:type owl:Class ;
-                rdfs:subClassOf vivo:Contract ;
+                rdfs:subClassOf vivo:Contract ,
+                                [ rdf:type owl:Restriction ;
+                                  owl:onProperty :hasHRClassification ;
+                                  owl:someValuesFrom skos:Concept
+                                ] ,
+                                [ rdf:type owl:Restriction ;
+                                  owl:onProperty :hasHRClassification ;
+                                  owl:allValuesFrom skos:Concept
+                                ] ;
                 owl:disjointWith :ProjectContract ;
                 rdfs:comment "An agreement between a person and an organization to work in a project for a specified duration."@en ;
                 rdfs:label "Contracte de treball"@ca-ad ,
@@ -3969,7 +3977,6 @@ A roh:FundingSource roh:feeds a roh:Funding with funds to sponsor some projects.
                            "Contrato de Persona"@es ,
                            "Contrato de trabajo"@es ,
                            "Contrato de trabalho"@pt ,
-                           "Employment contract"@en ,
                            "Person Contract"@en ;
                 skos:prefLabel "Contracte de treball"@ca-ad ,
                                "Contracte de treball"@ca-es ,
