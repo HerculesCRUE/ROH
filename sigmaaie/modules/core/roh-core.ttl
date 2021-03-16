@@ -366,13 +366,6 @@ foaf:primaryTopic rdf:type owl:AnnotationProperty .
 obo:RO_0000057 rdf:type owl:ObjectProperty .
 
 
-###  http://purl.org/dc/terms/hasPart
-terms:hasPart rdf:type owl:ObjectProperty ;
-              rdfs:comment "A related resource that is included either physically or logically in the described resource."@en ;
-              rdfs:label "está compuesto por"@es ,
-                         "has part"@en .
-
-
 ###  http://purl.org/roh#CVOf
 :CVOf rdf:type owl:ObjectProperty ;
       owl:inverseOf :hasCV ;
@@ -7360,8 +7353,8 @@ skos:ConceptScheme rdf:type owl:Class ;
            rdfs:comment "A property to express the i10-index of an author."@en .
 
 
-bfo:BFO_0000004 rdfs:label "independent continuant"@en ,
-                           "continuador independiente"@es .
+bfo:BFO_0000004 rdfs:label "continuador independiente"@es ,
+                           "independent continuant"@en .
 
 
 #################################################################
