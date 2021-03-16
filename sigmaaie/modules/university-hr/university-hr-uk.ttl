@@ -1,432 +1,663 @@
-@prefix :      <http://purl.org/roh/university-hr/uk#> .
-@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
-@prefix owl:   <http://www.w3.org/2002/07/owl#> .
-@prefix unescothes: <http://skos.um.es/unescothes/> .
-@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
-@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix : <http://purl.org/roh/university-hr/uk#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix roh: <http://purl.org/roh#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix vivo: <http://purl.org/roh/mirror/vivo#> .
 @prefix terms: <http://purl.org/dc/terms/> .
 @prefix euCountry: <http://publications.europa.eu/resource/authority/country/> .
-@prefix vivo:  <http://purl.org/roh/mirror/vivo#> .
-@prefix roh:   <http://purl.org/roh#> .
+@prefix unescothes: <http://skos.um.es/unescothes/> .
+@base <http://purl.org/roh/university-hr/uk> .
 
-<http://purl.org/roh/university-hr/uk>
-        a               owl:Ontology ;
-	rdfs:label      "ROH UK University HR Module"@en ;
-	rdfs:comment    "The University of Murcia signed on November 29, 2017, a Covenant with the Ministry of Economy, Industry and Competitiveness backing the “HÉRCULES: Semantic University Research Data” Project with a budget of FIVE MILLION FOUR HUNDRED AND SIXTY-TWO THOUSAND SIX HUNDRED euros with an 80% of co-financiering from the European Regional Development Fund program (ERDF) within the 2014-2020 period. \n\nThe project arose as a CRUE initiative, to create the basis for a new collaboration model between universities, to develop the information management systems and with the main objective of encouraging this type of collaboration.\n\nTherefore, the purpose of this agreement was to contribute to the improvement of public services and business innovation and research through the improvement of:\n\n    efficiency in public investment by decreasing the duplication of investment in R&D.\n    efficiency of research in universities.\n    scientific dissemination of research results.\n    detection of synergies in R&D between universities.\n    transfer of R&D results to companies.\n    efficiency in the management of research. \n\nby creating a research management system with semantic capacities based on semantic open data and that will provide a global view of the research data contained in the Spanish University System."@en ;
-	terms:license   <https://creativecommons.org/licenses/by-sa/4.0/> ;
-	owl:versionIRI  <http://purl.org/roh/university-hr/uk/1.0> .
+<http://purl.org/roh/university-hr/uk> rdf:type owl:Ontology ;
+                                        owl:versionIRI <http://purl.org/roh/university-hr/uk/1.0> ;
+                                        terms:license <https://creativecommons.org/licenses/by-sa/4.0/> ;
+                                        rdfs:comment """The University of Murcia signed on November 29, 2017, a Covenant with the Ministry of Economy, Industry and Competitiveness backing the “HÉRCULES: Semantic University Research Data” Project with a budget of FIVE MILLION FOUR HUNDRED AND SIXTY-TWO THOUSAND SIX HUNDRED euros with an 80% of co-financiering from the European Regional Development Fund program (ERDF) within the 2014-2020 period. 
 
-vivo:Position
-        a       owl:Class ;
-	rdfs:label "Position"@en .
+The project arose as a CRUE initiative, to create the basis for a new collaboration model between universities, to develop the information management systems and with the main objective of encouraging this type of collaboration.
 
-vivo:FacultyPosition
-        a       owl:Class ;
-	rdfs:label "Faculty Position"@en ;
-        rdfs:subClassOf  vivo:Position .
+Therefore, the purpose of this agreement was to contribute to the improvement of public services and business innovation and research through the improvement of:
 
-vivo:FacultyAdministrativePosition
-        a       owl:Class ;
-	rdfs:label "Faculty Administrative Position"@en ;
-        rdfs:subClassOf  vivo:Position .
+    efficiency in public investment by decreasing the duplication of investment in R&D.
+    efficiency of research in universities.
+    scientific dissemination of research results.
+    detection of synergies in R&D between universities.
+    transfer of R&D results to companies.
+    efficiency in the management of research. 
 
-roh:ResearcherPosition  a   owl:Class ;
-        rdfs:label       "Researcher Position"@en ;
-        rdfs:subClassOf  vivo:Position .
+by creating a research management system with semantic capacities based on semantic open data and that will provide a global view of the research data contained in the Spanish University System."""@en ;
+                                        rdfs:label "ROH UK University HR Module"@en .
 
-skos:Concept
-        a       owl:Class ;
-	rdfs:label "Concept"@en .
+#################################################################
+#    Annotation properties
+#################################################################
 
-skos:ConceptScheme
-        a       owl:Class ;
-	rdfs:label "Concept Scheme"@en .
-
-:GBUniversityHumanResourcesList
-        a               skos:ConceptScheme ;
-        rdfs:label      "Recursos humans de les universitats del Regne Unit"@ca , "Human resources of the universities from the United Kingdom"@en , "Resources humains des universités du Royaume Uni"@fr , "Recursos humanos de les universidaes del Reinu Xuníu"@ast , "Recursos humanos de las universidades del Reino Unido"@es , "Recursos humanos das universidades do Reino Unido"@gl , "Recursos humanos das universidades do Reino Unido"@pt ;
-        skos:prefLabel  "Recursos humanos de las universidades del Reino Unido"@es , "Recursos humanos de les universidaes del Reinu Xuníu"@ast , "Resources humains des universités du Royaume Uni"@fr , "Recursos humans de les universitats del Regne Unit"@ca , "Recursos humanos das universidades do Reino Unido"@pt , "Recursos humanos das universidades do Reino Unido"@gl , "Human resources of the universities from the United Kingdom"@en .
-
-:GBUniversityHumanResourcesCodesList
-        a               skos:ConceptScheme ;
-        rdfs:label      "Codes for the human resources of the universities from the United Kingdom"@en , "Códigos de los recursos humanos de les universidaes del Reinu Xuníu"@ast , "Códigos dos recursos humanos das universidades do Reino Unido"@pt , "Códigos dos recursos humanos das universidades do Reino Unido"@gl , "Codes des resources humains des universités du Royaume Uni"@fr , "Codis dels recursos humans de les universitats del Regne Unit"@ca , "Códigos de los recursos humanos de las universidades del Reino Unido"@es ;
-        skos:prefLabel  "Codes des resources humains des universités du Royaume Uni"@fr , "Códigos de los recursos humanos de las universidades del Reino Unido"@es , "Códigos de los recursos humanos de les universidaes del Reinu Xuníu"@ast , "Códigos dos recursos humanos das universidades do Reino Unido"@pt , "Códigos dos recursos humanos das universidades do Reino Unido"@gl , "Codis dels recursos humans de les universitats del Regne Unit"@ca , "Codes for the human resources of the universities from the United Kingdom"@en .
-
-:GB_UNIVERSITY_HR_CODE_GBRTSENLEC
-        a               skos:Concept ;
-        rdfs:label      "GBRTSENLEC" ;
-        roh:codeOf     :GB_UNIVERSITY_HR_GBRTSENLEC ;
-        skos:inScheme   :GBUniversityHumanResourcesCodesList ;
-        skos:prefLabel  "GBRTSENLEC" .
-
-:GB_UNIVERSITY_HR_CODE_GBDEAN
-        a               skos:Concept ;
-        rdfs:label      "GBDEAN" ;
-        roh:codeOf     :GB_UNIVERSITY_HR_GBDEAN ;
-        skos:inScheme   :GBUniversityHumanResourcesCodesList ;
-        skos:prefLabel  "GBDEAN" .
-
-:GB_UNIVERSITY_HR_CODE_GBCHAN
-        a               skos:Concept ;
-        rdfs:label      "GBCHAN" ;
-        roh:codeOf     :GB_UNIVERSITY_HR_GBCHAN ;
-        skos:inScheme   :GBUniversityHumanResourcesCodesList ;
-        skos:prefLabel  "GBCHAN" .
-
-:GB_UNIVERSITY_HR_GBDEPDIR
-        a                owl:Class ;
-        rdfs:label       "Department director of studies"@en ;
-        rdfs:subClassOf  vivo:FacultyAdministrativePosition ;
-        roh:country     euCountry:GBR ;
-        roh:hasCode     :GB_UNIVERSITY_HR_CODE_GBDEPDIR ;
-        skos:altLabel    "School directors of studies"@en ;
-        skos:inScheme    :GBUniversityHumanResourcesList ;
-        skos:notation    "GBDEPDIR" ;
-        skos:prefLabel   "Department director of studies"@en .
-
-:GB_UNIVERSITY_HR_CODE_GBRREAFEL
-        a               skos:Concept ;
-        rdfs:label      "GBRREAFEL" ;
-        roh:codeOf     :GB_UNIVERSITY_HR_GBRREAFEL ;
-        skos:inScheme   :GBUniversityHumanResourcesCodesList ;
-        skos:prefLabel  "GBRREAFEL" .
-
-:GB_UNIVERSITY_HR_CODE_GBRTLEC
-        a               skos:Concept ;
-        rdfs:label      "GBRTLEC" ;
-        roh:codeOf     :GB_UNIVERSITY_HR_GBRTLEC ;
-        skos:inScheme   :GBUniversityHumanResourcesCodesList ;
-        skos:prefLabel  "GBRTLEC" .
-
-:GB_UNIVERSITY_HR_GBTPROF
-        a                owl:Class ;
-        rdfs:label       "Professorial teaching fellow"@en ;
-        rdfs:subClassOf  vivo:FacultyPosition ;
-        roh:country     euCountry:GBR ;
-        roh:hasCode     :GB_UNIVERSITY_HR_CODE_GBTPROF ;
-        skos:closeMatch  unescothes:C03965 , unescothes:C00015 ;
-        skos:inScheme    :GBUniversityHumanResourcesList ;
-        skos:notation    "GBTPROF" ;
-        skos:prefLabel   "Professorial teaching fellow"@en .
+###  http://purl.org/dc/terms/license
+terms:license rdf:type owl:AnnotationProperty .
 
 
-:GB_UNIVERSITY_HR_CODE_GBDEPVICHAN
-        a               skos:Concept ;
-        rdfs:label      "GBDEPVICHAN" ;
-        roh:codeOf     :GB_UNIVERSITY_HR_GBDEPVICHAN ;
-        skos:inScheme   :GBUniversityHumanResourcesCodesList ;
-        skos:prefLabel  "GBDEPVICHAN" .
-
-:GB_UNIVERSITY_HR_CODE_GBRTASSLEC
-        a               skos:Concept ;
-        rdfs:label      "GBRTASSLEC" ;
-        roh:codeOf     :GB_UNIVERSITY_HR_GBRTASSLEC ;
-        skos:inScheme   :GBUniversityHumanResourcesCodesList ;
-        skos:prefLabel  "GBRTASSLEC" .
-
-:GB_UNIVERSITY_HR_GBDEPVICHAN
-        a                owl:Class ;
-        rdfs:label       "Deputy vice-chancellor"@en ;
-        rdfs:subClassOf  vivo:FacultyAdministrativePosition ;
-        roh:country     euCountry:GBR ;
-        roh:hasCode     :GB_UNIVERSITY_HR_CODE_GBDEPVICHAN ;
-        skos:inScheme    :GBUniversityHumanResourcesList ;
-        skos:notation    "GBDEPVICHAN" ;
-        skos:prefLabel   "Deputy vice-chancellor"@en .
-
-:GB_UNIVERSITY_HR_CODE_GBEREAD
-        a               skos:Concept ;
-        rdfs:label      "GBEREAD" ;
-        roh:codeOf     :GB_UNIVERSITY_HR_GBEREAD ;
-        skos:inScheme   :GBUniversityHumanResourcesCodesList ;
-        skos:prefLabel  "GBEREAD" .
-
-:GB_UNIVERSITY_HR_CODE_GBRTREAD
-        a               skos:Concept ;
-        rdfs:label      "GBRTREAD" ;
-        roh:codeOf     :GB_UNIVERSITY_HR_GBRTREAD ;
-        skos:inScheme   :GBUniversityHumanResourcesCodesList ;
-        skos:prefLabel  "GBRTREAD" .
+###  http://purl.org/roh#codeOf
+roh:codeOf rdf:type owl:AnnotationProperty .
 
 
-:GB_UNIVERSITY_HR_CODE_GBEPROF
-        a               skos:Concept ;
-        rdfs:label      "GBEPROF" ;
-        roh:codeOf     :GB_UNIVERSITY_HR_GBEPROF ;
-        skos:inScheme   :GBUniversityHumanResourcesCodesList ;
-        skos:prefLabel  "GBEPROF" .
-
-:GB_UNIVERSITY_HR_CODE_GBRTPROF
-        a               skos:Concept ;
-        rdfs:label      "GBRTPROF" ;
-        roh:codeOf     :GB_UNIVERSITY_HR_GBRTPROF ;
-        skos:inScheme   :GBUniversityHumanResourcesCodesList ;
-        skos:prefLabel  "GBRTPROF" .
+###  http://purl.org/roh#country
+roh:country rdf:type owl:AnnotationProperty .
 
 
-:GB_UNIVERSITY_HR_CODE_GBRPROF
-        a               skos:Concept ;
-        rdfs:label      "GBRPROF" ;
-        roh:codeOf     :GB_UNIVERSITY_HR_GBRPROF ;
-        skos:inScheme   :GBUniversityHumanResourcesCodesList ;
-        skos:prefLabel  "GBRPROF" .
-
-:GB_UNIVERSITY_HR_GBPROVICCHAN
-        a                owl:Class ;
-        rdfs:label       "Pro-vice-chancellor"@en ;
-        rdfs:subClassOf  vivo:FacultyAdministrativePosition ;
-        roh:country     euCountry:GBR ;
-        roh:hasCode     :GB_UNIVERSITY_HR_CODE_GBPROVICCHAN ;
-        skos:inScheme    :GBUniversityHumanResourcesList ;
-        skos:notation    "GBPROVICCHAN" ;
-        skos:prefLabel   "Pro-vice-chancellor"@en .
-
-:GB_UNIVERSITY_HR_CODE_GBDEPDIR
-        a               skos:Concept ;
-        rdfs:label      "GBDEPDIR" ;
-        roh:codeOf     :GB_UNIVERSITY_HR_GBDEPDIR ;
-        skos:inScheme   :GBUniversityHumanResourcesCodesList ;
-        skos:prefLabel  "GBDEPDIR" .
-
-:GB_UNIVERSITY_HR_GBHEADDEP
-        a                owl:Class ;
-        rdfs:label       "Head of department"@en ;
-        rdfs:subClassOf  vivo:FacultyAdministrativePosition ;
-        roh:country     euCountry:GBR ;
-        roh:hasCode     :GB_UNIVERSITY_HR_CODE_GBHEADDEP ;
-        skos:altLabel    "Head of school"@en ;
-        skos:inScheme    :GBUniversityHumanResourcesList ;
-        skos:notation    "GBHEADDEP" ;
-        skos:prefLabel   "Head of department"@en .
-
-:GB_UNIVERSITY_HR_GBRTASSLEC
-        a                owl:Class ;
-        rdfs:label       "Assistant lecturer"@en ;
-        rdfs:subClassOf  vivo:FacultyPosition ;
-        roh:country     euCountry:GBR ;
-        roh:hasCode     :GB_UNIVERSITY_HR_CODE_GBRTASSLEC ;
-        skos:altLabel    "Associate lecturer"@en ;
-        skos:closeMatch  unescothes:C03965 , unescothes:C00015 ;
-        skos:inScheme    :GBUniversityHumanResourcesList ;
-        skos:notation    "GBRTASSLEC" ;
-        skos:prefLabel   "Assistant lecturer"@en .
-
-:GB_UNIVERSITY_HR_GBDEAN
-        a                owl:Class ;
-        rdfs:label       "Dean of faculty"@en ;
-        rdfs:subClassOf  vivo:FacultyAdministrativePosition ;
-        roh:country     euCountry:GBR ;
-        roh:hasCode     :GB_UNIVERSITY_HR_CODE_GBDEAN ;
-        skos:inScheme    :GBUniversityHumanResourcesList ;
-        skos:notation    "GBDEAN" ;
-        skos:prefLabel   "Dean of faculty"@en .
-
-:GB_UNIVERSITY_HR_GBCHAN
-        a                owl:Class ;
-        rdfs:label       "Chancellor"@en ;
-        rdfs:subClassOf  vivo:FacultyAdministrativePosition ;
-        roh:country     euCountry:GBR ;
-        roh:hasCode     :GB_UNIVERSITY_HR_CODE_GBCHAN ;
-        skos:inScheme    :GBUniversityHumanResourcesList ;
-        skos:notation    "GBCHAN" ;
-        skos:prefLabel   "Chancellor"@en .
-
-:GB_UNIVERSITY_HR_GBRTCLLEC
-        a                owl:Class ;
-        rdfs:label       "Clinical lecturer"@en ;
-        rdfs:subClassOf  vivo:FacultyPosition ;
-        roh:country     euCountry:GBR ;
-        roh:hasCode     :GB_UNIVERSITY_HR_CODE_GBRTCLLEC ;
-        skos:closeMatch  unescothes:C03965 , unescothes:C00015 ;
-        skos:inScheme    :GBUniversityHumanResourcesList ;
-        skos:notation    "GBRTCLLEC" ;
-        skos:prefLabel   "Clinical lecturer"@en .
-
-:GB_UNIVERSITY_HR_CODE_GBHEADDEP
-        a               skos:Concept ;
-        rdfs:label      "GBHEADDEP" ;
-        roh:codeOf     :GB_UNIVERSITY_HR_GBHEADDEP ;
-        skos:inScheme   :GBUniversityHumanResourcesCodesList ;
-        skos:prefLabel  "GBHEADDEP" .
-
-:GB_UNIVERSITY_HR_CODE_GBTPROF
-        a               skos:Concept ;
-        rdfs:label      "GBTPROF" ;
-        roh:codeOf     :GB_UNIVERSITY_HR_GBTPROF ;
-        skos:inScheme   :GBUniversityHumanResourcesCodesList ;
-        skos:prefLabel  "GBTPROF" .
-
-:GB_UNIVERSITY_HR_CODE_GBRTCLLEC
-        a               skos:Concept ;
-        rdfs:label      "GBRTCLLEC" ;
-        roh:codeOf     :GB_UNIVERSITY_HR_GBRTCLLEC ;
-        skos:inScheme   :GBUniversityHumanResourcesCodesList ;
-        skos:prefLabel  "GBRTCLLEC" .
-
-:GB_UNIVERSITY_HR_GBRSENREAFEL
-        a                owl:Class ;
-        rdfs:label       "Senior research fellow"@en ;
-        rdfs:subClassOf  roh:ResearcherPosition ;
-        roh:country     euCountry:GBR ;
-        roh:hasCode     :GB_UNIVERSITY_HR_CODE_GBRSENREAFEL ;
-        skos:closeMatch  unescothes:C03376 ;
-        skos:inScheme    :GBUniversityHumanResourcesList ;
-        skos:notation    "GBRSENREAFEL" ;
-        skos:prefLabel   "Senior research fellow"@en .
-
-:GB_UNIVERSITY_HR_GBPROCHAN
-        a                owl:Class ;
-        rdfs:label       "Pro-chancellor"@en ;
-        rdfs:subClassOf  vivo:FacultyAdministrativePosition ;
-        roh:country     euCountry:GBR ;
-        roh:hasCode     :GB_UNIVERSITY_HR_CODE_GBPROCHAN ;
-        skos:inScheme    :GBUniversityHumanResourcesList ;
-        skos:notation    "GBPROCHAN" ;
-        skos:prefLabel   "Pro-chancellor"@en .
-
-:GB_UNIVERSITY_HR_CODE_GBPROCHAN
-        a               skos:Concept ;
-        rdfs:label      "GBPROCHAN" ;
-        roh:codeOf     :GB_UNIVERSITY_HR_GBPROCHAN ;
-        skos:inScheme   :GBUniversityHumanResourcesCodesList ;
-        skos:prefLabel  "GBPROCHAN" .
-
-:GB_UNIVERSITY_HR_GBRREAASS
-        a                owl:Class ;
-        rdfs:label       "Research assistant"@en ;
-        rdfs:subClassOf  roh:ResearcherPosition ;
-        roh:country     euCountry:GBR ;
-        roh:hasCode     :GB_UNIVERSITY_HR_CODE_GBRREAASS ;
-        skos:closeMatch  unescothes:C03376 ;
-        skos:inScheme    :GBUniversityHumanResourcesList ;
-        skos:notation    "GBRREAASS" ;
-        skos:prefLabel   "Research assistant"@en .
-
-:GB_UNIVERSITY_HR_CODE_GBRREAASS
-        a               skos:Concept ;
-        rdfs:label      "GBRREAASS" ;
-        roh:codeOf     :GB_UNIVERSITY_HR_GBRREAASS ;
-        skos:inScheme   :GBUniversityHumanResourcesCodesList ;
-        skos:prefLabel  "GBRREAASS" .
-
-:GB_UNIVERSITY_HR_CODE_GBPROVICCHAN
-        a               skos:Concept ;
-        rdfs:label      "GBPROVICCHAN" ;
-        roh:codeOf     :GB_UNIVERSITY_HR_GBPROVICCHAN ;
-        skos:inScheme   :GBUniversityHumanResourcesCodesList ;
-        skos:prefLabel  "GBPROVICCHAN" .
+###  http://purl.org/roh#hasCode
+roh:hasCode rdf:type owl:AnnotationProperty .
 
 
-:GB_UNIVERSITY_HR_GBRTLEC
-        a                owl:Class ;
-        rdfs:label       "Lecturer"@en ;
-        rdfs:subClassOf  vivo:FacultyPosition ;
-        roh:country     euCountry:GBR ;
-        roh:hasCode     :GB_UNIVERSITY_HR_CODE_GBRTLEC ;
-        skos:closeMatch  unescothes:C03965 , unescothes:C00015 ;
-        skos:inScheme    :GBUniversityHumanResourcesList ;
-        skos:notation    "GBRTLEC" ;
-        skos:prefLabel   "Lecturer"@en .
+###  http://www.w3.org/2004/02/skos/core#altLabel
+skos:altLabel rdf:type owl:AnnotationProperty .
 
-:GB_UNIVERSITY_HR_GBVICCHAN
-        a                owl:Class ;
-        rdfs:label       "Vice-chancellor"@en ;
-        rdfs:subClassOf  vivo:FacultyAdministrativePosition ;
-        roh:country     euCountry:GBR ;
-        roh:hasCode     :GB_UNIVERSITY_HR_CODE_GBVICCHAN ;
-        skos:altLabel    "Provost"@en ;
-        skos:inScheme    :GBUniversityHumanResourcesList ;
-        skos:notation    "GBVICCHAN" ;
-        skos:prefLabel   "Vice-chancellor"@en .
 
-:GB_UNIVERSITY_HR_CODE_GBVICCHAN
-        a               skos:Concept ;
-        rdfs:label      "GBVICCHAN" ;
-        roh:codeOf     :GB_UNIVERSITY_HR_GBVICCHAN ;
-        skos:inScheme   :GBUniversityHumanResourcesCodesList ;
-        skos:prefLabel  "GBVICCHAN" .
+###  http://www.w3.org/2004/02/skos/core#closeMatch
+skos:closeMatch rdf:type owl:AnnotationProperty .
 
-:GB_UNIVERSITY_HR_GBEREAD
-        a                owl:Class ;
-        rdfs:label       "Emeritus reader"@en ;
-        rdfs:subClassOf  vivo:FacultyPosition ;
-        roh:country     euCountry:GBR ;
-        roh:hasCode     :GB_UNIVERSITY_HR_CODE_GBEREAD ;
-        skos:closeMatch  unescothes:C00015 , unescothes:C03965 ;
-        skos:inScheme    :GBUniversityHumanResourcesList ;
-        skos:notation    "GBEREAD" ;
-        skos:prefLabel   "Emeritus reader"@en .
 
-:GB_UNIVERSITY_HR_CODE_GBRSENREAFEL
-        a               skos:Concept ;
-        rdfs:label      "GBRSENREAFEL" ;
-        roh:codeOf     :GB_UNIVERSITY_HR_GBRSENREAFEL ;
-        skos:inScheme   :GBUniversityHumanResourcesCodesList ;
-        skos:prefLabel  "GBRSENREAFEL" .
+###  http://www.w3.org/2004/02/skos/core#inScheme
+skos:inScheme rdf:type owl:AnnotationProperty .
 
-:GB_UNIVERSITY_HR_GBEPROF
-        a                owl:Class ;
-        rdfs:label       "Emeritus professor"@en ;
-        rdfs:subClassOf  vivo:FacultyPosition ;
-        roh:country     euCountry:GBR ;
-        roh:hasCode     :GB_UNIVERSITY_HR_CODE_GBEPROF ;
-        skos:closeMatch  unescothes:C03965 , unescothes:C00015 ;
-        skos:inScheme    :GBUniversityHumanResourcesList ;
-        skos:notation    "GBEPROF" ;
-        skos:prefLabel   "Emeritus professor"@en .
 
-:GB_UNIVERSITY_HR_GBRTREAD
-        a                owl:Class ;
-        rdfs:label       "Reader"@en ;
-        rdfs:subClassOf  vivo:FacultyPosition ;
-        roh:country     euCountry:GBR ;
-        roh:hasCode     :GB_UNIVERSITY_HR_CODE_GBRTREAD ;
-        skos:altLabel    "Principal lecturer"@en ;
-        skos:closeMatch  unescothes:C00015 , unescothes:C03965 ;
-        skos:inScheme    :GBUniversityHumanResourcesList ;
-        skos:notation    "GBRTREAD" ;
-        skos:prefLabel   "Reader"@en .
+###  http://www.w3.org/2004/02/skos/core#notation
+skos:notation rdf:type owl:AnnotationProperty .
 
-:GB_UNIVERSITY_HR_GBRPROF
-        a                owl:Class ;
-        rdfs:label       "Professorial research fellow"@en ;
-        rdfs:subClassOf  roh:ResearcherPosition ;
-        roh:country     euCountry:GBR ;
-        roh:hasCode     :GB_UNIVERSITY_HR_CODE_GBRPROF ;
-        skos:closeMatch  unescothes:C03376 , unescothes:C00015 , unescothes:C03965 ;
-        skos:inScheme    :GBUniversityHumanResourcesList ;
-        skos:notation    "GBRPROF" ;
-        skos:prefLabel   "Professorial research fellow"@en .
 
-:GB_UNIVERSITY_HR_GBRTSENLEC
-        a                owl:Class ;
-        rdfs:label       "Senior lecturer"@en ;
-        rdfs:subClassOf  vivo:FacultyPosition ;
-        roh:country     euCountry:GBR ;
-        roh:hasCode     :GB_UNIVERSITY_HR_CODE_GBRTSENLEC ;
-        skos:closeMatch  unescothes:C03965 , unescothes:C00015 ;
-        skos:inScheme    :GBUniversityHumanResourcesList ;
-        skos:notation    "GBRTSENLEC" ;
-        skos:prefLabel   "Senior lecturer"@en .
+###  http://www.w3.org/2004/02/skos/core#prefLabel
+skos:prefLabel rdf:type owl:AnnotationProperty .
 
-:GB_UNIVERSITY_HR_GBRREAFEL
-        a                owl:Class ;
-        rdfs:label       "Research fellow"@en ;
-        rdfs:subClassOf  roh:ResearcherPosition ;
-        roh:country     euCountry:GBR ;
-        roh:hasCode     :GB_UNIVERSITY_HR_CODE_GBRREAFEL ;
-        skos:closeMatch  unescothes:C03376 ;
-        skos:inScheme    :GBUniversityHumanResourcesList ;
-        skos:notation    "GBRREAFEL" ;
-        skos:prefLabel   "Research fellow"@en .
 
-:GB_UNIVERSITY_HR_GBRTPROF
-        a                owl:Class ;
-        rdfs:label       "Professor"@en ;
-        rdfs:subClassOf  vivo:FacultyPosition ;
-        roh:country     euCountry:GBR ;
-        roh:hasCode     :GB_UNIVERSITY_HR_CODE_GBRTPROF ;
-        skos:closeMatch  unescothes:C00015 , unescothes:C03965 ;
-        skos:inScheme    :GBUniversityHumanResourcesList ;
-        skos:notation    "GBRTPROF" ;
-        skos:prefLabel   "Professor"@en .
+#################################################################
+#    Classes
+#################################################################
+
+###  http://purl.org/roh#AcademicSubject
+roh:AcademicSubject rdf:type owl:Class .
+
+
+###  http://purl.org/roh#CompanyClassification
+roh:CompanyClassification rdf:type owl:Class .
+
+
+###  http://purl.org/roh#Country
+roh:Country rdf:type owl:Class .
+
+
+###  http://purl.org/roh#ExpenseClassification
+roh:ExpenseClassification rdf:type owl:Class .
+
+
+###  http://purl.org/roh#FundingProgramClassification
+roh:FundingProgramClassification rdf:type owl:Class .
+
+
+###  http://purl.org/roh#HRClassification
+roh:HRClassification rdf:type owl:Class ;
+                     rdfs:subClassOf skos:ConceptScheme ;
+                     rdfs:label "Human Resource Classification"@en .
+
+
+###  http://purl.org/roh#KnowledgeArea
+roh:KnowledgeArea rdf:type owl:Class .
+
+
+###  http://purl.org/roh#ProjectClassification
+roh:ProjectClassification rdf:type owl:Class .
+
+
+###  http://purl.org/roh#PropertyClassification
+roh:PropertyClassification rdf:type owl:Class .
+
+
+###  http://purl.org/roh#ResearchProblem
+roh:ResearchProblem rdf:type owl:Class .
+
+
+###  http://purl.org/roh#ResearcherPosition
+roh:ResearcherPosition rdf:type owl:Class ;
+                       rdfs:subClassOf vivo:Position ;
+                       rdfs:label "Researcher Position"@en .
+
+
+###  http://purl.org/roh/mirror/vivo#FacultyAdministrativePosition
+vivo:FacultyAdministrativePosition rdf:type owl:Class ;
+                                   rdfs:subClassOf vivo:Position ;
+                                   rdfs:label "Faculty Administrative Position"@en .
+
+
+###  http://purl.org/roh/mirror/vivo#FacultyPosition
+vivo:FacultyPosition rdf:type owl:Class ;
+                     rdfs:subClassOf vivo:Position ;
+                     rdfs:label "Faculty Position"@en .
+
+
+###  http://purl.org/roh/mirror/vivo#Position
+vivo:Position rdf:type owl:Class ;
+              rdfs:label "Position"@en .
+
+
+###  http://purl.org/roh/university-hr/uk#GB_UNIVERSITY_HR_GBCHAN
+:GB_UNIVERSITY_HR_GBCHAN rdf:type owl:Class ;
+                         rdfs:subClassOf vivo:FacultyAdministrativePosition ;
+                         roh:country euCountry:GBR ;
+                         roh:hasCode :GB_UNIVERSITY_HR_CODE_GBCHAN ;
+                         rdfs:label "Chancellor"@en ;
+                         skos:inScheme :GBUniversityHumanResourcesList ;
+                         skos:notation "GBCHAN" ;
+                         skos:prefLabel "Chancellor"@en .
+
+
+###  http://purl.org/roh/university-hr/uk#GB_UNIVERSITY_HR_GBDEAN
+:GB_UNIVERSITY_HR_GBDEAN rdf:type owl:Class ;
+                         rdfs:subClassOf vivo:FacultyAdministrativePosition ;
+                         roh:country euCountry:GBR ;
+                         roh:hasCode :GB_UNIVERSITY_HR_CODE_GBDEAN ;
+                         rdfs:label "Dean of faculty"@en ;
+                         skos:inScheme :GBUniversityHumanResourcesList ;
+                         skos:notation "GBDEAN" ;
+                         skos:prefLabel "Dean of faculty"@en .
+
+
+###  http://purl.org/roh/university-hr/uk#GB_UNIVERSITY_HR_GBDEPDIR
+:GB_UNIVERSITY_HR_GBDEPDIR rdf:type owl:Class ;
+                           rdfs:subClassOf vivo:FacultyAdministrativePosition ;
+                           roh:country euCountry:GBR ;
+                           roh:hasCode :GB_UNIVERSITY_HR_CODE_GBDEPDIR ;
+                           rdfs:label "Department director of studies"@en ;
+                           skos:altLabel "School directors of studies"@en ;
+                           skos:inScheme :GBUniversityHumanResourcesList ;
+                           skos:notation "GBDEPDIR" ;
+                           skos:prefLabel "Department director of studies"@en .
+
+
+###  http://purl.org/roh/university-hr/uk#GB_UNIVERSITY_HR_GBDEPVICHAN
+:GB_UNIVERSITY_HR_GBDEPVICHAN rdf:type owl:Class ;
+                              rdfs:subClassOf vivo:FacultyAdministrativePosition ;
+                              roh:country euCountry:GBR ;
+                              roh:hasCode :GB_UNIVERSITY_HR_CODE_GBDEPVICHAN ;
+                              rdfs:label "Deputy vice-chancellor"@en ;
+                              skos:inScheme :GBUniversityHumanResourcesList ;
+                              skos:notation "GBDEPVICHAN" ;
+                              skos:prefLabel "Deputy vice-chancellor"@en .
+
+
+###  http://purl.org/roh/university-hr/uk#GB_UNIVERSITY_HR_GBEPROF
+:GB_UNIVERSITY_HR_GBEPROF rdf:type owl:Class ;
+                          rdfs:subClassOf vivo:FacultyPosition ;
+                          roh:country euCountry:GBR ;
+                          roh:hasCode :GB_UNIVERSITY_HR_CODE_GBEPROF ;
+                          rdfs:label "Emeritus professor"@en ;
+                          skos:closeMatch unescothes:C00015 ,
+                                          unescothes:C03965 ;
+                          skos:inScheme :GBUniversityHumanResourcesList ;
+                          skos:notation "GBEPROF" ;
+                          skos:prefLabel "Emeritus professor"@en .
+
+
+###  http://purl.org/roh/university-hr/uk#GB_UNIVERSITY_HR_GBEREAD
+:GB_UNIVERSITY_HR_GBEREAD rdf:type owl:Class ;
+                          rdfs:subClassOf vivo:FacultyPosition ;
+                          roh:country euCountry:GBR ;
+                          roh:hasCode :GB_UNIVERSITY_HR_CODE_GBEREAD ;
+                          rdfs:label "Emeritus reader"@en ;
+                          skos:closeMatch unescothes:C00015 ,
+                                          unescothes:C03965 ;
+                          skos:inScheme :GBUniversityHumanResourcesList ;
+                          skos:notation "GBEREAD" ;
+                          skos:prefLabel "Emeritus reader"@en .
+
+
+###  http://purl.org/roh/university-hr/uk#GB_UNIVERSITY_HR_GBHEADDEP
+:GB_UNIVERSITY_HR_GBHEADDEP rdf:type owl:Class ;
+                            rdfs:subClassOf vivo:FacultyAdministrativePosition ;
+                            roh:country euCountry:GBR ;
+                            roh:hasCode :GB_UNIVERSITY_HR_CODE_GBHEADDEP ;
+                            rdfs:label "Head of department"@en ;
+                            skos:altLabel "Head of school"@en ;
+                            skos:inScheme :GBUniversityHumanResourcesList ;
+                            skos:notation "GBHEADDEP" ;
+                            skos:prefLabel "Head of department"@en .
+
+
+###  http://purl.org/roh/university-hr/uk#GB_UNIVERSITY_HR_GBPROCHAN
+:GB_UNIVERSITY_HR_GBPROCHAN rdf:type owl:Class ;
+                            rdfs:subClassOf vivo:FacultyAdministrativePosition ;
+                            roh:country euCountry:GBR ;
+                            roh:hasCode :GB_UNIVERSITY_HR_CODE_GBPROCHAN ;
+                            rdfs:label "Pro-chancellor"@en ;
+                            skos:inScheme :GBUniversityHumanResourcesList ;
+                            skos:notation "GBPROCHAN" ;
+                            skos:prefLabel "Pro-chancellor"@en .
+
+
+###  http://purl.org/roh/university-hr/uk#GB_UNIVERSITY_HR_GBPROVICCHAN
+:GB_UNIVERSITY_HR_GBPROVICCHAN rdf:type owl:Class ;
+                               rdfs:subClassOf vivo:FacultyAdministrativePosition ;
+                               roh:country euCountry:GBR ;
+                               roh:hasCode :GB_UNIVERSITY_HR_CODE_GBPROVICCHAN ;
+                               rdfs:label "Pro-vice-chancellor"@en ;
+                               skos:inScheme :GBUniversityHumanResourcesList ;
+                               skos:notation "GBPROVICCHAN" ;
+                               skos:prefLabel "Pro-vice-chancellor"@en .
+
+
+###  http://purl.org/roh/university-hr/uk#GB_UNIVERSITY_HR_GBRPROF
+:GB_UNIVERSITY_HR_GBRPROF rdf:type owl:Class ;
+                          rdfs:subClassOf roh:ResearcherPosition ;
+                          roh:country euCountry:GBR ;
+                          roh:hasCode :GB_UNIVERSITY_HR_CODE_GBRPROF ;
+                          rdfs:label "Professorial research fellow"@en ;
+                          skos:closeMatch unescothes:C00015 ,
+                                          unescothes:C03376 ,
+                                          unescothes:C03965 ;
+                          skos:inScheme :GBUniversityHumanResourcesList ;
+                          skos:notation "GBRPROF" ;
+                          skos:prefLabel "Professorial research fellow"@en .
+
+
+###  http://purl.org/roh/university-hr/uk#GB_UNIVERSITY_HR_GBRREAASS
+:GB_UNIVERSITY_HR_GBRREAASS rdf:type owl:Class ;
+                            rdfs:subClassOf roh:ResearcherPosition ;
+                            roh:country euCountry:GBR ;
+                            roh:hasCode :GB_UNIVERSITY_HR_CODE_GBRREAASS ;
+                            rdfs:label "Research assistant"@en ;
+                            skos:closeMatch unescothes:C03376 ;
+                            skos:inScheme :GBUniversityHumanResourcesList ;
+                            skos:notation "GBRREAASS" ;
+                            skos:prefLabel "Research assistant"@en .
+
+
+###  http://purl.org/roh/university-hr/uk#GB_UNIVERSITY_HR_GBRREAFEL
+:GB_UNIVERSITY_HR_GBRREAFEL rdf:type owl:Class ;
+                            rdfs:subClassOf roh:ResearcherPosition ;
+                            roh:country euCountry:GBR ;
+                            roh:hasCode :GB_UNIVERSITY_HR_CODE_GBRREAFEL ;
+                            rdfs:label "Research fellow"@en ;
+                            skos:closeMatch unescothes:C03376 ;
+                            skos:inScheme :GBUniversityHumanResourcesList ;
+                            skos:notation "GBRREAFEL" ;
+                            skos:prefLabel "Research fellow"@en .
+
+
+###  http://purl.org/roh/university-hr/uk#GB_UNIVERSITY_HR_GBRSENREAFEL
+:GB_UNIVERSITY_HR_GBRSENREAFEL rdf:type owl:Class ;
+                               rdfs:subClassOf roh:ResearcherPosition ;
+                               roh:country euCountry:GBR ;
+                               roh:hasCode :GB_UNIVERSITY_HR_CODE_GBRSENREAFEL ;
+                               rdfs:label "Senior research fellow"@en ;
+                               skos:closeMatch unescothes:C03376 ;
+                               skos:inScheme :GBUniversityHumanResourcesList ;
+                               skos:notation "GBRSENREAFEL" ;
+                               skos:prefLabel "Senior research fellow"@en .
+
+
+###  http://purl.org/roh/university-hr/uk#GB_UNIVERSITY_HR_GBRTASSLEC
+:GB_UNIVERSITY_HR_GBRTASSLEC rdf:type owl:Class ;
+                             rdfs:subClassOf vivo:FacultyPosition ;
+                             roh:country euCountry:GBR ;
+                             roh:hasCode :GB_UNIVERSITY_HR_CODE_GBRTASSLEC ;
+                             rdfs:label "Assistant lecturer"@en ;
+                             skos:altLabel "Associate lecturer"@en ;
+                             skos:closeMatch unescothes:C00015 ,
+                                             unescothes:C03965 ;
+                             skos:inScheme :GBUniversityHumanResourcesList ;
+                             skos:notation "GBRTASSLEC" ;
+                             skos:prefLabel "Assistant lecturer"@en .
+
+
+###  http://purl.org/roh/university-hr/uk#GB_UNIVERSITY_HR_GBRTCLLEC
+:GB_UNIVERSITY_HR_GBRTCLLEC rdf:type owl:Class ;
+                            rdfs:subClassOf vivo:FacultyPosition ;
+                            roh:country euCountry:GBR ;
+                            roh:hasCode :GB_UNIVERSITY_HR_CODE_GBRTCLLEC ;
+                            rdfs:label "Clinical lecturer"@en ;
+                            skos:closeMatch unescothes:C00015 ,
+                                            unescothes:C03965 ;
+                            skos:inScheme :GBUniversityHumanResourcesList ;
+                            skos:notation "GBRTCLLEC" ;
+                            skos:prefLabel "Clinical lecturer"@en .
+
+
+###  http://purl.org/roh/university-hr/uk#GB_UNIVERSITY_HR_GBRTLEC
+:GB_UNIVERSITY_HR_GBRTLEC rdf:type owl:Class ;
+                          rdfs:subClassOf vivo:FacultyPosition ;
+                          roh:country euCountry:GBR ;
+                          roh:hasCode :GB_UNIVERSITY_HR_CODE_GBRTLEC ;
+                          rdfs:label "Lecturer"@en ;
+                          skos:closeMatch unescothes:C00015 ,
+                                          unescothes:C03965 ;
+                          skos:inScheme :GBUniversityHumanResourcesList ;
+                          skos:notation "GBRTLEC" ;
+                          skos:prefLabel "Lecturer"@en .
+
+
+###  http://purl.org/roh/university-hr/uk#GB_UNIVERSITY_HR_GBRTPROF
+:GB_UNIVERSITY_HR_GBRTPROF rdf:type owl:Class ;
+                           rdfs:subClassOf vivo:FacultyPosition ;
+                           roh:country euCountry:GBR ;
+                           roh:hasCode :GB_UNIVERSITY_HR_CODE_GBRTPROF ;
+                           rdfs:label "Professor"@en ;
+                           skos:closeMatch unescothes:C00015 ,
+                                           unescothes:C03965 ;
+                           skos:inScheme :GBUniversityHumanResourcesList ;
+                           skos:notation "GBRTPROF" ;
+                           skos:prefLabel "Professor"@en .
+
+
+###  http://purl.org/roh/university-hr/uk#GB_UNIVERSITY_HR_GBRTREAD
+:GB_UNIVERSITY_HR_GBRTREAD rdf:type owl:Class ;
+                           rdfs:subClassOf vivo:FacultyPosition ;
+                           roh:country euCountry:GBR ;
+                           roh:hasCode :GB_UNIVERSITY_HR_CODE_GBRTREAD ;
+                           rdfs:label "Reader"@en ;
+                           skos:altLabel "Principal lecturer"@en ;
+                           skos:closeMatch unescothes:C00015 ,
+                                           unescothes:C03965 ;
+                           skos:inScheme :GBUniversityHumanResourcesList ;
+                           skos:notation "GBRTREAD" ;
+                           skos:prefLabel "Reader"@en .
+
+
+###  http://purl.org/roh/university-hr/uk#GB_UNIVERSITY_HR_GBRTSENLEC
+:GB_UNIVERSITY_HR_GBRTSENLEC rdf:type owl:Class ;
+                             rdfs:subClassOf vivo:FacultyPosition ;
+                             roh:country euCountry:GBR ;
+                             roh:hasCode :GB_UNIVERSITY_HR_CODE_GBRTSENLEC ;
+                             rdfs:label "Senior lecturer"@en ;
+                             skos:closeMatch unescothes:C00015 ,
+                                             unescothes:C03965 ;
+                             skos:inScheme :GBUniversityHumanResourcesList ;
+                             skos:notation "GBRTSENLEC" ;
+                             skos:prefLabel "Senior lecturer"@en .
+
+
+###  http://purl.org/roh/university-hr/uk#GB_UNIVERSITY_HR_GBTPROF
+:GB_UNIVERSITY_HR_GBTPROF rdf:type owl:Class ;
+                          rdfs:subClassOf vivo:FacultyPosition ;
+                          roh:country euCountry:GBR ;
+                          roh:hasCode :GB_UNIVERSITY_HR_CODE_GBTPROF ;
+                          rdfs:label "Professorial teaching fellow"@en ;
+                          skos:closeMatch unescothes:C00015 ,
+                                          unescothes:C03965 ;
+                          skos:inScheme :GBUniversityHumanResourcesList ;
+                          skos:notation "GBTPROF" ;
+                          skos:prefLabel "Professorial teaching fellow"@en .
+
+
+###  http://purl.org/roh/university-hr/uk#GB_UNIVERSITY_HR_GBVICCHAN
+:GB_UNIVERSITY_HR_GBVICCHAN rdf:type owl:Class ;
+                            rdfs:subClassOf vivo:FacultyAdministrativePosition ;
+                            roh:country euCountry:GBR ;
+                            roh:hasCode :GB_UNIVERSITY_HR_CODE_GBVICCHAN ;
+                            rdfs:label "Vice-chancellor"@en ;
+                            skos:altLabel "Provost"@en ;
+                            skos:inScheme :GBUniversityHumanResourcesList ;
+                            skos:notation "GBVICCHAN" ;
+                            skos:prefLabel "Vice-chancellor"@en .
+
+
+###  http://www.w3.org/2004/02/skos/core#Concept
+skos:Concept rdf:type owl:Class ;
+             rdfs:label "Concept"@en .
+
+
+###  http://www.w3.org/2004/02/skos/core#ConceptScheme
+skos:ConceptScheme rdf:type owl:Class ;
+                   rdfs:label "Concept Scheme"@en .
+
+
+#################################################################
+#    Individuals
+#################################################################
+
+###  http://purl.org/roh/university-hr/uk#GBUniversityHumanResourcesCodesList
+:GBUniversityHumanResourcesCodesList rdf:type owl:NamedIndividual ,
+                                              roh:HRClassification ;
+                                     rdfs:label "Codes des resources humains des universités du Royaume Uni"@fr ,
+                                                "Codes for the human resources of the universities from the United Kingdom"@en ,
+                                                "Codis dels recursos humans de les universitats del Regne Unit"@ca ,
+                                                "Códigos de los recursos humanos de las universidades del Reino Unido"@es ,
+                                                "Códigos de los recursos humanos de les universidaes del Reinu Xuníu"@ast ,
+                                                "Códigos dos recursos humanos das universidades do Reino Unido"@gl ,
+                                                "Códigos dos recursos humanos das universidades do Reino Unido"@pt ;
+                                     skos:prefLabel "Codes des resources humains des universités du Royaume Uni"@fr ,
+                                                    "Codes for the human resources of the universities from the United Kingdom"@en ,
+                                                    "Codis dels recursos humans de les universitats del Regne Unit"@ca ,
+                                                    "Códigos de los recursos humanos de las universidades del Reino Unido"@es ,
+                                                    "Códigos de los recursos humanos de les universidaes del Reinu Xuníu"@ast ,
+                                                    "Códigos dos recursos humanos das universidades do Reino Unido"@gl ,
+                                                    "Códigos dos recursos humanos das universidades do Reino Unido"@pt .
+
+
+###  http://purl.org/roh/university-hr/uk#GBUniversityHumanResourcesList
+:GBUniversityHumanResourcesList rdf:type owl:NamedIndividual ,
+                                         roh:HRClassification ;
+                                rdfs:label "Human resources of the universities from the United Kingdom"@en ,
+                                           "Recursos humanos das universidades do Reino Unido"@gl ,
+                                           "Recursos humanos das universidades do Reino Unido"@pt ,
+                                           "Recursos humanos de las universidades del Reino Unido"@es ,
+                                           "Recursos humanos de les universidaes del Reinu Xuníu"@ast ,
+                                           "Recursos humans de les universitats del Regne Unit"@ca ,
+                                           "Resources humains des universités du Royaume Uni"@fr ;
+                                skos:prefLabel "Human resources of the universities from the United Kingdom"@en ,
+                                               "Recursos humanos das universidades do Reino Unido"@gl ,
+                                               "Recursos humanos das universidades do Reino Unido"@pt ,
+                                               "Recursos humanos de las universidades del Reino Unido"@es ,
+                                               "Recursos humanos de les universidaes del Reinu Xuníu"@ast ,
+                                               "Recursos humans de les universitats del Regne Unit"@ca ,
+                                               "Resources humains des universités du Royaume Uni"@fr .
+
+
+###  http://purl.org/roh/university-hr/uk#GB_UNIVERSITY_HR_CODE_GBCHAN
+:GB_UNIVERSITY_HR_CODE_GBCHAN rdf:type owl:NamedIndividual ,
+                                       skos:Concept ;
+                              roh:codeOf :GB_UNIVERSITY_HR_GBCHAN ;
+                              rdfs:label "GBCHAN" ;
+                              skos:inScheme :GBUniversityHumanResourcesCodesList ;
+                              skos:prefLabel "GBCHAN" .
+
+
+###  http://purl.org/roh/university-hr/uk#GB_UNIVERSITY_HR_CODE_GBDEAN
+:GB_UNIVERSITY_HR_CODE_GBDEAN rdf:type owl:NamedIndividual ,
+                                       skos:Concept ;
+                              roh:codeOf :GB_UNIVERSITY_HR_GBDEAN ;
+                              rdfs:label "GBDEAN" ;
+                              skos:inScheme :GBUniversityHumanResourcesCodesList ;
+                              skos:prefLabel "GBDEAN" .
+
+
+###  http://purl.org/roh/university-hr/uk#GB_UNIVERSITY_HR_CODE_GBDEPDIR
+:GB_UNIVERSITY_HR_CODE_GBDEPDIR rdf:type owl:NamedIndividual ,
+                                         skos:Concept ;
+                                roh:codeOf :GB_UNIVERSITY_HR_GBDEPDIR ;
+                                rdfs:label "GBDEPDIR" ;
+                                skos:inScheme :GBUniversityHumanResourcesCodesList ;
+                                skos:prefLabel "GBDEPDIR" .
+
+
+###  http://purl.org/roh/university-hr/uk#GB_UNIVERSITY_HR_CODE_GBDEPVICHAN
+:GB_UNIVERSITY_HR_CODE_GBDEPVICHAN rdf:type owl:NamedIndividual ,
+                                            skos:Concept ;
+                                   roh:codeOf :GB_UNIVERSITY_HR_GBDEPVICHAN ;
+                                   rdfs:label "GBDEPVICHAN" ;
+                                   skos:inScheme :GBUniversityHumanResourcesCodesList ;
+                                   skos:prefLabel "GBDEPVICHAN" .
+
+
+###  http://purl.org/roh/university-hr/uk#GB_UNIVERSITY_HR_CODE_GBEPROF
+:GB_UNIVERSITY_HR_CODE_GBEPROF rdf:type owl:NamedIndividual ,
+                                        skos:Concept ;
+                               roh:codeOf :GB_UNIVERSITY_HR_GBEPROF ;
+                               rdfs:label "GBEPROF" ;
+                               skos:inScheme :GBUniversityHumanResourcesCodesList ;
+                               skos:prefLabel "GBEPROF" .
+
+
+###  http://purl.org/roh/university-hr/uk#GB_UNIVERSITY_HR_CODE_GBEREAD
+:GB_UNIVERSITY_HR_CODE_GBEREAD rdf:type owl:NamedIndividual ,
+                                        skos:Concept ;
+                               roh:codeOf :GB_UNIVERSITY_HR_GBEREAD ;
+                               rdfs:label "GBEREAD" ;
+                               skos:inScheme :GBUniversityHumanResourcesCodesList ;
+                               skos:prefLabel "GBEREAD" .
+
+
+###  http://purl.org/roh/university-hr/uk#GB_UNIVERSITY_HR_CODE_GBHEADDEP
+:GB_UNIVERSITY_HR_CODE_GBHEADDEP rdf:type owl:NamedIndividual ,
+                                          skos:Concept ;
+                                 roh:codeOf :GB_UNIVERSITY_HR_GBHEADDEP ;
+                                 rdfs:label "GBHEADDEP" ;
+                                 skos:inScheme :GBUniversityHumanResourcesCodesList ;
+                                 skos:prefLabel "GBHEADDEP" .
+
+
+###  http://purl.org/roh/university-hr/uk#GB_UNIVERSITY_HR_CODE_GBPROCHAN
+:GB_UNIVERSITY_HR_CODE_GBPROCHAN rdf:type owl:NamedIndividual ,
+                                          skos:Concept ;
+                                 roh:codeOf :GB_UNIVERSITY_HR_GBPROCHAN ;
+                                 rdfs:label "GBPROCHAN" ;
+                                 skos:inScheme :GBUniversityHumanResourcesCodesList ;
+                                 skos:prefLabel "GBPROCHAN" .
+
+
+###  http://purl.org/roh/university-hr/uk#GB_UNIVERSITY_HR_CODE_GBPROVICCHAN
+:GB_UNIVERSITY_HR_CODE_GBPROVICCHAN rdf:type owl:NamedIndividual ,
+                                             skos:Concept ;
+                                    roh:codeOf :GB_UNIVERSITY_HR_GBPROVICCHAN ;
+                                    rdfs:label "GBPROVICCHAN" ;
+                                    skos:inScheme :GBUniversityHumanResourcesCodesList ;
+                                    skos:prefLabel "GBPROVICCHAN" .
+
+
+###  http://purl.org/roh/university-hr/uk#GB_UNIVERSITY_HR_CODE_GBRPROF
+:GB_UNIVERSITY_HR_CODE_GBRPROF rdf:type owl:NamedIndividual ,
+                                        skos:Concept ;
+                               roh:codeOf :GB_UNIVERSITY_HR_GBRPROF ;
+                               rdfs:label "GBRPROF" ;
+                               skos:inScheme :GBUniversityHumanResourcesCodesList ;
+                               skos:prefLabel "GBRPROF" .
+
+
+###  http://purl.org/roh/university-hr/uk#GB_UNIVERSITY_HR_CODE_GBRREAASS
+:GB_UNIVERSITY_HR_CODE_GBRREAASS rdf:type owl:NamedIndividual ,
+                                          skos:Concept ;
+                                 roh:codeOf :GB_UNIVERSITY_HR_GBRREAASS ;
+                                 rdfs:label "GBRREAASS" ;
+                                 skos:inScheme :GBUniversityHumanResourcesCodesList ;
+                                 skos:prefLabel "GBRREAASS" .
+
+
+###  http://purl.org/roh/university-hr/uk#GB_UNIVERSITY_HR_CODE_GBRREAFEL
+:GB_UNIVERSITY_HR_CODE_GBRREAFEL rdf:type owl:NamedIndividual ,
+                                          skos:Concept ;
+                                 roh:codeOf :GB_UNIVERSITY_HR_GBRREAFEL ;
+                                 rdfs:label "GBRREAFEL" ;
+                                 skos:inScheme :GBUniversityHumanResourcesCodesList ;
+                                 skos:prefLabel "GBRREAFEL" .
+
+
+###  http://purl.org/roh/university-hr/uk#GB_UNIVERSITY_HR_CODE_GBRSENREAFEL
+:GB_UNIVERSITY_HR_CODE_GBRSENREAFEL rdf:type owl:NamedIndividual ,
+                                             skos:Concept ;
+                                    roh:codeOf :GB_UNIVERSITY_HR_GBRSENREAFEL ;
+                                    rdfs:label "GBRSENREAFEL" ;
+                                    skos:inScheme :GBUniversityHumanResourcesCodesList ;
+                                    skos:prefLabel "GBRSENREAFEL" .
+
+
+###  http://purl.org/roh/university-hr/uk#GB_UNIVERSITY_HR_CODE_GBRTASSLEC
+:GB_UNIVERSITY_HR_CODE_GBRTASSLEC rdf:type owl:NamedIndividual ,
+                                           skos:Concept ;
+                                  roh:codeOf :GB_UNIVERSITY_HR_GBRTASSLEC ;
+                                  rdfs:label "GBRTASSLEC" ;
+                                  skos:inScheme :GBUniversityHumanResourcesCodesList ;
+                                  skos:prefLabel "GBRTASSLEC" .
+
+
+###  http://purl.org/roh/university-hr/uk#GB_UNIVERSITY_HR_CODE_GBRTCLLEC
+:GB_UNIVERSITY_HR_CODE_GBRTCLLEC rdf:type owl:NamedIndividual ,
+                                          skos:Concept ;
+                                 roh:codeOf :GB_UNIVERSITY_HR_GBRTCLLEC ;
+                                 rdfs:label "GBRTCLLEC" ;
+                                 skos:inScheme :GBUniversityHumanResourcesCodesList ;
+                                 skos:prefLabel "GBRTCLLEC" .
+
+
+###  http://purl.org/roh/university-hr/uk#GB_UNIVERSITY_HR_CODE_GBRTLEC
+:GB_UNIVERSITY_HR_CODE_GBRTLEC rdf:type owl:NamedIndividual ,
+                                        skos:Concept ;
+                               roh:codeOf :GB_UNIVERSITY_HR_GBRTLEC ;
+                               rdfs:label "GBRTLEC" ;
+                               skos:inScheme :GBUniversityHumanResourcesCodesList ;
+                               skos:prefLabel "GBRTLEC" .
+
+
+###  http://purl.org/roh/university-hr/uk#GB_UNIVERSITY_HR_CODE_GBRTPROF
+:GB_UNIVERSITY_HR_CODE_GBRTPROF rdf:type owl:NamedIndividual ,
+                                         skos:Concept ;
+                                roh:codeOf :GB_UNIVERSITY_HR_GBRTPROF ;
+                                rdfs:label "GBRTPROF" ;
+                                skos:inScheme :GBUniversityHumanResourcesCodesList ;
+                                skos:prefLabel "GBRTPROF" .
+
+
+###  http://purl.org/roh/university-hr/uk#GB_UNIVERSITY_HR_CODE_GBRTREAD
+:GB_UNIVERSITY_HR_CODE_GBRTREAD rdf:type owl:NamedIndividual ,
+                                         skos:Concept ;
+                                roh:codeOf :GB_UNIVERSITY_HR_GBRTREAD ;
+                                rdfs:label "GBRTREAD" ;
+                                skos:inScheme :GBUniversityHumanResourcesCodesList ;
+                                skos:prefLabel "GBRTREAD" .
+
+
+###  http://purl.org/roh/university-hr/uk#GB_UNIVERSITY_HR_CODE_GBRTSENLEC
+:GB_UNIVERSITY_HR_CODE_GBRTSENLEC rdf:type owl:NamedIndividual ,
+                                           skos:Concept ;
+                                  roh:codeOf :GB_UNIVERSITY_HR_GBRTSENLEC ;
+                                  rdfs:label "GBRTSENLEC" ;
+                                  skos:inScheme :GBUniversityHumanResourcesCodesList ;
+                                  skos:prefLabel "GBRTSENLEC" .
+
+
+###  http://purl.org/roh/university-hr/uk#GB_UNIVERSITY_HR_CODE_GBTPROF
+:GB_UNIVERSITY_HR_CODE_GBTPROF rdf:type owl:NamedIndividual ,
+                                        skos:Concept ;
+                               roh:codeOf :GB_UNIVERSITY_HR_GBTPROF ;
+                               rdfs:label "GBTPROF" ;
+                               skos:inScheme :GBUniversityHumanResourcesCodesList ;
+                               skos:prefLabel "GBTPROF" .
+
+
+###  http://purl.org/roh/university-hr/uk#GB_UNIVERSITY_HR_CODE_GBVICCHAN
+:GB_UNIVERSITY_HR_CODE_GBVICCHAN rdf:type owl:NamedIndividual ,
+                                          skos:Concept ;
+                                 roh:codeOf :GB_UNIVERSITY_HR_GBVICCHAN ;
+                                 rdfs:label "GBVICCHAN" ;
+                                 skos:inScheme :GBUniversityHumanResourcesCodesList ;
+                                 skos:prefLabel "GBVICCHAN" .
+
+
+#################################################################
+#    General axioms
+#################################################################
+
+[ rdf:type owl:AllDisjointClasses ;
+  owl:members ( roh:AcademicSubject
+                roh:CompanyClassification
+                roh:Country
+                roh:ExpenseClassification
+                roh:FundingProgramClassification
+                roh:HRClassification
+                roh:KnowledgeArea
+                roh:ProjectClassification
+                roh:PropertyClassification
+                roh:ResearchProblem
+              )
+] .
+
+
+###  Generated by the OWL API (version 4.5.9.2019-02-01T07:24:44Z) https://github.com/owlcs/owlapi

@@ -1,112 +1,297 @@
-@prefix :      <http://purl.org/roh/university-hr/pt#> .
-@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
-@prefix owl:   <http://www.w3.org/2002/07/owl#> .
-@prefix unescothes: <http://skos.um.es/unescothes/> .
-@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
-@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix : <http://purl.org/roh/university-hr/pt#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix roh: <http://purl.org/roh#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix vivo: <http://purl.org/roh/mirror/vivo#> .
 @prefix terms: <http://purl.org/dc/terms/> .
 @prefix euCountry: <http://publications.europa.eu/resource/authority/country/> .
-@prefix vivo:  <http://purl.org/roh/mirror/vivo#> .
-@prefix roh:   <http://purl.org/roh#> .
+@prefix unescothes: <http://skos.um.es/unescothes/> .
+@base <http://purl.org/roh/university-hr/pt> .
 
-<http://purl.org/roh/university-hr/pt>
-        a               owl:Ontology ;
-	rdfs:label      "ROH Portuguese University HR Module"@en ;
-	rdfs:comment    "The University of Murcia signed on November 29, 2017, a Covenant with the Ministry of Economy, Industry and Competitiveness backing the “HÉRCULES: Semantic University Research Data” Project with a budget of FIVE MILLION FOUR HUNDRED AND SIXTY-TWO THOUSAND SIX HUNDRED euros with an 80% of co-financiering from the European Regional Development Fund program (ERDF) within the 2014-2020 period. \n\nThe project arose as a CRUE initiative, to create the basis for a new collaboration model between universities, to develop the information management systems and with the main objective of encouraging this type of collaboration.\n\nTherefore, the purpose of this agreement was to contribute to the improvement of public services and business innovation and research through the improvement of:\n\n    efficiency in public investment by decreasing the duplication of investment in R&D.\n    efficiency of research in universities.\n    scientific dissemination of research results.\n    detection of synergies in R&D between universities.\n    transfer of R&D results to companies.\n    efficiency in the management of research. \n\nby creating a research management system with semantic capacities based on semantic open data and that will provide a global view of the research data contained in the Spanish University System."@en ;
-	terms:license   <https://creativecommons.org/licenses/by-sa/4.0/> ;
-	owl:versionIRI  <http://purl.org/roh/university-hr/pt/1.0> .
+<http://purl.org/roh/university-hr/pt> rdf:type owl:Ontology ;
+                                        owl:versionIRI <http://purl.org/roh/university-hr/pt/1.0> ;
+                                        terms:license <https://creativecommons.org/licenses/by-sa/4.0/> ;
+                                        rdfs:comment """The University of Murcia signed on November 29, 2017, a Covenant with the Ministry of Economy, Industry and Competitiveness backing the “HÉRCULES: Semantic University Research Data” Project with a budget of FIVE MILLION FOUR HUNDRED AND SIXTY-TWO THOUSAND SIX HUNDRED euros with an 80% of co-financiering from the European Regional Development Fund program (ERDF) within the 2014-2020 period. 
 
-vivo:FacultyPosition
-        a       owl:Class ;
-	rdfs:label "Faculty Position"@en .
+The project arose as a CRUE initiative, to create the basis for a new collaboration model between universities, to develop the information management systems and with the main objective of encouraging this type of collaboration.
 
-skos:Concept
-        a       owl:Class ;
-	rdfs:label "Concept"@en .
+Therefore, the purpose of this agreement was to contribute to the improvement of public services and business innovation and research through the improvement of:
 
-skos:ConceptScheme
-        a       owl:Class ;
-	rdfs:label "Concept Scheme"@en .
+    efficiency in public investment by decreasing the duplication of investment in R&D.
+    efficiency of research in universities.
+    scientific dissemination of research results.
+    detection of synergies in R&D between universities.
+    transfer of R&D results to companies.
+    efficiency in the management of research. 
 
-:PTUniversityHumanResourcesList
-        a               skos:ConceptScheme ;
-        rdfs:label      "Resources humains des universités de Portugal"@fr , "Recursos humanos das universidades de Portugal"@gl , "Recursos humanos das universidades de Portugal"@pt , "Human resources of the universities from Portugal"@en , "Recursos humanos de las universidades de Portugal"@es , "Recursos humans de les universitats de Portugal"@ca , "Recursos humanos de les universidaes de Portugal"@ast ;
-        skos:prefLabel  "Recursos humans de les universitats de Portugal"@ca , "Resources humains des universités de Portugal"@fr , "Human resources of the universities from Portugal"@en , "Recursos humanos de les universidaes de Portugal"@ast , "Recursos humanos de las universidades de Portugal"@es , "Recursos humanos das universidades de Portugal"@gl , "Recursos humanos das universidades de Portugal"@pt .
+by creating a research management system with semantic capacities based on semantic open data and that will provide a global view of the research data contained in the Spanish University System."""@en ;
+                                        rdfs:label "ROH Portuguese University HR Module"@en .
 
-:PTUniversityHumanResourcesCodesList
-        a               skos:ConceptScheme ;
-        rdfs:label      "Codis dels recursos humans de les universitats de Portugal"@ca , "Códigos dos recursos humanos das universidades de Portugal"@pt , "Códigos dos recursos humanos das universidades de Portugal"@gl , "Códigos de los recursos humanos de las universidades de Portugal"@es , "Codes des resources humains des universités de Portugal"@fr , "Codes for the human resources of the universities from Portugal"@en , "Códigos de los recursos humanos de les universidaes de Portugal"@ast ;
-        skos:prefLabel  "Codes for the human resources of the universities from Portugal"@en , "Códigos dos recursos humanos das universidades de Portugal"@pt , "Códigos dos recursos humanos das universidades de Portugal"@gl , "Codis dels recursos humans de les universitats de Portugal"@ca , "Codes des resources humains des universités de Portugal"@fr , "Códigos de los recursos humanos de les universidaes de Portugal"@ast , "Códigos de los recursos humanos de las universidades de España"@es .
+#################################################################
+#    Annotation properties
+#################################################################
 
-:PT_UNIVERSITY_HR_PTPEM
-        a                owl:Class ;
-        rdfs:label       "Professor emérito"@pt ;
-        rdfs:subClassOf  vivo:FacultyPosition ;
-        roh:country     euCountry:PRT ;
-        roh:hasCode     :PT_UNIVERSITY_HR_CODE_PTPEM ;
-        skos:closeMatch  unescothes:C03965 , unescothes:C00015 ;
-        skos:inScheme    :PTUniversityHumanResourcesList ;
-        skos:notation    "PTPEM" ;
-        skos:prefLabel   "Profesor emérito"@gl , "Profesor emérito"@es , "Professor emèrit"@ca , "Profesor eméritu"@ast , "Professor emérito"@pt .
+###  http://purl.org/dc/terms/license
+terms:license rdf:type owl:AnnotationProperty .
 
-:PT_UNIVERSITY_HR_PTPAU
-        a                owl:Class ;
-        rdfs:label       "Professor auxiliar"@pt ;
-        rdfs:subClassOf  vivo:FacultyPosition ;
-        roh:country     euCountry:PRT ;
-        roh:hasCode     :PT_UNIVERSITY_HR_CODE_PTPAU ;
-        skos:closeMatch  unescothes:C00015 , unescothes:C03965 ;
-        skos:inScheme    :PTUniversityHumanResourcesList ;
-        skos:notation    "PTPAU" ;
-        skos:prefLabel   "Profesor auxiliar"@es , "Profesor auxiliar"@gl , "Profesor auxiliar"@ast , "Professor auxiliar"@pt , "Professor auxiliar"@ca .
 
-:PT_UNIVERSITY_HR_CODE_PTPC
-        a               skos:Concept ;
-        rdfs:label      "PTPC" ;
-        roh:codeOf     :PT_UNIVERSITY_HR_PTPC ;
-        skos:inScheme   :PTUniversityHumanResourcesCodesList ;
-        skos:prefLabel  "PTPC" .
+###  http://purl.org/roh#codeOf
+roh:codeOf rdf:type owl:AnnotationProperty .
 
-:PT_UNIVERSITY_HR_PTPC
-        a                owl:Class ;
-        rdfs:label       "Professor catedrático"@pt ;
-        rdfs:subClassOf  vivo:FacultyPosition ;
-        roh:country     euCountry:PRT ;
-        roh:hasCode     :PT_UNIVERSITY_HR_CODE_PTPC ;
-        skos:closeMatch  unescothes:C03965 , unescothes:C00015 ;
-        skos:inScheme    :PTUniversityHumanResourcesList ;
-        skos:notation    "PTPC" ;
-        skos:prefLabel   "Professor catedrático"@pt , "Profesor catedrático"@gl , "Profesor catedrático"@es , "Professor catedràtic"@ca , "Profesor catedráticu"@ast .
 
-:PT_UNIVERSITY_HR_CODE_PTPEM
-        a               skos:Concept ;
-        rdfs:label      "PTPEM" ;
-        roh:codeOf     :PT_UNIVERSITY_HR_PTPEM ;
-        skos:inScheme   :PTUniversityHumanResourcesCodesList ;
-        skos:prefLabel  "PTPEM" .
+###  http://purl.org/roh#country
+roh:country rdf:type owl:AnnotationProperty .
 
-:PT_UNIVERSITY_HR_PTPAS
-        a                owl:Class ;
-        rdfs:label       "Professor associado"@pt ;
-        rdfs:subClassOf  vivo:FacultyPosition ;
-        roh:country     euCountry:PRT ;
-        roh:hasCode     :PT_UNIVERSITY_HR_CODE_PTPAS ;
-        skos:closeMatch  unescothes:C00015 , unescothes:C03965 ;
-        skos:inScheme    :PTUniversityHumanResourcesList ;
-        skos:notation    "PTPAS" ;
-        skos:prefLabel   "Profesor asociáu"@ast , "Professor associado"@pt , "Professor associat"@ca , "Irakasle elkartua"@eu , "Profesor asociado"@gl , "Profesor asociado"@es .
 
-:PT_UNIVERSITY_HR_CODE_PTPAU
-        a               skos:Concept ;
-        rdfs:label      "PTPAU" ;
-        roh:codeOf      :PT_UNIVERSITY_HR_PTPAU ;
-        skos:inScheme   :PTUniversityHumanResourcesCodesList ;
-        skos:prefLabel  "PTPAU" .
+###  http://purl.org/roh#hasCode
+roh:hasCode rdf:type owl:AnnotationProperty .
 
-:PT_UNIVERSITY_HR_CODE_PTPAS
-        a               skos:Concept ;
-        rdfs:label      "PTPAS" ;
-        roh:codeOf      :PT_UNIVERSITY_HR_PTPAS ;
-        skos:inScheme   :PTUniversityHumanResourcesCodesList ;
-        skos:prefLabel  "PTPAS" .
 
+###  http://www.w3.org/2004/02/skos/core#closeMatch
+skos:closeMatch rdf:type owl:AnnotationProperty .
+
+
+###  http://www.w3.org/2004/02/skos/core#inScheme
+skos:inScheme rdf:type owl:AnnotationProperty .
+
+
+###  http://www.w3.org/2004/02/skos/core#notation
+skos:notation rdf:type owl:AnnotationProperty .
+
+
+###  http://www.w3.org/2004/02/skos/core#prefLabel
+skos:prefLabel rdf:type owl:AnnotationProperty .
+
+
+#################################################################
+#    Classes
+#################################################################
+
+###  http://purl.org/roh#AcademicSubject
+roh:AcademicSubject rdf:type owl:Class .
+
+
+###  http://purl.org/roh#CompanyClassification
+roh:CompanyClassification rdf:type owl:Class .
+
+
+###  http://purl.org/roh#Country
+roh:Country rdf:type owl:Class .
+
+
+###  http://purl.org/roh#ExpenseClassification
+roh:ExpenseClassification rdf:type owl:Class .
+
+
+###  http://purl.org/roh#FundingProgramClassification
+roh:FundingProgramClassification rdf:type owl:Class .
+
+
+###  http://purl.org/roh#HRClassification
+roh:HRClassification rdf:type owl:Class ;
+                     rdfs:subClassOf skos:ConceptScheme ;
+                     rdfs:label "Human Resource Classification"@en .
+
+
+###  http://purl.org/roh#KnowledgeArea
+roh:KnowledgeArea rdf:type owl:Class .
+
+
+###  http://purl.org/roh#ProjectClassification
+roh:ProjectClassification rdf:type owl:Class .
+
+
+###  http://purl.org/roh#PropertyClassification
+roh:PropertyClassification rdf:type owl:Class .
+
+
+###  http://purl.org/roh#ResearchProblem
+roh:ResearchProblem rdf:type owl:Class .
+
+
+###  http://purl.org/roh/mirror/vivo#FacultyPosition
+vivo:FacultyPosition rdf:type owl:Class ;
+                     rdfs:label "Faculty Position"@en .
+
+
+###  http://purl.org/roh/university-hr/pt#PT_UNIVERSITY_HR_PTPAS
+:PT_UNIVERSITY_HR_PTPAS rdf:type owl:Class ;
+                        rdfs:subClassOf vivo:FacultyPosition ;
+                        roh:country euCountry:PRT ;
+                        roh:hasCode :PT_UNIVERSITY_HR_CODE_PTPAS ;
+                        rdfs:label "Professor associado"@pt ;
+                        skos:closeMatch unescothes:C00015 ,
+                                        unescothes:C03965 ;
+                        skos:inScheme :PTUniversityHumanResourcesList ;
+                        skos:notation "PTPAS" ;
+                        skos:prefLabel "Irakasle elkartua"@eu ,
+                                       "Profesor asociado"@es ,
+                                       "Profesor asociado"@gl ,
+                                       "Profesor asociáu"@ast ,
+                                       "Professor associado"@pt ,
+                                       "Professor associat"@ca .
+
+
+###  http://purl.org/roh/university-hr/pt#PT_UNIVERSITY_HR_PTPAU
+:PT_UNIVERSITY_HR_PTPAU rdf:type owl:Class ;
+                        rdfs:subClassOf vivo:FacultyPosition ;
+                        roh:country euCountry:PRT ;
+                        roh:hasCode :PT_UNIVERSITY_HR_CODE_PTPAU ;
+                        rdfs:label "Professor auxiliar"@pt ;
+                        skos:closeMatch unescothes:C00015 ,
+                                        unescothes:C03965 ;
+                        skos:inScheme :PTUniversityHumanResourcesList ;
+                        skos:notation "PTPAU" ;
+                        skos:prefLabel "Profesor auxiliar"@ast ,
+                                       "Profesor auxiliar"@es ,
+                                       "Profesor auxiliar"@gl ,
+                                       "Professor auxiliar"@ca ,
+                                       "Professor auxiliar"@pt .
+
+
+###  http://purl.org/roh/university-hr/pt#PT_UNIVERSITY_HR_PTPC
+:PT_UNIVERSITY_HR_PTPC rdf:type owl:Class ;
+                       rdfs:subClassOf vivo:FacultyPosition ;
+                       roh:country euCountry:PRT ;
+                       roh:hasCode :PT_UNIVERSITY_HR_CODE_PTPC ;
+                       rdfs:label "Professor catedrático"@pt ;
+                       skos:closeMatch unescothes:C00015 ,
+                                       unescothes:C03965 ;
+                       skos:inScheme :PTUniversityHumanResourcesList ;
+                       skos:notation "PTPC" ;
+                       skos:prefLabel "Profesor catedrático"@es ,
+                                      "Profesor catedrático"@gl ,
+                                      "Profesor catedráticu"@ast ,
+                                      "Professor catedràtic"@ca ,
+                                      "Professor catedrático"@pt .
+
+
+###  http://purl.org/roh/university-hr/pt#PT_UNIVERSITY_HR_PTPEM
+:PT_UNIVERSITY_HR_PTPEM rdf:type owl:Class ;
+                        rdfs:subClassOf vivo:FacultyPosition ;
+                        roh:country euCountry:PRT ;
+                        roh:hasCode :PT_UNIVERSITY_HR_CODE_PTPEM ;
+                        rdfs:label "Professor emérito"@pt ;
+                        skos:closeMatch unescothes:C00015 ,
+                                        unescothes:C03965 ;
+                        skos:inScheme :PTUniversityHumanResourcesList ;
+                        skos:notation "PTPEM" ;
+                        skos:prefLabel "Profesor emérito"@es ,
+                                       "Profesor emérito"@gl ,
+                                       "Profesor eméritu"@ast ,
+                                       "Professor emèrit"@ca ,
+                                       "Professor emérito"@pt .
+
+
+###  http://www.w3.org/2004/02/skos/core#Concept
+skos:Concept rdf:type owl:Class ;
+             rdfs:label "Concept"@en .
+
+
+###  http://www.w3.org/2004/02/skos/core#ConceptScheme
+skos:ConceptScheme rdf:type owl:Class ;
+                   rdfs:label "Concept Scheme"@en .
+
+
+#################################################################
+#    Individuals
+#################################################################
+
+###  http://purl.org/roh/university-hr/pt#PTUniversityHumanResourcesCodesList
+:PTUniversityHumanResourcesCodesList rdf:type owl:NamedIndividual ,
+                                              roh:HRClassification ;
+                                     rdfs:label "Codes des resources humains des universités de Portugal"@fr ,
+                                                "Codes for the human resources of the universities from Portugal"@en ,
+                                                "Codis dels recursos humans de les universitats de Portugal"@ca ,
+                                                "Códigos de los recursos humanos de las universidades de Portugal"@es ,
+                                                "Códigos de los recursos humanos de les universidaes de Portugal"@ast ,
+                                                "Códigos dos recursos humanos das universidades de Portugal"@gl ,
+                                                "Códigos dos recursos humanos das universidades de Portugal"@pt ;
+                                     skos:prefLabel "Codes des resources humains des universités de Portugal"@fr ,
+                                                    "Codes for the human resources of the universities from Portugal"@en ,
+                                                    "Codis dels recursos humans de les universitats de Portugal"@ca ,
+                                                    "Códigos de los recursos humanos de las universidades de España"@es ,
+                                                    "Códigos de los recursos humanos de les universidaes de Portugal"@ast ,
+                                                    "Códigos dos recursos humanos das universidades de Portugal"@gl ,
+                                                    "Códigos dos recursos humanos das universidades de Portugal"@pt .
+
+
+###  http://purl.org/roh/university-hr/pt#PTUniversityHumanResourcesList
+:PTUniversityHumanResourcesList rdf:type owl:NamedIndividual ,
+                                         roh:HRClassification ;
+                                rdfs:label "Human resources of the universities from Portugal"@en ,
+                                           "Recursos humanos das universidades de Portugal"@gl ,
+                                           "Recursos humanos das universidades de Portugal"@pt ,
+                                           "Recursos humanos de las universidades de Portugal"@es ,
+                                           "Recursos humanos de les universidaes de Portugal"@ast ,
+                                           "Recursos humans de les universitats de Portugal"@ca ,
+                                           "Resources humains des universités de Portugal"@fr ;
+                                skos:prefLabel "Human resources of the universities from Portugal"@en ,
+                                               "Recursos humanos das universidades de Portugal"@gl ,
+                                               "Recursos humanos das universidades de Portugal"@pt ,
+                                               "Recursos humanos de las universidades de Portugal"@es ,
+                                               "Recursos humanos de les universidaes de Portugal"@ast ,
+                                               "Recursos humans de les universitats de Portugal"@ca ,
+                                               "Resources humains des universités de Portugal"@fr .
+
+
+###  http://purl.org/roh/university-hr/pt#PT_UNIVERSITY_HR_CODE_PTPAS
+:PT_UNIVERSITY_HR_CODE_PTPAS rdf:type owl:NamedIndividual ,
+                                      skos:Concept ;
+                             roh:codeOf :PT_UNIVERSITY_HR_PTPAS ;
+                             rdfs:label "PTPAS" ;
+                             skos:inScheme :PTUniversityHumanResourcesCodesList ;
+                             skos:prefLabel "PTPAS" .
+
+
+###  http://purl.org/roh/university-hr/pt#PT_UNIVERSITY_HR_CODE_PTPAU
+:PT_UNIVERSITY_HR_CODE_PTPAU rdf:type owl:NamedIndividual ,
+                                      skos:Concept ;
+                             roh:codeOf :PT_UNIVERSITY_HR_PTPAU ;
+                             rdfs:label "PTPAU" ;
+                             skos:inScheme :PTUniversityHumanResourcesCodesList ;
+                             skos:prefLabel "PTPAU" .
+
+
+###  http://purl.org/roh/university-hr/pt#PT_UNIVERSITY_HR_CODE_PTPC
+:PT_UNIVERSITY_HR_CODE_PTPC rdf:type owl:NamedIndividual ,
+                                     skos:Concept ;
+                            roh:codeOf :PT_UNIVERSITY_HR_PTPC ;
+                            rdfs:label "PTPC" ;
+                            skos:inScheme :PTUniversityHumanResourcesCodesList ;
+                            skos:prefLabel "PTPC" .
+
+
+###  http://purl.org/roh/university-hr/pt#PT_UNIVERSITY_HR_CODE_PTPEM
+:PT_UNIVERSITY_HR_CODE_PTPEM rdf:type owl:NamedIndividual ,
+                                      skos:Concept ;
+                             roh:codeOf :PT_UNIVERSITY_HR_PTPEM ;
+                             rdfs:label "PTPEM" ;
+                             skos:inScheme :PTUniversityHumanResourcesCodesList ;
+                             skos:prefLabel "PTPEM" .
+
+
+#################################################################
+#    General axioms
+#################################################################
+
+[ rdf:type owl:AllDisjointClasses ;
+  owl:members ( roh:AcademicSubject
+                roh:CompanyClassification
+                roh:Country
+                roh:ExpenseClassification
+                roh:FundingProgramClassification
+                roh:HRClassification
+                roh:KnowledgeArea
+                roh:ProjectClassification
+                roh:PropertyClassification
+                roh:ResearchProblem
+              )
+] .
+
+
+###  Generated by the OWL API (version 4.5.9.2019-02-01T07:24:44Z) https://github.com/owlcs/owlapi

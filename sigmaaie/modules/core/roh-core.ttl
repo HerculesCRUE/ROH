@@ -40,8 +40,18 @@
 
 <http://purl.org/roh> rdf:type owl:Ontology ;
                        owl:versionIRI <http://purl.org/roh/0.2> ;
-                       dc:contributor "Esteban Sota" ;
-                       terms:license <https://creativecommons.org/publicdomain/zero/1.0/> ;
+                       dc:contributor "Alejandro González Hevia" ,
+                                      "Diego López de Ipiña" ,
+                                      "Esteban Sota" ,
+                                      "Iñigo Apellániz" ,
+                                      "José Emilio Labra Gayo" ,
+                                      "Álvaro Palacios" ;
+                       dc:creator "Emilio Rubiera Azcona" ,
+                                  "Mikel Emaldi" ;
+                       dc:description "An ontology to address the Research Management of the CRUE's Spanish University System (Sistema Universitario Español) by applying an encompassing model not only capable of addressing the universities of the CRUE but also more belonging to the European Union." ;
+                       dc:title "The ASIO ontology" ;
+                       terms:license <https://creativecommons.org/licenses/by-sa/4.0/> ,
+                                     <https://creativecommons.org/publicdomain/zero/1.0/> ;
                        rdfs:comment """The University of Murcia signed on November 29, 2017, a Covenant with the Ministry of Economy, Industry and Competitiveness backing the “HÉRCULES: Semantic University Research Data” Project with a budget of FIVE MILLION FOUR HUNDRED AND SIXTY-TWO THOUSAND SIX HUNDRED euros with an 80% of co-financiering from the European Regional Development Fund program (ERDF) within the 2014-2020 period. 
 
 The project arose as a CRUE initiative, to create the basis for a new collaboration model between universities, to develop the information management systems and with the main objective of encouraging this type of collaboration.
@@ -56,19 +66,9 @@ Therefore, the purpose of this agreement was to contribute to the improvement of
     efficiency in the management of research. 
 
 by creating a research management system with semantic capacities based on semantic open data and that will provide a global view of the research data contained in the Spanish University System."""@en ;
-                       dc:contributor "Alejandro González Hevia" ;
-                       dc:title "The ASIO ontology" ;
                        owl:versionInfo "0.0.1" ;
-                       dc:contributor "José Emilio Labra Gayo" ,
-                                      "Iñigo Apellániz" ,
-                                      "Álvaro Palacios" ;
-                       foaf:primaryTopic <http://purl.org/roh> ;
-                       dc:description "An ontology to address the Research Management of the CRUE's Spanish University System (Sistema Universitario Español) by applying an encompassing model not only capable of addressing the universities of the CRUE but also more belonging to the European Union." ;
-                       terms:license <https://creativecommons.org/licenses/by-sa/4.0/> ;
                        schema:identifier <http://purl.org/roh> ;
-                       dc:creator "Mikel Emaldi" ;
-                       dc:contributor "Diego López de Ipiña" ;
-                       dc:creator "Emilio Rubiera Azcona" .
+                       foaf:primaryTopic <http://purl.org/roh> .
 
 #################################################################
 #    Annotation properties
@@ -541,7 +541,6 @@ terms:hasPart rdf:type owl:ObjectProperty ;
 
 ###  http://purl.org/roh#coordinatedBy
 :coordinatedBy rdf:type owl:ObjectProperty ;
-               owl:inverseOf :projectCoordinator ;
                rdfs:domain vivo:Project ;
                rdfs:range <http://purl.org/roh/mirror/foaf#Agent> ;
                rdfs:comment "inverse property of 'project coordinator'"@en ;
@@ -869,17 +868,9 @@ terms:hasPart rdf:type owl:ObjectProperty ;
                          rdfs:label "has research contribution"@en .
 
 
-###  http://purl.org/roh#hasResearchLine
-:hasResearchLine rdf:type owl:ObjectProperty ;
-                 rdfs:domain <http://purl.org/roh/mirror/foaf#Agent> ;
-                 rdfs:range skos:Concept ;
-                 rdfs:comment "a property linking organizations or groups with scientific domains"@en ;
-                 rdfs:label "has research line"@en .
-
-
 ###  http://purl.org/roh#hasReservable
 :hasReservable rdf:type owl:ObjectProperty ;
-               owl:inverseOf :infrastructureOf ;
+               owl:inverseOf :reservableOf ;
                rdfs:domain <http://purl.org/roh/mirror/foaf#Agent> ;
                rdfs:range :Reservable ;
                rdfs:comment "An Agent who owns an infrastructure."@en ;
@@ -901,13 +892,6 @@ terms:hasPart rdf:type owl:ObjectProperty ;
 :hasScientificDomain rdf:type owl:ObjectProperty ;
                      rdfs:range skos:Concept ;
                      rdfs:label "has scientific domain"@en .
-
-
-###  http://purl.org/roh#hasSealOfQuality
-:hasSealOfQuality rdf:type owl:ObjectProperty ;
-                  rdfs:domain <http://purl.org/roh/mirror/foaf#Agent> ;
-                  rdfs:range :ResearchInstitute ;
-                  rdfs:label "has seal of quality"@en .
 
 
 ###  http://purl.org/roh#hasSpinoff
@@ -940,15 +924,6 @@ terms:hasPart rdf:type owl:ObjectProperty ;
            rdfs:domain :AuthorMetric .
 
 
-###  http://purl.org/roh#infrastructureOf
-:infrastructureOf rdf:type owl:ObjectProperty ;
-                  rdfs:domain :Reservable ;
-                  rdfs:range <http://purl.org/roh/mirror/foaf#Agent> ;
-                  rdfs:comment "An Infrastructure belonging to an Agent."@en ;
-                  rdfs:label "infrastructura de"@es ,
-                             "infrastructure of"@en .
-
-
 ###  http://purl.org/roh#isAdvisedBy
 :isAdvisedBy rdf:type owl:ObjectProperty ;
              rdfs:label "is advised by"@en .
@@ -965,13 +940,6 @@ terms:hasPart rdf:type owl:ObjectProperty ;
              rdf:type owl:FunctionalProperty ;
              rdfs:range <http://purl.org/roh/mirror/foaf#Agent> ;
              rdfs:label "is awarded by"@en .
-
-
-###  http://purl.org/roh#isCoauthoredBy
-:isCoauthoredBy rdf:type owl:ObjectProperty ;
-                rdfs:domain bibo:Document ;
-                rdfs:range <http://purl.org/roh/mirror/foaf#Agent> ;
-                rdfs:label "is co-authored by"@en .
 
 
 ###  http://purl.org/roh#isFundedBy
@@ -1052,7 +1020,6 @@ terms:hasPart rdf:type owl:ObjectProperty ;
 
 ###  http://purl.org/roh#metricOf
 :metricOf rdf:type owl:ObjectProperty ;
-          rdfs:subPropertyOf iao:IAO_0000136 ;
           rdfs:domain :Metric ;
           rdfs:comment "relates a Metric to the entity it describes"@en ;
           rdfs:label "metric of"@en ,
@@ -1192,14 +1159,6 @@ terms:hasPart rdf:type owl:ObjectProperty ;
                                     "project categorization of"@en .
 
 
-###  http://purl.org/roh#projectCoordinator
-:projectCoordinator rdf:type owl:ObjectProperty ;
-                    rdfs:domain <http://purl.org/roh/mirror/foaf#Agent> ;
-                    rdfs:range vivo:Project ;
-                    rdfs:comment "A property to link an agent (person or organisation) with a project in the role of coordinator."@en ;
-                    rdfs:label "project coordinator"@en .
-
-
 ###  http://purl.org/roh#projectStatus
 :projectStatus rdf:type owl:ObjectProperty ;
                rdfs:domain vivo:Project ;
@@ -1272,6 +1231,15 @@ terms:hasPart rdf:type owl:ObjectProperty ;
                      ] ;
           rdfs:comment "This property relates roles and their requisites, i.e. other roles."@en ;
           rdfs:label "requires"@en .
+
+
+###  http://purl.org/roh#reservableOf
+:reservableOf rdf:type owl:ObjectProperty ;
+              rdfs:domain :Reservable ;
+              rdfs:range <http://purl.org/roh/mirror/foaf#Agent> ;
+              rdfs:comment "An Infrastructure belonging to an Agent."@en ;
+              rdfs:label "reservable de"@es ,
+                         "reservable of"@en .
 
 
 ###  http://purl.org/roh#reviews
@@ -1529,11 +1497,6 @@ bfo:BFO_0000055 rdf:type owl:ObjectProperty ;
                            "realizes"@en .
 
 
-###  http://purl.org/roh/mirror/obo/iao#IAO_0000136
-iao:IAO_0000136 rdf:type owl:ObjectProperty ;
-                rdfs:domain iao:IAO_0000030 .
-
-
 ###  http://purl.org/roh/mirror/obo/ro#BFO_0000050
 ro:BFO_0000050 rdf:type owl:ObjectProperty ;
                owl:inverseOf ro:BFO_0000051 ;
@@ -1731,14 +1694,6 @@ vivo:hasPublicationVenue rdf:type owl:ObjectProperty ;
                                     "published in"@en .
 
 
-###  http://purl.org/roh/mirror/vivo#hasSubjectArea
-vivo:hasSubjectArea rdf:type owl:ObjectProperty ;
-                    owl:inverseOf vivo:subjectAreaOf ;
-                    rdfs:comment "An entity which is related to some KnowledgeArea or skos:Concept."@en ;
-                    rdfs:label "has subject area"@en ,
-                               "tiene materia"@es .
-
-
 ###  http://purl.org/roh/mirror/vivo#hasSuccessorOrganization
 vivo:hasSuccessorOrganization rdf:type owl:ObjectProperty ,
                                        owl:TransitiveProperty ;
@@ -1797,13 +1752,6 @@ vivo:start rdf:type owl:ObjectProperty ;
            rdfs:comment "The date/time value in which something starts."@en ;
            rdfs:label "comienzo"@es ,
                       "start"@en .
-
-
-###  http://purl.org/roh/mirror/vivo#subjectAreaOf
-vivo:subjectAreaOf rdf:type owl:ObjectProperty ;
-                   rdfs:comment "Some Entity which is the research area of another Entity."@en ;
-                   rdfs:label "subject area of"@en ,
-                              "área temática de"@es .
 
 
 ###  http://purl.org/roh/mirror/vivo#supportedInformationResource
@@ -2711,6 +2659,10 @@ obo:BFO_0000040 rdf:type owl:Class .
 ###  http://purl.org/roh#Accreditation
 :Accreditation rdf:type owl:Class ;
                rdfs:subClassOf [ rdf:type owl:Restriction ;
+                                 owl:onProperty :hasKnowledgeArea ;
+                                 owl:allValuesFrom skos:Concept
+                               ] ,
+                               [ rdf:type owl:Restriction ;
                                  owl:onProperty vivo:dateIssued ;
                                  owl:allValuesFrom vivo:DateTimeValue
                                ] ,
@@ -2719,11 +2671,7 @@ obo:BFO_0000040 rdf:type owl:Class .
                                  owl:allValuesFrom <http://purl.org/roh/mirror/foaf#Organization>
                                ] ,
                                [ rdf:type owl:Restriction ;
-                                 owl:onProperty vivo:hasSubjectArea ;
-                                 owl:allValuesFrom skos:Concept
-                               ] ,
-                               [ rdf:type owl:Restriction ;
-                                 owl:onProperty <http://purl.org/roh/mirror/foaf#title> ;
+                                 owl:onProperty :title ;
                                  owl:someValuesFrom xsd:string
                                ] ,
                                [ rdf:type owl:Restriction ;
@@ -2764,6 +2712,10 @@ obo:BFO_0000040 rdf:type owl:Class .
 :Activity rdf:type owl:Class ;
           rdfs:subClassOf bfo:BFO_0000015 ,
                           [ rdf:type owl:Restriction ;
+                            owl:onProperty :hasKnowledgeArea ;
+                            owl:allValuesFrom skos:Concept
+                          ] ,
+                          [ rdf:type owl:Restriction ;
                             owl:onProperty :participatedBy ;
                             owl:allValuesFrom <http://purl.org/roh/mirror/foaf#Agent>
                           ] ,
@@ -2778,10 +2730,6 @@ obo:BFO_0000040 rdf:type owl:Class .
                           [ rdf:type owl:Restriction ;
                             owl:onProperty vivo:dateTimeInterval ;
                             owl:allValuesFrom vivo:DateTimeInterval
-                          ] ,
-                          [ rdf:type owl:Restriction ;
-                            owl:onProperty vivo:hasSubjectArea ;
-                            owl:allValuesFrom skos:Concept
                           ] ,
                           [ rdf:type owl:Restriction ;
                             owl:onProperty vivo:relates ;
@@ -3574,10 +3522,6 @@ A roh:FundingSource roh:feeds a roh:Funding with funds to sponsor some projects.
 ###  http://purl.org/roh#Invention
 :Invention rdf:type owl:Class ;
            rdfs:subClassOf [ rdf:type owl:Restriction ;
-                             owl:onProperty terms:hasPart ;
-                             owl:allValuesFrom :PatentApplication
-                           ] ,
-                           [ rdf:type owl:Restriction ;
                              owl:onProperty :fundedBy ;
                              owl:allValuesFrom :FundingProgram
                            ] ,
@@ -3627,6 +3571,10 @@ A roh:FundingSource roh:feeds a roh:Funding with funds to sponsor some projects.
                            [ rdf:type owl:Restriction ;
                              owl:onProperty <http://purl.org/roh/mirror/geonames#locatedIn> ;
                              owl:allValuesFrom <http://purl.org/roh/mirror/geonames#Feature>
+                           ] ,
+                           [ rdf:type owl:Restriction ;
+                             owl:onProperty ro:BFO_0000051 ;
+                             owl:allValuesFrom :PatentApplication
                            ] ,
                            [ rdf:type owl:Restriction ;
                              owl:onProperty vivo:relatedBy ;
@@ -3901,8 +3849,7 @@ A roh:FundingSource roh:feeds a roh:Funding with funds to sponsor some projects.
 
 ###  http://purl.org/roh#Metric
 :Metric rdf:type owl:Class ;
-        rdfs:subClassOf iao:IAO_0000030 ,
-                        [ rdf:type owl:Restriction ;
+        rdfs:subClassOf [ rdf:type owl:Restriction ;
                           owl:onProperty vivo:dateTimeValue ;
                           owl:allValuesFrom vivo:DateTimeValue
                         ] ,
@@ -3976,7 +3923,15 @@ A roh:FundingSource roh:feeds a roh:Funding with funds to sponsor some projects.
 
 ###  http://purl.org/roh#PersonContract
 :PersonContract rdf:type owl:Class ;
-                rdfs:subClassOf vivo:Contract ;
+                rdfs:subClassOf vivo:Contract ,
+                                [ rdf:type owl:Restriction ;
+                                  owl:onProperty :hasHRClassification ;
+                                  owl:someValuesFrom skos:Concept
+                                ] ,
+                                [ rdf:type owl:Restriction ;
+                                  owl:onProperty :hasHRClassification ;
+                                  owl:allValuesFrom skos:Concept
+                                ] ;
                 owl:disjointWith :ProjectContract ;
                 rdfs:comment "An agreement between a person and an organization to work in a project for a specified duration."@en ;
                 rdfs:label "Contracte de treball"@ca-ad ,
@@ -3985,7 +3940,6 @@ A roh:FundingSource roh:feeds a roh:Funding with funds to sponsor some projects.
                            "Contrato de Persona"@es ,
                            "Contrato de trabajo"@es ,
                            "Contrato de trabalho"@pt ,
-                           "Employment contract"@en ,
                            "Person Contract"@en ;
                 skos:prefLabel "Contracte de treball"@ca-ad ,
                                "Contracte de treball"@ca-es ,
@@ -4078,8 +4032,7 @@ A roh:FundingSource roh:feeds a roh:Funding with funds to sponsor some projects.
 
 ###  http://purl.org/roh#ProformaInvoice
 :ProformaInvoice rdf:type owl:Class ;
-                 rdfs:subClassOf :Invoice ,
-                                 bibo:Document ;
+                 rdfs:subClassOf :Invoice ;
                  rdfs:label "Proforma invoice"@en .
 
 
@@ -4134,10 +4087,6 @@ A roh:FundingSource roh:feeds a roh:Funding with funds to sponsor some projects.
 ###  http://purl.org/roh#PublicationMetric
 :PublicationMetric rdf:type owl:Class ;
                    rdfs:subClassOf :Metric ,
-                                   [ rdf:type owl:Restriction ;
-                                     owl:onProperty :metricOf ;
-                                     owl:allValuesFrom iao:IAO_0000136
-                                   ] ,
                                    [ rdf:type owl:Restriction ;
                                      owl:onProperty :citationCount ;
                                      owl:allValuesFrom xsd:integer
@@ -4346,7 +4295,7 @@ A roh:FundingSource roh:feeds a roh:Funding with funds to sponsor some projects.
                               owl:someValuesFrom vivo:DateTimeInterval
                             ] ,
                             [ rdf:type owl:Restriction ;
-                              owl:onProperty :infrastructureOf ;
+                              owl:onProperty :reservableOf ;
                               owl:allValuesFrom <http://purl.org/roh/mirror/foaf#Agent>
                             ] ,
                             [ rdf:type owl:Restriction ;
@@ -4406,12 +4355,12 @@ A roh:FundingSource roh:feeds a roh:Funding with funds to sponsor some projects.
                                            owl:someValuesFrom <http://purl.org/roh/mirror/foaf#Organization>
                                          ] ,
                                          [ rdf:type owl:Restriction ;
-                                           owl:onProperty vivo:dateTimeInterval ;
-                                           owl:allValuesFrom vivo:DateTimeInterval
+                                           owl:onProperty :hasKnowledgeArea ;
+                                           owl:allValuesFrom skos:Concept
                                          ] ,
                                          [ rdf:type owl:Restriction ;
-                                           owl:onProperty vivo:hasSubjectArea ;
-                                           owl:allValuesFrom skos:Concept
+                                           owl:onProperty vivo:dateTimeInterval ;
+                                           owl:allValuesFrom vivo:DateTimeInterval
                                          ] ;
                          obo:IAO_0000115 "A dual relationship of one organization offering a service to another organization, typically including start and end dates" ;
                          rdfs:label "Reservation Relationship"@en .
@@ -4774,11 +4723,11 @@ bibo:Chapter rdf:type owl:Class ;
 bibo:CollectedDocument rdf:type owl:Class ;
                        rdfs:subClassOf bibo:Document ,
                                        [ rdf:type owl:Restriction ;
-                                         owl:onProperty terms:hasPart ;
+                                         owl:onProperty ro:BFO_0000051 ;
                                          owl:allValuesFrom bibo:Document
                                        ] ,
                                        [ rdf:type owl:Restriction ;
-                                         owl:onProperty terms:hasPart ;
+                                         owl:onProperty ro:BFO_0000051 ;
                                          owl:minCardinality "1"^^xsd:nonNegativeInteger
                                        ] ;
                        rdfs:comment "A document consisting of collections of previously published works."@en ,
@@ -5003,11 +4952,11 @@ bibo:Interview rdf:type owl:Class ;
 bibo:Issue rdf:type owl:Class ;
            rdfs:subClassOf bibo:CollectedDocument ,
                            [ rdf:type owl:Restriction ;
-                             owl:onProperty terms:hasPart ;
+                             owl:onProperty ro:BFO_0000051 ;
                              owl:allValuesFrom bibo:Article
                            ] ,
                            [ rdf:type owl:Restriction ;
-                             owl:onProperty terms:hasPart ;
+                             owl:onProperty ro:BFO_0000051 ;
                              owl:minCardinality "1"^^xsd:nonNegativeInteger
                            ] ;
            rdfs:comment "something that is printed or published and distributed, esp. a given number of a periodical"@en ;
@@ -6072,10 +6021,6 @@ iao:IAO_0000109 rdf:type owl:Class ;
                 rdfs:label "Measurement Datum"@en .
 
 
-###  http://purl.org/roh/mirror/obo/iao#IAO_0000136
-iao:IAO_0000136 rdf:type owl:Class .
-
-
 ###  http://purl.org/roh/mirror/obo/iao#IAO_0000582
 iao:IAO_0000582 rdf:type owl:Class ;
                 rdfs:subClassOf iao:IAO_0000109 ;
@@ -6217,12 +6162,12 @@ vivo:AdvisingRelationship rdf:type owl:Class ;
                                             owl:someValuesFrom vivo:AdvisorRole
                                           ] ,
                                           [ rdf:type owl:Restriction ;
-                                            owl:onProperty vivo:dateTimeInterval ;
-                                            owl:allValuesFrom vivo:DateTimeInterval
+                                            owl:onProperty :hasKnowledgeArea ;
+                                            owl:allValuesFrom skos:Concept
                                           ] ,
                                           [ rdf:type owl:Restriction ;
-                                            owl:onProperty vivo:hasSubjectArea ;
-                                            owl:allValuesFrom owl:Thing
+                                            owl:onProperty vivo:dateTimeInterval ;
+                                            owl:allValuesFrom vivo:DateTimeInterval
                                           ] ;
                           obo:IAO_0000115 "A dual relationship of one person being advised or mentored by another person, typically including start and end dates" ;
                           rdfs:label "Advising Relationship"@en ,
@@ -6471,16 +6416,16 @@ vivo:Contract rdf:type owl:Class ;
                                 owl:allValuesFrom owl:Thing
                               ] ,
                               [ rdf:type owl:Restriction ;
+                                owl:onProperty :hasKnowledgeArea ;
+                                owl:allValuesFrom skos:Concept
+                              ] ,
+                              [ rdf:type owl:Restriction ;
                                 owl:onProperty vivo:assignedBy ;
                                 owl:allValuesFrom <http://purl.org/roh/mirror/foaf#Organization>
                               ] ,
                               [ rdf:type owl:Restriction ;
                                 owl:onProperty vivo:dateTimeInterval ;
                                 owl:allValuesFrom vivo:DateTimeInterval
-                              ] ,
-                              [ rdf:type owl:Restriction ;
-                                owl:onProperty vivo:hasSubjectArea ;
-                                owl:allValuesFrom skos:Concept
                               ] ,
                               [ rdf:type owl:Restriction ;
                                 owl:onProperty vivo:relates ;
@@ -7201,8 +7146,7 @@ skos:Concept rdf:type owl:Class ;
 
 ###  http://www.w3.org/2004/02/skos/core#ConceptScheme
 skos:ConceptScheme rdf:type owl:Class ;
-             rdfs:label "Concept Scheme"@en .
-
+                   rdfs:label "Concept Scheme"@en .
 
 
 #################################################################
@@ -7416,13 +7360,8 @@ skos:ConceptScheme rdf:type owl:Class ;
            rdfs:comment "A property to express the i10-index of an author."@en .
 
 
-bfo:BFO_0000004 rdfs:label "continuador independiente"@es ,
-                           "independent continuant"@en .
-
-
-iao:IAO_0000136 iao:IAO_0000115 "is_about is a (currently) primitive relation that relates an information artifact to an entity."@en ;
-                rdfs:label "is about"@en ;
-                iao:IAO_0000114 iao:IAO_0000125 .
+bfo:BFO_0000004 rdfs:label "independent continuant"@en ,
+                           "continuador independiente"@es .
 
 
 #################################################################
@@ -7864,4 +7803,4 @@ iao:IAO_0000136 iao:IAO_0000115 "is_about is a (currently) primitive relation th
 ] .
 
 
-###  Generated by the OWL API (version 4.2.8.20170104-2310) https://github.com/owlcs/owlapi
+###  Generated by the OWL API (version 4.5.9.2019-02-01T07:24:44Z) https://github.com/owlcs/owlapi
