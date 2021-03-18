@@ -33,18 +33,7 @@ jobs:
     - name: Compile documentation
       run: |
         cd widoco
-        java -jar ./widoco.jar \
-        -ontFile ../sigmaaie/modules/core/roh-core.ttl \
-        -oops \
-        -webVowl \
-        -includeAnnotationProperties \
-        -outFolder output/roh \
-        -rewriteAll \
-        -confFile ../sigmaaie/modules/core/doc/widoco.config.txt \
-        -includeImportedOntologies \
-        -uniteSections \
-        -excludeIntroduction
-
+        java -jar ./widoco.jar -ontFile ../sigmaaie/modules/core/roh-core.ttl -oops -webVowl -includeAnnotationProperties -outFolder output/roh -rewriteAll -confFile ../sigmaaie/modules/core/doc/widoco.config.txt -includeImportedOntologies -uniteSections -excludeIntroduction
     - name: Publish on Github Pages
       uses: crazy-max/ghaction-github-pages@v1.3.0
       with:
