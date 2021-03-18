@@ -9,7 +9,7 @@ Notice that ROH network of ontologies is divided into 2 main parts as depicted i
 - *The generic ontology, core module* - contains the most important entities and properties to model information in the academic domain. It contains the central part of the network of ontologies. It covers the academic domain, being agnostic to the country or the research organization whose information wants to be modelled with.
 - *A set of vertical modules*	 which include, on one hand, specializations of some academic concepts for a given country domain. For instance, the figure Associate Professor in the Spanish academic domain would be encountered in the vertical module university-HR-es and is assigned the URI `http://purl.org/roh/university-hr/es#ProfesorTitularDeUniversidad`. On the other hand, these vertical modules, include controlled vocabularies, according to SKOS ontology, for different important areas in the academic domain, namely,  geographical locations (`geopolitical`) , knowledge areas (including concepts for `scientific-domains`, `subject-areas` or `unesco-codes`), classification of project types (`project-classification`), resource positions in universities (`university-HR` for Spain, UK or Portugal), controlled vocabulary with all universities in Spain (`university-structure`) or  some extensions for the Spanish university system (`extensions-es`).
 
-![](.//media/ROH-core-vertical-modules.png)
+![](https://github.com/HerculesCRUE/ROH/blob/gh-pages/media/ROH-core-vertical-modules.png)
 
 **Figura** **1**. ROH core module and its associated vertical modules.
 
