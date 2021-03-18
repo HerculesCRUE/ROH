@@ -2710,7 +2710,11 @@ obo:BFO_0000040 rdf:type owl:Class .
                           ] ,
                           [ rdf:type owl:Restriction ;
                             owl:onProperty :participatedBy ;
-                            owl:allValuesFrom <http://purl.org/roh/mirror/foaf#Agent>
+                            owl:allValuesFrom [ rdf:type owl:Class ;
+                                                owl:unionOf ( <http://purl.org/roh/mirror/foaf#Agent>
+                                                              vivo:Project
+                                                            )
+                                              ]
                           ] ,
                           [ rdf:type owl:Restriction ;
                             owl:onProperty bibo:presents ;
@@ -7349,8 +7353,8 @@ skos:ConceptScheme rdf:type owl:Class ;
            rdfs:comment "A property to express the i10-index of an author."@en .
 
 
-bfo:BFO_0000004 rdfs:label "continuador independiente"@es ,
-                           "independent continuant"@en .
+bfo:BFO_0000004 rdfs:label "independent continuant"@en ,
+                           "continuador independiente"@es .
 
 
 #################################################################
