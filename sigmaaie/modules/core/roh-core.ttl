@@ -497,7 +497,6 @@ obo:RO_0000057 rdf:type owl:ObjectProperty .
 :contactInfoOf rdf:type owl:ObjectProperty ;
                owl:inverseOf :hasContactInfo ;
                rdfs:domain <http://purl.org/roh/mirror/vcard#Kind> ;
-               rdfs:range <http://purl.org/roh/mirror/foaf#Agent> ;
                rdfs:comment "Specifies the contact info of type vcard:Kind for an Agent."@en ;
                rdfs:label "contact info of"@en ,
                           "información de contacto de"@es .
@@ -726,7 +725,6 @@ obo:RO_0000057 rdf:type owl:ObjectProperty .
 
 ###  http://purl.org/roh#hasContactInfo
 :hasContactInfo rdf:type owl:ObjectProperty ;
-                rdfs:domain <http://purl.org/roh/mirror/foaf#Agent> ;
                 rdfs:range <http://purl.org/roh/mirror/vcard#Kind> ;
                 rdfs:comment "An Agent has a contact info of type vcard:Kind."@en ;
                 rdfs:label "has contact info"@en ,
@@ -7353,8 +7351,8 @@ skos:ConceptScheme rdf:type owl:Class ;
            rdfs:comment "A property to express the i10-index of an author."@en .
 
 
-bfo:BFO_0000004 rdfs:label "independent continuant"@en ,
-                           "continuador independiente"@es .
+bfo:BFO_0000004 rdfs:label "continuador independiente"@es ,
+                           "independent continuant"@en .
 
 
 #################################################################
