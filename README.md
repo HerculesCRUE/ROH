@@ -1,3 +1,5 @@
+![](https://github.com/HerculesCRUE/ROH/blob/gh-pages/media/CabeceraDocumentosMD.png)
+
 # ROH
 Research Domain Ontology (ROH). 
 
@@ -13,6 +15,7 @@ Notice that ROH network of ontologies is divided into 2 main parts as depicted i
 
 **Figura** **1**. ROH core module and its associated vertical modules.
 
+Some exemplary competence questions are shown below, which demonstrate the ROH ontology usage:
 
 * Q5 - Listado de los centros/estructuras de investigación que hayan realizado proyectos y su respectiva convocatoria: https://tinyurl.com/y4v39hy3
 * Q7
