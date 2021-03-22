@@ -1,0 +1,14 @@
+PREFIX roh: <http://purl.org/roh#>
+PREFIX ro: <http://purl.org/roh/mirror/obo/ro#>
+PREFIX bibo: <http://purl.org/ontology/bibo/>
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX foaf: <http://purl.org/roh/mirror/foaf#>
+PREFIX unesco: <http://purl.org/roh/unesco-individuals#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+prefix vivo: <http://purl.org/roh/mirror/vivo#>
+
+SELECT * WHERE {
+  ?company a ?typeCompany.
+  FILTER( ?typeCompany IN (roh:SmallEnterprise, roh:MediumEnterprise, roh:LargeEnterprise))
+}
