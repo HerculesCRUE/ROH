@@ -12,7 +12,6 @@ Some exemplary competence questions are shown below, which demonstrate the ROH o
 * Q16A - Dada una persona listar proyectos en los que ha intervenido filtrados por periodo y/o organización: https://tinyurl.com/yyejunrz
 * Q16B - Dada una persona listar research objects a los que ha contribuido, filtrados por periodo y/o organización: https://tinyurl.com/y42p6ah4
 * Q18 - Contar las publicaciones con índice de impacto de un usuario en un periodo de tiempo: https://tinyurl.com/yxjxrz8s
-* Q24
 * Q26 - Obtener el listado de congresos/workshops y eventos de divulgación científica en los que haya participado indicando el rol que he tenido: organizador, expositor, etc: https://tinyurl.com/y58ly6k7
 * Q28 - Obtener el listado de proyectos en los que he participado incluyendo el rol que he desempeñado, por ejemplo, investigador principal: https://tinyurl.com/y2fa474q
 * Q34 - Proyecto en estado PROPOSAL_SUBMITTED dirigidas a una empresa e incluso detalles económicos de la misma, el Funding propuesto y los Funding Amounts associado: https://tinyurl.com/yxgu6pg7
