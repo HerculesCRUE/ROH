@@ -1,0 +1,10 @@
+PREFIX roh: <http://purl.org/roh#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+
+SELECT ?centre ?researchLine  WHERE {
+  ?centre a  roh:ResearchInstitute; # get entities of type ResearchInstitute
+          roh:hasResearchLine ?researchLine . # with property hasResearchLine
+  ?researchLine roh:hasCode ?researchLineCode . # get code of researchLine
+  ?researchLineCode rdfs:label ?researchLineCodeLabel .
+}
+ORDER BY DESC(?centre)
