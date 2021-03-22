@@ -3,9 +3,11 @@
 # ROH
 Research Domain Ontology (ROH). 
 
-ROH main documentation can be found in the following files:
+[ROH main documentation](https://herculescrue.github.io/ROH/) can be found in the following PDF files:
 - `0 - OntologyTutorial.pdf` - [PDF](https://herculescrue.github.io/ROH/0%20-%20OntologyTutorial.pdf) corresponding to a tutorial about the ROH network of ontologies. This a PDF document including essentially the contents of section 2 of this Markdown document.
 - `1- OntologyDocumentation.pdf` - [PDF](https://herculescrue.github.io/ROH/1-%20OntologyDocumentation.pdf) describing in tabular form, every entity modelled in ROH.
+
+Full documentation of the ROH ontology in Markdown format can be accessed in [ROH GitHub Pages](https://herculescrue.github.io/ROH/)
 
 Notice that ROH network of ontologies is divided into 2 main parts as depicted in the following figure:
 - *The generic ontology, core module* - contains the most important entities and properties to model information in the academic domain. It contains the central part of the network of ontologies. It covers the academic domain, being agnostic to the country or the research organization whose information wants to be modelled with.
@@ -15,4 +17,3 @@ Notice that ROH network of ontologies is divided into 2 main parts as depicted i
 
 **Figura** **1**. ROH core module and its associated vertical modules.
 
-Full documentation of the ROH ontology can be accessed in [ROH GitHub Pages](https://herculescrue.github.io/ROH/)
