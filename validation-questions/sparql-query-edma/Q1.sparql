@@ -1,0 +1,18 @@
+PREFIX roh: <http://purl.org/roh#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX skos: <http://www.w3.org/2004/02/skos/core#> 
+PREFIX foaf: <http://xmlns.com/foaf/0.1/>
+
+SELECT ?centro ?nombre_centro ?tipo_de_centro ?nombre_research_line
+ WHERE { 
+        ?centro a roh:ResearchGroup. 
+      Optional{?centro roh:hasKnowledgeArea ?researchLine.} 
+      Optional{?centro foaf:title ?nombre_centro.} 
+      
+      Optional{?researchLine skos:prefLabel ?nombre_research_line.}
+      Optional{Filter(lang(?nombre_research_line) = "es")}
+  
+      OPTIONAL {roh:ResearchGroup rdfs:label ?tipo_de_centro.}
+  Filter(lang(?tipo_de_centro) = "es")
+  } 

@@ -130,6 +130,10 @@ obo:IAO_0000601 rdf:type owl:AnnotationProperty .
 obo:IAO_0000602 rdf:type owl:AnnotationProperty .
 
 
+###  http://purl.obolibrary.org/obo/IAO_0010000
+obo:IAO_0010000 rdf:type owl:AnnotationProperty .
+
+
 ###  http://purl.org/dc/elements/1.1/contributor
 dc:contributor rdf:type owl:AnnotationProperty .
 
@@ -595,8 +599,8 @@ obo:RO_0000057 rdf:type owl:ObjectProperty .
                                          )
                            ] ;
                 rdfs:comment "The status of a Document (Accepted or Rejected)."@en ;
-                rdfs:label "estado"@es ,
-                           "status"@en .
+                rdfs:label "document status"@en ,
+                           "estado del documento"@es .
 
 
 ###  http://purl.org/roh#employs
@@ -798,6 +802,11 @@ obo:RO_0000057 rdf:type owl:ObjectProperty .
                              "tiene area de conocimiento"@es .
 
 
+###  http://purl.org/roh#hasLicense
+:hasLicense rdf:type owl:ObjectProperty ;
+            rdfs:range vivo:License .
+
+
 ###  http://purl.org/roh#hasMetric
 :hasMetric rdf:type owl:ObjectProperty ;
            owl:inverseOf :metricOf ;
@@ -805,6 +814,33 @@ obo:RO_0000057 rdf:type owl:ObjectProperty .
            rdfs:comment "A Metric which quantifies a Research Object."@en ;
            rdfs:label "has metric"@en ,
                       "tiene métrica"@es .
+
+
+###  http://purl.org/roh#hasPartOfResearch
+:hasPartOfResearch rdf:type owl:ObjectProperty ;
+                   rdfs:subPropertyOf ro:BFO_0000051 ;
+                   owl:inverseOf :partOfResearch ;
+                   rdfs:domain :Research ;
+                   rdfs:range [ rdf:type owl:Class ;
+                                owl:unionOf ( :ExperimentalProtocol
+                                              :Repository
+                                              bibo:Document
+                                              <http://purl.org/roh/mirror/obo/ero#ERO_0000071>
+                                            )
+                              ] .
+
+
+###  http://purl.org/roh#hasPartOfTheRepository
+:hasPartOfTheRepository rdf:type owl:ObjectProperty ;
+                        rdfs:subPropertyOf ro:BFO_0000051 ;
+                        owl:inverseOf :partOfTheRepository ;
+                        rdfs:domain :Repository ;
+                        rdfs:range [ rdf:type owl:Class ;
+                                     owl:unionOf ( :ExperimentalProtocol
+                                                   bibo:Document
+                                                   <http://purl.org/roh/mirror/obo/ero#ERO_0000071>
+                                                 )
+                                   ] .
 
 
 ###  http://purl.org/roh#hasPatent
@@ -822,6 +858,12 @@ obo:RO_0000057 rdf:type owl:ObjectProperty .
              rdfs:comment "A Person has a Position in his/her Organization."@en ;
              rdfs:label "has position"@en ,
                         "tiene plaza"@es .
+
+
+###  http://purl.org/roh#hasPredecessor
+:hasPredecessor rdf:type owl:ObjectProperty ;
+                rdfs:subPropertyOf owl:topObjectProperty ;
+                owl:inverseOf :hasSucessor .
 
 
 ###  http://purl.org/roh#hasProjectClassification
@@ -852,6 +894,20 @@ obo:RO_0000057 rdf:type owl:ObjectProperty .
                                         rdf:type owl:Class
                                       ] ;
                            rdfs:label "has property classification"@en .
+
+
+###  http://purl.org/roh#hasReadme
+:hasReadme rdf:type owl:ObjectProperty ;
+           owl:inverseOf :readmeOf ;
+           rdfs:domain [ rdf:type owl:Class ;
+                         owl:unionOf ( :Repository
+                                       <http://purl.org/roh/mirror/obo/ero#ERO_0000071>
+                                     )
+                       ] ;
+           rdfs:range :README ;
+           rdfs:comment "This object property is used to specify the README document of a given a  Respository or Software."@en ;
+           rdfs:label "has readme"@en ,
+                      "tiene readme"@es .
 
 
 ###  http://purl.org/roh#hasResearchContribution
@@ -893,6 +949,10 @@ obo:RO_0000057 rdf:type owl:ObjectProperty .
             rdfs:comment "An Organization which has a spin off Company."@en ;
             rdfs:label "has spinoff"@en ,
                        "tiene spinoff"@es .
+
+
+###  http://purl.org/roh#hasSucessor
+:hasSucessor rdf:type owl:ObjectProperty .
 
 
 ###  http://purl.org/roh#hrClassificationOf
@@ -1042,6 +1102,31 @@ obo:RO_0000057 rdf:type owl:ObjectProperty .
                      rdfs:comment "An Organization owning a Patent."@en ;
                      rdfs:label "organización propietaria de"@es ,
                                 "owner organization of"@en .
+
+
+###  http://purl.org/roh#partOfResearch
+:partOfResearch rdf:type owl:ObjectProperty ;
+                rdfs:subPropertyOf ro:BFO_0000050 ;
+                rdfs:domain [ rdf:type owl:Class ;
+                              owl:unionOf ( :ExperimentalProtocol
+                                            :Repository
+                                            bibo:Document
+                                            <http://purl.org/roh/mirror/obo/ero#ERO_0000071>
+                                          )
+                            ] ;
+                rdfs:range :Research .
+
+
+###  http://purl.org/roh#partOfTheRepository
+:partOfTheRepository rdf:type owl:ObjectProperty ;
+                     rdfs:subPropertyOf ro:BFO_0000050 ;
+                     rdfs:domain [ rdf:type owl:Class ;
+                                   owl:unionOf ( :ExperimentalProtocol
+                                                 bibo:Document
+                                                 <http://purl.org/roh/mirror/obo/ero#ERO_0000071>
+                                               )
+                                 ] ;
+                     rdfs:range :Repository .
 
 
 ###  http://purl.org/roh#participatedBy
@@ -1201,6 +1286,32 @@ obo:RO_0000057 rdf:type owl:ObjectProperty .
                      "provides"@en .
 
 
+###  http://purl.org/roh#readmeOf
+:readmeOf rdf:type owl:ObjectProperty ;
+          rdfs:domain :README ;
+          rdfs:range [ rdf:type owl:Class ;
+                       owl:unionOf ( :Repository
+                                     <http://purl.org/roh/mirror/vcard#Address>
+                                   )
+                     ] ;
+          rdfs:comment "This object property is used to specify the Repository or Software of a given README document."@en ;
+          rdfs:label "readme de"@es ,
+                     "readme of"@en .
+
+
+###  http://purl.org/roh#repositoryStatus
+:repositoryStatus rdf:type owl:ObjectProperty ;
+                  rdfs:domain :Repository ;
+                  rdfs:range [ rdf:type owl:Class ;
+                               owl:unionOf ( :Closed
+                                             :Open
+                                           )
+                             ] ;
+                  rdfs:comment "The status of a Repository (Closed or Open)."@es ;
+                  rdfs:label "estado del repositorio"@en ,
+                             "repository status"@es .
+
+
 ###  http://purl.org/roh#requiredFor
 :requiredFor rdf:type owl:ObjectProperty ;
              rdfs:domain bibo:Document ;
@@ -1248,6 +1359,29 @@ obo:RO_0000057 rdf:type owl:ObjectProperty .
         rdfs:comment "The Role held by an Agent in a Relationship."@en ;
         rdfs:label "rol de"@es ,
                    "role of"@en .
+
+
+###  http://purl.org/roh#seqOfAuthors
+:seqOfAuthors rdf:type owl:ObjectProperty ;
+              rdfs:range rdf:Seq ;
+              rdfs:comment "An unordered list of authors."@en ,
+                           "Una lista no ordenada de los autores."@es ;
+              rdfs:label "conjunto de autores"@es ,
+                         "seq of authors"@en .
+
+
+###  http://purl.org/roh#softwareStatus
+:softwareStatus rdf:type owl:ObjectProperty ;
+                rdfs:subPropertyOf owl:topObjectProperty ;
+                rdfs:domain <http://purl.org/roh/mirror/obo/ero#ERO_0000071> ;
+                rdfs:range [ rdf:type owl:Class ;
+                             owl:unionOf ( :Final
+                                           :Provisional
+                                         )
+                           ] ;
+                rdfs:comment "The status of a Software  (Final or Provisional)."@en ;
+                rdfs:label "estatus de software"@es ,
+                           "software status"@en .
 
 
 ###  http://purl.org/roh#spends
@@ -1668,6 +1802,7 @@ vivo:hasGoverningAuthority rdf:type owl:ObjectProperty ;
 
 ###  http://purl.org/roh/mirror/vivo#hasPredecessorOrganization
 vivo:hasPredecessorOrganization rdf:type owl:ObjectProperty ;
+                                rdfs:subPropertyOf :hasPredecessor ;
                                 owl:inverseOf vivo:hasSuccessorOrganization ;
                                 rdf:type owl:TransitiveProperty ;
                                 rdfs:domain <http://purl.org/roh/mirror/foaf#Organization> ;
@@ -1686,8 +1821,9 @@ vivo:hasPublicationVenue rdf:type owl:ObjectProperty ;
 
 
 ###  http://purl.org/roh/mirror/vivo#hasSuccessorOrganization
-vivo:hasSuccessorOrganization rdf:type owl:ObjectProperty ,
-                                       owl:TransitiveProperty ;
+vivo:hasSuccessorOrganization rdf:type owl:ObjectProperty ;
+                              rdfs:subPropertyOf :hasSucessor ;
+                              rdf:type owl:TransitiveProperty ;
                               rdfs:domain <http://purl.org/roh/mirror/foaf#Organization> ;
                               rdfs:range <http://purl.org/roh/mirror/foaf#Organization> ;
                               rdfs:comment "The Organization created from a previous Organization."@en ;
@@ -1752,11 +1888,29 @@ vivo:supportedInformationResource rdf:type owl:ObjectProperty ;
                                              "supported publications or other works"@en .
 
 
+###  http://purl.org/spar/cito/cites
+<http://purl.org/spar/cito/cites> rdf:type owl:ObjectProperty ;
+                                  rdfs:subPropertyOf <http://purl.org/swan/2.0/discourse-relationships/refersTo> ;
+                                  owl:inverseOf <http://purl.org/spar/cito/isCitedBy> ;
+                                  rdfs:comment "The citing entity cites the cited entity, either directly and explicitly (as in the reference list of a journal article), indirectly (e.g. by citing a more recent paper by the same group on the same topic), or implicitly (e.g. as in artistic quotations or parodies, or in cases of plagiarism)."@en ;
+                                  rdfs:label "cites"@en .
+
+
 ###  http://purl.org/spar/cito/isCitedAsDataSourceBy
 <http://purl.org/spar/cito/isCitedAsDataSourceBy> rdf:type owl:ObjectProperty ;
                                                   rdfs:comment "The cited entity is cited as a data source by the citing entity."@en ;
                                                   rdfs:label "citado como fuente de datos por"@es ,
                                                              "is cited as data source by"@en .
+
+
+###  http://purl.org/spar/cito/isCitedBy
+<http://purl.org/spar/cito/isCitedBy> rdf:type owl:ObjectProperty ;
+                                      rdfs:comment "The cited entity (the subject of the RDF triple) is cited by the citing entity (the object of the triple)."@en ;
+                                      rdfs:label "is cited by"@en .
+
+
+###  http://purl.org/swan/2.0/discourse-relationships/refersTo
+<http://purl.org/swan/2.0/discourse-relationships/refersTo> rdf:type owl:ObjectProperty .
 
 
 #################################################################
@@ -1941,12 +2095,18 @@ vivo:supportedInformationResource rdf:type owl:ObjectProperty ;
 
 ###  http://purl.org/roh#language
 :language rdf:type owl:DatatypeProperty ;
-          rdfs:subPropertyOf :languageSkill ;
-          rdfs:domain :LanguageCertificate ;
-          rdfs:range xsd:string ;
-          rdfs:comment "The language to which refers the Language Certificate."@en ;
-          rdfs:label "idioma"@es ,
-                     "language"@en .
+          rdfs:range rdfs:Literal ,
+                     xsd:string .
+
+
+###  http://purl.org/roh#languageOfTheCertificate
+:languageOfTheCertificate rdf:type owl:DatatypeProperty ;
+                          rdfs:subPropertyOf :languageSkill ;
+                          rdfs:domain :LanguageCertificate ;
+                          rdfs:range xsd:string ;
+                          rdfs:comment "The language to which refers the Language Certificate."@en ;
+                          rdfs:label "idioma del certificado"@es ,
+                                     "language of the certificate"@en .
 
 
 ###  http://purl.org/roh#languageSkill
@@ -2054,6 +2214,14 @@ vivo:supportedInformationResource rdf:type owl:ObjectProperty ;
                         rdfs:comment "Represents if a Project needs to pass an ethical validation."@en ;
                         rdfs:label "necesita validación ética"@es ,
                                    "needs ethical validation"@en .
+
+
+###  http://purl.org/roh#programmingLanguage
+:programmingLanguage rdf:type owl:DatatypeProperty ;
+                     rdfs:subPropertyOf owl:topDataProperty ;
+                     rdfs:domain <http://purl.org/roh/mirror/obo/ero#ERO_0000071> ;
+                     rdfs:range rdfs:Literal ,
+                                xsd:string .
 
 
 ###  http://purl.org/roh#projectAcronym
@@ -2606,10 +2774,6 @@ vivo:scopusId rdf:type owl:DatatypeProperty ;
 #    Classes
 #################################################################
 
-###  http://purl.obolibrary.org/obo/BFO_0000015
-obo:BFO_0000015 rdf:type owl:Class .
-
-
 ###  http://purl.obolibrary.org/obo/BFO_0000040
 obo:BFO_0000040 rdf:type owl:Class .
 
@@ -2969,6 +3133,15 @@ The previous short definition was: \"An arbitrary classification of a space/time
                                 "Treball de fi de grau"@ca-es .
 
 
+###  http://purl.org/roh#BitBucketRepository
+:BitBucketRepository rdf:type owl:Class ;
+                     rdfs:subClassOf :Repository ,
+                                     [ rdf:type owl:Restriction ;
+                                       owl:onProperty :hasPredecessor ;
+                                       owl:allValuesFrom :BitBucketRepository
+                                     ] .
+
+
 ###  http://purl.org/roh#BlogPost
 :BlogPost rdf:type owl:Class ;
           rdfs:subClassOf bibo:Article ;
@@ -3312,6 +3485,89 @@ The previous short definition was: \"An arbitrary classification of a space/time
                        rdfs:label "Expense Classification"@en .
 
 
+###  http://purl.org/roh#ExperimentalProtocol
+:ExperimentalProtocol rdf:type owl:Class ;
+                      rdfs:subClassOf bfo:BFO_0000015 ,
+                                      [ rdf:type owl:Restriction ;
+                                        owl:onProperty :correspondingAuthor ;
+                                        owl:allValuesFrom <http://purl.org/roh/mirror/foaf#Person>
+                                      ] ,
+                                      [ rdf:type owl:Restriction ;
+                                        owl:onProperty :hasKnowledgeArea ;
+                                        owl:allValuesFrom [ owl:intersectionOf ( skos:Concept
+                                                                                 [ rdf:type owl:Restriction ;
+                                                                                   owl:onProperty skos:inScheme ;
+                                                                                   owl:someValuesFrom :KnowledgeArea
+                                                                                 ]
+                                                                               ) ;
+                                                            rdf:type owl:Class
+                                                          ]
+                                      ] ,
+                                      [ rdf:type owl:Restriction ;
+                                        owl:onProperty :hasPredecessor ;
+                                        owl:allValuesFrom :ExperimentalProtocol
+                                      ] ,
+                                      [ rdf:type owl:Restriction ;
+                                        owl:onProperty :partOfResearch ;
+                                        owl:allValuesFrom :Research
+                                      ] ,
+                                      [ rdf:type owl:Restriction ;
+                                        owl:onProperty :produces ;
+                                        owl:allValuesFrom :ExperimentalProtocolResult
+                                      ] ,
+                                      [ rdf:type owl:Restriction ;
+                                        owl:onProperty :seqOfAuthors ;
+                                        owl:allValuesFrom rdf:Seq
+                                      ] ,
+                                      [ rdf:type owl:Restriction ;
+                                        owl:onProperty <http://purl.org/roh/mirror/foaf#homepage> ;
+                                        owl:allValuesFrom bibo:Webpage
+                                      ] ,
+                                      [ rdf:type owl:Restriction ;
+                                        owl:onProperty vivo:dateTimeInterval ;
+                                        owl:allValuesFrom vivo:DateTimeInterval
+                                      ] ,
+                                      [ rdf:type owl:Restriction ;
+                                        owl:onProperty <http://purl.org/spar/cito/cites> ;
+                                        owl:allValuesFrom [ rdf:type owl:Class ;
+                                                            owl:unionOf ( :ExperimentalProtocol
+                                                                          :Repository
+                                                                          bibo:Document
+                                                                          <http://purl.org/roh/mirror/obo/ero#ERO_0000071>
+                                                                        )
+                                                          ]
+                                      ] ,
+                                      [ rdf:type owl:Restriction ;
+                                        owl:onProperty :seqOfAuthors ;
+                                        owl:maxCardinality "1"^^xsd:nonNegativeInteger
+                                      ] ,
+                                      [ rdf:type owl:Restriction ;
+                                        owl:onProperty :title ;
+                                        owl:someValuesFrom xsd:string
+                                      ] ,
+                                      [ rdf:type owl:Restriction ;
+                                        owl:onProperty :language ;
+                                        owl:allValuesFrom rdfs:Literal
+                                      ] ,
+                                      [ rdf:type owl:Restriction ;
+                                        owl:onProperty :title ;
+                                        owl:allValuesFrom xsd:string
+                                      ] ,
+                                      [ rdf:type owl:Restriction ;
+                                        owl:onProperty bibo:abstract ;
+                                        owl:allValuesFrom xsd:string
+                                      ] ,
+                                      [ rdf:type owl:Restriction ;
+                                        owl:onProperty vivo:freetextKeyword ;
+                                        owl:allValuesFrom xsd:string
+                                      ] .
+
+
+###  http://purl.org/roh#ExperimentalProtocolResult
+:ExperimentalProtocolResult rdf:type owl:Class ;
+                            rdfs:subClassOf bibo:Document .
+
+
 ###  http://purl.org/roh#ExternalMemberRole
 :ExternalMemberRole rdf:type owl:Class ;
                     rdfs:subClassOf bfo:BFO_0000023 ;
@@ -3499,6 +3755,15 @@ A roh:FundingSource roh:feeds a roh:Funding with funds to sponsor some projects.
                           "Funding Source"@en .
 
 
+###  http://purl.org/roh#GitHubRepository
+:GitHubRepository rdf:type owl:Class ;
+                  rdfs:subClassOf :Repository ,
+                                  [ rdf:type owl:Restriction ;
+                                    owl:onProperty :hasPredecessor ;
+                                    owl:allValuesFrom :GitHubRepository
+                                  ] .
+
+
 ###  http://purl.org/roh#Grant
 :Grant rdf:type owl:Class ;
        rdfs:subClassOf :Funding ;
@@ -3629,7 +3894,8 @@ A roh:FundingSource roh:feeds a roh:Funding with funds to sponsor some projects.
 ###  http://purl.org/roh#KnowledgeArea
 :KnowledgeArea rdf:type owl:Class ;
                rdfs:subClassOf skos:ConceptScheme ;
-               owl:disjointWith :ProjectClassification ;
+               owl:disjointWith :ProjectClassification ,
+                                bfo:BFO_0000015 ;
                rdfs:comment "ROH will be populated with instance data of UNESCO skos concepts. A Person, Activity, Project and Organization can be qualified by a KnowledgeArea" ;
                rdfs:label "Knowledge Area"@en ,
                           "Área de Conocimiento"@es ;
@@ -3640,7 +3906,7 @@ A roh:FundingSource roh:feeds a roh:Funding with funds to sponsor some projects.
 :LanguageCertificate rdf:type owl:Class ;
                      rdfs:subClassOf vivo:Certificate ,
                                      [ rdf:type owl:Restriction ;
-                                       owl:onProperty :language ;
+                                       owl:onProperty :languageOfTheCertificate ;
                                        owl:someValuesFrom xsd:string
                                      ] ,
                                      [ rdf:type owl:Restriction ;
@@ -3664,7 +3930,7 @@ A roh:FundingSource roh:feeds a roh:Funding with funds to sponsor some projects.
                                        owl:someValuesFrom xsd:string
                                      ] ,
                                      [ rdf:type owl:Restriction ;
-                                       owl:onProperty :language ;
+                                       owl:onProperty :languageOfTheCertificate ;
                                        owl:allValuesFrom xsd:string
                                      ] ,
                                      [ rdf:type owl:Restriction ;
@@ -4102,6 +4368,19 @@ A roh:FundingSource roh:feeds a roh:Funding with funds to sponsor some projects.
                               "Publication Metric"@en .
 
 
+###  http://purl.org/roh#README
+:README rdf:type owl:Class ;
+        rdfs:subClassOf bibo:Document ,
+                        [ rdf:type owl:Restriction ;
+                          owl:onProperty :readmeOf ;
+                          owl:someValuesFrom [ rdf:type owl:Class ;
+                                               owl:unionOf ( :Repository
+                                                             <http://purl.org/roh/mirror/obo/ero#ERO_0000071>
+                                                           )
+                                             ]
+                        ] .
+
+
 ###  http://purl.org/roh#RadioProgram
 :RadioProgram rdf:type owl:Class ;
               rdfs:subClassOf bibo:AudioVisualDocument ;
@@ -4121,6 +4400,101 @@ A roh:FundingSource roh:feeds a roh:Funding with funds to sponsor some projects.
           rdfs:label "Rejected"@en .
 
 
+###  http://purl.org/roh#Repository
+:Repository rdf:type owl:Class ;
+            rdfs:subClassOf iao:IAO_0000030 ,
+                            [ rdf:type owl:Restriction ;
+                              owl:onProperty :correspondingAuthor ;
+                              owl:allValuesFrom <http://purl.org/roh/mirror/foaf#Person>
+                            ] ,
+                            [ rdf:type owl:Restriction ;
+                              owl:onProperty :hasKnowledgeArea ;
+                              owl:allValuesFrom [ owl:intersectionOf ( skos:Concept
+                                                                       [ rdf:type owl:Restriction ;
+                                                                         owl:onProperty skos:inScheme ;
+                                                                         owl:someValuesFrom :KnowledgeArea
+                                                                       ]
+                                                                     ) ;
+                                                  rdf:type owl:Class
+                                                ]
+                            ] ,
+                            [ rdf:type owl:Restriction ;
+                              owl:onProperty :hasPredecessor ;
+                              owl:allValuesFrom :Repository
+                            ] ,
+                            [ rdf:type owl:Restriction ;
+                              owl:onProperty :hasReadme ;
+                              owl:allValuesFrom [ rdf:type owl:Class ;
+                                                  owl:unionOf ( :Repository
+                                                                <http://purl.org/roh/mirror/obo/ero#ERO_0000071>
+                                                              )
+                                                ]
+                            ] ,
+                            [ rdf:type owl:Restriction ;
+                              owl:onProperty :partOfResearch ;
+                              owl:allValuesFrom :Research
+                            ] ,
+                            [ rdf:type owl:Restriction ;
+                              owl:onProperty :repositoryStatus ;
+                              owl:allValuesFrom [ rdf:type owl:Class ;
+                                                  owl:unionOf ( :Closed
+                                                                :Open
+                                                              )
+                                                ]
+                            ] ,
+                            [ rdf:type owl:Restriction ;
+                              owl:onProperty :seqOfAuthors ;
+                              owl:allValuesFrom rdf:Seq
+                            ] ,
+                            [ rdf:type owl:Restriction ;
+                              owl:onProperty <http://purl.org/roh/mirror/foaf#homepage> ;
+                              owl:allValuesFrom bibo:Webpage
+                            ] ,
+                            [ rdf:type owl:Restriction ;
+                              owl:onProperty vivo:dateTimeValue ;
+                              owl:allValuesFrom vivo:DateTimeValue
+                            ] ,
+                            [ rdf:type owl:Restriction ;
+                              owl:onProperty <http://purl.org/spar/cito/cites> ;
+                              owl:allValuesFrom [ rdf:type owl:Class ;
+                                                  owl:unionOf ( :ExperimentalProtocol
+                                                                :Repository
+                                                                bibo:Document
+                                                                <http://purl.org/roh/mirror/obo/ero#ERO_0000071>
+                                                              )
+                                                ]
+                            ] ,
+                            [ rdf:type owl:Restriction ;
+                              owl:onProperty :seqOfAuthors ;
+                              owl:maxCardinality "1"^^xsd:nonNegativeInteger
+                            ] ,
+                            [ rdf:type owl:Restriction ;
+                              owl:onProperty :title ;
+                              owl:someValuesFrom xsd:string
+                            ] ,
+                            [ rdf:type owl:Restriction ;
+                              owl:onProperty :language ;
+                              owl:allValuesFrom rdfs:Literal
+                            ] ,
+                            [ rdf:type owl:Restriction ;
+                              owl:onProperty :title ;
+                              owl:allValuesFrom xsd:string
+                            ] ,
+                            [ rdf:type owl:Restriction ;
+                              owl:onProperty bibo:abstract ;
+                              owl:allValuesFrom xsd:string
+                            ] ,
+                            [ rdf:type owl:Restriction ;
+                              owl:onProperty vivo:freetextKeyword ;
+                              owl:allValuesFrom xsd:string
+                            ] .
+
+
+###  http://purl.org/roh#Research
+:Research rdf:type owl:Class ;
+          rdfs:subClassOf bfo:BFO_0000015 .
+
+
 ###  http://purl.org/roh#ResearchAccreditation
 :ResearchAccreditation rdf:type owl:Class ;
                        rdfs:subClassOf :Accreditation ;
@@ -4131,7 +4505,7 @@ A roh:FundingSource roh:feeds a roh:Funding with funds to sponsor some projects.
 
 ###  http://purl.org/roh#ResearchContribution
 :ResearchContribution rdf:type owl:Class ;
-                      rdfs:subClassOf obo:BFO_0000015 ;
+                      rdfs:subClassOf bfo:BFO_0000015 ;
                       rdfs:label "Research contribution"@en .
 
 
@@ -4192,7 +4566,7 @@ A roh:FundingSource roh:feeds a roh:Funding with funds to sponsor some projects.
 
 ###  http://purl.org/roh#ResearchMethod
 :ResearchMethod rdf:type owl:Class ;
-                rdfs:subClassOf obo:BFO_0000015 ;
+                rdfs:subClassOf bfo:BFO_0000015 ;
                 rdfs:label "Research method"@en ;
                 skos:prefLabel "Research method"@en .
 
@@ -4200,38 +4574,27 @@ A roh:FundingSource roh:feeds a roh:Funding with funds to sponsor some projects.
 ###  http://purl.org/roh#ResearchObject
 :ResearchObject rdf:type owl:Class ;
                 owl:equivalentClass [ rdf:type owl:Class ;
-                                      owl:unionOf ( [ owl:intersectionOf ( [ owl:intersectionOf ( [ rdf:type owl:Restriction ;
-                                                                                                    owl:onProperty :correspondingAuthor ;
-                                                                                                    owl:someValuesFrom <http://purl.org/roh/mirror/foaf#Person>
-                                                                                                  ]
-                                                                                                  [ rdf:type owl:Restriction ;
-                                                                                                    owl:onProperty :hasKnowledgeArea ;
-                                                                                                    owl:someValuesFrom [ owl:intersectionOf ( skos:Concept
-                                                                                                                                              [ rdf:type owl:Restriction ;
-                                                                                                                                                owl:onProperty skos:inScheme ;
-                                                                                                                                                owl:someValuesFrom :KnowledgeArea
-                                                                                                                                              ]
-                                                                                                                                            ) ;
-                                                                                                                         rdf:type owl:Class
-                                                                                                                       ]
-                                                                                                  ]
-                                                                                                ) ;
-                                                                             rdf:type owl:Class
-                                                                           ]
+                                      owl:unionOf ( :Research
+                                                    [ owl:intersectionOf ( <http://purl.org/roh/mirror/obo/ero#ERO_0000071>
                                                                            [ rdf:type owl:Restriction ;
                                                                              owl:onProperty :correspondingAuthor ;
-                                                                             owl:allValuesFrom <http://purl.org/roh/mirror/foaf#Person>
+                                                                             owl:someValuesFrom <http://purl.org/roh/mirror/foaf#Person>
                                                                            ]
                                                                            [ rdf:type owl:Restriction ;
-                                                                             owl:onProperty :hasKnowledgeArea ;
-                                                                             owl:allValuesFrom [ owl:intersectionOf ( skos:Concept
-                                                                                                                      [ rdf:type owl:Restriction ;
-                                                                                                                        owl:onProperty skos:inScheme ;
-                                                                                                                        owl:someValuesFrom :KnowledgeArea
-                                                                                                                      ]
-                                                                                                                    ) ;
-                                                                                                 rdf:type owl:Class
-                                                                                               ]
+                                                                             owl:onProperty :partOfResearch ;
+                                                                             owl:someValuesFrom :Research
+                                                                           ]
+                                                                         ) ;
+                                                      rdf:type owl:Class
+                                                    ]
+                                                    [ owl:intersectionOf ( iao:IAO_0000030
+                                                                           [ rdf:type owl:Restriction ;
+                                                                             owl:onProperty :correspondingAuthor ;
+                                                                             owl:someValuesFrom <http://purl.org/roh/mirror/foaf#Person>
+                                                                           ]
+                                                                           [ rdf:type owl:Restriction ;
+                                                                             owl:onProperty :partOfResearch ;
+                                                                             owl:someValuesFrom :Research
                                                                            ]
                                                                          ) ;
                                                       rdf:type owl:Class
@@ -4243,6 +4606,10 @@ A roh:FundingSource roh:feeds a roh:Funding with funds to sponsor some projects.
                                                   )
                                     ] ;
                 rdfs:subClassOf [ rdf:type owl:Restriction ;
+                                  owl:onProperty :seqOfAuthors ;
+                                  owl:allValuesFrom rdf:Seq
+                                ] ,
+                                [ rdf:type owl:Restriction ;
                                   owl:onProperty :spends ;
                                   owl:allValuesFrom :ResearchObjectExpense
                                 ] ,
@@ -4328,6 +4695,16 @@ A roh:FundingSource roh:feeds a roh:Funding with funds to sponsor some projects.
 :ReservableProviderRole rdf:type owl:Class ;
                         rdfs:subClassOf bfo:BFO_0000023 ;
                         rdfs:label "ReservableProviderRole"@en .
+
+
+###  http://purl.org/roh#ReservableSoftware
+:ReservableSoftware rdf:type owl:Class ;
+                    owl:equivalentClass [ owl:intersectionOf ( :Reservable
+                                                               <http://purl.org/roh/mirror/obo/ero#ERO_0000071>
+                                                             ) ;
+                                          rdf:type owl:Class
+                                        ] ;
+                    rdfs:subClassOf <http://purl.org/roh/mirror/obo/ero#ERO_0000071> .
 
 
 ###  http://purl.org/roh#ReservationRelationship
@@ -4583,6 +4960,23 @@ A roh:FundingSource roh:feeds a roh:Funding with funds to sponsor some projects.
                rdfs:comment "A paper published on a conference workshop."@en ;
                rdfs:label "Artículo de Seminario"@es ,
                           "Workshop Paper"@en .
+
+
+###  http://purl.org/roh#ZenodoRepository
+:ZenodoRepository rdf:type owl:Class ;
+                  rdfs:subClassOf :Repository ,
+                                  [ rdf:type owl:Restriction ;
+                                    owl:onProperty :hasPredecessor ;
+                                    owl:allValuesFrom :ZenodoRepository
+                                  ] ,
+                                  [ rdf:type owl:Restriction ;
+                                    owl:onProperty bibo:doi ;
+                                    owl:allValuesFrom xsd:integer
+                                  ] ,
+                                  [ rdf:type owl:Restriction ;
+                                    owl:onProperty vivo:identifier ;
+                                    owl:allValuesFrom xsd:integer
+                                  ] .
 
 
 ###  http://purl.org/roh/mirror/bibo#AcademicArticle
@@ -5505,13 +5899,42 @@ Besides, an instance of a foaf:Person / roh:Researcher is associated to the foll
 
 ###  http://purl.org/roh/mirror/obo/bfo#BFO_0000008
 bfo:BFO_0000008 rdf:type owl:Class ;
+                owl:disjointWith bfo:BFO_0000015 ;
                 rdfs:comment "A temporal region is an occurrent entity that is part of time as defined relative to some reference frame."@en ;
                 rdfs:label "Región Temporal"@es ,
                            "Temporal Region"@en .
 
 
 ###  http://purl.org/roh/mirror/obo/bfo#BFO_0000015
-bfo:BFO_0000015 rdf:type owl:Class .
+bfo:BFO_0000015 rdf:type owl:Class ;
+                obo:BFO_0000179 "process" ;
+                obo:BFO_0000180 "Process" ;
+                obo:IAO_0000112 "a process of cell-division, \\ a beating of the heart"@en ,
+                                "a process of meiosis"@en ,
+                                "a process of sleeping"@en ,
+                                "the course of a disease"@en ,
+                                "the flight of a bird"@en ,
+                                "the life of an organism"@en ,
+                                "your process of aging."@en ;
+                obo:IAO_0000115 "p is a process = Def. p is an occurrent that has temporal proper parts and for some time t, p s-depends_on some material entity at t. (axiom label in BFO2 Reference: [083-003])"@en ;
+                obo:IAO_0000116 "BFO 2 Reference: The realm of occurrents is less pervasively marked by the presence of natural units than is the case in the realm of independent continuants. Thus there is here no counterpart of ‘object’. In BFO 1.0 ‘process’ served as such a counterpart. In BFO 2.0 ‘process’ is, rather, the occurrent counterpart of ‘material entity’. Those natural – as contrasted with engineered, which here means: deliberately executed – units which do exist in the realm of occurrents are typically either parasitic on the existence of natural units on the continuant side, or they are fiat in nature. Thus we can count lives; we can count football games; we can count chemical reactions performed in experiments or in chemical manufacturing. We cannot count the processes taking place, for instance, in an episode of insect mating behavior.Even where natural units are identifiable, for example cycles in a cyclical process such as the beating of a heart or an organism’s sleep/wake cycle, the processes in question form a sequence with no discontinuities (temporal gaps) of the sort that we find for instance where billiard balls or zebrafish or planets are separated by clear spatial gaps. Lives of organisms are process units, but they too unfold in a continuous series from other, prior processes such as fertilization, and they unfold in turn in continuous series of post-life processes such as post-mortem decay. Clear examples of boundaries of processes are almost always of the fiat sort (midnight, a time of death as declared in an operating theater or on a death certificate, the initiation of a state of war)"@en ;
+                obo:IAO_0000602 "(iff (Process a) (and (Occurrent a) (exists (b) (properTemporalPartOf b a)) (exists (c t) (and (MaterialEntity c) (specificallyDependsOnAt a c t))))) // axiom label in BFO2 CLIF: [083-003] " ;
+                rdfs:isDefinedBy bfo:BFO.owl ;
+                rdfs:label "process"@en .
+
+[ rdf:type owl:Axiom ;
+   owl:annotatedSource bfo:BFO_0000015 ;
+   owl:annotatedProperty obo:IAO_0000115 ;
+   owl:annotatedTarget "p is a process = Def. p is an occurrent that has temporal proper parts and for some time t, p s-depends_on some material entity at t. (axiom label in BFO2 Reference: [083-003])"@en ;
+   obo:IAO_0010000 <http://purl.org/roh/mirror/obo/bfo#BFO/axiom/083-003>
+ ] .
+
+[ rdf:type owl:Axiom ;
+   owl:annotatedSource bfo:BFO_0000015 ;
+   owl:annotatedProperty obo:IAO_0000602 ;
+   owl:annotatedTarget "(iff (Process a) (and (Occurrent a) (exists (b) (properTemporalPartOf b a)) (exists (c t) (and (MaterialEntity c) (specificallyDependsOnAt a c t))))) // axiom label in BFO2 CLIF: [083-003] " ;
+   obo:IAO_0010000 <http://purl.org/roh/mirror/obo/bfo#BFO/axiom/083-003>
+ ] .
 
 
 ###  http://purl.org/roh/mirror/obo/bfo#BFO_0000023
@@ -5619,7 +6042,92 @@ bfo:BFO_0000148 rdf:type owl:Class ;
 
 ###  http://purl.org/roh/mirror/obo/ero#ERO_0000071
 <http://purl.org/roh/mirror/obo/ero#ERO_0000071> rdf:type owl:Class ;
-                                                 rdfs:subClassOf :Reservable ;
+                                                 rdfs:subClassOf [ rdf:type owl:Restriction ;
+                                                                   owl:onProperty :correspondingAuthor ;
+                                                                   owl:allValuesFrom <http://purl.org/roh/mirror/foaf#Person>
+                                                                 ] ,
+                                                                 [ rdf:type owl:Restriction ;
+                                                                   owl:onProperty :hasKnowledgeArea ;
+                                                                   owl:allValuesFrom [ owl:intersectionOf ( skos:Concept
+                                                                                                            [ rdf:type owl:Restriction ;
+                                                                                                              owl:onProperty skos:inScheme ;
+                                                                                                              owl:someValuesFrom :KnowledgeArea
+                                                                                                            ]
+                                                                                                          ) ;
+                                                                                       rdf:type owl:Class
+                                                                                     ]
+                                                                 ] ,
+                                                                 [ rdf:type owl:Restriction ;
+                                                                   owl:onProperty :hasLicense ;
+                                                                   owl:allValuesFrom vivo:License
+                                                                 ] ,
+                                                                 [ rdf:type owl:Restriction ;
+                                                                   owl:onProperty :hasPredecessor ;
+                                                                   owl:allValuesFrom <http://purl.org/roh/mirror/obo/ero#ERO_0000071>
+                                                                 ] ,
+                                                                 [ rdf:type owl:Restriction ;
+                                                                   owl:onProperty :hasReadme ;
+                                                                   owl:allValuesFrom [ rdf:type owl:Class ;
+                                                                                       owl:unionOf ( :Repository
+                                                                                                     <http://purl.org/roh/mirror/obo/ero#ERO_0000071>
+                                                                                                   )
+                                                                                     ]
+                                                                 ] ,
+                                                                 [ rdf:type owl:Restriction ;
+                                                                   owl:onProperty :seqOfAuthors ;
+                                                                   owl:allValuesFrom rdf:Seq
+                                                                 ] ,
+                                                                 [ rdf:type owl:Restriction ;
+                                                                   owl:onProperty :softwareStatus ;
+                                                                   owl:allValuesFrom [ rdf:type owl:Class ;
+                                                                                       owl:unionOf ( :Final
+                                                                                                     :Provisional
+                                                                                                   )
+                                                                                     ]
+                                                                 ] ,
+                                                                 [ rdf:type owl:Restriction ;
+                                                                   owl:onProperty <http://purl.org/roh/mirror/foaf#homepage> ;
+                                                                   owl:allValuesFrom bibo:Webpage
+                                                                 ] ,
+                                                                 [ rdf:type owl:Restriction ;
+                                                                   owl:onProperty vivo:dateTimeValue ;
+                                                                   owl:allValuesFrom vivo:DateTimeValue
+                                                                 ] ,
+                                                                 [ rdf:type owl:Restriction ;
+                                                                   owl:onProperty <http://purl.org/spar/cito/cites> ;
+                                                                   owl:allValuesFrom [ rdf:type owl:Class ;
+                                                                                       owl:unionOf ( :ExperimentalProtocol
+                                                                                                     :Repository
+                                                                                                     bibo:Document
+                                                                                                     <http://purl.org/roh/mirror/obo/ero#ERO_0000071>
+                                                                                                   )
+                                                                                     ]
+                                                                 ] ,
+                                                                 [ rdf:type owl:Restriction ;
+                                                                   owl:onProperty :seqOfAuthors ;
+                                                                   owl:maxCardinality "1"^^xsd:nonNegativeInteger
+                                                                 ] ,
+                                                                 [ rdf:type owl:Restriction ;
+                                                                   owl:onProperty :title ;
+                                                                   owl:someValuesFrom xsd:string
+                                                                 ] ,
+                                                                 [ rdf:type owl:Restriction ;
+                                                                   owl:onProperty :programmingLanguage ;
+                                                                   owl:allValuesFrom rdfs:Literal
+                                                                 ] ,
+                                                                 [ rdf:type owl:Restriction ;
+                                                                   owl:onProperty :title ;
+                                                                   owl:allValuesFrom xsd:string
+                                                                 ] ,
+                                                                 [ rdf:type owl:Restriction ;
+                                                                   owl:onProperty bibo:abstract ;
+                                                                   owl:allValuesFrom xsd:string
+                                                                 ] ,
+                                                                 [ rdf:type owl:Restriction ;
+                                                                   owl:onProperty vivo:freetextKeyword ;
+                                                                   owl:allValuesFrom xsd:string
+                                                                 ] ;
+                                                 owl:disjointWith iao:IAO_0000030 ;
                                                  obo:IAO_0000111 "software" ;
                                                  obo:IAO_0000112 "Microsoft Word is commonly used word processing software." ;
                                                  obo:IAO_0000114 iao:IAO_0000120 ;
@@ -7269,7 +7777,7 @@ skos:ConceptScheme rdf:type owl:Class ;
 
 ###  http://purl.org/roh#TestNonResearchSoftware
 :TestNonResearchSoftware rdf:type owl:NamedIndividual ,
-                                  <http://purl.org/roh/mirror/obo/ero#ERO_0000071> ;
+                                  :ReservableSoftware ;
                          rdfs:label "TestNonResearchSoftware"@en .
 
 
@@ -7351,8 +7859,8 @@ skos:ConceptScheme rdf:type owl:Class ;
            rdfs:comment "A property to express the i10-index of an author."@en .
 
 
-bfo:BFO_0000004 rdfs:label "continuador independiente"@es ,
-                           "independent continuant"@en .
+bfo:BFO_0000004 rdfs:label "independent continuant"@en ,
+                           "continuador independiente"@es .
 
 
 #################################################################
