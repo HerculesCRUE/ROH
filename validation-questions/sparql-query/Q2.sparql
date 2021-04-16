@@ -6,8 +6,8 @@ PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
 
 
 SELECT ?person, ?position WHERE {
-   ?person  a   foaf:Person .
-   ?person roh:hasPosition ?position .
+   ?person  a   foaf:Person ;
+           roh:hasPosition ?position .
 
    ?position vivo:relates ?org ;
             a vivo:Position .

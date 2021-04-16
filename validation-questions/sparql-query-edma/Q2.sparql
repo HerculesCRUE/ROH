@@ -1,0 +1,48 @@
+PREFIX foaf: <http://purl.org/roh/mirror/foaf#>
+PREFIX roh: <http://purl.org/roh#>
+PREFIX vivo:  <http://purl.org/roh/mirror/vivo#>
+PREFIX unesco: <http://purl.org/roh/unesco-individuals#>
+PREFIX ro: <http://purl.org/obo/owl/ro#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+
+SELECT ?researcher ?center ?positionClass ?area
+WHERE {
+  {
+  ?researcher	roh:hasKnowledgeArea ?area ;
+  				roh:hasPosition ?position .
+  ?position vivo:relates ?center ;
+  			a	?positionClass .
+  ?center a roh:ResearchGroup .} UNION {
+     ?researcher	roh:hasKnowledgeArea ?area ;
+  				roh:hasPosition ?position .
+  ?position vivo:relates ?center ;
+  			a	?positionClass .
+  ?center a roh:ResearchInstitute .
+  }
+
+FILTER NOT EXISTS {
+?position a ?otherClass .
+?otherClass rdfs:subClassOf ?positionClass .
+FILTER (?otherClass != ?positionClass)
+}
+}
+
+Dudas: RESULTAS: 
+en la pregunta https://github.com/HerculesCRUE/GnossDeustoBackend/blob/master/validation-questions/sparql-query/Q2.sparql
+porque se busca la clase de la posicion que esta relacionada con el centro y no la persona... o mejor dicho
+porque se puede relacionar una posicion con una organizacion ¿?  --> xk no podemos hacer relaciones no binarias
+por lo que enlazas la persona su posicion y la organizacion mediante dos relaciones. 
+
+
+Objetivo: listado de investigadores de un centro/estructura de investigación de un area/disciplina especifica.
+Este listado podra filtrarse segun el tipo de investigador ya sea docente, personal investigacdor en formación,
+etc... 
+
+Como se supone que el usuario al realizar la pregunta puede filtar. ¿? 
+
+Hay dos opciones o faltan roles o se quiere filtar por Rol y no por posicion. El rol entiendo que es momentaneo
+dependiente de la tarea que se este realizando por lo que es muy posible que se quiera filtar por posicion y
+estas esten incompletas. 
+
+Es que un investigador puede ser una persona con posicion roh:ResearcherPosition en una investigacion o 
+como alguien que tiene un area de concimiento. 
