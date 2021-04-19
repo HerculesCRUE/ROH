@@ -1,0 +1,16 @@
+PREFIX roh: <http://purl.org/roh#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+
+
+PREFIX roh: <http://purl.org/roh#>
+SELECT ?center (COUNT(?accreditation) AS ?numberOfSeals) 
+WHERE {{
+ ?center a roh:ResearchGroup ;
+         roh:hasAccreditation ?accreditation .
+ }UNION{
+ ?center a roh:ResearchInstitute ;
+         roh:hasAccreditation ?accreditation .
+ 
+}}GROUP BY ?centre
+ORDER BY DESC(?numberOfSeals)
+LIMIT 10

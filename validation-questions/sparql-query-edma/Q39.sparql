@@ -1,0 +1,26 @@
+PREFIX roh: <http://purl.org/roh#>
+prefix vivo:  <http://purl.org/roh/mirror/vivo#> 
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX foaf: <http://purl.org/roh/mirror/foaf#>
+PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
+
+
+SELECT SUM(?fundingAmount) WHERE {
+
+   ?person  a   foaf:Person .
+   ?person roh:hasPosition ?position .
+   ?position vivo:relates ?org .
+
+  ?funding roh:grants ?org ;
+           roh:monetaryAmount ?fundingAmount .
+
+ ?org  roh:hasKnowledgeArea ?knowledgeArea ;
+        rdfs:label ?orgLabel .
+
+   ?knowledgeArea rdfs:label ?knowledgeLabel .
+
+
+      FILTER(?orgLabel = "sample-FundingOrganization-1437" && 
+         ?knowledgeLabel = "sample-PropertyClassification-2084")  
+
+}

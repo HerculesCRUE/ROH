@@ -8,3 +8,4 @@ SELECT ?centre (COUNT(?seal) AS ?numberOfSeals) WHERE {
 GROUP BY ?centre
 ORDER BY DESC(?numberOfSeals)
 LIMIT 10
+

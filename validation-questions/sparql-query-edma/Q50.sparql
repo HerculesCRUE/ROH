@@ -1,0 +1,16 @@
+PREFIX iao: <http://purl.org/roh/mirror/obo/iao#>
+PREFIX roh: <http://purl.org/roh#>
+PREFIX bibo:  <http://purl.org/roh/mirror/bibo#>
+PREFIX rdfs:  <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+PREFIX vivo: <http://purl.org/roh/mirror/vivo#>
+
+SELECT ?journal ?impactFactor (YEAR(?date) as ?year)  WHERE {
+	?journal	a iao:IAO_0000013 ;
+    			vivo:dateIssued ?dateTimeValue ;
+    			bibo:authorList ?authorList ;
+    			roh:hasMetric ?metric .
+    ?dateTimeValue vivo:dateTime ?date .
+    ?metric roh:impactFactor ?impactFactor .
+    FILTER (YEAR(?date) >= "1990"^^xsd:integer && YEAR(?date) <= "2000"^^xsd:integer )
+} 
