@@ -34,7 +34,6 @@ jobs:
       run: |
         cd widoco
         mkdir config
-        cp ../sigmaaie/modules/core/doc/widoco.config.txt ./config/config.properties
         java -jar ./widoco.jar \
         -ontFile ../sigmaaie/modules/core/roh-core.ttl \
         -oops \
