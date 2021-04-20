@@ -1,0 +1,558 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+  xmlns:owl="http://www.w3.org/2002/07/owl#"
+  xmlns:dc="http://purl.org/dc/elements/1.1/"
+  xmlns:vann="http://purl.org/vocab/vann/"
+  xmlns:foaf="http://xmlns.com/foaf/0.1/"
+  xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#">
+
+  <owl:Ontology rdf:about="http://www.morelab.deusto.es/ontologies/swrcfe">
+    <dc:title>SWRC-FE (SWRC Funding Extension)</dc:title>
+    <dc:description>SWRCFE (SWRC Funding Extension) is an extension of the SWRC ontology (http://ontoware.org/swrc/), used to represent funding in R&amp;amp;D projects (who finances the project, in what period of time and with which amount of money).
+The most recent version of the ontology is v5.0 (25th November, 2013).
+Developed by MORElab Research Group at Deustotech (University of Deusto, Spain).
+
+SWRCFE (SWRC Funding Extension) es una extensión de la ontología SWRC (http://ontoware.org/swrc/) cuya finalidad es representar la financiación en proyectos de I+D+i (quién financia el proyecto, en que período de tiempo y con que cuantía).
+La versión más reciente de esta ontología es la v5.1 (29 de enero, 2014).
+Desarrollada por el grupo de investigación MORElab, DeustoTech (Unievurrsidad de Deusto, España).</dc:description>
+    <dc:modified rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2017-07-27</dc:modified>
+    <dc:modified rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2014-01-29</dc:modified>
+    <vann:preferredNamespaceUri>http://www.morelab.deusto.es/ontologies/swrcfe#</vann:preferredNamespaceUri>
+    <vann:preferredNamespacePrefix>swrcfe</vann:preferredNamespacePrefix>
+    <foaf:page rdf:resource="http://www.morelab.deusto.es/ontologies/swrcfe.html"/>
+    <dc:creator rdf:resource="http://www.morelab.deusto.es/ontologies/swrcfe#admin"/>
+    <dc:creator rdf:resource="http://www.morelab.deusto.es/ontologies/swrcfe#oscar.pena"/>
+    <dc:creator rdf:resource="http://www.morelab.deusto.es/resource/jon-lazaro"/>
+    <dc:issued rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2012-06-20</dc:issued>
+    <owl:versionInfo rdf:datatype="http://www.w3.org/2001/XMLSchema#double">5.1</owl:versionInfo>
+    <owl:backwardCompatibleWith rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">http://data.semanticweb.org/ns/swc/swrc</owl:backwardCompatibleWith>
+    <owl:imports rdf:resource="http://data.semanticweb.org/ns/swc/swrc"/>
+    <dc:contributor rdf:resource="http://www.morelab.deusto.es/resource/oscar-pena"/>
+  </owl:Ontology>
+
+  <foaf:Person rdf:about="http://www.morelab.deusto.es/ontologies/swrcfe#admin">
+    <foaf:name>Jon Lazaro Aduna</foaf:name>
+    <foaf:homepage rdf:resource="http://paginaspersonales.deusto.es/jlazaro/"/>
+    <foaf:mbox rdf:resource="mailto:jlazaro@deusto.es"/>
+  </foaf:Person>
+
+  <foaf:Organization rdf:about="http://www.morelab.deusto.es/ontologies/swrcfe#MORElab%20Research%20Group%20%28University%20of%20Deusto%29">
+    <foaf:member rdf:resource="http://www.morelab.deusto.es/ontologies/swrcfe#admin"/>
+    <foaf:name>MORElab Research Group (University of Deusto)</foaf:name>
+    <foaf:homepage rdf:resource="http://www.morelab.deusto.es/"/>
+  </foaf:Organization>
+
+  <foaf:Person rdf:about="http://www.morelab.deusto.es/ontologies/swrcfe#oscar.pena">
+    <foaf:name>Oscar Peña</foaf:name>
+    <foaf:homepage></foaf:homepage>
+  </foaf:Person>
+
+  <rdfs:Class rdf:about="http://www.morelab.deusto.es/ontologies/swrcfe#PublicationAuthor">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:isDefinedBy rdf:resource="http://www.morelab.deusto.es/ontologies/swrcfe"/>
+    <rdfs:label>Publication authorship</rdfs:label>
+    <rdfs:comment>Relationship between Publication and Person, in which you can specify the author position.</rdfs:comment>
+  </rdfs:Class>
+
+  <rdfs:Class rdf:about="http://www.morelab.deusto.es/ontologies/swrcfe#Language">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:isDefinedBy rdf:resource="http://www.morelab.deusto.es/ontologies/swrcfe"/>
+    <rdfs:label>Language</rdfs:label>
+    <rdfs:comment>Class for language representation</rdfs:comment>
+  </rdfs:Class>
+
+  <rdfs:Class rdf:about="http://www.morelab.deusto.es/ontologies/swrcfe#Job">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:isDefinedBy rdf:resource="http://www.morelab.deusto.es/ontologies/swrcfe"/>
+    <rdfs:label>Job</rdfs:label>
+    <rdfs:comment>Class for job representations.</rdfs:comment>
+  </rdfs:Class>
+
+  <rdfs:Class rdf:about="http://www.morelab.deusto.es/ontologies/swrcfe#GeographicalScope">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:isDefinedBy rdf:resource="http://www.morelab.deusto.es/ontologies/swrcfe"/>
+    <rdfs:label>Geographical scope</rdfs:label>
+    <rdfs:comment>Clase para representar regiones geográficas.</rdfs:comment>
+  </rdfs:Class>
+
+  <rdfs:Class rdf:about="http://www.morelab.deusto.es/ontologies/swrcfe#FundingProgram">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:isDefinedBy rdf:resource="http://www.morelab.deusto.es/ontologies/swrcfe"/>
+    <rdfs:label>Funding program</rdfs:label>
+    <rdfs:comment>Funding program that funded the project. It should describe the funding program's name, which organization promotes it and the geographical scope of the funding.</rdfs:comment>
+  </rdfs:Class>
+
+  <rdfs:Class rdf:about="http://www.morelab.deusto.es/ontologies/swrcfe#FundingAmount">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:isDefinedBy rdf:resource="http://www.morelab.deusto.es/ontologies/swrcfe"/>
+    <rdfs:label>Funding amount</rdfs:label>
+    <rdfs:comment>Amount of money funded, including the quantity and the year it was conceeded.</rdfs:comment>
+  </rdfs:Class>
+
+  <rdfs:Class rdf:about="http://www.morelab.deusto.es/ontologies/swrcfe#Funding">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:isDefinedBy rdf:resource="http://www.morelab.deusto.es/ontologies/swrcfe"/>
+    <rdfs:label>Funding</rdfs:label>
+    <rdfs:comment>Specific funding for a given project. You can specify both the total funding and the official code for the funding itseld.</rdfs:comment>
+  </rdfs:Class>
+
+  <rdfs:Class rdf:about="http://www.morelab.deusto.es/ontologies/swrcfe#AssignedPerson">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:isDefinedBy rdf:resource="http://www.morelab.deusto.es/ontologies/swrcfe"/>
+    <rdfs:label>Assigned person</rdfs:label>
+    <rdfs:comment>Representation of the Project-Person relationship, in which it is possible to specify the duration and the functions carried out by that person in the project.</rdfs:comment>
+  </rdfs:Class>
+
+  <rdfs:Class rdf:about="http://www.morelab.deusto.es/ontologies/swrcfe#AccountProfile">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:isDefinedBy rdf:resource="http://www.morelab.deusto.es/ontologies/swrcfe"/>
+    <rdfs:label>Account profile</rdfs:label>
+    <rdfs:comment>Class for specifying the details of the profiles of a given person in different social networks.</rdfs:comment>
+  </rdfs:Class>
+
+  <rdf:Property rdf:about="http://www.morelab.deusto.es/ontologies/swrcfe#hostCountry">
+    <rdfs:isDefinedBy rdf:resource="http://www.morelab.deusto.es/ontologies/swrcfe"/>
+    <rdfs:label>hostCountry</rdfs:label>
+    <rdfs:domain rdf:resource="http://swrc.ontoware.org/ontology#Event"/>
+    <rdfs:range rdf:resource="http://purl.org/ontology/places#Country"/>
+  </rdf:Property>
+
+  <rdf:Property rdf:about="http://www.morelab.deusto.es/ontologies/swrcfe#helds">
+    <rdfs:isDefinedBy rdf:resource="http://www.morelab.deusto.es/ontologies/swrcfe"/>
+    <rdfs:label>helds</rdfs:label>
+    <rdfs:domain rdf:resource="http://swrc.ontoware.org/ontology#Person"/>
+    <rdfs:domain rdf:resource="http://xmlns.com/foaf/0.1/Person"/>
+    <rdfs:range rdf:resource="http://www.morelab.deusto.es/ontologies/swrcfe#AccountProfile"/>
+  </rdf:Property>
+
+  <rdf:Property rdf:about="http://www.morelab.deusto.es/ontologies/swrcfe#heldBy">
+    <rdfs:isDefinedBy rdf:resource="http://www.morelab.deusto.es/ontologies/swrcfe"/>
+    <rdfs:label>heldBy</rdfs:label>
+    <rdfs:domain rdf:resource="http://www.morelab.deusto.es/ontologies/swrcfe#AccountProfile"/>
+    <rdfs:range rdf:resource="http://swrc.ontoware.org/ontology#Person"/>
+    <rdfs:range rdf:resource="http://xmlns.com/foaf/0.1/Person"/>
+  </rdf:Property>
+
+  <rdf:Property rdf:about="http://www.morelab.deusto.es/ontologies/swrcfe#hasProceedings">
+    <rdfs:isDefinedBy rdf:resource="http://www.morelab.deusto.es/ontologies/swrcfe"/>
+    <rdfs:label>hasProceedings</rdfs:label>
+    <rdfs:domain rdf:resource="http://swrc.ontoware.org/ontology#Event"/>
+    <rdfs:range rdf:resource="http://swrc.ontoware.org/ontology#Publication"/>
+  </rdf:Property>
+
+  <rdf:Property rdf:about="http://www.morelab.deusto.es/ontologies/swrcfe#hasJob">
+    <rdfs:isDefinedBy rdf:resource="http://www.morelab.deusto.es/ontologies/swrcfe"/>
+    <rdfs:label>hasJob</rdfs:label>
+    <rdfs:domain rdf:resource="http://swrc.ontoware.org/ontology#Organization"/>
+    <rdfs:range rdf:resource="http://www.morelab.deusto.es/ontologies/swrcfe#Job"/>
+  </rdf:Property>
+
+  <rdf:Property rdf:about="http://www.morelab.deusto.es/ontologies/swrcfe#hasAuthorship">
+    <rdfs:isDefinedBy rdf:resource="http://www.morelab.deusto.es/ontologies/swrcfe"/>
+    <rdfs:label>hasAuthorship</rdfs:label>
+    <rdfs:domain rdf:resource="http://swrc.ontoware.org/ontology#Publication"/>
+    <rdfs:range rdf:resource="http://www.morelab.deusto.es/ontologies/swrcfe#PublicationAuthor"/>
+  </rdf:Property>
+
+  <rdf:Property rdf:about="http://www.morelab.deusto.es/ontologies/swrcfe#hasAssigned">
+    <rdfs:isDefinedBy rdf:resource="http://www.morelab.deusto.es/ontologies/swrcfe"/>
+    <rdfs:label>hasAssigned</rdfs:label>
+    <rdfs:domain rdf:resource="http://swrc.ontoware.org/ontology#Project"/>
+    <rdfs:range rdf:resource="http://www.morelab.deusto.es/ontologies/swrcfe#AssignedPerson"/>
+  </rdf:Property>
+
+  <rdf:Property rdf:about="http://www.morelab.deusto.es/ontologies/swrcfe#geographicalScope">
+    <rdfs:isDefinedBy rdf:resource="http://www.morelab.deusto.es/ontologies/swrcfe"/>
+    <rdfs:label>geographicalScope</rdfs:label>
+    <rdfs:domain rdf:resource="http://www.morelab.deusto.es/ontologies/swrcfe#FundingProgram"/>
+    <rdfs:range rdf:resource="http://www.morelab.deusto.es/ontologies/swrcfe#GeographicalScope"/>
+  </rdf:Property>
+
+  <rdf:Property rdf:about="http://www.morelab.deusto.es/ontologies/swrcfe#funds">
+    <rdfs:isDefinedBy rdf:resource="http://www.morelab.deusto.es/ontologies/swrcfe"/>
+    <rdfs:label>funds</rdfs:label>
+    <rdfs:domain rdf:resource="http://www.morelab.deusto.es/ontologies/swrcfe#Funding"/>
+    <rdfs:range rdf:resource="http://swrc.ontoware.org/ontology#Project"/>
+  </rdf:Property>
+
+  <rdf:Property rdf:about="http://www.morelab.deusto.es/ontologies/swrcfe#fundingProgram">
+    <rdfs:isDefinedBy rdf:resource="http://www.morelab.deusto.es/ontologies/swrcfe"/>
+    <rdfs:label>fundingProgram</rdfs:label>
+    <rdfs:domain rdf:resource="http://www.morelab.deusto.es/ontologies/swrcfe#Funding"/>
+    <rdfs:range rdf:resource="http://www.morelab.deusto.es/ontologies/swrcfe#FundingProgram"/>
+  </rdf:Property>
+
+  <rdf:Property rdf:about="http://www.morelab.deusto.es/ontologies/swrcfe#financedWith">
+    <rdfs:isDefinedBy rdf:resource="http://www.morelab.deusto.es/ontologies/swrcfe"/>
+    <rdfs:label>financedWith</rdfs:label>
+    <rdfs:domain rdf:resource="http://swrc.ontoware.org/ontology#Project"/>
+    <rdfs:range rdf:resource="http://www.morelab.deusto.es/ontologies/swrcfe#Funding"/>
+  </rdf:Property>
+
+  <rdf:Property rdf:about="http://www.morelab.deusto.es/ontologies/swrcfe#doneBy">
+    <rdfs:isDefinedBy rdf:resource="http://www.morelab.deusto.es/ontologies/swrcfe"/>
+    <rdfs:label>doneBy</rdfs:label>
+    <rdfs:domain rdf:resource="http://www.morelab.deusto.es/ontologies/swrcfe#Job"/>
+    <rdfs:range rdf:resource="http://swrc.ontoware.org/ontology#Person"/>
+    <rdfs:range rdf:resource="http://xmlns.com/foaf/0.1/Person"/>
+  </rdf:Property>
+
+  <rdf:Property rdf:about="http://www.morelab.deusto.es/ontologies/swrcfe#createdPublication">
+    <rdfs:isDefinedBy rdf:resource="http://www.morelab.deusto.es/ontologies/swrcfe"/>
+    <rdfs:label>createdPublication</rdfs:label>
+    <rdfs:domain rdf:resource="http://www.morelab.deusto.es/ontologies/swrcfe#PublicationAuthor"/>
+    <rdfs:range rdf:resource="http://swrc.ontoware.org/ontology#Publication"/>
+  </rdf:Property>
+
+  <rdf:Property rdf:about="http://www.morelab.deusto.es/ontologies/swrcfe#carriedOutIn">
+    <rdfs:isDefinedBy rdf:resource="http://www.morelab.deusto.es/ontologies/swrcfe"/>
+    <rdfs:label>carriedOutIn</rdfs:label>
+    <rdfs:domain rdf:resource="http://www.morelab.deusto.es/ontologies/swrcfe#Job"/>
+    <rdfs:range rdf:resource="http://swrc.ontoware.org/ontology#Organization"/>
+  </rdf:Property>
+
+  <rdf:Property rdf:about="http://www.morelab.deusto.es/ontologies/swrcfe#authorIn">
+    <rdfs:isDefinedBy rdf:resource="http://www.morelab.deusto.es/ontologies/swrcfe"/>
+    <rdfs:label>authorIn</rdfs:label>
+    <rdfs:domain rdf:resource="http://swrc.ontoware.org/ontology#Person"/>
+    <rdfs:domain rdf:resource="http://xmlns.com/foaf/0.1/Person"/>
+    <rdfs:range rdf:resource="http://www.morelab.deusto.es/ontologies/swrcfe#PublicationAuthor"/>
+  </rdf:Property>
+
+  <rdf:Property rdf:about="http://www.morelab.deusto.es/ontologies/swrcfe#assignedTo">
+    <rdfs:isDefinedBy rdf:resource="http://www.morelab.deusto.es/ontologies/swrcfe"/>
+    <rdfs:label>assignedTo</rdfs:label>
+    <rdfs:domain rdf:resource="http://swrc.ontoware.org/ontology#Person"/>
+    <rdfs:domain rdf:resource="http://xmlns.com/foaf/0.1/Person"/>
+    <rdfs:range rdf:resource="http://www.morelab.deusto.es/ontologies/swrcfe#AssignedPerson"/>
+  </rdf:Property>
+
+  <rdf:Property rdf:about="http://www.morelab.deusto.es/ontologies/swrcfe#assignedPerson">
+    <rdfs:isDefinedBy rdf:resource="http://www.morelab.deusto.es/ontologies/swrcfe"/>
+    <rdfs:label>assignedPerson</rdfs:label>
+    <rdfs:domain rdf:resource="http://www.morelab.deusto.es/ontologies/swrcfe#AssignedPerson"/>
+    <rdfs:range rdf:resource="http://swrc.ontoware.org/ontology#Person"/>
+    <rdfs:range rdf:resource="http://xmlns.com/foaf/0.1/Person"/>
+  </rdf:Property>
+
+  <rdf:Property rdf:about="http://www.morelab.deusto.es/ontologies/swrcfe#year">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+    <rdfs:isDefinedBy rdf:resource="http://www.morelab.deusto.es/ontologies/swrcfe"/>
+    <rdfs:label>year</rdfs:label>
+    <rdfs:domain rdf:resource="http://swrc.ontoware.org/ontology#Event"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#gYear"/>
+  </rdf:Property>
+
+  <rdf:Property rdf:about="http://www.morelab.deusto.es/ontologies/swrcfe#workStartDate">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+    <rdfs:isDefinedBy rdf:resource="http://www.morelab.deusto.es/ontologies/swrcfe"/>
+    <rdfs:label>workStartDate</rdfs:label>
+    <rdfs:domain rdf:resource="http://www.morelab.deusto.es/ontologies/swrcfe#AssignedPerson"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#date"/>
+  </rdf:Property>
+
+  <rdf:Property rdf:about="http://www.morelab.deusto.es/ontologies/swrcfe#workEndDate">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+    <rdfs:isDefinedBy rdf:resource="http://www.morelab.deusto.es/ontologies/swrcfe"/>
+    <rdfs:label>workEndDate</rdfs:label>
+    <rdfs:domain rdf:resource="http://www.morelab.deusto.es/ontologies/swrcfe#AssignedPerson"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#date"/>
+  </rdf:Property>
+
+  <rdf:Property rdf:about="http://www.morelab.deusto.es/ontologies/swrcfe#totalFunds">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+    <rdfs:isDefinedBy rdf:resource="http://www.morelab.deusto.es/ontologies/swrcfe"/>
+    <rdfs:label>totalFunds</rdfs:label>
+    <rdfs:domain rdf:resource="http://www.morelab.deusto.es/ontologies/swrcfe#Funding"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#decimal"/>
+  </rdf:Property>
+
+  <rdf:Property rdf:about="http://www.morelab.deusto.es/ontologies/swrcfe#seriesText">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+    <rdfs:isDefinedBy rdf:resource="http://www.morelab.deusto.es/ontologies/swrcfe"/>
+    <rdfs:label>seriesText</rdfs:label>
+    <rdfs:domain rdf:resource="http://swrc.ontoware.org/ontology#Publication"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
+  </rdf:Property>
+
+  <rdf:Property rdf:about="http://www.morelab.deusto.es/ontologies/swrcfe#seriesNumber">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+    <rdfs:isDefinedBy rdf:resource="http://www.morelab.deusto.es/ontologies/swrcfe"/>
+    <rdfs:label>seriesNumber</rdfs:label>
+    <rdfs:domain rdf:resource="http://swrc.ontoware.org/ontology#Publication"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
+  </rdf:Property>
+
+  <rdf:Property rdf:about="http://www.morelab.deusto.es/ontologies/swrcfe#series">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+    <rdfs:isDefinedBy rdf:resource="http://www.morelab.deusto.es/ontologies/swrcfe"/>
+    <rdfs:label>series</rdfs:label>
+    <rdfs:domain rdf:resource="http://swrc.ontoware.org/ontology#Publication"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
+  </rdf:Property>
+
+  <rdf:Property rdf:about="http://www.morelab.deusto.es/ontologies/swrcfe#role">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+    <rdfs:isDefinedBy rdf:resource="http://www.morelab.deusto.es/ontologies/swrcfe"/>
+    <rdfs:label>role</rdfs:label>
+    <rdfs:domain rdf:resource="http://www.morelab.deusto.es/ontologies/swrcfe#AssignedPerson"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
+  </rdf:Property>
+
+  <rdf:Property rdf:about="http://www.morelab.deusto.es/ontologies/swrcfe#publicationYear">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+    <rdfs:isDefinedBy rdf:resource="http://www.morelab.deusto.es/ontologies/swrcfe"/>
+    <rdfs:label>publicationYear</rdfs:label>
+    <rdfs:domain rdf:resource="http://swrc.ontoware.org/ontology#Publication"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#gYear"/>
+  </rdf:Property>
+
+  <rdf:Property rdf:about="http://www.morelab.deusto.es/ontologies/swrcfe#publicationType">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+    <rdfs:isDefinedBy rdf:resource="http://www.morelab.deusto.es/ontologies/swrcfe"/>
+    <rdfs:label>publicationType</rdfs:label>
+    <rdfs:domain rdf:resource="http://swrc.ontoware.org/ontology#Publication"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
+  </rdf:Property>
+
+  <rdf:Property rdf:about="http://www.morelab.deusto.es/ontologies/swrcfe#publicationShortTitle">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+    <rdfs:isDefinedBy rdf:resource="http://www.morelab.deusto.es/ontologies/swrcfe"/>
+    <rdfs:label>publicationShortTitle</rdfs:label>
+    <rdfs:domain rdf:resource="http://swrc.ontoware.org/ontology#Publication"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
+  </rdf:Property>
+
+  <rdf:Property rdf:about="http://www.morelab.deusto.es/ontologies/swrcfe#projectType">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+    <rdfs:isDefinedBy rdf:resource="http://www.morelab.deusto.es/ontologies/swrcfe"/>
+    <rdfs:label>projectType</rdfs:label>
+    <rdfs:domain rdf:resource="http://swrc.ontoware.org/ontology#Project"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
+  </rdf:Property>
+
+  <rdf:Property rdf:about="http://www.morelab.deusto.es/ontologies/swrcfe#projectCode">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+    <rdfs:isDefinedBy rdf:resource="http://www.morelab.deusto.es/ontologies/swrcfe"/>
+    <rdfs:label>projectCode</rdfs:label>
+    <rdfs:domain rdf:resource="http://www.morelab.deusto.es/ontologies/swrcfe#Funding"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
+  </rdf:Property>
+
+  <rdf:Property rdf:about="http://www.morelab.deusto.es/ontologies/swrcfe#profileId">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+    <rdfs:isDefinedBy rdf:resource="http://www.morelab.deusto.es/ontologies/swrcfe"/>
+    <rdfs:label>profileId</rdfs:label>
+    <rdfs:domain rdf:resource="http://www.morelab.deusto.es/ontologies/swrcfe#AccountProfile"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
+  </rdf:Property>
+
+  <rdf:Property rdf:about="http://www.morelab.deusto.es/ontologies/swrcfe#position">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+    <rdfs:isDefinedBy rdf:resource="http://www.morelab.deusto.es/ontologies/swrcfe"/>
+    <rdfs:label>position</rdfs:label>
+    <rdfs:domain rdf:resource="http://www.morelab.deusto.es/ontologies/swrcfe#Job"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
+  </rdf:Property>
+
+  <rdf:Property rdf:about="http://www.morelab.deusto.es/ontologies/swrcfe#ownAmount">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+    <rdfs:isDefinedBy rdf:resource="http://www.morelab.deusto.es/ontologies/swrcfe"/>
+    <rdfs:label>ownAmount</rdfs:label>
+    <rdfs:domain rdf:resource="http://www.morelab.deusto.es/ontologies/swrcfe#FundingAmount"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#decimal"/>
+  </rdf:Property>
+
+  <rdf:Property rdf:about="http://www.morelab.deusto.es/ontologies/swrcfe#organizationType">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+    <rdfs:isDefinedBy rdf:resource="http://www.morelab.deusto.es/ontologies/swrcfe"/>
+    <rdfs:label>organizationType</rdfs:label>
+    <rdfs:domain rdf:resource="http://swrc.ontoware.org/ontology#Organization"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
+  </rdf:Property>
+
+  <rdf:Property rdf:about="http://www.morelab.deusto.es/ontologies/swrcfe#journalAbbreviation">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+    <rdfs:isDefinedBy rdf:resource="http://www.morelab.deusto.es/ontologies/swrcfe"/>
+    <rdfs:label>journalAbbreviation</rdfs:label>
+    <rdfs:domain rdf:resource="http://swrc.ontoware.org/ontology#Publication"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
+  </rdf:Property>
+
+  <rdf:Property rdf:about="http://www.morelab.deusto.es/ontologies/swrcfe#jobStartDate">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+    <rdfs:isDefinedBy rdf:resource="http://www.morelab.deusto.es/ontologies/swrcfe"/>
+    <rdfs:label>jobStartDate</rdfs:label>
+    <rdfs:domain rdf:resource="http://www.morelab.deusto.es/ontologies/swrcfe#Job"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#date"/>
+  </rdf:Property>
+
+  <rdf:Property rdf:about="http://www.morelab.deusto.es/ontologies/swrcfe#jobEndDate">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+    <rdfs:isDefinedBy rdf:resource="http://www.morelab.deusto.es/ontologies/swrcfe"/>
+    <rdfs:label>jobEndDate</rdfs:label>
+    <rdfs:domain rdf:resource="http://www.morelab.deusto.es/ontologies/swrcfe#Job"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#date"/>
+  </rdf:Property>
+
+  <rdf:Property rdf:about="http://www.morelab.deusto.es/ontologies/swrcfe#isMember">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+    <rdfs:isDefinedBy rdf:resource="http://www.morelab.deusto.es/ontologies/swrcfe"/>
+    <rdfs:label>isMember</rdfs:label>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#boolean"/>
+  </rdf:Property>
+
+  <rdf:Property rdf:about="http://www.morelab.deusto.es/ontologies/swrcfe#impactFactor">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+    <rdfs:isDefinedBy rdf:resource="http://www.morelab.deusto.es/ontologies/swrcfe"/>
+    <rdfs:label>impactFactor</rdfs:label>
+    <rdfs:domain rdf:resource="http://swrc.ontoware.org/ontology#Publication"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#decimal"/>
+  </rdf:Property>
+
+  <rdf:Property rdf:about="http://www.morelab.deusto.es/ontologies/swrcfe#hostCity">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+    <rdfs:isDefinedBy rdf:resource="http://www.morelab.deusto.es/ontologies/swrcfe"/>
+    <rdfs:label>hostCity</rdfs:label>
+    <rdfs:domain rdf:resource="http://swrc.ontoware.org/ontology#Event"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#anyURI"/>
+  </rdf:Property>
+
+  <rdf:Property rdf:about="http://www.morelab.deusto.es/ontologies/swrcfe#fundedYear">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+    <rdfs:isDefinedBy rdf:resource="http://www.morelab.deusto.es/ontologies/swrcfe"/>
+    <rdfs:label>fundedYear</rdfs:label>
+    <rdfs:domain rdf:resource="http://www.morelab.deusto.es/ontologies/swrcfe#FundingAmount"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#gYear"/>
+  </rdf:Property>
+
+  <rdf:Property rdf:about="http://www.morelab.deusto.es/ontologies/swrcfe#eventType">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+    <rdfs:isDefinedBy rdf:resource="http://www.morelab.deusto.es/ontologies/swrcfe"/>
+    <rdfs:label>eventType</rdfs:label>
+    <rdfs:domain rdf:resource="http://swrc.ontoware.org/ontology#Event"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
+  </rdf:Property>
+
+  <rdf:Property rdf:about="http://www.morelab.deusto.es/ontologies/swrcfe#eventStartDate">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+    <rdfs:isDefinedBy rdf:resource="http://www.morelab.deusto.es/ontologies/swrcfe"/>
+    <rdfs:label>eventStartDate</rdfs:label>
+    <rdfs:domain rdf:resource="http://swrc.ontoware.org/ontology#Event"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#date"/>
+  </rdf:Property>
+
+  <rdf:Property rdf:about="http://www.morelab.deusto.es/ontologies/swrcfe#eventLocation">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+    <rdfs:isDefinedBy rdf:resource="http://www.morelab.deusto.es/ontologies/swrcfe"/>
+    <rdfs:label>eventLocation</rdfs:label>
+    <rdfs:domain rdf:resource="http://swrc.ontoware.org/ontology#Event"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
+  </rdf:Property>
+
+  <rdf:Property rdf:about="http://www.morelab.deusto.es/ontologies/swrcfe#eventEndDate">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+    <rdfs:isDefinedBy rdf:resource="http://www.morelab.deusto.es/ontologies/swrcfe"/>
+    <rdfs:label>eventEndDate</rdfs:label>
+    <rdfs:domain rdf:resource="http://swrc.ontoware.org/ontology#Event"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#date"/>
+  </rdf:Property>
+
+  <rdf:Property rdf:about="http://www.morelab.deusto.es/ontologies/swrcfe#bookTitle">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+    <rdfs:isDefinedBy rdf:resource="http://www.morelab.deusto.es/ontologies/swrcfe"/>
+    <rdfs:label>bookTitle</rdfs:label>
+    <rdfs:domain rdf:resource="http://swrc.ontoware.org/ontology#Publication"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
+  </rdf:Property>
+
+  <rdf:Property rdf:about="http://www.morelab.deusto.es/ontologies/swrcfe#bibtex">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+    <rdfs:isDefinedBy rdf:resource="http://www.morelab.deusto.es/ontologies/swrcfe"/>
+    <rdfs:label>bibtex</rdfs:label>
+    <rdfs:domain rdf:resource="http://swrc.ontoware.org/ontology#Publication"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
+  </rdf:Property>
+
+  <rdf:Property rdf:about="http://www.morelab.deusto.es/ontologies/swrcfe#authorPosition">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+    <rdfs:isDefinedBy rdf:resource="http://www.morelab.deusto.es/ontologies/swrcfe"/>
+    <rdfs:label>authorPosition</rdfs:label>
+    <rdfs:domain rdf:resource="http://www.morelab.deusto.es/ontologies/swrcfe#PublicationAuthor"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
+  </rdf:Property>
+
+  <rdf:Property rdf:about="http://www.morelab.deusto.es/ontologies/swrcfe#isLeaderOf">
+    <rdfs:isDefinedBy rdf:resource="http://www.morelab.deusto.es/ontologies/swrcfe"/>
+    <rdfs:label>isLeaderOf</rdfs:label>
+    <rdfs:domain rdf:resource="http://swrc.ontoware.org/ontology#Organization"/>
+    <rdfs:range rdf:resource="http://swrc.ontoware.org/ontology#Project"/>
+  </rdf:Property>
+
+  <rdf:Property rdf:about="http://www.morelab.deusto.es/ontologies/swrcfe#memberOf">
+    <rdfs:isDefinedBy rdf:resource="http://www.morelab.deusto.es/ontologies/swrcfe"/>
+    <rdfs:label>memberOf</rdfs:label>
+    <rdfs:domain rdf:resource="http://swrc.ontoware.org/ontology#Organization"/>
+    <rdfs:domain rdf:resource="http://swrc.ontoware.org/ontology#Person"/>
+    <rdfs:domain rdf:resource="http://xmlns.com/foaf/0.1/Person"/>
+    <rdfs:range rdf:resource="http://swrc.ontoware.org/ontology#Organization"/>
+  </rdf:Property>
+
+  <rdf:Property rdf:about="http://www.morelab.deusto.es/ontologies/swrcfe#network">
+    <rdfs:isDefinedBy rdf:resource="http://www.morelab.deusto.es/ontologies/swrcfe"/>
+    <rdfs:label>network</rdfs:label>
+    <rdfs:domain rdf:resource="http://www.morelab.deusto.es/ontologies/swrcfe#AccountProfile"/>
+    <rdfs:range rdf:resource="http://xmlns.com/foaf/0.1/OnlineAccount"/>
+  </rdf:Property>
+
+  <rdf:Property rdf:about="http://www.morelab.deusto.es/ontologies/swrcfe#project">
+    <rdfs:isDefinedBy rdf:resource="http://www.morelab.deusto.es/ontologies/swrcfe"/>
+    <rdfs:label>project</rdfs:label>
+    <rdfs:domain rdf:resource="http://www.morelab.deusto.es/ontologies/swrcfe#AssignedPerson"/>
+    <rdfs:range rdf:resource="http://swrc.ontoware.org/ontology#Project"/>
+  </rdf:Property>
+
+  <rdf:Property rdf:about="http://www.morelab.deusto.es/ontologies/swrcfe#projectLeader">
+    <rdfs:isDefinedBy rdf:resource="http://www.morelab.deusto.es/ontologies/swrcfe"/>
+    <rdfs:label>projectLeader</rdfs:label>
+    <rdfs:domain rdf:resource="http://swrc.ontoware.org/ontology#Project"/>
+    <rdfs:range rdf:resource="http://swrc.ontoware.org/ontology#Organization"/>
+  </rdf:Property>
+
+  <rdf:Property rdf:about="http://www.morelab.deusto.es/ontologies/swrcfe#relatedProject">
+    <rdfs:isDefinedBy rdf:resource="http://www.morelab.deusto.es/ontologies/swrcfe"/>
+    <rdfs:label>relatedProject</rdfs:label>
+    <rdfs:domain rdf:resource="http://swrc.ontoware.org/ontology#Publication"/>
+    <rdfs:range rdf:resource="http://swrc.ontoware.org/ontology#Project"/>
+  </rdf:Property>
+
+  <rdf:Property rdf:about="http://www.morelab.deusto.es/ontologies/swrcfe#relatedPublication">
+    <rdfs:isDefinedBy rdf:resource="http://www.morelab.deusto.es/ontologies/swrcfe"/>
+    <rdfs:label>relatedPublication</rdfs:label>
+    <rdfs:domain rdf:resource="http://swrc.ontoware.org/ontology#Project"/>
+    <rdfs:range rdf:resource="http://swrc.ontoware.org/ontology#Publication"/>
+  </rdf:Property>
+
+  <rdf:Property rdf:about="http://www.morelab.deusto.es/ontologies/swrcfe#supportedBy">
+    <rdfs:isDefinedBy rdf:resource="http://www.morelab.deusto.es/ontologies/swrcfe"/>
+    <rdfs:label>supportedBy</rdfs:label>
+    <rdfs:domain rdf:resource="http://www.morelab.deusto.es/ontologies/swrcfe#FundingProgram"/>
+    <rdfs:range rdf:resource="http://swrc.ontoware.org/ontology#Organization"/>
+  </rdf:Property>
+
+  <rdf:Property rdf:about="http://www.morelab.deusto.es/ontologies/swrcfe#supports">
+    <rdfs:isDefinedBy rdf:resource="http://www.morelab.deusto.es/ontologies/swrcfe"/>
+    <rdfs:label>supports</rdfs:label>
+    <rdfs:domain rdf:resource="http://swrc.ontoware.org/ontology#Organization"/>
+    <rdfs:range rdf:resource="http://www.morelab.deusto.es/ontologies/swrcfe#FundingProgram"/>
+  </rdf:Property>
+
+  <rdf:Property rdf:about="http://www.morelab.deusto.es/ontologies/swrcfe#university">
+    <rdfs:isDefinedBy rdf:resource="http://www.morelab.deusto.es/ontologies/swrcfe"/>
+    <rdfs:label>university</rdfs:label>
+    <rdfs:domain rdf:resource="http://swrc.ontoware.org/ontology#Publication"/>
+    <rdfs:range rdf:resource="http://swrc.ontoware.org/ontology#Organization"/>
+  </rdf:Property>
+
+</rdf:RDF>
