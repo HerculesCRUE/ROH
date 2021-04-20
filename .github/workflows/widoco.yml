@@ -48,9 +48,8 @@ jobs:
         mv output/roh/index-en.html output/roh/index.html
 
     - name: Publish on Github Pages
-      uses: crazy-max/ghaction-github-pages@v1.3.0
+      uses: crazy-max/ghaction-github-pages@v2.3.0
       with:
-        keep_history: true 
         build_dir: widoco/output 
       env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
