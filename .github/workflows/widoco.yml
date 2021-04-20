@@ -45,6 +45,7 @@ jobs:
         -includeImportedOntologies \
         -uniteSections \
         -excludeIntroduction
+        mv index-en.html index.html
 
     - name: Publish on Github Pages
       uses: crazy-max/ghaction-github-pages@v1.3.0
