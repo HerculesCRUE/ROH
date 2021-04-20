@@ -46,10 +46,11 @@ jobs:
         -uniteSections \
         -excludeIntroduction
         mv output/roh/index-en.html output/roh/index.html
+        mv output/roh ../docs
 
     - name: Publish on Github Pages
       uses: crazy-max/ghaction-github-pages@v2.3.0
       with:
-        build_dir: widoco/output 
+        build_dir: docs 
       env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
