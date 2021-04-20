@@ -1,36 +1,24 @@
-PREFIX roh: <http://purl.org/roh#>
+ PREFIX roh: <http://purl.org/roh_edma#>
 PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
 PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
 PREFIX skos: <http://www.w3.org/2004/02/skos/core#> 
 PREFIX foaf: <http://xmlns.com/foaf/0.1/>
+prefix uneskos:  <http://purl.org/roh/unesco-individuals#>
 
-SELECT ?centro ?tipo_de_centro ?researchLine ?nombre_research_line
+SELECT DISTINCT ?centro ?tipo_de_centro 
  WHERE { 
-    {    ?centro a roh:ResearchGroup. 
-      Optional{?centro roh:hasKnowledgeArea ?researchLine.} 
+    {    ?centro a roh:ResearchGroup;
+                 roh:hasKnowledgeArea uneskos:120304.
       
-      Optional{?researchLine skos:prefLabel ?nombre_research_line.}
-      Optional{Filter(lang(?nombre_research_line) = "en")}
-  
-      OPTIONAL {roh:ResearchGroup rdfs:label ?tipo_de_centro.}
-        Filter(lang(?tipo_de_centro) = "en")
+      OPTIONAL {?centro roh:title ?tipo_de_centro.}
+   
+      
     } UNION 
     {
-         ?centro a roh:ResearchInstitute. 
-      Optional{?centro roh:hasKnowledgeArea ?researchLine.} 
-      
-      Optional{?researchLine skos:prefLabel ?nombre_research_line.}
-      Optional{Filter(lang(?nombre_research_line) = "en")}
+         ?centro a roh:ResearchInstitute;
+                  roh:hasKnowledgeArea uneskos:120304.
   
-      OPTIONAL {roh:ResearchInstitute rdfs:label ?tipo_de_centro.}
-          Filter(lang(?tipo_de_centro) = "en")
+      OPTIONAL {?centro roh:title  ?tipo_de_centro.}
+           
     }
-  } 
-
-  DUDAS: yo lo he echo con :KnowledgeArea pero no se si habria que hacerlo con :researchLine 
-        como centros de investigacion solo he considerado 2 :ResearchGroup y :ResearchInstitute. Igual considerar otro metodo de extraer cuales son los centros ¿?
-         Se puede realizar de modo que todas las areas de conomiento aparezcan listadas en una celda en vez de tres celdas con el mismo centro. ¿? 
-  
-OBJETIVO: Se quiere obtener un listado de los centros/estructuras de investigación que trabajan en un 
-areá/disciplina específica. 
-          No he realizado un filtro segun el area especifica... (no tengo claro como se realizaria)
+  }

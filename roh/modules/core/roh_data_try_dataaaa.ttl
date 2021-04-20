@@ -1,70 +1,535 @@
 @prefix : <http://purl.org/roh_edma#> .
+@prefix ro: <http://purl.org/roh_edma/mirror/obo/ro#> .
+@prefix bfo: <http://purl.org/roh_edma/mirror/obo/bfo#> .
+@prefix dc: <http://purl.org/dc/elements/1.1/> .
+@prefix iao: <http://purl.org/roh_edma/mirror/obo/iao#> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
 @prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
 @prefix xml: <http://www.w3.org/XML/1998/namespace> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix foaf: <http://purl.org/roh_edma/mirror/foaf#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
-@prefix vivo: <http://purl.org/roh/mirror/vivo#> .
-@prefix dcterms:  <http://purl.org/dc/terms/> .
-@prefix foaf: <http://purl.org/roh/mirror/foaf#> .
+@prefix vivo: <http://purl.org/roh_edma/mirror/vivo#> .
 @prefix void: <http://rdfs.org/ns/void#> .
-
-#@base <http://www.semanticweb.org/mpuer/ontologies/2021/3/untitled-ontology-9> .
-
-<http://www.semanticweb.org/mpuer/ontologies/2021/3/untitled-ontology-9> rdf:type owl:Ontology ;
-                                                                          owl:imports <http://purl.org/roh_edma> .
-
-
-#################################################################
-#    Individuals
-#################################################################
-
-:ResearchRe
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix uneskos:  <http://purl.org/roh/unesco-individuals#>.
+@prefix bibo: <http://purl.org/roh_edma/mirror/bibo#> .
+@prefix gn: <http://purl.org/roh_edma/mirror/geonames#> .
 
 
+[ rdf:type owl:Ontology ;
+                                                                          owl:imports <http://purl.org/roh_edma>.]
+           
 ###  http://purl.org/roh_edma/data#
-<http://purl.org/roh_edma/data#> a owl:NamedIndividual ,
-                                          vivo:Dataset;
-                                           dcterms:title "ASIO example data"@en ;
-        dcterms:description "This dataset has been created to allow  the testing of the ROH ontology through the validation SPARQL queries"@en ;
-        dcterms:title "Datos de ejemplo ASIO"@es ;
-        dcterms:description "Este dataset ha sido creado para poder validar la ontología a través de las consultas SPARQL de validación"@es ;
-        dcterms:publisher "Universidad de Murcia";
-        dcterms:creator	"Universidad de Deusto", "GNOSS";
-        foaf:homepage <https://www.um.es/web/hercules/>;
-        dcterms:created	"2021-04-19"^^xsd:date ;
-        dcterms:issued	"2021-04-19"^^xsd:date ;
-        dcterms:license <https://creativecommons.org/licenses/by-sa/4.0/> ;
-        dcterms:subject <http://dbpedia.org/resource/Semantic_Web> ;
-        void:feature <http://www.w3.org/ns/formats/Turtle> .
-
+<http://purl.org/roh_edma/data#> rdf:type 
+                                          vivo:Dataset ;
+                                 foaf:homepage <https://www.um.es/web/hercules/> ;
+                                 dcterms:created "2021-04-19"^^xsd:date ;
+                                 dcterms:creator "GNOSS" ,
+                                                 "Universidad de Deusto" ;
+                                 dcterms:description "Este dataset ha sido creado para poder validar la ontología a través de las consultas SPARQL de validación"@es ,
+                                                     "This dataset has been created to allow  the testing of the ROH ontology through the validation SPARQL queries"@en ;
+                                 dcterms:issued "2021-04-19"^^xsd:date ;
+                                 dcterms:license <https://creativecommons.org/licenses/by-sa/4.0/> ;
+                                 dcterms:publisher "Universidad de Murcia" ;
+                                 dcterms:subject <http://dbpedia.org/resource/Semantic_Web> ;
+                                 dcterms:title "ASIO example data"@en ,
+                                               "Datos de ejemplo ASIO"@es ;
+                                 void:feature <http://www.w3.org/ns/formats/Turtle> .
 
 
 ###  http://purl.org/roh_edma/data#centro-investigacion-2
-<http://purl.org/roh_edma/data#centro-investigacion-2> a owl:NamedIndividual ,
-                                                                :ResearchInstitute .
+<http://purl.org/roh_edma/data#centro-investigacion-2> rdf:type 
+                                                                :ResearchInstitute ;
+                                        
+                                        :hasAccreditation _:genid1 ;
+                                         :hasKnowledgeArea uneskos:120304 ,
+                                                         uneskos:120318 ,
+                                                        uneskos:120601 ,
+                                                        uneskos:570508 ;
+                                        #:hasContactInfo : vcard:Organization
+                                        ro:BFO_0000051 <http://purl.org/roh_edma/data#grupo-investigacion-1> ;
+                                        :title "Centro de Investigacion 2" ;
+                                        vivo:description "A GREAT RESEARCH INSTITUTE 2" ;
+                                        vivo:identifier "rdfs:Literal that identifies this research institute 2"^^xsd:string .
+
+_:genid1 rdf:type :Accreditation ;
+          vivo:hasGoverningAuthority <http://purl.org/roh_edma/data#gobierno-vasco> ;
+          :title "Centro reconocido por el Gobierno Vasco" .
 
 
 ###  http://purl.org/roh_edma/data#centro-investigacion-3
-<http://purl.org/roh_edma/data#centro-investigacion-3> rdf:type owl:NamedIndividual ,
-                                                                :ResearchInstitute .
+<http://purl.org/roh_edma/data#centro-investigacion-3> rdf:type 
+                                                                :ResearchInstitute ;
+                                                       :hasKnowledgeArea uneskos:120318,  uneskos:570508 ;
+                                                       gn:locatedIn <https://sws.geonames.org/3128026/> ;
+                                                       :title "Centro de investigacion 3" ;
+                                                        #:hasContactInfo : vcard:Organization
+                                                       vivo:description "A GREAT RESEARCH INSTITUTE 3" ;
+                                                       vivo:identifier "rdfs:Literal that identifies this research institute 3"^^xsd:string .
 
+
+###  http://purl.org/roh_edma/data#grupo-investigacion-1
+<http://purl.org/roh_edma/data#grupo-investigacion-1> rdf:type 
+                                                               :ResearchGroup ;
+                        :hasAccreditation  [ a                       :Accreditation ;
+                                                vivo:hasGoverningAuthority  <http://purl.org/roh_edma/data#gobierno-vasco> ;
+                                                :title                  "Grupo reconocido por el Gobierno Vasco"
+                                         ] ;
+        
+                        :hasAccreditation [ a                       :SealOfQuality ;
+                                                vivo:hasGoverningAuthority  <http://purl.org/roh_edma/data#gobierno-vasco> ;
+                                                :title                  "Sello de calidad proporcionado por el Gobierno Vasco"
+                                         ] ;
+                        :hasResearchLine uneskos:120318 , uneskos:120304 , uneskos:120601;
+                        :hasKnowledgeArea  uneskos:120318 , uneskos:120304 , uneskos:120601;
+                        gn:locatedIn <https://sws.geonames.org/3128026/> ;
+                        :title "Grupo de investigacion 1";
+                        #:hasContactInfo : vcard:Organization
+                        vivo:description "A GREAT RESEARCH GROUP 1";
+                        vivo:identifier "rdfs:Literal that identifies this research group 1"^^xsd:string.
 
 ###  http://purl.org/roh_edma/data#universidad-1
-<http://purl.org/roh_edma/data#universidad-1> rdf:type owl:NamedIndividual ,
-                                                       vivo:University ;
-                                              vivo:description "A GREAT UNIVERSITY 1"^^xsd:string .
+<http://purl.org/roh_edma/data#universidad-1> rdf:type 
+                        vivo:University ;
+         ro:BFO_0000051 <http://purl.org/roh_edma/data#centro-investigacion-2> ,
+                                                             <http://purl.org/roh_edma/data#grupo-investigacion-1> ;
+        :title "Universidad 1" ;
+        #:hasContactInfo : vcard:Organization
+        vivo:description "A GREAT UNIVERSITY 1"^^xsd:string ;
+        vivo:identifier "rdfs:Literal that identifier University 1"^^xsd:string .
 
 
 ###  http://purl.org/roh_edma/data#universidad-2
-<http://purl.org/roh_edma/data#universidad-2> rdf:type owl:NamedIndividual ,
+<http://purl.org/roh_edma/data#universidad-2> rdf:type 
                                                        vivo:University ;
-                                              vivo:description "A GREAT UNIVERSITY 2"^^xsd:string .
+                                              ro:BFO_0000051 <http://purl.org/roh_edma/data#centro-investigacion-3> ;
+                                              :title "Universidad 2" ;
+                                              #:hasContactInfo : vcard:Organization
+                                              vivo:description "A GREAT UNIVERSITY 2"^^xsd:string ;
+                                              vivo:identifier "rdfs:Literal that identifies this University 2"^^xsd:string .
 
 
-###  ttp://purl.org/roh_edma/data#grupo-investigacion-1
-<ttp://purl.org/roh_edma/data#grupo-investigacion-1> rdf:type owl:NamedIndividual ,
-                                                              :ResearchGroup .
+###  https://sws.geonames.org/3128026/
+<https://sws.geonames.org/3128026/> a 
+                                             gn:Feature.
 
 
-###  Generated by the OWL API (version 4.5.9.2019-02-01T07:24:44Z) https://github.com/owlcs/owlapi
+###  https://www.um.es/web/hercules/
+<https://www.um.es/web/hercules/> rdf:type 
+                                        bibo:Webpage.
+
+
+###  http://purl.org/roh_edma/data#gobierno-vasco
+<http://purl.org/roh_edma/data#gobierno-vasco> rdf:type 
+                vivo:GovernmentAgency ;
+        :promotes  <http://purl.org/roh_edma/data#hazitek2020>;
+        :title "Gobierno Vasco".
+
+<http://purl.org/roh_edma/data#hazitek2020> rdf:type 
+                :FundingProgram ;
+        :promotedBy  <http://purl.org/roh_edma/data#gobierno-vasco> .
+
+
+
+<http://purl.org/roh_edma/data#investigador-1> rdf:type 
+               foaf:Person ;
+        :hasKnowledgeArea  uneskos:120304 , uneskos:120601 ;
+        :hasPosition       [ a       :ResearcherPosition ;
+                             vivo:dateTimeInterval
+                                   [ a       vivo:DateTimeInterval ;
+                                       vivo:start
+                                               [ a       vivo:DateTimeValue ;
+                                                 vivo:dateTime
+                                                         "2010-09-15T00:00:00"^^xsd:dateTime
+                                               ]
+                                     ] ;
+                             vivo:relates
+                                     <http://purl.org/roh_edma/data#grupo-investigacion-1> , <http://purl.org/roh_edma/data#investigador-1>
+                           ] ;
+        :hasPosition       [ a       vivo:FacultyPosition ;
+                             vivo:dateTimeInterval
+                                   [ a       vivo:DateTimeInterval ;
+                                       vivo:start
+                                               [ a       vivo:DateTimeValue ;
+                                                 vivo:dateTime
+                                                         "2010-09-15T00:00:00"^^xsd:dateTime
+                                               ]
+                                     ] ;
+                             vivo:relates
+                                     <http://purl.org/roh_edma/data#grupo-investigacion-1> , <http://purl.org/roh_edma/data#investigador-1>
+                           ] ;
+        foaf:name "Pedro" ;
+        foaf:gender "male" ;
+        vivo:relatedBy     [ a             vivo:FacultyPosition ;
+                             vivo:relates  <http://purl.org/roh_edma/data#grupo-investigacion-1> , <http://purl.org/roh_edma/data#investigador-1>
+                          ] ;
+        :hasCV       [ a      :CurriculumVitae ;
+                          :cites "21"^^xsd:integer ;
+                          :factorH "3"^^xsd:integer ] .
+
+
+
+
+<http://purl.org/roh_edma/data#investigador-2>  rdf:type 
+      foaf:Person ;
+        :hasKnowledgeArea  uneskos:120304 , uneskos:570508 ;
+        :hasPosition       [ a       :ResearcherPosition ;
+                             vivo:dateTimeInterval
+                                     [ a       vivo:DateTimeInterval ;
+                                       vivo:start
+                                               [ a       vivo:DateTimeValue ;
+                                                 vivo:dateTime
+                                                         "2013-05-10T00:00:00"^^xsd:dateTime
+                                               ]
+                                     ] ;
+                             vivo:relates
+                                     <http://purl.org/roh_edma/data#grupo-investigacion-1> , <http://purl.org/roh_edma/data#investigador-2>
+                           ] ;
+        foaf:name "Maria" ;
+        foaf:gender "female" ;
+        vivo:relatedBy     [ a             :ResearcherPosition ;
+                             vivo:relates  <http://purl.org/roh_edma/data#grupo-investigacion-1> , <http://purl.org/roh_edma/data#investigador-2>
+                           ] ;
+        :hasCV       [ a      :CurriculumVitae ;
+                        :cites "53"^^xsd:integer ;
+                        :factorH "5"^^xsd:integer ] .
+
+
+
+<http://purl.org/roh_edma/data#investigador-3>
+        a                  foaf:Person ;
+        :hasKnowledgeArea  uneskos:120318 ;
+        :hasPosition       [ a       :ResearcherPosition ;
+                             vivo:dateTimeInterval
+                                     [ a       vivo:DateTimeInterval ;
+                                       vivo:start
+                                               [ a       vivo:DateTimeValue ;
+                                                 vivo:dateTime
+                                                         "2012-05-10T00:00:00"^^xsd:dateTime
+                                               ]
+                                     ] ;
+                             vivo:relates
+                                     <http://purl.org/roh_edma/data#grupo-investigacion-1> , <http://purl.org/roh_edma/data#investigador-3>
+                           ] ;
+        foaf:name
+                "Sofia" ;
+        foaf:gender "female" ;
+        vivo:relatedBy     [ a             :ResearcherPosition ;
+                             vivo:relates  <http://purl.org/roh_edma/data#grupo-investigacion-1> , <http://purl.org/roh_edma/data#investigador-3>
+                           ] ;
+        vivo:relatedBy
+                [ a       :ResearcherPosition ;
+                  vivo:relates
+                          <http://purl.org/roh_edma/data#grupo-investigacion-1> , <http://purl.org/roh_edma/data#investigador-3>
+                ] ;
+        :hasCV       [ a      :CurriculumVitae ;
+                :cites "5"^^xsd:integer ;
+                :factorH "1"^^xsd:integer ] .
+
+
+
+<http://purl.org/roh_edma/data#investigador-4>
+        a               foaf:Person ;
+        foaf:name
+                "Carlos" ;
+        vivo:relatedBy  [ a             :ResearcherPosition ;
+                          vivo:relates  <http://purl.org/roh_edma/data#centro-investigacion-3> , <http://purl.org/roh_edma/data#investigador-4>
+                        ] ;
+        vivo:relatedBy
+                [ a       :ResearcherPosition ;
+                  vivo:relates
+                          <http://purl.org/roh_edma/data#centro-investigacion-3> , <http://purl.org/roh_edma/data#investigador-4>
+                ] .
+
+
+<http://purl.org/roh_edma/data#investigador-1-juan-de-la-cierva>
+        a       :Grant ;
+        ro:BFO_0000051 [ a :FundingAmount ;
+                         :monetaryAmount "35000"^^xsd:decimal ;
+                         :currency "€" ] .
+
+
+<http://purl.org/roh_edma/data#investigador-1-contract>
+        a       :PersonContract ;
+        vivo:relates    <http://purl.org/roh_edma/data#investigador-1>, <http://purl.org/roh_edma/data#investigador-1-juan-de-la-cierva> .
+
+
+<http://purl.org/roh_edma/data#investigador-3-phd-relationship>
+        a       :PhDSupervisingRelationship ;
+        vivo:dateTimeInterval [ a       vivo:DateTimeInterval ;
+                                vivo:start [ a  vivo:DateTimeValue ;
+                                             vivo:dateTime  "2018-11-13T00:00:00"^^xsd:dateTime ]] ;
+        vivo:relates <http://purl.org/roh_edma/data#investigador-3>, <http://purl.org/roh_edma/data#investigador-1> ;
+        vivo:relates [ a        :SuperviseeRole ;
+                       ro:RO_0000052 <http://purl.org/roh_edma/data#investigador-3> ;
+                       vivo:relatedBy <http://purl.org/roh_edma/data#investigador-3-phd-relationship> ] ;
+        vivo:relates [ a        :SupervisorRole ;
+                       ro:RO_0000052 <http://purl.org/roh_edma/data#investigador-1> ; 
+                       vivo:relatedBy <http://purl.org/roh_edma/data#investigador-3-phd-relationship> ] ;
+        vivo:relates <http://purl.org/roh_edma/data#investigador-3>, <http://purl.org/roh_edma/data#investigador-1> ;
+
+        :produces <http://purl.org/roh_edma/data#investigador-3-phd-thesis> .
+
+
+<http://purl.org/roh_edma/data#investigador-3-phd-thesis> 
+        a :PhDThesis ;
+        dc:title "My fabulous PhD Thesis" ;
+        :correspondingAuthor <http://purl.org/roh_edma/data#investigador-3> ;
+        :seqOfAuthors [ a     rdf:Seq ;
+                          rdf:_1        <http://purl.org/roh_edma/data#investigador-3> ;
+                          rdf:_2        <http://purl.org/roh_edma/data#investigador-1> ] .
+
+
+
+<http://purl.org/roh_edma/data#a-great-conference>
+        a       bibo:Conference ;
+        bfo:BFO_0000055 [ a     vivo:AttendeeRole ;
+                          ro:RO_0000052        <http://purl.org/roh_edma/data#investigador-2> ] .
+
+
+<http://purl.org/roh_edma/data#european-comission>
+        a          vivo:GovernmentAgency ;
+        :promotes  <http://purl.org/roh_edma/data#feder> .
+
+
+
+<http://purl.org/roh_edma/data#feder> 
+	a	   :FundingSource ;
+	:funds     <http://purl.org/roh_edma/data#hazitek2020> .
+
+
+
+
+<http://purl.org/roh_edma/data#a-project-research-proposal>
+        a       vivo:ResearchProposal .
+
+<http://purl.org/roh_edma/data#a-project-justification> 
+        a       :Justification .
+
+<http://purl.org/roh_edma/data#another-project>
+        a                     vivo:Project ;
+        :hasKnowledgeArea     uneskos:120703 .
+
+
+<http://purl.org/roh_edma/data#a-project-in-negotiation>
+        a                     vivo:Project ;
+        :projectStatus        "PROPOSAL_SUBMITTED" ;
+        :isSupportedBy        [ a       :Funding ;
+                                ro:BFO_0000051 [ a :FundingAmount ;
+                                             :grants <http://purl.org/roh_edma/data#grupo-investigacion-1> ;
+                                             :monetaryAmount "5000"^^xsd:decimal ] ;
+                                :fundedBy [ a :FundingProgram ;
+                                            :promotedBy <http://purl.org/roh_edma/data#company-one> ] ;
+                                :publicFunding "false"^^xsd:boolean 
+                              ];
+        vivo:relates           [ a               vivo:MemberRole ;
+                                 :roleOf         <http://purl.org/roh_edma/data#grupo-investigacion-1> ;
+                                 vivo:relatedBy  <http://purl.org/roh_edma/data#a-project-in-negotiation>
+                               ] ;
+        vivo:relates           [ a vivo:LeaderRole ;
+                                 :roleOf <http://purl.org/roh_edma/data#company-one> ;
+                                 vivo:relatedBy  <http://purl.org/roh_edma/data#a-project-in-negotiation>
+                               ] .
+
+
+
+<http://purl.org/roh_edma/data#a-private-project>
+        a                     vivo:Project ;
+        :isSupportedBy        [ a       :Funding ;
+                                ro:BFO_0000051 [ a :FundingAmount ;
+                                             :grants <http://purl.org/roh_edma/data#grupo-investigacion-1> ;
+                                             :monetaryAmount "50000"^^xsd:decimal ] ;
+                                :fundedBy [ a :FundingProgram ;
+                                            :promotedBy <http://purl.org/roh_edma/data#company-one> ] ;
+                                :publicFunding "false"^^xsd:boolean 
+                              ];
+        vivo:relates           [ a               vivo:MemberRole ;
+                                 :roleOf         <http://purl.org/roh_edma/data#grupo-investigacion-1> ;
+                                 vivo:relatedBy  <http://purl.org/roh_edma/data#a-project-in-negotiation>
+                               ] ;
+        vivo:relates           [ a vivo:LeaderRole ;
+                                 :roleOf <http://purl.org/roh_edma/data#company-one> ;
+                                 vivo:relatedBy  <http://purl.org/roh_edma/data#a-project-in-negotiation>
+                               ] .
+
+
+
+<http://purl.org/roh_edma/data#european-funding-program>
+        a :FundingProgram ;
+        :promotedBy <http://purl.org/roh_edma/data#european-comission> .
+
+
+<http://purl.org/roh_edma/data#another-collaborative-project>
+        a       vivo:Project ;
+        :isSupportedBy        [ a       :Funding ;
+                                ro:BFO_0000051[ a :FundingAmount ;
+                                             :grants <http://purl.org/roh_edma/data#grupo-investigacion-1> ;
+                                             :monetaryAmount "25000"^^xsd:decimal ] ;
+                                :fundedBy <http://purl.org/roh_edma/data#european-funding-program> ;
+                                :publicFunding "true"^^xsd:boolean 
+                              ],
+                              [ a       :Funding ;
+                                ro:BFO_0000051 [ a :FundingAmount ;
+                                             :grants <http://purl.org/roh_edma/data#centro-investigacion-3> ;
+                                             :monetaryAmount "35000"^^xsd:decimal ] ;
+                                :fundedBy <http://purl.org/roh_edma/data#european-funding-program> ;
+                                :publicFunding "true"^^xsd:boolean 
+                              ];
+        vivo:dateTimeInterval  [ a           vivo:DateTimeInterval ;
+                                 vivo:end    [ a              vivo:DateTimeValue ;
+                                               vivo:dateTime  "2021-06-30T00:00:00"^^xsd:dateTime
+                                             ] ;
+                                 vivo:start  [ a              vivo:DateTimeValue ;
+                                               vivo:dateTime  "2018-01-01T00:00:00"^^xsd:dateTime
+                                             ]
+                               ] ;
+        vivo:relates           [ a               vivo:MemberRole ;
+                                 :roleOf         <http://purl.org/roh_edma/data#grupo-investigacion-1> ;
+                                 vivo:relatedBy  <http://purl.org/roh_edma/data#another-collaborative-project>
+                               ] ;
+        vivo:relates           [ a vivo:LeaderRole ;
+                                 :roleOf <http://purl.org/roh_edma/data#centro-investigacion-3> ;
+                                 vivo:relatedBy  <http://purl.org/roh_edma/data#another-collaborative-project>
+                               ];
+        :title                 "another collaborative project".
+
+
+<http://purl.org/roh_edma/data#a-project>
+        a                     vivo:Project ;
+        :hasKnowledgeArea     uneskos:1203 ;
+        :isSupportedBy         [ a               :Funding ;
+                                 ro:hasPart     [ a                :FundingAmount ;
+                                                   :grants          <http://purl.org/roh_edma/data#grupo-investigacion-1> ;
+                                                   :monetaryAmount  "10000"^^xsd:decimal
+                                                 ] ;
+                                 :fundedBy       <http://purl.org/roh_edma/data#hazitek2020> ;
+                                 :publicFunding  "true"^^xsd:boolean
+                               ] ;
+        :title                 "A GREAT PROJECT" ;
+        vivo:dateTimeInterval  [ a           vivo:DateTimeInterval ;
+                                 vivo:end    [ a              vivo:DateTimeValue ;
+                                               vivo:dateTime  "2019-12-01T00:00:00"^^xsd:dateTime
+                                             ] ;
+                                 vivo:start  [ a              vivo:DateTimeValue ;
+                                               vivo:dateTime  "2018-01-01T00:00:00"^^xsd:dateTime
+                                             ]
+                               ] ;
+        vivo:relates           [ a               vivo:MemberRole ;
+                                 :roleOf         <http://purl.org/roh_edma/data#grupo-investigacion-1> ;
+                                 vivo:relatedBy  <http://purl.org/roh_edma/data#a-project>
+                               ] ;
+        vivo:relates           [ a               vivo:MemberRole ;
+                                 :roleOf         <http://purl.org/roh_edma/data#investigador-1> ;
+                                 vivo:relatedBy  <http://purl.org/roh_edma/data#a-project>
+                               ] ;
+        vivo:relates           [ a vivo:LeaderRole ;
+                                 :roleOf <http://purl.org/roh_edma/data#company-one> ;
+                                 vivo:relatedBy  <http://purl.org/roh_edma/data#a-project>
+
+        ] ;
+        gn:locatedIn    <https://sws.geonames.org/3336903/> ;
+        :spends      <http://purl.org/roh_edma/data#an-intern-expense> ;
+        :foreseenJustificationDate "2019-03-31T00:00:00"^^xsd:dateTime, "2020-03-31T00:00:00"^^xsd:dateTime .
+
+
+<http://purl.org/roh_edma/data#an-intern-expense>
+        a       :ProjectExpense ;
+        vivo:description        "The salary of an intern working for the project".
+
+
+						   
+<http://purl.org/roh_edma/data#investigador-4>
+        a               foaf:Person ;
+        foaf:name
+                "Carlos" ;
+        vivo:relatedBy  [ a             :ResearcherPosition ;
+                          vivo:relates  <http://purl.org/roh_edma/data#centro-investigacion-3> , <http://purl.org/roh_edma/data#investigador-4>
+                        ] ;
+        vivo:relatedBy
+                [ a       :ResearcherPosition ;
+                  vivo:relates
+                          <http://purl.org/roh_edma/data#centro-investigacion-3> , <http://purl.org/roh_edma/data#investigador-4>
+                ] .                        
+
+
+
+<http://purl.org/roh_edma/data#excelent-journal>
+        a                         bibo:Journal ;
+        dc:title
+                "An excelent Journal" ;
+        vivo:dateIssued           [ a              vivo:DateTimeValue ;
+                                    vivo:dateTime  "2020-04-27T00:00:00"^^xsd:dateTime
+                                  ] ;
+        vivo:publicationVenueFor  <http://purl.org/roh_edma/data#journal-article-1> ;
+        vivo:dateIssued
+                [ a       vivo:DateTimeValue ;
+                  vivo:dateTime
+                          "2020-04-27T00:00:00"^^xsd:dateTime
+                ] ;
+        vivo:publicationVenueFor
+                <http://purl.org/roh_edma/data#journal-article-1> .
+
+
+### HOLAAAAAA
+<http://purl.org/roh_edma/data#journal-article-1>
+        a                         iao:IAO_0000013 ;
+        dc:title
+                "My great journal article" ;
+        :hasKnowledgeArea     uneskos:1203 ;
+        :correspondingAuthor      <http://purl.org/roh_edma/data#investigador-1> ;
+        :seqOfAuthors         [ a       rdf:Seq ;
+                                    rdf:_1  <http://purl.org/roh_edma/data#investigador-1> ;
+                                    rdf:_2  <http://purl.org/roh_edma/data#investigador-3>
+                                  ] ;
+         vivo:dateIssued
+                [ a       vivo:DateTimeValue ;
+                  vivo:dateTime
+                          "2020-04-27T00:00:00"^^xsd:dateTime
+                ] ;
+        vivo:hasPublicationVenue
+                <http://purl.org/roh_edma/data#excelent-journal> ;
+
+        :hasMetric   <http://purl.org/roh_edma/data#journal-article-1-metric> .
+
+
+
+<http://purl.org/roh_edma/data#journal-article-1-metric>
+        a :PublicationMetric ;
+        :impactFactor "2.5"^^xsd:float ;
+        :quartile "Q2"^^xsd:string .
+
+
+## HOLAAAA
+<http://purl.org/roh_edma/data#my-fabulous-patent>
+        a       bibo:Patent ;
+        vivo:identifier "my-fabulous-patent"^^xsd:string ;
+        :hasKnowledgeArea     uneskos:1203 ;
+        :correspondingAuthor <http://purl.org/roh_edma/data#investigador-1> ;
+        :ownerOrganization  <http://purl.org/roh_edma/data#centro-investigacion-1>;
+        :seqOfAuthors           [ a       rdf:Seq ;
+                                    rdf:_1  <http://purl.org/roh_edma/data#investigador-1> ;
+                                    rdf:_2  <http://purl.org/roh_edma/data#investigador-3> ];
+        vivo:dateIssued
+                [ a       vivo:DateTimeValue ;
+                  vivo:dateTime
+                          "2020-03-17T00:00:00"^^xsd:dateTime
+                ] .
+
+
+<http://purl.org/roh_edma/data#another-fabulous-patent>
+        a       bibo:Patent ;
+        vivo:identifier "another-fabulous-patent"^^xsd:string ;
+        :hasKnowledgeArea     uneskos:1203 ;
+        :correspondingAuthor <http://purl.org/roh_edma/data#investigador-3> ;
+        :ownerOrganization  <http://purl.org/roh_edma/data#centro-investigacion-1>;
+        :seqOfAuthors           [ a       rdf:Seq ;
+                                    rdf:_1  <http://purl.org/roh_edma/data#investigador-1> ;
+                                    rdf:_2  <http://purl.org/roh:_edma/data#investigador-1> ];
+        vivo:dateIssued
+                [ a       vivo:DateTimeValue ;
+                  vivo:dateTime
+                          "2015-02-12T00:00:00"^^xsd:dateTime
+                ] .
+
+

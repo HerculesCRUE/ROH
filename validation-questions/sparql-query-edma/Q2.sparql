@@ -1,36 +1,34 @@
-PREFIX foaf: <http://purl.org/roh/mirror/foaf#>
-PREFIX roh: <http://purl.org/roh#>
-PREFIX vivo:  <http://purl.org/roh/mirror/vivo#>
+PREFIX foaf: <http://purl.org/roh_edma/mirror/foaf#>
+PREFIX roh: <http://purl.org/roh_edma#>
+PREFIX vivo:  <http://purl.org/roh_edma/mirror/vivo#>
 PREFIX unesco: <http://purl.org/roh/unesco-individuals#>
 PREFIX ro: <http://purl.org/obo/owl/ro#>
+PREFIX owl: <http://www.w3.org/2002/07/owl#>
 PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
 
-SELECT ?researcher ?center ?positionClass
-WHERE {
-  {
-  ?researcher	roh:hasKnowledgeArea unesco:120304 ;
+SELECT distinct ?researcher ?center ?positionClass
+WHERE {{
+  ?researcher	roh:hasKnowledgeArea ?area;
   				roh:hasPosition ?position .
   ?position vivo:relates ?center ;
-  			a	?positionClass .
+  			a	?positionClass.
+	
+	Filter(?positionClass != owl:NamedIndividual) # Esta clausula es necesaria debida a la forma de generar los datos
   ?center a roh:ResearchGroup .}
    UNION {
-     ?researcher	roh:hasKnowledgeArea unesco:120304 ;
+     ?researcher	roh:hasKnowledgeArea ?area;
   				roh:hasPosition ?position .
   ?position vivo:relates ?center ;
-  			a	?positionClass .
+  			a	?positionClass.
+Filter(?positionClass != owl:NamedIndividual) # Esta clausula es necesaria debida a la forma de generar los datos
+
   ?center a roh:ResearchInstitute .
   }
 
 FILTER NOT EXISTS {
-?position a ?otherClass .
+?position a ?otherClass.
 ?otherClass rdfs:subClassOf ?positionClass .
-FILTER (?otherClass != ?positionClass)
+FILTER (?otherClass != ?positionClass) 
+
 }
 }
-
-
-Objetivo: Listado de los investigadores de un centro/estructura de investigación de un área/disciplina específica y 
-su posición. 
-
-
-Creo que segun como esta la oregunta faltan posiciones para poder especificar mas las posicion degun el enunciado. 

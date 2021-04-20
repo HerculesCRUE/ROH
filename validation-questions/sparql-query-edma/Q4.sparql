@@ -1,8 +1,7 @@
-PREFIX roh: <http://purl.org/roh#>
+PREFIX roh: <http://purl.org/roh_edma#>
 PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
 
-
-PREFIX roh: <http://purl.org/roh#>
 SELECT ?center (COUNT(?accreditation) AS ?numberOfSeals) 
 WHERE {{
  ?center a roh:ResearchGroup ;
@@ -11,6 +10,6 @@ WHERE {{
  ?center a roh:ResearchInstitute ;
          roh:hasAccreditation ?accreditation .
  
-}}GROUP BY ?centre
+}}GROUP BY ?center
 ORDER BY DESC(?numberOfSeals)
 LIMIT 10
