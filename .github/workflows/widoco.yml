@@ -47,7 +47,7 @@ jobs:
         -excludeIntroduction
         mv output/roh/index-en.html output/roh/index.html
         mv output/roh ../docs/
-        cp ../mirror ../docs/
+        cp -r ../mirror ../docs/
 
     - name: Publish on Github Pages
       uses: crazy-max/ghaction-github-pages@v2.3.0
