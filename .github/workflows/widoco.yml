@@ -35,13 +35,13 @@ jobs:
         cd widoco
         mkdir config
         java -jar ./widoco.jar \
-        -ontFile ../sigmaaie/modules/core/roh-core.ttl \
+        -ontFile ../roh/modules/core/roh-core.ttl \
         -oops \
         -webVowl \
         -includeAnnotationProperties \
         -outFolder output/roh \
         -rewriteAll \
-        -confFile ../sigmaaie/modules/core/doc/widoco.config.txt \
+        -confFile ../roh/modules/core/doc/widoco.config.txt \
         -includeImportedOntologies \
         -uniteSections \
         -excludeIntroduction
