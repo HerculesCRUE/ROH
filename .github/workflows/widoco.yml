@@ -26,8 +26,6 @@ jobs:
      # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
     - name: Checkout repo
       uses: actions/checkout@v2
-      with:
-        ref: 'widoco-action'
       
     - name: Download widoco
       run: mkdir widoco && wget -O widoco/widoco.jar https://github.com/dgarijo/Widoco/releases/download/v1.4.14/widoco-1.4.14-jar-with-dependencies.jar
@@ -35,22 +33,23 @@ jobs:
     - name: Compile documentation
       run: |
         cd widoco
+        mkdir config
         java -jar ./widoco.jar \
-        -ontFile ../sigmaaie/modules/core/roh-core.ttl \
+        -ontFile ../roh/modules/core/roh-core.ttl \
         -oops \
         -webVowl \
         -includeAnnotationProperties \
         -outFolder output/roh \
         -rewriteAll \
-        -confFile config-roh \
+        -confFile ../roh/modules/core/doc/widoco.config.txt \
         -includeImportedOntologies \
         -uniteSections \
         -excludeIntroduction
+        mv output/roh/index-en.html output/roh/index.html
 
     - name: Publish on Github Pages
-      uses: crazy-max/ghaction-github-pages@v1.3.0
+      uses: crazy-max/ghaction-github-pages@v2.3.0
       with:
-        keep_history: true 
         build_dir: widoco/output 
       env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
