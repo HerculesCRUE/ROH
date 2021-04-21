@@ -6,21 +6,19 @@ PREFIX ro: <http://purl.org/obo/owl/ro#>
 PREFIX owl: <http://www.w3.org/2002/07/owl#>
 PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
 
-SELECT distinct ?researcher ?center ?positionClass
+SELECT ?researcher ?center ?positionClass
 WHERE {{
-  ?researcher	roh:hasKnowledgeArea ?area;
-  				roh:hasPosition ?position .
+  ?researcher	roh:hasKnowledgeArea uneskos:120304;
+  			vivo:relatedBy  ?position .
+  ?position a roh:ResearcherPosition.
   ?position vivo:relates ?center ;
   			a	?positionClass.
-	
-	Filter(?positionClass != owl:NamedIndividual) # Esta clausula es necesaria debida a la forma de generar los datos
-  ?center a roh:ResearchGroup .}
+}
    UNION {
-     ?researcher	roh:hasKnowledgeArea ?area;
+     ?researcher	roh:hasKnowledgeArea  uneskos:120304;
   				roh:hasPosition ?position .
   ?position vivo:relates ?center ;
   			a	?positionClass.
-Filter(?positionClass != owl:NamedIndividual) # Esta clausula es necesaria debida a la forma de generar los datos
 
   ?center a roh:ResearchInstitute .
   }
@@ -32,3 +30,13 @@ FILTER (?otherClass != ?positionClass)
 
 }
 }
+
+
+SELECT ?researcher ?center ?positionClass
+WHERE {
+  ?researcher	roh:hasKnowledgeArea ?area;
+  			vivo:relatedBy  ?position .
+  ?position vivo:relates ?center ;
+            a	?positionClass.
+    ?center a ?classCenter.
+ FILTER(?classCenter = roh:ResearchGroup || ?classCenter = roh:ResearchInstitute) 

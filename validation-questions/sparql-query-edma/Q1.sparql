@@ -1,24 +1,30 @@
- PREFIX roh: <http://purl.org/roh_edma#>
+PREFIX roh: <http://purl.org/roh_edma#>
+PREFIX ro:  <http://purl.org/roh_edma/mirror/obo/ro#>
 PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
 PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
 PREFIX skos: <http://www.w3.org/2004/02/skos/core#> 
 PREFIX foaf: <http://xmlns.com/foaf/0.1/>
 prefix uneskos:  <http://purl.org/roh/unesco-individuals#>
-
-SELECT DISTINCT ?centro ?tipo_de_centro 
+PREFIX vivo: <http://purl.org/roh_edma/mirror/vivo#> 
+SELECT  ?centro ?tipo_de_centro  ?universidad 
  WHERE { 
     {    ?centro a roh:ResearchGroup;
                  roh:hasKnowledgeArea uneskos:120304.
-      
+      OPTIONAL{?universidad_uri a vivo:University;
+                    ro:BFO_0000051 ?centro;
+					roh:title  ?universidad.}
       OPTIONAL {?centro roh:title ?tipo_de_centro.}
-   
-      
     } UNION 
     {
          ?centro a roh:ResearchInstitute;
                   roh:hasKnowledgeArea uneskos:120304.
+          OPTIONAL{?universidad_URI a vivo:University;
+                                   ro:BFO_0000051 ?centro;
+					roh:title  ?universidad.}
   
-      OPTIONAL {?centro roh:title  ?tipo_de_centro.}
-           
+      OPTIONAL {?centro roh:title  ?tipo_de_centro.}     
     }
   }
+
+
+

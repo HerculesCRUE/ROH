@@ -30,4 +30,24 @@ WHERE {
    
 }GROUP BY ?researcher
 ORDER BY DESC(?n_publiaciones)
-LIMIT 10E
+LIMIT 10
+
+
+
+
+PREFIX foaf: <http://purl.org/roh_edma/mirror/foaf#>
+PREFIX roh: <http://purl.org/roh_edma#>
+PREFIX vivo:  <http://purl.org/roh_edma/mirror/vivo#>
+PREFIX unesco: <http://purl.org/roh/unesco-individuals#>
+PREFIX ro: <http://purl.org/obo/owl/ro#>
+PREFIX owl: <http://www.w3.org/2002/07/owl#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+
+SELECT   ?researcher ?class ?publicaciones
+WHERE {
+  
+  ?researcher 
+	roh:hasKnowledgeArea ?area;
+	a foaf:Person.
+?publicaciones roh:correspondingAuthor ?researcher;
+               a ?class}
