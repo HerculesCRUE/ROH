@@ -39,7 +39,7 @@
 @base <http://purl.org/roh_edma> .
 
 <http://purl.org/roh_edma> rdf:type owl:Ontology ;
-                            owl:versionIRI <http://purl.org/roh_edma> ;
+                            owl:versionIRI <http://purl.org/roh_edma/1.0.0> ;
                             dc:contributor "Alejandro González Hevia" ,
                                            "Diego López de Ipiña" ,
                                            "Esteban Sota" ,
@@ -66,9 +66,9 @@ Therefore, the purpose of this agreement was to contribute to the improvement of
     efficiency in the management of research. 
 
 by creating a research management system with semantic capacities based on semantic open data and that will provide a global view of the research data contained in the Spanish University System."""@en ;
-                            owl:versionInfo "0.0.1" ;
-                            schema:identifier <http://purl.org/roh> ;
-                            <https://xmlns.com/foaf/0.1/primaryTopic> <http://purl.org/roh> .
+                            owl:versionInfo "1.0.0" ;
+                            schema:identifier <http://purl.org/roh_edma> ;
+                            <https://xmlns.com/foaf/0.1/primaryTopic> <http://purl.org/roh_edma> .
 
 #################################################################
 #    Annotation properties
@@ -914,7 +914,7 @@ obo:RO_0000057 rdf:type owl:ObjectProperty .
 :hasReservable rdf:type owl:ObjectProperty ;
                owl:inverseOf :reservableOf ;
                rdfs:domain foaf:Agent ;
-               rdfs:range <http://purl.org/roh_edma#Reservable> ;
+               rdfs:range :Reservable ;
                rdfs:comment "An Agent who owns an infrastructure."@en ;
                rdfs:label "has reservable"@en ,
                           "tiene reservable"@es .
@@ -1371,7 +1371,7 @@ obo:RO_0000057 rdf:type owl:ObjectProperty .
 
 ###  http://purl.org/roh_edma#reservableOf
 :reservableOf rdf:type owl:ObjectProperty ;
-              rdfs:domain <http://purl.org/roh_edma#Reservable> ;
+              rdfs:domain :Reservable ;
               rdfs:range foaf:Agent ;
               rdfs:comment "An Infrastructure belonging to an Agent."@en ;
               rdfs:label "reservable de"@es ,
@@ -2094,7 +2094,7 @@ skos:inScheme rdf:type owl:ObjectProperty .
 
 ###  http://purl.org/roh_edma#hasTRL
 :hasTRL rdf:type owl:DatatypeProperty ;
-        rdfs:domain <http://purl.org/roh_edma#Product> ;
+        rdfs:domain :Product ;
         rdfs:range xsd:integer ;
         rdfs:comment "A prototype has a given technology readiness level"@en ;
         rdfs:label "has TRL"@en .
@@ -4348,6 +4348,12 @@ A roh:FundingSource roh:feeds a roh:Funding with funds to sponsor some projects.
               rdfs:label "Press Article"@en .
 
 
+###  http://purl.org/roh_edma#Product
+:Product rdf:type owl:Class ;
+         rdfs:comment "A product as outcome of a project."@en ;
+         rdfs:label "Product"@en .
+
+
 ###  http://purl.org/roh_edma#ProformaInvoice
 :ProformaInvoice rdf:type owl:Class ;
                  rdfs:subClassOf :Invoice ;
@@ -4391,7 +4397,7 @@ A roh:FundingSource roh:feeds a roh:Funding with funds to sponsor some projects.
 
 ###  http://purl.org/roh_edma#Prototype
 :Prototype rdf:type owl:Class ;
-           rdfs:subClassOf <http://purl.org/roh_edma#Product> ;
+           rdfs:subClassOf :Product ;
            rdfs:comment "A product prototype"@en ;
            rdfs:label "Prototype"@en .
 
@@ -4743,6 +4749,41 @@ A roh:FundingSource roh:feeds a roh:Funding with funds to sponsor some projects.
              rdfs:label "Researching"@en .
 
 
+###  http://purl.org/roh_edma#Reservable
+:Reservable rdf:type owl:Class ;
+            rdfs:subClassOf [ rdf:type owl:Restriction ;
+                              owl:onProperty vivo:dateTimeInterval ;
+                              owl:someValuesFrom vivo:DateTimeInterval
+                            ] ,
+                            [ rdf:type owl:Restriction ;
+                              owl:onProperty :reservableOf ;
+                              owl:allValuesFrom foaf:Agent
+                            ] ,
+                            [ rdf:type owl:Restriction ;
+                              owl:onProperty vivo:dateTimeInterval ;
+                              owl:allValuesFrom vivo:DateTimeInterval
+                            ] ,
+                            [ rdf:type owl:Restriction ;
+                              owl:onProperty :title ;
+                              owl:someValuesFrom xsd:string
+                            ] ,
+                            [ rdf:type owl:Restriction ;
+                              owl:onProperty :title ;
+                              owl:allValuesFrom xsd:string
+                            ] ,
+                            [ rdf:type owl:Restriction ;
+                              owl:onProperty vivo:description ;
+                              owl:allValuesFrom xsd:string
+                            ] ,
+                            [ rdf:type owl:Restriction ;
+                              owl:onProperty vivo:freetextKeyword ;
+                              owl:allValuesFrom xsd:string
+                            ] ;
+            rdfs:comment "Some resources may available by an organization to be used by others."@en ;
+            rdfs:label "Reservable"@en ,
+                       "Reservable"@es .
+
+
 ###  http://purl.org/roh_edma#ReservableConsumerRole
 :ReservableConsumerRole rdf:type owl:Class ;
                         rdfs:subClassOf bfo:BFO_0000023 ;
@@ -4755,9 +4796,28 @@ A roh:FundingSource roh:feeds a roh:Funding with funds to sponsor some projects.
                         rdfs:label "ReservableProviderRole"@en .
 
 
+###  http://purl.org/roh_edma#ReservableSoftware
+:ReservableSoftware rdf:type owl:Class ;
+                    owl:equivalentClass [ owl:intersectionOf ( :Reservable
+                                                               ero:ERO_0000071
+                                                             ) ;
+                                          rdf:type owl:Class
+                                        ] ;
+                    rdfs:subClassOf ero:ERO_0000071 ;
+                    owl:disjointWith iao:IAO_0000030 ;
+                    rdfs:comment "Esta entidad denota el Software que es reservable."@es ,
+                                 "Software that is reservable."@en ;
+                    rdfs:label "Reservable Software"@en ,
+                               "Software Reservable"@es .
+
+
 ###  http://purl.org/roh_edma#ReservationRelationship
 :ReservationRelationship rdf:type owl:Class ;
                          rdfs:subClassOf vivo:Relationship ,
+                                         [ rdf:type owl:Restriction ;
+                                           owl:onProperty vivo:relates ;
+                                           owl:someValuesFrom :Reservable
+                                         ] ,
                                          [ rdf:type owl:Restriction ;
                                            owl:onProperty vivo:relates ;
                                            owl:someValuesFrom :ReservableConsumerRole
@@ -4769,10 +4829,6 @@ A roh:FundingSource roh:feeds a roh:Funding with funds to sponsor some projects.
                                          [ rdf:type owl:Restriction ;
                                            owl:onProperty vivo:relates ;
                                            owl:someValuesFrom foaf:Organization
-                                         ] ,
-                                         [ rdf:type owl:Restriction ;
-                                           owl:onProperty vivo:relates ;
-                                           owl:someValuesFrom <http://purl.org/roh_edma#Reservable>
                                          ] ,
                                          [ rdf:type owl:Restriction ;
                                            owl:onProperty :hasKnowledgeArea ;
@@ -5716,7 +5772,7 @@ foaf:Organization rdf:type owl:Class ;
                                   ] ,
                                   [ rdf:type owl:Restriction ;
                                     owl:onProperty :hasReservable ;
-                                    owl:allValuesFrom <http://purl.org/roh_edma#Reservable>
+                                    owl:allValuesFrom :Reservable
                                   ] ,
                                   [ rdf:type owl:Restriction ;
                                     owl:onProperty :participates ;
@@ -6578,7 +6634,6 @@ iao:IAO_0000030 rdf:type owl:Class ;
                                   owl:onProperty :language ;
                                   owl:allValuesFrom xsd:string
                                 ] ;
-                owl:disjointWith <http://purl.org/roh_edma#ReservableSoftware> ;
                 obo:IAO_0000115 "A generically dependent continuant that is about some thing."@en ;
                 rdfs:label "Entidad de Contenido de Información"@es ,
                            "Information Content Entity"@en .
@@ -7132,12 +7187,51 @@ vivo:EditorialArticle rdf:type owl:Class ;
                                  "Editorial Article"@en .
 
 
+###  http://purl.org/roh_edma/mirror/vivo#Equipment
+vivo:Equipment rdf:type owl:Class ;
+               rdfs:subClassOf :Reservable ,
+                               [ rdf:type owl:Restriction ;
+                                 owl:onProperty vivo:freetextKeyword ;
+                                 owl:allValuesFrom xsd:string
+                               ] ;
+               obo:IAO_0000112 "A network server is one example. Medical schools and research laboratories can list professional equipment, such as microscopes." ,
+                               "server; Bruker Vector-33 FT-IR" ;
+               obo:IAO_0000115 "A physical object provided for specific purpose, task or occupation." ;
+               rdfs:comment """An Equipment belongs to an Organization and might be funded by a Funding.
+
+A vivo:Equipment, subclasss of roh:Infrastructure, belongs to a foaf:Organization and might be funded by a roh:Funding.""" ;
+               rdfs:label "Equipament"@ca-es ,
+                          "Equipamento"@pt ,
+                          "Equipamiento"@es ,
+                          "Equipment"@en ,
+                          "Equipo"@es ,
+                          "équipements"@fr .
+
+
 ###  http://purl.org/roh_edma/mirror/vivo#Exhibit
 vivo:Exhibit rdf:type owl:Class ;
              rdfs:subClassOf :Activity ;
              obo:IAO_0000115 "The showing of an object or a collection of objects, in an organized manner." ;
              rdfs:label "Exhibición"@es ,
                         "Exhibit"@en .
+
+
+###  http://purl.org/roh_edma/mirror/vivo#Facility
+vivo:Facility rdf:type owl:Class ;
+              rdfs:subClassOf :Reservable ,
+                              [ rdf:type owl:Restriction ;
+                                owl:onProperty ro:BFO_0000051 ;
+                                owl:allValuesFrom vivo:Facility
+                              ] ;
+              obo:IAO_0000112 "Distinct from the organization that runs it; e.g., a laboratory may be an organization but may be run by another organization and only consist of facilities housing equipment or services. Can be a building or place that provides a particular service or is used for a particular activity. Use the specific Building or Room whenever possible. Short definition from http://dictionary.reference.com/browse/facility." ,
+                              "Use subclasses of core:Facility subclasses instead of this class if possible" ;
+              obo:IAO_0000115 "Something designed, built, installed, etc., to serve a specific function or activity affording a convenience or service." ;
+              rdfs:comment "A vivo:Facility belongs to an foaf:Organization and might be funded by a roh:Funding." ;
+              rdfs:label "Facility"@en ,
+                         "Instalaciones"@es ,
+                         "Instalacions"@ca-es ,
+                         "Instalación"@es ,
+                         "établissement"@fr .
 
 
 ###  http://purl.org/roh_edma/mirror/vivo#FacultyAdministrativePosition
@@ -7655,100 +7749,6 @@ vivo:University rdf:type owl:Class ;
                                "Université"@fr .
 
 
-###  http://purl.org/roh_edma#Product
-<http://purl.org/roh_edma#Product> rdf:type owl:Class ;
-                                        rdfs:comment "A product as outcome of a project."@en ;
-                                        rdfs:label "Product"@en .
-
-
-###  http://purl.org/roh_edma#Reservable
-<http://purl.org/roh_edma#Reservable> rdf:type owl:Class ;
-                                           rdfs:subClassOf [ rdf:type owl:Restriction ;
-                                                             owl:onProperty vivo:dateTimeInterval ;
-                                                             owl:someValuesFrom vivo:DateTimeInterval
-                                                           ] ,
-                                                           [ rdf:type owl:Restriction ;
-                                                             owl:onProperty :reservableOf ;
-                                                             owl:allValuesFrom foaf:Agent
-                                                           ] ,
-                                                           [ rdf:type owl:Restriction ;
-                                                             owl:onProperty vivo:dateTimeInterval ;
-                                                             owl:allValuesFrom vivo:DateTimeInterval
-                                                           ] ,
-                                                           [ rdf:type owl:Restriction ;
-                                                             owl:onProperty :title ;
-                                                             owl:someValuesFrom xsd:string
-                                                           ] ,
-                                                           [ rdf:type owl:Restriction ;
-                                                             owl:onProperty :title ;
-                                                             owl:allValuesFrom xsd:string
-                                                           ] ,
-                                                           [ rdf:type owl:Restriction ;
-                                                             owl:onProperty vivo:description ;
-                                                             owl:allValuesFrom xsd:string
-                                                           ] ,
-                                                           [ rdf:type owl:Restriction ;
-                                                             owl:onProperty vivo:freetextKeyword ;
-                                                             owl:allValuesFrom xsd:string
-                                                           ] ;
-                                           rdfs:comment "Some resources may available by an organization to be used by others."@en ;
-                                           rdfs:label "Reservable"@en ,
-                                                      "Reservable"@es .
-
-
-###  http://purl.org/roh_edma#ReservableSoftware
-<http://purl.org/roh_edma#ReservableSoftware> rdf:type owl:Class ;
-                                                   owl:equivalentClass [ owl:intersectionOf ( ero:ERO_0000071
-                                                                                              <http://purl.org/roh_edma#Reservable>
-                                                                                            ) ;
-                                                                         rdf:type owl:Class
-                                                                       ] ;
-                                                   rdfs:subClassOf ero:ERO_0000071 ;
-                                                   rdfs:comment "Esta entidad denota el Software que es reservable."@es ,
-                                                                "Software that is reservable."@en ;
-                                                   rdfs:label "Reservable Software"@en ,
-                                                              "Software Reservable"@es .
-
-
-###  http://purl.org/roh_edma/mirror/vivo#Equipment
-<http://purl.org/roh_edma/mirror/vivo#Equipment> rdf:type owl:Class ;
-                                                      rdfs:subClassOf <http://purl.org/roh_edma#Reservable> ,
-                                                                      [ rdf:type owl:Restriction ;
-                                                                        owl:onProperty vivo:freetextKeyword ;
-                                                                        owl:allValuesFrom xsd:string
-                                                                      ] ;
-                                                      obo:IAO_0000112 "A network server is one example. Medical schools and research laboratories can list professional equipment, such as microscopes." ,
-                                                                      "server; Bruker Vector-33 FT-IR" ;
-                                                      obo:IAO_0000115 "A physical object provided for specific purpose, task or occupation." ;
-                                                      rdfs:comment """An Equipment belongs to an Organization and might be funded by a Funding.
-
-A vivo:Equipment, subclasss of roh:Infrastructure, belongs to a foaf:Organization and might be funded by a roh:Funding.""" ;
-                                                      rdfs:label "Equipament"@ca-es ,
-                                                                 "Equipamento"@pt ,
-                                                                 "Equipamiento"@es ,
-                                                                 "Equipment"@en ,
-                                                                 "Equipo"@es ,
-                                                                 "équipements"@fr .
-
-
-###  http://purl.org/roh_edma/mirror/vivo#Facility
-<http://purl.org/roh_edma/mirror/vivo#Facility> rdf:type owl:Class ;
-                                                     rdfs:subClassOf <http://purl.org/roh_edma#Reservable> ,
-                                                                     [ rdf:type owl:Restriction ;
-                                                                       owl:onProperty ro:BFO_0000051 ;
-                                                                       owl:allValuesFrom <http://purl.org/roh_edma/mirror/vivo#Facility>
-                                                                     ] ;
-                                                     obo:IAO_0000112 "Distinct from the organization that runs it; e.g., a laboratory may be an organization but may be run by another organization and only consist of facilities housing equipment or services. Can be a building or place that provides a particular service or is used for a particular activity. Use the specific Building or Room whenever possible. Short definition from http://dictionary.reference.com/browse/facility." ,
-                                                                     "Use subclasses of core:Facility subclasses instead of this class if possible" ;
-                                                     obo:IAO_0000115 "Something designed, built, installed, etc., to serve a specific function or activity affording a convenience or service." ;
-                                                     rdfs:comment "A vivo:Facility belongs to an foaf:Organization and might be funded by a roh:Funding." ;
-                                                     rdfs:label "Facility"@en ,
-                                                                "Instalaciones"@es ,
-                                                                "Instalacions"@ca-es ,
-                                                                "Instalación"@es ,
-                                                                "établissement"@fr .
-
-
 ###  http://www.w3.org/1999/02/22-rdf-syntax-ns#List
 rdf:List rdf:type owl:Class .
 
@@ -7941,8 +7941,8 @@ skos:ConceptScheme rdf:type owl:Class ;
 
 ###  http://purl.org/roh_edma#TestNonResearchSoftware
 :TestNonResearchSoftware rdf:type owl:NamedIndividual ,
-                                  ero:ERO_0000071 ,
-                                  <http://purl.org/roh_edma#Reservable> ;
+                                  :Reservable ,
+                                  ero:ERO_0000071 ;
                          rdfs:label "TestNonResearchSoftware"@en .
 
 
@@ -8128,8 +8128,8 @@ skos:ConceptScheme rdf:type owl:Class ;
 #    Annotations
 #################################################################
 
-<http://purl.org/roh/mirror/obo/bfo#BFO_0000004> rdfs:label "independent continuant"@en ,
-                                                            "continuador independiente"@es .
+<http://purl.org/roh/mirror/obo/bfo#BFO_0000004> rdfs:label "continuador independiente"@es ,
+                                                            "independent continuant"@en .
 
 
 :Repository rdfs:label "Repository"@en ,
@@ -8154,6 +8154,7 @@ skos:ConceptScheme rdf:type owl:Class ;
                 :FundingSource
                 :Invention
                 :Metric
+                :Product
                 :Status
                 foaf:Agent
                 <http://purl.org/roh_edma/mirror/geonames#Feature>
@@ -8168,7 +8169,6 @@ skos:ConceptScheme rdf:type owl:Class ;
                 <http://purl.org/roh_edma/mirror/vcard#Name>
                 vivo:AcademicDegree
                 vivo:Relationship
-                <http://purl.org/roh_edma#Product>
                 rdf:List
                 rdf:Seq
                 skos:Concept
@@ -8461,8 +8461,8 @@ skos:ConceptScheme rdf:type owl:Class ;
 
 [ rdf:type owl:AllDisjointClasses ;
   owl:members ( ero:ERO_0000071
-                <http://purl.org/roh_edma/mirror/vivo#Equipment>
-                <http://purl.org/roh_edma/mirror/vivo#Facility>
+                vivo:Equipment
+                vivo:Facility
               )
 ] .
 
