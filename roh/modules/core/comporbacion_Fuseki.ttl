@@ -1,0 +1,57 @@
+@prefix : <http://purl.org/roh_edma#> .
+@prefix ro: <http://purl.org/roh_edma/mirror/obo/ro#> .
+@prefix bfo: <http://purl.org/roh_edma/mirror/obo/bfo#> .
+@prefix dc: <http://purl.org/dc/elements/1.1/> .
+@prefix iao: <http://purl.org/roh_edma/mirror/obo/iao#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix foaf: <http://purl.org/roh_edma/mirror/foaf#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix vivo: <http://purl.org/roh_edma/mirror/vivo#> .
+@prefix void: <http://rdfs.org/ns/void#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix uneskoss:  <http://purl.org/roh/unesco-individuals#>.
+@prefix bibo: <http://purl.org/roh_edma/mirror/bibo#> .
+@prefix gn: <http://purl.org/roh_edma/mirror/geonames#> .
+
+[ rdf:type owl:Ontology ;
+                owl:imports <http://purl.org/roh_edma>].
+           
+<http://purl.org/roh_edma/data#> a 
+                                          vivo:Dataset ;
+                                 :url <https://www.um.es/web/hercules/> ;
+                                 dcterms:created "2021-04-19"^^xsd:date ;
+                                 dcterms:creator "GNOSS" ,
+                                                 "Universidad de Deusto" ;
+                                 dcterms:description "Este dataset ha sido creado para poder validar la ontología a través de las consultas SPARQL de validación"@es ,
+                                                     "This dataset has been created to allow  the testing of the ROH ontology through the validation SPARQL queries"@en ;
+                                 dcterms:issued "2021-04-19"^^xsd:date ;
+                                 dcterms:license <https://creativecommons.org/licenses/by-sa/4.0/> ;
+                                 dcterms:publisher "Universidad de Murcia" ;
+                                 dcterms:subject <http://dbpedia.org/resource/Semantic_Web> ;
+                                 dcterms:title "ASIO example data"@en ,
+                                               "Datos de ejemplo ASIO"@es ;
+                                 void:feature <http://www.w3.org/ns/formats/Turtle> .
+
+
+<http://purl.org/roh_edma/data#investigador-1> 
+        a foaf:Person;
+        foaf:name "Pedro" ;
+        foaf:gender "male" ;
+        foaf:surname "surname pedro";
+        vivo:description "Pedro surname is a really good researcher, who actually work in the ResearchGoup 1.... (bla, bla, bla)";
+        :ORCID "orcid.org/0oo0-0001-7005-5u0m";
+        :hasKnowledgeArea  uneskoss:120304 , uneskoss:120601;
+        .
+### HOLAAAAAA
+<http://purl.org/roh_edma/data#journal-article-1>
+        a                         bibo:AcademicArticle ;
+        :title
+                "My great journal article" ;
+        :hasKnowledgeArea     uneskoss:1203, uneskoss:120304 ;
+        :correspondingAuthor      <http://purl.org/roh_edma/data#investigador-1> ;
+        .
+
+
