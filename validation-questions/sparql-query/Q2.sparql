@@ -5,7 +5,7 @@ PREFIX foaf: <http://purl.org/roh/mirror/foaf#>
 PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
 
 
-SELECT ?person, ?position WHERE {
+SELECT ?person ?position WHERE {
    ?person  a   foaf:Person .
    ?person roh:hasPosition ?position .
 
@@ -17,7 +17,7 @@ SELECT ?person, ?position WHERE {
 
    ?knowledgeArea rdfs:label ?knowledgeLabel .
 
-   FILTER(?orgLabel = "sample-AcademicDepartment-6432" && 
-         ?knowledgeLabel = "sample-UNESCOKnowledgeArea-5740")      
+ FILTER(?orgLabel = "sample-Organization-6665" && 
+         ?knowledgeLabel = "sample-KnowledgeArea-5410")       
 
 }

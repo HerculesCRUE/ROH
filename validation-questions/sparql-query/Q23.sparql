@@ -8,7 +8,7 @@ PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
 PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
 prefix vivo: <http://purl.org/roh/mirror/vivo#>
 
-SELECT distinct ?area  (COUNT (?project as ?numProyectos)) WHERE {
+SELECT distinct ?area  (COUNT (?project) as ?numProyectos) WHERE {
   ?centro roh:grantedBy ?fundingAmount .
   ?funding ro:BFO_0000051 ?fundingAmount ;
            roh:fundedBy ?fundingProgram .
@@ -17,7 +17,7 @@ SELECT distinct ?area  (COUNT (?project as ?numProyectos)) WHERE {
            roh:hasKnowledgeArea ?area ;
            vivo:dateTimeInterval ?date .
   ?date  rdfs:label ?interval .
-  FILTER(?interval = "sample-DateTimeInterval-1866")
+  FILTER(?interval = "sample-DateTimeInterval-1562")
 }
 GROUP BY ?area
 LIMIT 3

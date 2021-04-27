@@ -19,5 +19,5 @@ WHERE {
 						vivo:end ?endDateTimeValue . 
 	?startDateTimeValue vivo:dateTime ?start . 
 	?endDateTimeValue vivo:dateTime ?end . 
-	FILTER (YEAR(?start) <= "2010"^^xsd:integer && YEAR(?end) >= "1990"^^xsd:integer )
+  	FILTER (YEAR(?start) >= "2010"^^xsd:integer && YEAR(?end) <= "2020"^^xsd:integer )
 }
