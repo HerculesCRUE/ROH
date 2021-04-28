@@ -16,5 +16,5 @@ WHERE {
 	?role roh:roleOf ?researcher .
 	?researcher roh:hasPosition ?position .
   	?position vivo:relates ?organization .
-	FILTER (YEAR(?start) <= "1996"^^xsd:integer && YEAR(?end) >= "1996"^^xsd:integer )
+	FILTER (YEAR(?start) <= "2020"^^xsd:integer && YEAR(?end) >= "2010"^^xsd:integer )
 }

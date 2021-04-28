@@ -20,5 +20,5 @@ WHERE{
     ?start vivo:dateTime ?startTime .
     ?end vivo:dateTime ?endTime .
   	FILTER (?otherOrganization != ?university)
-  	FILTER (YEAR(?startTime) <= "2010"^^xsd:integer && YEAR(?endTime) >= "1990"^^xsd:integer)
+  	FILTER (YEAR(?startTime) <= "2020"^^xsd:integer && YEAR(?endTime) >= "2010"^^xsd:integer)
 }

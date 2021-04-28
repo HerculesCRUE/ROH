@@ -10,4 +10,4 @@ WHERE {
         roh:citationCount ?citations .
 ?position vivo:relates ?researchGroup .
 ?researchGroup a roh:ResearchGroup .
-} GROUP BY ?researchGroup 
+} GROUP BY ?researchGroup ?citations

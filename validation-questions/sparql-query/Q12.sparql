@@ -11,4 +11,4 @@ WHERE {
     ?project	roh:projectStatus ?projectStatus . 
     ?projectStatus a ?projectStatusClass .
     FILTER (?projectStatusClass != roh:ProposalSubmitted)
-} GROUP BY ?location
+} GROUP BY ?location ?project ?centre
