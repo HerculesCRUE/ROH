@@ -5,7 +5,7 @@ PREFIX foaf: <http://purl.org/roh/mirror/foaf#>
 PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
 
 
-SELECT SUM(?fundingAmount) WHERE {
+SELECT (SUM(?fundingAmount) as ?fundingSum) ?orgLabel ?knowledgeLabel WHERE {
 
    ?person  a   foaf:Person .
    ?person roh:hasPosition ?position .
@@ -17,10 +17,5 @@ SELECT SUM(?fundingAmount) WHERE {
  ?org  roh:hasKnowledgeArea ?knowledgeArea ;
         rdfs:label ?orgLabel .
 
-   ?knowledgeArea rdfs:label ?knowledgeLabel .
-
-
-      FILTER(?orgLabel = "sample-FundingOrganization-1437" && 
-         ?knowledgeLabel = "sample-PropertyClassification-2084")  
-
-}
+   ?knowledgeArea rdfs:label ?knowledgeLabel .    
+} GROUP BY ?orgLabel ?knowledgeLabel
