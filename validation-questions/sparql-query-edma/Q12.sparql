@@ -1,14 +1,14 @@
-PREFIX vivo: <http://purl.org/roh/mirror/vivo#>
-PREFIX roh: <http://purl.org/roh#>
-PREFIX gn:	<http://purl.org/roh/mirror/geonames#>
+PREFIX vivo: <http://purl.org/roh_edma/mirror/vivo#>
+PREFIX roh: <http://purl.org/roh_edma#>
+PREFIX gn:	<http://purl.org/roh_edma/mirror/geonames#>
 
-SELECT DISTINCT ?project ?centre ?location
+SELECT DISTINCT ?project ?location
 WHERE {
 	?project	a vivo:Project ; 
 				gn:locatedIn ?location ;
 				vivo:relates ?role .
-	?role		roh:roleOf ?centre .
+	?role		roh:roleOf  ?centre.
     ?project	roh:projectStatus ?projectStatus . 
     ?projectStatus a ?projectStatusClass .
     FILTER (?projectStatusClass != roh:ProposalSubmitted)
-} GROUP BY ?location
+}

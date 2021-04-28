@@ -1,14 +1,19 @@
-PREFIX vivo: <http://purl.org/roh/mirror/vivo#>
-PREFIX roh: <http://purl.org/roh#>
-PREFIX bibo: <http://purl.org/roh/mirror/bibo#>
-PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+prefix vivo: <http://purl.org/roh_edma/mirror/vivo#>
+prefix roh: <http://purl.org/roh_edma#>
+prefix bibo: <http://purl.org/roh_edma/mirror/bibo#>
+prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
 SELECT DISTINCT ?patent ?centre ?knowledgeArea 
 WHERE {
   ?patent a bibo:Patent ;
-  bibo:authorList ?authorList .
-  ?patent roh:hasKnowledgeArea ?knowledgeArea .
-  ?authorlist ?member ?author .
-  ?position roh:positionOf ?author .
-  ?position vivo:relates ?centre .
-  ?centre a roh:ResearchGroup .
+          bibo:authorList+|roh:seqOfAuthors ?authorList ;
+          roh:hasKnowledgeArea ?knowledgeArea .
+  ?authorlist a rdf:Seq;
+              rdfs:member ?author .
+  ?position roh:positionOf ?author;
+            vivo:relates ?centre .
+  ?centre a ?classCenter.
+  Filter(?classCenter = roh:ResearchGroup || ?classCenter =roh:ResearchInstitute)
+  
+
 } GROUP BY ?patent ?centre ?knowledgeArea 

@@ -1,23 +1,25 @@
-PREFIX roh: <http://purl.org/roh#>
-prefix vivo:  <http://purl.org/roh/mirror/vivo#> 
-PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
-PREFIX foaf: <http://purl.org/roh/mirror/foaf#>
-PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
+PREFIX ro: <http://purl.org/obo/owl/ro#>
+prefix vivo: <http://purl.org/roh_edma/mirror/vivo#> 
+prefix roh: <http://purl.org/roh_edma#>
+prefix bibo: <http://purl.org/roh_edma/mirror/bibo#> 
+prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#>
+prefix foaf: <http://purl.org/roh_edma/mirror/foaf#>
+prefix xsd: <http://www.w3.org/2001/XMLSchema#> 
+prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> 
+prefix uneskos:  <http://purl.org/roh/unesco-individuals#>
 
-
-SELECT ?document WHERE {
-   ?person  a   foaf:Person .
-   ?person roh:hasPosition ?position .
-
-   ?position vivo:relates ?org ;
-            a vivo:Position .
-
-   ?org  roh:hasKnowledgeArea unesco:120304;
-        rdfs:label ?orgLabel .
-
-  ?document roh:correspondingAuthor ?person .
+SELECT distinct ?organization ?researchObject  
+WHERE {
   
+?researchObject a roh:ResearchObject;
+        roh:correspondingOrganization ?organization;
+        vivo:dateIssued ?dateIssued ;
+        roh:hasKnowledgeArea uneskos:120304. 
 
-      
+?organization a ?classOrganization. 
+?dateIssued vivo:dateTime ?dateTime .
 
-}
+FILTER (YEAR(?dateTime) >= "1980"^^xsd:integer && YEAR(?dateTime) <= "2022"^^xsd:integer)
+Filter(?classOrganization = roh:ResearchInstitute || ?classOrganization = roh:ResearchGroup)
+
+} GROUP BY ?organization ?researchObject 

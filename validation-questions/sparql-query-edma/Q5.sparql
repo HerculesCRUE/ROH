@@ -1,31 +1,26 @@
-PREFIX roh: <http://purl.org/roh#>
-PREFIX ro: <http://purl.org/roh/mirror/obo/ro#>
-PREFIX bibo: <http://purl.org/ontology/bibo/>
-PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
-PREFIX foaf: <http://purl.org/roh/mirror/foaf#>
-PREFIX unesco: <http://purl.org/roh/unesco-individuals#>
-PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
-PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+prefix roh: <http://purl.org/roh_edma#>
+prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+prefix ro: <http://purl.org/roh_edma/mirror/obo/ro#> #mirrar si es este
 
-SELECT DISTINCT ?centro ?fundingProgram ?project
+SELECT DISTINCT ?centro  ?project ?classClasificacionProject
 WHERE {
-    {
-  ?centro roh:grantedBy ?fundingAmount .
+  ?centro roh:grantedBy ?fundingAmount ;
+          a ?centroClass.
   ?funding ro:BFO_0000051 ?fundingAmount ;
            roh:fundedBy ?fundingProgram .
-  ?project roh:isSupportedBy ?funding .
-?centro a roh:ResearchInstitute. 
-}
-UNION
-{
- ?centro roh:grantedBy ?fundingAmount .
-  ?funding ro:BFO_0000051 ?fundingAmount ;
-           roh:fundedBy ?fundingProgram .
-  ?project roh:isSupportedBy ?funding .
-?centro a roh:ResearchGroup. 
-}
+
+  ?project roh:isSupportedBy ?funding.
+Optional{ 
+    ?project              roh:hasProjectCategorization  ?projectClasificacion.
+    ?projectClasificacion a         ?classClasificacionProject.
+    FILTER NOT EXISTS {
+?projectClasificacion a ?otherClass.
+?otherClass rdfs:subClassOf ?classClasificacionProject .
+FILTER (?otherClass != ?classClasificacionProject) } }             
   OPTIONAL {
 	?project roh:projectStatus ?projectStatus .
+  ?projectStatus a ?projectClass.
   }
-  FILTER (!BOUND(?projectStatus) || ?projectStatus != "PROPOSAL_SUBMITTED")
+  FILTER (!BOUND(?projectStatus) || ?projectClass != roh:ProposalSubmitted)
+  Filter(?centroClass = roh:ResearchInstitute || ?centroClass = roh:ResearchGroup) 
 }

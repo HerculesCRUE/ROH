@@ -1,0 +1,32 @@
+PREFIX roh: <http://purl.org/roh_edma#>
+prefix vivo:  <http://purl.org/roh_edma/mirror/vivo#> 
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX foaf: <http://purl.org/roh_edma/mirror/foaf#>
+PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+prefix uneskos:  <http://purl.org/roh/unesco-individuals#>
+prefix bibo: <http://purl.org/roh_edma/mirror/bibo#>
+prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+
+select distinct ?RO ?researchObjectClass ?dateTimeValue 
+WHERE{
+?RO a roh:ResearchObject;
+    a  ?researchObjectClass;
+  roh:hasKnowledgeArea uneskos:120304;
+   roh:seqOfAuthors+|bibo:authorList ?authorList;
+   vivo:dateTimeValue ?date  .
+   ?date  vivo:dateTime ?dateTimeValue .
+?authorList a rdf:Seq;
+            rdfs:member ?author .
+?author roh:hasPosition ?position .
+?position vivo:relates ?center .
+?center a ?centerClass. 
+Filter(?centerClass = roh:ResearchGroup || ?centerClass = roh:ResearchInstitute).
+FILTER NOT EXISTS {
+?RO a ?otherClass .
+?otherClass rdfs:subClassOf ?researchObjectClass .
+FILTER (?otherClass != ?researchObjectClass)
+}
+FILTER (str(?researchObjectClass) != "http://purl.org/roh_edma#ResearchObject")
+
+ }ORDER BY ASC(?dateTimeValue )

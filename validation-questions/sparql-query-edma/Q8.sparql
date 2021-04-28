@@ -2,8 +2,6 @@
 
 prefix vivo: <http://purl.org/roh_edma/mirror/vivo#>
 prefix roh: <http://purl.org/roh_edma#>
-prefix obo: <http://purl.obolibrary.org/obo/>
-prefix bibo: <http://purl.org/roh_edma/mirror/bibo#>
 prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
 prefix foaf: <http://purl.org/roh_edma/mirror/foaf#>
 prefix unesco: <http://purl.org/roh/unesco-individuals#>
@@ -13,24 +11,15 @@ prefix ero: <http://purl.org/roh_edma/mirror/obo/ero#>
 prefix gn: <http://purl.org/roh_edma/mirror/geonames#>
 prefix iao: <http://purl.org/roh_edma/mirror/obo/iao#>
 prefix dc: <http://purl.org/dc/elements/1.1/>
-
 SELECT
-(COUNT(DISTINCT ?publication) as ?publicationCount) ?comunidadAutonoma
+(COUNT(DISTINCT ?organizacion) as ?n_organizacion) ?knowledgeArea ?comunidadAutonoma
 WHERE {
-  ?publication         a bibo:Document ;
-                       vivo:hasPublicationVenue        ?journal;
- 				  		vivo:dateIssued        ?dateTimeValue;
-           bibo:authorList+| roh:seqOfAuthors       ?authorList.
 
-  ?authorList a rdf:Seq.
-  ?journal	a bibo:Journal        .
-  ?authorList	rdfs:member        ?author .
-  ?dateTimeValue	vivo:dateTime        ?dateTime .
-  ?author	a        foaf:Person .
-  ?position roh:positionOf ?author ;
-            vivo:relates ?organization .
-  ?organization	gn:locatedIn        ?location .
+  ?organizacion	a               vivo:University;
+                gn:locatedIn     ?location ;
+                roh:hasKnowledgeArea ?knowledgeArea.
  SERVICE ?location {
   	?location <http://www.geonames.org/ontology#parentADM1> ?comunidadAutonoma .
-  }
-GROUP BY ?comunidadAutonoma
+ }
+}
+GROUP BY ?knowledgeArea ?comunidadAutonoma 

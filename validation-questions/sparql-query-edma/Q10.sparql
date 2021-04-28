@@ -1,23 +1,29 @@
-PREFIX vivo: <http://purl.org/roh/mirror/vivo#>
-PREFIX roh: <http://purl.org/roh#>
+  
+PREFIX vivo: <http://purl.org/roh_edma/mirror/vivo#>
+PREFIX roh: <http://purl.org/roh_edma#>
 PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
 PREFIX rdfs:  <http://www.w3.org/2000/01/rdf-schema#>
-PREFIX foaf: <http://purl.org/roh/mirror/foaf#>
-PREFIX bfo: <http://purl.org/roh/mirror/obo/bfo#>
-
-SELECT DISTINCT ?project ?centre ?knowledgeArea
+PREFIX foaf: <http://purl.org/roh_edma/mirror/foaf#>
+PREFIX bfo: <http://purl.org/roh_edma/mirror/obo/bfo#>
+SELECT DISTINCT ?project ?centre ?knowledgeArea 
 WHERE {
-	?project	a vivo:Project ;
-				roh:hasKnowledgeArea ?knowledgeArea ;
-				vivo:relates ?role ;
-				vivo:dateTimeInterval ?dateTimeInterval .
-	?role	a ?roleClass ;
-			roh:roleOf ?centre .
-	?roleClass rdfs:subClassOf* bfo:BFO_0000023 .
-	?centre a ?organization .
-	?dateTimeInterval	vivo:start ?startDateTimeValue ;
-						vivo:end ?endDateTimeValue . 
-	?startDateTimeValue vivo:dateTime ?start . 
-	?endDateTimeValue vivo:dateTime ?end . 
-	FILTER (YEAR(?start) <= "2010"^^xsd:integer && YEAR(?end) >= "1990"^^xsd:integer )
+?project a vivo:Project ;
+roh:hasKnowledgeArea ?knowledgeArea ;
+vivo:relates ?role ;
+vivo:dateTimeInterval ?dateTimeInterval .
+?role a ?roleClass ;
+roh:roleOf ?centre .
+?roleClass rdfs:subClassOf* bfo:BFO_0000023 .
+?centre a ?organization .
+?organization rdfs:subClassOf* foaf:Organization .
+?dateTimeInterval vivo:start ?startDateTimeValue ;
+vivo:end ?endDateTimeValue . 
+?startDateTimeValue vivo:dateTime ?start . 
+?endDateTimeValue vivo:dateTime ?end . 
+FILTER (YEAR(?start) <= "2019"^^xsd:integer && YEAR(?end) >= "2019"^^xsd:integer )
+FILTER NOT EXISTS {
+?role a ?otherClass .
+?otherClass rdfs:subClassOf ?roleClass .
+FILTER (?otherClass != ?roleClass)
+}
 }

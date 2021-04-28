@@ -1,20 +1,23 @@
-PREFIX roh: <http://purl.org/roh#>
-PREFIX vivo: <http://purl.org/roh/mirror/vivo#>
-PREFIX foaf: <http://purl.org/roh/mirror/foaf#>
+PREFIX roh: <http://purl.org/roh_edma#>
+PREFIX vivo: <http://purl.org/roh_edma/mirror/vivo#>
+PREFIX foaf: <http://purl.org/roh_edma/mirror/foaf#>
 PREFIX rdfs:  <http://www.w3.org/2000/01/rdf-schema#>
 PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+PREFIX bibo: <http://purl.org/roh_edma/mirror/bibo#>
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
 
-SELECT DISTINCT ?researcher ?project ?organization ?start ?end
+SELECT DISTINCT ?researcher ?researchObject ?organization  
 WHERE {
-  	?project	a vivo:Project ;
-  				vivo:relates ?role ;
-  				vivo:dateTimeInterval ?dateTimeInterval .
-	?dateTimeInterval	vivo:end ?endDateTimeValue ;
-						vivo:start ?startDateTimeValue .
-	?endDateTimeValue vivo:dateTime ?end .
-	?startDateTimeValue vivo:dateTime ?start .
-	?role roh:roleOf ?researcher .
+  
+  ?researchObject a roh:ResearchObject ;
+	roh:seqOfAuthor+| bibo:authorList ?authorList ;
+	vivo:dateIssued ?dateTimeValue .
+	?dateTimeValue vivo:dateTime ?date .
+	?authorList a rdf:Seq;
+             rdfs:member ?researcher .
 	?researcher roh:hasPosition ?position .
-  	?position vivo:relates ?organization .
-	FILTER (YEAR(?start) <= "1996"^^xsd:integer && YEAR(?end) >= "1996"^^xsd:integer )
-}
+	?position vivo:relates ?organization .
+  ?organization a foaf:Organization.
+ 	FILTER (YEAR(?date) >= "1980"^^xsd:integer && YEAR(?date) <= "2021"^^xsd:integer )
+  }
+ORDER BY ?researcher

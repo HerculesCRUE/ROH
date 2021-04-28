@@ -1,15 +1,13 @@
-PREFIX roh: <http://purl.org/roh_edma#>
-PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
-PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+prefix vivo: <http://purl.org/roh_edma/mirror/vivo#>
+prefix roh: <http://purl.org/roh_edma#>
+prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#>
 
-SELECT ?center (COUNT(?accreditation) AS ?numberOfSeals) 
-WHERE {{
- ?center a roh:ResearchGroup ;
-         roh:hasAccreditation ?accreditation .
- }UNION{
- ?center a roh:ResearchInstitute ;
-         roh:hasAccreditation ?accreditation .
- 
-}}GROUP BY ?center
+SELECT ?centre (COUNT(?seal) AS ?numberOfSeals) WHERE {
+  ?centre a ?centerClass ; # get entities of type ResearchInstitute
+          roh:hasAccreditation  ?seal . # with property hasSealOfQuality
+  ?seal a roh:SealOfQuality.
+Filter(?centerClass = roh:ResearchInstitute || ?centerClass = roh:ResearchGroup)
+}
+GROUP BY ?centre
 ORDER BY DESC(?numberOfSeals)
 LIMIT 10

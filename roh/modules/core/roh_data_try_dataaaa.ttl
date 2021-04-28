@@ -12,16 +12,17 @@
 @prefix vivo: <http://purl.org/roh_edma/mirror/vivo#> .
 @prefix void: <http://rdfs.org/ns/void#> .
 @prefix dcterms: <http://purl.org/dc/terms/> .
-@prefix uneskoss:  <http://purl.org/roh/unesco-individuals#>.
+@prefix uneskos:  <http://purl.org/roh/unesco-individuals#>.
 @prefix bibo: <http://purl.org/roh_edma/mirror/bibo#> .
 @prefix gn: <http://purl.org/roh_edma/mirror/geonames#> .
+@prefix ero: <http://purl.org/roh_edma/mirror/obo/ero#ERO_0000071>.
 
 [ rdf:type owl:Ontology ;
-                owl:imports <http://purl.org/roh_edma>].
+               owl:imports <file:roh_core.ttl>].
            
 <http://purl.org/roh_edma/data#> a 
                                           vivo:Dataset ;
-                                 foaf:homepage <https://www.um.es/web/hercules/> ;
+                                 :url "https://www.um.es/web/hercules/" ;
                                  dcterms:created "2021-04-19"^^xsd:date ;
                                  dcterms:creator "GNOSS" ,
                                                  "Universidad de Deusto" ;
@@ -37,10 +38,12 @@
 
 <http://purl.org/roh_edma/data#universidad-1> 
         a vivo:University ;
-        ro:BFO_0000051 <http://purl.org/roh_edma/data#centro-investigacion-2> ,
-                        <http://purl.org/roh_edma/data#grupo-investigacion-1> ;
+        ro:BFO_0000051 <http://purl.org/roh_edma/data#centro-investigacion-2> ;
+                       # <http://purl.org/roh_edma/data#grupo-investigacion-1> ;
         :title "Universidad 1" ;
+        :hasKnowledgeArea  uneskos:120304 , uneskos:120318 , uneskos:120601 , uneskos:570508 ;
         #:hasContactInfo : vcard:Organization
+        gn:locatedIn <https://sws.geonames.org/3128026/> ;
         vivo:description "La Universidad 1 fue fundada en ... Sus pilares son... Actualmente ... "^^xsd:string ;
         vivo:identifier "Esta es la universidad a la que pertenece el grafo de conocimiento."^^xsd:string;
         vivo:dateTimeInterval
@@ -60,7 +63,9 @@
         a vivo:University ;
         ro:BFO_0000051 <http://purl.org/roh_edma/data#grupo-investigacion-3> ;
         :title "Universidad 2" ;
+        :hasKnowledgeArea uneskos:120318,  uneskos:570508, uneskos:120304;
         #:hasContactInfo : vcard:Organization
+        gn:locatedIn <https://sws.geonames.org/3128026/> ;
         vivo:description "La universidad  2 fue fundada en ..."^^xsd:string ;
         vivo:identifier "Esta es otra universidad altamente vinculada con la Universidad 1"^^xsd:string .
 
@@ -68,7 +73,7 @@
 <http://purl.org/roh_edma/data#centro-investigacion-2> 
         a :ResearchInstitute ;        
         :hasAccreditation _:genid1 ;
-        :hasKnowledgeArea uneskoss:120304 , uneskoss:120318 , uneskoss:120601 , uneskoss:570508 ;
+        :hasKnowledgeArea uneskos:120304 , uneskos:120318 , uneskos:120601 , uneskos:570508 ;
         #:hasContactInfo : vcard:Organization
         ro:BFO_0000051 <http://purl.org/roh_edma/data#grupo-investigacion-1> ;
         :title "Centro de Investigacion 2" ;
@@ -82,7 +87,7 @@ _:genid1 a :Accreditation ;
 
 <http://purl.org/roh_edma/data#grupo-investigacion-3> 
         a  :ResearchGroup ;
-        :hasKnowledgeArea uneskoss:120318,  uneskoss:570508, uneskoss:120304;
+        :hasKnowledgeArea uneskos:120318,  uneskos:570508, uneskos:120304;
         gn:locatedIn <https://sws.geonames.org/3128026/> ;
         :title "Centro de investigacion 3" ;
         #:hasContactInfo : vcard:Organization
@@ -104,7 +109,7 @@ _:genid1 a :Accreditation ;
                 vivo:hasGoverningAuthority  <http://purl.org/roh_edma/data#gobierno-vasco> ;
                 :title                  "Sello de calidad proporcionado por el Gobierno Vasco"
                 ] ;
-        :hasKnowledgeArea  uneskoss:120318 , uneskoss:120304 , uneskoss:120601;
+        :hasKnowledgeArea  uneskos:120318 , uneskos:120304 , uneskos:120601;
         gn:locatedIn <https://sws.geonames.org/3128026/> ;
         :title "Grupo de investigacion 1";
         #:hasContactInfo : vcard:Organization
@@ -119,7 +124,7 @@ _:genid1 a :Accreditation ;
         foaf:surname "surname pedro";
         vivo:description "Pedro surname is a really good researcher, who actually work in the ResearchGoup 1.... (bla, bla, bla)";
         :ORCID "orcid.org/0oo0-0001-7005-5u0m";
-        :hasKnowledgeArea  uneskoss:120304 , uneskoss:120601;
+        :hasKnowledgeArea  uneskos:120304 , uneskos:120601;
         :hasPosition       [ a       :ResearcherPosition ;
                              vivo:dateTimeInterval
                                    [ a       vivo:DateTimeInterval ;
@@ -130,7 +135,8 @@ _:genid1 a :Accreditation ;
                                                ]
                                      ] ;
                              vivo:relates
-                                     <http://purl.org/roh_edma/data#grupo-investigacion-1> , <http://purl.org/roh_edma/data#investigador-1>
+                                     <http://purl.org/roh_edma/data#grupo-investigacion-1> ,
+                                        <http://purl.org/roh_edma/data#investigador-1>
                            ] ;
         :hasPosition       [ a       vivo:FacultyPosition ;
                              vivo:dateTimeInterval
@@ -161,7 +167,7 @@ _:genid1 a :Accreditation ;
         foaf:gender "female" ;
         vivo:description "Maria surname is a really good researcher, who actually work in the ResearchGoup 1.... (bla, bla, bla";
         :ORCID "orcid.org/0oo0-0001-7oo5-5504";
-        :hasKnowledgeArea  uneskoss:120304 , uneskoss:570508;
+        :hasKnowledgeArea  uneskos:120304 , uneskos:570508;
         :hasPosition       [ a       :ResearcherPosition ;
                              vivo:dateTimeInterval
                                      [ a       vivo:DateTimeInterval ;
@@ -192,7 +198,7 @@ _:genid1 a :Accreditation ;
 
 <http://purl.org/roh_edma/data#investigador-3>
         a                  foaf:Person ;
-        :hasKnowledgeArea  uneskoss:120318, uneskoss:120304;
+        :hasKnowledgeArea  uneskos:120318, uneskos:120304;
         :hasPosition       [ a       :ResearcherPosition ;
                              vivo:dateTimeInterval
                                      [ a       vivo:DateTimeInterval ;
@@ -238,7 +244,7 @@ _:genid1 a :Accreditation ;
         vivo:relatedBy  [ a             :ResearcherPosition ;
                           vivo:relates  <http://purl.org/roh_edma/data#grupo-investigacion-3> , <http://purl.org/roh_edma/data#investigador-4>
                         ];
-        :hasKnowledgeArea uneskoss:120304. # OPCIONAL 
+        :hasKnowledgeArea uneskos:120304. # OPCIONAL 
         #vivo:relatedBy
         #        [ a       :ResearcherPosition ;
         #          vivo:relates
@@ -304,7 +310,6 @@ _:genid1 a :Accreditation ;
                           rdf:_2        <http://purl.org/roh_edma/data#investigador-1> ] .
 
 
-
 <http://purl.org/roh_edma/data#a-great-conference>
         a       bibo:Conference ;
         bfo:BFO_0000055 [ a     vivo:AttendeeRole ;
@@ -330,12 +335,13 @@ _:genid1 a :Accreditation ;
 
 <http://purl.org/roh_edma/data#another-project>
         a                     vivo:Project ;
-        :hasKnowledgeArea     uneskoss:120703 .
+        :hasKnowledgeArea     uneskos:120703 ;
+                :projectStatus        [ a  :ProposalSubmitted ].
 
 
 <http://purl.org/roh_edma/data#a-project-in-negotiation>
         a                     vivo:Project ;
-        :projectStatus        [ a  :ProposalSubmitted ];
+        :hasKnowledgeArea     uneskos:120703 ;
         :isSupportedBy        [ a       :Funding ;
                                 ro:BFO_0000051 [ a :FundingAmount ;
                                              :grants <http://purl.org/roh_edma/data#grupo-investigacion-1> ;
@@ -351,7 +357,32 @@ _:genid1 a :Accreditation ;
         vivo:relates           [ a vivo:LeaderRole ;
                                  :roleOf <http://purl.org/roh_edma/data#company-one> ;
                                  vivo:relatedBy  <http://purl.org/roh_edma/data#a-project-in-negotiation>
-                               ] .
+                               ] ;
+        :produces <http://purl.org/roh_edma/data#software-producedBy-proyect>.
+
+<http://purl.org/roh_edma/data#software-producedBy-proyect> 
+                a ero:ERO_0000071;
+                :partOfRepository <http://purl.org/roh_edma/data#repository-2>;
+                :partOfResearchResult  <http://purl.org/roh_edma/data#research-result-2> ;
+                :correspondingOrganization <http://purl.org/roh_edma/data#grupo-investigacion-1>, 
+                <http://purl.org/roh_edma/data#company-one>;
+                :hasKnowledgeArea     uneskos:1203, uneskos:120304;
+                :correspondingAuthor <http://purl.org/roh_edma/data#investigador-3>;
+                vivo:dateIssued
+                                                [ a       vivo:DateTimeValue ;
+                                                vivo:dateTime
+                                                        "2020-04-27T00:00:00"^^xsd:dateTime
+                                                ] ;
+                :seqOfAuthors  [ a       rdf:Seq ;
+                                    rdf:_1  <http://purl.org/roh_edma/data#investigador-1> ;
+                                    rdf:_2  <http://purl.org/roh_edma/data#investigador-3>
+                                  ] .
+                
+<http://purl.org/roh_edma/data#repository-2> 
+        a                        :GitHubRepository;
+        :title "A grate Git repository";
+        :hasKnowledgeArea     uneskos:1203, uneskos:120304. 
+
 
 <http://purl.org/roh_edma/data#company-one>
         a       vivo:Company .
@@ -373,9 +404,8 @@ _:genid1 a :Accreditation ;
         vivo:relates           [ a vivo:LeaderRole ;
                                  :roleOf <http://purl.org/roh_edma/data#company-one> ;
                                  vivo:relatedBy  <http://purl.org/roh_edma/data#a-project-in-negotiation>
-                               ] .
-
-
+                               ] ;
+        :projectStatus        [ a  :ProposalSubmitted ].
 
 <http://purl.org/roh_edma/data#european-funding-program>
         a :FundingProgram ;
@@ -414,12 +444,14 @@ _:genid1 a :Accreditation ;
                                  :roleOf <http://purl.org/roh_edma/data#grupo-investigacion-3> ;
                                  vivo:relatedBy  <http://purl.org/roh_edma/data#another-collaborative-project>
                                ];
-        :title                 "another collaborative project".
+        :title                 "another collaborative project";
+                :projectStatus        [ a  :ProposalSubmitted ].
 
 
 <http://purl.org/roh_edma/data#a-project>
         a                     vivo:Project ;
-        :hasKnowledgeArea     uneskoss:1203, uneskoss:120304;
+        :projectStatus        [ a  :ProposalSubmitted ];
+        :hasKnowledgeArea     uneskos:1203, uneskos:120304;
         :isSupportedBy         [ a               :Funding ;
                                  ro:BFO_0000051    [ a                :FundingAmount ;
                                                    :grants          <http://purl.org/roh_edma/data#grupo-investigacion-1> ;
@@ -452,20 +484,39 @@ _:genid1 a :Accreditation ;
         ] ;
         gn:locatedIn    <https://sws.geonames.org/3336903/> ;
         :spends      <http://purl.org/roh_edma/data#an-intern-expense> ;
-        :foreseenJustificationDate [a vivo:DateTimeValue;
-                                vivo:dateTime           "2019-03-31T00:00:00"^^xsd:dateTime, "2020-03-31T00:00:00"^^xsd:dateTime 
+        :foreseenJustificationDate [ a vivo:DateTimeValue;
+                                vivo:dateTime          
+                                 "2019-03-31T00:00:00"^^xsd:dateTime, 
+                                "2020-03-31T00:00:00"^^xsd:dateTime 
                                         ].
-
 
 <http://purl.org/roh_edma/data#an-intern-expense>
         a       :ProjectExpense ;
         vivo:description        "The salary of an intern working for the project".
 
+<http://purl.org/roh_edma/data#research-result-investigador-1> 
+                a                       :ResearchResult;
+                :correspondingAuthor    <http://purl.org/roh_edma/data#investigador-1>;
+                :hasKnowledgeArea     uneskos:1203, uneskos:120304 ;
+                :seqOfAuthors         [ a       rdf:Seq ;
+                                    rdf:_1  <http://purl.org/roh_edma/data#investigador-1> ;
+                                    rdf:_2  <http://purl.org/roh_edma/data#investigador-3>
+                                  ] .
+
+<http://purl.org/roh_edma/data#research-result-2> 
+                a                       :ResearchResult;
+                :correspondingAuthor    <http://purl.org/roh_edma/data#investigador-3>;
+                :hasKnowledgeArea     uneskos:1203, uneskos:120304 ;
+                :seqOfAuthors         [ a       rdf:Seq ;
+                                    rdf:_1  <http://purl.org/roh_edma/data#investigador-1> ;
+                                    rdf:_2  <http://purl.org/roh_edma/data#investigador-3>
+                                  ] .
 
 <http://purl.org/roh_edma/data#excelent-journal>
         a                         bibo:Journal ;
         :title
                 "An excelent Journal" ;
+       
         vivo:dateIssued           [ a              vivo:DateTimeValue ;
                                     vivo:dateTime  "2020-04-27T00:00:00"^^xsd:dateTime
                                   ] ;
@@ -479,12 +530,28 @@ _:genid1 a :Accreditation ;
                 <http://purl.org/roh_edma/data#journal-article-1> .
 
 
-### HOLAAAAAA
-<http://purl.org/roh_edma/data#journal-article-1>
-        a                         bibo:AcademicArticle ;
-        :title
-                "My great journal article" ;
-        :hasKnowledgeArea     uneskoss:1203, uneskoss:120304 ;
+<http://purl.org/roh_edma/data#software-1>
+        a                       ero:ERO_0000071;
+        :title "A great software";
+        :correspondingOrganization  <http://purl.org/roh_edma/data#grupo-investigacion-1>;
+        :hasKnowledgeArea     uneskos:1203, uneskos:120304 ;
+        :partOfRepository    <http://purl.org/roh_edma/data#repository-1>;
+        :correspondingAuthor      <http://purl.org/roh_edma/data#investigador-1> ;
+        :partOfResearchResult     <http://purl.org/roh_edma/data#research-result-investigador-1>;
+        :seqOfAuthors         [ a       rdf:Seq ;
+                                    rdf:_1  <http://purl.org/roh_edma/data#investigador-1> ;
+                                    rdf:_2  <http://purl.org/roh_edma/data#investigador-3>
+                                  ] ;
+         vivo:dateIssued
+                [ a       vivo:DateTimeValue ;
+                  vivo:dateTime
+                          "2020-04-27T00:00:00"^^xsd:dateTime
+                ] .
+
+<http://purl.org/roh_edma/data#repository-1> 
+        a                        :BitBucketRepository;
+        :title "A grate git repository";
+        :hasKnowledgeArea     uneskos:1203, uneskos:120304 ;
         :correspondingAuthor      <http://purl.org/roh_edma/data#investigador-1> ;
         :seqOfAuthors         [ a       rdf:Seq ;
                                     rdf:_1  <http://purl.org/roh_edma/data#investigador-1> ;
@@ -494,10 +561,28 @@ _:genid1 a :Accreditation ;
                 [ a       vivo:DateTimeValue ;
                   vivo:dateTime
                           "2020-04-27T00:00:00"^^xsd:dateTime
+                 ] .
+
+### HOLAAAAAA
+<http://purl.org/roh_edma/data#journal-article-1>
+        a                         bibo:Article ;
+        :title
+                "My great journal article" ;
+        :correspondingOrganization <http://purl.org/roh_edma/data#grupo-investigacion-1>;
+        :hasKnowledgeArea     uneskos:1203, uneskos:120304;
+        :correspondingAuthor      <http://purl.org/roh_edma/data#investigador-1> ;
+        :partOfResearchResult     <http://purl.org/roh_edma/data#research-result-investigador-1>;
+        bibo:authorList        [ a       rdf:Seq ;
+                                    rdf:_1  <http://purl.org/roh_edma/data#investigador-1> ;
+                                    rdf:_2  <http://purl.org/roh_edma/data#investigador-3>
+                                 ] ;
+         vivo:dateIssued
+                [ a       vivo:DateTimeValue ;
+                  vivo:dateTime
+                          "2021-04-27T00:00:00"^^xsd:dateTime
                 ] ;
         vivo:hasPublicationVenue
                 <http://purl.org/roh_edma/data#excelent-journal> ;
-
         :hasMetric   <http://purl.org/roh_edma/data#journal-article-1-metric> .
 
 
@@ -512,8 +597,8 @@ _:genid1 a :Accreditation ;
 <http://purl.org/roh_edma/data#my-fabulous-patent>
         a       bibo:Patent ;
         vivo:identifier "my-fabulous-patent"^^xsd:string ;
-        :hasKnowledgeArea     uneskoss:1203, uneskoss:120304;
-        :correspondingAuthor <http://purl.org/roh_edma/data#investigador-1> ;
+        :hasKnowledgeArea     uneskos:1203, uneskos:120304;
+        :correspomndingOrganization <http://purl.org/roh_edma/data#grupo-investigacion-1>;
         :ownerOrganization  <http://purl.org/roh_edma/data#grupo-investigacion-1>;
         :seqOfAuthors           [ a       rdf:Seq ;
                                     rdf:_1  <http://purl.org/roh_edma/data#investigador-1> ;
@@ -528,12 +613,13 @@ _:genid1 a :Accreditation ;
 <http://purl.org/roh_edma/data#another-fabulous-patent>
         a       bibo:Patent ;
         vivo:identifier "another-fabulous-patent"^^xsd:string ;
-        :hasKnowledgeArea     uneskoss:1203, uneskoss:120304 ;
+        :hasKnowledgeArea     uneskos:1203, uneskos:120304 ;
+
         :correspondingAuthor <http://purl.org/roh_edma/data#investigador-3> ;
         :ownerOrganization  <http://purl.org/roh_edma/data#grupo-investigacion-1>;
         :seqOfAuthors           [ a       rdf:Seq ;
                                     rdf:_1  <http://purl.org/roh_edma/data#investigador-1> ;
-                                    rdf:_2  <http://purl.org/roh_edma/data#investigador-1> ];
+                                    rdf:_2  <http://purl.org/roh_edma/data#investigador-3> ];
         vivo:dateIssued
                 [ a       vivo:DateTimeValue ;
                   vivo:dateTime
