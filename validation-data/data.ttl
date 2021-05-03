@@ -41,12 +41,11 @@
 
 <http://purl.org/roh/data#universidad-1>
         a       vivo:University ;
-        ro:BFO_0000051  <http://purl.org/roh/data#centro-investigacion-1>, <http://purl.org/roh/data#centro-investigacion-2>.
-        
+        ro:BFO_0000051  <http://purl.org/roh/data#centro-investigacion-1>, <http://purl.org/roh/data#centro-investigacion-2> .
 
 <http://purl.org/roh/data#universidad-2>
         a       vivo:University ;
-        ro:BFO_0000051 <http://purl.org/roh/data#centro-investigacion-3>.
+        ro:BFO_0000051 <http://purl.org/roh/data#centro-investigacion-3> .
 
 
 <http://purl.org/roh/data#centro-investigacion-1>
@@ -56,16 +55,18 @@
                              :title                  "Grupo reconocido por el Gobierno Vasco"
                            ] ;
         :hasKnowledgeArea  uneskos:120318 , uneskos:120304 , uneskos:120601 ;
-        gn:locatedIn <https://sws.geonames.org/3128026/> . 
+        gn:locatedIn <https://sws.geonames.org/3128026/> .
+
+
 
 <http://purl.org/roh/data#centro-investigacion-2>
         a                  :ResearchGroup ;
-        :hasKnowledgeArea  uneskos:120318 , uneskos:120304 , uneskos:570508.
+        :hasKnowledgeArea  uneskos:120318 , uneskos:120304 , uneskos:570508 .
 
 <http://purl.org/roh/data#centro-investigacion-3>
         a                  :ResearchGroup ;
         :hasKnowledgeArea  uneskos:120318 , uneskos:570508 ;
-        gn:locatedIn <https://sws.geonames.org/3128026/>. 
+        gn:locatedIn <https://sws.geonames.org/3128026/> .
 
 <http://purl.org/roh/data#investigador-1>
         a                  foaf:Person ;
@@ -82,8 +83,8 @@
                              vivo:relates
                                      <http://purl.org/roh/data#centro-investigacion-1> , <http://purl.org/roh/data#investigador-1>
                            ] ;
-        :hasContract <http://purl.org/roh/data#investigador-1-contract>;
-        foaf:name  "Pedro" ;
+        foaf:name
+                "Pedro" ;
         foaf:gender "male" ;
         vivo:relatedBy     [ a             :ResearcherPosition ;
                              vivo:relates  <http://purl.org/roh/data#centro-investigacion-1> , <http://purl.org/roh/data#investigador-1>
@@ -160,7 +161,6 @@
                 :cites "5"^^xsd:integer ;
                 :factorH "1"^^xsd:integer ] .
 
-
 <http://purl.org/roh/data#investigador-3-phd-relationship>
         a       :PhDSupervisingRelationship ;
         vivo:dateTimeInterval [ a       vivo:DateTimeInterval ;
@@ -198,8 +198,7 @@
 
 <http://purl.org/roh/data#gobierno-vasco>
         a          vivo:GovernmentAgency ;
-        :promotes  <http://purl.org/roh/data#hazitek2020>;
-        :title "Gobierno Vasco".
+        :promotes  <http://purl.org/roh/data#hazitek2020> .
 
 <http://purl.org/roh/data#feder> 
 	a	   :FundingSource ;
@@ -306,8 +305,7 @@
         vivo:relates           [ a vivo:LeaderRole ;
                                  :roleOf <http://purl.org/roh/data#centro-investigacion-3> ;
                                  vivo:relatedBy  <http://purl.org/roh/data#another-collaborative-project>
-                               ] 
-        :title                 "another collaborative project".
+                               ] .
 
 
 <http://purl.org/roh/data#a-project>
@@ -415,7 +413,7 @@
                                     rdf:_1  <http://purl.org/roh/data#investigador-1> ;
                                     rdf:_2  <http://purl.org/roh/data#investigador-3> ];
         vivo:dateIssued
-                [ a       vivo:DateTimeValue ;
+                [ a       vivo:DateTimeValue 
                   vivo:dateTime
                           "2020-03-17T00:00:00"^^xsd:dateTime
                 ] .

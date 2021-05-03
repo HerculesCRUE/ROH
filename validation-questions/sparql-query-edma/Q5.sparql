@@ -2,9 +2,9 @@ prefix roh: <http://purl.org/roh_edma#>
 prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#>
 prefix ro: <http://purl.org/roh_edma/mirror/obo/ro#> #mirrar si es este
 
-SELECT DISTINCT ?centro  ?project ?classClasificacionProject
+SELECT DISTINCT ?centre  ?project ?classClasificacionProject
 WHERE {
-  ?centro roh:grantedBy ?fundingAmount ;
+  ?centre roh:grantedBy ?fundingAmount ;
           a ?centroClass.
   ?funding ro:BFO_0000051 ?fundingAmount ;
            roh:fundedBy ?fundingProgram .

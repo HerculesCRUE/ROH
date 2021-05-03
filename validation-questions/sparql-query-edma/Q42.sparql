@@ -1,18 +1,16 @@
-PREFIX roh: <http://purl.org/roh#>
-PREFIX vivo: <http://purl.org/roh/mirror/vivo#>
-PREFIX foaf: <http://purl.org/roh/mirror/foaf#>
-
+PREFIX roh: <http://purl.org/roh_edma#>
+PREFIX vivo: <http://purl.org/roh_edma/mirror/vivo#>
+PREFIX foaf: <http://purl.org/roh_edma/mirror/foaf#>
 SELECT ?researcher ?grant 
 WHERE {
-    ?contract a roh:PersonContract  .
-    ?researcher roh:hasContract ?contract ;
-    a foaf:Person
-
-    {
-        SELECT ?grant 
-        WHERE {
-            ?grant a roh:Grant ;
-            roh:hasContract ?contract .
-        }
-    }
+?contract a roh:PersonContract ; 
+vivo:relates ?researcher .
+?researcher a foaf:Person .
+{
+SELECT ?grant 
+WHERE {
+?grant a roh:Grant .
+?contract vivo:relates ?grant .
+}
+}
 }

@@ -7612,6 +7612,7 @@ vivo:Project rdf:type owl:Class ;
                                                    owl:unionOf ( :Dossier
                                                                  :EthicalReport
                                                                  :Justification
+                                                                 bfo:BFO_0000023
                                                                )
                                                  ]
                              ] ,
@@ -7870,14 +7871,6 @@ skos:ConceptScheme rdf:type owl:Class ;
                 rdfs:label "TestChapterTwo"@en .
 
 
-###  http://purl.org/roh_edma#TestCoSupervisorRole
-:TestCoSupervisorRole rdf:type owl:NamedIndividual ,
-                               :SupervisorRole ;
-                      ro:RO_0000052 :TestPhdCoSupervisor ;
-                      vivo:relatedBy :TestPhDSupervisingRelationship ;
-                      rdfs:label "TestCoSupervisorRole"@en .
-
-
 ###  http://purl.org/roh_edma#TestDateTimeInterval
 :TestDateTimeInterval rdf:type owl:NamedIndividual ,
                                vivo:DateTimeInterval ;
@@ -7937,32 +7930,11 @@ skos:ConceptScheme rdf:type owl:Class ;
                   rdfs:label "TestOrganization"@en .
 
 
-###  http://purl.org/roh_edma#TestPhDStudent
-:TestPhDStudent rdf:type owl:NamedIndividual ,
-                         foaf:Person ;
-                rdfs:label "TestPhDStudent"@en .
-
-
 ###  http://purl.org/roh_edma#TestPhDSupervisingRelationship
 :TestPhDSupervisingRelationship rdf:type owl:NamedIndividual ,
                                          :PhDSupervisingRelationship ;
                                 vivo:dateTimeInterval :TestDateTimeInterval ;
-                                vivo:relates :TestPhDStudent ,
-                                             :TestPhdCoSupervisor ,
-                                             :TestPhdSupervisor ;
                                 rdfs:label "TestPhDSupervisingRelationship"@en .
-
-
-###  http://purl.org/roh_edma#TestPhdCoSupervisor
-:TestPhdCoSupervisor rdf:type owl:NamedIndividual ,
-                              foaf:Person ;
-                     rdfs:label "TestPhdCoSupervisor"@en .
-
-
-###  http://purl.org/roh_edma#TestPhdSupervisor
-:TestPhdSupervisor rdf:type owl:NamedIndividual ,
-                            foaf:Person ;
-                   rdfs:label "TestPhdSupervisor"@en .
 
 
 ###  http://purl.org/roh_edma#TestProject
@@ -7981,7 +7953,6 @@ skos:ConceptScheme rdf:type owl:Class ;
 ###  http://purl.org/roh_edma#TestSuperviseeRole
 :TestSuperviseeRole rdf:type owl:NamedIndividual ,
                              :SuperviseeRole ;
-                    ro:RO_0000052 :TestPhDStudent ;
                     vivo:relatedBy :TestPhDSupervisingRelationship ;
                     rdfs:label "TestSuperviseeRole"@en .
 
@@ -7989,7 +7960,6 @@ skos:ConceptScheme rdf:type owl:Class ;
 ###  http://purl.org/roh_edma#TestSupervisorRole
 :TestSupervisorRole rdf:type owl:NamedIndividual ,
                              :SupervisorRole ;
-                    ro:RO_0000052 :TestPhdSupervisor ;
                     vivo:relatedBy :TestPhDSupervisingRelationship ;
                     rdfs:label "TestSupervisorRole"@en .
 
@@ -8086,8 +8056,8 @@ skos:ConceptScheme rdf:type owl:Class ;
 #    Annotations
 #################################################################
 
-<http://purl.org/roh/mirror/obo/bfo#BFO_0000004> rdfs:label "independent continuant"@en ,
-                                                            "continuador independiente"@es .
+<http://purl.org/roh/mirror/obo/bfo#BFO_0000004> rdfs:label "continuador independiente"@es ,
+                                                            "independent continuant"@en .
 
 
 #################################################################

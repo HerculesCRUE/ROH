@@ -1,17 +1,26 @@
-PREFIX roh: <http://purl.org/roh#>
-PREFIX vivo: <http://purl.org/roh/mirror/vivo#>
-PREFIX bibo:  <http://purl.org/roh/mirror/bibo#>
+  PREFIX roh: <http://purl.org/roh_edma#>
+PREFIX vivo: <http://purl.org/roh_edma/mirror/vivo#>
+PREFIX bibo:  <http://purl.org/roh_edma/mirror/bibo#>
 PREFIX rdfs:  <http://www.w3.org/2000/01/rdf-schema#>
 PREFIX dc:    <http://purl.org/dc/elements/1.1/>
-PREFIX ro: <http://purl.org/roh/mirror/obo/ro#>
-SELECT DISTINCT ?university ?phdThesis 
+PREFIX ro: <http://purl.org/roh_edma/mirror/obo/ro#>
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+
+SELECT DISTINCT ?university ?Thesis  ?ThesisClass
 WHERE {
-?phdThesis a roh:PhDThesis 
-;bibo:authorList ?authorList ;
-dc:title ?title .
-?authorList rdfs:member ?author .
-?author roh:hasPosition ?position .
-?position vivo:relates ?researchGroup .
+?Thesis 
+           a ?ThesisClass;
+           roh:correspondingOrganization ?researchGroup;
+			roh:title ?title .
 ?researchGroup a roh:ResearchGroup .
-?university ro:BFO_0000051 ?researchGroup .
+?university a vivo:University;
+            ro:BFO_0000051+ ?researchGroup .
+?ThesisClass rdfs:subClassOf bibo:Thesis.
+  
+  FILTER NOT EXISTS {
+?Thesis a ?otherClass .
+?otherClass rdfs:subClassOf ?ThesisClass .
+    FILTER (?otherClass != ?ThesisClass)}
+  FILTER (str(?ThesisClass) != "http://purl.org/roh_edma#ResearchObject")
+
 FILTER regex(?title, "fabulous", "i")}

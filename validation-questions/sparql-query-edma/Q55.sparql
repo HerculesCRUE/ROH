@@ -1,23 +1,24 @@
-PREFIX roh: <http://purl.org/roh#>
-PREFIX vivo: <http://purl.org/roh/mirror/vivo#>
-PREFIX ro: <http://purl.org/roh/mirror/obo/ro#>
+PREFIX roh: <http://purl.org/roh_edma#>
+PREFIX vivo: <http://purl.org/roh_edma/mirror/vivo#>
 PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
 PREFIX fo: <http://www.w3.org/1999/XSL/Format#>
-PREFIX foaf: <http://purl.org/roh/mirror/foaf#>
-
-SELECT ?organization ?project ?company 
+PREFIX foaf: <http://purl.org/roh_edma/mirror/foaf#>
+prefix ro: <http://purl.org/roh_edma/mirror/obo/ro#> 
+prefix xsd: <http://www.w3.org/2001/XMLSchema#>
+SELECT distinct ?organization ?project ?company 
 WHERE {
 	?project	a vivo:Project ;
 				vivo:relates ?role ;
 				roh:isSupportedBy ?funding ;
   				roh:projectStatus ?projectStatus .
 	?funding	ro:BFO_0000051 ?fundingAmount ;
-				roh:fundedBy ?fundingProgram .
+				roh:fundedBy ?fundingProgram ;
+    			roh:publicFunding "false"^^xsd:boolean .
 	?fundingProgram roh:promotedBy ?company .
   	?fundingAmount roh:monetaryAmount ?fundingAmounts .
-  	?role roh:roleOf ?organization .
+  	?role ro:RO_0000052 ?organization .
   	?organization a ?researchGroupClass .
-  	# ?researchGroupClass	rdfs:subClassOf foaf:Organization .
-  	?projectStatus a ?projectStatusClass .
+    Filter( ?researchGroupClass = roh:ResearchGroup || ?researchGroupClass = roh:ResearchInstitute)
+      ?projectStatus a ?projectStatusClass .
   	FILTER (?projectStatusClass != roh:ProposalSubmitted)
 }

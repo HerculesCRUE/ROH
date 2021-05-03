@@ -1,18 +1,15 @@
-PREFIX roh: <http://purl.org/roh#>
-PREFIX ro: <http://purl.org/roh/mirror/obo/ro#>
-PREFIX bibo: <http://purl.org/ontology/bibo/>
-PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
-PREFIX foaf: <http://purl.org/roh/mirror/foaf#>
-PREFIX unesco: <http://purl.org/roh/unesco-individuals#>
-PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
-PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
-
-SELECT DISTINCT ?org1 ?org2 ?project
+PREFIX roh: <http://purl.org/roh_edma#>
+PREFIX vivo: <http://purl.org/roh_edma/mirror/vivo#>
+PREFIX foaf: <http://purl.org/roh_edma/mirror/foaf#>
+prefix ro: <http://purl.org/roh_edma/mirror/obo/ro#>
+SELECT DISTINCT ?project ?organization ?otherOrganization 
 WHERE {
-  ?org1 roh:grantedBy ?fundingAmount .
-  ?org2 roh:grantedBy ?fundingAmount .
-  ?funding ro:BFO_0000051 ?fundingAmount ;
-           roh:fundedBy ?fundingProgram .
-  ?project roh:isSupportedBy ?funding .
-  
+?project a vivo:Project ;
+		vivo:relates ?role ;
+		vivo:relates ?otherRole .
+?role ro:RO_0000052 ?organization .
+?organization a foaf:Organization .
+?otherRole ro:RO_0000052 ?otherOrganization .
+?otherOrganization a foaf:Organization .
+FILTER (?organization != ?otherOrganization) 
 }

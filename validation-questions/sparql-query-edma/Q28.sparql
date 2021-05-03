@@ -1,14 +1,15 @@
-PREFIX vivo: <http://purl.org/roh/mirror/vivo#>
-PREFIX roh: <http://purl.org/roh#>
-PREFIX foaf: <http://purl.org/roh/mirror/foaf#>
+PREFIX vivo: <http://purl.org/roh_edma/mirror/vivo#>
+PREFIX roh: <http://purl.org/roh_edma#>
+PREFIX foaf: <http://purl.org/roh_edma/mirror/foaf#>
 PREFIX rdfs:  <http://www.w3.org/2000/01/rdf-schema#>
+prefix ro: <http://purl.org/roh_edma/mirror/obo/ro#>
 
 SELECT ?researcher ?project ?roleClass 
 WHERE {
 	?project	a vivo:Project ;
 				vivo:relates ?role .
 	?role	a ?roleClass ;
-			roh:roleOf ?researcher .
+			ro:RO_0000052 ?researcher .
 	?researcher a foaf:Person .
 	FILTER NOT EXISTS {
 		?role a ?otherClass .

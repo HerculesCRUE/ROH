@@ -1,0 +1,12 @@
+PREFIX roh: <http://purl.org/roh_edma#>
+PREFIX bibo:  <http://purl.org/roh_edma/mirror/bibo#>
+PREFIX vivo: <http://purl.org/roh_edma/mirror/vivo#>
+prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+SELECT DISTINCT ?project ?report 
+WHERE {
+?project a vivo:Project .
+?dossier vivo:relates ?project ;
+         vivo:relates ?report .
+?report a ?reportClass .
+?reportClass rdfs:subClassOf* bibo:Report .
+}

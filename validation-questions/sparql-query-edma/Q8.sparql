@@ -1,25 +1,22 @@
-# En esta consulta hay que comprobar que funciona la parte de consultar a Geonames, ya que en Fuseki no funcionan las querys federadas
-
 prefix vivo: <http://purl.org/roh_edma/mirror/vivo#>
 prefix roh: <http://purl.org/roh_edma#>
-prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
-prefix foaf: <http://purl.org/roh_edma/mirror/foaf#>
-prefix unesco: <http://purl.org/roh/unesco-individuals#>
+prefix bibo: <http://purl.org/roh_edma/mirror/bibo#>
+prefix uneskos: <http://purl.org/roh/unesco-individuals#>
 prefix ro: <http://purl.org/roh_edma/mirror/obo/ro#> 
-prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#>
-prefix ero: <http://purl.org/roh_edma/mirror/obo/ero#>
-prefix gn: <http://purl.org/roh_edma/mirror/geonames#>
-prefix iao: <http://purl.org/roh_edma/mirror/obo/iao#>
-prefix dc: <http://purl.org/dc/elements/1.1/>
-SELECT
-(COUNT(DISTINCT ?organizacion) as ?n_organizacion) ?knowledgeArea ?comunidadAutonoma
-WHERE {
 
-  ?organizacion	a               vivo:University;
-                gn:locatedIn     ?location ;
-                roh:hasKnowledgeArea ?knowledgeArea.
- SERVICE ?location {
-  	?location <http://www.geonames.org/ontology#parentADM1> ?comunidadAutonoma .
+SELECT (COUNT(DISTINCT ?publication) as ?publicationCount) ?organization ?university
+WHERE {
+  ?publication         a bibo:Document ;
+                       roh:hasKnowledgeArea uneskos:120304;
+                       vivo:hasPublicationVenue        ?journal;
+                       roh:correspondingOrganization ?organization.
+  ?journal	a bibo:Journal . 
+  ?organization a ?classOrganizacion.
+  OPTIONAL{ ?organization
+                ro:BFO_0000050+ ?university. 
+    ?university a vivo:University.}
+  
+  Filter(?classOrganizacion = roh:ResearchGroup || ?classOrganizacion = roh:ResearchInstitute) 
  }
-}
-GROUP BY ?knowledgeArea ?comunidadAutonoma 
+
+GROUP BY ?organization ?university

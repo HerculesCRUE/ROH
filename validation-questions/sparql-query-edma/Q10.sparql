@@ -1,29 +1,48 @@
-  
 PREFIX vivo: <http://purl.org/roh_edma/mirror/vivo#>
 PREFIX roh: <http://purl.org/roh_edma#>
 PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
 PREFIX rdfs:  <http://www.w3.org/2000/01/rdf-schema#>
 PREFIX foaf: <http://purl.org/roh_edma/mirror/foaf#>
 PREFIX bfo: <http://purl.org/roh_edma/mirror/obo/bfo#>
-SELECT DISTINCT ?project ?centre ?knowledgeArea 
+prefix uneskos: <http://purl.org/roh/unesco-individuals#>
+prefix ro: <http://purl.org/roh_edma/mirror/obo/ro#> 
+
+SELECT DISTINCT ?project ?centre ?roleClass ?title ?classEstatus ?public ?cuantia ?FundingProgram ?RO
 WHERE {
 ?project a vivo:Project ;
-roh:hasKnowledgeArea ?knowledgeArea ;
+roh:hasKnowledgeArea uneskos:120304 ;
 vivo:relates ?role ;
 vivo:dateTimeInterval ?dateTimeInterval .
 ?role a ?roleClass ;
-roh:roleOf ?centre .
+ro:RO_0000052 ?centre .
+  Optional{ ?project roh:title ?title}
+  Optional{?project roh:projectStatus ?status.
+  ?status a ?classEstatus
+  FILTER NOT EXISTS {
+?status a ?otherClass .
+?otherClass rdfs:subClassOf ?classEstatus .
+FILTER (?otherClass != ?classEstatus)
+    }}
+  
+  OPTIONAL{ ?project roh:isSupportedBy ?funding. 
+    ?funding roh:publicFunding ?public;
+             ro:BFO_0000051 ?FundingAmount;
+             roh:fundedBy ?FundingProgram.
+    ?FundingAmount roh:grants ?centre;
+                  roh:monetaryAmount ?cuantia.
+       
+  } 
+  OPTIONAL{?project roh:produces ?RO}
 ?roleClass rdfs:subClassOf* bfo:BFO_0000023 .
-?centre a ?organization .
-?organization rdfs:subClassOf* foaf:Organization .
+?centre a ?classOrganization .
+Filter( ?classOrganization = roh:ResearchGroup || ?classOrganization = roh:ResearchIntitute) 
 ?dateTimeInterval vivo:start ?startDateTimeValue ;
 vivo:end ?endDateTimeValue . 
 ?startDateTimeValue vivo:dateTime ?start . 
 ?endDateTimeValue vivo:dateTime ?end . 
-FILTER (YEAR(?start) <= "2019"^^xsd:integer && YEAR(?end) >= "2019"^^xsd:integer )
+FILTER (YEAR(?start) = "2019"^^xsd:integer || YEAR(?end) = "2019"^^xsd:integer )
 FILTER NOT EXISTS {
 ?role a ?otherClass .
 ?otherClass rdfs:subClassOf ?roleClass .
-FILTER (?otherClass != ?roleClass)
-}
+FILTER (?otherClass != ?roleClass)  }
 }

@@ -1,19 +1,41 @@
-PREFIX roh: <http://purl.org/roh#>
-PREFIX vivo: <http://purl.org/roh/mirror/vivo#>
-PREFIX foaf: <http://purl.org/roh/mirror/foaf#>
-PREFIX rdfs:  <http://www.w3.org/2000/01/rdf-schema#>
-PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
-PREFIX bibo: <http://purl.org/roh/mirror/bibo#>
+prefix ro: <http://purl.org/roh_edma/mirror/obo/ro#> 
+prefix vivo: <http://purl.org/roh_edma/mirror/vivo#> 
+prefix roh: <http://purl.org/roh_edma#>
+prefix bibo: <http://purl.org/roh_edma/mirror/bibo#> 
+prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#>
+prefix foaf: <http://purl.org/roh_edma/mirror/foaf#>
+prefix xsd: <http://www.w3.org/2001/XMLSchema#> 
+prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> 
+prefix uneskos:  <http://purl.org/roh/unesco-individuals#>
 
-SELECT DISTINCT ?researcher ?researchObject ?organization 
+SELECT distinct ?organization ?researchObject  ?researchObjectClass   ?title ?repository ?keyword ?doi ?project
 WHERE {
-	?researchObject a roh:ResearchObject ;
-	bibo:authorList+! roh:seqOfAuthors ?authorList ;
-	vivo:dateIssued ?dateTimeValue .
-	?dateTimeValue vivo:dateTime ?date .
-	?authorList rdfs:member ?researcher .
-	?researcher roh:hasPosition ?position .
-	?position vivo:relates ?organization .
-FILTER (YEAR(?start) >= "1990"^^xsd:integer && YEAR(?end) <= "2020"^^xsd:integer )
+  
+?researchObject a roh:ResearchObject;
+        roh:correspondingOrganization ?organization;
+        a ?researchObjectClass;
+        
+        roh:hasKnowledgeArea uneskos:120304. 
+
+ Optional{?researchObject roh:title ?title}  
+ ?researchObject  roh:seqOfAuthors+|bibo:authorList ?list.
+    ?list a rdf:Seq;
+          rdfs:member <http://purl.org/roh_edma/data#investigador-2>.
+?researchObject roh:producedBy ?project.
+  ?project  a vivo:Project.
+ Optional{ ?researchObject vivo:doi ?doi. }
+ Optional{?researchObject roh:partOfRepository ?repository.}
+ Optional {?researchObject vivo:freetextKeyword ?keyword}
+
+?organization a ?classOrganization. 
+
+Filter(?classOrganization = roh:ResearchInstitute || ?classOrganization = roh:ResearchGroup)
+FILTER NOT EXISTS {
+?researchObject a ?otherClass .
+?otherClass rdfs:subClassOf ?researchObjectClass .
+FILTER (?otherClass != ?researchObjectClass)
 }
-ORDER BY ?researcher
+FILTER (str(?researchObjectClass) != "http://purl.org/roh_edma#ResearchObject")
+} GROUP BY ?organization ?researchObject  ?researchObjectClass ?author ?dateTime ?title ?repository ?keyword ?doi ?project
+
+

@@ -19,18 +19,10 @@ SELECT
 WHERE {
   ?publication         a bibo:Document ;
                        vivo:hasPublicationVenue        ?journal;
- 				  		vivo:dateIssued        ?dateTimeValue;
-           bibo:authorList+| roh:seqOfAuthors       ?authorList.
-
-  ?authorList a rdf:Seq.
+                       roh:correspondingOrganization ?organization.
   ?journal	a bibo:Journal        .
-  ?authorList	rdfs:member        ?author .
-  ?dateTimeValue	vivo:dateTime        ?dateTime .
-  ?author	a        foaf:Person .
-  ?position roh:positionOf ?author ;
-            vivo:relates ?organization .
   ?organization	gn:locatedIn        ?location .
  SERVICE ?location {
   	?location <http://www.geonames.org/ontology#parentADM1> ?comunidadAutonoma .
-  }
+  } }
 GROUP BY ?comunidadAutonoma

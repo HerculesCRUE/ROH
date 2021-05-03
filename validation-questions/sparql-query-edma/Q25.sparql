@@ -1,17 +1,25 @@
-PREFIX roh: <http://purl.org/roh#>
-PREFIX ro: <http://purl.org/roh/mirror/obo/ro#>
-PREFIX bibo: <http://purl.org/ontology/bibo/>
-PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
-PREFIX foaf: <http://purl.org/roh/mirror/foaf#>
-PREFIX unesco: <http://purl.org/roh/unesco-individuals#>
+PREFIX roh: <http://purl.org/roh_edma#>
+PREFIX foaf: <http://purl.org/roh_edma/mirror/foaf#>
 PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
-PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
-prefix vivo: <http://purl.org/roh/mirror/vivo#>
+prefix vivo: <http://purl.org/roh_edma/mirror/vivo#>
+prefix bibo: <http://purl.org/roh_edma/mirror/bibo#>
+prefix ro: <http://purl.org/roh_edma/mirror/obo/ro#> 
+prefix foaf: <http://purl.org/roh_edma/mirror/foaf#>
 
-SELECT distinct ?thesis  WHERE {
-  ?thesis roh:supervisedBy ?person;
-  a roh:PhDThesis .
+SELECT  distinct ?thesis ?classThesis ?alumno  ?profesor WHERE {
+?thesis a  ?classThesis;
+          a bibo:Thesis;
+       	  roh:correspondingAuthor ?alumno.
 
- ?person rdfs:label ?label
- FILTER(?label="sample-Person-7769")
+ ?alumno vivo:relatedBy ?posicion. 
+  ?posicion a roh:SupervisingRelationship;
+           vivo:relates ?supervision. 
+  ?supersion a roh:SupervisorRole;
+             ro:RO_0000052 ?profesor.
+ ?profesor a foaf:Person.
+FILTER NOT EXISTS {
+?thesis a ?otherClass .
+?otherClass rdfs:subClassOf ?classThesis .
+FILTER (?otherClass != ?classThesis)
+}FILTER (str(?classThesis) != "http://purl.org/roh_edma#ResearchObject")
 }

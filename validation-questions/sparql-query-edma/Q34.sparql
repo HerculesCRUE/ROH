@@ -1,16 +1,20 @@
-PREFIX roh: <http://purl.org/roh#>
-PREFIX vivo: <http://purl.org/roh/mirror/vivo#>
-PREFIX ro: <http://purl.org/roh/mirror/obo/ro#>
+
+PREFIX roh: <http://purl.org/roh_edma#>
+PREFIX vivo: <http://purl.org/roh_edma/mirror/vivo#>
+PREFIX ro: <http://purl.org/roh_edma/mirror/obo/ro#>
 
 
-SELECT ?project ?company ?fundingAmounts 
+SELECT ?project ?company ?fundingAmounts  ?center
 WHERE {
   ?project a vivo:Project ;
-  roh:projectStatus ?status ;
-  roh:isSupportedBy ?funding ;
-  roh:fundedBy ?fundingProgram .
+ roh:projectStatus ?status ;
+ roh:isSupportedBy ?funding.
+           ?funding a roh:Funding;
+  					roh:fundedBy ?fundingProgram;
+      
+       ro:BFO_0000051 ?fundingAmount .
   ?status a roh:ProposalSubmitted .
-  ?funding ro:BFO_0000051 ?fundingAmount .
   ?fundingProgram roh:promotedBy ?company .
-  ?fundingAmount roh:monetaryAmount ?fundingAmounts .
+  ?fundingAmount roh:monetaryAmount ?fundingAmounts;
+                  roh:grants ?center.
 }

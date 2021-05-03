@@ -1,0 +1,11 @@
+PREFIX roh: <http://purl.org/roh_edma#>
+prefix bibo: <http://purl.org/roh_edma/mirror/bibo#>
+
+
+SELECT distinct ?patent  WHERE {
+  ?patent a bibo:Patent;
+          roh:patentInventor <http://purl.org/roh_edma/data#investigador-3>. 
+  
+}
+ 
+
