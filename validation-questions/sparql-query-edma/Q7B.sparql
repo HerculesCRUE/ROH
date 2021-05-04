@@ -10,7 +10,7 @@ prefix uneskos:  <http://purl.org/roh/unesco-individuals#>
 prefix gn: <http://purl.org/roh_edma/mirror/geonames#>
 
 SELECT
-(COUNT(DISTINCT ?RO) as ?CountResarchObject) ?comunidadAutonoma
+(COUNT(DISTINCT ?RO) as ?CountResearchObject) ?comunidadAutonoma
 WHERE {
   ?RO         a roh:ResearchObject;
               roh:correspondingOrganization ?organization.

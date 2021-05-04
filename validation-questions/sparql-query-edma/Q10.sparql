@@ -7,42 +7,48 @@ PREFIX bfo: <http://purl.org/roh_edma/mirror/obo/bfo#>
 prefix uneskos: <http://purl.org/roh/unesco-individuals#>
 prefix ro: <http://purl.org/roh_edma/mirror/obo/ro#> 
 
-SELECT DISTINCT ?project ?centre ?roleClass ?title ?classEstatus ?public ?cuantia ?FundingProgram ?RO
+SELECT DISTINCT ?project ?centre ?roleClass ?title ?classStatus ?public ?cuantia ?FundingProgram ?RO
 WHERE {
 ?project a vivo:Project ;
-roh:hasKnowledgeArea uneskos:120304 ;
-vivo:relates ?role ;
-vivo:dateTimeInterval ?dateTimeInterval .
+        roh:hasKnowledgeArea uneskos:120304 ;
+        vivo:relates ?role ;
+        vivo:dateTimeInterval ?dateTimeInterval .
 ?role a ?roleClass ;
-ro:RO_0000052 ?centre .
-  Optional{ ?project roh:title ?title}
-  Optional{?project roh:projectStatus ?status.
-  ?status a ?classEstatus
+      ro:RO_0000052 ?centre .
+?roleClass rdfs:subClassOf* bfo:BFO_0000023 .
+    ?centre a ?classOrganization .
+?dateTimeInterval vivo:start ?startDateTimeValue ;
+                vivo:end ?endDateTimeValue . 
+?startDateTimeValue vivo:dateTime ?start . 
+?endDateTimeValue vivo:dateTime ?end . 
+
+Optional{ ?project roh:title ?title}
+Optional{
+  ?project roh:projectStatus ?status.
+  ?status a ?classStatus
   FILTER NOT EXISTS {
-?status a ?otherClass .
-?otherClass rdfs:subClassOf ?classEstatus .
-FILTER (?otherClass != ?classEstatus)
-    }}
+        ?status a ?otherClass .
+        ?otherClass rdfs:subClassOf ?classStatus .
+      FILTER (?otherClass != ?classStatus)
+      }
+    }
   
-  OPTIONAL{ ?project roh:isSupportedBy ?funding. 
+OPTIONAL{ ?project roh:isSupportedBy ?funding. 
     ?funding roh:publicFunding ?public;
              ro:BFO_0000051 ?FundingAmount;
              roh:fundedBy ?FundingProgram.
     ?FundingAmount roh:grants ?centre;
-                  roh:monetaryAmount ?cuantia.
-       
-  } 
-  OPTIONAL{?project roh:produces ?RO}
-?roleClass rdfs:subClassOf* bfo:BFO_0000023 .
-?centre a ?classOrganization .
+                  roh:monetaryAmount ?cuantia.   
+    } 
+OPTIONAL{
+    ?project roh:produces ?RO
+    }
+    
 Filter( ?classOrganization = roh:ResearchGroup || ?classOrganization = roh:ResearchIntitute) 
-?dateTimeInterval vivo:start ?startDateTimeValue ;
-vivo:end ?endDateTimeValue . 
-?startDateTimeValue vivo:dateTime ?start . 
-?endDateTimeValue vivo:dateTime ?end . 
 FILTER (YEAR(?start) = "2019"^^xsd:integer || YEAR(?end) = "2019"^^xsd:integer )
 FILTER NOT EXISTS {
-?role a ?otherClass .
-?otherClass rdfs:subClassOf ?roleClass .
-FILTER (?otherClass != ?roleClass)  }
+    ?role a ?otherClass .
+    ?otherClass rdfs:subClassOf ?roleClass .
+    FILTER (?otherClass != ?roleClass) 
+     }
 }

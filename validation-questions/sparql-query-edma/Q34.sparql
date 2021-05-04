@@ -7,12 +7,11 @@ PREFIX ro: <http://purl.org/roh_edma/mirror/obo/ro#>
 SELECT ?project ?company ?fundingAmounts  ?center
 WHERE {
   ?project a vivo:Project ;
- roh:projectStatus ?status ;
- roh:isSupportedBy ?funding.
-           ?funding a roh:Funding;
+          roh:projectStatus ?status ;
+          roh:isSupportedBy ?funding.
+  ?funding a roh:Funding;
   					roh:fundedBy ?fundingProgram;
-      
-       ro:BFO_0000051 ?fundingAmount .
+             ro:BFO_0000051 ?fundingAmount .
   ?status a roh:ProposalSubmitted .
   ?fundingProgram roh:promotedBy ?company .
   ?fundingAmount roh:monetaryAmount ?fundingAmounts;

@@ -4,13 +4,13 @@ PREFIX foaf: <http://purl.org/roh_edma/mirror/foaf#>
 SELECT ?researcher ?grant 
 WHERE {
 ?contract a roh:PersonContract ; 
-vivo:relates ?researcher .
+            vivo:relates ?researcher .
 ?researcher a foaf:Person .
 {
 SELECT ?grant 
 WHERE {
-?grant a roh:Grant .
-?contract vivo:relates ?grant .
+?   grant a roh:Grant .
+    ?contract vivo:relates ?grant .
 }
 }
 }

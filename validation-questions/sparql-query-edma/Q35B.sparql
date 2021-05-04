@@ -3,6 +3,6 @@ PREFIX vivo: <http://purl.org/roh_edma/mirror/vivo#>
 SELECT ?date 
 WHERE {
 ?project a vivo:Project ;
-roh:foreseenJustificationDate ?foreseenJustificationDate  .
-  ?foreseenJustificationDate vivo:dateTime ?date.
+          roh:foreseenJustificationDate ?foreseenJustificationDate  .
+?foreseenJustificationDate vivo:dateTime ?date.
 }

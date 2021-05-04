@@ -6,10 +6,10 @@ prefix iao: <http://purl.org/roh_edma/mirror/obo/iao#>
 SELECT DISTINCT ?researcher ?center ?journalArticle 
 WHERE {
 ?journalArticle a                        iao:IAO_0000013;
-    bibo:authorList+| roh:seqOfAuthors ?authorList ;
-                                 roh:correspondingOrganization ?center;
-vivo:hasPublicationVenue <http://purl.org/roh_edma/data#excelent-journal> .
+        bibo:authorList+| roh:seqOfAuthors ?authorList ;
+        roh:correspondingOrganization ?center;
+        vivo:hasPublicationVenue <http://purl.org/roh_edma/data#excelent-journal> .
 ?authorList rdfs:member ?researcher .
 ?center a ?classCenter. 
-  Filter(?classCenter = roh:ResearchGroup || ?classCenter = roh:ResearchInstitute)
+Filter(?classCenter = roh:ResearchGroup || ?classCenter = roh:ResearchInstitute)
 }

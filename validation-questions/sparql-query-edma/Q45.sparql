@@ -8,9 +8,9 @@ prefix foaf: <http://purl.org/roh_edma/mirror/foaf#>
 
 SELECT ?gender (COUNT(?journal) as ?count)  WHERE {
 ?journal a bibo:Document ;
-vivo:dateIssued ?dateTimeValue ;
-bibo:authorList ?authorList ;
-roh:hasMetric ?metric .
+        vivo:dateIssued ?dateTimeValue ;
+        bibo:authorList ?authorList ;
+    roh:hasMetric ?metric .
 ?dateTimeValue vivo:dateTime ?date .
 ?authorList rdfs:member ?researcher . 
 ?researcher foaf:gender ?gender .

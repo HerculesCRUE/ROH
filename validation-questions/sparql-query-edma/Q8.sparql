@@ -11,12 +11,12 @@ WHERE {
                        vivo:hasPublicationVenue        ?journal;
                        roh:correspondingOrganization ?organization.
   ?journal	a bibo:Journal . 
-  ?organization a ?classOrganizacion.
+  ?organization a ?classOrganization.
   OPTIONAL{ ?organization
                 ro:BFO_0000050+ ?university. 
     ?university a vivo:University.}
   
-  Filter(?classOrganizacion = roh:ResearchGroup || ?classOrganizacion = roh:ResearchInstitute) 
+  Filter(?classOrganization = roh:ResearchGroup || ?classOrganization = roh:ResearchInstitute) 
  }
 
 GROUP BY ?organization ?university

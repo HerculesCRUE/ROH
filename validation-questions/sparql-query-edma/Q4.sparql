@@ -6,7 +6,7 @@ SELECT ?centre (COUNT(?seal) AS ?numberOfSeals) WHERE {
   ?centre a ?centerClass ; # get entities of type ResearchInstitute
           roh:hasAccreditation  ?seal . # with property hasSealOfQuality
   ?seal a roh:SealOfQuality.
-Filter(?centerClass = roh:ResearchInstitute || ?centerClass = roh:ResearchGroup)
+  Filter(?centerClass = roh:ResearchInstitute || ?centerClass = roh:ResearchGroup)
 }
 GROUP BY ?centre
 ORDER BY DESC(?numberOfSeals)

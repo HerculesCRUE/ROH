@@ -5,14 +5,16 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
 prefix vivo: <http://purl.org/roh_edma/mirror/vivo#>
 prefix bibo: <http://purl.org/roh_edma/mirror/bibo#>
 select (count( ?knowledgeArea) AS ?n_knowledgeArea)  ?knowledgeArea
-where {{
+where {
+{
  ?sujeto a vivo:Project;
-    roh:hasKnowledgeArea ?knowledgeArea. }
-  UNION{
-      ?sujeto a roh:ResearchObject;
+            roh:hasKnowledgeArea ?knowledgeArea. 
+} UNION{
+    ?sujeto a roh:ResearchObject;
           roh:hasKnowledgeArea ?knowledgeArea
-    }
-} GRoup by ?knowledgeArea
+}
+} 
+Group by ?knowledgeArea
 ORDER by desc( ?n_knowledgeArea)
 
 

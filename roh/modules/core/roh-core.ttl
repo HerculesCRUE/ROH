@@ -579,11 +579,6 @@ obo:RO_0000057 rdf:type owl:ObjectProperty .
 ###  http://purl.org/roh_edma#correspondingOrganization
 :correspondingOrganization rdf:type owl:ObjectProperty ;
                            owl:inverseOf :correspondingOrganizationOf ;
-                           rdfs:domain [ rdf:type owl:Class ;
-                                         owl:unionOf ( :ResearchResult
-                                                       iao:IAO_0000030
-                                                     )
-                                       ] ;
                            rdfs:range foaf:Organization ;
                            rdfs:label "correspondingOrganization"@en .
 
@@ -591,11 +586,6 @@ obo:RO_0000057 rdf:type owl:ObjectProperty .
 ###  http://purl.org/roh_edma#correspondingOrganizationOf
 :correspondingOrganizationOf rdf:type owl:ObjectProperty ;
                              rdfs:domain foaf:Organization ;
-                             rdfs:range [ rdf:type owl:Class ;
-                                          owl:unionOf ( :ResearchResult
-                                                        iao:IAO_0000030
-                                                      )
-                                        ] ;
                              rdfs:label "correspondingOrganizationOf"@en .
 
 
@@ -1409,7 +1399,6 @@ obo:RO_0000057 rdf:type owl:ObjectProperty .
 
 ###  http://purl.org/roh_edma#softwareStatus
 :softwareStatus rdf:type owl:ObjectProperty ;
-                rdfs:subPropertyOf owl:topObjectProperty ;
                 rdfs:domain ero:ERO_0000071 ;
                 rdfs:range [ rdf:type owl:Class ;
                              owl:unionOf ( :Final
@@ -1503,7 +1492,7 @@ bibo:authorList rdf:type owl:ObjectProperty ;
                                          )
                            ] ;
                 rdfs:comment "An ordered list of authors. Normally, this list is seen as a priority list that order authors by importance."@en ;
-                rdfs:isDefinedBy "http://purl.org/roh/mirror/bibo#"^^xsd:anyURI ;
+                rdfs:isDefinedBy "http://purl.org/roh_edma/mirror/bibo#"^^xsd:anyURI ;
                 rdfs:label "list of authors"@en ,
                            "lista de authores"@es ;
                 ns:term_status "stable" .
@@ -1512,7 +1501,7 @@ bibo:authorList rdf:type owl:ObjectProperty ;
 ###  http://purl.org/roh_edma/mirror/bibo#contributorList
 bibo:contributorList rdf:type owl:ObjectProperty ;
                      rdfs:comment "An ordered list of contributors. Normally, this list is seen as a priority list that order contributors by importance."@en ;
-                     rdfs:isDefinedBy "http://purl.org/roh/mirror/bibo#"^^xsd:anyURI ;
+                     rdfs:isDefinedBy "http://purl.org/roh_edma/mirror/bibo#"^^xsd:anyURI ;
                      rdfs:label "list of contributors"@en ,
                                 "lista de contribuidores"@es ;
                      ns:term_status "stable" .
@@ -1522,7 +1511,7 @@ bibo:contributorList rdf:type owl:ObjectProperty ;
 bibo:distributor rdf:type owl:ObjectProperty ;
                  rdfs:comment "Distribuidor de un documento o colección de documentos."@es ,
                               "Distributor of a document or a collection of documents."@en ;
-                 rdfs:isDefinedBy "http://purl.org/roh/mirror/bibo#"^^xsd:anyURI ;
+                 rdfs:isDefinedBy "http://purl.org/roh_edma/mirror/bibo#"^^xsd:anyURI ;
                  rdfs:label "distribuidor"@es ,
                             "distributor"@en .
 
@@ -1537,7 +1526,7 @@ bibo:editorList rdf:type owl:ObjectProperty ;
                                          )
                            ] ;
                 rdfs:comment "An ordered list of editors. Normally, this list is seen as a priority list that order editors by importance."@en ;
-                rdfs:isDefinedBy "http://purl.org/roh/mirror/bibo#"^^xsd:anyURI ;
+                rdfs:isDefinedBy "http://purl.org/roh_edma/mirror/bibo#"^^xsd:anyURI ;
                 rdfs:label "list of editors"@en ,
                            "lista de editores"@es ;
                 ns:term_status "stable" .
@@ -1546,7 +1535,7 @@ bibo:editorList rdf:type owl:ObjectProperty ;
 ###  http://purl.org/roh_edma/mirror/bibo#presentedAt
 bibo:presentedAt rdf:type owl:ObjectProperty ;
                  rdfs:comment "Relates a document to an event; for example, a paper to a conference."@en ;
-                 rdfs:isDefinedBy "http://purl.org/roh/mirror/bibo#"^^xsd:anyURI ;
+                 rdfs:isDefinedBy "http://purl.org/roh_edma/mirror/bibo#"^^xsd:anyURI ;
                  rdfs:label "presentado en"@es ,
                             "presented at"@en .
 
@@ -1554,7 +1543,7 @@ bibo:presentedAt rdf:type owl:ObjectProperty ;
 ###  http://purl.org/roh_edma/mirror/bibo#presents
 bibo:presents rdf:type owl:ObjectProperty ;
               rdfs:comment "Relates an event to associated documents; for example, conference to a paper."@en ;
-              rdfs:isDefinedBy "http://purl.org/roh/mirror/bibo#"^^xsd:anyURI ;
+              rdfs:isDefinedBy "http://purl.org/roh_edma/mirror/bibo#"^^xsd:anyURI ;
               rdfs:label "presenta"@es ,
                          "presents"@en .
 
@@ -1563,7 +1552,7 @@ bibo:presents rdf:type owl:ObjectProperty ;
 foaf:depiction rdf:type owl:ObjectProperty ;
                rdfs:comment "A depiction of some thing." ,
                             "La representación de un objeto."@es ;
-               rdfs:isDefinedBy <http://purl.org/roh/mirror/foaf#> ;
+               rdfs:isDefinedBy foaf: ;
                rdfs:label "depiction" ,
                           "representación"@es .
 
@@ -1576,7 +1565,7 @@ foaf:homepage rdf:type owl:ObjectProperty ;
               rdfs:domain owl:Thing ;
               rdfs:range bibo:Document ;
               rdfs:comment "A homepage for some thing." ;
-              rdfs:isDefinedBy <http://purl.org/roh/mirror/foaf#> ;
+              rdfs:isDefinedBy foaf: ;
               rdfs:label "homepage" ,
                          "página web"@es ;
               ns:term_status "stable" .
@@ -1589,7 +1578,7 @@ foaf:img rdf:type owl:ObjectProperty ;
          rdfs:range foaf:Image ;
          rdfs:comment "An image that can be used to represent some thing (ie. those depictions which are particularly representative of something, eg. one's photo on a homepage)." ,
                       "Una imagen puede utilizarse para representar algún objeto (es decir, aquellas representaciones que son particularmente representativas de algo, p.ej. una foto en una la página de inicio de una web)."@es ;
-         rdfs:isDefinedBy <http://purl.org/roh/mirror/foaf#> ;
+         rdfs:isDefinedBy foaf: ;
          rdfs:label "image" ,
                     "imagen"@es ;
          ns:term_status "testing" .
@@ -1598,7 +1587,7 @@ foaf:img rdf:type owl:ObjectProperty ;
 ###  http://purl.org/roh_edma/mirror/foaf#isPrimaryTopicOf
 foaf:isPrimaryTopicOf rdf:type owl:ObjectProperty ;
                       rdfs:comment "A document that this thing is the primary topic of." ;
-                      rdfs:isDefinedBy <http://purl.org/roh/mirror/foaf#> ;
+                      rdfs:isDefinedBy foaf: ;
                       rdfs:label "es el tema principal de"@es ,
                                  "is primary topic of" .
 
@@ -1609,7 +1598,7 @@ foaf:mbox rdf:type owl:ObjectProperty ,
           rdfs:domain foaf:Agent ;
           rdfs:range iao:IAO_0000030 ;
           rdfs:comment "A  personal mailbox, ie. an Internet mailbox associated with exactly one owner, the first owner of this mailbox. This is a 'static inverse functional property', in that  there is (across time and change) at most one individual that ever has any particular value for foaf:mbox." ;
-          rdfs:isDefinedBy <http://purl.org/roh/mirror/foaf#> ;
+          rdfs:isDefinedBy foaf: ;
           rdfs:label "buzón personal"@es ,
                      "personal mailbox" ;
           ns:term_status "stable" .
@@ -1618,7 +1607,7 @@ foaf:mbox rdf:type owl:ObjectProperty ,
 ###  http://purl.org/roh_edma/mirror/foaf#page
 foaf:page rdf:type owl:ObjectProperty ;
           rdfs:comment "A page or document about this thing." ;
-          rdfs:isDefinedBy <http://purl.org/roh/mirror/foaf#> ;
+          rdfs:isDefinedBy foaf: ;
           rdfs:label "page" ,
                      "página"@es .
 
@@ -2581,7 +2570,7 @@ bibo:issue rdf:type owl:DatatypeProperty ;
            rdfs:range rdfs:Literal ;
            obo:IAO_0000112 "Bibo has the domain of bibo:issue as the class Issue, but an example on their site uses it with Article, referring to the issue number \"4\"" ;
            rdfs:comment "An issue number"@en ;
-           rdfs:isDefinedBy "http://purl.org/roh/mirror/bibo#"^^xsd:anyURI ;
+           rdfs:isDefinedBy "http://purl.org/roh_edma/mirror/bibo#"^^xsd:anyURI ;
            rdfs:label "issue"@en ,
                       "número"@es ;
            ns:term_status "stable" .
@@ -2614,7 +2603,7 @@ bibo:pageEnd rdf:type owl:DatatypeProperty ;
              rdfs:domain bibo:Document ;
              rdfs:range rdfs:Literal ;
              rdfs:comment "Ending page number within a continuous page range."@en ;
-             rdfs:isDefinedBy "http://purl.org/roh/mirror/bibo#"^^xsd:anyURI ;
+             rdfs:isDefinedBy "http://purl.org/roh_edma/mirror/bibo#"^^xsd:anyURI ;
              rdfs:label "end page"@en ,
                         "page end"@en ,
                         "página fin"@es ;
@@ -2627,7 +2616,7 @@ bibo:pageStart rdf:type owl:DatatypeProperty ;
                rdfs:domain bibo:Document ;
                rdfs:range rdfs:Literal ;
                rdfs:comment "Starting page number within a continuous page range."@en ;
-               rdfs:isDefinedBy "http://purl.org/roh/mirror/bibo#"^^xsd:anyURI ;
+               rdfs:isDefinedBy "http://purl.org/roh_edma/mirror/bibo#"^^xsd:anyURI ;
                rdfs:label "page start"@en ,
                           "página inicio"@es ,
                           "start page"@en ;
@@ -2640,7 +2629,7 @@ bibo:volume rdf:type owl:DatatypeProperty ;
             rdfs:domain bibo:Document ;
             rdfs:range rdfs:Literal ;
             rdfs:comment "A volume number"@en ;
-            rdfs:isDefinedBy "http://purl.org/roh/mirror/bibo#"^^xsd:anyURI ;
+            rdfs:isDefinedBy "http://purl.org/roh_edma/mirror/bibo#"^^xsd:anyURI ;
             rdfs:label "volume"@en ,
                        "volumen"@es ;
             ns:term_status "stable" .
@@ -2651,7 +2640,7 @@ foaf:firstName rdf:type owl:DatatypeProperty ;
                rdfs:domain foaf:Person ;
                rdfs:range rdfs:Literal ;
                rdfs:comment "The first name of a person." ;
-               rdfs:isDefinedBy <http://purl.org/roh/mirror/foaf#> ;
+               rdfs:isDefinedBy foaf: ;
                rdfs:label "firstName" ,
                           "nombre de pila"@es ;
                ns:term_status "testing" .
@@ -2663,7 +2652,7 @@ foaf:gender rdf:type owl:DatatypeProperty ,
             rdfs:domain foaf:Person ;
             rdfs:range rdfs:Literal ;
             rdfs:comment "The gender of this Agent (typically but not necessarily 'male' or 'female')." ;
-            rdfs:isDefinedBy <http://purl.org/roh/mirror/foaf#> ;
+            rdfs:isDefinedBy foaf: ;
             rdfs:label "gender" ,
                        "género"@es ;
             ns:term_status "testing" .
@@ -2674,7 +2663,7 @@ foaf:name rdf:type owl:DatatypeProperty ;
           rdfs:domain owl:Thing ;
           rdfs:range rdfs:Literal ;
           rdfs:comment "A name for some thing." ;
-          rdfs:isDefinedBy <http://purl.org/roh/mirror/foaf#> ;
+          rdfs:isDefinedBy foaf: ;
           rdfs:label "name" ,
                      "nombre"@es ;
           ns:term_status "testing" .
@@ -2683,7 +2672,7 @@ foaf:name rdf:type owl:DatatypeProperty ;
 ###  http://purl.org/roh_edma/mirror/foaf#nick
 foaf:nick rdf:type owl:DatatypeProperty ;
           rdfs:comment "A short informal nickname characterising an agent (includes login identifiers, IRC and other chat nicknames)." ;
-          rdfs:isDefinedBy <http://purl.org/roh/mirror/foaf#> ;
+          rdfs:isDefinedBy foaf: ;
           rdfs:label "apodo/alias"@es ,
                      "nickname" ;
           ns:term_status "testing" .
@@ -2694,7 +2683,7 @@ foaf:surname rdf:type owl:DatatypeProperty ;
              rdfs:domain foaf:Person ;
              rdfs:range rdfs:Literal ;
              rdfs:comment "The surname of some person." ;
-             rdfs:isDefinedBy <http://purl.org/roh/mirror/foaf#> ;
+             rdfs:isDefinedBy foaf: ;
              rdfs:label "apellido"@es ,
                         "surname"@en ;
              ns:term_status "archaic" .
@@ -2703,7 +2692,7 @@ foaf:surname rdf:type owl:DatatypeProperty ;
 ###  http://purl.org/roh_edma/mirror/foaf#title
 foaf:title rdf:type owl:DatatypeProperty ;
            rdfs:comment "Title (Mr, Mrs, Ms, Dr. etc)" ;
-           rdfs:isDefinedBy <http://purl.org/roh/mirror/foaf#> ;
+           rdfs:isDefinedBy foaf: ;
            rdfs:label "title" ,
                       "título personal"@es ;
            ns:term_status "testing" .
@@ -5099,7 +5088,7 @@ bibo:AcademicArticle rdf:type owl:Class ;
                      obo:IAO_0000112 "A specific academic journal article" ;
                      obo:IAO_0000115 "Written by scholars for other scholars, typically published in an academic journal with an abstract and bibliography" ;
                      rdfs:comment "A scholarly academic article, typically published in a journal."@en ;
-                     rdfs:isDefinedBy "http://purl.org/roh/mirror/bibo#"^^xsd:anyURI ;
+                     rdfs:isDefinedBy "http://purl.org/roh_edma/mirror/bibo#"^^xsd:anyURI ;
                      rdfs:label "Academic Article"@en ,
                                 "Artículo Académico"@es ;
                      ns:term_status "stable" .
@@ -5124,7 +5113,7 @@ bibo:Article rdf:type owl:Class ;
                              "Short Definition modified from the bibo ontology." ;
              obo:IAO_0000115 "A written composition in prose, usually nonfiction, on a specific topic, forming an independent part of a periodical or book" ;
              rdfs:comment "A written composition in prose, usually nonfiction, on a specific topic, forming an independent part of a book or other publication, as a newspaper or magazine."@en ;
-             rdfs:isDefinedBy "http://purl.org/roh/mirror/bibo#"^^xsd:anyURI ;
+             rdfs:isDefinedBy "http://purl.org/roh_edma/mirror/bibo#"^^xsd:anyURI ;
              rdfs:label "Article"@en ,
                         "Artículo"@es ;
              ns:term_status "stable" ;
@@ -5164,7 +5153,7 @@ bibo:Book rdf:type owl:Class ;
           obo:IAO_0000112 "Short Definition copied from bibo ontology" ;
           obo:IAO_0000115 "A written or printed work of fiction or nonfiction, usually on sheets of paper fastened or bound together within covers" ;
           rdfs:comment "A written or printed work of fiction or nonfiction, usually on sheets of paper fastened or bound together within covers."@en ;
-          rdfs:isDefinedBy "http://purl.org/roh/mirror/bibo#"^^xsd:anyURI ;
+          rdfs:isDefinedBy "http://purl.org/roh_edma/mirror/bibo#"^^xsd:anyURI ;
           rdfs:label "Book"@en ,
                      "Libro"@es ,
                      "Livre"@fr ,
@@ -5197,7 +5186,7 @@ bibo:BookSection rdf:type owl:Class ;
                  obo:IAO_0000112 "Short Definition from the bibo ontology" ;
                  obo:IAO_0000115 "A section of a book" ;
                  rdfs:comment "A section of a book."@en ;
-                 rdfs:isDefinedBy "http://purl.org/roh/mirror/bibo#"^^xsd:anyURI ;
+                 rdfs:isDefinedBy "http://purl.org/roh_edma/mirror/bibo#"^^xsd:anyURI ;
                  rdfs:label "Book Section"@en ,
                             "Sección de Libro"@es ;
                  ns:term_status "unstable" .
@@ -5208,7 +5197,7 @@ bibo:Chapter rdf:type owl:Class ;
              rdfs:subClassOf bibo:BookSection ;
              obo:IAO_0000115 "A main division of a book" ;
              rdfs:comment "A chapter of a book."@en ;
-             rdfs:isDefinedBy "http://purl.org/roh/mirror/bibo#"^^xsd:anyURI ;
+             rdfs:isDefinedBy "http://purl.org/roh_edma/mirror/bibo#"^^xsd:anyURI ;
              rdfs:label "Capítulo"@es ,
                         "Chapter"@en ;
              ns:term_status "unstable" .
@@ -5227,7 +5216,7 @@ bibo:CollectedDocument rdf:type owl:Class ;
                                        ] ;
                        rdfs:comment "A document consisting of collections of previously published works."@en ,
                                     "A document that simultaneously contains other documents."@en ;
-                       rdfs:isDefinedBy "http://purl.org/roh/mirror/bibo#"^^xsd:anyURI ;
+                       rdfs:isDefinedBy "http://purl.org/roh_edma/mirror/bibo#"^^xsd:anyURI ;
                        rdfs:label "Collected Document"@en ,
                                   "Collected document"@en ,
                                   "Documento Contenedor"@es ;
@@ -5248,7 +5237,7 @@ bibo:Collection rdf:type owl:Class ;
                              """ResearchObjects related to publication concept are based on types defined by BIBO ontology. Currently, the following set of publication-related entities are supported: bibo: bibo:Collection (Periodical, Journal, Magazine)
 
 This is a type of roh:ResearchObjects related to publication concept. It is based on types defined by BIBO ontology. Currently, the following set of publication-related entities are supported: bibo: bibo:Collection (Periodical, Journal, Magazine) and bibo:Document (Article, ConferencePaper, EditorialArticle, Book, Proceedings, ConferencePaper, Chapter, Thesis) and obo:Software. bibo:Thesis has been refined into roh:BachelorsThesis, roh:MastersThesis and roh:PhDThesis. Notably a new subclass of bibo:Collection named roh:Dossier has been created. Under such collection can be included the reports usually associated to a project, e.g.  roh:EthicalReport, roh:EvaluationSummary, roh:Justification, vivo:ResearchProposal. A roh:Dossier is bound through object property vivo:relates with a vivo:Project""" ;
-                rdfs:isDefinedBy "http://purl.org/roh/mirror/bibo#"^^xsd:anyURI ;
+                rdfs:isDefinedBy "http://purl.org/roh_edma/mirror/bibo#"^^xsd:anyURI ;
                 rdfs:label "Colección"@es ,
                            "Collection"@en ;
                 ns:term_status "stable" .
@@ -5266,7 +5255,7 @@ bibo:Conference rdf:type owl:Class ;
                 obo:IAO_0000115 "A meeting for consultation or discussion." ;
                 rdfs:comment "A meeting for consultation or discussion."@en ,
                              "A meeting for consultation or discussion. [Source: http://purl.org/ontology/bibo/Conference]"@en ;
-                rdfs:isDefinedBy "http://purl.org/roh/mirror/bibo#"^^xsd:anyURI ;
+                rdfs:isDefinedBy "http://purl.org/roh_edma/mirror/bibo#"^^xsd:anyURI ;
                 rdfs:label "Conference"@en ,
                            "Conferencia"@es ;
                 ns:term_status "stable" .
@@ -5362,7 +5351,7 @@ bibo:Document rdf:type owl:Class ;
                            """ResearchObjects related to publication concept are based on types defined by BIBO ontology. Currently, the following set of publication-related entities are supported: bibo:Document (Article, ConferencePaper, EditorialArticle, Book, Proceedings, ConferencePaper, Chapter, Thesis)
 
 This is a type of roh:ResearchObjects related to publication concept. It is based on types defined by BIBO ontology. Currently, the following set of publication-related entities are supported: bibo: bibo:Collection (Periodical, Journal, Magazine) and bibo:Document (Article, ConferencePaper, EditorialArticle, Book, Proceedings, ConferencePaper, Chapter, Thesis) and obo:Software. bibo:Thesis has been refined into roh:BachelorsThesis, roh:MastersThesis and roh:PhDThesis. Notably a new subclass of bibo:Collection named roh:Dossier has been created. Under such collection can be included the reports usually associated to a project, e.g.  roh:EthicalReport, roh:EvaluationSummary, roh:Justification, vivo:ResearchProposal. A roh:Dossier is bound through object property vivo:relates with a vivo:Project""" ;
-              rdfs:isDefinedBy "http://purl.org/roh/mirror/bibo#"^^xsd:anyURI ;
+              rdfs:isDefinedBy "http://purl.org/roh_edma/mirror/bibo#"^^xsd:anyURI ;
               rdfs:label "Academic publication"@en ,
                          "Document"@en ,
                          "Documento"@es ,
@@ -5410,7 +5399,7 @@ bibo:DocumentPart rdf:type owl:Class ;
                   obo:IAO_0000112 "Short Definition from the bibo ontology" ;
                   obo:IAO_0000115 "A distinct part of a larger document or collected document" ;
                   rdfs:comment "a distinct part of a larger document or collected document."@en ;
-                  rdfs:isDefinedBy "http://purl.org/roh/mirror/bibo#"^^xsd:anyURI ;
+                  rdfs:isDefinedBy "http://purl.org/roh_edma/mirror/bibo#"^^xsd:anyURI ;
                   rdfs:label "Document Part"@en ,
                              "Parte de Documento"@es ;
                   ns:term_status "unstable" .
@@ -5421,7 +5410,7 @@ bibo:EditedBook rdf:type owl:Class ;
                 rdfs:subClassOf bibo:CollectedDocument ;
                 owl:disjointWith bibo:Issue ;
                 rdfs:comment "An edited book."@en ;
-                rdfs:isDefinedBy "http://purl.org/roh/mirror/bibo#"^^xsd:anyURI ;
+                rdfs:isDefinedBy "http://purl.org/roh_edma/mirror/bibo#"^^xsd:anyURI ;
                 rdfs:label "Edited Book"@en ,
                            "Libro Editado"@es ;
                 ns:term_status "stable" .
@@ -5433,7 +5422,7 @@ bibo:Hearing rdf:type owl:Class ;
              obo:IAO_0000112 "Definiton from Bibo here: http://bibotools.googlecode.com/svn/bibo-ontology/trunk/doc/index.html" ;
              obo:IAO_0000115 "An instance or a session in which testimony and arguments are presented, esp. before an official, as a judge in a lawsuit." ;
              rdfs:comment "An instance or a session in which testimony and arguments are presented, esp. before an official, as a judge in a lawsuit."@en ;
-             rdfs:isDefinedBy "http://purl.org/roh/mirror/bibo#"^^xsd:anyURI ;
+             rdfs:isDefinedBy "http://purl.org/roh_edma/mirror/bibo#"^^xsd:anyURI ;
              rdfs:label "Audición"@es ,
                         "Hearing"@en ;
              ns:term_status "stable" .
@@ -5445,7 +5434,7 @@ bibo:Interview rdf:type owl:Class ;
                obo:IAO_0000112 "radio or newspaper interview" ;
                obo:IAO_0000115 "A conversation between two or more people where questions are asked by the interviewer to obtain information from the interviewee." ;
                rdfs:comment "A formalized discussion between two or more people."@en ;
-               rdfs:isDefinedBy "http://purl.org/roh/mirror/bibo#"^^xsd:anyURI ;
+               rdfs:isDefinedBy "http://purl.org/roh_edma/mirror/bibo#"^^xsd:anyURI ;
                rdfs:label "Entrevista"@es ,
                           "Interview"@en ;
                ns:term_status "stable" .
@@ -5463,7 +5452,7 @@ bibo:Issue rdf:type owl:Class ;
                              owl:minCardinality "1"^^xsd:nonNegativeInteger
                            ] ;
            rdfs:comment "something that is printed or published and distributed, esp. a given number of a periodical"@en ;
-           rdfs:isDefinedBy "http://purl.org/roh/mirror/bibo#"^^xsd:anyURI ;
+           rdfs:isDefinedBy "http://purl.org/roh_edma/mirror/bibo#"^^xsd:anyURI ;
            rdfs:label "Issue"@en ,
                       "Número"@es ;
            ns:term_status "stable" .
@@ -5481,7 +5470,7 @@ bibo:Journal rdf:type owl:Class ;
                              "Journal of Information Science; IEEE Intelligent System; Scientometrics" ;
              obo:IAO_0000115 "Contains original scholarly research or review articles by experts in the field" ;
              rdfs:comment "A periodical of scholarly journal Articles."@en ;
-             rdfs:isDefinedBy "http://purl.org/roh/mirror/bibo#"^^xsd:anyURI ;
+             rdfs:isDefinedBy "http://purl.org/roh_edma/mirror/bibo#"^^xsd:anyURI ;
              rdfs:label "Journal"@en ,
                         "Publicación de Impacto"@es ;
              ns:term_status "stable" .
@@ -5494,7 +5483,7 @@ bibo:Magazine rdf:type owl:Class ;
                               "New Yorker" ;
               obo:IAO_0000115 "Contains articles of current events or general interest, geared to the reading public as being informative or recreational" ;
               rdfs:comment "A periodical of magazine Articles. A magazine is a publication that is issued periodically, usually bound in a paper cover, and typically contains essays, stories, poems, etc., by many writers, and often photographs and drawings, frequently specializing in a particular subject or area, as hobbies, news, or sports."@en ;
-              rdfs:isDefinedBy "http://purl.org/roh/mirror/bibo#"^^xsd:anyURI ;
+              rdfs:isDefinedBy "http://purl.org/roh_edma/mirror/bibo#"^^xsd:anyURI ;
               rdfs:label "Magazine"@en ,
                          "Revista"@es ;
               ns:term_status "stable" .
@@ -5559,7 +5548,7 @@ bibo:Patent rdf:type owl:Class ;
             obo:IAO_0000115 "(from BIBO) A document describing the exclusive right granted by a government to an inventor to manufacture, use, or sell an invention for a certain number of years" ;
             rdfs:comment "A document describing the exclusive right granted by a government to an inventor to manufacture, use, or sell an invention for a certain number of years."@en ,
                          "A form of intellectual property that gives its owner the legal right to exclude others from making, using, selling and importing an invention for a limited period of years, in exchange for publishing an enabling public disclosure of the invention."@en ;
-            rdfs:isDefinedBy "http://purl.org/roh/mirror/bibo#"^^xsd:anyURI ;
+            rdfs:isDefinedBy "http://purl.org/roh_edma/mirror/bibo#"^^xsd:anyURI ;
             rdfs:label "Patent"@ca-ad ,
                        "Patent"@ca-es ,
                        "Patent"@en ,
@@ -5583,7 +5572,7 @@ bibo:Performance rdf:type owl:Class ;
                  rdfs:subClassOf :Activity ;
                  obo:IAO_0000115 "Something carried out, acted or rendered." ;
                  rdfs:comment "A public performance."@en ;
-                 rdfs:isDefinedBy "http://purl.org/roh/mirror/bibo#"^^xsd:anyURI ;
+                 rdfs:isDefinedBy "http://purl.org/roh_edma/mirror/bibo#"^^xsd:anyURI ;
                  rdfs:label "Actuación"@es ,
                             "Performance"@en ;
                  ns:term_status "unstable" .
@@ -5605,7 +5594,7 @@ bibo:Periodical rdf:type owl:Class ;
                                   owl:allValuesFrom rdfs:Literal
                                 ] ;
                 rdfs:comment "A group of related documents issued at regular intervals."@en ;
-                rdfs:isDefinedBy "http://purl.org/roh/mirror/bibo#"^^xsd:anyURI ;
+                rdfs:isDefinedBy "http://purl.org/roh_edma/mirror/bibo#"^^xsd:anyURI ;
                 rdfs:label "Periodical"@en ,
                            "Revista Periódica"@es ;
                 ns:term_status "stable" .
@@ -5618,7 +5607,7 @@ bibo:Proceedings rdf:type owl:Class ;
                  obo:IAO_0000115 "A compilation of documents published from an event, such as a conference" ;
                  rdfs:comment "A book integrated by a compilation of documents published from an event, such as a conference."@en ,
                               "A compilation of documents published from an event, such as a conference."@en ;
-                 rdfs:isDefinedBy "http://purl.org/roh/mirror/bibo#"^^xsd:anyURI ;
+                 rdfs:isDefinedBy "http://purl.org/roh_edma/mirror/bibo#"^^xsd:anyURI ;
                  rdfs:label "Actas"@es ,
                             "Proceedings"@en ;
                  ns:term_status "unstable" .
@@ -5643,7 +5632,7 @@ bibo:Report rdf:type owl:Class ;
             obo:IAO_0000115 "A document describing an account or statement describing in detail an event, situation, or the like, usually as the result of observation, inquiry, etc." ;
             rdfs:comment "A document describing an account or statement describing in detail an event, situation, or the like, usually as the result of observation, inquiry, etc."@en ,
                          "A document describing an account or statement describing in detail an event, situation, or the like, usually as the result of observation, inquiry, etc.."@en ;
-            rdfs:isDefinedBy "http://purl.org/roh/mirror/bibo#"^^xsd:anyURI ;
+            rdfs:isDefinedBy "http://purl.org/roh_edma/mirror/bibo#"^^xsd:anyURI ;
             rdfs:label "Report"@en ,
                        "Reporte"@es ;
             ns:term_status "stable" .
@@ -5664,7 +5653,7 @@ bibo:Thesis rdf:type owl:Class ;
             obo:IAO_0000115 "Works created to satisfy the requirements for an academic certification or degree; also called dissertation" ;
             rdfs:comment "A document created to summarize research findings associated with the completion of an academic degree."@en ,
                          "Any kind of thesis (bachelor's, master's, PhD) produced to receive some sort of university degree."@en ;
-            rdfs:isDefinedBy "http://purl.org/roh/mirror/bibo#"^^xsd:anyURI ;
+            rdfs:isDefinedBy "http://purl.org/roh_edma/mirror/bibo#"^^xsd:anyURI ;
             rdfs:label "Tese"@gl ,
                        "Tese"@pt ,
                        "Tesi"@ca-ad ,
@@ -5689,7 +5678,7 @@ bibo:Webpage rdf:type owl:Class ;
              rdfs:subClassOf bibo:Document ;
              obo:IAO_0000115 "One section of a website that appears at a unique address within the parent site's address or URL on the World Wide Web" ;
              rdfs:comment "A web page is an online document available (at least initially) on the world wide web. A web page is written first and foremost to appear on the web, as distinct from other online resources such as books, manuscripts or audio documents which use the web primarily as a distribution mechanism alongside other more traditional methods such as print."@en ;
-             rdfs:isDefinedBy "http://purl.org/roh/mirror/bibo#"^^xsd:anyURI ;
+             rdfs:isDefinedBy "http://purl.org/roh_edma/mirror/bibo#"^^xsd:anyURI ;
              rdfs:label "Página web"@es ,
                         "Webpage"@en ;
              ns:term_status "unstable" .
@@ -5700,7 +5689,7 @@ bibo:Workshop rdf:type owl:Class ;
               rdfs:subClassOf :Activity ;
               obo:IAO_0000115 "Bibo Definition: A seminar, discussion group, or the like, that emphasizes exchange of ideas and the demonstration and application of techniques, skills, etc." ;
               rdfs:comment "A seminar, discussion group, or the like, that emphasizes zxchange of ideas and the demonstration and application of techniques, skills, etc."@en ;
-              rdfs:isDefinedBy "http://purl.org/roh/mirror/bibo#"^^xsd:anyURI ;
+              rdfs:isDefinedBy "http://purl.org/roh_edma/mirror/bibo#"^^xsd:anyURI ;
               rdfs:label "Seminario"@es ,
                          "Workshop"@en ;
               ns:term_status "stable" .
@@ -5740,7 +5729,7 @@ foaf:Group rdf:type owl:Class ;
 foaf:Image rdf:type owl:Class ;
            rdfs:subClassOf bibo:Document ;
            rdfs:comment "An image." ;
-           rdfs:isDefinedBy <http://purl.org/roh/mirror/foaf#> ;
+           rdfs:isDefinedBy foaf: ;
            rdfs:label "Image" ,
                       "Imagen"@es ;
            ns:term_status "stable" .
@@ -5853,7 +5842,7 @@ Besides, an instance of a foaf:Organization is associated to the following entit
 - foaf:Organization, where a foaf:Organization may be linked through vivo:hasSucessorOrganization or vivo:hasPredecessorOrganization with another foaf:Organization or may be part of (vivo:partOf) or include (vivo:hasPart) other several foaf:Organization.""" ,
                                "An organization" ,
                                "An organization." ;
-                  rdfs:isDefinedBy <http://purl.org/roh/mirror/foaf#> ;
+                  rdfs:isDefinedBy foaf: ;
                   rdfs:label "Organización"@es ,
                              "Organization" ,
                              "Organization"@en ;
@@ -5996,7 +5985,7 @@ Besides, an instance of a foaf:Person / roh:Researcher is associated to the foll
 - roh:Role, where a foaf:Agent, i.e. and its subclasses like foaf:Person or roh:Researcher, roh:hasRole like vivo:ResearcherRole or vivo:TeacherRole either in a roh:Project or a foaf:Organization.
 - roh:PersonContract, where a researcher roh:hasContract described according to the attributes corresponding to parent class vivo:Contract.
 - bibo:Thesis, where a researcher is roh:supervisor of a bibo:Thesis, concretely, any of its subtypes  subclasess like roh:MastersThesis or roh:PhDThesis.""" ;
-            rdfs:isDefinedBy <http://purl.org/roh/mirror/foaf#> ;
+            rdfs:isDefinedBy foaf: ;
             rdfs:label "Person" ,
                        "Person"@en ,
                        "Persona"@es ;
@@ -6033,21 +6022,21 @@ bfo:BFO_0000015 rdf:type owl:Class ;
                 obo:IAO_0000115 "p is a process = Def. p is an occurrent that has temporal proper parts and for some time t, p s-depends_on some material entity at t. (axiom label in BFO2 Reference: [083-003])"@en ;
                 obo:IAO_0000116 "BFO 2 Reference: The realm of occurrents is less pervasively marked by the presence of natural units than is the case in the realm of independent continuants. Thus there is here no counterpart of ‘object’. In BFO 1.0 ‘process’ served as such a counterpart. In BFO 2.0 ‘process’ is, rather, the occurrent counterpart of ‘material entity’. Those natural – as contrasted with engineered, which here means: deliberately executed – units which do exist in the realm of occurrents are typically either parasitic on the existence of natural units on the continuant side, or they are fiat in nature. Thus we can count lives; we can count football games; we can count chemical reactions performed in experiments or in chemical manufacturing. We cannot count the processes taking place, for instance, in an episode of insect mating behavior.Even where natural units are identifiable, for example cycles in a cyclical process such as the beating of a heart or an organism’s sleep/wake cycle, the processes in question form a sequence with no discontinuities (temporal gaps) of the sort that we find for instance where billiard balls or zebrafish or planets are separated by clear spatial gaps. Lives of organisms are process units, but they too unfold in a continuous series from other, prior processes such as fertilization, and they unfold in turn in continuous series of post-life processes such as post-mortem decay. Clear examples of boundaries of processes are almost always of the fiat sort (midnight, a time of death as declared in an operating theater or on a death certificate, the initiation of a state of war)"@en ;
                 obo:IAO_0000602 "(iff (Process a) (and (Occurrent a) (exists (b) (properTemporalPartOf b a)) (exists (c t) (and (MaterialEntity c) (specificallyDependsOnAt a c t))))) // axiom label in BFO2 CLIF: [083-003] " ;
-                rdfs:isDefinedBy <http://purl.org/roh/mirror/obo/bfo#BFO.owl> ;
+                rdfs:isDefinedBy bfo:BFO.owl ;
                 rdfs:label "process"@en .
 
 [ rdf:type owl:Axiom ;
    owl:annotatedSource bfo:BFO_0000015 ;
    owl:annotatedProperty obo:IAO_0000115 ;
    owl:annotatedTarget "p is a process = Def. p is an occurrent that has temporal proper parts and for some time t, p s-depends_on some material entity at t. (axiom label in BFO2 Reference: [083-003])"@en ;
-   obo:IAO_0010000 <http://purl.org/roh/mirror/obo/bfo#BFO/axiom/083-003>
+   obo:IAO_0010000 <http://purl.org/roh_edma/mirror/obo/bfo#BFO/axiom/083-003>
  ] .
 
 [ rdf:type owl:Axiom ;
    owl:annotatedSource bfo:BFO_0000015 ;
    owl:annotatedProperty obo:IAO_0000602 ;
    owl:annotatedTarget "(iff (Process a) (and (Occurrent a) (exists (b) (properTemporalPartOf b a)) (exists (c t) (and (MaterialEntity c) (specificallyDependsOnAt a c t))))) // axiom label in BFO2 CLIF: [083-003] " ;
-   obo:IAO_0010000 <http://purl.org/roh/mirror/obo/bfo#BFO/axiom/083-003>
+   obo:IAO_0010000 <http://purl.org/roh_edma/mirror/obo/bfo#BFO/axiom/083-003>
  ] .
 
 
@@ -6080,6 +6069,7 @@ bfo:BFO_0000023 rdf:type owl:Class ;
                                   owl:onProperty vivo:relatedBy ;
                                   owl:allValuesFrom [ rdf:type owl:Class ;
                                                       owl:unionOf ( :PatentApplication
+                                                                    bfo:BFO_0000023
                                                                     vivo:Project
                                                                     vivo:Relationship
                                                                   )
@@ -6145,7 +6135,7 @@ ero:ERO_0000005 rdf:type owl:Class ;
                                 ] ;
                 obo:IAO_0000111 "service" ;
                 obo:IAO_0000112 "A DNA sequencing service performed by a core lab." ;
-                obo:IAO_0000114 <http://purl.org/roh/mirror/obo/iao#IAO_0000120> ;
+                obo:IAO_0000114 iao:IAO_0000120 ;
                 obo:IAO_0000115 "An information content entity that describes a service performed by a person or organization with the objective of performing a technique, providing training, providing storage of data or material entities, or providing access to resources for another person or organization" ;
                 obo:IAO_0000117 "PERSON: Melissa Haendel" ;
                 obo:IAO_0000119 "PERSON: Melissa Haendel" ;
@@ -6249,7 +6239,7 @@ ero:ERO_0000071 rdf:type owl:Class ;
                                 ] ;
                 obo:IAO_0000111 "software" ;
                 obo:IAO_0000112 "Microsoft Word is commonly used word processing software." ;
-                obo:IAO_0000114 <http://purl.org/roh/mirror/obo/iao#IAO_0000120> ;
+                obo:IAO_0000114 iao:IAO_0000120 ;
                 obo:IAO_0000115 "A general term primarily used for digitally stored data such as computer programs and other kinds of information read and written by computers." ;
                 obo:IAO_0000117 "PERSON: Melissa Haendel" ;
                 obo:IAO_0000119 "http://en.wikipedia.org/wiki/Computer_software" ;
@@ -6262,7 +6252,7 @@ ero:ERO_0000071 rdf:type owl:Class ;
 ero:ERO_0000224 rdf:type owl:Class ;
                 rdfs:subClassOf bfo:BFO_0000023 ;
                 obo:IAO_0000112 "The NIH is a funding agency." ;
-                obo:IAO_0000114 <http://purl.org/roh/mirror/obo/iao#IAO_0000120> ;
+                obo:IAO_0000114 iao:IAO_0000120 ;
                 obo:IAO_0000115 "A role inhering in a person or organization that is realized when the bearer participates in providing funding to a person or an organization for academic or business purposes." ;
                 obo:IAO_0000117 "PERSON: Nicole Vasilevsky" ;
                 obo:IAO_0000119 "PERSON: Nicole Vasilevsky" ;
@@ -6274,7 +6264,7 @@ ero:ERO_0000224 rdf:type owl:Class ;
 ero:ERO_0000225 rdf:type owl:Class ;
                 rdfs:subClassOf bfo:BFO_0000023 ;
                 obo:IAO_0000112 "A teacher." ;
-                obo:IAO_0000114 <http://purl.org/roh/mirror/obo/iao#IAO_0000120> ;
+                obo:IAO_0000114 iao:IAO_0000120 ;
                 obo:IAO_0000115 "A role inhering in a person or organization that is realized when the bearer participates in providing education to a student or group of students." ;
                 obo:IAO_0000117 "PERSON: Nicole Vasilevsky" ;
                 obo:IAO_0000119 "PERSON: Nicole Vasilevsky" ;
@@ -6286,7 +6276,7 @@ ero:ERO_0000225 rdf:type owl:Class ;
 ero:ERO_0000391 rdf:type owl:Class ;
                 rdfs:subClassOf ero:ERO_0000005 ;
                 obo:IAO_0000112 "Allowing access to a microscope in a core lab." ;
-                obo:IAO_0000114 <http://purl.org/roh/mirror/obo/iao#IAO_0000120> ;
+                obo:IAO_0000114 iao:IAO_0000120 ;
                 obo:IAO_0000115 "A service offering that describes a service in which the consumer receives the right to use a resource (instrument, database, software, etc) that is owned or managed by a service provider.  Ownership of the accessed resource remains with the service provider during and after provision of service." ;
                 obo:IAO_0000117 "PERSON: Matt Brush" ;
                 obo:IAO_0000119 "PERSON: Matthew Brush" ;
@@ -6299,7 +6289,7 @@ ero:ERO_0000391 rdf:type owl:Class ;
 ero:ERO_0000392 rdf:type owl:Class ;
                 rdfs:subClassOf ero:ERO_0000005 ;
                 obo:IAO_0000112 "A computer server." ;
-                obo:IAO_0000114 <http://purl.org/roh/mirror/obo/iao#IAO_0000120> ;
+                obo:IAO_0000114 iao:IAO_0000120 ;
                 obo:IAO_0000115 "A service offering that describes a service in which the consumer provides some material or data as input which a service provider stores and returns as output." ;
                 obo:IAO_0000117 "PERSON: Matt Brush" ;
                 obo:IAO_0000119 "PERSON: Matthew Brush" ;
@@ -6312,7 +6302,7 @@ ero:ERO_0000392 rdf:type owl:Class ;
 ero:ERO_0000393 rdf:type owl:Class ;
                 rdfs:subClassOf ero:ERO_0000005 ;
                 obo:IAO_0000112 "Training a researcher to use a microscope." ;
-                obo:IAO_0000114 <http://purl.org/roh/mirror/obo/iao#IAO_0000120> ;
+                obo:IAO_0000114 iao:IAO_0000120 ;
                 obo:IAO_0000115 "A service offering that describes a service in which the provider offers educational materials or events, such as courses, workshops or graduate programs, to the service consumer" ;
                 obo:IAO_0000117 "PERSON: Matt Brush" ;
                 obo:IAO_0000119 "PERSON: Matthew Brush" ;
@@ -6325,7 +6315,7 @@ ero:ERO_0000393 rdf:type owl:Class ;
 ero:ERO_0000394 rdf:type owl:Class ;
                 rdfs:subClassOf ero:ERO_0000005 ;
                 obo:IAO_0000112 "Biopsy service." ;
-                obo:IAO_0000114 <http://purl.org/roh/mirror/obo/iao#IAO_0000120> ;
+                obo:IAO_0000114 iao:IAO_0000120 ;
                 obo:IAO_0000115 "A service offering that describes a service in which the provider makes physical changes to a specified input material entity with the objective of producing a new material entity form input materials, or modifying the input material entity, and returning this as output to the service consumer" ;
                 obo:IAO_0000117 "PERSON: Nicole Vasilevsky" ;
                 obo:IAO_0000119 "http://neurolex.org/wiki/Category:Production_service_resource" ;
@@ -6339,7 +6329,7 @@ ero:ERO_0000395 rdf:type owl:Class ;
                 rdfs:subClassOf ero:ERO_0001261 ;
                 owl:disjointWith ero:ERO_0001262 ;
                 obo:IAO_0000112 "Flow cytometry analysis of T cells." ;
-                obo:IAO_0000114 <http://purl.org/roh/mirror/obo/iao#IAO_0000120> ;
+                obo:IAO_0000114 iao:IAO_0000120 ;
                 obo:IAO_0000115 "An analysis service offering that describes a service in which the consumer provides some input material and a service provider performs some analysis of this material to generate data that is returned to the service consumer." ;
                 obo:IAO_0000117 "PERSON: Nicole Vasilevsky" ;
                 obo:IAO_0000119 "http://neurolex.org/wiki/Category:Analysis_service_resource" ;
@@ -6353,7 +6343,7 @@ ero:ERO_0000396 rdf:type owl:Class ;
                 rdfs:subClassOf ero:ERO_0000394 ;
                 owl:disjointWith ero:ERO_0001263 ;
                 obo:IAO_0000112 "Production of monoclonal antibodies from a hybridoma." ;
-                obo:IAO_0000114 <http://purl.org/roh/mirror/obo/iao#IAO_0000120> ;
+                obo:IAO_0000114 iao:IAO_0000120 ;
                 obo:IAO_0000115 "A material processing service offering that describes a service in which the provider makes physical changes to a specified input material that produce a new entity as specified output that is returned the service consumer.  The specified output of a material production service can be contained within, derived from, or synthesized from specified input materials, but it represents a material entity that is of a distinct type from any of the specified input materials." ;
                 obo:IAO_0000117 "PERSON: Matthew Brush" ;
                 obo:IAO_0000119 "http://neurolex.org/wiki/Category:Material_service_resource" ;
@@ -6366,7 +6356,7 @@ ero:ERO_0000396 rdf:type owl:Class ;
 ero:ERO_0000783 rdf:type owl:Class ;
                 rdfs:subClassOf bfo:BFO_0000023 ;
                 obo:IAO_0000112 "A college student." ;
-                obo:IAO_0000114 <http://purl.org/roh/mirror/obo/iao#IAO_0000120> ;
+                obo:IAO_0000114 iao:IAO_0000120 ;
                 obo:IAO_0000115 "A role inhering in a person that is realized when the bearer participates a course of study, as in a school, college, university, etc." ;
                 obo:IAO_0000117 "PERSON: Nicole Vasilevsky" ;
                 obo:IAO_0000119 "http://www.thefreedictionary.com/student" ;
@@ -6378,7 +6368,7 @@ ero:ERO_0000783 rdf:type owl:Class ;
 ero:ERO_0000784 rdf:type owl:Class ;
                 rdfs:subClassOf ero:ERO_0000783 ;
                 obo:IAO_0000112 "A college student." ;
-                obo:IAO_0000114 <http://purl.org/roh/mirror/obo/iao#IAO_0000120> ;
+                obo:IAO_0000114 iao:IAO_0000120 ;
                 obo:IAO_0000115 "A student role inhering in a person that is realized when the bearer participates in a course of study at a college, university, etc. in pursuit of an associate or bachelor's degree." ;
                 obo:IAO_0000117 "PERSON: Nicole Vasilevsky" ;
                 obo:IAO_0000119 "http://www.thefreedictionary.com/student" ;
@@ -6390,7 +6380,7 @@ ero:ERO_0000784 rdf:type owl:Class ;
 ero:ERO_0000785 rdf:type owl:Class ;
                 rdfs:subClassOf ero:ERO_0000783 ;
                 obo:IAO_0000112 "A PhD student at a university." ;
-                obo:IAO_0000114 <http://purl.org/roh/mirror/obo/iao#IAO_0000120> ;
+                obo:IAO_0000114 iao:IAO_0000120 ;
                 obo:IAO_0000115 "A student role inhering in a person that is realized when the bearer participates a course of study at a university or institution in pursuit of an graduate or professional degree." ;
                 obo:IAO_0000117 "PERSON: Nicole Vasilevsky" ;
                 obo:IAO_0000119 "http://www.thefreedictionary.com/student" ;
@@ -6402,7 +6392,7 @@ ero:ERO_0000785 rdf:type owl:Class ;
 ero:ERO_0000786 rdf:type owl:Class ;
                 rdfs:subClassOf ero:ERO_0000783 ;
                 obo:IAO_0000112 "A freshman in high school." ;
-                obo:IAO_0000114 <http://purl.org/roh/mirror/obo/iao#IAO_0000120> ;
+                obo:IAO_0000114 iao:IAO_0000120 ;
                 obo:IAO_0000115 "A student role inhering in a person that is realized when the bearer participates in a course of study at a secondary learning institution." ;
                 obo:IAO_0000117 "PERSON: Nicole Vasilevsky" ;
                 obo:IAO_0000119 "http://www.thefreedictionary.com/student" ;
@@ -6414,7 +6404,7 @@ ero:ERO_0000786 rdf:type owl:Class ;
 ero:ERO_0000787 rdf:type owl:Class ;
                 rdfs:subClassOf bfo:BFO_0000023 ;
                 obo:IAO_0000112 "An employee at a university." ;
-                obo:IAO_0000114 <http://purl.org/roh/mirror/obo/iao#IAO_0000120> ;
+                obo:IAO_0000114 iao:IAO_0000120 ;
                 obo:IAO_0000115 "A role inhering in a person that is realized when the bearer participates in an occupation by which a person earns a living or spends their time." ;
                 obo:IAO_0000117 "PERSON: Nicole Vasilevsky" ;
                 obo:IAO_0000119 "http://dictionary.reference.com/browse/employment" ;
@@ -6426,7 +6416,7 @@ ero:ERO_0000787 rdf:type owl:Class ;
 ero:ERO_0000788 rdf:type owl:Class ;
                 rdfs:subClassOf ero:ERO_0000787 ;
                 obo:IAO_0000112 "A professor at a university." ;
-                obo:IAO_0000114 <http://purl.org/roh/mirror/obo/iao#IAO_0000120> ;
+                obo:IAO_0000114 iao:IAO_0000120 ;
                 obo:IAO_0000115 "An employee role inhering in a person that is realized when the bearer participates in the teaching and/or administrative force of a university, college, or school." ;
                 obo:IAO_0000117 "PERSON: Nicole Vasilevsky" ;
                 obo:IAO_0000119 "http://dictionary.reference.com/browse/faculty" ;
@@ -6438,7 +6428,7 @@ ero:ERO_0000788 rdf:type owl:Class ;
 ero:ERO_0000789 rdf:type owl:Class ;
                 rdfs:subClassOf ero:ERO_0000787 ;
                 obo:IAO_0000112 "A research technician in a lab." ;
-                obo:IAO_0000114 <http://purl.org/roh/mirror/obo/iao#IAO_0000120> ;
+                obo:IAO_0000114 iao:IAO_0000120 ;
                 obo:IAO_0000115 "An employee role inhering in a person that is realized when the bearer is employed by an employer." ;
                 obo:IAO_0000117 "PERSON: Nicole Vasilevsky" ;
                 obo:IAO_0000119 "PERSON: Nicole Vasilevsky" ;
@@ -6449,7 +6439,7 @@ ero:ERO_0000789 rdf:type owl:Class ;
 ###  http://purl.org/roh_edma/mirror/obo/ero#ERO_0000790
 ero:ERO_0000790 rdf:type owl:Class ;
                 rdfs:subClassOf ero:ERO_0000783 ;
-                obo:IAO_0000114 <http://purl.org/roh/mirror/obo/iao#IAO_0000123> ;
+                obo:IAO_0000114 iao:IAO_0000123 ;
                 obo:IAO_0000115 "A student role inhering in a person that is realized when the bearer participates in a post-baccalaureate training program in pursuit of an additional bachelor's degree or new or additional training in a particular field." ;
                 obo:IAO_0000117 "PERSON: Nicole Vasilevsky" ;
                 obo:IAO_0000119 "PERSON: Nicole Vasilevsky" ;
@@ -6461,7 +6451,7 @@ ero:ERO_0000790 rdf:type owl:Class ;
 ero:ERO_0000914 rdf:type owl:Class ;
                 rdfs:subClassOf ero:ERO_0000783 ;
                 obo:IAO_0000112 "A post-doctoral fellow." ;
-                obo:IAO_0000114 <http://purl.org/roh/mirror/obo/iao#IAO_0000120> ;
+                obo:IAO_0000114 iao:IAO_0000120 ;
                 obo:IAO_0000115 "A student role inhering in a person that is realized when the bearer participates in a post-graduate training program in pursuit of new or additional training in a particular field, such as a post-doctoral fellowship." ;
                 obo:IAO_0000117 "PERSON: Nicole Vasilevsky" ;
                 obo:IAO_0000119 "PERSON: Nicole Vasilevsky" ;
@@ -6473,7 +6463,7 @@ ero:ERO_0000914 rdf:type owl:Class ;
 ero:ERO_0001254 rdf:type owl:Class ;
                 rdfs:subClassOf ero:ERO_0000005 ;
                 obo:IAO_0000112 "Transport of a patient within a hospital." ;
-                obo:IAO_0000114 <http://purl.org/roh/mirror/obo/iao#IAO_0000120> ;
+                obo:IAO_0000114 iao:IAO_0000120 ;
                 obo:IAO_0000115 "A service offering that describes a service in which the provider facilitates the transport of some material entity to a specified destination for the service consumer." ;
                 obo:IAO_0000117 "PERSON: Matt Brush" ;
                 obo:IAO_0000119 "PERSON: Matthew Brush" ;
@@ -6485,7 +6475,7 @@ ero:ERO_0001254 rdf:type owl:Class ;
 ero:ERO_0001255 rdf:type owl:Class ;
                 rdfs:subClassOf ero:ERO_0000005 ;
                 obo:IAO_0000112 "Technical support." ;
-                obo:IAO_0000114 <http://purl.org/roh/mirror/obo/iao#IAO_0000120> ;
+                obo:IAO_0000114 iao:IAO_0000120 ;
                 obo:IAO_0000115 "A service offering that describes a service in which the provider assists the consumer in activities directly or indirectly associated with the production and analysis or experimental research data." ;
                 obo:IAO_0000117 "PERSON: Matt Brush" ;
                 obo:IAO_0000119 "PERSON: Matthew Brush" ;
@@ -6498,7 +6488,7 @@ ero:ERO_0001256 rdf:type owl:Class ;
                 rdfs:subClassOf ero:ERO_0000392 ;
                 owl:disjointWith ero:ERO_0001257 ;
                 obo:IAO_0000112 "Cryopreservation service." ;
-                obo:IAO_0000114 <http://purl.org/roh/mirror/obo/iao#IAO_0000120> ;
+                obo:IAO_0000114 iao:IAO_0000120 ;
                 obo:IAO_0000115 "A storage service offering that describes a service in which the consumer provides some material as input which a service provider stores and returns as output" ;
                 obo:IAO_0000117 "PERSON: Matt Brush" ;
                 obo:IAO_0000119 "PERSON: Matthew Brush" ;
@@ -6510,7 +6500,7 @@ ero:ERO_0001256 rdf:type owl:Class ;
 ero:ERO_0001257 rdf:type owl:Class ;
                 rdfs:subClassOf ero:ERO_0000392 ;
                 obo:IAO_0000112 "Storing data on a server." ;
-                obo:IAO_0000114 <http://purl.org/roh/mirror/obo/iao#IAO_0000120> ;
+                obo:IAO_0000114 iao:IAO_0000120 ;
                 obo:IAO_0000115 "A storage service offering that describes a service in which the consumer provides data as input, which a service provider stores and returns as output in its original form." ;
                 obo:IAO_0000117 "PERSON: Matt Brush" ;
                 obo:IAO_0000119 "PERSON: Matthew Brush" ;
@@ -6521,7 +6511,7 @@ ero:ERO_0001257 rdf:type owl:Class ;
 ###  http://purl.org/roh_edma/mirror/obo/ero#ERO_0001258
 ero:ERO_0001258 rdf:type owl:Class ;
                 rdfs:subClassOf ero:ERO_0000005 ;
-                obo:IAO_0000114 <http://purl.org/roh/mirror/obo/iao#IAO_0000123> ;
+                obo:IAO_0000114 iao:IAO_0000123 ;
                 obo:IAO_0000115 "A service offering that describes a service in which the provider actively maintains a material or data resource (e.g. a model organism colony or database) for the service consumer.  This may involved making physical alterations to the material or data with the goal of maintaining its integrity or features." ;
                 obo:IAO_0000117 "PERSON: Matt Brush" ;
                 obo:IAO_0000119 "PERSON: Matthew Brush" ;
@@ -6534,7 +6524,7 @@ ero:ERO_0001259 rdf:type owl:Class ;
                 rdfs:subClassOf ero:ERO_0001258 ;
                 owl:disjointWith ero:ERO_0001260 ;
                 obo:IAO_0000112 "Maintaining an animal coloy." ;
-                obo:IAO_0000114 <http://purl.org/roh/mirror/obo/iao#IAO_0000120> ;
+                obo:IAO_0000114 iao:IAO_0000120 ;
                 obo:IAO_0000115 "A maintenance service offering that describes a service in which the provider actively maintains a material resource (e.g. a model organism colony) for the service consumer.  A material maintenance service may or may not include storage of the material input." ;
                 obo:IAO_0000117 "PERSON: Matt Brush" ;
                 obo:IAO_0000119 "PERSON: Matthew Brush" ;
@@ -6546,7 +6536,7 @@ ero:ERO_0001259 rdf:type owl:Class ;
 ero:ERO_0001260 rdf:type owl:Class ;
                 rdfs:subClassOf ero:ERO_0001258 ;
                 obo:IAO_0000112 "Maintaining a database." ;
-                obo:IAO_0000114 <http://purl.org/roh/mirror/obo/iao#IAO_0000120> ;
+                obo:IAO_0000114 iao:IAO_0000120 ;
                 obo:IAO_0000115 "A maintenance service offering that describes a service in which the provider actively manages or maintains data or a database for the service consumer.  Maintenance of the data is performed to maintain its integrity or enhance its quality or utility for the consumer, but new data is not generated as a result of the maintenance." ;
                 obo:IAO_0000117 "PERSON: Matt Brush" ;
                 obo:IAO_0000119 "PERSON: Matthew Brush" ;
@@ -6558,7 +6548,7 @@ ero:ERO_0001260 rdf:type owl:Class ;
 ero:ERO_0001261 rdf:type owl:Class ;
                 rdfs:subClassOf ero:ERO_0000005 ;
                 obo:IAO_0000112 "Flow cytometry analysis service." ;
-                obo:IAO_0000114 <http://purl.org/roh/mirror/obo/iao#IAO_0000120> ;
+                obo:IAO_0000114 iao:IAO_0000120 ;
                 obo:IAO_0000115 "A service offering that describes a service in which the consumer provides some input material or data and a service provider returns data about the input material or data." ;
                 obo:IAO_0000117 "PERSON: Matt Brush" ;
                 obo:IAO_0000119 "PERSON: Matthew Brush" ;
@@ -6570,7 +6560,7 @@ ero:ERO_0001261 rdf:type owl:Class ;
 ero:ERO_0001262 rdf:type owl:Class ;
                 rdfs:subClassOf ero:ERO_0001261 ;
                 obo:IAO_0000112 "Sequence data analysis." ;
-                obo:IAO_0000114 <http://purl.org/roh/mirror/obo/iao#IAO_0000120> ;
+                obo:IAO_0000114 iao:IAO_0000120 ;
                 obo:IAO_0000115 "An analysis service offering that describes a service in which the consumer provides some input data and a service provider transforms, models, or interprets the input data and returns this generated data as output" ;
                 obo:IAO_0000117 "PERSON: Matt Brush" ;
                 obo:IAO_0000118 "data processing service" ,
@@ -6584,7 +6574,7 @@ ero:ERO_0001262 rdf:type owl:Class ;
 ero:ERO_0001263 rdf:type owl:Class ;
                 rdfs:subClassOf ero:ERO_0000394 ;
                 obo:IAO_0000112 "Histology service." ;
-                obo:IAO_0000114 <http://purl.org/roh/mirror/obo/iao#IAO_0000120> ;
+                obo:IAO_0000114 iao:IAO_0000120 ;
                 obo:IAO_0000115 "A material processing service offering that describes a service in which the provider makes physical modifications to a specified input material, such that at least one of the specified outputs of this process is a modified version of a specified input material." ;
                 obo:IAO_0000117 "PERSON: Matt Brush" ;
                 obo:IAO_0000119 "PERSON: Matthew Brush" ;
@@ -6605,13 +6595,13 @@ iao:IAO_0000013 rdf:type owl:Class ;
                                 ] ;
                 obo:IAO_0000111 "journal article"@en ;
                 obo:IAO_0000112 "Examples are articles published in the journals, Nature and Science. The content can often be cited by reference to a paper based encoding, e.g.  Authors, Title of article, Journal name, date or year of publication, volume and page number."@en ;
-                obo:IAO_0000114 <http://purl.org/roh/mirror/obo/iao#IAO_0000120> ;
+                obo:IAO_0000114 iao:IAO_0000120 ;
                 obo:IAO_0000115 "a report that is published in a journal"@en ;
                 obo:IAO_0000117 "person:Alan Ruttenberg"@en ,
                                 "person:Chris Stoeckert"@en ;
                 obo:IAO_0000119 "OBI_0000159"@en ,
                                 "group:OBI"@en ;
-                obo:IAO_0000412 <http://purl.org/roh/mirror/obo/iao#IAO.owl> ;
+                obo:IAO_0000412 iao:IAO.owl ;
                 rdfs:label "Artículo de Revista de Impacto"@es ,
                            "Journal Article"@en .
 
@@ -6661,7 +6651,7 @@ iao:IAO_0000582 rdf:type owl:Class ;
 <http://purl.org/roh_edma/mirror/vcard#Group> rdf:type owl:Class ;
                                               rdfs:subClassOf <http://purl.org/roh_edma/mirror/vcard#Kind> ;
                                               rdfs:comment "Object representing a group of persons or entities.  A group object will usually contain hasMember properties to specify the members of the group."@en ;
-                                              rdfs:isDefinedBy <http://purl.org/roh/mirror/vcard> ;
+                                              rdfs:isDefinedBy <http://purl.org/roh_edma/mirror/vcard> ;
                                               rdfs:label "Group"@en ,
                                                          "Grupo"@es .
 
@@ -6670,7 +6660,7 @@ iao:IAO_0000582 rdf:type owl:Class ;
 <http://purl.org/roh_edma/mirror/vcard#Individual> rdf:type owl:Class ;
                                                    rdfs:subClassOf <http://purl.org/roh_edma/mirror/vcard#Kind> ;
                                                    rdfs:comment "An object representing a single person or entity"@en ;
-                                                   rdfs:isDefinedBy <http://purl.org/roh/mirror/vcard> ;
+                                                   rdfs:isDefinedBy <http://purl.org/roh_edma/mirror/vcard> ;
                                                    rdfs:label "Individual"@en ,
                                                               "Individual"@es .
 
@@ -6678,7 +6668,7 @@ iao:IAO_0000582 rdf:type owl:Class ;
 ###  http://purl.org/roh_edma/mirror/vcard#Kind
 <http://purl.org/roh_edma/mirror/vcard#Kind> rdf:type owl:Class ;
                                              rdfs:comment "The parent class for all objects"@en ;
-                                             rdfs:isDefinedBy <http://purl.org/roh/mirror/vcard> ;
+                                             rdfs:isDefinedBy <http://purl.org/roh_edma/mirror/vcard> ;
                                              rdfs:label "Kind"@en ,
                                                         "Tipo"@es .
 
@@ -6687,7 +6677,7 @@ iao:IAO_0000582 rdf:type owl:Class ;
 <http://purl.org/roh_edma/mirror/vcard#Location> rdf:type owl:Class ;
                                                  rdfs:subClassOf <http://purl.org/roh_edma/mirror/vcard#Kind> ;
                                                  rdfs:comment "An object representing a named geographical place"@en ;
-                                                 rdfs:isDefinedBy <http://purl.org/roh/mirror/vcard> ;
+                                                 rdfs:isDefinedBy <http://purl.org/roh_edma/mirror/vcard> ;
                                                  rdfs:label "Localización"@es ,
                                                             "Location"@en .
 
@@ -6700,7 +6690,7 @@ iao:IAO_0000582 rdf:type owl:Class ;
 <http://purl.org/roh_edma/mirror/vcard#Organization> rdf:type owl:Class ;
                                                      rdfs:subClassOf <http://purl.org/roh_edma/mirror/vcard#Kind> ;
                                                      rdfs:comment "An object representing an organization.  An organization is a single entity, and might represent a business or government, a department or division within a business or government, a club, an association, or the like."@en ;
-                                                     rdfs:isDefinedBy <http://purl.org/roh/mirror/vcard> ;
+                                                     rdfs:isDefinedBy <http://purl.org/roh_edma/mirror/vcard> ;
                                                      rdfs:label "Organización"@es ,
                                                                 "Organization"@en .
 
@@ -6741,7 +6731,7 @@ vivo:AcademicDepartment rdf:type owl:Class ;
                         rdfs:subClassOf vivo:Department ;
                         obo:IAO_0000112 "Endodontics (department within a College of Dentistry); English (department within a College of Liberal Arts)" ;
                         obo:IAO_0000115 "A distinct, usually specialized educational unit within an educational organization." ;
-                        obo:IAO_0000412 <http://purl.org/roh/mirror/vivo> ;
+                        obo:IAO_0000412 <http://purl.org/roh_edma/mirror/vivo> ;
                         rdfs:label "Academic Department"@en ,
                                    "Departamento Académico"@es .
 
@@ -6906,7 +6896,7 @@ vivo:Center rdf:type owl:Class ;
                             "Short Definition take from http://www.thefreedictionary.com/center." ;
             obo:IAO_0000115 "A place where a particular activity or service is concentrated." ,
                             "An organization where a specified activity is concentrated." ;
-            obo:IAO_0000412 <http://purl.org/roh/mirror/vivo> ;
+            obo:IAO_0000412 <http://purl.org/roh_edma/mirror/vivo> ;
             rdfs:label "Center"@en ,
                        "Centro"@es .
 
@@ -6958,7 +6948,7 @@ vivo:Company rdf:type owl:Class ;
              obo:IAO_0000112 "from Wikipedia: \"A company is a form of business organization. It is an association or collection of individual real persons and/or other companies ... This collection, group or association of persons can be made to exist in law and then a company is itself considered a \"legal person\". The name company arose because, at least originally, it represented or was owned by more than one real or legal person.\"" ;
              obo:IAO_0000115 "A legally-recognized business organization" ,
                              "A legally-recognized business organization." ;
-             obo:IAO_0000412 <http://purl.org/roh/mirror/vivo> ;
+             obo:IAO_0000412 <http://purl.org/roh_edma/mirror/vivo> ;
              rdfs:comment "A corporation or business organization which makes goods (in a broad sense) in an organized manner and sells them to the public for profit."@en ,
                           "Uma organização com personalidade jurídica, a qual dispõe dos médios necessários para a produção e obtenção de bens ou serviços destinados ao intercâmbio."@pt ,
                           "Una organització amb personalitat jurídica, la qual disposa dels mitjans necessaris per a la producció i es dedica a combinar-los per obtenir béns o serveis destinats a l'intercanvi."@ca ,
@@ -7015,7 +7005,7 @@ vivo:Consortium rdf:type owl:Class ;
                 rdfs:subClassOf foaf:Organization ;
                 obo:IAO_0000112 "Committee on Institutional Cooperation (CIC); The Five Colleges of Ohio" ;
                 obo:IAO_0000115 "A group  of independent organizations working together toward a common goal, under an expressed agreement." ;
-                obo:IAO_0000412 <http://purl.org/roh/mirror/vivo> ;
+                obo:IAO_0000412 <http://purl.org/roh_edma/mirror/vivo> ;
                 rdfs:label "Consorcio"@es ,
                            "Consortium"@en .
 
@@ -7163,7 +7153,7 @@ vivo:Department rdf:type owl:Class ;
                 obo:IAO_0000112 "Definition modified from the definition here: http://dictionary.reference.com/browse/department. It is difficult to tell the difference between and department and a division." ,
                                 "Legal (department within a company); Use for any non-academic department" ;
                 obo:IAO_0000115 "A unit within a larger organization that addresses a specific subject or area of activity." ;
-                obo:IAO_0000412 <http://purl.org/roh/mirror/vivo> ;
+                obo:IAO_0000412 <http://purl.org/roh_edma/mirror/vivo> ;
                 rdfs:label "Departamento"@es ,
                            "Department"@en .
 
@@ -7266,7 +7256,7 @@ vivo:Foundation rdf:type owl:Class ;
                 obo:IAO_0000112 "Definition take from: http://dictionary.reference.com/browse/foundation." ,
                                 "The Ford Foundation" ;
                 obo:IAO_0000115 "An institution founded with an endowment to support educational, research, artistic or other charitable activities." ;
-                obo:IAO_0000412 <http://purl.org/roh/mirror/vivo> ;
+                obo:IAO_0000412 <http://purl.org/roh_edma/mirror/vivo> ;
                 rdfs:label "Foundation"@en ,
                            "Fundación"@es .
 
@@ -7300,7 +7290,7 @@ vivo:FundingOrganization rdf:type owl:Class ;
                          obo:IAO_0000112 "National Institute of Health (NIH)" ;
                          obo:IAO_0000115 "A defined class of organizations that fund Grants" ,
                                          "An organization that provides financial support to individuals or organizations to carry out specified activities." ;
-                         obo:IAO_0000412 <http://purl.org/roh/mirror/vivo> ;
+                         obo:IAO_0000412 <http://purl.org/roh_edma/mirror/vivo> ;
                          rdfs:comment "A vivo:FundingOrganization inherits from foaf:Organization, it promotes (roh:promotes) a  roh:FundingSource who roh:funds a roh:FundingProgram. A roh:FundingProgram roh:funds with a roh:Funding linked to vivo:Projects through relationship roh:supports and through the roh:FundingAmounts in which is divided a roh:Funding, through roh:grants to different foaf:Organizations." ;
                          rdfs:label "Funding Organization"@en ,
                                     "Organización Financiadora"@es .
@@ -7312,7 +7302,7 @@ vivo:GovernmentAgency rdf:type owl:Class ;
                       obo:IAO_0000112 "Definition take from: http://en.wikipedia.org/wiki/Government_agency." ,
                                       "United States Library of Congress" ;
                       obo:IAO_0000115 "A unit of government responsible for oversight and regulation of certain activities or the administration and provision of specific services." ;
-                      obo:IAO_0000412 <http://purl.org/roh/mirror/vivo> ;
+                      obo:IAO_0000412 <http://purl.org/roh_edma/mirror/vivo> ;
                       rdfs:label "Agencia Gubernamental"@es ,
                                  "Government Agency"@en .
 
@@ -7331,7 +7321,7 @@ vivo:Institute rdf:type owl:Class ;
                obo:IAO_0000112 "Institute for Fundamental Theory" ;
                obo:IAO_0000115 "An Institute normally has a research focus but may also fulfill instructional or outreach roles" ,
                                "An organization founded to pursue or promote certain research, educational or public policy interests or activities." ;
-               obo:IAO_0000412 <http://purl.org/roh/mirror/vivo> ;
+               obo:IAO_0000412 <http://purl.org/roh_edma/mirror/vivo> ;
                rdfs:label "Institute"@en ,
                           "Instituto"@es .
 
@@ -7612,7 +7602,6 @@ vivo:Project rdf:type owl:Class ;
                                                    owl:unionOf ( :Dossier
                                                                  :EthicalReport
                                                                  :Justification
-                                                                 bfo:BFO_0000023
                                                                )
                                                  ]
                              ] ,
@@ -7729,7 +7718,7 @@ vivo:University rdf:type owl:Class ;
                 obo:IAO_0000112 "Definition taken from: http://en.wikipedia.org/wiki/University" ,
                                 "University of Florida; Washington University in St. Louis" ;
                 obo:IAO_0000115 "An institution of higher education and research, which grants academic degrees in a variety of subjects, and provides both undergraduate education and postgraduate education." ;
-                obo:IAO_0000412 <http://purl.org/roh/mirror/vivo> ;
+                obo:IAO_0000412 <http://purl.org/roh_edma/mirror/vivo> ;
                 rdfs:comment "A centre at which higher education and research is conducted."@en ;
                 rdfs:label "Unibertsitate"@eu ,
                            "Universidad"@es ,
@@ -7762,7 +7751,7 @@ skos:Concept rdf:type owl:Class ;
              skos1:definition "An abstract idea or notion; a unit of thought."@en ;
              rdfs:comment "Based on skos:Concept (https://www.w3.org/TR/skos-reference/). It has a main subclass, namely KnowledgeArea. vivo:freetextKeyword is a related DatatType property used to qualify: roh:Infrastructure, roh:Activity, roh:Funding, geonames:Feature, roh:Metrics, foaf:Organisation, vivo:Project, roh:ResearchObject among many other entities in ROH." ,
                           "Using SKOS, concepts can be identified using URIs, labeled with lexical strings in one or more natural languages, assigned notations (lexical codes), documented with various types of note, linked to other concepts and organized into informal hierarchies and association networks, aggregated into concept schemes, grouped into labeled and/or ordered collections, and mapped to concepts in other schemes." ;
-             rdfs:isDefinedBy <http://purl.org/roh/mirror/skos> ;
+             rdfs:isDefinedBy <http://purl.org/roh_edma/mirror/skos> ;
              rdfs:label "Concept"@en ,
                         "Concepto"@es .
 
@@ -7871,6 +7860,14 @@ skos:ConceptScheme rdf:type owl:Class ;
                 rdfs:label "TestChapterTwo"@en .
 
 
+###  http://purl.org/roh_edma#TestCoSupervisorRole
+:TestCoSupervisorRole rdf:type owl:NamedIndividual ,
+                               :SupervisorRole ;
+                      ro:RO_0000052 :TestPhdCoSupervisor ;
+                      vivo:relatedBy :TestPhDSupervisingRelationship ;
+                      rdfs:label "TestCoSupervisorRole"@en .
+
+
 ###  http://purl.org/roh_edma#TestDateTimeInterval
 :TestDateTimeInterval rdf:type owl:NamedIndividual ,
                                vivo:DateTimeInterval ;
@@ -7926,15 +7923,37 @@ skos:ConceptScheme rdf:type owl:Class ;
 
 
 ###  http://purl.org/roh_edma#TestOrganization
-:TestOrganization rdf:type owl:NamedIndividual ;
+:TestOrganization rdf:type owl:NamedIndividual ,
+                           foaf:Organization ;
                   rdfs:label "TestOrganization"@en .
+
+
+###  http://purl.org/roh_edma#TestPhDStudent
+:TestPhDStudent rdf:type owl:NamedIndividual ,
+                         foaf:Person ;
+                rdfs:label "TestPhDStudent"@en .
 
 
 ###  http://purl.org/roh_edma#TestPhDSupervisingRelationship
 :TestPhDSupervisingRelationship rdf:type owl:NamedIndividual ,
                                          :PhDSupervisingRelationship ;
                                 vivo:dateTimeInterval :TestDateTimeInterval ;
+                                vivo:relates :TestPhDStudent ,
+                                             :TestPhdCoSupervisor ,
+                                             :TestPhdSupervisor ;
                                 rdfs:label "TestPhDSupervisingRelationship"@en .
+
+
+###  http://purl.org/roh_edma#TestPhdCoSupervisor
+:TestPhdCoSupervisor rdf:type owl:NamedIndividual ,
+                              foaf:Person ;
+                     rdfs:label "TestPhdCoSupervisor"@en .
+
+
+###  http://purl.org/roh_edma#TestPhdSupervisor
+:TestPhdSupervisor rdf:type owl:NamedIndividual ,
+                            foaf:Person ;
+                   rdfs:label "TestPhdSupervisor"@en .
 
 
 ###  http://purl.org/roh_edma#TestProject
@@ -7953,6 +7972,7 @@ skos:ConceptScheme rdf:type owl:Class ;
 ###  http://purl.org/roh_edma#TestSuperviseeRole
 :TestSuperviseeRole rdf:type owl:NamedIndividual ,
                              :SuperviseeRole ;
+                    ro:RO_0000052 :TestPhDStudent ;
                     vivo:relatedBy :TestPhDSupervisingRelationship ;
                     rdfs:label "TestSuperviseeRole"@en .
 
@@ -7960,6 +7980,7 @@ skos:ConceptScheme rdf:type owl:Class ;
 ###  http://purl.org/roh_edma#TestSupervisorRole
 :TestSupervisorRole rdf:type owl:NamedIndividual ,
                              :SupervisorRole ;
+                    ro:RO_0000052 :TestPhdSupervisor ;
                     vivo:relatedBy :TestPhDSupervisingRelationship ;
                     rdfs:label "TestSupervisorRole"@en .
 
@@ -8056,8 +8077,8 @@ skos:ConceptScheme rdf:type owl:Class ;
 #    Annotations
 #################################################################
 
-<http://purl.org/roh/mirror/obo/bfo#BFO_0000004> rdfs:label "continuador independiente"@es ,
-                                                            "independent continuant"@en .
+bfo:BFO_0000004 rdfs:label "continuador independiente"@es ,
+                           "independent continuant"@en .
 
 
 #################################################################
@@ -8093,6 +8114,34 @@ skos:ConceptScheme rdf:type owl:Class ;
                 rdf:Seq
                 skos:Concept
                 skos:ConceptScheme
+              )
+] .
+
+
+[ rdf:type owl:AllDisjointClasses ;
+  owl:members ( obo:BFO_0000040
+                :Accreditation
+                :Expense
+                :Funding
+                :FundingAmount
+                :FundingProgram
+                :FundingSource
+                :Invention
+                :Metric
+                :Product
+                foaf:Agent
+                <http://purl.org/roh_edma/mirror/geonames#Feature>
+                bfo:BFO_0000008
+                bfo:BFO_0000023
+                ero:ERO_0000005
+                iao:IAO_0000030
+                <http://purl.org/roh_edma/mirror/vcard#Address>
+                <http://purl.org/roh_edma/mirror/vcard#Email>
+                <http://purl.org/roh_edma/mirror/vcard#Kind>
+                <http://purl.org/roh_edma/mirror/vcard#Name>
+                rdf:List
+                rdf:Seq
+                <http://www.w3.org/ns/oa#Annotation>
               )
 ] .
 

@@ -6,10 +6,11 @@ PREFIX foaf: <http://purl.org/roh_edma/mirror/foaf#>
 SELECT ?organization ?knowledgeArea (SUM(?monetaryAmount) as ?totalFunding) 
 WHERE {
 ?project a vivo:Project ;
-roh:hasKnowledgeArea ?knowledgeArea ;
-roh:isSupportedBy ?funding .
+        roh:hasKnowledgeArea ?knowledgeArea ;
+        roh:isSupportedBy ?funding .
 ?funding ro:BFO_0000051 ?fundingAmount .
 ?fundingAmount roh:monetaryAmount ?monetaryAmount ;
-roh:grants ?organization .
+r           oh:grants ?organization .
 ?organization a foaf:Organization .
-} GROUP BY ?organization ?knowledgeArea
+} 
+GROUP BY ?organization ?knowledgeArea

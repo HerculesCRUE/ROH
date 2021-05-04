@@ -9,19 +9,18 @@ PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
 prefix bfo: <http://purl.org/roh_edma/mirror/obo/bfo#> 
 SELECT DISTINCT  ?researcher ?organization  ?proyect 
 WHERE {
- ?researcher 
-             a foaf:Person.
+ ?researcher  a foaf:Person.
   ?proyect a vivo:Project;
            vivo:relates ?role;
            vivo:dateTimeInterval ?datetimeInterval.
-  ?datetimeInterval vivo:start ?dateStar;
-                    vivo:end ?dateend.
-    ?dateStar vivo:dateTime ?datestar .
-        ?dateend vivo:dateTime ?datend.
+  ?datetimeInterval vivo:start ?startTimeValue;
+                    vivo:end ?endTimeValue.
+  ?startTimeValue vivo:dateTime ?start .
+  ?endTimeValue vivo:dateTime ?end.
 
-    ?role roh:roleOf ?researcher;
+  ?role roh:roleOf ?researcher;
          ro:RO_0000052 ?organization.
-    ?organization a ?researchGroupClass. 
-    Filter( ?researchGroupClass = roh:ResearchGroup || ?researchGroupClass = roh:ResearchInstitute)
-  FILTER (YEAR(?datestar) >= "2015"^^xsd:integer && YEAR(?datend) <= "2022"^^xsd:integer )
+  ?organization a ?researchGroupClass. 
+  Filter( ?researchGroupClass = roh:ResearchGroup || ?researchGroupClass = roh:ResearchInstitute)
+  FILTER (YEAR(?start) >= "2015"^^xsd:integer && YEAR(?end) <= "2022"^^xsd:integer )
 }

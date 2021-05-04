@@ -8,27 +8,31 @@ prefix ro: <http://purl.org/obo/owl/ro#>
 prefix owl: <http://www.w3.org/2002/07/owl#>
 prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#>
 
-SELECT   ?researcher ?citas ?h_index ?i10_index (COUNT( distinct ?publicaciones) AS ?n_publicaciones) (COUNT( distinct ?publicaciones_autor_correspondiente) AS ?n_corresponding_author) 
+SELECT   ?researcher ?cites ?h_index ?i10_index (COUNT( distinct ?publication) AS ?n_publication)
+         (COUNT( distinct ?publication_correspondingAuthor) AS ?n_correspondingAuthor) 
 WHERE {
-?researcher	roh:hasKnowledgeArea uneskos:120304;
+  ?researcher	roh:hasKnowledgeArea uneskos:120304;
   			    roh:hasPosition  ?position;
             roh:hasMetric ?metric.
-   OPTIONAL{ ?publicaciones a bibo:Document;
-                           bibo:authorList+| roh:seqOfAuthors ?authorList.
-    ?authorList a rdf:Seq;
-                rdfs:member ?researcher.
-  }
-  OPTIONAL{ ?publicaciones_autor_correspondiente a bibo:Document;
-  roh:correspondingAuthor ?researcher.
-}
-OPTIONAL{?metric a roh:AuthorMetric;
-       roh:h-index ?h_index;
-        roh:i10-index ?i10_index;
-        roh:citationCount ?citas.}
-?position a roh:ResearcherPosition;
+  ?position a roh:ResearcherPosition;
             vivo:relates ?center.
-?center a ?centerClass.
-Filter(?centerClass = roh:ResearchGroup || ?centerClass=roh:ResearchInstitute)
-}GROUP BY ?researcher ?citas ?h_index ?i10_index 
-ORDER BY DESC(?citas + ?h_index + ?i10_index + ?n_publicaciones + ?n_corresponding_author)
+  ?center a ?centerClass.
+  
+  OPTIONAL{ ?publication a bibo:Document;
+                          bibo:authorList+| roh:seqOfAuthors ?authorList.
+            ?authorList a rdf:Seq;
+                          rdfs:member ?researcher.
+           }
+  OPTIONAL{ ?publication_correspondingAuthor a bibo:Document;
+                                     roh:correspondingAuthor ?researcher.
+          }
+  OPTIONAL{?metric a roh:AuthorMetric;
+                  roh:h-index ?h_index;
+                  roh:i10-index ?i10_index;
+                  roh:citationCount ?cites.}
+
+  Filter(?centerClass = roh:ResearchGroup || ?centerClass=roh:ResearchInstitute)
+}
+GROUP BY ?researcher ?cites ?h_index ?i10_index 
+ORDER BY DESC(?cites + ?h_index + ?i10_index + ?n_publication + ?n_correspondingAuthor)
 LIMIT 10

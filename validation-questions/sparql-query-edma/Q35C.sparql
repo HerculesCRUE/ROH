@@ -3,6 +3,6 @@ PREFIX vivo: <http://purl.org/roh_edma/mirror/vivo#>
 SELECT  ?project ?expense ?description 
 WHERE {
 ?project a vivo:Project ;
-roh:spends ?expense .
+        roh:spends ?expense .
 ?expense vivo:description ?description .
 }

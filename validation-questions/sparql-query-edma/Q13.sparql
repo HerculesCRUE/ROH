@@ -7,10 +7,11 @@ WHERE {
 ?dossier a roh:Dossier .
 ?dossier vivo:relates <http://purl.org/roh_edma/data#a-project>, ?document .
 ?document a ?documentType .
-?documentType rdfs:subClassOf bibo:Report .FILTER NOT EXISTS {
-?document a ?otherClass .
-?otherClass rdfs:subClassOf ?documentType .
-FILTER (?otherClass != ?documentType)
-}
+?documentType rdfs:subClassOf bibo:Report .
+
+FILTER NOT EXISTS {
+        ?document a ?otherClass .
+        ?otherClass rdfs:subClassOf ?documentType .
+    FILTER (?otherClass != ?documentType)}
 } 
 

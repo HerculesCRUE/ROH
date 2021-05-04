@@ -6,9 +6,9 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
 PREFIX vivo: <http://purl.org/roh_edma/mirror/vivo#>
 SELECT ?researcher ?journal ?impactFactor  WHERE {
 ?journal a iao:IAO_0000013 ;
-vivo:dateIssued ?dateTimeValue ;
-bibo:authorList+| roh:seqOfAuthors ?authorList ;
-roh:hasMetric ?metric .
+        vivo:dateIssued ?dateTimeValue ;
+        bibo:authorList+| roh:seqOfAuthors ?authorList ;
+        roh:hasMetric ?metric .
 ?dateTimeValue vivo:dateTime ?date .
 ?authorList rdfs:member ?researcher . 
 ?metric roh:impactFactor ?impactFactor .

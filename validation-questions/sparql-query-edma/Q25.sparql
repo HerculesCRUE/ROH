@@ -6,20 +6,21 @@ prefix bibo: <http://purl.org/roh_edma/mirror/bibo#>
 prefix ro: <http://purl.org/roh_edma/mirror/obo/ro#> 
 prefix foaf: <http://purl.org/roh_edma/mirror/foaf#>
 
-SELECT  distinct ?thesis ?classThesis ?alumno  ?profesor WHERE {
-?thesis a  ?classThesis;
-          a bibo:Thesis;
-       	  roh:correspondingAuthor ?alumno.
-
- ?alumno vivo:relatedBy ?posicion. 
-  ?posicion a roh:SupervisingRelationship;
+SELECT  distinct ?thesis ?classThesis ?student  ?supervisor
+WHERE { 
+    ?thesis a  ?classThesis;
+        a bibo:Thesis;
+       	roh:correspondingAuthor ?student.
+    ?student vivo:relatedBy ?posicion. 
+    ?posicion a roh:SupervisingRelationship;
            vivo:relates ?supervision. 
-  ?supersion a roh:SupervisorRole;
-             ro:RO_0000052 ?profesor.
- ?profesor a foaf:Person.
+    ?supersion a roh:SupervisorRole;
+             ro:RO_0000052 ?supervisor.
+    ?supervisor a foaf:Person.
 FILTER NOT EXISTS {
-?thesis a ?otherClass .
-?otherClass rdfs:subClassOf ?classThesis .
-FILTER (?otherClass != ?classThesis)
-}FILTER (str(?classThesis) != "http://purl.org/roh_edma#ResearchObject")
+        ?thesis a ?otherClass .
+        ?otherClass rdfs:subClassOf ?classThesis .
+        FILTER (?otherClass != ?classThesis)
+    }
+FILTER (str(?classThesis) != "http://purl.org/roh_edma#ResearchObject")
 }

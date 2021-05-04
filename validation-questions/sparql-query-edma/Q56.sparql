@@ -8,19 +8,20 @@ PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
 
 SELECT DISTINCT ?university ?Thesis  ?ThesisClass
 WHERE {
-?Thesis 
-           a ?ThesisClass;
-           roh:correspondingOrganization ?researchGroup;
-			roh:title ?title .
+?Thesis a ?ThesisClass;
+          roh:correspondingOrganization ?researchGroup;
+			    roh:title ?title .
 ?researchGroup a roh:ResearchGroup .
 ?university a vivo:University;
             ro:BFO_0000051+ ?researchGroup .
 ?ThesisClass rdfs:subClassOf bibo:Thesis.
   
-  FILTER NOT EXISTS {
-?Thesis a ?otherClass .
-?otherClass rdfs:subClassOf ?ThesisClass .
-    FILTER (?otherClass != ?ThesisClass)}
-  FILTER (str(?ThesisClass) != "http://purl.org/roh_edma#ResearchObject")
+FILTER NOT EXISTS {
+    ?Thesis a ?otherClass .
+    ?otherClass rdfs:subClassOf ?ThesisClass .
+    FILTER (?otherClass != ?ThesisClass)
+    }
+
+FILTER (str(?ThesisClass) != "http://purl.org/roh_edma#ResearchObject")
 
 FILTER regex(?title, "fabulous", "i")}

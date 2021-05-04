@@ -13,10 +13,10 @@ prefix xsd: <http://www.w3.org/2001/XMLSchema#>
 SELECT ?journalarticle ?impactFactor (YEAR(?date) as ?year)  WHERE {
 ?journalarticle a iao:IAO_0000013 ;
 			vivo:dateIssued ?dateTimeValue ;
-bibo:authorList+| roh:seqOfAuthors ?authorList ;
-roh:hasMetric ?metric .
+      bibo:authorList+| roh:seqOfAuthors ?authorList ;
+      roh:hasMetric ?metric .
 ?dateTimeValue vivo:dateTime ?date .
-  ?authorList rdfs:member <http://purl.org/roh_edma/data#investigador-1>.
+?authorList rdfs:member <http://purl.org/roh_edma/data#investigador-1>.
 ?metric roh:impactFactor ?impactFactor.
 FILTER (YEAR(?date) >= "2015"^^xsd:integer && YEAR(?date) <= "2017"^^xsd:integer )
 } 

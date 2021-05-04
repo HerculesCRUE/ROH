@@ -11,31 +11,29 @@ prefix uneskos:  <http://purl.org/roh/unesco-individuals#>
 SELECT distinct ?organization ?researchObject  ?researchObjectClass   ?title ?repository ?keyword ?doi ?project
 WHERE {
   
-?researchObject a roh:ResearchObject;
+  ?researchObject a roh:ResearchObject;
         roh:correspondingOrganization ?organization;
         a ?researchObjectClass;
-        
         roh:hasKnowledgeArea uneskos:120304. 
 
- Optional{?researchObject roh:title ?title}  
- ?researchObject  roh:seqOfAuthors+|bibo:authorList ?list.
-    ?list a rdf:Seq;
+  ?organization a ?classOrganization. 
+  ?researchObject  roh:seqOfAuthors+|bibo:authorList ?list.
+  ?list a rdf:Seq;
           rdfs:member <http://purl.org/roh_edma/data#investigador-2>.
-?researchObject roh:producedBy ?project.
+  ?researchObject roh:producedBy ?project.
   ?project  a vivo:Project.
- Optional{ ?researchObject vivo:doi ?doi. }
- Optional{?researchObject roh:partOfRepository ?repository.}
- Optional {?researchObject vivo:freetextKeyword ?keyword}
-
-?organization a ?classOrganization. 
-
-Filter(?classOrganization = roh:ResearchInstitute || ?classOrganization = roh:ResearchGroup)
-FILTER NOT EXISTS {
-?researchObject a ?otherClass .
-?otherClass rdfs:subClassOf ?researchObjectClass .
-FILTER (?otherClass != ?researchObjectClass)
-}
+  Optional{?researchObject roh:title ?title}   
+  Optional{ ?researchObject vivo:doi ?doi. }
+  Optional{?researchObject roh:partOfRepository ?repository.}
+  Optional {?researchObject vivo:freetextKeyword ?keyword}
+  Filter(?classOrganization = roh:ResearchInstitute || ?classOrganization = roh:ResearchGroup)
+  FILTER NOT EXISTS {
+            ?researchObject a ?otherClass .
+            ?otherClass rdfs:subClassOf ?researchObjectClass .
+        FILTER (?otherClass != ?researchObjectClass)
+  }
 FILTER (str(?researchObjectClass) != "http://purl.org/roh_edma#ResearchObject")
-} GROUP BY ?organization ?researchObject  ?researchObjectClass ?author ?dateTime ?title ?repository ?keyword ?doi ?project
+} 
+GROUP BY ?organization ?researchObject  ?researchObjectClass ?author ?dateTime ?title ?repository ?keyword ?doi ?project
 
 

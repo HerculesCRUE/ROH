@@ -11,11 +11,11 @@ prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#>
 select distinct ?RO ?researchObjectClass ?dateTimeValue 
 WHERE{
 ?RO a roh:ResearchObject;
-    a  ?researchObjectClass;
-  roh:hasKnowledgeArea uneskos:120304;
-   roh:seqOfAuthors+|bibo:authorList ?authorList;
-   vivo:dateTimeValue ?date  .
-   ?date  vivo:dateTime ?dateTimeValue .
+      a  ?researchObjectClass;
+      roh:hasKnowledgeArea uneskos:120304;
+      roh:seqOfAuthors+|bibo:authorList ?authorList;
+      vivo:dateTimeValue ?date  .
+?date  vivo:dateTime ?dateTimeValue .
 ?authorList a rdf:Seq;
             rdfs:member ?author .
 ?author roh:hasPosition ?position .
@@ -23,10 +23,10 @@ WHERE{
 ?center a ?centerClass. 
 Filter(?centerClass = roh:ResearchGroup || ?centerClass = roh:ResearchInstitute).
 FILTER NOT EXISTS {
-?RO a ?otherClass .
-?otherClass rdfs:subClassOf ?researchObjectClass .
-FILTER (?otherClass != ?researchObjectClass)
+    ?RO a ?otherClass .
+    ?otherClass rdfs:subClassOf ?researchObjectClass .
+    FILTER (?otherClass != ?researchObjectClass)
 }
 FILTER (str(?researchObjectClass) != "http://purl.org/roh_edma#ResearchObject")
-
- }ORDER BY ASC(?dateTimeValue )
+}
+ ORDER BY ASC(?dateTimeValue )

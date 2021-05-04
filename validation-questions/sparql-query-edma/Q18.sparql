@@ -15,18 +15,19 @@ prefix dc: <http://purl.org/dc/elements/1.1/>
 
 SELECT  ?publication ?date ?impactFacor ?quartile ?organization ?journal   ?author
 WHERE {
-  ?publication         a bibo:Document ;
-                       vivo:hasPublicationVenue        ?journal;
-                       roh:correspondingOrganization ?organization;
-					   roh:correspondingAuthor ?author;
-					   vivo:dateIssued ?dateTime;
-					   roh:hasMetric ?metric.
+  ?publication  a bibo:Document ;
+                vivo:hasPublicationVenue        ?journal;
+                roh:correspondingOrganization ?organization;
+					      roh:correspondingAuthor ?author;
+					      vivo:dateIssued ?dateTime;
+					      roh:hasMetric ?metric.
 	?metric a roh:PublicationMetric;
-			roh:impactFactor ?impactFacor;
-        roh:quartile ?quartile.
-		?dateTime a    vivo:DateTimeValue ;
-                  vivo:dateTime ?date.
+			      roh:impactFactor ?impactFacor;
+            roh:quartile ?quartile.
+	?dateTime a vivo:DateTimeValue ;
+            vivo:dateTime ?date.
 	?author a foaf:Person.
   ?journal	a bibo:Journal   .
 
-  } Order By ?publication DEsc(?date) ?impactFacor ?quartile  ?journal
+  } 
+  Order By ?publication DESC(?date) ?impactFacor ?quartile  ?journal
