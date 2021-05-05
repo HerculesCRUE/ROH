@@ -1,0 +1,37 @@
+prefix bibo: <http://purl.org/roh_edma/mirror/bibo#> 
+PREFIX roh: <http://purl.org/roh_edma#>
+prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> 
+PREFIX vivo: <http://purl.org/roh_edma/mirror/vivo#>
+prefix ero: <http://purl.org/roh_edma/mirror/obo/ero#>
+select ?experimentalProtocol ?repository ?classRepository ?project ?organization 
+ ?author   ?ResearchResult
+where{
+    ?experimentalProtocol  a roh:ExperimentalProtocol.                       
+  
+ 	OPTIONAL{
+  			?experimentalProtocol roh:correspondingOrganization ?organization.
+  			}
+    OPTIONAL{
+        ?experimentalProtocol roh:partOfRepository ?repository.
+        ?repository a ?classRepository.
+     FILTER NOT EXISTS {
+	        ?repository 		a ?otherClass .
+	        ?otherClass rdfs:subClassOf ?classRepository .
+	        FILTER (?otherClass != ?classRepository)
+        }
+        }
+
+    Optional{
+        ?experimentalProtocol roh:produces ?experimentalProtocolResult.
+        ?experimentalProtocolResult a roh:ExperimentalProtocolResult.
+    }
+    Optional{
+        ?experimentalProtocol roh:seqOfAuthors+|bibo:authorList ?authorList.
+        ?authorList rdfs:member ?author. 
+    }
+    Optional{
+        ?experimentalProtocol roh:partOfResearchResult ?ResearchResult.
+        ?ResearchResult roh:correspondingAuthor ?author.
+    }
+   
+}

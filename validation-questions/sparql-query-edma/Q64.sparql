@@ -1,0 +1,15 @@
+PREFIX roh: <http://purl.org/roh_edma#>
+prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> 
+
+select ?researchObjectBase ?anotherResearchObject ?classResearchObject
+where {
+    ?researchObjectBase a roh:ResearchObject;
+                    roh:hasSucessor ?anotherResearchObject.
+    ?anotherResearchObject a ?classResearchObject.
+    FILTER NOT EXISTS {
+	        ?researchObjectBase 		a ?otherClass .
+	        ?otherClass rdfs:subClassOf ?classResearchObject .
+	        FILTER (?otherClass != ?classResearchObject)
+        }
+    FILTER (str(?classResearchObject) != "http://purl.org/roh_edma#ResearchObject")
+}

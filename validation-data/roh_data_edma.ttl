@@ -418,7 +418,6 @@ _:genid1 a :Accreditation ;
 <http://purl.org/roh_edma/data#software-producedBy-proyect> 
                 a ero:ERO_0000071;
                  :hasKnowledgeArea     uneskos:120703, uneskos:120304 ;
-
                 :partOfRepository <http://purl.org/roh_edma/data#repository-2>;
                 :correspondingOrganization <http://purl.org/roh_edma/data#grupo-investigacion-1>, 
                                         <http://purl.org/roh_edma/data#company-one>;
@@ -438,24 +437,36 @@ _:genid1 a :Accreditation ;
 <http://purl.org/roh_edma/data#repository-2> 
         a                        :GitHubRepository;
         :title "A grate Git repository";
+        :correspondingOrganization <http://purl.org/roh_edma/data#grupo-investigacion-1>;
         :hasKnowledgeArea     uneskos:1203, uneskos:120304. 
 
 
 <http://purl.org/roh_edma/data#annotation-1> 
                 a oa:Annotation;
                 oa:hasTarget  <http://purl.org/roh_edma/data#software-producedBy-proyect>;
-                oa:hasBody "What is the java version used for this software? ";
+                oa:hasBody "What is the version of java used for this software? ";
                 oa:motivatedBy   oa:questioning;
                 :correspondingAuthor <http://purl.org/roh_edma/data#investigador-1>.
 
 <http://purl.org/roh_edma/data#annotation-2> 
                 a oa:Annotation;
-                oa:hasTarget: <http://purl.org/roh_edma/data#annotation-1>;
+                oa:hasTarget <http://purl.org/roh_edma/data#annotation-1>;
                 oa:motivatedBy   oa:commenting;
-                oa:hasBody "The version -.0 but it`s work whis --.1 version.";
+                oa:hasBody "The version -.0 but it`s work with --.1 version.";
                 :correspondingAuthor <http://purl.org/roh_edma/data#investigador-2>.
 
+<http://purl.org/roh_edma/data#annotation-3> 
+                a oa:Annotation;
+                oa:hasTarget <http://purl.org/roh_edma/data#annotation-2>;
+                oa:motivatedBy   oa:commenting;
+                oa:hasBody "it`s work with --.1 version too. I put another body with this reservable.",
+                 <http://purl.org/roh_edma/data#software-reservable>;
+                :correspondingAuthor <http://purl.org/roh_edma/data#investigador-2>.
 
+<http://purl.org/roh_edma/data#software-reservable>
+                        a ero:ERO_0000071; 
+                        a :Reservable;
+                        :title "java --.--".
 
 <http://purl.org/roh_edma/data#company-one>
         a       vivo:Company .
@@ -586,7 +597,7 @@ _:genid1 a :Accreditation ;
 
 <http://purl.org/roh_edma/data#annotation-research-result-1>
                 a oa:Annotation;
-                oa:hasBody "This RR contains all the RO of my research.";
+                oa:hasBody "This RR contains all ROs of my research.";
                 oa:hasTarget <http://purl.org/roh_edma/data#research-result-investigador-1>;
                 oa:motivatedBy oa:commenting;
                 :correspondingAuthor  <http://purl.org/roh_edma/data#investigador-1>;

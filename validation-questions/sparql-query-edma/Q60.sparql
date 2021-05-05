@@ -1,0 +1,18 @@
+prefix bibo: <http://purl.org/roh_edma/mirror/bibo#> 
+PREFIX roh: <http://purl.org/roh_edma#>
+prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> 
+PREFIX vivo: <http://purl.org/roh_edma/mirror/vivo#>
+prefix ero: <http://purl.org/roh_edma/mirror/obo/ero#>
+
+select ?software ?repository ?classRepository
+where {
+     ?software  a ero:ERO_0000071;
+                roh:partOfRepository ?repository.
+    ?repository a ?classRepository.
+     FILTER NOT EXISTS {
+	        ?repository 		a ?otherClass .
+	        ?otherClass rdfs:subClassOf ?classRepository .
+	        FILTER (?otherClass != ?classRepository)
+        }
+        
+}

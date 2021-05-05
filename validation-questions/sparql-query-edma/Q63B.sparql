@@ -1,0 +1,22 @@
+prefix bibo: <http://purl.org/roh_edma/mirror/bibo#> 
+PREFIX roh: <http://purl.org/roh_edma#>
+prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> 
+PREFIX vivo: <http://purl.org/roh_edma/mirror/vivo#>
+prefix ero: <http://purl.org/roh_edma/mirror/obo/ero#>
+select distinct ?repository ?classRepository ?project ?organization 
+ ?author  ?correspondingAuthor ?ResearchResult
+where{
+    ?repository  a roh:Repository;
+             a ?classRepository;
+            roh:correspondingAuthor+| roh:correspondingOrganization ?correspondingAuthor.
+    FILTER NOT EXISTS {
+	        ?repository 		a ?otherClass .
+	        ?otherClass rdfs:subClassOf ?classRepository .
+	        FILTER (?otherClass != ?classRepository)
+        }                 
+    Optional{
+        ?repository roh:seqOfAuthors+|bibo:authorList ?authorList.
+        ?authorList rdfs:member ?author. 
+    }
+   
+}
