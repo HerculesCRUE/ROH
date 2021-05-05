@@ -22,7 +22,7 @@
 @prefix oa: <http://www.w3.org/ns/oa#>.
 
 [ rdf:type owl:Ontology ;
-               owl:imports <http://purl.org/roh_edma>].
+        owl:imports <http://purl.org/roh_edma>].
            
 <http://purl.org/roh_edma/data#> a 
                                           vivo:Dataset ;
@@ -441,11 +441,20 @@ _:genid1 a :Accreditation ;
         :hasKnowledgeArea     uneskos:1203, uneskos:120304. 
 
 
-<http://purl.org/roh_edma/data#annotation-repository-2> 
+<http://purl.org/roh_edma/data#annotation-1> 
                 a oa:Annotation;
-                oa:hasTarget  <http://purl.org/roh_edma/data#repository-2> ;
-                oa:hasBody "annotation of the repository 2";
+                oa:hasTarget  <http://purl.org/roh_edma/data#software-producedBy-proyect>;
+                oa:hasBody "What is the java version used for this software? ";
+                oa:motivatedBy   oa:questioning;
+                :correspondingAuthor <http://purl.org/roh_edma/data#investigador-1>.
+
+<http://purl.org/roh_edma/data#annotation-2> 
+                a oa:Annotation;
+                oa:hasTarget: <http://purl.org/roh_edma/data#annotation-1>;
+                oa:motivatedBy   oa:commenting;
+                oa:hasBody "The version -.0 but it`s work whis --.1 version.";
                 :correspondingAuthor <http://purl.org/roh_edma/data#investigador-2>.
+
 
 
 <http://purl.org/roh_edma/data#company-one>
@@ -575,6 +584,19 @@ _:genid1 a :Accreditation ;
                                     rdf:_2  <http://purl.org/roh_edma/data#investigador-3>
                                   ] .
 
+<http://purl.org/roh_edma/data#annotation-research-result-1>
+                a oa:Annotation;
+                oa:hasBody "This RR contains all the RO of my research.";
+                oa:hasTarget <http://purl.org/roh_edma/data#research-result-investigador-1>;
+                oa:motivatedBy oa:commenting;
+                :correspondingAuthor  <http://purl.org/roh_edma/data#investigador-1>;
+                 vivo:dateIssued           [ a              vivo:DateTimeValue ;
+                                    vivo:dateTime  "2020-04-27T00:00:00"^^xsd:dateTime
+                                  ];
+                :hasKnowledgeArea     uneskos:1203, uneskos:120304.
+
+
+
 <http://purl.org/roh_edma/data#a-project-dossier>
         a       :Dossier ;
         vivo:relates    <http://purl.org/roh_edma/data#a-project>, 
@@ -584,9 +606,7 @@ _:genid1 a :Accreditation ;
 
 <http://purl.org/roh_edma/data#excelent-journal>
         a                         bibo:Journal ;
-        :title
-                "An excelent Journal" ;
-       
+        :title "An excelent Journal" ;
         vivo:dateIssued           [ a              vivo:DateTimeValue ;
                                     vivo:dateTime  "2020-04-27T00:00:00"^^xsd:dateTime
                                   ] ;
@@ -596,7 +616,6 @@ _:genid1 a :Accreditation ;
                   vivo:dateTime
                           "2020-04-27T00:00:00"^^xsd:dateTime
                 ] .
-
 
 <http://purl.org/roh_edma/data#software-1>
         a                       ero:ERO_0000071;
@@ -614,7 +633,68 @@ _:genid1 a :Accreditation ;
                 [ a       vivo:DateTimeValue ;
                   vivo:dateTime
                           "2020-04-27T00:00:00"^^xsd:dateTime
+                ] ;
+        :hasPredecessor  <http://purl.org/roh_edma/data#software-producedBy-proyect>.
+
+<http://purl.org/roh_edma/data#annotation-of-software-1>
+                        a oa:Annotation;
+                        oa:hasTarget <http://purl.org/roh_edma/data#software-1>;
+                        oa:hasBody "This software is based on software 1.";
+                        oa:motivatedBy oa:commenting;
+                        :correspondingAuthor      <http://purl.org/roh_edma/data#investigador-1>.
+
+
+<http://purl.org/roh_edma/data#readme-software-1>
+        a :README;
+        :title "A readme of a great software";
+        :readmeOf <http://purl.org/roh_edma/data#software-1>;
+        :partOfRepository    <http://purl.org/roh_edma/data#repository-1>;
+        :hasKnowledgeArea     uneskos:1203, uneskos:120304 .
+                #:correspondingAuthor      <http://purl.org/roh_edma/data#investigador-1> ;
+
+<http://purl.org/roh_edma/data#readme-repository-1>
+                a :README;
+                :title "A readme of the repository that contains a great software";
+                :readmeOf <http://purl.org/roh_edma/data#repository-1>;
+                :partOfRepository    <http://purl.org/roh_edma/data#repository-1>;
+                vivo:dateIssued
+                [ a       vivo:DateTimeValue ;
+                  vivo:dateTime
+                          "2020-04-27T00:00:00"^^xsd:dateTime
                 ] .
+
+<http://purl.org/roh_edma/data#experimental-prototol-1>
+        a  :ExperimentalProtocol;
+        :title "A great experimental protocol.";
+        :correspondingOrganization  <http://purl.org/roh_edma/data#grupo-investigacion-1>;
+        :hasKnowledgeArea     uneskos:1203, uneskos:120304 ;
+        :correspondingAuthor      <http://purl.org/roh_edma/data#investigador-1> ;
+        :partOfResearchResult     <http://purl.org/roh_edma/data#research-result-investigador-1>;
+        :seqOfAuthors         [ a       rdf:Seq ;
+                                    rdf:_1  <http://purl.org/roh_edma/data#investigador-1> ;
+                                    rdf:_2  <http://purl.org/roh_edma/data#investigador-3>
+                                  ] ;
+         vivo:dateIssued
+                [ a       vivo:DateTimeValue ;
+                  vivo:dateTime
+                          "2020-04-27T00:00:00"^^xsd:dateTime
+                ];
+        :produces <http://purl.org/roh_edma/data#experimental-prototol-result-1>.
+
+<http://purl.org/roh_edma/data#experimental-prototol-result-1>
+                a        :ExperimentalProtocolResult;
+                :title "A great result of the experimental protocol. ";
+                a         bibo:Article;
+                :partOfRepository    <http://purl.org/roh_edma/data#repository-1>;
+                :partOfResearchResult     <http://purl.org/roh_edma/data#research-result-investigador-1>;
+                :seqOfAuthors         [ a       rdf:Seq ;
+                                    rdf:_1  <http://purl.org/roh_edma/data#investigador-1> ;
+                                    rdf:_2  <http://purl.org/roh_edma/data#investigador-3>
+                                  ] ;
+                vivo:dateIssued
+                        [ a       vivo:DateTimeValue ;
+                        vivo:dateTime    "2020-04-27T00:00:00"^^xsd:dateTime
+                        ].
 
 <http://purl.org/roh_edma/data#repository-1> 
         a                        :BitBucketRepository;
@@ -631,7 +711,18 @@ _:genid1 a :Accreditation ;
                           "2020-04-27T00:00:00"^^xsd:dateTime
                  ] .
 
-### HOLAAAAAA
+<http://purl.org/roh_edma/data#fork-repository-1> 
+                 a                        :BitBucketRepository;
+        :title "A fork of a git repository-1";
+        :hasKnowledgeArea     uneskos:1203, uneskos:120304 ;
+        :correspondingAuthor      <http://purl.org/roh_edma/data#investigador-3> ;
+        :seqOfAuthors         [ a       rdf:Seq ;
+                                    rdf:_1  <http://purl.org/roh_edma/data#investigador-1> ;
+                                    rdf:_2  <http://purl.org/roh_edma/data#investigador-3>
+                                  ] ;
+        :hasPredecessor <http://purl.org/roh_edma/data#repository-1>.
+
+
 <http://purl.org/roh_edma/data#journal-article-1>
         a                        iao:IAO_0000013;
         :title
@@ -651,7 +742,13 @@ _:genid1 a :Accreditation ;
                 ] ;
         vivo:hasPublicationVenue
                 <http://purl.org/roh_edma/data#excelent-journal> ;
+
+        cito:cites <http://purl.org/roh_edma/data#software-1>, 
+                <http://purl.org/roh_edma/data#repository-1>,
+                <http://purl.org/roh_edma/data#experimental-prototol-result-1>;
         :hasMetric   <http://purl.org/roh_edma/data#journal-article-1-metric> .
+
+
 
 
 <http://purl.org/roh_edma/data#journal-article-1-metric>
@@ -664,9 +761,6 @@ _:genid1 a :Accreditation ;
                   vivo:dateTime
                           "2016-04-27T00:00:00"^^xsd:dateTime
                 ] .
-
-
-
 
 
 ## HOLAAAA

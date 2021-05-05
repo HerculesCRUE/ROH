@@ -1,0 +1,9 @@
+# Como usuario quiero el README de un repositorio especifico (<http://purl.org/roh_edma/data#repository-1>)
+
+PREFIX roh: <http://purl.org/roh_edma#>
+
+select ?readme 
+where {
+    ?readme roh:readmeOf <http://purl.org/roh_edma/data#repository-1>.
+    
+}
