@@ -10,7 +10,7 @@ WHERE {
         roh:isSupportedBy ?funding .
 ?funding ro:BFO_0000051 ?fundingAmount .
 ?fundingAmount roh:monetaryAmount ?monetaryAmount ;
-r           oh:grants ?organization .
+                roh:grants ?organization .
 ?organization a foaf:Organization .
 } 
 GROUP BY ?organization ?knowledgeArea
