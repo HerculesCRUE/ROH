@@ -1,34 +1,26 @@
 import json
 from os import listdir
-from SPARQLWrapper import SPARQLWrapper, JSON
-
-nombre = [f for f in listdir('C:/Users/mpuer/Documents/GitHub/ROH_oficial/validation-questions/sparql-query-edma/')]
-
-files = ['C:/Users/mpuer/Documents/GitHub/ROH_oficial/validation-questions/sparql-query-edma/' + f for f in nombre][:-1]
-for m in range(0, len(files)):
-    f = files[m]
+import sparqlwrapper
+nombre=[f for f in listdir('C:/Users/mpuer/Documents/GitHub/ROH_oficial/validation-questions/json/')]
+files = ['C:/Users/mpuer/Documents/GitHub/ROH_oficial/validation-questions/json/' + f for f in nombre]
+for m in range(0,len(files)):
+    f=files[m]
+    sol=[]
     doc = open(f, "r")
     content = doc.read()
-    sparql = SPARQLWrapper("http://localhost:3030/edma/query")
-    sparql.setQuery(content)
-    sparql.setReturnFormat(JSON)
-    results = sparql.query().convert()
+    docc = json.loads(content)
+    print(docc)
+    parametros = docc['head']['vars']
+    columnas= len(docc['results']['bindings'])
 
-    print(results)
-    parametros = results['head']['vars']
-    columnas = len(results['results']['bindings'])
-    sol = []
-    for i in range(0, columnas):
-        element = {}
-        for j in range(0, len(parametros)):
-            try:
-                element[parametros[j]] = results['results']['bindings'][i][parametros[j]]['value']
-            except:
-                element[parametros[j]] = ''
+    for i in range(0,columnas):
+        element={}
+        for j in range(0,len(parametros)):
+            element[parametros[j]]= docc['results']['bindings'][i][parametros[j]]['value']
+        print(element)
         sol.append(element)
-    final = {}
-    final['result'] = sol
-    with open('C:/Users/mpuer/Documents/GitHub/ROH_oficial/validation-questions/result/' + nombre[m][:-7] + '.json',
-              'w') as outfile:
+    final={}
+    final['result']=sol
+    with open('C:/Users/mpuer/Documents/GitHub/ROH_oficial/validation-questions/result/'+nombre[m], 'w') as outfile:
 
         json.dump(final, outfile)
