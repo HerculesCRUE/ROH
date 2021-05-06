@@ -49,6 +49,9 @@ jobs:
         mv output/roh ../docs/
         cp -r ../mirror ../docs/
 
+    - name: Copy ontology modules to docs folder
+      run: mkdir docs/roh cp -r roh/modules/* docs/roh/
+
     - name: Publish on Github Pages
       uses: crazy-max/ghaction-github-pages@v2.3.0
       with:
