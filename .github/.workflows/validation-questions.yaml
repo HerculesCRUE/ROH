@@ -2,7 +2,7 @@ name: Execute validation questions
 
 on:
   push:
-    branches: [ '*' ]
+    branches: [ 'edma' ]
   pull_request:
     branches: [ '*' ]
 
@@ -20,6 +20,7 @@ jobs:
       with: 
         repository: HerculesCRUE/GnossDeustoBackend
         path: GnossDeustoBackend
+
     - name: Checkout pellet
       uses: actions/checkout@v2
       with: 
@@ -29,18 +30,23 @@ jobs:
       uses: actions/setup-java@v1
       with:
         java-version: 1.8
+
     - name: Install Pellet reasoner
       working-directory: pellet
       run: mvn install
+
     - name: Launch tests
       working-directory: GnossDeustoBackend/validation-questions
       run: mvn surefire-report:report -Dmodel=https://raw.githubusercontent.com/HerculesCRUE/ROH/edma/roh/modules/core/roh-core.ttl,https://raw.githubusercontent.com/HerculesCRUE/ROH/edma/validation-data/rdf/roh_data_edma.ttl -DqueryFolder=/home/runner/work/ROH/ROH/validation-questions/sparql-query/
+
     - name: Generate maven site
       working-directory: GnossDeustoBackend/validation-questions
       run: mvn site
+
     - name: Generate documentation
       working-directory: GnossDeustoBackend/validation-questions
       run: mvn javadoc:test-javadoc
+      
     # - name: Deploy github pages
     #   uses: peaceiris/actions-gh-pages@v3.6.1
     #   with:
