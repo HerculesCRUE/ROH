@@ -2,7 +2,7 @@ PREFIX ro: <http://purl.org/roh_edma/mirror/obo/ro#>
 PREFIX bibo:  <http://purl.org/roh_edma/mirror/bibo#>
 PREFIX rdfs:  <http://www.w3.org/2000/01/rdf-schema#>
 PREFIX bfo: <http://purl.org/roh_edma/mirror/obo/bfo#>
-prefix roh: <http://putl.org/roh_edma#>
+prefix roh: <http://purl.org/roh_edma#>
 
 SELECT ?researcher ?conference ?roleClass 
 WHERE { 
@@ -13,7 +13,7 @@ WHERE {
 }
 	?role 		bfo:BFO_0000054 ?conference .
 	?role 		a ?roleClass ;
-      			ro:RO_0000052 ?researcher .
+      			roh:roleOf ?researcher .
   FILTER NOT EXISTS {
 	?role 		a ?otherClass .
 	?otherClass rdfs:subClassOf ?roleClass .

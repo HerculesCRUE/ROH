@@ -9,7 +9,7 @@ WHERE {
 	?project	a vivo:Project ;
 				vivo:relates ?role .
 	?role	a ?roleClass ;
-			ro:RO_0000052 ?researcher .
+			roh:roleOf ?researcher .
 	?researcher a foaf:Person .
 	FILTER NOT EXISTS {
 		?role a ?otherClass .

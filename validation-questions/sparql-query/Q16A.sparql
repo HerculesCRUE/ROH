@@ -18,8 +18,8 @@ WHERE {
   ?startTimeValue vivo:dateTime ?start .
   ?endTimeValue vivo:dateTime ?end.
 
-  ?role roh:roleOf ?researcher;
-         ro:RO_0000052 ?organization.
+  ?role ro:RO_0000052 ?researcher;
+         roh:roleOf ?organization.
   ?organization a ?researchGroupClass. 
   Filter( ?researchGroupClass = roh:ResearchGroup || ?researchGroupClass = roh:ResearchInstitute)
   FILTER (YEAR(?start) >= "2015"^^xsd:integer && YEAR(?end) <= "2022"^^xsd:integer )

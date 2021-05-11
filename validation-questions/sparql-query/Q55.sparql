@@ -16,7 +16,7 @@ WHERE {
     			roh:publicFunding "false"^^xsd:boolean .
 	?fundingProgram roh:promotedBy ?company .
   	?fundingAmount roh:monetaryAmount ?fundingAmounts .
-  	?role ro:RO_0000052 ?organization .
+  	?role roh:roleOf ?organization .
   	?organization a ?researchGroupClass .
     Filter( ?researchGroupClass = roh:ResearchGroup || ?researchGroupClass = roh:ResearchInstitute)
       ?projectStatus a ?projectStatusClass .

@@ -11,8 +11,8 @@ WHERE{
         vivo:relates ?otherRole ;
         roh:isSupportedBy ?funding .
 ?funding roh:fundedBy ?fundingProgram .
-?role ro:RO_0000052 <http://purl.org/roh_edma/data#grupo-investigacion-1> .
-?otherRole ro:RO_0000052 ?otherOrganization .
+?role roh:roleOf <http://purl.org/roh_edma/data#grupo-investigacion-1> .
+?otherRole roh:roleOf ?otherOrganization .
 ?university ro:BFO_0000051+ ?otherOrganization .
 ?university a vivo:University .
 ?dateTimeInterval vivo:start ?start ;

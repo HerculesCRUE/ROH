@@ -15,7 +15,7 @@ WHERE {
     ?posicion a roh:SupervisingRelationship;
            vivo:relates ?supervision. 
     ?supersion a roh:SupervisorRole;
-             ro:RO_0000052 ?supervisor.
+             roh:roleOf ?supervisor.
     ?supervisor a foaf:Person.
 FILTER NOT EXISTS {
         ?thesis a ?otherClass .

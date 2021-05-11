@@ -6,8 +6,8 @@ WHERE {
 ?project a vivo:Project ;
 		vivo:relates ?role ;
 		vivo:relates ?centreRole .
-?role ro:RO_0000052 <http://purl.org/roh_edma/data#company-one> .
-?centreRole ro:RO_0000052 ?centre .
+?role roh:roleOf <http://purl.org/roh_edma/data#company-one> .
+?centreRole roh:roleOf ?centre .
 ?centre a ?ClassCentre.
 FILTER(?ClassCentre = roh:ResearchGroup || ?ClassCentre = roh:ResearchInstitute)
 }

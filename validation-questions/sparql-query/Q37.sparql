@@ -7,9 +7,9 @@ WHERE {
 ?project a vivo:Project ;
 		vivo:relates ?role ;
 		vivo:relates ?otherRole .
-?role ro:RO_0000052 ?organization .
+?role roh:roleOf ?organization .
 ?organization a foaf:Organization .
-?otherRole ro:RO_0000052 ?otherOrganization .
+?otherRole roh:roleOf ?otherOrganization .
 ?otherOrganization a foaf:Organization .
 FILTER (?organization != ?otherOrganization) 
 }
