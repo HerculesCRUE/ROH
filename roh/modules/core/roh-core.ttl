@@ -4900,11 +4900,11 @@ A roh:FundingSource roh:feeds a roh:Funding with funds to sponsor some projects.
 :SuperviseeRole rdf:type owl:Class ;
                 rdfs:subClassOf bfo:BFO_0000023 ,
                                 [ rdf:type owl:Restriction ;
-                                  owl:onProperty ro:RO_0000052 ;
+                                  owl:onProperty :roleOf ;
                                   owl:someValuesFrom foaf:Person
                                 ] ,
                                 [ rdf:type owl:Restriction ;
-                                  owl:onProperty ro:RO_0000052 ;
+                                  owl:onProperty :roleOf ;
                                   owl:allValuesFrom foaf:Person
                                 ] ;
                 rdfs:label "Rol de Supervisado"@es ,
@@ -4955,11 +4955,11 @@ A roh:FundingSource roh:feeds a roh:Funding with funds to sponsor some projects.
 :SupervisorRole rdf:type owl:Class ;
                 rdfs:subClassOf bfo:BFO_0000023 ,
                                 [ rdf:type owl:Restriction ;
-                                  owl:onProperty ro:RO_0000052 ;
+                                  owl:onProperty :roleOf ;
                                   owl:someValuesFrom foaf:Person
                                 ] ,
                                 [ rdf:type owl:Restriction ;
-                                  owl:onProperty ro:RO_0000052 ;
+                                  owl:onProperty :roleOf ;
                                   owl:allValuesFrom foaf:Person
                                 ] ;
                 rdfs:label "Rol de Supervisor"@es ,
@@ -6043,7 +6043,7 @@ bfo:BFO_0000015 rdf:type owl:Class ;
 ###  http://purl.org/roh_edma/mirror/obo/bfo#BFO_0000023
 bfo:BFO_0000023 rdf:type owl:Class ;
                 rdfs:subClassOf [ rdf:type owl:Restriction ;
-                                  owl:onProperty ro:RO_0000052 ;
+                                  owl:onProperty :roleOf ;
                                   owl:someValuesFrom foaf:Agent
                                 ] ,
                                 [ rdf:type owl:Restriction ;
@@ -6058,7 +6058,7 @@ bfo:BFO_0000023 rdf:type owl:Class ;
                                                     ]
                                 ] ,
                                 [ rdf:type owl:Restriction ;
-                                  owl:onProperty ro:RO_0000052 ;
+                                  owl:onProperty :roleOf ;
                                   owl:allValuesFrom foaf:Agent
                                 ] ,
                                 [ rdf:type owl:Restriction ;
@@ -6747,11 +6747,11 @@ vivo:AdministratorRole rdf:type owl:Class ;
 vivo:AdviseeRole rdf:type owl:Class ;
                  rdfs:subClassOf bfo:BFO_0000023 ,
                                  [ rdf:type owl:Restriction ;
-                                   owl:onProperty ro:RO_0000052 ;
+                                   owl:onProperty :roleOf ;
                                    owl:someValuesFrom foaf:Person
                                  ] ,
                                  [ rdf:type owl:Restriction ;
-                                   owl:onProperty ro:RO_0000052 ;
+                                   owl:onProperty :roleOf ;
                                    owl:allValuesFrom foaf:Person
                                  ] ;
                  rdfs:label "Advisee Role"@en ,
@@ -6790,11 +6790,11 @@ vivo:AdvisingRelationship rdf:type owl:Class ;
 vivo:AdvisorRole rdf:type owl:Class ;
                  rdfs:subClassOf bfo:BFO_0000023 ,
                                  [ rdf:type owl:Restriction ;
-                                   owl:onProperty ro:RO_0000052 ;
+                                   owl:onProperty :roleOf ;
                                    owl:someValuesFrom foaf:Person
                                  ] ,
                                  [ rdf:type owl:Restriction ;
-                                   owl:onProperty ro:RO_0000052 ;
+                                   owl:onProperty :roleOf ;
                                    owl:allValuesFrom foaf:Person
                                  ] ;
                  rdfs:label "Advisor Role"@en ,
@@ -7972,7 +7972,7 @@ skos:ConceptScheme rdf:type owl:Class ;
 ###  http://purl.org/roh_edma#TestSuperviseeRole
 :TestSuperviseeRole rdf:type owl:NamedIndividual ,
                              :SuperviseeRole ;
-                    ro:RO_0000052 :TestPhDStudent ;
+                    :roleOf :TestPhDStudent ;
                     vivo:relatedBy :TestPhDSupervisingRelationship ;
                     rdfs:label "TestSuperviseeRole"@en .
 
@@ -7980,7 +7980,7 @@ skos:ConceptScheme rdf:type owl:Class ;
 ###  http://purl.org/roh_edma#TestSupervisorRole
 :TestSupervisorRole rdf:type owl:NamedIndividual ,
                              :SupervisorRole ;
-                    ro:RO_0000052 :TestPhdSupervisor ;
+                    :roleOf :TestPhdSupervisor ;
                     vivo:relatedBy :TestPhDSupervisingRelationship ;
                     rdfs:label "TestSupervisorRole"@en .
 

@@ -319,11 +319,11 @@ _:genid1 a :Accreditation ;
         vivo:relates <http://purl.org/roh_edma/data#investigador-3>,
                          <http://purl.org/roh_edma/data#investigador-1> ;
         vivo:relates [ a        :SuperviseeRole ;
-                       ro:RO_0000052 <http://purl.org/roh_edma/data#investigador-3> ;
+                       :roleOf <http://purl.org/roh_edma/data#investigador-3> ;
                       # vivo:relatedBy <http://purl.org/roh_edma/data#investigador-3-phd-relationship> 
                        ] ;
         vivo:relates [ a        :SupervisorRole ;
-                       ro:RO_0000052 <http://purl.org/roh_edma/data#investigador-1> ; 
+                       :roleOf <http://purl.org/roh_edma/data#investigador-1> ; 
                      #  vivo:relatedBy <http://purl.org/roh_edma/data#investigador-3-phd-relationship> 
                      ] ;
         :produces <http://purl.org/roh_edma/data#investigador-3-phd-thesis> .
@@ -358,7 +358,7 @@ _:genid1 a :Accreditation ;
 <http://purl.org/roh_edma/data#a-great-conference>
         a       bibo:Conference ;
         bfo:BFO_0000055 [ a     vivo:AttendeeRole ;
-                          ro:RO_0000052        <http://purl.org/roh_edma/data#investigador-2> ] .
+                          :roleOf       <http://purl.org/roh_edma/data#investigador-2> ] .
 
 
 <http://purl.org/roh_edma/data#european-comission>
@@ -406,11 +406,11 @@ _:genid1 a :Accreditation ;
                                 :publicFunding "false"^^xsd:boolean 
                               ];
         vivo:relates           [ a               vivo:MemberRole ;
-                                ro:RO_0000052         <http://purl.org/roh_edma/data#grupo-investigacion-1> ;
+                                :roleOf         <http://purl.org/roh_edma/data#grupo-investigacion-1> ;
                                 # vivo:relatedBy  <http://purl.org/roh_edma/data#a-project-in-negotiation>
                                ] ;
         vivo:relates           [ a vivo:LeaderRole ;
-                                ro:RO_0000052  <http://purl.org/roh_edma/data#company-one> ;
+                                :roleOf  <http://purl.org/roh_edma/data#company-one> ;
                                 # vivo:relatedBy  <http://purl.org/roh_edma/data#a-project-in-negotiation>
                                ] ;
         :produces <http://purl.org/roh_edma/data#software-producedBy-proyect>.
@@ -489,12 +489,12 @@ _:genid1 a :Accreditation ;
                                 :publicFunding "false"^^xsd:boolean 
                               ];
         vivo:relates           [ a               vivo:MemberRole ;
-                                 ro:RO_0000052        <http://purl.org/roh_edma/data#grupo-investigacion-1> ;
+                                 :roleOf        <http://purl.org/roh_edma/data#grupo-investigacion-1> ;
                                 # vivo:relatedBy  <http://purl.org/roh_edma/data#a-project-in-negotiation>
                                ] ;
                                
         vivo:relates           [ a vivo:LeaderRole ;
-                                 ro:RO_0000052 <http://purl.org/roh_edma/data#company-one> ;
+                                 :roleOf <http://purl.org/roh_edma/data#company-one> ;
                                 # vivo:relatedBy  <http://purl.org/roh_edma/data#a-project-in-negotiation>
                                ] ;
         :projectStatus        [ a  :ProposalSubmitted ].
@@ -530,11 +530,11 @@ _:genid1 a :Accreditation ;
                                              ]
                                ] ;
         vivo:relates           [ a               vivo:MemberRole ;
-                                 ro:RO_0000052         <http://purl.org/roh_edma/data#grupo-investigacion-1> ;
+                                 :roleOf        <http://purl.org/roh_edma/data#grupo-investigacion-1> ;
                                  #vivo:relatedBy  <http://purl.org/roh_edma/data#another-collaborative-project>
                                ] ;
         vivo:relates           [ a vivo:LeaderRole ;
-                                 ro:RO_0000052 <http://purl.org/roh_edma/data#grupo-investigacion-3> ;
+                                 :roleOf <http://purl.org/roh_edma/data#grupo-investigacion-3> ;
                                  #vivo:relatedBy  <http://purl.org/roh_edma/data#another-collaborative-project>
                                ];
         :title                 "another collaborative project";
@@ -563,15 +563,15 @@ _:genid1 a :Accreditation ;
                                              ]
                                ] ;
         vivo:relates           [ a               vivo:MemberRole ;
-                                ro:RO_0000052         <http://purl.org/roh_edma/data#grupo-investigacion-1> ;
-                                :roleOf               <http://purl.org/roh_edma/data#investigador-1> ;
+                                :roleOf       <http://purl.org/roh_edma/data#grupo-investigacion-1> ;
+                                ro:RO_0000052                 <http://purl.org/roh_edma/data#investigador-1> ;
                                 # vivo:relatedBy  <http://purl.org/roh_edma/data#a-project>
                                ] ;
         vivo:relates           [ a              vivo:InvestigatorRole;
-                                ro:RO_0000052           <http://purl.org/roh_edma/data#investigador-1> ;
+                                :roleOf           <http://purl.org/roh_edma/data#investigador-1> ;
                                 ];
         vivo:relates           [ a vivo:LeaderRole ;
-                                 ro:RO_0000052 <http://purl.org/roh_edma/data#company-one> ;
+                                 ro:roleOf <http://purl.org/roh_edma/data#company-one> ;
                                  #vivo:relatedBy  <http://purl.org/roh_edma/data#a-project>
         ] ;
         gn:locatedIn    <https://sws.geonames.org/3336903/> ;
