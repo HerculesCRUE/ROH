@@ -8,6 +8,5 @@ WHERE {
 ?dossier vivo:relates ?project ;
          vivo:relates ?report .
 ?report a ?reportClass .
-{
-    ?reportClass rdfs:subClassOf bibo:Report .}UNION{?repotClass a bibo:Report}
+?reportClass rdfs:subClassOf* bibo:Report .
 }
