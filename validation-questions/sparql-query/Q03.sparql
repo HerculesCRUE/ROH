@@ -8,8 +8,8 @@ prefix ro: <http://purl.org/roh_edma/mirror/obo/ro#>
 prefix owl: <http://www.w3.org/2002/07/owl#>
 prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#>
 
-SELECT   ?researcher ?cites ?h_index ?i10_index (COUNT( distinct ?publication) AS ?n_publication)
-         (COUNT( distinct ?publication_correspondingAuthor) AS ?n_correspondingAuthor) 
+SELECT   ?researcher ?cites ?hindex ?i10index (COUNT( distinct ?publication) AS ?countPublication)
+         (COUNT( distinct ?publicationAuthor) AS ?countCorrespondingAuthor) 
 WHERE {
   ?researcher	roh:hasKnowledgeArea uneskos:120304;
   			    roh:hasPosition  ?position;
@@ -23,16 +23,16 @@ WHERE {
             ?authorList a rdf:Seq;
                           rdfs:member ?researcher.
            }
-  OPTIONAL{ ?publication_correspondingAuthor a bibo:Document;
+  OPTIONAL{ ?publicationAuthor a bibo:Document;
                                      roh:correspondingAuthor ?researcher.
           }
   OPTIONAL{?metric a roh:AuthorMetric;
-                  roh:h-index ?h_index;
-                  roh:i10-index ?i10_index;
+                  roh:h-index ?hindex;
+                  roh:i10-index ?i10index;
                   roh:citationCount ?cites.}
 
   Filter(?centerClass = roh:ResearchGroup || ?centerClass=roh:ResearchInstitute)
 }
-GROUP BY ?researcher ?cites ?h_index ?i10_index 
-ORDER BY DESC(?cites + ?h_index + ?i10_index + ?n_publication + ?n_correspondingAuthor)
+GROUP BY ?researcher ?cites ?hindex ?i10index 
+ORDER BY DESC(?cites + ?hindex + ?i10index + ?countPublication + ?countCorrespondingAuthor)
 LIMIT 10

@@ -4,7 +4,7 @@ PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
 PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
 prefix vivo: <http://purl.org/roh_edma/mirror/vivo#>
 prefix bibo: <http://purl.org/roh_edma/mirror/bibo#>
-select (count( distinct ?sujeto) AS ?n_knowledgeArea)  ?knowledgeArea
+select (count( distinct ?sujeto) AS ?countKnowledgeArea)  ?knowledgeArea
 where {
 
  ?sujeto a ?ClassSujeto;
@@ -13,7 +13,7 @@ where {
 Filter(?ClassSujeto = roh:ResearchObject || ?ClassSujeto = vivo:Project)
 } 
 Group by ?knowledgeArea
-ORDER by desc( ?n_knowledgeArea)
+ORDER by desc( ?countKnowledgeArea)
 
 
 
