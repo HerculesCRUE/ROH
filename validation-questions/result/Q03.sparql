@@ -8,8 +8,8 @@ prefix ro: <http://purl.org/roh_edma/mirror/obo/ro#>
 prefix owl: <http://www.w3.org/2002/07/owl#>
 prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#>
 
-SELECT   ?researcher ?cites ?hindex ?i10index (COUNT( ?publication) AS ?countPublication)
-         (COUNT( ?publicationAuthor) AS ?countCorrespondingAuthor) 
+SELECT   ?researcher ?cites ?hindex ?i10index (COUNT( distinct ?publication) AS ?countPublication)
+         (COUNT(distinct ?publicationAuthor) AS ?countCorrespondingAuthor) 
 WHERE {
   ?researcher	roh:hasKnowledgeArea uneskos:120304;
   			    roh:hasPosition  ?position;
@@ -18,8 +18,9 @@ WHERE {
             vivo:relates ?center.
   ?center a ?centerClass.
   
-  OPTIONAL{ ?publication a ?classDocument
-                          bibo:authorList+| roh:seqOfAuthors ?authorList.
+  OPTIONAL{ ?publication a ?classDocument;
+                       # bibo:authorList+|
+                        roh:seqOfAuthors ?authorList.
             ?authorList a rdf:Seq;
                           rdfs:member ?researcher.
             ?classDocument rdfs:subClassOf* bibo:Document.

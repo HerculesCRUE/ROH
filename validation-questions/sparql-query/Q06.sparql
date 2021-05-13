@@ -31,9 +31,11 @@ Filter(?classOrganization = roh:ResearchInstitute || ?classOrganization = roh:Re
 FILTER NOT EXISTS {
         ?researchObject a ?otherClass .
         ?otherClass rdfs:subClassOf ?researchObjectClass .
-        FILTER (?otherClass != ?researchObjectClass)
-        }
-FILTER (str(?researchObjectClass) != "http://purl.org/roh_edma#ResearchObject")
+        FILTER (?otherClass != ?researchObjectClass)     
+}
+        FILTER (str(?researchObjectClass) != "http://purl.org/roh_edma#ResearchObject") 
+       Filter( str(?researchObjectClass) != "http://www.w3.org/2002/07/owl#NamedIndividual")
+
 }
  GROUP BY ?organization ?researchObject  ?researchObjectClass ?author ?dateTime ?title ?repository ?keyword ?doi 
 

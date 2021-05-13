@@ -16,5 +16,6 @@ where{
     FILTER (?otherClass != ?classResearchResult)
     }
 FILTER (?classResearchResult != roh:ResearchObject)
- FILTER (str(?classResearchResult) != "http://www.w3.org/2002/07/owl#Thing")
+         Filter(str(?classResearchResult)!="http://www.w3.org/2002/07/owl#NamedIndividual")
+
 }

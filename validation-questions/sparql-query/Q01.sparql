@@ -8,13 +8,13 @@ prefix uneskos:  <http://purl.org/roh/unesco-individuals#>
 prefix vivo: <http://purl.org/roh_edma/mirror/vivo#> 
 
 
-SELECT  ?centro ?nombre_del_centro  ?nombre_universidad 
+SELECT  ?centro ?centerName  ?universityName 
  WHERE { 
       ?centro a ?centroClass;
                  roh:hasKnowledgeArea uneskos:120304.
   OPTIONAL{?universidad_uri a vivo:University;
                     ro:BFO_0000051+ ?centro;
-					roh:title  ?nombre_universidad.}
-  OPTIONAL {?centro roh:title ?nombre_del_centro.}
+					roh:title  ?universityName.}
+  OPTIONAL {?centro roh:title ?centerName.}
   FILTER(?centroClass = roh:ResearchGroup || ?centroClass = roh:ResearchInstitute). 
   }

@@ -1,0 +1,15 @@
+PREFIX roh: <http://purl.org/roh_edma#>
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+prefix bibo: <http://purl.org/roh_edma/mirror/bibo#> 
+
+SELECT distinct ?document WHERE 
+
+    
+  {   ?document roh:correspondingAuthor <http://purl.org/roh_edma/data#investigador-1>.
+
+        ?document  roh:seqOfAuthors+| bibo:authorList ?authorList.
+        ?authorList
+                rdfs:member 	<http://purl.org/roh_edma/data#investigador-1>.
+  
+}

@@ -23,4 +23,6 @@ FILTER NOT EXISTS {
         FILTER (?otherClass != ?classThesis)
     }
 FILTER (str(?classThesis) != "http://purl.org/roh_edma#ResearchObject")
+       Filter( str(?classThesis) != "http://www.w3.org/2002/07/owl#NamedIndividual")
+
 }
