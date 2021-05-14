@@ -38,19 +38,19 @@ jobs:
         cd widoco
         mkdir config
         java -jar ./widoco.jar \
-        -ontFile ../roh/modules/core/roh-core.ttl \
+        -ontFile /home/runner/work/ROH/ROH/edma/roh/modules/core/roh-core.ttl \
         -oops \
         -webVowl \
         -includeAnnotationProperties \
         -outFolder output/roh \
         -rewriteAll \
-        -confFile ../roh/modules/core/doc/widoco.config.txt \
+        -confFile /home/runner/work/ROH/ROH/edma/roh/modules/core/doc/widoco.config.txt \
         -includeImportedOntologies \
         -uniteSections \
         -excludeIntroduction
         mv output/roh/index-en.html output/roh/index.html
-        mv output/roh ../docs/
-        cp -r ../mirror ../docs/
+        mv output/roh /home/runner/work/ROH/ROH/edma/docs/
+        cp -r /home/runner/work/ROH/ROH/edma/mirror /home/runner/work/ROH/ROH/edma/docs/
     - name: Copy ontology modules to docs folder
       run: cp -r /home/runner/work/ROH/ROH/edma/roh/modules/* docs/roh/
 
