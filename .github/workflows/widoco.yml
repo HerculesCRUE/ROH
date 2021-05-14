@@ -51,7 +51,7 @@ jobs:
         mv output/roh/index-en.html output/roh/index.html
         mv output/roh ../docs/
         cp -r ../mirror ../docs/
-      #working-directory: /home/runner/work/ROH/ROH/edma
+      working-directory: /home/runner/work/ROH/ROH/edma
 
     - name: Copy ontology modules to docs folder
       run: cp -r ../roh/modules/* docs/roh/
