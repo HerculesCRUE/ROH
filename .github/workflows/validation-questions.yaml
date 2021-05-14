@@ -55,3 +55,13 @@ jobs:
     #      keep_files: true
     #      publish_dir: target/site
     #      github_token: ${{ secrets.GITHUB_TOKEN }}
+
+    - name: Copy mirrored ontologies to docs folder
+      run: cp -r target/site docs/
+
+    - name: Publish on Github Pages
+      uses: crazy-max/ghaction-github-pages@v2.3.0
+      with:
+        build_dir: docs 
+      env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}

@@ -17,7 +17,6 @@ import com.hp.hpl.jena.rdf.model.RDFNode;
 
 import java.util.HashMap;
 
-
 public class QueryExecutor {
     
     public static JSONObject execute(String queryString, Model data) {
