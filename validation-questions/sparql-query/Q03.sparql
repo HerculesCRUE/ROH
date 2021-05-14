@@ -7,27 +7,31 @@ prefix uneskos: <http://purl.org/roh/unesco-individuals#>
 prefix ro: <http://purl.org/roh_edma/mirror/obo/ro#>
 prefix owl: <http://www.w3.org/2002/07/owl#>
 prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+prefix owl: <http://www.w3.org/2002/07/owl#> 
 
-SELECT   ?researcher ?cites ?hindex ?i10index (COUNT( distinct ?publication) AS ?countPublication)
-         (COUNT(distinct ?publicationAuthor) AS ?countCorrespondingAuthor) 
+SELECT  
+?researcher ?cites ?hindex ?i10index (COUNT( distinct ?publication) AS ?countPublication)
+       (COUNT(distinct ?publicationAuthor) AS ?countCorrespondingAuthor) 
 WHERE {
   ?researcher	roh:hasKnowledgeArea uneskos:120304;
   			    roh:hasPosition  ?position;
-            roh:hasMetric ?metric.
+            roh:hasMetric ?metric;
+            a foaf:Person.
   ?position a roh:ResearcherPosition;
             vivo:relates ?center.
   ?center a ?centerClass.
   
   OPTIONAL{ ?publication a ?classDocument;
-                       # bibo:authorList+|
-                        roh:seqOfAuthors ?authorList.
-            ?authorList a rdf:Seq;
-                          rdfs:member ?researcher.
+                       bibo:authorList+|roh:seqOfAuthors ?authorList.
+            ?authorList  a rdf:Seq;
+                          <http://www.w3.org/2000/01/rdf-schema#member> ?researcher.
+         
             ?classDocument rdfs:subClassOf* bibo:Document.
+            
            }
-  OPTIONAL{ ?publicationAuthor a ?classDocument;
+  OPTIONAL{ ?publicationAuthor a ?classDocument2;
                         roh:correspondingAuthor ?researcher.
-            ?classDocument rdfs:subClassOf* bibo:Document.
+            ?classDocument2 rdfs:subClassOf* bibo:Document.
           }
   OPTIONAL{?metric a roh:AuthorMetric;
                   roh:h-index ?hindex;
@@ -36,6 +40,6 @@ WHERE {
 
   Filter(?centerClass = roh:ResearchGroup || ?centerClass=roh:ResearchInstitute)
 }
-GROUP BY ?researcher ?cites ?hindex ?i10index 
+GROUP BY ?researcher ?cites ?hindex ?i10index
 ORDER BY DESC(?cites + ?hindex + ?i10index + ?countPublication + ?countCorrespondingAuthor)
 LIMIT 10
