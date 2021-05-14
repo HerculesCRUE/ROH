@@ -1,6 +1,6 @@
 ![](https://github.com/HerculesCRUE/ROH/blob/gh-pages/media/CabeceraDocumentosMD.png)
 
-# ROH
+# ROH: Hercules Network of Ontologies, ASIO project
 Research Domain Ontology (ROH). 
 
 [ROH main documentation](https://herculescrue.github.io/ROH/) can be found in the following PDF files:
