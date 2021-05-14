@@ -33,7 +33,7 @@ jobs:
       
     - name: Download widoco
       run: mkdir widoco && wget -O widoco/widoco.jar https://github.com/dgarijo/Widoco/releases/download/v1.4.14/widoco-1.4.14-jar-with-dependencies.jar
-      
+      working-directory: /home/runner/work/ROH/ROH/edma
 
     - name: Compile documentation
       run: |
