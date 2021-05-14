@@ -32,7 +32,6 @@ jobs:
       
     - name: Download widoco
       run: mkdir widoco && wget -O widoco/widoco.jar https://github.com/dgarijo/Widoco/releases/download/v1.4.14/widoco-1.4.14-jar-with-dependencies.jar
-      working-directory: /home/runner/work/ROH/ROH/edma
 
     - name: Compile documentation
       run: |
@@ -52,7 +51,6 @@ jobs:
         mv output/roh/index-en.html output/roh/index.html
         mv output/roh ../docs/
         cp -r ../mirror ../docs/
-      working-directory: /home/runner/work/ROH/ROH/edma
 
     - name: Copy ontology modules to docs folder
       run: cp -r ../roh/modules/* docs/roh/
