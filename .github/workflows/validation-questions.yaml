@@ -38,7 +38,7 @@ jobs:
       run: mvn install
 
     - name: Launch tests
-      working-directory: GnossDeustoBackend/validation-questions
+      working-directory: /home/runner/work/ROH/ROH/edma/validation-questions
       run: mvn surefire-report:report -Dmodel=https://raw.githubusercontent.com/HerculesCRUE/ROH/edma/roh/modules/core/roh-core.ttl,https://raw.githubusercontent.com/HerculesCRUE/ROH/edma/validation-data/roh_data_edma.ttl -DqueryFolder=/home/runner/work/ROH/ROH/edma/validation-questions/sparql-query/
 
     - name: Generate maven site
