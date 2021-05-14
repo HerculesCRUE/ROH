@@ -57,7 +57,7 @@ jobs:
     #      github_token: ${{ secrets.GITHUB_TOKEN }}
 
     - name: Copy mirrored ontologies to docs folder
-      run: cp -r target/site docs/
+      run: cp -r /home/runner/work/ROH/ROH/edma/validation-questions/target/site docs/
 
     - name: Publish on Github Pages
       uses: crazy-max/ghaction-github-pages@v2.3.0
