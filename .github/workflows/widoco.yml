@@ -35,18 +35,17 @@ jobs:
       run: mkdir widoco && wget -O widoco/widoco.jar https://github.com/dgarijo/Widoco/releases/download/v1.4.14/widoco-1.4.14-jar-with-dependencies.jar
 
     - name: Compile documentation
-      working-directory: /home/runner/work/ROH/ROH/edma
       run: |
         cd widoco
         mkdir config
         java -jar ./widoco.jar \
-        -ontFile ../roh/modules/core/roh-core.ttl \
+        -ontFile /home/runner/work/ROH/ROH/edma/roh/modules/core/roh-core.ttl \
         -oops \
         -webVowl \
         -includeAnnotationProperties \
         -outFolder output/roh \
         -rewriteAll \
-        -confFile ../roh/modules/core/doc/widoco.config.txt \
+        -confFile /home/runner/work/ROH/ROH/edma/roh/modules/core/doc/widoco.config.txt \
         -includeImportedOntologies \
         -uniteSections \
         -excludeIntroduction
