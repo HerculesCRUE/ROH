@@ -1,7 +1,7 @@
 ![](.//media/CabeceraDocumentosMD.png)
 
-ROH Network of Ontology documentation 
-=====================================
+ROH: Hercules Network of Ontologies, ASIO project - Documentation 
+=================================================================
 
 [**1. Ontological design**](#headSection1)
 
