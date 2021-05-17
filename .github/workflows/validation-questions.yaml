@@ -23,7 +23,7 @@ jobs:
         repository: HerculesCRUE/GnossDeustoBackend
         path: GnossDeustoBackend
 
-    - name: Checkout pellet
+    - name: Checkout openllet
       uses: actions/checkout@v2
       with: 
         repository: Galigator/openllet
@@ -33,7 +33,7 @@ jobs:
       with:
         java-version: 1.8
 
-    - name: Install Pellet reasoner
+    - name: Install openllet reasoner
       working-directory: openllet
       run: mvn install
 
