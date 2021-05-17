@@ -1,0 +1,1413 @@
+<?xml version="1.0"?>
+<rdf:RDF xmlns="http://purl.org/roh_edma#"
+     xml:base="http://purl.org/roh_edma"
+     xmlns:dc="http://purl.org/dc/elements/1.1/"
+     xmlns:gn="http://purl.org/roh_edma/mirror/geonames#"
+     xmlns:ns="http://www.w3.org/2003/06/sw-vocab-status/ns#"
+     xmlns:oa="http://www.w3.org/ns/oa#"
+     xmlns:ro="http://purl.org/roh_edma/mirror/obo/ro#"
+     xmlns:bfo="http://purl.org/roh_edma/mirror/obo/bfo#"
+     xmlns:ero="http://purl.org/roh_edma/mirror/obo/ero#"
+     xmlns:iao="http://purl.org/roh_edma/mirror/obo/iao#"
+     xmlns:obo="http://purl.obolibrary.org/obo/"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:bibo="http://purl.org/roh_edma/mirror/bibo#"
+     xmlns:cito="http://purl.org/spar/cito/"
+     xmlns:foaf="http://purl.org/roh_edma/mirror/foaf#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     xmlns:skos="http://www.w3.org/2004/02/skos/core#"
+     xmlns:vivo="http://purl.org/roh_edma/mirror/vivo#"
+     xmlns:void="http://rdfs.org/ns/void#"
+     xmlns:foaf3="https://xmlns.com/foaf/0.1/"
+     xmlns:skos2="http://purl.org/roh_edma/mirror/skos#"
+     xmlns:vcard="http://purl.org/roh_edma/mirror/vcard#"
+     xmlns:vitro="http://vitro.mannlib.cornell.edu/ns/vitro/0.7#"
+     xmlns:schema="https://schema.org/"
+     xmlns:dcterms="http://purl.org/dc/terms/"
+     xmlns:uneskos="http://purl.org/roh/unesco-individuals#"
+     xmlns:uneskos1="http://purl.org/umu/uneskos#"
+     xmlns:skos-thes="http://purl.org/iso25964/skos-thes#">
+    <owl:Ontology>
+        <owl:imports rdf:resource="http://purl.org/roh_edma"/>
+    </owl:Ontology>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Annotation properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://purl.org/dc/terms/subject -->
+
+    <owl:AnnotationProperty rdf:about="http://purl.org/dc/terms/subject"/>
+    
+
+
+    <!-- http://rdfs.org/ns/void#feature -->
+
+    <owl:AnnotationProperty rdf:about="http://rdfs.org/ns/void#feature"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Datatypes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.w3.org/2001/XMLSchema#date -->
+
+    <rdfs:Datatype rdf:about="http://www.w3.org/2001/XMLSchema#date"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Individuals
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://purl.org/roh/unesco-individuals#1203 -->
+
+    <owl:NamedIndividual rdf:about="http://purl.org/roh/unesco-individuals#1203"/>
+    
+
+
+    <!-- http://purl.org/roh/unesco-individuals#120304 -->
+
+    <owl:NamedIndividual rdf:about="http://purl.org/roh/unesco-individuals#120304"/>
+    
+
+
+    <!-- http://purl.org/roh/unesco-individuals#120318 -->
+
+    <owl:NamedIndividual rdf:about="http://purl.org/roh/unesco-individuals#120318"/>
+    
+
+
+    <!-- http://purl.org/roh/unesco-individuals#120601 -->
+
+    <owl:NamedIndividual rdf:about="http://purl.org/roh/unesco-individuals#120601"/>
+    
+
+
+    <!-- http://purl.org/roh/unesco-individuals#120703 -->
+
+    <owl:NamedIndividual rdf:about="http://purl.org/roh/unesco-individuals#120703"/>
+    
+
+
+    <!-- http://purl.org/roh/unesco-individuals#570508 -->
+
+    <owl:NamedIndividual rdf:about="http://purl.org/roh/unesco-individuals#570508"/>
+    
+
+
+    <!-- http://purl.org/roh_edma/data# -->
+
+    <owl:NamedIndividual rdf:about="http://purl.org/roh_edma/data#">
+        <rdf:type rdf:resource="http://purl.org/roh_edma/mirror/vivo#Dataset"/>
+        <url>https://www.um.es/web/hercules/</url>
+        <dcterms:created rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2021-04-19</dcterms:created>
+        <dcterms:creator>GNOSS</dcterms:creator>
+        <dcterms:creator>Universidad de Deusto</dcterms:creator>
+        <dcterms:description xml:lang="es">Este dataset ha sido creado para poder validar la ontología a través de las consultas SPARQL de validación</dcterms:description>
+        <dcterms:description xml:lang="en">This dataset has been created to allow  the testing of the ROH ontology through the validation SPARQL queries</dcterms:description>
+        <dcterms:issued rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2021-04-19</dcterms:issued>
+        <dcterms:license rdf:resource="https://creativecommons.org/licenses/by-sa/4.0/"/>
+        <dcterms:publisher>Universidad de Murcia</dcterms:publisher>
+        <dcterms:subject rdf:resource="http://dbpedia.org/resource/Semantic_Web"/>
+        <dcterms:title xml:lang="en">ASIO example data</dcterms:title>
+        <dcterms:title xml:lang="es">Datos de ejemplo ASIO</dcterms:title>
+        <void:feature rdf:resource="http://www.w3.org/ns/formats/Turtle"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://purl.org/roh_edma/data#a-great-conference -->
+
+    <owl:NamedIndividual rdf:about="http://purl.org/roh_edma/data#a-great-conference">
+        <rdf:type rdf:resource="http://purl.org/roh_edma/mirror/bibo#Conference"/>
+        <bfo:BFO_0000055>
+            <rdf:Description rdf:nodeID="genid2">
+                <rdf:type rdf:resource="http://purl.org/roh_edma/mirror/vivo#AttendeeRole"/>
+                <roleOf rdf:resource="http://purl.org/roh_edma/data#investigador-2"/>
+            </rdf:Description>
+        </bfo:BFO_0000055>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://purl.org/roh_edma/data#a-private-project -->
+
+    <owl:NamedIndividual rdf:about="http://purl.org/roh_edma/data#a-private-project">
+        <rdf:type rdf:resource="http://purl.org/roh_edma/mirror/vivo#Project"/>
+        <hasKnowledgeArea rdf:resource="http://purl.org/roh/unesco-individuals#1203"/>
+        <hasKnowledgeArea rdf:resource="http://purl.org/roh/unesco-individuals#120304"/>
+        <isSupportedBy>
+            <rdf:Description rdf:nodeID="genid3">
+                <rdf:type rdf:resource="http://purl.org/roh_edma#Funding"/>
+                <fundedBy>
+                    <rdf:Description rdf:nodeID="genid4">
+                        <rdf:type rdf:resource="http://purl.org/roh_edma#FundingProgram"/>
+                        <promotedBy rdf:resource="http://purl.org/roh_edma/data#company-one"/>
+                    </rdf:Description>
+                </fundedBy>
+                <ro:BFO_0000051>
+                    <rdf:Description rdf:nodeID="genid5">
+                        <rdf:type rdf:resource="http://purl.org/roh_edma#FundingAmount"/>
+                        <grants rdf:resource="http://purl.org/roh_edma/data#grupo-investigacion-1"/>
+                        <monetaryAmount rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">50000</monetaryAmount>
+                    </rdf:Description>
+                </ro:BFO_0000051>
+                <publicFunding rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">false</publicFunding>
+            </rdf:Description>
+        </isSupportedBy>
+        <projectStatus>
+            <rdf:Description>
+                <rdf:type rdf:resource="http://purl.org/roh_edma#ProposalSubmitted"/>
+            </rdf:Description>
+        </projectStatus>
+        <vivo:dateTimeInterval>
+            <rdf:Description rdf:nodeID="genid7">
+                <rdf:type rdf:resource="http://purl.org/roh_edma/mirror/vivo#DateTimeInterval"/>
+                <vivo:start>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="http://purl.org/roh_edma/mirror/vivo#DateTimeValue"/>
+                        <vivo:dateTime rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2019-01-01T00:00:00</vivo:dateTime>
+                    </rdf:Description>
+                </vivo:start>
+            </rdf:Description>
+        </vivo:dateTimeInterval>
+        <vivo:relates>
+            <rdf:Description rdf:nodeID="genid9">
+                <rdf:type rdf:resource="http://purl.org/roh_edma/mirror/vivo#MemberRole"/>
+                <roleOf rdf:resource="http://purl.org/roh_edma/data#grupo-investigacion-1"/>
+            </rdf:Description>
+        </vivo:relates>
+        <vivo:relates>
+            <rdf:Description rdf:nodeID="genid10">
+                <rdf:type rdf:resource="http://purl.org/roh_edma/mirror/vivo#LeaderRole"/>
+                <roleOf rdf:resource="http://purl.org/roh_edma/data#company-one"/>
+            </rdf:Description>
+        </vivo:relates>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://purl.org/roh_edma/data#a-project -->
+
+    <owl:NamedIndividual rdf:about="http://purl.org/roh_edma/data#a-project">
+        <rdf:type rdf:resource="http://purl.org/roh_edma/mirror/vivo#Project"/>
+        <foreseenJustificationDate>
+            <rdf:Description>
+                <rdf:type rdf:resource="http://purl.org/roh_edma/mirror/vivo#DateTimeValue"/>
+                <vivo:dateTime rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2019-03-31T00:00:00</vivo:dateTime>
+                <vivo:dateTime rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2020-03-31T00:00:00</vivo:dateTime>
+            </rdf:Description>
+        </foreseenJustificationDate>
+        <hasKnowledgeArea rdf:resource="http://purl.org/roh/unesco-individuals#1203"/>
+        <hasKnowledgeArea rdf:resource="http://purl.org/roh/unesco-individuals#120304"/>
+        <isSupportedBy>
+            <rdf:Description rdf:nodeID="genid12">
+                <rdf:type rdf:resource="http://purl.org/roh_edma#Funding"/>
+                <fundedBy rdf:resource="http://purl.org/roh_edma/data#hazitek2020"/>
+                <ro:BFO_0000051>
+                    <rdf:Description rdf:nodeID="genid13">
+                        <rdf:type rdf:resource="http://purl.org/roh_edma#FundingAmount"/>
+                        <grants rdf:resource="http://purl.org/roh_edma/data#grupo-investigacion-1"/>
+                        <monetaryAmount rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">10000</monetaryAmount>
+                    </rdf:Description>
+                </ro:BFO_0000051>
+                <publicFunding rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</publicFunding>
+            </rdf:Description>
+        </isSupportedBy>
+        <projectStatus>
+            <rdf:Description>
+                <rdf:type rdf:resource="http://purl.org/roh_edma#ProposalSubmitted"/>
+            </rdf:Description>
+        </projectStatus>
+        <spends rdf:resource="http://purl.org/roh_edma/data#an-intern-expense"/>
+        <gn:locatedIn rdf:resource="https://sws.geonames.org/3336903/"/>
+        <vivo:dateTimeInterval>
+            <rdf:Description rdf:nodeID="genid15">
+                <rdf:type rdf:resource="http://purl.org/roh_edma/mirror/vivo#DateTimeInterval"/>
+                <vivo:end>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="http://purl.org/roh_edma/mirror/vivo#DateTimeValue"/>
+                        <vivo:dateTime rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2019-12-01T00:00:00</vivo:dateTime>
+                    </rdf:Description>
+                </vivo:end>
+                <vivo:start>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="http://purl.org/roh_edma/mirror/vivo#DateTimeValue"/>
+                        <vivo:dateTime rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2018-01-01T00:00:00</vivo:dateTime>
+                    </rdf:Description>
+                </vivo:start>
+            </rdf:Description>
+        </vivo:dateTimeInterval>
+        <vivo:relates>
+            <rdf:Description rdf:nodeID="genid18">
+                <rdf:type rdf:resource="http://purl.org/roh_edma/mirror/vivo#MemberRole"/>
+                <roleOf rdf:resource="http://purl.org/roh_edma/data#grupo-investigacion-1"/>
+                <ro:RO_0000052 rdf:resource="http://purl.org/roh_edma/data#investigador-1"/>
+            </rdf:Description>
+        </vivo:relates>
+        <vivo:relates>
+            <rdf:Description rdf:nodeID="genid19">
+                <rdf:type rdf:resource="http://purl.org/roh_edma/mirror/vivo#InvestigatorRole"/>
+                <roleOf rdf:resource="http://purl.org/roh_edma/data#investigador-1"/>
+            </rdf:Description>
+        </vivo:relates>
+        <vivo:relates>
+            <rdf:Description rdf:nodeID="genid20">
+                <rdf:type rdf:resource="http://purl.org/roh_edma/mirror/vivo#LeaderRole"/>
+                <roleOf rdf:resource="http://purl.org/roh_edma/data#company-one"/>
+            </rdf:Description>
+        </vivo:relates>
+        <title>A GREAT PROJECT</title>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://purl.org/roh_edma/data#a-project-dossier -->
+
+    <owl:NamedIndividual rdf:about="http://purl.org/roh_edma/data#a-project-dossier">
+        <rdf:type rdf:resource="http://purl.org/roh_edma#Dossier"/>
+        <vivo:relates rdf:resource="http://purl.org/roh_edma/data#a-project"/>
+        <vivo:relates rdf:resource="http://purl.org/roh_edma/data#a-project-justification"/>
+        <vivo:relates rdf:resource="http://purl.org/roh_edma/data#a-project-research-proposal"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://purl.org/roh_edma/data#a-project-in-negotiation -->
+
+    <owl:NamedIndividual rdf:about="http://purl.org/roh_edma/data#a-project-in-negotiation">
+        <rdf:type rdf:resource="http://purl.org/roh_edma/mirror/vivo#Project"/>
+        <hasKnowledgeArea rdf:resource="http://purl.org/roh/unesco-individuals#120304"/>
+        <hasKnowledgeArea rdf:resource="http://purl.org/roh/unesco-individuals#120703"/>
+        <isSupportedBy>
+            <rdf:Description rdf:nodeID="genid21">
+                <rdf:type rdf:resource="http://purl.org/roh_edma#Funding"/>
+                <fundedBy>
+                    <rdf:Description rdf:nodeID="genid22">
+                        <rdf:type rdf:resource="http://purl.org/roh_edma#FundingProgram"/>
+                        <promotedBy rdf:resource="http://purl.org/roh_edma/data#company-one"/>
+                    </rdf:Description>
+                </fundedBy>
+                <ro:BFO_0000051>
+                    <rdf:Description rdf:nodeID="genid23">
+                        <rdf:type rdf:resource="http://purl.org/roh_edma#FundingAmount"/>
+                        <grants rdf:resource="http://purl.org/roh_edma/data#grupo-investigacion-1"/>
+                        <monetaryAmount rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">5000</monetaryAmount>
+                    </rdf:Description>
+                </ro:BFO_0000051>
+                <publicFunding rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">false</publicFunding>
+            </rdf:Description>
+        </isSupportedBy>
+        <produces rdf:resource="http://purl.org/roh_edma/data#software-producedBy-proyect"/>
+        <vivo:dateTimeInterval>
+            <rdf:Description rdf:nodeID="genid24">
+                <rdf:type rdf:resource="http://purl.org/roh_edma/mirror/vivo#DateTimeInterval"/>
+                <vivo:end>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="http://purl.org/roh_edma/mirror/vivo#DateTimeValue"/>
+                        <vivo:dateTime rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2019-06-30T00:00:00</vivo:dateTime>
+                    </rdf:Description>
+                </vivo:end>
+                <vivo:start>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="http://purl.org/roh_edma/mirror/vivo#DateTimeValue"/>
+                        <vivo:dateTime rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2018-01-01T00:00:00</vivo:dateTime>
+                    </rdf:Description>
+                </vivo:start>
+            </rdf:Description>
+        </vivo:dateTimeInterval>
+        <vivo:relates>
+            <rdf:Description rdf:nodeID="genid27">
+                <rdf:type rdf:resource="http://purl.org/roh_edma/mirror/vivo#MemberRole"/>
+                <roleOf rdf:resource="http://purl.org/roh_edma/data#grupo-investigacion-1"/>
+            </rdf:Description>
+        </vivo:relates>
+        <vivo:relates>
+            <rdf:Description rdf:nodeID="genid28">
+                <rdf:type rdf:resource="http://purl.org/roh_edma/mirror/vivo#LeaderRole"/>
+                <roleOf rdf:resource="http://purl.org/roh_edma/data#company-one"/>
+            </rdf:Description>
+        </vivo:relates>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://purl.org/roh_edma/data#a-project-justification -->
+
+    <owl:NamedIndividual rdf:about="http://purl.org/roh_edma/data#a-project-justification">
+        <rdf:type rdf:resource="http://purl.org/roh_edma#Justification"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://purl.org/roh_edma/data#a-project-research-proposal -->
+
+    <owl:NamedIndividual rdf:about="http://purl.org/roh_edma/data#a-project-research-proposal">
+        <rdf:type rdf:resource="http://purl.org/roh_edma/mirror/vivo#ResearchProposal"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://purl.org/roh_edma/data#an-intern-expense -->
+
+    <owl:NamedIndividual rdf:about="http://purl.org/roh_edma/data#an-intern-expense">
+        <rdf:type rdf:resource="http://purl.org/roh_edma#ProjectExpense"/>
+        <vivo:description>The salary of an intern working for the project</vivo:description>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://purl.org/roh_edma/data#annotation-1 -->
+
+    <owl:NamedIndividual rdf:about="http://purl.org/roh_edma/data#annotation-1">
+        <rdf:type rdf:resource="http://www.w3.org/ns/oa#Annotation"/>
+        <correspondingAuthor rdf:resource="http://purl.org/roh_edma/data#investigador-1"/>
+        <oa:motivatedBy rdf:resource="http://www.w3.org/ns/oa#questioning"/>
+        <oa:hasBody>What is the version of java used for this software? </oa:hasBody>
+        <oa:hasTarget rdf:resource="http://purl.org/roh_edma/data#software-producedBy-proyect"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://purl.org/roh_edma/data#annotation-2 -->
+
+    <owl:NamedIndividual rdf:about="http://purl.org/roh_edma/data#annotation-2">
+        <rdf:type rdf:resource="http://www.w3.org/ns/oa#Annotation"/>
+        <correspondingAuthor rdf:resource="http://purl.org/roh_edma/data#investigador-2"/>
+        <oa:motivatedBy rdf:resource="http://www.w3.org/ns/oa#commenting"/>
+        <oa:hasBody>The version -.0 but it`s work with --.1 version.</oa:hasBody>
+        <oa:hasTarget rdf:resource="http://purl.org/roh_edma/data#annotation-1"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://purl.org/roh_edma/data#annotation-3 -->
+
+    <owl:NamedIndividual rdf:about="http://purl.org/roh_edma/data#annotation-3">
+        <rdf:type rdf:resource="http://www.w3.org/ns/oa#Annotation"/>
+        <correspondingAuthor rdf:resource="http://purl.org/roh_edma/data#investigador-2"/>
+        <oa:motivatedBy rdf:resource="http://www.w3.org/ns/oa#commenting"/>
+        <oa:hasBody rdf:resource="http://purl.org/roh_edma/data#software-reservable"/>
+        <oa:hasBody>it`s work with --.1 version too. I put another body with this reservable.</oa:hasBody>
+        <oa:hasTarget rdf:resource="http://purl.org/roh_edma/data#annotation-2"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://purl.org/roh_edma/data#annotation-of-software-1 -->
+
+    <owl:NamedIndividual rdf:about="http://purl.org/roh_edma/data#annotation-of-software-1">
+        <rdf:type rdf:resource="http://www.w3.org/ns/oa#Annotation"/>
+        <correspondingAuthor rdf:resource="http://purl.org/roh_edma/data#investigador-1"/>
+        <oa:motivatedBy rdf:resource="http://www.w3.org/ns/oa#commenting"/>
+        <oa:hasBody>This software is based on software 1.</oa:hasBody>
+        <oa:hasTarget rdf:resource="http://purl.org/roh_edma/data#software-1"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://purl.org/roh_edma/data#annotation-research-result-1 -->
+
+    <owl:NamedIndividual rdf:about="http://purl.org/roh_edma/data#annotation-research-result-1">
+        <rdf:type rdf:resource="http://www.w3.org/ns/oa#Annotation"/>
+        <correspondingAuthor rdf:resource="http://purl.org/roh_edma/data#investigador-1"/>
+        <hasKnowledgeArea rdf:resource="http://purl.org/roh/unesco-individuals#1203"/>
+        <hasKnowledgeArea rdf:resource="http://purl.org/roh/unesco-individuals#120304"/>
+        <vivo:dateIssued>
+            <rdf:Description>
+                <rdf:type rdf:resource="http://purl.org/roh_edma/mirror/vivo#DateTimeValue"/>
+                <vivo:dateTime rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2020-04-27T00:00:00</vivo:dateTime>
+            </rdf:Description>
+        </vivo:dateIssued>
+        <oa:motivatedBy rdf:resource="http://www.w3.org/ns/oa#commenting"/>
+        <oa:hasBody>This RR contains all ROs of my research.</oa:hasBody>
+        <oa:hasTarget rdf:resource="http://purl.org/roh_edma/data#research-result-investigador-1"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://purl.org/roh_edma/data#another-collaborative-project -->
+
+    <owl:NamedIndividual rdf:about="http://purl.org/roh_edma/data#another-collaborative-project">
+        <rdf:type rdf:resource="http://purl.org/roh_edma/mirror/vivo#Project"/>
+        <hasKnowledgeArea rdf:resource="http://purl.org/roh/unesco-individuals#1203"/>
+        <hasKnowledgeArea rdf:resource="http://purl.org/roh/unesco-individuals#120304"/>
+        <isSupportedBy>
+            <rdf:Description rdf:nodeID="genid30">
+                <rdf:type rdf:resource="http://purl.org/roh_edma#Funding"/>
+                <fundedBy rdf:resource="http://purl.org/roh_edma/data#european-funding-program"/>
+                <ro:BFO_0000051>
+                    <rdf:Description rdf:nodeID="genid31">
+                        <rdf:type rdf:resource="http://purl.org/roh_edma#FundingAmount"/>
+                        <grants rdf:resource="http://purl.org/roh_edma/data#grupo-investigacion-1"/>
+                        <monetaryAmount rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">25000</monetaryAmount>
+                    </rdf:Description>
+                </ro:BFO_0000051>
+                <publicFunding rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</publicFunding>
+            </rdf:Description>
+        </isSupportedBy>
+        <isSupportedBy>
+            <rdf:Description rdf:nodeID="genid32">
+                <rdf:type rdf:resource="http://purl.org/roh_edma#Funding"/>
+                <fundedBy rdf:resource="http://purl.org/roh_edma/data#european-funding-program"/>
+                <ro:BFO_0000051>
+                    <rdf:Description rdf:nodeID="genid33">
+                        <rdf:type rdf:resource="http://purl.org/roh_edma#FundingAmount"/>
+                        <grants rdf:resource="http://purl.org/roh_edma/data#grupo-investigacion-3"/>
+                        <monetaryAmount rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">35000</monetaryAmount>
+                    </rdf:Description>
+                </ro:BFO_0000051>
+                <publicFunding rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">false</publicFunding>
+            </rdf:Description>
+        </isSupportedBy>
+        <projectStatus>
+            <rdf:Description>
+                <rdf:type rdf:resource="http://purl.org/roh_edma#ProposalSubmitted"/>
+            </rdf:Description>
+        </projectStatus>
+        <vivo:dateTimeInterval>
+            <rdf:Description rdf:nodeID="genid35">
+                <rdf:type rdf:resource="http://purl.org/roh_edma/mirror/vivo#DateTimeInterval"/>
+                <vivo:end>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="http://purl.org/roh_edma/mirror/vivo#DateTimeValue"/>
+                        <vivo:dateTime rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2019-06-30T00:00:00</vivo:dateTime>
+                    </rdf:Description>
+                </vivo:end>
+                <vivo:start>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="http://purl.org/roh_edma/mirror/vivo#DateTimeValue"/>
+                        <vivo:dateTime rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2018-01-01T00:00:00</vivo:dateTime>
+                    </rdf:Description>
+                </vivo:start>
+            </rdf:Description>
+        </vivo:dateTimeInterval>
+        <vivo:relates>
+            <rdf:Description rdf:nodeID="genid38">
+                <rdf:type rdf:resource="http://purl.org/roh_edma/mirror/vivo#MemberRole"/>
+                <roleOf rdf:resource="http://purl.org/roh_edma/data#grupo-investigacion-1"/>
+            </rdf:Description>
+        </vivo:relates>
+        <vivo:relates>
+            <rdf:Description rdf:nodeID="genid39">
+                <rdf:type rdf:resource="http://purl.org/roh_edma/mirror/vivo#LeaderRole"/>
+                <roleOf rdf:resource="http://purl.org/roh_edma/data#grupo-investigacion-3"/>
+            </rdf:Description>
+        </vivo:relates>
+        <title>another collaborative project</title>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://purl.org/roh_edma/data#another-fabulous-patent -->
+
+    <owl:NamedIndividual rdf:about="http://purl.org/roh_edma/data#another-fabulous-patent">
+        <rdf:type rdf:resource="http://purl.org/roh_edma/mirror/bibo#Patent"/>
+        <correspondingAuthor rdf:resource="http://purl.org/roh_edma/data#investigador-3"/>
+        <correspondingOrganization rdf:resource="http://purl.org/roh_edma/data#grupo-investigacion-1"/>
+        <hasKnowledgeArea rdf:resource="http://purl.org/roh/unesco-individuals#1203"/>
+        <hasKnowledgeArea rdf:resource="http://purl.org/roh/unesco-individuals#120304"/>
+        <ownerOrganization rdf:resource="http://purl.org/roh_edma/data#grupo-investigacion-1"/>
+        <patentInventor rdf:resource="http://purl.org/roh_edma/data#investigador-3"/>
+        <seqOfAuthors>
+            <rdf:Description>
+                <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Seq"/>
+            </rdf:Description>
+        </seqOfAuthors>
+        <vivo:dateIssued>
+            <rdf:Description>
+                <rdf:type rdf:resource="http://purl.org/roh_edma/mirror/vivo#DateTimeValue"/>
+                <vivo:dateTime rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2015-02-12T00:00:00</vivo:dateTime>
+            </rdf:Description>
+        </vivo:dateIssued>
+        <vivo:identifier rdf:datatype="http://www.w3.org/2001/XMLSchema#string">another-fabulous-patent</vivo:identifier>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://purl.org/roh_edma/data#another-great-project -->
+
+    <owl:NamedIndividual rdf:about="http://purl.org/roh_edma/data#another-great-project">
+        <rdf:type rdf:resource="http://purl.org/roh_edma/mirror/vivo#Project"/>
+        <hasKnowledgeArea rdf:resource="http://purl.org/roh/unesco-individuals#120304"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://purl.org/roh_edma/data#another-project -->
+
+    <owl:NamedIndividual rdf:about="http://purl.org/roh_edma/data#another-project">
+        <rdf:type rdf:resource="http://purl.org/roh_edma/mirror/vivo#Project"/>
+        <hasKnowledgeArea rdf:resource="http://purl.org/roh/unesco-individuals#120304"/>
+        <hasKnowledgeArea rdf:resource="http://purl.org/roh/unesco-individuals#120703"/>
+        <projectStatus>
+            <rdf:Description>
+                <rdf:type rdf:resource="http://purl.org/roh_edma#ProposalSubmitted"/>
+            </rdf:Description>
+        </projectStatus>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://purl.org/roh_edma/data#centro-investigacion-2 -->
+
+    <owl:NamedIndividual rdf:about="http://purl.org/roh_edma/data#centro-investigacion-2">
+        <rdf:type rdf:resource="http://purl.org/roh_edma#ResearchInstitute"/>
+        <hasAccreditation>
+            <rdf:Description rdf:nodeID="genid43">
+                <rdf:type rdf:resource="http://purl.org/roh_edma#Accreditation"/>
+                <vivo:hasGoverningAuthority rdf:resource="http://purl.org/roh_edma/data#gobierno-vasco"/>
+                <title>Centro reconocido por el Gobierno Vasco</title>
+            </rdf:Description>
+        </hasAccreditation>
+        <hasContactInfo>
+            <rdf:Description rdf:nodeID="genid44">
+                <rdf:type rdf:resource="http://purl.org/roh_edma/mirror/vcard#Organization"/>
+                <vcard:hasEmail>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="http://purl.org/roh_edma/mirror/vcard#Email"/>
+                    </rdf:Description>
+                </vcard:hasEmail>
+            </rdf:Description>
+        </hasContactInfo>
+        <hasKnowledgeArea rdf:resource="http://purl.org/roh/unesco-individuals#120304"/>
+        <hasKnowledgeArea rdf:resource="http://purl.org/roh/unesco-individuals#120318"/>
+        <hasKnowledgeArea rdf:resource="http://purl.org/roh/unesco-individuals#120601"/>
+        <hasKnowledgeArea rdf:resource="http://purl.org/roh/unesco-individuals#570508"/>
+        <ro:BFO_0000051 rdf:resource="http://purl.org/roh_edma/data#grupo-investigacion-1"/>
+        <title>Centro de Investigacion 2</title>
+        <vivo:description>A GREAT RESEARCH INSTITUTE 2</vivo:description>
+        <vivo:identifier rdf:datatype="http://www.w3.org/2001/XMLSchema#string">rdfs:Literal that identifies this research institute 2</vivo:identifier>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://purl.org/roh_edma/data#company-one -->
+
+    <owl:NamedIndividual rdf:about="http://purl.org/roh_edma/data#company-one">
+        <rdf:type rdf:resource="http://purl.org/roh_edma/mirror/vivo#Company"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://purl.org/roh_edma/data#european-comission -->
+
+    <owl:NamedIndividual rdf:about="http://purl.org/roh_edma/data#european-comission">
+        <rdf:type rdf:resource="http://purl.org/roh_edma/mirror/vivo#GovernmentAgency"/>
+        <promotes rdf:resource="http://purl.org/roh_edma/data#feder"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://purl.org/roh_edma/data#european-funding-program -->
+
+    <owl:NamedIndividual rdf:about="http://purl.org/roh_edma/data#european-funding-program">
+        <rdf:type rdf:resource="http://purl.org/roh_edma#FundingProgram"/>
+        <promotedBy rdf:resource="http://purl.org/roh_edma/data#european-comission"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://purl.org/roh_edma/data#excelent-journal -->
+
+    <owl:NamedIndividual rdf:about="http://purl.org/roh_edma/data#excelent-journal">
+        <rdf:type rdf:resource="http://purl.org/roh_edma/mirror/bibo#Journal"/>
+        <vivo:dateIssued>
+            <rdf:Description>
+                <rdf:type rdf:resource="http://purl.org/roh_edma/mirror/vivo#DateTimeValue"/>
+                <vivo:dateTime rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2020-04-27T00:00:00</vivo:dateTime>
+            </rdf:Description>
+        </vivo:dateIssued>
+        <vivo:dateIssued>
+            <rdf:Description>
+                <rdf:type rdf:resource="http://purl.org/roh_edma/mirror/vivo#DateTimeValue"/>
+                <vivo:dateTime rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2020-04-27T00:00:00</vivo:dateTime>
+            </rdf:Description>
+        </vivo:dateIssued>
+        <vivo:publicationVenueFor rdf:resource="http://purl.org/roh_edma/data#journal-article-1"/>
+        <title>An excelent Journal</title>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://purl.org/roh_edma/data#experimental-prototol-1 -->
+
+    <owl:NamedIndividual rdf:about="http://purl.org/roh_edma/data#experimental-prototol-1">
+        <rdf:type rdf:resource="http://purl.org/roh_edma#ExperimentalProtocol"/>
+        <correspondingAuthor rdf:resource="http://purl.org/roh_edma/data#investigador-1"/>
+        <correspondingOrganization rdf:resource="http://purl.org/roh_edma/data#grupo-investigacion-1"/>
+        <hasKnowledgeArea rdf:resource="http://purl.org/roh/unesco-individuals#1203"/>
+        <hasKnowledgeArea rdf:resource="http://purl.org/roh/unesco-individuals#120304"/>
+        <partOfResearchResult rdf:resource="http://purl.org/roh_edma/data#research-result-investigador-1"/>
+        <produces rdf:resource="http://purl.org/roh_edma/data#experimental-prototol-result-1"/>
+        <seqOfAuthors>
+            <rdf:Description>
+                <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Seq"/>
+            </rdf:Description>
+        </seqOfAuthors>
+        <vivo:dateIssued>
+            <rdf:Description>
+                <rdf:type rdf:resource="http://purl.org/roh_edma/mirror/vivo#DateTimeValue"/>
+                <vivo:dateTime rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2020-04-27T00:00:00</vivo:dateTime>
+            </rdf:Description>
+        </vivo:dateIssued>
+        <title>A great experimental protocol.</title>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://purl.org/roh_edma/data#experimental-prototol-result-1 -->
+
+    <owl:NamedIndividual rdf:about="http://purl.org/roh_edma/data#experimental-prototol-result-1">
+        <rdf:type rdf:resource="http://purl.org/roh_edma#ExperimentalProtocolResult"/>
+        <rdf:type rdf:resource="http://purl.org/roh_edma/mirror/bibo#Article"/>
+        <partOfRepository rdf:resource="http://purl.org/roh_edma/data#repository-1"/>
+        <partOfResearchResult rdf:resource="http://purl.org/roh_edma/data#research-result-investigador-1"/>
+        <seqOfAuthors>
+            <rdf:Description>
+                <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Seq"/>
+            </rdf:Description>
+        </seqOfAuthors>
+        <vivo:dateIssued>
+            <rdf:Description>
+                <rdf:type rdf:resource="http://purl.org/roh_edma/mirror/vivo#DateTimeValue"/>
+                <vivo:dateTime rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2020-04-27T00:00:00</vivo:dateTime>
+            </rdf:Description>
+        </vivo:dateIssued>
+        <title>A great result of the experimental protocol. </title>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://purl.org/roh_edma/data#feder -->
+
+    <owl:NamedIndividual rdf:about="http://purl.org/roh_edma/data#feder">
+        <rdf:type rdf:resource="http://purl.org/roh_edma#FundingSource"/>
+        <funds rdf:resource="http://purl.org/roh_edma/data#hazitek2020"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://purl.org/roh_edma/data#fork-repository-1 -->
+
+    <owl:NamedIndividual rdf:about="http://purl.org/roh_edma/data#fork-repository-1">
+        <rdf:type rdf:resource="http://purl.org/roh_edma#BitBucketRepository"/>
+        <correspondingAuthor rdf:resource="http://purl.org/roh_edma/data#investigador-3"/>
+        <hasKnowledgeArea rdf:resource="http://purl.org/roh/unesco-individuals#1203"/>
+        <hasKnowledgeArea rdf:resource="http://purl.org/roh/unesco-individuals#120304"/>
+        <hasPredecessor rdf:resource="http://purl.org/roh_edma/data#repository-1"/>
+        <seqOfAuthors>
+            <rdf:Description>
+                <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Seq"/>
+            </rdf:Description>
+        </seqOfAuthors>
+        <title>A fork of a git repository-1</title>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://purl.org/roh_edma/data#gobierno-vasco -->
+
+    <owl:NamedIndividual rdf:about="http://purl.org/roh_edma/data#gobierno-vasco">
+        <rdf:type rdf:resource="http://purl.org/roh_edma/mirror/vivo#GovernmentAgency"/>
+        <promotes rdf:resource="http://purl.org/roh_edma/data#hazitek2020"/>
+        <title>Gobierno Vasco</title>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://purl.org/roh_edma/data#grupo-investigacion-1 -->
+
+    <owl:NamedIndividual rdf:about="http://purl.org/roh_edma/data#grupo-investigacion-1">
+        <rdf:type rdf:resource="http://purl.org/roh_edma#ResearchGroup"/>
+        <hasAccreditation>
+            <rdf:Description rdf:nodeID="genid53">
+                <rdf:type rdf:resource="http://purl.org/roh_edma#Accreditation"/>
+                <vivo:hasGoverningAuthority rdf:resource="http://purl.org/roh_edma/data#gobierno-vasco"/>
+                <title>Grupo reconocido por el Gobierno Vasco</title>
+            </rdf:Description>
+        </hasAccreditation>
+        <hasAccreditation>
+            <rdf:Description rdf:nodeID="genid54">
+                <rdf:type rdf:resource="http://purl.org/roh_edma#SealOfQuality"/>
+                <vivo:hasGoverningAuthority rdf:resource="http://purl.org/roh_edma/data#gobierno-vasco"/>
+                <title>Sello de calidad proporcionado por el Gobierno Vasco</title>
+            </rdf:Description>
+        </hasAccreditation>
+        <hasContactInfo>
+            <rdf:Description rdf:nodeID="genid55">
+                <rdf:type rdf:resource="http://purl.org/roh_edma/mirror/vcard#Organization"/>
+                <vcard:hasEmail>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="http://purl.org/roh_edma/mirror/vcard#Email"/>
+                    </rdf:Description>
+                </vcard:hasEmail>
+            </rdf:Description>
+        </hasContactInfo>
+        <hasKnowledgeArea rdf:resource="http://purl.org/roh/unesco-individuals#120304"/>
+        <hasKnowledgeArea rdf:resource="http://purl.org/roh/unesco-individuals#120318"/>
+        <hasKnowledgeArea rdf:resource="http://purl.org/roh/unesco-individuals#120601"/>
+        <gn:locatedIn rdf:resource="https://sws.geonames.org/3128026/"/>
+        <title>Grupo de investigacion 1</title>
+        <vivo:description>A GREAT RESEARCH GROUP 1</vivo:description>
+        <vivo:identifier rdf:datatype="http://www.w3.org/2001/XMLSchema#string">rdfs:Literal that identifies this research group 1</vivo:identifier>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://purl.org/roh_edma/data#grupo-investigacion-3 -->
+
+    <owl:NamedIndividual rdf:about="http://purl.org/roh_edma/data#grupo-investigacion-3">
+        <rdf:type rdf:resource="http://purl.org/roh_edma#ResearchGroup"/>
+        <hasContactInfo>
+            <rdf:Description rdf:nodeID="genid57">
+                <rdf:type rdf:resource="http://purl.org/roh_edma/mirror/vcard#Organization"/>
+                <vcard:hasEmail>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="http://purl.org/roh_edma/mirror/vcard#Email"/>
+                    </rdf:Description>
+                </vcard:hasEmail>
+            </rdf:Description>
+        </hasContactInfo>
+        <hasKnowledgeArea rdf:resource="http://purl.org/roh/unesco-individuals#120304"/>
+        <hasKnowledgeArea rdf:resource="http://purl.org/roh/unesco-individuals#120318"/>
+        <hasKnowledgeArea rdf:resource="http://purl.org/roh/unesco-individuals#570508"/>
+        <gn:locatedIn rdf:resource="https://sws.geonames.org/3128026/"/>
+        <title>Centro de investigacion 3</title>
+        <vivo:description>A GREAT RESEARCH INSTITUTE 3</vivo:description>
+        <vivo:identifier rdf:datatype="http://www.w3.org/2001/XMLSchema#string">rdfs:Literal that identifies this research institute 3</vivo:identifier>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://purl.org/roh_edma/data#hazitek2020 -->
+
+    <owl:NamedIndividual rdf:about="http://purl.org/roh_edma/data#hazitek2020">
+        <rdf:type rdf:resource="http://purl.org/roh_edma#FundingProgram"/>
+        <promotedBy rdf:resource="http://purl.org/roh_edma/data#gobierno-vasco"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://purl.org/roh_edma/data#investigador-1 -->
+
+    <owl:NamedIndividual rdf:about="http://purl.org/roh_edma/data#investigador-1">
+        <rdf:type rdf:resource="http://purl.org/roh_edma/mirror/foaf#Person"/>
+        <hasKnowledgeArea rdf:resource="http://purl.org/roh/unesco-individuals#120304"/>
+        <hasKnowledgeArea rdf:resource="http://purl.org/roh/unesco-individuals#120601"/>
+        <hasMetric>
+            <rdf:Description>
+                <rdf:type rdf:resource="http://purl.org/roh_edma#AuthorMetric"/>
+                <citationCount rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">21</citationCount>
+                <h-index rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">3</h-index>
+                <i10-index rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">5</i10-index>
+            </rdf:Description>
+        </hasMetric>
+        <hasPosition>
+            <rdf:Description rdf:nodeID="genid60">
+                <rdf:type rdf:resource="http://purl.org/roh_edma#ResearcherPosition"/>
+                <vivo:dateTimeInterval>
+                    <rdf:Description rdf:nodeID="genid61">
+                        <rdf:type rdf:resource="http://purl.org/roh_edma/mirror/vivo#DateTimeInterval"/>
+                        <vivo:start>
+                            <rdf:Description>
+                                <rdf:type rdf:resource="http://purl.org/roh_edma/mirror/vivo#DateTimeValue"/>
+                                <vivo:dateTime rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2010-09-15T00:00:00</vivo:dateTime>
+                            </rdf:Description>
+                        </vivo:start>
+                    </rdf:Description>
+                </vivo:dateTimeInterval>
+                <vivo:relates rdf:resource="http://purl.org/roh_edma/data#grupo-investigacion-1"/>
+                <vivo:relates rdf:resource="http://purl.org/roh_edma/data#investigador-1"/>
+            </rdf:Description>
+        </hasPosition>
+        <hasPosition>
+            <rdf:Description rdf:nodeID="genid63">
+                <rdf:type rdf:resource="http://purl.org/roh_edma/mirror/vivo#FacultyPosition"/>
+                <vivo:dateTimeInterval>
+                    <rdf:Description rdf:nodeID="genid64">
+                        <rdf:type rdf:resource="http://purl.org/roh_edma/mirror/vivo#DateTimeInterval"/>
+                        <vivo:start>
+                            <rdf:Description>
+                                <rdf:type rdf:resource="http://purl.org/roh_edma/mirror/vivo#DateTimeValue"/>
+                                <vivo:dateTime rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2010-09-15T00:00:00</vivo:dateTime>
+                            </rdf:Description>
+                        </vivo:start>
+                    </rdf:Description>
+                </vivo:dateTimeInterval>
+                <vivo:relates rdf:resource="http://purl.org/roh_edma/data#grupo-investigacion-1"/>
+                <vivo:relates rdf:resource="http://purl.org/roh_edma/data#investigador-1"/>
+            </rdf:Description>
+        </hasPosition>
+        <vivo:relatedBy>
+            <rdf:Description rdf:nodeID="genid66">
+                <rdf:type rdf:resource="http://purl.org/roh_edma/mirror/vivo#FacultyPosition"/>
+                <vivo:relates rdf:resource="http://purl.org/roh_edma/data#grupo-investigacion-1"/>
+                <vivo:relates rdf:resource="http://purl.org/roh_edma/data#investigador-1"/>
+            </rdf:Description>
+        </vivo:relatedBy>
+        <ORCID>orcid.org/0oo0-0001-7005-5u0m</ORCID>
+        <foaf:gender>male</foaf:gender>
+        <foaf:name>Pedro</foaf:name>
+        <foaf:surname>surname pedro</foaf:surname>
+        <vivo:description>Pedro surname is a really good researcher, who actually work in the ResearchGoup 1.... (bla, bla, bla)</vivo:description>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://purl.org/roh_edma/data#investigador-1-contract -->
+
+    <owl:NamedIndividual rdf:about="http://purl.org/roh_edma/data#investigador-1-contract">
+        <rdf:type rdf:resource="http://purl.org/roh_edma#PersonContract"/>
+        <vivo:relates rdf:resource="http://purl.org/roh_edma/data#investigador-1"/>
+        <vivo:relates rdf:resource="http://purl.org/roh_edma/data#investigador-1-juan-de-la-cierva"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://purl.org/roh_edma/data#investigador-1-juan-de-la-cierva -->
+
+    <owl:NamedIndividual rdf:about="http://purl.org/roh_edma/data#investigador-1-juan-de-la-cierva">
+        <rdf:type rdf:resource="http://purl.org/roh_edma#Grant"/>
+        <ro:BFO_0000051>
+            <rdf:Description>
+                <rdf:type rdf:resource="http://purl.org/roh_edma#FundingAmount"/>
+                <currency>€</currency>
+                <monetaryAmount rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">35000</monetaryAmount>
+            </rdf:Description>
+        </ro:BFO_0000051>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://purl.org/roh_edma/data#investigador-2 -->
+
+    <owl:NamedIndividual rdf:about="http://purl.org/roh_edma/data#investigador-2">
+        <rdf:type rdf:resource="http://purl.org/roh_edma/mirror/foaf#Person"/>
+        <hasCV>
+            <rdf:Description>
+                <rdf:type rdf:resource="http://purl.org/roh_edma#CurriculumVitae"/>
+            </rdf:Description>
+        </hasCV>
+        <hasKnowledgeArea rdf:resource="http://purl.org/roh/unesco-individuals#120304"/>
+        <hasKnowledgeArea rdf:resource="http://purl.org/roh/unesco-individuals#570508"/>
+        <hasMetric>
+            <rdf:Description>
+                <rdf:type rdf:resource="http://purl.org/roh_edma#AuthorMetric"/>
+                <citationCount rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">53</citationCount>
+                <h-index rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">5</h-index>
+                <i10-index rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">7</i10-index>
+            </rdf:Description>
+        </hasMetric>
+        <hasPosition>
+            <rdf:Description rdf:nodeID="genid70">
+                <rdf:type rdf:resource="http://purl.org/roh_edma#ResearcherPosition"/>
+                <vivo:dateTimeInterval>
+                    <rdf:Description rdf:nodeID="genid71">
+                        <rdf:type rdf:resource="http://purl.org/roh_edma/mirror/vivo#DateTimeInterval"/>
+                        <vivo:start>
+                            <rdf:Description>
+                                <rdf:type rdf:resource="http://purl.org/roh_edma/mirror/vivo#DateTimeValue"/>
+                                <vivo:dateTime rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2013-05-10T00:00:00</vivo:dateTime>
+                            </rdf:Description>
+                        </vivo:start>
+                    </rdf:Description>
+                </vivo:dateTimeInterval>
+                <vivo:relates rdf:resource="http://purl.org/roh_edma/data#grupo-investigacion-1"/>
+                <vivo:relates rdf:resource="http://purl.org/roh_edma/data#investigador-2"/>
+            </rdf:Description>
+        </hasPosition>
+        <vivo:relatedBy>
+            <rdf:Description rdf:nodeID="genid73">
+                <rdf:type rdf:resource="http://purl.org/roh_edma#ResearcherPosition"/>
+                <vivo:relates rdf:resource="http://purl.org/roh_edma/data#grupo-investigacion-1"/>
+                <vivo:relates rdf:resource="http://purl.org/roh_edma/data#investigador-2"/>
+            </rdf:Description>
+        </vivo:relatedBy>
+        <ORCID>orcid.org/0oo0-0001-7oo5-5504</ORCID>
+        <foaf:gender>female</foaf:gender>
+        <foaf:name>Maria</foaf:name>
+        <foaf:surname>surname maria</foaf:surname>
+        <vivo:description>Maria surname is a really good researcher, who actually work in the ResearchGoup 1.... (bla, bla, bla</vivo:description>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://purl.org/roh_edma/data#investigador-3 -->
+
+    <owl:NamedIndividual rdf:about="http://purl.org/roh_edma/data#investigador-3">
+        <rdf:type rdf:resource="http://purl.org/roh_edma/mirror/foaf#Person"/>
+        <hasKnowledgeArea rdf:resource="http://purl.org/roh/unesco-individuals#120304"/>
+        <hasKnowledgeArea rdf:resource="http://purl.org/roh/unesco-individuals#120318"/>
+        <hasMetric>
+            <rdf:Description>
+                <rdf:type rdf:resource="http://purl.org/roh_edma#AuthorMetric"/>
+                <citationCount rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">5</citationCount>
+                <h-index rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</h-index>
+                <i10-index rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</i10-index>
+            </rdf:Description>
+        </hasMetric>
+        <hasPosition>
+            <rdf:Description rdf:nodeID="genid75">
+                <rdf:type rdf:resource="http://purl.org/roh_edma#ResearcherPosition"/>
+                <vivo:dateTimeInterval>
+                    <rdf:Description rdf:nodeID="genid76">
+                        <rdf:type rdf:resource="http://purl.org/roh_edma/mirror/vivo#DateTimeInterval"/>
+                        <vivo:start>
+                            <rdf:Description>
+                                <rdf:type rdf:resource="http://purl.org/roh_edma/mirror/vivo#DateTimeValue"/>
+                                <vivo:dateTime rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2012-05-10T00:00:00</vivo:dateTime>
+                            </rdf:Description>
+                        </vivo:start>
+                    </rdf:Description>
+                </vivo:dateTimeInterval>
+                <vivo:relates rdf:resource="http://purl.org/roh_edma/data#grupo-investigacion-1"/>
+                <vivo:relates rdf:resource="http://purl.org/roh_edma/data#investigador-3"/>
+            </rdf:Description>
+        </hasPosition>
+        <vivo:relatedBy>
+            <rdf:Description rdf:nodeID="genid78">
+                <rdf:type rdf:resource="http://purl.org/roh_edma#ResearcherPosition"/>
+                <vivo:relates rdf:resource="http://purl.org/roh_edma/data#grupo-investigacion-1"/>
+                <vivo:relates rdf:resource="http://purl.org/roh_edma/data#investigador-3"/>
+            </rdf:Description>
+        </vivo:relatedBy>
+        <vivo:relatedBy>
+            <rdf:Description rdf:nodeID="genid79">
+                <rdf:type rdf:resource="http://purl.org/roh_edma#ResearcherPosition"/>
+                <vivo:relates rdf:resource="http://purl.org/roh_edma/data#grupo-investigacion-1"/>
+                <vivo:relates rdf:resource="http://purl.org/roh_edma/data#investigador-3"/>
+            </rdf:Description>
+        </vivo:relatedBy>
+        <ORCID>orcid.org/0000-0001-7oo5-5pp4</ORCID>
+        <foaf:gender>female</foaf:gender>
+        <foaf:name>Sofia</foaf:name>
+        <foaf:surname>surname sofia</foaf:surname>
+        <vivo:description>Sofia surname is a really good researcher, who actually work in the ResearchGoup 1.... (bla, bla, bla</vivo:description>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://purl.org/roh_edma/data#investigador-3-phd-relationship -->
+
+    <owl:NamedIndividual rdf:about="http://purl.org/roh_edma/data#investigador-3-phd-relationship">
+        <rdf:type rdf:resource="http://purl.org/roh_edma#PhDSupervisingRelationship"/>
+        <produces rdf:resource="http://purl.org/roh_edma/data#investigador-3-phd-thesis"/>
+        <vivo:dateTimeInterval>
+            <rdf:Description rdf:nodeID="genid80">
+                <rdf:type rdf:resource="http://purl.org/roh_edma/mirror/vivo#DateTimeInterval"/>
+                <vivo:start>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="http://purl.org/roh_edma/mirror/vivo#DateTimeValue"/>
+                        <vivo:dateTime rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2018-11-13T00:00:00</vivo:dateTime>
+                    </rdf:Description>
+                </vivo:start>
+            </rdf:Description>
+        </vivo:dateTimeInterval>
+        <vivo:relates rdf:resource="http://purl.org/roh_edma/data#investigador-1"/>
+        <vivo:relates rdf:resource="http://purl.org/roh_edma/data#investigador-3"/>
+        <vivo:relates>
+            <rdf:Description rdf:nodeID="genid82">
+                <rdf:type rdf:resource="http://purl.org/roh_edma#SuperviseeRole"/>
+                <roleOf rdf:resource="http://purl.org/roh_edma/data#investigador-3"/>
+            </rdf:Description>
+        </vivo:relates>
+        <vivo:relates>
+            <rdf:Description rdf:nodeID="genid83">
+                <rdf:type rdf:resource="http://purl.org/roh_edma#SupervisorRole"/>
+                <roleOf rdf:resource="http://purl.org/roh_edma/data#investigador-1"/>
+            </rdf:Description>
+        </vivo:relates>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://purl.org/roh_edma/data#investigador-3-phd-thesis -->
+
+    <owl:NamedIndividual rdf:about="http://purl.org/roh_edma/data#investigador-3-phd-thesis">
+        <rdf:type rdf:resource="http://purl.org/roh_edma#PhDThesis"/>
+        <correspondingAuthor rdf:resource="http://purl.org/roh_edma/data#investigador-3"/>
+        <correspondingOrganization rdf:resource="http://purl.org/roh_edma/data#grupo-investigacion-1"/>
+        <hasKnowledgeArea rdf:resource="http://purl.org/roh/unesco-individuals#120304"/>
+        <partOfResearchResult rdf:resource="http://purl.org/roh_edma/data#research-result-phd-investigador-3"/>
+        <seqOfAuthors>
+            <rdf:Description>
+                <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Seq"/>
+            </rdf:Description>
+        </seqOfAuthors>
+        <vivo:dateIssued>
+            <rdf:Description>
+                <rdf:type rdf:resource="http://purl.org/roh_edma/mirror/vivo#DateTimeValue"/>
+                <vivo:dateTime rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2010-04-27T00:00:00</vivo:dateTime>
+            </rdf:Description>
+        </vivo:dateIssued>
+        <title>My fabulous PhD Thesis</title>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://purl.org/roh_edma/data#investigador-4 -->
+
+    <owl:NamedIndividual rdf:about="http://purl.org/roh_edma/data#investigador-4">
+        <rdf:type rdf:resource="http://purl.org/roh_edma/mirror/foaf#Person"/>
+        <hasKnowledgeArea rdf:resource="http://purl.org/roh/unesco-individuals#120304"/>
+        <vivo:relatedBy>
+            <rdf:Description rdf:nodeID="genid86">
+                <rdf:type rdf:resource="http://purl.org/roh_edma#ResearcherPosition"/>
+                <vivo:relates rdf:resource="http://purl.org/roh_edma/data#grupo-investigacion-3"/>
+                <vivo:relates rdf:resource="http://purl.org/roh_edma/data#investigador-4"/>
+            </rdf:Description>
+        </vivo:relatedBy>
+        <ORCID>orcid.org/0000-0001-7oo5-5pp4</ORCID>
+        <foaf:gender>male</foaf:gender>
+        <foaf:name>Carlos</foaf:name>
+        <foaf:surname>surname Carlos</foaf:surname>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://purl.org/roh_edma/data#journal-article-1 -->
+
+    <owl:NamedIndividual rdf:about="http://purl.org/roh_edma/data#journal-article-1">
+        <rdf:type rdf:resource="http://purl.org/roh_edma/mirror/obo/iao#IAO_0000013"/>
+        <correspondingAuthor rdf:resource="http://purl.org/roh_edma/data#investigador-1"/>
+        <correspondingOrganization rdf:resource="http://purl.org/roh_edma/data#grupo-investigacion-1"/>
+        <hasKnowledgeArea rdf:resource="http://purl.org/roh/unesco-individuals#1203"/>
+        <hasKnowledgeArea rdf:resource="http://purl.org/roh/unesco-individuals#120304"/>
+        <hasMetric rdf:resource="http://purl.org/roh_edma/data#journal-article-1-metric"/>
+        <partOfResearchResult rdf:resource="http://purl.org/roh_edma/data#research-result-investigador-1"/>
+        <bibo:authorList>
+            <rdf:Description>
+                <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Seq"/>
+            </rdf:Description>
+        </bibo:authorList>
+        <vivo:dateIssued>
+            <rdf:Description>
+                <rdf:type rdf:resource="http://purl.org/roh_edma/mirror/vivo#DateTimeValue"/>
+                <vivo:dateTime rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2016-04-27T00:00:00</vivo:dateTime>
+            </rdf:Description>
+        </vivo:dateIssued>
+        <vivo:hasPublicationVenue rdf:resource="http://purl.org/roh_edma/data#excelent-journal"/>
+        <cito:cites rdf:resource="http://purl.org/roh_edma/data#experimental-prototol-result-1"/>
+        <cito:cites rdf:resource="http://purl.org/roh_edma/data#repository-1"/>
+        <cito:cites rdf:resource="http://purl.org/roh_edma/data#software-1"/>
+        <title>My great journal article</title>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://purl.org/roh_edma/data#journal-article-1-metric -->
+
+    <owl:NamedIndividual rdf:about="http://purl.org/roh_edma/data#journal-article-1-metric">
+        <rdf:type rdf:resource="http://purl.org/roh_edma#PublicationMetric"/>
+        <vivo:dateIssued>
+            <rdf:Description>
+                <rdf:type rdf:resource="http://purl.org/roh_edma/mirror/vivo#DateTimeValue"/>
+                <vivo:dateTime rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2016-04-27T00:00:00</vivo:dateTime>
+            </rdf:Description>
+        </vivo:dateIssued>
+        <citationCount rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">23</citationCount>
+        <impactFactor rdf:datatype="http://www.w3.org/2001/XMLSchema#float">2.5</impactFactor>
+        <quartile>Q2</quartile>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://purl.org/roh_edma/data#my-fabulous-patent -->
+
+    <owl:NamedIndividual rdf:about="http://purl.org/roh_edma/data#my-fabulous-patent">
+        <rdf:type rdf:resource="http://purl.org/roh_edma/mirror/bibo#Patent"/>
+        <correspondingOrganization rdf:resource="http://purl.org/roh_edma/data#grupo-investigacion-1"/>
+        <hasKnowledgeArea rdf:resource="http://purl.org/roh/unesco-individuals#1203"/>
+        <hasKnowledgeArea rdf:resource="http://purl.org/roh/unesco-individuals#120304"/>
+        <ownerOrganization rdf:resource="http://purl.org/roh_edma/data#grupo-investigacion-1"/>
+        <patentInventor rdf:resource="http://purl.org/roh_edma/data#investigador-1"/>
+        <seqOfAuthors>
+            <rdf:Description>
+                <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Seq"/>
+            </rdf:Description>
+        </seqOfAuthors>
+        <vivo:dateIssued>
+            <rdf:Description>
+                <rdf:type rdf:resource="http://purl.org/roh_edma/mirror/vivo#DateTimeValue"/>
+                <vivo:dateTime rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2020-03-17T00:00:00</vivo:dateTime>
+            </rdf:Description>
+        </vivo:dateIssued>
+        <vivo:identifier rdf:datatype="http://www.w3.org/2001/XMLSchema#string">my-fabulous-patent</vivo:identifier>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://purl.org/roh_edma/data#readme-repository-1 -->
+
+    <owl:NamedIndividual rdf:about="http://purl.org/roh_edma/data#readme-repository-1">
+        <rdf:type rdf:resource="http://purl.org/roh_edma#README"/>
+        <partOfRepository rdf:resource="http://purl.org/roh_edma/data#repository-1"/>
+        <readmeOf rdf:resource="http://purl.org/roh_edma/data#repository-1"/>
+        <vivo:dateIssued>
+            <rdf:Description>
+                <rdf:type rdf:resource="http://purl.org/roh_edma/mirror/vivo#DateTimeValue"/>
+                <vivo:dateTime rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2020-04-27T00:00:00</vivo:dateTime>
+            </rdf:Description>
+        </vivo:dateIssued>
+        <title>A readme of the repository that contains a great software</title>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://purl.org/roh_edma/data#readme-software-1 -->
+
+    <owl:NamedIndividual rdf:about="http://purl.org/roh_edma/data#readme-software-1">
+        <rdf:type rdf:resource="http://purl.org/roh_edma#README"/>
+        <hasKnowledgeArea rdf:resource="http://purl.org/roh/unesco-individuals#1203"/>
+        <hasKnowledgeArea rdf:resource="http://purl.org/roh/unesco-individuals#120304"/>
+        <partOfRepository rdf:resource="http://purl.org/roh_edma/data#repository-1"/>
+        <readmeOf rdf:resource="http://purl.org/roh_edma/data#software-1"/>
+        <title>A readme of a great software</title>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://purl.org/roh_edma/data#repository-1 -->
+
+    <owl:NamedIndividual rdf:about="http://purl.org/roh_edma/data#repository-1">
+        <rdf:type rdf:resource="http://purl.org/roh_edma#BitBucketRepository"/>
+        <correspondingAuthor rdf:resource="http://purl.org/roh_edma/data#investigador-1"/>
+        <hasKnowledgeArea rdf:resource="http://purl.org/roh/unesco-individuals#1203"/>
+        <hasKnowledgeArea rdf:resource="http://purl.org/roh/unesco-individuals#120304"/>
+        <seqOfAuthors>
+            <rdf:Description>
+                <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Seq"/>
+            </rdf:Description>
+        </seqOfAuthors>
+        <vivo:dateIssued>
+            <rdf:Description>
+                <rdf:type rdf:resource="http://purl.org/roh_edma/mirror/vivo#DateTimeValue"/>
+                <vivo:dateTime rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2020-04-27T00:00:00</vivo:dateTime>
+            </rdf:Description>
+        </vivo:dateIssued>
+        <title>A grate git repository</title>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://purl.org/roh_edma/data#repository-2 -->
+
+    <owl:NamedIndividual rdf:about="http://purl.org/roh_edma/data#repository-2">
+        <rdf:type rdf:resource="http://purl.org/roh_edma#GitHubRepository"/>
+        <correspondingOrganization rdf:resource="http://purl.org/roh_edma/data#grupo-investigacion-1"/>
+        <hasKnowledgeArea rdf:resource="http://purl.org/roh/unesco-individuals#1203"/>
+        <hasKnowledgeArea rdf:resource="http://purl.org/roh/unesco-individuals#120304"/>
+        <title>A grate Git repository</title>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://purl.org/roh_edma/data#research-result-investigador-1 -->
+
+    <owl:NamedIndividual rdf:about="http://purl.org/roh_edma/data#research-result-investigador-1">
+        <rdf:type rdf:resource="http://purl.org/roh_edma#ResearchResult"/>
+        <correspondingAuthor rdf:resource="http://purl.org/roh_edma/data#investigador-1"/>
+        <hasKnowledgeArea rdf:resource="http://purl.org/roh/unesco-individuals#1203"/>
+        <hasKnowledgeArea rdf:resource="http://purl.org/roh/unesco-individuals#120304"/>
+        <seqOfAuthors>
+            <rdf:Description>
+                <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Seq"/>
+            </rdf:Description>
+        </seqOfAuthors>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://purl.org/roh_edma/data#research-result-phd-investigador-3 -->
+
+    <owl:NamedIndividual rdf:about="http://purl.org/roh_edma/data#research-result-phd-investigador-3">
+        <rdf:type rdf:resource="http://purl.org/roh_edma#ResearchResult"/>
+        <correspondingAuthor rdf:resource="http://purl.org/roh_edma/data#investigador-3"/>
+        <seqOfAuthors>
+            <rdf:Description>
+                <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Seq"/>
+            </rdf:Description>
+        </seqOfAuthors>
+        <title>My fabulous PhD Thesis - container</title>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://purl.org/roh_edma/data#software-1 -->
+
+    <owl:NamedIndividual rdf:about="http://purl.org/roh_edma/data#software-1">
+        <rdf:type rdf:resource="http://purl.org/roh_edma/mirror/obo/ero#ERO_0000071"/>
+        <correspondingAuthor rdf:resource="http://purl.org/roh_edma/data#investigador-1"/>
+        <correspondingOrganization rdf:resource="http://purl.org/roh_edma/data#grupo-investigacion-1"/>
+        <hasKnowledgeArea rdf:resource="http://purl.org/roh/unesco-individuals#1203"/>
+        <hasKnowledgeArea rdf:resource="http://purl.org/roh/unesco-individuals#120304"/>
+        <hasPredecessor rdf:resource="http://purl.org/roh_edma/data#software-producedBy-proyect"/>
+        <partOfRepository rdf:resource="http://purl.org/roh_edma/data#repository-1"/>
+        <partOfResearchResult rdf:resource="http://purl.org/roh_edma/data#research-result-investigador-1"/>
+        <seqOfAuthors>
+            <rdf:Description>
+                <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Seq"/>
+            </rdf:Description>
+        </seqOfAuthors>
+        <vivo:dateIssued>
+            <rdf:Description>
+                <rdf:type rdf:resource="http://purl.org/roh_edma/mirror/vivo#DateTimeValue"/>
+                <vivo:dateTime rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2020-04-27T00:00:00</vivo:dateTime>
+            </rdf:Description>
+        </vivo:dateIssued>
+        <title>A great software</title>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://purl.org/roh_edma/data#software-producedBy-proyect -->
+
+    <owl:NamedIndividual rdf:about="http://purl.org/roh_edma/data#software-producedBy-proyect">
+        <rdf:type rdf:resource="http://purl.org/roh_edma/mirror/obo/ero#ERO_0000071"/>
+        <correspondingAuthor rdf:resource="http://purl.org/roh_edma/data#investigador-2"/>
+        <correspondingOrganization rdf:resource="http://purl.org/roh_edma/data#company-one"/>
+        <correspondingOrganization rdf:resource="http://purl.org/roh_edma/data#grupo-investigacion-1"/>
+        <hasKnowledgeArea rdf:resource="http://purl.org/roh/unesco-individuals#1203"/>
+        <hasKnowledgeArea rdf:resource="http://purl.org/roh/unesco-individuals#120304"/>
+        <hasKnowledgeArea rdf:resource="http://purl.org/roh/unesco-individuals#120703"/>
+        <partOfRepository rdf:resource="http://purl.org/roh_edma/data#repository-2"/>
+        <seqOfAuthors>
+            <rdf:Description>
+                <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Seq"/>
+            </rdf:Description>
+        </seqOfAuthors>
+        <vivo:dateIssued>
+            <rdf:Description>
+                <rdf:type rdf:resource="http://purl.org/roh_edma/mirror/vivo#DateTimeValue"/>
+                <vivo:dateTime rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2020-04-27T00:00:00</vivo:dateTime>
+            </rdf:Description>
+        </vivo:dateIssued>
+        <cito:cites rdf:resource="http://purl.org/roh_edma/data#a-project-in-negotiation"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://purl.org/roh_edma/data#software-reservable -->
+
+    <owl:NamedIndividual rdf:about="http://purl.org/roh_edma/data#software-reservable">
+        <rdf:type rdf:resource="http://purl.org/roh_edma#Reservable"/>
+        <rdf:type rdf:resource="http://purl.org/roh_edma/mirror/obo/ero#ERO_0000071"/>
+        <title>java --.--</title>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://purl.org/roh_edma/data#universidad-1 -->
+
+    <owl:NamedIndividual rdf:about="http://purl.org/roh_edma/data#universidad-1">
+        <rdf:type rdf:resource="http://purl.org/roh_edma/mirror/vivo#University"/>
+        <foundationDate>
+            <rdf:Description>
+                <rdf:type rdf:resource="http://purl.org/roh_edma/mirror/vivo#DateTimeValue"/>
+                <vivo:dateTime rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">1980-09-01T00:00:00</vivo:dateTime>
+            </rdf:Description>
+        </foundationDate>
+        <hasContactInfo>
+            <rdf:Description rdf:nodeID="genid102">
+                <rdf:type rdf:resource="http://purl.org/roh_edma/mirror/vcard#Organization"/>
+                <vcard:hasEmail>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="http://purl.org/roh_edma/mirror/vcard#Email"/>
+                    </rdf:Description>
+                </vcard:hasEmail>
+            </rdf:Description>
+        </hasContactInfo>
+        <hasKnowledgeArea rdf:resource="http://purl.org/roh/unesco-individuals#120304"/>
+        <hasKnowledgeArea rdf:resource="http://purl.org/roh/unesco-individuals#120318"/>
+        <hasKnowledgeArea rdf:resource="http://purl.org/roh/unesco-individuals#120601"/>
+        <hasKnowledgeArea rdf:resource="http://purl.org/roh/unesco-individuals#570508"/>
+        <gn:locatedIn rdf:resource="https://sws.geonames.org/3128026/"/>
+        <ro:BFO_0000051 rdf:resource="http://purl.org/roh_edma/data#centro-investigacion-2"/>
+        <vivo:dateTimeInterval>
+            <rdf:Description rdf:nodeID="genid104">
+                <rdf:type rdf:resource="http://purl.org/roh_edma/mirror/vivo#DateTimeInterval"/>
+                <vivo:start>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="http://purl.org/roh_edma/mirror/vivo#DateTimeValue"/>
+                        <vivo:dateTime rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">1980-09-01T00:00:00</vivo:dateTime>
+                    </rdf:Description>
+                </vivo:start>
+            </rdf:Description>
+        </vivo:dateTimeInterval>
+        <title>Universidad 1</title>
+        <vivo:description rdf:datatype="http://www.w3.org/2001/XMLSchema#string">La Universidad 1 fue fundada en ... Sus pilares son... Actualmente ... </vivo:description>
+        <vivo:identifier rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Esta es la universidad a la que pertenece el grafo de conocimiento.</vivo:identifier>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://purl.org/roh_edma/data#universidad-2 -->
+
+    <owl:NamedIndividual rdf:about="http://purl.org/roh_edma/data#universidad-2">
+        <rdf:type rdf:resource="http://purl.org/roh_edma/mirror/vivo#University"/>
+        <hasContactInfo>
+            <rdf:Description rdf:nodeID="genid106">
+                <rdf:type rdf:resource="http://purl.org/roh_edma/mirror/vcard#Organization"/>
+                <vcard:hasEmail>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="http://purl.org/roh_edma/mirror/vcard#Email"/>
+                    </rdf:Description>
+                </vcard:hasEmail>
+            </rdf:Description>
+        </hasContactInfo>
+        <hasKnowledgeArea rdf:resource="http://purl.org/roh/unesco-individuals#120304"/>
+        <hasKnowledgeArea rdf:resource="http://purl.org/roh/unesco-individuals#120318"/>
+        <hasKnowledgeArea rdf:resource="http://purl.org/roh/unesco-individuals#570508"/>
+        <gn:locatedIn rdf:resource="https://sws.geonames.org/3128026/"/>
+        <ro:BFO_0000051 rdf:resource="http://purl.org/roh_edma/data#grupo-investigacion-3"/>
+        <title>Universidad 2</title>
+        <vivo:description rdf:datatype="http://www.w3.org/2001/XMLSchema#string">La universidad  2 fue fundada en ...</vivo:description>
+        <vivo:identifier rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Esta es otra universidad altamente vinculada con la Universidad 1</vivo:identifier>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://sws.geonames.org/3128026/ -->
+
+    <owl:NamedIndividual rdf:about="https://sws.geonames.org/3128026/"/>
+    
+
+
+    <!-- https://sws.geonames.org/3336903/ -->
+
+    <owl:NamedIndividual rdf:about="https://sws.geonames.org/3336903/"/>
+</rdf:RDF>
+
+
+
+<!-- Generated by the OWL API (version 4.5.9.2019-02-01T07:24:44Z) https://github.com/owlcs/owlapi -->
+
