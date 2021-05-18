@@ -33,12 +33,16 @@ public class QueryExecutor {
                   // Map<String, String> partialResult = new HashMap<String, String>();
                   for(String var : resultVars) {
                     if(soln.get(var)==null){                   
-                        partialResult.put(var, "");}
+                        partialResult.put(var, "");
+                    }
+                    else{   
+                      RDFNode node = soln.get(var);
+                      if(node.isAnon() || node.isURIResource()){
+                          partialResult.put(var, node.toString());}
                       else{
-
-                  RDFNode node = soln.get(var);
-                  partialResult.put(var, node.toString());}
-                }
+                        partialResult.put(var, "blank node");
+                          }
+                    }}
                   // result.add(partialResult);
                   result.append("result", partialResult);
 			    }
