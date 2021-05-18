@@ -30,8 +30,8 @@ RewriteCond %{HTTP_ACCEPT} application/rdf\+xml
 RewriteRule ^$ ontology.xml [R=303,L]
 
 # Rewrite rule to serve N-Triples content from the vocabulary URI if requested
-RewriteCond %{HTTP_ACCEPT} application/n-triples
-RewriteRule ^$ ontology.nt [R=303,L]
+#RewriteCond %{HTTP_ACCEPT} application/n-triples
+#RewriteRule ^$ ontology.nt [R=303,L]
 
 # Rewrite rule to serve TTL content from the vocabulary URI if requested
 RewriteCond %{HTTP_ACCEPT} text/turtle [OR]
