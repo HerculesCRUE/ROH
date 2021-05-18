@@ -31,6 +31,7 @@ jobs:
         path: edma
       
     - name: Download widoco
+      working-directory: /home/runner/work/ROH/ROH/edma
       run: mkdir widoco && wget -O widoco/widoco.jar https://github.com/dgarijo/Widoco/releases/download/v1.4.14/widoco-1.4.14-jar-with-dependencies.jar
 
     - name: Compile documentation
@@ -57,9 +58,10 @@ jobs:
 
     - name: Copy mirrored ontologies to docs folder
       run: cp -r /home/runner/work/ROH/ROH/edma/validation-questions/target/site docs/
-    - name: Publish on Github Pages
-      uses: crazy-max/ghaction-github-pages@v2.3.0
-      with:
-        build_dir: docs 
-      env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+    
+    #- name: Publish on Github Pages
+    #  uses: crazy-max/ghaction-github-pages@v2.3.0
+    #  with:
+    #    build_dir: docs 
+    #  env:
+    #      GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
