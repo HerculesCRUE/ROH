@@ -37,12 +37,12 @@ public class QueryExecutor {
                     }
                     else{   
                       RDFNode node = soln.get(var);
-                      if(node.isAnon() || node.isURIResource()){
-                          partialResult.put(var, node.toString());}
-                      else{
-                        partialResult.put(var, "blank node");
-                          }
-                    }}
+                      if(node.isLiteral() || node.isURIResource()){
+                        partialResult.put(var, node.toString());}
+                        else{
+                            partialResult.put(var, "blank node");
+                        }
+                  }}
                   // result.add(partialResult);
                   result.append("result", partialResult);
 			    }
