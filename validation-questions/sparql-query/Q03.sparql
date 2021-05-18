@@ -24,7 +24,7 @@ WHERE {
   OPTIONAL{ ?publication a ?classDocument;
                        bibo:authorList+|roh:seqOfAuthors ?authorList.
             ?authorList  a rdf:Seq;
-                          <http://www.w3.org/2000/01/rdf-schema#member> ?researcher.
+                          rdfs:member ?researcher.
          
             ?classDocument rdfs:subClassOf* bibo:Document.
             
