@@ -55,9 +55,11 @@ jobs:
         cp -r ../mirror ../docs/
 
     - name: Copy ontology modules to docs folder
+      working-directory: /home/runner/work/ROH/ROH/edma
       run: cp -r ../roh/modules/* docs/roh/
 
     - name: Copy mirrored ontologies to docs folder
+      working-directory: /home/runner/work/ROH/ROH/edma
       run: cp -r /home/runner/work/ROH/ROH/edma/validation-questions/target/site docs/
     
     #- name: Publish on Github Pages
