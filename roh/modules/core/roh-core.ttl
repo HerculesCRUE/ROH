@@ -3833,7 +3833,8 @@ A roh:FundingSource roh:feeds a roh:Funding with funds to sponsor some projects.
 ###  http://purl.org/roh_edma#HRClassification
 :HRClassification rdf:type owl:Class ;
                   rdfs:subClassOf skos:ConceptScheme ;
-                  rdfs:label "Human Resource Classification"@en .
+                  rdfs:label "Clasificación de los recursos humanos"@es ,
+                             "Human Resource Classification"@en .
 
 
 ###  http://purl.org/roh_edma#Invention
@@ -4380,7 +4381,8 @@ A roh:FundingSource roh:feeds a roh:Funding with funds to sponsor some projects.
 ###  http://purl.org/roh_edma#PropertyClassification
 :PropertyClassification rdf:type owl:Class ;
                         rdfs:subClassOf skos:ConceptScheme ;
-                        rdfs:label "Property Classification"@en .
+                        rdfs:label "Clasificación de la propiedad"@es ,
+                                   "Property Classification"@en .
 
 
 ###  http://purl.org/roh_edma#ProposalSubmitted
@@ -8114,6 +8116,7 @@ bfo:BFO_0000004 rdfs:label "continuador independiente"@es ,
                 rdf:Seq
                 skos:Concept
                 skos:ConceptScheme
+                <http://www.w3.org/ns/oa#Annotation>
               )
 ] .
 
@@ -8463,91 +8466,6 @@ bfo:BFO_0000004 rdfs:label "continuador independiente"@es ,
                 vivo:GraduateAdvisingRelationship
                 vivo:PostdocOrFellowAdvisingRelationship
                 vivo:UndergraduateAdvisingRelationship
-              )
-] .
-
-
-[ rdf:type owl:AllDisjointClasses ;
-  owl:members ( [ owl:intersectionOf ( skos:Concept
-                                       [ rdf:type owl:Restriction ;
-                                         owl:onProperty skos:inScheme ;
-                                         owl:someValuesFrom :AcademicSubject
-                                       ]
-                                     ) ;
-                  rdf:type owl:Class
-                ]
-                [ owl:intersectionOf ( skos:Concept
-                                       [ rdf:type owl:Restriction ;
-                                         owl:onProperty skos:inScheme ;
-                                         owl:someValuesFrom :CompanyClassification
-                                       ]
-                                     ) ;
-                  rdf:type owl:Class
-                ]
-                [ owl:intersectionOf ( skos:Concept
-                                       [ rdf:type owl:Restriction ;
-                                         owl:onProperty skos:inScheme ;
-                                         owl:someValuesFrom :Country
-                                       ]
-                                     ) ;
-                  rdf:type owl:Class
-                ]
-                [ owl:intersectionOf ( skos:Concept
-                                       [ rdf:type owl:Restriction ;
-                                         owl:onProperty skos:inScheme ;
-                                         owl:someValuesFrom :ExpenseClassification
-                                       ]
-                                     ) ;
-                  rdf:type owl:Class
-                ]
-                [ owl:intersectionOf ( skos:Concept
-                                       [ rdf:type owl:Restriction ;
-                                         owl:onProperty skos:inScheme ;
-                                         owl:someValuesFrom :FundingProgramClassification
-                                       ]
-                                     ) ;
-                  rdf:type owl:Class
-                ]
-                [ owl:intersectionOf ( skos:Concept
-                                       [ rdf:type owl:Restriction ;
-                                         owl:onProperty skos:inScheme ;
-                                         owl:someValuesFrom :HRClassification
-                                       ]
-                                     ) ;
-                  rdf:type owl:Class
-                ]
-                [ owl:intersectionOf ( skos:Concept
-                                       [ rdf:type owl:Restriction ;
-                                         owl:onProperty skos:inScheme ;
-                                         owl:someValuesFrom :KnowledgeArea
-                                       ]
-                                     ) ;
-                  rdf:type owl:Class
-                ]
-                [ owl:intersectionOf ( skos:Concept
-                                       [ rdf:type owl:Restriction ;
-                                         owl:onProperty skos:inScheme ;
-                                         owl:someValuesFrom :ProjectClassification
-                                       ]
-                                     ) ;
-                  rdf:type owl:Class
-                ]
-                [ owl:intersectionOf ( skos:Concept
-                                       [ rdf:type owl:Restriction ;
-                                         owl:onProperty skos:inScheme ;
-                                         owl:someValuesFrom :PropertyClassification
-                                       ]
-                                     ) ;
-                  rdf:type owl:Class
-                ]
-                [ owl:intersectionOf ( skos:Concept
-                                       [ rdf:type owl:Restriction ;
-                                         owl:onProperty skos:inScheme ;
-                                         owl:someValuesFrom :ResearchProblem
-                                       ]
-                                     ) ;
-                  rdf:type owl:Class
-                ]
               )
 ] .
 
