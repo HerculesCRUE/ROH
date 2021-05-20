@@ -25,19 +25,16 @@ WHERE {
                        bibo:authorList+|roh:seqOfAuthors ?authorList.
             ?authorList  a rdf:Seq;
                           rdfs:member ?researcher.
-         
-            ?classDocument rdfs:subClassOf* bibo:Document.
-            
+            ?classDocument rdfs:subClassOf* bibo:Document. 
            }
   OPTIONAL{ ?publicationAuthor a ?classDocument2;
                         roh:correspondingAuthor ?researcher.
-            ?classDocument2 rdfs:subClassOf* bibo:Document.
+            ?classDocument2 rdfs:subClassOf* bibo:Document. 
           }
   OPTIONAL{?metric a roh:AuthorMetric;
                   roh:h-index ?hindex;
                   roh:i10-index ?i10index;
                   roh:citationCount ?cites.}
-
   Filter(?centerClass = roh:ResearchGroup || ?centerClass=roh:ResearchInstitute)
 }
 GROUP BY ?researcher ?cites ?hindex ?i10index

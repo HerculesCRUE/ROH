@@ -11,8 +11,8 @@ prefix ero: <http://purl.org/roh_edma/mirror/obo/ero#>
 prefix gn: <http://purl.org/roh_edma/mirror/geonames#>
 prefix iao: <http://purl.org/roh_edma/mirror/obo/iao#>
 prefix dc: <http://purl.org/dc/elements/1.1/>
-
-SELECT  ?publication ?date ?impactFacor ?quartile ?organization ?journal   ?author
+ 
+SELECT  ?publication ?nameOfMetric ?name ?date ?impactFacor ?quartile ?organization ?journal   ?author
 WHERE {
   ?publication  a bibo:Document ;
                 vivo:hasPublicationVenue        ?journal;
@@ -27,6 +27,6 @@ WHERE {
             vivo:dateTime ?date.
 	?author a foaf:Person.
   ?journal	a bibo:Journal   .
-
+optional{?metric roh:metricName ?nameOfMetric}
   } 
   Order By ?publication DESC(?date) ?impactFacor ?quartile  ?journal

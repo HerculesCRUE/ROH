@@ -10,7 +10,7 @@ prefix uneskos:  <http://purl.org/roh/unesco-individuals#>
 prefix bibo: <http://purl.org/roh_edma/mirror/bibo#> 
 prefix roh: <http://purl.org/roh_edma#>
 prefix xsd: <http://www.w3.org/2001/XMLSchema#> 
-SELECT ?journalarticle ?impactFactor (YEAR(?date) as ?year)  WHERE {
+SELECT distinct ?journalarticle ?impactFactor (YEAR(?date) as ?year)  WHERE {
 ?journalarticle a iao:IAO_0000013 ;
 			vivo:dateIssued ?dateTimeValue ;
       bibo:authorList+| roh:seqOfAuthors ?authorList ;

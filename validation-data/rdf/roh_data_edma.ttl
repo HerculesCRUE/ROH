@@ -162,7 +162,12 @@ _:genid1 a :Accreditation ;
                                                [ a       vivo:DateTimeValue ;
                                                  vivo:dateTime
                                                          "2010-09-15T00:00:00"^^xsd:dateTime
-                                               ]
+                                               ];
+                                        vivo:end   
+                                                [ a       vivo:DateTimeValue ;
+                                                vivo:dateTime
+                                                         "2017-05-10T00:00:00"^^xsd:dateTime
+                                               ] 
                                      ] ;
                              vivo:relates
                                      <http://purl.org/roh_edma/data#grupo-investigacion-1> ,
@@ -210,7 +215,7 @@ _:genid1 a :Accreditation ;
                                        vivo:start
                                                [ a       vivo:DateTimeValue ;
                                                  vivo:dateTime
-                                                         "2013-05-10T00:00:00"^^xsd:dateTime
+                                                         "2012-05-10T00:00:00"^^xsd:dateTime
                                                ];
                                         vivo:end   
                                                 [ a       vivo:DateTimeValue ;
@@ -290,6 +295,7 @@ _:genid1 a :Accreditation ;
         vivo:relatedBy  [ a             :ResearcherPosition ;
                           vivo:relates  <http://purl.org/roh_edma/data#grupo-investigacion-3> , <http://purl.org/roh_edma/data#investigador-4>
                         ];
+        :companyFounder <http://purl.org/roh_edma/data#company-one>,<http://purl.org/roh_edma/data#company-two>;
         :hasKnowledgeArea uneskos:120304. # OPCIONAL 
         #vivo:relatedBy
         #        [ a       :ResearcherPosition ;
@@ -393,6 +399,7 @@ _:genid1 a :Accreditation ;
         a                     vivo:Project ;
         :hasKnowledgeArea     uneskos:120703, uneskos:120304 ;
                 :projectStatus        [ a  :ProposalSubmitted ].
+
 <http://purl.org/roh_edma/data#another-great-project>
         a                     vivo:Project ;
         :hasKnowledgeArea     uneskos:120304 .
@@ -405,7 +412,7 @@ _:genid1 a :Accreditation ;
                                                vivo:dateTime  "2019-06-30T00:00:00"^^xsd:dateTime
                                              ] ;
                                  vivo:start  [ a              vivo:DateTimeValue ;
-                                               vivo:dateTime  "2018-01-01T00:00:00"^^xsd:dateTime
+                                               vivo:dateTime  "2017-01-01T00:00:00"^^xsd:dateTime
                                              ]
                                ] ;
         :isSupportedBy        [ a       :Funding ;
@@ -479,8 +486,16 @@ _:genid1 a :Accreditation ;
                         a :Reservable;
                         :title "java --.--".
 
+<http://purl.org/roh_edma/data#company-two>
+        a       vivo:Company ;
+        :isStartup "true"^^xsd:boolean. 
+
+
 <http://purl.org/roh_edma/data#company-one>
-        a       vivo:Company .
+        a       vivo:Company ;
+        :isSpinffOf  <http://purl.org/roh_edma/data#grupo-investigacion-1>.
+
+
 
 <http://purl.org/roh_edma/data#a-private-project>
         a                     vivo:Project ;
@@ -786,11 +801,12 @@ _:genid1 a :Accreditation ;
         vivo:hasPublicationVenue
                 <http://purl.org/roh_edma/data#excelent-journal> ;
 
-        :hasMetric   <http://purl.org/roh_edma/data#journal-article-2-metric> .
-
+        :hasMetric <http://purl.org/roh_edma/data#journal-article-2-metric-sjc>;
+        :hasMetric <http://purl.org/roh_edma/data#journal-article-2-metric-jcr>, <http://purl.org/roh_edma/data#journal-article-2-metric-jcr-2>.
 
 <http://purl.org/roh_edma/data#journal-article-1-metric>
         a :PublicationMetric ;
+        :metricName "jcr";
         :impactFactor "2.5"^^xsd:float ;
         :citationCount "23"^^xsd:integer;
         :quartile "Q2" ;
@@ -800,17 +816,41 @@ _:genid1 a :Accreditation ;
                           "2016-04-27T00:00:00"^^xsd:dateTime
                 ] .
 
-<http://purl.org/roh_edma/data#journal-article-2-metric>
+<http://purl.org/roh_edma/data#journal-article-2-metric-sjc>
         a :PublicationMetric ;
-        :impactFactor "2.5"^^xsd:float ;
+        :metricName "sjc";
+        :impactFactor "3"^^xsd:float ;
+        :citationCount "23"^^xsd:integer;
+        :quartile "Q2" ;
+        vivo:dateIssued
+                [ a       vivo:DateTimeValue ;
+                  vivo:dateTime
+                          "2016-04-27T00:00:00"^^xsd:dateTime
+                ] .
+
+<http://purl.org/roh_edma/data#journal-article-2-metric-jcr>
+      a :PublicationMetric ;
+        :metricName "jcr";
+        :impactFactor "4"^^xsd:float ;
+        :citationCount "50"^^xsd:integer;
+        :quartile "Q2" ;
+        vivo:dateIssued
+                [ a       vivo:DateTimeValue ;
+                  vivo:dateTime
+                          "2011-04-27T00:00:00"^^xsd:dateTime
+                ] .
+
+<http://purl.org/roh_edma/data#journal-article-2-metric-jcr-2>
+      a :PublicationMetric ;
+        :metricName "jcr";
+        :impactFactor "3"^^xsd:float ;
         :citationCount "23"^^xsd:integer;
         :quartile "Q1" ;
         vivo:dateIssued
                 [ a       vivo:DateTimeValue ;
                   vivo:dateTime
-                          "2013-04-27T00:00:00"^^xsd:dateTime
+                          "2016-04-27T00:00:00"^^xsd:dateTime
                 ] .
-
 ## HOLAAAA
 <http://purl.org/roh_edma/data#my-fabulous-patent>
         a       bibo:Patent ;

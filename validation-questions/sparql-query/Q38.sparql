@@ -1,0 +1,28 @@
+PREFIX roh: <http://purl.org/roh_edma#>
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+prefix foaf: <http://purl.org/roh_edma/mirror/foaf#>
+prefix vivo: <http://purl.org/roh_edma/mirror/vivo#> 
+prefix bibo: <http://purl.org/roh_edma/mirror/bibo#>
+select ?researcher ?publication 
+where{{
+?phD a roh:PhDThesis;
+    vivo:dateIssued ?node;
+    roh:correspondingAuthor ?researcher.
+?node a vivo:DateTimeValue ;
+        vivo:dateTime ?date.
+}union{
+?phD a roh:PhDThesis;
+    roh:correspondingAuthor ?researcher;
+    vivo:dateTimeValue ?date.
+}
+?publication a bibo:Document;
+                    vivo:hasPublicationVenue ?journal;
+                vivo:dateIssued ?nodeOfPublication;
+                roh:seqOfAuthor+| bibo:authorList ?listOfAuthor. 
+?listOfAuthor a rdf:Seq;
+               rdfs:member ?researcher.
+?nodeOfPublication a       vivo:DateTimeValue ;
+                  vivo:dateTime ?dateofPublication.     
+filter(?date < ?dateofPublication)
+}

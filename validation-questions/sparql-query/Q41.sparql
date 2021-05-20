@@ -1,0 +1,35 @@
+PREFIX roh: <http://purl.org/roh_edma#>
+PREFIX uneskos: <http://purl.org/roh/unesco-individuals#>
+prefix bibo: <http://purl.org/roh_edma/mirror/bibo#>
+prefix ro:  <http://purl.org/roh_edma/mirror/obo/ro#>
+prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+prefix skos: <http://www.w3.org/2004/02/skos/core#> 
+prefix bfo: <http://purl.org/roh_edma/mirror/obo/bfo#>
+PREFIX uneskos: <http://purl.org/roh/unesco-individuals#>
+prefix foaf: <http://purl.org/roh_edma/mirror/foaf#>
+prefix uneskos:  <http://purl.org/roh/unesco-individuals#>
+prefix vivo: <http://purl.org/roh_edma/mirror/vivo#> 
+
+SELECT ( year(?dateStartProject) as ?year) ?knowledgeArea
+  (count( distinct?project) As ?CountProject)   ?classClasificacionProject
+where{
+
+    ?project a vivo:Project;
+            vivo:dateTimeInterval ?dateTimeIntervalProject;
+            roh:hasKnowledgeArea ?knowledgeArea.
+          
+    
+    ?dateTimeIntervalProject  vivo:start ?startProject.
+    ?startProject  vivo:dateTime ?dateStartProject.
+    Optional{?project
+    roh:hasProjectCategorization  ?projectClasificacion.
+    ?projectClasificacion a ?classClasificacionProject.
+    FILTER NOT EXISTS { 
+        ?projectClasificacion a ?otherClass.
+        ?otherClass rdfs:subClassOf ?classClasificacionProject .
+        FILTER (?otherClass != ?classClasificacionProject) } 
+        }             
+}
+Group by  ?dateStartProject  ?knowledgeArea ?classClasificacionProject
+order by ?year

@@ -1,0 +1,13 @@
+PREFIX roh: <http://purl.org/roh_edma#>
+prefix foaf: <http://purl.org/roh_edma/mirror/foaf#>
+prefix vivo: <http://purl.org/roh_edma/mirror/vivo#> 
+
+
+select ?founder ?company 
+where{
+
+    ?founder a foaf:Person;
+             roh:companyFounder ?company.
+    ?company a vivo:Company;
+              roh:isSpinffOf  <http://purl.org/roh_edma/data#grupo-investigacion-1>.
+}

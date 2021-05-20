@@ -10,7 +10,7 @@ prefix uneskos:  <http://purl.org/roh/unesco-individuals#>
 prefix vivo: <http://purl.org/roh_edma/mirror/vivo#> 
 
 
-SELECT (year(?date) as ?year)  (count( distinct?publication) As ?CountPublication) (count( distinct ?person) as ?researchers )  (?CountPublication / ?researchers  AS ?rate) ?knowledgeArea 
+SELECT (year(?date) as ?year)  (count( distinct?publication) As ?CountPublication)  (count( distinct ?person) as ?researchers )  (?CountPublication / ?researchers  AS ?rate) ?knowledgeArea 
 where{
     ?publication roh:correspondingOrganization <http://purl.org/roh_edma/data#grupo-investigacion-1>;
     roh:hasKnowledgeArea ?knowledgeArea;
@@ -18,18 +18,19 @@ where{
     vivo:hasPublicationVenue ?journal.
    ?journal a bibo:Journal.
     ?person roh:hasPosition ?position;
-            a foaf:Person.
-        
+            a foaf:Person.   
     ?position vivo:dateTimeInterval ?dateTimeInterval;
                 vivo:relates <http://purl.org/roh_edma/data#grupo-investigacion-1>;
               a roh:ResearcherPosition.
     ?dateIssued vivo:dateTime ?date.
     ?dateTimeInterval vivo:start ?satarNode.
     ?satarNode vivo:dateTime  ?star.
-  Filter(year(?star) <= year(?date) )
-    Optional{?dateTimeInterval vivo:end ?endNode.
-                ?endNode vivo:dateTime  ?end.
-    Filter( year(?star) <= year(?date) && year(?date) <= year(?end) )
-}
+  Filter(year(?star) <= year(?date)) 
+ 	filter not exists{ ?dateTimeInterval vivo:end ?endNode.
+    					?endNode vivo:dateTime  ?end.
+						Filter(year(?date) > year(?end))
+  }
+  
 }
 Group by  ?knowledgeArea ?CountPublication ?rate ?date 
+order by ?year

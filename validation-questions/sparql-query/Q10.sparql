@@ -15,7 +15,7 @@ WHERE {
         vivo:dateTimeInterval ?dateTimeInterval .
 ?role a ?roleClass ;
       roh:roleOf ?centre .
-?roleClass rdfs:subClassOf* bfo:BFO_0000023 .
+?roleClass rdfs:subClassOf* bfo:BFO_0000023 . 
     ?centre a ?classOrganization .
 ?dateTimeInterval vivo:start ?startDateTimeValue ;
                 vivo:end ?endDateTimeValue . 
