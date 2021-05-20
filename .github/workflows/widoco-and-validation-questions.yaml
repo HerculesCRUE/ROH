@@ -63,14 +63,6 @@ jobs:
       working-directory: /home/runner/work/ROH/ROH/edma
       run: cp -r mirror/ docs/
 
-    - name: Publish on Github Pages
-      uses: crazy-max/ghaction-github-pages@v2.3.0
-      with:
-        build_dir: docs 
-        publish_dir: target/site
-      env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-    
       
     - name: Checkout validation-questions
       uses: actions/checkout@v2
@@ -112,6 +104,7 @@ jobs:
       with:
         build_dir: docs 
         publish_dir: target/site
+        keep_files: true
       env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
