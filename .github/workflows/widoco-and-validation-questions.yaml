@@ -101,8 +101,8 @@ jobs:
     - name: Publish on Github Pages
       uses: crazy-max/ghaction-github-pages@v2.3.0
       with:
+        repo: /home/runner/work/ROH/ROH/edma
         build_dir: docs 
-        #target_branch: gh-pages
       env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
