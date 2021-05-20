@@ -96,9 +96,9 @@ jobs:
       working-directory: GnossDeustoBackend/validation-questions
       run: mvn javadoc:test-javadoc
       
-    #- name: Publish on Github Pages
-    #  uses: crazy-max/ghaction-github-pages@v2.3.0
-    #  with:
-    #    build_dir: docs 
-    #  env:
-    #      GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+    - name: Publish on Github Pages
+      uses: crazy-max/ghaction-github-pages@v2.3.0
+      with:
+        build_dir: docs 
+      env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
