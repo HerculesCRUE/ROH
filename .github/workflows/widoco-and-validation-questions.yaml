@@ -1,6 +1,6 @@
 # This is a basic workflow to help you get started with Actions
 
-name: widoco
+name: widoco and validation questions 
 
 # Controls when the action will run. Triggers the workflow on push or pull request
 # events but only for the master branch
@@ -96,9 +96,25 @@ jobs:
       working-directory: GnossDeustoBackend/validation-questions
       run: mvn javadoc:test-javadoc
       
+    - name: Deploy github pages
+      uses: peaceiris/actions-gh-pages@v3.6.1
+      with:
+        keep_files: true
+        publish_dir: target/site
+        github_token: ${{ secrets.GITHUB_TOKEN }}
+
     - name: Publish on Github Pages
+        
       uses: crazy-max/ghaction-github-pages@v2.3.0
       with:
         build_dir: docs 
       env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+
+      
+    #- name: Publish on Github Pages
+    #  uses: crazy-max/ghaction-github-pages@v2.3.0
+    #  with:
+    #    build_dir: docs 
+    #  env:
+    #      GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
