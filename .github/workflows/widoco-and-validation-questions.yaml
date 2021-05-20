@@ -99,10 +99,9 @@ jobs:
       
 
     - name: Publish on Github Pages
-      working-directory: /home/runner/work/ROH/ROH/edma
       uses: crazy-max/ghaction-github-pages@v2.3.0
       with:
-        build_dir: docs 
+        build_dir: /home/runner/work/ROH/ROH/edma/docs 
         publish_dir: target/site
         keep_files: true
       env:
