@@ -1,14 +1,14 @@
-<!-- Tufts VUE 3.3.0 concept-map (5.roh-research-object.vue) 2021-05-12 -->
+<!-- Tufts VUE 3.3.0 concept-map (5.roh-research-object.vue) 2021-05-19 -->
 <!-- Tufts VUE: http://vue.tufts.edu/ -->
 <!-- Do Not Remove: VUE mapping @version(1.1) jar:file:/C:/Program%20Files%20(x86)/VUE/VUE.jar!/tufts/vue/resources/lw_mapping_1_1.xml -->
-<!-- Do Not Remove: Saved date Wed May 12 11:15:33 CEST 2021 by mpuer on platform Windows 8 6.2 in JVM 1.7.0_21-b11 -->
+<!-- Do Not Remove: Saved date Wed May 19 12:02:50 CEST 2021 by mpuer on platform Windows 8 6.2 in JVM 1.7.0_21-b11 -->
 <!-- Do Not Remove: Saving version @(#)VUE: built October 8 2015 at 1658 by tomadm on Linux 2.6.32-504.23.4.el6.x86_64 i386 JVM 1.7.0_21-b11(bits=32) -->
 <?xml version="1.0" encoding="US-ASCII"?>
 <LW-MAP xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
     xsi:noNamespaceSchemaLocation="none" ID="0"
     label="5.roh-research-object.vue" created="1456932426998" x="0.0"
     y="0.0" width="1.4E-45" height="1.4E-45" strokeWidth="0.0" autoSized="false">
-    <resource referenceCreated="1620810933815" size="43765"
+    <resource referenceCreated="1621418570965" size="45309"
         spec="C:\Users\mpuer\Documents\GitHub\ROH_oficial\docs\media\5.roh-research-object.vue"
         type="1" xsi:type="URLResource">
         <title>5.roh-research-object.vue</title>
@@ -169,9 +169,10 @@
         </child>
         <shape xsi:type="ellipse"/>
     </child>
-    <child ID="32" label="ResearchObject Model 12 March 2021"
+    <child ID="32"
+        label="AcademicArticle Model &#xa;    &#xa;    &#xa;      12 March 2021"
         layerID="1" created="1456933995716" x="516.6618" y="31.386026"
-        width="233.0" height="47.0" strokeWidth="0.0" autoSized="false" xsi:type="text">
+        width="232.0" height="47.0" strokeWidth="0.0" autoSized="false" xsi:type="text">
         <strokeColor>#404040</strokeColor>
         <textColor>#000000</textColor>
         <font>-plain-18</font>
@@ -180,25 +181,28 @@
   &lt;head&gt;
     &lt;style type="text/css"&gt;
       &lt;!--
-        body { margin-top: 0px; margin-right: 0px; font-family: Arial; margin-left: 0px; margin-bottom: 0px; color: #404040; font-size: 11 }
-        ol { margin-top: 6; font-family: Arial; list-style-position: outside; margin-left: 30; vertical-align: middle; font-size: 11 }
-        p { margin-top: 0; margin-right: 0; margin-left: 0; margin-bottom: 0; color: #404040 }
-        ul { margin-top: 6; font-family: Arial; list-style-position: outside; margin-left: 30; vertical-align: middle; font-size: 11 }
+        body { font-family: Arial; margin-top: 0px; margin-left: 0px; color: #404040; margin-right: 0px; margin-bottom: 0px; font-size: 11 }
+        ol { font-family: Arial; margin-top: 6; margin-left: 30; vertical-align: middle; list-style-position: outside; font-size: 11 }
+        p { margin-top: 0; margin-left: 0; color: #404040; margin-right: 0; margin-bottom: 0 }
+        ul { font-family: Arial; margin-top: 6; margin-left: 30; vertical-align: middle; list-style-position: outside; font-size: 11 }
       --&gt;
     &lt;/style&gt;
     
   &lt;/head&gt;
   &lt;body&gt;
-    &lt;p style="color: #404040" color="#404040"&gt;
-      &lt;b&gt;&lt;font style="font-size:18;"&gt;ResearchObject Model&lt;/font&gt; &lt;/b&gt;
+    &lt;p color="#404040" style="color: #404040"&gt;
+      &lt;font style="font-size:18;"&gt;&lt;b&gt;AcademicArticle Model&lt;/b&gt;&lt;/font&gt;&lt;b&gt; &lt;/b&gt;
     &lt;/p&gt;
-    &lt;p style="color: #404040" color="#404040"&gt;
+    &lt;p color="#404040" style="color: #404040"&gt;
       &lt;font style="font-size:18;"&gt;12 March 2021&lt;/font&gt;
     &lt;/p&gt;
   &lt;/body&gt;
 &lt;/html&gt;
 </richText>
-        <label>ResearchObject Model 12 March 2021</label>
+        <label>AcademicArticle Model 
+    
+    
+      12 March 2021</label>
     </child>
     <child ID="54" label="vcard:Individual" layerID="1"
         created="1473435495370" x="935.58704" y="299.33752"
@@ -674,19 +678,19 @@
         <font>SansSerif-plain-14</font>
         <URIString>http://vue.tufts.edu/rdf/resource/390fd249c0a8001f0014d8e10820c13a</URIString>
         <richText>&lt;html&gt;
-  &lt;head style="color: #000000" color="#000000"&gt;
+  &lt;head color="#000000" style="color: #000000"&gt;
     &lt;style type="text/css"&gt;
       &lt;!--
-        body { margin-top: 0px; margin-right: 0px; font-family: Arial; margin-left: 0px; margin-bottom: 0px; color: #000000; font-size: 12 }
-        ol { margin-top: 6; font-family: Arial; list-style-position: outside; margin-left: 30; vertical-align: middle; font-size: 12 }
-        p { margin-top: 0; margin-right: 0; margin-left: 0; margin-bottom: 0; color: #000000 }
-        ul { margin-top: 6; font-family: Arial; list-style-position: outside; margin-left: 30; vertical-align: middle; font-size: 12 }
+        body { font-family: Arial; margin-top: 0px; margin-left: 0px; color: #000000; margin-right: 0px; margin-bottom: 0px; font-size: 12 }
+        ol { font-family: Arial; margin-top: 6; margin-left: 30; vertical-align: middle; list-style-position: outside; font-size: 12 }
+        p { margin-top: 0; margin-left: 0; color: #000000; margin-right: 0; margin-bottom: 0 }
+        ul { font-family: Arial; margin-top: 6; margin-left: 30; vertical-align: middle; list-style-position: outside; font-size: 12 }
       --&gt;
     &lt;/style&gt;
     
   &lt;/head&gt;
   &lt;body&gt;
-    &lt;p style="color: #000000" color="#000000"&gt;
+    &lt;p color="#000000" style="color: #000000"&gt;
       Different subclasses of Metric are defined, e.g. PublicationMetric, 
       AuthorMetric
     &lt;/p&gt;
@@ -768,7 +772,7 @@
     </child>
     <child ID="149" label="roh:researchResultHasPart" layerID="1"
         created="1620809902020" x="610.71564" y="259.766"
-        width="148.51715" height="130.7089" strokeWidth="1.0"
+        width="148.01715" height="130.7089" strokeWidth="1.0"
         autoSized="false" controlCount="1" arrowState="2" xsi:type="link">
         <strokeColor>#404040</strokeColor>
         <textColor>#404040</textColor>
@@ -782,7 +786,7 @@
     </child>
     <child ID="150" label="roh:partOfResearchResult" layerID="1"
         created="1620809902020" x="589.8059" y="235.07877"
-        width="140.948" height="129.79208" strokeWidth="1.0"
+        width="140.448" height="129.79208" strokeWidth="1.0"
         autoSized="false" controlCount="1" arrowState="2" xsi:type="link">
         <strokeColor>#404040</strokeColor>
         <textColor>#404040</textColor>
@@ -798,8 +802,8 @@
         y="0.0" width="1.4E-45" height="1.4E-45" strokeWidth="0.0" autoSized="false">
         <URIString>http://vue.tufts.edu/rdf/resource/380ad05dc0a801b555b47f18d3251e72</URIString>
     </layer>
-    <userZoom>1.0</userZoom>
-    <userOrigin x="-274.8836" y="-282.33038"/>
+    <userZoom>1.5</userZoom>
+    <userOrigin x="111.11542" y="-159.02785"/>
     <presentationBackground>#202020</presentationBackground>
     <PathwayList currentPathway="0" revealerIndex="-1">
         <pathway ID="0" label="Untitled Pathway" created="1456932426997"
