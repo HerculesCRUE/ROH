@@ -1,21 +1,20 @@
-PREFIX roh: <https://w3id.org/roh#>
-PREFIX ro: <https://w3id.org/roh/mirror/obo/ro#>
-PREFIX bibo: <http://purl.org/ontology/bibo/>
+PREFIX roh: <http://w3id.org/roh#>
+PREFIX ro: <http://w3id.org/roh/mirror/obo/ro#>
 PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
-PREFIX foaf: <https://w3id.org/roh/mirror/foaf#>
-PREFIX unesco: <https://w3id.org/roh/unesco-individuals#>
-PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
 PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
-prefix vivo: <https://w3id.org/roh/mirror/vivo#>
+prefix vivo: <http://w3id.org/roh/mirror/vivo#>
+prefix bibo: <http://w3id.org/roh/mirror/bibo#>
+select (count( distinct ?sujeto) AS ?countKnowledgeArea)  ?knowledgeArea
+where {
 
-SELECT distinct ?project ?area WHERE {
-  ?centro roh:grantedBy ?fundingAmount .
-  ?funding ro:BFO_0000051 ?fundingAmount ;
-           roh:fundedBy ?fundingProgram .
-  ?project roh:isSupportedBy ?funding ;
-           a vivo:Project;
-           roh:hasKnowledgeArea ?area ;
-           vivo:dateTimeInterval ?date .
-  ?date  rdfs:label ?interval .
-  FILTER(?interval = "sample-DateTimeInterval-1562")
-}
+ ?sujeto a ?ClassSujeto;
+            roh:hasKnowledgeArea ?knowledgeArea. 
+
+Filter(?ClassSujeto = roh:ResearchObject || ?ClassSujeto = vivo:Project)
+} 
+Group by ?knowledgeArea
+ORDER by desc( ?countKnowledgeArea)
+
+
+
+

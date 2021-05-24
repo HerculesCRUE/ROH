@@ -1,0 +1,8 @@
+PREFIX roh: <http://w3id.org/roh#>
+PREFIX vivo: <http://w3id.org/roh/mirror/vivo#>
+SELECT  ?project ?expense ?description 
+WHERE {
+?project a vivo:Project ;
+        roh:spends ?expense .
+?expense vivo:description ?description .
+}

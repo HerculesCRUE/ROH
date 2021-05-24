@@ -1,17 +1,18 @@
-PREFIX iao: <https://w3id.org/roh/mirror/obo/iao#>
-PREFIX roh: <https://w3id.org/roh#>
-PREFIX bibo:  <https://w3id.org/roh/mirror/bibo#>
-PREFIX rdfs:  <http://www.w3.org/2000/01/rdf-schema#>
-PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
-PREFIX vivo: <https://w3id.org/roh/mirror/vivo#>
-PREFIX foaf: <https://w3id.org/roh/mirror/foaf#>
+PREFIX roh: <http://w3id.org/roh#>
+PREFIX foaf: <http://w3id.org/roh/mirror/foaf#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+prefix vivo: <http://w3id.org/roh/mirror/vivo#>
+prefix bibo: <http://w3id.org/roh/mirror/bibo#>
+prefix ro: <http://w3id.org/roh/mirror/obo/ro#> 
+prefix foaf: <http://w3id.org/roh/mirror/foaf#>
+
 SELECT ?gender (COUNT(?journal) as ?count)  WHERE {
-    ?journal a iao:IAO_0000013 ;
-    vivo:dateIssued ?dateTimeValue ;
-    bibo:authorList ?authorList ;
+?journal a bibo:Document ;
+        vivo:dateIssued ?dateTimeValue ;
+        bibo:authorList ?authorList ;
     roh:hasMetric ?metric .
-    ?dateTimeValue vivo:dateTime ?date .
-    ?authorList rdfs:member ?researcher . 
-    ?researcher foaf:gender ?gender .
-    ?metric roh:impactFactor ?impactFactor .
-} GROUP BY ?gender
+?dateTimeValue vivo:dateTime ?date .
+?authorList rdfs:member ?researcher . 
+?researcher foaf:gender ?gender .
+?metric roh:impactFactor ?impactFactor .
+} GROUP BY ?gender 

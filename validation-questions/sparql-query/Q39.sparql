@@ -1,21 +1,16 @@
-PREFIX roh: <https://w3id.org/roh#>
-prefix vivo:  <https://w3id.org/roh/mirror/vivo#> 
-PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
-PREFIX foaf: <https://w3id.org/roh/mirror/foaf#>
-PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
+PREFIX roh: <http://w3id.org/roh#>
+PREFIX vivo: <http://w3id.org/roh/mirror/vivo#>
+PREFIX ro: <http://w3id.org/roh/mirror/obo/ro#>
+PREFIX foaf: <http://w3id.org/roh/mirror/foaf#>
 
-
-SELECT (SUM(?fundingAmount) as ?fundingSum) ?orgLabel ?knowledgeLabel WHERE {
-
-   ?person  a   foaf:Person .
-   ?person roh:hasPosition ?position .
-   ?position vivo:relates ?org .
-
-  ?funding roh:grants ?org ;
-           roh:monetaryAmount ?fundingAmount .
-
- ?org  roh:hasKnowledgeArea ?knowledgeArea ;
-        rdfs:label ?orgLabel .
-
-   ?knowledgeArea rdfs:label ?knowledgeLabel .    
-} GROUP BY ?orgLabel ?knowledgeLabel
+SELECT ?organization ?knowledgeArea (SUM(?monetaryAmount) as ?totalFunding) 
+WHERE {
+?project a vivo:Project ;
+        roh:hasKnowledgeArea ?knowledgeArea ;
+        roh:isSupportedBy ?funding .
+?funding ro:BFO_0000051 ?fundingAmount .
+?fundingAmount roh:monetaryAmount ?monetaryAmount ;
+                roh:grants ?organization .
+?organization a foaf:Organization .
+} 
+GROUP BY ?organization ?knowledgeArea

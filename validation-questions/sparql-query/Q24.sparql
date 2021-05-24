@@ -1,0 +1,13 @@
+PREFIX vivo: <http://w3id.org/roh/mirror/vivo#>
+PREFIX roh: <http://w3id.org/roh#>
+prefix ro: <http://w3id.org/roh/mirror/obo/ro#> 
+SELECT  distinct ?project ?centre 
+WHERE {
+?project a vivo:Project ;
+		vivo:relates ?role ;
+		vivo:relates ?centreRole .
+?role roh:roleOf <http://w3id.org/roh/data#company-one> .
+?centreRole roh:roleOf ?centre .
+?centre a ?ClassCentre.
+FILTER(?ClassCentre = roh:ResearchGroup || ?ClassCentre = roh:ResearchInstitute)
+}

@@ -1,0 +1,21 @@
+PREFIX roh: <http://w3id.org/roh#>
+PREFIX oa: <http://www.w3.org/ns/oa#>
+prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> 
+
+select distinct  ?researchResult ?annotation ?body   
+where{
+    ?researchResult a roh:ResearchResult;
+                    a ?classResearchResult.
+  ?annotation a oa:Annotation;
+             oa:hasTarget ?researchResult;
+             oa:hasBody ?body;
+             oa:motivatedBy ?motivation.
+  FILTER NOT EXISTS {
+    ?researchResult a ?otherClass .
+    ?otherClass rdfs:subClassOf roh:ResearchResult .
+    FILTER (?otherClass != ?classResearchResult)
+    }
+FILTER (?classResearchResult != roh:ResearchObject)
+         Filter(str(?classResearchResult)!="http://www.w3.org/2002/07/owl#NamedIndividual")
+
+}

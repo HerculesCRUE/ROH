@@ -1,13 +1,19 @@
-PREFIX ro: <https://w3id.org/roh/mirror/obo/ro#>
-PREFIX bibo:  <https://w3id.org/roh/mirror/bibo#>
+PREFIX ro: <http://w3id.org/roh/mirror/obo/ro#>
+PREFIX bibo:  <http://w3id.org/roh/mirror/bibo#>
 PREFIX rdfs:  <http://www.w3.org/2000/01/rdf-schema#>
-PREFIX bfo: <https://w3id.org/roh/mirror/obo/bfo#>
+PREFIX bfo: <http://w3id.org/roh/mirror/obo/bfo#>
+prefix roh: <http://w3id.org/roh#>
+
 SELECT ?researcher ?conference ?roleClass 
-WHERE {
-	?conference	a	bibo:Conference .
+WHERE { 
+{
+    ?conference	a bibo:Conference. 
+}UNION{
+	?conference a bibo:Workshop.
+}
 	?role 		bfo:BFO_0000054 ?conference .
 	?role 		a ?roleClass ;
-      			ro:RO_0000052 ?researcher .
+      			roh:roleOf ?researcher .
   FILTER NOT EXISTS {
 	?role 		a ?otherClass .
 	?otherClass rdfs:subClassOf ?roleClass .

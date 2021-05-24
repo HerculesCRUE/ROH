@@ -1,0 +1,10 @@
+PREFIX roh: <http://w3id.org/roh#>
+
+select ?experimetalProtocol ?experimentalProtocolResult 
+where{
+    ?experimetalProtocol a roh:ExperimentalProtocol;
+                        roh:produces ?experimentalProtocolResult.
+    ?experimentalProtocolResult a roh:ExperimentalProtocolResult.
+
+
+}

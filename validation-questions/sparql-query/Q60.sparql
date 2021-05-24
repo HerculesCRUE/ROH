@@ -1,0 +1,19 @@
+prefix bibo: <http://w3id.org/roh/mirror/bibo#> 
+PREFIX roh: <http://w3id.org/roh#>
+prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> 
+PREFIX vivo: <http://w3id.org/roh/mirror/vivo#>
+prefix ero: <http://w3id.org/roh/mirror/obo/ero#>
+
+select ?software ?repository ?classRepository
+where {
+     ?software  a ero:ERO_0000071;
+                roh:partOfRepository ?repository.
+    ?repository a ?classRepository.
+     FILTER NOT EXISTS {
+	        ?repository 		a ?otherClass .
+	        ?otherClass rdfs:subClassOf ?classRepository .
+	        FILTER (?otherClass != ?classRepository)
+        }
+        Filter(str(?classRepository)!="http://www.w3.org/2002/07/owl#NamedIndividual")
+        
+}

@@ -1,0 +1,11 @@
+PREFIX roh: <http://w3id.org/roh#>
+prefix bibo: <http://w3id.org/roh/mirror/bibo#>
+
+
+SELECT distinct ?patent  WHERE {
+  ?patent a bibo:Patent;
+          roh:patentInventor <http://w3id.org/roh/data#investigador-3>. 
+  
+}
+ 
+

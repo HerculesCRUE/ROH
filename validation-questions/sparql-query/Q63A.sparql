@@ -1,0 +1,9 @@
+PREFIX roh: <http://w3id.org/roh#>
+prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> 
+
+select   ?element
+where {
+    <http://w3id.org/roh/data#repository-1>
+                roh:repositoryHasPart ?element.
+    
+}

@@ -1,0 +1,18 @@
+PREFIX roh: <http://w3id.org/roh#>
+prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> 
+
+select ?readme ?readmeOf ?classReadmeOf
+where {
+    ?readme a roh:README;
+            roh:readmeOf ?readmeOf.
+    ?readmeOf a ?classReadmeOf. 
+    FILTER NOT EXISTS {
+	?readmeOf 		a ?otherClass .
+	?otherClass rdfs:subClassOf ?classReadmeOf .
+	FILTER (?otherClass != ?classReadmeOf)
+  }
+  FILTER (str(?classReadmeOf) != "http://w3id.org/roh#ResearchObject")
+  Filter( str(?classReadmeOf) != "http://www.w3.org/2002/07/owl#NamedIndividual")
+
+}

@@ -1,0 +1,41 @@
+prefix vivo: <http://w3id.org/roh/mirror/vivo#> 
+prefix roh: <http://w3id.org/roh#>
+prefix bibo: <http://w3id.org/roh/mirror/bibo#> 
+prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#>
+prefix xsd: <http://www.w3.org/2001/XMLSchema#> 
+prefix uneskos:  <http://w3id.org/roh/unesco-individuals#>
+
+SELECT distinct ?organization ?researchObject  ?researchObjectClass ?author ?dateTime ?title ?repository ?keyword ?doi 
+WHERE {
+  
+?researchObject a roh:ResearchObject;
+        roh:correspondingOrganization ?organization;
+        a ?researchObjectClass;
+        vivo:dateIssued ?dateIssued ;
+        roh:hasKnowledgeArea uneskos:120304. 
+
+?organization a ?classOrganization. 
+?dateIssued vivo:dateTime ?dateTime .
+
+Optional{?researchObject roh:title ?title}  
+Optional{?researchObject  roh:correspondingAuthor ?author.}
+ 
+Optional{ ?researchObject vivo:doi ?doi. }
+Optional{?researchObject roh:partOfRepository ?repository.}
+Optional {?researchObject vivo:freetextKeyword ?keyword}
+FILTER (YEAR(?dateTime) >= "1980"^^xsd:integer && YEAR(?dateTime) <= "2022"^^xsd:integer)
+Filter(?classOrganization = roh:ResearchInstitute || ?classOrganization = roh:ResearchGroup)
+FILTER NOT EXISTS {
+        ?researchObject a ?otherClass .
+        ?otherClass rdfs:subClassOf ?researchObjectClass .
+        FILTER (?otherClass != ?researchObjectClass)     
+}
+        FILTER (str(?researchObjectClass) != "http://w3id.org/roh#ResearchObject") 
+       Filter( str(?researchObjectClass) != "http://www.w3.org/2002/07/owl#NamedIndividual")
+
+}
+ GROUP BY ?organization ?researchObject  ?researchObjectClass ?author ?dateTime ?title ?repository ?keyword ?doi 
+
+
+
+                                                       

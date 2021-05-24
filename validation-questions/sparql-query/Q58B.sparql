@@ -1,0 +1,9 @@
+# Como usuario quiero el README de un repositorio especifico (<http://w3id.org/roh/data#repository-1>)
+
+PREFIX roh: <http://w3id.org/roh#>
+
+select ?readme 
+where {
+    ?readme roh:readmeOf <http://w3id.org/roh/data#repository-1>.
+    
+}

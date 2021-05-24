@@ -1,0 +1,24 @@
+prefix foaf: <http://w3id.org/roh/mirror/foaf#>
+prefix roh: <http://w3id.org/roh#>
+prefix vivo:  <http://w3id.org/roh/mirror/vivo#>
+prefix uneskos: <http://w3id.org/roh/unesco-individuals#>
+prefix ro:  <http://w3id.org/roh/mirror/obo/ro#>
+prefix owl: <http://www.w3.org/2002/07/owl#>
+prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+
+SELECT ?researcher ?center ?positionClass
+WHERE {
+  ?researcher	roh:hasKnowledgeArea uneskos:120304;
+  			      roh:hasPosition  ?position.
+  ?position a roh:ResearcherPosition.
+  ?position vivo:relates ?center ;
+  			    a	?positionClass.
+  ?center a ?centerClass.
+  Filter(?centerClass = roh:ResearchGroup || ?centerClass=roh:ResearchInstitute)
+   
+  FILTER NOT EXISTS {
+      ?position a ?otherClass.
+      ?otherClass rdfs:subClassOf ?positionClass .
+      FILTER (?otherClass != ?positionClass) 
+    }
+}

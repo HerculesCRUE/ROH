@@ -1,0 +1,22 @@
+prefix vivo: <http://w3id.org/roh/mirror/vivo#>
+prefix roh: <http://w3id.org/roh#>
+prefix bibo: <http://w3id.org/roh/mirror/bibo#>
+prefix uneskos: <http://w3id.org/roh/unesco-individuals#>
+prefix ro: <http://w3id.org/roh/mirror/obo/ro#> 
+
+SELECT (COUNT(DISTINCT ?publication) as ?publicationCount) ?organization ?university
+WHERE {
+  ?publication         a bibo:Document ;
+                       roh:hasKnowledgeArea uneskos:120304;
+                       vivo:hasPublicationVenue        ?journal;
+                       roh:correspondingOrganization ?organization.
+  ?journal	a bibo:Journal . 
+  ?organization a ?classOrganization.
+  OPTIONAL{ ?organization
+                ro:BFO_0000050+ ?university. 
+    ?university a vivo:University.}
+  
+  Filter(?classOrganization = roh:ResearchGroup || ?classOrganization = roh:ResearchInstitute) 
+ }
+
+GROUP BY ?organization ?university

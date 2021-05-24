@@ -1,16 +1,19 @@
-PREFIX roh: <https://w3id.org/roh#>
-PREFIX vivo: <https://w3id.org/roh/mirror/vivo#>
-PREFIX ro: <https://w3id.org/roh/mirror/obo/ro#>
+
+PREFIX roh: <http://w3id.org/roh#>
+PREFIX vivo: <http://w3id.org/roh/mirror/vivo#>
+PREFIX ro: <http://w3id.org/roh/mirror/obo/ro#>
 
 
-SELECT ?project ?company ?fundingAmounts 
+SELECT ?project ?company ?fundingAmounts  ?center
 WHERE {
   ?project a vivo:Project ;
-  roh:projectStatus ?status ;
-  roh:isSupportedBy ?funding ;
-  roh:fundedBy ?fundingProgram .
+          roh:projectStatus ?status ;
+          roh:isSupportedBy ?funding.
+  ?funding a roh:Funding;
+  					roh:fundedBy ?fundingProgram;
+             ro:BFO_0000051 ?fundingAmount .
   ?status a roh:ProposalSubmitted .
-  ?funding ro:BFO_0000051 ?fundingAmount .
   ?fundingProgram roh:promotedBy ?company .
-  ?fundingAmount roh:monetaryAmount ?fundingAmounts .
+  ?fundingAmount roh:monetaryAmount ?fundingAmounts;
+                  roh:grants ?center.
 }

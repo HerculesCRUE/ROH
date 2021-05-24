@@ -1,0 +1,13 @@
+prefix vivo: <http://w3id.org/roh/mirror/vivo#>
+prefix roh: <http://w3id.org/roh#>
+prefix bibo: <http://w3id.org/roh/mirror/bibo#>
+
+SELECT DISTINCT ?patent ?centre ?knowledgeArea 
+WHERE {
+  ?patent a bibo:Patent ;
+          roh:correspondingOrganization ?centre;
+          roh:hasKnowledgeArea ?knowledgeArea .
+  ?centre a ?classCenter.
+  Filter(?classCenter = roh:ResearchGroup || ?classCenter =roh:ResearchInstitute)
+  
+} GROUP BY ?patent ?centre ?knowledgeArea 

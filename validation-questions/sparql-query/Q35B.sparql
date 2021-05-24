@@ -1,0 +1,8 @@
+PREFIX roh: <http://w3id.org/roh#>
+PREFIX vivo: <http://w3id.org/roh/mirror/vivo#>
+SELECT ?date 
+WHERE {
+?project a vivo:Project ;
+          roh:foreseenJustificationDate ?foreseenJustificationDate  .
+?foreseenJustificationDate vivo:dateTime ?date.
+}

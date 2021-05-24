@@ -1,18 +1,18 @@
-<!-- Tufts VUE 3.3.0 concept-map (3.roh-organization.vue) 2021-03-20 -->
+<!-- Tufts VUE 3.3.0 concept-map (3.roh-organization.vue) 2021-05-12 -->
 <!-- Tufts VUE: http://vue.tufts.edu/ -->
-<!-- Do Not Remove: VUE mapping @version(1.1) jar:file:/C:/Programming/utilities/VUE/VUE.jar!/tufts/vue/resources/lw_mapping_1_1.xml -->
-<!-- Do Not Remove: Saved date Sat Mar 20 09:45:49 CET 2021 by dipina on platform Windows 8 6.2 in JVM 1.7.0_21-b11 -->
+<!-- Do Not Remove: VUE mapping @version(1.1) jar:file:/C:/Program%20Files%20(x86)/VUE/VUE.jar!/tufts/vue/resources/lw_mapping_1_1.xml -->
+<!-- Do Not Remove: Saved date Wed May 12 11:55:56 CEST 2021 by mpuer on platform Windows 8 6.2 in JVM 1.7.0_21-b11 -->
 <!-- Do Not Remove: Saving version @(#)VUE: built October 8 2015 at 1658 by tomadm on Linux 2.6.32-504.23.4.el6.x86_64 i386 JVM 1.7.0_21-b11(bits=32) -->
 <?xml version="1.0" encoding="US-ASCII"?>
 <LW-MAP xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
     xsi:noNamespaceSchemaLocation="none" ID="0"
     label="3.roh-organization.vue" created="1393354945662" x="0.0"
     y="0.0" width="1.4E-45" height="1.4E-45" strokeWidth="0.0" autoSized="false">
-    <resource referenceCreated="1616229949290" size="43414"
-        spec="C:\temp\roh-updated\ROH\media\3.roh-organization.vue"
+    <resource referenceCreated="1620813356781" size="44244"
+        spec="C:\Users\mpuer\Documents\GitHub\ROH_oficial\docs\media\3.roh-organization.vue"
         type="1" xsi:type="URLResource">
         <title>3.roh-organization.vue</title>
-        <property key="File" value="C:\temp\roh-updated\ROH\media\3.roh-organization.vue"/>
+        <property key="File" value="C:\Users\mpuer\Documents\GitHub\ROH_oficial\docs\media\3.roh-organization.vue"/>
     </resource>
     <fillColor>#FFFFFF</fillColor>
     <strokeColor>#404040</strokeColor>
@@ -90,25 +90,25 @@
         <font>-plain-24</font>
         <URIString>http://vue.tufts.edu/rdf/resource/92c74fb080fd571400ade1b68581e822</URIString>
         <richText>&lt;html&gt;
-  &lt;head style="color: #000000" color="#000000"&gt;
+  &lt;head color="#000000" style="color: #000000"&gt;
     &lt;style type="text/css"&gt;
       &lt;!--
-        body { font-family: Arial; margin-right: 0px; color: #000000; font-size: 8; margin-bottom: 0px; margin-top: 0px; margin-left: 0px }
-        ol { vertical-align: middle; font-family: Arial; list-style-position: outside; font-size: 8; margin-top: 6; margin-left: 30 }
-        p { margin-right: 0; color: #000000; margin-bottom: 0; margin-top: 0; margin-left: 0 }
-        ul { vertical-align: middle; font-family: Arial; list-style-position: outside; font-size: 8; margin-top: 6; margin-left: 30 }
+        body { margin-bottom: 0px; font-family: Arial; font-size: 8; margin-left: 0px; color: #000000; margin-right: 0px; margin-top: 0px }
+        ol { font-size: 8; font-family: Arial; list-style-position: outside; margin-left: 30; vertical-align: middle; margin-top: 6 }
+        p { margin-bottom: 0; margin-left: 0; color: #000000; margin-right: 0; margin-top: 0 }
+        ul { font-size: 8; font-family: Arial; list-style-position: outside; margin-left: 30; vertical-align: middle; margin-top: 6 }
       --&gt;
     &lt;/style&gt;
     
   &lt;/head&gt;
   &lt;body&gt;
-    &lt;p style="text-align: center; color: #000000" color="#000000"&gt;
+    &lt;p color="#000000" style="color: #000000; text-align: center"&gt;
       &lt;font style="font-size:24;"&gt;Organization Model &lt;/font&gt;
     &lt;/p&gt;
-    &lt;p style="text-align: center; color: #000000" color="#000000"&gt;
+    &lt;p color="#000000" style="color: #000000; text-align: center"&gt;
       &lt;font style="font-size:24;"&gt;12 March 2021 &lt;/font&gt;
     &lt;/p&gt;
-    &lt;p style="text-align: center; color: #000000" color="#000000"&gt;
+    &lt;p color="#000000" style="color: #000000; text-align: center"&gt;
       
     &lt;/p&gt;
   &lt;/body&gt;
@@ -366,18 +366,18 @@
         <shape xsi:type="ellipse"/>
     </child>
     <child ID="186" label="vivo:hasSuccessorOrganization" layerID="1"
-        created="1455985170927" x="-349.026" y="-663.3941"
-        width="171.82428" height="63.2359" strokeWidth="1.0"
+        created="1455985170927" x="-361.27417" y="-660.9833"
+        width="184.30583" height="57.94812" strokeWidth="1.0"
         autoSized="false" controlCount="1" arrowState="2" xsi:type="link">
         <strokeColor>#000000</strokeColor>
         <textColor>#4C4C4C</textColor>
         <font>Arial-plain-11</font>
         <URIString>http://vue.tufts.edu/rdf/resource/ff828d4fc0a80499750dfdbfcc52a137</URIString>
-        <point1 x="-341.08444" y="-600.6582"/>
-        <point2 x="-177.70172" y="-662.8941"/>
+        <point1 x="-343.9105" y="-603.53516"/>
+        <point2 x="-177.46834" y="-660.4833"/>
         <ID1 xsi:type="node">6</ID1>
         <ID2 xsi:type="node">185</ID2>
-        <ctrlPoint0 x="-283.65894" y="-648.18756" xsi:type="point"/>
+        <ctrlPoint0 x="-306.85892" y="-636.98755" xsi:type="point"/>
     </child>
     <child ID="187" label="vivo:hasPredecessorOrganization" layerID="1"
         created="1455985208892" x="-318.516" y="-630.8485"
@@ -430,10 +430,10 @@
   &lt;head&gt;
     &lt;style type="text/css"&gt;
       &lt;!--
-        body { font-family: Arial; margin-right: 0px; color: #000000; font-size: 12; margin-bottom: 0px; margin-top: 0px; margin-left: 0px }
-        ol { vertical-align: middle; font-family: Arial; list-style-position: outside; font-size: 12; margin-top: 6; margin-left: 30 }
-        p { margin-right: 0; color: #000000; margin-bottom: 0; margin-top: 0; margin-left: 0 }
-        ul { vertical-align: middle; font-family: Arial; list-style-position: outside; font-size: 12; margin-top: 6; margin-left: 30 }
+        body { margin-bottom: 0px; font-family: Arial; font-size: 12; margin-left: 0px; color: #000000; margin-right: 0px; margin-top: 0px }
+        ol { font-size: 12; font-family: Arial; list-style-position: outside; margin-left: 30; vertical-align: middle; margin-top: 6 }
+        p { margin-bottom: 0; margin-left: 0; color: #000000; margin-right: 0; margin-top: 0 }
+        ul { font-size: 12; font-family: Arial; list-style-position: outside; margin-left: 30; vertical-align: middle; margin-top: 6 }
       --&gt;
     &lt;/style&gt;
     
@@ -469,19 +469,19 @@
         <font>SansSerif-plain-14</font>
         <URIString>http://vue.tufts.edu/rdf/resource/afdad9afac102a265de355d5923dde5e</URIString>
         <richText>&lt;html&gt;
-  &lt;head style="color: #000000" color="#000000"&gt;
+  &lt;head color="#000000" style="color: #000000"&gt;
     &lt;style type="text/css"&gt;
       &lt;!--
-        body { font-family: Arial; margin-right: 0px; color: #000000; font-size: 12; margin-bottom: 0px; margin-top: 0px; margin-left: 0px }
-        ol { vertical-align: middle; font-family: Arial; list-style-position: outside; font-size: 12; margin-top: 6; margin-left: 30 }
-        p { margin-right: 0; color: #000000; margin-bottom: 0; margin-top: 0; margin-left: 0 }
-        ul { vertical-align: middle; font-family: Arial; list-style-position: outside; font-size: 12; margin-top: 6; margin-left: 30 }
+        body { margin-bottom: 0px; font-family: Arial; font-size: 12; margin-left: 0px; color: #000000; margin-right: 0px; margin-top: 0px }
+        ol { font-size: 12; font-family: Arial; list-style-position: outside; margin-left: 30; vertical-align: middle; margin-top: 6 }
+        p { margin-bottom: 0; margin-left: 0; color: #000000; margin-right: 0; margin-top: 0 }
+        ul { font-size: 12; font-family: Arial; list-style-position: outside; margin-left: 30; vertical-align: middle; margin-top: 6 }
       --&gt;
     &lt;/style&gt;
     
   &lt;/head&gt;
   &lt;body&gt;
-    &lt;p style="color: #000000" color="#000000"&gt;
+    &lt;p color="#000000" style="color: #000000"&gt;
       A hierarchy of Organizations is defined, importing subclasses already 
       defined by VIVO and adding some new ones in ROH
     &lt;/p&gt;
@@ -500,19 +500,19 @@
         <font>SansSerif-plain-14</font>
         <URIString>http://vue.tufts.edu/rdf/resource/afdad9afac102a265de355d5c4515d9c</URIString>
         <richText>&lt;html&gt;
-  &lt;head style="color: #000000" color="#000000"&gt;
+  &lt;head color="#000000" style="color: #000000"&gt;
     &lt;style type="text/css"&gt;
       &lt;!--
-        body { font-family: Arial; margin-right: 0px; color: #000000; font-size: 12; margin-bottom: 0px; margin-top: 0px; margin-left: 0px }
-        ol { vertical-align: middle; font-family: Arial; list-style-position: outside; font-size: 12; margin-top: 6; margin-left: 30 }
-        p { margin-right: 0; color: #000000; margin-bottom: 0; margin-top: 0; margin-left: 0 }
-        ul { vertical-align: middle; font-family: Arial; list-style-position: outside; font-size: 12; margin-top: 6; margin-left: 30 }
+        body { margin-bottom: 0px; font-family: Arial; font-size: 12; margin-left: 0px; color: #000000; margin-right: 0px; margin-top: 0px }
+        ol { font-size: 12; font-family: Arial; list-style-position: outside; margin-left: 30; vertical-align: middle; margin-top: 6 }
+        p { margin-bottom: 0; margin-left: 0; color: #000000; margin-right: 0; margin-top: 0 }
+        ul { font-size: 12; font-family: Arial; list-style-position: outside; margin-left: 30; vertical-align: middle; margin-top: 6 }
       --&gt;
     &lt;/style&gt;
     
   &lt;/head&gt;
   &lt;body&gt;
-    &lt;p style="color: #000000" color="#000000"&gt;
+    &lt;p color="#000000" style="color: #000000"&gt;
       Organizations may be part of of other organizations, or have other 
       organizations as parts, or both. Here we show the organizationbeing 
       modeled as part of a pre-existing organization
@@ -534,42 +534,41 @@
         <shape xsi:type="ellipse"/>
     </child>
     <child ID="219" label="vivo:affiliatedOrganization" layerID="1"
-        created="1476125895089" x="-399.91132" y="-743.79895"
-        width="125.0" height="120.60425" strokeWidth="1.0"
+        created="1476125895089" x="-367.5514" y="-730.41223"
+        width="125.0" height="117.230286" strokeWidth="1.0"
         autoSized="false" controlCount="1" arrowState="2" xsi:type="link">
         <strokeColor>#000000</strokeColor>
         <textColor>#4C4C4C</textColor>
         <font>Arial-plain-11</font>
         <URIString>http://vue.tufts.edu/rdf/resource/affce837ac102a265c627fe18ec5af91</URIString>
-        <point1 x="-375.88092" y="-623.6947"/>
-        <point2 x="-287.90952" y="-743.29895"/>
+        <point1 x="-356.71603" y="-613.68195"/>
+        <point2 x="-273.33688" y="-729.91223"/>
         <ID1 xsi:type="node">6</ID1>
         <ID2 xsi:type="node">218</ID2>
-        <ctrlPoint0 x="-342.92743" y="-696.64307" xsi:type="point"/>
+        <ctrlPoint0 x="-295.07635" y="-692.9899" xsi:type="point"/>
     </child>
     <child ID="221"
         label="An Organization is financed through FundingAmounts coming from Funding &#xa;      Organizations through FundingPrograms and take part in several projects under different Roles"
-        layerID="1" created="1581400654613" x="-880.95776"
-        y="-646.82916" width="255.0" height="81.0" strokeWidth="0.0"
-        autoSized="false" xsi:type="text">
+        layerID="1" created="1581400654613" x="-994.5578" y="-634.0292"
+        width="255.0" height="81.0" strokeWidth="0.0" autoSized="false" xsi:type="text">
         <strokeColor>#404040</strokeColor>
         <textColor>#000000</textColor>
         <font>SansSerif-plain-14</font>
         <URIString>http://vue.tufts.edu/rdf/resource/32dc914fc0a8001f01edcd79cab2485d</URIString>
         <richText>&lt;html&gt;
-  &lt;head style="color: #000000" color="#000000"&gt;
+  &lt;head color="#000000" style="color: #000000"&gt;
     &lt;style type="text/css"&gt;
       &lt;!--
-        body { font-family: Arial; margin-right: 0px; color: #000000; font-size: 12; margin-bottom: 0px; margin-top: 0px; margin-left: 0px }
-        ol { vertical-align: middle; font-family: Arial; list-style-position: outside; font-size: 12; margin-top: 6; margin-left: 30 }
-        p { margin-right: 0; color: #000000; margin-bottom: 0; margin-top: 0; margin-left: 0 }
-        ul { vertical-align: middle; font-family: Arial; list-style-position: outside; font-size: 12; margin-top: 6; margin-left: 30 }
+        body { margin-bottom: 0px; font-family: Arial; font-size: 12; margin-left: 0px; color: #000000; margin-right: 0px; margin-top: 0px }
+        ol { font-size: 12; font-family: Arial; list-style-position: outside; margin-left: 30; vertical-align: middle; margin-top: 6 }
+        p { margin-bottom: 0; margin-left: 0; color: #000000; margin-right: 0; margin-top: 0 }
+        ul { font-size: 12; font-family: Arial; list-style-position: outside; margin-left: 30; vertical-align: middle; margin-top: 6 }
       --&gt;
     &lt;/style&gt;
     
   &lt;/head&gt;
   &lt;body&gt;
-    &lt;p style="color: #000000" color="#000000"&gt;
+    &lt;p color="#000000" style="color: #000000"&gt;
       An Organization is financed through FundingAmounts coming from Funding 
       Organizations through FundingPrograms and take part in several projects 
       under different Roles
@@ -581,15 +580,15 @@
       Organizations through FundingPrograms and take part in several projects under different Roles</label>
     </child>
     <child ID="224" label="gn:locatedIn" layerID="1"
-        created="1581400833307" x="-580.58124" y="-650.5335"
-        width="78.70877" height="74.7005" strokeWidth="1.0"
+        created="1581400833307" x="-622.29065" y="-623.7269"
+        width="120.41818" height="47.89392" strokeWidth="1.0"
         autoSized="false" controlCount="1" arrowState="2" xsi:type="link">
         <strokeColor>#000000</strokeColor>
         <textColor>#000000</textColor>
         <font>Arial-plain-11</font>
         <URIString>http://vue.tufts.edu/rdf/resource/32dc9150c0a8001f01edcd79e00a1c86</URIString>
         <point1 x="-502.37247" y="-576.333"/>
-        <point2 x="-580.08124" y="-650.0335"/>
+        <point2 x="-621.79065" y="-623.2269"/>
         <ID1 xsi:type="node">6</ID1>
         <ID2 xsi:type="node">232</ID2>
         <ctrlPoint0 x="-533.3274" y="-588.64307" xsi:type="point"/>
@@ -642,7 +641,7 @@
         <ctrlPoint0 x="-563.6245" y="-506.4292" xsi:type="point"/>
     </child>
     <child ID="232" label="gn:Feature" layerID="1"
-        created="1581415899963" x="-674.1245" y="-757.7291"
+        created="1581415899963" x="-734.1245" y="-704.92914"
         width="116.2" height="121.0" strokeWidth="2.0" autoSized="false" xsi:type="node">
         <fillColor>#C1F780</fillColor>
         <strokeColor>#000000</strokeColor>
@@ -734,16 +733,17 @@
         <shape xsi:type="ellipse"/>
     </child>
     <child ID="245" label="vivo:dateTimeInterval" layerID="1"
-        created="1615911643955" x="-509.17636" y="-703.5795"
-        width="101.0" height="86.64081" strokeWidth="1.0"
+        created="1615911643955" x="-480.89114" y="-727.12866"
+        width="101.0" height="110.18994" strokeWidth="1.0"
         autoSized="false" controlCount="1" arrowState="2" xsi:type="link">
         <strokeColor>#000000</strokeColor>
         <textColor>#000000</textColor>
         <font>Arial-plain-11</font>
         <URIString>http://vue.tufts.edu/rdf/resource/3bdba2bcac17f0010125801db3ecfde9</URIString>
         <point1 x="-442.5465" y="-617.4387"/>
-        <point2 x="-474.3672" y="-703.0795"/>
-        <ctrlPoint0 x="-458.89584" y="-659.9266" xsi:type="point"/>
+        <point2 x="-455.26532" y="-726.62866"/>
+        <ID2 xsi:type="node">234</ID2>
+        <ctrlPoint0 x="-411.87637" y="-684.9899" xsi:type="point"/>
     </child>
     <child ID="246" label="vivo:Company" layerID="1"
         created="1615911773488" x="-282.17636" y="-399.45917"
@@ -769,12 +769,51 @@
         <ID2 xsi:type="node">246</ID2>
         <ctrlPoint0 x="-273.87637" y="-425.05917" xsi:type="point"/>
     </child>
+    <child ID="251" label="roh:Research&#xa;Object" layerID="1"
+        created="1620811489781" x="-694.5753" y="-822.6113"
+        width="125.898926" height="112.82141" strokeWidth="2.0"
+        autoSized="false" xsi:type="node">
+        <fillColor>#33A8F5</fillColor>
+        <strokeColor>#000000</strokeColor>
+        <textColor>#000000</textColor>
+        <font>Arial-plain-12</font>
+        <URIString>http://vue.tufts.edu/rdf/resource/60011f16c0a80182010a93c2ed23b7b1</URIString>
+        <shape xsi:type="ellipse"/>
+    </child>
+    <child ID="252" label="roh:corresponding&#xa;Organization"
+        layerID="1" created="1620811489781" x="-581.3077" y="-733.6615"
+        width="112.93271" height="119.80768" strokeWidth="1.0"
+        autoSized="false" controlCount="1" arrowState="2" xsi:type="link">
+        <strokeColor>#000000</strokeColor>
+        <textColor>#4C4C4C</textColor>
+        <font>Arial-plain-11</font>
+        <URIString>http://vue.tufts.edu/rdf/resource/60011f16c0a80182010a93c2d91443dd</URIString>
+        <point1 x="-468.87497" y="-614.3538"/>
+        <point2 x="-580.8077" y="-733.1615"/>
+        <ID1 xsi:type="node">6</ID1>
+        <ID2 xsi:type="node">251</ID2>
+        <ctrlPoint0 x="-537.4764" y="-704.9899" xsi:type="point"/>
+    </child>
+    <child ID="253" label="roh:corresponding&#xa;OrganizationOf"
+        layerID="1" created="1620811489781" x="-605.0644" y="-715.96735"
+        width="110.35211" height="127.7099" strokeWidth="1.0"
+        autoSized="false" controlCount="1" arrowState="2" xsi:type="link">
+        <strokeColor>#000000</strokeColor>
+        <textColor>#4C4C4C</textColor>
+        <font>Arial-plain-11</font>
+        <URIString>http://vue.tufts.edu/rdf/resource/60011f16c0a80182010a93c28f0d673c</URIString>
+        <point1 x="-604.5644" y="-715.46735"/>
+        <point2 x="-495.21228" y="-588.75745"/>
+        <ID1 xsi:type="node">251</ID1>
+        <ID2 xsi:type="node">6</ID2>
+        <ctrlPoint0 x="-555.87634" y="-624.18994" xsi:type="point"/>
+    </child>
     <layer ID="1" label="Layer 1" created="1393354945802" x="0.0"
         y="0.0" width="1.4E-45" height="1.4E-45" strokeWidth="0.0" autoSized="false">
         <URIString>http://vue.tufts.edu/rdf/resource/6a822fa280fd5714007fcd7edc120198</URIString>
     </layer>
     <userZoom>1.25</userZoom>
-    <userOrigin x="-1168.8455" y="-1237.9023"/>
+    <userOrigin x="-1311.8455" y="-1212.2374"/>
     <presentationBackground>#202020</presentationBackground>
     <PathwayList currentPathway="0" revealerIndex="-1">
         <pathway ID="0" label="Untitled Pathway" created="1393354945644"
@@ -826,6 +865,6 @@
     </PathwayList>
     <date>2014-02-25</date>
     <modelVersion>6</modelVersion>
-    <saveLocation>C:\temp\roh-updated\ROH\media</saveLocation>
-    <saveFile>C:\temp\roh-updated\ROH\media\3.roh-organization.vue</saveFile>
+    <saveLocation>C:\Users\mpuer\Documents\GitHub\ROH_oficial\docs\media</saveLocation>
+    <saveFile>C:\Users\mpuer\Documents\GitHub\ROH_oficial\docs\media\3.roh-organization.vue</saveFile>
 </LW-MAP>

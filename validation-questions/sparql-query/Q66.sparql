@@ -1,0 +1,12 @@
+PREFIX roh: <http://w3id.org/roh#>
+prefix oa: <http://www.w3.org/ns/oa#>
+
+select distinct ?target ?anotation  ?body ?annotation2 ?body2
+where{
+    ?anotation a oa:Annotation;
+                oa:hasTarget ?target;
+                oa:hasBody ?body.
+    ?annotation2 a oa:Annotation;
+                oa:hasTarget ?anotation;
+                 oa:hasBody ?body2.
+}

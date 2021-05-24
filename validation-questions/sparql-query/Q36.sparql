@@ -1,11 +1,15 @@
-PREFIX roh: <https://w3id.org/roh#>
-PREFIX ro: <https://w3id.org/roh/mirror/obo/ro#>
+PREFIX roh: <http://w3id.org/roh#>
+PREFIX ro: <http://w3id.org/roh/mirror/obo/ro#>
+prefix vivo: <http://w3id.org/roh/mirror/vivo#>
 
-SELECT ?organization ?fundingProgram (SUM(?monetaryAmount) as ?totalFunding) 
+SELECT ?university  (SUM(?monetaryAmount) as ?totalFunding) 
 WHERE {
 	?fundingProgram	a roh:FundingProgram .
 	?funding		roh:fundedBy  ?fundingProgram .
 	?funding 		ro:BFO_0000051 ?fundingAmount .
 	?fundingAmount 	roh:grants ?organization ;
                 	roh:monetaryAmount ?monetaryAmount .
-} GROUP BY ?organization ?fundingProgram 
+  ?university ro:BFO_0000051+ ?organization.
+  ?university a vivo:University. 
+} 
+GROUP BY ?university  

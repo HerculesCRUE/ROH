@@ -1,0 +1,10 @@
+# Como usuario quiero el README de un software especifico (<http://w3id.org/roh/data#software-1>)
+
+PREFIX roh: <http://w3id.org/roh#>
+
+select ?readme 
+where {
+    ?readme roh:readmeOf <http://w3id.org/roh/data#software-1>.
+    
+
+}

@@ -1,11 +1,11 @@
-PREFIX roh: <https://w3id.org/roh#>
-PREFIX vivo: <https://w3id.org/roh/mirror/vivo#>
-PREFIX bibo:  <https://w3id.org/roh/mirror/bibo#>
+PREFIX roh: <http://w3id.org/roh#>
+PREFIX vivo: <http://w3id.org/roh/mirror/vivo#>
+PREFIX bibo:  <http://w3id.org/roh/mirror/bibo#>
 PREFIX rdfs:  <http://www.w3.org/2000/01/rdf-schema#>
-PREFIX dc:    <http://purl.org/dc/elements/1.1/>
 SELECT DISTINCT ?publication 
 WHERE {
-    ?publication bibo:authorList ?authorList  ;dc:title ?title ;a bibo:Article .?authorList rdfs:member ?author .
-    ?author roh:hasPosition ?position .
-    ?position vivo:relates <https://w3id.org/roh/data#centro-investigacion-1> .
+?publication 
+                               roh:title ?title ;
+                               a bibo:Article ;
+                               roh:correspondingOrganization <http://w3id.org/roh/data#grupo-investigacion-1>.
 FILTER regex(?title, "great", "i")}

@@ -1,0 +1,25 @@
+PREFIX iao: <http://w3id.org/roh/mirror/obo/iao#>
+PREFIX roh: <http://w3id.org/roh#>
+PREFIX bibo:  <http://w3id.org/roh/mirror/bibo#>
+PREFIX rdfs:  <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+PREFIX vivo: <http://w3id.org/roh/mirror/vivo#>
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+
+SELECT ?journal ?researcher (COUNT(?journal) as ?count)  WHERE {
+?journal a bibo:Document ;
+         vivo:hasPublicationVenue        ?journal_revusta;
+vivo:dateIssued ?dateTimeValue ;
+roh:seqOfAuthors+|bibo:authorList ?authorList ;
+roh:hasMetric ?metric .
+?dateTimeValue vivo:dateTime ?date .
+ ?journal_revusta a bibo:Journal        .
+?authorList a rdf:Seq;
+            rdfs:member ?researcher . 
+?metric a roh:PublicationMetric;
+    roh:impactFactor ?impactFactor ;
+	roh:quartile ?quartile .
+FILTER (str(?quartile) = "Q1"^^xsd:string || str(?quartile) = "Q2"^^xsd:string) 
+ FILTER (YEAR(?date) >= "2015"^^xsd:integer && YEAR(?date) <= "2021"^^xsd:integer )
+
+} GROUP BY ?journal ?researcher HAVING (?count > 0) 

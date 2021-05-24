@@ -1,13 +1,23 @@
-PREFIX roh: <https://w3id.org/roh#>
-PREFIX foaf: <https://w3id.org/roh/mirror/foaf#>
-PREFIX vivo: <https://w3id.org/roh/mirror/vivo#>
-SELECT ?researchGroup ?citations
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+prefix bibo: <http://w3id.org/roh/mirror/bibo#> 
+prefix foaf: <http://w3id.org/roh/mirror/foaf#>
+prefix roh: <http://w3id.org/roh#>
+prefix vivo:  <http://w3id.org/roh/mirror/vivo#>
+prefix uneskos: <http://w3id.org/roh/unesco-individuals#>
+prefix ro: <http://w3id.org/roh/mirror/obo/ro#> 
+prefix owl: <http://www.w3.org/2002/07/owl#>
+prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+
+SELECT  ?center (SUM(?citas) AS ?CountCitas) (SUM(?impactFactor) AS ?count_impact_factor) 
 WHERE {
-?researcher a foaf:Person ;
-  roh:hasPosition ?position .
-  
-?metric roh:metricOf ?researcher ;
-        roh:citationCount ?citations .
-?position vivo:relates ?researchGroup .
-?researchGroup a roh:ResearchGroup .
-} GROUP BY ?researchGroup ?citations
+
+?publication roh:correspondingOrganization ?center;
+              roh:hasMetric ?metric. 
+?metric a roh:PublicationMetric ;
+		roh:impactFactor ?impactFactor;
+        roh:citationCount ?citas.
+
+?center a ?centerClass.
+Filter(?centerClass = roh:ResearchGroup || ?centerClass=roh:ResearchInstitute)
+}GROUP BY ?center
+

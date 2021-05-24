@@ -1,0 +1,39 @@
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+prefix bibo: <http://w3id.org/roh/mirror/bibo#> 
+prefix foaf: <http://w3id.org/roh/mirror/foaf#>
+prefix roh: <http://w3id.org/roh#>
+prefix vivo:  <http://w3id.org/roh/mirror/vivo#>
+prefix uneskos: <http://w3id.org/roh/unesco-individuals#>
+prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+
+SELECT  
+?researcher ?cites ?hindex ?i10index (COUNT( distinct ?publication) AS ?countPublication)
+       (COUNT(distinct ?publicationAuthor) AS ?countCorrespondingAuthor) 
+WHERE {
+  ?researcher	roh:hasKnowledgeArea uneskos:120304;
+  			    roh:hasPosition  ?position;
+            roh:hasMetric ?metric;
+            a foaf:Person.
+  ?position a roh:ResearcherPosition;
+            vivo:relates ?center.
+  ?center a ?centerClass.
+  
+  OPTIONAL{ ?publication a ?classDocument;
+                       bibo:authorList+|roh:seqOfAuthors ?authorList.
+            ?authorList  a rdf:Seq;
+                          rdfs:member ?researcher.
+            ?classDocument rdfs:subClassOf* bibo:Document. 
+           }
+  OPTIONAL{ ?publicationAuthor a ?classDocument2;
+                        roh:correspondingAuthor ?researcher.
+            ?classDocument2 rdfs:subClassOf* bibo:Document. 
+          }
+  OPTIONAL{?metric a roh:AuthorMetric;
+                  roh:h-index ?hindex;
+                  roh:i10-index ?i10index;
+                  roh:citationCount ?cites.}
+  Filter(?centerClass = roh:ResearchGroup || ?centerClass=roh:ResearchInstitute)
+}
+GROUP BY ?researcher ?cites ?hindex ?i10index
+ORDER BY DESC(?cites + ?hindex + ?i10index + ?countPublication + ?countCorrespondingAuthor)
+LIMIT 10

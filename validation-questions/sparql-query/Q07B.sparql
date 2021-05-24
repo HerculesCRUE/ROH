@@ -1,0 +1,16 @@
+prefix roh: <http://w3id.org/roh#>
+prefix gn: <http://w3id.org/roh/mirror/geonames#>
+
+SELECT
+(COUNT(DISTINCT ?RO) as ?CountResearchObject) ?comunidadAutonoma
+WHERE {
+  ?RO         a roh:ResearchObject;
+              roh:correspondingOrganization ?organization.
+?organization	gn:locatedIn        ?location ;
+              a ?classOrganization.
+Filter(?classOrganization = roh:ResearchInstitute || ?classOrganization = roh:ResearchGroup)
+# SERVICE ?location {
+#  	?location <http://www.geonames.org/ontology#parentADM1> ?comunidadAutonoma .
+#  }
+}
+GROUP BY ?comunidadAutonoma

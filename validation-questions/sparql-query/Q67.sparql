@@ -1,0 +1,9 @@
+PREFIX roh: <http://w3id.org/roh#>
+PREFIX cito: <http://purl.org/spar/cito/>
+prefix oa: <http://www.w3.org/ns/oa#>
+
+select ?resource
+where{
+    <http://w3id.org/roh/data#journal-article-1>
+                                cito:cites ?resource
+}

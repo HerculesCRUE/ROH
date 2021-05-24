@@ -1,0 +1,22 @@
+prefix bibo: <http://w3id.org/roh/mirror/bibo#> 
+PREFIX roh: <http://w3id.org/roh#>
+prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> 
+PREFIX vivo: <http://w3id.org/roh/mirror/vivo#>
+prefix ero: <http://w3id.org/roh/mirror/obo/ero#>
+select distinct ?repository ?classRepository ?project ?organization 
+ ?author  ?correspondingAuthor ?ResearchResult
+where{
+    ?repository  a roh:Repository;
+             a ?classRepository;
+            roh:correspondingAuthor+| roh:correspondingOrganization ?correspondingAuthor.
+    FILTER NOT EXISTS {
+	        ?repository 		a ?otherClass .
+	        ?otherClass rdfs:subClassOf ?classRepository .
+	        FILTER (?otherClass != ?classRepository)
+        }                 
+    Optional{
+        ?repository roh:seqOfAuthors+|bibo:authorList ?authorList.
+        ?authorList rdfs:member ?author. 
+    }
+   
+}

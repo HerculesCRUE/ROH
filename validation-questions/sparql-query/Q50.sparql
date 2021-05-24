@@ -1,16 +1,22 @@
-PREFIX iao: <https://w3id.org/roh/mirror/obo/iao#>
-PREFIX roh: <https://w3id.org/roh#>
-PREFIX bibo:  <https://w3id.org/roh/mirror/bibo#>
-PREFIX rdfs:  <http://www.w3.org/2000/01/rdf-schema#>
-PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
-PREFIX vivo: <https://w3id.org/roh/mirror/vivo#>
-
-SELECT ?journal ?impactFactor (YEAR(?date) as ?year)  WHERE {
-	?journal	a iao:IAO_0000013 ;
-    			vivo:dateIssued ?dateTimeValue ;
-    			bibo:authorList ?authorList ;
-    			roh:hasMetric ?metric .
-    ?dateTimeValue vivo:dateTime ?date .
-    ?metric roh:impactFactor ?impactFactor .
-    FILTER (YEAR(?date) >= "1990"^^xsd:integer && YEAR(?date) <= "2000"^^xsd:integer )
+prefix ro: <http://w3id.org/roh/mirror/obo/ro#> 
+prefix bfo: <http://w3id.org/roh/mirror/obo/bfo#> 
+prefix dc: <http://purl.org/dc/elements/1.1/> 
+prefix vivo: <http://w3id.org/roh/mirror/vivo#> 
+prefix iao: <http://w3id.org/roh/mirror/obo/iao#> 
+prefix owl: <http://www.w3.org/2002/07/owl#> 
+prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> 
+prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> 
+prefix uneskos:  <http://w3id.org/roh/unesco-individuals#>
+prefix bibo: <http://w3id.org/roh/mirror/bibo#> 
+prefix roh: <http://w3id.org/roh#>
+prefix xsd: <http://www.w3.org/2001/XMLSchema#> 
+SELECT distinct ?journalarticle ?impactFactor (YEAR(?date) as ?year)  WHERE {
+?journalarticle a iao:IAO_0000013 ;
+			vivo:dateIssued ?dateTimeValue ;
+      bibo:authorList+| roh:seqOfAuthors ?authorList ;
+      roh:hasMetric ?metric .
+?dateTimeValue vivo:dateTime ?date .
+?authorList rdfs:member <http://w3id.org/roh/data#investigador-1>.
+?metric roh:impactFactor ?impactFactor.
+FILTER (YEAR(?date) >= "2015"^^xsd:integer && YEAR(?date) <= "2017"^^xsd:integer )
 } 

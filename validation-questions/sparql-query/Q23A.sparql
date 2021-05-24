@@ -1,0 +1,36 @@
+PREFIX roh: <http://w3id.org/roh#>
+PREFIX uneskos: <http://w3id.org/roh/unesco-individuals#>
+prefix bibo: <http://w3id.org/roh/mirror/bibo#>
+prefix ro:  <http://w3id.org/roh/mirror/obo/ro#>
+prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+prefix skos: <http://www.w3.org/2004/02/skos/core#> 
+prefix foaf: <http://w3id.org/roh/mirror/foaf#>
+prefix uneskos:  <http://w3id.org/roh/unesco-individuals#>
+prefix vivo: <http://w3id.org/roh/mirror/vivo#> 
+
+
+SELECT (year(?date) as ?year)  (count( distinct?publication) As ?CountPublication)  (count( distinct ?person) as ?researchers )  (?CountPublication / ?researchers  AS ?rate) ?knowledgeArea 
+where{
+    ?publication roh:correspondingOrganization <http://w3id.org/roh/data#grupo-investigacion-1>;
+    roh:hasKnowledgeArea ?knowledgeArea;
+    vivo:dateIssued ?dateIssued;
+    vivo:hasPublicationVenue ?journal.
+   ?journal a bibo:Journal.
+    ?person roh:hasPosition ?position;
+            a foaf:Person.   
+    ?position vivo:dateTimeInterval ?dateTimeInterval;
+                vivo:relates <http://w3id.org/roh/data#grupo-investigacion-1>;
+              a roh:ResearcherPosition.
+    ?dateIssued vivo:dateTime ?date.
+    ?dateTimeInterval vivo:start ?satarNode.
+    ?satarNode vivo:dateTime  ?star.
+  Filter(year(?star) <= year(?date)) 
+ 	filter not exists{ ?dateTimeInterval vivo:end ?endNode.
+    					?endNode vivo:dateTime  ?end.
+						Filter(year(?date) > year(?end))
+  }
+  
+}
+Group by  ?knowledgeArea ?CountPublication ?rate ?date 
+order by ?year

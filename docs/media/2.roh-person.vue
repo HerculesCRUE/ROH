@@ -1,17 +1,18 @@
-<!-- Tufts VUE 3.3.0 concept-map (2.roh-person.vue) 2021-03-20 -->
+<!-- Tufts VUE 3.3.0 concept-map (2.roh-person.vue) 2021-05-12 -->
 <!-- Tufts VUE: http://vue.tufts.edu/ -->
-<!-- Do Not Remove: VUE mapping @version(1.1) jar:file:/C:/Programming/utilities/VUE/VUE.jar!/tufts/vue/resources/lw_mapping_1_1.xml -->
-<!-- Do Not Remove: Saved date Sat Mar 20 09:46:59 CET 2021 by dipina on platform Windows 8 6.2 in JVM 1.7.0_21-b11 -->
+<!-- Do Not Remove: VUE mapping @version(1.1) jar:file:/C:/Program%20Files%20(x86)/VUE/VUE.jar!/tufts/vue/resources/lw_mapping_1_1.xml -->
+<!-- Do Not Remove: Saved date Wed May 12 11:59:10 CEST 2021 by mpuer on platform Windows 8 6.2 in JVM 1.7.0_21-b11 -->
 <!-- Do Not Remove: Saving version @(#)VUE: built October 8 2015 at 1658 by tomadm on Linux 2.6.32-504.23.4.el6.x86_64 i386 JVM 1.7.0_21-b11(bits=32) -->
 <?xml version="1.0" encoding="US-ASCII"?>
 <LW-MAP xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
     xsi:noNamespaceSchemaLocation="none" ID="0" label="2.roh-person.vue"
     created="1393354945662" x="0.0" y="0.0" width="1.4E-45"
     height="1.4E-45" strokeWidth="0.0" autoSized="false">
-    <resource referenceCreated="1616230019498" size="71688"
-        spec="C:\temp\roh-updated\ROH\media\2.roh-person.vue" type="1" xsi:type="URLResource">
+    <resource referenceCreated="1620813550515" size="71679"
+        spec="C:\Users\mpuer\Documents\GitHub\ROH_oficial\docs\media\2.roh-person.vue"
+        type="1" xsi:type="URLResource">
         <title>2.roh-person.vue</title>
-        <property key="File" value="C:\temp\roh-updated\ROH\media\2.roh-person.vue"/>
+        <property key="File" value="C:\Users\mpuer\Documents\GitHub\ROH_oficial\docs\media\2.roh-person.vue"/>
     </resource>
     <fillColor>#FFFFFF</fillColor>
     <strokeColor>#404040</strokeColor>
@@ -27,8 +28,8 @@
         <textColor>#000000</textColor>
         <font>Arial-plain-12</font>
         <URIString>http://vue.tufts.edu/rdf/resource/6a822f6280fd5714007fcd7e7d7148a9</URIString>
-        <child ID="209" label="vivo:ORCID" created="1460463413390"
-            x="77.63164" y="60.825012" width="84.0" height="25.0"
+        <child ID="209" label="roh:ORCID" created="1460463413390"
+            x="77.63164" y="60.825012" width="80.0" height="25.0"
             strokeWidth="1.0" autoSized="true" xsi:type="node">
             <fillColor>#FFFFFF</fillColor>
             <strokeColor>#000000</strokeColor>
@@ -102,10 +103,10 @@
   &lt;head style="color: #000000" color="#000000"&gt;
     &lt;style type="text/css"&gt;
       &lt;!--
-        body { color: #000000; margin-left: 0px; font-size: 8; margin-right: 0px; font-family: Arial; margin-top: 0px; margin-bottom: 0px }
-        ol { margin-left: 30; font-size: 8; vertical-align: middle; list-style-position: outside; margin-top: 6; font-family: Arial }
-        p { color: #000000; margin-left: 0; margin-right: 0; margin-top: 0; margin-bottom: 0 }
-        ul { margin-left: 30; font-size: 8; vertical-align: middle; list-style-position: outside; font-family: Arial; margin-top: 6 }
+        body { color: #000000; margin-right: 0px; font-size: 8; margin-bottom: 0px; margin-top: 0px; font-family: Arial; margin-left: 0px }
+        ol { vertical-align: middle; font-size: 8; margin-top: 6; list-style-position: outside; font-family: Arial; margin-left: 30 }
+        p { color: #000000; margin-right: 0; margin-bottom: 0; margin-top: 0; margin-left: 0 }
+        ul { vertical-align: middle; font-size: 8; margin-top: 6; font-family: Arial; list-style-position: outside; margin-left: 30 }
       --&gt;
     &lt;/style&gt;
     
@@ -315,10 +316,10 @@
   &lt;head&gt;
     &lt;style type="text/css"&gt;
       &lt;!--
-        body { color: #000000; margin-left: 0px; font-size: 12; margin-right: 0px; font-family: Arial; margin-top: 0px; margin-bottom: 0px }
-        ol { margin-left: 30; font-size: 12; vertical-align: middle; list-style-position: outside; margin-top: 6; font-family: Arial }
-        p { color: #000000; margin-left: 0; margin-right: 0; margin-top: 0; margin-bottom: 0 }
-        ul { margin-left: 30; font-size: 12; vertical-align: middle; list-style-position: outside; font-family: Arial; margin-top: 6 }
+        body { color: #000000; margin-right: 0px; font-size: 12; margin-bottom: 0px; margin-top: 0px; font-family: Arial; margin-left: 0px }
+        ol { vertical-align: middle; font-size: 12; margin-top: 6; list-style-position: outside; font-family: Arial; margin-left: 30 }
+        p { color: #000000; margin-right: 0; margin-bottom: 0; margin-top: 0; margin-left: 0 }
+        ul { vertical-align: middle; font-size: 12; margin-top: 6; font-family: Arial; list-style-position: outside; margin-left: 30 }
       --&gt;
     &lt;/style&gt;
     
@@ -343,10 +344,10 @@
   &lt;head&gt;
     &lt;style type="text/css"&gt;
       &lt;!--
-        body { color: #000000; margin-left: 0px; font-size: 12; margin-right: 0px; font-family: Arial; margin-top: 0px; margin-bottom: 0px }
-        ol { margin-left: 30; font-size: 12; vertical-align: middle; list-style-position: outside; margin-top: 6; font-family: Arial }
-        p { color: #000000; margin-left: 0; margin-right: 0; margin-top: 0; margin-bottom: 0 }
-        ul { margin-left: 30; font-size: 12; vertical-align: middle; list-style-position: outside; font-family: Arial; margin-top: 6 }
+        body { color: #000000; margin-right: 0px; font-size: 12; margin-bottom: 0px; margin-top: 0px; font-family: Arial; margin-left: 0px }
+        ol { vertical-align: middle; font-size: 12; margin-top: 6; list-style-position: outside; font-family: Arial; margin-left: 30 }
+        p { color: #000000; margin-right: 0; margin-bottom: 0; margin-top: 0; margin-left: 0 }
+        ul { vertical-align: middle; font-size: 12; margin-top: 6; font-family: Arial; list-style-position: outside; margin-left: 30 }
       --&gt;
     &lt;/style&gt;
     
@@ -748,10 +749,10 @@
   &lt;head style="color: #000000" color="#000000"&gt;
     &lt;style type="text/css"&gt;
       &lt;!--
-        body { color: #000000; margin-left: 0px; font-size: 11; margin-right: 0px; font-family: Arial; margin-top: 0px; margin-bottom: 0px }
-        ol { margin-left: 30; font-size: 11; vertical-align: middle; list-style-position: outside; margin-top: 6; font-family: Arial }
-        p { color: #000000; margin-left: 0; margin-right: 0; margin-top: 0; margin-bottom: 0 }
-        ul { margin-left: 30; font-size: 11; vertical-align: middle; list-style-position: outside; font-family: Arial; margin-top: 6 }
+        body { color: #000000; margin-right: 0px; font-size: 11; margin-bottom: 0px; margin-top: 0px; font-family: Arial; margin-left: 0px }
+        ol { vertical-align: middle; font-size: 11; margin-top: 6; list-style-position: outside; font-family: Arial; margin-left: 30 }
+        p { color: #000000; margin-right: 0; margin-bottom: 0; margin-top: 0; margin-left: 0 }
+        ul { vertical-align: middle; font-size: 11; margin-top: 6; font-family: Arial; list-style-position: outside; margin-left: 30 }
       --&gt;
     &lt;/style&gt;
     
@@ -957,10 +958,10 @@
   &lt;head style="color: #000000" color="#000000"&gt;
     &lt;style type="text/css"&gt;
       &lt;!--
-        body { color: #000000; margin-left: 0px; font-size: 11; margin-right: 0px; font-family: Arial; margin-top: 0px; margin-bottom: 0px }
-        ol { margin-left: 30; font-size: 11; vertical-align: middle; list-style-position: outside; margin-top: 6; font-family: Arial }
-        p { color: #000000; margin-left: 0; margin-right: 0; margin-top: 0; margin-bottom: 0 }
-        ul { margin-left: 30; font-size: 11; vertical-align: middle; list-style-position: outside; font-family: Arial; margin-top: 6 }
+        body { color: #000000; margin-right: 0px; font-size: 11; margin-bottom: 0px; margin-top: 0px; font-family: Arial; margin-left: 0px }
+        ol { vertical-align: middle; font-size: 11; margin-top: 6; list-style-position: outside; font-family: Arial; margin-left: 30 }
+        p { color: #000000; margin-right: 0; margin-bottom: 0; margin-top: 0; margin-left: 0 }
+        ul { vertical-align: middle; font-size: 11; margin-top: 6; font-family: Arial; list-style-position: outside; margin-left: 30 }
       --&gt;
     &lt;/style&gt;
     
@@ -1151,10 +1152,10 @@
   &lt;head style="color: #000000" color="#000000"&gt;
     &lt;style type="text/css"&gt;
       &lt;!--
-        body { color: #000000; margin-left: 0px; font-size: 11; margin-right: 0px; font-family: Arial; margin-top: 0px; margin-bottom: 0px }
-        ol { margin-left: 30; font-size: 11; vertical-align: middle; list-style-position: outside; margin-top: 6; font-family: Arial }
-        p { color: #000000; margin-left: 0; margin-right: 0; margin-top: 0; margin-bottom: 0 }
-        ul { margin-left: 30; font-size: 11; vertical-align: middle; list-style-position: outside; font-family: Arial; margin-top: 6 }
+        body { color: #000000; margin-right: 0px; font-size: 11; margin-bottom: 0px; margin-top: 0px; font-family: Arial; margin-left: 0px }
+        ol { vertical-align: middle; font-size: 11; margin-top: 6; list-style-position: outside; font-family: Arial; margin-left: 30 }
+        p { color: #000000; margin-right: 0; margin-bottom: 0; margin-top: 0; margin-left: 0 }
+        ul { vertical-align: middle; font-size: 11; margin-top: 6; font-family: Arial; list-style-position: outside; margin-left: 30 }
       --&gt;
     &lt;/style&gt;
     
@@ -1307,8 +1308,8 @@
         y="0.0" width="1.4E-45" height="1.4E-45" strokeWidth="0.0" autoSized="false">
         <URIString>http://vue.tufts.edu/rdf/resource/6a822fa280fd5714007fcd7edc120198</URIString>
     </layer>
-    <userZoom>1.0</userZoom>
-    <userOrigin x="-1257.5112" y="-805.90436"/>
+    <userZoom>2.0</userZoom>
+    <userOrigin x="-2505.0225" y="-1568.5731"/>
     <presentationBackground>#202020</presentationBackground>
     <PathwayList currentPathway="0" revealerIndex="-1">
         <pathway ID="0" label="Untitled Pathway" created="1393354945644"
@@ -1360,6 +1361,6 @@
     </PathwayList>
     <date>2014-02-25</date>
     <modelVersion>6</modelVersion>
-    <saveLocation>C:\temp\roh-updated\ROH\media</saveLocation>
-    <saveFile>C:\temp\roh-updated\ROH\media\2.roh-person.vue</saveFile>
+    <saveLocation>C:\Users\mpuer\Documents\GitHub\ROH_oficial\docs\media</saveLocation>
+    <saveFile>C:\Users\mpuer\Documents\GitHub\ROH_oficial\docs\media\2.roh-person.vue</saveFile>
 </LW-MAP>

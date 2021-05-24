@@ -1,0 +1,27 @@
+prefix roh: <http://w3id.org/roh#>
+prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+prefix ro: <http://w3id.org/roh/mirror/obo/ro#> 
+
+SELECT DISTINCT ?centre  ?project ?classClasificacionProject
+WHERE {
+  ?centre roh:grantedBy ?fundingAmount ;
+          a ?centroClass.
+  ?funding ro:BFO_0000051 ?fundingAmount ;
+           roh:fundedBy ?fundingProgram .
+
+  ?project roh:isSupportedBy ?funding.
+  Optional{ 
+    ?project  roh:hasProjectCategorization  ?projectClasificacion.
+    ?projectClasificacion a ?classClasificacionProject.
+    FILTER NOT EXISTS { 
+        ?projectClasificacion a ?otherClass.
+        ?otherClass rdfs:subClassOf ?classClasificacionProject .
+        FILTER (?otherClass != ?classClasificacionProject) } 
+        }             
+  OPTIONAL {
+	      ?project roh:projectStatus ?projectStatus .
+        ?projectStatus a ?projectClass.
+        }
+  FILTER (!BOUND(?projectStatus) || ?projectClass != roh:ProposalSubmitted)
+  Filter(?centroClass = roh:ResearchInstitute || ?centroClass = roh:ResearchGroup) 
+}

@@ -1,0 +1,13 @@
+PREFIX roh: <http://w3id.org/roh#>
+prefix foaf: <http://w3id.org/roh/mirror/foaf#>
+prefix vivo: <http://w3id.org/roh/mirror/vivo#> 
+
+
+select ?founder ?company 
+where{
+
+    ?founder a foaf:Person;
+             roh:companyFounder ?company.
+    ?company a vivo:Company;
+              roh:isSpinffOf  <http://w3id.org/roh/data#grupo-investigacion-1>.
+}

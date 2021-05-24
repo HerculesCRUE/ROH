@@ -1,0 +1,11 @@
+PREFIX roh: <http://w3id.org/roh#>
+prefix oa: <http://www.w3.org/ns/oa#>
+
+select ?anotation ?target ?body ?motivation ?author
+where{
+    ?anotation a oa:Annotation;
+                oa:hasTarget ?target;
+                oa:hasBody ?body;
+                oa:motivatedBy ?motivation;
+                roh:correspondingAuthor ?author. 
+}

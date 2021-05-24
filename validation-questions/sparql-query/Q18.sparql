@@ -1,12 +1,32 @@
-PREFIX roh: <https://w3id.org/roh#>
-PREFIX bibo: <https://w3id.org/roh/mirror/bibo#>
-PREFIX rdfs:  <http://www.w3.org/2000/01/rdf-schema#>
-
-SELECT ?researcher (COUNT(?metric) as ?count)
+prefix vivo: <http://w3id.org/roh/mirror/vivo#>
+prefix roh: <http://w3id.org/roh#>
+prefix obo: <http://purl.obolibrary.org/obo/>
+prefix bibo: <http://w3id.org/roh/mirror/bibo#>
+prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+prefix foaf: <http://w3id.org/roh/mirror/foaf#>
+prefix unesco: <http://w3id.org/roh/unesco-individuals#>
+prefix ro: <http://w3id.org/roh/mirror/obo/ro#> 
+prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+prefix ero: <http://w3id.org/roh/mirror/obo/ero#>
+prefix gn: <http://w3id.org/roh/mirror/geonames#>
+prefix iao: <http://w3id.org/roh/mirror/obo/iao#>
+prefix dc: <http://purl.org/dc/elements/1.1/>
+ 
+SELECT  ?publication ?nameOfMetric ?name ?date ?impactFacor ?quartile ?organization ?journal   ?author
 WHERE {
-	?researchObject	a roh:ResearchObject ;
-					bibo:authorList ?authorList ;
-					roh:hasMetric ?metric .
-	?metric roh:impactFactor ?impactFactor .
-	?authorList rdfs:member ?researcher .
-} GROUP BY ?researcher 
+  ?publication  a bibo:Document ;
+                vivo:hasPublicationVenue        ?journal;
+                roh:correspondingOrganization ?organization;
+					      roh:correspondingAuthor ?author;
+					      vivo:dateIssued ?dateTime;
+					      roh:hasMetric ?metric.
+	?metric a roh:PublicationMetric;
+			      roh:impactFactor ?impactFacor;
+            roh:quartile ?quartile.
+	?dateTime a vivo:DateTimeValue ;
+            vivo:dateTime ?date.
+	?author a foaf:Person.
+  ?journal	a bibo:Journal   .
+optional{?metric roh:metricName ?nameOfMetric}
+  } 
+  Order By ?publication DESC(?date) ?impactFacor ?quartile  ?journal

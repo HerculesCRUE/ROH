@@ -1,0 +1,16 @@
+PREFIX roh: <http://w3id.org/roh#>
+prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> 
+
+select ?repository ?repositoryFork ?classRepository
+where {
+    ?repository a roh:Repository;
+                roh:hasSucessor ?repositoryFork.
+    ?repositoryFork a ?classRepository.
+    FILTER NOT EXISTS {
+	        ?repository 		a ?otherClass .
+	        ?otherClass rdfs:subClassOf ?classRepository .
+	        FILTER (?otherClass != ?classRepository)
+        }
+                Filter(str(?classRepository)!="http://www.w3.org/2002/07/owl#NamedIndividual")
+
+}

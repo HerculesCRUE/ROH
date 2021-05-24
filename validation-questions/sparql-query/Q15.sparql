@@ -1,13 +1,17 @@
-PREFIX roh: <https://w3id.org/roh#>
-prefix vivo:  <https://w3id.org/roh/mirror/vivo#> 
-PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
-PREFIX foaf: <https://w3id.org/roh/mirror/foaf#>
+PREFIX roh: <http://w3id.org/roh#>
+PREFIX vivo: <http://w3id.org/roh/mirror/vivo#>
+PREFIX uneskos: <http://w3id.org/roh/unesco-individuals#>
 PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
-
-SELECT ?project ?KnowledgeArea WHERE {
-  ?project a  vivo:Project;
-          roh:hasKnowledgeArea ?KnowledgeArea . 
-  ?KnowledgeArea  a roh:UNESCOKnowledgeArea .
-
+SELECT DISTINCT ?project 
+WHERE {
+{
+?project a vivo:Project ;
+            roh:hasKnowledgeArea ?knowledgeArea .
+?knowledgeArea skos:broader+|skos:narrower+|skos:related+ uneskos:1203 .
+} UNION {
+uneskos:1203 skos:broader+ ?topKnowledgeArea .
+        ?topKnowledgeArea skos:narrower+ ?otherKnowledgeArea .
+?project roh:hasKnowledgeArea ?otherKnowledgeArea ;
+        a vivo:Project .
 }
-ORDER BY DESC(?project )
+}

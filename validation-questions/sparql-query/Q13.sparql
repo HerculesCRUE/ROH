@@ -1,14 +1,17 @@
-PREFIX roh: <https://w3id.org/roh#>
-prefix vivo:  <https://w3id.org/roh/mirror/vivo#> 
-PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
-PREFIX foaf: <https://w3id.org/roh/mirror/foaf#>
-PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
+PREFIX vivo: <http://w3id.org/roh/mirror/vivo#>
+PREFIX bibo:  <http://w3id.org/roh/mirror/bibo#>
+PREFIX roh: <http://w3id.org/roh#>
+PREFIX rdfs:  <http://www.w3.org/2000/01/rdf-schema#>
+SELECT  ?document ?documentType
+WHERE {
+?dossier a roh:Dossier .
+?dossier vivo:relates <http://w3id.org/roh/data#a-project>, ?document .
+?document a ?documentType .
+?documentType rdfs:subClassOf bibo:Report .
 
+FILTER NOT EXISTS {
+        ?document a ?otherClass .
+        ?otherClass rdfs:subClassOf ?documentType .
+    FILTER (?otherClass != ?documentType)}
+} 
 
-SELECT ?dosier WHERE {
- 
-    ?dosier vivo:relates ?project .
-    ?project rdfs:label ?projectLabel .
-  FILTER(?projectLabel = "sample-Project-3665")      
-
-}

@@ -1,0 +1,21 @@
+# En esta consulta hay que comprobar que funciona la parte de consultar a Geonames, ya que en Fuseki no funcionan las querys federadas
+
+prefix vivo: <http://w3id.org/roh/mirror/vivo#>
+prefix roh: <http://w3id.org/roh#>
+prefix bibo: <http://w3id.org/roh/mirror/bibo#>
+prefix foaf: <http://w3id.org/roh/mirror/foaf#>
+prefix gn: <http://w3id.org/roh/mirror/geonames#>
+
+SELECT
+(COUNT(DISTINCT ?publication) as ?publicationCount) ?comunidadAutonoma
+WHERE {
+  ?publication         a bibo:Document ;
+                       vivo:hasPublicationVenue        ?journal;
+                       roh:correspondingOrganization ?organization.
+  ?journal	a bibo:Journal        .
+  ?organization	gn:locatedIn        ?location .
+ #SERVICE ?location {
+ # 	?location <http://www.geonames.org/ontology#parentADM1> ?comunidadAutonoma .
+#  }
+}
+GROUP BY ?comunidadAutonoma
