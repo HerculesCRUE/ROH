@@ -86,7 +86,7 @@ jobs:
       run: mvn install
 
     - name: Launch tests
-      #working-directory: /home/runner/work/ROH/ROH/main
+      working-directory: /home/runner/work/ROH/ROH
       run: mvn surefire-report:report -Dmodel=https://raw.githubusercontent.com/HerculesCRUE/ROH/main/roh/modules/core/roh-core.ttl,https://raw.githubusercontent.com/HerculesCRUE/ROH/main/validation-data/rdf/roh_data_edma.ttl,https://raw.githubusercontent.com/HerculesCRUE/ROH/main/mirror/uneskos/unesco-individuals.rdf -DqueryFolder=/home/runner/work/ROH/ROH/validation-questions/sparql-query/
 
     - name: Generate maven site
