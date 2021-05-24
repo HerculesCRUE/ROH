@@ -1,8 +1,8 @@
-PREFIX roh: <http://purl.org/roh_edma#>
-prefix bibo: <http://purl.org/roh_edma/mirror/bibo#>
+PREFIX roh: <http://w3id.org/roh#>
+prefix bibo: <http://w3id.org/roh/mirror/bibo#>
 prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#>
-prefix vivo: <http://purl.org/roh_edma/mirror/vivo#> 
-prefix bfo: <http://purl.org/roh_edma/mirror/obo/bfo#>
+prefix vivo: <http://w3id.org/roh/mirror/vivo#> 
+prefix bfo: <http://w3id.org/roh/mirror/obo/bfo#>
 
 select  distinct ?project 
 where{
@@ -11,7 +11,7 @@ where{
 Filter not exists{
             ?project  vivo:relates ?rol.
             ?rol a ?rolClass; 
-                roh:roleOf  <http://purl.org/roh_edma/data#grupo-investigacion-1>.
+                roh:roleOf  <http://w3id.org/roh/data#grupo-investigacion-1>.
             ?rolClass rdfs:subClassOf* bfo:BFO_0000023.
             }
 }

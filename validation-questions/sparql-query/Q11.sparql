@@ -1,11 +1,11 @@
-PREFIX roh: <http://purl.org/roh_edma#>
-prefix vivo:  <http://purl.org/roh_edma/mirror/vivo#> 
+PREFIX roh: <http://w3id.org/roh#>
+prefix vivo:  <http://w3id.org/roh/mirror/vivo#> 
 PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
-PREFIX foaf: <http://purl.org/roh_edma/mirror/foaf#>
+PREFIX foaf: <http://w3id.org/roh/mirror/foaf#>
 PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
 PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
-prefix uneskos:  <http://purl.org/roh/unesco-individuals#>
-prefix bibo: <http://purl.org/roh_edma/mirror/bibo#>
+prefix uneskos:  <http://w3id.org/roh/unesco-individuals#>
+prefix bibo: <http://w3id.org/roh/mirror/bibo#>
 prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#>
 
 select distinct ?RO ?researchObjectClass ?dateTimeValue 
@@ -27,6 +27,6 @@ FILTER NOT EXISTS {
     ?otherClass rdfs:subClassOf ?researchObjectClass .
     FILTER (?otherClass != ?researchObjectClass)
 }
-FILTER (str(?researchObjectClass) != "http://purl.org/roh_edma#ResearchObject")
+FILTER (str(?researchObjectClass) != "http://w3id.org/roh#ResearchObject")
 }
  ORDER BY ASC(?dateTimeValue )

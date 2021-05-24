@@ -1,9 +1,9 @@
-PREFIX iao: <http://purl.org/roh_edma/mirror/obo/iao#>
-PREFIX roh: <http://purl.org/roh_edma#>
-PREFIX bibo:  <http://purl.org/roh_edma/mirror/bibo#>
+PREFIX iao: <http://w3id.org/roh/mirror/obo/iao#>
+PREFIX roh: <http://w3id.org/roh#>
+PREFIX bibo:  <http://w3id.org/roh/mirror/bibo#>
 PREFIX rdfs:  <http://www.w3.org/2000/01/rdf-schema#>
 PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
-PREFIX vivo: <http://purl.org/roh_edma/mirror/vivo#>
+PREFIX vivo: <http://w3id.org/roh/mirror/vivo#>
 SELECT ?researcher ?journal ?impactFactor  WHERE {
 ?journal a iao:IAO_0000013 ;
         vivo:dateIssued ?dateTimeValue ;

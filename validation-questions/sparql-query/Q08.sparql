@@ -1,8 +1,8 @@
-prefix vivo: <http://purl.org/roh_edma/mirror/vivo#>
-prefix roh: <http://purl.org/roh_edma#>
-prefix bibo: <http://purl.org/roh_edma/mirror/bibo#>
-prefix uneskos: <http://purl.org/roh/unesco-individuals#>
-prefix ro: <http://purl.org/roh_edma/mirror/obo/ro#> 
+prefix vivo: <http://w3id.org/roh/mirror/vivo#>
+prefix roh: <http://w3id.org/roh#>
+prefix bibo: <http://w3id.org/roh/mirror/bibo#>
+prefix uneskos: <http://w3id.org/roh/unesco-individuals#>
+prefix ro: <http://w3id.org/roh/mirror/obo/ro#> 
 
 SELECT (COUNT(DISTINCT ?publication) as ?publicationCount) ?organization ?university
 WHERE {

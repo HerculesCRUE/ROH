@@ -1,7 +1,7 @@
-PREFIX roh: <http://purl.org/roh_edma#>
-PREFIX vivo: <http://purl.org/roh_edma/mirror/vivo#>
-PREFIX ro: <http://purl.org/roh_edma/mirror/obo/ro#>
-PREFIX foaf: <http://purl.org/roh_edma/mirror/foaf#>
+PREFIX roh: <http://w3id.org/roh#>
+PREFIX vivo: <http://w3id.org/roh/mirror/vivo#>
+PREFIX ro: <http://w3id.org/roh/mirror/obo/ro#>
+PREFIX foaf: <http://w3id.org/roh/mirror/foaf#>
 
 SELECT ?organization ?knowledgeArea (SUM(?monetaryAmount) as ?totalFunding) 
 WHERE {

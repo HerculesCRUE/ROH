@@ -1,15 +1,15 @@
-PREFIX roh: <http://purl.org/roh_edma#>
-PREFIX uneskos: <http://purl.org/roh/unesco-individuals#>
-prefix bibo: <http://purl.org/roh_edma/mirror/bibo#>
-prefix ro:  <http://purl.org/roh_edma/mirror/obo/ro#>
+PREFIX roh: <http://w3id.org/roh#>
+PREFIX uneskos: <http://w3id.org/roh/unesco-individuals#>
+prefix bibo: <http://w3id.org/roh/mirror/bibo#>
+prefix ro:  <http://w3id.org/roh/mirror/obo/ro#>
 prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#>
 prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
 prefix skos: <http://www.w3.org/2004/02/skos/core#> 
-prefix bfo: <http://purl.org/roh_edma/mirror/obo/bfo#>
-PREFIX uneskos: <http://purl.org/roh/unesco-individuals#>
-prefix foaf: <http://purl.org/roh_edma/mirror/foaf#>
-prefix uneskos:  <http://purl.org/roh/unesco-individuals#>
-prefix vivo: <http://purl.org/roh_edma/mirror/vivo#> 
+prefix bfo: <http://w3id.org/roh/mirror/obo/bfo#>
+PREFIX uneskos: <http://w3id.org/roh/unesco-individuals#>
+prefix foaf: <http://w3id.org/roh/mirror/foaf#>
+prefix uneskos:  <http://w3id.org/roh/unesco-individuals#>
+prefix vivo: <http://w3id.org/roh/mirror/vivo#> 
 
 SELECT ( year(?dateStartProject) as ?year) 
   (count( distinct?project) As ?CountProject) (count( distinct ?person) as ?researchers )  (?CountProject / ?researchers  AS ?rate) ?knowledgeArea 
@@ -24,7 +24,7 @@ where{
     ?startProject  vivo:dateTime ?dateStartProject.
 
     ?rol a ?rolClass; 
-        roh:roleOf   <http://purl.org/roh_edma/data#grupo-investigacion-1>.
+        roh:roleOf   <http://w3id.org/roh/data#grupo-investigacion-1>.
 
     ?rolClass rdfs:subClassOf bfo:BFO_0000023.
 
@@ -32,7 +32,7 @@ where{
             a foaf:Person.
     
     ?position vivo:dateTimeInterval ?dateTimeInterval;
-                vivo:relates <http://purl.org/roh_edma/data#grupo-investigacion-1>;
+                vivo:relates <http://w3id.org/roh/data#grupo-investigacion-1>;
               a roh:ResearcherPosition.
     
     ?dateTimeInterval vivo:start ?satarNode.

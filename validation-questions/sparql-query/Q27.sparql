@@ -1,10 +1,10 @@
-PREFIX roh: <http://purl.org/roh_edma#>
-prefix bibo: <http://purl.org/roh_edma/mirror/bibo#>
+PREFIX roh: <http://w3id.org/roh#>
+prefix bibo: <http://w3id.org/roh/mirror/bibo#>
 
 
 SELECT distinct ?patent  WHERE {
   ?patent a bibo:Patent;
-          roh:patentInventor <http://purl.org/roh_edma/data#investigador-3>. 
+          roh:patentInventor <http://w3id.org/roh/data#investigador-3>. 
   
 }
  

@@ -1,4 +1,4 @@
-PREFIX roh: <http://purl.org/roh_edma#>
+PREFIX roh: <http://w3id.org/roh#>
 prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> 
 
 select ?researchObjectBase ?anotherResearchObject ?classResearchObject
@@ -11,7 +11,7 @@ where {
 	        ?otherClass rdfs:subClassOf ?classResearchObject .
 	        FILTER (?otherClass != ?classResearchObject)
         }
-    FILTER (str(?classResearchObject) != "http://purl.org/roh_edma#ResearchObject")
+    FILTER (str(?classResearchObject) != "http://w3id.org/roh#ResearchObject")
              Filter(str(?classResearchObject)!="http://www.w3.org/2002/07/owl#NamedIndividual")
 
 }

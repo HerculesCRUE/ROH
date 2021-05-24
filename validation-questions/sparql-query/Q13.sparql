@@ -1,11 +1,11 @@
-PREFIX vivo: <http://purl.org/roh_edma/mirror/vivo#>
-PREFIX bibo:  <http://purl.org/roh_edma/mirror/bibo#>
-PREFIX roh: <http://purl.org/roh_edma#>
+PREFIX vivo: <http://w3id.org/roh/mirror/vivo#>
+PREFIX bibo:  <http://w3id.org/roh/mirror/bibo#>
+PREFIX roh: <http://w3id.org/roh#>
 PREFIX rdfs:  <http://www.w3.org/2000/01/rdf-schema#>
 SELECT  ?document ?documentType
 WHERE {
 ?dossier a roh:Dossier .
-?dossier vivo:relates <http://purl.org/roh_edma/data#a-project>, ?document .
+?dossier vivo:relates <http://w3id.org/roh/data#a-project>, ?document .
 ?document a ?documentType .
 ?documentType rdfs:subClassOf bibo:Report .
 

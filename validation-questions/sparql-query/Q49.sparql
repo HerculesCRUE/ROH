@@ -1,14 +1,14 @@
-PREFIX roh: <http://purl.org/roh_edma#>
-PREFIX vivo: <http://purl.org/roh_edma/mirror/vivo#>
-PREFIX bibo:  <http://purl.org/roh_edma/mirror/bibo#>
+PREFIX roh: <http://w3id.org/roh#>
+PREFIX vivo: <http://w3id.org/roh/mirror/vivo#>
+PREFIX bibo:  <http://w3id.org/roh/mirror/bibo#>
 PREFIX rdfs:  <http://www.w3.org/2000/01/rdf-schema#>
-prefix iao: <http://purl.org/roh_edma/mirror/obo/iao#>
+prefix iao: <http://w3id.org/roh/mirror/obo/iao#>
 SELECT DISTINCT ?researcher ?center ?journalArticle 
 WHERE {
 ?journalArticle a                        iao:IAO_0000013;
         bibo:authorList+| roh:seqOfAuthors ?authorList ;
         roh:correspondingOrganization ?center;
-        vivo:hasPublicationVenue <http://purl.org/roh_edma/data#excelent-journal> .
+        vivo:hasPublicationVenue <http://w3id.org/roh/data#excelent-journal> .
 ?authorList rdfs:member ?researcher .
 ?center a ?classCenter. 
 Filter(?classCenter = roh:ResearchGroup || ?classCenter = roh:ResearchInstitute)

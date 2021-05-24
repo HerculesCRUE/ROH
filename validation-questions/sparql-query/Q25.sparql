@@ -1,10 +1,10 @@
-PREFIX roh: <http://purl.org/roh_edma#>
-PREFIX foaf: <http://purl.org/roh_edma/mirror/foaf#>
+PREFIX roh: <http://w3id.org/roh#>
+PREFIX foaf: <http://w3id.org/roh/mirror/foaf#>
 PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
-prefix vivo: <http://purl.org/roh_edma/mirror/vivo#>
-prefix bibo: <http://purl.org/roh_edma/mirror/bibo#>
-prefix ro: <http://purl.org/roh_edma/mirror/obo/ro#> 
-prefix foaf: <http://purl.org/roh_edma/mirror/foaf#>
+prefix vivo: <http://w3id.org/roh/mirror/vivo#>
+prefix bibo: <http://w3id.org/roh/mirror/bibo#>
+prefix ro: <http://w3id.org/roh/mirror/obo/ro#> 
+prefix foaf: <http://w3id.org/roh/mirror/foaf#>
 
 SELECT  distinct ?thesis ?classThesis ?student  ?supervisor
 WHERE { 
@@ -22,7 +22,7 @@ FILTER NOT EXISTS {
         ?otherClass rdfs:subClassOf ?classThesis .
         FILTER (?otherClass != ?classThesis)
     }
-FILTER (str(?classThesis) != "http://purl.org/roh_edma#ResearchObject")
+FILTER (str(?classThesis) != "http://w3id.org/roh#ResearchObject")
        Filter( str(?classThesis) != "http://www.w3.org/2002/07/owl#NamedIndividual")
 
 }

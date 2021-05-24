@@ -1,13 +1,13 @@
-PREFIX roh: <http://purl.org/roh_edma#>
-PREFIX vivo: <http://purl.org/roh_edma/mirror/vivo#>
-PREFIX bibo:  <http://purl.org/roh_edma/mirror/bibo#>
+PREFIX roh: <http://w3id.org/roh#>
+PREFIX vivo: <http://w3id.org/roh/mirror/vivo#>
+PREFIX bibo:  <http://w3id.org/roh/mirror/bibo#>
 PREFIX rdfs:  <http://www.w3.org/2000/01/rdf-schema#>
 SELECT DISTINCT ?journal ?knowledgeArea ?nameOfMetric
 WHERE {
 ?journalArticle vivo:hasPublicationVenue ?journal ;
 				roh:hasMetric ?metric ;
 				roh:hasKnowledgeArea ?knowledgeArea ;
-				roh:correspondingOrganization <http://purl.org/roh_edma/data#grupo-investigacion-1> .
+				roh:correspondingOrganization <http://w3id.org/roh/data#grupo-investigacion-1> .
 ?metric roh:quartile "Q2".
 Optional{?metric roh:metricName ?nameOfMetric}
 }

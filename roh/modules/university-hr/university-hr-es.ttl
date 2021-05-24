@@ -1,23 +1,23 @@
-@prefix : <http://purl.org/roh/university-hr/es#> .
+@prefix : <http://w3id.org/roh/university-hr/es#> .
 @prefix ns: <http://www.w3.org/2003/06/sw-vocab-status/ns#> .
 @prefix geo: <http://purl.org/hercules/asio/modules#> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
 @prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
-@prefix roh: <http://purl.org/roh#> .
+@prefix roh: <http://w3id.org/roh#> .
 @prefix xml: <http://www.w3.org/XML/1998/namespace> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix skos: <http://www.w3.org/2004/02/skos/core#> .
-@prefix vivo: <http://purl.org/roh/mirror/vivo#> .
-@prefix rohpt: <http://purl.org/roh/university-hr/pt#> .
-@prefix rohuk: <http://purl.org/roh/university-hr/uk#> .
+@prefix vivo: <http://w3id.org/roh/mirror/vivo#> .
+@prefix rohpt: <http://w3id.org/roh/university-hr/pt#> .
+@prefix rohuk: <http://w3id.org/roh/university-hr/uk#> .
 @prefix terms: <http://purl.org/dc/terms/> .
 @prefix euCountry: <http://publications.europa.eu/resource/authority/country/> .
 @prefix unescothes: <http://skos.um.es/unescothes/> .
-@base <http://purl.org/roh/university-hr/es> .
+@base <http://w3id.org/roh/university-hr/es> .
 
-<http://purl.org/roh/university-hr/es> rdf:type owl:Ontology ;
-                                        owl:versionIRI <http://purl.org/roh/university-hr/1.0> ;
+<http://w3id.org/roh/university-hr/es> rdf:type owl:Ontology ;
+                                        owl:versionIRI <http://w3id.org/roh/university-hr/1.0> ;
                                         terms:license <https://creativecommons.org/licenses/by-sa/4.0/> ;
                                         rdfs:comment """The University of Murcia signed on November 29, 2017, a Covenant with the Ministry of Economy, Industry and Competitiveness backing the “HÉRCULES: Semantic University Research Data” Project with a budget of FIVE MILLION FOUR HUNDRED AND SIXTY-TWO THOUSAND SIX HUNDRED euros with an 80% of co-financiering from the European Regional Development Fund program (ERDF) within the 2014-2020 period. 
 
@@ -43,19 +43,19 @@ by creating a research management system with semantic capacities based on seman
 terms:license rdf:type owl:AnnotationProperty .
 
 
-###  http://purl.org/roh#codeOf
+###  http://w3id.org/roh#codeOf
 roh:codeOf rdf:type owl:AnnotationProperty .
 
 
-###  http://purl.org/roh#country
+###  http://w3id.org/roh#country
 roh:country rdf:type owl:AnnotationProperty .
 
 
-###  http://purl.org/roh#geoDivision
+###  http://w3id.org/roh#geoDivision
 roh:geoDivision rdf:type owl:AnnotationProperty .
 
 
-###  http://purl.org/roh#hasCode
+###  http://w3id.org/roh#hasCode
 roh:hasCode rdf:type owl:AnnotationProperty .
 
 
@@ -83,83 +83,83 @@ skos:prefLabel rdf:type owl:AnnotationProperty .
 #    Classes
 #################################################################
 
-###  http://purl.org/roh#AcademicSubject
+###  http://w3id.org/roh#AcademicSubject
 roh:AcademicSubject rdf:type owl:Class .
 
 
-###  http://purl.org/roh#CompanyClassification
+###  http://w3id.org/roh#CompanyClassification
 roh:CompanyClassification rdf:type owl:Class .
 
 
-###  http://purl.org/roh#Country
+###  http://w3id.org/roh#Country
 roh:Country rdf:type owl:Class .
 
 
-###  http://purl.org/roh#ExpenseClassification
+###  http://w3id.org/roh#ExpenseClassification
 roh:ExpenseClassification rdf:type owl:Class .
 
 
-###  http://purl.org/roh#FundingProgramClassification
+###  http://w3id.org/roh#FundingProgramClassification
 roh:FundingProgramClassification rdf:type owl:Class .
 
 
-###  http://purl.org/roh#HRClassification
+###  http://w3id.org/roh#HRClassification
 roh:HRClassification rdf:type owl:Class ;
                      rdfs:subClassOf skos:ConceptScheme ;
                      rdfs:label "Human Resource Classification"@en .
 
 
-###  http://purl.org/roh#KnowledgeArea
+###  http://w3id.org/roh#KnowledgeArea
 roh:KnowledgeArea rdf:type owl:Class .
 
 
-###  http://purl.org/roh#ProjectClassification
+###  http://w3id.org/roh#ProjectClassification
 roh:ProjectClassification rdf:type owl:Class .
 
 
-###  http://purl.org/roh#PropertyClassification
+###  http://w3id.org/roh#PropertyClassification
 roh:PropertyClassification rdf:type owl:Class .
 
 
-###  http://purl.org/roh#ResearchProblem
+###  http://w3id.org/roh#ResearchProblem
 roh:ResearchProblem rdf:type owl:Class .
 
 
-###  http://purl.org/roh/mirror/vivo#FacultyAdministrativePosition
+###  http://w3id.org/roh/mirror/vivo#FacultyAdministrativePosition
 vivo:FacultyAdministrativePosition rdf:type owl:Class ;
                                    rdfs:subClassOf vivo:Position ;
                                    rdfs:label "Faculty Administrative Position"@en ,
                                               "Posición Administrativa en Facultad"@es .
 
 
-###  http://purl.org/roh/mirror/vivo#FacultyPosition
+###  http://w3id.org/roh/mirror/vivo#FacultyPosition
 vivo:FacultyPosition rdf:type owl:Class ;
                      rdfs:subClassOf vivo:Position ;
                      rdfs:label "Faculty Position"@en ,
                                 "Posición en Facultad"@es .
 
 
-###  http://purl.org/roh/mirror/vivo#NonAcademicPosition
+###  http://w3id.org/roh/mirror/vivo#NonAcademicPosition
 vivo:NonAcademicPosition rdf:type owl:Class ;
                          rdfs:subClassOf vivo:Position ;
                          rdfs:label "Non-Academic Position"@en ,
                                     "Posición no Académica"@es .
 
 
-###  http://purl.org/roh/mirror/vivo#NonFacultyAcademicPosition
+###  http://w3id.org/roh/mirror/vivo#NonFacultyAcademicPosition
 vivo:NonFacultyAcademicPosition rdf:type owl:Class ;
                                 rdfs:subClassOf vivo:Position ;
                                 rdfs:label "Non-Faculty Academic Position"@en ,
                                            "Posición Académica no de Facultad"@es .
 
 
-###  http://purl.org/roh/mirror/vivo#Position
+###  http://w3id.org/roh/mirror/vivo#Position
 vivo:Position rdf:type owl:Class ;
               rdfs:label "Posición"@es ,
                          "Position"@en .
 
 
-###  http://purl.org/roh/university-hr/es#Ayudante
+###  http://w3id.org/roh/university-hr/es#Ayudante
 :Ayudante rdf:type owl:Class ;
           rdfs:subClassOf :PDIContratado ;
           rdfs:comment "Los ayudantes serán contratados entre quienes hayan superado todas las materias de estudio que se determinen en los criterios a que hace referencia el artículo 38 y con la finalidad principal de completar su formación investigadora. La contratación será con dedicación a tiempo completo, por una duración no superior a cuatro años improrrogables. Los ayudantes también podrán colaborar en tareas docentes en los términos que establezcan los Estatutos."@es ;
@@ -167,7 +167,7 @@ vivo:Position rdf:type owl:Class ;
                      "Ayudante"@es .
 
 
-###  http://purl.org/roh/university-hr/es#CatedraticoDeEscuelaUniversitaria
+###  http://w3id.org/roh/university-hr/es#CatedraticoDeEscuelaUniversitaria
 :CatedraticoDeEscuelaUniversitaria rdf:type owl:Class ;
                                    rdfs:subClassOf :CuerpoDocente ;
                                    roh:country euCountry:ESP ;
@@ -186,7 +186,7 @@ vivo:Position rdf:type owl:Class ;
                                                   "Unibertsitateko Eskolako Katedraduna"@eu .
 
 
-###  http://purl.org/roh/university-hr/es#CatedraticoDeUniversidad
+###  http://w3id.org/roh/university-hr/es#CatedraticoDeUniversidad
 :CatedraticoDeUniversidad rdf:type owl:Class ;
                           rdfs:subClassOf :CuerpoDocente ;
                           roh:country euCountry:ESP ;
@@ -207,7 +207,7 @@ vivo:Position rdf:type owl:Class ;
                                          "Unibertsitateko katedraduna"@eu .
 
 
-###  http://purl.org/roh/university-hr/es#CuerpoDocente
+###  http://w3id.org/roh/university-hr/es#CuerpoDocente
 :CuerpoDocente rdf:type owl:Class ;
                rdfs:subClassOf vivo:FacultyPosition ;
                owl:disjointWith :PDIContratado ;
@@ -216,7 +216,7 @@ vivo:Position rdf:type owl:Class ;
                           "Faculty"@en .
 
 
-###  http://purl.org/roh/university-hr/es#ES_UNIVERSITY_HR_ESDECA
+###  http://w3id.org/roh/university-hr/es#ES_UNIVERSITY_HR_ESDECA
 :ES_UNIVERSITY_HR_ESDECA rdf:type owl:Class ;
                          rdfs:subClassOf vivo:FacultyAdministrativePosition ;
                          roh:country euCountry:ESP ;
@@ -232,7 +232,7 @@ vivo:Position rdf:type owl:Class ;
                                         "Dekanoa"@eu .
 
 
-###  http://purl.org/roh/university-hr/es#ES_UNIVERSITY_HR_ESFIVEFNP
+###  http://w3id.org/roh/university-hr/es#ES_UNIVERSITY_HR_ESFIVEFNP
 :ES_UNIVERSITY_HR_ESFIVEFNP rdf:type owl:Class ;
                             rdfs:subClassOf :PDIContratado ;
                             roh:country euCountry:ESP ;
@@ -249,7 +249,7 @@ vivo:Position rdf:type owl:Class ;
                                            "SHEE Iraskaslea (Ez--Iraunkorra)"@eu .
 
 
-###  http://purl.org/roh/university-hr/es#ES_UNIVERSITY_HR_ESFIVEFP
+###  http://w3id.org/roh/university-hr/es#ES_UNIVERSITY_HR_ESFIVEFP
 :ES_UNIVERSITY_HR_ESFIVEFP rdf:type owl:Class ;
                            rdfs:subClassOf :CuerpoDocente ;
                            roh:country euCountry:ESP ;
@@ -267,7 +267,7 @@ vivo:Position rdf:type owl:Class ;
                                           "SHEE Irakaslea (Iraunkorra)"@eu .
 
 
-###  http://purl.org/roh/university-hr/es#ES_UNIVERSITY_HR_ESFPTN
+###  http://w3id.org/roh/university-hr/es#ES_UNIVERSITY_HR_ESFPTN
 :ES_UNIVERSITY_HR_ESFPTN rdf:type owl:Class ;
                          rdfs:subClassOf :CuerpoDocente ;
                          roh:country euCountry:ESP ;
@@ -285,7 +285,7 @@ vivo:Position rdf:type owl:Class ;
                                         "Professor titular d'escola de nàutica"@ca .
 
 
-###  http://purl.org/roh/university-hr/es#ES_UNIVERSITY_HR_ESJEFDEP
+###  http://w3id.org/roh/university-hr/es#ES_UNIVERSITY_HR_ESJEFDEP
 :ES_UNIVERSITY_HR_ESJEFDEP rdf:type owl:Class ;
                            rdfs:subClassOf vivo:FacultyAdministrativePosition ;
                            roh:country euCountry:ESP ;
@@ -301,7 +301,7 @@ vivo:Position rdf:type owl:Class ;
                                           "Saileko Zuzendaria"@eu .
 
 
-###  http://purl.org/roh/university-hr/es#ES_UNIVERSITY_HR_ESLI
+###  http://w3id.org/roh/university-hr/es#ES_UNIVERSITY_HR_ESLI
 :ES_UNIVERSITY_HR_ESLI rdf:type owl:Class ;
                        rdfs:subClassOf vivo:NonFacultyAcademicPosition ;
                        roh:country euCountry:ESP ;
@@ -317,7 +317,7 @@ vivo:Position rdf:type owl:Class ;
                                       "Investigador"@gl .
 
 
-###  http://purl.org/roh/university-hr/es#ES_UNIVERSITY_HR_ESLPADJ
+###  http://w3id.org/roh/university-hr/es#ES_UNIVERSITY_HR_ESLPADJ
 :ES_UNIVERSITY_HR_ESLPADJ rdf:type owl:Class ;
                           rdfs:subClassOf :PDIContratado ;
                           roh:country euCountry:ESP ;
@@ -334,7 +334,7 @@ vivo:Position rdf:type owl:Class ;
                                          "Professor adjunt"@ca .
 
 
-###  http://purl.org/roh/university-hr/es#ES_UNIVERSITY_HR_ESLPAG
+###  http://w3id.org/roh/university-hr/es#ES_UNIVERSITY_HR_ESLPAG
 :ES_UNIVERSITY_HR_ESLPAG rdf:type owl:Class ;
                          rdfs:subClassOf :CuerpoDocente ;
                          roh:country euCountry:ESP ;
@@ -351,7 +351,7 @@ vivo:Position rdf:type owl:Class ;
                                         "Professor agregat"@ca .
 
 
-###  http://purl.org/roh/university-hr/es#ES_UNIVERSITY_HR_ESLPAM
+###  http://w3id.org/roh/university-hr/es#ES_UNIVERSITY_HR_ESLPAM
 :ES_UNIVERSITY_HR_ESLPAM rdf:type owl:Class ;
                          rdfs:subClassOf :PDIContratado ;
                          roh:country euCountry:ESP ;
@@ -367,7 +367,7 @@ vivo:Position rdf:type owl:Class ;
                                         "Professor associat mèdic"@ca .
 
 
-###  http://purl.org/roh/university-hr/es#ES_UNIVERSITY_HR_ESLPAY
+###  http://w3id.org/roh/university-hr/es#ES_UNIVERSITY_HR_ESLPAY
 :ES_UNIVERSITY_HR_ESLPAY rdf:type owl:Class ;
                          rdfs:subClassOf :PDIContratado ;
                          roh:country euCountry:ESP ;
@@ -384,7 +384,7 @@ vivo:Position rdf:type owl:Class ;
                                         "Professor ajudante"@ca .
 
 
-###  http://purl.org/roh/university-hr/es#ES_UNIVERSITY_HR_ESLPC
+###  http://w3id.org/roh/university-hr/es#ES_UNIVERSITY_HR_ESLPC
 :ES_UNIVERSITY_HR_ESLPC rdf:type owl:Class ;
                         rdfs:subClassOf :CuerpoDocente ;
                         roh:country euCountry:ESP ;
@@ -401,7 +401,7 @@ vivo:Position rdf:type owl:Class ;
                                        "Professor catedràtic laboral"@ca .
 
 
-###  http://purl.org/roh/university-hr/es#ES_UNIVERSITY_HR_ESLPCNP
+###  http://w3id.org/roh/university-hr/es#ES_UNIVERSITY_HR_ESLPCNP
 :ES_UNIVERSITY_HR_ESLPCNP rdf:type owl:Class ;
                           rdfs:subClassOf :PDIContratado ;
                           roh:country euCountry:ESP ;
@@ -418,7 +418,7 @@ vivo:Position rdf:type owl:Class ;
                                          "Unibertsitateko kolaboratzailea (Ez--iraunkorra)"@eu .
 
 
-###  http://purl.org/roh/university-hr/es#ES_UNIVERSITY_HR_ESLPCP
+###  http://w3id.org/roh/university-hr/es#ES_UNIVERSITY_HR_ESLPCP
 :ES_UNIVERSITY_HR_ESLPCP rdf:type owl:Class ;
                          rdfs:subClassOf :CuerpoDocente ;
                          roh:country euCountry:ESP ;
@@ -435,7 +435,7 @@ vivo:Position rdf:type owl:Class ;
                                         "Unibertsitateko kolaboratzailea (Iraunkorra)"@eu .
 
 
-###  http://purl.org/roh/university-hr/es#ES_UNIVERSITY_HR_ESLPI
+###  http://w3id.org/roh/university-hr/es#ES_UNIVERSITY_HR_ESLPI
 :ES_UNIVERSITY_HR_ESLPI rdf:type owl:Class ;
                         rdfs:subClassOf :PDIContratado ;
                         roh:country euCountry:ESP ;
@@ -452,7 +452,7 @@ vivo:Position rdf:type owl:Class ;
                                        "Professor laboral interí"@ca .
 
 
-###  http://purl.org/roh/university-hr/es#ES_UNIVERSITY_HR_ESLPL
+###  http://w3id.org/roh/university-hr/es#ES_UNIVERSITY_HR_ESLPL
 :ES_UNIVERSITY_HR_ESLPL rdf:type owl:Class ;
                         rdfs:subClassOf :PDIContratado ;
                         roh:country euCountry:ESP ;
@@ -469,7 +469,7 @@ vivo:Position rdf:type owl:Class ;
                                        "Professor lector"@ca .
 
 
-###  http://purl.org/roh/university-hr/es#ES_UNIVERSITY_HR_ESPASF
+###  http://w3id.org/roh/university-hr/es#ES_UNIVERSITY_HR_ESPASF
 :ES_UNIVERSITY_HR_ESPASF rdf:type owl:Class ;
                          rdfs:subClassOf vivo:NonAcademicPosition ;
                          roh:country euCountry:ESP ;
@@ -484,7 +484,7 @@ vivo:Position rdf:type owl:Class ;
                                         "Personal d’administració i serveis funcionari"@ca .
 
 
-###  http://purl.org/roh/university-hr/es#ES_UNIVERSITY_HR_ESPASL
+###  http://w3id.org/roh/university-hr/es#ES_UNIVERSITY_HR_ESPASL
 :ES_UNIVERSITY_HR_ESPASL rdf:type owl:Class ;
                          rdfs:subClassOf vivo:NonAcademicPosition ;
                          roh:country euCountry:ESP ;
@@ -499,7 +499,7 @@ vivo:Position rdf:type owl:Class ;
                                         "Personal d’administració i serveis laboral"@ca .
 
 
-###  http://purl.org/roh/university-hr/es#ES_UNIVERSITY_HR_ESRECT
+###  http://w3id.org/roh/university-hr/es#ES_UNIVERSITY_HR_ESRECT
 :ES_UNIVERSITY_HR_ESRECT rdf:type owl:Class ;
                          rdfs:subClassOf vivo:FacultyAdministrativePosition ;
                          roh:country euCountry:ESP ;
@@ -515,7 +515,7 @@ vivo:Position rdf:type owl:Class ;
                                         "Rector"@gl .
 
 
-###  http://purl.org/roh/university-hr/es#ES_UNIVERSITY_HR_ESSECGE
+###  http://w3id.org/roh/university-hr/es#ES_UNIVERSITY_HR_ESSECGE
 :ES_UNIVERSITY_HR_ESSECGE rdf:type owl:Class ;
                           rdfs:subClassOf vivo:FacultyAdministrativePosition ;
                           roh:country euCountry:ESP ;
@@ -530,7 +530,7 @@ vivo:Position rdf:type owl:Class ;
                                          "Secretariu xeneral"@ast .
 
 
-###  http://purl.org/roh/university-hr/es#ES_UNIVERSITY_HR_ESVIDEC
+###  http://w3id.org/roh/university-hr/es#ES_UNIVERSITY_HR_ESVIDEC
 :ES_UNIVERSITY_HR_ESVIDEC rdf:type owl:Class ;
                           rdfs:subClassOf vivo:FacultyAdministrativePosition ;
                           roh:country euCountry:ESP ;
@@ -545,7 +545,7 @@ vivo:Position rdf:type owl:Class ;
                                          "Vicedegà"@ca .
 
 
-###  http://purl.org/roh/university-hr/es#ES_UNIVERSITY_HR_ESVIREC
+###  http://w3id.org/roh/university-hr/es#ES_UNIVERSITY_HR_ESVIREC
 :ES_UNIVERSITY_HR_ESVIREC rdf:type owl:Class ;
                           rdfs:subClassOf vivo:FacultyAdministrativePosition ;
                           roh:country euCountry:ESP ;
@@ -561,7 +561,7 @@ vivo:Position rdf:type owl:Class ;
                                          "Vicerrector"@gl .
 
 
-###  http://purl.org/roh/university-hr/es#PDIContratado
+###  http://w3id.org/roh/university-hr/es#PDIContratado
 :PDIContratado rdf:type owl:Class ;
                rdfs:subClassOf vivo:FacultyPosition ;
                rdfs:comment "Personal temporal de una universidad."@es ;
@@ -569,7 +569,7 @@ vivo:Position rdf:type owl:Class ;
                           "PDI Contratado"@es .
 
 
-###  http://purl.org/roh/university-hr/es#ProfesorAsociado
+###  http://w3id.org/roh/university-hr/es#ProfesorAsociado
 :ProfesorAsociado rdf:type owl:Class ;
                   rdfs:subClassOf :PDIContratado ;
                   roh:country euCountry:ESP ;
@@ -593,7 +593,7 @@ d) La duración del contrato será trimestral, semestral o anual, y se podrá re
                                  "Professor associat"@ca .
 
 
-###  http://purl.org/roh/university-hr/es#ProfesorAyudanteDoctor
+###  http://w3id.org/roh/university-hr/es#ProfesorAyudanteDoctor
 :ProfesorAyudanteDoctor rdf:type owl:Class ;
                         rdfs:subClassOf :PDIContratado ;
                         roh:country euCountry:ESP ;
@@ -616,7 +616,7 @@ d) La duración del contrato no podrá ser inferior a un año ni superior a cinc
                                        "Professor ajudant doctor"@ca .
 
 
-###  http://purl.org/roh/university-hr/es#ProfesorContratadoDoctor
+###  http://w3id.org/roh/university-hr/es#ProfesorContratadoDoctor
 :ProfesorContratadoDoctor rdf:type owl:Class ;
                           rdfs:subClassOf :PDIContratado ;
                           roh:country euCountry:ESP ;
@@ -638,7 +638,7 @@ c) El contrato será de carácter indefinido y con dedicación a tiempo completo
                                          "Professor contractat doctor"@ca .
 
 
-###  http://purl.org/roh/university-hr/es#ProfesorEmerito
+###  http://w3id.org/roh/university-hr/es#ProfesorEmerito
 :ProfesorEmerito rdf:type owl:Class ;
                  rdfs:subClassOf :PDIContratado ;
                  roh:country euCountry:ESP ;
@@ -659,7 +659,7 @@ c) El contrato será de carácter indefinido y con dedicación a tiempo completo
                                 "Professor emèrit"@ca .
 
 
-###  http://purl.org/roh/university-hr/es#ProfesorTitularDeEscuelaUniversitaria
+###  http://w3id.org/roh/university-hr/es#ProfesorTitularDeEscuelaUniversitaria
 :ProfesorTitularDeEscuelaUniversitaria rdf:type owl:Class ;
                                        rdfs:subClassOf :CuerpoDocente ;
                                        roh:country euCountry:ESP ;
@@ -678,7 +678,7 @@ c) El contrato será de carácter indefinido y con dedicación a tiempo completo
                                                       "Professor titular d’escola universitària"@ca .
 
 
-###  http://purl.org/roh/university-hr/es#ProfesorTitularDeUniversidad
+###  http://w3id.org/roh/university-hr/es#ProfesorTitularDeUniversidad
 :ProfesorTitularDeUniversidad rdf:type owl:Class ;
                               rdfs:subClassOf :CuerpoDocente ;
                               roh:country euCountry:ESP ;
@@ -699,7 +699,7 @@ c) El contrato será de carácter indefinido y con dedicación a tiempo completo
                                              "Professor titular de universidade"@pt .
 
 
-###  http://purl.org/roh/university-hr/es#ProfesorVisitante
+###  http://w3id.org/roh/university-hr/es#ProfesorVisitante
 :ProfesorVisitante rdf:type owl:Class ;
                    rdfs:subClassOf :PDIContratado ;
                    roh:country euCountry:ESP ;
@@ -737,7 +737,7 @@ skos:ConceptScheme rdf:type owl:Class ;
 #    Individuals
 #################################################################
 
-###  http://purl.org/roh/university-hr/es#ESUniversityHumanResourcesCodesList
+###  http://w3id.org/roh/university-hr/es#ESUniversityHumanResourcesCodesList
 :ESUniversityHumanResourcesCodesList rdf:type owl:NamedIndividual ,
                                               roh:HRClassification ;
                                      rdfs:label "Codes des resources humains des universités d'Espagne"@fr ,
@@ -756,7 +756,7 @@ skos:ConceptScheme rdf:type owl:Class ;
                                                     "Códigos dos recursos humanos das universidades de España"@gl .
 
 
-###  http://purl.org/roh/university-hr/es#ESUniversityHumanResourcesList
+###  http://w3id.org/roh/university-hr/es#ESUniversityHumanResourcesList
 :ESUniversityHumanResourcesList rdf:type owl:NamedIndividual ,
                                          roh:HRClassification ;
                                 rdfs:label "Human resources of the universities from Spain"@en ,
@@ -775,7 +775,7 @@ skos:ConceptScheme rdf:type owl:Class ;
                                                "Resources humains des universités d'Espagne"@fr .
 
 
-###  http://purl.org/roh/university-hr/es#ES_UNIVERSITY_HR_CODE_ESDECA
+###  http://w3id.org/roh/university-hr/es#ES_UNIVERSITY_HR_CODE_ESDECA
 :ES_UNIVERSITY_HR_CODE_ESDECA rdf:type owl:NamedIndividual ,
                                        skos:Concept ;
                               roh:codeOf :ES_UNIVERSITY_HR_ESDECA ;
@@ -784,7 +784,7 @@ skos:ConceptScheme rdf:type owl:Class ;
                               skos:prefLabel "ESDECA" .
 
 
-###  http://purl.org/roh/university-hr/es#ES_UNIVERSITY_HR_CODE_ESFEU
+###  http://w3id.org/roh/university-hr/es#ES_UNIVERSITY_HR_CODE_ESFEU
 :ES_UNIVERSITY_HR_CODE_ESFEU rdf:type owl:NamedIndividual ,
                                       skos:Concept ;
                              roh:codeOf :ProfesorTitularDeEscuelaUniversitaria ;
@@ -793,7 +793,7 @@ skos:ConceptScheme rdf:type owl:Class ;
                              skos:prefLabel "ESFEU" .
 
 
-###  http://purl.org/roh/university-hr/es#ES_UNIVERSITY_HR_CODE_ESFIVEFNP
+###  http://w3id.org/roh/university-hr/es#ES_UNIVERSITY_HR_CODE_ESFIVEFNP
 :ES_UNIVERSITY_HR_CODE_ESFIVEFNP rdf:type owl:NamedIndividual ,
                                           skos:Concept ;
                                  roh:codeOf :ES_UNIVERSITY_HR_ESFIVEFNP ;
@@ -802,7 +802,7 @@ skos:ConceptScheme rdf:type owl:Class ;
                                  skos:prefLabel "ESFIVEFNP" .
 
 
-###  http://purl.org/roh/university-hr/es#ES_UNIVERSITY_HR_CODE_ESFIVEFP
+###  http://w3id.org/roh/university-hr/es#ES_UNIVERSITY_HR_CODE_ESFIVEFP
 :ES_UNIVERSITY_HR_CODE_ESFIVEFP rdf:type owl:NamedIndividual ,
                                          skos:Concept ;
                                 roh:codeOf :ES_UNIVERSITY_HR_ESFIVEFP ;
@@ -811,7 +811,7 @@ skos:ConceptScheme rdf:type owl:Class ;
                                 skos:prefLabel "ESFIVEFP" .
 
 
-###  http://purl.org/roh/university-hr/es#ES_UNIVERSITY_HR_CODE_ESFPCEU
+###  http://w3id.org/roh/university-hr/es#ES_UNIVERSITY_HR_CODE_ESFPCEU
 :ES_UNIVERSITY_HR_CODE_ESFPCEU rdf:type owl:NamedIndividual ,
                                         skos:Concept ;
                                roh:codeOf :CatedraticoDeEscuelaUniversitaria ;
@@ -820,7 +820,7 @@ skos:ConceptScheme rdf:type owl:Class ;
                                skos:prefLabel "ESFPCEU" .
 
 
-###  http://purl.org/roh/university-hr/es#ES_UNIVERSITY_HR_CODE_ESFPCU
+###  http://w3id.org/roh/university-hr/es#ES_UNIVERSITY_HR_CODE_ESFPCU
 :ES_UNIVERSITY_HR_CODE_ESFPCU rdf:type owl:NamedIndividual ,
                                        skos:Concept ;
                               roh:codeOf :CatedraticoDeUniversidad ;
@@ -829,7 +829,7 @@ skos:ConceptScheme rdf:type owl:Class ;
                               skos:prefLabel "ESFPCU" .
 
 
-###  http://purl.org/roh/university-hr/es#ES_UNIVERSITY_HR_CODE_ESFPTN
+###  http://w3id.org/roh/university-hr/es#ES_UNIVERSITY_HR_CODE_ESFPTN
 :ES_UNIVERSITY_HR_CODE_ESFPTN rdf:type owl:NamedIndividual ,
                                        skos:Concept ;
                               roh:codeOf :ES_UNIVERSITY_HR_ESFPTN ;
@@ -838,7 +838,7 @@ skos:ConceptScheme rdf:type owl:Class ;
                               skos:prefLabel "ESFPTN" .
 
 
-###  http://purl.org/roh/university-hr/es#ES_UNIVERSITY_HR_CODE_ESFPTU
+###  http://w3id.org/roh/university-hr/es#ES_UNIVERSITY_HR_CODE_ESFPTU
 :ES_UNIVERSITY_HR_CODE_ESFPTU rdf:type owl:NamedIndividual ,
                                        skos:Concept ;
                               roh:codeOf :ProfesorTitularDeUniversidad ;
@@ -847,7 +847,7 @@ skos:ConceptScheme rdf:type owl:Class ;
                               skos:prefLabel "ESFPTU" .
 
 
-###  http://purl.org/roh/university-hr/es#ES_UNIVERSITY_HR_CODE_ESJEFDEP
+###  http://w3id.org/roh/university-hr/es#ES_UNIVERSITY_HR_CODE_ESJEFDEP
 :ES_UNIVERSITY_HR_CODE_ESJEFDEP rdf:type owl:NamedIndividual ,
                                          skos:Concept ;
                                 roh:codeOf :ES_UNIVERSITY_HR_ESJEFDEP ;
@@ -856,7 +856,7 @@ skos:ConceptScheme rdf:type owl:Class ;
                                 skos:prefLabel "ESJEFDEP" .
 
 
-###  http://purl.org/roh/university-hr/es#ES_UNIVERSITY_HR_CODE_ESLI
+###  http://w3id.org/roh/university-hr/es#ES_UNIVERSITY_HR_CODE_ESLI
 :ES_UNIVERSITY_HR_CODE_ESLI rdf:type owl:NamedIndividual ,
                                      skos:Concept ;
                             roh:codeOf :ES_UNIVERSITY_HR_ESLI ;
@@ -865,7 +865,7 @@ skos:ConceptScheme rdf:type owl:Class ;
                             skos:prefLabel "ESLI" .
 
 
-###  http://purl.org/roh/university-hr/es#ES_UNIVERSITY_HR_CODE_ESLPAD
+###  http://w3id.org/roh/university-hr/es#ES_UNIVERSITY_HR_CODE_ESLPAD
 :ES_UNIVERSITY_HR_CODE_ESLPAD rdf:type owl:NamedIndividual ,
                                        skos:Concept ;
                               roh:codeOf :ProfesorAyudanteDoctor ;
@@ -874,7 +874,7 @@ skos:ConceptScheme rdf:type owl:Class ;
                               skos:prefLabel "ESLPAD" .
 
 
-###  http://purl.org/roh/university-hr/es#ES_UNIVERSITY_HR_CODE_ESLPADJ
+###  http://w3id.org/roh/university-hr/es#ES_UNIVERSITY_HR_CODE_ESLPADJ
 :ES_UNIVERSITY_HR_CODE_ESLPADJ rdf:type owl:NamedIndividual ,
                                         skos:Concept ;
                                roh:codeOf :ES_UNIVERSITY_HR_ESLPADJ ;
@@ -883,7 +883,7 @@ skos:ConceptScheme rdf:type owl:Class ;
                                skos:prefLabel "ESLPADJ" .
 
 
-###  http://purl.org/roh/university-hr/es#ES_UNIVERSITY_HR_CODE_ESLPAG
+###  http://w3id.org/roh/university-hr/es#ES_UNIVERSITY_HR_CODE_ESLPAG
 :ES_UNIVERSITY_HR_CODE_ESLPAG rdf:type owl:NamedIndividual ,
                                        skos:Concept ;
                               roh:codeOf :ES_UNIVERSITY_HR_ESLPAG ;
@@ -892,7 +892,7 @@ skos:ConceptScheme rdf:type owl:Class ;
                               skos:prefLabel "ESLPAG" .
 
 
-###  http://purl.org/roh/university-hr/es#ES_UNIVERSITY_HR_CODE_ESLPAM
+###  http://w3id.org/roh/university-hr/es#ES_UNIVERSITY_HR_CODE_ESLPAM
 :ES_UNIVERSITY_HR_CODE_ESLPAM rdf:type owl:NamedIndividual ,
                                        skos:Concept ;
                               roh:codeOf :ES_UNIVERSITY_HR_ESLPAM ;
@@ -901,7 +901,7 @@ skos:ConceptScheme rdf:type owl:Class ;
                               skos:prefLabel "ESLPAM" .
 
 
-###  http://purl.org/roh/university-hr/es#ES_UNIVERSITY_HR_CODE_ESLPAS
+###  http://w3id.org/roh/university-hr/es#ES_UNIVERSITY_HR_CODE_ESLPAS
 :ES_UNIVERSITY_HR_CODE_ESLPAS rdf:type owl:NamedIndividual ,
                                        skos:Concept ;
                               roh:codeOf :ProfesorAsociado ;
@@ -910,7 +910,7 @@ skos:ConceptScheme rdf:type owl:Class ;
                               skos:prefLabel "ESLPAS" .
 
 
-###  http://purl.org/roh/university-hr/es#ES_UNIVERSITY_HR_CODE_ESLPAY
+###  http://w3id.org/roh/university-hr/es#ES_UNIVERSITY_HR_CODE_ESLPAY
 :ES_UNIVERSITY_HR_CODE_ESLPAY rdf:type owl:NamedIndividual ,
                                        skos:Concept ;
                               roh:codeOf :ES_UNIVERSITY_HR_ESLPAY ;
@@ -919,7 +919,7 @@ skos:ConceptScheme rdf:type owl:Class ;
                               skos:prefLabel "ESLPAY" .
 
 
-###  http://purl.org/roh/university-hr/es#ES_UNIVERSITY_HR_CODE_ESLPC
+###  http://w3id.org/roh/university-hr/es#ES_UNIVERSITY_HR_CODE_ESLPC
 :ES_UNIVERSITY_HR_CODE_ESLPC rdf:type owl:NamedIndividual ,
                                       skos:Concept ;
                              roh:codeOf :ES_UNIVERSITY_HR_ESLPC ;
@@ -928,7 +928,7 @@ skos:ConceptScheme rdf:type owl:Class ;
                              skos:prefLabel "ESLPC" .
 
 
-###  http://purl.org/roh/university-hr/es#ES_UNIVERSITY_HR_CODE_ESLPCD
+###  http://w3id.org/roh/university-hr/es#ES_UNIVERSITY_HR_CODE_ESLPCD
 :ES_UNIVERSITY_HR_CODE_ESLPCD rdf:type owl:NamedIndividual ,
                                        skos:Concept ;
                               roh:codeOf :ProfesorContratadoDoctor ;
@@ -937,7 +937,7 @@ skos:ConceptScheme rdf:type owl:Class ;
                               skos:prefLabel "ESLPCD" .
 
 
-###  http://purl.org/roh/university-hr/es#ES_UNIVERSITY_HR_CODE_ESLPCNP
+###  http://w3id.org/roh/university-hr/es#ES_UNIVERSITY_HR_CODE_ESLPCNP
 :ES_UNIVERSITY_HR_CODE_ESLPCNP rdf:type owl:NamedIndividual ,
                                         skos:Concept ;
                                roh:codeOf :ES_UNIVERSITY_HR_ESLPCNP ;
@@ -946,7 +946,7 @@ skos:ConceptScheme rdf:type owl:Class ;
                                skos:prefLabel "ESLPCNP" .
 
 
-###  http://purl.org/roh/university-hr/es#ES_UNIVERSITY_HR_CODE_ESLPCP
+###  http://w3id.org/roh/university-hr/es#ES_UNIVERSITY_HR_CODE_ESLPCP
 :ES_UNIVERSITY_HR_CODE_ESLPCP rdf:type owl:NamedIndividual ,
                                        skos:Concept ;
                               roh:codeOf :ES_UNIVERSITY_HR_ESLPCP ;
@@ -955,7 +955,7 @@ skos:ConceptScheme rdf:type owl:Class ;
                               skos:prefLabel "ESLPCP" .
 
 
-###  http://purl.org/roh/university-hr/es#ES_UNIVERSITY_HR_CODE_ESLPI
+###  http://w3id.org/roh/university-hr/es#ES_UNIVERSITY_HR_CODE_ESLPI
 :ES_UNIVERSITY_HR_CODE_ESLPI rdf:type owl:NamedIndividual ,
                                       skos:Concept ;
                              roh:codeOf :ES_UNIVERSITY_HR_ESLPI ;
@@ -964,7 +964,7 @@ skos:ConceptScheme rdf:type owl:Class ;
                              skos:prefLabel "ESLPI" .
 
 
-###  http://purl.org/roh/university-hr/es#ES_UNIVERSITY_HR_CODE_ESLPL
+###  http://w3id.org/roh/university-hr/es#ES_UNIVERSITY_HR_CODE_ESLPL
 :ES_UNIVERSITY_HR_CODE_ESLPL rdf:type owl:NamedIndividual ,
                                       skos:Concept ;
                              roh:codeOf :ES_UNIVERSITY_HR_ESLPL ;
@@ -973,7 +973,7 @@ skos:ConceptScheme rdf:type owl:Class ;
                              skos:prefLabel "ESLPL" .
 
 
-###  http://purl.org/roh/university-hr/es#ES_UNIVERSITY_HR_CODE_ESPASF
+###  http://w3id.org/roh/university-hr/es#ES_UNIVERSITY_HR_CODE_ESPASF
 :ES_UNIVERSITY_HR_CODE_ESPASF rdf:type owl:NamedIndividual ,
                                        skos:Concept ;
                               roh:codeOf :ES_UNIVERSITY_HR_ESPASF ;
@@ -982,7 +982,7 @@ skos:ConceptScheme rdf:type owl:Class ;
                               skos:prefLabel "ESPASF" .
 
 
-###  http://purl.org/roh/university-hr/es#ES_UNIVERSITY_HR_CODE_ESPASL
+###  http://w3id.org/roh/university-hr/es#ES_UNIVERSITY_HR_CODE_ESPASL
 :ES_UNIVERSITY_HR_CODE_ESPASL rdf:type owl:NamedIndividual ,
                                        skos:Concept ;
                               roh:codeOf :ES_UNIVERSITY_HR_ESPASL ;
@@ -991,7 +991,7 @@ skos:ConceptScheme rdf:type owl:Class ;
                               skos:prefLabel "ESPASL" .
 
 
-###  http://purl.org/roh/university-hr/es#ES_UNIVERSITY_HR_CODE_ESPLEM
+###  http://w3id.org/roh/university-hr/es#ES_UNIVERSITY_HR_CODE_ESPLEM
 :ES_UNIVERSITY_HR_CODE_ESPLEM rdf:type owl:NamedIndividual ,
                                        skos:Concept ;
                               roh:codeOf :ProfesorEmerito ;
@@ -1000,7 +1000,7 @@ skos:ConceptScheme rdf:type owl:Class ;
                               skos:prefLabel "ESPLEM" .
 
 
-###  http://purl.org/roh/university-hr/es#ES_UNIVERSITY_HR_CODE_ESPLV
+###  http://w3id.org/roh/university-hr/es#ES_UNIVERSITY_HR_CODE_ESPLV
 :ES_UNIVERSITY_HR_CODE_ESPLV rdf:type owl:NamedIndividual ,
                                       skos:Concept ;
                              roh:codeOf :ProfesorVisitante ;
@@ -1009,7 +1009,7 @@ skos:ConceptScheme rdf:type owl:Class ;
                              skos:prefLabel "ESPLV" .
 
 
-###  http://purl.org/roh/university-hr/es#ES_UNIVERSITY_HR_CODE_ESRECT
+###  http://w3id.org/roh/university-hr/es#ES_UNIVERSITY_HR_CODE_ESRECT
 :ES_UNIVERSITY_HR_CODE_ESRECT rdf:type owl:NamedIndividual ,
                                        skos:Concept ;
                               roh:codeOf :ES_UNIVERSITY_HR_ESRECT ;
@@ -1018,7 +1018,7 @@ skos:ConceptScheme rdf:type owl:Class ;
                               skos:prefLabel "ESRECT" .
 
 
-###  http://purl.org/roh/university-hr/es#ES_UNIVERSITY_HR_CODE_ESSECGE
+###  http://w3id.org/roh/university-hr/es#ES_UNIVERSITY_HR_CODE_ESSECGE
 :ES_UNIVERSITY_HR_CODE_ESSECGE rdf:type owl:NamedIndividual ,
                                         skos:Concept ;
                                roh:codeOf :ES_UNIVERSITY_HR_ESSECGE ;
@@ -1027,7 +1027,7 @@ skos:ConceptScheme rdf:type owl:Class ;
                                skos:prefLabel "ESSECGE" .
 
 
-###  http://purl.org/roh/university-hr/es#ES_UNIVERSITY_HR_CODE_ESVIDEC
+###  http://w3id.org/roh/university-hr/es#ES_UNIVERSITY_HR_CODE_ESVIDEC
 :ES_UNIVERSITY_HR_CODE_ESVIDEC rdf:type owl:NamedIndividual ,
                                         skos:Concept ;
                                roh:codeOf :ES_UNIVERSITY_HR_ESVIDEC ;
@@ -1036,7 +1036,7 @@ skos:ConceptScheme rdf:type owl:Class ;
                                skos:prefLabel "ESVIDEC" .
 
 
-###  http://purl.org/roh/university-hr/es#ES_UNIVERSITY_HR_CODE_ESVIREC
+###  http://w3id.org/roh/university-hr/es#ES_UNIVERSITY_HR_CODE_ESVIREC
 :ES_UNIVERSITY_HR_CODE_ESVIREC rdf:type owl:NamedIndividual ,
                                         skos:Concept ;
                                roh:codeOf :ES_UNIVERSITY_HR_ESVIREC ;

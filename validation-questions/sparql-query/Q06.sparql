@@ -1,12 +1,9 @@
-prefix ro: <http://purl.org/roh_edma/mirror/obo/ro#> 
-prefix vivo: <http://purl.org/roh_edma/mirror/vivo#> 
-prefix roh: <http://purl.org/roh_edma#>
-prefix bibo: <http://purl.org/roh_edma/mirror/bibo#> 
+prefix vivo: <http://w3id.org/roh/mirror/vivo#> 
+prefix roh: <http://w3id.org/roh#>
+prefix bibo: <http://w3id.org/roh/mirror/bibo#> 
 prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#>
-prefix foaf: <http://purl.org/roh_edma/mirror/foaf#>
 prefix xsd: <http://www.w3.org/2001/XMLSchema#> 
-prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> 
-prefix uneskos:  <http://purl.org/roh/unesco-individuals#>
+prefix uneskos:  <http://w3id.org/roh/unesco-individuals#>
 
 SELECT distinct ?organization ?researchObject  ?researchObjectClass ?author ?dateTime ?title ?repository ?keyword ?doi 
 WHERE {
@@ -33,7 +30,7 @@ FILTER NOT EXISTS {
         ?otherClass rdfs:subClassOf ?researchObjectClass .
         FILTER (?otherClass != ?researchObjectClass)     
 }
-        FILTER (str(?researchObjectClass) != "http://purl.org/roh_edma#ResearchObject") 
+        FILTER (str(?researchObjectClass) != "http://w3id.org/roh#ResearchObject") 
        Filter( str(?researchObjectClass) != "http://www.w3.org/2002/07/owl#NamedIndividual")
 
 }

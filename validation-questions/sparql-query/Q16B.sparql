@@ -1,12 +1,12 @@
-prefix ro: <http://purl.org/roh_edma/mirror/obo/ro#> 
-prefix vivo: <http://purl.org/roh_edma/mirror/vivo#> 
-prefix roh: <http://purl.org/roh_edma#>
-prefix bibo: <http://purl.org/roh_edma/mirror/bibo#> 
+prefix ro: <http://w3id.org/roh/mirror/obo/ro#> 
+prefix vivo: <http://w3id.org/roh/mirror/vivo#> 
+prefix roh: <http://w3id.org/roh#>
+prefix bibo: <http://w3id.org/roh/mirror/bibo#> 
 prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#>
-prefix foaf: <http://purl.org/roh_edma/mirror/foaf#>
+prefix foaf: <http://w3id.org/roh/mirror/foaf#>
 prefix xsd: <http://www.w3.org/2001/XMLSchema#> 
 prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> 
-prefix uneskos:  <http://purl.org/roh/unesco-individuals#>
+prefix uneskos:  <http://w3id.org/roh/unesco-individuals#>
 
 SELECT distinct ?organization ?researchObject  ?researchObjectClass   ?title ?repository ?keyword ?doi ?project
 WHERE {
@@ -19,7 +19,7 @@ WHERE {
   ?organization a ?classOrganization. 
   ?researchObject  roh:seqOfAuthors+|bibo:authorList ?list.
   ?list a rdf:Seq;
-          rdfs:member <http://purl.org/roh_edma/data#investigador-2>.
+          rdfs:member <http://w3id.org/roh/data#investigador-2>.
   ?researchObject roh:producedBy ?project.
   ?project  a vivo:Project.
   Optional{?researchObject roh:title ?title}   
@@ -32,7 +32,7 @@ WHERE {
             ?otherClass rdfs:subClassOf ?researchObjectClass .
         FILTER (?otherClass != ?researchObjectClass)
   }
-FILTER (str(?researchObjectClass) != "http://purl.org/roh_edma#ResearchObject")
+FILTER (str(?researchObjectClass) != "http://w3id.org/roh#ResearchObject")
 } 
 GROUP BY ?organization ?researchObject  ?researchObjectClass ?author ?dateTime ?title ?repository ?keyword ?doi ?project
 

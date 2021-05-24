@@ -1,14 +1,14 @@
-prefix ro: <http://purl.org/roh_edma/mirror/obo/ro#> 
-prefix bfo: <http://purl.org/roh_edma/mirror/obo/bfo#> 
+prefix ro: <http://w3id.org/roh/mirror/obo/ro#> 
+prefix bfo: <http://w3id.org/roh/mirror/obo/bfo#> 
 prefix dc: <http://purl.org/dc/elements/1.1/> 
-prefix vivo: <http://purl.org/roh_edma/mirror/vivo#> 
-prefix iao: <http://purl.org/roh_edma/mirror/obo/iao#> 
+prefix vivo: <http://w3id.org/roh/mirror/vivo#> 
+prefix iao: <http://w3id.org/roh/mirror/obo/iao#> 
 prefix owl: <http://www.w3.org/2002/07/owl#> 
 prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> 
 prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> 
-prefix uneskos:  <http://purl.org/roh/unesco-individuals#>
-prefix bibo: <http://purl.org/roh_edma/mirror/bibo#> 
-prefix roh: <http://purl.org/roh_edma#>
+prefix uneskos:  <http://w3id.org/roh/unesco-individuals#>
+prefix bibo: <http://w3id.org/roh/mirror/bibo#> 
+prefix roh: <http://w3id.org/roh#>
 prefix xsd: <http://www.w3.org/2001/XMLSchema#> 
 SELECT distinct ?journalarticle ?impactFactor (YEAR(?date) as ?year)  WHERE {
 ?journalarticle a iao:IAO_0000013 ;
@@ -16,7 +16,7 @@ SELECT distinct ?journalarticle ?impactFactor (YEAR(?date) as ?year)  WHERE {
       bibo:authorList+| roh:seqOfAuthors ?authorList ;
       roh:hasMetric ?metric .
 ?dateTimeValue vivo:dateTime ?date .
-?authorList rdfs:member <http://purl.org/roh_edma/data#investigador-1>.
+?authorList rdfs:member <http://w3id.org/roh/data#investigador-1>.
 ?metric roh:impactFactor ?impactFactor.
 FILTER (YEAR(?date) >= "2015"^^xsd:integer && YEAR(?date) <= "2017"^^xsd:integer )
 } 

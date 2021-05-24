@@ -1,12 +1,12 @@
-PREFIX vivo: <http://purl.org/roh_edma/mirror/vivo#>
-PREFIX roh: <http://purl.org/roh_edma#>
-prefix ro: <http://purl.org/roh_edma/mirror/obo/ro#> 
+PREFIX vivo: <http://w3id.org/roh/mirror/vivo#>
+PREFIX roh: <http://w3id.org/roh#>
+prefix ro: <http://w3id.org/roh/mirror/obo/ro#> 
 SELECT  distinct ?project ?centre 
 WHERE {
 ?project a vivo:Project ;
 		vivo:relates ?role ;
 		vivo:relates ?centreRole .
-?role roh:roleOf <http://purl.org/roh_edma/data#company-one> .
+?role roh:roleOf <http://w3id.org/roh/data#company-one> .
 ?centreRole roh:roleOf ?centre .
 ?centre a ?ClassCentre.
 FILTER(?ClassCentre = roh:ResearchGroup || ?ClassCentre = roh:ResearchInstitute)
