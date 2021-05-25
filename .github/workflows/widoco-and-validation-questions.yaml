@@ -99,7 +99,7 @@ jobs:
     
     - name: Deploy github pages
       uses: peaceiris/actions-gh-pages@v3.6.1
-       with:
+      with:
           keep_files: true
           publish_dir: target/site
           github_token: ${{ secrets.GITHUB_TOKEN }}
