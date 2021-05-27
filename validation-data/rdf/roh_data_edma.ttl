@@ -829,7 +829,7 @@ _:genid1 a :Accreditation ;
         cito:cites <http://w3id.org/roh/data#software-1>, 
                 <http://w3id.org/roh/data#repository-1>,
                 <http://w3id.org/roh/data#experimental-prototol-result-1>;
-        :hasMetric   <http://w3id.org/roh/data#journal-article-1-metric-webOfScience-2016>,
+        :hasMetric  <http://w3id.org/roh/data#journal-article-1-metricwebOfScience-2016>,
                         <http://w3id.org/roh/data#journal-article-1-metric-webOfScience-2017>
  .
 
@@ -859,7 +859,7 @@ _:genid1 a :Accreditation ;
 
 <http://w3id.org/roh/data#journal-article-1-metricwebOfScience-2016>
         a :PublicationMetric ;
-        :metricName "web of science";
+        :metricName "Web of science";
         :citationCount "15"^^xsd:integer;
         vivo:dateTimeValue
                 [ a       vivo:DateTimeValue ;
@@ -884,7 +884,6 @@ _:genid1 a :Accreditation ;
         a :PublicationMetric ;
         :metricName "Web of Science";
         :citationCount "12"^^xsd:integer;
-
         vivo:dateIssued
                 [ a       vivo:DateTimeValue ;
                   vivo:dateTime

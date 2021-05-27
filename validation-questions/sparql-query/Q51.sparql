@@ -4,17 +4,23 @@ PREFIX bibo:  <http://w3id.org/roh/mirror/bibo#>
 PREFIX rdfs:  <http://www.w3.org/2000/01/rdf-schema#>
 PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
 PREFIX vivo: <http://w3id.org/roh/mirror/vivo#>
-select  ?journal (year(?date) as ?year) ?quartile ?impactFactor ?citationCount 
-where{ 
-    ?journal a iao:IAO_0000013 ;
-         roh:hasMetric ?metric. 
-    ?metric a roh:PublicationMetric;
-             roh:impactFactor ?impactFactor ;
-        	roh:citationCount ?citationCount;
-         	roh:metricName "jcr";
-        	roh:quartile ?quartile;
-               vivo:dateIssued ?dateNode.      
-  ?dateNode vivo:dateTime ?date.   
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
 
-}group by ?journal ?date ?quartile ?impactFactor ?citationCount ?date 
-order by ?journal
+SELECT distinct  (year(?date) as ?year)   (COUNT(?journal_article) as ?count)  WHERE {
+?journal_article a bibo:Document ;
+         vivo:hasPublicationVenue        ?journal_revusta;
+        vivo:dateIssued ?dateTimeValue .
+        ?dateTimeValue vivo:dateTime ?date .
+ ?journal_revusta a bibo:Journal;
+                roh:hasMetric ?jorunalMetric.
+
+?jorunalMetric a roh:JournalMetric;
+    roh:impactFactor ?impactFactor ;
+    roh:impactFactorName "jcr";
+ 	 vivo:dateTimeValue+|vivo:dateIssued ?DateMetricJournal.
+?DateMetricJournal a vivo:DateTimeValue ;
+              vivo:dateTime ?dateMetricJournal. 
+
+Filter(year(?dateMetricJournal) = year(?date))
+
+} GROUP BY   ?nameOfImpactFactor  ?date

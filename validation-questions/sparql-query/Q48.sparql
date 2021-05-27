@@ -7,17 +7,23 @@ prefix uneskos: <http://w3id.org/roh/unesco-individuals#>
 prefix ro: <http://w3id.org/roh/mirror/obo/ro#> 
 prefix owl: <http://www.w3.org/2002/07/owl#>
 prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+prefix xsd: <http://www.w3.org/2001/XMLSchema#> 
+SELECT   distinct ?center (year( ?dateeMetricJournal) as ?year)  (SUM( distinct ?citas) AS ?CountCitas)  
 
-SELECT  ?center (SUM(?citas) AS ?CountCitas) (SUM(?impactFactor) AS ?count_impact_factor) 
 WHERE {
 
-?publication roh:correspondingOrganization ?center;
-              roh:hasMetric ?metric. 
+?publication a bibo:Document;
+             roh:correspondingOrganization ?center;
+              roh:hasMetric ?metric;
+              vivo:dateTimeValue+|vivo:dateIssued ?DateMetricJournal.
+?DateMetricJournal a vivo:DateTimeValue ;
+              vivo:dateTime ?dateeMetricJournal. 
 ?metric a roh:PublicationMetric ;
-		roh:impactFactor ?impactFactor;
+         roh:metricName "Web of Science"^^xsd:string;
         roh:citationCount ?citas.
+         
 
 ?center a ?centerClass.
 Filter(?centerClass = roh:ResearchGroup || ?centerClass=roh:ResearchInstitute)
-}GROUP BY ?center
+}Group by ?dateeMetricJournal ?center 
 

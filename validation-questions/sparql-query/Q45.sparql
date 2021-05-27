@@ -6,13 +6,23 @@ prefix bibo: <http://w3id.org/roh/mirror/bibo#>
 prefix ro: <http://w3id.org/roh/mirror/obo/ro#> 
 prefix foaf: <http://w3id.org/roh/mirror/foaf#>
 
-SELECT ?gender (COUNT(?journal) as ?count)  WHERE {
-?journal a bibo:Document ;
-        vivo:dateIssued ?dateTimeValue ;
-        bibo:authorList ?authorList ;
-    roh:hasMetric ?metric .
+SELECT distinct ?gender (COUNT( distinct ?journal_article) as ?count)  
+ WHERE {
+?journal_article a bibo:Document ;
+        vivo:dateIssued+|vivo:dateTimeValue ?dateTimeValue ;
+                 vivo:hasPublicationVenue        ?journal.
+  
 ?dateTimeValue vivo:dateTime ?date .
 ?authorList rdfs:member ?researcher . 
 ?researcher foaf:gender ?gender .
-?metric roh:impactFactor ?impactFactor .
+?journal a bibo:Journal;
+                roh:hasMetric ?jorunalMetric.
+
+?jorunalMetric a roh:JournalMetric;
+    roh:impactFactor ?impactFactor;
+     vivo:dateTimeValue+|vivo:dateIssued ?DateMetricJournal.
+?DateMetricJournal a vivo:DateTimeValue ;
+              vivo:dateTime ?dateMetricJournal. 
+
+Filter(year(?dateMetricJournal) = year(?date))
 } GROUP BY ?gender 

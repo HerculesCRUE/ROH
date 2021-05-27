@@ -12,21 +12,39 @@ prefix gn: <http://w3id.org/roh/mirror/geonames#>
 prefix iao: <http://w3id.org/roh/mirror/obo/iao#>
 prefix dc: <http://purl.org/dc/elements/1.1/>
  
-SELECT  ?publication ?nameOfMetric ?name ?date ?impactFacor ?quartile ?organization ?journal   ?author
+SELECT distinct ?publication ?citationCount ?nameOfMetric ?dateMetricPublication ?journal ?impactFactorName ?impactFacor ?quartile ?organization ?author
 WHERE {
   ?publication  a bibo:Document ;
                 vivo:hasPublicationVenue        ?journal;
-                roh:correspondingOrganization ?organization;
+                roh:correspondingOrganization ?organization; 
 					      roh:correspondingAuthor ?author;
-					      vivo:dateIssued ?dateTime;
+					      vivo:dateIssued+|vivo:dateTimeValue ?dateTime;
 					      roh:hasMetric ?metric.
+
 	?metric a roh:PublicationMetric;
-			      roh:impactFactor ?impactFacor;
-            roh:quartile ?quartile.
+			      roh:citationCount ?citationCount;
+         		roh:metricName ?nameOfMetric;
+          	vivo:dateTimeValue+|vivo:dateIssued ?DateMetricPublication.
+  
+?DateMetricPublication a vivo:DateTimeValue ;
+                     vivo:dateTime ?dateMetricPublication. 
+ 
 	?dateTime a vivo:DateTimeValue ;
             vivo:dateTime ?date.
+  
 	?author a foaf:Person.
-  ?journal	a bibo:Journal   .
-optional{?metric roh:metricName ?nameOfMetric}
+  
+  ?journal	a bibo:Journal;
+            roh:hasMetric ?metricJournal.
+  
+  ?metricJournal a roh:JournalMetric;
+              roh:impactFactor ?impactFacor;
+            	roh:quartile ?quartile;
+              roh:impactFactorName ?impactFactorName;
+              vivo:dateTimeValue+|vivo:dateIssued ?DateMetricJournal.
+?DateMetricJournal a vivo:DateTimeValue ;
+              vivo:dateTime ?dateMetricJournal. 
+
+Filter(year(?dateMetricJournal) = year(?date))
   } 
-  Order By ?publication DESC(?date) ?impactFacor ?quartile  ?journal
+ 

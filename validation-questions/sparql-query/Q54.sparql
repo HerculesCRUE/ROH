@@ -4,14 +4,21 @@ PREFIX bibo:  <http://w3id.org/roh/mirror/bibo#>
 PREFIX rdfs:  <http://www.w3.org/2000/01/rdf-schema#>
 PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
 PREFIX vivo: <http://w3id.org/roh/mirror/vivo#>
-SELECT ?researcher ?journal ?impactFactor  WHERE {
+SELECT distinct ?researcher ?journal ?impactFactor  WHERE {
 ?journal a iao:IAO_0000013 ;
-        vivo:dateIssued ?dateTimeValue ;
+        vivo:dateIssued+|vivo:dateTimeValue ?dateTimeValue ;
         bibo:authorList+| roh:seqOfAuthors ?authorList ;
         roh:hasMetric ?metric .
 ?dateTimeValue vivo:dateTime ?date .
 ?authorList rdfs:member ?researcher . 
-?metric roh:impactFactor ?impactFactor;
-       roh:metricName "jcr".
+
+       
+?jorunalMetric a roh:JournalMetric;
+    roh:impactFactor ?impactFactor;
+     vivo:dateTimeValue+|vivo:dateIssued ?DateMetricJournal.
+?DateMetricJournal a vivo:DateTimeValue ;
+              vivo:dateTime ?dateMetricJournal. 
+              Filter(year(?dateMetricJournal) = year(?date))
+
 FILTER (YEAR(?date) >= "2010"^^xsd:integer && YEAR(?date) <= "2020"^^xsd:integer )
 } 

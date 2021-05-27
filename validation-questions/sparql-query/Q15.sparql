@@ -3,7 +3,7 @@ PREFIX vivo: <http://w3id.org/roh/mirror/vivo#>
 PREFIX uneskos: <http://w3id.org/roh/unesco-individuals#>
 PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
 SELECT DISTINCT ?project 
-WHERE {
+WHERE 
 {
 ?project a vivo:Project ;
             roh:hasKnowledgeArea ?knowledgeArea .
