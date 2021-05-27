@@ -10,13 +10,23 @@ prefix uneskos:  <http://w3id.org/roh/unesco-individuals#>
 prefix bibo: <http://w3id.org/roh/mirror/bibo#> 
 prefix roh: <http://w3id.org/roh#>
 prefix xsd: <http://www.w3.org/2001/XMLSchema#> 
-SELECT distinct ?journalarticle ?impactFactor (YEAR(?date) as ?year)  WHERE {
+SELECT distinct ?journalarticle ?impactFactor (YEAR(?date) as ?year)  ?impactFactorName
+WHERE {
 ?journalarticle a iao:IAO_0000013 ;
-			vivo:dateIssued ?dateTimeValue ;
+			vivo:dateIssued+|vivo:dateTimeValue ?dateTimeValue ;
       bibo:authorList+| roh:seqOfAuthors ?authorList ;
+      vivo:hasPublicationVenue        ?journal;
       roh:hasMetric ?metric .
+?journal a bibo:Journal;
+      roh:hasMetric ?journalMetric.
 ?dateTimeValue vivo:dateTime ?date .
 ?authorList rdfs:member <http://w3id.org/roh/data#investigador-1>.
-?metric roh:impactFactor ?impactFactor.
+?journalMetric roh:impactFactor ?impactFactor;
+			vivo:dateIssued+|vivo:dateTimeValue ?dateMetricJournal;
+                  roh:impactFactorName ?impactFactorName.
+      ?dateMetricJournal vivo:dateTime ?datemetricJournal.
+                           
+Filter(year(?datemetricJournal) = year(?date))
+
 FILTER (YEAR(?date) >= "2015"^^xsd:integer && YEAR(?date) <= "2017"^^xsd:integer )
 } 

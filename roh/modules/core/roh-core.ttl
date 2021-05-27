@@ -39,20 +39,18 @@
 @base <http://w3id.org/roh> .
 
 <http://w3id.org/roh> rdf:type owl:Ontology ;
-                            owl:versionIRI <http://w3id.org/roh/0.3> ;
-                            dc:contributor "Alejandro González Hevia" ,
-                                           "Diego López de Ipiña" ,
-                                           "Esteban Sota" ,
-                                           "Iñigo Apellániz" ,
-                                           "José Emilio Labra Gayo" ,
-                                           "Álvaro Palacios" ;
-                            dc:creator "Emilio Rubiera Azcona" ,
-                                       "Mikel Emaldi" ;
-                            dc:description "An ontology to address the Research Management of the CRUE's Spanish University System (Sistema Universitario Español) by applying an encompassing model not only capable of addressing the universities of the CRUE but also more belonging to the European Union." ;
-                            dc:title "The ASIO ontology" ;
-                            dct:license <https://creativecommons.org/licenses/by-sa/4.0/> ,
-                                        <https://creativecommons.org/publicdomain/zero/1.0/> ;
-                            rdfs:comment """The University of Murcia signed on November 29, 2017, a Covenant with the Ministry of Economy, Industry and Competitiveness backing the “HÉRCULES: Semantic University Research Data” Project with a budget of FIVE MILLION FOUR HUNDRED AND SIXTY-TWO THOUSAND SIX HUNDRED euros with an 80% of co-financiering from the European Regional Development Fund program (ERDF) within the 2014-2020 period. 
+                       owl:versionIRI <http://w3id.org/roh/0.3> ;
+                       dc:contributor "Alejandro González Hevia" ,
+                                      "Diego López de Ipiña" ,
+                                      "Esteban Sota" ,
+                                      "Iñigo Apellániz" ,
+                                      "José Emilio Labra Gayo" ,
+                                      "Álvaro Palacios" ;
+                       dc:creator "Emilio Rubiera Azcona" ,
+                                  "Mikel Emaldi" ;
+                       dc:description "An ontology to address the Research Management of the CRUE's Spanish University System (Sistema Universitario Español) by applying an encompassing model not only capable of addressing the universities of the CRUE but also more belonging to the European Union." ;
+                       dc:title "The ASIO ontology" ;
+                       rdfs:comment """The University of Murcia signed on November 29, 2017, a Covenant with the Ministry of Economy, Industry and Competitiveness backing the “HÉRCULES: Semantic University Research Data” Project with a budget of FIVE MILLION FOUR HUNDRED AND SIXTY-TWO THOUSAND SIX HUNDRED euros with an 80% of co-financiering from the European Regional Development Fund program (ERDF) within the 2014-2020 period. 
 
 The project arose as a CRUE initiative, to create the basis for a new collaboration model between universities, to develop the information management systems and with the main objective of encouraging this type of collaboration.
 
@@ -66,9 +64,11 @@ Therefore, the purpose of this agreement was to contribute to the improvement of
     efficiency in the management of research. 
 
 by creating a research management system with semantic capacities based on semantic open data and that will provide a global view of the research data contained in the Spanish University System."""@en ;
-                            owl:versionInfo "1.0.0" ;
-                            schema:identifier <http://w3id.org/roh> ;
-                            <https://xmlns.com/foaf/0.1/primaryTopic> <http://w3id.org/roh> .
+                       owl:versionInfo "0.3" ;
+                       schema:identifier <http://w3id.org/roh> ;
+                       dct:license <https://creativecommons.org/licenses/by-sa/4.0/> ,
+                                   <https://creativecommons.org/publicdomain/zero/1.0/> ;
+                       <https://xmlns.com/foaf/0.1/primaryTopic> <http://w3id.org/roh> .
 
 #################################################################
 #    Annotation properties
@@ -150,62 +150,6 @@ dc:description rdf:type owl:AnnotationProperty .
 dc:title rdf:type owl:AnnotationProperty .
 
 
-###  https://w3id.org/roh/mirror/dc/terms/conformsTo
-dct:conformsTo rdf:type owl:AnnotationProperty .
-
-
-###  https://w3id.org/roh/mirror/dc/terms/created
-dct:created rdf:type owl:AnnotationProperty .
-
-
-###  https://w3id.org/roh/mirror/dc/terms/creator
-dct:creator rdf:type owl:AnnotationProperty .
-
-
-###  https://w3id.org/roh/mirror/dc/terms/description
-dct:description rdf:type owl:AnnotationProperty .
-
-
-###  https://w3id.org/roh/mirror/dc/terms/identifier
-dct:identifier rdf:type owl:AnnotationProperty .
-
-
-###  https://w3id.org/roh/mirror/dc/terms/issued
-dct:issued rdf:type owl:AnnotationProperty .
-
-
-###  https://w3id.org/roh/mirror/dc/terms/language
-dct:language rdf:type owl:AnnotationProperty .
-
-
-###  https://w3id.org/roh/mirror/dc/terms/license
-dct:license rdf:type owl:AnnotationProperty .
-
-
-###  https://w3id.org/roh/mirror/dc/terms/publisher
-dct:publisher rdf:type owl:AnnotationProperty .
-
-
-###  https://w3id.org/roh/mirror/dc/terms/rights
-dct:rights rdf:type owl:AnnotationProperty .
-
-
-###  https://w3id.org/roh/mirror/dc/terms/rightsHolder
-dct:rightsHolder rdf:type owl:AnnotationProperty .
-
-
-###  https://w3id.org/roh/mirror/dc/terms/source
-dct:source rdf:type owl:AnnotationProperty .
-
-
-###  https://w3id.org/roh/mirror/dc/terms/title
-dct:title rdf:type owl:AnnotationProperty .
-
-
-###  https://w3id.org/roh/mirror/dc/terms/type
-dct:type rdf:type owl:AnnotationProperty .
-
-
 ###  http://purl.org/iso25964/skos-thes#microThesaurusOf
 skos-thes:microThesaurusOf rdf:type owl:AnnotationProperty .
 
@@ -216,6 +160,30 @@ skos-thes:subGroup rdf:type owl:AnnotationProperty .
 
 ###  http://purl.org/iso25964/skos-thes#superGroup
 skos-thes:superGroup rdf:type owl:AnnotationProperty .
+
+
+###  http://purl.org/umu/uneskos#hasMainConcept
+uneskos:hasMainConcept rdf:type owl:AnnotationProperty .
+
+
+###  http://purl.org/umu/uneskos#hasMicroThesaurus
+uneskos:hasMicroThesaurus rdf:type owl:AnnotationProperty .
+
+
+###  http://purl.org/umu/uneskos#mainConceptOf
+uneskos:mainConceptOf rdf:type owl:AnnotationProperty .
+
+
+###  http://purl.org/umu/uneskos#memberOf
+uneskos:memberOf rdf:type owl:AnnotationProperty .
+
+
+###  http://vitro.mannlib.cornell.edu/ns/vitro/0.7#descriptionAnnot
+vitro:descriptionAnnot rdf:type owl:AnnotationProperty .
+
+
+###  http://vitro.mannlib.cornell.edu/ns/vitro/0.7#exampleAnnot
+vitro:exampleAnnot rdf:type owl:AnnotationProperty .
 
 
 ###  http://w3id.org/roh/mirror/obo/bfo#BFO_0000179
@@ -276,30 +244,6 @@ iao:IAO_0000602 rdf:type owl:AnnotationProperty .
 
 ###  http://w3id.org/roh/mirror/skos#definition
 skos1:definition rdf:type owl:AnnotationProperty .
-
-
-###  http://purl.org/umu/uneskos#hasMainConcept
-uneskos:hasMainConcept rdf:type owl:AnnotationProperty .
-
-
-###  http://purl.org/umu/uneskos#hasMicroThesaurus
-uneskos:hasMicroThesaurus rdf:type owl:AnnotationProperty .
-
-
-###  http://purl.org/umu/uneskos#mainConceptOf
-uneskos:mainConceptOf rdf:type owl:AnnotationProperty .
-
-
-###  http://purl.org/umu/uneskos#memberOf
-uneskos:memberOf rdf:type owl:AnnotationProperty .
-
-
-###  http://vitro.mannlib.cornell.edu/ns/vitro/0.7#descriptionAnnot
-vitro:descriptionAnnot rdf:type owl:AnnotationProperty .
-
-
-###  http://vitro.mannlib.cornell.edu/ns/vitro/0.7#exampleAnnot
-vitro:exampleAnnot rdf:type owl:AnnotationProperty .
 
 
 ###  http://www.w3.org/2003/06/sw-vocab-status/ns#term_status
@@ -374,6 +318,62 @@ skos:topConceptOf rdf:type owl:AnnotationProperty .
 schema:identifier rdf:type owl:AnnotationProperty .
 
 
+###  https://w3id.org/roh/mirror/dc/terms/conformsTo
+dct:conformsTo rdf:type owl:AnnotationProperty .
+
+
+###  https://w3id.org/roh/mirror/dc/terms/created
+dct:created rdf:type owl:AnnotationProperty .
+
+
+###  https://w3id.org/roh/mirror/dc/terms/creator
+dct:creator rdf:type owl:AnnotationProperty .
+
+
+###  https://w3id.org/roh/mirror/dc/terms/description
+dct:description rdf:type owl:AnnotationProperty .
+
+
+###  https://w3id.org/roh/mirror/dc/terms/identifier
+dct:identifier rdf:type owl:AnnotationProperty .
+
+
+###  https://w3id.org/roh/mirror/dc/terms/issued
+dct:issued rdf:type owl:AnnotationProperty .
+
+
+###  https://w3id.org/roh/mirror/dc/terms/language
+dct:language rdf:type owl:AnnotationProperty .
+
+
+###  https://w3id.org/roh/mirror/dc/terms/license
+dct:license rdf:type owl:AnnotationProperty .
+
+
+###  https://w3id.org/roh/mirror/dc/terms/publisher
+dct:publisher rdf:type owl:AnnotationProperty .
+
+
+###  https://w3id.org/roh/mirror/dc/terms/rights
+dct:rights rdf:type owl:AnnotationProperty .
+
+
+###  https://w3id.org/roh/mirror/dc/terms/rightsHolder
+dct:rightsHolder rdf:type owl:AnnotationProperty .
+
+
+###  https://w3id.org/roh/mirror/dc/terms/source
+dct:source rdf:type owl:AnnotationProperty .
+
+
+###  https://w3id.org/roh/mirror/dc/terms/title
+dct:title rdf:type owl:AnnotationProperty .
+
+
+###  https://w3id.org/roh/mirror/dc/terms/type
+dct:type rdf:type owl:AnnotationProperty .
+
+
 ###  https://xmlns.com/foaf/0.1/primaryTopic
 <https://xmlns.com/foaf/0.1/primaryTopic> rdf:type owl:AnnotationProperty .
 
@@ -384,6 +384,27 @@ schema:identifier rdf:type owl:AnnotationProperty .
 
 ###  http://purl.obolibrary.org/obo/RO_0000057
 obo:RO_0000057 rdf:type owl:ObjectProperty .
+
+
+###  http://purl.org/spar/cito/cites
+<http://purl.org/spar/cito/cites> rdf:type owl:ObjectProperty ;
+                                  rdfs:subPropertyOf owl:topObjectProperty ;
+                                  owl:inverseOf <http://purl.org/spar/cito/isCitedBy> ;
+                                  rdfs:comment "The citing entity cites the cited entity, either directly and explicitly (as in the reference list of a journal article), indirectly (e.g. by citing a more recent paper by the same group on the same topic), or implicitly (e.g. as in artistic quotations or parodies, or in cases of plagiarism)."@en ;
+                                  rdfs:label "cites"@en .
+
+
+###  http://purl.org/spar/cito/isCitedAsDataSourceBy
+<http://purl.org/spar/cito/isCitedAsDataSourceBy> rdf:type owl:ObjectProperty ;
+                                                  rdfs:comment "The cited entity is cited as a data source by the citing entity."@en ;
+                                                  rdfs:label "citado como fuente de datos por"@es ,
+                                                             "is cited as data source by"@en .
+
+
+###  http://purl.org/spar/cito/isCitedBy
+<http://purl.org/spar/cito/isCitedBy> rdf:type owl:ObjectProperty ;
+                                      rdfs:comment "The cited entity (the subject of the RDF triple) is cited by the citing entity (the object of the triple)."@en ;
+                                      rdfs:label "is cited by"@en .
 
 
 ###  http://w3id.org/roh#CVOf
@@ -1614,10 +1635,10 @@ foaf:page rdf:type owl:ObjectProperty ;
 
 ###  http://w3id.org/roh/mirror/geonames#locatedIn
 <http://w3id.org/roh/mirror/geonames#locatedIn> rdf:type owl:ObjectProperty ;
-                                                     rdfs:range <http://w3id.org/roh/mirror/geonames#Feature> ;
-                                                     rdfs:comment "Indicates that the subject resource is located in the object feature"@en ;
-                                                     rdfs:label "localizado en"@es ,
-                                                                "located in"@en .
+                                                rdfs:range <http://w3id.org/roh/mirror/geonames#Feature> ;
+                                                rdfs:comment "Indicates that the subject resource is located in the object feature"@en ;
+                                                rdfs:label "localizado en"@es ,
+                                                           "located in"@en .
 
 
 ###  http://w3id.org/roh/mirror/obo/bfo#BFO_0000054
@@ -1689,47 +1710,47 @@ ro:RO_0001025 rdf:type owl:ObjectProperty ;
 
 ###  http://w3id.org/roh/mirror/vcard#adr
 <http://w3id.org/roh/mirror/vcard#adr> rdf:type owl:ObjectProperty ;
-                                            owl:equivalentProperty <http://w3id.org/roh/mirror/vcard#hasAddress> ;
-                                            rdfs:comment "This object property has been mapped"@en ;
-                                            rdfs:label "address"@en .
+                                       owl:equivalentProperty <http://w3id.org/roh/mirror/vcard#hasAddress> ;
+                                       rdfs:comment "This object property has been mapped"@en ;
+                                       rdfs:label "address"@en .
 
 
 ###  http://w3id.org/roh/mirror/vcard#email
 <http://w3id.org/roh/mirror/vcard#email> rdf:type owl:ObjectProperty ;
-                                              owl:equivalentProperty <http://w3id.org/roh/mirror/vcard#hasEmail> ;
-                                              rdfs:comment "This object property has been mapped"@en ;
-                                              rdfs:label "email"@en .
+                                         owl:equivalentProperty <http://w3id.org/roh/mirror/vcard#hasEmail> ;
+                                         rdfs:comment "This object property has been mapped"@en ;
+                                         rdfs:label "email"@en .
 
 
 ###  http://w3id.org/roh/mirror/vcard#hasAddress
 <http://w3id.org/roh/mirror/vcard#hasAddress> rdf:type owl:ObjectProperty ;
-                                                   rdfs:range <http://w3id.org/roh/mirror/vcard#Address> ;
-                                                   rdfs:comment "To specify the components of the delivery address for the object"@en ;
-                                                   rdfs:isDefinedBy <http://www.w3.org/2006/vcard/ns> ;
-                                                   rdfs:label "has address"@en .
+                                              rdfs:range <http://w3id.org/roh/mirror/vcard#Address> ;
+                                              rdfs:comment "To specify the components of the delivery address for the object"@en ;
+                                              rdfs:isDefinedBy <http://www.w3.org/2006/vcard/ns> ;
+                                              rdfs:label "has address"@en .
 
 
 ###  http://w3id.org/roh/mirror/vcard#hasEmail
 <http://w3id.org/roh/mirror/vcard#hasEmail> rdf:type owl:ObjectProperty ;
-                                                 rdfs:range <http://w3id.org/roh/mirror/vcard#Email> ;
-                                                 rdfs:comment "To specify the electronic mail address for communication with the object"@en ;
-                                                 rdfs:isDefinedBy <http://www.w3.org/2006/vcard/ns> ;
-                                                 rdfs:label "has email"@en .
+                                            rdfs:range <http://w3id.org/roh/mirror/vcard#Email> ;
+                                            rdfs:comment "To specify the electronic mail address for communication with the object"@en ;
+                                            rdfs:isDefinedBy <http://www.w3.org/2006/vcard/ns> ;
+                                            rdfs:label "has email"@en .
 
 
 ###  http://w3id.org/roh/mirror/vcard#hasName
 <http://w3id.org/roh/mirror/vcard#hasName> rdf:type owl:ObjectProperty ;
-                                                owl:equivalentProperty <http://w3id.org/roh/mirror/vcard#n> ;
-                                                rdfs:range <http://w3id.org/roh/mirror/vcard#Name> ;
-                                                rdfs:comment "To specify the components of the name of the object"@en ;
-                                                rdfs:isDefinedBy <http://www.w3.org/2006/vcard/ns> ;
-                                                rdfs:label "has name"@en .
+                                           owl:equivalentProperty <http://w3id.org/roh/mirror/vcard#n> ;
+                                           rdfs:range <http://w3id.org/roh/mirror/vcard#Name> ;
+                                           rdfs:comment "To specify the components of the name of the object"@en ;
+                                           rdfs:isDefinedBy <http://www.w3.org/2006/vcard/ns> ;
+                                           rdfs:label "has name"@en .
 
 
 ###  http://w3id.org/roh/mirror/vcard#n
 <http://w3id.org/roh/mirror/vcard#n> rdf:type owl:ObjectProperty ;
-                                          rdfs:comment "This object property has been mapped"@en ;
-                                          rdfs:label "name"@en .
+                                     rdfs:comment "This object property has been mapped"@en ;
+                                     rdfs:label "name"@en .
 
 
 ###  http://w3id.org/roh/mirror/vivo#affiliatedOrganization
@@ -1914,27 +1935,6 @@ vivo:supportedInformationResource rdf:type owl:ObjectProperty ;
                                              "supported publications or other works"@en .
 
 
-###  http://purl.org/spar/cito/cites
-<http://purl.org/spar/cito/cites> rdf:type owl:ObjectProperty ;
-                                  rdfs:subPropertyOf owl:topObjectProperty ;
-                                  owl:inverseOf <http://purl.org/spar/cito/isCitedBy> ;
-                                  rdfs:comment "The citing entity cites the cited entity, either directly and explicitly (as in the reference list of a journal article), indirectly (e.g. by citing a more recent paper by the same group on the same topic), or implicitly (e.g. as in artistic quotations or parodies, or in cases of plagiarism)."@en ;
-                                  rdfs:label "cites"@en .
-
-
-###  http://purl.org/spar/cito/isCitedAsDataSourceBy
-<http://purl.org/spar/cito/isCitedAsDataSourceBy> rdf:type owl:ObjectProperty ;
-                                                  rdfs:comment "The cited entity is cited as a data source by the citing entity."@en ;
-                                                  rdfs:label "citado como fuente de datos por"@es ,
-                                                             "is cited as data source by"@en .
-
-
-###  http://purl.org/spar/cito/isCitedBy
-<http://purl.org/spar/cito/isCitedBy> rdf:type owl:ObjectProperty ;
-                                      rdfs:comment "The cited entity (the subject of the RDF triple) is cited by the citing entity (the object of the triple)."@en ;
-                                      rdfs:label "is cited by"@en .
-
-
 ###  http://www.w3.org/2004/02/skos/core#inScheme
 skos:inScheme rdf:type owl:ObjectProperty .
 
@@ -2101,11 +2101,17 @@ skos:inScheme rdf:type owl:ObjectProperty .
 
 ###  http://w3id.org/roh#impactFactor
 :impactFactor rdf:type owl:DatatypeProperty ;
-              rdfs:domain :PublicationMetric ;
+              rdfs:domain :JournalMetric ;
               rdfs:range xsd:float ;
               rdfs:comment "A scientometric index that reflects the yearly average number of citations that articles published in the last two years in a given journal received."@en ;
               rdfs:label "factor de impacto"@es ,
                          "impact factor"@en .
+
+
+###  http://w3id.org/roh#impactFactorName
+:impactFactorName rdf:type owl:DatatypeProperty ;
+                  rdfs:domain :JournalMetric ;
+                  rdfs:range xsd:string .
 
 
 ###  http://w3id.org/roh#isCompetitive
@@ -2314,7 +2320,7 @@ skos:inScheme rdf:type owl:ObjectProperty .
 
 ###  http://w3id.org/roh#quartile
 :quartile rdf:type owl:DatatypeProperty ;
-          rdfs:domain :PublicationMetric ;
+          rdfs:domain :JournalMetric ;
           rdfs:range [ rdf:type rdfs:Datatype ;
                        owl:oneOf [ rdf:type rdf:List ;
                                    rdf:first "Q1" ;
@@ -2337,7 +2343,7 @@ skos:inScheme rdf:type owl:ObjectProperty .
 
 ###  http://w3id.org/roh#ranking
 :ranking rdf:type owl:DatatypeProperty ;
-         rdfs:domain :PublicationMetric ;
+         rdfs:domain :JournalMetric ;
          rdfs:range xsd:string ;
          rdfs:comment "The ranking of a scientific publication."@en ;
          rdfs:label "ranking"@en ,
@@ -2700,10 +2706,10 @@ foaf:title rdf:type owl:DatatypeProperty ;
 
 ###  http://w3id.org/roh/mirror/vcard#locality
 <http://w3id.org/roh/mirror/vcard#locality> rdf:type owl:DatatypeProperty ;
-                                                 rdfs:range xsd:string ;
-                                                 rdfs:comment "The locality (e.g. city or town) associated with the address of the object"@en ;
-                                                 rdfs:isDefinedBy <http://www.w3.org/2006/vcard/ns> ;
-                                                 rdfs:label "locality"@en .
+                                            rdfs:range xsd:string ;
+                                            rdfs:comment "The locality (e.g. city or town) associated with the address of the object"@en ;
+                                            rdfs:isDefinedBy <http://www.w3.org/2006/vcard/ns> ;
+                                            rdfs:label "locality"@en .
 
 
 ###  http://w3id.org/roh/mirror/vivo#abbreviation
@@ -3538,6 +3544,10 @@ The previous short definition was: \"An arbitrary classification of a space/time
 :ExperimentalProtocol rdf:type owl:Class ;
                       rdfs:subClassOf bfo:BFO_0000015 ,
                                       [ rdf:type owl:Restriction ;
+                                        owl:onProperty <http://purl.org/spar/cito/cites> ;
+                                        owl:allValuesFrom owl:Thing
+                                      ] ,
+                                      [ rdf:type owl:Restriction ;
                                         owl:onProperty :correspondingAuthor ;
                                         owl:allValuesFrom foaf:Person
                                       ] ,
@@ -3579,10 +3589,6 @@ The previous short definition was: \"An arbitrary classification of a space/time
                                       [ rdf:type owl:Restriction ;
                                         owl:onProperty vivo:dateTimeInterval ;
                                         owl:allValuesFrom vivo:DateTimeInterval
-                                      ] ,
-                                      [ rdf:type owl:Restriction ;
-                                        owl:onProperty <http://purl.org/spar/cito/cites> ;
-                                        owl:allValuesFrom owl:Thing
                                       ] ,
                                       [ rdf:type owl:Restriction ;
                                         owl:onProperty :seqOfAuthors ;
@@ -3936,6 +3942,31 @@ A roh:FundingSource roh:feeds a roh:Funding with funds to sponsor some projects.
          rdfs:subClassOf bibo:Document ;
          rdfs:label "Factura"@es ,
                     "Invoice"@en .
+
+
+###  http://w3id.org/roh#JournalMetric
+:JournalMetric rdf:type owl:Class ;
+               rdfs:subClassOf :Metric ,
+                               [ rdf:type owl:Restriction ;
+                                 owl:onProperty :impactFactor ;
+                                 owl:allValuesFrom xsd:float
+                               ] ,
+                               [ rdf:type owl:Restriction ;
+                                 owl:onProperty :impactFactorName ;
+                                 owl:allValuesFrom xsd:string
+                               ] ,
+                               [ rdf:type owl:Restriction ;
+                                 owl:onProperty :quartile ;
+                                 owl:allValuesFrom xsd:string
+                               ] ,
+                               [ rdf:type owl:Restriction ;
+                                 owl:onProperty :ranking ;
+                                 owl:allValuesFrom xsd:string
+                               ] ;
+               rdfs:comment "Esta entidad es la metrica de una revista. Cada cierto tiempo se actualiza la metrica de cada revista por lo que esa revista debe  crear una nueva JournalMetric con el mismo impactFactorName pero en la cual los valores de fecha impactFactor, ranking y quartile esten actualizados."@es ,
+                            "This is the metric of a jorunal. When the journal metric is updated, a new journal metric must be created with the same impactFactorName but with the updated impactFactor, ranking and quartile values."@en ;
+               rdfs:label "Journal Metric"@en ,
+                          "Metrica de una revista"@es .
 
 
 ###  http://w3id.org/roh#Justification
@@ -4410,19 +4441,9 @@ A roh:FundingSource roh:feeds a roh:Funding with funds to sponsor some projects.
                                    [ rdf:type owl:Restriction ;
                                      owl:onProperty :citationCount ;
                                      owl:allValuesFrom xsd:integer
-                                   ] ,
-                                   [ rdf:type owl:Restriction ;
-                                     owl:onProperty :impactFactor ;
-                                     owl:allValuesFrom xsd:float
-                                   ] ,
-                                   [ rdf:type owl:Restriction ;
-                                     owl:onProperty :quartile ;
-                                     owl:allValuesFrom xsd:string
-                                   ] ,
-                                   [ rdf:type owl:Restriction ;
-                                     owl:onProperty :ranking ;
-                                     owl:allValuesFrom xsd:string
                                    ] ;
+                   rdfs:comment "An article is cited roh:citationCount times in the roh:metricName network. Example: if an article is cited 5 times in the Web of Science, then the roh:metricName should be Web of Science and the roh:citationCount 5. Thus, a roh:metricName can be roh and the value of roh:citationCount the number of times that article has been cited in the knowledge graph of this ontology."@en ,
+                                "Un artículo es citado roh:citationCount veces en la red the roh:metricName. Ejemplo: si un artículo ha sido citado 5 veces en la Web of Science, entonces los atributos roh:metricName debe ser Web Of Science y roh:citationCount 5. De este modo, una roh:metricName puede ser roh y el valor de roh:citationCount el número de veces que dicho artículo ha sido citado en el grafo de conocimiento de esta ontología."@es ;
                    rdfs:label "Métrica de Publicación"@es ,
                               "Publication Metric"@en .
 
@@ -4662,6 +4683,10 @@ A roh:FundingSource roh:feeds a roh:Funding with funds to sponsor some projects.
                                   owl:someValuesFrom foaf:Person
                                 ] ,
                                 [ rdf:type owl:Restriction ;
+                                  owl:onProperty <http://purl.org/spar/cito/cites> ;
+                                  owl:allValuesFrom owl:Thing
+                                ] ,
+                                [ rdf:type owl:Restriction ;
                                   owl:onProperty :hasKnowledgeArea ;
                                   owl:allValuesFrom [ owl:intersectionOf ( skos:Concept
                                                                            [ rdf:type owl:Restriction ;
@@ -4699,10 +4724,6 @@ A roh:FundingSource roh:feeds a roh:Funding with funds to sponsor some projects.
                                 [ rdf:type owl:Restriction ;
                                   owl:onProperty foaf:homepage ;
                                   owl:allValuesFrom bibo:Webpage
-                                ] ,
-                                [ rdf:type owl:Restriction ;
-                                  owl:onProperty <http://purl.org/spar/cito/cites> ;
-                                  owl:allValuesFrom owl:Thing
                                 ] ,
                                 [ rdf:type owl:Restriction ;
                                   owl:onProperty :language ;
@@ -5464,6 +5485,10 @@ bibo:Issue rdf:type owl:Class ;
 bibo:Journal rdf:type owl:Class ;
              rdfs:subClassOf bibo:Periodical ,
                              [ rdf:type owl:Restriction ;
+                               owl:onProperty :hasMetric ;
+                               owl:allValuesFrom :JournalMetric
+                             ] ,
+                             [ rdf:type owl:Restriction ;
                                owl:onProperty vivo:abbreviation ;
                                owl:allValuesFrom xsd:string
                              ] ;
@@ -5996,10 +6021,10 @@ Besides, an instance of a foaf:Person / roh:Researcher is associated to the foll
 
 ###  http://w3id.org/roh/mirror/geonames#Feature
 <http://w3id.org/roh/mirror/geonames#Feature> rdf:type owl:Class ;
-                                                   rdfs:comment "A geographical feature"@en ;
-                                                   rdfs:label "Característica"@es ,
-                                                              "Feature"@en ;
-                                                   skos:historyNote "Modified in version 3.1 : The cardinality constraints on feature code, feature class are relaxed on this class, and put on the specific subclass Geonames Feature. This class and attached properties can therefore be used for features not necessarily identified in the Geoanmes data base"@en .
+                                              rdfs:comment "A geographical feature"@en ;
+                                              rdfs:label "Característica"@es ,
+                                                         "Feature"@en ;
+                                              skos:historyNote "Modified in version 3.1 : The cardinality constraints on feature code, feature class are relaxed on this class, and put on the specific subclass Geonames Feature. This class and attached properties can therefore be used for features not necessarily identified in the Geoanmes data base"@en .
 
 
 ###  http://w3id.org/roh/mirror/obo/bfo#BFO_0000008
@@ -6149,6 +6174,10 @@ ero:ERO_0000005 rdf:type owl:Class ;
 ###  http://w3id.org/roh/mirror/obo/ero#ERO_0000071
 ero:ERO_0000071 rdf:type owl:Class ;
                 rdfs:subClassOf [ rdf:type owl:Restriction ;
+                                  owl:onProperty <http://purl.org/spar/cito/cites> ;
+                                  owl:allValuesFrom owl:Thing
+                                ] ,
+                                [ rdf:type owl:Restriction ;
                                   owl:onProperty :correspondingAuthor ;
                                   owl:allValuesFrom foaf:Person
                                 ] ,
@@ -6202,10 +6231,6 @@ ero:ERO_0000071 rdf:type owl:Class ;
                                 [ rdf:type owl:Restriction ;
                                   owl:onProperty vivo:dateTimeValue ;
                                   owl:allValuesFrom vivo:DateTimeValue
-                                ] ,
-                                [ rdf:type owl:Restriction ;
-                                  owl:onProperty <http://purl.org/spar/cito/cites> ;
-                                  owl:allValuesFrom owl:Thing
                                 ] ,
                                 [ rdf:type owl:Restriction ;
                                   owl:onProperty :seqOfAuthors ;
@@ -6651,37 +6676,37 @@ iao:IAO_0000582 rdf:type owl:Class ;
 
 ###  http://w3id.org/roh/mirror/vcard#Group
 <http://w3id.org/roh/mirror/vcard#Group> rdf:type owl:Class ;
-                                              rdfs:subClassOf <http://w3id.org/roh/mirror/vcard#Kind> ;
-                                              rdfs:comment "Object representing a group of persons or entities.  A group object will usually contain hasMember properties to specify the members of the group."@en ;
-                                              rdfs:isDefinedBy <http://w3id.org/roh/mirror/vcard> ;
-                                              rdfs:label "Group"@en ,
-                                                         "Grupo"@es .
+                                         rdfs:subClassOf <http://w3id.org/roh/mirror/vcard#Kind> ;
+                                         rdfs:comment "Object representing a group of persons or entities.  A group object will usually contain hasMember properties to specify the members of the group."@en ;
+                                         rdfs:isDefinedBy <http://w3id.org/roh/mirror/vcard> ;
+                                         rdfs:label "Group"@en ,
+                                                    "Grupo"@es .
 
 
 ###  http://w3id.org/roh/mirror/vcard#Individual
 <http://w3id.org/roh/mirror/vcard#Individual> rdf:type owl:Class ;
-                                                   rdfs:subClassOf <http://w3id.org/roh/mirror/vcard#Kind> ;
-                                                   rdfs:comment "An object representing a single person or entity"@en ;
-                                                   rdfs:isDefinedBy <http://w3id.org/roh/mirror/vcard> ;
-                                                   rdfs:label "Individual"@en ,
-                                                              "Individual"@es .
+                                              rdfs:subClassOf <http://w3id.org/roh/mirror/vcard#Kind> ;
+                                              rdfs:comment "An object representing a single person or entity"@en ;
+                                              rdfs:isDefinedBy <http://w3id.org/roh/mirror/vcard> ;
+                                              rdfs:label "Individual"@en ,
+                                                         "Individual"@es .
 
 
 ###  http://w3id.org/roh/mirror/vcard#Kind
 <http://w3id.org/roh/mirror/vcard#Kind> rdf:type owl:Class ;
-                                             rdfs:comment "The parent class for all objects"@en ;
-                                             rdfs:isDefinedBy <http://w3id.org/roh/mirror/vcard> ;
-                                             rdfs:label "Kind"@en ,
-                                                        "Tipo"@es .
+                                        rdfs:comment "The parent class for all objects"@en ;
+                                        rdfs:isDefinedBy <http://w3id.org/roh/mirror/vcard> ;
+                                        rdfs:label "Kind"@en ,
+                                                   "Tipo"@es .
 
 
 ###  http://w3id.org/roh/mirror/vcard#Location
 <http://w3id.org/roh/mirror/vcard#Location> rdf:type owl:Class ;
-                                                 rdfs:subClassOf <http://w3id.org/roh/mirror/vcard#Kind> ;
-                                                 rdfs:comment "An object representing a named geographical place"@en ;
-                                                 rdfs:isDefinedBy <http://w3id.org/roh/mirror/vcard> ;
-                                                 rdfs:label "Localización"@es ,
-                                                            "Location"@en .
+                                            rdfs:subClassOf <http://w3id.org/roh/mirror/vcard#Kind> ;
+                                            rdfs:comment "An object representing a named geographical place"@en ;
+                                            rdfs:isDefinedBy <http://w3id.org/roh/mirror/vcard> ;
+                                            rdfs:label "Localización"@es ,
+                                                       "Location"@en .
 
 
 ###  http://w3id.org/roh/mirror/vcard#Name
@@ -6690,11 +6715,11 @@ iao:IAO_0000582 rdf:type owl:Class ;
 
 ###  http://w3id.org/roh/mirror/vcard#Organization
 <http://w3id.org/roh/mirror/vcard#Organization> rdf:type owl:Class ;
-                                                     rdfs:subClassOf <http://w3id.org/roh/mirror/vcard#Kind> ;
-                                                     rdfs:comment "An object representing an organization.  An organization is a single entity, and might represent a business or government, a department or division within a business or government, a club, an association, or the like."@en ;
-                                                     rdfs:isDefinedBy <http://w3id.org/roh/mirror/vcard> ;
-                                                     rdfs:label "Organización"@es ,
-                                                                "Organization"@en .
+                                                rdfs:subClassOf <http://w3id.org/roh/mirror/vcard#Kind> ;
+                                                rdfs:comment "An object representing an organization.  An organization is a single entity, and might represent a business or government, a department or division within a business or government, a club, an association, or the like."@en ;
+                                                rdfs:isDefinedBy <http://w3id.org/roh/mirror/vcard> ;
+                                                rdfs:label "Organización"@es ,
+                                                           "Organization"@en .
 
 
 ###  http://w3id.org/roh/mirror/vivo#Abstract
@@ -7749,13 +7774,13 @@ rdf:Seq rdf:type owl:Class .
 
 ###  http://www.w3.org/2004/02/skos/core#Concept
 skos:Concept rdf:type owl:Class ;
-             dct:issued "2008-05-xx" ;
              skos1:definition "An abstract idea or notion; a unit of thought."@en ;
              rdfs:comment "Based on skos:Concept (https://www.w3.org/TR/skos-reference/). It has a main subclass, namely KnowledgeArea. vivo:freetextKeyword is a related DatatType property used to qualify: roh:Infrastructure, roh:Activity, roh:Funding, geonames:Feature, roh:Metrics, foaf:Organisation, vivo:Project, roh:ResearchObject among many other entities in ROH." ,
                           "Using SKOS, concepts can be identified using URIs, labeled with lexical strings in one or more natural languages, assigned notations (lexical codes), documented with various types of note, linked to other concepts and organized into informal hierarchies and association networks, aggregated into concept schemes, grouped into labeled and/or ordered collections, and mapped to concepts in other schemes." ;
              rdfs:isDefinedBy <http://w3id.org/roh/mirror/skos> ;
              rdfs:label "Concept"@en ,
-                        "Concepto"@es .
+                        "Concepto"@es ;
+             dct:issued "2008-05-xx" .
 
 
 ###  http://www.w3.org/2004/02/skos/core#ConceptScheme

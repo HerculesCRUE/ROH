@@ -647,7 +647,58 @@ _:genid1 a :Accreditation ;
         vivo:dateIssued           [ a              vivo:DateTimeValue ;
                                     vivo:dateTime  "2020-04-27T00:00:00"^^xsd:dateTime
                                   ] ;
-        vivo:publicationVenueFor  <http://w3id.org/roh/data#journal-article-1> .
+        #vivo:publicationVenueFor  <http://w3id.org/roh/data#journal-article-1>;
+        :hasMetric <http://w3id.org/roh/data#journal-metric-2016-jcr>,
+                        <http://w3id.org/roh/data#journal-metric-2017-jcr>,
+                        <http://w3id.org/roh/data#journal-metric-2016-sjr>,
+                        <http://w3id.org/roh/data#journal-metric-2017-sjr>.
+
+
+<http://w3id.org/roh/data#journal-metric-2016-jcr>
+        a :JournalMetric;
+        :impactFactorName "jcr";
+        :impactFactor "0.72"^^xsd:float ;
+        :quartile "Q2" ;
+        vivo:dateTimeValue
+                [ a       vivo:DateTimeValue ;
+                  vivo:dateTime
+                          "2016-01-01T00:00:00"^^xsd:dateTime
+                ] .
+
+<http://w3id.org/roh/data#journal-metric-2017-jcr>
+        a :JournalMetric;
+        :impactFactorName "jcr";
+        :impactFactor "0.95"^^xsd:float ;
+        :quartile "Q1" ;
+        vivo:dateTimeValue
+                [ a       vivo:DateTimeValue ;
+                  vivo:dateTime
+                          "2017-01-01T00:00:00"^^xsd:dateTime
+                ] .
+
+
+<http://w3id.org/roh/data#journal-metric-2016-sjr>
+        a :JournalMetric;
+        :impactFactorName "SJR";
+        :impactFactor "0.3"^^xsd:float ;
+        :quartile "Q3" ;
+        vivo:dateTimeValue
+                [ a       vivo:DateTimeValue ;
+                  vivo:dateTime
+                          "2016-01-01T00:00:00"^^xsd:dateTime
+                ] .
+
+<http://w3id.org/roh/data#journal-metric-2017-sjr>
+        a :JournalMetric;
+        :impactFactorName "SJR";
+        :impactFactor "0.6"^^xsd:float ;
+        :quartile "Q2" ;
+        vivo:dateTimeValue
+                [ a       vivo:DateTimeValue ;
+                  vivo:dateTime
+                          "2017-01-01T00:00:00"^^xsd:dateTime
+                ] .
+
 
 <http://w3id.org/roh/data#software-1>
         a                       ero:ERO_0000071;
@@ -778,7 +829,9 @@ _:genid1 a :Accreditation ;
         cito:cites <http://w3id.org/roh/data#software-1>, 
                 <http://w3id.org/roh/data#repository-1>,
                 <http://w3id.org/roh/data#experimental-prototol-result-1>;
-        :hasMetric   <http://w3id.org/roh/data#journal-article-1-metric> .
+        :hasMetric  <http://w3id.org/roh/data#journal-article-1-metricwebOfScience-2016>,
+                        <http://w3id.org/roh/data#journal-article-1-metric-webOfScience-2017>
+ .
 
 
 <http://w3id.org/roh/data#journal-article-2>
@@ -796,61 +849,58 @@ _:genid1 a :Accreditation ;
          vivo:dateIssued
                 [ a       vivo:DateTimeValue ;
                   vivo:dateTime
-                          "2013-04-27T00:00:00"^^xsd:dateTime
+                          "2017-04-27T00:00:00"^^xsd:dateTime
                 ] ;
         vivo:hasPublicationVenue
                 <http://w3id.org/roh/data#excelent-journal> ;
 
-        :hasMetric <http://w3id.org/roh/data#journal-article-2-metric-sjc>;
-        :hasMetric <http://w3id.org/roh/data#journal-article-2-metric-jcr>, <http://w3id.org/roh/data#journal-article-2-metric-jcr-2>.
+        :hasMetric       <http://w3id.org/roh/data#journal-article-2-metric-2017-webOfScience>,
+                         <http://w3id.org/roh/data#journal-article-2-metric-2017-scopus>.
 
-<http://w3id.org/roh/data#journal-article-1-metric>
+<http://w3id.org/roh/data#journal-article-1-metricwebOfScience-2016>
         a :PublicationMetric ;
-        :metricName "jcr";
-        :impactFactor "2.5"^^xsd:float ;
+        :metricName "Web of science";
+        :citationCount "15"^^xsd:integer;
+        vivo:dateTimeValue
+                [ a       vivo:DateTimeValue ;
+                  vivo:dateTime
+                          "2016-05-27T00:00:00"^^xsd:dateTime
+                ] .
+
+
+<http://w3id.org/roh/data#journal-article-1-metric-webOfScience-2017>
+      a :PublicationMetric ;
+        :metricName "Web of Science";
         :citationCount "23"^^xsd:integer;
-        :quartile "Q2" ;
         vivo:dateIssued
                 [ a       vivo:DateTimeValue ;
                   vivo:dateTime
-                          "2016-04-27T00:00:00"^^xsd:dateTime
+                          "2017-01-01T00:00:00"^^xsd:dateTime
                 ] .
+        
 
-<http://w3id.org/roh/data#journal-article-2-metric-sjc>
+
+<http://w3id.org/roh/data#journal-article-2-metric-2017-webOfScience>
         a :PublicationMetric ;
-        :metricName "sjc";
-        :impactFactor "3"^^xsd:float ;
-        :citationCount "23"^^xsd:integer;
-        :quartile "Q2" ;
+        :metricName "Web of Science";
+        :citationCount "12"^^xsd:integer;
         vivo:dateIssued
                 [ a       vivo:DateTimeValue ;
                   vivo:dateTime
-                          "2016-04-27T00:00:00"^^xsd:dateTime
+                          "2017-04-27T00:00:00"^^xsd:dateTime
                 ] .
 
-<http://w3id.org/roh/data#journal-article-2-metric-jcr>
-      a :PublicationMetric ;
-        :metricName "jcr";
-        :impactFactor "4"^^xsd:float ;
-        :citationCount "50"^^xsd:integer;
-        :quartile "Q2" ;
+<http://w3id.org/roh/data#journal-article-2-metric-2017-scopus>
+        a :PublicationMetric ;
+        :metricName "Scopus";
+        :citationCount "20"^^xsd:integer;
         vivo:dateIssued
                 [ a       vivo:DateTimeValue ;
                   vivo:dateTime
-                          "2011-04-27T00:00:00"^^xsd:dateTime
+                          "2017-04-27T00:00:00"^^xsd:dateTime
                 ] .
 
-<http://w3id.org/roh/data#journal-article-2-metric-jcr-2>
-      a :PublicationMetric ;
-        :metricName "jcr";
-        :impactFactor "3"^^xsd:float ;
-        :citationCount "23"^^xsd:integer;
-        :quartile "Q1" ;
-        vivo:dateIssued
-                [ a       vivo:DateTimeValue ;
-                  vivo:dateTime
-                          "2016-04-27T00:00:00"^^xsd:dateTime
-                ] .
+
 ## HOLAAAA
 <http://w3id.org/roh/data#my-fabulous-patent>
         a       bibo:Patent ;
