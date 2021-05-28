@@ -90,11 +90,11 @@ jobs:
       run: mvn surefire-report:report -Dmodel=https://raw.githubusercontent.com/HerculesCRUE/ROH/main/roh/modules/core/roh-core.ttl,https://raw.githubusercontent.com/HerculesCRUE/ROH/main/validation-data/rdf/roh_data_edma.ttl,https://raw.githubusercontent.com/HerculesCRUE/ROH/main/mirror/uneskos/unesco-individuals.rdf -DqueryFolder=/home/runner/work/ROH/ROH/validation-questions/sparql-query/
 
     - name: Generate maven site
-      working-directory: GnossDeustoBackend/validation-questions
+      working-directory: /home/runner/work/ROH/ROH/validation-questions
       run: mvn site
 
     - name: Generate documentation
-      working-directory: GnossDeustoBackend/validation-questions
+      working-directory: /home/runner/work/ROH/ROH/validation-questions
       run: mvn javadoc:test-javadoc
     
     #- name: Deploy github pages
