@@ -28,7 +28,7 @@ jobs:
       uses: actions/checkout@v2
       with:
         #ref: edma
-        path: ROH
+        #path: ROH
         submodules: true 
     
     - name: Download widoco
@@ -80,11 +80,11 @@ jobs:
       run: mvn install
 
     - name: Launch tests
-      working-directory: ROH/validation-questions
+      working-directory: HerculesCRUE/ROH/validation-questions
       run: mvn surefire-report:report -Dmodel=https://raw.githubusercontent.com/HerculesCRUE/ROH/main/roh/modules/core/roh-core.ttl,https://raw.githubusercontent.com/HerculesCRUE/ROH/main/validation-data/rdf/roh_data_edma.ttl,https://raw.githubusercontent.com/HerculesCRUE/ROH/main/mirror/uneskos/unesco-individuals.rdf -DqueryFolder=/home/runner/work/ROH/ROH/validation-questions/sparql-query/
 
     - name: Generate maven site
-      working-directory: ROH/validation-questions
+      working-directory: HerculesCRUE/ROH/validation-questions
       run:   mvn site
 
 
