@@ -343,7 +343,7 @@ En el desarrollo de ROH se han usado extensivamente las propiedades `rdfs:label`
 
 Las etiquetas y la documentación multilingüe se apoyan en el sistema de etiquetado de idiomas de los literales del RDF. Por ejemplo, para la propiedad roh:attachment, el siguiente comentario explica en inglés el propósito de esta object property y las siguientes dos labels ofrecen su significado tanto en inglés como en castellano:
 
-    <owl:ObjectProperty rdf:about="http://purl.org/roh#attachment">
+    <owl:ObjectProperty rdf:about="http://w3id.org/roh#attachment">
         <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
         <rdfs:comment xml:lang="en">A not machine-readable document attached to an entity offering more detailed information.</rdfs:comment>
       <rdfs:label xml:lang="es">adjunto</rdfs:label>
