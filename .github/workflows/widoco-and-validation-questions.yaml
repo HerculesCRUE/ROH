@@ -37,12 +37,13 @@ jobs:
 
     - name: Compile documentation
       #working-directory: /home/runner/work/ROH/ROH
+      #        #-oops \
       run: |
         cd widoco
         mkdir config
         java -jar ./widoco.jar \
         -ontFile ../roh/modules/core/roh-core.ttl \
-      #  -oops \
+
         -webVowl \
         -includeAnnotationProperties \
         -outFolder output/roh \
@@ -54,6 +55,7 @@ jobs:
         mv output/roh/index-en.html output/roh/index.html
         mv output/roh ../docs/
         cp -r ../mirror ../docs/
+      
 
     - name: Copy ontology modules to docs folder
       #working-directory: /home/runner/work/ROH/ROH
