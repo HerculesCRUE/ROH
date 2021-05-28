@@ -35,35 +35,33 @@ jobs:
       working-directory: /home/runner/work/ROH/ROH
       run: mkdir widoco && wget -O widoco/widoco.jar https://github.com/dgarijo/Widoco/releases/download/v1.4.14/widoco-1.4.14-jar-with-dependencies.jar
 
-    - name: Compile documentation
-      #working-directory: /home/runner/work/ROH/ROH
-      #        #-oops \
-      run: |
-        cd widoco
-        mkdir config
-        java -jar ./widoco.jar \
-        -ontFile ../roh/modules/core/roh-core.ttl \
+    #- name: Compile documentation
+      #working-directory: /home/runner/work/ROH/ROH       
+    #  run: |
+    #    cd widoco
+    #    mkdir config
+    #    java -jar ./widoco.jar \
+    #    -ontFile ../roh/modules/core/roh-core.ttl \
+    #    -oops \
+    #    -webVowl \
+    #    -includeAnnotationProperties \
+    #    -outFolder output/roh \
+    #    -rewriteAll \
+    #    -confFile ../roh/modules/core/doc/widoco.config.txt \
+    #    -includeImportedOntologies \
+    #    -uniteSections \
+    #    -excludeIntroduction
+    #    mv output/roh/index-en.html output/roh/index.html
+    #    mv output/roh ../docs/
+    #    cp -r ../mirror ../docs/ 
 
-        -webVowl \
-        -includeAnnotationProperties \
-        -outFolder output/roh \
-        -rewriteAll \
-        -confFile ../roh/modules/core/doc/widoco.config.txt \
-        -includeImportedOntologies \
-        -uniteSections \
-        -excludeIntroduction
-        mv output/roh/index-en.html output/roh/index.html
-        mv output/roh ../docs/
-        cp -r ../mirror ../docs/
-      
-
-    - name: Copy ontology modules to docs folder
+    #- name: Copy ontology modules to docs folder
       #working-directory: /home/runner/work/ROH/ROH
-      run: cp -r roh/modules/* docs/roh/
+    #  run: cp -r roh/modules/* docs/roh/
 
-    - name: Copy mirrored ontologies to docs folder
+    #- name: Copy mirrored ontologies to docs folder
       #working-directory: /home/runner/work/ROH/ROH
-      run: cp -r mirror/ docs/
+    #  run: cp -r mirror/ docs/
 
       
     - name: Checkout validation-questions
@@ -100,22 +98,16 @@ jobs:
       working-directory: ROH/validation-questions
       run: mvn javadoc:test-javadoc
     
-    #- name: Deploy github pages
-    #  uses: peaceiris/actions-gh-pages@v3.6.1
+  
+
+    #- name: Publish on Github Pages
+    #  uses: crazy-max/ghaction-github-pages@v2.3.0
     #  with:
-    #      keep_files: true
-    #      publish_dir: target/site
-    #      github_token: ${{ secrets.GITHUB_TOKEN }}
-
-
-    - name: Publish on Github Pages
-      uses: crazy-max/ghaction-github-pages@v2.3.0
-      with:
         #build_dir: edma/docs 
-        build_dir: docs 
-        publish_dir: target/site
-      env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+    #    build_dir: docs 
+    #    publish_dir: target/site
+    #  env:
+    #      GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
       
     #- name: Publish on Github Pages
@@ -124,3 +116,9 @@ jobs:
     #    build_dir: docs 
     #  env:
     #      GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+      #- name: Deploy github pages
+    #  uses: peaceiris/actions-gh-pages@v3.6.1
+    #  with:
+    #      keep_files: true
+    #      publish_dir: target/site
+    #      github_token: ${{ secrets.GITHUB_TOKEN }}
