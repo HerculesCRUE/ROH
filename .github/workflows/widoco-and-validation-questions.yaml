@@ -28,7 +28,7 @@ jobs:
       uses: actions/checkout@v2
       with:
         #ref: edma
-        #path: edma
+        path: ROH
         submodules: true 
     
     - name: Download widoco
@@ -64,11 +64,11 @@ jobs:
     #  run: cp -r mirror/ docs/
 
       
-    - name: Checkout validation-questions
-      uses: actions/checkout@v2
-      with: 
-        repository: /home/runner/work/ROH/ROH
-        path: ROH
+    #- name: Checkout validation-questions
+    #  uses: actions/checkout@v2
+    #  with: 
+    #    repository: /home/runner/work/ROH/ROH
+    #    path: ROH
 
     - name: Checkout pellet
       uses: actions/checkout@v2
