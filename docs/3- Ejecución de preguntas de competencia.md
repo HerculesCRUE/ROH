@@ -23,7 +23,7 @@ Download the repository and cd to validation-questions path:
 
 ```
 $ git clone https://github.com/HerculesCRUE/ROH
-$ cd GnossDeustoBackend/validation-questions
+$ cd ROH/validation-questions
 ```
 
 Add required submodules, GnossDeustoOnto (ontology) and pellet (reasoner):

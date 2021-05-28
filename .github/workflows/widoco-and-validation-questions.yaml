@@ -63,12 +63,6 @@ jobs:
       #working-directory: /home/runner/work/ROH/ROH
     #  run: cp -r mirror/ docs/
 
-      
-    #- name: Checkout validation-questions
-    #  uses: actions/checkout@v2
-    #  with: 
-    #    repository: /home/runner/work/ROH/ROH
-    #    path: ROH
 
     - name: Checkout pellet
       uses: actions/checkout@v2
@@ -91,7 +85,7 @@ jobs:
 
     - name: Generate maven site
       working-directory: ROH/validation-questions
-      run: mvn site
+      run:   mvn site
 
 
     - name: Generate documentation
