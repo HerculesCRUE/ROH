@@ -67,8 +67,8 @@ jobs:
     - name: Checkout validation-questions
       uses: actions/checkout@v2
       with: 
-        repository: HerculesCRUE/GnossDeustoBackend
-        path: GnossDeustoBackend
+        repository: /home/runner/work/ROH/ROH
+        path: ROH
 
     - name: Checkout pellet
       uses: actions/checkout@v2
@@ -86,16 +86,16 @@ jobs:
       run: mvn install
 
     - name: Launch tests
-      working-directory: /home/runner/work/ROH/ROH/validation-questions
+      working-directory: ROH/validation-questions
       run: mvn surefire-report:report -Dmodel=https://raw.githubusercontent.com/HerculesCRUE/ROH/main/roh/modules/core/roh-core.ttl,https://raw.githubusercontent.com/HerculesCRUE/ROH/main/validation-data/rdf/roh_data_edma.ttl,https://raw.githubusercontent.com/HerculesCRUE/ROH/main/mirror/uneskos/unesco-individuals.rdf -DqueryFolder=/home/runner/work/ROH/ROH/validation-questions/sparql-query/
 
     - name: Generate maven site
-      working-directory: /home/runner/work/ROH/ROH/validation-questions
+      working-directory: ROH/validation-questions
       run: mvn site
 
 
     - name: Generate documentation
-      working-directory: /home/runner/work/ROH/ROH/validation-questions
+      working-directory: ROH/validation-questions
       run: mvn javadoc:test-javadoc
     
     #- name: Deploy github pages
