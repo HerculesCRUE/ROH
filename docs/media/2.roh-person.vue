@@ -1,14 +1,14 @@
-<!-- Tufts VUE 3.3.0 concept-map (2.roh-person.vue) 2021-05-12 -->
+<!-- Tufts VUE 3.3.0 concept-map (2.roh-person.vue) 2021-05-31 -->
 <!-- Tufts VUE: http://vue.tufts.edu/ -->
 <!-- Do Not Remove: VUE mapping @version(1.1) jar:file:/C:/Program%20Files%20(x86)/VUE/VUE.jar!/tufts/vue/resources/lw_mapping_1_1.xml -->
-<!-- Do Not Remove: Saved date Wed May 12 11:59:10 CEST 2021 by mpuer on platform Windows 8 6.2 in JVM 1.7.0_21-b11 -->
+<!-- Do Not Remove: Saved date Mon May 31 11:14:30 CEST 2021 by mpuer on platform Windows 8 6.2 in JVM 1.7.0_21-b11 -->
 <!-- Do Not Remove: Saving version @(#)VUE: built October 8 2015 at 1658 by tomadm on Linux 2.6.32-504.23.4.el6.x86_64 i386 JVM 1.7.0_21-b11(bits=32) -->
 <?xml version="1.0" encoding="US-ASCII"?>
 <LW-MAP xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
     xsi:noNamespaceSchemaLocation="none" ID="0" label="2.roh-person.vue"
     created="1393354945662" x="0.0" y="0.0" width="1.4E-45"
     height="1.4E-45" strokeWidth="0.0" autoSized="false">
-    <resource referenceCreated="1620813550515" size="71679"
+    <resource referenceCreated="1622452470205" size="71789"
         spec="C:\Users\mpuer\Documents\GitHub\ROH_oficial\docs\media\2.roh-person.vue"
         type="1" xsi:type="URLResource">
         <title>2.roh-person.vue</title>
@@ -103,10 +103,10 @@
   &lt;head style="color: #000000" color="#000000"&gt;
     &lt;style type="text/css"&gt;
       &lt;!--
-        body { color: #000000; margin-right: 0px; font-size: 8; margin-bottom: 0px; margin-top: 0px; font-family: Arial; margin-left: 0px }
-        ol { vertical-align: middle; font-size: 8; margin-top: 6; list-style-position: outside; font-family: Arial; margin-left: 30 }
-        p { color: #000000; margin-right: 0; margin-bottom: 0; margin-top: 0; margin-left: 0 }
-        ul { vertical-align: middle; font-size: 8; margin-top: 6; font-family: Arial; list-style-position: outside; margin-left: 30 }
+        body { margin-bottom: 0px; font-size: 8; font-family: Arial; color: #000000; margin-top: 0px; margin-left: 0px; margin-right: 0px }
+        ol { vertical-align: middle; font-size: 8; font-family: Arial; list-style-position: outside; margin-top: 6; margin-left: 30 }
+        p { margin-bottom: 0; color: #000000; margin-top: 0; margin-left: 0; margin-right: 0 }
+        ul { vertical-align: middle; font-size: 8; font-family: Arial; list-style-position: outside; margin-top: 6; margin-left: 30 }
       --&gt;
     &lt;/style&gt;
     
@@ -145,6 +145,16 @@
         <textColor>#000000</textColor>
         <font>Arial-plain-12</font>
         <URIString>http://vue.tufts.edu/rdf/resource/6bd2ad9d0a8703a9013fc0bba14594d7</URIString>
+        <child ID="238" label="vcard:title" created="1460465186182"
+            x="49.5" y="72.375" width="62.0" height="23.0"
+            strokeWidth="1.0" autoSized="true" xsi:type="node">
+            <fillColor>#FFFFFF</fillColor>
+            <strokeColor>#000000</strokeColor>
+            <textColor>#000000</textColor>
+            <font>Arial-plain-12</font>
+            <URIString>http://vue.tufts.edu/rdf/resource/0adc244ec0a801b559ecb4d81f1f1a7a</URIString>
+            <shape xsi:type="rectangle"/>
+        </child>
         <shape xsi:type="ellipse"/>
     </child>
     <child ID="126" label="roh:hasContactInfo" layerID="1"
@@ -160,60 +170,6 @@
         <ID1 xsi:type="node">125</ID1>
         <ID2 xsi:type="node">6</ID2>
         <ctrlPoint0 x="-633.1183" y="-207.11282" xsi:type="point"/>
-    </child>
-    <child ID="127" label="vcard:URL" layerID="1"
-        created="1440622233083" x="-998.4645" y="-385.6102"
-        width="124.0" height="117.12346" strokeWidth="2.0"
-        autoSized="false" xsi:type="node">
-        <fillColor>#E6F7FD</fillColor>
-        <strokeColor>#000000</strokeColor>
-        <textColor>#000000</textColor>
-        <font>Arial-plain-12</font>
-        <URIString>http://vue.tufts.edu/rdf/resource/6bd2ad9d0a8703a9013fc0bb29d10683</URIString>
-        <child ID="128" label="vcard:url" created="1440622233083"
-            x="44.0" y="39.18673" width="57.0" height="23.0"
-            strokeWidth="1.0" autoSized="true" xsi:type="node">
-            <fillColor>#FFFFFF</fillColor>
-            <strokeColor>#000000</strokeColor>
-            <textColor>#000000</textColor>
-            <font>Arial-plain-12</font>
-            <URIString>http://vue.tufts.edu/rdf/resource/6bd2ad9d0a8703a9013fc0bb333a9ebf</URIString>
-            <shape xsi:type="rectangle"/>
-        </child>
-        <child ID="131" label="vivo:rank" created="1440622366644"
-            x="44.0" y="59.43673" width="58.0" height="23.0"
-            strokeWidth="1.0" autoSized="true" xsi:type="node">
-            <fillColor>#FFFFFF</fillColor>
-            <strokeColor>#000000</strokeColor>
-            <textColor>#000000</textColor>
-            <font>Arial-plain-12</font>
-            <URIString>http://vue.tufts.edu/rdf/resource/6bd2ad9e0a8703a9013fc0bb868f6752</URIString>
-            <shape xsi:type="rectangle"/>
-        </child>
-        <child ID="208" label="rdfs:label" created="1457108938982"
-            x="44.0" y="79.68673" width="62.0" height="23.0"
-            strokeWidth="1.0" autoSized="true" xsi:type="node">
-            <fillColor>#FFFFFF</fillColor>
-            <strokeColor>#000000</strokeColor>
-            <textColor>#000000</textColor>
-            <font>Arial-plain-12</font>
-            <URIString>http://vue.tufts.edu/rdf/resource/427a8c91c0a801b55682eebc4dff0fba</URIString>
-            <shape xsi:type="rectangle"/>
-        </child>
-        <shape xsi:type="ellipse"/>
-    </child>
-    <child ID="129" label="vcard:hasURL" layerID="1"
-        created="1440622249643" x="-905.3191" y="-277.4402"
-        width="71.40393" height="112.47974" strokeWidth="1.0"
-        autoSized="false" controlCount="0" arrowState="2" xsi:type="link">
-        <strokeColor>#000000</strokeColor>
-        <textColor>#000000</textColor>
-        <font>Arial-plain-11</font>
-        <URIString>http://vue.tufts.edu/rdf/resource/6bd2ad9e0a8703a9013fc0bb88054b49</URIString>
-        <point1 x="-834.41516" y="-165.46045"/>
-        <point2 x="-904.8191" y="-276.9402"/>
-        <ID1 xsi:type="node">125</ID1>
-        <ID2 xsi:type="node">127</ID2>
     </child>
     <child ID="156" label="foaf:Organization" layerID="1"
         created="1455982783789" x="114.411194" y="-297.50232"
@@ -245,8 +201,8 @@
         <textColor>#000000</textColor>
         <font>Arial-plain-12</font>
         <URIString>http://vue.tufts.edu/rdf/resource/ff828d4dc0a80499750dfdbffb91dabe</URIString>
-        <child ID="167" label="vcard:email" created="1455983129096"
-            x="38.65" y="59.274998" width="74.0" height="23.0"
+        <child ID="167" label="vcard:value" created="1455983129096"
+            x="38.65" y="59.274998" width="72.0" height="23.0"
             strokeWidth="1.0" autoSized="true" xsi:type="node">
             <fillColor>#FFFFFF</fillColor>
             <strokeColor>#000000</strokeColor>
@@ -316,10 +272,10 @@
   &lt;head&gt;
     &lt;style type="text/css"&gt;
       &lt;!--
-        body { color: #000000; margin-right: 0px; font-size: 12; margin-bottom: 0px; margin-top: 0px; font-family: Arial; margin-left: 0px }
-        ol { vertical-align: middle; font-size: 12; margin-top: 6; list-style-position: outside; font-family: Arial; margin-left: 30 }
-        p { color: #000000; margin-right: 0; margin-bottom: 0; margin-top: 0; margin-left: 0 }
-        ul { vertical-align: middle; font-size: 12; margin-top: 6; font-family: Arial; list-style-position: outside; margin-left: 30 }
+        body { margin-bottom: 0px; font-size: 12; font-family: Arial; color: #000000; margin-top: 0px; margin-left: 0px; margin-right: 0px }
+        ol { vertical-align: middle; font-size: 12; font-family: Arial; list-style-position: outside; margin-top: 6; margin-left: 30 }
+        p { margin-bottom: 0; color: #000000; margin-top: 0; margin-left: 0; margin-right: 0 }
+        ul { vertical-align: middle; font-size: 12; font-family: Arial; list-style-position: outside; margin-top: 6; margin-left: 30 }
       --&gt;
     &lt;/style&gt;
     
@@ -344,10 +300,10 @@
   &lt;head&gt;
     &lt;style type="text/css"&gt;
       &lt;!--
-        body { color: #000000; margin-right: 0px; font-size: 12; margin-bottom: 0px; margin-top: 0px; font-family: Arial; margin-left: 0px }
-        ol { vertical-align: middle; font-size: 12; margin-top: 6; list-style-position: outside; font-family: Arial; margin-left: 30 }
-        p { color: #000000; margin-right: 0; margin-bottom: 0; margin-top: 0; margin-left: 0 }
-        ul { vertical-align: middle; font-size: 12; margin-top: 6; font-family: Arial; list-style-position: outside; margin-left: 30 }
+        body { margin-bottom: 0px; font-size: 12; font-family: Arial; color: #000000; margin-top: 0px; margin-left: 0px; margin-right: 0px }
+        ol { vertical-align: middle; font-size: 12; font-family: Arial; list-style-position: outside; margin-top: 6; margin-left: 30 }
+        p { margin-bottom: 0; color: #000000; margin-top: 0; margin-left: 0; margin-right: 0 }
+        ul { vertical-align: middle; font-size: 12; font-family: Arial; list-style-position: outside; margin-top: 6; margin-left: 30 }
       --&gt;
     &lt;/style&gt;
     
@@ -361,8 +317,8 @@
 </richText>
         <label>Expressed as a geo uri "geo:25.094190,102.772167"</label>
     </child>
-    <child ID="219" label="vcard:Telephone" layerID="1"
-        created="1460464397775" x="-1083.2761" y="64.318146"
+    <child ID="219" label="vcard:Cell" layerID="1"
+        created="1460464397775" x="-1147.2761" y="-10.34852"
         width="151.69998" height="146.85724" strokeWidth="2.0"
         autoSized="false" xsi:type="node">
         <fillColor>#E6F7FD</fillColor>
@@ -370,8 +326,8 @@
         <textColor>#000000</textColor>
         <font>Arial-plain-12</font>
         <URIString>http://vue.tufts.edu/rdf/resource/0adc244bc0a801b559ecb4d81fdae0f4</URIString>
-        <child ID="220" label="vcard:telephone" created="1460464397775"
-            x="40.84999" y="74.30362" width="98.0" height="23.0"
+        <child ID="220" label="vcard:value" created="1460464397775"
+            x="59.34999" y="74.30362" width="72.0" height="23.0"
             strokeWidth="1.0" autoSized="true" xsi:type="node">
             <fillColor>#FFFFFF</fillColor>
             <strokeColor>#000000</strokeColor>
@@ -383,29 +339,29 @@
         <shape xsi:type="ellipse"/>
     </child>
     <child ID="221" label="vcard:hasTelephone" layerID="1"
-        created="1460464437596" x="-960.55225" y="-62.48456"
-        width="119.85492" height="143.80939" strokeWidth="1.0"
+        created="1460464437596" x="-1008.77136" y="-76.819275"
+        width="154.72247" height="99.80621" strokeWidth="1.0"
         autoSized="false" controlCount="0" arrowState="2" xsi:type="link">
         <strokeColor>#000000</strokeColor>
         <textColor>#000000</textColor>
         <font>Arial-plain-11</font>
         <URIString>http://vue.tufts.edu/rdf/resource/0adc244cc0a801b559ecb4d8065db0a1</URIString>
-        <point1 x="-841.19727" y="-61.98456"/>
-        <point2 x="-960.0522" y="80.82483"/>
+        <point1 x="-854.5489" y="-76.319275"/>
+        <point2 x="-1008.27136" y="22.486938"/>
         <ID1 xsi:type="node">125</ID1>
         <ID2 xsi:type="node">219</ID2>
     </child>
     <child ID="222" label="vcard:Name" layerID="1"
         created="1460464471556" x="-1148.6583" y="-302.79462"
-        width="179.20001" height="181.87021" strokeWidth="2.0"
+        width="181.29999" height="181.87021" strokeWidth="2.0"
         autoSized="false" xsi:type="node">
         <fillColor>#E6F7FD</fillColor>
         <strokeColor>#000000</strokeColor>
         <textColor>#000000</textColor>
         <font>Arial-plain-12</font>
         <URIString>http://vue.tufts.edu/rdf/resource/0adc244cc0a801b559ecb4d82bccbc32</URIString>
-        <child ID="223" label="vcard:givenName" created="1460464471556"
-            x="54.600006" y="51.310104" width="106.0" height="23.0"
+        <child ID="223" label="vcard:given-name" created="1460464471556"
+            x="54.899994" y="51.310104" width="108.0" height="23.0"
             strokeWidth="1.0" autoSized="true" xsi:type="node">
             <fillColor>#FFFFFF</fillColor>
             <strokeColor>#000000</strokeColor>
@@ -414,9 +370,10 @@
             <URIString>http://vue.tufts.edu/rdf/resource/0adc244cc0a801b559ecb4d8b91d75c2</URIString>
             <shape xsi:type="rectangle"/>
         </child>
-        <child ID="224" label="vcard:familyName" created="1460464496754"
-            x="54.600006" y="71.560104" width="109.0" height="23.0"
-            strokeWidth="1.0" autoSized="true" xsi:type="node">
+        <child ID="224" label="vcard:family-name"
+            created="1460464496754" x="54.899994" y="71.560104"
+            width="111.0" height="23.0" strokeWidth="1.0"
+            autoSized="true" xsi:type="node">
             <fillColor>#FFFFFF</fillColor>
             <strokeColor>#000000</strokeColor>
             <textColor>#000000</textColor>
@@ -424,9 +381,9 @@
             <URIString>http://vue.tufts.edu/rdf/resource/0adc244cc0a801b559ecb4d8c324640c</URIString>
             <shape xsi:type="rectangle"/>
         </child>
-        <child ID="225" label="vcard:additionalName"
-            created="1460464510010" x="54.600006" y="91.810104"
-            width="131.0" height="23.0" strokeWidth="1.0"
+        <child ID="225" label="vcard:additional-name"
+            created="1460464510010" x="54.899994" y="91.810104"
+            width="133.0" height="23.0" strokeWidth="1.0"
             autoSized="true" xsi:type="node">
             <fillColor>#FFFFFF</fillColor>
             <strokeColor>#000000</strokeColor>
@@ -435,9 +392,9 @@
             <URIString>http://vue.tufts.edu/rdf/resource/0adc244cc0a801b559ecb4d852dcbc80</URIString>
             <shape xsi:type="rectangle"/>
         </child>
-        <child ID="226" label="vcard:honorificPrefix"
-            created="1460464524565" x="54.600006" y="112.060104"
-            width="120.0" height="23.0" strokeWidth="1.0"
+        <child ID="226" label="vcard:honorific-prefix"
+            created="1460464524565" x="54.899994" y="112.060104"
+            width="123.0" height="23.0" strokeWidth="1.0"
             autoSized="true" xsi:type="node">
             <fillColor>#FFFFFF</fillColor>
             <strokeColor>#000000</strokeColor>
@@ -446,9 +403,9 @@
             <URIString>http://vue.tufts.edu/rdf/resource/0adc244cc0a801b559ecb4d8ed29a4f2</URIString>
             <shape xsi:type="rectangle"/>
         </child>
-        <child ID="227" label="vcard:honorificSuffix"
-            created="1460464545515" x="54.600006" y="132.3101"
-            width="119.0" height="23.0" strokeWidth="1.0"
+        <child ID="227" label="vcard:honorific-suffix"
+            created="1460464545515" x="54.899994" y="132.3101"
+            width="122.0" height="23.0" strokeWidth="1.0"
             autoSized="true" xsi:type="node">
             <fillColor>#FFFFFF</fillColor>
             <strokeColor>#000000</strokeColor>
@@ -460,51 +417,17 @@
         <shape xsi:type="ellipse"/>
     </child>
     <child ID="228" label="vcard:hasName" layerID="1"
-        created="1460464578050" x="-975.9515" y="-179.86972"
-        width="115.91345" height="45.65558" strokeWidth="1.0"
+        created="1460464578050" x="-974.08594" y="-179.41922"
+        width="114.07477" height="45.120026" strokeWidth="1.0"
         autoSized="false" controlCount="0" arrowState="2" xsi:type="link">
         <strokeColor>#000000</strokeColor>
         <textColor>#000000</textColor>
         <font>Arial-plain-11</font>
         <URIString>http://vue.tufts.edu/rdf/resource/0adc244dc0a801b559ecb4d8970e64f0</URIString>
-        <point1 x="-860.538" y="-134.71414"/>
-        <point2 x="-975.4515" y="-179.36972"/>
+        <point1 x="-860.5112" y="-134.7992"/>
+        <point2 x="-973.586" y="-178.91922"/>
         <ID1 xsi:type="node">125</ID1>
         <ID2 xsi:type="node">222</ID2>
-    </child>
-    <child ID="229" label="vcard:Geo" layerID="1"
-        created="1460464627913" x="-1059.087" y="-66.00043"
-        width="120.3" height="116.799995" strokeWidth="2.0"
-        autoSized="false" xsi:type="node">
-        <fillColor>#E6F7FD</fillColor>
-        <strokeColor>#000000</strokeColor>
-        <textColor>#000000</textColor>
-        <font>Arial-plain-12</font>
-        <URIString>http://vue.tufts.edu/rdf/resource/0adc244dc0a801b559ecb4d8e275dfbf</URIString>
-        <child ID="230" label="vcard:geo" created="1460464627913"
-            x="43.15" y="59.274998" width="64.0" height="23.0"
-            strokeWidth="1.0" autoSized="true" xsi:type="node">
-            <fillColor>#FFFFFF</fillColor>
-            <strokeColor>#000000</strokeColor>
-            <textColor>#000000</textColor>
-            <font>Arial-plain-12</font>
-            <URIString>http://vue.tufts.edu/rdf/resource/0adc244dc0a801b559ecb4d83dcc2787</URIString>
-            <shape xsi:type="rectangle"/>
-        </child>
-        <shape xsi:type="ellipse"/>
-    </child>
-    <child ID="231" label="vcard:hasGeo" layerID="1"
-        created="1460464664705" x="-946.6865" y="-81.93649"
-        width="89.81683" height="47.323486" strokeWidth="1.0"
-        autoSized="false" controlCount="0" arrowState="2" xsi:type="link">
-        <strokeColor>#000000</strokeColor>
-        <textColor>#000000</textColor>
-        <font>Arial-plain-11</font>
-        <URIString>http://vue.tufts.edu/rdf/resource/0adc244dc0a801b559ecb4d8807f3f1e</URIString>
-        <point1 x="-857.3697" y="-81.43649"/>
-        <point2 x="-946.1865" y="-35.113007"/>
-        <ID1 xsi:type="node">125</ID1>
-        <ID2 xsi:type="node">229</ID2>
     </child>
     <child ID="232" label="skos:Concept" layerID="1"
         created="1460464824765" x="-672.0023" y="-592.28656"
@@ -555,36 +478,91 @@
         <ID2 xsi:type="node">6</ID2>
         <ctrlPoint0 x="-474.84457" y="-409.08032" xsi:type="point"/>
     </child>
-    <child ID="237" label="vcard:Title" layerID="1"
-        created="1460465186182" x="-904.9058" y="32.40395" width="120.3"
-        height="116.799995" strokeWidth="2.0" autoSized="false" xsi:type="node">
+    <child ID="237" label="vcard:Address" layerID="1"
+        created="1460465186182" x="-948.9058" y="22.40395"
+        width="221.06128" height="211.64276" strokeWidth="2.0"
+        autoSized="false" xsi:type="node">
         <fillColor>#E6F7FD</fillColor>
         <strokeColor>#000000</strokeColor>
         <textColor>#000000</textColor>
         <font>Arial-plain-12</font>
         <URIString>http://vue.tufts.edu/rdf/resource/0adc244ec0a801b559ecb4d873ff691c</URIString>
-        <child ID="238" label="vcard:title" created="1460465186182"
-            x="43.15" y="59.274998" width="62.0" height="23.0"
+        <child ID="388" label="vcard:country-name"
+            created="1622449707401" x="71.03064" y="56.07138"
+            width="118.0" height="23.0" strokeWidth="1.0"
+            autoSized="true" xsi:type="node">
+            <fillColor>#FFFFFF</fillColor>
+            <strokeColor>#000000</strokeColor>
+            <textColor>#000000</textColor>
+            <font>Arial-plain-12</font>
+            <URIString>http://vue.tufts.edu/rdf/resource/c1b401dc0aa424c301f0075fcf69e7bb</URIString>
+            <shape xsi:type="rectangle"/>
+        </child>
+        <child ID="389" label="vcard:locality" created="1622449926268"
+            x="71.03064" y="76.32138" width="80.0" height="23.0"
             strokeWidth="1.0" autoSized="true" xsi:type="node">
             <fillColor>#FFFFFF</fillColor>
             <strokeColor>#000000</strokeColor>
             <textColor>#000000</textColor>
             <font>Arial-plain-12</font>
-            <URIString>http://vue.tufts.edu/rdf/resource/0adc244ec0a801b559ecb4d81f1f1a7a</URIString>
+            <URIString>http://vue.tufts.edu/rdf/resource/c1b401dc0aa424c301f0075f260e3848</URIString>
+            <shape xsi:type="rectangle"/>
+        </child>
+        <child ID="390" label="vcard:postal-code"
+            created="1622449970055" x="71.03064" y="96.57138"
+            width="108.0" height="23.0" strokeWidth="1.0"
+            autoSized="true" xsi:type="node">
+            <fillColor>#FFFFFF</fillColor>
+            <strokeColor>#000000</strokeColor>
+            <textColor>#000000</textColor>
+            <font>Arial-plain-12</font>
+            <URIString>http://vue.tufts.edu/rdf/resource/c1b401dc0aa424c301f0075f68fee77b</URIString>
+            <shape xsi:type="rectangle"/>
+        </child>
+        <child ID="391" label="vcard:region" created="1622450007740"
+            x="71.03064" y="116.82138" width="78.0" height="23.0"
+            strokeWidth="1.0" autoSized="true" xsi:type="node">
+            <fillColor>#FFFFFF</fillColor>
+            <strokeColor>#000000</strokeColor>
+            <textColor>#000000</textColor>
+            <font>Arial-plain-12</font>
+            <URIString>http://vue.tufts.edu/rdf/resource/c1b401dc0aa424c301f0075fc4b27752</URIString>
+            <shape xsi:type="rectangle"/>
+        </child>
+        <child ID="392" label="vcard:street-address"
+            created="1622450038016" x="71.03064" y="137.07138"
+            width="124.0" height="23.0" strokeWidth="1.0"
+            autoSized="true" xsi:type="node">
+            <fillColor>#FFFFFF</fillColor>
+            <strokeColor>#000000</strokeColor>
+            <textColor>#000000</textColor>
+            <font>Arial-plain-12</font>
+            <URIString>http://vue.tufts.edu/rdf/resource/c1b401dc0aa424c301f0075f2d29917b</URIString>
+            <shape xsi:type="rectangle"/>
+        </child>
+        <child ID="393" label="vcard:extended-address"
+            created="1622450093958" x="71.03064" y="157.32138"
+            width="143.0" height="23.0" strokeWidth="1.0"
+            autoSized="true" xsi:type="node">
+            <fillColor>#FFFFFF</fillColor>
+            <strokeColor>#000000</strokeColor>
+            <textColor>#000000</textColor>
+            <font>Arial-plain-12</font>
+            <URIString>http://vue.tufts.edu/rdf/resource/c1b401dc0aa424c301f0075f683a5866</URIString>
             <shape xsi:type="rectangle"/>
         </child>
         <shape xsi:type="ellipse"/>
     </child>
-    <child ID="239" label="vcard:hasTitle" layerID="1"
-        created="1460465212191" x="-857.0685" y="-49.270264"
-        width="68.0" height="83.50122" strokeWidth="1.0"
-        autoSized="false" controlCount="0" arrowState="2" xsi:type="link">
+    <child ID="239" label="vcard:hasAddress" layerID="1"
+        created="1460465212191" x="-861.9728" y="-48.7583" width="92.0"
+        height="72.99219" strokeWidth="1.0" autoSized="false"
+        controlCount="0" arrowState="2" xsi:type="link">
         <strokeColor>#000000</strokeColor>
         <textColor>#000000</textColor>
         <font>Arial-plain-11</font>
         <URIString>http://vue.tufts.edu/rdf/resource/0adc244ec0a801b559ecb4d847ca54ec</URIString>
-        <point1 x="-813.96985" y="-48.770264"/>
-        <point2 x="-832.1672" y="33.730957"/>
+        <point1 x="-810.2327" y="-48.2583"/>
+        <point2 x="-821.71277" y="23.733887"/>
         <ID1 xsi:type="node">125</ID1>
         <ID2 xsi:type="node">237</ID2>
     </child>
@@ -749,10 +727,10 @@
   &lt;head style="color: #000000" color="#000000"&gt;
     &lt;style type="text/css"&gt;
       &lt;!--
-        body { color: #000000; margin-right: 0px; font-size: 11; margin-bottom: 0px; margin-top: 0px; font-family: Arial; margin-left: 0px }
-        ol { vertical-align: middle; font-size: 11; margin-top: 6; list-style-position: outside; font-family: Arial; margin-left: 30 }
-        p { color: #000000; margin-right: 0; margin-bottom: 0; margin-top: 0; margin-left: 0 }
-        ul { vertical-align: middle; font-size: 11; margin-top: 6; font-family: Arial; list-style-position: outside; margin-left: 30 }
+        body { margin-bottom: 0px; font-size: 11; font-family: Arial; color: #000000; margin-top: 0px; margin-left: 0px; margin-right: 0px }
+        ol { vertical-align: middle; font-size: 11; font-family: Arial; list-style-position: outside; margin-top: 6; margin-left: 30 }
+        p { margin-bottom: 0; color: #000000; margin-top: 0; margin-left: 0; margin-right: 0 }
+        ul { vertical-align: middle; font-size: 11; font-family: Arial; list-style-position: outside; margin-top: 6; margin-left: 30 }
       --&gt;
     &lt;/style&gt;
     
@@ -958,10 +936,10 @@
   &lt;head style="color: #000000" color="#000000"&gt;
     &lt;style type="text/css"&gt;
       &lt;!--
-        body { color: #000000; margin-right: 0px; font-size: 11; margin-bottom: 0px; margin-top: 0px; font-family: Arial; margin-left: 0px }
-        ol { vertical-align: middle; font-size: 11; margin-top: 6; list-style-position: outside; font-family: Arial; margin-left: 30 }
-        p { color: #000000; margin-right: 0; margin-bottom: 0; margin-top: 0; margin-left: 0 }
-        ul { vertical-align: middle; font-size: 11; margin-top: 6; font-family: Arial; list-style-position: outside; margin-left: 30 }
+        body { margin-bottom: 0px; font-size: 11; font-family: Arial; color: #000000; margin-top: 0px; margin-left: 0px; margin-right: 0px }
+        ol { vertical-align: middle; font-size: 11; font-family: Arial; list-style-position: outside; margin-top: 6; margin-left: 30 }
+        p { margin-bottom: 0; color: #000000; margin-top: 0; margin-left: 0; margin-right: 0 }
+        ul { vertical-align: middle; font-size: 11; font-family: Arial; list-style-position: outside; margin-top: 6; margin-left: 30 }
       --&gt;
     &lt;/style&gt;
     
@@ -1152,10 +1130,10 @@
   &lt;head style="color: #000000" color="#000000"&gt;
     &lt;style type="text/css"&gt;
       &lt;!--
-        body { color: #000000; margin-right: 0px; font-size: 11; margin-bottom: 0px; margin-top: 0px; font-family: Arial; margin-left: 0px }
-        ol { vertical-align: middle; font-size: 11; margin-top: 6; list-style-position: outside; font-family: Arial; margin-left: 30 }
-        p { color: #000000; margin-right: 0; margin-bottom: 0; margin-top: 0; margin-left: 0 }
-        ul { vertical-align: middle; font-size: 11; margin-top: 6; font-family: Arial; list-style-position: outside; margin-left: 30 }
+        body { margin-bottom: 0px; font-size: 11; font-family: Arial; color: #000000; margin-top: 0px; margin-left: 0px; margin-right: 0px }
+        ol { vertical-align: middle; font-size: 11; font-family: Arial; list-style-position: outside; margin-top: 6; margin-left: 30 }
+        p { margin-bottom: 0; color: #000000; margin-top: 0; margin-left: 0; margin-right: 0 }
+        ul { vertical-align: middle; font-size: 11; font-family: Arial; list-style-position: outside; margin-top: 6; margin-left: 30 }
       --&gt;
     &lt;/style&gt;
     
@@ -1308,8 +1286,8 @@
         y="0.0" width="1.4E-45" height="1.4E-45" strokeWidth="0.0" autoSized="false">
         <URIString>http://vue.tufts.edu/rdf/resource/6a822fa280fd5714007fcd7edc120198</URIString>
     </layer>
-    <userZoom>2.0</userZoom>
-    <userOrigin x="-2505.0225" y="-1568.5731"/>
+    <userZoom>1.5</userZoom>
+    <userOrigin x="-2066.7668" y="-1178.9299"/>
     <presentationBackground>#202020</presentationBackground>
     <PathwayList currentPathway="0" revealerIndex="-1">
         <pathway ID="0" label="Untitled Pathway" created="1393354945644"
