@@ -4,8 +4,8 @@
 Research Domain Ontology (ROH). 
 
 [ROH main documentation](https://herculescrue.github.io/ROH/) can be found in the following PDF files:
-- `0 - OntologyTutorial.pdf` - [PDF](https://herculescrue.github.io/ROH/0%20-%20OntologyTutorial.pdf) corresponding to a tutorial about the ROH network of ontologies. This a PDF document including essentially the contents of section 2 of this Markdown document.
-- `1- OntologyDocumentation.pdf` -[PDF](https://github.com/HerculesCRUE/ROH/blob/main/docs/0-%20OntologyTutorial.pdf) describing in tabular form, every entity modelled in ROH.
+- `0- OntologyTutorial.pdf` - [PDF](https://github.com/HerculesCRUE/ROH/blob/main/docs/0-%20OntologyTutorial.pdf) corresponding to a tutorial about the ROH network of ontologies. This a PDF document including essentially the contents of section 2 of this Markdown document.
+- `1- OntologyDocumentation.pdf` -[PDF](https://github.com/HerculesCRUE/ROH/blob/main/docs/1-%20OntologyDocumentation.pdf) describing in tabular form, every entity modelled in ROH.
 
 Full documentation of the ROH ontology in Markdown format can be accessed in [ROH GitHub Pages](https://herculescrue.github.io/ROH/) and in the [Widoco tool generated documentation](https://herculescrue.github.io/ROH/roh/).
 

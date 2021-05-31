@@ -28,8 +28,8 @@ ROH: Hercules Network of Ontologies, ASIO project - Documentation
 [**Bibliography**](#bibliography)
 
 This documentation area includes the following files:
-- `0 - OntologyTutorial.pdf` - [PDF](https://herculescrue.github.io/ROH/0%20-%20OntologyTutorial.pdf) corresponding to a tutorial about the ROH network of ontologies. This a PDF document including essentially the contents of section 2 of this Markdown document.
-- `1- OntologyDocumentation.pdf` - [PDF](https://github.com/HerculesCRUE/ROH/blob/main/docs/0-%20OntologyTutorial.pdf) describing in tabular form, every entity modelled in ROH.
+- `0 - OntologyTutorial.pdf` - [PDF](https://github.com/HerculesCRUE/ROH/blob/main/docs/0-%20OntologyTutorial.pdf) corresponding to a tutorial about the ROH network of ontologies. This a PDF document including essentially the contents of section 2 of this Markdown document.
+- `1- OntologyDocumentation.pdf` - [PDF](https://github.com/HerculesCRUE/ROH/blob/main/docs/1-%20OntologyDocumentation.pdf) describing in tabular form, every entity modelled in ROH.
 - `2- CoberturaPreguntasCompetencia.pdf` - [PDF](https://github.com/HerculesCRUE/ROH/blob/main/docs/2-%20CoberturaPreguntasCompetencia.pdf) with [competence questions which have been assessed against ROH](https://github.com/HerculesCRUE/ROH/blob/main/docs/2-%20CoberturaPreguntasCompetencia.pdf.
 - `3- Ejecución de preguntas de competencia.md`	- [Markdown document](https://github.com/HerculesCRUE/ROH/blob/main/docs/3-%20Ejecuci%C3%B3n%20de%20preguntas%20de%20competencia.md) to page to execute competency questions against ROH
 - `4- Modelo de multilingüismo.md`	- [Markdown document](https://herculescrue.github.io/ROH/4-%20Modelo%20de%20multiling%C3%BCismo) explaining how multilinguism is supported in ROH
