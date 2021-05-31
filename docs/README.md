@@ -34,6 +34,7 @@ This documentation area includes the following files:
 - `3- Ejecución de preguntas de competencia.md`	- [Markdown document](https://github.com/HerculesCRUE/ROH/blob/main/docs/3-%20Ejecuci%C3%B3n%20de%20preguntas%20de%20competencia.md) to page to execute competency questions against ROH
 - `4- Modelo de multilingüismo.md`	- [Markdown document](https://herculescrue.github.io/ROH/4-%20Modelo%20de%20multiling%C3%BCismo) explaining how multilinguism is supported in ROH
 - `5- Método para el control de versiones OWL.md` - [Markdown document](https://herculescrue.github.io/ROH/5-%20M%C3%A9todo%20para%20el%20control%20de%20versiones%20OWL) explaining how version control is carried out in ROH
+- `6-ROH Ontology Specification document` - [PDF](https://github.com/HerculesCRUE/ROH/blob/master/docs/6-%20OntologySpecification.pdf) includes a detailed discussion on how entities modelled in ROH have been imported and aligned with other existing entities in widely adopted ontologies that have successfully modelled parts of the Academic domain. 
 - `README.md` - This very file which includes documentation in Markdown of ROH, describing with text and diagrams the relationships among the main entities in ROH
 
 **<a name="headSection1"></a>1. Ontological design**
@@ -77,6 +78,7 @@ import and extension.
 | **vcard** | vCard Ontology - for describing People and Organizations | Creative Commons Attribution License 4.0 | [https://www.w3.org/2006/vcard/ns#](https://www.w3.org/2006/vcard/ns) |
 | **vivo** | VIVO Ontology for Researcher Discovery | Creative Commons Attribution License 4.0 | [http://vivoweb.org/ontology/core#](http://vivoweb.org/ontology/core) |
 | **oa** | The Web Annotation Data Model | Creative Commons Attribution License 4.0 | [http://www.w3.org/ns/oa#](http://www.w3.org/ns/oa#) |
+| **cito** | CiTO, the Citation Typing Ontology | Creative Commons Attribution 4.0 | [http://purl.org/spar/cito#](http://purl.org/spar/cito#) |
 
 ***<a name="headSection1-1"></a>1.1. Design rationale***
 ===========================
@@ -114,7 +116,7 @@ The process followed to design an ontology that models a Research Management Sys
 2. Selection and analysis of the main ontologies that model the academic environment. Including contrast with [CERIF - ERD](https://www.eurocris.org/Uploads/Web%20pages/CERIF-1.5/cerif.html) vocabulary, entity relationship diagram, since it is the standard information model for CRIS (Current Research Information System) systems.
 3.	Identification of the main entities and relationships to model the knowledge of the academic world. Fulfilling the requirements of of the ASIO project. 
 4.	Validation of the flexibility, completeness and integrity of the ROH ontology network through the following evaluations:
-  - Review the [questions/competency queries](https://github.com/HerculesCRUE/GnossDeustoOnto/blob/master/Documentation/2-%20CoberturaPreguntasCompetencia.pdf) of the network listed by the University of Murcia (UM) and implement as a [suite of SPARQL queries](https://github.com/HerculesCRUE/GnossDeustoBackend/tree/master/validation-questions/sparql-query) to validate their compliance. As a result of this validation, some new data and object properties were added. 
+  - Review the [questions/competency queries](https://github.com/HerculesCRUE/ROH/blob/main/docs/2-%20CoberturaPreguntasCompetencia.pdf) of the network listed by the University of Murcia (UM) and implement as a [suite of SPARQL queries](https://github.com/HerculesCRUE/ROH/tree/master/validation-questions/sparql-query) to validate their compliance. As a result of this validation, some new data and object properties were added. 
   - Review datasets offered by the University of Murcia and check that their data can be modelled with the entities and properties defined within ROH. Extension and adaptation of ROH entities according to the determined needs. 
   - [Mapping of FECYT CVN format data to the ROH ontology](https://github.com/HerculesCRUE/GnossDeustoBackend/tree/master/cvn). Where there were unmodelled entities or relationships, they were included. Details of the mapping between CVN and ROH entities appear in the cvn/config folder.  
 5.	Continuous refinement validated by a Continous Integration (CI) process. A battery of regression tests regulate that new changes introduced continue to guarantee the quality of ROH, its flexibility and extensibility to accommodate new requirements. 
@@ -138,7 +140,7 @@ entities in ROH have geographic (class Geonames:Feature) and temporal
 **Figura** **2**. High level diagram of ROH --Red de Ontologías
 Hércules.
 
-Notice that section 3 of the [ROH Ontology Specification document](https://github.com/HerculesCRUE/GnossDeustoOnto/blob/master/Documentation/0%20-%20OntologySpecification.pdf) includes a detailed discussion on how entities modelled in ROH have been imported and aligned with other existing entities in widely adopted ontologies that have successfully modelled parts of the Academic domain. 
+Notice that section 3 of the [ROH Ontology Specification document](https://github.com/HerculesCRUE/ROH/blob/master/docs/6-%20OntologySpecification.pdf) includes a detailed discussion on how entities modelled in ROH have been imported and aligned with other existing entities in widely adopted ontologies that have successfully modelled parts of the Academic domain. 
 
 
 **<a name="headSection3"></a>3. Project entity**
