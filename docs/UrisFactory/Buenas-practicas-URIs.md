@@ -1,4 +1,4 @@
-![](.//media/CabeceraDocumentosMD.png)
+![](../media/CabeceraDocumentosMD.png)
 
 | Fecha         | 3/3/2021                                                   |
 | ------------- | ------------------------------------------------------------ |

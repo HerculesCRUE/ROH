@@ -57,7 +57,7 @@ El desarrollo de ROH, hasta la finalización del Hito 1, ha sido un proceso de d
 
 Como se describe más adelante en [Procedimiento de desarrollo ontológico](#procedimiento-de-desarrollo-ontológico), hemos usado Protégé para las tareas de diseño y git en la plataforma GitHub para el control de versiones. 
 
-Durante esta fase se han definido y preparado unos tests de regresión que ejecutan las cuestiones de validación ([validation-questions](https://github.com/HerculesCRUE/ROH/tree/main/validation-questions/sparql-query)) de ROH contra un conjunto de datos de prueba y un [workflow en Github Actions](https://raw.githubusercontent.com/HerculesCRUE/ROH/main/.github/workflows/widoco-and-validation-questions.yaml), que permiten comprobar, automáticamente, que las modificaciones de la ontología siguen siendo conformes al funcionamiento esperado.
+Durante esta fase se han definido y preparado unos tests de regresión que ejecutan las cuestiones de validación ([validation-questions](https://github.com/HerculesCRUE/ROH/tree/main/validation-questions/sparql-query)) de ROH contra un conjunto de datos de prueba y un [workflow en Github Actions](https://github.com/HerculesCRUE/ROH/blob/main/.github/workflows/widoco-and-validation-questions.yaml), que permiten comprobar, automáticamente, que las modificaciones de la ontología siguen siendo conformes al funcionamiento esperado.
 
 Control de versiones en el refinamiento de ROH
 ----------------------------------------------
@@ -130,7 +130,7 @@ revisar esos cambios y aceptarlos si proceden.
 Sin embargo, el proceso de revisión de un cambio no tiene por qué ser 
 totalmente manual. A través de la herramienta [Github Actions](https://github.com/features/actions) se pueden definir unos flujos de ejecución que, por ejemplo, realicen una serie de
 tests para comprobar que a pesar de los cambios realizados en la ontología
-el resto de las herramientas dependientes siguen funcionando correctamente. De hecho un [workflow en Github Actions](https://raw.githubusercontent.com/HerculesCRUE/ROH/main/.github/workflows/widoco-and-validation-questions.yaml) ha sido creado para poner en marcha el conjunto de cuestiones de validación ([validation-questions](https://github.com/HerculesCRUE/ROH/tree/main/validation-questions/sparql-query)) de ROH. 
+el resto de las herramientas dependientes siguen funcionando correctamente. De hecho un [workflow en Github Actions](https://github.com/HerculesCRUE/ROH/blob/main/.github/workflows/widoco-and-validation-questions.yaml) ha sido creado para poner en marcha el conjunto de cuestiones de validación ([validation-questions](https://github.com/HerculesCRUE/ROH/tree/main/validation-questions/sparql-query)) de ROH. 
 Una vez pasados estos tests (batería de tests de regresión), el pull-request
 se puede integrar en la rama principal del repositorio de la ontología. 
 Si se desease utilizar una solución independiente de la plataforma Github, 
