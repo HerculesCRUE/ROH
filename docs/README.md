@@ -34,7 +34,7 @@ This documentation area includes the following files:
 - `3- Ejecución de preguntas de competencia.md`	- [Markdown document](https://github.com/HerculesCRUE/ROH/blob/main/docs/3-%20Ejecuci%C3%B3n%20de%20preguntas%20de%20competencia.md) to page to execute competency questions against ROH
 - `4- Modelo de multilingüismo.md`	- [Markdown document](https://herculescrue.github.io/ROH/4-%20Modelo%20de%20multiling%C3%BCismo) explaining how multilinguism is supported in ROH
 - `5- Método para el control de versiones OWL.md` - [Markdown document](https://herculescrue.github.io/ROH/5-%20M%C3%A9todo%20para%20el%20control%20de%20versiones%20OWL) explaining how version control is carried out in ROH
-- `6-ROH Ontology Specification document` - [PDF](https://github.com/HerculesCRUE/ROH/blob/main/docs/6-%20OntologySpecification.pdf) includes a detailed discussion on how entities modelled in ROH have been imported and aligned with other existing entities in widely adopted ontologies that have successfully modelled parts of the Academic domain. 
+- `6-ROH Ontology Specification document` - [PDF](https://github.com/HerculesCRUE/ROH/blob/main/docs/6%20-%20OntologySpecification.pdf) includes a detailed discussion on how entities modelled in ROH have been imported and aligned with other existing entities in widely adopted ontologies that have successfully modelled parts of the Academic domain. 
 - `README.md` - This very file which includes documentation in Markdown of ROH, describing with text and diagrams the relationships among the main entities in ROH
 
 **<a name="headSection1"></a>1. Ontological design**
@@ -140,7 +140,7 @@ entities in ROH have geographic (class Geonames:Feature) and temporal
 **Figura** **2**. High level diagram of ROH --Red de Ontologías
 Hércules.
 
-Notice that section 3 of the [ROH Ontology Specification document](https://github.com/HerculesCRUE/ROH/blob/main/docs/6-%20OntologySpecification.pdf) includes a detailed discussion on how entities modelled in ROH have been imported and aligned with other existing entities in widely adopted ontologies that have successfully modelled parts of the Academic domain. 
+Notice that section 3 of the [ROH Ontology Specification document](hhttps://github.com/HerculesCRUE/ROH/blob/main/docs/6%20-%20OntologySpecification.pdf) includes a detailed discussion on how entities modelled in ROH have been imported and aligned with other existing entities in widely adopted ontologies that have successfully modelled parts of the Academic domain. 
 
 
 **<a name="headSection3"></a>3. Project entity**
