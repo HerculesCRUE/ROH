@@ -28,8 +28,7 @@ INTRODUCCIÓN
 ============
 
 El presente documento describe las buenas prácticas en la definición de los URI
-para el proyecto Hércules ASIO y tiene en cuenta lo indicado en la 
-[Especificacion-Esquema-de-URIs](Especificacion-Esquema-de-URIs.md).
+para el proyecto Hércules ASIO. <!---y tiene en cuenta lo indicado en la [Especificacion-Esquema-de-URIs](Especificacion-Esquema-de-URIs.md).-->
 
 En su elaboración aplicamos las recomendaciones de la [Norma
 Técnica de Interoperabilidad de Reutilización de recursos de la
