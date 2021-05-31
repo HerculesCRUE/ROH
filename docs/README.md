@@ -140,7 +140,7 @@ entities in ROH have geographic (class Geonames:Feature) and temporal
 **Figura** **2**. High level diagram of ROH --Red de Ontologías
 Hércules.
 
-Notice that section 3 of the [ROH Ontology Specification document](hhttps://github.com/HerculesCRUE/ROH/blob/main/docs/6%20-%20OntologySpecification.pdf) includes a detailed discussion on how entities modelled in ROH have been imported and aligned with other existing entities in widely adopted ontologies that have successfully modelled parts of the Academic domain. 
+Notice that section 3 of the [ROH Ontology Specification document](https://github.com/HerculesCRUE/ROH/blob/main/docs/6%20-%20OntologySpecification.pdf) includes a detailed discussion on how entities modelled in ROH have been imported and aligned with other existing entities in widely adopted ontologies that have successfully modelled parts of the Academic domain. 
 
 
 **<a name="headSection3"></a>3. Project entity**
