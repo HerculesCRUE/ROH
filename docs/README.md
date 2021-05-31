@@ -30,12 +30,13 @@ ROH: Hercules Network of Ontologies, ASIO project - Documentation
 This documentation area includes the following files:
 - `0 - OntologyTutorial.pdf` - [PDF](https://github.com/HerculesCRUE/ROH/blob/main/docs/0-%20OntologyTutorial.pdf) corresponding to a tutorial about the ROH network of ontologies. This a PDF document including essentially the contents of section 2 of this Markdown document.
 - `1- OntologyDocumentation.pdf` - [PDF](https://github.com/HerculesCRUE/ROH/blob/main/docs/1-%20OntologyDocumentation.pdf) describing in tabular form, every entity modelled in ROH.
-- `2- CoberturaPreguntasCompetencia.pdf` - [PDF](https://github.com/HerculesCRUE/ROH/blob/main/docs/2-%20CoberturaPreguntasCompetencia.pdf) <!--with [competence questions which have been assessed against ROH](https://github.com/HerculesCRUE/ROH/blob/main/docs/2-%20CoberturaPreguntasCompetencia.pdf).-->
-- `3- Ejecución de preguntas de competencia.md`	- [Markdown document](https://github.com/HerculesCRUE/ROH/blob/main/docs/3-%20Ejecuci%C3%B3n%20de%20preguntas%20de%20competencia.md) to page to execute competency questions against ROH
-- `4- Modelo de multilingüismo.md`	- [Markdown document](https://herculescrue.github.io/ROH/4-%20Modelo%20de%20multiling%C3%BCismo) explaining how multilinguism is supported in ROH
-- `5- Método para el control de versiones OWL.md` - [Markdown document](https://herculescrue.github.io/ROH/5-%20M%C3%A9todo%20para%20el%20control%20de%20versiones%20OWL) explaining how version control is carried out in ROH
-- `6-ROH Ontology Specification document` - [PDF](https://github.com/HerculesCRUE/ROH/blob/main/docs/6%20-%20OntologySpecification.pdf) includes a detailed discussion on how entities modelled in ROH have been imported and aligned with other existing entities in widely adopted ontologies that have successfully modelled parts of the Academic domain. 
-- `README.md` - This very file which includes documentation in Markdown of ROH, describing with text and diagrams the relationships among the main entities in ROH
+- `2- CoberturaPreguntasCompetencia.pdf` - [PDF](https://github.com/HerculesCRUE/ROH/blob/main/docs/2-%20CoberturaPreguntasCompetencia.pdf) with [competence questions which have been assessed against ROH](https://github.com/HerculesCRUE/ROH/blob/main/docs/2-%20CoberturaPreguntasCompetencia.pdf).
+- `3- Ejecución de preguntas de competencia.md`	- [Markdown document](https://github.com/HerculesCRUE/ROH/blob/main/docs/3-%20Ejecuci%C3%B3n%20de%20preguntas%20de%20competencia.md) to page to execute competency questions against ROH.
+- `4- Modelo de multilingüismo.md`	- [Markdown document](https://herculescrue.github.io/ROH/4-%20Modelo%20de%20multiling%C3%BCismo) explaining how multilinguism is supported in ROH.
+- `5- Método para el control de versiones OWL.md` - [Markdown document](https://herculescrue.github.io/ROH/5-%20M%C3%A9todo%20para%20el%20control%20de%20versiones%20OWL) explaining how version control is carried out in ROH.
+- `6- ROH Ontology Specification document` - [PDF](https://github.com/HerculesCRUE/ROH/blob/main/docs/6%20-%20OntologySpecification.pdf) includes a detailed discussion on how entities modelled in ROH have been imported and aligned with other existing entities in widely adopted ontologies that have successfully modelled parts of the Academic domain. 
+- `Próximos pasos` - [Markdown document](https://github.com/HerculesCRUE/ROH/blob/main/docs/Pr%C3%B3ximos%20pasos.md) - Markdown document explaining the next steps in the develepment of ROH, afer the ending of the first milestone of ASIO project.
+- `README.md` - This very file which includes documentation in Markdown of ROH, describing with text and diagrams the relationships among the main entities in ROH.
 
 **<a name="headSection1"></a>1. Ontological design**
 ====================================================
@@ -43,7 +44,7 @@ This documentation area includes the following files:
 This section is going to break down from minor to major detail the
 design of the ROH ontology network. Starting in [section 2](#headSection2) with a high
 level diagram, the most important entities will be shown. Then, the main
-entities modelled are broken down (sections [section 3](#headSection3) to [section 9](#headSection9)). But, first notice that readers are encouraged to read through the rationale behind the ontology design in [section 1.1](#headSection1-1)
+entities modelled are broken down (sections [section 3](#headSection3) to [section 9](#headSection9)). But, first notice that readers are encouraged to read through the rationale behind the ontology design in [section 1.1](#headSection1-1).
 
 Notice that ROH network of ontologies is divided into 2 [main parts](https://github.com/HerculesCRUE/ROH/tree/main/roh/modules). 
 - The generic ontology, **core module** , contains the most important entities and properties to model information in the academic domain. It contains the central part of the network of ontologies. It covers the academic domain, being agnostic to the country or the research organization whose information wants to be modelled with.

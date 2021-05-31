@@ -33,7 +33,7 @@ En todas las fases de diseño de ASIO tenemos en cuenta el uso efectivo y viable
 
 La construcción de un proceso totalmente automatizado nos parece inviable en este caso, un sistema que puede crecer, ramificarse y evolucionar en cada nodo de modo no controlado, que ha de ajustarse en cada caso para responder a casuísticas locales no anticipables  y potencialmente muy numerosas . En este ecosistema, que puede llegar a ser muy complejo, las modificaciones relevantes de la ontología afectarían, al mismo tiempo y de modo no previsible a priori a todos los componentes software dependientes del mismo. Concretamente, a los datos existentes en ASIO, a las integraciones con otros sistemas de Hércules, a las integraciones con otros sistemas de la universidad, a posibles reutilizadores de la información y a los procesos de consulta sobre la información de todo el SUE. Es decir, la modificación del modelo ontológico desarrollado en la Red de Ontologías Hércules (ROH) no es sólo un ejercicio de definición y representación formal de un sistema de conocimiento, sino que se trata de la redefinición del núcleo de un sistema de conocimiento complejo y actuante, que contiene datos y cuenta con múltiples instancias y conexiones, cuyos cambios deben suceder de manera controlada y contenida.
 
-Los [principios de diseño que hemos aplicado en la creación de ROH](https://github.com/HerculesCRUE/GnossDeustoOnto/blob/master/Documentation/README.md#11-design-rationale) tienen que seguir respetándose en el mantenimiento posterior de ROH. Estos principios son **reusabilidad** de ontologías y vocabularios existentes; **extensibilidad** para contemplar casos específicos del sistema universitario español o de cada universidad sin perder la **integridad** de la información; y **usabilidad** para que otros sistemas puedan conectarse y reutilizar datos con facilidad y fiabilidad.
+Los [principios de diseño que hemos aplicado en la creación de ROH](https://github.com/HerculesCRUE/ROH/blob/main/docs/README.md#11-design-rationale) tienen que seguir respetándose en el mantenimiento posterior de ROH. Estos principios son **reusabilidad** de ontologías y vocabularios existentes; **extensibilidad** para contemplar casos específicos del sistema universitario español o de cada universidad sin perder la **integridad** de la información; y **usabilidad** para que otros sistemas puedan conectarse y reutilizar datos con facilidad y fiabilidad.
 
 En particular, consideramos que, en el mantenimiento de ROH, debe tenerse en cuenta la **extensibilidad sujeta al cumplimiento de la integridad**, que supone que no se vean perjudicadas las instancias e integraciones existentes.
 
@@ -53,7 +53,7 @@ Este proceso tiene unos condicionantes distintos según el momento en el que se 
 Control de versiones en el desarrollo de ROH
 --------------------------------------------
 
-El desarrollo de ROH, hasta la finalización del Hito 1, ha sido un proceso de diseño ontológico, cuyos detalles se pueden consultar en [Ontological design](https://github.com/HerculesCRUE/GnossDeustoOnto/blob/master/Documentation/README.md#headSection1), en el que las interacciones con otros sistemas o modelos de datos han sido muy limitadas y sólo como caso de modelado de datos o fuente de datos para pruebas.
+El desarrollo de ROH, hasta la finalización del Hito 1, ha sido un proceso de diseño ontológico, cuyos detalles se pueden consultar en [Ontological design](https://github.com/HerculesCRUE/ROH/blob/main/docs/README.md#1-ontological-design), en el que las interacciones con otros sistemas o modelos de datos han sido muy limitadas y sólo como caso de modelado de datos o fuente de datos para pruebas.
 
 Como se describe más adelante en [Procedimiento de desarrollo ontológico](#procedimiento-de-desarrollo-ontológico), hemos usado Protégé para las tareas de diseño y git en la plataforma GitHub para el control de versiones. 
 
@@ -62,7 +62,7 @@ Durante esta fase se han definido y preparado unos tests de regresión que ejecu
 Control de versiones en el refinamiento de ROH
 ----------------------------------------------
 
-Como se indica en el documento [Tareas pendientes en la definición de ROH](https://github.com/HerculesCRUE/GnossDeustoOnto/blob/master/Documentation/Pr%C3%B3ximos%20pasos.md), en esta fase, que va desde la finalización del Hito 1 hasta el final de la ejecución del proyecto ASIO, la infraestructura tecnológica será mejorada y ampliada con cambios que provendrán de:
+Como se indica en el documento [Tareas pendientes en la definición de ROH](https://github.com/HerculesCRUE/ROH/blob/main/docs/Pr%C3%B3ximos%20pasos.md), en esta fase, que va desde la finalización del Hito 1 hasta el final de la ejecución del proyecto ASIO, la infraestructura tecnológica será mejorada y ampliada con cambios que provendrán de:
 -   Alineación con el modelo de datos del proyecto Hércules SGI, que constituye la fuente de datos fundamental de Hércules.
 -   Alineación con otras fuentes de datos (otros SGI) que van a ser mapeadas como parte del desarrollo de ASIO.
 -   Entidades y mejoras identificadas en la finalización del Hito 1 o que puedan surgir durante la ejecución del proyecto.
@@ -128,8 +128,7 @@ desease modificar la ontología, el equipo mantenedor del proyecto pudiera
 revisar esos cambios y aceptarlos si proceden.
 
 Sin embargo, el proceso de revisión de un cambio no tiene por qué ser 
-totalmente manual. A través de la herramienta [Github Actions](https://github.com/features/actions) se pueden 
-definir unos flujos de ejecución que, por ejemplo, realicen una serie de
+totalmente manual. A través de la herramienta [Github Actions](https://github.com/features/actions) se pueden definir unos flujos de ejecución que, por ejemplo, realicen una serie de
 tests para comprobar que a pesar de los cambios realizados en la ontología
 el resto de las herramientas dependientes siguen funcionando correctamente. De hecho un [workflow en Github Actions](https://raw.githubusercontent.com/HerculesCRUE/ROH/main/.github/workflows/widoco-and-validation-questions.yaml) ha sido creado para poner en marcha el conjunto de cuestiones de validación ([validation-questions](https://github.com/HerculesCRUE/ROH/tree/main/validation-questions/sparql-query)) de ROH. 
 Una vez pasados estos tests (batería de tests de regresión), el pull-request
@@ -245,7 +244,5 @@ nuevas versiones de las ontologías.
 Además, GitHub permite la descarga de las versiones de las ontologías y 
 mantiene un registro de las versiones consolidadas.
 
-El repositorio de código fuente GitHub para el desarrollo de la 
-infraestructura ontológica del proyecto Hércules está en
-<https://github.com/HerculesCRUE/GnossDeustoOnto/>.
+
 
