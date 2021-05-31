@@ -40,7 +40,7 @@ recomendaciones procedentes del mundo de la Web Semántica para los
 datos enlazados (Linked Data).
 
 Las recomendaciones de multilingüismo se incluyen y detallan en el documento
-[20200427 Hércules ASIO Modelo de multilingüismo.md](../../Hercules-ASIO-Modelo-de-multilinguismo.md).
+[Modelo de multilingüismo.md](https://github.com/HerculesCRUE/ROH/blob/main/docs/4-%20Modelo%20de%20multiling%C3%BCismo.md).
 
 Buenas prácticas de URIs
 ========================
