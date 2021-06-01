@@ -38,7 +38,6 @@ jobs:
       uses: actions/checkout@v2
       with:
         submodules: true 
-        path: ROH
     
     - name: Download widoco
       working-directory: /home/runner/work/ROH/ROH
@@ -102,7 +101,7 @@ jobs:
     - name: Create html files
       run: |
         cd validation-questions/src
-        python jsonTohtml.py "/home/runner/work/ROH/ROH/validation-questions/sparql-query" ".ROH/validation-questions/sparql-query/Q38.json', "ROH/validation-questions/sparql-query"
+        python jsonTohtml.py "/home/runner/work/ROH/ROH/validation-questions/sparql-query" "HerculesCRUE/ROH/validation-questions/sparql-query/Q38.json', "ROH/validation-questions/sparql-query"
 
     
     - name: Publish on Github Pages
