@@ -97,13 +97,11 @@ jobs:
       working-directory: /home/runner/work/ROH/ROH/validation-questions
       run: mvn javadoc:test-javadoc
     
-   
-   
+  
     - name: Create html files
-        run: |
-          cd validation-questions/src
-          python jsonTohtml.py "/home/runner/work/ROH/ROH/validation-questions/sparql-query" "HerculesCRUE/ROH/validation-questions/sparql-query"
-
+      run:  python jsonTohtml.py "/home/runner/work/ROH/ROH/validation-questions/sparql-query" "HerculesCRUE/ROH/validation-questions/sparql-query"
+    
+    
     - name: Publish on Github Pages
       uses: crazy-max/ghaction-github-pages@v2.3.0
       with:
