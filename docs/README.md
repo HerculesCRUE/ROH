@@ -56,7 +56,7 @@ Notice that ROH network of ontologies is divided into 2 [main parts](https://git
 To incorporate [specific modules](https://github.com/HerculesCRUE/ROH/tree/main/roh/modules) to the ontology, it is enough to create a new ontology, import the required higher level ontology entities and create the new classes or properties needed. Both classes and properties can be integrated within the existing hierarchy in the imported ontology. Let's say, for example, that a new university (e.g. University of Castilla La-Mancha) wants to make use of ROH and needs to add a series of positions of its own through which to classify research technicians. To do this, you can import the core ontology, and under `vivo:Position`, in which the hierarchies for the typical university positions appear, create your own as subclasses.
 
 The automatically generated documentation, through the Widoco tool, for each ontological part is referenced below:
-- Widoco generated documentation for [ROH core module](https://raw.githubusercontent.com/HerculesCRUE/ROH/main/roh/modules/core/roh-core.ttl)
+- Widoco generated documentation for [ROH core module](https://herculescrue.github.io/ROH/roh/)
 - Widoco generated documentation for [ROH vertical modules](https://herculescrue.github.io/GnossDeustoOnto/rohes/)
 
 The following table shows a summary of the reused ontologies together with their respective user licenses. All reused ontologies have been evaluated for compatibility with their
