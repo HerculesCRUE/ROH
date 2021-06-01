@@ -2,7 +2,7 @@ from json2html import *
 from os import listdir
 
 folder_jsons = sys.argv[1]
-fordel_html = sys.argv[1]
+fordel_html = sys.argv[2]
 
 files = listdir(folder_jsons)
 json_files = []
