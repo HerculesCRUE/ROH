@@ -1,5 +1,6 @@
 from json2html import *
 from os import listdir
+from os import remove
 
 folder_jsons = sys.argv[1]
 fordel_html = sys.argv[2]
@@ -16,6 +17,7 @@ for f in files:
     json_result = open(f, 'r')
     json_string=json_result.read()
     json_result.close()
+    remove(f)
 
     json_in_html = json2html.convert(json=json_string)
     print(json_in_html)
