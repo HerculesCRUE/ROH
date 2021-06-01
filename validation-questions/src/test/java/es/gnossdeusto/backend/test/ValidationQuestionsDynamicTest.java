@@ -27,7 +27,9 @@ import org.junit.jupiter.api.DynamicTest;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
+ 
 import java.io.File;
+import java.io.FileWriter;
 import java.io.IOException;
 import java.nio.charset.Charset;
 import java.util.ArrayList;
@@ -105,13 +107,15 @@ public class ValidationQuestionsDynamicTest {
 	}
 	
     @TestFactory
-    Stream<DynamicTest> validationQuestions() {
+    Stream<DynamicTest> validationQuestions() throws IOException{
+		
         try {
         	List<String> inputList = new ArrayList<String>();
         	List<JSONObject> outputList = new ArrayList<JSONObject>();
         	
 			Model model = getModel(System.getProperty("model").split(","));
 			File queryFolder = new File(System.getProperty("queryFolder"));
+			List<String> pathList = new ArrayList<String>();
 			for (File inputFile : queryFolder.listFiles()) {
 				if (inputFile.getName().endsWith(".sparql")) {
 					String query = null;
@@ -123,6 +127,7 @@ public class ValidationQuestionsDynamicTest {
 							inputList.add(query);
 							//outputList.add(queryResult);
 							outputList.add(new JSONObject(queryResult));
+							pathList.add(outputFile.getAbsolutePath().replace(".result",".json"));
 						} catch (IOException e1) {
 							System.out.println(String.format("Can't read result file %s", outputFile.getAbsolutePath()));
 						}
@@ -144,12 +149,22 @@ public class ValidationQuestionsDynamicTest {
 				JSONObject result = null;
 				try {
 					result = QueryExecutor.execute(input, model);
+					FileWriter file = new FileWriter(pathList.get(id));
+            		file.write(result.toString());
 					JSONAssert.assertEquals(outputList.get(id), result, JSONCompareMode.NON_EXTENSIBLE);
 				} catch (AssertionError ae) {
 					ae.printStackTrace();
 					System.out.println("ERROR\n");
 					System.out.println(result);
+					System.out.println(pathList.get(id));
 					throw ae;
+				}
+				catch(IOException ae){
+					ae.printStackTrace();
+					System.out.println("ERROR\n");
+					System.out.println(pathList.get(id));
+					throw ae;
+
 				}
 			};
 			
