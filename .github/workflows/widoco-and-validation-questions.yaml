@@ -101,7 +101,7 @@ jobs:
     - name: Create html files
       run: |
         cd validation-questions/src
-        python jsonTohtml.py "/home/runner/work/ROH/ROH/validation-questions/sparql-query" "HerculesCRUE/ROH/validation-questions/sparql-query/Q38.json', "ROH/validation-questions/sparql-query"
+        python jsonTohtml.py "/home/runner/work/ROH/ROH/validation-questions/sparql-query" "HerculesCRUE/ROH/validation-questions/sparql-query"
 
     
     - name: Publish on Github Pages
