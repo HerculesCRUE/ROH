@@ -1,9 +1,18 @@
 ![](https://github.com/HerculesCRUE/ROH/blob/gh-pages/media/CabeceraDocumentosMD.png)
 
-# ROH
-Research Domain Ontology (ROH) Competence Questions 
+# Research Domain Ontology (ROH) Competence Questions 
 
-Some exemplary competence questions are shown below, which demonstrate the ROH ontology usage are shown below:
+This folder is composed with couples of files with the same name but with different endings, `.sparql`, `.result` and `.html`.
+* The `.sparql` file is the query in [SPARQL](https://www.w3.org/TR/rdf-sparql-query/) language, and 
+* The `.result` file is the expected result of the execution of the sparql file with the same name, using the data located in the [validation-data/rdf](https://github.com/HerculesCRUE/ROH/tree/main/validation-data/rdf) folder. 
+* The `.html` file is the result, in table format, of running the sparql file with the same name, using the data located in the [validation-data/rdf](https://github.com/HerculesCRUE/ROH/tree/main/validation-data/rdf) folder. This file is created automatically, by the [workflow](https://github.com/HerculesCRUE/ROH/blob/main/.github/workflows/widoco-and-validation-questions.yaml) deployed on Github Actions,, when a modification is made.
+
+For more details on how the validation questions are executed in this project or how other validation questions could being executed, the reader is encouraged to read [`3- Ejecución de preguntas de competencia.md`](https://github.com/HerculesCRUE/ROH/blob/main/docs/3-%20Ejecuci%C3%B3n%20de%20preguntas%20de%20competencia.md).
+
+# Validation questions 
+
+The validation questions defined to demonstrate the [ROH ontology](https://github.com/HerculesCRUE/ROH/blob/main/roh/modules/core/roh-core.ttl) usage are shown below. 
+
 * CQ01. Listado de centros de investigación los cuales tiene area de conocimiento `uneskos:120304`. Se devuelve la URI de dicho centro (columna *centro*) y en caso de que este declarado en el grafo de conocmiento, tambien se devolvera el nombre de dicho centro (columna *centerName*) y el nombre de la universidad a la que pertenece (columna *universityName*). -  LINK.
 * CQ02. Listado de los investigadores (columna *researcher*) que tienen el area de conocimiento `unekos:120304` y cuya posicion (columna *positionClass*) es de `ResearcherPosition` en un centro de investigacion concreto (columna center). - LINK
 * CQ3. Devuelve un listado de investigadores (columna *researcher*) con área de investigación `uneskos:120304`. Por cada investigador se devuelve el número de citas de su CV (columna *n_citas*), la metrica h_index de su CV (columna *h_index*), la métrica i10-index de su CV (columa *i10-index*), el numero de publicaciones en las que ha participado (columna *n_pubicaciones*) y el numero de publicaciones de las que es autor principal (columna *n_corresponding_author*). Los usuarios estan ordenados según la suma de todos estos parametros. Como maximo se devolveran 10 usuarios. 
