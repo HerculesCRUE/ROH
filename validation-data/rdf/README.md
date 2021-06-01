@@ -3,6 +3,8 @@
 # ROH
 Research Domain Ontology (ROH) Instance Data folder. 
 
-A directory for sample RDF data for use in testing the ROH ontology. The included files have instance data which may be used to exercise [competence questions](https://github.com/HerculesCRUE/ROH/blob/main/validation-questions/sparql-query/README.md).
+A directory for sample RDF data for use in testing the ROH ontology. The included files have instance data which may be used to exercise [competence questions](https://github.com/HerculesCRUE/ROH/blob/main/docs/2-%20CoberturaPreguntasCompetencia.pdf). 
 
 For more details about the ROH ontology and how to instantiate at, readers are recommended to visit [ROH GitHub Pages](https://herculescrue.github.io/ROH/)
+
+For more detais about how execute sparql-queries with this data, readers are recommended to visit [Fuseki](https://github.com/HerculesCRUE/ROH/blob/main/validation-questions/Fuseki/Fuseki.md). 
