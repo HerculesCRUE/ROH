@@ -1,0 +1,35 @@
+@prefix :      <http://base/#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix tdb2:  <http://jena.apache.org/2016/tdb#> .
+@prefix ja:    <http://jena.hpl.hp.com/2005/11/Assembler#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix fuseki: <http://jena.apache.org/fuseki#> .
+
+
+<http://base/#service1>   rdf:type            fuseki:Service ;
+        rdfs:label                    "TDB2 edma" ;
+        fuseki:name                   "edma" ;
+        fuseki:serviceQuery           "query" , "" , "sparql" ;
+        fuseki:serviceReadGraphStore  "get" ;
+        fuseki:serviceReadWriteGraphStore
+                "data" ;
+        fuseki:serviceUpdate          "" , "update" ;
+        fuseki:serviceUpload          "upload" ;
+          fuseki:dataset                <http://base/#dataset> .
+
+<http://base/#dataset>
+        rdf:type      ja:RDFDataset;
+         ja:defaultGraph <http://base/#inferenceModel> ;
+          rdfs:label "ROH";
+         .
+
+<http://base/#inferenceModel> rdf:type   ja:InfModel;
+     rdfs:label "roh_data_try_dataaaa.ttl" ;
+     ja:reasoner [ ja:reasonerClass "openllet.jena.PelletReasonerFactory"] ;
+     ja:baseModel <http://base/#baseModel>;
+     ja:content [ja:externalContent <file:path/ROH_oficial/validation-data/rdf/roh_data_edma.ttl>,  <http://w3id.org/roh/unesco-individuals#>, <https://sws.geonames.org/3128026/> ] ;
+     .
+
+<http://base/#baseModel> rdf:type ja:MemoryModel;  # for example.
+     ja:content [ja:externalContent  <file:path/ROH_oficial/roh/modules/core/roh-core.ttl> ];
+     .
