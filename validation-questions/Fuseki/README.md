@@ -15,9 +15,9 @@ The goal of the [validation questions](https://github.com/HerculesCRUE/ROH/blob/
 git clone https://github.com/HerculesCRUE/ROH
 ```
 
-4. Unzziped  [extra.rar]() in `Fuseki/run/`.
+4. Unzziped  [extra.rar](https://github.com/HerculesCRUE/ROH/blob/main/validation-questions/Fuseki/extra.rar) in `Fuseki/run/`.
  
-5. Copy [edma.ttl]() to the local folder `Fuseki/configuration/` and open this file in a editor. Edit `path` in the nexts lines:
+5. Copy [edma.ttl](https://github.com/HerculesCRUE/ROH/blob/main/validation-questions/Fuseki/edma.ttl) to the local folder `Fuseki/configuration/` and open this file in a editor. Edit `path` in the nexts lines:
 
 ```  
 ja:content [ja:externalContent <file:path/ROH_oficial/validation-data/rdf/roh_data_edma.ttl>,  <http://w3id.org/roh/unesco-individuals#>, <https://sws.geonames.org/3128026/> ] ;
