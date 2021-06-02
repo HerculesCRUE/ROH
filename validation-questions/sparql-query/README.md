@@ -1,6 +1,6 @@
 ![](https://github.com/HerculesCRUE/ROH/blob/gh-pages/media/CabeceraDocumentosMD.png)
 
-# Research Domain Ontology (ROH) Competence Questions 
+# Research Domain Ontology (ROH) Validation Questions 
 
 This folder is composed with couples of files with the same name but with different endings, `.sparql`, `.result` and `.html`.
 * The `.sparql` file is the query in [SPARQL](https://www.w3.org/TR/rdf-sparql-query/) language, and 
