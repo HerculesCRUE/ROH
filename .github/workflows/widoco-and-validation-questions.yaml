@@ -23,6 +23,7 @@ jobs:
       uses: actions/setup-java@v1.4.3
       with:
         java-version: 1.8
+
     - name: Set up Python 3.7
       uses: actions/setup-python@v2
       with:
@@ -33,42 +34,7 @@ jobs:
           python -m pip install --upgrade pip
           pip install json2html
 
-     # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
-    - name: Checkout repo
-      uses: actions/checkout@v2
-      with:
-        submodules: true 
     
-    - name: Download widoco
-      working-directory: /home/runner/work/ROH/ROH
-      run: mkdir widoco && wget -O widoco/widoco.jar https://github.com/dgarijo/Widoco/releases/download/v1.4.14/widoco-1.4.14-jar-with-dependencies.jar
-
-    - name: Compile documentation
-      run: |
-        cd widoco
-        mkdir config
-        java -jar ./widoco.jar \
-        -ontFile ../roh/modules/core/roh-core.ttl \
-        -oops \
-        -webVowl \
-        -includeAnnotationProperties \
-        -outFolder output/roh \
-        -rewriteAll \
-        -confFile ../roh/modules/core/doc/widoco.config.txt \
-        -includeImportedOntologies \
-        -uniteSections \
-        -excludeIntroduction
-        mv output/roh/index-en.html output/roh/index.html
-        mv output/roh ../docs/
-        cp -r ../mirror ../docs/ 
-
-    - name: Copy ontology modules to docs folder
-      run: cp -r roh/modules/* docs/roh/
-
-    - name: Copy mirrored ontologies to docs folder
-      run: cp -r mirror/ docs/
-
-
     - name: Checkout pellet
       uses: actions/checkout@v2
       with: 
@@ -104,13 +70,7 @@ jobs:
         python jsonTohtml.py "/home/runner/work/ROH/ROH/validation-questions/sparql-query" "../sparql-query"
 
     
-    - name: Publish on Github Pages
-      uses: crazy-max/ghaction-github-pages@v2.3.0
-      with:
-        build_dir: docs 
-        publish_dir: target/site
-      env:
-        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+    
 
       
     #- name: Publish on Github Pages
