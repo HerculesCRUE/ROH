@@ -1,6 +1,6 @@
 ![](.//media/CabeceraDocumentosMD.png)
 
-# fuseki
+# Fuseki
 
 The goal of the [validation questions](https://github.com/HerculesCRUE/ROH/blob/main/docs/2-%20CoberturaPreguntasCompetencia.pdf) is to verify the correct modeling performed by the [ROH ontology](https://github.com/HerculesCRUE/ROH/blob/main/roh/modules/core/roh-core.ttl). The [sparql questions](https://github.com/HerculesCRUE/ROH/tree/main/validation-questions/sparql-query/) are executed, through a [workflow](https://github.com/HerculesCRUE/ROH/blob/main/.github/workflows/widoco-and-validation-questions.yaml), each time a modification is made in the repository. However, this is a verification system, and does not allow a dynamic execution of sparql questions. In case you want to perform sparql queries dynamically, it is recommended to install Fuseki locally and leave the Github Action as a verification system. 
 
