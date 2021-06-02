@@ -28,7 +28,7 @@ jobs:
       uses: actions/setup-python@v2
       with:
         python-version: 3.7
-        
+
     - name: Checkout repo
       uses: actions/checkout@v2
 
@@ -70,11 +70,9 @@ jobs:
     - name: Create html files
       run: |
         cd validation-questions/src
-        python jsonTohtml.py "/home/runner/work/ROH/ROH/validation-questions/sparql-query" "../sparql-query"
-
+        mkdir ../sparql-query/html
+        python jsonTohtml.py "/home/runner/work/ROH/ROH/validation-questions/sparql-query" "../sparql-query/html"
     
-    
-
       
     #- name: Publish on Github Pages
     #  uses: crazy-max/ghaction-github-pages@v2.3.0
