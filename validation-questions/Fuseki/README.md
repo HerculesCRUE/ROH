@@ -1,4 +1,4 @@
-![](.//media/CabeceraDocumentosMD.png)
+![](https://github.com/HerculesCRUE/ROH/blob/gh-pages/media/CabeceraDocumentosMD.png)
 
 # Fuseki
 
