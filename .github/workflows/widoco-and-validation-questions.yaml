@@ -73,6 +73,17 @@ jobs:
         mkdir ../sparql-query/html
         python jsonTohtml.py "/home/runner/work/ROH/ROH/validation-questions/sparql-query" "../sparql-query/html"
     
+    
+    - name: Add .html files 
+      uses: EndBug/add-and-commit@v7 # You can change this to use a specific version
+      with:
+        # The arguments for the `git add` command (see the paragraph below for more info)
+        # Default: '.'
+        add: 'validation-questions/sparql-query/html/Q01.html'
+        author_name: Maite 
+        default_author: github_actions
+        message: 'Your commit message'
+
       
     #- name: Publish on Github Pages
     #  uses: crazy-max/ghaction-github-pages@v2.3.0
