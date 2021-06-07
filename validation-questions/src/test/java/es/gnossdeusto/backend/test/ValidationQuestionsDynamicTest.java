@@ -151,6 +151,7 @@ public class ValidationQuestionsDynamicTest {
 					result = QueryExecutor.execute(input, model);
 					FileWriter file = new FileWriter(pathList.get(id));
             		file.write(result.toString());
+					file.close();
 					JSONAssert.assertEquals(outputList.get(id), result, JSONCompareMode.NON_EXTENSIBLE);
 				} catch (AssertionError ae) {
 					ae.printStackTrace();
