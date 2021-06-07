@@ -61,13 +61,13 @@ Durante esta fase se han definido y preparado unos tests de regresión que ejecu
 
 Control de versiones en el refinamiento de ROH
 ----------------------------------------------
-
+<!---
 Como se indica en el documento [Tareas pendientes en la definición de ROH](https://github.com/HerculesCRUE/ROH/blob/main/docs/Pr%C3%B3ximos%20pasos.md), en esta fase, que va desde la finalización del Hito 1 hasta el final de la ejecución del proyecto ASIO, la infraestructura tecnológica será mejorada y ampliada con cambios que provendrán de:
 -   Alineación con el modelo de datos del proyecto Hércules SGI, que constituye la fuente de datos fundamental de Hércules.
 -   Alineación con otras fuentes de datos (otros SGI) que van a ser mapeadas como parte del desarrollo de ASIO.
 -   Entidades y mejoras identificadas en la finalización del Hito 1 o que puedan surgir durante la ejecución del proyecto.
 
-En esta fase del proyecto se van a ir desarrollado las integraciones de ASIO con otros sistemas al tiempo que se termina la definición de ROH. Esta complejidad creciente tiene que acompañarse de la preparación de los procesos semi-automáticos que serán utilizados y puestos a prueba en esta fase y serán la base del control de versiones de ROH en su posterior mantenimiento.
+En esta fase del proyecto se van a ir desarrollado las integraciones de ASIO con otros sistemas al tiempo que se termina la definición de ROH. Esta complejidad creciente tiene que acompañarse de la preparación de los procesos semi-automáticos que serán utilizados y puestos a prueba en esta fase y serán la base del control de versiones de ROH en su posterior mantenimiento.--->
 
 La respuesta del control de versiones OWL al aumento de complejidad creciente consistirá en: 
 1.  Mejorar y ampliar las preguntas de competencia ([validation-questions](https://github.com/HerculesCRUE/ROH/tree/main/validation-questions/sparql-query)).

@@ -35,7 +35,7 @@ This documentation area includes the following files:
 - `4- Modelo de multilingüismo.md`	- [Markdown document](https://herculescrue.github.io/ROH/4-%20Modelo%20de%20multiling%C3%BCismo) explaining how multilinguism is supported in ROH.
 - `5- Método para el control de versiones OWL.md` - [Markdown document](https://herculescrue.github.io/ROH/5-%20M%C3%A9todo%20para%20el%20control%20de%20versiones%20OWL) explaining how version control is carried out in ROH.
 - `6- ROH Ontology Specification document` - [PDF](https://github.com/HerculesCRUE/ROH/blob/main/docs/6%20-%20OntologySpecification.pdf) includes a detailed discussion on how entities modelled in ROH have been imported and aligned with other existing entities in widely adopted ontologies that have successfully modelled parts of the Academic domain. 
-- `Próximos pasos` - [Markdown document](https://github.com/HerculesCRUE/ROH/blob/main/docs/Pr%C3%B3ximos%20pasos.md) - Markdown document explaining the next steps in the develepment of ROH, afer the ending of the first milestone of ASIO project.
+<!--- `Próximos pasos` - [Markdown document](https://github.com/HerculesCRUE/ROH/blob/main/docs/Pr%C3%B3ximos%20pasos.md) - Markdown document explaining the next steps in the develepment of ROH, afer the ending of the first milestone of ASIO project.-->
 - `README.md` - This very file which includes documentation in Markdown of ROH, describing with text and diagrams the relationships among the main entities in ROH.
 
 **<a name="headSection1"></a>1. Ontological design**
