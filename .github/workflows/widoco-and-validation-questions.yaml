@@ -71,7 +71,7 @@ jobs:
       run: |
         cd validation-questions/src
         mkdir ../sparql-query/html
-        python jsonTohtml.py "/home/runner/work/ROH/ROH/validation-questions/sparql-query" "../sparql-query/html"
+        python jsonTohtml.py "/home/runner/work/ROH/ROH/validation-questions/sparql-query" "../sparql-query"
     
     
     - name: Add .html files 
@@ -79,7 +79,7 @@ jobs:
       with:
         # The arguments for the `git add` command (see the paragraph below for more info)
         # Default: '.'
-        add: 'validation-questions/sparql-query/html/Q01.html'
+        add: 'validation-questions/sparql-query/Q01.html'
         author_name: Maite 
         default_author: github_actions
         message: 'Your commit message'
