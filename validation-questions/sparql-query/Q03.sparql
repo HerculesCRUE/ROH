@@ -3,14 +3,14 @@ prefix bibo: <http://w3id.org/roh/mirror/bibo#>
 prefix foaf: <http://w3id.org/roh/mirror/foaf#>
 prefix roh: <http://w3id.org/roh#>
 prefix vivo:  <http://w3id.org/roh/mirror/vivo#>
-prefix uneskos-individuals-individuals-individuals-individuals: <http://w3id.org/roh/unesco-individuals#>
+prefix uneskos-individuals: <http://w3id.org/roh/unesco-individuals#>
 prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#>
 
 SELECT  
 ?researcher ?cites ?hindex ?i10index (COUNT( distinct ?publication) AS ?countPublication)
        (COUNT(distinct ?publicationAuthor) AS ?countCorrespondingAuthor) 
 WHERE {
-  ?researcher	roh:hasKnowledgeArea uneskos-individuals-individuals-individuals:120304;
+  ?researcher	roh:hasKnowledgeArea uneskos-individuals:120304;
   			    roh:hasPosition  ?position;
             roh:hasMetric ?metric;
             a foaf:Person.

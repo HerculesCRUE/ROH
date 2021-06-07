@@ -1,14 +1,14 @@
 prefix foaf: <http://w3id.org/roh/mirror/foaf#>
 prefix roh: <http://w3id.org/roh#>
 prefix vivo:  <http://w3id.org/roh/mirror/vivo#>
-prefix uneskos-individuals-individuals: <http://w3id.org/roh/unesco-individuals#>
+prefix uneskosindividuals: <http://w3id.org/roh/unesco-individuals#>
 prefix ro:  <http://w3id.org/roh/mirror/obo/ro#>
 prefix owl: <http://www.w3.org/2002/07/owl#>
 prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#>
 
 SELECT ?researcher ?center ?positionClass
 WHERE {
-  ?researcher	roh:hasKnowledgeArea uneskos-individuals-individuals:120304;
+  ?researcher	roh:hasKnowledgeArea uneskos-individuals:120304;
   			      roh:hasPosition  ?position.
   ?position a roh:ResearcherPosition.
   ?position vivo:relates ?center ;

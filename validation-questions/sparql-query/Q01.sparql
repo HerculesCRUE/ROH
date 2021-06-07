@@ -1,14 +1,14 @@
 prefix roh: <http://w3id.org/roh#>
 prefix ro:  <http://w3id.org/roh/mirror/obo/ro#>
 prefix foaf:  <http://w3id.org/roh/mirror/foaf#>
-prefix uneskos-individuals-individuals:  <http://w3id.org/roh/unesco-individuals#>
+prefix uneskos-individuals:  <http://w3id.org/roh/unesco-individuals#>
 prefix vivo: <http://w3id.org/roh/mirror/vivo#> 
 
 
 SELECT  ?centro ?centerName  ?universityName 
  WHERE { 
       ?centro a ?centroClass;
-                 roh:hasKnowledgeArea uneskos-individuals-individuals-individuals-individuals:120304.
+                 roh:hasKnowledgeArea uneskos-individuals:120304.
   OPTIONAL{?universidad_uri a vivo:University;
                     ro:BFO_0000051+ ?centro;
 					roh:title  ?universityName.}
