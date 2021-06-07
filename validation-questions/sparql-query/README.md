@@ -146,9 +146,9 @@ The validation questions defined to demonstrate the [ROH ontology](https://githu
 
 * CQ66- Devuelve una anotacion que ha sido target de otra, es decir que han creado un hilo. Devuelve el target (*target*) de la primera anaotacion (*anotation*), la anotacion, el body (*body*) de esta primera anotación, la URI de la segunda anotacion (*annotation2*)  y su body (*body2*). - [Link](https://htmlpreview.github.io/?https://raw.githubusercontent.com/HerculesCRUE/ROH/main/validation-questions/html/Q66.html)
 	
-* CQ68A - Recursos citados por el articulo `http://w3id.org/roh/data#journal-article-1`. - [Link](https://htmlpreview.github.io/?https://raw.githubusercontent.com/HerculesCRUE/ROH/main/validation-questions/html/Q68A.html)
+* CQ67 - Recursos citados por el articulo `http://w3id.org/roh/data#journal-article-1`. - [Link](https://htmlpreview.github.io/?https://raw.githubusercontent.com/HerculesCRUE/ROH/main/validation-questions/html/Q67.html)
 
-* CQ68B- Los ResearchResult *researchResult* que ha realizado una autor y los recursos resource  que contiene. 	- [Link](https://htmlpreview.github.io/?https://raw.githubusercontent.com/HerculesCRUE/ROH/main/validation-questions/html/Q68B.html)
+* CQ68- Los ResearchResult *researchResult* que ha realizado una autor y los recursos resource  que contiene. 	- [Link](https://htmlpreview.github.io/?https://raw.githubusercontent.com/HerculesCRUE/ROH/main/validation-questions/html/Q68.html)
 
 * CQ69- Devuelve las anotaciones (*annotation*) realizadas sobre un ResearchResult (*researchResult*) que no es un ResearchObject. Devuelve tambien el body (*body*) de dicha annotacion.	- [Link](https://htmlpreview.github.io/?https://raw.githubusercontent.com/HerculesCRUE/ROH/main/validation-questions/html/Q69.html)
 
