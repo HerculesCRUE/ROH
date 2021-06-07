@@ -74,16 +74,16 @@ jobs:
         python jsonTohtml.py "/home/runner/work/ROH/ROH/validation-questions/sparql-query" "/home/runner/work/ROH/ROH/validation-questions/sparql-query"
     
     
-    #- name: Add .html files 
-    #  uses: EndBug/add-and-commit@v7 # You can change this to use a specific version
-    #  with:
+    - name: Add .html files 
+      uses: EndBug/add-and-commit@v7 # You can change this to use a specific version
+      with:
         # The arguments for the `git add` command (see the paragraph below for more info)
         # Default: '.'
 
-      #  add: '*.html'
-      #  author_name: Maite 
-      #  default_author: github_actions
-      #  message: 'Your commit message'
+        add: '*.html'
+        author_name: Maite 
+        default_author: github_actions
+        message: 'Your commit message'
 
       
     #- name: Publish on Github Pages
