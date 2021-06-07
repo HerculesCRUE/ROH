@@ -1,16 +1,16 @@
 PREFIX roh: <http://w3id.org/roh#>
 PREFIX vivo: <http://w3id.org/roh/mirror/vivo#>
 PREFIX uneskos-individuals: <http://w3id.org/roh/unesco-individuals#>
-PREFIX skos: <http://w3id.org/roh/mirror/skos#>
+PREFIX skos1: <http://w3id.org/roh/mirror/skos#>
 SELECT DISTINCT ?project 
 WHERE {
 {
 ?project a vivo:Project ;
             roh:hasKnowledgeArea ?knowledgeArea .
-?knowledgeArea skos:broader+|skos:narrower+|skos:related+ uneskos-individuals:1203 .
+?knowledgeArea skos1:broader+|skos1:narrower+|skos1:related+ uneskos-individuals:1203 .
 } UNION {
-uneskos-individuals:1203 skos:broader+ ?topKnowledgeArea .
-        ?topKnowledgeArea skos:narrower+ ?otherKnowledgeArea .
+uneskos-individuals:1203 skos1:broader+ ?topKnowledgeArea .
+        ?topKnowledgeArea skos1:narrower+ ?otherKnowledgeArea .
 ?project roh:hasKnowledgeArea ?otherKnowledgeArea ;
         a vivo:Project .
 }
