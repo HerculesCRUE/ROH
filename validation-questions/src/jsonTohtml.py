@@ -14,14 +14,17 @@ for i in files:
 files = [folder_jsons  + '/' + f for f in json_files]
 
 for f in files:
-    # Obtenemos el string del fichero json y eliminados el fichero json. 
+    # Obtenemos el json 
     json_result = open(f, 'r')
     content = json_result.read()
     jsondecoded = json.loads(content) 
     json_result.close()
 
-    # pasamos el string a html.
-    json_in_html = json2html.convert(json=jsondecoded['result'])
+    # pasamos el json  a html. Esta estepcion capta cuando el ficheor json esta vacio.
+    try:
+        json_in_html = json2html.convert(json=jsondecoded['result'])
+    except :
+        json_in_html = json2html.convert(json=jsondecoded)
 
     # Obtemeos el nombre de la pregunta esparql par apoder denominar a nuestro dichero html con el mismo nombre 
     index_start = f.index('Q')
