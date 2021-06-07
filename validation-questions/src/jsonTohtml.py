@@ -29,6 +29,7 @@ for f in files:
 
     
     string_destino = fordel_html + '/' + id_query_string + '.html' 
+    print(string_destino)
     file_html = open(string_destino, "w") 
     file_html.write(json_in_html) 
     file_html.close()
