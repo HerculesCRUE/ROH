@@ -11,15 +11,18 @@ for i in files:
     if i.endswith(".json"):
         json_files.append(i)
 files = [folder_jsons  + '/' + f for f in json_files]
+print(files)
 
 for f in files:
     # Obtenemos el string del fichero json y eliminados el fichero json. 
     json_result = open(f, 'r')
     json_string=json_result.read()
+    print(json_string)
     json_result.close()
 
     # pasamos el string a html.
     json_in_html = json2html.convert(json=json_string)
+    print(json_in_html)
     # Obtemeos el nombre de la pregunta esparql par apoder denominar a nuestro dichero html con el mismo nombre 
     index_start = f.index('Q')
     index_end = f.index('.')
