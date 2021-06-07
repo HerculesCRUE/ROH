@@ -1,13 +1,13 @@
 prefix vivo: <http://w3id.org/roh/mirror/vivo#>
 prefix roh: <http://w3id.org/roh#>
 prefix bibo: <http://w3id.org/roh/mirror/bibo#>
-prefix uneskos: <http://w3id.org/roh/unesco-individuals#>
+prefix uneskos-individuals: <http://w3id.org/roh/unesco-individuals#>
 prefix ro: <http://w3id.org/roh/mirror/obo/ro#> 
 
 SELECT (COUNT(DISTINCT ?publication) as ?publicationCount) ?organization ?university
 WHERE {
   ?publication         a bibo:Document ;
-                       roh:hasKnowledgeArea uneskos:120304;
+                       roh:hasKnowledgeArea uneskos-individuals:120304;
                        vivo:hasPublicationVenue        ?journal;
                        roh:correspondingOrganization ?organization.
   ?journal	a bibo:Journal . 

@@ -6,7 +6,7 @@ prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#>
 prefix foaf: <http://w3id.org/roh/mirror/foaf#>
 prefix xsd: <http://www.w3.org/2001/XMLSchema#> 
 prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> 
-prefix uneskos:  <http://w3id.org/roh/unesco-individuals#>
+prefix uneskos-individuals:  <http://w3id.org/roh/unesco-individuals#>
 
 SELECT distinct ?organization ?researchObject  ?researchObjectClass   ?title ?repository ?keyword ?doi ?project
 WHERE {
@@ -14,7 +14,7 @@ WHERE {
   ?researchObject a roh:ResearchObject;
         roh:correspondingOrganization ?organization;
         a ?researchObjectClass;
-        roh:hasKnowledgeArea uneskos:120304. 
+        roh:hasKnowledgeArea uneskos-individuals:120304. 
 
   ?organization a ?classOrganization. 
   ?researchObject  roh:seqOfAuthors+|bibo:authorList ?list.

@@ -15,7 +15,7 @@
 @prefix vivo: <http://w3id.org/roh/mirror/vivo#> .
 @prefix void: <http://rdfs.org/ns/void#> .
 @prefix dcterms: <http://purl.org/dc/terms/> .
-@prefix uneskos:  <http://w3id.org/roh/unesco-individuals#>.
+@prefix uneskos-individuals:  <http://w3id.org/roh/unesco-individuals#>.
 @prefix bibo: <http://w3id.org/roh/mirror/bibo#> .
 @prefix gn: <http://w3id.org/roh/mirror/geonames#> .
 @prefix ero: <http://w3id.org/roh/mirror/obo/ero#>.
@@ -45,7 +45,7 @@
         ro:BFO_0000051 <http://w3id.org/roh/data#centro-investigacion-2> ;
                        # <http://w3id.org/roh/data#grupo-investigacion-1> ;
         :title "Universidad 1" ;
-        :hasKnowledgeArea  uneskos:120304 , uneskos:120318 , uneskos:120601 , uneskos:570508 ;
+        :hasKnowledgeArea  uneskos-individuals:120304 , uneskos-individuals:120318 , uneskos-individuals:120601 , uneskos-individuals:570508 ;
         :hasContactInfo [ a  vcard:Organization;
                         vcard:hasEmail [ a vcard:Email;
                                          #  vcard:email "universidad-1@---";
@@ -72,7 +72,7 @@
         a vivo:University ;
         ro:BFO_0000051 <http://w3id.org/roh/data#grupo-investigacion-3> ;
         :title "Universidad 2" ;
-        :hasKnowledgeArea uneskos:120318,  uneskos:570508, uneskos:120304;
+        :hasKnowledgeArea uneskos-individuals:120318,  uneskos-individuals:570508, uneskos-individuals:120304;
         :hasContactInfo [ a  vcard:Organization;
                         vcard:hasEmail [ a vcard:Email;
                                          #  vcard:email "universidad-2@---";
@@ -88,7 +88,7 @@
 <http://w3id.org/roh/data#centro-investigacion-2> 
         a :ResearchInstitute ;        
         :hasAccreditation _:genid1 ;
-        :hasKnowledgeArea uneskos:120304 , uneskos:120318 , uneskos:120601 , uneskos:570508 ;
+        :hasKnowledgeArea uneskos-individuals:120304 , uneskos-individuals:120318 , uneskos-individuals:120601 , uneskos-individuals:570508 ;
         :hasContactInfo [ a  vcard:Organization;
                         vcard:hasEmail [ a vcard:Email;
                                          #  vcard:email "centro-investigacion-2@---";
@@ -107,7 +107,7 @@ _:genid1 a :Accreditation ;
 
 <http://w3id.org/roh/data#grupo-investigacion-3> 
         a  :ResearchGroup ;
-        :hasKnowledgeArea uneskos:120318,  uneskos:570508, uneskos:120304;
+        :hasKnowledgeArea uneskos-individuals:120318,  uneskos-individuals:570508, uneskos-individuals:120304;
         gn:locatedIn <https://sws.geonames.org/3128026/> ;
         :title "Centro de investigacion 3" ;
         :hasContactInfo [ a  vcard:Organization;
@@ -134,7 +134,7 @@ _:genid1 a :Accreditation ;
                 vivo:hasGoverningAuthority  <http://w3id.org/roh/data#gobierno-vasco> ;
                 :title                  "Sello de calidad proporcionado por el Gobierno Vasco"
                 ] ;
-        :hasKnowledgeArea  uneskos:120318 , uneskos:120304 , uneskos:120601;
+        :hasKnowledgeArea  uneskos-individuals:120318 , uneskos-individuals:120304 , uneskos-individuals:120601;
         gn:locatedIn <https://sws.geonames.org/3128026/> ;
         :title "Grupo de investigacion 1";
         :hasContactInfo [ a  vcard:Organization;
@@ -154,7 +154,7 @@ _:genid1 a :Accreditation ;
         foaf:surname "surname pedro";
         vivo:description "Pedro surname is a really good researcher, who actually work in the ResearchGoup 1.... (bla, bla, bla)";
         :ORCID "orcid.org/0oo0-0001-7005-5u0m";
-        :hasKnowledgeArea  uneskos:120304 , uneskos:120601;
+        :hasKnowledgeArea  uneskos-individuals:120304 , uneskos-individuals:120601;
         :hasPosition       [ a       :ResearcherPosition ;
                              vivo:dateTimeInterval
                                    [ a       vivo:DateTimeInterval ;
@@ -208,7 +208,7 @@ _:genid1 a :Accreditation ;
         foaf:gender "female" ;
         vivo:description "Maria surname is a really good researcher, who actually work in the ResearchGoup 1.... (bla, bla, bla";
         :ORCID "orcid.org/0oo0-0001-7oo5-5504";
-        :hasKnowledgeArea  uneskos:120304 , uneskos:570508;
+        :hasKnowledgeArea  uneskos-individuals:120304 , uneskos-individuals:570508;
         :hasPosition       [ a       :ResearcherPosition ;
                              vivo:dateTimeInterval
                                      [ a       vivo:DateTimeInterval ;
@@ -247,7 +247,7 @@ _:genid1 a :Accreditation ;
 
 <http://w3id.org/roh/data#investigador-3>
         a                  foaf:Person ;
-        :hasKnowledgeArea  uneskos:120318, uneskos:120304;
+        :hasKnowledgeArea  uneskos-individuals:120318, uneskos-individuals:120304;
         :hasPosition       [ a       :ResearcherPosition ;
                              vivo:dateTimeInterval
                                      [ a       vivo:DateTimeInterval ;
@@ -296,7 +296,7 @@ _:genid1 a :Accreditation ;
                           vivo:relates  <http://w3id.org/roh/data#grupo-investigacion-3> , <http://w3id.org/roh/data#investigador-4>
                         ];
         :companyFounder <http://w3id.org/roh/data#company-one>,<http://w3id.org/roh/data#company-two>;
-        :hasKnowledgeArea uneskos:120304. # OPCIONAL 
+        :hasKnowledgeArea uneskos-individuals:120304. # OPCIONAL 
         #vivo:relatedBy
         #        [ a       :ResearcherPosition ;
         #          vivo:relates
@@ -349,7 +349,7 @@ _:genid1 a :Accreditation ;
 <http://w3id.org/roh/data#investigador-3-phd-thesis> 
         a :PhDThesis ;
         :title "My fabulous PhD Thesis" ;
-        :hasKnowledgeArea uneskos:120304;
+        :hasKnowledgeArea uneskos-individuals:120304;
         :correspondingOrganization  <http://w3id.org/roh/data#grupo-investigacion-1>;
         :partOfResearchResult <http://w3id.org/roh/data#research-result-phd-investigador-3> ;
         :correspondingAuthor <http://w3id.org/roh/data#investigador-3> ;
@@ -397,16 +397,16 @@ _:genid1 a :Accreditation ;
 
 <http://w3id.org/roh/data#another-project>
         a                     vivo:Project ;
-        :hasKnowledgeArea     uneskos:120703, uneskos:120304 ;
+        :hasKnowledgeArea     uneskos-individuals:120703, uneskos-individuals:120304 ;
                 :projectStatus        [ a  :ProposalSubmitted ].
 
 <http://w3id.org/roh/data#another-great-project>
         a                     vivo:Project ;
-        :hasKnowledgeArea     uneskos:120304 .
+        :hasKnowledgeArea     uneskos-individuals:120304 .
 
 <http://w3id.org/roh/data#a-project-in-negotiation>
         a                     vivo:Project ;
-        :hasKnowledgeArea     uneskos:120703, uneskos:120304 ;
+        :hasKnowledgeArea     uneskos-individuals:120703, uneskos-individuals:120304 ;
          vivo:dateTimeInterval  [ a           vivo:DateTimeInterval ;
                                  vivo:end    [ a              vivo:DateTimeValue ;
                                                vivo:dateTime  "2019-06-30T00:00:00"^^xsd:dateTime
@@ -435,12 +435,12 @@ _:genid1 a :Accreditation ;
 
 <http://w3id.org/roh/data#software-producedBy-proyect> 
                 a ero:ERO_0000071;
-                 :hasKnowledgeArea     uneskos:120703, uneskos:120304 ;
+                 :hasKnowledgeArea     uneskos-individuals:120703, uneskos-individuals:120304 ;
                 :partOfRepository <http://w3id.org/roh/data#repository-2>;
                 :correspondingOrganization <http://w3id.org/roh/data#grupo-investigacion-1>, 
                                         <http://w3id.org/roh/data#company-one>;
                 cito:cites <http://w3id.org/roh/data#a-project-in-negotiation>;
-                :hasKnowledgeArea     uneskos:1203, uneskos:120304;
+                :hasKnowledgeArea     uneskos-individuals:1203, uneskos-individuals:120304;
                 :correspondingAuthor <http://w3id.org/roh/data#investigador-2>;
                 vivo:dateIssued
                                                 [ a       vivo:DateTimeValue ;
@@ -456,7 +456,7 @@ _:genid1 a :Accreditation ;
         a                        :GitHubRepository;
         :title "A grate Git repository";
         :correspondingOrganization <http://w3id.org/roh/data#grupo-investigacion-1>;
-        :hasKnowledgeArea     uneskos:1203, uneskos:120304. 
+        :hasKnowledgeArea     uneskos-individuals:1203, uneskos-individuals:120304. 
 
 
 <http://w3id.org/roh/data#annotation-1> 
@@ -499,7 +499,7 @@ _:genid1 a :Accreditation ;
 
 <http://w3id.org/roh/data#a-private-project>
         a                     vivo:Project ;
-        :hasKnowledgeArea     uneskos:1203, uneskos:120304;
+        :hasKnowledgeArea     uneskos-individuals:1203, uneskos-individuals:120304;
          vivo:dateTimeInterval  [ a           vivo:DateTimeInterval ;
                                  
                                  vivo:start  [ a              vivo:DateTimeValue ;
@@ -532,7 +532,7 @@ _:genid1 a :Accreditation ;
 
 <http://w3id.org/roh/data#another-collaborative-project>
         a       vivo:Project ;
-        :hasKnowledgeArea     uneskos:1203, uneskos:120304;
+        :hasKnowledgeArea     uneskos-individuals:1203, uneskos-individuals:120304;
         :isSupportedBy        [ a       :Funding ;
                                 ro:BFO_0000051 [ a :FundingAmount ;
                                              :grants <http://w3id.org/roh/data#grupo-investigacion-1> ;
@@ -570,7 +570,7 @@ _:genid1 a :Accreditation ;
 <http://w3id.org/roh/data#a-project>
         a                     vivo:Project ;
         :projectStatus        [ a  :ProposalSubmitted ];
-        :hasKnowledgeArea     uneskos:1203, uneskos:120304;
+        :hasKnowledgeArea     uneskos-individuals:1203, uneskos-individuals:120304;
         :isSupportedBy         [ a               :Funding ;
                                  ro:BFO_0000051    [ a                :FundingAmount ;
                                                    :grants          <http://w3id.org/roh/data#grupo-investigacion-1> ;
@@ -615,7 +615,7 @@ _:genid1 a :Accreditation ;
 <http://w3id.org/roh/data#research-result-investigador-1> 
                 a                       :ResearchResult;
                 :correspondingAuthor    <http://w3id.org/roh/data#investigador-1>;
-                :hasKnowledgeArea     uneskos:1203, uneskos:120304 ;
+                :hasKnowledgeArea     uneskos-individuals:1203, uneskos-individuals:120304 ;
                 :seqOfAuthors         [ a       rdf:Seq ;
                                     rdf:_1  <http://w3id.org/roh/data#investigador-1> ;
                                     rdf:_2  <http://w3id.org/roh/data#investigador-3>
@@ -630,7 +630,7 @@ _:genid1 a :Accreditation ;
                  vivo:dateIssued           [ a              vivo:DateTimeValue ;
                                     vivo:dateTime  "2020-04-27T00:00:00"^^xsd:dateTime
                                   ];
-                :hasKnowledgeArea     uneskos:1203, uneskos:120304.
+                :hasKnowledgeArea     uneskos-individuals:1203, uneskos-individuals:120304.
 
 
 
@@ -704,7 +704,7 @@ _:genid1 a :Accreditation ;
         a                       ero:ERO_0000071;
         :title "A great software";
         :correspondingOrganization  <http://w3id.org/roh/data#grupo-investigacion-1>;
-        :hasKnowledgeArea     uneskos:1203, uneskos:120304 ;
+        :hasKnowledgeArea     uneskos-individuals:1203, uneskos-individuals:120304 ;
         :partOfRepository    <http://w3id.org/roh/data#repository-1>;
         :correspondingAuthor      <http://w3id.org/roh/data#investigador-1> ;
         :partOfResearchResult     <http://w3id.org/roh/data#research-result-investigador-1>;
@@ -732,7 +732,7 @@ _:genid1 a :Accreditation ;
         :title "A readme of a great software";
         :readmeOf <http://w3id.org/roh/data#software-1>;
         :partOfRepository    <http://w3id.org/roh/data#repository-1>;
-        :hasKnowledgeArea     uneskos:1203, uneskos:120304 .
+        :hasKnowledgeArea     uneskos-individuals:1203, uneskos-individuals:120304 .
                 #:correspondingAuthor      <http://w3id.org/roh/data#investigador-1> ;
 
 <http://w3id.org/roh/data#readme-repository-1>
@@ -750,7 +750,7 @@ _:genid1 a :Accreditation ;
         a  :ExperimentalProtocol;
         :title "A great experimental protocol.";
         :correspondingOrganization  <http://w3id.org/roh/data#grupo-investigacion-1>;
-        :hasKnowledgeArea     uneskos:1203, uneskos:120304 ;
+        :hasKnowledgeArea     uneskos-individuals:1203, uneskos-individuals:120304 ;
         :correspondingAuthor      <http://w3id.org/roh/data#investigador-1> ;
         :partOfResearchResult     <http://w3id.org/roh/data#research-result-investigador-1>;
         :seqOfAuthors         [ a       rdf:Seq ;
@@ -782,7 +782,7 @@ _:genid1 a :Accreditation ;
 <http://w3id.org/roh/data#repository-1> 
         a                        :BitBucketRepository;
         :title "A grate git repository";
-        :hasKnowledgeArea     uneskos:1203, uneskos:120304 ;
+        :hasKnowledgeArea     uneskos-individuals:1203, uneskos-individuals:120304 ;
         :correspondingAuthor      <http://w3id.org/roh/data#investigador-1> ;
         :seqOfAuthors         [ a       rdf:Seq ;
                                     rdf:_1  <http://w3id.org/roh/data#investigador-1> ;
@@ -797,7 +797,7 @@ _:genid1 a :Accreditation ;
 <http://w3id.org/roh/data#fork-repository-1> 
                  a                        :BitBucketRepository;
         :title "A fork of a git repository-1";
-        :hasKnowledgeArea     uneskos:1203, uneskos:120304 ;
+        :hasKnowledgeArea     uneskos-individuals:1203, uneskos-individuals:120304 ;
         :correspondingAuthor      <http://w3id.org/roh/data#investigador-3> ;
         :seqOfAuthors         [ a       rdf:Seq ;
                                     rdf:_1  <http://w3id.org/roh/data#investigador-1> ;
@@ -811,7 +811,7 @@ _:genid1 a :Accreditation ;
         :title
                 "My great journal article" ;
         :correspondingOrganization <http://w3id.org/roh/data#grupo-investigacion-1>;
-        :hasKnowledgeArea     uneskos:1203, uneskos:120304;
+        :hasKnowledgeArea     uneskos-individuals:1203, uneskos-individuals:120304;
         :correspondingAuthor      <http://w3id.org/roh/data#investigador-1> ;
         :partOfResearchResult     <http://w3id.org/roh/data#research-result-investigador-1>;
         bibo:authorList        [ a       rdf:Seq ;
@@ -839,7 +839,7 @@ _:genid1 a :Accreditation ;
         :title
                 "My great journal article" ;
         :correspondingOrganization <http://w3id.org/roh/data#grupo-investigacion-1>;
-        :hasKnowledgeArea     uneskos:1203, uneskos:120304;
+        :hasKnowledgeArea     uneskos-individuals:1203, uneskos-individuals:120304;
         :correspondingAuthor      <http://w3id.org/roh/data#investigador-1> ;
         :partOfResearchResult     <http://w3id.org/roh/data#research-result-investigador-1>;
         bibo:authorList        [ a       rdf:Seq ;
@@ -905,7 +905,7 @@ _:genid1 a :Accreditation ;
 <http://w3id.org/roh/data#my-fabulous-patent>
         a       bibo:Patent ;
         vivo:identifier "my-fabulous-patent"^^xsd:string ;
-        :hasKnowledgeArea     uneskos:1203, uneskos:120304;
+        :hasKnowledgeArea     uneskos-individuals:1203, uneskos-individuals:120304;
         :patentInventor <http://w3id.org/roh/data#investigador-1>;
         :correspondingOrganization <http://w3id.org/roh/data#grupo-investigacion-1>;
         :ownerOrganization  <http://w3id.org/roh/data#grupo-investigacion-1>;
@@ -922,7 +922,7 @@ _:genid1 a :Accreditation ;
 <http://w3id.org/roh/data#another-fabulous-patent>
         a       bibo:Patent ;
         vivo:identifier "another-fabulous-patent"^^xsd:string ;
-        :hasKnowledgeArea     uneskos:1203, uneskos:120304 ;
+        :hasKnowledgeArea     uneskos-individuals:1203, uneskos-individuals:120304 ;
         :patentInventor <http://w3id.org/roh/data#investigador-3>;
         :correspondingOrganization <http://w3id.org/roh/data#grupo-investigacion-1>;
         :correspondingAuthor <http://w3id.org/roh/data#investigador-3> ;

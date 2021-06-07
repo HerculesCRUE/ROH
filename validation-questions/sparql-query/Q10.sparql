@@ -4,13 +4,13 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
 PREFIX rdfs:  <http://www.w3.org/2000/01/rdf-schema#>
 PREFIX foaf: <http://w3id.org/roh/mirror/foaf#>
 PREFIX bfo: <http://w3id.org/roh/mirror/obo/bfo#>
-prefix uneskos: <http://w3id.org/roh/unesco-individuals#>
+prefix uneskos-individuals: <http://w3id.org/roh/unesco-individuals#>
 prefix ro: <http://w3id.org/roh/mirror/obo/ro#> 
 
 SELECT DISTINCT ?project ?centre ?roleClass ?title ?classStatus ?public ?cuantia ?FundingProgram ?RO
 WHERE {
 ?project a vivo:Project ;
-        roh:hasKnowledgeArea uneskos:120304 ;
+        roh:hasKnowledgeArea uneskos-individuals:120304 ;
         vivo:relates ?role ;
         vivo:dateTimeInterval ?dateTimeInterval .
 ?role a ?roleClass ;

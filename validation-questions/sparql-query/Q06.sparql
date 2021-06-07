@@ -3,7 +3,7 @@ prefix roh: <http://w3id.org/roh#>
 prefix bibo: <http://w3id.org/roh/mirror/bibo#> 
 prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#>
 prefix xsd: <http://www.w3.org/2001/XMLSchema#> 
-prefix uneskos:  <http://w3id.org/roh/unesco-individuals#>
+prefix uneskos-individuals:  <http://w3id.org/roh/unesco-individuals#>
 
 SELECT distinct ?organization ?researchObject  ?researchObjectClass ?author ?dateTime ?title ?repository ?keyword ?doi 
 WHERE {
@@ -12,7 +12,7 @@ WHERE {
         roh:correspondingOrganization ?organization;
         a ?researchObjectClass;
         vivo:dateIssued ?dateIssued ;
-        roh:hasKnowledgeArea uneskos:120304. 
+        roh:hasKnowledgeArea uneskos-individuals:120304. 
 
 ?organization a ?classOrganization. 
 ?dateIssued vivo:dateTime ?dateTime .
