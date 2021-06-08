@@ -68,7 +68,7 @@ jobs:
       working-directory: /home/runner/work/ROH/ROH/validation-questions
       run: |
         mvn site
-        cp -r /src/site/site.xml home/runner/work/ROH/ROH/validation-questions/html/
+      # cp -r /src/site/site.xml home/runner/work/ROH/ROH/validation-questions/html/
 
 
     - name: Generate documentation
