@@ -64,15 +64,15 @@ jobs:
         cd validation-questions
         mkdir html
 
-    - name: Generate maven site
-      working-directory: /home/runner/work/ROH/ROH/validation-questions
-      run:  mvn site
+    #- name: Generate maven site
+    #  working-directory: /home/runner/work/ROH/ROH/validation-questions
+    #  run:  mvn site
       # cp -r /src/site/site.xml home/runner/work/ROH/ROH/validation-questions/html/
 
 
-    - name: Generate documentation
-      working-directory: /home/runner/work/ROH/ROH/validation-questions
-      run: mvn javadoc:test-javadoc 
+   # - name: Generate documentation
+   #   working-directory: /home/runner/work/ROH/ROH/validation-questions
+   #   run: mvn javadoc:test-javadoc 
 
     - name: Create html files
       run: |
@@ -107,8 +107,6 @@ jobs:
 
     - name: Copy mirrored ontologies to docs folder
       run: cp -r mirror/ docs/
-    - name: report 
-      run: cp -r /home/runner/work/ROH/ROH/validation-questions/src/ /home/runner/work/ROH/ROH/validation-questions/html/
 
     - name: Copy html file to docs folder
       run: cp -r /home/runner/work/ROH/ROH/validation-questions/html/ docs/html/
