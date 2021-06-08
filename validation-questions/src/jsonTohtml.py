@@ -37,7 +37,7 @@ for f in files:
     # json_string = json_result.read()
     # print(json_string)
     json_result.close()
-
+    
     try:
         jsondecoded = jsondecoded['result']
     except:
@@ -45,10 +45,14 @@ for f in files:
     columns=[]
     List_of_string_of_prefix=['<head><link rel="stylesheet" href="styles.css"></head>']
 
-
-    for i in jsondecoded[0].keys():
-        columns.append(i)
-    print(columns)
+    try:
+        for i in jsondecoded[0].keys():
+            columns.append(i)
+        print(columns)
+    except:
+        for i in jsondecoded.keys():
+            columns.append(i)
+        print(columns)
     for i in range(0,len(jsondecoded)):
         for j in columns:
             for t in dic_of_prefix:
@@ -66,8 +70,9 @@ for f in files:
     index_start = f.index('Q')
     index_end = f.index('.')
     id_query_string = f[index_start:index_end]
-    string_query='<p> %s </p>' %dic_of_queries[id_query_string]
-    List_of_string_of_prefix.append(string_query)
+    if id_query_string in dic_of_queries.keys():
+        string_query='<p> %s </p>' %dic_of_queries[id_query_string]
+        List_of_string_of_prefix.append(string_query)
     json_in_html = json2html.convert(json=jsondecoded)
     caption= '<table border="1"><caption> %s </caption>' %id_query_string
     json_in_html=json_in_html.replace('<table border="1">',caption,1)
