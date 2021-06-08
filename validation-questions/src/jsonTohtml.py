@@ -38,7 +38,7 @@ for f in files:
     except:
         pass
     columns=[]
-    List_of_string_of_prefix=['<head><style> html { font-family: sans-serif;}p {   text-align: justify;  letter-spacing: 1px;  font-size: 0.8rem; }table {border-collapse: collapse;  border: 2px solid rgb(200,200,200); letter-spacing: 1px;  font-size: 0.8rem;}td, th {border: 1px solid rgb(190,190,190);  padding: 10px 20px;}th {  background-color: rgb(235,235,235);}td {  text-align: center;}tr:nth-child(even) td {  background-color: rgb(250,250,250);}tr:nth-child(odd) td {background-color: rgb(245,245,245);}caption { padding: 10px;}</style></head>']
+    List_of_string_of_prefix=['<head><style> html { font-family: sans-serif;wit}p {   text-align: justify;  letter-spacing: 1px;  font-size: 0.9rem; }table {border-collapse: collapse;  border: 2px solid rgb(200,200,200); letter-spacing: 1px;  font-size: 0.8rem;}td, th {border: 1px solid rgb(190,190,190);  padding: 10px 20px;}th {  background-color: rgb(235,235,235);}td {  text-align: center;}tr:nth-child(even) td {  background-color: rgb(250,250,250);}tr:nth-child(odd) td {background-color: rgb(245,245,245);}caption { padding: 10px;}</style></head>']
 
     try:
         for i in jsondecoded[0].keys():
