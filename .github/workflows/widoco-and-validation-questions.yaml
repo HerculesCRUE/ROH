@@ -71,8 +71,9 @@ jobs:
   
     - name: Create html files
       run: |
-        cd validation-questions/src
-        mkdir ../sparql-query/html
+        cd validation-questions
+        mkdir html
+        cd src
         python jsonTohtml.py "/home/runner/work/ROH/ROH/validation-questions/sparql-query" "/home/runner/work/ROH/ROH/validation-questions/html"
     
         
