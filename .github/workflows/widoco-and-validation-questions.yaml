@@ -77,7 +77,6 @@ jobs:
     - name: Create html files
       run: |
         cd validation-questions/src
-        cp -r styles.css  /home/runner/work/ROH/ROH/validation-questions/html/
         python jsonTohtml.py "/home/runner/work/ROH/ROH/validation-questions/sparql-query" "/home/runner/work/ROH/ROH/validation-questions/html"
     
     - name: Download widoco
