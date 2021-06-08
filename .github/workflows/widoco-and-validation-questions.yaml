@@ -66,8 +66,7 @@ jobs:
 
     - name: Generate maven site
       working-directory: /home/runner/work/ROH/ROH/validation-questions
-      run: |
-        mvn site
+      run:  mvn site
       # cp -r /src/site/site.xml home/runner/work/ROH/ROH/validation-questions/html/
 
 
@@ -77,7 +76,7 @@ jobs:
 
     - name: Create html files
       run: |
-        cd validation-questions/html
+        cd validation-questions/src
         python jsonTohtml.py "/home/runner/work/ROH/ROH/validation-questions/sparql-query" "/home/runner/work/ROH/ROH/validation-questions/html"
     
     - name: Download widoco
