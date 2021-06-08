@@ -8,10 +8,10 @@ WHERE {
 ?project a vivo:Project ;
             roh:hasKnowledgeArea ?knowledgeArea .
 ?knowledgeArea skos1:broader+|skos1:narrower+|skos1:related+ uneskos-individuals:1203 .
-} UNION {
-uneskos-individuals:1203 skos1:broader+ ?topKnowledgeArea .
-        ?topKnowledgeArea skos1:narrower+ ?otherKnowledgeArea .
-?project roh:hasKnowledgeArea ?otherKnowledgeArea ;
-        a vivo:Project .
-}
+} #UNION {
+#uneskos-individuals:1203 skos1:broader+ ?topKnowledgeArea .
+#        ?topKnowledgeArea skos1:narrower+ ?otherKnowledgeArea .
+#?project roh:hasKnowledgeArea ?otherKnowledgeArea ;
+#        a vivo:Project .
+#}
 }
