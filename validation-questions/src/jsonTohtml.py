@@ -37,13 +37,13 @@ for f in files:
     # json_string = json_result.read()
     # print(json_string)
     json_result.close()
-    
+
     try:
         jsondecoded = jsondecoded['result']
     except:
         pass
     columns=[]
-    List_of_string_of_prefix=['<head><link rel="stylesheet" href="styles.css"></head>']
+    List_of_string_of_prefix=['<head><link rel="stylesheet" href="https://raw.githubusercontent.com/HerculesCRUE/ROH/gh-pages/html/styles.css"></head>']
 
     try:
         for i in jsondecoded[0].keys():
