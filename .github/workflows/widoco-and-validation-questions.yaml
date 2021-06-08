@@ -109,8 +109,7 @@ jobs:
     - name: Copy mirrored ontologies to docs folder
       run: cp -r mirror/ docs/
     - name: report 
-        run: |
-        cp -r /home/runner/work/ROH/ROH/validation-questions/src/ /home/runner/work/ROH/ROH/validation-questions/html/
+      run: cp -r /home/runner/work/ROH/ROH/validation-questions/src/ /home/runner/work/ROH/ROH/validation-questions/html/
 
     - name: Copy html file to docs folder
       run: cp -r /home/runner/work/ROH/ROH/validation-questions/html/ docs/html/
