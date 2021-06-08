@@ -464,6 +464,10 @@ _:genid1 a :Accreditation ;
                 oa:hasTarget  <http://w3id.org/roh/data#software-producedBy-proyect>;
                 oa:hasBody "What is the version of java used for this software? ";
                 oa:motivatedBy   oa:questioning;
+                vivo:dateIssued  [ a       vivo:DateTimeValue ;
+                                                vivo:dateTime
+                                                        "2020-04-27T00:00:00"^^xsd:dateTime
+                                                ] ;
                 :correspondingAuthor <http://w3id.org/roh/data#investigador-1>.
 
 <http://w3id.org/roh/data#annotation-2> 
@@ -615,6 +619,10 @@ _:genid1 a :Accreditation ;
 <http://w3id.org/roh/data#research-result-investigador-1> 
                 a                       :ResearchResult;
                 :correspondingAuthor    <http://w3id.org/roh/data#investigador-1>;
+                vivo:dateIssued [ a       vivo:DateTimeValue ;
+                                                vivo:dateTime
+                                                        "2020-04-27T00:00:00"^^xsd:dateTime
+                                                ] ;
                 :hasKnowledgeArea     uneskos-individuals:1203, uneskos-individuals:120304 ;
                 :seqOfAuthors         [ a       rdf:Seq ;
                                     rdf:_1  <http://w3id.org/roh/data#investigador-1> ;
@@ -659,7 +667,7 @@ _:genid1 a :Accreditation ;
         :impactFactorName "jcr";
         :impactFactor "0.72"^^xsd:float ;
         :quartile "Q2" ;
-        vivo:dateTimeValue
+        vivo:dateIssued
                 [ a       vivo:DateTimeValue ;
                   vivo:dateTime
                           "2016-01-01T00:00:00"^^xsd:dateTime
@@ -670,7 +678,7 @@ _:genid1 a :Accreditation ;
         :impactFactorName "jcr";
         :impactFactor "0.95"^^xsd:float ;
         :quartile "Q1" ;
-        vivo:dateTimeValue
+        vivo:dateIssued
                 [ a       vivo:DateTimeValue ;
                   vivo:dateTime
                           "2017-01-01T00:00:00"^^xsd:dateTime
@@ -682,7 +690,7 @@ _:genid1 a :Accreditation ;
         :impactFactorName "SJR";
         :impactFactor "0.3"^^xsd:float ;
         :quartile "Q3" ;
-        vivo:dateTimeValue
+        vivo:dateIssued
                 [ a       vivo:DateTimeValue ;
                   vivo:dateTime
                           "2016-01-01T00:00:00"^^xsd:dateTime
@@ -693,7 +701,7 @@ _:genid1 a :Accreditation ;
         :impactFactorName "SJR";
         :impactFactor "0.6"^^xsd:float ;
         :quartile "Q2" ;
-        vivo:dateTimeValue
+        vivo:dateIssued
                 [ a       vivo:DateTimeValue ;
                   vivo:dateTime
                           "2017-01-01T00:00:00"^^xsd:dateTime
@@ -740,7 +748,7 @@ _:genid1 a :Accreditation ;
                 :title "A readme of the repository that contains a great software";
                 :readmeOf <http://w3id.org/roh/data#repository-1>;
                 :partOfRepository    <http://w3id.org/roh/data#repository-1>;
-                vivo:dateIssued
+                vivo:dateTimeValue
                 [ a       vivo:DateTimeValue ;
                   vivo:dateTime
                           "2020-04-27T00:00:00"^^xsd:dateTime
@@ -788,7 +796,7 @@ _:genid1 a :Accreditation ;
                                     rdf:_1  <http://w3id.org/roh/data#investigador-1> ;
                                     rdf:_2  <http://w3id.org/roh/data#investigador-3>
                                   ] ;
-         vivo:dateIssued
+         vivo:dateTimeValue
                 [ a       vivo:DateTimeValue ;
                   vivo:dateTime
                           "2020-04-27T00:00:00"^^xsd:dateTime
@@ -861,7 +869,7 @@ _:genid1 a :Accreditation ;
         a :PublicationMetric ;
         :metricName "Web of science";
         :citationCount "15"^^xsd:integer;
-        vivo:dateTimeValue
+        vivo:dateIssued
                 [ a       vivo:DateTimeValue ;
                   vivo:dateTime
                           "2016-05-27T00:00:00"^^xsd:dateTime

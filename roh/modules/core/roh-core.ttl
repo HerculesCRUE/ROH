@@ -5312,7 +5312,7 @@ bibo:Document rdf:type owl:Class ;
                                 owl:allValuesFrom rdf:Seq
                               ] ,
                               [ rdf:type owl:Restriction ;
-                                owl:onProperty vivo:dateTimeValue ;
+                                owl:onProperty vivo:dateIssued ;
                                 owl:allValuesFrom vivo:DateTimeValue
                               ] ,
                               [ rdf:type owl:Restriction ;
@@ -5328,7 +5328,7 @@ bibo:Document rdf:type owl:Class ;
                                 owl:maxCardinality "1"^^xsd:nonNegativeInteger
                               ] ,
                               [ rdf:type owl:Restriction ;
-                                owl:onProperty vivo:dateTimeValue ;
+                                owl:onProperty vivo:dateIssued ;
                                 owl:maxQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
                                 owl:onClass vivo:DateTimeValue
                               ] ,
