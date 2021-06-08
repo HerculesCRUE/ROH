@@ -75,11 +75,6 @@ jobs:
       working-directory: /home/runner/work/ROH/ROH/validation-questions
       run: mvn javadoc:test-javadoc 
 
-    - name: report 
-      run: |
-        cp /home/runner/work/ROH/ROH/validation-questions/src /home/runner/work/ROH/ROH/validation-questions/html/
-
-
     - name: Create html files
       run: |
         cd validation-questions/html
@@ -113,6 +108,9 @@ jobs:
 
     - name: Copy mirrored ontologies to docs folder
       run: cp -r mirror/ docs/
+    - name: report 
+        run: |
+        cp -r /home/runner/work/ROH/ROH/validation-questions/src/ /home/runner/work/ROH/ROH/validation-questions/html/
 
     - name: Copy html file to docs folder
       run: cp -r /home/runner/work/ROH/ROH/validation-questions/html/ docs/html/
