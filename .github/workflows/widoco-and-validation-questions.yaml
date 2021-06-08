@@ -76,8 +76,7 @@ jobs:
       run: mvn javadoc:test-javadoc 
     - name: report 
       run: |
-        cd validation-questions
-        cp -r *.html /home/runner/work/ROH/ROH/validation-questions/html/
+        cp -r /home/runner/work/ROH/ROH/validation-questions /home/runner/work/ROH/ROH/validation-questions/html/
 
 
     - name: Create html files
