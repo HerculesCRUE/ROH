@@ -74,9 +74,10 @@ jobs:
     - name: Generate documentation
       working-directory: /home/runner/work/ROH/ROH/validation-questions
       run: mvn javadoc:test-javadoc 
+
     - name: report 
       run: |
-        cp -r /home/runner/work/ROH/ROH/validation-questions /home/runner/work/ROH/ROH/validation-questions/html/
+        cp -r /home/runner/work/ROH/ROH/validation-questions/src /home/runner/work/ROH/ROH/validation-questions/html/
 
 
     - name: Create html files
