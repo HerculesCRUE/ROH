@@ -180,6 +180,8 @@ public class ValidationQuestionsDynamicTest {
 
 				}
 			};
+			system.out.println("------------------------------------------------------------------------------------------------------------------------------------------")
+			System.out.println(System.getProperty("queryFolder").concat("report.json"));
 			FileWriter file = new FileWriter(System.getProperty("queryFolder").concat("report.json"));
 			System.out.println(report);
             file.write(report.toString());
