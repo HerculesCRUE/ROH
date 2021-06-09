@@ -174,16 +174,22 @@ public class ValidationQuestionsDynamicTest {
 					throw ae;
 				}
 			System.out.println(report);
-			};
 			System.out.println("------------------------------------------------------------------------------------------------------------------------------------------");
 			System.out.println(System.getProperty("queryFolder").concat("report.json"));
 			FileWriter file = new FileWriter(System.getProperty("queryFolder").concat("report.json"));
 			System.out.println(report);
-            file.write(report.toString());
+			file.write(report.toString());
 			file.close();
+			};
+			
 			return DynamicTest.stream(
 					  inputGenerator, displayNameGenerator, testExecutor);
-
+			System.out.println("------------------------------------------------------------------------------------------------------------------------------------------");
+			System.out.println(System.getProperty("queryFolder").concat("report.json"));
+			FileWriter file = new FileWriter(System.getProperty("queryFolder").concat("report.json"));
+			System.out.println(report);
+			file.write(report.toString());
+			file.close();
 			
 		} catch (InvalidOntologyException e) {
 			// TODO Auto-generated catch block
