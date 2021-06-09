@@ -160,18 +160,14 @@ public class ValidationQuestionsDynamicTest {
 					file.close();
 					JSONAssert.assertEquals(outputList.get(id), result, JSONCompareMode.NON_EXTENSIBLE);
 					report.put(pathList.get(id), "Pass");
-					System.out.println(report);
-					System.out.println("---------------------------------------------------------");
-						
+					
 				} catch (AssertionError ae) {
 					ae.printStackTrace();
 					System.out.println("ERROR\n");
 					System.out.println(result);
 					System.out.println(pathList.get(id));
 					report.put(pathList.get(id), "Incorrect");
-					System.out.println(report);
-					System.out.println("---------------------------------------------------------");
-						
+					
 					throw ae;
 				}
 				catch(IOException ae){
@@ -179,9 +175,7 @@ public class ValidationQuestionsDynamicTest {
 					System.out.println("ERROR\n");
 					System.out.println(pathList.get(id));
 					report.put(pathList.get(id), "Incorrect");
-					System.out.println(report);
-					System.out.println("---------------------------------------------------------");
-						
+					
 					throw ae;
 
 				}
@@ -189,7 +183,6 @@ public class ValidationQuestionsDynamicTest {
 			FileWriter file = new FileWriter(System.getProperty("queryFolder").concat("report.json"));
 			System.out.println(report);
             file.write(report.toString());
-			System.out.println("----------------------------------------------------------------------");
 			file.close();
 			return DynamicTest.stream(
 					  inputGenerator, displayNameGenerator, testExecutor);
