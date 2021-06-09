@@ -22,7 +22,7 @@ files = listdir(folder_jsons)
 json_files = []
 sparql_files = []
 for i in files:
-    if i.endswith(".json") and i != "report.json":
+    if i.endswith(".json"):
         json_files.append(i)
     if i.endswith(".sparql"):
         sparql_files.append(i)
@@ -130,63 +130,6 @@ for f in files:
     # Escribiros el estring en html en un fichero html.
 
     string_destino = fordel_html + '/' + id_query_string + '.html'
-    file_html = open(string_destino, "w")
-    file_html.write(json_in_html)
-    file_html.close()
-
-if "report.json" in listdir(folder_jsons):
-    string_html_file = '<head><style> html {font-family: sans-serif;}p{width:85%}' + \
-                       ' div { white-space:pre;display: inline-block; width:85%;text-align:center;}div >left {display: inline-block;float:left;width:85px;}div > center {display: inline-block;width:100px;}div > right {display: inline-block;float:right;width:100px;}' + \
-                       'details > p {white-space:pre;font-family: "Courier New"; padding: 4px;  background-color: #eeeeee;  border: none;  box-shadow: 1px 1px 2px #bbbbbb;  cursor: pointer;width:100%;}' + \
-                       'p {text-align: justify; letter-spacing: 1px;  font-size: 0.9rem; }' + \
-                       'table { border-collapse: collapse;  border: 2px solid rgb(200,200,200); letter-spacing: 1px;  font-size: 0.8rem;}td, th {border: 1px solid rgb(190,190,190);  padding: 10px 20px;}th {  background-color: rgb(235,235,235);}td {  text-align: justify;}tr:nth-child(even) td {  background-color: rgb(250,250,250);}tr:nth-child(odd) td {background-color: rgb(245,245,245);}caption { padding: 10px;}</style></head>'
-    dic = {}
-    path = folder_jsons + '/' + "report.json"
-    json_result = open(path, 'r')
-    content = json_result.read()
-    jsondecoded = json.loads(content)
-    json_result.close()
-
-    # Obtenemos las keys!
-    row = []
-    try:
-        for i in jsondecoded[0].keys():
-            row.append(i)
-    except:
-        for i in jsondecoded.keys():
-            row.append(i)
-    # Ordeno las key para que salgan ordendas
-    row.sort()
-
-    # Creamos el json reporte que posteriormente pasaremos a html!. 
-    List_of_result =[{} for i in range(0,len(row))]
-    for i,c in enumerate(row):
-        sub_dic = {}
-        valor = jsondecoded[c]
-        index_start = c.index('Q')
-        index_end = c.index('.')
-        id_query_string = c[index_start:index_end]
-        sub_dic['id'] = id_query_string
-        sub_dic['Validacion'] = valor
-        sub_dic['Pregunta'] = dic_of_queries[id_query_string]
-        List_of_result[i]=sub_dic
-    dic['result'] = List_of_result
-    json_in_html = json2html.convert(json=dic['result'])
-    # Le pongo el caption con el nombre
-    #<caption = '<table border="1"><caption> %s </caption>' % ''
-    #json_in_html = json_in_html.replace('<table border="1">', caption, 1)
-
-    # unimos la tabla con el string del fichero que ya tenemos!
-    json_in_html = string_html_file + json_in_html
-    string = '</br><div style = "width:82%" >'
-    string = string + '<left > <a href="https://github.com/HerculesCRUE/ROH"> Repositorio Principal.</a> </left >'
-    string = string + '<center  > <a href="https://github.com/HerculesCRUE/ROH/blob/gh-pages/2-%20CoberturaPreguntasCompetencia.pdf"> CoberturaPreguntasCompetencia.pdf.</a> </center>'
-    string = string + '<right > <a href="https://github.com/HerculesCRUE/ROH/blob/main/validation-questions/sparql-query/README.md"> Preguntas Sparql y results.</a> </right>'
-    string = string + '</div>'
-
-    json_in_html = json_in_html + string
-
-    string_destino = fordel_html + '/' + 'report.html'
     file_html = open(string_destino, "w")
     file_html.write(json_in_html)
     file_html.close()
