@@ -112,7 +112,9 @@ public class ValidationQuestionsDynamicTest {
         try {
         	List<String> inputList = new ArrayList<String>();
         	List<JSONObject> outputList = new ArrayList<JSONObject>();
-        	
+			JSONObject report =new JSONObject();
+
+
 			Model model = getModel(System.getProperty("model").split(","));
 			File queryFolder = new File(System.getProperty("queryFolder"));
 			List<String> pathList = new ArrayList<String>();
@@ -122,6 +124,7 @@ public class ValidationQuestionsDynamicTest {
 					try {
 						query = FileUtils.readFileToString(inputFile, (Charset) null);
 						File outputFile = new File(inputFile.getAbsolutePath().replace(".sparql", ".result"));
+						report.put(inputFile.getAbsolutePath(), "Skipped");
 						try {
 							String queryResult = FileUtils.readFileToString(outputFile, (Charset) null);
 							inputList.add(query);
@@ -153,22 +156,28 @@ public class ValidationQuestionsDynamicTest {
             		file.write(result.toString());
 					file.close();
 					JSONAssert.assertEquals(outputList.get(id), result, JSONCompareMode.NON_EXTENSIBLE);
+					report.put(pathList.get(id), "Pass");
 				} catch (AssertionError ae) {
 					ae.printStackTrace();
 					System.out.println("ERROR\n");
 					System.out.println(result);
 					System.out.println(pathList.get(id));
+					report.put(pathList.get(id), "Incorrect");
 					throw ae;
 				}
 				catch(IOException ae){
 					ae.printStackTrace();
 					System.out.println("ERROR\n");
 					System.out.println(pathList.get(id));
+					report.put(pathList.get(id), "Incorrect");
 					throw ae;
 
 				}
 			};
-			
+			FileWriter file = new FileWriter(System.getProperty("queryFolder").concat("report.json"));
+            file.write(report.toString());
+			System.out.println(report);
+			file.close();
 			return DynamicTest.stream(
 					  inputGenerator, displayNameGenerator, testExecutor);
 

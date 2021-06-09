@@ -23,7 +23,7 @@ files = listdir(folder_jsons)
 json_files = []
 sparql_files = []
 for i in files:
-    if i.endswith(".json"):
+    if i.endswith(".json") and i !="report.json":
         json_files.append(i)
     if i.endswith(".sparql"):
         sparql_files.append(i)
