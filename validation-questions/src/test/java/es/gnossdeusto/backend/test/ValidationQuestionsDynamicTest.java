@@ -133,13 +133,9 @@ public class ValidationQuestionsDynamicTest {
 						} catch (IOException e1) {
 							System.out.println(String.format("Can't read result file %s", outputFile.getAbsolutePath()));
 							report.put(inputFile.getAbsolutePath(), "Skipped");
-							System.out.println(report);
-							System.out.println("---------------------------------------------------------");
 						}
 					} catch (IOException e) {
 						System.out.println(String.format("Can't read query file %s", inputFile.getAbsolutePath()));
-						System.out.println(report);
-						System.out.println("---------------------------------------------------------");
 						
 					}				
 				}
@@ -180,7 +176,7 @@ public class ValidationQuestionsDynamicTest {
 
 				}
 			};
-			system.out.println("------------------------------------------------------------------------------------------------------------------------------------------")
+			System.out.println("------------------------------------------------------------------------------------------------------------------------------------------")
 			System.out.println(System.getProperty("queryFolder").concat("report.json"));
 			FileWriter file = new FileWriter(System.getProperty("queryFolder").concat("report.json"));
 			System.out.println(report);
