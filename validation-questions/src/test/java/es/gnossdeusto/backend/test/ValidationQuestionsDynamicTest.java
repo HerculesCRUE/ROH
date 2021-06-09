@@ -173,8 +173,9 @@ public class ValidationQuestionsDynamicTest {
 				}
 			};
 			FileWriter file = new FileWriter(System.getProperty("queryFolder").concat("report.json"));
-            file.write(report.toString());
 			System.out.println(report);
+            file.write(report.toString());
+			System.out.println("----------------------------------------------------------------------");
 			file.close();
 			return DynamicTest.stream(
 					  inputGenerator, displayNameGenerator, testExecutor);
