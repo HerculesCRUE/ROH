@@ -112,8 +112,6 @@ public class ValidationQuestionsDynamicTest {
         try {
         	List<String> inputList = new ArrayList<String>();
         	List<JSONObject> outputList = new ArrayList<JSONObject>();
-			JSONObject reportFinal =new JSONObject();
-
 
 			Model model = getModel(System.getProperty("model").split(","));
 			File queryFolder = new File(System.getProperty("queryFolder"));
@@ -132,7 +130,6 @@ public class ValidationQuestionsDynamicTest {
 							pathList.add(outputFile.getAbsolutePath().replace(".result",".json"));
 						} catch (IOException e1) {
 							System.out.println(String.format("Can't read result file %s", outputFile.getAbsolutePath()));
-							reportFinal.put(inputFile.getAbsolutePath(), "Skipped");
 						}
 					} catch (IOException e) {
 						System.out.println(String.format("Can't read query file %s", inputFile.getAbsolutePath()));
@@ -155,32 +152,23 @@ public class ValidationQuestionsDynamicTest {
             		file.write(result.toString());
 					file.close();
 					JSONAssert.assertEquals(outputList.get(id), result, JSONCompareMode.NON_EXTENSIBLE);
-					reportFinal.put(pathList.get(id), "Pass");
 					
 				} catch (AssertionError ae) {
 					ae.printStackTrace();
 					System.out.println("ERROR\n");
 					System.out.println(result);
-					System.out.println(pathList.get(id));
-					reportFinal.put(pathList.get(id), "Incorrect");
-					
+					System.out.println(pathList.get(id));					
 					throw ae;
 				}
 				catch(IOException ae){
 					ae.printStackTrace();
 					System.out.println("ERROR\n");
 					System.out.println(pathList.get(id));
-					reportFinal.put(pathList.get(id), "Incorrect");
 					throw ae;
 				}
 		
 			};
-			System.out.println("------------------------------------------------------------------------------------------------------------------------------------------");
-			System.out.println(System.getProperty("queryFolder").concat("report.json"));
-			FileWriter file = new FileWriter(System.getProperty("queryFolder").concat("report.json"));
-			System.out.println(reportFinal);
-			file.write(reportFinal.toString());
-			file.close();
+			
 
 			return DynamicTest.stream(
 					  inputGenerator, displayNameGenerator, testExecutor);
