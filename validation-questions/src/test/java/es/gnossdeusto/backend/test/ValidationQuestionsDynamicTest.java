@@ -133,9 +133,14 @@ public class ValidationQuestionsDynamicTest {
 						} catch (IOException e1) {
 							System.out.println(String.format("Can't read result file %s", outputFile.getAbsolutePath()));
 							report.put(inputFile.getAbsolutePath(), "Skipped");
+							System.out.println(report);
+							System.out.println("---------------------------------------------------------");
 						}
 					} catch (IOException e) {
 						System.out.println(String.format("Can't read query file %s", inputFile.getAbsolutePath()));
+						System.out.println(report);
+						System.out.println("---------------------------------------------------------");
+						
 					}				
 				}
 			}
@@ -155,12 +160,18 @@ public class ValidationQuestionsDynamicTest {
 					file.close();
 					JSONAssert.assertEquals(outputList.get(id), result, JSONCompareMode.NON_EXTENSIBLE);
 					report.put(pathList.get(id), "Pass");
+					System.out.println(report);
+					System.out.println("---------------------------------------------------------");
+						
 				} catch (AssertionError ae) {
 					ae.printStackTrace();
 					System.out.println("ERROR\n");
 					System.out.println(result);
 					System.out.println(pathList.get(id));
 					report.put(pathList.get(id), "Incorrect");
+					System.out.println(report);
+					System.out.println("---------------------------------------------------------");
+						
 					throw ae;
 				}
 				catch(IOException ae){
@@ -168,6 +179,9 @@ public class ValidationQuestionsDynamicTest {
 					System.out.println("ERROR\n");
 					System.out.println(pathList.get(id));
 					report.put(pathList.get(id), "Incorrect");
+					System.out.println(report);
+					System.out.println("---------------------------------------------------------");
+						
 					throw ae;
 
 				}
