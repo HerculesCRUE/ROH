@@ -171,10 +171,9 @@ public class ValidationQuestionsDynamicTest {
 					System.out.println("ERROR\n");
 					System.out.println(pathList.get(id));
 					report.put(pathList.get(id), "Incorrect");
-					
 					throw ae;
-
 				}
+			System.out.println(report);
 			};
 			System.out.println("------------------------------------------------------------------------------------------------------------------------------------------");
 			System.out.println(System.getProperty("queryFolder").concat("report.json"));
