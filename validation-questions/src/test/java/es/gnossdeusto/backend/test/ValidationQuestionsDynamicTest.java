@@ -112,7 +112,7 @@ public class ValidationQuestionsDynamicTest {
         try {
         	List<String> inputList = new ArrayList<String>();
         	List<JSONObject> outputList = new ArrayList<JSONObject>();
-			JSONObject report =new JSONObject();
+			JSONObject reportFinal =new JSONObject();
 
 
 			Model model = getModel(System.getProperty("model").split(","));
@@ -132,7 +132,7 @@ public class ValidationQuestionsDynamicTest {
 							pathList.add(outputFile.getAbsolutePath().replace(".result",".json"));
 						} catch (IOException e1) {
 							System.out.println(String.format("Can't read result file %s", outputFile.getAbsolutePath()));
-							report.put(inputFile.getAbsolutePath(), "Skipped");
+							reportFinal.put(inputFile.getAbsolutePath(), "Skipped");
 						}
 					} catch (IOException e) {
 						System.out.println(String.format("Can't read query file %s", inputFile.getAbsolutePath()));
@@ -155,14 +155,14 @@ public class ValidationQuestionsDynamicTest {
             		file.write(result.toString());
 					file.close();
 					JSONAssert.assertEquals(outputList.get(id), result, JSONCompareMode.NON_EXTENSIBLE);
-					report.put(pathList.get(id), "Pass");
+					reportFinal.put(pathList.get(id), "Pass");
 					
 				} catch (AssertionError ae) {
 					ae.printStackTrace();
 					System.out.println("ERROR\n");
 					System.out.println(result);
 					System.out.println(pathList.get(id));
-					report.put(pathList.get(id), "Incorrect");
+					reportFinal.put(pathList.get(id), "Incorrect");
 					
 					throw ae;
 				}
@@ -170,20 +170,21 @@ public class ValidationQuestionsDynamicTest {
 					ae.printStackTrace();
 					System.out.println("ERROR\n");
 					System.out.println(pathList.get(id));
-					report.put(pathList.get(id), "Incorrect");
+					reportFinal.put(pathList.get(id), "Incorrect");
 					throw ae;
 				}
 		
 			};
-			
-			return DynamicTest.stream(
-					  inputGenerator, displayNameGenerator, testExecutor);
 			System.out.println("------------------------------------------------------------------------------------------------------------------------------------------");
 			System.out.println(System.getProperty("queryFolder").concat("report.json"));
 			FileWriter file = new FileWriter(System.getProperty("queryFolder").concat("report.json"));
-			System.out.println(report);
-			file.write(report.toString());
+			System.out.println(reportFinal);
+			file.write(reportFinal.toString());
 			file.close();
+
+			return DynamicTest.stream(
+					  inputGenerator, displayNameGenerator, testExecutor);
+			
 			
 		} catch (InvalidOntologyException e) {
 			// TODO Auto-generated catch block
