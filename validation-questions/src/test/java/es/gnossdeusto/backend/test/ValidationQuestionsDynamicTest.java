@@ -176,7 +176,7 @@ public class ValidationQuestionsDynamicTest {
 
 				}
 			};
-			System.out.println("------------------------------------------------------------------------------------------------------------------------------------------")
+			System.out.println("------------------------------------------------------------------------------------------------------------------------------------------");
 			System.out.println(System.getProperty("queryFolder").concat("report.json"));
 			FileWriter file = new FileWriter(System.getProperty("queryFolder").concat("report.json"));
 			System.out.println(report);
