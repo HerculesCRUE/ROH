@@ -173,13 +173,7 @@ public class ValidationQuestionsDynamicTest {
 					report.put(pathList.get(id), "Incorrect");
 					throw ae;
 				}
-			System.out.println(report);
-			System.out.println("------------------------------------------------------------------------------------------------------------------------------------------");
-			System.out.println(System.getProperty("queryFolder").concat("report.json"));
-			FileWriter file = new FileWriter(System.getProperty("queryFolder").concat("report.json"));
-			System.out.println(report);
-			file.write(report.toString());
-			file.close();
+		
 			};
 			
 			return DynamicTest.stream(
