@@ -124,7 +124,6 @@ public class ValidationQuestionsDynamicTest {
 					try {
 						query = FileUtils.readFileToString(inputFile, (Charset) null);
 						File outputFile = new File(inputFile.getAbsolutePath().replace(".sparql", ".result"));
-						report.put(inputFile.getAbsolutePath(), "Skipped");
 						try {
 							String queryResult = FileUtils.readFileToString(outputFile, (Charset) null);
 							inputList.add(query);
@@ -133,11 +132,10 @@ public class ValidationQuestionsDynamicTest {
 							pathList.add(outputFile.getAbsolutePath().replace(".result",".json"));
 						} catch (IOException e1) {
 							System.out.println(String.format("Can't read result file %s", outputFile.getAbsolutePath()));
+							report.put(inputFile.getAbsolutePath(), "Skipped");
 						}
 					} catch (IOException e) {
 						System.out.println(String.format("Can't read query file %s", inputFile.getAbsolutePath()));
-						
-						
 					}				
 				}
 			}
