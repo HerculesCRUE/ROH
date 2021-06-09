@@ -5,7 +5,6 @@ from os import listdir
 folder_jsons = sys.argv[1]
 fordel_html = sys.argv[2]
 
-
 prefix = open('prefix.json', 'r')
 content = prefix.read()
 dic_of_prefix = json.loads(content)
@@ -45,7 +44,11 @@ for f in files:
         pass
     columns = []
     List_of_string_of_prefix = [
-        '<head><style> html { font-family: sans-serif;}p{width:85%} div {display: inline-block; width:85%;text-align:center;}div >left {display: inline-block;float:left;width:85px;}div > center {display: inline-block;width:100px;}div > right {display: inline-block;float:right;width:100px;}details > p {font-family: "Courier New"; padding: 4px;  background-color: #eeeeee;  border: none;  box-shadow: 1px 1px 2px #bbbbbb;  cursor: pointer;}p {   text-align: justify;  letter-spacing: 1px;  font-size: 0.9rem; }table {border-collapse: collapse;  border: 2px solid rgb(200,200,200); letter-spacing: 1px;  font-size: 0.8rem;}td, th {border: 1px solid rgb(190,190,190);  padding: 10px 20px;}th {  background-color: rgb(235,235,235);}td {  text-align: center;}tr:nth-child(even) td {  background-color: rgb(250,250,250);}tr:nth-child(odd) td {background-color: rgb(245,245,245);}caption { padding: 10px;}</style></head>']
+        '<head><style> html {font-family: sans-serif;}p{width:85%}'
+        ' div { white-space:pre;display: inline-block; width:85%;text-align:center;}div >left {display: inline-block;float:left;width:85px;}div > center {display: inline-block;width:100px;}div > right {display: inline-block;float:right;width:100px;}'
+        'details > p {white-space:pre;font-family: "Courier New"; padding: 4px;  background-color: #eeeeee;  border: none;  box-shadow: 1px 1px 2px #bbbbbb;  cursor: pointer;width:92%;}'
+        'p {text-align: justify; letter-spacing: 1px;  font-size: 0.9rem; }'
+        'table { white-space:pre;border-collapse: collapse;  border: 2px solid rgb(200,200,200); letter-spacing: 1px;  font-size: 0.8rem;}td, th {border: 1px solid rgb(190,190,190);  padding: 10px 20px;}th {  background-color: rgb(235,235,235);}td {  text-align: center;}tr:nth-child(even) td {  background-color: rgb(250,250,250);}tr:nth-child(odd) td {background-color: rgb(245,245,245);}caption { padding: 10px;}</style></head>']
 
 
     try:
@@ -88,7 +91,7 @@ for f in files:
                 elif linea=='\n':
                     pass
                 else:
-                    linea=linea.replace(' ','&nbsp')
+                    #linea=linea.replace(' ','&nbsp')
                     string_sparql = ' %s </br>' % linea
                     string_sparql_query=string_sparql_query+ string_sparql
         #string_sparql_query= string_sparql_query +
@@ -107,9 +110,9 @@ for f in files:
 
     json_in_html = cadena + json_in_html
     string='</br><div style = "width:82%" >'
-    string=string+'<right > <a href="https://github.com/HerculesCRUE/ROH"> Repositorio&nbspPintcipal.</a> </right >'
+    string=string+'<left > <a href="https://github.com/HerculesCRUE/ROH"> Repositorio Printcipal.</a> </left >'
     string=string + '<center  > <a href="hhttps://github.com/HerculesCRUE/ROH/blob/main/docs/2-%20CoberturaPreguntasCompetencia.pdf"> CoberturaPreguntasCompetencia.pdf.</a> </center>'
-    string = string + '<left > <a href="https://github.com/HerculesCRUE/ROH/blob/main/validation-questions/sparql-query/README.md"> Preguntas&nbspSparql&nbspy&nbspresults.</a> </left>'
+    string = string + '<right > <a href="https://github.com/HerculesCRUE/ROH/blob/main/validation-questions/sparql-query/README.md"> Preguntas Sparql y presults.</a> </right>'
     string =string +'</div>'
 
     json_in_html=json_in_html+string
