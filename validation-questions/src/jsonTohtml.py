@@ -123,7 +123,7 @@ for f in files:
     # Por ultimo añadimos los tres enlaces que aparecen abajo! 
     string='</br><div style = "width:82%" >'
     string=string+'<left > <a href="https://github.com/HerculesCRUE/ROH"> Repositorio Printcipal.</a> </left >'
-    string=string + '<center  > <a href="hhttps://github.com/HerculesCRUE/ROH/blob/main/docs/2-%20CoberturaPreguntasCompetencia.pdf"> CoberturaPreguntasCompetencia.pdf.</a> </center>'
+    string=string + '<center  > <a href="https://github.com/HerculesCRUE/ROH/blob/gh-pages/2-%20CoberturaPreguntasCompetencia.pdf"> CoberturaPreguntasCompetencia.pdf.</a> </center>'
     string = string + '<right > <a href="https://github.com/HerculesCRUE/ROH/blob/main/validation-questions/sparql-query/README.md"> Preguntas Sparql y presults.</a> </right>'
     string =string +'</div>'
 
