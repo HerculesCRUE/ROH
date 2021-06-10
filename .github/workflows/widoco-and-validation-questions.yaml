@@ -59,6 +59,8 @@ jobs:
       run: |
         cd validation-questions
         mkdir html
+        cd html 
+        mkdir report
 
     - name: Launch tests
       working-directory: /home/runner/work/ROH/ROH/validation-questions
@@ -71,7 +73,7 @@ jobs:
     - name: copy maven report to html folder
       run: |
         cd validation-questions
-        cp -r target/site/surefire-report.html html/
+        cp -r target/site/ html/report
 
     - name: Generate documentation
       working-directory: /home/runner/work/ROH/ROH/validation-questions
