@@ -12,18 +12,18 @@
     <rdfs:label xml:lang="en">Concept</rdfs:label>
   </owl:Class>
 
-  <!-- http://w3id.org/roh#KnowledgeArea -->
+  <!-- http://purl.org/roh#KnowledgeArea -->
 
-  <owl:Class rdf:about="http://w3id.org/roh#KnowledgeArea">
+  <owl:Class rdf:about="http://purl.org/roh#KnowledgeArea">
     <rdfs:subClassOf rdf:resource="http://www.w3.org/2004/02/skos/core#ConceptScheme"/>
     <rdfs:label xml:lang="en">Knowledge Area</rdfs:label>
     <rdfs:label xml:lang="es">Área de Conocimiento</rdfs:label>
   </owl:Class>
 
-  <!-- http://purl.org/roh/unesco-individuals#UNESCOKnowledgeArea -->
+  <!-- http://purl.org/roh#UNESCOKnowledgeArea -->
 
-  <owl:Class rdf:about="http://purl.org/roh/unesco-individuals#UNESCOKnowledgeArea">
-    <rdfs:subClassOf rdf:resource="http://w3id.org/roh#KnowledgeArea"/>
+  <owl:Class rdf:about="http://purl.org/roh#UNESCOKnowledgeArea">
+    <rdfs:subClassOf rdf:resource="http://purl.org/roh#KnowledgeArea"/>
     <rdfs:comment xml:lang="en">List of terms used in subject analysis and retrieval of documents and publications in the fields of education, culture, natural sciences, social and human sciences, communication and information by UNESCO.</rdfs:comment>
     <rdfs:label xml:lang="en">UNESCO Knowledge Area</rdfs:label>
     <rdfs:label xml:lang="es">Área de Conocimiento UNESCO</rdfs:label>
@@ -6605,7 +6605,7 @@
     <dc:title xml:lang="en">Proposed international standard nomenclature for fields of science and technology</dc:title>
     <skos:hasTopConcept rdf:resource="http://purl.org/roh/unesco-individuals#55"/>
     <skos:hasTopConcept rdf:resource="http://purl.org/roh/unesco-individuals#11"/>
-    <rdf:type rdf:resource="http://purl.org/roh/unesco-individuals#UNESCOKnowledgeArea"/>
+    <rdf:type rdf:resource="http://purl.org/roh#UNESCOKnowledgeArea"/>
     <skos:prefLabel xml:lang="en">Proposed international standard nomenclature for fields of science and technology</skos:prefLabel>
     <skos:hasTopConcept rdf:resource="http://purl.org/roh/unesco-individuals#24"/>
     <skos:hasTopConcept rdf:resource="http://purl.org/roh/unesco-individuals#72"/>
