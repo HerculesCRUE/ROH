@@ -70,15 +70,16 @@ jobs:
     - name: Generate maven site
       working-directory: /home/runner/work/ROH/ROH/validation-questions
       run:  mvn site
-    - name: copy maven report to html folder
-      run: |
-        cd validation-questions
-        cp -r target/site html/report
+
 
     - name: Generate documentation
       working-directory: /home/runner/work/ROH/ROH/validation-questions
       run: mvn javadoc:test-javadoc 
 
+    - name: copy maven report to html folder
+      run: |
+        cd validation-questions
+        cp -r target/site/*  html/report
     - name: Create html files
       run: |
         cd validation-questions/src
