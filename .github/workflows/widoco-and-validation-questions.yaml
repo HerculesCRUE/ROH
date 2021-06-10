@@ -54,7 +54,7 @@ jobs:
     - name: Install Pellet reasoner
       working-directory: pellet
       run: mvn install
-      
+
     - name: Create html folder
       run: |
         cd validation-questions
@@ -63,7 +63,10 @@ jobs:
     - name: Launch tests
       working-directory: /home/runner/work/ROH/ROH/validation-questions
       run: mvn surefire-report:report -Dmodel=https://raw.githubusercontent.com/HerculesCRUE/ROH/main/roh/modules/core/roh-core.ttl,https://raw.githubusercontent.com/HerculesCRUE/ROH/main/validation-data/rdf/roh_data_edma.ttl,https://raw.githubusercontent.com/HerculesCRUE/ROH/main/roh/modules/knowledge-area/unesco-knowledge-area.rdf -DqueryFolder=/home/runner/work/ROH/ROH/validation-questions/sparql-query/
-
+    - name: Create html folder
+      run: |
+        cd validation-questions
+        cp -r target/site/surefire-report.html html/
 
     - name: Generate maven site
       working-directory: /home/runner/work/ROH/ROH/validation-questions
