@@ -2,19 +2,22 @@
 
 #  Validation Questions
 
-In this project, different SPARQL queries are executed to test the ROH ontology. These [validation questions](https://github.com/HerculesCRUE/ROH/blob/main/docs/2-%20CoberturaPreguntasCompetencia.pdf) are located in the [validation-questions/sparql-query](https://github.com/HerculesCRUE/ROH/tree/main/validation-questions/sparql-query/) folder. This folder is composed of couples of files with the same name but with different endings, `.sparql`, `.result` and `.html`.
+In this project, different SPARQL queries are executed to test the ROH ontology. These [validation questions](https://github.com/HerculesCRUE/ROH/blob/main/docs/2-%20CoberturaPreguntasCompetencia.pdf) are located in the [validation-questions/sparql-query](https://github.com/HerculesCRUE/ROH/tree/main/validation-questions/sparql-query/) folder. Visit this to more detail. 
+
+
+<!--This folder is composed of couples of files with the same name but with different endings, `.sparql`, `.result` and `.html`.
 * The `.sparql` file is the query in [SPARQL](https://www.w3.org/TR/rdf-sparql-query/) language, and 
 * The `.result` file is the expected result of the execution of the sparql file with the same name, using the data located in the [validation-data/rdf](https://github.com/HerculesCRUE/ROH/tree/main/validation-data/rdf) folder. 
-* The `.html` file is the result, in a table format, of running the sparql file with the same name, using the data located in the [validation-data/rdf](https://github.com/HerculesCRUE/ROH/tree/main/validation-data/rdf) folder. This file is created automatically, by the [workflow](https://github.com/HerculesCRUE/ROH/blob/main/.github/workflows/widoco-and-validation-questions.yaml) deployed on Github Actions, when a modification is made.
-
-Each group of three files with the same name allows, through the workflow deployed in GitHub Actions, to check one validation question.
 
 
-# The execution of validation questions
+The real result of executing a sparql query, using the data located in the [validation-data/rdf](https://github.com/HerculesCRUE/ROH/tree/main/validation-data/rdf) folder, can be found at [html](https://github.com/HerculesCRUE/ROH/tree/gh-pages/html) folder in the github pages. To visualizeted, add https://htmlpreview.github.io/? before the url of each file. The `.html` file is the result, in a table format, of running the sparql file with the same name, using the data located in the [validation-data/rdf](https://github.com/HerculesCRUE/ROH/tree/main/validation-data/rdf) folder. This files is created automatically, by the [workflow](https://github.com/HerculesCRUE/ROH/blob/main/.github/workflows/widoco-and-validation-questions.yaml) deployed on Github Actions, when a modification is made.
 
-The execution of [validation questions](https://github.com/HerculesCRUE/ROH/blob/main/docs/2-%20CoberturaPreguntasCompetencia.pdf) is deployed in Github Actions and allows the automatic verification of each sparql query each time a modification is made. For each validation question, [this workflow](https://github.com/HerculesCRUE/ROH/blob/main/.github/workflows/widoco-and-validation-questions.yaml) executes the corresponding sparql query. This result is compared to the result file with the same name as the sparql query. If they are the same this query passes since the expected result and the obtained result are the same. 
-Also, this workflow generates the [Widoco 
-documentation](https://herculescrue.github.io/ROH/roh/) of the ROH ontology.  
+Each group of three files with the same name allows, through the workflow deployed in GitHub Actions, to check one validation question. 
+
+
+# The execution of validation questions -->
+
+The execution of [validation questions](https://github.com/HerculesCRUE/ROH/blob/main/docs/2-%20CoberturaPreguntasCompetencia.pdf) is deployed in Github Actions and allows the automatic verification of each sparql query each time a modification is made. For each validation question, [this workflow](https://github.com/HerculesCRUE/ROH/blob/main/.github/workflows/widoco-and-validation-questions.yaml) executes the corresponding sparql query. This result is compared to the result file with the same name as the sparql query. If they are the same this query passes since the expected result and the obtained result are the same. Also, this workflow generates the [Widoco documentation](https://herculescrue.github.io/ROH/roh/) of the ROH ontology.  
 
 # Run new validation questions
 
