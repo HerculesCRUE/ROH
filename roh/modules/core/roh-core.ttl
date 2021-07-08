@@ -5117,6 +5117,11 @@ bibo:AcademicArticle rdf:type owl:Class ;
                                        owl:allValuesFrom bibo:Journal
                                      ] ,
                                      [ rdf:type owl:Restriction ;
+                                       owl:onProperty :hasMetric ;
+                                       owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                                       owl:onClass :PublicationMetric
+                                     ] ,
+                                     [ rdf:type owl:Restriction ;
                                        owl:onProperty bibo:eanucc13 ;
                                        owl:allValuesFrom rdfs:Literal
                                      ] ;
