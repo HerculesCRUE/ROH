@@ -15,4 +15,4 @@ Notice that ROH network of ontologies is divided into 2 main parts as depicted i
 
 ![](https://github.com/HerculesCRUE/ROH/blob/gh-pages/media/ROH-core-vertical-modules.png)
 
-**Figura** **1**. ROH core module and its associated vertical modules.
+**Figura** **1**. ROH core module and its associated vertical modules. [Ontology modules](https://github.com/HerculesCRUE/ROH/tree/main/roh/modules)
