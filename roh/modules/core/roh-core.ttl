@@ -4264,13 +4264,6 @@ A roh:FundingSource roh:feeds a roh:Funding with funds to sponsor some projects.
                rdfs:label "Patent Expense"@en .
 
 
-###  http://w3id.org/roh#PeerReviewedArticle
-:PeerReviewedArticle rdf:type owl:Class ;
-                     rdfs:subClassOf bibo:AcademicArticle ,
-                                     bibo:Article ;
-                     rdfs:label "Peer-reviewed article"@en .
-
-
 ###  http://w3id.org/roh#PersonContract
 :PersonContract rdf:type owl:Class ;
                 rdfs:subClassOf vivo:Contract ,
@@ -5099,6 +5092,25 @@ A roh:FundingSource roh:feeds a roh:Funding with funds to sponsor some projects.
 
 ###  http://w3id.org/roh/mirror/bibo#AcademicArticle
 bibo:AcademicArticle rdf:type owl:Class ;
+                     owl:equivalentClass [ owl:intersectionOf ( bibo:Article
+                                                                [ rdf:type owl:Restriction ;
+                                                                  owl:onProperty :hasMetric ;
+                                                                  owl:someValuesFrom :PublicationMetric
+                                                                ]
+                                                                [ rdf:type owl:Restriction ;
+                                                                  owl:onProperty vivo:hasPublicationVenue ;
+                                                                  owl:someValuesFrom [ owl:intersectionOf ( bibo:Journal
+                                                                                                            [ rdf:type owl:Restriction ;
+                                                                                                              owl:onProperty :hasMetric ;
+                                                                                                              owl:someValuesFrom :JournalMetric
+                                                                                                            ]
+                                                                                                          ) ;
+                                                                                       rdf:type owl:Class
+                                                                                     ]
+                                                                ]
+                                                              ) ;
+                                           rdf:type owl:Class
+                                         ] ;
                      rdfs:subClassOf bibo:Article ,
                                      [ rdf:type owl:Restriction ;
                                        owl:onProperty vivo:hasPublicationVenue ;
@@ -5120,6 +5132,23 @@ bibo:AcademicArticle rdf:type owl:Class ;
 ###  http://w3id.org/roh/mirror/bibo#Article
 bibo:Article rdf:type owl:Class ;
              rdfs:subClassOf bibo:Document ,
+                             [ rdf:type owl:Restriction ;
+                               owl:onProperty :correspondingOrganization ;
+                               owl:someValuesFrom foaf:Organization
+                             ] ,
+                             [ rdf:type owl:Restriction ;
+                               owl:onProperty :seqOfAuthors ;
+                               owl:someValuesFrom rdf:Seq
+                             ] ,
+                             [ rdf:type owl:Restriction ;
+                               owl:onProperty vivo:dateIssued ;
+                               owl:someValuesFrom vivo:DateTimeValue
+                             ] ,
+                             [ rdf:type owl:Restriction ;
+                               owl:onProperty :hasMetric ;
+                               owl:maxQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                               owl:onClass :PublicationMetric
+                             ] ,
                              [ rdf:type owl:Restriction ;
                                owl:onProperty bibo:doi ;
                                owl:someValuesFrom xsd:string
@@ -5306,6 +5335,10 @@ bibo:Document rdf:type owl:Class ;
                               [ rdf:type owl:Restriction ;
                                 owl:onProperty :researchResultHasPart ;
                                 owl:allValuesFrom :ResearchResult
+                              ] ,
+                              [ rdf:type owl:Restriction ;
+                                owl:onProperty :seqOfAuthors ;
+                                owl:allValuesFrom rdf:Seq
                               ] ,
                               [ rdf:type owl:Restriction ;
                                 owl:onProperty bibo:authorList ;
@@ -6607,30 +6640,6 @@ ero:ERO_0001263 rdf:type owl:Class ;
                 obo:IAO_0000119 "PERSON: Matthew Brush" ;
                 rdfs:label "Material Modification Service"@en ,
                            "Servicio de Modificación de Material"@es .
-
-
-###  http://w3id.org/roh/mirror/obo/iao#IAO_0000013
-iao:IAO_0000013 rdf:type owl:Class ;
-                rdfs:subClassOf bibo:AcademicArticle ,
-                                [ rdf:type owl:Restriction ;
-                                  owl:onProperty :hasMetric ;
-                                  owl:allValuesFrom :PublicationMetric
-                                ] ,
-                                [ rdf:type owl:Restriction ;
-                                  owl:onProperty vivo:dateIssued ;
-                                  owl:allValuesFrom vivo:DateTimeValue
-                                ] ;
-                obo:IAO_0000111 "journal article"@en ;
-                obo:IAO_0000112 "Examples are articles published in the journals, Nature and Science. The content can often be cited by reference to a paper based encoding, e.g.  Authors, Title of article, Journal name, date or year of publication, volume and page number."@en ;
-                obo:IAO_0000114 iao:IAO_0000120 ;
-                obo:IAO_0000115 "a report that is published in a journal"@en ;
-                obo:IAO_0000117 "person:Alan Ruttenberg"@en ,
-                                "person:Chris Stoeckert"@en ;
-                obo:IAO_0000119 "OBI_0000159"@en ,
-                                "group:OBI"@en ;
-                obo:IAO_0000412 iao:IAO.owl ;
-                rdfs:label "Artículo de Revista de Impacto"@es ,
-                           "Journal Article"@en .
 
 
 ###  http://w3id.org/roh/mirror/obo/iao#IAO_0000027
@@ -8103,8 +8112,8 @@ skos:ConceptScheme rdf:type owl:Class ;
 #    Annotations
 #################################################################
 
-bfo:BFO_0000004 rdfs:label "continuador independiente"@es ,
-                           "independent continuant"@en .
+bfo:BFO_0000004 rdfs:label "independent continuant"@en ,
+                           "continuador independiente"@es .
 
 
 #################################################################
