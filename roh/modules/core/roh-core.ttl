@@ -3079,6 +3079,10 @@ The previous short definition was: \"An arbitrary classification of a space/time
               rdfs:subClassOf :Metric ,
                               [ rdf:type owl:Restriction ;
                                 owl:onProperty :metricOf ;
+                                owl:someValuesFrom foaf:Agent
+                              ] ,
+                              [ rdf:type owl:Restriction ;
+                                owl:onProperty :metricOf ;
                                 owl:allValuesFrom foaf:Agent
                               ] ,
                               [ rdf:type owl:Restriction ;
@@ -3949,6 +3953,14 @@ A roh:FundingSource roh:feeds a roh:Funding with funds to sponsor some projects.
                rdfs:subClassOf :Metric ,
                                [ rdf:type owl:Restriction ;
                                  owl:onProperty :impactFactor ;
+                                 owl:someValuesFrom xsd:float
+                               ] ,
+                               [ rdf:type owl:Restriction ;
+                                 owl:onProperty :impactFactorName ;
+                                 owl:someValuesFrom xsd:string
+                               ] ,
+                               [ rdf:type owl:Restriction ;
+                                 owl:onProperty :impactFactor ;
                                  owl:allValuesFrom xsd:float
                                ] ,
                                [ rdf:type owl:Restriction ;
@@ -4200,7 +4212,7 @@ A roh:FundingSource roh:feeds a roh:Funding with funds to sponsor some projects.
 ###  http://w3id.org/roh#Metric
 :Metric rdf:type owl:Class ;
         rdfs:subClassOf [ rdf:type owl:Restriction ;
-                          owl:onProperty vivo:dateTimeValue ;
+                          owl:onProperty vivo:dateIssued ;
                           owl:allValuesFrom vivo:DateTimeValue
                         ] ,
                         [ rdf:type owl:Restriction ;
@@ -4432,6 +4444,10 @@ A roh:FundingSource roh:feeds a roh:Funding with funds to sponsor some projects.
 :PublicationMetric rdf:type owl:Class ;
                    rdfs:subClassOf :Metric ,
                                    [ rdf:type owl:Restriction ;
+                                     owl:onProperty :metricName ;
+                                     owl:someValuesFrom xsd:string
+                                   ] ,
+                                   [ rdf:type owl:Restriction ;
                                      owl:onProperty :citationCount ;
                                      owl:allValuesFrom xsd:integer
                                    ] ;
@@ -4487,6 +4503,18 @@ A roh:FundingSource roh:feeds a roh:Funding with funds to sponsor some projects.
 ###  http://w3id.org/roh#Repository
 :Repository rdf:type owl:Class ;
             rdfs:subClassOf iao:IAO_0000030 ,
+                            [ rdf:type owl:Restriction ;
+                              owl:onProperty :repositoryStatus ;
+                              owl:someValuesFrom [ rdf:type owl:Class ;
+                                                   owl:unionOf ( :Closed
+                                                                 :Open
+                                                               )
+                                                 ]
+                            ] ,
+                            [ rdf:type owl:Restriction ;
+                              owl:onProperty :seqOfAuthors ;
+                              owl:someValuesFrom rdf:Seq
+                            ] ,
                             [ rdf:type owl:Restriction ;
                               owl:onProperty :correspondingAuthor ;
                               owl:allValuesFrom foaf:Person
@@ -5093,33 +5121,39 @@ A roh:FundingSource roh:feeds a roh:Funding with funds to sponsor some projects.
 ###  http://w3id.org/roh/mirror/bibo#AcademicArticle
 bibo:AcademicArticle rdf:type owl:Class ;
                      owl:equivalentClass [ owl:intersectionOf ( bibo:Article
+                                                                [ owl:intersectionOf ( [ rdf:type owl:Restriction ;
+                                                                                         owl:onProperty :correspondingAuthor ;
+                                                                                         owl:someValuesFrom foaf:Person
+                                                                                       ]
+                                                                                       [ rdf:type owl:Restriction ;
+                                                                                         owl:onProperty vivo:hasPublicationVenue ;
+                                                                                         owl:someValuesFrom [ owl:intersectionOf ( bibo:Journal
+                                                                                                                                   [ rdf:type owl:Restriction ;
+                                                                                                                                     owl:onProperty :hasMetric ;
+                                                                                                                                     owl:someValuesFrom :JournalMetric
+                                                                                                                                   ]
+                                                                                                                                 ) ;
+                                                                                                              rdf:type owl:Class
+                                                                                                            ]
+                                                                                       ]
+                                                                                     ) ;
+                                                                  rdf:type owl:Class
+                                                                ]
                                                                 [ rdf:type owl:Restriction ;
                                                                   owl:onProperty :hasMetric ;
                                                                   owl:someValuesFrom :PublicationMetric
-                                                                ]
-                                                                [ rdf:type owl:Restriction ;
-                                                                  owl:onProperty vivo:hasPublicationVenue ;
-                                                                  owl:someValuesFrom [ owl:intersectionOf ( bibo:Journal
-                                                                                                            [ rdf:type owl:Restriction ;
-                                                                                                              owl:onProperty :hasMetric ;
-                                                                                                              owl:someValuesFrom :JournalMetric
-                                                                                                            ]
-                                                                                                          ) ;
-                                                                                       rdf:type owl:Class
-                                                                                     ]
                                                                 ]
                                                               ) ;
                                            rdf:type owl:Class
                                          ] ;
                      rdfs:subClassOf bibo:Article ,
                                      [ rdf:type owl:Restriction ;
-                                       owl:onProperty vivo:hasPublicationVenue ;
-                                       owl:allValuesFrom bibo:Journal
+                                       owl:onProperty :correspondingAuthor ;
+                                       owl:someValuesFrom foaf:Person
                                      ] ,
                                      [ rdf:type owl:Restriction ;
-                                       owl:onProperty :hasMetric ;
-                                       owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
-                                       owl:onClass :PublicationMetric
+                                       owl:onProperty vivo:hasPublicationVenue ;
+                                       owl:allValuesFrom bibo:Journal
                                      ] ,
                                      [ rdf:type owl:Restriction ;
                                        owl:onProperty bibo:eanucc13 ;
@@ -5148,11 +5182,6 @@ bibo:Article rdf:type owl:Class ;
                              [ rdf:type owl:Restriction ;
                                owl:onProperty vivo:dateIssued ;
                                owl:someValuesFrom vivo:DateTimeValue
-                             ] ,
-                             [ rdf:type owl:Restriction ;
-                               owl:onProperty :hasMetric ;
-                               owl:maxQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
-                               owl:onClass :PublicationMetric
                              ] ,
                              [ rdf:type owl:Restriction ;
                                owl:onProperty bibo:doi ;
@@ -5320,92 +5349,95 @@ bibo:Conference rdf:type owl:Class ;
 
 ###  http://w3id.org/roh/mirror/bibo#Document
 bibo:Document rdf:type owl:Class ;
-              rdfs:subClassOf iao:IAO_0000030 ,
-                              [ rdf:type owl:Restriction ;
-                                owl:onProperty :correspondingAuthor ;
-                                owl:allValuesFrom foaf:Person
-                              ] ,
-                              [ rdf:type owl:Restriction ;
-                                owl:onProperty :documentStatus ;
-                                owl:allValuesFrom [ rdf:type owl:Class ;
-                                                    owl:unionOf ( :Accepted
-                                                                  :Rejected
-                                                                )
-                                                  ]
-                              ] ,
-                              [ rdf:type owl:Restriction ;
-                                owl:onProperty :repositoryHasPart ;
-                                owl:allValuesFrom :Repository
-                              ] ,
-                              [ rdf:type owl:Restriction ;
-                                owl:onProperty :researchResultHasPart ;
-                                owl:allValuesFrom :ResearchResult
-                              ] ,
-                              [ rdf:type owl:Restriction ;
-                                owl:onProperty :seqOfAuthors ;
-                                owl:allValuesFrom rdf:Seq
-                              ] ,
-                              [ rdf:type owl:Restriction ;
-                                owl:onProperty bibo:authorList ;
-                                owl:allValuesFrom rdf:Seq
-                              ] ,
-                              [ rdf:type owl:Restriction ;
-                                owl:onProperty vivo:dateIssued ;
-                                owl:allValuesFrom vivo:DateTimeValue
-                              ] ,
-                              [ rdf:type owl:Restriction ;
-                                owl:onProperty vivo:hasPublicationVenue ;
-                                owl:allValuesFrom [ rdf:type owl:Class ;
-                                                    owl:unionOf ( bibo:Book
-                                                                  bibo:Collection
-                                                                )
-                                                  ]
-                              ] ,
-                              [ rdf:type owl:Restriction ;
-                                owl:onProperty bibo:authorList ;
-                                owl:maxCardinality "1"^^xsd:nonNegativeInteger
-                              ] ,
-                              [ rdf:type owl:Restriction ;
-                                owl:onProperty vivo:dateIssued ;
-                                owl:maxQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
-                                owl:onClass vivo:DateTimeValue
-                              ] ,
-                              [ rdf:type owl:Restriction ;
-                                owl:onProperty :title ;
-                                owl:someValuesFrom xsd:string
-                              ] ,
-                              [ rdf:type owl:Restriction ;
-                                owl:onProperty :title ;
-                                owl:allValuesFrom xsd:string
-                              ] ,
-                              [ rdf:type owl:Restriction ;
-                                owl:onProperty bibo:abstract ;
-                                owl:allValuesFrom xsd:string
-                              ] ,
-                              [ rdf:type owl:Restriction ;
-                                owl:onProperty bibo:doi ;
-                                owl:allValuesFrom xsd:string
-                              ] ,
-                              [ rdf:type owl:Restriction ;
-                                owl:onProperty bibo:pageEnd ;
-                                owl:allValuesFrom rdfs:Literal
-                              ] ,
-                              [ rdf:type owl:Restriction ;
-                                owl:onProperty bibo:pageStart ;
-                                owl:allValuesFrom rdfs:Literal
-                              ] ,
-                              [ rdf:type owl:Restriction ;
-                                owl:onProperty vivo:freetextKeyword ;
-                                owl:allValuesFrom xsd:string
-                              ] ,
-                              [ rdf:type owl:Restriction ;
-                                owl:onProperty bibo:pageEnd ;
-                                owl:maxCardinality "1"^^xsd:nonNegativeInteger
-                              ] ,
-                              [ rdf:type owl:Restriction ;
-                                owl:onProperty bibo:pageStart ;
-                                owl:maxCardinality "1"^^xsd:nonNegativeInteger
-                              ] ;
+              owl:equivalentClass [ owl:intersectionOf ( iao:IAO_0000030
+                                                         [ rdf:type owl:Restriction ;
+                                                           owl:onProperty :correspondingAuthor ;
+                                                           owl:allValuesFrom foaf:Person
+                                                         ]
+                                                         [ rdf:type owl:Restriction ;
+                                                           owl:onProperty :documentStatus ;
+                                                           owl:allValuesFrom [ rdf:type owl:Class ;
+                                                                               owl:unionOf ( :Accepted
+                                                                                             :Rejected
+                                                                                           )
+                                                                             ]
+                                                         ]
+                                                         [ rdf:type owl:Restriction ;
+                                                           owl:onProperty :repositoryHasPart ;
+                                                           owl:allValuesFrom :Repository
+                                                         ]
+                                                         [ rdf:type owl:Restriction ;
+                                                           owl:onProperty :researchResultHasPart ;
+                                                           owl:allValuesFrom :ResearchResult
+                                                         ]
+                                                         [ rdf:type owl:Restriction ;
+                                                           owl:onProperty :seqOfAuthors ;
+                                                           owl:allValuesFrom rdf:Seq
+                                                         ]
+                                                         [ rdf:type owl:Restriction ;
+                                                           owl:onProperty bibo:authorList ;
+                                                           owl:allValuesFrom rdf:Seq
+                                                         ]
+                                                         [ rdf:type owl:Restriction ;
+                                                           owl:onProperty vivo:dateIssued ;
+                                                           owl:allValuesFrom vivo:DateTimeValue
+                                                         ]
+                                                         [ rdf:type owl:Restriction ;
+                                                           owl:onProperty vivo:hasPublicationVenue ;
+                                                           owl:allValuesFrom [ rdf:type owl:Class ;
+                                                                               owl:unionOf ( bibo:Book
+                                                                                             bibo:Collection
+                                                                                           )
+                                                                             ]
+                                                         ]
+                                                         [ rdf:type owl:Restriction ;
+                                                           owl:onProperty bibo:authorList ;
+                                                           owl:maxCardinality "1"^^xsd:nonNegativeInteger
+                                                         ]
+                                                         [ rdf:type owl:Restriction ;
+                                                           owl:onProperty vivo:dateIssued ;
+                                                           owl:maxQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                                                           owl:onClass vivo:DateTimeValue
+                                                         ]
+                                                         [ rdf:type owl:Restriction ;
+                                                           owl:onProperty :title ;
+                                                           owl:someValuesFrom xsd:string
+                                                         ]
+                                                         [ rdf:type owl:Restriction ;
+                                                           owl:onProperty :title ;
+                                                           owl:allValuesFrom xsd:string
+                                                         ]
+                                                         [ rdf:type owl:Restriction ;
+                                                           owl:onProperty bibo:abstract ;
+                                                           owl:allValuesFrom xsd:string
+                                                         ]
+                                                         [ rdf:type owl:Restriction ;
+                                                           owl:onProperty bibo:doi ;
+                                                           owl:allValuesFrom xsd:string
+                                                         ]
+                                                         [ rdf:type owl:Restriction ;
+                                                           owl:onProperty bibo:pageEnd ;
+                                                           owl:allValuesFrom rdfs:Literal
+                                                         ]
+                                                         [ rdf:type owl:Restriction ;
+                                                           owl:onProperty bibo:pageStart ;
+                                                           owl:allValuesFrom rdfs:Literal
+                                                         ]
+                                                         [ rdf:type owl:Restriction ;
+                                                           owl:onProperty vivo:freetextKeyword ;
+                                                           owl:allValuesFrom xsd:string
+                                                         ]
+                                                         [ rdf:type owl:Restriction ;
+                                                           owl:onProperty bibo:pageEnd ;
+                                                           owl:maxCardinality "1"^^xsd:nonNegativeInteger
+                                                         ]
+                                                         [ rdf:type owl:Restriction ;
+                                                           owl:onProperty bibo:pageStart ;
+                                                           owl:maxCardinality "1"^^xsd:nonNegativeInteger
+                                                         ]
+                                                       ) ;
+                                    rdf:type owl:Class
+                                  ] ;
               owl:disjointWith ero:ERO_0000071 ;
               rdfs:comment "A document (noun) is a bounded physical representation of body of information designed with the capacity (and usually intent) to communicate. A document may manifest symbolic, diagrammatic or sensory-representational information."@en ,
                            "Content made available to the general public. In the case of ASIO, often scientific or academic contents published."@en ,
@@ -5522,6 +5554,10 @@ bibo:Issue rdf:type owl:Class ;
 ###  http://w3id.org/roh/mirror/bibo#Journal
 bibo:Journal rdf:type owl:Class ;
              rdfs:subClassOf bibo:Periodical ,
+                             [ rdf:type owl:Restriction ;
+                               owl:onProperty :hasMetric ;
+                               owl:someValuesFrom :JournalMetric
+                             ] ,
                              [ rdf:type owl:Restriction ;
                                owl:onProperty :hasMetric ;
                                owl:allValuesFrom :JournalMetric
@@ -5686,7 +5722,7 @@ bibo:Report rdf:type owl:Class ;
                               owl:allValuesFrom foaf:Organization
                             ] ,
                             [ rdf:type owl:Restriction ;
-                              owl:onProperty vivo:dateTimeValue ;
+                              owl:onProperty vivo:dateIssued ;
                               owl:allValuesFrom vivo:DateTimeValue
                             ] ,
                             [ rdf:type owl:Restriction ;
@@ -8117,8 +8153,8 @@ skos:ConceptScheme rdf:type owl:Class ;
 #    Annotations
 #################################################################
 
-bfo:BFO_0000004 rdfs:label "independent continuant"@en ,
-                           "continuador independiente"@es .
+bfo:BFO_0000004 rdfs:label "continuador independiente"@es ,
+                           "independent continuant"@en .
 
 
 #################################################################
