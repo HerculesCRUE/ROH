@@ -12,7 +12,7 @@ prefix roh: <http://w3id.org/roh#>
 prefix xsd: <http://www.w3.org/2001/XMLSchema#> 
 SELECT distinct ?journalarticle ?impactFactor (YEAR(?date) as ?year)  ?impactFactorName
 WHERE {
-?journalarticle a iao:IAO_0000013 ;
+?journalarticle a bibo:AcademicArticle ;
 			vivo:dateIssued+|vivo:dateTimeValue ?dateTimeValue ;
       bibo:authorList+| roh:seqOfAuthors ?authorList ;
       vivo:hasPublicationVenue        ?journal;
