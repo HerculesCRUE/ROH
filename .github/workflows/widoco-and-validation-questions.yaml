@@ -64,7 +64,7 @@ jobs:
 
     - name: Launch tests
       working-directory: /home/runner/work/ROH/ROH/validation-questions
-      run: mvn surefire-report:report -Dmodel=https://raw.githubusercontent.com/HerculesCRUE/ROH/main/roh/modules/core/roh-core.ttl,https://raw.githubusercontent.com/HerculesCRUE/ROH/main/validation-data/rdf/roh_data_edma.ttl,https://raw.githubusercontent.com/HerculesCRUE/ROH/main/roh/modules/knowledge-area/unesco-knowledge-area.rdf -DqueryFolder=/home/runner/work/ROH/ROH/validation-questions/sparql-query/
+      run: mvn surefire-report:report -Dmodel=https://raw.githubusercontent.com/HerculesCRUE/ROH/add_some/roh/modules/core/roh-core.ttl,https://raw.githubusercontent.com/HerculesCRUE/ROH/add_some/validation-data/rdf/roh_data_edma.ttl,https://raw.githubusercontent.com/HerculesCRUE/ROH/add_some/roh/modules/knowledge-area/unesco-knowledge-area.rdf -DqueryFolder=/home/runner/work/ROH/ROH/validation-questions/sparql-query/
 
 
     - name: Generate maven site
