@@ -54,34 +54,9 @@ jobs:
       working-directory: pellet
       run: mvn install
 
-    - name: Create html folder
-      run: |
-        cd validation-questions
-        mkdir html
-        cd html 
-        mkdir report
-
     - name: Launch tests
       working-directory: /home/runner/work/ROH/ROH/validation-questions
       run: mvn surefire-report:report -Dmodel=https://raw.githubusercontent.com/HerculesCRUE/ROH/add_some/roh/modules/core/roh-core.ttl,https://raw.githubusercontent.com/HerculesCRUE/ROH/add_some/validation-data/rdf/roh_data_edma.ttl,https://raw.githubusercontent.com/HerculesCRUE/ROH/add_some/roh/modules/knowledge-area/unesco-knowledge-area.rdf -DqueryFolder=/home/runner/work/ROH/ROH/validation-questions/sparql-query/
 
 
-    - name: Generate maven site
-      working-directory: /home/runner/work/ROH/ROH/validation-questions
-      run:  mvn site
-
-
-    - name: Generate documentation
-      working-directory: /home/runner/work/ROH/ROH/validation-questions
-      run: mvn javadoc:test-javadoc 
-
-    - name: copy maven report to html folder
-      run: |
-        cd validation-questions
-        cp -r target/site/*  html/report
-    - name: Create html files
-      run: |
-        cd validation-questions/src
-        python jsonTohtml.py "/home/runner/work/ROH/ROH/validation-questions/sparql-query" "/home/runner/work/ROH/ROH/validation-questions/html"
-    
    
