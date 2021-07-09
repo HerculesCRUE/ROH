@@ -5,7 +5,7 @@ PREFIX rdfs:  <http://www.w3.org/2000/01/rdf-schema#>
 prefix iao: <http://w3id.org/roh/mirror/obo/iao#>
 SELECT DISTINCT ?researcher ?center ?journalArticle 
 WHERE {
-?journalArticle a                        iao:IAO_0000013;
+?journalArticle a                        bibo:AcademicArticle;
         bibo:authorList+| roh:seqOfAuthors ?authorList ;
         roh:correspondingOrganization ?center;
         vivo:hasPublicationVenue <http://w3id.org/roh/data#excelent-journal> .
