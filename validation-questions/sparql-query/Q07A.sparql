@@ -6,16 +6,15 @@ prefix bibo: <http://w3id.org/roh/mirror/bibo#>
 prefix foaf: <http://w3id.org/roh/mirror/foaf#>
 prefix gn: <http://w3id.org/roh/mirror/geonames#>
 
-SELECT
-(COUNT(DISTINCT ?publication) as ?publicationCount) ?comunidadAutonoma
+SELECT(COUNT(DISTINCT ?publication) as ?publicationCount) ?comunidadAutonoma
 WHERE {
   ?publication         a bibo:Document ;
                        vivo:hasPublicationVenue        ?journal;
                        roh:correspondingOrganization ?organization.
   ?journal	a bibo:Journal        .
   ?organization	gn:locatedIn        ?location .
-#SERVICE ?location {
-#  	?location <https://www.geonames.org/ontology#A.ADM1> ?comunidadAutonoma .
-#  }
+SERVICE ?location {
+  	?location <https://www.geonames.org/ontology#A.ADM1> ?comunidadAutonoma .
+  }
 }
 GROUP BY ?comunidadAutonoma
