@@ -9,10 +9,9 @@ WHERE {
 ?organization	gn:locatedIn        ?location ;
               a ?classOrganization.
 Filter(?classOrganization = roh:ResearchInstitute || ?classOrganization = roh:ResearchGroup)
- #SERVICE ?location {
-  	?location gn:parentADM1 ?comunidadAutonoma ;
-              gn:name ?name.
-
- # }
+SERVICE ?location {
+  	?location <http://www.geonames.org/ontology#officialName> ?comunidadAutonoma .
+  }
+}
 }
 GROUP BY ?comunidadAutonoma
