@@ -14,8 +14,8 @@ WHERE {
                        roh:correspondingOrganization ?organization.
   ?journal	a bibo:Journal        .
   ?organization	gn:locatedIn        ?location .
- SERVICE ?location {
+ #SERVICE ?location {
   	?location gn:parentADM1 ?comunidadAutonoma .
-  }
+  #}
 }
 GROUP BY ?comunidadAutonoma
