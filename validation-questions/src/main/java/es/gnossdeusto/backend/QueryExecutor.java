@@ -7,14 +7,15 @@ import java.util.Map;
 import org.json.JSONObject;
 
 import com.hp.hpl.jena.query.Query;
+import com.hp.hpl.jena.sparql.engine.http.Service;
 import com.hp.hpl.jena.query.QueryExecution;
 import com.hp.hpl.jena.query.QueryExecutionFactory;
 import com.hp.hpl.jena.query.QueryFactory;
 import com.hp.hpl.jena.query.QuerySolution;
 import com.hp.hpl.jena.query.ResultSet;
+import com.hp.hpl.jena.query.Syntax;
 import com.hp.hpl.jena.rdf.model.Model;
 import com.hp.hpl.jena.rdf.model.RDFNode;
-
 import java.util.HashMap;
 
 public class QueryExecutor {
@@ -23,7 +24,10 @@ public class QueryExecutor {
         Query query = QueryFactory.create(queryString) ;
         JSONObject result = new JSONObject();
 		//List<Map<String, String>> result = new ArrayList<Map<String, String>>();
-        try(QueryExecution qexec = QueryExecutionFactory.create(query, data)) {
+        Syntax syntaxSPARQL = new syntaxSPARQL();
+        Syntax syntaxARQ = new syntaxARQ();
+
+        try(QueryExecution qexec = QueryExecutionFactory.create(query, syntaxSPARQL, data )) {
             ResultSet results = qexec.execSelect();
             List<String> resultVars = results.getResultVars();
             for ( ; results.hasNext() ; )
