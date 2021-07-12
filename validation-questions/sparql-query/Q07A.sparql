@@ -15,7 +15,7 @@ WHERE {
   ?journal	a bibo:Journal        .
   ?organization	gn:locatedIn        ?location .
  SERVICE ?location {
-  	?location <http://www.geonames.org/ontology#parentADM1> ?comunidadAutonoma .
+  	?location gn:parentADM1 ?comunidadAutonoma .
   }
 }
 GROUP BY ?comunidadAutonoma
