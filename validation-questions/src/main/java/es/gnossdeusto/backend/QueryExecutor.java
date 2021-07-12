@@ -8,6 +8,7 @@ import org.json.JSONObject;
 
 import com.hp.hpl.jena.query.Query;
 import com.hp.hpl.jena.sparql.engine.http.Service;
+import com.hp.hpl.jena.sparql.util.Symbol;
 import com.hp.hpl.jena.query.QueryExecution;
 import com.hp.hpl.jena.query.QueryExecutionFactory;
 import com.hp.hpl.jena.query.QueryFactory;
@@ -24,10 +25,7 @@ public class QueryExecutor {
         Query query = QueryFactory.create(queryString) ;
         JSONObject result = new JSONObject();
 		//List<Map<String, String>> result = new ArrayList<Map<String, String>>();
-        Syntax syntaxSPARQL = new syntaxSPARQL();
-        Syntax syntaxARQ = new syntaxARQ();
-
-        try(QueryExecution qexec = QueryExecutionFactory.create(query, syntaxSPARQL, data )) {
+        try(QueryExecution qexec = QueryExecutionFactory.create(query,  data )) {
             ResultSet results = qexec.execSelect();
             List<String> resultVars = results.getResultVars();
             for ( ; results.hasNext() ; )
