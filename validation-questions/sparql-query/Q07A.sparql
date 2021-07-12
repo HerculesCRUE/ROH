@@ -14,8 +14,8 @@ WHERE {
                        roh:correspondingOrganization ?organization.
   ?journal	a bibo:Journal        .
   ?organization	gn:locatedIn        ?location .
- SERVICE ?location {
-  	?location <https://www.geonames.org/ontology#A.ADM1> ?comunidadAutonoma .
-  }
+#SERVICE ?location {
+#  	?location <https://www.geonames.org/ontology#A.ADM1> ?comunidadAutonoma .
+#  }
 }
 GROUP BY ?comunidadAutonoma
