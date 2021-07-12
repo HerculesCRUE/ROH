@@ -2918,6 +2918,18 @@ obo:BFO_0000040 rdf:type owl:Class .
 :Activity rdf:type owl:Class ;
           rdfs:subClassOf bfo:BFO_0000015 ,
                           [ rdf:type owl:Restriction ;
+                            owl:onProperty :participatedBy ;
+                            owl:someValuesFrom [ rdf:type owl:Class ;
+                                                 owl:unionOf ( foaf:Agent
+                                                               vivo:Project
+                                                             )
+                                               ]
+                          ] ,
+                          [ rdf:type owl:Restriction ;
+                            owl:onProperty vivo:dateTimeInterval ;
+                            owl:someValuesFrom vivo:DateTimeInterval
+                          ] ,
+                          [ rdf:type owl:Restriction ;
                             owl:onProperty :hasKnowledgeArea ;
                             owl:allValuesFrom skos:Concept
                           ] ,
@@ -3499,6 +3511,10 @@ The previous short definition was: \"An arbitrary classification of a space/time
 ###  http://w3id.org/roh#Expense
 :Expense rdf:type owl:Class ;
          rdfs:subClassOf [ rdf:type owl:Restriction ;
+                           owl:onProperty vivo:dateIssued ;
+                           owl:someValuesFrom vivo:DateTimeValue
+                         ] ,
+                         [ rdf:type owl:Restriction ;
                            owl:onProperty :hasExpenseClassification ;
                            owl:allValuesFrom [ owl:intersectionOf ( skos:Concept
                                                                     [ rdf:type owl:Restriction ;
@@ -3510,8 +3526,16 @@ The previous short definition was: \"An arbitrary classification of a space/time
                                              ]
                          ] ,
                          [ rdf:type owl:Restriction ;
-                           owl:onProperty vivo:dateTimeValue ;
+                           owl:onProperty vivo:dateIssued ;
                            owl:allValuesFrom vivo:DateTimeValue
+                         ] ,
+                         [ rdf:type owl:Restriction ;
+                           owl:onProperty :currency ;
+                           owl:someValuesFrom xsd:string
+                         ] ,
+                         [ rdf:type owl:Restriction ;
+                           owl:onProperty :monetaryAmount ;
+                           owl:someValuesFrom xsd:decimal
                          ] ,
                          [ rdf:type owl:Restriction ;
                            owl:onProperty :currency ;
@@ -6169,7 +6193,8 @@ bfo:BFO_0000023 rdf:type owl:Class ;
                                 [ rdf:type owl:Restriction ;
                                   owl:onProperty vivo:relatedBy ;
                                   owl:allValuesFrom [ rdf:type owl:Class ;
-                                                      owl:unionOf ( :PatentApplication
+                                                      owl:unionOf ( :Activity
+                                                                    :PatentApplication
                                                                     bfo:BFO_0000023
                                                                     vivo:Project
                                                                     vivo:Relationship
