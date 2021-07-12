@@ -2,7 +2,7 @@ prefix roh: <http://w3id.org/roh#>
 prefix gn: <http://w3id.org/roh/mirror/geonames#>
 prefix geonames: <http://www.geonames.org/ontology#>
 SELECT
-(COUNT(DISTINCT ?RO) as ?CountResearchObject) ?comunidadAutonoma
+(COUNT(DISTINCT ?RO) as ?CountResearchObject) ?comunidadAutonoma ?property
 WHERE {
   ?RO         a roh:ResearchObject;
               roh:correspondingOrganization ?organization.
@@ -10,7 +10,7 @@ WHERE {
               a ?classOrganization.
 Filter(?classOrganization = roh:ResearchInstitute || ?classOrganization = roh:ResearchGroup)
 #SERVICE ?location {
-  	?location geonames:officialName ?comunidadAutonoma .
+  	?location ?property ?comunidadAutonoma .
  # }
 
 }
