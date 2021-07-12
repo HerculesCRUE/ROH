@@ -9,9 +9,8 @@ WHERE {
 ?organization	gn:locatedIn        ?location ;
               a ?classOrganization.
 Filter(?classOrganization = roh:ResearchInstitute || ?classOrganization = roh:ResearchGroup)
-#SERVICE ?location {
+SERVICE ?location {
   	?location ?property ?comunidadAutonoma .
- # }
-
+  }
 }
 GROUP BY ?comunidadAutonoma
