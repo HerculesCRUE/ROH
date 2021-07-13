@@ -34,6 +34,7 @@ public class QueryExecutor {
 			      JSONObject partialResult = new JSONObject();
                   // Map<String, String> partialResult = new HashMap<String, String>();
                   for(String var : resultVars) {
+                      System.out.println(partialResult);
                     if(soln.get(var)==null){                   
                         partialResult.put(var, "");
                     }
