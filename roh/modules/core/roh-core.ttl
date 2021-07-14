@@ -2865,6 +2865,10 @@ obo:BFO_0000040 rdf:type owl:Class .
 ###  http://w3id.org/roh#Accreditation
 :Accreditation rdf:type owl:Class ;
                rdfs:subClassOf [ rdf:type owl:Restriction ;
+                                 owl:onProperty vivo:hasGoverningAuthority ;
+                                 owl:someValuesFrom foaf:Organization
+                               ] ,
+                               [ rdf:type owl:Restriction ;
                                  owl:onProperty :hasKnowledgeArea ;
                                  owl:allValuesFrom skos:Concept
                                ] ,
@@ -2917,6 +2921,18 @@ obo:BFO_0000040 rdf:type owl:Class .
 ###  http://w3id.org/roh#Activity
 :Activity rdf:type owl:Class ;
           rdfs:subClassOf bfo:BFO_0000015 ,
+                          [ rdf:type owl:Restriction ;
+                            owl:onProperty :participatedBy ;
+                            owl:someValuesFrom [ rdf:type owl:Class ;
+                                                 owl:unionOf ( foaf:Agent
+                                                               vivo:Project
+                                                             )
+                                               ]
+                          ] ,
+                          [ rdf:type owl:Restriction ;
+                            owl:onProperty vivo:dateTimeInterval ;
+                            owl:someValuesFrom vivo:DateTimeInterval
+                          ] ,
                           [ rdf:type owl:Restriction ;
                             owl:onProperty :hasKnowledgeArea ;
                             owl:allValuesFrom skos:Concept
@@ -3495,6 +3511,10 @@ The previous short definition was: \"An arbitrary classification of a space/time
 ###  http://w3id.org/roh#Expense
 :Expense rdf:type owl:Class ;
          rdfs:subClassOf [ rdf:type owl:Restriction ;
+                           owl:onProperty vivo:dateIssued ;
+                           owl:someValuesFrom vivo:DateTimeValue
+                         ] ,
+                         [ rdf:type owl:Restriction ;
                            owl:onProperty :hasExpenseClassification ;
                            owl:allValuesFrom [ owl:intersectionOf ( skos:Concept
                                                                     [ rdf:type owl:Restriction ;
@@ -3506,8 +3526,12 @@ The previous short definition was: \"An arbitrary classification of a space/time
                                              ]
                          ] ,
                          [ rdf:type owl:Restriction ;
-                           owl:onProperty vivo:dateTimeValue ;
+                           owl:onProperty vivo:dateIssued ;
                            owl:allValuesFrom vivo:DateTimeValue
+                         ] ,
+                         [ rdf:type owl:Restriction ;
+                           owl:onProperty :monetaryAmount ;
+                           owl:someValuesFrom xsd:decimal
                          ] ,
                          [ rdf:type owl:Restriction ;
                            owl:onProperty :currency ;
@@ -3658,15 +3682,8 @@ The previous short definition was: \"An arbitrary classification of a space/time
 ###  http://w3id.org/roh#Funding
 :Funding rdf:type owl:Class ;
          rdfs:subClassOf [ rdf:type owl:Restriction ;
-                           owl:onProperty :hasKnowledgeArea ;
-                           owl:someValuesFrom [ owl:intersectionOf ( skos:Concept
-                                                                     [ rdf:type owl:Restriction ;
-                                                                       owl:onProperty skos:inScheme ;
-                                                                       owl:someValuesFrom :KnowledgeArea
-                                                                     ]
-                                                                   ) ;
-                                                rdf:type owl:Class
-                                              ]
+                           owl:onProperty :fundedBy ;
+                           owl:someValuesFrom :FundingProgram
                          ] ,
                          [ rdf:type owl:Restriction ;
                            owl:onProperty :fundedBy ;
@@ -3885,10 +3902,6 @@ A roh:FundingSource roh:feeds a roh:Funding with funds to sponsor some projects.
                                                ]
                            ] ,
                            [ rdf:type owl:Restriction ;
-                             owl:onProperty :produces ;
-                             owl:allValuesFrom :ResearchObject
-                           ] ,
-                           [ rdf:type owl:Restriction ;
                              owl:onProperty :spends ;
                              owl:allValuesFrom :PatentExpense
                            ] ,
@@ -3947,6 +3960,14 @@ A roh:FundingSource roh:feeds a roh:Funding with funds to sponsor some projects.
 ###  http://w3id.org/roh#JournalMetric
 :JournalMetric rdf:type owl:Class ;
                rdfs:subClassOf :Metric ,
+                               [ rdf:type owl:Restriction ;
+                                 owl:onProperty :impactFactor ;
+                                 owl:someValuesFrom xsd:float
+                               ] ,
+                               [ rdf:type owl:Restriction ;
+                                 owl:onProperty :impactFactorName ;
+                                 owl:someValuesFrom xsd:string
+                               ] ,
                                [ rdf:type owl:Restriction ;
                                  owl:onProperty :impactFactor ;
                                  owl:allValuesFrom xsd:float
@@ -4200,7 +4221,7 @@ A roh:FundingSource roh:feeds a roh:Funding with funds to sponsor some projects.
 ###  http://w3id.org/roh#Metric
 :Metric rdf:type owl:Class ;
         rdfs:subClassOf [ rdf:type owl:Restriction ;
-                          owl:onProperty vivo:dateTimeValue ;
+                          owl:onProperty vivo:dateIssued ;
                           owl:allValuesFrom vivo:DateTimeValue
                         ] ,
                         [ rdf:type owl:Restriction ;
@@ -4262,13 +4283,6 @@ A roh:FundingSource roh:feeds a roh:Funding with funds to sponsor some projects.
 :PatentExpense rdf:type owl:Class ;
                rdfs:subClassOf :Expense ;
                rdfs:label "Patent Expense"@en .
-
-
-###  http://w3id.org/roh#PeerReviewedArticle
-:PeerReviewedArticle rdf:type owl:Class ;
-                     rdfs:subClassOf bibo:AcademicArticle ,
-                                     bibo:Article ;
-                     rdfs:label "Peer-reviewed article"@en .
 
 
 ###  http://w3id.org/roh#PersonContract
@@ -4439,6 +4453,10 @@ A roh:FundingSource roh:feeds a roh:Funding with funds to sponsor some projects.
 :PublicationMetric rdf:type owl:Class ;
                    rdfs:subClassOf :Metric ,
                                    [ rdf:type owl:Restriction ;
+                                     owl:onProperty :metricName ;
+                                     owl:someValuesFrom xsd:string
+                                   ] ,
+                                   [ rdf:type owl:Restriction ;
                                      owl:onProperty :citationCount ;
                                      owl:allValuesFrom xsd:integer
                                    ] ;
@@ -4494,6 +4512,18 @@ A roh:FundingSource roh:feeds a roh:Funding with funds to sponsor some projects.
 ###  http://w3id.org/roh#Repository
 :Repository rdf:type owl:Class ;
             rdfs:subClassOf iao:IAO_0000030 ,
+                            [ rdf:type owl:Restriction ;
+                              owl:onProperty :repositoryStatus ;
+                              owl:someValuesFrom [ rdf:type owl:Class ;
+                                                   owl:unionOf ( :Closed
+                                                                 :Open
+                                                               )
+                                                 ]
+                            ] ,
+                            [ rdf:type owl:Restriction ;
+                              owl:onProperty :seqOfAuthors ;
+                              owl:someValuesFrom rdf:Seq
+                            ] ,
                             [ rdf:type owl:Restriction ;
                               owl:onProperty :correspondingAuthor ;
                               owl:allValuesFrom foaf:Person
@@ -4681,6 +4711,10 @@ A roh:FundingSource roh:feeds a roh:Funding with funds to sponsor some projects.
                 rdfs:subClassOf [ rdf:type owl:Restriction ;
                                   owl:onProperty :correspondingAuthor ;
                                   owl:someValuesFrom foaf:Person
+                                ] ,
+                                [ rdf:type owl:Restriction ;
+                                  owl:onProperty :seqOfAuthors ;
+                                  owl:someValuesFrom rdf:Seq
                                 ] ,
                                 [ rdf:type owl:Restriction ;
                                   owl:onProperty <http://purl.org/spar/cito/cites> ;
@@ -5101,6 +5135,10 @@ A roh:FundingSource roh:feeds a roh:Funding with funds to sponsor some projects.
 bibo:AcademicArticle rdf:type owl:Class ;
                      rdfs:subClassOf bibo:Article ,
                                      [ rdf:type owl:Restriction ;
+                                       owl:onProperty :correspondingAuthor ;
+                                       owl:someValuesFrom foaf:Person
+                                     ] ,
+                                     [ rdf:type owl:Restriction ;
                                        owl:onProperty vivo:hasPublicationVenue ;
                                        owl:allValuesFrom bibo:Journal
                                      ] ,
@@ -5120,6 +5158,18 @@ bibo:AcademicArticle rdf:type owl:Class ;
 ###  http://w3id.org/roh/mirror/bibo#Article
 bibo:Article rdf:type owl:Class ;
              rdfs:subClassOf bibo:Document ,
+                             [ rdf:type owl:Restriction ;
+                               owl:onProperty :correspondingOrganization ;
+                               owl:someValuesFrom foaf:Organization
+                             ] ,
+                             [ rdf:type owl:Restriction ;
+                               owl:onProperty :seqOfAuthors ;
+                               owl:someValuesFrom rdf:Seq
+                             ] ,
+                             [ rdf:type owl:Restriction ;
+                               owl:onProperty vivo:dateIssued ;
+                               owl:someValuesFrom vivo:DateTimeValue
+                             ] ,
                              [ rdf:type owl:Restriction ;
                                owl:onProperty bibo:doi ;
                                owl:someValuesFrom xsd:string
@@ -5308,6 +5358,10 @@ bibo:Document rdf:type owl:Class ;
                                 owl:allValuesFrom :ResearchResult
                               ] ,
                               [ rdf:type owl:Restriction ;
+                                owl:onProperty :seqOfAuthors ;
+                                owl:allValuesFrom rdf:Seq
+                              ] ,
+                              [ rdf:type owl:Restriction ;
                                 owl:onProperty bibo:authorList ;
                                 owl:allValuesFrom rdf:Seq
                               ] ,
@@ -5484,6 +5538,10 @@ bibo:Issue rdf:type owl:Class ;
 ###  http://w3id.org/roh/mirror/bibo#Journal
 bibo:Journal rdf:type owl:Class ;
              rdfs:subClassOf bibo:Periodical ,
+                             [ rdf:type owl:Restriction ;
+                               owl:onProperty :hasMetric ;
+                               owl:someValuesFrom :JournalMetric
+                             ] ,
                              [ rdf:type owl:Restriction ;
                                owl:onProperty :hasMetric ;
                                owl:allValuesFrom :JournalMetric
@@ -6095,7 +6153,8 @@ bfo:BFO_0000023 rdf:type owl:Class ;
                                 [ rdf:type owl:Restriction ;
                                   owl:onProperty vivo:relatedBy ;
                                   owl:allValuesFrom [ rdf:type owl:Class ;
-                                                      owl:unionOf ( :PatentApplication
+                                                      owl:unionOf ( :Activity
+                                                                    :PatentApplication
                                                                     bfo:BFO_0000023
                                                                     vivo:Project
                                                                     vivo:Relationship
@@ -6613,6 +6672,10 @@ ero:ERO_0001263 rdf:type owl:Class ;
 iao:IAO_0000013 rdf:type owl:Class ;
                 rdfs:subClassOf bibo:AcademicArticle ,
                                 [ rdf:type owl:Restriction ;
+                                  owl:onProperty vivo:hasPublicationVenue ;
+                                  owl:someValuesFrom bibo:Journal
+                                ] ,
+                                [ rdf:type owl:Restriction ;
                                   owl:onProperty :hasMetric ;
                                   owl:allValuesFrom :PublicationMetric
                                 ] ,
@@ -7008,7 +7071,7 @@ vivo:Competition rdf:type owl:Class ;
 
 ###  http://w3id.org/roh/mirror/vivo#ConferencePaper
 vivo:ConferencePaper rdf:type owl:Class ;
-                     rdfs:subClassOf bibo:Article ,
+                     rdfs:subClassOf bibo:AcademicArticle ,
                                      [ rdf:type owl:Restriction ;
                                        owl:onProperty bibo:presentedAt ;
                                        owl:allValuesFrom bibo:Conference
@@ -7126,6 +7189,10 @@ vivo:Dataset rdf:type owl:Class ;
 ###  http://w3id.org/roh/mirror/vivo#DateTimeInterval
 vivo:DateTimeInterval rdf:type owl:Class ;
                       rdfs:subClassOf bfo:BFO_0000038 ,
+                                      [ rdf:type owl:Restriction ;
+                                        owl:onProperty vivo:start ;
+                                        owl:someValuesFrom vivo:DateTimeValue
+                                      ] ,
                                       [ rdf:type owl:Restriction ;
                                         owl:onProperty :hasKnowledgeArea ;
                                         owl:allValuesFrom [ owl:intersectionOf ( skos:Concept
@@ -7540,6 +7607,24 @@ vivo:PrincipalInvestigatorRole rdf:type owl:Class ;
 vivo:Project rdf:type owl:Class ;
              rdfs:subClassOf bfo:BFO_0000015 ,
                              [ rdf:type owl:Restriction ;
+                               owl:onProperty :projectStatus ;
+                               owl:someValuesFrom [ rdf:type owl:Class ;
+                                                    owl:unionOf ( :Closed
+                                                                  :Open
+                                                                  :ProposalSubmitted
+                                                                  :Rejected
+                                                                )
+                                                  ]
+                             ] ,
+                             [ rdf:type owl:Restriction ;
+                               owl:onProperty vivo:dateTimeInterval ;
+                               owl:someValuesFrom vivo:DateTimeInterval
+                             ] ,
+                             [ rdf:type owl:Restriction ;
+                               owl:onProperty vivo:relates ;
+                               owl:someValuesFrom bfo:BFO_0000023
+                             ] ,
+                             [ rdf:type owl:Restriction ;
                                owl:onProperty :foreseenJustificationDate ;
                                owl:allValuesFrom vivo:DateTimeValue
                              ] ,
@@ -7792,6 +7877,10 @@ skos:ConceptScheme rdf:type owl:Class ;
                                      rdfs:subClassOf [ rdf:type owl:Restriction ;
                                                        owl:onProperty :correspondingAuthor ;
                                                        owl:someValuesFrom foaf:Person
+                                                     ] ,
+                                                     [ rdf:type owl:Restriction ;
+                                                       owl:onProperty :correspondingAuthor ;
+                                                       owl:allValuesFrom foaf:Person
                                                      ] ,
                                                      [ rdf:type owl:Restriction ;
                                                        owl:onProperty vivo:dateTimeValue ;
@@ -8103,8 +8192,8 @@ skos:ConceptScheme rdf:type owl:Class ;
 #    Annotations
 #################################################################
 
-bfo:BFO_0000004 rdfs:label "continuador independiente"@es ,
-                           "independent continuant"@en .
+bfo:BFO_0000004 rdfs:label "independent continuant"@en ,
+                           "continuador independiente"@es .
 
 
 #################################################################
