@@ -5146,6 +5146,7 @@ bibo:AcademicArticle rdf:type owl:Class ;
                                        owl:onProperty bibo:eanucc13 ;
                                        owl:allValuesFrom rdfs:Literal
                                      ] ;
+                     owl:disjointWith vivo:EditorialArticle ;
                      obo:IAO_0000112 "A specific academic journal article" ;
                      obo:IAO_0000115 "Written by scholars for other scholars, typically published in an academic journal with an abstract and bibliography" ;
                      rdfs:comment "A scholarly academic article, typically published in a journal."@en ;
@@ -8383,7 +8384,6 @@ bfo:BFO_0000004 rdfs:label "independent continuant"@en ,
   owl:members ( :BlogPost
                 :PressArticle
                 bibo:AcademicArticle
-                vivo:ConferencePaper
                 vivo:EditorialArticle
               )
 ] .
@@ -8516,14 +8516,6 @@ bfo:BFO_0000004 rdfs:label "independent continuant"@en ,
                 vivo:Internship
                 vivo:Meeting
                 vivo:Presentation
-              )
-] .
-
-
-[ rdf:type owl:AllDisjointClasses ;
-  owl:members ( bibo:AcademicArticle
-                vivo:ConferencePaper
-                vivo:EditorialArticle
               )
 ] .
 
