@@ -3683,11 +3683,12 @@ The previous short definition was: \"An arbitrary classification of a space/time
 :Funding rdf:type owl:Class ;
          rdfs:subClassOf [ rdf:type owl:Restriction ;
                            owl:onProperty :fundedBy ;
-                           owl:someValuesFrom :FundingProgram
-                         ] ,
-                         [ rdf:type owl:Restriction ;
-                           owl:onProperty :fundedBy ;
-                           owl:allValuesFrom :FundingProgram
+                           owl:allValuesFrom [ rdf:type owl:Class ;
+                                               owl:unionOf ( :FundingProgram
+                                                             :FundingSource
+                                                             vivo:FundingOrganization
+                                                           )
+                                             ]
                          ] ,
                          [ rdf:type owl:Restriction ;
                            owl:onProperty :hasContract ;
@@ -5137,6 +5138,10 @@ bibo:AcademicArticle rdf:type owl:Class ;
                                      [ rdf:type owl:Restriction ;
                                        owl:onProperty :correspondingAuthor ;
                                        owl:someValuesFrom foaf:Person
+                                     ] ,
+                                     [ rdf:type owl:Restriction ;
+                                       owl:onProperty :hasMetric ;
+                                       owl:allValuesFrom :PublicationMetric
                                      ] ,
                                      [ rdf:type owl:Restriction ;
                                        owl:onProperty vivo:hasPublicationVenue ;
@@ -8193,8 +8198,8 @@ skos:ConceptScheme rdf:type owl:Class ;
 #    Annotations
 #################################################################
 
-bfo:BFO_0000004 rdfs:label "independent continuant"@en ,
-                           "continuador independiente"@es .
+bfo:BFO_0000004 rdfs:label "continuador independiente"@es ,
+                           "independent continuant"@en .
 
 
 #################################################################
