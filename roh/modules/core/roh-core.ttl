@@ -697,7 +697,6 @@ obo:RO_0000057 rdf:type owl:ObjectProperty .
 
 ###  http://w3id.org/roh#funds
 :funds rdf:type owl:ObjectProperty ;
-       owl:inverseOf :isFundedBy ;
        rdfs:comment "An object property linking a Thing when it funds another Thing."@en ;
        rdfs:label "financia"@es ,
                   "funds"@en .
@@ -1002,11 +1001,6 @@ obo:RO_0000057 rdf:type owl:ObjectProperty .
              rdf:type owl:FunctionalProperty ;
              rdfs:range foaf:Agent ;
              rdfs:label "is awarded by"@en .
-
-
-###  http://w3id.org/roh#isFundedBy
-:isFundedBy rdf:type owl:ObjectProperty ;
-            rdfs:label "is funded by"@en .
 
 
 ###  http://w3id.org/roh#isGrantedWith
@@ -3685,7 +3679,6 @@ The previous short definition was: \"An arbitrary classification of a space/time
                            owl:onProperty :fundedBy ;
                            owl:allValuesFrom [ rdf:type owl:Class ;
                                                owl:unionOf ( :FundingProgram
-                                                             :FundingSource
                                                              vivo:FundingOrganization
                                                            )
                                              ]
