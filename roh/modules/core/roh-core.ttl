@@ -3955,6 +3955,10 @@ A roh:FundingSource roh:feeds a roh:Funding with funds to sponsor some projects.
 :JournalMetric rdf:type owl:Class ;
                rdfs:subClassOf :Metric ,
                                [ rdf:type owl:Restriction ;
+                                 owl:onProperty vivo:dateIssued ;
+                                 owl:someValuesFrom vivo:DateTimeValue
+                               ] ,
+                               [ rdf:type owl:Restriction ;
                                  owl:onProperty :impactFactor ;
                                  owl:someValuesFrom xsd:float
                                ] ,
