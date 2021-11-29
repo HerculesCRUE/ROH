@@ -2825,15 +2825,7 @@ obo:BFO_0000040 rdf:type owl:Class .
 
 ###  http://w3id.org/roh#AcademicAccreditation
 :AcademicAccreditation rdf:type owl:Class ;
-                       rdfs:subClassOf :Accreditation ,
-                                       [ rdf:type owl:Restriction ;
-                                         owl:onProperty :title ;
-                                         owl:someValuesFrom xsd:string
-                                       ] ,
-                                       [ rdf:type owl:Restriction ;
-                                         owl:onProperty :title ;
-                                         owl:allValuesFrom xsd:string
-                                       ] ;
+                       rdfs:subClassOf :Accreditation ;
                        rdfs:comment "An attestation of qualification, competence, or authority issued to an individual by a third party with a relevant or  de facto authority or assumed competence to do so in the academic field."@en ;
                        rdfs:label "Academic Accreditation"@en ,
                                   "Acreditación Académica"@es .
