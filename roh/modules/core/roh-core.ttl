@@ -5778,6 +5778,10 @@ bibo:Workshop rdf:type owl:Class ;
 ###  http://w3id.org/roh/mirror/foaf#Agent
 foaf:Agent rdf:type owl:Class ;
            rdfs:subClassOf [ rdf:type owl:Restriction ;
+                             owl:onProperty :hasContactInfo ;
+                             owl:allValuesFrom <http://w3id.org/roh/mirror/vcard#Kind>
+                           ] ,
+                           [ rdf:type owl:Restriction ;
                              owl:onProperty vivo:relatedBy ;
                              owl:allValuesFrom vivo:Relationship
                            ] ,
@@ -8187,8 +8191,8 @@ skos:ConceptScheme rdf:type owl:Class ;
 #    Annotations
 #################################################################
 
-bfo:BFO_0000004 rdfs:label "continuador independiente"@es ,
-                           "independent continuant"@en .
+bfo:BFO_0000004 rdfs:label "independent continuant"@en ,
+                           "continuador independiente"@es .
 
 
 #################################################################
