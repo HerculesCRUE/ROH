@@ -3707,6 +3707,14 @@ The previous short definition was: \"An arbitrary classification of a space/time
                            owl:someValuesFrom rdfs:Literal
                          ] ,
                          [ rdf:type owl:Restriction ;
+                           owl:onProperty vivo:description ;
+                           owl:allValuesFrom xsd:string
+                         ] ,
+                         [ rdf:type owl:Restriction ;
+                           owl:onProperty vivo:freetextKeyword ;
+                           owl:allValuesFrom xsd:string
+                         ] ,
+                         [ rdf:type owl:Restriction ;
                            owl:onProperty vivo:identifier ;
                            owl:maxCardinality "1"^^xsd:nonNegativeInteger
                          ] ;
