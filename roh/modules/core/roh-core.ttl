@@ -2856,7 +2856,14 @@ obo:BFO_0000040 rdf:type owl:Class .
                                ] ,
                                [ rdf:type owl:Restriction ;
                                  owl:onProperty :hasKnowledgeArea ;
-                                 owl:allValuesFrom skos:Concept
+                                 owl:allValuesFrom [ owl:intersectionOf ( skos:Concept
+                                                                          [ rdf:type owl:Restriction ;
+                                                                            owl:onProperty skos:inScheme ;
+                                                                            owl:someValuesFrom :KnowledgeArea
+                                                                          ]
+                                                                        ) ;
+                                                     rdf:type owl:Class
+                                                   ]
                                ] ,
                                [ rdf:type owl:Restriction ;
                                  owl:onProperty vivo:dateIssued ;
@@ -2921,7 +2928,14 @@ obo:BFO_0000040 rdf:type owl:Class .
                           ] ,
                           [ rdf:type owl:Restriction ;
                             owl:onProperty :hasKnowledgeArea ;
-                            owl:allValuesFrom skos:Concept
+                            owl:allValuesFrom [ owl:intersectionOf ( skos:Concept
+                                                                     [ rdf:type owl:Restriction ;
+                                                                       owl:onProperty skos:inScheme ;
+                                                                       owl:someValuesFrom :KnowledgeArea
+                                                                     ]
+                                                                   ) ;
+                                                rdf:type owl:Class
+                                              ]
                           ] ,
                           [ rdf:type owl:Restriction ;
                             owl:onProperty :participatedBy ;
@@ -4878,7 +4892,14 @@ A roh:FundingSource roh:feeds a roh:Funding with funds to sponsor some projects.
                                          ] ,
                                          [ rdf:type owl:Restriction ;
                                            owl:onProperty :hasKnowledgeArea ;
-                                           owl:allValuesFrom skos:Concept
+                                           owl:allValuesFrom [ owl:intersectionOf ( skos:Concept
+                                                                                    [ rdf:type owl:Restriction ;
+                                                                                      owl:onProperty skos:inScheme ;
+                                                                                      owl:someValuesFrom :KnowledgeArea
+                                                                                    ]
+                                                                                  ) ;
+                                                               rdf:type owl:Class
+                                                             ]
                                          ] ,
                                          [ rdf:type owl:Restriction ;
                                            owl:onProperty vivo:dateTimeInterval ;
@@ -6876,7 +6897,14 @@ vivo:AdvisingRelationship rdf:type owl:Class ;
                                           ] ,
                                           [ rdf:type owl:Restriction ;
                                             owl:onProperty :hasKnowledgeArea ;
-                                            owl:allValuesFrom skos:Concept
+                                            owl:allValuesFrom [ owl:intersectionOf ( skos:Concept
+                                                                                     [ rdf:type owl:Restriction ;
+                                                                                       owl:onProperty skos:inScheme ;
+                                                                                       owl:someValuesFrom :KnowledgeArea
+                                                                                     ]
+                                                                                   ) ;
+                                                                rdf:type owl:Class
+                                                              ]
                                           ] ,
                                           [ rdf:type owl:Restriction ;
                                             owl:onProperty vivo:dateTimeInterval ;
@@ -7129,7 +7157,14 @@ vivo:Contract rdf:type owl:Class ;
                               ] ,
                               [ rdf:type owl:Restriction ;
                                 owl:onProperty :hasKnowledgeArea ;
-                                owl:allValuesFrom skos:Concept
+                                owl:allValuesFrom [ owl:intersectionOf ( skos:Concept
+                                                                         [ rdf:type owl:Restriction ;
+                                                                           owl:onProperty skos:inScheme ;
+                                                                           owl:someValuesFrom :KnowledgeArea
+                                                                         ]
+                                                                       ) ;
+                                                    rdf:type owl:Class
+                                                  ]
                               ] ,
                               [ rdf:type owl:Restriction ;
                                 owl:onProperty vivo:assignedBy ;
