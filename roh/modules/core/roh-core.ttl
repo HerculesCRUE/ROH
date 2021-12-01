@@ -3896,6 +3896,10 @@ A roh:FundingSource roh:feeds a roh:Funding with funds to sponsor some projects.
                                                ]
                            ] ,
                            [ rdf:type owl:Restriction ;
+                             owl:onProperty :produces ;
+                             owl:allValuesFrom :ResearchObject
+                           ] ,
+                           [ rdf:type owl:Restriction ;
                              owl:onProperty :spends ;
                              owl:allValuesFrom :PatentExpense
                            ] ,
