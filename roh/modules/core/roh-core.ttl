@@ -6296,12 +6296,12 @@ ero:ERO_0000071 rdf:type owl:Class ;
                                   owl:allValuesFrom :README
                                 ] ,
                                 [ rdf:type owl:Restriction ;
-                                  owl:onProperty :partOfResearchResult ;
-                                  owl:allValuesFrom :ResearchResult
+                                  owl:onProperty :partOfRepository ;
+                                  owl:allValuesFrom :Repository
                                 ] ,
                                 [ rdf:type owl:Restriction ;
-                                  owl:onProperty :repositoryHasPart ;
-                                  owl:allValuesFrom :Repository
+                                  owl:onProperty :partOfResearchResult ;
+                                  owl:allValuesFrom :ResearchResult
                                 ] ,
                                 [ rdf:type owl:Restriction ;
                                   owl:onProperty :seqOfAuthors ;
