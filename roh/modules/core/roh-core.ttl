@@ -7240,17 +7240,6 @@ vivo:DateTimeInterval rdf:type owl:Class ;
                                         owl:someValuesFrom vivo:DateTimeValue
                                       ] ,
                                       [ rdf:type owl:Restriction ;
-                                        owl:onProperty :hasKnowledgeArea ;
-                                        owl:allValuesFrom [ owl:intersectionOf ( skos:Concept
-                                                                                 [ rdf:type owl:Restriction ;
-                                                                                   owl:onProperty skos:inScheme ;
-                                                                                   owl:someValuesFrom :KnowledgeArea
-                                                                                 ]
-                                                                               ) ;
-                                                            rdf:type owl:Class
-                                                          ]
-                                      ] ,
-                                      [ rdf:type owl:Restriction ;
                                         owl:onProperty vivo:end ;
                                         owl:allValuesFrom vivo:DateTimeValue
                                       ] ,
