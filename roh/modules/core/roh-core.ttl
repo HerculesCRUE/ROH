@@ -5378,11 +5378,11 @@ bibo:Document rdf:type owl:Class ;
                                                   ]
                               ] ,
                               [ rdf:type owl:Restriction ;
-                                owl:onProperty :repositoryHasPart ;
+                                owl:onProperty :partOfRepository ;
                                 owl:allValuesFrom :Repository
                               ] ,
                               [ rdf:type owl:Restriction ;
-                                owl:onProperty :researchResultHasPart ;
+                                owl:onProperty :partOfResearchResult ;
                                 owl:allValuesFrom :ResearchResult
                               ] ,
                               [ rdf:type owl:Restriction ;
@@ -8238,8 +8238,8 @@ skos:ConceptScheme rdf:type owl:Class ;
 #    Annotations
 #################################################################
 
-bfo:BFO_0000004 rdfs:label "independent continuant"@en ,
-                           "continuador independiente"@es .
+bfo:BFO_0000004 rdfs:label "continuador independiente"@es ,
+                           "independent continuant"@en .
 
 
 #################################################################
