@@ -1,7 +1,8 @@
 
 ## 2022-02-18 
 ### Fixed 
-    - El prefijo de importacion de las ontologias skos y oa al prefiko w3id. 
+    - El prefijo de importacion de las ontologias skos y oa al prefiko w3id, en la ontologia, los datos, las preguntas y en la ontologia de unesko-individuals. 
+
 
 ## 2022-02-18 
 ### Added
