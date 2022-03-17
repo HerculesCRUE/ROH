@@ -132,7 +132,7 @@ The following list details the meaning of each query with the link to the real e
 
 * CQ61B- Devuelve  el *experimentalProtoco*l, en caso de estar en un repositorio devuelve la URI del repositorio  (*repository*) y el tipo de repositorio que es (*classRepository*), en caso de ser producido por un proyecto devuelve le proyecto que lo ha creado (*project*), devuelve la organizacion correspondiente  (en caso de ternerla) *organization* , devuelve el autor (*author*)  y en caso de que dicho autor (el que ha salido en dicha fila) halla declarado  un ResearchResult en el que dicho software esta includio tambien se devuelve (*ResearchResult*)	 - [Link](https://htmlpreview.github.io/?https://github.com/HerculesCRUE/ROH/blob/gh-pages/html/Q61B.html)
 
-* CQ62- Devuelve el repositorio (*repository*) y los repositorios que son fork (*repositoryFork*) de este primero ademas devuelve el tipo de repositorio del que estabamos hablando (*classRepository*). - [Link](https://htmlpreview.github.io/?https://github.com/HerculesCRUE/ROH/blob/gh-pages/html/Q62A.html)
+* CQ62- Devuelve el repositorio (*repository*) y los repositorios que son fork (*repositoryFork*) de este primero ademas devuelve el tipo de repositorio del que estabamos hablando (*classRepository*). - [Link](https://htmlpreview.github.io/?https://github.com/HerculesCRUE/ROH/blob/gh-pages/html/Q62.html)
 
 
 * CQ63A- Fijado el repositorio `http://w3id.org/roh/data#repository-1` devuelve todos los elementos (element) que estan almacenados en dicho repositorio. - [Link](https://htmlpreview.github.io/?https://github.com/HerculesCRUE/ROH/blob/gh-pages/html/Q63A.html)
