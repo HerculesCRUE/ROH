@@ -1,5 +1,9 @@
 
 ## 2022-02-18 
+### Fixed 
+    - El prefijo de importacion de las ontologias skos y oa al prefiko w3id. 
+
+## 2022-02-18 
 ### Added
 	- Actualización de la tabla ResearchObject, se añade la propiedad vivo:relates para explicar y enfatizar que esta propiedad se puede usar para modelar las relaciones existentes entre los RO que componen un RS. También se añadió unas líneas explicativas en la documentación pertinente.
 

@@ -3,6 +3,7 @@
 @prefix ns: <http://www.w3.org/2003/06/sw-vocab-status/ns#> .
 @prefix ro: <http://w3id.org/roh/mirror/obo/ro#> .
 @prefix bfo: <http://w3id.org/roh/mirror/obo/bfo#> .
+@prefix oa: <http://w3id.org/roh/mirror/oa#> .
 @prefix dct: <https://w3id.org/roh/mirror/dc/terms/> .
 @prefix deo: <http://purl.org/spar/deo/> .
 @prefix ero: <http://w3id.org/roh/mirror/obo/ero#> .
@@ -21,13 +22,13 @@
 @prefix doco: <http://purl.org/spar/doco/> .
 @prefix foaf: <http://w3id.org/roh/mirror/foaf#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
-@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+#@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
 @prefix time: <http://www.w3.org/2006/time#> .
 @prefix vivo: <http://w3id.org/roh/mirror/vivo#> .
 @prefix cerif: <https://w3id.org/roh/mirror/cerif/> .
 @prefix fabio: <http://purl.org/spar/fabio/> .
 @prefix frapo: <http://purl.org/cerif/frapo#> .
-@prefix skos1: <http://w3id.org/roh/mirror/skos#> .
+@prefix skos: <http://w3id.org/roh/mirror/skos#> .
 @prefix vitro: <http://vitro.mannlib.cornell.edu/ns/vitro/0.7#> .
 @prefix schema: <https://schema.org/> .
 @prefix modules: <http://purl.org/hercules/asio/modules#> .
@@ -243,7 +244,7 @@ iao:IAO_0000602 rdf:type owl:AnnotationProperty .
 
 
 ###  http://w3id.org/roh/mirror/skos#definition
-skos1:definition rdf:type owl:AnnotationProperty .
+skos:definition rdf:type owl:AnnotationProperty .
 
 
 ###  http://www.w3.org/2003/06/sw-vocab-status/ns#term_status
@@ -299,19 +300,19 @@ skos:topConceptOf rdf:type owl:AnnotationProperty .
 
 
 ###  http://www.w3.org/ns/oa#hasBody
-<http://www.w3.org/ns/oa#hasBody> rdf:type owl:AnnotationProperty ;
+oa:hasBody rdf:type owl:AnnotationProperty ;
                                   rdfs:comment "The object of the relationship is a resource that is a body of the Annotation." ;
                                   rdfs:isDefinedBy <http://www.w3.org/ns/oa#> ;
                                   rdfs:label "hasBody" ;
-                                  rdfs:domain <http://www.w3.org/ns/oa#Annotation> .
+                                  rdfs:domain oa:Annotation .
 
 
 ###  http://www.w3.org/ns/oa#hasTarget
-<http://www.w3.org/ns/oa#hasTarget> rdf:type owl:AnnotationProperty ;
+oa:hasTarget rdf:type owl:AnnotationProperty ;
                                     rdfs:comment "The relationship between an Annotation and its Target." ;
                                     rdfs:isDefinedBy <http://www.w3.org/ns/oa#> ;
                                     rdfs:label "hasTarget" ;
-                                    rdfs:domain <http://www.w3.org/ns/oa#Annotation> .
+                                    rdfs:domain oa:Annotation .
 
 
 ###  https://schema.org/identifier
@@ -1934,9 +1935,9 @@ skos:inScheme rdf:type owl:ObjectProperty .
 
 
 ###  http://www.w3.org/ns/oa#motivatedBy
-<http://www.w3.org/ns/oa#motivatedBy> rdf:type owl:ObjectProperty ;
-                                      rdfs:domain <http://www.w3.org/ns/oa#Annotation> ;
-                                      rdfs:range <http://www.w3.org/ns/oa#Motivation> ;
+oa:motivatedBy rdf:type owl:ObjectProperty ;
+                                      rdfs:domain oa:Annotation ;
+                                      rdfs:range oa:Motivation ;
                                       rdfs:comment "The relationship between an Annotation and a Motivation that describes the reason for the Annotation's creation." ;
                                       rdfs:isDefinedBy <http://www.w3.org/ns/oa#> ;
                                       rdfs:label "motivatedBy" .
@@ -7893,7 +7894,7 @@ rdf:Seq rdf:type owl:Class .
 
 ###  http://www.w3.org/2004/02/skos/core#Concept
 skos:Concept rdf:type owl:Class ;
-             skos1:definition "An abstract idea or notion; a unit of thought."@en ;
+             skos:definition "An abstract idea or notion; a unit of thought."@en ;
              rdfs:comment "Based on skos:Concept (https://www.w3.org/TR/skos-reference/). It has a main subclass, namely KnowledgeArea. vivo:freetextKeyword is a related DatatType property used to qualify: roh:Infrastructure, roh:Activity, roh:Funding, geonames:Feature, roh:Metrics, foaf:Organisation, vivo:Project, roh:ResearchObject among many other entities in ROH." ,
                           "Using SKOS, concepts can be identified using URIs, labeled with lexical strings in one or more natural languages, assigned notations (lexical codes), documented with various types of note, linked to other concepts and organized into informal hierarchies and association networks, aggregated into concept schemes, grouped into labeled and/or ordered collections, and mapped to concepts in other schemes." ;
              rdfs:isDefinedBy <http://w3id.org/roh/mirror/skos> ;
@@ -7908,7 +7909,7 @@ skos:ConceptScheme rdf:type owl:Class ;
 
 
 ###  http://www.w3.org/ns/oa#Annotation
-<http://www.w3.org/ns/oa#Annotation> rdf:type owl:Class ;
+oa:Annotation rdf:type owl:Class ;
                                      rdfs:subClassOf [ rdf:type owl:Restriction ;
                                                        owl:onProperty :correspondingAuthor ;
                                                        owl:someValuesFrom foaf:Person
@@ -7922,8 +7923,8 @@ skos:ConceptScheme rdf:type owl:Class ;
                                                        owl:allValuesFrom vivo:DateTimeValue
                                                      ] ,
                                                      [ rdf:type owl:Restriction ;
-                                                       owl:onProperty <http://www.w3.org/ns/oa#motivatedBy> ;
-                                                       owl:allValuesFrom <http://www.w3.org/ns/oa#Motivation>
+                                                       owl:onProperty oa:motivatedBy;
+                                                       owl:allValuesFrom oa:Motivation
                                                      ] ;
                                      rdfs:comment "The class for Web Annotations." ;
                                      rdfs:isDefinedBy <http://www.w3.org/ns/oa#> ;
@@ -7931,7 +7932,7 @@ skos:ConceptScheme rdf:type owl:Class ;
 
 
 ###  http://www.w3.org/ns/oa#Motivation
-<http://www.w3.org/ns/oa#Motivation> rdf:type owl:Class ;
+oa:Motivation rdf:type owl:Class ;
                                      rdfs:subClassOf skos:Concept ;
                                      rdfs:comment "The Motivation class is used to record the user's intent or motivation for the creation of the Annotation, or the inclusion of the body or target, that it is associated with." ;
                                      rdfs:isDefinedBy <http://www.w3.org/ns/oa#> ;
@@ -8136,88 +8137,88 @@ skos:ConceptScheme rdf:type owl:Class ;
 
 
 ###  http://www.w3.org/ns/oa#assessing
-<http://www.w3.org/ns/oa#assessing> rdf:type owl:NamedIndividual ,
-                                             <http://www.w3.org/ns/oa#Motivation> ;
+oa:assessing rdf:type owl:NamedIndividual ,
+                                             oa:Motivation ;
                                     rdfs:comment "The motivation for when the user intends to provide an assessment about the Target resource." ;
                                     rdfs:isDefinedBy <http://www.w3.org/ns/oa#> ;
                                     rdfs:label "assessing" .
 
 
 ###  http://www.w3.org/ns/oa#bookmarking
-<http://www.w3.org/ns/oa#bookmarking> rdf:type owl:NamedIndividual ,
-                                               <http://www.w3.org/ns/oa#Motivation> ;
+oa:bookmarking rdf:type owl:NamedIndividual ,
+                                               oa:Motivation ;
                                       rdfs:comment "The motivation for when the user intends to create a bookmark to the Target or part thereof." ;
                                       rdfs:isDefinedBy <http://www.w3.org/ns/oa#> ;
                                       rdfs:label "bookmarking" .
 
 
 ###  http://www.w3.org/ns/oa#classifying
-<http://www.w3.org/ns/oa#classifying> rdf:type owl:NamedIndividual ,
-                                               <http://www.w3.org/ns/oa#Motivation> ;
+oa:classifying rdf:type owl:NamedIndividual ,
+                                              oa:Motivation ;
                                       rdfs:comment "The motivation for when the user intends to that classify the Target as something." ;
                                       rdfs:isDefinedBy <http://www.w3.org/ns/oa#> ;
                                       rdfs:label "classifying" .
 
 
 ###  http://www.w3.org/ns/oa#commenting
-<http://www.w3.org/ns/oa#commenting> rdf:type owl:NamedIndividual ,
-                                              <http://www.w3.org/ns/oa#Motivation> ;
+oa:commenting rdf:type owl:NamedIndividual ,
+                                            oa:Motivation ;
                                      rdfs:comment "The motivation for when the user intends to comment about the Target." ;
                                      rdfs:isDefinedBy <http://www.w3.org/ns/oa#> ;
                                      rdfs:label "commenting" .
 
 
 ###  http://www.w3.org/ns/oa#describing
-<http://www.w3.org/ns/oa#describing> rdf:type owl:NamedIndividual ,
-                                              <http://www.w3.org/ns/oa#Motivation> ;
+oa:describing rdf:type owl:NamedIndividual ,
+                                              oa:Motivation ;
                                      rdfs:comment "The motivation for when the user intends to describe the Target, as opposed to a comment about them." ;
                                      rdfs:isDefinedBy <http://www.w3.org/ns/oa#> ;
                                      rdfs:label "describing" .
 
 
 ###  http://www.w3.org/ns/oa#editing
-<http://www.w3.org/ns/oa#editing> rdf:type owl:NamedIndividual ,
-                                           <http://www.w3.org/ns/oa#Motivation> ;
+oa:editing rdf:type owl:NamedIndividual ,
+                                           oa:Motivation ;
                                   rdfs:comment "The motivation for when the user intends to request a change or edit to the Target resource." ;
                                   rdfs:isDefinedBy <http://www.w3.org/ns/oa#> ;
                                   rdfs:label "editing" .
 
 
 ###  http://www.w3.org/ns/oa#highlighting
-<http://www.w3.org/ns/oa#highlighting> rdf:type owl:NamedIndividual ,
-                                                <http://www.w3.org/ns/oa#Motivation> ;
+oa:highlighting rdf:type owl:NamedIndividual ,
+                                                oa:Motivation ;
                                        rdfs:comment "The motivation for when the user intends to highlight the Target resource or segment of it." ;
                                        rdfs:isDefinedBy <http://www.w3.org/ns/oa#> ;
                                        rdfs:label "highlighting" .
 
 
 ###  http://www.w3.org/ns/oa#identifying
-<http://www.w3.org/ns/oa#identifying> rdf:type owl:NamedIndividual ,
-                                               <http://www.w3.org/ns/oa#Motivation> ;
+oa:identifying rdf:type owl:NamedIndividual ,
+                                               oa:Motivation ;
                                       rdfs:comment "The motivation for when the user intends to assign an identity to the Target or identify what is being depicted or described in the Target." ;
                                       rdfs:isDefinedBy <http://www.w3.org/ns/oa#> ;
                                       rdfs:label "identifying" .
 
 
 ###  http://www.w3.org/ns/oa#linking
-<http://www.w3.org/ns/oa#linking> rdf:type owl:NamedIndividual ,
-                                           <http://www.w3.org/ns/oa#Motivation> ;
+oa:linking rdf:type owl:NamedIndividual ,
+                                           oa:Motivation ;
                                   rdfs:comment "The motivation for when the user intends to link to a resource related to the Target." ;
                                   rdfs:isDefinedBy <http://www.w3.org/ns/oa#> ;
                                   rdfs:label "linking" .
 
 
 ###  http://www.w3.org/ns/oa#questioning
-<http://www.w3.org/ns/oa#questioning> rdf:type owl:NamedIndividual ,
-                                               <http://www.w3.org/ns/oa#Motivation> ;
+oa:questioning rdf:type owl:NamedIndividual ,
+                                            oa:Motivation ;
                                       rdfs:comment "The motivation for when the user intends to ask a question about the Target." ;
                                       rdfs:isDefinedBy <http://www.w3.org/ns/oa#> ;
                                       rdfs:label "questioning" .
 
 
 ###  http://www.w3.org/ns/oa#tagging
-<http://www.w3.org/ns/oa#tagging> rdf:type owl:NamedIndividual ,
-                                           <http://www.w3.org/ns/oa#Motivation> ;
+oa:tagging rdf:type owl:NamedIndividual ,
+                                           oa:Motivation ;
                                   rdfs:comment "The motivation for when the user intends to associate a tag with the Target." ;
                                   rdfs:isDefinedBy <http://www.w3.org/ns/oa#> ;
                                   rdfs:label "tagging" .
@@ -8264,7 +8265,7 @@ bfo:BFO_0000004 rdfs:label "continuador independiente"@es ,
                 rdf:Seq
                 skos:Concept
                 skos:ConceptScheme
-                <http://www.w3.org/ns/oa#Annotation>
+                oa:Annotation
               )
 ] .
 
@@ -8292,7 +8293,7 @@ bfo:BFO_0000004 rdfs:label "continuador independiente"@es ,
                 <http://w3id.org/roh/mirror/vcard#Name>
                 rdf:List
                 rdf:Seq
-                <http://www.w3.org/ns/oa#Annotation>
+                oa_Annotation
               )
 ] .
 
