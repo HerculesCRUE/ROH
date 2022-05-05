@@ -41,6 +41,8 @@ This documentation area includes the following files:
 **<a name="headSection1"></a>1. Ontological design**
 ====================================================
 
+Computational ontologies are a means to formally model the structure of a system, i.e., the relevant entities and relations that emerge from its observation, and which are useful to our purposes. An example of such a system can be a university with all its employees and their interrelationships. The ontology engineer analyzes relevant entities and organizes them into concepts and relations, being represented, respectively, by unary and binary predicates. The backbone of an ontology consists of a generalization/specialization/hierarchy of concepts, i.e., a taxonomy.
+
 This section is going to break down from minor to major detail the
 design of the ROH ontology network. Starting in [section 2](#headSection2) with a high
 level diagram, the most important entities will be shown. Then, the main
