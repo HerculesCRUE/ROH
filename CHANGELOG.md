@@ -14,3 +14,7 @@
     - Se corrigieron types y ciertos axiomas que estaban mal aunque no producían ningún tipo de error. Todos estos cambios están documentados y descritos en los commits. Estas descripciones se pueden ser en el siguiente enlace: [https://github.com/HerculesCRUE/ROH/commits/main](https://github.com/HerculesCRUE/ROH/commits/main). 
     
 
+## 2022-06-16
+### Fixed
+    - changed the prefix of skos ontology to http://w3id.org/roh/mirror/skos#>  in es-scientific-domain.ttl and \es-subject-area.ttl
+    
