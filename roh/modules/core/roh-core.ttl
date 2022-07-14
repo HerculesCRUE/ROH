@@ -1,9 +1,9 @@
 @prefix : <http://w3id.org/roh#> .
 @prefix dc: <http://purl.org/dc/elements/1.1/> .
 @prefix ns: <http://www.w3.org/2003/06/sw-vocab-status/ns#> .
+@prefix oa: <http://w3id.org/roh/mirror/oa#> .
 @prefix ro: <http://w3id.org/roh/mirror/obo/ro#> .
 @prefix bfo: <http://w3id.org/roh/mirror/obo/bfo#> .
-@prefix oa: <http://w3id.org/roh/mirror/oa#> .
 @prefix dct: <https://w3id.org/roh/mirror/dc/terms/> .
 @prefix deo: <http://purl.org/spar/deo/> .
 @prefix ero: <http://w3id.org/roh/mirror/obo/ero#> .
@@ -22,13 +22,12 @@
 @prefix doco: <http://purl.org/spar/doco/> .
 @prefix foaf: <http://w3id.org/roh/mirror/foaf#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
-#@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix skos: <http://w3id.org/roh/mirror/skos#> .
 @prefix time: <http://www.w3.org/2006/time#> .
 @prefix vivo: <http://w3id.org/roh/mirror/vivo#> .
 @prefix cerif: <https://w3id.org/roh/mirror/cerif/> .
 @prefix fabio: <http://purl.org/spar/fabio/> .
 @prefix frapo: <http://purl.org/cerif/frapo#> .
-@prefix skos: <http://w3id.org/roh/mirror/skos#> .
 @prefix vitro: <http://vitro.mannlib.cornell.edu/ns/vitro/0.7#> .
 @prefix schema: <https://schema.org/> .
 @prefix modules: <http://purl.org/hercules/asio/modules#> .
@@ -187,6 +186,22 @@ vitro:descriptionAnnot rdf:type owl:AnnotationProperty .
 vitro:exampleAnnot rdf:type owl:AnnotationProperty .
 
 
+###  http://w3id.org/roh/mirror/oa#hasBody
+oa:hasBody rdf:type owl:AnnotationProperty ;
+           rdfs:comment "The object of the relationship is a resource that is a body of the Annotation." ;
+           rdfs:isDefinedBy <http://www.w3.org/ns/oa#> ;
+           rdfs:label "hasBody" ;
+           rdfs:domain oa:Annotation .
+
+
+###  http://w3id.org/roh/mirror/oa#hasTarget
+oa:hasTarget rdf:type owl:AnnotationProperty ;
+             rdfs:comment "The relationship between an Annotation and its Target." ;
+             rdfs:isDefinedBy <http://www.w3.org/ns/oa#> ;
+             rdfs:label "hasTarget" ;
+             rdfs:domain oa:Annotation .
+
+
 ###  http://w3id.org/roh/mirror/obo/bfo#BFO_0000179
 bfo:BFO_0000179 rdf:type owl:AnnotationProperty .
 
@@ -243,76 +258,60 @@ iao:IAO_0000601 rdf:type owl:AnnotationProperty .
 iao:IAO_0000602 rdf:type owl:AnnotationProperty .
 
 
+###  http://w3id.org/roh/mirror/skos#altLabel
+skos:altLabel rdf:type owl:AnnotationProperty .
+
+
+###  http://w3id.org/roh/mirror/skos#broader
+skos:broader rdf:type owl:AnnotationProperty .
+
+
 ###  http://w3id.org/roh/mirror/skos#definition
 skos:definition rdf:type owl:AnnotationProperty .
 
 
-###  http://www.w3.org/2003/06/sw-vocab-status/ns#term_status
-ns:term_status rdf:type owl:AnnotationProperty .
-
-
-###  http://www.w3.org/2004/02/skos/core#altLabel
-skos:altLabel rdf:type owl:AnnotationProperty .
-
-
-###  http://www.w3.org/2004/02/skos/core#broader
-skos:broader rdf:type owl:AnnotationProperty .
-
-
-###  http://www.w3.org/2004/02/skos/core#hasTopConcept
+###  http://w3id.org/roh/mirror/skos#hasTopConcept
 skos:hasTopConcept rdf:type owl:AnnotationProperty .
 
 
-###  http://www.w3.org/2004/02/skos/core#historyNote
+###  http://w3id.org/roh/mirror/skos#historyNote
 skos:historyNote rdf:type owl:AnnotationProperty .
 
 
-###  http://www.w3.org/2004/02/skos/core#inScheme
+###  http://w3id.org/roh/mirror/skos#inScheme
 skos:inScheme rdf:type owl:AnnotationProperty .
 
 
-###  http://www.w3.org/2004/02/skos/core#member
+###  http://w3id.org/roh/mirror/skos#member
 skos:member rdf:type owl:AnnotationProperty .
 
 
-###  http://www.w3.org/2004/02/skos/core#narrower
+###  http://w3id.org/roh/mirror/skos#narrower
 skos:narrower rdf:type owl:AnnotationProperty .
 
 
-###  http://www.w3.org/2004/02/skos/core#notation
+###  http://w3id.org/roh/mirror/skos#notation
 skos:notation rdf:type owl:AnnotationProperty .
 
 
-###  http://www.w3.org/2004/02/skos/core#prefLabel
+###  http://w3id.org/roh/mirror/skos#prefLabel
 skos:prefLabel rdf:type owl:AnnotationProperty .
 
 
-###  http://www.w3.org/2004/02/skos/core#related
+###  http://w3id.org/roh/mirror/skos#related
 skos:related rdf:type owl:AnnotationProperty .
 
 
-###  http://www.w3.org/2004/02/skos/core#scopeNote
+###  http://w3id.org/roh/mirror/skos#scopeNote
 skos:scopeNote rdf:type owl:AnnotationProperty .
 
 
-###  http://www.w3.org/2004/02/skos/core#topConceptOf
+###  http://w3id.org/roh/mirror/skos#topConceptOf
 skos:topConceptOf rdf:type owl:AnnotationProperty .
 
 
-###  http://www.w3.org/ns/oa#hasBody
-oa:hasBody rdf:type owl:AnnotationProperty ;
-                                  rdfs:comment "The object of the relationship is a resource that is a body of the Annotation." ;
-                                  rdfs:isDefinedBy <http://www.w3.org/ns/oa#> ;
-                                  rdfs:label "hasBody" ;
-                                  rdfs:domain oa:Annotation .
-
-
-###  http://www.w3.org/ns/oa#hasTarget
-oa:hasTarget rdf:type owl:AnnotationProperty ;
-                                    rdfs:comment "The relationship between an Annotation and its Target." ;
-                                    rdfs:isDefinedBy <http://www.w3.org/ns/oa#> ;
-                                    rdfs:label "hasTarget" ;
-                                    rdfs:domain oa:Annotation .
+###  http://www.w3.org/2003/06/sw-vocab-status/ns#term_status
+ns:term_status rdf:type owl:AnnotationProperty .
 
 
 ###  https://schema.org/identifier
@@ -1636,6 +1635,15 @@ foaf:page rdf:type owl:ObjectProperty ;
                                                            "located in"@en .
 
 
+###  http://w3id.org/roh/mirror/oa#motivatedBy
+oa:motivatedBy rdf:type owl:ObjectProperty ;
+               rdfs:domain oa:Annotation ;
+               rdfs:range oa:Motivation ;
+               rdfs:comment "The relationship between an Annotation and a Motivation that describes the reason for the Annotation's creation." ;
+               rdfs:isDefinedBy <http://www.w3.org/ns/oa#> ;
+               rdfs:label "motivatedBy" .
+
+
 ###  http://w3id.org/roh/mirror/obo/bfo#BFO_0000054
 bfo:BFO_0000054 rdf:type owl:ObjectProperty ;
                 owl:inverseOf bfo:BFO_0000055 ;
@@ -1701,6 +1709,10 @@ ro:RO_0001025 rdf:type owl:ObjectProperty ;
               rdfs:comment "A relation between two independent continuants, the target and the location, in which the target is entirely within the location"@en ;
               rdfs:label "located in"@en ,
                          "ubicado en"@es .
+
+
+###  http://w3id.org/roh/mirror/skos#inScheme
+skos:inScheme rdf:type owl:ObjectProperty .
 
 
 ###  http://w3id.org/roh/mirror/vcard#adr
@@ -1928,19 +1940,6 @@ vivo:supportedInformationResource rdf:type owl:ObjectProperty ;
                                   rdfs:comment "an information resource (typically a publication) supported by (typically via funding) an agreement (such as a grant)"@en ;
                                   rdfs:label "publicaciones admitidas u otros trabajos"@es ,
                                              "supported publications or other works"@en .
-
-
-###  http://www.w3.org/2004/02/skos/core#inScheme
-skos:inScheme rdf:type owl:ObjectProperty .
-
-
-###  http://www.w3.org/ns/oa#motivatedBy
-oa:motivatedBy rdf:type owl:ObjectProperty ;
-                                      rdfs:domain oa:Annotation ;
-                                      rdfs:range oa:Motivation ;
-                                      rdfs:comment "The relationship between an Annotation and a Motivation that describes the reason for the Annotation's creation." ;
-                                      rdfs:isDefinedBy <http://www.w3.org/ns/oa#> ;
-                                      rdfs:label "motivatedBy" .
 
 
 #################################################################
@@ -2835,12 +2834,12 @@ obo:BFO_0000040 rdf:type owl:Class .
 ###  http://w3id.org/roh#AcademicSubject
 :AcademicSubject rdf:type owl:Class ;
                  rdfs:subClassOf skos:ConceptScheme ;
+                 skos:altLabel "Cadeira"@pt ;
                  rdfs:comment "Matière académique"@fr ;
                  rdfs:label "Academic subject"@en ,
                             "Asignatura académica"@es ,
                             "Assignatura acadèmica"@ca-es ,
-                            "Unidade curricular acadêmica"@pt-pt ;
-                 skos:altLabel "Cadeira"@pt .
+                            "Unidade curricular acadêmica"@pt-pt .
 
 
 ###  http://w3id.org/roh#Accepted
@@ -3026,19 +3025,19 @@ The previous short definition was: \"An arbitrary classification of a space/time
 ###  http://w3id.org/roh#AdministrativeEntity
 :AdministrativeEntity rdf:type owl:Class ;
                       rdfs:subClassOf skos:ConceptScheme ;
+                      skos:prefLabel "Administrative entities"@en ,
+                                     "Entidades administrativas"@es ,
+                                     "Entidades administrativas"@pt ,
+                                     "Entitats administratives"@ca-ad ,
+                                     "Entitats administratives"@ca-es ,
+                                     "Entités administratives"@fr ;
                       rdfs:comment "This vertical module in ASIO models all the relevant administrative bodies (\"Administración Autonómica\") of Spain's Autonomous Communities (conserjerías, departamentos, secretarías) that might have a role (funding, participating) within the development of a given project. It is modeled hierarchically through the relevant administrative levels thereof."@en ;
                       rdfs:label "Administrative entities"@en ,
                                  "Entidades administrativas"@es ,
                                  "Entidades administrativas"@pt ,
                                  "Entitats administratives"@ca-ad ,
                                  "Entitats administratives"@ca-es ,
-                                 "Entités administratives"@fr ;
-                      skos:prefLabel "Administrative entities"@en ,
-                                     "Entidades administrativas"@es ,
-                                     "Entidades administrativas"@pt ,
-                                     "Entitats administratives"@ca-ad ,
-                                     "Entitats administratives"@ca-es ,
-                                     "Entités administratives"@fr .
+                                 "Entités administratives"@fr .
 
 
 ###  http://w3id.org/roh#AuditeeRole
@@ -3124,12 +3123,6 @@ The previous short definition was: \"An arbitrary classification of a space/time
 ###  http://w3id.org/roh#BachelorsDegree
 :BachelorsDegree rdf:type owl:Class ;
                  rdfs:subClassOf vivo:AcademicDegree ;
-                 rdfs:comment "An undergraduate academic degree awarded by colleges and universities upon completion of a course of study lasting three to four years (depending on institution and academic discipline)."@en ;
-                 rdfs:label "Bachelor's degree"@en ,
-                            "Licenciatura (pós-Bologna)"@pt-pt ,
-                            "Títol de bàtxelor"@ca-ad ,
-                            "Títol de grau"@ca-es ,
-                            "Título de grado"@es ;
                  skos:altLabel "Bàtxelor"@ca-ad ,
                                "Grado"@es ,
                                "Gradu"@eu ,
@@ -3140,7 +3133,13 @@ The previous short definition was: \"An arbitrary classification of a space/time
                                 "Licenciatura (pós-Bologna)"@pt-pt ,
                                 "Títol de bàtxelor"@ca-ad ,
                                 "Títol de grau"@ca-es ,
-                                "Título de grado"@es .
+                                "Título de grado"@es ;
+                 rdfs:comment "An undergraduate academic degree awarded by colleges and universities upon completion of a course of study lasting three to four years (depending on institution and academic discipline)."@en ;
+                 rdfs:label "Bachelor's degree"@en ,
+                            "Licenciatura (pós-Bologna)"@pt-pt ,
+                            "Títol de bàtxelor"@ca-ad ,
+                            "Títol de grau"@ca-es ,
+                            "Título de grado"@es .
 
 
 ###  http://w3id.org/roh#BachelorsDegreeSubject
@@ -3169,16 +3168,6 @@ The previous short definition was: \"An arbitrary classification of a space/time
                  rdfs:subClassOf bibo:Thesis ;
                  owl:disjointWith :MastersThesis ,
                                   :PhDThesis ;
-                 rdfs:comment "A document created to summarize research findings associated with the completion of an academic degree."@en ,
-                              "A thesis reporting a research project undertaken as part of an undergraduate course of education to receive a bachelor's degree."@en ;
-                 rdfs:label "Bachelor's Thesis"@en ,
-                            "Degree Thesis"@en ,
-                            "Mémoire de fin de licence"@fr ,
-                            "Tesis de Grado"@es ,
-                            "Trabajo de fin de grado"@es-es ,
-                            "Trabayu de fin de grau"@ast ,
-                            "Treball fi de bàtxelor"@ca-ad ,
-                            "Treball fi de grau"@ca-es ;
                  skos:altLabel "GALa"@eu ,
                                "Honor's thesis"@en-us ,
                                "Honour's thesis"@en-ca ,
@@ -3198,7 +3187,17 @@ The previous short definition was: \"An arbitrary classification of a space/time
                                 "Traballo de fin de grao"@gl ,
                                 "Trabayu de fin de grau"@ast ,
                                 "Treball de fi de bàtxelor"@ca-ad ,
-                                "Treball de fi de grau"@ca-es .
+                                "Treball de fi de grau"@ca-es ;
+                 rdfs:comment "A document created to summarize research findings associated with the completion of an academic degree."@en ,
+                              "A thesis reporting a research project undertaken as part of an undergraduate course of education to receive a bachelor's degree."@en ;
+                 rdfs:label "Bachelor's Thesis"@en ,
+                            "Degree Thesis"@en ,
+                            "Mémoire de fin de licence"@fr ,
+                            "Tesis de Grado"@es ,
+                            "Trabajo de fin de grado"@es-es ,
+                            "Trabayu de fin de grau"@ast ,
+                            "Treball fi de bàtxelor"@ca-ad ,
+                            "Treball fi de grau"@ca-es .
 
 
 ###  http://w3id.org/roh#BitBucketRepository
@@ -3261,14 +3260,6 @@ The previous short definition was: \"An arbitrary classification of a space/time
 ###  http://w3id.org/roh#Country
 :Country rdf:type owl:Class ;
          rdfs:subClassOf skos:ConceptScheme ;
-         rdfs:comment "A region legally identified as a distinct entity in political geography."@en ;
-         rdfs:label "Country"@en ,
-                    "Herrialde"@eu ,
-                    "Pays"@fr ,
-                    "País"@ca-ad ,
-                    "País"@ca-es ,
-                    "País"@es ,
-                    "País"@pt ;
          skos:prefLabel "Country"@en ,
                         "Herrialde"@eu ,
                         "Pays"@fr ,
@@ -3276,7 +3267,15 @@ The previous short definition was: \"An arbitrary classification of a space/time
                         "País"@ca-es ,
                         "País"@es ,
                         "País"@gl ,
-                        "País"@pt .
+                        "País"@pt ;
+         rdfs:comment "A region legally identified as a distinct entity in political geography."@en ;
+         rdfs:label "Country"@en ,
+                    "Herrialde"@eu ,
+                    "Pays"@fr ,
+                    "País"@ca-ad ,
+                    "País"@ca-es ,
+                    "País"@es ,
+                    "País"@pt .
 
 
 ###  http://w3id.org/roh#CourseCertificate
@@ -3294,18 +3293,6 @@ The previous short definition was: \"An arbitrary classification of a space/time
                                    owl:onProperty :summary ;
                                    owl:allValuesFrom xsd:string
                                  ] ;
-                 rdfs:comment "A document used and created by a person to present their background, skills and accomplishments."@en ,
-                              "roh:CurriculumVitae adds extra fields necessary to be able to complete the CV of a foaf:Person which cannot be extracted from the relationships with roh:ResearchObject and vivo:Project, among others, that a foaf:Person may have." ;
-                 rdfs:label "Curriculum Vitae"@en ,
-                            "Curriculum Vitae"@es ,
-                            "Curriculum vitae"@eu ,
-                            "Curriculum vitae"@fr ,
-                            "Curriculum vitae"@pt ,
-                            "Currículum vitae"@ca-ad ,
-                            "Currículum vitae"@ca-es ,
-                            "Currículum vitae"@en ,
-                            "Currículum vitae"@es ,
-                            "Currículum vitae"@gl ;
                  skos:altLabel "CV"@ca ,
                                "CV"@en ,
                                "CV"@es ,
@@ -3328,7 +3315,19 @@ The previous short definition was: \"An arbitrary classification of a space/time
                                 "Curriculum vitae"@fr ,
                                 "Curriculum vitae"@pt ,
                                 "Currículum vitae"@ca ,
-                                "Currículum vitae"@es .
+                                "Currículum vitae"@es ;
+                 rdfs:comment "A document used and created by a person to present their background, skills and accomplishments."@en ,
+                              "roh:CurriculumVitae adds extra fields necessary to be able to complete the CV of a foaf:Person which cannot be extracted from the relationships with roh:ResearchObject and vivo:Project, among others, that a foaf:Person may have." ;
+                 rdfs:label "Curriculum Vitae"@en ,
+                            "Curriculum Vitae"@es ,
+                            "Curriculum vitae"@eu ,
+                            "Curriculum vitae"@fr ,
+                            "Curriculum vitae"@pt ,
+                            "Currículum vitae"@ca-ad ,
+                            "Currículum vitae"@ca-es ,
+                            "Currículum vitae"@en ,
+                            "Currículum vitae"@es ,
+                            "Currículum vitae"@gl .
 
 
 ###  http://w3id.org/roh#Database
@@ -3372,17 +3371,6 @@ The previous short definition was: \"An arbitrary classification of a space/time
 ###  http://w3id.org/roh#DoctoralDegree
 :DoctoralDegree rdf:type owl:Class ;
                 rdfs:subClassOf vivo:AcademicDegree ;
-                rdfs:label "Doctorado"@es ,
-                           "Doctoral degree"@en ,
-                           "Doctorat"@ca-ad ,
-                           "Doctorat"@ca-es ,
-                           "Doctorat"@fr-be ,
-                           "Doctorat"@fr-ca ,
-                           "Doctorat"@fr-ch ,
-                           "Doctorat"@fr-fr ,
-                           "Doktorego"@eu ,
-                           "Doutoramento"@gl ,
-                           "Doutoramento"@pt ;
                 skos:altLabel "Doctorate"@en ,
                               "Doktoretza"@eu ;
                 skos:prefLabel "Doctorado"@es ,
@@ -3395,7 +3383,18 @@ The previous short definition was: \"An arbitrary classification of a space/time
                                "Doctorat"@fr-fr ,
                                "Doktorego"@eu ,
                                "Doutoramento"@gl ,
-                               "Doutoramento"@pt .
+                               "Doutoramento"@pt ;
+                rdfs:label "Doctorado"@es ,
+                           "Doctoral degree"@en ,
+                           "Doctorat"@ca-ad ,
+                           "Doctorat"@ca-es ,
+                           "Doctorat"@fr-be ,
+                           "Doctorat"@fr-ca ,
+                           "Doctorat"@fr-ch ,
+                           "Doctorat"@fr-fr ,
+                           "Doktorego"@eu ,
+                           "Doutoramento"@gl ,
+                           "Doutoramento"@pt .
 
 
 ###  http://w3id.org/roh#Dossier
@@ -4023,10 +4022,10 @@ A roh:FundingSource roh:feeds a roh:Funding with funds to sponsor some projects.
                rdfs:subClassOf skos:ConceptScheme ;
                owl:disjointWith :ProjectClassification ,
                                 bfo:BFO_0000015 ;
+               skos:altLabel "Cadeira"@pt ;
                rdfs:comment "ROH will be populated with instance data of UNESCO skos concepts. A Person, Activity, Project and Organization can be qualified by a KnowledgeArea" ;
                rdfs:label "Knowledge Area"@en ,
-                          "Área de Conocimiento"@es ;
-               skos:altLabel "Cadeira"@pt .
+                          "Área de Conocimiento"@es .
 
 
 ###  http://w3id.org/roh#LanguageCertificate
@@ -4120,18 +4119,6 @@ A roh:FundingSource roh:feeds a roh:Funding with funds to sponsor some projects.
 ###  http://w3id.org/roh#MastersDegree
 :MastersDegree rdf:type owl:Class ;
                rdfs:subClassOf vivo:AcademicDegree ;
-               rdfs:label "Magister Scientiae"@es-ve ,
-                          "Master's degree"@en ,
-                          "Maîtrise universitaire"@fr-be ,
-                          "Maîtrise universitaire"@fr-ca ,
-                          "Maîtrise universitaire"@fr-ch ,
-                          "Maîtrise universitaire"@fr-fr ,
-                          "Mestrado"@pt-br ,
-                          "Mestrado"@pt-pt ,
-                          "Màster universitari"@ca-ad ,
-                          "Màster universitari"@ca-es ,
-                          "Máster universitario"@es-es ,
-                          "Máster universitario"@gl ;
                skos:altLabel "Mestrado universitario"@gl ,
                              "Mestratge universitari"@ca-ad ,
                              "Mestratge universitari"@ca-es ;
@@ -4146,7 +4133,19 @@ A roh:FundingSource roh:feeds a roh:Funding with funds to sponsor some projects.
                               "Màster universitari"@ca-ad ,
                               "Màster universitari"@ca-es ,
                               "Máster universitario"@es-es ,
-                              "Máster universitario"@gl .
+                              "Máster universitario"@gl ;
+               rdfs:label "Magister Scientiae"@es-ve ,
+                          "Master's degree"@en ,
+                          "Maîtrise universitaire"@fr-be ,
+                          "Maîtrise universitaire"@fr-ca ,
+                          "Maîtrise universitaire"@fr-ch ,
+                          "Maîtrise universitaire"@fr-fr ,
+                          "Mestrado"@pt-br ,
+                          "Mestrado"@pt-pt ,
+                          "Màster universitari"@ca-ad ,
+                          "Màster universitari"@ca-es ,
+                          "Máster universitario"@es-es ,
+                          "Máster universitario"@gl .
 
 
 ###  http://w3id.org/roh#MastersDegreeSubject
@@ -4183,23 +4182,6 @@ A roh:FundingSource roh:feeds a roh:Funding with funds to sponsor some projects.
 :MastersThesis rdf:type owl:Class ;
                rdfs:subClassOf bibo:Thesis ;
                owl:disjointWith :PhDThesis ;
-               rdfs:comment "A document created to summarize research findings associated with the completion of a master's degree."@en ,
-                            "A thesis reporting a research project undertaken as part of a second-cycle course of education to receive a master's degree."@en ;
-               rdfs:label "Dissertação de mestrado"@pt-br ,
-                          "Dissertação de mestrado"@pt-pt ,
-                          "Master's Thesis"@en ,
-                          "Mémoire de maîtrise"@fr-ca ,
-                          "Mémoire de maîtrise"@fr-fr ,
-                          "Tese de mestrado"@pt-ao ,
-                          "Tesis de Máster"@es ,
-                          "Tesis de maestría"@es-ar ,
-                          "Tesis de maestría"@es-co ,
-                          "Tesis de maestría"@es-cu ,
-                          "Tesis de maestría"@es-mx ,
-                          "Trabajo de fin de máster"@es-es ,
-                          "Traballo de fin de máster"@gl ,
-                          "Treball de fi de màster"@ca-ad ,
-                          "Treball de fi de màster"@ca-es ;
                skos:altLabel "MALa"@es-eu ,
                              "TFM"@ca-ad ,
                              "TFM"@ca-es ,
@@ -4225,7 +4207,24 @@ A roh:FundingSource roh:feeds a roh:Funding with funds to sponsor some projects.
                               "Trabajo de fin de máster"@es-es ,
                               "Traballo de fin de máster"@gl ,
                               "Treball de fi de màster"@ca-ad ,
-                              "Treball de fi de màster"@ca-es .
+                              "Treball de fi de màster"@ca-es ;
+               rdfs:comment "A document created to summarize research findings associated with the completion of a master's degree."@en ,
+                            "A thesis reporting a research project undertaken as part of a second-cycle course of education to receive a master's degree."@en ;
+               rdfs:label "Dissertação de mestrado"@pt-br ,
+                          "Dissertação de mestrado"@pt-pt ,
+                          "Master's Thesis"@en ,
+                          "Mémoire de maîtrise"@fr-ca ,
+                          "Mémoire de maîtrise"@fr-fr ,
+                          "Tese de mestrado"@pt-ao ,
+                          "Tesis de Máster"@es ,
+                          "Tesis de maestría"@es-ar ,
+                          "Tesis de maestría"@es-co ,
+                          "Tesis de maestría"@es-cu ,
+                          "Tesis de maestría"@es-mx ,
+                          "Trabajo de fin de máster"@es-es ,
+                          "Traballo de fin de máster"@gl ,
+                          "Treball de fi de màster"@ca-ad ,
+                          "Treball de fi de màster"@ca-es .
 
 
 ###  http://w3id.org/roh#MediumEnterprise
@@ -4314,6 +4313,12 @@ A roh:FundingSource roh:feeds a roh:Funding with funds to sponsor some projects.
                                   owl:allValuesFrom skos:Concept
                                 ] ;
                 owl:disjointWith :ProjectContract ;
+                skos:prefLabel "Contracte de treball"@ca-ad ,
+                               "Contracte de treball"@ca-es ,
+                               "Contrat de travail"@fr ,
+                               "Contrato de trabajo"@es ,
+                               "Contrato de trabalho"@pt ,
+                               "Employment contract"@en ;
                 rdfs:comment "An agreement between a person and an organization to work in a project for a specified duration."@en ;
                 rdfs:label "Contracte de treball"@ca-ad ,
                            "Contracte de treball"@ca-es ,
@@ -4321,13 +4326,7 @@ A roh:FundingSource roh:feeds a roh:Funding with funds to sponsor some projects.
                            "Contrato de Persona"@es ,
                            "Contrato de trabajo"@es ,
                            "Contrato de trabalho"@pt ,
-                           "Person Contract"@en ;
-                skos:prefLabel "Contracte de treball"@ca-ad ,
-                               "Contracte de treball"@ca-es ,
-                               "Contrat de travail"@fr ,
-                               "Contrato de trabajo"@es ,
-                               "Contrato de trabalho"@pt ,
-                               "Employment contract"@en .
+                           "Person Contract"@en .
 
 
 ###  http://w3id.org/roh#PersonExpense
@@ -4353,6 +4352,15 @@ A roh:FundingSource roh:feeds a roh:Funding with funds to sponsor some projects.
 ###  http://w3id.org/roh#PhDThesis
 :PhDThesis rdf:type owl:Class ;
            rdfs:subClassOf bibo:Thesis ;
+           skos:altLabel "Tese de doutoramento"@gl ;
+           skos:prefLabel "Doctoral thesis"@en ,
+                          "Doktorego tesi"@eu ,
+                          "Tese de doutoramento"@pt ,
+                          "Tese doctoral"@gl ,
+                          "Tesi doctoral"@ca-ad ,
+                          "Tesi doctoral"@ca-es ,
+                          "Tesis doctoral"@es ,
+                          "Thèse doctorale"@fr ;
            rdfs:comment "A document created to summarize research findings associated with the completion of a doctoral thesis."@en ,
                         "A thesis reporting a research project undertaken as part of an undergraduate course of education to receive a doctoral degree."@en ;
            rdfs:label "Doctoral thesis"@en ,
@@ -4364,16 +4372,7 @@ A roh:FundingSource roh:feeds a roh:Funding with funds to sponsor some projects.
                       "Tesi doctoral"@ca-es ,
                       "Tesis de Doctorado"@es ,
                       "Tesis doctoral"@es ,
-                      "Thèse doctorale"@fr ;
-           skos:altLabel "Tese de doutoramento"@gl ;
-           skos:prefLabel "Doctoral thesis"@en ,
-                          "Doktorego tesi"@eu ,
-                          "Tese de doutoramento"@pt ,
-                          "Tese doctoral"@gl ,
-                          "Tesi doctoral"@ca-ad ,
-                          "Tesi doctoral"@ca-es ,
-                          "Tesis doctoral"@es ,
-                          "Thèse doctorale"@fr .
+                      "Thèse doctorale"@fr .
 
 
 ###  http://w3id.org/roh#PhDThesisMetric
@@ -4635,6 +4634,12 @@ A roh:FundingSource roh:feeds a roh:Funding with funds to sponsor some projects.
                                  owl:onProperty :excellenceLabel ;
                                  owl:allValuesFrom xsd:boolean
                                ] ;
+               skos:prefLabel "Group de recherche"@fr ,
+                              "Grup d'investigació"@ca-es ,
+                              "Grup de recerca"@ca-ad ,
+                              "Grupo de investigación"@es ,
+                              "Grupo de investigação"@pt ,
+                              "Research group"@en ;
                rdfs:comment "A group of researchers often from the same centre, specialised on the same subject, working together on the issue or topic."@en ;
                rdfs:label "Group de recherche"@fr ,
                           "Grup d'investigació"@ca-es ,
@@ -4643,13 +4648,7 @@ A roh:FundingSource roh:feeds a roh:Funding with funds to sponsor some projects.
                           "Grupo de investigación"@es ,
                           "Grupo de investigação"@pt ,
                           "Research Group"@en ,
-                          "Research group"@en ;
-               skos:prefLabel "Group de recherche"@fr ,
-                              "Grup d'investigació"@ca-es ,
-                              "Grup de recerca"@ca-ad ,
-                              "Grupo de investigación"@es ,
-                              "Grupo de investigação"@pt ,
-                              "Research group"@en .
+                          "Research group"@en .
 
 
 ###  http://w3id.org/roh#ResearchGroupMetric
@@ -4661,33 +4660,33 @@ A roh:FundingSource roh:feeds a roh:Funding with funds to sponsor some projects.
 ###  http://w3id.org/roh#ResearchInstitute
 :ResearchInstitute rdf:type owl:Class ;
                    rdfs:subClassOf vivo:Institute ;
+                   skos:prefLabel "Centre d'investigació"@ca-es ,
+                                  "Centre de recerca"@ca-ad ,
+                                  "Centre de recherche"@fr ,
+                                  "Centro de investigación"@es ,
+                                  "Centro de investigação"@pt ,
+                                  "Research institute"@en ;
                    rdfs:comment "An establishment founded for doing research."@en ;
                    rdfs:label "Centre d'investigació"@ca-es ,
                               "Centre de recerca"@ca-ad ,
                               "Centre de recherche"@fr ,
                               "Centro de investigación"@es ,
                               "Centro de investigação"@pt ,
-                              "Research institute"@en ;
-                   skos:prefLabel "Centre d'investigació"@ca-es ,
-                                  "Centre de recerca"@ca-ad ,
-                                  "Centre de recherche"@fr ,
-                                  "Centro de investigación"@es ,
-                                  "Centro de investigação"@pt ,
-                                  "Research institute"@en .
+                              "Research institute"@en .
 
 
 ###  http://w3id.org/roh#ResearchMaterial
 :ResearchMaterial rdf:type owl:Class ;
                   rdfs:subClassOf obo:BFO_0000040 ;
-                  rdfs:label "Research material"@en ;
-                  skos:prefLabel "Research material"@en .
+                  skos:prefLabel "Research material"@en ;
+                  rdfs:label "Research material"@en .
 
 
 ###  http://w3id.org/roh#ResearchMethod
 :ResearchMethod rdf:type owl:Class ;
                 rdfs:subClassOf bfo:BFO_0000015 ;
-                rdfs:label "Research method"@en ;
-                skos:prefLabel "Research method"@en .
+                skos:prefLabel "Research method"@en ;
+                rdfs:label "Research method"@en .
 
 
 ###  http://w3id.org/roh#ResearchObject
@@ -4719,8 +4718,8 @@ A roh:FundingSource roh:feeds a roh:Funding with funds to sponsor some projects.
 ###  http://w3id.org/roh#ResearchProblem
 :ResearchProblem rdf:type owl:Class ;
                  rdfs:subClassOf skos:ConceptScheme ;
-                 rdfs:label "Research problem"@en ;
-                 skos:prefLabel "Research problem"@en .
+                 skos:prefLabel "Research problem"@en ;
+                 rdfs:label "Research problem"@en .
 
 
 ###  http://w3id.org/roh#ResearchResult
@@ -4919,34 +4918,34 @@ A roh:FundingSource roh:feeds a roh:Funding with funds to sponsor some projects.
 ###  http://w3id.org/roh#SealOfQuality
 :SealOfQuality rdf:type owl:Class ;
                rdfs:subClassOf :Accreditation ;
+               skos:prefLabel "Label qualité"@fr ,
+                              "Seal of quality"@en ,
+                              "Segell de qualitat"@ca-ad ,
+                              "Segell de qualitat"@ca-es ,
+                              "Sello de calidad"@es ,
+                              "Selo de qualidade"@pt ;
                rdfs:comment "A graphic mark indicating highest levels of quality in research, often measured in terms of relevant publications related to the researching activity."@en ;
                rdfs:label "Label qualité"@fr ,
                           "Seal of quality"@en ,
                           "Segell de qualitat"@ca-ad ,
                           "Segell de qualitat"@ca-es ,
                           "Sello de calidad"@es ,
-                          "Selo de qualidade"@pt ;
-               skos:prefLabel "Label qualité"@fr ,
-                              "Seal of quality"@en ,
-                              "Segell de qualitat"@ca-ad ,
-                              "Segell de qualitat"@ca-es ,
-                              "Sello de calidad"@es ,
-                              "Selo de qualidade"@pt .
+                          "Selo de qualidade"@pt .
 
 
 ###  http://w3id.org/roh#ServiceContract
 :ServiceContract rdf:type owl:Class ;
                  rdfs:subClassOf vivo:Contract ;
-                 rdfs:label "Contracte de servei"@ca-es ,
-                            "Contrat de service"@fr ,
-                            "Contrato de servicio"@es ,
-                            "Contrato de serviço"@pt ,
-                            "Service contract"@en ;
                  skos:prefLabel "Contracte de servei"@ca-es ,
                                 "Contrat de service"@fr ,
                                 "Contrato de servicio"@es ,
                                 "Contrato de serviço"@pt ,
-                                "Service contract"@en .
+                                "Service contract"@en ;
+                 rdfs:label "Contracte de servei"@ca-es ,
+                            "Contrat de service"@fr ,
+                            "Contrato de servicio"@es ,
+                            "Contrato de serviço"@pt ,
+                            "Service contract"@en .
 
 
 ###  http://w3id.org/roh#Signed
@@ -5056,8 +5055,8 @@ A roh:FundingSource roh:feeds a roh:Funding with funds to sponsor some projects.
 ###  http://w3id.org/roh#TechnicalReport
 :TechnicalReport rdf:type owl:Class ;
                  rdfs:subClassOf bibo:Report ;
-                 rdfs:label "Technical report"@en ;
-                 skos:prefLabel "Technical report"@en .
+                 skos:prefLabel "Technical report"@en ;
+                 rdfs:label "Technical report"@en .
 
 
 ###  http://w3id.org/roh#TechnicalSupport
@@ -5168,7 +5167,11 @@ bibo:AcademicArticle rdf:type owl:Class ;
                                      ] ,
                                      [ rdf:type owl:Restriction ;
                                        owl:onProperty vivo:hasPublicationVenue ;
-                                       owl:allValuesFrom bibo:Journal
+                                       owl:allValuesFrom [ rdf:type owl:Class ;
+                                                           owl:unionOf ( bibo:Journal
+                                                                         bibo:Proceedings
+                                                                       )
+                                                         ]
                                      ] ,
                                      [ rdf:type owl:Restriction ;
                                        owl:onProperty bibo:eanucc13 ;
@@ -5214,12 +5217,12 @@ bibo:Article rdf:type owl:Class ;
              obo:IAO_0000112 "A specific journal article" ,
                              "Short Definition modified from the bibo ontology." ;
              obo:IAO_0000115 "A written composition in prose, usually nonfiction, on a specific topic, forming an independent part of a periodical or book" ;
+             skos:prefLabel "Article"@en ;
              rdfs:comment "A written composition in prose, usually nonfiction, on a specific topic, forming an independent part of a book or other publication, as a newspaper or magazine."@en ;
              rdfs:isDefinedBy "http://w3id.org/roh/mirror/bibo#"^^xsd:anyURI ;
              rdfs:label "Article"@en ,
                         "Artículo"@es ;
-             ns:term_status "stable" ;
-             skos:prefLabel "Article"@en .
+             ns:term_status "stable" .
 
 
 ###  http://w3id.org/roh/mirror/bibo#AudioVisualDocument
@@ -5254,6 +5257,11 @@ bibo:Book rdf:type owl:Class ;
                           ] ;
           obo:IAO_0000112 "Short Definition copied from bibo ontology" ;
           obo:IAO_0000115 "A written or printed work of fiction or nonfiction, usually on sheets of paper fastened or bound together within covers" ;
+          skos:prefLabel "Book"@en ,
+                         "Libro"@es ,
+                         "Livre"@fr ,
+                         "Livro"@pt ,
+                         "Llibre"@ca ;
           rdfs:comment "A written or printed work of fiction or nonfiction, usually on sheets of paper fastened or bound together within covers."@en ;
           rdfs:isDefinedBy "http://w3id.org/roh/mirror/bibo#"^^xsd:anyURI ;
           rdfs:label "Book"@en ,
@@ -5262,12 +5270,7 @@ bibo:Book rdf:type owl:Class ;
                      "Livro"@pt ,
                      "Llibre"@ca-ad ,
                      "Llibre"@ca-es ;
-          ns:term_status "stable" ;
-          skos:prefLabel "Book"@en ,
-                         "Libro"@es ,
-                         "Livre"@fr ,
-                         "Livro"@pt ,
-                         "Llibre"@ca .
+          ns:term_status "stable" .
 
 
 ###  http://w3id.org/roh/mirror/bibo#BookSection
@@ -5452,6 +5455,20 @@ bibo:Document rdf:type owl:Class ;
                                 owl:maxCardinality "1"^^xsd:nonNegativeInteger
                               ] ;
               owl:disjointWith ero:ERO_0000071 ;
+              skos:prefLabel "Academic publication"@en ,
+                             "Publicació"@ca-ad ,
+                             "Publicació"@ca-es ,
+                             "Publicació acadèmica"@ca-ad ,
+                             "Publicació acadèmica"@ca-es ,
+                             "Publicación"@es ,
+                             "Publicación"@gl ,
+                             "Publicación académica"@es ,
+                             "Publicación académica"@gl ,
+                             "Publication"@en ,
+                             "Publication"@fr ,
+                             "Publication académique"@fr ,
+                             "Publicação"@pt ,
+                             "Publicação acadêmica"@pt ;
               rdfs:comment "A document (noun) is a bounded physical representation of body of information designed with the capacity (and usually intent) to communicate. A document may manifest symbolic, diagrammatic or sensory-representational information."@en ,
                            "Content made available to the general public. In the case of ASIO, often scientific or academic contents published."@en ,
                            """ResearchObjects related to publication concept are based on types defined by BIBO ontology. Currently, the following set of publication-related entities are supported: bibo:Document (Article, ConferencePaper, EditorialArticle, Book, Proceedings, ConferencePaper, Chapter, Thesis)
@@ -5474,21 +5491,7 @@ This is a type of roh:ResearchObjects related to publication concept. It is base
                          "Publication académique"@fr ,
                          "Publicação"@pt ,
                          "Publicação acadêmica"@pt ;
-              ns:term_status "stable" ;
-              skos:prefLabel "Academic publication"@en ,
-                             "Publicació"@ca-ad ,
-                             "Publicació"@ca-es ,
-                             "Publicació acadèmica"@ca-ad ,
-                             "Publicació acadèmica"@ca-es ,
-                             "Publicación"@es ,
-                             "Publicación"@gl ,
-                             "Publicación académica"@es ,
-                             "Publicación académica"@gl ,
-                             "Publication"@en ,
-                             "Publication"@fr ,
-                             "Publication académique"@fr ,
-                             "Publicação"@pt ,
-                             "Publicação acadêmica"@pt .
+              ns:term_status "stable" .
 
 
 ###  http://w3id.org/roh/mirror/bibo#DocumentPart
@@ -5606,10 +5609,10 @@ bibo:Magazine rdf:type owl:Class ;
 ###  http://w3id.org/roh/mirror/bibo#Manual
 bibo:Manual rdf:type owl:Class ;
             rdfs:subClassOf bibo:Document ;
-            rdfs:comment "A book of instructions or guide to a specific topic."@en ;
-            rdfs:label "Manual"@en ;
             skos:altLabel "Handbook"@en ;
-            skos:prefLabel "Manual"@en .
+            skos:prefLabel "Manual"@en ;
+            rdfs:comment "A book of instructions or guide to a specific topic."@en ;
+            rdfs:label "Manual"@en .
 
 
 ###  http://w3id.org/roh/mirror/bibo#Patent
@@ -5660,6 +5663,13 @@ bibo:Patent rdf:type owl:Class ;
                             ] ;
             obo:IAO_0000112 "A patent is an exclusive right granted for an invention, which is a product or a process that provides, in general, a new way of doing something, or offers a new technical solution to a problem.  In order to be patentable, the invention must fulfill certain conditions. (http://www.wipo.int/patentscope/en/)" ;
             obo:IAO_0000115 "(from BIBO) A document describing the exclusive right granted by a government to an inventor to manufacture, use, or sell an invention for a certain number of years" ;
+            skos:prefLabel "Patent"@ca ,
+                           "Patent"@en ,
+                           "Patent"@fr ,
+                           "Patente"@es ,
+                           "Patente"@eu ,
+                           "Patente"@gl ,
+                           "Patente"@pt ;
             rdfs:comment "A document describing the exclusive right granted by a government to an inventor to manufacture, use, or sell an invention for a certain number of years."@en ,
                          "A form of intellectual property that gives its owner the legal right to exclude others from making, using, selling and importing an invention for a limited period of years, in exchange for publishing an enabling public disclosure of the invention."@en ;
             rdfs:isDefinedBy "http://w3id.org/roh/mirror/bibo#"^^xsd:anyURI ;
@@ -5671,14 +5681,7 @@ bibo:Patent rdf:type owl:Class ;
                        "Patente"@eu ,
                        "Patente"@gl ,
                        "Patente"@pt ;
-            ns:term_status "stable" ;
-            skos:prefLabel "Patent"@ca ,
-                           "Patent"@en ,
-                           "Patent"@fr ,
-                           "Patente"@es ,
-                           "Patente"@eu ,
-                           "Patente"@gl ,
-                           "Patente"@pt .
+            ns:term_status "stable" .
 
 
 ###  http://w3id.org/roh/mirror/bibo#Performance
@@ -5765,6 +5768,14 @@ bibo:Thesis rdf:type owl:Class ;
                             ] ;
             obo:IAO_0000112 "Short Definition from OCLC Input Standards, EntW" ;
             obo:IAO_0000115 "Works created to satisfy the requirements for an academic certification or degree; also called dissertation" ;
+            skos:prefLabel "Tese"@gl ,
+                           "Tese"@pt ,
+                           "Tesi"@ca-ad ,
+                           "Tesi"@ca-es ,
+                           "Tesi"@eu ,
+                           "Tesis"@es ,
+                           "Thesis"@en ,
+                           "Thèse"@fr ;
             rdfs:comment "A document created to summarize research findings associated with the completion of an academic degree."@en ,
                          "Any kind of thesis (bachelor's, master's, PhD) produced to receive some sort of university degree."@en ;
             rdfs:isDefinedBy "http://w3id.org/roh/mirror/bibo#"^^xsd:anyURI ;
@@ -5776,15 +5787,7 @@ bibo:Thesis rdf:type owl:Class ;
                        "Tesis"@es ,
                        "Thesis"@en ,
                        "Thèse"@fr ;
-            ns:term_status "stable" ;
-            skos:prefLabel "Tese"@gl ,
-                           "Tese"@pt ,
-                           "Tesi"@ca-ad ,
-                           "Tesi"@ca-es ,
-                           "Tesi"@eu ,
-                           "Tesis"@es ,
-                           "Thesis"@en ,
-                           "Thèse"@fr .
+            ns:term_status "stable" .
 
 
 ###  http://w3id.org/roh/mirror/bibo#Webpage
@@ -5829,13 +5832,13 @@ foaf:Agent rdf:type owl:Class ;
                            "Things that do stuff." ;
            obo:IAO_0000117 "PERSON: Scott Hoffmann" ;
            obo:IAO_0000118 "" ;
+           skos:scopeNote "Used to describe any \"agent\" related to bibliographic items. Such agents can be persons, organizations or groups of any kind."@en ;
            rdfs:comment "An agent" ,
                         "An agent (eg. person, group, software or physical artifact)." ;
            rdfs:label "Agent" ,
                       "Agent"@en ,
                       "Agente"@es ;
-           ns:term_status "stable" ;
-           skos:scopeNote "Used to describe any \"agent\" related to bibliographic items. Such agents can be persons, organizations or groups of any kind."@en .
+           ns:term_status "stable" .
 
 
 ###  http://w3id.org/roh/mirror/foaf#Group
@@ -5939,6 +5942,7 @@ foaf:Organization rdf:type owl:Class ;
                                   "A kind of Agent corresponding to social instititutions such as companies, societies etc." ;
                   obo:IAO_0000117 "PERSON: Scott Hoffmann" ;
                   obo:IAO_0000118 "" ;
+                  skos:scopeNote "Ued to describe an organization related to bibliographic items such as a publishing company, etc."@en ;
                   rdfs:comment """A foaf:Organization (and its subclasses, e.g. vivo:FundingOrganization), an roh:Activity and a vivo:Project are bound to a geographical scope (geonames:Feature) a través de la relación geonames:locatedIn. All the entities of ROH which have to be defined within a geographical scope have the geonames:locatedIn object property. 
 
 An Organization in ROH is a foaf:Organization which carries out several roh:Project. It is a child of foaf:Agent. Some organization can emit roh:Acreditation (e.g. ANECA or CENAI in Spain), those belonging to subclass roh:AccreditationIssuer, or award degrees (vivo:AwardedDegree), those of subclass vivo:University. An Organization may receive several roh:FundingAmount, corresponding to a roh:Funding, obtained through a roh:FundingProgram provided by a vivo:FundingOrganization through a roh:FundingSource. As a foaf:Agent an Organization may be involved in several roh:Actitity, has several instances of attribute roh:researchLine, is associated through roh:hasKnowledgeArea with roh:KnowledgeArea and bound to a geographical scope through gn:locatedIn with gn:Feature, it may also have a time span through vivo:dateTimeInterval linking it with an instance of vivo:DateTimeInterval.
@@ -5964,8 +5968,7 @@ Besides, an instance of a foaf:Organization is associated to the following entit
                   rdfs:label "Organización"@es ,
                              "Organization" ,
                              "Organization"@en ;
-                  ns:term_status "stable" ;
-                  skos:scopeNote "Ued to describe an organization related to bibliographic items such as a publishing company, etc."@en .
+                  ns:term_status "stable" .
 
 
 ###  http://w3id.org/roh/mirror/foaf#Person
@@ -6112,10 +6115,41 @@ Besides, an instance of a foaf:Person / roh:Researcher is associated to the foll
 
 ###  http://w3id.org/roh/mirror/geonames#Feature
 <http://w3id.org/roh/mirror/geonames#Feature> rdf:type owl:Class ;
+                                              skos:historyNote "Modified in version 3.1 : The cardinality constraints on feature code, feature class are relaxed on this class, and put on the specific subclass Geonames Feature. This class and attached properties can therefore be used for features not necessarily identified in the Geoanmes data base"@en ;
                                               rdfs:comment "A geographical feature"@en ;
                                               rdfs:label "Característica"@es ,
-                                                         "Feature"@en ;
-                                              skos:historyNote "Modified in version 3.1 : The cardinality constraints on feature code, feature class are relaxed on this class, and put on the specific subclass Geonames Feature. This class and attached properties can therefore be used for features not necessarily identified in the Geoanmes data base"@en .
+                                                         "Feature"@en .
+
+
+###  http://w3id.org/roh/mirror/oa#Annotation
+oa:Annotation rdf:type owl:Class ;
+              rdfs:subClassOf [ rdf:type owl:Restriction ;
+                                owl:onProperty :correspondingAuthor ;
+                                owl:someValuesFrom foaf:Person
+                              ] ,
+                              [ rdf:type owl:Restriction ;
+                                owl:onProperty :correspondingAuthor ;
+                                owl:allValuesFrom foaf:Person
+                              ] ,
+                              [ rdf:type owl:Restriction ;
+                                owl:onProperty oa:motivatedBy ;
+                                owl:allValuesFrom oa:Motivation
+                              ] ,
+                              [ rdf:type owl:Restriction ;
+                                owl:onProperty vivo:dateTimeValue ;
+                                owl:allValuesFrom vivo:DateTimeValue
+                              ] ;
+              rdfs:comment "The class for Web Annotations." ;
+              rdfs:isDefinedBy <http://www.w3.org/ns/oa#> ;
+              rdfs:label "Annotation" .
+
+
+###  http://w3id.org/roh/mirror/oa#Motivation
+oa:Motivation rdf:type owl:Class ;
+              rdfs:subClassOf skos:Concept ;
+              rdfs:comment "The Motivation class is used to record the user's intent or motivation for the creation of the Annotation, or the inclusion of the body or target, that it is associated with." ;
+              rdfs:isDefinedBy <http://www.w3.org/ns/oa#> ;
+              rdfs:label "Motivation" .
 
 
 ###  http://w3id.org/roh/mirror/obo/bfo#BFO_0000008
@@ -6762,6 +6796,22 @@ iao:IAO_0000582 rdf:type owl:Class ;
                 rdfs:label "Time-Stamped Measurement Datum"@en .
 
 
+###  http://w3id.org/roh/mirror/skos#Concept
+skos:Concept rdf:type owl:Class ;
+             skos:definition "An abstract idea or notion; a unit of thought."@en ;
+             rdfs:comment "Based on skos:Concept (https://www.w3.org/TR/skos-reference/). It has a main subclass, namely KnowledgeArea. vivo:freetextKeyword is a related DatatType property used to qualify: roh:Infrastructure, roh:Activity, roh:Funding, geonames:Feature, roh:Metrics, foaf:Organisation, vivo:Project, roh:ResearchObject among many other entities in ROH." ,
+                          "Using SKOS, concepts can be identified using URIs, labeled with lexical strings in one or more natural languages, assigned notations (lexical codes), documented with various types of note, linked to other concepts and organized into informal hierarchies and association networks, aggregated into concept schemes, grouped into labeled and/or ordered collections, and mapped to concepts in other schemes." ;
+             rdfs:isDefinedBy <http://w3id.org/roh/mirror/skos> ;
+             rdfs:label "Concept"@en ,
+                        "Concepto"@es ;
+             dct:issued "2008-05-xx" .
+
+
+###  http://w3id.org/roh/mirror/skos#ConceptScheme
+skos:ConceptScheme rdf:type owl:Class ;
+                   rdfs:label "Concept Scheme"@en .
+
+
 ###  http://w3id.org/roh/mirror/vcard#Address
 <http://w3id.org/roh/mirror/vcard#Address> rdf:type owl:Class .
 
@@ -6987,6 +7037,19 @@ vivo:AwardedDegree rdf:type owl:Class ;
                                      owl:onClass vivo:DateTimeValue
                                    ] ;
                    obo:IAO_0000115 "The awarding of a degree by an agent to another agent. It is mostly for academic degrees." ;
+                   skos:prefLabel "Academic degree"@en ,
+                                  "Grade universitaire"@fr ,
+                                  "Grade universitaire"@fr-be ,
+                                  "Grade universitaire"@fr-ca ,
+                                  "Grade universitaire"@fr-ch ,
+                                  "Grade universitaire"@fr-fr ,
+                                  "Grao académico"@gl ,
+                                  "Grau acadèmic"@ca-ad ,
+                                  "Grau acadèmic"@ca-es ,
+                                  "Grau académico"@pt-pt ,
+                                  "Grau acadêmico"@pt-br ,
+                                  "Título académico"@es-es ,
+                                  "Unibertsitate-gradu"@eu ;
                    rdfs:comment "A qualification awarded to students upon successful completion of a course of study in higher education."@en ,
                                 "A vivo:AwardedDegree is related to a foaf:Person and vivo:AcademicDegree through vivo:relates relationship, it is a qualification (degree) received by somebody." ;
                    rdfs:label "Awarded Degree"@en ,
@@ -7002,20 +7065,7 @@ vivo:AwardedDegree rdf:type owl:Class ;
                               "Grau acadêmico"@pt-br ,
                               "Titulación Universitaria Concedida"@es ,
                               "Título académico"@es-es ,
-                              "Unibertsitate-gradu"@eu ;
-                   skos:prefLabel "Academic degree"@en ,
-                                  "Grade universitaire"@fr ,
-                                  "Grade universitaire"@fr-be ,
-                                  "Grade universitaire"@fr-ca ,
-                                  "Grade universitaire"@fr-ch ,
-                                  "Grade universitaire"@fr-fr ,
-                                  "Grao académico"@gl ,
-                                  "Grau acadèmic"@ca-ad ,
-                                  "Grau acadèmic"@ca-es ,
-                                  "Grau académico"@pt-pt ,
-                                  "Grau acadêmico"@pt-br ,
-                                  "Título académico"@es-es ,
-                                  "Unibertsitate-gradu"@eu .
+                              "Unibertsitate-gradu"@eu .
 
 
 ###  http://w3id.org/roh/mirror/vivo#Center
@@ -7078,6 +7128,13 @@ vivo:Company rdf:type owl:Class ;
              obo:IAO_0000115 "A legally-recognized business organization" ,
                              "A legally-recognized business organization." ;
              obo:IAO_0000412 <http://w3id.org/roh/mirror/vivo> ;
+             skos:prefLabel "Company"@en ,
+                            "Empresa"@ca-ad ,
+                            "Empresa"@ca-es ,
+                            "Empresa"@es ,
+                            "Empresa"@gl ,
+                            "Empresa"@pt ,
+                            "Entreprise"@fr ;
              rdfs:comment "A corporation or business organization which makes goods (in a broad sense) in an organized manner and sells them to the public for profit."@en ,
                           "Uma organização com personalidade jurídica, a qual dispõe dos médios necessários para a produção e obtenção de bens ou serviços destinados ao intercâmbio."@pt ,
                           "Una organització amb personalitat jurídica, la qual disposa dels mitjans necessaris per a la producció i es dedica a combinar-los per obtenir béns o serveis destinats a l'intercanvi."@ca ,
@@ -7089,14 +7146,7 @@ vivo:Company rdf:type owl:Class ;
                         "Empresa"@gl ,
                         "Empresa"@pt ,
                         "Entreprise"@fr ,
-                        "Rol de Asistente"@es ;
-             skos:prefLabel "Company"@en ,
-                            "Empresa"@ca-ad ,
-                            "Empresa"@ca-es ,
-                            "Empresa"@es ,
-                            "Empresa"@gl ,
-                            "Empresa"@pt ,
-                            "Entreprise"@fr .
+                        "Rol de Asistente"@es .
 
 
 ###  http://w3id.org/roh/mirror/vivo#Competition
@@ -7115,6 +7165,10 @@ vivo:ConferencePaper rdf:type owl:Class ;
                                      [ rdf:type owl:Restriction ;
                                        owl:onProperty bibo:presentedAt ;
                                        owl:allValuesFrom bibo:Conference
+                                     ] ,
+                                     [ rdf:type owl:Restriction ;
+                                       owl:onProperty vivo:hasPublicationVenue ;
+                                       owl:allValuesFrom bibo:Proceedings
                                      ] ;
                      obo:IAO_0000115 "A paper presented at a conference; optionally collected into a Proceedings or a special Journal issue" ;
                      rdfs:label "Artículo de Conferencia"@es ,
@@ -7866,6 +7920,13 @@ vivo:University rdf:type owl:Class ;
                                 "University of Florida; Washington University in St. Louis" ;
                 obo:IAO_0000115 "An institution of higher education and research, which grants academic degrees in a variety of subjects, and provides both undergraduate education and postgraduate education." ;
                 obo:IAO_0000412 <http://w3id.org/roh/mirror/vivo> ;
+                skos:prefLabel "Unibertsitate"@eu ,
+                               "Universidade"@gl ,
+                               "Universidade"@pt ,
+                               "Universitat"@ca-ad ,
+                               "Universitat"@ca-es ,
+                               "University"@en ,
+                               "Université"@fr ;
                 rdfs:comment "A centre at which higher education and research is conducted."@en ;
                 rdfs:label "Unibertsitate"@eu ,
                            "Universidad"@es ,
@@ -7874,14 +7935,7 @@ vivo:University rdf:type owl:Class ;
                            "Universitat"@ca-ad ,
                            "Universitat"@ca-es ,
                            "University"@en ,
-                           "Université"@fr ;
-                skos:prefLabel "Unibertsitate"@eu ,
-                               "Universidade"@gl ,
-                               "Universidade"@pt ,
-                               "Universitat"@ca-ad ,
-                               "Universitat"@ca-es ,
-                               "University"@en ,
-                               "Université"@fr .
+                           "Université"@fr .
 
 
 ###  http://www.w3.org/1999/02/22-rdf-syntax-ns#List
@@ -7890,53 +7944,6 @@ rdf:List rdf:type owl:Class .
 
 ###  http://www.w3.org/1999/02/22-rdf-syntax-ns#Seq
 rdf:Seq rdf:type owl:Class .
-
-
-###  http://www.w3.org/2004/02/skos/core#Concept
-skos:Concept rdf:type owl:Class ;
-             skos:definition "An abstract idea or notion; a unit of thought."@en ;
-             rdfs:comment "Based on skos:Concept (https://www.w3.org/TR/skos-reference/). It has a main subclass, namely KnowledgeArea. vivo:freetextKeyword is a related DatatType property used to qualify: roh:Infrastructure, roh:Activity, roh:Funding, geonames:Feature, roh:Metrics, foaf:Organisation, vivo:Project, roh:ResearchObject among many other entities in ROH." ,
-                          "Using SKOS, concepts can be identified using URIs, labeled with lexical strings in one or more natural languages, assigned notations (lexical codes), documented with various types of note, linked to other concepts and organized into informal hierarchies and association networks, aggregated into concept schemes, grouped into labeled and/or ordered collections, and mapped to concepts in other schemes." ;
-             rdfs:isDefinedBy <http://w3id.org/roh/mirror/skos> ;
-             rdfs:label "Concept"@en ,
-                        "Concepto"@es ;
-             dct:issued "2008-05-xx" .
-
-
-###  http://www.w3.org/2004/02/skos/core#ConceptScheme
-skos:ConceptScheme rdf:type owl:Class ;
-                   rdfs:label "Concept Scheme"@en .
-
-
-###  http://www.w3.org/ns/oa#Annotation
-oa:Annotation rdf:type owl:Class ;
-                                     rdfs:subClassOf [ rdf:type owl:Restriction ;
-                                                       owl:onProperty :correspondingAuthor ;
-                                                       owl:someValuesFrom foaf:Person
-                                                     ] ,
-                                                     [ rdf:type owl:Restriction ;
-                                                       owl:onProperty :correspondingAuthor ;
-                                                       owl:allValuesFrom foaf:Person
-                                                     ] ,
-                                                     [ rdf:type owl:Restriction ;
-                                                       owl:onProperty vivo:dateTimeValue ;
-                                                       owl:allValuesFrom vivo:DateTimeValue
-                                                     ] ,
-                                                     [ rdf:type owl:Restriction ;
-                                                       owl:onProperty oa:motivatedBy;
-                                                       owl:allValuesFrom oa:Motivation
-                                                     ] ;
-                                     rdfs:comment "The class for Web Annotations." ;
-                                     rdfs:isDefinedBy <http://www.w3.org/ns/oa#> ;
-                                     rdfs:label "Annotation" .
-
-
-###  http://www.w3.org/ns/oa#Motivation
-oa:Motivation rdf:type owl:Class ;
-                                     rdfs:subClassOf skos:Concept ;
-                                     rdfs:comment "The Motivation class is used to record the user's intent or motivation for the creation of the Annotation, or the inclusion of the body or target, that it is associated with." ;
-                                     rdfs:isDefinedBy <http://www.w3.org/ns/oa#> ;
-                                     rdfs:label "Motivation" .
 
 
 #################################################################
@@ -8136,92 +8143,92 @@ oa:Motivation rdf:type owl:Class ;
                     rdfs:label "TestSupervisorRole"@en .
 
 
-###  http://www.w3.org/ns/oa#assessing
+###  http://w3id.org/roh/mirror/oa#assessing
 oa:assessing rdf:type owl:NamedIndividual ,
-                                             oa:Motivation ;
-                                    rdfs:comment "The motivation for when the user intends to provide an assessment about the Target resource." ;
-                                    rdfs:isDefinedBy <http://www.w3.org/ns/oa#> ;
-                                    rdfs:label "assessing" .
+                      oa:Motivation ;
+             rdfs:comment "The motivation for when the user intends to provide an assessment about the Target resource." ;
+             rdfs:isDefinedBy <http://www.w3.org/ns/oa#> ;
+             rdfs:label "assessing" .
 
 
-###  http://www.w3.org/ns/oa#bookmarking
+###  http://w3id.org/roh/mirror/oa#bookmarking
 oa:bookmarking rdf:type owl:NamedIndividual ,
-                                               oa:Motivation ;
-                                      rdfs:comment "The motivation for when the user intends to create a bookmark to the Target or part thereof." ;
-                                      rdfs:isDefinedBy <http://www.w3.org/ns/oa#> ;
-                                      rdfs:label "bookmarking" .
+                        oa:Motivation ;
+               rdfs:comment "The motivation for when the user intends to create a bookmark to the Target or part thereof." ;
+               rdfs:isDefinedBy <http://www.w3.org/ns/oa#> ;
+               rdfs:label "bookmarking" .
 
 
-###  http://www.w3.org/ns/oa#classifying
+###  http://w3id.org/roh/mirror/oa#classifying
 oa:classifying rdf:type owl:NamedIndividual ,
-                                              oa:Motivation ;
-                                      rdfs:comment "The motivation for when the user intends to that classify the Target as something." ;
-                                      rdfs:isDefinedBy <http://www.w3.org/ns/oa#> ;
-                                      rdfs:label "classifying" .
+                        oa:Motivation ;
+               rdfs:comment "The motivation for when the user intends to that classify the Target as something." ;
+               rdfs:isDefinedBy <http://www.w3.org/ns/oa#> ;
+               rdfs:label "classifying" .
 
 
-###  http://www.w3.org/ns/oa#commenting
+###  http://w3id.org/roh/mirror/oa#commenting
 oa:commenting rdf:type owl:NamedIndividual ,
-                                            oa:Motivation ;
-                                     rdfs:comment "The motivation for when the user intends to comment about the Target." ;
-                                     rdfs:isDefinedBy <http://www.w3.org/ns/oa#> ;
-                                     rdfs:label "commenting" .
+                       oa:Motivation ;
+              rdfs:comment "The motivation for when the user intends to comment about the Target." ;
+              rdfs:isDefinedBy <http://www.w3.org/ns/oa#> ;
+              rdfs:label "commenting" .
 
 
-###  http://www.w3.org/ns/oa#describing
+###  http://w3id.org/roh/mirror/oa#describing
 oa:describing rdf:type owl:NamedIndividual ,
-                                              oa:Motivation ;
-                                     rdfs:comment "The motivation for when the user intends to describe the Target, as opposed to a comment about them." ;
-                                     rdfs:isDefinedBy <http://www.w3.org/ns/oa#> ;
-                                     rdfs:label "describing" .
+                       oa:Motivation ;
+              rdfs:comment "The motivation for when the user intends to describe the Target, as opposed to a comment about them." ;
+              rdfs:isDefinedBy <http://www.w3.org/ns/oa#> ;
+              rdfs:label "describing" .
 
 
-###  http://www.w3.org/ns/oa#editing
+###  http://w3id.org/roh/mirror/oa#editing
 oa:editing rdf:type owl:NamedIndividual ,
-                                           oa:Motivation ;
-                                  rdfs:comment "The motivation for when the user intends to request a change or edit to the Target resource." ;
-                                  rdfs:isDefinedBy <http://www.w3.org/ns/oa#> ;
-                                  rdfs:label "editing" .
+                    oa:Motivation ;
+           rdfs:comment "The motivation for when the user intends to request a change or edit to the Target resource." ;
+           rdfs:isDefinedBy <http://www.w3.org/ns/oa#> ;
+           rdfs:label "editing" .
 
 
-###  http://www.w3.org/ns/oa#highlighting
+###  http://w3id.org/roh/mirror/oa#highlighting
 oa:highlighting rdf:type owl:NamedIndividual ,
-                                                oa:Motivation ;
-                                       rdfs:comment "The motivation for when the user intends to highlight the Target resource or segment of it." ;
-                                       rdfs:isDefinedBy <http://www.w3.org/ns/oa#> ;
-                                       rdfs:label "highlighting" .
+                         oa:Motivation ;
+                rdfs:comment "The motivation for when the user intends to highlight the Target resource or segment of it." ;
+                rdfs:isDefinedBy <http://www.w3.org/ns/oa#> ;
+                rdfs:label "highlighting" .
 
 
-###  http://www.w3.org/ns/oa#identifying
+###  http://w3id.org/roh/mirror/oa#identifying
 oa:identifying rdf:type owl:NamedIndividual ,
-                                               oa:Motivation ;
-                                      rdfs:comment "The motivation for when the user intends to assign an identity to the Target or identify what is being depicted or described in the Target." ;
-                                      rdfs:isDefinedBy <http://www.w3.org/ns/oa#> ;
-                                      rdfs:label "identifying" .
+                        oa:Motivation ;
+               rdfs:comment "The motivation for when the user intends to assign an identity to the Target or identify what is being depicted or described in the Target." ;
+               rdfs:isDefinedBy <http://www.w3.org/ns/oa#> ;
+               rdfs:label "identifying" .
 
 
-###  http://www.w3.org/ns/oa#linking
+###  http://w3id.org/roh/mirror/oa#linking
 oa:linking rdf:type owl:NamedIndividual ,
-                                           oa:Motivation ;
-                                  rdfs:comment "The motivation for when the user intends to link to a resource related to the Target." ;
-                                  rdfs:isDefinedBy <http://www.w3.org/ns/oa#> ;
-                                  rdfs:label "linking" .
+                    oa:Motivation ;
+           rdfs:comment "The motivation for when the user intends to link to a resource related to the Target." ;
+           rdfs:isDefinedBy <http://www.w3.org/ns/oa#> ;
+           rdfs:label "linking" .
 
 
-###  http://www.w3.org/ns/oa#questioning
+###  http://w3id.org/roh/mirror/oa#questioning
 oa:questioning rdf:type owl:NamedIndividual ,
-                                            oa:Motivation ;
-                                      rdfs:comment "The motivation for when the user intends to ask a question about the Target." ;
-                                      rdfs:isDefinedBy <http://www.w3.org/ns/oa#> ;
-                                      rdfs:label "questioning" .
+                        oa:Motivation ;
+               rdfs:comment "The motivation for when the user intends to ask a question about the Target." ;
+               rdfs:isDefinedBy <http://www.w3.org/ns/oa#> ;
+               rdfs:label "questioning" .
 
 
-###  http://www.w3.org/ns/oa#tagging
+###  http://w3id.org/roh/mirror/oa#tagging
 oa:tagging rdf:type owl:NamedIndividual ,
-                                           oa:Motivation ;
-                                  rdfs:comment "The motivation for when the user intends to associate a tag with the Target." ;
-                                  rdfs:isDefinedBy <http://www.w3.org/ns/oa#> ;
-                                  rdfs:label "tagging" .
+                    oa:Motivation ;
+           rdfs:comment "The motivation for when the user intends to associate a tag with the Target." ;
+           rdfs:isDefinedBy <http://www.w3.org/ns/oa#> ;
+           rdfs:label "tagging" .
 
 
 #################################################################
@@ -8250,11 +8257,14 @@ bfo:BFO_0000004 rdfs:label "continuador independiente"@es ,
                 :Status
                 foaf:Agent
                 <http://w3id.org/roh/mirror/geonames#Feature>
+                oa:Annotation
                 bfo:BFO_0000008
                 bfo:BFO_0000015
                 bfo:BFO_0000023
                 ero:ERO_0000005
                 ero:ERO_0000071
+                skos:Concept
+                skos:ConceptScheme
                 <http://w3id.org/roh/mirror/vcard#Address>
                 <http://w3id.org/roh/mirror/vcard#Email>
                 <http://w3id.org/roh/mirror/vcard#Kind>
@@ -8263,9 +8273,6 @@ bfo:BFO_0000004 rdfs:label "continuador independiente"@es ,
                 vivo:Relationship
                 rdf:List
                 rdf:Seq
-                skos:Concept
-                skos:ConceptScheme
-                oa:Annotation
               )
 ] .
 
@@ -8283,6 +8290,7 @@ bfo:BFO_0000004 rdfs:label "continuador independiente"@es ,
                 :Product
                 foaf:Agent
                 <http://w3id.org/roh/mirror/geonames#Feature>
+                oa:Annotation
                 bfo:BFO_0000008
                 bfo:BFO_0000023
                 ero:ERO_0000005
@@ -8293,7 +8301,6 @@ bfo:BFO_0000004 rdfs:label "continuador independiente"@es ,
                 <http://w3id.org/roh/mirror/vcard#Name>
                 rdf:List
                 rdf:Seq
-                oa:Annotation
               )
 ] .
 
