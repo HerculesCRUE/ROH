@@ -17,4 +17,13 @@
 ## 2022-06-16
 ### Fixed
     - changed the prefix of skos ontology to http://w3id.org/roh/mirror/skos#>  in es-scientific-domain.ttl and \es-subject-area.ttl
+
+
+## 2022-07-14
+## Fixed 
+	-The following has been removed from bibo:AcademicArticle: vivo:hasPublicationVenue only  bibo:Journal
+	- The following has been added from bibo:AcademicArticle: vivo:hasPublicationVenue only (bibo:Journal or bibo:Proceedings)
+	- The following has been removed from  vivo:ConferencePaper:		vivo:hasPublicationVenue only  bibo:Journal
+	- The following has been added from  vivo:ConferencerPaper: vivo:hasPublicationVenue only  bibo:Proceedings
+
     

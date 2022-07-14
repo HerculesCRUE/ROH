@@ -4302,7 +4302,10 @@ by creating a research management system with semantic capacities based on seman
         <Class IRI="/mirror/bibo#AcademicArticle"/>
         <ObjectAllValuesFrom>
             <ObjectProperty IRI="/mirror/vivo#hasPublicationVenue"/>
-            <Class IRI="/mirror/bibo#Journal"/>
+            <ObjectUnionOf>
+                <Class IRI="/mirror/bibo#Journal"/>
+                <Class IRI="/mirror/bibo#Proceedings"/>
+            </ObjectUnionOf>
         </ObjectAllValuesFrom>
     </SubClassOf>
     <SubClassOf>
@@ -5906,6 +5909,13 @@ by creating a research management system with semantic capacities based on seman
         <ObjectAllValuesFrom>
             <ObjectProperty IRI="/mirror/bibo#presentedAt"/>
             <Class IRI="/mirror/bibo#Conference"/>
+        </ObjectAllValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="/mirror/vivo#ConferencePaper"/>
+        <ObjectAllValuesFrom>
+            <ObjectProperty IRI="/mirror/vivo#hasPublicationVenue"/>
+            <Class IRI="/mirror/bibo#Proceedings"/>
         </ObjectAllValuesFrom>
     </SubClassOf>
     <SubClassOf>

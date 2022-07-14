@@ -7296,7 +7296,14 @@ A roh:FundingSource roh:feeds a roh:Funding with funds to sponsor some projects.
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="http://w3id.org/roh/mirror/vivo#hasPublicationVenue"/>
-                <owl:allValuesFrom rdf:resource="http://w3id.org/roh/mirror/bibo#Journal"/>
+                <owl:allValuesFrom>
+                    <owl:Class>
+                        <owl:unionOf rdf:parseType="Collection">
+                            <rdf:Description rdf:about="http://w3id.org/roh/mirror/bibo#Journal"/>
+                            <rdf:Description rdf:about="http://w3id.org/roh/mirror/bibo#Proceedings"/>
+                        </owl:unionOf>
+                    </owl:Class>
+                </owl:allValuesFrom>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
@@ -9964,6 +9971,12 @@ Based on obo-bfo:Role also used in VIVO, it defines roles. The object property r
                 <owl:allValuesFrom rdf:resource="http://w3id.org/roh/mirror/bibo#Conference"/>
             </owl:Restriction>
         </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://w3id.org/roh/mirror/vivo#hasPublicationVenue"/>
+                <owl:allValuesFrom rdf:resource="http://w3id.org/roh/mirror/bibo#Proceedings"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
         <obo:IAO_0000115>A paper presented at a conference; optionally collected into a Proceedings or a special Journal issue</obo:IAO_0000115>
         <rdfs:label xml:lang="es">Artículo de Conferencia</rdfs:label>
         <rdfs:label xml:lang="en">Conference Paper</rdfs:label>
@@ -11450,8 +11463,8 @@ Contents
      -->
 
     <rdf:Description rdf:about="http://w3id.org/roh/mirror/obo/bfo#BFO_0000004">
-        <rdfs:label xml:lang="en">independent continuant</rdfs:label>
         <rdfs:label xml:lang="es">continuador independiente</rdfs:label>
+        <rdfs:label xml:lang="en">independent continuant</rdfs:label>
     </rdf:Description>
     
 
