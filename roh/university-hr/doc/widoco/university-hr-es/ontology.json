@@ -1,0 +1,2071 @@
+[ {
+  "@id" : "http://purl.org/dc/terms/license",
+  "@type" : [ "http://www.w3.org/2002/07/owl#AnnotationProperty" ]
+}, {
+  "@id" : "http://purl.org/roh#codeOf",
+  "@type" : [ "http://www.w3.org/2002/07/owl#AnnotationProperty" ]
+}, {
+  "@id" : "http://purl.org/roh#country",
+  "@type" : [ "http://www.w3.org/2002/07/owl#AnnotationProperty" ]
+}, {
+  "@id" : "http://purl.org/roh#geoDivision",
+  "@type" : [ "http://www.w3.org/2002/07/owl#AnnotationProperty" ]
+}, {
+  "@id" : "http://purl.org/roh#hasCode",
+  "@type" : [ "http://www.w3.org/2002/07/owl#AnnotationProperty" ]
+}, {
+  "@id" : "http://purl.org/roh/mirror/vivo#FacultyAdministrativePosition",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "Faculty Administrative Position"
+  }, {
+    "@language" : "es",
+    "@value" : "Posición Administrativa en Facultad"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "http://purl.org/roh/mirror/vivo#Position"
+  } ]
+}, {
+  "@id" : "http://purl.org/roh/mirror/vivo#FacultyPosition",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "Faculty Position"
+  }, {
+    "@language" : "es",
+    "@value" : "Posición en Facultad"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "http://purl.org/roh/mirror/vivo#Position"
+  } ]
+}, {
+  "@id" : "http://purl.org/roh/mirror/vivo#NonAcademicPosition",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "Non-Academic Position"
+  }, {
+    "@language" : "es",
+    "@value" : "Posición no Académica"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "http://purl.org/roh/mirror/vivo#Position"
+  } ]
+}, {
+  "@id" : "http://purl.org/roh/mirror/vivo#NonFacultyAcademicPosition",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "Non-Faculty Academic Position"
+  }, {
+    "@language" : "es",
+    "@value" : "Posición Académica no de Facultad"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "http://purl.org/roh/mirror/vivo#Position"
+  } ]
+}, {
+  "@id" : "http://purl.org/roh/mirror/vivo#Position",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "es",
+    "@value" : "Posición"
+  }, {
+    "@language" : "en",
+    "@value" : "Position"
+  } ]
+}, {
+  "@id" : "http://purl.org/roh/university-hr/es",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Ontology" ],
+  "http://purl.org/dc/terms/license" : [ {
+    "@id" : "https://creativecommons.org/licenses/by-sa/4.0/"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "The University of Murcia signed on November 29, 2017, a Covenant with the Ministry of Economy, Industry and Competitiveness backing the “HÉRCULES: Semantic University Research Data” Project with a budget of FIVE MILLION FOUR HUNDRED AND SIXTY-TWO THOUSAND SIX HUNDRED euros with an 80% of co-financiering from the European Regional Development Fund program (ERDF) within the 2014-2020 period. \n\nThe project arose as a CRUE initiative, to create the basis for a new collaboration model between universities, to develop the information management systems and with the main objective of encouraging this type of collaboration.\n\nTherefore, the purpose of this agreement was to contribute to the improvement of public services and business innovation and research through the improvement of:\n\n    efficiency in public investment by decreasing the duplication of investment in R&D.\n    efficiency of research in universities.\n    scientific dissemination of research results.\n    detection of synergies in R&D between universities.\n    transfer of R&D results to companies.\n    efficiency in the management of research. \n\nby creating a research management system with semantic capacities based on semantic open data and that will provide a global view of the research data contained in the Spanish University System."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "ROH Spanish University HR Module"
+  } ],
+  "http://www.w3.org/2002/07/owl#versionIRI" : [ {
+    "@id" : "http://purl.org/roh/university-hr/1.0"
+  } ]
+}, {
+  "@id" : "http://purl.org/roh/university-hr/es#Ayudante",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "es",
+    "@value" : "Los ayudantes serán contratados entre quienes hayan superado todas las materias de estudio que se determinen en los criterios a que hace referencia el artículo 38 y con la finalidad principal de completar su formación investigadora. La contratación será con dedicación a tiempo completo, por una duración no superior a cuatro años improrrogables. Los ayudantes también podrán colaborar en tareas docentes en los términos que establezcan los Estatutos."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "Assistant"
+  }, {
+    "@language" : "es",
+    "@value" : "Ayudante"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "http://purl.org/roh/university-hr/es#PDIContratado"
+  } ]
+}, {
+  "@id" : "http://purl.org/roh/university-hr/es#CatedraticoDeEscuelaUniversitaria",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://purl.org/roh#country" : [ {
+    "@id" : "http://publications.europa.eu/resource/authority/country/ESP"
+  } ],
+  "http://purl.org/roh#hasCode" : [ {
+    "@id" : "http://purl.org/roh/university-hr/es#ES_UNIVERSITY_HR_CODE_ESFPCEU"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "es",
+    "@value" : "Catedrático de Escuela Universitaria"
+  }, {
+    "@language" : "es",
+    "@value" : "Profesor catedrático de escuela universitaria"
+  }, {
+    "@language" : "en",
+    "@value" : "University School Professor"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "http://purl.org/roh/university-hr/es#CuerpoDocente"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#closeMatch" : [ {
+    "@id" : "http://skos.um.es/unescothes/C00015"
+  }, {
+    "@id" : "http://skos.um.es/unescothes/C03965"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#inScheme" : [ {
+    "@id" : "http://purl.org/roh/university-hr/es#ESUniversityHumanResourcesList"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#notation" : [ {
+    "@value" : "ESFPCEU"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#prefLabel" : [ {
+    "@language" : "gl",
+    "@value" : "Profesor catedrático de escola universitaria"
+  }, {
+    "@language" : "es",
+    "@value" : "Profesor catedrático de escuela universitaria"
+  }, {
+    "@language" : "ast",
+    "@value" : "Profesor catedráticu d'escuela universitaria"
+  }, {
+    "@language" : "ca",
+    "@value" : "Professor catedràtic d’escola universitària"
+  }, {
+    "@language" : "eu",
+    "@value" : "Unibertsitateko Eskolako Katedraduna"
+  } ]
+}, {
+  "@id" : "http://purl.org/roh/university-hr/es#CatedraticoDeUniversidad",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://purl.org/roh#country" : [ {
+    "@id" : "http://publications.europa.eu/resource/authority/country/ESP"
+  } ],
+  "http://purl.org/roh#hasCode" : [ {
+    "@id" : "http://purl.org/roh/university-hr/es#ES_UNIVERSITY_HR_CODE_ESFPCU"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "es",
+    "@value" : "Catedrático de Universidad"
+  }, {
+    "@language" : "es",
+    "@value" : "Profesor catedrático de universidad"
+  }, {
+    "@language" : "en",
+    "@value" : "University Professor"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "http://purl.org/roh/university-hr/es#CuerpoDocente"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#closeMatch" : [ {
+    "@id" : "http://skos.um.es/unescothes/C00015"
+  }, {
+    "@id" : "http://skos.um.es/unescothes/C03965"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#inScheme" : [ {
+    "@id" : "http://purl.org/roh/university-hr/es#ESUniversityHumanResourcesList"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#notation" : [ {
+    "@value" : "ESFPCU"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#prefLabel" : [ {
+    "@language" : "es",
+    "@value" : "Profesor catedrático de universidad"
+  }, {
+    "@language" : "gl",
+    "@value" : "Profesor catedrático de universidade"
+  }, {
+    "@language" : "ast",
+    "@value" : "Profesor catedráticu d'universidá"
+  }, {
+    "@language" : "fr",
+    "@value" : "Professeur d'université"
+  }, {
+    "@language" : "ca",
+    "@value" : "Professor catedràtic d'universitat"
+  }, {
+    "@language" : "pt",
+    "@value" : "Professor catedrático de universidade"
+  }, {
+    "@language" : "eu",
+    "@value" : "Unibertsitateko katedraduna"
+  } ]
+}, {
+  "@id" : "http://purl.org/roh/university-hr/es#CuerpoDocente",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "es",
+    "@value" : "Personal funcionario o permanente de una universidad."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "es",
+    "@value" : "Cuerpo Docente"
+  }, {
+    "@language" : "en",
+    "@value" : "Faculty"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "http://purl.org/roh/mirror/vivo#FacultyPosition"
+  } ],
+  "http://www.w3.org/2002/07/owl#disjointWith" : [ {
+    "@id" : "http://purl.org/roh/university-hr/es#PDIContratado"
+  } ]
+}, {
+  "@id" : "http://purl.org/roh/university-hr/es#ESUniversityHumanResourcesCodesList",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://www.w3.org/2004/02/skos/core#ConceptScheme" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "fr",
+    "@value" : "Codes des resources humains des universités d'Espagne"
+  }, {
+    "@language" : "en",
+    "@value" : "Codes for the human resources of the universities from Spain"
+  }, {
+    "@language" : "ca",
+    "@value" : "Codis dels recursos humans de les universitats d'Espanya"
+  }, {
+    "@language" : "es",
+    "@value" : "Códigos de los recursos humanos de las universidades de España"
+  }, {
+    "@language" : "ast",
+    "@value" : "Códigos de los recursos humanos de les universidaes d'España"
+  }, {
+    "@language" : "pt",
+    "@value" : "Códigos dos recursos humanos das universidades de Espanha"
+  }, {
+    "@language" : "gl",
+    "@value" : "Códigos dos recursos humanos das universidades de España"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#prefLabel" : [ {
+    "@language" : "fr",
+    "@value" : "Codes des resources humains des universités d'Espagne"
+  }, {
+    "@language" : "en",
+    "@value" : "Codes for the human resources of the universities from Spain"
+  }, {
+    "@language" : "ca",
+    "@value" : "Codis dels recursos humans de les universitats d'Espanya"
+  }, {
+    "@language" : "es",
+    "@value" : "Códigos de los recursos humanos de las universidades de España"
+  }, {
+    "@language" : "ast",
+    "@value" : "Códigos de los recursos humanos de les universidaes d'España"
+  }, {
+    "@language" : "pt",
+    "@value" : "Códigos dos recursos humanos das universidades de Espanha"
+  }, {
+    "@language" : "gl",
+    "@value" : "Códigos dos recursos humanos das universidades de España"
+  } ]
+}, {
+  "@id" : "http://purl.org/roh/university-hr/es#ESUniversityHumanResourcesList",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://www.w3.org/2004/02/skos/core#ConceptScheme" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "Human resources of the universities from Spain"
+  }, {
+    "@language" : "pt",
+    "@value" : "Recursos humanos das universidades de Espanha"
+  }, {
+    "@language" : "gl",
+    "@value" : "Recursos humanos das universidades de España"
+  }, {
+    "@language" : "es",
+    "@value" : "Recursos humanos de las universidades de España"
+  }, {
+    "@language" : "ast",
+    "@value" : "Recursos humanos de les universidaes d'España"
+  }, {
+    "@language" : "ca",
+    "@value" : "Recursos humans de les universitats d'Espanya"
+  }, {
+    "@language" : "fr",
+    "@value" : "Resources humains des universités d'Espagne"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#prefLabel" : [ {
+    "@language" : "en",
+    "@value" : "Human resources of the universities from Spain"
+  }, {
+    "@language" : "pt",
+    "@value" : "Recursos humanos das universidades de Espanha"
+  }, {
+    "@language" : "gl",
+    "@value" : "Recursos humanos das universidades de España"
+  }, {
+    "@language" : "es",
+    "@value" : "Recursos humanos de las universidades de España"
+  }, {
+    "@language" : "ast",
+    "@value" : "Recursos humanos de les universidaes d'España"
+  }, {
+    "@language" : "ca",
+    "@value" : "Recursos humans de les universitats d'Espanya"
+  }, {
+    "@language" : "fr",
+    "@value" : "Resources humains des universités d'Espagne"
+  } ]
+}, {
+  "@id" : "http://purl.org/roh/university-hr/es#ES_UNIVERSITY_HR_CODE_ESDECA",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://www.w3.org/2004/02/skos/core#Concept" ],
+  "http://purl.org/roh#codeOf" : [ {
+    "@id" : "http://purl.org/roh/university-hr/es#ES_UNIVERSITY_HR_ESDECA"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "ESDECA"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#inScheme" : [ {
+    "@id" : "http://purl.org/roh/university-hr/es#ESUniversityHumanResourcesCodesList"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#prefLabel" : [ {
+    "@value" : "ESDECA"
+  } ]
+}, {
+  "@id" : "http://purl.org/roh/university-hr/es#ES_UNIVERSITY_HR_CODE_ESFEU",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://www.w3.org/2004/02/skos/core#Concept" ],
+  "http://purl.org/roh#codeOf" : [ {
+    "@id" : "http://purl.org/roh/university-hr/es#ProfesorTitularDeEscuelaUniversitaria"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "ESFEU"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#inScheme" : [ {
+    "@id" : "http://purl.org/roh/university-hr/es#ESUniversityHumanResourcesCodesList"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#prefLabel" : [ {
+    "@value" : "ESFEU"
+  } ]
+}, {
+  "@id" : "http://purl.org/roh/university-hr/es#ES_UNIVERSITY_HR_CODE_ESFIVEFNP",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://www.w3.org/2004/02/skos/core#Concept" ],
+  "http://purl.org/roh#codeOf" : [ {
+    "@id" : "http://purl.org/roh/university-hr/es#ES_UNIVERSITY_HR_ESFIVEFNP"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "ESFIVEFNP"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#inScheme" : [ {
+    "@id" : "http://purl.org/roh/university-hr/es#ESUniversityHumanResourcesCodesList"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#prefLabel" : [ {
+    "@value" : "ESFIVEFNP"
+  } ]
+}, {
+  "@id" : "http://purl.org/roh/university-hr/es#ES_UNIVERSITY_HR_CODE_ESFIVEFP",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://www.w3.org/2004/02/skos/core#Concept" ],
+  "http://purl.org/roh#codeOf" : [ {
+    "@id" : "http://purl.org/roh/university-hr/es#ES_UNIVERSITY_HR_ESFIVEFP"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "ESFIVEFP"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#inScheme" : [ {
+    "@id" : "http://purl.org/roh/university-hr/es#ESUniversityHumanResourcesCodesList"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#prefLabel" : [ {
+    "@value" : "ESFIVEFP"
+  } ]
+}, {
+  "@id" : "http://purl.org/roh/university-hr/es#ES_UNIVERSITY_HR_CODE_ESFPCEU",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://www.w3.org/2004/02/skos/core#Concept" ],
+  "http://purl.org/roh#codeOf" : [ {
+    "@id" : "http://purl.org/roh/university-hr/es#CatedraticoDeEscuelaUniversitaria"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "ESFPCEU"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#inScheme" : [ {
+    "@id" : "http://purl.org/roh/university-hr/es#ESUniversityHumanResourcesCodesList"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#prefLabel" : [ {
+    "@value" : "ESFPCEU"
+  } ]
+}, {
+  "@id" : "http://purl.org/roh/university-hr/es#ES_UNIVERSITY_HR_CODE_ESFPCU",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://www.w3.org/2004/02/skos/core#Concept" ],
+  "http://purl.org/roh#codeOf" : [ {
+    "@id" : "http://purl.org/roh/university-hr/es#CatedraticoDeUniversidad"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "ESFPCU"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#inScheme" : [ {
+    "@id" : "http://purl.org/roh/university-hr/es#ESUniversityHumanResourcesCodesList"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#prefLabel" : [ {
+    "@value" : "ESFPCU"
+  } ]
+}, {
+  "@id" : "http://purl.org/roh/university-hr/es#ES_UNIVERSITY_HR_CODE_ESFPTN",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://www.w3.org/2004/02/skos/core#Concept" ],
+  "http://purl.org/roh#codeOf" : [ {
+    "@id" : "http://purl.org/roh/university-hr/es#ES_UNIVERSITY_HR_ESFPTN"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "ESFPTN"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#inScheme" : [ {
+    "@id" : "http://purl.org/roh/university-hr/es#ESUniversityHumanResourcesCodesList"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#prefLabel" : [ {
+    "@value" : "ESFPTN"
+  } ]
+}, {
+  "@id" : "http://purl.org/roh/university-hr/es#ES_UNIVERSITY_HR_CODE_ESFPTU",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://www.w3.org/2004/02/skos/core#Concept" ],
+  "http://purl.org/roh#codeOf" : [ {
+    "@id" : "http://purl.org/roh/university-hr/es#ProfesorTitularDeUniversidad"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "ESFPTU"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#inScheme" : [ {
+    "@id" : "http://purl.org/roh/university-hr/es#ESUniversityHumanResourcesCodesList"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#prefLabel" : [ {
+    "@value" : "ESFPTU"
+  } ]
+}, {
+  "@id" : "http://purl.org/roh/university-hr/es#ES_UNIVERSITY_HR_CODE_ESJEFDEP",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://www.w3.org/2004/02/skos/core#Concept" ],
+  "http://purl.org/roh#codeOf" : [ {
+    "@id" : "http://purl.org/roh/university-hr/es#ES_UNIVERSITY_HR_ESJEFDEP"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "ESJEFDEP"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#inScheme" : [ {
+    "@id" : "http://purl.org/roh/university-hr/es#ESUniversityHumanResourcesCodesList"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#prefLabel" : [ {
+    "@value" : "ESJEFDEP"
+  } ]
+}, {
+  "@id" : "http://purl.org/roh/university-hr/es#ES_UNIVERSITY_HR_CODE_ESLI",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://www.w3.org/2004/02/skos/core#Concept" ],
+  "http://purl.org/roh#codeOf" : [ {
+    "@id" : "http://purl.org/roh/university-hr/es#ES_UNIVERSITY_HR_ESLI"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "ESLI"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#inScheme" : [ {
+    "@id" : "http://purl.org/roh/university-hr/es#ESUniversityHumanResourcesCodesList"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#prefLabel" : [ {
+    "@value" : "ESLI"
+  } ]
+}, {
+  "@id" : "http://purl.org/roh/university-hr/es#ES_UNIVERSITY_HR_CODE_ESLPAD",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://www.w3.org/2004/02/skos/core#Concept" ],
+  "http://purl.org/roh#codeOf" : [ {
+    "@id" : "http://purl.org/roh/university-hr/es#ProfesorAyudanteDoctor"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "ESLPAD"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#inScheme" : [ {
+    "@id" : "http://purl.org/roh/university-hr/es#ESUniversityHumanResourcesCodesList"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#prefLabel" : [ {
+    "@value" : "ESLPAD"
+  } ]
+}, {
+  "@id" : "http://purl.org/roh/university-hr/es#ES_UNIVERSITY_HR_CODE_ESLPADJ",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://www.w3.org/2004/02/skos/core#Concept" ],
+  "http://purl.org/roh#codeOf" : [ {
+    "@id" : "http://purl.org/roh/university-hr/es#ES_UNIVERSITY_HR_ESLPADJ"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "ESLPADJ"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#inScheme" : [ {
+    "@id" : "http://purl.org/roh/university-hr/es#ESUniversityHumanResourcesCodesList"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#prefLabel" : [ {
+    "@value" : "ESLPADJ"
+  } ]
+}, {
+  "@id" : "http://purl.org/roh/university-hr/es#ES_UNIVERSITY_HR_CODE_ESLPAG",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://www.w3.org/2004/02/skos/core#Concept" ],
+  "http://purl.org/roh#codeOf" : [ {
+    "@id" : "http://purl.org/roh/university-hr/es#ES_UNIVERSITY_HR_ESLPAG"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "ESLPAG"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#inScheme" : [ {
+    "@id" : "http://purl.org/roh/university-hr/es#ESUniversityHumanResourcesCodesList"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#prefLabel" : [ {
+    "@value" : "ESLPAG"
+  } ]
+}, {
+  "@id" : "http://purl.org/roh/university-hr/es#ES_UNIVERSITY_HR_CODE_ESLPAM",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://www.w3.org/2004/02/skos/core#Concept" ],
+  "http://purl.org/roh#codeOf" : [ {
+    "@id" : "http://purl.org/roh/university-hr/es#ES_UNIVERSITY_HR_ESLPAM"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "ESLPAM"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#inScheme" : [ {
+    "@id" : "http://purl.org/roh/university-hr/es#ESUniversityHumanResourcesCodesList"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#prefLabel" : [ {
+    "@value" : "ESLPAM"
+  } ]
+}, {
+  "@id" : "http://purl.org/roh/university-hr/es#ES_UNIVERSITY_HR_CODE_ESLPAS",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://www.w3.org/2004/02/skos/core#Concept" ],
+  "http://purl.org/roh#codeOf" : [ {
+    "@id" : "http://purl.org/roh/university-hr/es#ProfesorAsociado"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "ESLPAS"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#inScheme" : [ {
+    "@id" : "http://purl.org/roh/university-hr/es#ESUniversityHumanResourcesCodesList"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#prefLabel" : [ {
+    "@value" : "ESLPAS"
+  } ]
+}, {
+  "@id" : "http://purl.org/roh/university-hr/es#ES_UNIVERSITY_HR_CODE_ESLPAY",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://www.w3.org/2004/02/skos/core#Concept" ],
+  "http://purl.org/roh#codeOf" : [ {
+    "@id" : "http://purl.org/roh/university-hr/es#ES_UNIVERSITY_HR_ESLPAY"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "ESLPAY"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#inScheme" : [ {
+    "@id" : "http://purl.org/roh/university-hr/es#ESUniversityHumanResourcesCodesList"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#prefLabel" : [ {
+    "@value" : "ESLPAY"
+  } ]
+}, {
+  "@id" : "http://purl.org/roh/university-hr/es#ES_UNIVERSITY_HR_CODE_ESLPC",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://www.w3.org/2004/02/skos/core#Concept" ],
+  "http://purl.org/roh#codeOf" : [ {
+    "@id" : "http://purl.org/roh/university-hr/es#ES_UNIVERSITY_HR_ESLPC"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "ESLPC"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#inScheme" : [ {
+    "@id" : "http://purl.org/roh/university-hr/es#ESUniversityHumanResourcesCodesList"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#prefLabel" : [ {
+    "@value" : "ESLPC"
+  } ]
+}, {
+  "@id" : "http://purl.org/roh/university-hr/es#ES_UNIVERSITY_HR_CODE_ESLPCD",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://www.w3.org/2004/02/skos/core#Concept" ],
+  "http://purl.org/roh#codeOf" : [ {
+    "@id" : "http://purl.org/roh/university-hr/es#ProfesorContratadoDoctor"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "ESLPCD"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#inScheme" : [ {
+    "@id" : "http://purl.org/roh/university-hr/es#ESUniversityHumanResourcesCodesList"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#prefLabel" : [ {
+    "@value" : "ESLPCD"
+  } ]
+}, {
+  "@id" : "http://purl.org/roh/university-hr/es#ES_UNIVERSITY_HR_CODE_ESLPCNP",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://www.w3.org/2004/02/skos/core#Concept" ],
+  "http://purl.org/roh#codeOf" : [ {
+    "@id" : "http://purl.org/roh/university-hr/es#ES_UNIVERSITY_HR_ESLPCNP"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "ESLPCNP"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#inScheme" : [ {
+    "@id" : "http://purl.org/roh/university-hr/es#ESUniversityHumanResourcesCodesList"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#prefLabel" : [ {
+    "@value" : "ESLPCNP"
+  } ]
+}, {
+  "@id" : "http://purl.org/roh/university-hr/es#ES_UNIVERSITY_HR_CODE_ESLPCP",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://www.w3.org/2004/02/skos/core#Concept" ],
+  "http://purl.org/roh#codeOf" : [ {
+    "@id" : "http://purl.org/roh/university-hr/es#ES_UNIVERSITY_HR_ESLPCP"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "ESLPCP"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#inScheme" : [ {
+    "@id" : "http://purl.org/roh/university-hr/es#ESUniversityHumanResourcesCodesList"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#prefLabel" : [ {
+    "@value" : "ESLPCP"
+  } ]
+}, {
+  "@id" : "http://purl.org/roh/university-hr/es#ES_UNIVERSITY_HR_CODE_ESLPI",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://www.w3.org/2004/02/skos/core#Concept" ],
+  "http://purl.org/roh#codeOf" : [ {
+    "@id" : "http://purl.org/roh/university-hr/es#ES_UNIVERSITY_HR_ESLPI"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "ESLPI"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#inScheme" : [ {
+    "@id" : "http://purl.org/roh/university-hr/es#ESUniversityHumanResourcesCodesList"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#prefLabel" : [ {
+    "@value" : "ESLPI"
+  } ]
+}, {
+  "@id" : "http://purl.org/roh/university-hr/es#ES_UNIVERSITY_HR_CODE_ESLPL",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://www.w3.org/2004/02/skos/core#Concept" ],
+  "http://purl.org/roh#codeOf" : [ {
+    "@id" : "http://purl.org/roh/university-hr/es#ES_UNIVERSITY_HR_ESLPL"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "ESLPL"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#inScheme" : [ {
+    "@id" : "http://purl.org/roh/university-hr/es#ESUniversityHumanResourcesCodesList"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#prefLabel" : [ {
+    "@value" : "ESLPL"
+  } ]
+}, {
+  "@id" : "http://purl.org/roh/university-hr/es#ES_UNIVERSITY_HR_CODE_ESPASF",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://www.w3.org/2004/02/skos/core#Concept" ],
+  "http://purl.org/roh#codeOf" : [ {
+    "@id" : "http://purl.org/roh/university-hr/es#ES_UNIVERSITY_HR_ESPASF"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "ESPASF"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#inScheme" : [ {
+    "@id" : "http://purl.org/roh/university-hr/es#ESUniversityHumanResourcesCodesList"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#prefLabel" : [ {
+    "@value" : "ESPASF"
+  } ]
+}, {
+  "@id" : "http://purl.org/roh/university-hr/es#ES_UNIVERSITY_HR_CODE_ESPASL",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://www.w3.org/2004/02/skos/core#Concept" ],
+  "http://purl.org/roh#codeOf" : [ {
+    "@id" : "http://purl.org/roh/university-hr/es#ES_UNIVERSITY_HR_ESPASL"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "ESPASL"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#inScheme" : [ {
+    "@id" : "http://purl.org/roh/university-hr/es#ESUniversityHumanResourcesCodesList"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#prefLabel" : [ {
+    "@value" : "ESPASL"
+  } ]
+}, {
+  "@id" : "http://purl.org/roh/university-hr/es#ES_UNIVERSITY_HR_CODE_ESPLEM",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://www.w3.org/2004/02/skos/core#Concept" ],
+  "http://purl.org/roh#codeOf" : [ {
+    "@id" : "http://purl.org/roh/university-hr/es#ProfesorEmerito"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "ESPLEM"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#inScheme" : [ {
+    "@id" : "http://purl.org/roh/university-hr/es#ESUniversityHumanResourcesCodesList"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#prefLabel" : [ {
+    "@value" : "ESPLEM"
+  } ]
+}, {
+  "@id" : "http://purl.org/roh/university-hr/es#ES_UNIVERSITY_HR_CODE_ESPLV",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://www.w3.org/2004/02/skos/core#Concept" ],
+  "http://purl.org/roh#codeOf" : [ {
+    "@id" : "http://purl.org/roh/university-hr/es#ProfesorVisitante"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "ESPLV"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#inScheme" : [ {
+    "@id" : "http://purl.org/roh/university-hr/es#ESUniversityHumanResourcesCodesList"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#prefLabel" : [ {
+    "@value" : "ESPLV"
+  } ]
+}, {
+  "@id" : "http://purl.org/roh/university-hr/es#ES_UNIVERSITY_HR_CODE_ESRECT",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://www.w3.org/2004/02/skos/core#Concept" ],
+  "http://purl.org/roh#codeOf" : [ {
+    "@id" : "http://purl.org/roh/university-hr/es#ES_UNIVERSITY_HR_ESRECT"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "ESRECT"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#inScheme" : [ {
+    "@id" : "http://purl.org/roh/university-hr/es#ESUniversityHumanResourcesCodesList"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#prefLabel" : [ {
+    "@value" : "ESRECT"
+  } ]
+}, {
+  "@id" : "http://purl.org/roh/university-hr/es#ES_UNIVERSITY_HR_CODE_ESSECGE",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://www.w3.org/2004/02/skos/core#Concept" ],
+  "http://purl.org/roh#codeOf" : [ {
+    "@id" : "http://purl.org/roh/university-hr/es#ES_UNIVERSITY_HR_ESSECGE"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "ESSECGE"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#inScheme" : [ {
+    "@id" : "http://purl.org/roh/university-hr/es#ESUniversityHumanResourcesCodesList"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#prefLabel" : [ {
+    "@value" : "ESSECGE"
+  } ]
+}, {
+  "@id" : "http://purl.org/roh/university-hr/es#ES_UNIVERSITY_HR_CODE_ESVIDEC",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://www.w3.org/2004/02/skos/core#Concept" ],
+  "http://purl.org/roh#codeOf" : [ {
+    "@id" : "http://purl.org/roh/university-hr/es#ES_UNIVERSITY_HR_ESVIDEC"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "ESVIDEC"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#inScheme" : [ {
+    "@id" : "http://purl.org/roh/university-hr/es#ESUniversityHumanResourcesCodesList"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#prefLabel" : [ {
+    "@value" : "ESVIDEC"
+  } ]
+}, {
+  "@id" : "http://purl.org/roh/university-hr/es#ES_UNIVERSITY_HR_CODE_ESVIREC",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://www.w3.org/2004/02/skos/core#Concept" ],
+  "http://purl.org/roh#codeOf" : [ {
+    "@id" : "http://purl.org/roh/university-hr/es#ES_UNIVERSITY_HR_ESVIREC"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "ESVIREC"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#inScheme" : [ {
+    "@id" : "http://purl.org/roh/university-hr/es#ESUniversityHumanResourcesCodesList"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#prefLabel" : [ {
+    "@value" : "ESVIREC"
+  } ]
+}, {
+  "@id" : "http://purl.org/roh/university-hr/es#ES_UNIVERSITY_HR_ESDECA",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://purl.org/roh#country" : [ {
+    "@id" : "http://publications.europa.eu/resource/authority/country/ESP"
+  } ],
+  "http://purl.org/roh#hasCode" : [ {
+    "@id" : "http://purl.org/roh/university-hr/es#ES_UNIVERSITY_HR_CODE_ESDECA"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "es",
+    "@value" : "Decano"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "http://purl.org/roh/mirror/vivo#FacultyAdministrativePosition"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#closeMatch" : [ {
+    "@id" : "http://purl.org/roh/university-hr/uk#GB_UNIVERSITY_HR_GBDEAN"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#inScheme" : [ {
+    "@id" : "http://purl.org/roh/university-hr/es#ESUniversityHumanResourcesList"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#notation" : [ {
+    "@value" : "ESDECA"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#prefLabel" : [ {
+    "@language" : "es",
+    "@value" : "Decano"
+  }, {
+    "@language" : "gl",
+    "@value" : "Decano"
+  }, {
+    "@language" : "ast",
+    "@value" : "Decanu"
+  }, {
+    "@language" : "ca",
+    "@value" : "Degà"
+  }, {
+    "@language" : "eu",
+    "@value" : "Dekanoa"
+  } ]
+}, {
+  "@id" : "http://purl.org/roh/university-hr/es#ES_UNIVERSITY_HR_ESFIVEFNP",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://purl.org/roh#country" : [ {
+    "@id" : "http://publications.europa.eu/resource/authority/country/ESP"
+  } ],
+  "http://purl.org/roh#geoDivision" : [ {
+    "@id" : "http://purl.org/hercules/asio/modules#ES_DIVISION_LEVEL_1_ES_PV"
+  } ],
+  "http://purl.org/roh#hasCode" : [ {
+    "@id" : "http://purl.org/roh/university-hr/es#ES_UNIVERSITY_HR_CODE_ESFIVEFNP"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "es",
+    "@value" : "Profesor Ivef no permanente"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "http://purl.org/roh/university-hr/es#PDIContratado"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#closeMatch" : [ {
+    "@id" : "http://skos.um.es/unescothes/C00015"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#inScheme" : [ {
+    "@id" : "http://purl.org/roh/university-hr/es#ESUniversityHumanResourcesList"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#notation" : [ {
+    "@value" : "ESFIVEFNP"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#prefLabel" : [ {
+    "@language" : "ast",
+    "@value" : "Profesor Ivef no permanente"
+  }, {
+    "@language" : "es",
+    "@value" : "Profesor Ivef no permanente"
+  }, {
+    "@language" : "gl",
+    "@value" : "Profesor Ivef no permanente"
+  }, {
+    "@language" : "ca",
+    "@value" : "Professor Ivef no permanent"
+  }, {
+    "@language" : "eu",
+    "@value" : "SHEE Iraskaslea (Ez--Iraunkorra)"
+  } ]
+}, {
+  "@id" : "http://purl.org/roh/university-hr/es#ES_UNIVERSITY_HR_ESFIVEFP",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://purl.org/roh#country" : [ {
+    "@id" : "http://publications.europa.eu/resource/authority/country/ESP"
+  } ],
+  "http://purl.org/roh#geoDivision" : [ {
+    "@id" : "http://purl.org/hercules/asio/modules#ES_DIVISION_LEVEL_1_ES_PV"
+  } ],
+  "http://purl.org/roh#hasCode" : [ {
+    "@id" : "http://purl.org/roh/university-hr/es#ES_UNIVERSITY_HR_CODE_ESFIVEFP"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "es",
+    "@value" : "Profesor Ivef permanente"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "http://purl.org/roh/university-hr/es#CuerpoDocente"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#closeMatch" : [ {
+    "@id" : "http://skos.um.es/unescothes/C00015"
+  }, {
+    "@id" : "http://skos.um.es/unescothes/C03965"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#inScheme" : [ {
+    "@id" : "http://purl.org/roh/university-hr/es#ESUniversityHumanResourcesList"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#notation" : [ {
+    "@value" : "ESFIVEFP"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#prefLabel" : [ {
+    "@language" : "ast",
+    "@value" : "Profesor Ivef permanente"
+  }, {
+    "@language" : "es",
+    "@value" : "Profesor Ivef permanente"
+  }, {
+    "@language" : "gl",
+    "@value" : "Profesor Ivef permanente"
+  }, {
+    "@language" : "ca",
+    "@value" : "Professor Ivef permanent"
+  }, {
+    "@language" : "eu",
+    "@value" : "SHEE Irakaslea (Iraunkorra)"
+  } ]
+}, {
+  "@id" : "http://purl.org/roh/university-hr/es#ES_UNIVERSITY_HR_ESFPTN",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://purl.org/roh#country" : [ {
+    "@id" : "http://publications.europa.eu/resource/authority/country/ESP"
+  } ],
+  "http://purl.org/roh#geoDivision" : [ {
+    "@id" : "http://purl.org/hercules/asio/modules#ES_DIVISION_LEVEL_1_ES_PV"
+  } ],
+  "http://purl.org/roh#hasCode" : [ {
+    "@id" : "http://purl.org/roh/university-hr/es#ES_UNIVERSITY_HR_CODE_ESFPTN"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "es",
+    "@value" : "Profesor titular de escuela de náutica"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "http://purl.org/roh/university-hr/es#CuerpoDocente"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#closeMatch" : [ {
+    "@id" : "http://skos.um.es/unescothes/C00015"
+  }, {
+    "@id" : "http://skos.um.es/unescothes/C03965"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#inScheme" : [ {
+    "@id" : "http://purl.org/roh/university-hr/es#ESUniversityHumanResourcesList"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#notation" : [ {
+    "@value" : "ESFPTN"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#prefLabel" : [ {
+    "@language" : "eu",
+    "@value" : "Nautika Eskola Ofizialeko Irakasle numerarioa"
+  }, {
+    "@language" : "ast",
+    "@value" : "Profesor oficial d'escuela de náutica"
+  }, {
+    "@language" : "gl",
+    "@value" : "Profesor titular de escola de náutica"
+  }, {
+    "@language" : "es",
+    "@value" : "Profesor titular de escuela de náutica"
+  }, {
+    "@language" : "ca",
+    "@value" : "Professor titular d'escola de nàutica"
+  } ]
+}, {
+  "@id" : "http://purl.org/roh/university-hr/es#ES_UNIVERSITY_HR_ESJEFDEP",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://purl.org/roh#country" : [ {
+    "@id" : "http://publications.europa.eu/resource/authority/country/ESP"
+  } ],
+  "http://purl.org/roh#hasCode" : [ {
+    "@id" : "http://purl.org/roh/university-hr/es#ES_UNIVERSITY_HR_CODE_ESJEFDEP"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "es",
+    "@value" : "Director de departamento"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "http://purl.org/roh/mirror/vivo#FacultyAdministrativePosition"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#closeMatch" : [ {
+    "@id" : "http://purl.org/roh/university-hr/uk#GB_UNIVERSITY_GBHEADDEP"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#inScheme" : [ {
+    "@id" : "http://purl.org/roh/university-hr/es#ESUniversityHumanResourcesList"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#notation" : [ {
+    "@value" : "ESJEFDEP"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#prefLabel" : [ {
+    "@language" : "ca",
+    "@value" : "Director de departament"
+  }, {
+    "@language" : "es",
+    "@value" : "Director de departamento"
+  }, {
+    "@language" : "gl",
+    "@value" : "Director de departamento"
+  }, {
+    "@language" : "ast",
+    "@value" : "Director de departamentu"
+  }, {
+    "@language" : "eu",
+    "@value" : "Saileko Zuzendaria"
+  } ]
+}, {
+  "@id" : "http://purl.org/roh/university-hr/es#ES_UNIVERSITY_HR_ESLI",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://purl.org/roh#country" : [ {
+    "@id" : "http://publications.europa.eu/resource/authority/country/ESP"
+  } ],
+  "http://purl.org/roh#hasCode" : [ {
+    "@id" : "http://purl.org/roh/university-hr/es#ES_UNIVERSITY_HR_CODE_ESLI"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "es",
+    "@value" : "Investigador"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "http://purl.org/roh/mirror/vivo#NonFacultyAcademicPosition"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#closeMatch" : [ {
+    "@id" : "http://skos.um.es/unescothes/C03376"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#inScheme" : [ {
+    "@id" : "http://purl.org/roh/university-hr/es#ESUniversityHumanResourcesList"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#notation" : [ {
+    "@value" : "ESLI"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#prefLabel" : [ {
+    "@language" : "eu",
+    "@value" : "Ikertzaileak"
+  }, {
+    "@language" : "ast",
+    "@value" : "Investigador"
+  }, {
+    "@language" : "ca",
+    "@value" : "Investigador"
+  }, {
+    "@language" : "es",
+    "@value" : "Investigador"
+  }, {
+    "@language" : "gl",
+    "@value" : "Investigador"
+  } ]
+}, {
+  "@id" : "http://purl.org/roh/university-hr/es#ES_UNIVERSITY_HR_ESLPADJ",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://purl.org/roh#country" : [ {
+    "@id" : "http://publications.europa.eu/resource/authority/country/ESP"
+  } ],
+  "http://purl.org/roh#hasCode" : [ {
+    "@id" : "http://purl.org/roh/university-hr/es#ES_UNIVERSITY_HR_CODE_ESLPADJ"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "es",
+    "@value" : "Profesor adjunto"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "http://purl.org/roh/university-hr/es#PDIContratado"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#closeMatch" : [ {
+    "@id" : "http://skos.um.es/unescothes/C00015"
+  }, {
+    "@id" : "http://skos.um.es/unescothes/C03965"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#inScheme" : [ {
+    "@id" : "http://purl.org/roh/university-hr/es#ESUniversityHumanResourcesList"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#notation" : [ {
+    "@value" : "ESLPADJ"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#prefLabel" : [ {
+    "@language" : "eu",
+    "@value" : "Irakasle atxikia"
+  }, {
+    "@language" : "es",
+    "@value" : "Profesor adjunto"
+  }, {
+    "@language" : "gl",
+    "@value" : "Profesor adxunto"
+  }, {
+    "@language" : "ast",
+    "@value" : "Profesor adxuntu"
+  }, {
+    "@language" : "ca",
+    "@value" : "Professor adjunt"
+  } ]
+}, {
+  "@id" : "http://purl.org/roh/university-hr/es#ES_UNIVERSITY_HR_ESLPAG",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://purl.org/roh#country" : [ {
+    "@id" : "http://publications.europa.eu/resource/authority/country/ESP"
+  } ],
+  "http://purl.org/roh#hasCode" : [ {
+    "@id" : "http://purl.org/roh/university-hr/es#ES_UNIVERSITY_HR_CODE_ESLPAG"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "es",
+    "@value" : "Profesor agregado"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "http://purl.org/roh/university-hr/es#CuerpoDocente"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#closeMatch" : [ {
+    "@id" : "http://skos.um.es/unescothes/C00015"
+  }, {
+    "@id" : "http://skos.um.es/unescothes/C03965"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#inScheme" : [ {
+    "@id" : "http://purl.org/roh/university-hr/es#ESUniversityHumanResourcesList"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#notation" : [ {
+    "@value" : "ESLPAG"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#prefLabel" : [ {
+    "@language" : "eu",
+    "@value" : "Irakasle agregatua"
+  }, {
+    "@language" : "es",
+    "@value" : "Profesor agregado"
+  }, {
+    "@language" : "gl",
+    "@value" : "Profesor agregado"
+  }, {
+    "@language" : "ast",
+    "@value" : "Profesor agregáu"
+  }, {
+    "@language" : "ca",
+    "@value" : "Professor agregat"
+  } ]
+}, {
+  "@id" : "http://purl.org/roh/university-hr/es#ES_UNIVERSITY_HR_ESLPAM",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://purl.org/roh#country" : [ {
+    "@id" : "http://publications.europa.eu/resource/authority/country/ESP"
+  } ],
+  "http://purl.org/roh#hasCode" : [ {
+    "@id" : "http://purl.org/roh/university-hr/es#ES_UNIVERSITY_HR_CODE_ESLPAM"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "es",
+    "@value" : "Profesor asociado médico"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "http://purl.org/roh/university-hr/es#PDIContratado"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#closeMatch" : [ {
+    "@id" : "http://skos.um.es/unescothes/C00015"
+  }, {
+    "@id" : "http://skos.um.es/unescothes/C03965"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#inScheme" : [ {
+    "@id" : "http://purl.org/roh/university-hr/es#ESUniversityHumanResourcesList"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#notation" : [ {
+    "@value" : "ESLPAM"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#prefLabel" : [ {
+    "@language" : "es",
+    "@value" : "Profesor asociado médico"
+  }, {
+    "@language" : "gl",
+    "@value" : "Profesor asociado médico"
+  }, {
+    "@language" : "ast",
+    "@value" : "Profesor asociáu mélicu"
+  }, {
+    "@language" : "ca",
+    "@value" : "Professor associat mèdic"
+  } ]
+}, {
+  "@id" : "http://purl.org/roh/university-hr/es#ES_UNIVERSITY_HR_ESLPAY",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://purl.org/roh#country" : [ {
+    "@id" : "http://publications.europa.eu/resource/authority/country/ESP"
+  } ],
+  "http://purl.org/roh#hasCode" : [ {
+    "@id" : "http://purl.org/roh/university-hr/es#ES_UNIVERSITY_HR_CODE_ESLPAY"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "es",
+    "@value" : "Profesor ayudante"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "http://purl.org/roh/university-hr/es#PDIContratado"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#closeMatch" : [ {
+    "@id" : "http://skos.um.es/unescothes/C00015"
+  }, {
+    "@id" : "http://skos.um.es/unescothes/C03965"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#inScheme" : [ {
+    "@id" : "http://purl.org/roh/university-hr/es#ESUniversityHumanResourcesList"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#notation" : [ {
+    "@value" : "ESLPAY"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#prefLabel" : [ {
+    "@language" : "eu",
+    "@value" : "Irakasle laguntzailea"
+  }, {
+    "@language" : "gl",
+    "@value" : "Profesor axudante"
+  }, {
+    "@language" : "ast",
+    "@value" : "Profesor ayudante"
+  }, {
+    "@language" : "es",
+    "@value" : "Profesor ayudante"
+  }, {
+    "@language" : "ca",
+    "@value" : "Professor ajudante"
+  } ]
+}, {
+  "@id" : "http://purl.org/roh/university-hr/es#ES_UNIVERSITY_HR_ESLPC",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://purl.org/roh#country" : [ {
+    "@id" : "http://publications.europa.eu/resource/authority/country/ESP"
+  } ],
+  "http://purl.org/roh#geoDivision" : [ {
+    "@id" : "http://purl.org/hercules/asio/modules#ES_DIVISION_LEVEL_1_ES_CT"
+  } ],
+  "http://purl.org/roh#hasCode" : [ {
+    "@id" : "http://purl.org/roh/university-hr/es#ES_UNIVERSITY_HR_CODE_ESLPC"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "es",
+    "@value" : "Profesor catedrático laboral"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "http://purl.org/roh/university-hr/es#CuerpoDocente"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#closeMatch" : [ {
+    "@id" : "http://skos.um.es/unescothes/C00015"
+  }, {
+    "@id" : "http://skos.um.es/unescothes/C03965"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#inScheme" : [ {
+    "@id" : "http://purl.org/roh/university-hr/es#ESUniversityHumanResourcesList"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#notation" : [ {
+    "@value" : "ESLPC"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#prefLabel" : [ {
+    "@language" : "es",
+    "@value" : "Profesor catedrático laboral"
+  }, {
+    "@language" : "gl",
+    "@value" : "Profesor catedrático laboral"
+  }, {
+    "@language" : "ast",
+    "@value" : "Profesor catedráticu llaboral"
+  }, {
+    "@language" : "ca",
+    "@value" : "Professor catedràtic laboral"
+  } ]
+}, {
+  "@id" : "http://purl.org/roh/university-hr/es#ES_UNIVERSITY_HR_ESLPCNP",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://purl.org/roh#country" : [ {
+    "@id" : "http://publications.europa.eu/resource/authority/country/ESP"
+  } ],
+  "http://purl.org/roh#hasCode" : [ {
+    "@id" : "http://purl.org/roh/university-hr/es#ES_UNIVERSITY_HR_CODE_ESLPCNP"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "es",
+    "@value" : "Profesor colaborador no permanente"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "http://purl.org/roh/university-hr/es#PDIContratado"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#closeMatch" : [ {
+    "@id" : "http://skos.um.es/unescothes/C00015"
+  }, {
+    "@id" : "http://skos.um.es/unescothes/C03965"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#inScheme" : [ {
+    "@id" : "http://purl.org/roh/university-hr/es#ESUniversityHumanResourcesList"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#notation" : [ {
+    "@value" : "ESLPCNP"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#prefLabel" : [ {
+    "@language" : "es",
+    "@value" : "Profesor colaborador no permanente"
+  }, {
+    "@language" : "gl",
+    "@value" : "Profesor colaborador non permanente"
+  }, {
+    "@language" : "ast",
+    "@value" : "Profesor collaborador non permanente"
+  }, {
+    "@language" : "ca",
+    "@value" : "Professor col·laborador no permanent"
+  }, {
+    "@language" : "eu",
+    "@value" : "Unibertsitateko kolaboratzailea (Ez--iraunkorra)"
+  } ]
+}, {
+  "@id" : "http://purl.org/roh/university-hr/es#ES_UNIVERSITY_HR_ESLPCP",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://purl.org/roh#country" : [ {
+    "@id" : "http://publications.europa.eu/resource/authority/country/ESP"
+  } ],
+  "http://purl.org/roh#hasCode" : [ {
+    "@id" : "http://purl.org/roh/university-hr/es#ES_UNIVERSITY_HR_CODE_ESLPCP"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "es",
+    "@value" : "Profesor colaborador permanente"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "http://purl.org/roh/university-hr/es#CuerpoDocente"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#closeMatch" : [ {
+    "@id" : "http://skos.um.es/unescothes/C00015"
+  }, {
+    "@id" : "http://skos.um.es/unescothes/C03965"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#inScheme" : [ {
+    "@id" : "http://purl.org/roh/university-hr/es#ESUniversityHumanResourcesList"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#notation" : [ {
+    "@value" : "ESLPCP"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#prefLabel" : [ {
+    "@language" : "es",
+    "@value" : "Profesor colaborador permanente"
+  }, {
+    "@language" : "gl",
+    "@value" : "Profesor colaborador permanente"
+  }, {
+    "@language" : "ast",
+    "@value" : "Profesor collaborador permanente"
+  }, {
+    "@language" : "ca",
+    "@value" : "Professor col·laborador permanent"
+  }, {
+    "@language" : "eu",
+    "@value" : "Unibertsitateko kolaboratzailea (Iraunkorra)"
+  } ]
+}, {
+  "@id" : "http://purl.org/roh/university-hr/es#ES_UNIVERSITY_HR_ESLPI",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://purl.org/roh#country" : [ {
+    "@id" : "http://publications.europa.eu/resource/authority/country/ESP"
+  } ],
+  "http://purl.org/roh#hasCode" : [ {
+    "@id" : "http://purl.org/roh/university-hr/es#ES_UNIVERSITY_HR_CODE_ESLPI"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "es",
+    "@value" : "Profesor laboral interino"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "http://purl.org/roh/university-hr/es#PDIContratado"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#closeMatch" : [ {
+    "@id" : "http://skos.um.es/unescothes/C00015"
+  }, {
+    "@id" : "http://skos.um.es/unescothes/C03965"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#inScheme" : [ {
+    "@id" : "http://purl.org/roh/university-hr/es#ESUniversityHumanResourcesList"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#notation" : [ {
+    "@value" : "ESLPI"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#prefLabel" : [ {
+    "@language" : "eu",
+    "@value" : "Lan kontratudun bitarteko irakaslea"
+  }, {
+    "@language" : "es",
+    "@value" : "Profesor laboral interino"
+  }, {
+    "@language" : "gl",
+    "@value" : "Profesor laboral interino"
+  }, {
+    "@language" : "ast",
+    "@value" : "Profesor llaboral interín"
+  }, {
+    "@language" : "ca",
+    "@value" : "Professor laboral interí"
+  } ]
+}, {
+  "@id" : "http://purl.org/roh/university-hr/es#ES_UNIVERSITY_HR_ESLPL",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://purl.org/roh#country" : [ {
+    "@id" : "http://publications.europa.eu/resource/authority/country/ESP"
+  } ],
+  "http://purl.org/roh#hasCode" : [ {
+    "@id" : "http://purl.org/roh/university-hr/es#ES_UNIVERSITY_HR_CODE_ESLPL"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "es",
+    "@value" : "Profesor lector"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "http://purl.org/roh/university-hr/es#PDIContratado"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#closeMatch" : [ {
+    "@id" : "http://skos.um.es/unescothes/C00015"
+  }, {
+    "@id" : "http://skos.um.es/unescothes/C03965"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#inScheme" : [ {
+    "@id" : "http://purl.org/roh/university-hr/es#ESUniversityHumanResourcesList"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#notation" : [ {
+    "@value" : "ESLPL"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#prefLabel" : [ {
+    "@language" : "eu",
+    "@value" : "Irakurlea"
+  }, {
+    "@language" : "ast",
+    "@value" : "Profesor lector"
+  }, {
+    "@language" : "es",
+    "@value" : "Profesor lector"
+  }, {
+    "@language" : "gl",
+    "@value" : "Profesor lector"
+  }, {
+    "@language" : "ca",
+    "@value" : "Professor lector"
+  } ]
+}, {
+  "@id" : "http://purl.org/roh/university-hr/es#ES_UNIVERSITY_HR_ESPASF",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://purl.org/roh#country" : [ {
+    "@id" : "http://publications.europa.eu/resource/authority/country/ESP"
+  } ],
+  "http://purl.org/roh#hasCode" : [ {
+    "@id" : "http://purl.org/roh/university-hr/es#ES_UNIVERSITY_HR_CODE_ESPASF"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "es",
+    "@value" : "Personal de administración y servicios funcionario"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "http://purl.org/roh/mirror/vivo#NonAcademicPosition"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#inScheme" : [ {
+    "@id" : "http://purl.org/roh/university-hr/es#ESUniversityHumanResourcesList"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#notation" : [ {
+    "@value" : "ESPASF"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#prefLabel" : [ {
+    "@language" : "eu",
+    "@value" : "Karrerako Funtzionarioak"
+  }, {
+    "@language" : "gl",
+    "@value" : "Persoal de administración e servizos funcionario"
+  }, {
+    "@language" : "ast",
+    "@value" : "Personal d'alministración y servicios funcionario"
+  }, {
+    "@language" : "es",
+    "@value" : "Personal de administración y servicios funcionario"
+  }, {
+    "@language" : "ca",
+    "@value" : "Personal d’administració i serveis funcionari"
+  } ]
+}, {
+  "@id" : "http://purl.org/roh/university-hr/es#ES_UNIVERSITY_HR_ESPASL",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://purl.org/roh#country" : [ {
+    "@id" : "http://publications.europa.eu/resource/authority/country/ESP"
+  } ],
+  "http://purl.org/roh#hasCode" : [ {
+    "@id" : "http://purl.org/roh/university-hr/es#ES_UNIVERSITY_HR_CODE_ESPASL"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "es",
+    "@value" : "Personal de administración y servicios laboral"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "http://purl.org/roh/mirror/vivo#NonAcademicPosition"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#inScheme" : [ {
+    "@id" : "http://purl.org/roh/university-hr/es#ESUniversityHumanResourcesList"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#notation" : [ {
+    "@value" : "ESPASL"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#prefLabel" : [ {
+    "@language" : "eu",
+    "@value" : "Lan kontratudun langile finkoak"
+  }, {
+    "@language" : "gl",
+    "@value" : "Persoal de administración e servizos laboral"
+  }, {
+    "@language" : "ast",
+    "@value" : "Personal d'alministración y servicios llaboral"
+  }, {
+    "@language" : "es",
+    "@value" : "Personal de administración y servicios laboral"
+  }, {
+    "@language" : "ca",
+    "@value" : "Personal d’administració i serveis laboral"
+  } ]
+}, {
+  "@id" : "http://purl.org/roh/university-hr/es#ES_UNIVERSITY_HR_ESRECT",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://purl.org/roh#country" : [ {
+    "@id" : "http://publications.europa.eu/resource/authority/country/ESP"
+  } ],
+  "http://purl.org/roh#hasCode" : [ {
+    "@id" : "http://purl.org/roh/university-hr/es#ES_UNIVERSITY_HR_CODE_ESRECT"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "es",
+    "@value" : "Rector"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "http://purl.org/roh/mirror/vivo#FacultyAdministrativePosition"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#closeMatch" : [ {
+    "@id" : "http://purl.org/roh/university-hr/uk#GB_UNIVERSITY_CODE_GBCHAN"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#inScheme" : [ {
+    "@id" : "http://purl.org/roh/university-hr/es#ESUniversityHumanResourcesList"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#notation" : [ {
+    "@value" : "ESRECT"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#prefLabel" : [ {
+    "@language" : "eu",
+    "@value" : "Errektorea"
+  }, {
+    "@language" : "ast",
+    "@value" : "Rector"
+  }, {
+    "@language" : "ca",
+    "@value" : "Rector"
+  }, {
+    "@language" : "es",
+    "@value" : "Rector"
+  }, {
+    "@language" : "gl",
+    "@value" : "Rector"
+  } ]
+}, {
+  "@id" : "http://purl.org/roh/university-hr/es#ES_UNIVERSITY_HR_ESSECGE",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://purl.org/roh#country" : [ {
+    "@id" : "http://publications.europa.eu/resource/authority/country/ESP"
+  } ],
+  "http://purl.org/roh#hasCode" : [ {
+    "@id" : "http://purl.org/roh/university-hr/es#ES_UNIVERSITY_HR_CODE_ESSECGE"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "es",
+    "@value" : "Secretario general"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "http://purl.org/roh/mirror/vivo#FacultyAdministrativePosition"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#inScheme" : [ {
+    "@id" : "http://purl.org/roh/university-hr/es#ESUniversityHumanResourcesList"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#notation" : [ {
+    "@value" : "ESSECGE"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#prefLabel" : [ {
+    "@language" : "eu",
+    "@value" : "Idazkari Nagusia"
+  }, {
+    "@language" : "ca",
+    "@value" : "Secretari general"
+  }, {
+    "@language" : "es",
+    "@value" : "Secretario general"
+  }, {
+    "@language" : "gl",
+    "@value" : "Secretario xeral"
+  }, {
+    "@language" : "ast",
+    "@value" : "Secretariu xeneral"
+  } ]
+}, {
+  "@id" : "http://purl.org/roh/university-hr/es#ES_UNIVERSITY_HR_ESVIDEC",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://purl.org/roh#country" : [ {
+    "@id" : "http://publications.europa.eu/resource/authority/country/ESP"
+  } ],
+  "http://purl.org/roh#hasCode" : [ {
+    "@id" : "http://purl.org/roh/university-hr/es#ES_UNIVERSITY_HR_CODE_ESVIDEC"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "es",
+    "@value" : "Vicedecano"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "http://purl.org/roh/mirror/vivo#FacultyAdministrativePosition"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#inScheme" : [ {
+    "@id" : "http://purl.org/roh/university-hr/es#ESUniversityHumanResourcesList"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#notation" : [ {
+    "@value" : "ESVIDEC"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#prefLabel" : [ {
+    "@language" : "eu",
+    "@value" : "Dekanordea"
+  }, {
+    "@language" : "es",
+    "@value" : "Vicedecano"
+  }, {
+    "@language" : "gl",
+    "@value" : "Vicedecano"
+  }, {
+    "@language" : "ast",
+    "@value" : "Vicedecanu"
+  }, {
+    "@language" : "ca",
+    "@value" : "Vicedegà"
+  } ]
+}, {
+  "@id" : "http://purl.org/roh/university-hr/es#ES_UNIVERSITY_HR_ESVIREC",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://purl.org/roh#country" : [ {
+    "@id" : "http://publications.europa.eu/resource/authority/country/ESP"
+  } ],
+  "http://purl.org/roh#hasCode" : [ {
+    "@id" : "http://purl.org/roh/university-hr/es#ES_UNIVERSITY_HR_CODE_ESVIREC"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "es",
+    "@value" : "Vicerrector"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "http://purl.org/roh/mirror/vivo#FacultyAdministrativePosition"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#closeMatch" : [ {
+    "@id" : "http://purl.org/roh/university-hr/uk#GB_UNIVERSITY_HR_GBCHAN"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#inScheme" : [ {
+    "@id" : "http://purl.org/roh/university-hr/es#ESUniversityHumanResourcesList"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#notation" : [ {
+    "@value" : "ESVIREC"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#prefLabel" : [ {
+    "@language" : "eu",
+    "@value" : "Errektoreordea"
+  }, {
+    "@language" : "ca",
+    "@value" : "Vicerector"
+  }, {
+    "@language" : "ast",
+    "@value" : "Vicerrector"
+  }, {
+    "@language" : "es",
+    "@value" : "Vicerrector"
+  }, {
+    "@language" : "gl",
+    "@value" : "Vicerrector"
+  } ]
+}, {
+  "@id" : "http://purl.org/roh/university-hr/es#PDIContratado",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "es",
+    "@value" : "Personal temporal de una universidad."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "Hired PDI"
+  }, {
+    "@language" : "es",
+    "@value" : "PDI Contratado"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "http://purl.org/roh/mirror/vivo#FacultyPosition"
+  } ]
+}, {
+  "@id" : "http://purl.org/roh/university-hr/es#ProfesorAsociado",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://purl.org/roh#country" : [ {
+    "@id" : "http://publications.europa.eu/resource/authority/country/ESP"
+  } ],
+  "http://purl.org/roh#hasCode" : [ {
+    "@id" : "http://purl.org/roh/university-hr/es#ES_UNIVERSITY_HR_CODE_ESLPAS"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "es",
+    "@value" : "La contratación de Profesoras y Profesores Asociados se ajustará a las siguientes reglas:\na) El contrato se podrá celebrar con especialistas de reconocida competencia que acrediten ejercer su actividad profesional fuera del ámbito académico universitario.\nb) La finalidad del contrato será la de desarrollar tareas docentes a través de las que se aporten sus conocimientos y experiencia profesionales a la universidad.\nc) El contrato será de carácter temporal y con dedicación a tiempo parcial.\nd) La duración del contrato será trimestral, semestral o anual, y se podrá renovar por períodos de igual duración, siempre que se siga acreditando el ejercicio de la actividad profesional fuera del ámbito académico universitario."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "Associate Professor"
+  }, {
+    "@language" : "es",
+    "@value" : "Profesor Asociado"
+  }, {
+    "@language" : "es",
+    "@value" : "Profesor asociado"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "http://purl.org/roh/university-hr/es#PDIContratado"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#closeMatch" : [ {
+    "@id" : "http://skos.um.es/unescothes/C00015"
+  }, {
+    "@value" : "C03965"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#inScheme" : [ {
+    "@id" : "http://purl.org/roh/university-hr/es#ESUniversityHumanResourcesList"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#notation" : [ {
+    "@value" : "ESLPAS"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#prefLabel" : [ {
+    "@language" : "eu",
+    "@value" : "Irakasle elkartua"
+  }, {
+    "@language" : "es",
+    "@value" : "Profesor asociado"
+  }, {
+    "@language" : "gl",
+    "@value" : "Profesor asociado"
+  }, {
+    "@language" : "ast",
+    "@value" : "Profesor asociáu"
+  }, {
+    "@language" : "ca",
+    "@value" : "Professor associat"
+  } ]
+}, {
+  "@id" : "http://purl.org/roh/university-hr/es#ProfesorAyudanteDoctor",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://purl.org/roh#country" : [ {
+    "@id" : "http://publications.europa.eu/resource/authority/country/ESP"
+  } ],
+  "http://purl.org/roh#hasCode" : [ {
+    "@id" : "http://purl.org/roh/university-hr/es#ES_UNIVERSITY_HR_CODE_ESLPAD"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "es",
+    "@value" : "La contratación de Profesoras y Profesores Ayudantes Doctores se ajustará a las siguientes reglas:\na) El contrato se celebrará con doctores. La contratación exigirá la previa evaluación positiva de su actividad por parte de la Agencia Nacional de Evaluación de la Calidad y Acreditación o del órgano de evaluación externa que la ley de la Comunidad Autónoma determine, y será mérito preferente la estancia del candidato en universidades o centros de investigación de reconocido prestigio, españoles o extranjeros, distintos de la universidad que lleve a cabo la contratación.\nb) La finalidad del contrato será la de desarrollar tareas docentes y de investigación.\nc) El contrato será de carácter temporal y con dedicación a tiempo completo.\nd) La duración del contrato no podrá ser inferior a un año ni superior a cinco, pudiendo prorrogarse o renovarse si se hubiera concertado por duración inferior a la máxima, siempre que la duración total no exceda de los indicados cinco años. En cualquier caso, el tiempo total de duración conjunta entre esta figura contractual y la prevista en el artículo anterior, en la misma o distinta universidad, no podrá exceder de ocho años. Las situaciones de incapacidad temporal, maternidad y adopción o acogimiento durante el período de duración del contrato, interrumpirán su cómputo"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "Assistant Professor Doctor"
+  }, {
+    "@language" : "es",
+    "@value" : "Profesor Ayudante Doctor"
+  }, {
+    "@language" : "es",
+    "@value" : "Profesor ayudante doctor"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "http://purl.org/roh/university-hr/es#PDIContratado"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#closeMatch" : [ {
+    "@id" : "http://skos.um.es/unescothes/C00015"
+  }, {
+    "@id" : "http://skos.um.es/unescothes/C03965"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#inScheme" : [ {
+    "@id" : "http://purl.org/roh/university-hr/es#ESUniversityHumanResourcesList"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#notation" : [ {
+    "@value" : "ESLPAD"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#prefLabel" : [ {
+    "@language" : "gl",
+    "@value" : "Profesor axudante doutor"
+  }, {
+    "@language" : "ast",
+    "@value" : "Profesor ayudante doctor"
+  }, {
+    "@language" : "es",
+    "@value" : "Profesor ayudante doctor"
+  }, {
+    "@language" : "ca",
+    "@value" : "Professor ajudant doctor"
+  } ]
+}, {
+  "@id" : "http://purl.org/roh/university-hr/es#ProfesorContratadoDoctor",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://purl.org/roh#country" : [ {
+    "@id" : "http://publications.europa.eu/resource/authority/country/ESP"
+  } ],
+  "http://purl.org/roh#hasCode" : [ {
+    "@id" : "http://purl.org/roh/university-hr/es#ES_UNIVERSITY_HR_CODE_ESLPCD"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "es",
+    "@value" : "La contratación de Profesoras y Profesores Contratados Doctores se ajustará a las siguientes reglas:\na) El contrato se celebrará con doctores que reciban la evaluación positiva por parte de la Agencia Nacional de Evaluación de la Calidad y Acreditación o del órgano de evaluación externo que la ley de la Comunidad Autónoma determine.\nb) La finalidad del contrato será la de desarrollar, con plena capacidad docente e investigadora, tareas de docencia y de investigación, o prioritariamente de investigación.\nc) El contrato será de carácter indefinido y con dedicación a tiempo completo."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "Hired Professor Doctorr"
+  }, {
+    "@language" : "es",
+    "@value" : "Profesor Contratado Doctor"
+  }, {
+    "@language" : "es",
+    "@value" : "Profesor contratado doctor"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "http://purl.org/roh/university-hr/es#PDIContratado"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#closeMatch" : [ {
+    "@id" : "http://skos.um.es/unescothes/C00015"
+  }, {
+    "@id" : "http://skos.um.es/unescothes/C03965"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#inScheme" : [ {
+    "@id" : "http://purl.org/roh/university-hr/es#ESUniversityHumanResourcesList"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#notation" : [ {
+    "@value" : "ESLPCD"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#prefLabel" : [ {
+    "@language" : "es",
+    "@value" : "Profesor contratado doctor"
+  }, {
+    "@language" : "gl",
+    "@value" : "Profesor contratado doutor"
+  }, {
+    "@language" : "ast",
+    "@value" : "Profesor contratáu doctor"
+  }, {
+    "@language" : "ca",
+    "@value" : "Professor contractat doctor"
+  } ]
+}, {
+  "@id" : "http://purl.org/roh/university-hr/es#ProfesorEmerito",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://purl.org/roh#country" : [ {
+    "@id" : "http://publications.europa.eu/resource/authority/country/ESP"
+  } ],
+  "http://purl.org/roh#hasCode" : [ {
+    "@id" : "http://purl.org/roh/university-hr/es#ES_UNIVERSITY_HR_CODE_ESPLEM"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "es",
+    "@value" : "Las universidades, de acuerdo con sus estatutos, podrán nombrar a Profesores Eméritos entre profesoras y profesores jubilados que hayan prestado servicios destacados a la universidad"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "es",
+    "@value" : "Profesor Emérito"
+  }, {
+    "@language" : "es",
+    "@value" : "Profesor emérito"
+  }, {
+    "@language" : "en",
+    "@value" : "Professor Emeritus"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "http://purl.org/roh/university-hr/es#PDIContratado"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#closeMatch" : [ {
+    "@id" : "http://purl.org/roh/university-hr/pt#PT_UNIVERSITY_HR_PTPEM"
+  }, {
+    "@id" : "http://skos.um.es/unescothes/C00015"
+  }, {
+    "@id" : "http://skos.um.es/unescothes/C03965"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#inScheme" : [ {
+    "@id" : "http://purl.org/roh/university-hr/es#ESUniversityHumanResourcesList"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#notation" : [ {
+    "@value" : "ESPLEM"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#prefLabel" : [ {
+    "@language" : "eu",
+    "@value" : "Irakasle emeritua"
+  }, {
+    "@language" : "es",
+    "@value" : "Profesor emérito"
+  }, {
+    "@language" : "gl",
+    "@value" : "Profesor emérito"
+  }, {
+    "@language" : "ast",
+    "@value" : "Profesor eméritu"
+  }, {
+    "@language" : "ca",
+    "@value" : "Professor emèrit"
+  } ]
+}, {
+  "@id" : "http://purl.org/roh/university-hr/es#ProfesorTitularDeEscuelaUniversitaria",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://purl.org/roh#country" : [ {
+    "@id" : "http://publications.europa.eu/resource/authority/country/ESP"
+  } ],
+  "http://purl.org/roh#hasCode" : [ {
+    "@id" : "http://purl.org/roh/university-hr/es#ES_UNIVERSITY_HR_CODE_ESFEU"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "es",
+    "@value" : "Profesor Titular de Escuela Universitaria"
+  }, {
+    "@language" : "es",
+    "@value" : "Profesor titular de escuela universitaria"
+  }, {
+    "@language" : "en",
+    "@value" : "University School Reader"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "http://purl.org/roh/university-hr/es#CuerpoDocente"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#closeMatch" : [ {
+    "@id" : "http://skos.um.es/unescothes/C00015"
+  }, {
+    "@id" : "http://skos.um.es/unescothes/C03965"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#inScheme" : [ {
+    "@id" : "http://purl.org/roh/university-hr/es#ESUniversityHumanResourcesList"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#notation" : [ {
+    "@value" : "ESFEU"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#prefLabel" : [ {
+    "@language" : "eu",
+    "@value" : "Eskolako irakasle titutarra"
+  }, {
+    "@language" : "gl",
+    "@value" : "Profesor titular de escola universitaria"
+  }, {
+    "@language" : "es",
+    "@value" : "Profesor titular de escuela universitaria"
+  }, {
+    "@language" : "ast",
+    "@value" : "Profesor titular d’escuela universitaria"
+  }, {
+    "@language" : "ca",
+    "@value" : "Professor titular d’escola universitària"
+  } ]
+}, {
+  "@id" : "http://purl.org/roh/university-hr/es#ProfesorTitularDeUniversidad",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://purl.org/roh#country" : [ {
+    "@id" : "http://publications.europa.eu/resource/authority/country/ESP"
+  } ],
+  "http://purl.org/roh#hasCode" : [ {
+    "@id" : "http://purl.org/roh/university-hr/es#ES_UNIVERSITY_HR_CODE_ESFPTU"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "Associate Professor"
+  }, {
+    "@language" : "es",
+    "@value" : "Profesor Titular de Universidad"
+  }, {
+    "@language" : "es",
+    "@value" : "Profesor titular de universidad"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "http://purl.org/roh/university-hr/es#CuerpoDocente"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#closeMatch" : [ {
+    "@id" : "http://skos.um.es/unescothes/C00015"
+  }, {
+    "@id" : "http://skos.um.es/unescothes/C03965"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#inScheme" : [ {
+    "@id" : "http://purl.org/roh/university-hr/es#ESUniversityHumanResourcesList"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#notation" : [ {
+    "@value" : "ESFPTU"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#prefLabel" : [ {
+    "@language" : "eu",
+    "@value" : "Irakasle titularra"
+  }, {
+    "@language" : "ast",
+    "@value" : "Profesor titular d'universidá"
+  }, {
+    "@language" : "es",
+    "@value" : "Profesor titular de universidad"
+  }, {
+    "@language" : "gl",
+    "@value" : "Profesor titular de universidade"
+  }, {
+    "@language" : "fr",
+    "@value" : "Professeur titulaire d'université"
+  }, {
+    "@language" : "ca",
+    "@value" : "Professor titular d'universitat"
+  }, {
+    "@language" : "pt",
+    "@value" : "Professor titular de universidade"
+  } ]
+}, {
+  "@id" : "http://purl.org/roh/university-hr/es#ProfesorVisitante",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://purl.org/roh#country" : [ {
+    "@id" : "http://publications.europa.eu/resource/authority/country/ESP"
+  } ],
+  "http://purl.org/roh#hasCode" : [ {
+    "@id" : "http://purl.org/roh/university-hr/es#ES_UNIVERSITY_HR_CODE_ESPLV"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "es",
+    "@value" : "La contratación de Profesoras y Profesores Visitantes se ajustará a las siguientes reglas:\na) El contrato se podrá celebrar con profesores o investigadores de reconocido prestigio de otras universidades y centros de investigación, tanto españoles como extranjeros.\nb) La finalidad del contrato será la de desarrollar tareas docentes o investigadoras a través de las que se aporten los conocimientos y la experiencia docente e investigadora de los indicados profesores a la universidad.\nc) El contrato será de carácter temporal con la duración que se acuerde entre las partes y dedicación a tiempo parcial o completo"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "es",
+    "@value" : "Profesor Visitante"
+  }, {
+    "@language" : "es",
+    "@value" : "Profesor visitante"
+  }, {
+    "@language" : "en",
+    "@value" : "Visiting Professor"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "http://purl.org/roh/university-hr/es#PDIContratado"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#closeMatch" : [ {
+    "@id" : "http://skos.um.es/unescothes/C00015"
+  }, {
+    "@id" : "http://skos.um.es/unescothes/C03965"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#exactMatch" : [ {
+    "@id" : "http://skos.um.es/unescothes/C04254"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#inScheme" : [ {
+    "@id" : "http://purl.org/roh/university-hr/es#ESUniversityHumanResourcesList"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#notation" : [ {
+    "@value" : "ESPLV"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#prefLabel" : [ {
+    "@language" : "eu",
+    "@value" : "Irakasle bisitaria"
+  }, {
+    "@language" : "ast",
+    "@value" : "Profesor visitante"
+  }, {
+    "@language" : "es",
+    "@value" : "Profesor visitante"
+  }, {
+    "@language" : "gl",
+    "@value" : "Profesor visitante"
+  }, {
+    "@language" : "ca",
+    "@value" : "Professor visitant"
+  } ]
+}, {
+  "@id" : "http://www.w3.org/2004/02/skos/core#Concept",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "Concept"
+  } ]
+}, {
+  "@id" : "http://www.w3.org/2004/02/skos/core#ConceptScheme",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "Concept Scheme"
+  } ]
+}, {
+  "@id" : "http://www.w3.org/2004/02/skos/core#closeMatch",
+  "@type" : [ "http://www.w3.org/2002/07/owl#AnnotationProperty" ]
+}, {
+  "@id" : "http://www.w3.org/2004/02/skos/core#exactMatch",
+  "@type" : [ "http://www.w3.org/2002/07/owl#AnnotationProperty" ]
+}, {
+  "@id" : "http://www.w3.org/2004/02/skos/core#inScheme",
+  "@type" : [ "http://www.w3.org/2002/07/owl#AnnotationProperty" ]
+}, {
+  "@id" : "http://www.w3.org/2004/02/skos/core#notation",
+  "@type" : [ "http://www.w3.org/2002/07/owl#AnnotationProperty" ]
+}, {
+  "@id" : "http://www.w3.org/2004/02/skos/core#prefLabel",
+  "@type" : [ "http://www.w3.org/2002/07/owl#AnnotationProperty" ]
+} ]

@@ -1,0 +1,1600 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+ <link rel="stylesheet" href="resources/primer.css" media="screen" />    <link rel="stylesheet" href="resources/rec.css" media="screen" />    <link rel="stylesheet" href="resources/extra.css" media="screen" />    <link rel="stylesheet" href="resources/owl.css" media="screen" />    <title>ROH UK University HR Module</title>
+
+
+<!-- SCHEMA.ORG METADATA -->
+<script type="application/ld+json">{"@context":"http://schema.org","@type":"TechArticle","url":"http://purl.org/roh/university-hr/uk","image":"http://vowl.visualdataweb.org/webvowl/#iri=http://purl.org/roh/university-hr/uk","name":"ROH UK University HR Module", "headline":"The University of Murcia signed on November 29, 2017, a Covenant with the Ministry of Economy, Industry and Competitiveness backing the “HÉRCULES: Semantic University Research Data” Project with a budget of FIVE MILLION FOUR HUNDRED AND SIXTY-TWO THOUSAND SIX HUNDRED euros with an 80% of co-financiering from the European Regional Development Fund program (ERDF) within the 2014-2020 period. ", "datePublished":"Fri Feb 19 15:15:12 EET 2021", "version":"0.0.1", "license":"https://creativecommons.org/publicdomain/zero/1.0/", "author":[{"@type":"Person","name":"Mikel Emaldi, Emilio Rubiera Azcona"}], "contributor":[{"@type":"Person","name":"Iñigo Apellániz, Diego López de Ipiña, Esteban Sota, Álvaro Palacios, Alejandro González Hevia, José Emilio Labra Gayo"}]}</script>
+
+<script src="resources/jquery.js"></script> 
+<script src="resources/marked.min.js"></script> 
+    <script> 
+function loadHash() {
+  jQuery(".markdown").each(function(el){jQuery(this).after(marked(jQuery(this).text())).remove()});
+	var hash = location.hash;
+	if($(hash).offset()!=null){
+	  $('html, body').animate({scrollTop: $(hash).offset().top}, 0);
+}
+	loadTOC();
+}
+function loadTOC(){
+	//process toc dynamically
+	  var t='<h2>Table of contents</h2><ul>';i = 1;j=0;
+	  jQuery(".list").each(function(){
+		if(jQuery(this).is('h2')){
+			if(j>0){
+				t+='</ul>';
+				j=0;
+			}
+			t+= '<li>'+i+'. <a href=#'+ jQuery(this).attr('id')+'>'+ jQuery(this).ignore("span").text()+'</a></li>';
+			i++;
+		}
+		if(jQuery(this).is('h3')){
+			if(j==0){
+				t+='<ul>';
+			}
+			j++;
+			t+= '<li>'+(i-1)+'.'+j+'. '+'<a href=#'+ jQuery(this).attr('id')+'>'+ jQuery(this).ignore("span").text()+'</a></li>';
+		}
+	  });
+	  t+='</ul>';
+	  $("#toc").html(t); 
+}
+ $.fn.ignore = function(sel){
+        return this.clone().find(sel||">*").remove().end();
+ }; 
+   </script> 
+  </head> 
+
+<body>
+<div class="container">
+<div class="head">
+<div style="float:right">language <a href="index-en.html"><b>en</b></a> </div>
+<h1>ROH UK University HR Module</h1>
+
+
+<dl>
+<dt>Latest version:</dt>
+<dd><a href="http://purl.org/roh/university-hr/uk">http://purl.org/roh/university-hr/uk</a></dd>
+<dt>Revision:</dt>
+<dd>0.0.1</dd>
+<dt>Authors:</dt>
+<dd>Mikel Emaldi, Emilio Rubiera Azcona</dd>
+
+<dt>Contributors:</dt>
+<dd>Iñigo Apellániz, Diego López de Ipiña, Esteban Sota, Álvaro Palacios, Alejandro González Hevia, José Emilio Labra Gayo</dd>
+
+<dt>Download serialization:</dt><dd><span><a href="ontology.json" target="_blank"><img src="https://img.shields.io/badge/Format-JSON_LD-blue.svg" alt="JSON-LD" /></a> </span><span><a href="ontology.xml" target="_blank"><img src="https://img.shields.io/badge/Format-RDF/XML-blue.svg" alt="RDF/XML" /></a> </span><span><a href="ontology.nt" target="_blank"><img src="https://img.shields.io/badge/Format-N_Triples-blue.svg" alt="N-Triples" /></a> </span><span><a href="ontology.ttl" target="_blank"><img src="https://img.shields.io/badge/Format-TTL-blue.svg" alt="TTL" /></a> </span></dd><dt>License: </dt><dd><a href="https://creativecommons.org/publicdomain/zero/1.0/" target="_blank"><img src="https://img.shields.io/badge/License-https://creativecommons.org/publicdomain/zero/1.0/-blue.svg" alt="https://creativecommons.org/publicdomain/zero/1.0/" /></a>
+</dd><dt>Visualization:</dt><dd><a href="webvowl/index.html#" target="_blank"><img src="https://img.shields.io/badge/Visualize_with-WebVowl-blue.svg" alt="Visualize with WebVowl" /></a></dd>
+<!-- <dt>Evaluation:</dt><dd><a href="OOPSEvaluation/OOPSeval.html#" target="_blank"><img src="https://img.shields.io/badge/Evaluate_with-OOPS! (OntOlogy Pitfall Scanner!)-blue.svg" alt="Evaluate with OOPS!" /></a></dd> --></dl>
+
+<hr/>
+</div>
+<div class="status">
+<div>
+<span>Ontology Specification Draft</span>
+</div>
+</div>     <div id="abstract"><h2>Abstract</h2><span class="markdown">
+The University of Murcia signed on November 29, 2017, a Covenant with the Ministry of Economy, Industry and Competitiveness backing the “HÉRCULES: Semantic University Research Data” Project with a budget of FIVE MILLION FOUR HUNDRED AND SIXTY-TWO THOUSAND SIX HUNDRED euros with an 80% of co-financiering from the European Regional Development Fund program (ERDF) within the 2014-2020 period. </span>
+</div>
+<div id="toc"></div> 
+
+<!--INTRODUCTION SECTION-->
+    <div id="introduction"><h2 id="intro" class="list">Introduction <span class="backlink"> back to <a href="#toc">ToC</a></span></h2>
+<span class="markdown">
+This is a place holder text for the introduction. The introduction should briefly describe the ontology, its motivation, state of the art and goals.</span>
+<div id="namespacedeclarations">
+<h3 id="ns" class="list">Namespace declarations</h3>
+<div id="ns" align="center">
+<table>
+<caption> <a href="#ns"> Table 1</a>: Namespaces used in the document </caption>
+<tbody>
+<tr><td><b>roh</b></td><td>&lt;http://purl.org/roh/university-hr/uk&gt;</td></tr>
+<tr><td><b>country</b></td><td>&lt;http://publications.europa.eu/resource/authority/country&gt;</td></tr>
+<tr><td><b>owl</b></td><td>&lt;http://www.w3.org/2002/07/owl&gt;</td></tr>
+<tr><td><b>unescothes</b></td><td>&lt;http://skos.um.es/unescothes&gt;</td></tr>
+<tr><td><b>xsd</b></td><td>&lt;http://www.w3.org/2001/XMLSchema&gt;</td></tr>
+<tr><td><b>skos</b></td><td>&lt;http://www.w3.org/2004/02/skos/core&gt;</td></tr>
+<tr><td><b>rdfs</b></td><td>&lt;http://www.w3.org/2000/01/rdf-schema&gt;</td></tr>
+<tr><td><b>roh</b></td><td>&lt;http://purl.org/roh&gt;</td></tr>
+<tr><td><b>university-hr</b></td><td>&lt;http://purl.org/roh/university-hr&gt;</td></tr>
+<tr><td><b>rdf</b></td><td>&lt;http://www.w3.org/1999/02/22-rdf-syntax-ns&gt;</td></tr>
+<tr><td><b>terms</b></td><td>&lt;http://purl.org/dc/terms&gt;</td></tr>
+<tr><td><b>vivo</b></td><td>&lt;http://purl.org/roh/mirror/vivo&gt;</td></tr>
+</tbody>
+</table>
+</div>
+</div>
+</div>
+  
+
+<!--OVERVIEW SECTION-->
+    <div id="overview"><h2 id="overv" class="list">The ROH ontology: Overview <span class="backlink"> back to <a href="#toc">ToC</a></span></h2>
+<span class="markdown">
+This ontology has the following classes and properties.</span>
+<h4>Classes</h4>
+<ul class="hlist">
+   <li>
+      <a href="#GB_UNIVERSITY_HR_GBRTASSLEC"
+         title="http://purl.org/roh/university-hr/uk#GB_UNIVERSITY_HR_GBRTASSLEC">Assistant lecturer Assistant lecturer</a>
+   </li>
+   <li>
+      <a href="#GB_UNIVERSITY_HR_GBCHAN"
+         title="http://purl.org/roh/university-hr/uk#GB_UNIVERSITY_HR_GBCHAN">Chancellor Chancellor</a>
+   </li>
+   <li>
+      <a href="#GB_UNIVERSITY_HR_GBRTCLLEC"
+         title="http://purl.org/roh/university-hr/uk#GB_UNIVERSITY_HR_GBRTCLLEC">Clinical lecturer Clinical lecturer</a>
+   </li>
+   <li>
+      <a href="#http://www.w3.org/2004/02/skos/core#Concept" title="http://www.w3.org/2004/02/skos/core#Concept">Concept</a>
+   </li>
+   <li>
+      <a href="#http://www.w3.org/2004/02/skos/core#ConceptScheme"
+         title="http://www.w3.org/2004/02/skos/core#ConceptScheme">Concept Scheme</a>
+   </li>
+   <li>
+      <a href="#GB_UNIVERSITY_HR_GBDEAN"
+         title="http://purl.org/roh/university-hr/uk#GB_UNIVERSITY_HR_GBDEAN">Dean of faculty Dean of faculty</a>
+   </li>
+   <li>
+      <a href="#GB_UNIVERSITY_HR_GBDEPDIR"
+         title="http://purl.org/roh/university-hr/uk#GB_UNIVERSITY_HR_GBDEPDIR">Department director of studies Department director of studies</a>
+   </li>
+   <li>
+      <a href="#GB_UNIVERSITY_HR_GBDEPVICHAN"
+         title="http://purl.org/roh/university-hr/uk#GB_UNIVERSITY_HR_GBDEPVICHAN">Deputy vice-chancellor Deputy vice-chancellor</a>
+   </li>
+   <li>
+      <a href="#GB_UNIVERSITY_HR_GBEPROF"
+         title="http://purl.org/roh/university-hr/uk#GB_UNIVERSITY_HR_GBEPROF">Emeritus professor Emeritus professor</a>
+   </li>
+   <li>
+      <a href="#GB_UNIVERSITY_HR_GBEREAD"
+         title="http://purl.org/roh/university-hr/uk#GB_UNIVERSITY_HR_GBEREAD">Emeritus reader Emeritus reader</a>
+   </li>
+   <li>
+      <a href="#http://purl.org/roh/mirror/vivo#FacultyAdministrativePosition"
+         title="http://purl.org/roh/mirror/vivo#FacultyAdministrativePosition">Faculty Administrative Position</a>
+   </li>
+   <li>
+      <a href="#http://purl.org/roh/mirror/vivo#FacultyPosition" title="http://purl.org/roh/mirror/vivo#FacultyPosition">Faculty Position</a>
+   </li>
+   <li>
+      <a href="#GB_UNIVERSITY_HR_GBHEADDEP"
+         title="http://purl.org/roh/university-hr/uk#GB_UNIVERSITY_HR_GBHEADDEP">Head of department Head of department</a>
+   </li>
+   <li>
+      <a href="#GB_UNIVERSITY_HR_GBRTLEC"
+         title="http://purl.org/roh/university-hr/uk#GB_UNIVERSITY_HR_GBRTLEC">Lecturer Lecturer</a>
+   </li>
+   <li>
+      <a href="#http://purl.org/roh/mirror/vivo#Position" title="http://purl.org/roh/mirror/vivo#Position">Position</a>
+   </li>
+   <li>
+      <a href="#GB_UNIVERSITY_HR_GBPROCHAN"
+         title="http://purl.org/roh/university-hr/uk#GB_UNIVERSITY_HR_GBPROCHAN">Pro-chancellor Pro-chancellor</a>
+   </li>
+   <li>
+      <a href="#GB_UNIVERSITY_HR_GBPROVICCHAN"
+         title="http://purl.org/roh/university-hr/uk#GB_UNIVERSITY_HR_GBPROVICCHAN">Pro-vice-chancellor Pro-vice-chancellor</a>
+   </li>
+   <li>
+      <a href="#GB_UNIVERSITY_HR_GBRTPROF"
+         title="http://purl.org/roh/university-hr/uk#GB_UNIVERSITY_HR_GBRTPROF">Professor Professor</a>
+   </li>
+   <li>
+      <a href="#GB_UNIVERSITY_HR_GBRPROF"
+         title="http://purl.org/roh/university-hr/uk#GB_UNIVERSITY_HR_GBRPROF">Professorial research fellow Professorial research fellow</a>
+   </li>
+   <li>
+      <a href="#GB_UNIVERSITY_HR_GBTPROF"
+         title="http://purl.org/roh/university-hr/uk#GB_UNIVERSITY_HR_GBTPROF">Professorial teaching fellow Professorial teaching fellow</a>
+   </li>
+   <li>
+      <a href="#GB_UNIVERSITY_HR_GBRTREAD"
+         title="http://purl.org/roh/university-hr/uk#GB_UNIVERSITY_HR_GBRTREAD">Reader Reader</a>
+   </li>
+   <li>
+      <a href="#GB_UNIVERSITY_HR_GBRREAASS"
+         title="http://purl.org/roh/university-hr/uk#GB_UNIVERSITY_HR_GBRREAASS">Research assistant Research assistant</a>
+   </li>
+   <li>
+      <a href="#GB_UNIVERSITY_HR_GBRREAFEL"
+         title="http://purl.org/roh/university-hr/uk#GB_UNIVERSITY_HR_GBRREAFEL">Research fellow Research fellow</a>
+   </li>
+   <li>
+      <a href="#http://purl.org/roh#ResearcherPosition" title="http://purl.org/roh#ResearcherPosition">Researcher Position</a>
+   </li>
+   <li>
+      <a href="#GB_UNIVERSITY_HR_GBRTSENLEC"
+         title="http://purl.org/roh/university-hr/uk#GB_UNIVERSITY_HR_GBRTSENLEC">Senior lecturer Senior lecturer</a>
+   </li>
+   <li>
+      <a href="#GB_UNIVERSITY_HR_GBRSENREAFEL"
+         title="http://purl.org/roh/university-hr/uk#GB_UNIVERSITY_HR_GBRSENREAFEL">Senior research fellow Senior research fellow</a>
+   </li>
+   <li>
+      <a href="#GB_UNIVERSITY_HR_GBVICCHAN"
+         title="http://purl.org/roh/university-hr/uk#GB_UNIVERSITY_HR_GBVICCHAN">Vice-chancellor Vice-chancellor</a>
+   </li>
+</ul><h4>Named Individuals</h4><ul class="hlist">
+   <li>
+      <a href="#GBUniversityHumanResourcesCodesList"
+         title="http://purl.org/roh/university-hr/uk#GBUniversityHumanResourcesCodesList">Codes for the human resources of the universities from the United Kingdom Codes for the human resources of the universities from the United Kingdom</a>
+   </li>
+   <li>
+      <a href="#GB_UNIVERSITY_HR_CODE_GBCHAN"
+         title="http://purl.org/roh/university-hr/uk#GB_UNIVERSITY_HR_CODE_GBCHAN">GBCHAN GBCHAN</a>
+   </li>
+   <li>
+      <a href="#GB_UNIVERSITY_HR_CODE_GBDEAN"
+         title="http://purl.org/roh/university-hr/uk#GB_UNIVERSITY_HR_CODE_GBDEAN">GBDEAN GBDEAN</a>
+   </li>
+   <li>
+      <a href="#GB_UNIVERSITY_HR_CODE_GBDEPDIR"
+         title="http://purl.org/roh/university-hr/uk#GB_UNIVERSITY_HR_CODE_GBDEPDIR">GBDEPDIR GBDEPDIR</a>
+   </li>
+   <li>
+      <a href="#GB_UNIVERSITY_HR_CODE_GBDEPVICHAN"
+         title="http://purl.org/roh/university-hr/uk#GB_UNIVERSITY_HR_CODE_GBDEPVICHAN">GBDEPVICHAN GBDEPVICHAN</a>
+   </li>
+   <li>
+      <a href="#GB_UNIVERSITY_HR_CODE_GBEPROF"
+         title="http://purl.org/roh/university-hr/uk#GB_UNIVERSITY_HR_CODE_GBEPROF">GBEPROF GBEPROF</a>
+   </li>
+   <li>
+      <a href="#GB_UNIVERSITY_HR_CODE_GBEREAD"
+         title="http://purl.org/roh/university-hr/uk#GB_UNIVERSITY_HR_CODE_GBEREAD">GBEREAD GBEREAD</a>
+   </li>
+   <li>
+      <a href="#GB_UNIVERSITY_HR_CODE_GBHEADDEP"
+         title="http://purl.org/roh/university-hr/uk#GB_UNIVERSITY_HR_CODE_GBHEADDEP">GBHEADDEP GBHEADDEP</a>
+   </li>
+   <li>
+      <a href="#GB_UNIVERSITY_HR_CODE_GBPROCHAN"
+         title="http://purl.org/roh/university-hr/uk#GB_UNIVERSITY_HR_CODE_GBPROCHAN">GBPROCHAN GBPROCHAN</a>
+   </li>
+   <li>
+      <a href="#GB_UNIVERSITY_HR_CODE_GBPROVICCHAN"
+         title="http://purl.org/roh/university-hr/uk#GB_UNIVERSITY_HR_CODE_GBPROVICCHAN">GBPROVICCHAN GBPROVICCHAN</a>
+   </li>
+   <li>
+      <a href="#GB_UNIVERSITY_HR_CODE_GBRPROF"
+         title="http://purl.org/roh/university-hr/uk#GB_UNIVERSITY_HR_CODE_GBRPROF">GBRPROF GBRPROF</a>
+   </li>
+   <li>
+      <a href="#GB_UNIVERSITY_HR_CODE_GBRREAASS"
+         title="http://purl.org/roh/university-hr/uk#GB_UNIVERSITY_HR_CODE_GBRREAASS">GBRREAASS GBRREAASS</a>
+   </li>
+   <li>
+      <a href="#GB_UNIVERSITY_HR_CODE_GBRREAFEL"
+         title="http://purl.org/roh/university-hr/uk#GB_UNIVERSITY_HR_CODE_GBRREAFEL">GBRREAFEL GBRREAFEL</a>
+   </li>
+   <li>
+      <a href="#GB_UNIVERSITY_HR_CODE_GBRSENREAFEL"
+         title="http://purl.org/roh/university-hr/uk#GB_UNIVERSITY_HR_CODE_GBRSENREAFEL">GBRSENREAFEL GBRSENREAFEL</a>
+   </li>
+   <li>
+      <a href="#GB_UNIVERSITY_HR_CODE_GBRTASSLEC"
+         title="http://purl.org/roh/university-hr/uk#GB_UNIVERSITY_HR_CODE_GBRTASSLEC">GBRTASSLEC GBRTASSLEC</a>
+   </li>
+   <li>
+      <a href="#GB_UNIVERSITY_HR_CODE_GBRTCLLEC"
+         title="http://purl.org/roh/university-hr/uk#GB_UNIVERSITY_HR_CODE_GBRTCLLEC">GBRTCLLEC GBRTCLLEC</a>
+   </li>
+   <li>
+      <a href="#GB_UNIVERSITY_HR_CODE_GBRTLEC"
+         title="http://purl.org/roh/university-hr/uk#GB_UNIVERSITY_HR_CODE_GBRTLEC">GBRTLEC GBRTLEC</a>
+   </li>
+   <li>
+      <a href="#GB_UNIVERSITY_HR_CODE_GBRTPROF"
+         title="http://purl.org/roh/university-hr/uk#GB_UNIVERSITY_HR_CODE_GBRTPROF">GBRTPROF GBRTPROF</a>
+   </li>
+   <li>
+      <a href="#GB_UNIVERSITY_HR_CODE_GBRTREAD"
+         title="http://purl.org/roh/university-hr/uk#GB_UNIVERSITY_HR_CODE_GBRTREAD">GBRTREAD GBRTREAD</a>
+   </li>
+   <li>
+      <a href="#GB_UNIVERSITY_HR_CODE_GBRTSENLEC"
+         title="http://purl.org/roh/university-hr/uk#GB_UNIVERSITY_HR_CODE_GBRTSENLEC">GBRTSENLEC GBRTSENLEC</a>
+   </li>
+   <li>
+      <a href="#GB_UNIVERSITY_HR_CODE_GBTPROF"
+         title="http://purl.org/roh/university-hr/uk#GB_UNIVERSITY_HR_CODE_GBTPROF">GBTPROF GBTPROF</a>
+   </li>
+   <li>
+      <a href="#GB_UNIVERSITY_HR_CODE_GBVICCHAN"
+         title="http://purl.org/roh/university-hr/uk#GB_UNIVERSITY_HR_CODE_GBVICCHAN">GBVICCHAN GBVICCHAN</a>
+   </li>
+   <li>
+      <a href="#GBUniversityHumanResourcesList"
+         title="http://purl.org/roh/university-hr/uk#GBUniversityHumanResourcesList">Human resources of the universities from the United Kingdom Human resources of the universities from the United Kingdom</a>
+   </li>
+</ul><iframe align="center" width="100%" height ="500px" src="webvowl/index.html"></iframe> 
+</div>
+  
+
+<!--DESCRIPTION SECTION-->
+    <div id="description"><h2 id="desc" class="list">The ROH ontology: Description <span class="backlink"> back to <a href="#toc">ToC</a></span></h2>
+<span class="markdown">
+This is a placeholder text for the description of your ontology. The description should include an explanation and a diagram explaining how the classes are related, examples of usage, etc.</span>
+
+</div>
+   
+
+<!--CROSSREF SECTION-->
+   <div id="crossref"><h2 id="crossreference" class="list">Cross reference for The ROH ontology classes, properties and dataproperties <span class="backlink"> back to <a href="#toc">ToC</a></span></h2>
+This section provides details for each class and property defined by The ROH ontology.
+<div id="classes">
+   <h3 id="classes-headline" class="list">Classes</h3>
+   <ul class="hlist">
+      <li>
+         <a href="#GB_UNIVERSITY_HR_GBRTASSLEC"
+            title="http://purl.org/roh/university-hr/uk#GB_UNIVERSITY_HR_GBRTASSLEC">Assistant lecturer Assistant lecturer</a>
+      </li>
+      <li>
+         <a href="#GB_UNIVERSITY_HR_GBCHAN"
+            title="http://purl.org/roh/university-hr/uk#GB_UNIVERSITY_HR_GBCHAN">Chancellor Chancellor</a>
+      </li>
+      <li>
+         <a href="#GB_UNIVERSITY_HR_GBRTCLLEC"
+            title="http://purl.org/roh/university-hr/uk#GB_UNIVERSITY_HR_GBRTCLLEC">Clinical lecturer Clinical lecturer</a>
+      </li>
+      <li>
+         <a href="#http://www.w3.org/2004/02/skos/core#Concept" title="http://www.w3.org/2004/02/skos/core#Concept">Concept</a>
+      </li>
+      <li>
+         <a href="#http://www.w3.org/2004/02/skos/core#ConceptScheme"
+            title="http://www.w3.org/2004/02/skos/core#ConceptScheme">Concept Scheme</a>
+      </li>
+      <li>
+         <a href="#GB_UNIVERSITY_HR_GBDEAN"
+            title="http://purl.org/roh/university-hr/uk#GB_UNIVERSITY_HR_GBDEAN">Dean of faculty Dean of faculty</a>
+      </li>
+      <li>
+         <a href="#GB_UNIVERSITY_HR_GBDEPDIR"
+            title="http://purl.org/roh/university-hr/uk#GB_UNIVERSITY_HR_GBDEPDIR">Department director of studies Department director of studies</a>
+      </li>
+      <li>
+         <a href="#GB_UNIVERSITY_HR_GBDEPVICHAN"
+            title="http://purl.org/roh/university-hr/uk#GB_UNIVERSITY_HR_GBDEPVICHAN">Deputy vice-chancellor Deputy vice-chancellor</a>
+      </li>
+      <li>
+         <a href="#GB_UNIVERSITY_HR_GBEPROF"
+            title="http://purl.org/roh/university-hr/uk#GB_UNIVERSITY_HR_GBEPROF">Emeritus professor Emeritus professor</a>
+      </li>
+      <li>
+         <a href="#GB_UNIVERSITY_HR_GBEREAD"
+            title="http://purl.org/roh/university-hr/uk#GB_UNIVERSITY_HR_GBEREAD">Emeritus reader Emeritus reader</a>
+      </li>
+      <li>
+         <a href="#http://purl.org/roh/mirror/vivo#FacultyAdministrativePosition"
+            title="http://purl.org/roh/mirror/vivo#FacultyAdministrativePosition">Faculty Administrative Position</a>
+      </li>
+      <li>
+         <a href="#http://purl.org/roh/mirror/vivo#FacultyPosition" title="http://purl.org/roh/mirror/vivo#FacultyPosition">Faculty Position</a>
+      </li>
+      <li>
+         <a href="#GB_UNIVERSITY_HR_GBHEADDEP"
+            title="http://purl.org/roh/university-hr/uk#GB_UNIVERSITY_HR_GBHEADDEP">Head of department Head of department</a>
+      </li>
+      <li>
+         <a href="#GB_UNIVERSITY_HR_GBRTLEC"
+            title="http://purl.org/roh/university-hr/uk#GB_UNIVERSITY_HR_GBRTLEC">Lecturer Lecturer</a>
+      </li>
+      <li>
+         <a href="#http://purl.org/roh/mirror/vivo#Position" title="http://purl.org/roh/mirror/vivo#Position">Position</a>
+      </li>
+      <li>
+         <a href="#GB_UNIVERSITY_HR_GBPROCHAN"
+            title="http://purl.org/roh/university-hr/uk#GB_UNIVERSITY_HR_GBPROCHAN">Pro-chancellor Pro-chancellor</a>
+      </li>
+      <li>
+         <a href="#GB_UNIVERSITY_HR_GBPROVICCHAN"
+            title="http://purl.org/roh/university-hr/uk#GB_UNIVERSITY_HR_GBPROVICCHAN">Pro-vice-chancellor Pro-vice-chancellor</a>
+      </li>
+      <li>
+         <a href="#GB_UNIVERSITY_HR_GBRTPROF"
+            title="http://purl.org/roh/university-hr/uk#GB_UNIVERSITY_HR_GBRTPROF">Professor Professor</a>
+      </li>
+      <li>
+         <a href="#GB_UNIVERSITY_HR_GBRPROF"
+            title="http://purl.org/roh/university-hr/uk#GB_UNIVERSITY_HR_GBRPROF">Professorial research fellow Professorial research fellow</a>
+      </li>
+      <li>
+         <a href="#GB_UNIVERSITY_HR_GBTPROF"
+            title="http://purl.org/roh/university-hr/uk#GB_UNIVERSITY_HR_GBTPROF">Professorial teaching fellow Professorial teaching fellow</a>
+      </li>
+      <li>
+         <a href="#GB_UNIVERSITY_HR_GBRTREAD"
+            title="http://purl.org/roh/university-hr/uk#GB_UNIVERSITY_HR_GBRTREAD">Reader Reader</a>
+      </li>
+      <li>
+         <a href="#GB_UNIVERSITY_HR_GBRREAASS"
+            title="http://purl.org/roh/university-hr/uk#GB_UNIVERSITY_HR_GBRREAASS">Research assistant Research assistant</a>
+      </li>
+      <li>
+         <a href="#GB_UNIVERSITY_HR_GBRREAFEL"
+            title="http://purl.org/roh/university-hr/uk#GB_UNIVERSITY_HR_GBRREAFEL">Research fellow Research fellow</a>
+      </li>
+      <li>
+         <a href="#http://purl.org/roh#ResearcherPosition" title="http://purl.org/roh#ResearcherPosition">Researcher Position</a>
+      </li>
+      <li>
+         <a href="#GB_UNIVERSITY_HR_GBRTSENLEC"
+            title="http://purl.org/roh/university-hr/uk#GB_UNIVERSITY_HR_GBRTSENLEC">Senior lecturer Senior lecturer</a>
+      </li>
+      <li>
+         <a href="#GB_UNIVERSITY_HR_GBRSENREAFEL"
+            title="http://purl.org/roh/university-hr/uk#GB_UNIVERSITY_HR_GBRSENREAFEL">Senior research fellow Senior research fellow</a>
+      </li>
+      <li>
+         <a href="#GB_UNIVERSITY_HR_GBVICCHAN"
+            title="http://purl.org/roh/university-hr/uk#GB_UNIVERSITY_HR_GBVICCHAN">Vice-chancellor Vice-chancellor</a>
+      </li>
+   </ul>
+   <div class="entity" id="GB_UNIVERSITY_HR_GBRTASSLEC">
+      <h3>Assistant lecturer<sup class="type-c" title="class">c</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a>
+         </span>
+      </h3>
+      <h3>Assistant lecturer<sup class="type-c" title="class">c</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://purl.org/roh/university-hr/uk#GB_UNIVERSITY_HR_GBRTASSLEC</p>
+      <dl class="description">
+         <dt>has super-classes</dt>
+         <dd>
+            <a href="#http://purl.org/roh/mirror/vivo#FacultyPosition" title="http://purl.org/roh/mirror/vivo#FacultyPosition">Faculty Position</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="GB_UNIVERSITY_HR_GBCHAN">
+      <h3>Chancellor<sup class="type-c" title="class">c</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a>
+         </span>
+      </h3>
+      <h3>Chancellor<sup class="type-c" title="class">c</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://purl.org/roh/university-hr/uk#GB_UNIVERSITY_HR_GBCHAN</p>
+      <dl class="description">
+         <dt>has super-classes</dt>
+         <dd>
+            <a href="#http://purl.org/roh/mirror/vivo#FacultyAdministrativePosition"
+               title="http://purl.org/roh/mirror/vivo#FacultyAdministrativePosition">Faculty Administrative Position</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="GB_UNIVERSITY_HR_GBRTCLLEC">
+      <h3>Clinical lecturer<sup class="type-c" title="class">c</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a>
+         </span>
+      </h3>
+      <h3>Clinical lecturer<sup class="type-c" title="class">c</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://purl.org/roh/university-hr/uk#GB_UNIVERSITY_HR_GBRTCLLEC</p>
+      <dl class="description">
+         <dt>has super-classes</dt>
+         <dd>
+            <a href="#http://purl.org/roh/mirror/vivo#FacultyPosition" title="http://purl.org/roh/mirror/vivo#FacultyPosition">Faculty Position</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="http://www.w3.org/2004/02/skos/core#Concept">
+      <h3>Concept<sup class="type-c" title="class">c</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://www.w3.org/2004/02/skos/core#Concept</p>
+      <dl class="description">
+         <dt>has members</dt>
+         <dd>
+            <a href="#GB_UNIVERSITY_HR_CODE_GBCHAN"
+               title="http://purl.org/roh/university-hr/uk#GB_UNIVERSITY_HR_CODE_GBCHAN">GBCHAN GBCHAN</a>
+            <sup class="type-ni" title="named individual">ni</sup>, <a href="#GB_UNIVERSITY_HR_CODE_GBDEAN"
+               title="http://purl.org/roh/university-hr/uk#GB_UNIVERSITY_HR_CODE_GBDEAN">GBDEAN GBDEAN</a>
+            <sup class="type-ni" title="named individual">ni</sup>, <a href="#GB_UNIVERSITY_HR_CODE_GBDEPDIR"
+               title="http://purl.org/roh/university-hr/uk#GB_UNIVERSITY_HR_CODE_GBDEPDIR">GBDEPDIR GBDEPDIR</a>
+            <sup class="type-ni" title="named individual">ni</sup>, <a href="#GB_UNIVERSITY_HR_CODE_GBDEPVICHAN"
+               title="http://purl.org/roh/university-hr/uk#GB_UNIVERSITY_HR_CODE_GBDEPVICHAN">GBDEPVICHAN GBDEPVICHAN</a>
+            <sup class="type-ni" title="named individual">ni</sup>, <a href="#GB_UNIVERSITY_HR_CODE_GBEPROF"
+               title="http://purl.org/roh/university-hr/uk#GB_UNIVERSITY_HR_CODE_GBEPROF">GBEPROF GBEPROF</a>
+            <sup class="type-ni" title="named individual">ni</sup>, <a href="#GB_UNIVERSITY_HR_CODE_GBEREAD"
+               title="http://purl.org/roh/university-hr/uk#GB_UNIVERSITY_HR_CODE_GBEREAD">GBEREAD GBEREAD</a>
+            <sup class="type-ni" title="named individual">ni</sup>, <a href="#GB_UNIVERSITY_HR_CODE_GBHEADDEP"
+               title="http://purl.org/roh/university-hr/uk#GB_UNIVERSITY_HR_CODE_GBHEADDEP">GBHEADDEP GBHEADDEP</a>
+            <sup class="type-ni" title="named individual">ni</sup>, <a href="#GB_UNIVERSITY_HR_CODE_GBPROCHAN"
+               title="http://purl.org/roh/university-hr/uk#GB_UNIVERSITY_HR_CODE_GBPROCHAN">GBPROCHAN GBPROCHAN</a>
+            <sup class="type-ni" title="named individual">ni</sup>, <a href="#GB_UNIVERSITY_HR_CODE_GBPROVICCHAN"
+               title="http://purl.org/roh/university-hr/uk#GB_UNIVERSITY_HR_CODE_GBPROVICCHAN">GBPROVICCHAN GBPROVICCHAN</a>
+            <sup class="type-ni" title="named individual">ni</sup>, <a href="#GB_UNIVERSITY_HR_CODE_GBRPROF"
+               title="http://purl.org/roh/university-hr/uk#GB_UNIVERSITY_HR_CODE_GBRPROF">GBRPROF GBRPROF</a>
+            <sup class="type-ni" title="named individual">ni</sup>, <a href="#GB_UNIVERSITY_HR_CODE_GBRREAASS"
+               title="http://purl.org/roh/university-hr/uk#GB_UNIVERSITY_HR_CODE_GBRREAASS">GBRREAASS GBRREAASS</a>
+            <sup class="type-ni" title="named individual">ni</sup>, <a href="#GB_UNIVERSITY_HR_CODE_GBRREAFEL"
+               title="http://purl.org/roh/university-hr/uk#GB_UNIVERSITY_HR_CODE_GBRREAFEL">GBRREAFEL GBRREAFEL</a>
+            <sup class="type-ni" title="named individual">ni</sup>, <a href="#GB_UNIVERSITY_HR_CODE_GBRSENREAFEL"
+               title="http://purl.org/roh/university-hr/uk#GB_UNIVERSITY_HR_CODE_GBRSENREAFEL">GBRSENREAFEL GBRSENREAFEL</a>
+            <sup class="type-ni" title="named individual">ni</sup>, <a href="#GB_UNIVERSITY_HR_CODE_GBRTASSLEC"
+               title="http://purl.org/roh/university-hr/uk#GB_UNIVERSITY_HR_CODE_GBRTASSLEC">GBRTASSLEC GBRTASSLEC</a>
+            <sup class="type-ni" title="named individual">ni</sup>, <a href="#GB_UNIVERSITY_HR_CODE_GBRTCLLEC"
+               title="http://purl.org/roh/university-hr/uk#GB_UNIVERSITY_HR_CODE_GBRTCLLEC">GBRTCLLEC GBRTCLLEC</a>
+            <sup class="type-ni" title="named individual">ni</sup>, <a href="#GB_UNIVERSITY_HR_CODE_GBRTLEC"
+               title="http://purl.org/roh/university-hr/uk#GB_UNIVERSITY_HR_CODE_GBRTLEC">GBRTLEC GBRTLEC</a>
+            <sup class="type-ni" title="named individual">ni</sup>, <a href="#GB_UNIVERSITY_HR_CODE_GBRTPROF"
+               title="http://purl.org/roh/university-hr/uk#GB_UNIVERSITY_HR_CODE_GBRTPROF">GBRTPROF GBRTPROF</a>
+            <sup class="type-ni" title="named individual">ni</sup>, <a href="#GB_UNIVERSITY_HR_CODE_GBRTREAD"
+               title="http://purl.org/roh/university-hr/uk#GB_UNIVERSITY_HR_CODE_GBRTREAD">GBRTREAD GBRTREAD</a>
+            <sup class="type-ni" title="named individual">ni</sup>, <a href="#GB_UNIVERSITY_HR_CODE_GBRTSENLEC"
+               title="http://purl.org/roh/university-hr/uk#GB_UNIVERSITY_HR_CODE_GBRTSENLEC">GBRTSENLEC GBRTSENLEC</a>
+            <sup class="type-ni" title="named individual">ni</sup>, <a href="#GB_UNIVERSITY_HR_CODE_GBTPROF"
+               title="http://purl.org/roh/university-hr/uk#GB_UNIVERSITY_HR_CODE_GBTPROF">GBTPROF GBTPROF</a>
+            <sup class="type-ni" title="named individual">ni</sup>, <a href="#GB_UNIVERSITY_HR_CODE_GBVICCHAN"
+               title="http://purl.org/roh/university-hr/uk#GB_UNIVERSITY_HR_CODE_GBVICCHAN">GBVICCHAN GBVICCHAN</a>
+            <sup class="type-ni" title="named individual">ni</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="http://www.w3.org/2004/02/skos/core#ConceptScheme">
+      <h3>Concept Scheme<sup class="type-c" title="class">c</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://www.w3.org/2004/02/skos/core#ConceptScheme</p>
+      <dl class="description">
+         <dt>has members</dt>
+         <dd>
+            <a href="#GBUniversityHumanResourcesCodesList"
+               title="http://purl.org/roh/university-hr/uk#GBUniversityHumanResourcesCodesList">Codes for the human resources of the universities from the United Kingdom Codes for the human resources of the universities from the United Kingdom</a>
+            <sup class="type-ni" title="named individual">ni</sup>, <a href="#GBUniversityHumanResourcesList"
+               title="http://purl.org/roh/university-hr/uk#GBUniversityHumanResourcesList">Human resources of the universities from the United Kingdom Human resources of the universities from the United Kingdom</a>
+            <sup class="type-ni" title="named individual">ni</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="GB_UNIVERSITY_HR_GBDEAN">
+      <h3>Dean of faculty<sup class="type-c" title="class">c</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a>
+         </span>
+      </h3>
+      <h3>Dean of faculty<sup class="type-c" title="class">c</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://purl.org/roh/university-hr/uk#GB_UNIVERSITY_HR_GBDEAN</p>
+      <dl class="description">
+         <dt>has super-classes</dt>
+         <dd>
+            <a href="#http://purl.org/roh/mirror/vivo#FacultyAdministrativePosition"
+               title="http://purl.org/roh/mirror/vivo#FacultyAdministrativePosition">Faculty Administrative Position</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="GB_UNIVERSITY_HR_GBDEPDIR">
+      <h3>Department director of studies<sup class="type-c" title="class">c</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a>
+         </span>
+      </h3>
+      <h3>Department director of studies<sup class="type-c" title="class">c</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://purl.org/roh/university-hr/uk#GB_UNIVERSITY_HR_GBDEPDIR</p>
+      <dl class="description">
+         <dt>has super-classes</dt>
+         <dd>
+            <a href="#http://purl.org/roh/mirror/vivo#FacultyAdministrativePosition"
+               title="http://purl.org/roh/mirror/vivo#FacultyAdministrativePosition">Faculty Administrative Position</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="GB_UNIVERSITY_HR_GBDEPVICHAN">
+      <h3>Deputy vice-chancellor<sup class="type-c" title="class">c</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a>
+         </span>
+      </h3>
+      <h3>Deputy vice-chancellor<sup class="type-c" title="class">c</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://purl.org/roh/university-hr/uk#GB_UNIVERSITY_HR_GBDEPVICHAN</p>
+      <dl class="description">
+         <dt>has super-classes</dt>
+         <dd>
+            <a href="#http://purl.org/roh/mirror/vivo#FacultyAdministrativePosition"
+               title="http://purl.org/roh/mirror/vivo#FacultyAdministrativePosition">Faculty Administrative Position</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="GB_UNIVERSITY_HR_GBEPROF">
+      <h3>Emeritus professor<sup class="type-c" title="class">c</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a>
+         </span>
+      </h3>
+      <h3>Emeritus professor<sup class="type-c" title="class">c</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://purl.org/roh/university-hr/uk#GB_UNIVERSITY_HR_GBEPROF</p>
+      <dl class="description">
+         <dt>has super-classes</dt>
+         <dd>
+            <a href="#http://purl.org/roh/mirror/vivo#FacultyPosition" title="http://purl.org/roh/mirror/vivo#FacultyPosition">Faculty Position</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="GB_UNIVERSITY_HR_GBEREAD">
+      <h3>Emeritus reader<sup class="type-c" title="class">c</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a>
+         </span>
+      </h3>
+      <h3>Emeritus reader<sup class="type-c" title="class">c</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://purl.org/roh/university-hr/uk#GB_UNIVERSITY_HR_GBEREAD</p>
+      <dl class="description">
+         <dt>has super-classes</dt>
+         <dd>
+            <a href="#http://purl.org/roh/mirror/vivo#FacultyPosition" title="http://purl.org/roh/mirror/vivo#FacultyPosition">Faculty Position</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="http://purl.org/roh/mirror/vivo#FacultyAdministrativePosition">
+      <h3>Faculty Administrative Position<sup class="type-c" title="class">c</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://purl.org/roh/mirror/vivo#FacultyAdministrativePosition</p>
+      <dl class="description">
+         <dt>has super-classes</dt>
+         <dd>
+            <a href="#http://purl.org/roh/mirror/vivo#Position" title="http://purl.org/roh/mirror/vivo#Position">Position</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+         <dt>has sub-classes</dt>
+         <dd>
+            <a href="#GB_UNIVERSITY_HR_GBCHAN"
+               title="http://purl.org/roh/university-hr/uk#GB_UNIVERSITY_HR_GBCHAN">Chancellor Chancellor</a>
+            <sup class="type-c" title="class">c</sup>, <a href="#GB_UNIVERSITY_HR_GBDEAN"
+               title="http://purl.org/roh/university-hr/uk#GB_UNIVERSITY_HR_GBDEAN">Dean of faculty Dean of faculty</a>
+            <sup class="type-c" title="class">c</sup>, <a href="#GB_UNIVERSITY_HR_GBDEPDIR"
+               title="http://purl.org/roh/university-hr/uk#GB_UNIVERSITY_HR_GBDEPDIR">Department director of studies Department director of studies</a>
+            <sup class="type-c" title="class">c</sup>, <a href="#GB_UNIVERSITY_HR_GBDEPVICHAN"
+               title="http://purl.org/roh/university-hr/uk#GB_UNIVERSITY_HR_GBDEPVICHAN">Deputy vice-chancellor Deputy vice-chancellor</a>
+            <sup class="type-c" title="class">c</sup>, <a href="#GB_UNIVERSITY_HR_GBHEADDEP"
+               title="http://purl.org/roh/university-hr/uk#GB_UNIVERSITY_HR_GBHEADDEP">Head of department Head of department</a>
+            <sup class="type-c" title="class">c</sup>, <a href="#GB_UNIVERSITY_HR_GBPROCHAN"
+               title="http://purl.org/roh/university-hr/uk#GB_UNIVERSITY_HR_GBPROCHAN">Pro-chancellor Pro-chancellor</a>
+            <sup class="type-c" title="class">c</sup>, <a href="#GB_UNIVERSITY_HR_GBPROVICCHAN"
+               title="http://purl.org/roh/university-hr/uk#GB_UNIVERSITY_HR_GBPROVICCHAN">Pro-vice-chancellor Pro-vice-chancellor</a>
+            <sup class="type-c" title="class">c</sup>, <a href="#GB_UNIVERSITY_HR_GBVICCHAN"
+               title="http://purl.org/roh/university-hr/uk#GB_UNIVERSITY_HR_GBVICCHAN">Vice-chancellor Vice-chancellor</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="http://purl.org/roh/mirror/vivo#FacultyPosition">
+      <h3>Faculty Position<sup class="type-c" title="class">c</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://purl.org/roh/mirror/vivo#FacultyPosition</p>
+      <dl class="description">
+         <dt>has super-classes</dt>
+         <dd>
+            <a href="#http://purl.org/roh/mirror/vivo#Position" title="http://purl.org/roh/mirror/vivo#Position">Position</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+         <dt>has sub-classes</dt>
+         <dd>
+            <a href="#GB_UNIVERSITY_HR_GBRTASSLEC"
+               title="http://purl.org/roh/university-hr/uk#GB_UNIVERSITY_HR_GBRTASSLEC">Assistant lecturer Assistant lecturer</a>
+            <sup class="type-c" title="class">c</sup>, <a href="#GB_UNIVERSITY_HR_GBRTCLLEC"
+               title="http://purl.org/roh/university-hr/uk#GB_UNIVERSITY_HR_GBRTCLLEC">Clinical lecturer Clinical lecturer</a>
+            <sup class="type-c" title="class">c</sup>, <a href="#GB_UNIVERSITY_HR_GBEPROF"
+               title="http://purl.org/roh/university-hr/uk#GB_UNIVERSITY_HR_GBEPROF">Emeritus professor Emeritus professor</a>
+            <sup class="type-c" title="class">c</sup>, <a href="#GB_UNIVERSITY_HR_GBEREAD"
+               title="http://purl.org/roh/university-hr/uk#GB_UNIVERSITY_HR_GBEREAD">Emeritus reader Emeritus reader</a>
+            <sup class="type-c" title="class">c</sup>, <a href="#GB_UNIVERSITY_HR_GBRTLEC"
+               title="http://purl.org/roh/university-hr/uk#GB_UNIVERSITY_HR_GBRTLEC">Lecturer Lecturer</a>
+            <sup class="type-c" title="class">c</sup>, <a href="#GB_UNIVERSITY_HR_GBRTPROF"
+               title="http://purl.org/roh/university-hr/uk#GB_UNIVERSITY_HR_GBRTPROF">Professor Professor</a>
+            <sup class="type-c" title="class">c</sup>, <a href="#GB_UNIVERSITY_HR_GBTPROF"
+               title="http://purl.org/roh/university-hr/uk#GB_UNIVERSITY_HR_GBTPROF">Professorial teaching fellow Professorial teaching fellow</a>
+            <sup class="type-c" title="class">c</sup>, <a href="#GB_UNIVERSITY_HR_GBRTREAD"
+               title="http://purl.org/roh/university-hr/uk#GB_UNIVERSITY_HR_GBRTREAD">Reader Reader</a>
+            <sup class="type-c" title="class">c</sup>, <a href="#GB_UNIVERSITY_HR_GBRTSENLEC"
+               title="http://purl.org/roh/university-hr/uk#GB_UNIVERSITY_HR_GBRTSENLEC">Senior lecturer Senior lecturer</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="GB_UNIVERSITY_HR_GBHEADDEP">
+      <h3>Head of department<sup class="type-c" title="class">c</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a>
+         </span>
+      </h3>
+      <h3>Head of department<sup class="type-c" title="class">c</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://purl.org/roh/university-hr/uk#GB_UNIVERSITY_HR_GBHEADDEP</p>
+      <dl class="description">
+         <dt>has super-classes</dt>
+         <dd>
+            <a href="#http://purl.org/roh/mirror/vivo#FacultyAdministrativePosition"
+               title="http://purl.org/roh/mirror/vivo#FacultyAdministrativePosition">Faculty Administrative Position</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="GB_UNIVERSITY_HR_GBRTLEC">
+      <h3>Lecturer<sup class="type-c" title="class">c</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a>
+         </span>
+      </h3>
+      <h3>Lecturer<sup class="type-c" title="class">c</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://purl.org/roh/university-hr/uk#GB_UNIVERSITY_HR_GBRTLEC</p>
+      <dl class="description">
+         <dt>has super-classes</dt>
+         <dd>
+            <a href="#http://purl.org/roh/mirror/vivo#FacultyPosition" title="http://purl.org/roh/mirror/vivo#FacultyPosition">Faculty Position</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="http://purl.org/roh/mirror/vivo#Position">
+      <h3>Position<sup class="type-c" title="class">c</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://purl.org/roh/mirror/vivo#Position</p>
+      <dl class="description">
+         <dt>has sub-classes</dt>
+         <dd>
+            <a href="#http://purl.org/roh/mirror/vivo#FacultyAdministrativePosition"
+               title="http://purl.org/roh/mirror/vivo#FacultyAdministrativePosition">Faculty Administrative Position</a>
+            <sup class="type-c" title="class">c</sup>, <a href="#http://purl.org/roh/mirror/vivo#FacultyPosition" title="http://purl.org/roh/mirror/vivo#FacultyPosition">Faculty Position</a>
+            <sup class="type-c" title="class">c</sup>, <a href="#http://purl.org/roh#ResearcherPosition" title="http://purl.org/roh#ResearcherPosition">Researcher Position</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="GB_UNIVERSITY_HR_GBPROCHAN">
+      <h3>Pro-chancellor<sup class="type-c" title="class">c</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a>
+         </span>
+      </h3>
+      <h3>Pro-chancellor<sup class="type-c" title="class">c</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://purl.org/roh/university-hr/uk#GB_UNIVERSITY_HR_GBPROCHAN</p>
+      <dl class="description">
+         <dt>has super-classes</dt>
+         <dd>
+            <a href="#http://purl.org/roh/mirror/vivo#FacultyAdministrativePosition"
+               title="http://purl.org/roh/mirror/vivo#FacultyAdministrativePosition">Faculty Administrative Position</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="GB_UNIVERSITY_HR_GBPROVICCHAN">
+      <h3>Pro-vice-chancellor<sup class="type-c" title="class">c</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a>
+         </span>
+      </h3>
+      <h3>Pro-vice-chancellor<sup class="type-c" title="class">c</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://purl.org/roh/university-hr/uk#GB_UNIVERSITY_HR_GBPROVICCHAN</p>
+      <dl class="description">
+         <dt>has super-classes</dt>
+         <dd>
+            <a href="#http://purl.org/roh/mirror/vivo#FacultyAdministrativePosition"
+               title="http://purl.org/roh/mirror/vivo#FacultyAdministrativePosition">Faculty Administrative Position</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="GB_UNIVERSITY_HR_GBRTPROF">
+      <h3>Professor<sup class="type-c" title="class">c</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a>
+         </span>
+      </h3>
+      <h3>Professor<sup class="type-c" title="class">c</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://purl.org/roh/university-hr/uk#GB_UNIVERSITY_HR_GBRTPROF</p>
+      <dl class="description">
+         <dt>has super-classes</dt>
+         <dd>
+            <a href="#http://purl.org/roh/mirror/vivo#FacultyPosition" title="http://purl.org/roh/mirror/vivo#FacultyPosition">Faculty Position</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="GB_UNIVERSITY_HR_GBRPROF">
+      <h3>Professorial research fellow<sup class="type-c" title="class">c</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a>
+         </span>
+      </h3>
+      <h3>Professorial research fellow<sup class="type-c" title="class">c</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://purl.org/roh/university-hr/uk#GB_UNIVERSITY_HR_GBRPROF</p>
+      <dl class="description">
+         <dt>has super-classes</dt>
+         <dd>
+            <a href="#http://purl.org/roh#ResearcherPosition" title="http://purl.org/roh#ResearcherPosition">Researcher Position</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="GB_UNIVERSITY_HR_GBTPROF">
+      <h3>Professorial teaching fellow<sup class="type-c" title="class">c</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a>
+         </span>
+      </h3>
+      <h3>Professorial teaching fellow<sup class="type-c" title="class">c</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://purl.org/roh/university-hr/uk#GB_UNIVERSITY_HR_GBTPROF</p>
+      <dl class="description">
+         <dt>has super-classes</dt>
+         <dd>
+            <a href="#http://purl.org/roh/mirror/vivo#FacultyPosition" title="http://purl.org/roh/mirror/vivo#FacultyPosition">Faculty Position</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="GB_UNIVERSITY_HR_GBRTREAD">
+      <h3>Reader<sup class="type-c" title="class">c</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a>
+         </span>
+      </h3>
+      <h3>Reader<sup class="type-c" title="class">c</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://purl.org/roh/university-hr/uk#GB_UNIVERSITY_HR_GBRTREAD</p>
+      <dl class="description">
+         <dt>has super-classes</dt>
+         <dd>
+            <a href="#http://purl.org/roh/mirror/vivo#FacultyPosition" title="http://purl.org/roh/mirror/vivo#FacultyPosition">Faculty Position</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="GB_UNIVERSITY_HR_GBRREAASS">
+      <h3>Research assistant<sup class="type-c" title="class">c</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a>
+         </span>
+      </h3>
+      <h3>Research assistant<sup class="type-c" title="class">c</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://purl.org/roh/university-hr/uk#GB_UNIVERSITY_HR_GBRREAASS</p>
+      <dl class="description">
+         <dt>has super-classes</dt>
+         <dd>
+            <a href="#http://purl.org/roh#ResearcherPosition" title="http://purl.org/roh#ResearcherPosition">Researcher Position</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="GB_UNIVERSITY_HR_GBRREAFEL">
+      <h3>Research fellow<sup class="type-c" title="class">c</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a>
+         </span>
+      </h3>
+      <h3>Research fellow<sup class="type-c" title="class">c</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://purl.org/roh/university-hr/uk#GB_UNIVERSITY_HR_GBRREAFEL</p>
+      <dl class="description">
+         <dt>has super-classes</dt>
+         <dd>
+            <a href="#http://purl.org/roh#ResearcherPosition" title="http://purl.org/roh#ResearcherPosition">Researcher Position</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="http://purl.org/roh#ResearcherPosition">
+      <h3>Researcher Position<sup class="type-c" title="class">c</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://purl.org/roh#ResearcherPosition</p>
+      <dl class="description">
+         <dt>has super-classes</dt>
+         <dd>
+            <a href="#http://purl.org/roh/mirror/vivo#Position" title="http://purl.org/roh/mirror/vivo#Position">Position</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+         <dt>has sub-classes</dt>
+         <dd>
+            <a href="#GB_UNIVERSITY_HR_GBRPROF"
+               title="http://purl.org/roh/university-hr/uk#GB_UNIVERSITY_HR_GBRPROF">Professorial research fellow Professorial research fellow</a>
+            <sup class="type-c" title="class">c</sup>, <a href="#GB_UNIVERSITY_HR_GBRREAASS"
+               title="http://purl.org/roh/university-hr/uk#GB_UNIVERSITY_HR_GBRREAASS">Research assistant Research assistant</a>
+            <sup class="type-c" title="class">c</sup>, <a href="#GB_UNIVERSITY_HR_GBRREAFEL"
+               title="http://purl.org/roh/university-hr/uk#GB_UNIVERSITY_HR_GBRREAFEL">Research fellow Research fellow</a>
+            <sup class="type-c" title="class">c</sup>, <a href="#GB_UNIVERSITY_HR_GBRSENREAFEL"
+               title="http://purl.org/roh/university-hr/uk#GB_UNIVERSITY_HR_GBRSENREAFEL">Senior research fellow Senior research fellow</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="GB_UNIVERSITY_HR_GBRTSENLEC">
+      <h3>Senior lecturer<sup class="type-c" title="class">c</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a>
+         </span>
+      </h3>
+      <h3>Senior lecturer<sup class="type-c" title="class">c</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://purl.org/roh/university-hr/uk#GB_UNIVERSITY_HR_GBRTSENLEC</p>
+      <dl class="description">
+         <dt>has super-classes</dt>
+         <dd>
+            <a href="#http://purl.org/roh/mirror/vivo#FacultyPosition" title="http://purl.org/roh/mirror/vivo#FacultyPosition">Faculty Position</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="GB_UNIVERSITY_HR_GBRSENREAFEL">
+      <h3>Senior research fellow<sup class="type-c" title="class">c</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a>
+         </span>
+      </h3>
+      <h3>Senior research fellow<sup class="type-c" title="class">c</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://purl.org/roh/university-hr/uk#GB_UNIVERSITY_HR_GBRSENREAFEL</p>
+      <dl class="description">
+         <dt>has super-classes</dt>
+         <dd>
+            <a href="#http://purl.org/roh#ResearcherPosition" title="http://purl.org/roh#ResearcherPosition">Researcher Position</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="GB_UNIVERSITY_HR_GBVICCHAN">
+      <h3>Vice-chancellor<sup class="type-c" title="class">c</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a>
+         </span>
+      </h3>
+      <h3>Vice-chancellor<sup class="type-c" title="class">c</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://purl.org/roh/university-hr/uk#GB_UNIVERSITY_HR_GBVICCHAN</p>
+      <dl class="description">
+         <dt>has super-classes</dt>
+         <dd>
+            <a href="#http://purl.org/roh/mirror/vivo#FacultyAdministrativePosition"
+               title="http://purl.org/roh/mirror/vivo#FacultyAdministrativePosition">Faculty Administrative Position</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+      </dl>
+   </div>
+</div><div id="namedindividuals">
+   <h3 id="namedindividuals" class="list">Named Individuals</h3>
+   <ul class="hlist">
+      <li>
+         <a href="#GBUniversityHumanResourcesCodesList"
+            title="http://purl.org/roh/university-hr/uk#GBUniversityHumanResourcesCodesList">Codes for the human resources of the universities from the United Kingdom Codes for the human resources of the universities from the United Kingdom</a>
+      </li>
+      <li>
+         <a href="#GB_UNIVERSITY_HR_CODE_GBCHAN"
+            title="http://purl.org/roh/university-hr/uk#GB_UNIVERSITY_HR_CODE_GBCHAN">GBCHAN GBCHAN</a>
+      </li>
+      <li>
+         <a href="#GB_UNIVERSITY_HR_CODE_GBDEAN"
+            title="http://purl.org/roh/university-hr/uk#GB_UNIVERSITY_HR_CODE_GBDEAN">GBDEAN GBDEAN</a>
+      </li>
+      <li>
+         <a href="#GB_UNIVERSITY_HR_CODE_GBDEPDIR"
+            title="http://purl.org/roh/university-hr/uk#GB_UNIVERSITY_HR_CODE_GBDEPDIR">GBDEPDIR GBDEPDIR</a>
+      </li>
+      <li>
+         <a href="#GB_UNIVERSITY_HR_CODE_GBDEPVICHAN"
+            title="http://purl.org/roh/university-hr/uk#GB_UNIVERSITY_HR_CODE_GBDEPVICHAN">GBDEPVICHAN GBDEPVICHAN</a>
+      </li>
+      <li>
+         <a href="#GB_UNIVERSITY_HR_CODE_GBEPROF"
+            title="http://purl.org/roh/university-hr/uk#GB_UNIVERSITY_HR_CODE_GBEPROF">GBEPROF GBEPROF</a>
+      </li>
+      <li>
+         <a href="#GB_UNIVERSITY_HR_CODE_GBEREAD"
+            title="http://purl.org/roh/university-hr/uk#GB_UNIVERSITY_HR_CODE_GBEREAD">GBEREAD GBEREAD</a>
+      </li>
+      <li>
+         <a href="#GB_UNIVERSITY_HR_CODE_GBHEADDEP"
+            title="http://purl.org/roh/university-hr/uk#GB_UNIVERSITY_HR_CODE_GBHEADDEP">GBHEADDEP GBHEADDEP</a>
+      </li>
+      <li>
+         <a href="#GB_UNIVERSITY_HR_CODE_GBPROCHAN"
+            title="http://purl.org/roh/university-hr/uk#GB_UNIVERSITY_HR_CODE_GBPROCHAN">GBPROCHAN GBPROCHAN</a>
+      </li>
+      <li>
+         <a href="#GB_UNIVERSITY_HR_CODE_GBPROVICCHAN"
+            title="http://purl.org/roh/university-hr/uk#GB_UNIVERSITY_HR_CODE_GBPROVICCHAN">GBPROVICCHAN GBPROVICCHAN</a>
+      </li>
+      <li>
+         <a href="#GB_UNIVERSITY_HR_CODE_GBRPROF"
+            title="http://purl.org/roh/university-hr/uk#GB_UNIVERSITY_HR_CODE_GBRPROF">GBRPROF GBRPROF</a>
+      </li>
+      <li>
+         <a href="#GB_UNIVERSITY_HR_CODE_GBRREAASS"
+            title="http://purl.org/roh/university-hr/uk#GB_UNIVERSITY_HR_CODE_GBRREAASS">GBRREAASS GBRREAASS</a>
+      </li>
+      <li>
+         <a href="#GB_UNIVERSITY_HR_CODE_GBRREAFEL"
+            title="http://purl.org/roh/university-hr/uk#GB_UNIVERSITY_HR_CODE_GBRREAFEL">GBRREAFEL GBRREAFEL</a>
+      </li>
+      <li>
+         <a href="#GB_UNIVERSITY_HR_CODE_GBRSENREAFEL"
+            title="http://purl.org/roh/university-hr/uk#GB_UNIVERSITY_HR_CODE_GBRSENREAFEL">GBRSENREAFEL GBRSENREAFEL</a>
+      </li>
+      <li>
+         <a href="#GB_UNIVERSITY_HR_CODE_GBRTASSLEC"
+            title="http://purl.org/roh/university-hr/uk#GB_UNIVERSITY_HR_CODE_GBRTASSLEC">GBRTASSLEC GBRTASSLEC</a>
+      </li>
+      <li>
+         <a href="#GB_UNIVERSITY_HR_CODE_GBRTCLLEC"
+            title="http://purl.org/roh/university-hr/uk#GB_UNIVERSITY_HR_CODE_GBRTCLLEC">GBRTCLLEC GBRTCLLEC</a>
+      </li>
+      <li>
+         <a href="#GB_UNIVERSITY_HR_CODE_GBRTLEC"
+            title="http://purl.org/roh/university-hr/uk#GB_UNIVERSITY_HR_CODE_GBRTLEC">GBRTLEC GBRTLEC</a>
+      </li>
+      <li>
+         <a href="#GB_UNIVERSITY_HR_CODE_GBRTPROF"
+            title="http://purl.org/roh/university-hr/uk#GB_UNIVERSITY_HR_CODE_GBRTPROF">GBRTPROF GBRTPROF</a>
+      </li>
+      <li>
+         <a href="#GB_UNIVERSITY_HR_CODE_GBRTREAD"
+            title="http://purl.org/roh/university-hr/uk#GB_UNIVERSITY_HR_CODE_GBRTREAD">GBRTREAD GBRTREAD</a>
+      </li>
+      <li>
+         <a href="#GB_UNIVERSITY_HR_CODE_GBRTSENLEC"
+            title="http://purl.org/roh/university-hr/uk#GB_UNIVERSITY_HR_CODE_GBRTSENLEC">GBRTSENLEC GBRTSENLEC</a>
+      </li>
+      <li>
+         <a href="#GB_UNIVERSITY_HR_CODE_GBTPROF"
+            title="http://purl.org/roh/university-hr/uk#GB_UNIVERSITY_HR_CODE_GBTPROF">GBTPROF GBTPROF</a>
+      </li>
+      <li>
+         <a href="#GB_UNIVERSITY_HR_CODE_GBVICCHAN"
+            title="http://purl.org/roh/university-hr/uk#GB_UNIVERSITY_HR_CODE_GBVICCHAN">GBVICCHAN GBVICCHAN</a>
+      </li>
+      <li>
+         <a href="#GBUniversityHumanResourcesList"
+            title="http://purl.org/roh/university-hr/uk#GBUniversityHumanResourcesList">Human resources of the universities from the United Kingdom Human resources of the universities from the United Kingdom</a>
+      </li>
+   </ul>
+   <div class="entity" id="GBUniversityHumanResourcesCodesList">
+      <h3>Codes for the human resources of the universities from the United Kingdom<sup class="type-ni" title="named individual">ni</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#namedindividuals">Named Individual ToC</a>
+         </span>
+      </h3>
+      <h3>Codes for the human resources of the universities from the United Kingdom<sup class="type-ni" title="named individual">ni</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#namedindividuals">Named Individual ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://purl.org/roh/university-hr/uk#GBUniversityHumanResourcesCodesList</p>
+      <dl class="description">
+         <dt>belongs to</dt>
+         <dd>
+            <a href="#http://www.w3.org/2004/02/skos/core#ConceptScheme"
+               title="http://www.w3.org/2004/02/skos/core#ConceptScheme">Concept Scheme</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="GB_UNIVERSITY_HR_CODE_GBCHAN">
+      <h3>GBCHAN<sup class="type-ni" title="named individual">ni</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#namedindividuals">Named Individual ToC</a>
+         </span>
+      </h3>
+      <h3>GBCHAN<sup class="type-ni" title="named individual">ni</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#namedindividuals">Named Individual ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://purl.org/roh/university-hr/uk#GB_UNIVERSITY_HR_CODE_GBCHAN</p>
+      <dl class="description">
+         <dt>belongs to</dt>
+         <dd>
+            <a href="#http://www.w3.org/2004/02/skos/core#Concept" title="http://www.w3.org/2004/02/skos/core#Concept">Concept</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="GB_UNIVERSITY_HR_CODE_GBDEAN">
+      <h3>GBDEAN<sup class="type-ni" title="named individual">ni</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#namedindividuals">Named Individual ToC</a>
+         </span>
+      </h3>
+      <h3>GBDEAN<sup class="type-ni" title="named individual">ni</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#namedindividuals">Named Individual ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://purl.org/roh/university-hr/uk#GB_UNIVERSITY_HR_CODE_GBDEAN</p>
+      <dl class="description">
+         <dt>belongs to</dt>
+         <dd>
+            <a href="#http://www.w3.org/2004/02/skos/core#Concept" title="http://www.w3.org/2004/02/skos/core#Concept">Concept</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="GB_UNIVERSITY_HR_CODE_GBDEPDIR">
+      <h3>GBDEPDIR<sup class="type-ni" title="named individual">ni</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#namedindividuals">Named Individual ToC</a>
+         </span>
+      </h3>
+      <h3>GBDEPDIR<sup class="type-ni" title="named individual">ni</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#namedindividuals">Named Individual ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://purl.org/roh/university-hr/uk#GB_UNIVERSITY_HR_CODE_GBDEPDIR</p>
+      <dl class="description">
+         <dt>belongs to</dt>
+         <dd>
+            <a href="#http://www.w3.org/2004/02/skos/core#Concept" title="http://www.w3.org/2004/02/skos/core#Concept">Concept</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="GB_UNIVERSITY_HR_CODE_GBDEPVICHAN">
+      <h3>GBDEPVICHAN<sup class="type-ni" title="named individual">ni</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#namedindividuals">Named Individual ToC</a>
+         </span>
+      </h3>
+      <h3>GBDEPVICHAN<sup class="type-ni" title="named individual">ni</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#namedindividuals">Named Individual ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://purl.org/roh/university-hr/uk#GB_UNIVERSITY_HR_CODE_GBDEPVICHAN</p>
+      <dl class="description">
+         <dt>belongs to</dt>
+         <dd>
+            <a href="#http://www.w3.org/2004/02/skos/core#Concept" title="http://www.w3.org/2004/02/skos/core#Concept">Concept</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="GB_UNIVERSITY_HR_CODE_GBEPROF">
+      <h3>GBEPROF<sup class="type-ni" title="named individual">ni</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#namedindividuals">Named Individual ToC</a>
+         </span>
+      </h3>
+      <h3>GBEPROF<sup class="type-ni" title="named individual">ni</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#namedindividuals">Named Individual ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://purl.org/roh/university-hr/uk#GB_UNIVERSITY_HR_CODE_GBEPROF</p>
+      <dl class="description">
+         <dt>belongs to</dt>
+         <dd>
+            <a href="#http://www.w3.org/2004/02/skos/core#Concept" title="http://www.w3.org/2004/02/skos/core#Concept">Concept</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="GB_UNIVERSITY_HR_CODE_GBEREAD">
+      <h3>GBEREAD<sup class="type-ni" title="named individual">ni</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#namedindividuals">Named Individual ToC</a>
+         </span>
+      </h3>
+      <h3>GBEREAD<sup class="type-ni" title="named individual">ni</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#namedindividuals">Named Individual ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://purl.org/roh/university-hr/uk#GB_UNIVERSITY_HR_CODE_GBEREAD</p>
+      <dl class="description">
+         <dt>belongs to</dt>
+         <dd>
+            <a href="#http://www.w3.org/2004/02/skos/core#Concept" title="http://www.w3.org/2004/02/skos/core#Concept">Concept</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="GB_UNIVERSITY_HR_CODE_GBHEADDEP">
+      <h3>GBHEADDEP<sup class="type-ni" title="named individual">ni</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#namedindividuals">Named Individual ToC</a>
+         </span>
+      </h3>
+      <h3>GBHEADDEP<sup class="type-ni" title="named individual">ni</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#namedindividuals">Named Individual ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://purl.org/roh/university-hr/uk#GB_UNIVERSITY_HR_CODE_GBHEADDEP</p>
+      <dl class="description">
+         <dt>belongs to</dt>
+         <dd>
+            <a href="#http://www.w3.org/2004/02/skos/core#Concept" title="http://www.w3.org/2004/02/skos/core#Concept">Concept</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="GB_UNIVERSITY_HR_CODE_GBPROCHAN">
+      <h3>GBPROCHAN<sup class="type-ni" title="named individual">ni</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#namedindividuals">Named Individual ToC</a>
+         </span>
+      </h3>
+      <h3>GBPROCHAN<sup class="type-ni" title="named individual">ni</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#namedindividuals">Named Individual ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://purl.org/roh/university-hr/uk#GB_UNIVERSITY_HR_CODE_GBPROCHAN</p>
+      <dl class="description">
+         <dt>belongs to</dt>
+         <dd>
+            <a href="#http://www.w3.org/2004/02/skos/core#Concept" title="http://www.w3.org/2004/02/skos/core#Concept">Concept</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="GB_UNIVERSITY_HR_CODE_GBPROVICCHAN">
+      <h3>GBPROVICCHAN<sup class="type-ni" title="named individual">ni</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#namedindividuals">Named Individual ToC</a>
+         </span>
+      </h3>
+      <h3>GBPROVICCHAN<sup class="type-ni" title="named individual">ni</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#namedindividuals">Named Individual ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://purl.org/roh/university-hr/uk#GB_UNIVERSITY_HR_CODE_GBPROVICCHAN</p>
+      <dl class="description">
+         <dt>belongs to</dt>
+         <dd>
+            <a href="#http://www.w3.org/2004/02/skos/core#Concept" title="http://www.w3.org/2004/02/skos/core#Concept">Concept</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="GB_UNIVERSITY_HR_CODE_GBRPROF">
+      <h3>GBRPROF<sup class="type-ni" title="named individual">ni</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#namedindividuals">Named Individual ToC</a>
+         </span>
+      </h3>
+      <h3>GBRPROF<sup class="type-ni" title="named individual">ni</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#namedindividuals">Named Individual ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://purl.org/roh/university-hr/uk#GB_UNIVERSITY_HR_CODE_GBRPROF</p>
+      <dl class="description">
+         <dt>belongs to</dt>
+         <dd>
+            <a href="#http://www.w3.org/2004/02/skos/core#Concept" title="http://www.w3.org/2004/02/skos/core#Concept">Concept</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="GB_UNIVERSITY_HR_CODE_GBRREAASS">
+      <h3>GBRREAASS<sup class="type-ni" title="named individual">ni</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#namedindividuals">Named Individual ToC</a>
+         </span>
+      </h3>
+      <h3>GBRREAASS<sup class="type-ni" title="named individual">ni</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#namedindividuals">Named Individual ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://purl.org/roh/university-hr/uk#GB_UNIVERSITY_HR_CODE_GBRREAASS</p>
+      <dl class="description">
+         <dt>belongs to</dt>
+         <dd>
+            <a href="#http://www.w3.org/2004/02/skos/core#Concept" title="http://www.w3.org/2004/02/skos/core#Concept">Concept</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="GB_UNIVERSITY_HR_CODE_GBRREAFEL">
+      <h3>GBRREAFEL<sup class="type-ni" title="named individual">ni</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#namedindividuals">Named Individual ToC</a>
+         </span>
+      </h3>
+      <h3>GBRREAFEL<sup class="type-ni" title="named individual">ni</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#namedindividuals">Named Individual ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://purl.org/roh/university-hr/uk#GB_UNIVERSITY_HR_CODE_GBRREAFEL</p>
+      <dl class="description">
+         <dt>belongs to</dt>
+         <dd>
+            <a href="#http://www.w3.org/2004/02/skos/core#Concept" title="http://www.w3.org/2004/02/skos/core#Concept">Concept</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="GB_UNIVERSITY_HR_CODE_GBRSENREAFEL">
+      <h3>GBRSENREAFEL<sup class="type-ni" title="named individual">ni</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#namedindividuals">Named Individual ToC</a>
+         </span>
+      </h3>
+      <h3>GBRSENREAFEL<sup class="type-ni" title="named individual">ni</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#namedindividuals">Named Individual ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://purl.org/roh/university-hr/uk#GB_UNIVERSITY_HR_CODE_GBRSENREAFEL</p>
+      <dl class="description">
+         <dt>belongs to</dt>
+         <dd>
+            <a href="#http://www.w3.org/2004/02/skos/core#Concept" title="http://www.w3.org/2004/02/skos/core#Concept">Concept</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="GB_UNIVERSITY_HR_CODE_GBRTASSLEC">
+      <h3>GBRTASSLEC<sup class="type-ni" title="named individual">ni</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#namedindividuals">Named Individual ToC</a>
+         </span>
+      </h3>
+      <h3>GBRTASSLEC<sup class="type-ni" title="named individual">ni</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#namedindividuals">Named Individual ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://purl.org/roh/university-hr/uk#GB_UNIVERSITY_HR_CODE_GBRTASSLEC</p>
+      <dl class="description">
+         <dt>belongs to</dt>
+         <dd>
+            <a href="#http://www.w3.org/2004/02/skos/core#Concept" title="http://www.w3.org/2004/02/skos/core#Concept">Concept</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="GB_UNIVERSITY_HR_CODE_GBRTCLLEC">
+      <h3>GBRTCLLEC<sup class="type-ni" title="named individual">ni</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#namedindividuals">Named Individual ToC</a>
+         </span>
+      </h3>
+      <h3>GBRTCLLEC<sup class="type-ni" title="named individual">ni</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#namedindividuals">Named Individual ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://purl.org/roh/university-hr/uk#GB_UNIVERSITY_HR_CODE_GBRTCLLEC</p>
+      <dl class="description">
+         <dt>belongs to</dt>
+         <dd>
+            <a href="#http://www.w3.org/2004/02/skos/core#Concept" title="http://www.w3.org/2004/02/skos/core#Concept">Concept</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="GB_UNIVERSITY_HR_CODE_GBRTLEC">
+      <h3>GBRTLEC<sup class="type-ni" title="named individual">ni</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#namedindividuals">Named Individual ToC</a>
+         </span>
+      </h3>
+      <h3>GBRTLEC<sup class="type-ni" title="named individual">ni</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#namedindividuals">Named Individual ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://purl.org/roh/university-hr/uk#GB_UNIVERSITY_HR_CODE_GBRTLEC</p>
+      <dl class="description">
+         <dt>belongs to</dt>
+         <dd>
+            <a href="#http://www.w3.org/2004/02/skos/core#Concept" title="http://www.w3.org/2004/02/skos/core#Concept">Concept</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="GB_UNIVERSITY_HR_CODE_GBRTPROF">
+      <h3>GBRTPROF<sup class="type-ni" title="named individual">ni</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#namedindividuals">Named Individual ToC</a>
+         </span>
+      </h3>
+      <h3>GBRTPROF<sup class="type-ni" title="named individual">ni</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#namedindividuals">Named Individual ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://purl.org/roh/university-hr/uk#GB_UNIVERSITY_HR_CODE_GBRTPROF</p>
+      <dl class="description">
+         <dt>belongs to</dt>
+         <dd>
+            <a href="#http://www.w3.org/2004/02/skos/core#Concept" title="http://www.w3.org/2004/02/skos/core#Concept">Concept</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="GB_UNIVERSITY_HR_CODE_GBRTREAD">
+      <h3>GBRTREAD<sup class="type-ni" title="named individual">ni</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#namedindividuals">Named Individual ToC</a>
+         </span>
+      </h3>
+      <h3>GBRTREAD<sup class="type-ni" title="named individual">ni</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#namedindividuals">Named Individual ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://purl.org/roh/university-hr/uk#GB_UNIVERSITY_HR_CODE_GBRTREAD</p>
+      <dl class="description">
+         <dt>belongs to</dt>
+         <dd>
+            <a href="#http://www.w3.org/2004/02/skos/core#Concept" title="http://www.w3.org/2004/02/skos/core#Concept">Concept</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="GB_UNIVERSITY_HR_CODE_GBRTSENLEC">
+      <h3>GBRTSENLEC<sup class="type-ni" title="named individual">ni</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#namedindividuals">Named Individual ToC</a>
+         </span>
+      </h3>
+      <h3>GBRTSENLEC<sup class="type-ni" title="named individual">ni</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#namedindividuals">Named Individual ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://purl.org/roh/university-hr/uk#GB_UNIVERSITY_HR_CODE_GBRTSENLEC</p>
+      <dl class="description">
+         <dt>belongs to</dt>
+         <dd>
+            <a href="#http://www.w3.org/2004/02/skos/core#Concept" title="http://www.w3.org/2004/02/skos/core#Concept">Concept</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="GB_UNIVERSITY_HR_CODE_GBTPROF">
+      <h3>GBTPROF<sup class="type-ni" title="named individual">ni</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#namedindividuals">Named Individual ToC</a>
+         </span>
+      </h3>
+      <h3>GBTPROF<sup class="type-ni" title="named individual">ni</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#namedindividuals">Named Individual ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://purl.org/roh/university-hr/uk#GB_UNIVERSITY_HR_CODE_GBTPROF</p>
+      <dl class="description">
+         <dt>belongs to</dt>
+         <dd>
+            <a href="#http://www.w3.org/2004/02/skos/core#Concept" title="http://www.w3.org/2004/02/skos/core#Concept">Concept</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="GB_UNIVERSITY_HR_CODE_GBVICCHAN">
+      <h3>GBVICCHAN<sup class="type-ni" title="named individual">ni</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#namedindividuals">Named Individual ToC</a>
+         </span>
+      </h3>
+      <h3>GBVICCHAN<sup class="type-ni" title="named individual">ni</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#namedindividuals">Named Individual ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://purl.org/roh/university-hr/uk#GB_UNIVERSITY_HR_CODE_GBVICCHAN</p>
+      <dl class="description">
+         <dt>belongs to</dt>
+         <dd>
+            <a href="#http://www.w3.org/2004/02/skos/core#Concept" title="http://www.w3.org/2004/02/skos/core#Concept">Concept</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="GBUniversityHumanResourcesList">
+      <h3>Human resources of the universities from the United Kingdom<sup class="type-ni" title="named individual">ni</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#namedindividuals">Named Individual ToC</a>
+         </span>
+      </h3>
+      <h3>Human resources of the universities from the United Kingdom<sup class="type-ni" title="named individual">ni</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#namedindividuals">Named Individual ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://purl.org/roh/university-hr/uk#GBUniversityHumanResourcesList</p>
+      <dl class="description">
+         <dt>belongs to</dt>
+         <dd>
+            <a href="#http://www.w3.org/2004/02/skos/core#ConceptScheme"
+               title="http://www.w3.org/2004/02/skos/core#ConceptScheme">Concept Scheme</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+      </dl>
+   </div>
+</div><div id="legend">
+<h2>Legend <span class="backlink"> back to <a href="#toc">ToC</a></span></h2>
+<div   class="entity">
+<sup class="type-c" title="Classes">c</sup>: Classes <br/>
+<sup class="type-op" title="Object Properties">op</sup>: Object Properties <br/>
+<sup class="type-dp" title="Data Properties">dp</sup>: Data Properties <br/>
+<sup class="type-ni" title="Named Individuals">ni</sup>: Named Individuals
+</div>
+</div>
+</div>
+    
+
+<!--REFERENCES SECTION-->
+  <div id="references">
+<h2 id="ref" class="list">References <span class="backlink"> back to <a href="#toc">ToC</a></span></h2>
+<span class="markdown">
+Add your references here. It is recommended to have them as a list.</span>
+
+</div>
+<div id="acknowledgements">
+<h2 id="ack" class="list">Acknowledgements <span class="backlink"> back to <a href="#toc">ToC</a></span></h2>
+<p>
+The authors would like to thank <a href="http://www.essepuntato.it/">Silvio Peroni</a> for developing <a href="http://www.essepuntato.it/lode">LODE</a>, a Live OWL Documentation Environment, which is used for representing the Cross Referencing Section of this document and <a href="https://w3id.org/people/dgarijo">Daniel Garijo</a> for developing <a href="https://github.com/dgarijo/Widoco">Widoco</a>, the program used to create the template used in this documentation.</p>
+</div>
+
+
+</div>
+</body>
+</html>

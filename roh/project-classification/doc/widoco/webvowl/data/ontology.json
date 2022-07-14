@@ -1,0 +1,684 @@
+{
+  "_comment" : "Created with OWL2VOWL (version 0.3.5), http://vowl.visualdataweb.org",
+  "header" : {
+    "languages" : [ "en", "es" ],
+    "baseIris" : [ "http://www.w3.org/1999/02/22-rdf-syntax-ns", "http://www.w3.org/2000/01/rdf-schema", "http://purl.org/roh", "http://www.w3.org/2004/02/skos/core" ],
+    "iri" : "http://purl.org/roh/project-classification"
+  },
+  "namespace" : [ ],
+  "class" : [ {
+    "id" : "0",
+    "type" : "owl:Class"
+  }, {
+    "id" : "6",
+    "type" : "owl:Class"
+  }, {
+    "id" : "8",
+    "type" : "owl:Class"
+  }, {
+    "id" : "1",
+    "type" : "owl:Class"
+  }, {
+    "id" : "3",
+    "type" : "owl:Thing"
+  } ],
+  "classAttribute" : [ {
+    "iri" : "http://www.w3.org/2004/02/skos/core#ConceptScheme",
+    "baseIri" : "http://www.w3.org/2004/02/skos/core",
+    "instances" : 0,
+    "annotations" : {
+      "isDefinedBy" : [ {
+        "identifier" : "isDefinedBy",
+        "language" : "undefined",
+        "value" : "http://www.w3.org/2004/02/skos/core",
+        "type" : "iri"
+      } ],
+      "definition" : [ {
+        "identifier" : "definition",
+        "language" : "en",
+        "value" : "A set of concepts, optionally including statements about semantic relationships between those concepts.",
+        "type" : "label"
+      } ],
+      "example" : [ {
+        "identifier" : "example",
+        "language" : "en",
+        "value" : "Thesauri, classification schemes, subject heading lists, taxonomies, 'folksonomies', and other types of controlled vocabulary are all examples of concept schemes. Concept schemes are also embedded in glossaries and terminologies.",
+        "type" : "label"
+      } ],
+      "scopeNote" : [ {
+        "identifier" : "scopeNote",
+        "language" : "en",
+        "value" : "A concept scheme may be defined to include concepts from different sources.",
+        "type" : "label"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "ConceptScheme",
+      "en" : "Concept Scheme"
+    },
+    "subClasses" : [ "1" ],
+    "attributes" : [ "external" ],
+    "id" : "0"
+  }, {
+    "iri" : "http://www.w3.org/2004/02/skos/core#Collection",
+    "baseIri" : "http://www.w3.org/2004/02/skos/core",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "Collection"
+    },
+    "attributes" : [ "external" ],
+    "id" : "6"
+  }, {
+    "iri" : "http://www.w3.org/2004/02/skos/core#Concept",
+    "baseIri" : "http://www.w3.org/2004/02/skos/core",
+    "instances" : 0,
+    "annotations" : {
+      "isDefinedBy" : [ {
+        "identifier" : "isDefinedBy",
+        "language" : "undefined",
+        "value" : "http://www.w3.org/2004/02/skos/core",
+        "type" : "iri"
+      } ],
+      "definition" : [ {
+        "identifier" : "definition",
+        "language" : "en",
+        "value" : "An idea or notion; a unit of thought.",
+        "type" : "label"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "Concept",
+      "en" : "Concept"
+    },
+    "individuals" : [ {
+      "iri" : "http://purl.org/roh/project-classification#Regional",
+      "baseIri" : "http://purl.org/roh/project-classification",
+      "annotations" : {
+        "inScheme" : [ {
+          "identifier" : "inScheme",
+          "language" : "undefined",
+          "value" : "http://purl.org/roh/project-classification#ProjectClassification",
+          "type" : "iri"
+        } ]
+      },
+      "labels" : {
+        "IRI-based" : "Regional"
+      }
+    }, {
+      "iri" : "http://purl.org/roh/project-classification#FomentoInvestigacionCientificoTecnica",
+      "baseIri" : "http://purl.org/roh/project-classification",
+      "annotations" : {
+        "inScheme" : [ {
+          "identifier" : "inScheme",
+          "language" : "undefined",
+          "value" : "http://purl.org/roh/project-classification#ProjectClassification",
+          "type" : "iri"
+        } ]
+      },
+      "labels" : {
+        "IRI-based" : "FomentoInvestigacionCientificoTecnica"
+      }
+    }, {
+      "iri" : "http://purl.org/roh/project-classification#National",
+      "baseIri" : "http://purl.org/roh/project-classification",
+      "annotations" : {
+        "inScheme" : [ {
+          "identifier" : "inScheme",
+          "language" : "undefined",
+          "value" : "http://purl.org/roh/project-classification#ProjectClassification",
+          "type" : "iri"
+        } ]
+      },
+      "labels" : {
+        "IRI-based" : "National"
+      }
+    }, {
+      "iri" : "http://purl.org/roh/project-classification#Internal",
+      "baseIri" : "http://purl.org/roh/project-classification",
+      "annotations" : {
+        "inScheme" : [ {
+          "identifier" : "inScheme",
+          "language" : "undefined",
+          "value" : "http://purl.org/roh/project-classification#ProjectClassification",
+          "type" : "iri"
+        } ]
+      },
+      "labels" : {
+        "IRI-based" : "Internal"
+      }
+    }, {
+      "iri" : "http://purl.org/roh/project-classification#FormacionTalento",
+      "baseIri" : "http://purl.org/roh/project-classification",
+      "annotations" : {
+        "inScheme" : [ {
+          "identifier" : "inScheme",
+          "language" : "undefined",
+          "value" : "http://purl.org/roh/project-classification#ProjectClassification",
+          "type" : "iri"
+        } ]
+      },
+      "labels" : {
+        "IRI-based" : "FormacionTalento"
+      }
+    }, {
+      "iri" : "http://purl.org/roh/project-classification#Interreg",
+      "baseIri" : "http://purl.org/roh/project-classification",
+      "annotations" : {
+        "inScheme" : [ {
+          "identifier" : "inScheme",
+          "language" : "undefined",
+          "value" : "http://purl.org/roh/project-classification#ProjectClassification",
+          "type" : "iri"
+        } ]
+      },
+      "labels" : {
+        "IRI-based" : "Interreg"
+      }
+    }, {
+      "iri" : "http://purl.org/roh/project-classification#IndividualFellowships",
+      "baseIri" : "http://purl.org/roh/project-classification",
+      "annotations" : {
+        "inScheme" : [ {
+          "identifier" : "inScheme",
+          "language" : "undefined",
+          "value" : "http://purl.org/roh/project-classification#ProjectClassification",
+          "type" : "iri"
+        } ]
+      },
+      "labels" : {
+        "IRI-based" : "IndividualFellowships"
+      }
+    }, {
+      "iri" : "http://purl.org/roh/project-classification#ITN-ETN",
+      "baseIri" : "http://purl.org/roh/project-classification",
+      "annotations" : {
+        "inScheme" : [ {
+          "identifier" : "inScheme",
+          "language" : "undefined",
+          "value" : "http://purl.org/roh/project-classification#ProjectClassification",
+          "type" : "iri"
+        } ]
+      },
+      "labels" : {
+        "IRI-based" : "ITN-ETN"
+      }
+    }, {
+      "iri" : "http://purl.org/roh/project-classification#FormacionI+D+i",
+      "baseIri" : "http://purl.org/roh/project-classification",
+      "annotations" : {
+        "inScheme" : [ {
+          "identifier" : "inScheme",
+          "language" : "undefined",
+          "value" : "http://purl.org/roh/project-classification#ProjectClassification",
+          "type" : "iri"
+        } ]
+      },
+      "labels" : {
+        "IRI-based" : "FormacionI+D+i"
+      }
+    }, {
+      "iri" : "http://purl.org/roh/project-classification#SubprogramaEstatalIncorporacion",
+      "baseIri" : "http://purl.org/roh/project-classification",
+      "annotations" : {
+        "inScheme" : [ {
+          "identifier" : "inScheme",
+          "language" : "undefined",
+          "value" : "http://purl.org/roh/project-classification#ProjectClassification",
+          "type" : "iri"
+        } ]
+      },
+      "labels" : {
+        "IRI-based" : "SubprogramaEstatalIncorporacion"
+      }
+    }, {
+      "iri" : "http://purl.org/roh/project-classification#PromocionTalento",
+      "baseIri" : "http://purl.org/roh/project-classification",
+      "annotations" : {
+        "inScheme" : [ {
+          "identifier" : "inScheme",
+          "language" : "undefined",
+          "value" : "http://purl.org/roh/project-classification#ProjectClassification",
+          "type" : "iri"
+        } ]
+      },
+      "labels" : {
+        "IRI-based" : "PromocionTalento"
+      }
+    }, {
+      "iri" : "http://purl.org/roh/project-classification#PlanEstatal2013-2016",
+      "baseIri" : "http://purl.org/roh/project-classification",
+      "annotations" : {
+        "inScheme" : [ {
+          "identifier" : "inScheme",
+          "language" : "undefined",
+          "value" : "http://purl.org/roh/project-classification#ProjectClassification",
+          "type" : "iri"
+        } ]
+      },
+      "labels" : {
+        "IRI-based" : "PlanEstatal2013-2016"
+      }
+    }, {
+      "iri" : "http://purl.org/roh/project-classification#SocietalChallenges",
+      "baseIri" : "http://purl.org/roh/project-classification",
+      "annotations" : {
+        "inScheme" : [ {
+          "identifier" : "inScheme",
+          "language" : "undefined",
+          "value" : "http://purl.org/roh/project-classification#ProjectClassification",
+          "type" : "iri"
+        } ]
+      },
+      "labels" : {
+        "IRI-based" : "SocietalChallenges"
+      }
+    }, {
+      "iri" : "http://purl.org/roh/project-classification#SC2",
+      "baseIri" : "http://purl.org/roh/project-classification",
+      "annotations" : {
+        "inScheme" : [ {
+          "identifier" : "inScheme",
+          "language" : "undefined",
+          "value" : "http://purl.org/roh/project-classification#ProjectClassification",
+          "type" : "iri"
+        } ]
+      },
+      "labels" : {
+        "IRI-based" : "SC2"
+      }
+    }, {
+      "iri" : "http://purl.org/roh/project-classification#SC1",
+      "baseIri" : "http://purl.org/roh/project-classification",
+      "annotations" : {
+        "inScheme" : [ {
+          "identifier" : "inScheme",
+          "language" : "undefined",
+          "value" : "http://purl.org/roh/project-classification#ProjectClassification",
+          "type" : "iri"
+        } ]
+      },
+      "labels" : {
+        "IRI-based" : "SC1"
+      }
+    }, {
+      "iri" : "http://purl.org/roh/project-classification#GeneracionConocimiento",
+      "baseIri" : "http://purl.org/roh/project-classification",
+      "annotations" : {
+        "inScheme" : [ {
+          "identifier" : "inScheme",
+          "language" : "undefined",
+          "value" : "http://purl.org/roh/project-classification#ProjectClassification",
+          "type" : "iri"
+        } ]
+      },
+      "labels" : {
+        "IRI-based" : "GeneracionConocimiento",
+        "en" : "Knowledge Generation",
+        "es" : "Generación de Conocimiento"
+      }
+    }, {
+      "iri" : "http://purl.org/roh/project-classification#International",
+      "baseIri" : "http://purl.org/roh/project-classification",
+      "annotations" : {
+        "inScheme" : [ {
+          "identifier" : "inScheme",
+          "language" : "undefined",
+          "value" : "http://purl.org/roh/project-classification#ProjectClassification",
+          "type" : "iri"
+        } ]
+      },
+      "labels" : {
+        "IRI-based" : "International"
+      }
+    }, {
+      "iri" : "http://purl.org/roh/project-classification#SubprogramaGeneracionConocimiento",
+      "baseIri" : "http://purl.org/roh/project-classification",
+      "annotations" : {
+        "inScheme" : [ {
+          "identifier" : "inScheme",
+          "language" : "undefined",
+          "value" : "http://purl.org/roh/project-classification#ProjectClassification",
+          "type" : "iri"
+        } ]
+      },
+      "labels" : {
+        "IRI-based" : "SubprogramaGeneracionConocimiento"
+      }
+    }, {
+      "iri" : "http://purl.org/roh/project-classification#SubprogramaEstatalFormacion",
+      "baseIri" : "http://purl.org/roh/project-classification",
+      "annotations" : {
+        "inScheme" : [ {
+          "identifier" : "inScheme",
+          "language" : "undefined",
+          "value" : "http://purl.org/roh/project-classification#ProjectClassification",
+          "type" : "iri"
+        } ]
+      },
+      "labels" : {
+        "IRI-based" : "SubprogramaEstatalFormacion"
+      }
+    }, {
+      "iri" : "http://purl.org/roh/project-classification#European",
+      "baseIri" : "http://purl.org/roh/project-classification",
+      "annotations" : {
+        "inScheme" : [ {
+          "identifier" : "inScheme",
+          "language" : "undefined",
+          "value" : "http://purl.org/roh/project-classification#ProjectClassification",
+          "type" : "iri"
+        } ]
+      },
+      "labels" : {
+        "IRI-based" : "European"
+      }
+    }, {
+      "iri" : "http://purl.org/roh/project-classification#ExcellentScience",
+      "baseIri" : "http://purl.org/roh/project-classification",
+      "annotations" : {
+        "inScheme" : [ {
+          "identifier" : "inScheme",
+          "language" : "undefined",
+          "value" : "http://purl.org/roh/project-classification#ProjectClassification",
+          "type" : "iri"
+        } ]
+      },
+      "labels" : {
+        "IRI-based" : "ExcellentScience"
+      }
+    }, {
+      "iri" : "http://purl.org/roh/project-classification#RegionsofEurope",
+      "baseIri" : "http://purl.org/roh/project-classification",
+      "annotations" : {
+        "inScheme" : [ {
+          "identifier" : "inScheme",
+          "language" : "undefined",
+          "value" : "http://purl.org/roh/project-classification#ProjectClassification",
+          "type" : "iri"
+        } ]
+      },
+      "labels" : {
+        "IRI-based" : "RegionsofEurope"
+      }
+    }, {
+      "iri" : "http://purl.org/roh/project-classification#SubprogramaFortalecimientoInstitucional",
+      "baseIri" : "http://purl.org/roh/project-classification",
+      "annotations" : {
+        "inScheme" : [ {
+          "identifier" : "inScheme",
+          "language" : "undefined",
+          "value" : "http://purl.org/roh/project-classification#ProjectClassification",
+          "type" : "iri"
+        } ]
+      },
+      "labels" : {
+        "IRI-based" : "SubprogramaFortalecimientoInstitucional"
+      }
+    }, {
+      "iri" : "http://purl.org/roh/project-classification#Movilidad",
+      "baseIri" : "http://purl.org/roh/project-classification",
+      "annotations" : {
+        "inScheme" : [ {
+          "identifier" : "inScheme",
+          "language" : "undefined",
+          "value" : "http://purl.org/roh/project-classification#ProjectClassification",
+          "type" : "iri"
+        } ]
+      },
+      "labels" : {
+        "IRI-based" : "Movilidad"
+      }
+    }, {
+      "iri" : "http://purl.org/roh/project-classification#Sudoe",
+      "baseIri" : "http://purl.org/roh/project-classification",
+      "annotations" : {
+        "inScheme" : [ {
+          "identifier" : "inScheme",
+          "language" : "undefined",
+          "value" : "http://purl.org/roh/project-classification#ProjectClassification",
+          "type" : "iri"
+        } ]
+      },
+      "labels" : {
+        "IRI-based" : "Sudoe"
+      }
+    }, {
+      "iri" : "http://purl.org/roh/project-classification#Horizon2020",
+      "baseIri" : "http://purl.org/roh/project-classification",
+      "annotations" : {
+        "inScheme" : [ {
+          "identifier" : "inScheme",
+          "language" : "undefined",
+          "value" : "http://purl.org/roh/project-classification#ProjectClassification",
+          "type" : "iri"
+        } ]
+      },
+      "labels" : {
+        "IRI-based" : "Horizon2020"
+      }
+    }, {
+      "iri" : "http://purl.org/roh/project-classification#PlanEstatal2017-2020",
+      "baseIri" : "http://purl.org/roh/project-classification",
+      "annotations" : {
+        "inScheme" : [ {
+          "identifier" : "inScheme",
+          "language" : "undefined",
+          "value" : "http://purl.org/roh/project-classification#ProjectClassification",
+          "type" : "iri"
+        } ]
+      },
+      "labels" : {
+        "IRI-based" : "PlanEstatal2017-2020"
+      }
+    } ],
+    "attributes" : [ "external" ],
+    "id" : "8"
+  }, {
+    "iri" : "http://purl.org/roh#ProjectClassification",
+    "baseIri" : "http://purl.org/roh",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "ProjectClassification",
+      "en" : "Project Classification",
+      "es" : "Clasificación de Proyecto"
+    },
+    "individuals" : [ {
+      "iri" : "http://purl.org/roh/project-classification#ProjectClassification",
+      "baseIri" : "http://purl.org/roh/project-classification",
+      "labels" : {
+        "IRI-based" : "ProjectClassification"
+      }
+    } ],
+    "attributes" : [ "external" ],
+    "id" : "1",
+    "superClasses" : [ "0" ]
+  }, {
+    "iri" : "http://www.w3.org/2002/07/owl#Thing",
+    "baseIri" : "http://owl2vowl.de",
+    "id" : "3",
+    "label" : {
+      "undefined" : "Thing"
+    }
+  } ],
+  "property" : [ {
+    "id" : "2",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "7",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "10",
+    "type" : "owl:disjointWith"
+  }, {
+    "id" : "11",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "4",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "12",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "5",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "13",
+    "type" : "owl:disjointWith"
+  }, {
+    "id" : "14",
+    "type" : "owl:disjointWith"
+  }, {
+    "id" : "9",
+    "type" : "owl:objectProperty"
+  } ],
+  "propertyAttribute" : [ {
+    "iri" : "http://www.w3.org/2004/02/skos/core#broader",
+    "inverse" : "4",
+    "baseIri" : "http://www.w3.org/2004/02/skos/core",
+    "range" : "3",
+    "annotations" : {
+      "isDefinedBy" : [ {
+        "identifier" : "isDefinedBy",
+        "language" : "undefined",
+        "value" : "http://www.w3.org/2004/02/skos/core",
+        "type" : "iri"
+      } ],
+      "definition" : [ {
+        "identifier" : "definition",
+        "language" : "en",
+        "value" : "Relates a concept to a concept that is more general in meaning.",
+        "type" : "label"
+      } ],
+      "scopeNote" : [ {
+        "identifier" : "scopeNote",
+        "language" : "en",
+        "value" : "By convention, skos:broader is only used to assert an immediate (i.e. direct) hierarchical link between two conceptual resources.",
+        "type" : "label"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "broader",
+      "en" : "has broader"
+    },
+    "superproperty" : [ "5" ],
+    "domain" : "3",
+    "comment" : {
+      "en" : "Broader concepts are typically rendered as parents in a concept hierarchy (tree)."
+    },
+    "attributes" : [ "object", "external" ],
+    "id" : "2"
+  }, {
+    "iri" : "http://www.w3.org/2004/02/skos/core#hasTopConcept",
+    "inverse" : "9",
+    "baseIri" : "http://www.w3.org/2004/02/skos/core",
+    "range" : "8",
+    "annotations" : {
+      "isDefinedBy" : [ {
+        "identifier" : "isDefinedBy",
+        "language" : "undefined",
+        "value" : "http://www.w3.org/2004/02/skos/core",
+        "type" : "iri"
+      } ],
+      "definition" : [ {
+        "identifier" : "definition",
+        "language" : "en",
+        "value" : "Relates, by convention, a concept scheme to a concept which is topmost in the broader/narrower concept hierarchies for that scheme, providing an entry point to these hierarchies.",
+        "type" : "label"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "hasTopConcept",
+      "en" : "has top concept"
+    },
+    "domain" : "0",
+    "attributes" : [ "object", "external" ],
+    "id" : "7"
+  }, {
+    "range" : "0",
+    "domain" : "8",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "10"
+  }, {
+    "range" : "0",
+    "domain" : "1",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "11"
+  }, {
+    "iri" : "http://www.w3.org/2004/02/skos/core#narrower",
+    "baseIri" : "http://www.w3.org/2004/02/skos/core",
+    "range" : "3",
+    "annotations" : {
+      "isDefinedBy" : [ {
+        "identifier" : "isDefinedBy",
+        "language" : "undefined",
+        "value" : "http://www.w3.org/2004/02/skos/core",
+        "type" : "iri"
+      } ],
+      "definition" : [ {
+        "identifier" : "definition",
+        "language" : "en",
+        "value" : "Relates a concept to a concept that is more specific in meaning.",
+        "type" : "label"
+      } ],
+      "scopeNote" : [ {
+        "identifier" : "scopeNote",
+        "language" : "en",
+        "value" : "By convention, skos:broader is only used to assert an immediate (i.e. direct) hierarchical link between two conceptual resources.",
+        "type" : "label"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "narrower",
+      "en" : "has narrower"
+    },
+    "superproperty" : [ "12" ],
+    "domain" : "3",
+    "comment" : {
+      "en" : "Narrower concepts are typically rendered as children in a concept hierarchy (tree)."
+    },
+    "attributes" : [ "object", "external" ],
+    "id" : "4"
+  }, {
+    "iri" : "http://www.w3.org/2004/02/skos/core#narrowerTransitive",
+    "baseIri" : "http://www.w3.org/2004/02/skos/core",
+    "range" : "3",
+    "label" : {
+      "IRI-based" : "narrowerTransitive"
+    },
+    "domain" : "3",
+    "subproperty" : [ "4" ],
+    "attributes" : [ "object", "external" ],
+    "id" : "12"
+  }, {
+    "iri" : "http://www.w3.org/2004/02/skos/core#broaderTransitive",
+    "baseIri" : "http://www.w3.org/2004/02/skos/core",
+    "range" : "3",
+    "label" : {
+      "IRI-based" : "broaderTransitive"
+    },
+    "domain" : "3",
+    "subproperty" : [ "2" ],
+    "attributes" : [ "object", "external" ],
+    "id" : "5"
+  }, {
+    "range" : "8",
+    "domain" : "6",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "13"
+  }, {
+    "range" : "0",
+    "domain" : "6",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "14"
+  }, {
+    "iri" : "http://www.w3.org/2004/02/skos/core#topConceptOf",
+    "baseIri" : "http://www.w3.org/2004/02/skos/core",
+    "range" : "3",
+    "label" : {
+      "IRI-based" : "topConceptOf"
+    },
+    "domain" : "3",
+    "attributes" : [ "object", "external" ],
+    "id" : "9"
+  } ]
+}

@@ -1,0 +1,95 @@
+@prefix foaf:    <http://xmlns.com/foaf/0.1/#> .
+@prefix asio:  <http://purl.org/hercules/asio/core#> .
+@prefix euCountry:  <http://publications.europa.eu/resource/authority/country/> .
+@prefix my:      <http://weso.es/tablines/project/HRuniversitiesPT/resource/> .
+@prefix project:  <http://weso.es/tablines/project/HRuniversitiesPT/> .
+@prefix rdfs:    <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix dcat:    <http://www.w3.org/ns/dcat#> .
+@prefix asioModules:  <http://purl.org/asio/modules#> .
+@prefix dct:     <http://purl.org/dc/terms/> .
+@prefix owl:     <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:     <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix skos:    <http://www.w3.org/2004/02/skos/core#> .
+@prefix unescothes:    <http://skos.um.es/unescothes/> .
+
+asioModules:PT_UNIVERSITY_HR_PTPEM
+      a       owl:NamedIndividual , asio:Role , skos:Concept ;
+      rdfs:label "Professor emérito"@pt ;
+      asio:country euCountry:PRT ;
+      asio:hasCode asioModules:PT_UNIVERSITY_HR_CODE_PTPEM ;
+      skos:inScheme asioModules:PTUniversityHumanResourcesList ;
+      skos:notation "PTPEM" ;
+      skos:closeMatch unescothes:C00015 ;
+      skos:closeMatch unescothes:C03965 ;
+      skos:prefLabel "Profesor emérito"@es , "Profesor emérito"@gl , "Profesor eméritu"@ast , "Professor emèrit"@ca , "Professor emérito"@pt .
+
+asioModules:PT_UNIVERSITY_HR_PTPC
+      a       owl:NamedIndividual , asio:Role , skos:Concept ;
+      rdfs:label "Professor catedrático"@pt ;
+      asio:country euCountry:PRT ;
+      asio:hasCode asioModules:PT_UNIVERSITY_HR_CODE_PTPC ;
+      skos:inScheme asioModules:PTUniversityHumanResourcesList ;
+      skos:notation "PTPC" ;
+      skos:closeMatch unescothes:C00015 ;
+      skos:closeMatch unescothes:C03965 ;
+      skos:prefLabel "Professor catedràtic"@ca , "Profesor catedrático"@es , "Profesor catedrático"@gl , "Professor catedrático"@pt , "Profesor catedráticu"@ast .
+
+asioModules:PTUniversityHumanResourcesList
+      a       asioModules:UniversityHumanResources ;
+      rdfs:label "Human resources of the universities from Portugal"@en , "Recursos humans de les universitats de Portugal"@ca , "Recursos humanos de les universidaes de Portugal"@ast , "Resources humains des universités de Portugal"@fr , "Recursos humanos de las universidades de Portugal"@es , "Recursos humanos das universidades de Portugal"@gl , "Recursos humanos das universidades de Portugal"@pt ;
+      skos:prefLabel "Human resources of the universities from Portugal"@en , "Recursos humans de les universitats de Portugal"@ca , "Recursos humanos de les universidaes de Portugal"@ast , "Resources humains des universités de Portugal"@fr , "Recursos humanos de las universidades de Portugal"@es , "Recursos humanos das universidades de Portugal"@gl , "Recursos humanos das universidades de Portugal"@pt .
+
+asioModules:PT_UNIVERSITY_HR_PTPAU
+      a       owl:NamedIndividual , asio:Role , skos:Concept ;
+      rdfs:label "Professor auxiliar"@pt ;
+      asio:country euCountry:PRT ;
+      asio:hasCode asioModules:PT_UNIVERSITY_HR_CODE_PTPAU ;
+      skos:inScheme asioModules:PTUniversityHumanResourcesList ;
+      skos:notation "PTPAU" ;
+      skos:closeMatch unescothes:C00015 ;
+      skos:closeMatch unescothes:C03965 ;
+      skos:prefLabel "Profesor auxiliar"@gl , "Profesor auxiliar"@es , "Profesor auxiliar"@ast , "Professor auxiliar"@ca , "Professor auxiliar"@pt .
+
+asioModules:PT_UNIVERSITY_HR_CODE_PTPAU
+      a       skos:Concept ;
+      rdfs:label "PTPAU" ;
+      asio:codeOf asioModules:PT_UNIVERSITY_HR_PTPAU ;
+      skos:inScheme asioModules:PTUniversityHumanResourcesCodesList ;
+      skos:prefLabel "PTPAU" .
+
+asioModules:PTUniversityHumanResourcesCodesList
+      a       asioModules:UniversityHumanResources ;
+      rdfs:label "Codes des resources humains des universités de Portugal"@fr , "Códigos de los recursos humanos de les universidaes de Portugal"@ast , "Codis dels recursos humans de les universitats de Portugal"@ca , "Códigos de los recursos humanos de las universidades de Portugal"@es , "Códigos dos recursos humanos das universidades de Portugal"@pt , "Códigos dos recursos humanos das universidades de Portugal"@gl , "Codes for the human resources of the universities from Portugal"@en ;
+      skos:prefLabel "Codes des resources humains des universités de Portugal"@fr , "Códigos de los recursos humanos de les universidaes de Portugal"@ast , "Codis dels recursos humans de les universitats de Portugal"@ca , "Códigos de los recursos humanos de las universidades de España"@es , "Códigos dos recursos humanos das universidades de Portugal"@pt , "Códigos dos recursos humanos das universidades de Portugal"@gl , "Codes for the human resources of the universities from Portugal"@en .
+
+asioModules:PT_UNIVERSITY_HR_CODE_PTPAS
+      a       skos:Concept ;
+      rdfs:label "PTPAS" ;
+      asio:codeOf asioModules:PT_UNIVERSITY_HR_PTPAS ;
+      skos:inScheme asioModules:PTUniversityHumanResourcesCodesList ;
+      skos:prefLabel "PTPAS" .
+
+asioModules:PT_UNIVERSITY_HR_CODE_PTPEM
+      a       skos:Concept ;
+      rdfs:label "PTPEM" ;
+      asio:codeOf asioModules:PT_UNIVERSITY_HR_PTPEM ;
+      skos:inScheme asioModules:PTUniversityHumanResourcesCodesList ;
+      skos:prefLabel "PTPEM" .
+
+asioModules:PT_UNIVERSITY_HR_PTPAS
+      a       owl:NamedIndividual , asio:Role , skos:Concept ;
+      rdfs:label "Professor associado"@pt ;
+      asio:country euCountry:PRT ;
+      asio:hasCode asioModules:PT_UNIVERSITY_HR_CODE_PTPAS ;
+      skos:inScheme asioModules:PTUniversityHumanResourcesList ;
+      skos:notation "PTPAS" ;
+      skos:closeMatch unescothes:C00015 ;
+      skos:closeMatch unescothes:C03965 ;
+      skos:prefLabel "Profesor asociáu"@ast , "Professor associado"@pt , "Professor associat"@ca , "Irakasle elkartua"@eu , "Profesor asociado"@es , "Profesor asociado"@gl .
+
+asioModules:PT_UNIVERSITY_HR_CODE_PTPC
+      a       skos:Concept ;
+      rdfs:label "PTPC" ;
+      asio:codeOf asioModules:PT_UNIVERSITY_HR_PTPC ;
+      skos:inScheme asioModules:PTUniversityHumanResourcesCodesList ;
+      skos:prefLabel "PTPC" .

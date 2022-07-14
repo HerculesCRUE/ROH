@@ -1,0 +1,1291 @@
+@prefix : <http://purl.org/roh/mirror/vcard#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@base <http://purl.org/roh/mirror/vcard> .
+
+<http://purl.org/roh/mirror/vcard> rdf:type owl:Ontology ;
+                                    rdfs:comment "Ontology for vCard based on RFC6350"@en ;
+                                    rdfs:label "Ontology for vCard"@en ;
+                                    owl:versionInfo "Final"@en .
+
+#################################################################
+#    Datatypes
+#################################################################
+
+###  http://www.w3.org/2001/XMLSchema#gYear
+xsd:gYear rdf:type rdfs:Datatype .
+
+
+#################################################################
+#    Object Properties
+#################################################################
+
+###  http://purl.org/roh/mirror/vcard#adr
+:adr rdf:type owl:ObjectProperty ;
+     owl:equivalentProperty :hasAddress ;
+     rdfs:comment "This object property has been mapped"@en ;
+     rdfs:isDefinedBy <http://purl.org/roh/mirror/vcard> ;
+     rdfs:label "address"@en .
+
+
+###  http://purl.org/roh/mirror/vcard#agent
+:agent rdf:type owl:ObjectProperty ;
+       rdfs:comment "This object property has been deprecated"@en ;
+       rdfs:isDefinedBy <http://purl.org/roh/mirror/vcard> ;
+       rdfs:label "agent"@en ;
+       owl:deprecated "true"^^xsd:boolean .
+
+
+###  http://purl.org/roh/mirror/vcard#email
+:email rdf:type owl:ObjectProperty ;
+       owl:equivalentProperty :hasEmail ;
+       rdfs:comment "This object property has been mapped"@en ;
+       rdfs:isDefinedBy <http://purl.org/roh/mirror/vcard> ;
+       rdfs:label "email"@en .
+
+
+###  http://purl.org/roh/mirror/vcard#geo
+:geo rdf:type owl:ObjectProperty ;
+     owl:equivalentProperty :hasGeo ;
+     rdfs:comment "This object property has been mapped"@en ;
+     rdfs:isDefinedBy <http://purl.org/roh/mirror/vcard> ;
+     rdfs:label "geo"@en .
+
+
+###  http://purl.org/roh/mirror/vcard#hasAdditionalName
+:hasAdditionalName rdf:type owl:ObjectProperty ;
+                   rdfs:comment "Used to support property parameters for the additional name data property"@en ;
+                   rdfs:isDefinedBy <http://purl.org/roh/mirror/vcard> ;
+                   rdfs:label "has additional name"@en .
+
+
+###  http://purl.org/roh/mirror/vcard#hasAddress
+:hasAddress rdf:type owl:ObjectProperty ;
+            rdfs:range :Address ;
+            rdfs:comment "To specify the components of the delivery address for the object"@en ;
+            rdfs:isDefinedBy <http://purl.org/roh/mirror/vcard> ;
+            rdfs:label "has address"@en .
+
+
+###  http://purl.org/roh/mirror/vcard#hasCalendarBusy
+:hasCalendarBusy rdf:type owl:ObjectProperty ;
+                 rdfs:comment "To specify the busy time associated with the object. (Was called FBURL in RFC6350)"@en ;
+                 rdfs:isDefinedBy <http://purl.org/roh/mirror/vcard> ;
+                 rdfs:label "has calendar busy"@en .
+
+
+###  http://purl.org/roh/mirror/vcard#hasCalendarLink
+:hasCalendarLink rdf:type owl:ObjectProperty ;
+                 rdfs:comment "To specify the calendar associated with the object. (Was called CALURI in RFC6350)"@en ;
+                 rdfs:isDefinedBy <http://purl.org/roh/mirror/vcard> ;
+                 rdfs:label "has calendar link"@en .
+
+
+###  http://purl.org/roh/mirror/vcard#hasCalendarRequest
+:hasCalendarRequest rdf:type owl:ObjectProperty ;
+                    rdfs:comment "To specify the calendar user address to which a scheduling request be sent for the object. (Was called CALADRURI in RFC6350)"@en ;
+                    rdfs:isDefinedBy <http://purl.org/roh/mirror/vcard> ;
+                    rdfs:label "has calendar request"@en .
+
+
+###  http://purl.org/roh/mirror/vcard#hasCategory
+:hasCategory rdf:type owl:ObjectProperty ;
+             rdfs:comment "Used to support property parameters for the category data property"@en ;
+             rdfs:isDefinedBy <http://purl.org/roh/mirror/vcard> ;
+             rdfs:label "has category"@en .
+
+
+###  http://purl.org/roh/mirror/vcard#hasCountryName
+:hasCountryName rdf:type owl:ObjectProperty ;
+                rdfs:comment "Used to support property parameters for the country name data property"@en ;
+                rdfs:isDefinedBy <http://purl.org/roh/mirror/vcard> ;
+                rdfs:label "has country name"@en .
+
+
+###  http://purl.org/roh/mirror/vcard#hasEmail
+:hasEmail rdf:type owl:ObjectProperty ;
+          rdfs:range :Email ;
+          rdfs:comment "To specify the electronic mail address for communication with the object"@en ;
+          rdfs:isDefinedBy <http://purl.org/roh/mirror/vcard> ;
+          rdfs:label "has email"@en .
+
+
+###  http://purl.org/roh/mirror/vcard#hasFN
+:hasFN rdf:type owl:ObjectProperty ;
+       rdfs:comment "Used to support property parameters for the formatted name data property"@en ;
+       rdfs:isDefinedBy <http://purl.org/roh/mirror/vcard> ;
+       rdfs:label "has formatted name"@en .
+
+
+###  http://purl.org/roh/mirror/vcard#hasFamilyName
+:hasFamilyName rdf:type owl:ObjectProperty ;
+               rdfs:comment "Used to support property parameters for the family name data property"@en ;
+               rdfs:isDefinedBy <http://purl.org/roh/mirror/vcard> ;
+               rdfs:label "has family name"@en .
+
+
+###  http://purl.org/roh/mirror/vcard#hasGender
+:hasGender rdf:type owl:ObjectProperty ;
+           rdfs:comment "To specify  the sex or gender identity of the object. URIs are recommended to enable interoperable sex and gender codes to be used."@en ;
+           rdfs:isDefinedBy <http://purl.org/roh/mirror/vcard> ;
+           rdfs:label "has gender"@en .
+
+
+###  http://purl.org/roh/mirror/vcard#hasGeo
+:hasGeo rdf:type owl:ObjectProperty ;
+        rdfs:comment "To specify information related to the global positioning of the object. May also be used as a property parameter."@en ;
+        rdfs:isDefinedBy <http://purl.org/roh/mirror/vcard> ;
+        rdfs:label "has geo"@en .
+
+
+###  http://purl.org/roh/mirror/vcard#hasGivenName
+:hasGivenName rdf:type owl:ObjectProperty ;
+              rdfs:comment "Used to support property parameters for the given name data property"@en ;
+              rdfs:isDefinedBy <http://purl.org/roh/mirror/vcard> ;
+              rdfs:label "has given name"@en .
+
+
+###  http://purl.org/roh/mirror/vcard#hasHonorificPrefix
+:hasHonorificPrefix rdf:type owl:ObjectProperty ;
+                    rdfs:comment "Used to support property parameters for the honorific prefix data property"@en ;
+                    rdfs:isDefinedBy <http://purl.org/roh/mirror/vcard> ;
+                    rdfs:label "has honorific prefix"@en .
+
+
+###  http://purl.org/roh/mirror/vcard#hasHonorificSuffix
+:hasHonorificSuffix rdf:type owl:ObjectProperty ;
+                    rdfs:comment "Used to support property parameters for the honorific suffix data property"@en ;
+                    rdfs:isDefinedBy <http://purl.org/roh/mirror/vcard> ;
+                    rdfs:label "has honorific suffix"@en .
+
+
+###  http://purl.org/roh/mirror/vcard#hasInstantMessage
+:hasInstantMessage rdf:type owl:ObjectProperty ;
+                   rdfs:comment "To specify the instant messaging and presence protocol communications with the object. (Was called IMPP in RFC6350)"@en ;
+                   rdfs:isDefinedBy <http://purl.org/roh/mirror/vcard> ;
+                   rdfs:label "has messaging"@en .
+
+
+###  http://purl.org/roh/mirror/vcard#hasKey
+:hasKey rdf:type owl:ObjectProperty ;
+        owl:equivalentProperty :key ;
+        rdfs:comment "To specify a public key or authentication certificate associated with the object"@en ;
+        rdfs:isDefinedBy <http://purl.org/roh/mirror/vcard> ;
+        rdfs:label "has key"@en .
+
+
+###  http://purl.org/roh/mirror/vcard#hasLanguage
+:hasLanguage rdf:type owl:ObjectProperty ;
+             rdfs:comment "Used to support property parameters for the language data property"@en ;
+             rdfs:isDefinedBy <http://purl.org/roh/mirror/vcard> ;
+             rdfs:label "has language"@en .
+
+
+###  http://purl.org/roh/mirror/vcard#hasLocality
+:hasLocality rdf:type owl:ObjectProperty ;
+             rdfs:comment "Used to support property parameters for the locality data property"@en ;
+             rdfs:isDefinedBy <http://purl.org/roh/mirror/vcard> ;
+             rdfs:label "has locality"@en .
+
+
+###  http://purl.org/roh/mirror/vcard#hasLogo
+:hasLogo rdf:type owl:ObjectProperty ;
+         owl:equivalentProperty :logo ;
+         rdfs:comment "To specify a graphic image of a logo associated with the object "@en ;
+         rdfs:isDefinedBy <http://purl.org/roh/mirror/vcard> ;
+         rdfs:label "has logo"@en .
+
+
+###  http://purl.org/roh/mirror/vcard#hasMember
+:hasMember rdf:type owl:ObjectProperty ;
+           rdfs:domain :Group ;
+           rdfs:range :Kind ;
+           rdfs:comment "To include a member in the group this object represents. (This property can only be used by Group individuals)"@en ;
+           rdfs:isDefinedBy <http://purl.org/roh/mirror/vcard> ;
+           rdfs:label "has member"@en .
+
+
+###  http://purl.org/roh/mirror/vcard#hasName
+:hasName rdf:type owl:ObjectProperty ;
+         owl:equivalentProperty :n ;
+         rdfs:range :Name ;
+         rdfs:comment "To specify the components of the name of the object"@en ;
+         rdfs:isDefinedBy <http://purl.org/roh/mirror/vcard> ;
+         rdfs:label "has name"@en .
+
+
+###  http://purl.org/roh/mirror/vcard#hasNickname
+:hasNickname rdf:type owl:ObjectProperty ;
+             rdfs:comment "Used to support property parameters for the nickname data property"@en ;
+             rdfs:isDefinedBy <http://purl.org/roh/mirror/vcard> ;
+             rdfs:label "has nickname"@en ;
+             rdfs:seeAlso :nickname .
+
+
+###  http://purl.org/roh/mirror/vcard#hasNote
+:hasNote rdf:type owl:ObjectProperty ;
+         rdfs:comment "Used to support property parameters for the note data property"@en ;
+         rdfs:isDefinedBy <http://purl.org/roh/mirror/vcard> ;
+         rdfs:label "has note"@en .
+
+
+###  http://purl.org/roh/mirror/vcard#hasOrganizationName
+:hasOrganizationName rdf:type owl:ObjectProperty ;
+                     rdfs:comment "Used to support property parameters for the organization name data property"@en ;
+                     rdfs:isDefinedBy <http://purl.org/roh/mirror/vcard> ;
+                     rdfs:label "has organization name"@en .
+
+
+###  http://purl.org/roh/mirror/vcard#hasOrganizationUnit
+:hasOrganizationUnit rdf:type owl:ObjectProperty ;
+                     rdfs:comment "Used to support property parameters for the organization unit name data property"@en ;
+                     rdfs:isDefinedBy <http://purl.org/roh/mirror/vcard> ;
+                     rdfs:label "has organization unit name"@en .
+
+
+###  http://purl.org/roh/mirror/vcard#hasPhoto
+:hasPhoto rdf:type owl:ObjectProperty ;
+          owl:equivalentProperty :photo ;
+          rdfs:comment "To specify an image or photograph information that annotates some aspect of the object"@en ;
+          rdfs:isDefinedBy <http://purl.org/roh/mirror/vcard> ;
+          rdfs:label "has photo"@en .
+
+
+###  http://purl.org/roh/mirror/vcard#hasPostalCode
+:hasPostalCode rdf:type owl:ObjectProperty ;
+               rdfs:comment "Used to support property parameters for the postal code data property"@en ;
+               rdfs:isDefinedBy <http://purl.org/roh/mirror/vcard> ;
+               rdfs:label "has postal code"@en .
+
+
+###  http://purl.org/roh/mirror/vcard#hasRegion
+:hasRegion rdf:type owl:ObjectProperty ;
+           rdfs:comment "Used to support property parameters for the region data property"@en ;
+           rdfs:isDefinedBy <http://purl.org/roh/mirror/vcard> ;
+           rdfs:label "has region"@en .
+
+
+###  http://purl.org/roh/mirror/vcard#hasRelated
+:hasRelated rdf:type owl:ObjectProperty ;
+            rdfs:comment "To specify a relationship between another entity and the entity represented by this object"@en ;
+            rdfs:isDefinedBy <http://purl.org/roh/mirror/vcard> ;
+            rdfs:label "has related"@en .
+
+
+###  http://purl.org/roh/mirror/vcard#hasRole
+:hasRole rdf:type owl:ObjectProperty ;
+         rdfs:comment "Used to support property parameters for the role data property"@en ;
+         rdfs:isDefinedBy <http://purl.org/roh/mirror/vcard> ;
+         rdfs:label "has role"@en .
+
+
+###  http://purl.org/roh/mirror/vcard#hasSound
+:hasSound rdf:type owl:ObjectProperty ;
+          owl:equivalentProperty :sound ;
+          rdfs:comment "To specify a digital sound content information that annotates some aspect of the object"@en ;
+          rdfs:isDefinedBy <http://purl.org/roh/mirror/vcard> ;
+          rdfs:label "has sound"@en .
+
+
+###  http://purl.org/roh/mirror/vcard#hasSource
+:hasSource rdf:type owl:ObjectProperty ;
+           rdfs:comment "To identify the source of directory information of the object"@en ;
+           rdfs:isDefinedBy <http://purl.org/roh/mirror/vcard> ;
+           rdfs:label "has source"@en .
+
+
+###  http://purl.org/roh/mirror/vcard#hasStreetAddress
+:hasStreetAddress rdf:type owl:ObjectProperty ;
+                  rdfs:comment "Used to support property parameters for the street address data property"@en ;
+                  rdfs:isDefinedBy <http://purl.org/roh/mirror/vcard> ;
+                  rdfs:label "has street address"@en .
+
+
+###  http://purl.org/roh/mirror/vcard#hasTelephone
+:hasTelephone rdf:type owl:ObjectProperty ;
+              owl:equivalentProperty :tel ;
+              rdfs:comment "To specify the telephone number for telephony communication with the object"@en ;
+              rdfs:isDefinedBy <http://purl.org/roh/mirror/vcard> ;
+              rdfs:label "has telephone"@en .
+
+
+###  http://purl.org/roh/mirror/vcard#hasTitle
+:hasTitle rdf:type owl:ObjectProperty ;
+          rdfs:comment "Used to support property parameters for the title data property"@en ;
+          rdfs:isDefinedBy <http://purl.org/roh/mirror/vcard> ;
+          rdfs:label "has title"@en .
+
+
+###  http://purl.org/roh/mirror/vcard#hasUID
+:hasUID rdf:type owl:ObjectProperty ;
+        rdfs:comment "To specify a value that represents a globally unique identifier corresponding to the object"@en ;
+        rdfs:isDefinedBy <http://purl.org/roh/mirror/vcard> ;
+        rdfs:label "has uid"@en .
+
+
+###  http://purl.org/roh/mirror/vcard#hasURL
+:hasURL rdf:type owl:ObjectProperty ;
+        owl:equivalentProperty :url ;
+        rdfs:comment "To specify a uniform resource locator associated with the object"@en ;
+        rdfs:isDefinedBy <http://purl.org/roh/mirror/vcard> ;
+        rdfs:label "has url"@en .
+
+
+###  http://purl.org/roh/mirror/vcard#hasValue
+:hasValue rdf:type owl:ObjectProperty ;
+          rdfs:comment "Used to indicate the resource value of an object property that requires property parameters"@en ;
+          rdfs:isDefinedBy <http://purl.org/roh/mirror/vcard> ;
+          rdfs:label "has value"@en .
+
+
+###  http://purl.org/roh/mirror/vcard#key
+:key rdf:type owl:ObjectProperty ;
+     rdfs:comment "This object property has been mapped"@en ;
+     rdfs:isDefinedBy <http://purl.org/roh/mirror/vcard> ;
+     rdfs:label "key"@en .
+
+
+###  http://purl.org/roh/mirror/vcard#logo
+:logo rdf:type owl:ObjectProperty ;
+      rdfs:comment "This object property has been mapped"@en ;
+      rdfs:isDefinedBy <http://purl.org/roh/mirror/vcard> ;
+      rdfs:label "logo"@en .
+
+
+###  http://purl.org/roh/mirror/vcard#n
+:n rdf:type owl:ObjectProperty ;
+   rdfs:comment "This object property has been mapped"@en ;
+   rdfs:isDefinedBy <http://purl.org/roh/mirror/vcard> ;
+   rdfs:label "name"@en .
+
+
+###  http://purl.org/roh/mirror/vcard#org
+:org rdf:type owl:ObjectProperty ;
+     rdfs:comment "This object property has been mapped. Use the organization-name data property."@en ;
+     rdfs:isDefinedBy <http://purl.org/roh/mirror/vcard> ;
+     rdfs:label "organization"@en .
+
+
+###  http://purl.org/roh/mirror/vcard#photo
+:photo rdf:type owl:ObjectProperty ;
+       rdfs:comment "This object property has been mapped"@en ;
+       rdfs:isDefinedBy <http://purl.org/roh/mirror/vcard> ;
+       rdfs:label "photo"@en .
+
+
+###  http://purl.org/roh/mirror/vcard#sound
+:sound rdf:type owl:ObjectProperty ;
+       rdfs:comment "This object property has been mapped"@en ;
+       rdfs:isDefinedBy <http://purl.org/roh/mirror/vcard> ;
+       rdfs:label "sound"@en .
+
+
+###  http://purl.org/roh/mirror/vcard#tel
+:tel rdf:type owl:ObjectProperty ;
+     rdfs:comment "This object property has been mapped"@en ;
+     rdfs:isDefinedBy <http://purl.org/roh/mirror/vcard> ;
+     rdfs:label "telephone"@en .
+
+
+###  http://purl.org/roh/mirror/vcard#url
+:url rdf:type owl:ObjectProperty ;
+     rdfs:comment "This object property has been mapped"@en ;
+     rdfs:isDefinedBy <http://purl.org/roh/mirror/vcard> ;
+     rdfs:label "url"@en .
+
+
+#################################################################
+#    Data properties
+#################################################################
+
+###  http://purl.org/roh/mirror/vcard#additional-name
+:additional-name rdf:type owl:DatatypeProperty ;
+                 rdfs:range xsd:string ;
+                 rdfs:comment "The additional name associated with the object"@en ;
+                 rdfs:isDefinedBy <http://purl.org/roh/mirror/vcard> ;
+                 rdfs:label "additional name"@en .
+
+
+###  http://purl.org/roh/mirror/vcard#anniversary
+:anniversary rdf:type owl:DatatypeProperty ;
+             rdfs:range [ rdf:type rdfs:Datatype ;
+                          owl:unionOf ( xsd:dateTime
+                                        xsd:gYear
+                                      )
+                        ] ;
+             rdfs:comment "The date of marriage, or equivalent, of the object"@en ;
+             rdfs:isDefinedBy <http://purl.org/roh/mirror/vcard> ;
+             rdfs:label "anniversary"@en .
+
+
+###  http://purl.org/roh/mirror/vcard#bday
+:bday rdf:type owl:DatatypeProperty ;
+      rdfs:range [ rdf:type rdfs:Datatype ;
+                   owl:unionOf ( xsd:dateTime
+                                 xsd:dateTimeStamp
+                                 xsd:gYear
+                               )
+                 ] ;
+      rdfs:comment "To specify the birth date of the object"@en ;
+      rdfs:isDefinedBy <http://purl.org/roh/mirror/vcard> ;
+      rdfs:label "birth date"@en .
+
+
+###  http://purl.org/roh/mirror/vcard#category
+:category rdf:type owl:DatatypeProperty ;
+          rdfs:range xsd:string ;
+          rdfs:comment "The category information about the object, also known as tags"@en ;
+          rdfs:isDefinedBy <http://purl.org/roh/mirror/vcard> ;
+          rdfs:label "category"@en .
+
+
+###  http://purl.org/roh/mirror/vcard#class
+:class rdf:type owl:DatatypeProperty ;
+       rdfs:comment "This data property has been deprecated"@en ;
+       rdfs:isDefinedBy <http://purl.org/roh/mirror/vcard> ;
+       rdfs:label "class"@en ;
+       owl:deprecated "true"^^xsd:boolean .
+
+
+###  http://purl.org/roh/mirror/vcard#country-name
+:country-name rdf:type owl:DatatypeProperty ;
+              rdfs:range xsd:string ;
+              rdfs:comment "The country name associated with the address of the object"@en ;
+              rdfs:isDefinedBy <http://purl.org/roh/mirror/vcard> ;
+              rdfs:label "country name"@en .
+
+
+###  http://purl.org/roh/mirror/vcard#extended-address
+:extended-address rdf:type owl:DatatypeProperty ;
+                  rdfs:comment "This data property has been deprecated"@en ;
+                  rdfs:isDefinedBy <http://purl.org/roh/mirror/vcard> ;
+                  rdfs:label "extended address"@en .
+
+
+###  http://purl.org/roh/mirror/vcard#family-name
+:family-name rdf:type owl:DatatypeProperty ;
+             rdfs:range xsd:string ;
+             rdfs:comment "The family name associated with the object"@en ;
+             rdfs:isDefinedBy <http://purl.org/roh/mirror/vcard> ;
+             rdfs:label "family name"@en .
+
+
+###  http://purl.org/roh/mirror/vcard#fn
+:fn rdf:type owl:DatatypeProperty ;
+    rdfs:range xsd:string ;
+    rdfs:comment "The formatted text corresponding to the name of the object"@en ;
+    rdfs:isDefinedBy <http://purl.org/roh/mirror/vcard> ;
+    rdfs:label "formatted name"@en .
+
+
+###  http://purl.org/roh/mirror/vcard#given-name
+:given-name rdf:type owl:DatatypeProperty ;
+            rdfs:range xsd:string ;
+            rdfs:comment "The given name associated with the object"@en ;
+            rdfs:isDefinedBy <http://purl.org/roh/mirror/vcard> ;
+            rdfs:label "given name"@en .
+
+
+###  http://purl.org/roh/mirror/vcard#honorific-prefix
+:honorific-prefix rdf:type owl:DatatypeProperty ;
+                  rdfs:range xsd:string ;
+                  rdfs:comment "The honorific prefix of the name associated with the object"@en ;
+                  rdfs:isDefinedBy <http://purl.org/roh/mirror/vcard> ;
+                  rdfs:label "honorific prefix"@en .
+
+
+###  http://purl.org/roh/mirror/vcard#honorific-suffix
+:honorific-suffix rdf:type owl:DatatypeProperty ;
+                  rdfs:range xsd:string ;
+                  rdfs:comment "The honorific suffix of the name associated with the object"@en ;
+                  rdfs:isDefinedBy <http://purl.org/roh/mirror/vcard> ;
+                  rdfs:label "honorific suffix"@en .
+
+
+###  http://purl.org/roh/mirror/vcard#label
+:label rdf:type owl:DatatypeProperty ;
+       rdfs:comment "This data property has been deprecated"@en ;
+       rdfs:isDefinedBy <http://purl.org/roh/mirror/vcard> ;
+       rdfs:label "label"@en ;
+       owl:deprecated "true"^^xsd:boolean .
+
+
+###  http://purl.org/roh/mirror/vcard#language
+:language rdf:type owl:DatatypeProperty ;
+          rdfs:comment "To specify the language that may be used for contacting the object. May also be used as a property parameter."@en ;
+          rdfs:isDefinedBy <http://purl.org/roh/mirror/vcard> ;
+          rdfs:label "language"@en .
+
+
+###  http://purl.org/roh/mirror/vcard#latitude
+:latitude rdf:type owl:DatatypeProperty ;
+          rdfs:comment "This data property has been deprecated. See hasGeo"@en ;
+          rdfs:isDefinedBy <http://purl.org/roh/mirror/vcard> ;
+          rdfs:label "latitude"@en ;
+          owl:deprecated "true"^^xsd:boolean .
+
+
+###  http://purl.org/roh/mirror/vcard#locality
+:locality rdf:type owl:DatatypeProperty ;
+          rdfs:range xsd:string ;
+          rdfs:comment "The locality (e.g. city or town) associated with the address of the object"@en ;
+          rdfs:isDefinedBy <http://purl.org/roh/mirror/vcard> ;
+          rdfs:label "locality"@en .
+
+
+###  http://purl.org/roh/mirror/vcard#longitude
+:longitude rdf:type owl:DatatypeProperty ;
+           rdfs:comment "This data property has been deprecated. See hasGeo"@en ;
+           rdfs:isDefinedBy <http://purl.org/roh/mirror/vcard> ;
+           rdfs:label "longitude"@en ;
+           owl:deprecated "true"^^xsd:boolean .
+
+
+###  http://purl.org/roh/mirror/vcard#mailer
+:mailer rdf:type owl:DatatypeProperty ;
+        rdfs:comment "This data property has been deprecated"@en ;
+        rdfs:isDefinedBy <http://purl.org/roh/mirror/vcard> ;
+        rdfs:label "mailer"@en ;
+        owl:deprecated "true"^^xsd:boolean .
+
+
+###  http://purl.org/roh/mirror/vcard#nickname
+:nickname rdf:type owl:DatatypeProperty ;
+          rdfs:range xsd:string ;
+          rdfs:comment "The nick name associated with the object"@en ;
+          rdfs:isDefinedBy <http://purl.org/roh/mirror/vcard> ;
+          rdfs:label "nickname"@en .
+
+
+###  http://purl.org/roh/mirror/vcard#note
+:note rdf:type owl:DatatypeProperty ;
+      rdfs:range xsd:string ;
+      rdfs:comment "A note associated with the object"@en ;
+      rdfs:isDefinedBy <http://purl.org/roh/mirror/vcard> ;
+      rdfs:label "note"@en .
+
+
+###  http://purl.org/roh/mirror/vcard#organization-name
+:organization-name rdf:type owl:DatatypeProperty ;
+                   rdfs:range xsd:string ;
+                   rdfs:comment "To specify the organizational name associated with the object"@en ;
+                   rdfs:isDefinedBy <http://purl.org/roh/mirror/vcard> ;
+                   rdfs:label "organization name"@en .
+
+
+###  http://purl.org/roh/mirror/vcard#organization-unit
+:organization-unit rdf:type owl:DatatypeProperty ;
+                   rdfs:subPropertyOf :organization-name ;
+                   rdfs:range xsd:string ;
+                   rdfs:comment "To specify the organizational unit name associated with the object"@en ;
+                   rdfs:isDefinedBy <http://purl.org/roh/mirror/vcard> ;
+                   rdfs:label "organizational unit name"@en .
+
+
+###  http://purl.org/roh/mirror/vcard#post-office-box
+:post-office-box rdf:type owl:DatatypeProperty ;
+                 rdfs:comment "This data property has been deprecated"@en ;
+                 rdfs:isDefinedBy <http://purl.org/roh/mirror/vcard> ;
+                 rdfs:label "post office box"@en ;
+                 owl:deprecated "true"^^xsd:boolean .
+
+
+###  http://purl.org/roh/mirror/vcard#postal-code
+:postal-code rdf:type owl:DatatypeProperty ;
+             rdfs:range xsd:string ;
+             rdfs:comment "The postal code associated with the address of the object"@en ;
+             rdfs:isDefinedBy <http://purl.org/roh/mirror/vcard> ;
+             rdfs:label "postal code"@en .
+
+
+###  http://purl.org/roh/mirror/vcard#prodid
+:prodid rdf:type owl:DatatypeProperty ;
+        rdfs:range xsd:string ;
+        rdfs:comment "To specify the identifier for the product that created the object"@en ;
+        rdfs:isDefinedBy <http://purl.org/roh/mirror/vcard> ;
+        rdfs:label "product id"@en .
+
+
+###  http://purl.org/roh/mirror/vcard#region
+:region rdf:type owl:DatatypeProperty ;
+        rdfs:range xsd:string ;
+        rdfs:comment "The region (e.g. state or province) associated with the address of the object"@en ;
+        rdfs:isDefinedBy <http://purl.org/roh/mirror/vcard> ;
+        rdfs:label "region"@en .
+
+
+###  http://purl.org/roh/mirror/vcard#rev
+:rev rdf:type owl:DatatypeProperty ;
+     rdfs:range xsd:dateTime ;
+     rdfs:comment "To specify revision information about the object"@en ;
+     rdfs:isDefinedBy <http://purl.org/roh/mirror/vcard> ;
+     rdfs:label "revision"@en .
+
+
+###  http://purl.org/roh/mirror/vcard#role
+:role rdf:type owl:DatatypeProperty ;
+      rdfs:range xsd:string ;
+      rdfs:comment "To specify the function or part played in a particular situation by the object"@en ;
+      rdfs:isDefinedBy <http://purl.org/roh/mirror/vcard> ;
+      rdfs:label "role"@en .
+
+
+###  http://purl.org/roh/mirror/vcard#sort-string
+:sort-string rdf:type owl:DatatypeProperty ;
+             rdfs:range xsd:string ;
+             rdfs:comment "To specify the string to be used for national-language-specific sorting. Used as a property parameter only."@en ;
+             rdfs:isDefinedBy <http://purl.org/roh/mirror/vcard> ;
+             rdfs:label "sort as"@en .
+
+
+###  http://purl.org/roh/mirror/vcard#street-address
+:street-address rdf:type owl:DatatypeProperty ;
+                rdfs:range xsd:string ;
+                rdfs:comment "The street address associated with the address of the object"@en ;
+                rdfs:isDefinedBy <http://purl.org/roh/mirror/vcard> ;
+                rdfs:label "street address"@en .
+
+
+###  http://purl.org/roh/mirror/vcard#title
+:title rdf:type owl:DatatypeProperty ;
+       rdfs:range xsd:string ;
+       rdfs:comment "To specify the position or job of the object"@en ;
+       rdfs:isDefinedBy <http://purl.org/roh/mirror/vcard> ;
+       rdfs:label "title"@en .
+
+
+###  http://purl.org/roh/mirror/vcard#tz
+:tz rdf:type owl:DatatypeProperty ;
+    rdfs:range xsd:string ;
+    rdfs:comment "To indicate time zone information that is specific to the object. May also be used as a property parameter."@en ;
+    rdfs:isDefinedBy <http://purl.org/roh/mirror/vcard> ;
+    rdfs:label "time zone"@en .
+
+
+###  http://purl.org/roh/mirror/vcard#value
+:value rdf:type owl:DatatypeProperty ;
+       rdfs:comment "Used to indicate the literal value of a data property that requires property parameters"@en ;
+       rdfs:isDefinedBy <http://purl.org/roh/mirror/vcard> ;
+       rdfs:label "value"@en .
+
+
+#################################################################
+#    Classes
+#################################################################
+
+###  http://purl.org/roh/mirror/vcard#Acquaintance
+:Acquaintance rdf:type owl:Class ;
+              rdfs:subClassOf :RelatedType ;
+              rdfs:isDefinedBy <http://purl.org/roh/mirror/vcard> ;
+              rdfs:label "Acquaintance"@en .
+
+
+###  http://purl.org/roh/mirror/vcard#Address
+:Address rdf:type owl:Class ;
+         owl:equivalentClass [ rdf:type owl:Class ;
+                               owl:unionOf ( [ owl:intersectionOf ( [ rdf:type owl:Restriction ;
+                                                                      owl:onProperty :country-name ;
+                                                                      owl:someValuesFrom xsd:string
+                                                                    ]
+                                                                    [ rdf:type owl:Restriction ;
+                                                                      owl:onProperty :country-name ;
+                                                                      owl:maxCardinality "1"^^xsd:nonNegativeInteger
+                                                                    ]
+                                                                  ) ;
+                                               rdf:type owl:Class
+                                             ]
+                                             [ owl:intersectionOf ( [ rdf:type owl:Restriction ;
+                                                                      owl:onProperty :locality ;
+                                                                      owl:someValuesFrom xsd:string
+                                                                    ]
+                                                                    [ rdf:type owl:Restriction ;
+                                                                      owl:onProperty :locality ;
+                                                                      owl:maxCardinality "1"^^xsd:nonNegativeInteger
+                                                                    ]
+                                                                  ) ;
+                                               rdf:type owl:Class
+                                             ]
+                                             [ owl:intersectionOf ( [ rdf:type owl:Restriction ;
+                                                                      owl:onProperty :postal-code ;
+                                                                      owl:someValuesFrom xsd:string
+                                                                    ]
+                                                                    [ rdf:type owl:Restriction ;
+                                                                      owl:onProperty :postal-code ;
+                                                                      owl:maxCardinality "1"^^xsd:nonNegativeInteger
+                                                                    ]
+                                                                  ) ;
+                                               rdf:type owl:Class
+                                             ]
+                                             [ owl:intersectionOf ( [ rdf:type owl:Restriction ;
+                                                                      owl:onProperty :region ;
+                                                                      owl:someValuesFrom xsd:string
+                                                                    ]
+                                                                    [ rdf:type owl:Restriction ;
+                                                                      owl:onProperty :region ;
+                                                                      owl:maxCardinality "1"^^xsd:nonNegativeInteger
+                                                                    ]
+                                                                  ) ;
+                                               rdf:type owl:Class
+                                             ]
+                                             [ owl:intersectionOf ( [ rdf:type owl:Restriction ;
+                                                                      owl:onProperty :street-address ;
+                                                                      owl:someValuesFrom xsd:string
+                                                                    ]
+                                                                    [ rdf:type owl:Restriction ;
+                                                                      owl:onProperty :street-address ;
+                                                                      owl:maxCardinality "1"^^xsd:nonNegativeInteger
+                                                                    ]
+                                                                  ) ;
+                                               rdf:type owl:Class
+                                             ]
+                                           )
+                             ] ;
+         rdfs:comment "To specify the components of the delivery address for the  object"@en ;
+         rdfs:isDefinedBy <http://purl.org/roh/mirror/vcard> ;
+         rdfs:label "Address"@en .
+
+
+###  http://purl.org/roh/mirror/vcard#Agent
+:Agent rdf:type owl:Class ;
+       rdfs:subClassOf :RelatedType ;
+       rdfs:isDefinedBy <http://purl.org/roh/mirror/vcard> ;
+       rdfs:label "Agent"@en .
+
+
+###  http://purl.org/roh/mirror/vcard#BBS
+:BBS rdf:type owl:Class ;
+     rdfs:subClassOf :TelephoneType ;
+     rdfs:comment "This class is deprecated"@en ;
+     rdfs:isDefinedBy <http://purl.org/roh/mirror/vcard> ;
+     rdfs:label "BBS"@en ;
+     owl:deprecated "true"^^xsd:boolean .
+
+
+###  http://purl.org/roh/mirror/vcard#Car
+:Car rdf:type owl:Class ;
+     rdfs:subClassOf :TelephoneType ;
+     rdfs:comment "This class is deprecated"@en ;
+     rdfs:isDefinedBy <http://purl.org/roh/mirror/vcard> ;
+     rdfs:label "Car"@en ;
+     owl:deprecated "true"^^xsd:boolean .
+
+
+###  http://purl.org/roh/mirror/vcard#Cell
+:Cell rdf:type owl:Class ;
+      rdfs:subClassOf :TelephoneType ;
+      rdfs:comment "Also called mobile telephone"@en ;
+      rdfs:isDefinedBy <http://purl.org/roh/mirror/vcard> ;
+      rdfs:label "Cell"@en .
+
+
+###  http://purl.org/roh/mirror/vcard#Child
+:Child rdf:type owl:Class ;
+       rdfs:subClassOf :RelatedType ;
+       rdfs:isDefinedBy <http://purl.org/roh/mirror/vcard> ;
+       rdfs:label "Child"@en .
+
+
+###  http://purl.org/roh/mirror/vcard#Colleague
+:Colleague rdf:type owl:Class ;
+           rdfs:subClassOf :RelatedType ;
+           rdfs:isDefinedBy <http://purl.org/roh/mirror/vcard> ;
+           rdfs:label "Colleague"@en .
+
+
+###  http://purl.org/roh/mirror/vcard#Contact
+:Contact rdf:type owl:Class ;
+         rdfs:subClassOf :RelatedType ;
+         rdfs:isDefinedBy <http://purl.org/roh/mirror/vcard> ;
+         rdfs:label "Contact"@en .
+
+
+###  http://purl.org/roh/mirror/vcard#Coresident
+:Coresident rdf:type owl:Class ;
+            rdfs:subClassOf :RelatedType ;
+            rdfs:isDefinedBy <http://purl.org/roh/mirror/vcard> ;
+            rdfs:label "Coresident"@en .
+
+
+###  http://purl.org/roh/mirror/vcard#Coworker
+:Coworker rdf:type owl:Class ;
+          rdfs:subClassOf :RelatedType ;
+          rdfs:isDefinedBy <http://purl.org/roh/mirror/vcard> ;
+          rdfs:label "Coworker"@en .
+
+
+###  http://purl.org/roh/mirror/vcard#Crush
+:Crush rdf:type owl:Class ;
+       rdfs:subClassOf :RelatedType ;
+       rdfs:isDefinedBy <http://purl.org/roh/mirror/vcard> ;
+       rdfs:label "Crush"@en .
+
+
+###  http://purl.org/roh/mirror/vcard#Date
+:Date rdf:type owl:Class ;
+      rdfs:subClassOf :RelatedType ;
+      rdfs:isDefinedBy <http://purl.org/roh/mirror/vcard> ;
+      rdfs:label "Date"@en .
+
+
+###  http://purl.org/roh/mirror/vcard#Dom
+:Dom rdf:type owl:Class ;
+     rdfs:subClassOf :Type ;
+     rdfs:comment "This class is deprecated"@en ;
+     rdfs:isDefinedBy <http://purl.org/roh/mirror/vcard> ;
+     rdfs:label "Dom"@en ;
+     owl:deprecated "true"^^xsd:boolean .
+
+
+###  http://purl.org/roh/mirror/vcard#Email
+:Email rdf:type owl:Class ;
+       rdfs:comment "To specify the electronic mail address for communication with the object the vCard represents. Use the hasEmail object property."@en ;
+       rdfs:isDefinedBy <http://purl.org/roh/mirror/vcard> ;
+       rdfs:label "Email"@en .
+
+
+###  http://purl.org/roh/mirror/vcard#Emergency
+:Emergency rdf:type owl:Class ;
+           rdfs:subClassOf :RelatedType ;
+           rdfs:isDefinedBy <http://purl.org/roh/mirror/vcard> ;
+           rdfs:label "Emergency"@en .
+
+
+###  http://purl.org/roh/mirror/vcard#Fax
+:Fax rdf:type owl:Class ;
+     rdfs:subClassOf :TelephoneType ;
+     rdfs:isDefinedBy <http://purl.org/roh/mirror/vcard> ;
+     rdfs:label "Fax"@en .
+
+
+###  http://purl.org/roh/mirror/vcard#Female
+:Female rdf:type owl:Class ;
+        rdfs:subClassOf :Gender ;
+        rdfs:isDefinedBy <http://purl.org/roh/mirror/vcard> ;
+        rdfs:label "Female"@en .
+
+
+###  http://purl.org/roh/mirror/vcard#Friend
+:Friend rdf:type owl:Class ;
+        rdfs:subClassOf :RelatedType ;
+        rdfs:isDefinedBy <http://purl.org/roh/mirror/vcard> ;
+        rdfs:label "Friend"@en .
+
+
+###  http://purl.org/roh/mirror/vcard#Gender
+:Gender rdf:type owl:Class ;
+        rdfs:comment "Used for gender codes. The URI of the gender code must be used as the value for Gender."@en ;
+        rdfs:isDefinedBy <http://purl.org/roh/mirror/vcard> ;
+        rdfs:label "Gender"@en .
+
+
+###  http://purl.org/roh/mirror/vcard#Group
+:Group rdf:type owl:Class ;
+       owl:equivalentClass [ owl:intersectionOf ( [ rdf:type owl:Restriction ;
+                                                    owl:onProperty :hasMember ;
+                                                    owl:someValuesFrom :Kind
+                                                  ]
+                                                  [ rdf:type owl:Restriction ;
+                                                    owl:onProperty :hasMember ;
+                                                    owl:minQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                                                    owl:onClass :Kind
+                                                  ]
+                                                ) ;
+                             rdf:type owl:Class
+                           ] ;
+       rdfs:subClassOf :Kind ;
+       owl:disjointWith :Individual ,
+                        :Location ,
+                        :Organization ;
+       rdfs:comment "Object representing a group of persons or entities.  A group object will usually contain hasMember properties to specify the members of the group."@en ;
+       rdfs:isDefinedBy <http://purl.org/roh/mirror/vcard> ;
+       rdfs:label "Group"@en .
+
+
+###  http://purl.org/roh/mirror/vcard#Home
+:Home rdf:type owl:Class ;
+      rdfs:subClassOf :Type ;
+      rdfs:comment "This implies that the property is related to an individual's personal life"@en ;
+      rdfs:isDefinedBy <http://purl.org/roh/mirror/vcard> ;
+      rdfs:label "Home"@en .
+
+
+###  http://purl.org/roh/mirror/vcard#ISDN
+:ISDN rdf:type owl:Class ;
+      rdfs:subClassOf :Type ;
+      rdfs:comment "This class is deprecated"@en ;
+      rdfs:isDefinedBy <http://purl.org/roh/mirror/vcard> ;
+      rdfs:label "ISDN"@en ;
+      owl:deprecated "true"^^xsd:boolean .
+
+
+###  http://purl.org/roh/mirror/vcard#Individual
+:Individual rdf:type owl:Class ;
+            rdfs:subClassOf :Kind ;
+            owl:disjointWith :Location ,
+                             :Organization ;
+            rdfs:comment "An object representing a single person or entity"@en ;
+            rdfs:isDefinedBy <http://purl.org/roh/mirror/vcard> ;
+            rdfs:label "Individual"@en .
+
+
+###  http://purl.org/roh/mirror/vcard#Internet
+:Internet rdf:type owl:Class ;
+          rdfs:subClassOf :Type ;
+          rdfs:comment "This class is deprecated"@en ;
+          rdfs:isDefinedBy <http://purl.org/roh/mirror/vcard> ;
+          rdfs:label "Internet"@en ;
+          owl:deprecated "true"^^xsd:boolean .
+
+
+###  http://purl.org/roh/mirror/vcard#Intl
+:Intl rdf:type owl:Class ;
+      rdfs:subClassOf :Type ;
+      rdfs:comment "This class is deprecated"@en ;
+      rdfs:isDefinedBy <http://purl.org/roh/mirror/vcard> ;
+      rdfs:label "Intl"@en ;
+      owl:deprecated "true"^^xsd:boolean .
+
+
+###  http://purl.org/roh/mirror/vcard#Kin
+:Kin rdf:type owl:Class ;
+     rdfs:subClassOf :RelatedType ;
+     rdfs:isDefinedBy <http://purl.org/roh/mirror/vcard> ;
+     rdfs:label "Kin"@en .
+
+
+###  http://purl.org/roh/mirror/vcard#Kind
+:Kind rdf:type owl:Class ;
+      owl:equivalentClass :VCard ,
+                          [ rdf:type owl:Restriction ;
+                            owl:onProperty :fn ;
+                            owl:minQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                            owl:onDataRange xsd:string
+                          ] ;
+      rdfs:comment "The parent class for all objects"@en ;
+      rdfs:isDefinedBy <http://purl.org/roh/mirror/vcard> ;
+      rdfs:label "Kind"@en .
+
+
+###  http://purl.org/roh/mirror/vcard#Label
+:Label rdf:type owl:Class ;
+       rdfs:subClassOf :Type ;
+       rdfs:comment "This class is deprecated"@en ;
+       rdfs:isDefinedBy <http://purl.org/roh/mirror/vcard> ;
+       rdfs:label "Label"@en ;
+       owl:deprecated "true"^^xsd:boolean .
+
+
+###  http://purl.org/roh/mirror/vcard#Location
+:Location rdf:type owl:Class ;
+          rdfs:subClassOf :Kind ;
+          owl:disjointWith :Organization ;
+          rdfs:comment "An object representing a named geographical place"@en ;
+          rdfs:isDefinedBy <http://purl.org/roh/mirror/vcard> ;
+          rdfs:label "Location"@en .
+
+
+###  http://purl.org/roh/mirror/vcard#Male
+:Male rdf:type owl:Class ;
+      rdfs:subClassOf :Gender ;
+      rdfs:isDefinedBy <http://purl.org/roh/mirror/vcard> ;
+      rdfs:label "Male"@en .
+
+
+###  http://purl.org/roh/mirror/vcard#Me
+:Me rdf:type owl:Class ;
+    rdfs:subClassOf :RelatedType ;
+    rdfs:isDefinedBy <http://purl.org/roh/mirror/vcard> ;
+    rdfs:label "Me"@en .
+
+
+###  http://purl.org/roh/mirror/vcard#Met
+:Met rdf:type owl:Class ;
+     rdfs:subClassOf :RelatedType ;
+     rdfs:isDefinedBy <http://purl.org/roh/mirror/vcard> ;
+     rdfs:label "Met"@en .
+
+
+###  http://purl.org/roh/mirror/vcard#Modem
+:Modem rdf:type owl:Class ;
+       rdfs:subClassOf :TelephoneType ;
+       rdfs:comment "This class is deprecated"@en ;
+       rdfs:isDefinedBy <http://purl.org/roh/mirror/vcard> ;
+       rdfs:label "Modem"@en ;
+       owl:deprecated "true"^^xsd:boolean .
+
+
+###  http://purl.org/roh/mirror/vcard#Msg
+:Msg rdf:type owl:Class ;
+     rdfs:subClassOf :TelephoneType ;
+     rdfs:comment "This class is deprecated"@en ;
+     rdfs:isDefinedBy <http://purl.org/roh/mirror/vcard> ;
+     rdfs:label "Msg"@en ;
+     owl:deprecated "true"^^xsd:boolean .
+
+
+###  http://purl.org/roh/mirror/vcard#Muse
+:Muse rdf:type owl:Class ;
+      rdfs:subClassOf :RelatedType ;
+      rdfs:isDefinedBy <http://purl.org/roh/mirror/vcard> ;
+      rdfs:label "Muse"@en .
+
+
+###  http://purl.org/roh/mirror/vcard#Name
+:Name rdf:type owl:Class ;
+      owl:equivalentClass [ rdf:type owl:Class ;
+                            owl:unionOf ( [ owl:intersectionOf ( [ rdf:type owl:Restriction ;
+                                                                   owl:onProperty :additional-name ;
+                                                                   owl:someValuesFrom xsd:string
+                                                                 ]
+                                                                 [ rdf:type owl:Restriction ;
+                                                                   owl:onProperty :additional-name ;
+                                                                   owl:minCardinality "0"^^xsd:nonNegativeInteger
+                                                                 ]
+                                                               ) ;
+                                            rdf:type owl:Class
+                                          ]
+                                          [ owl:intersectionOf ( [ rdf:type owl:Restriction ;
+                                                                   owl:onProperty :family-name ;
+                                                                   owl:someValuesFrom xsd:string
+                                                                 ]
+                                                                 [ rdf:type owl:Restriction ;
+                                                                   owl:onProperty :family-name ;
+                                                                   owl:maxCardinality "1"^^xsd:nonNegativeInteger
+                                                                 ]
+                                                               ) ;
+                                            rdf:type owl:Class
+                                          ]
+                                          [ owl:intersectionOf ( [ rdf:type owl:Restriction ;
+                                                                   owl:onProperty :given-name ;
+                                                                   owl:someValuesFrom xsd:string
+                                                                 ]
+                                                                 [ rdf:type owl:Restriction ;
+                                                                   owl:onProperty :given-name ;
+                                                                   owl:maxCardinality "1"^^xsd:nonNegativeInteger
+                                                                 ]
+                                                               ) ;
+                                            rdf:type owl:Class
+                                          ]
+                                          [ owl:intersectionOf ( [ rdf:type owl:Restriction ;
+                                                                   owl:onProperty :honorific-prefix ;
+                                                                   owl:someValuesFrom xsd:string
+                                                                 ]
+                                                                 [ rdf:type owl:Restriction ;
+                                                                   owl:onProperty :honorific-prefix ;
+                                                                   owl:minCardinality "0"^^xsd:nonNegativeInteger
+                                                                 ]
+                                                               ) ;
+                                            rdf:type owl:Class
+                                          ]
+                                          [ owl:intersectionOf ( [ rdf:type owl:Restriction ;
+                                                                   owl:onProperty :honorific-suffix ;
+                                                                   owl:someValuesFrom xsd:string
+                                                                 ]
+                                                                 [ rdf:type owl:Restriction ;
+                                                                   owl:onProperty :honorific-suffix ;
+                                                                   owl:minCardinality "0"^^xsd:nonNegativeInteger
+                                                                 ]
+                                                               ) ;
+                                            rdf:type owl:Class
+                                          ]
+                                        )
+                          ] ;
+      rdfs:comment "To specify the components of the name of the object"@en ;
+      rdfs:isDefinedBy <http://purl.org/roh/mirror/vcard> ;
+      rdfs:label "Name"@en .
+
+
+###  http://purl.org/roh/mirror/vcard#Neighbor
+:Neighbor rdf:type owl:Class ;
+          rdfs:subClassOf :RelatedType ;
+          rdfs:isDefinedBy <http://purl.org/roh/mirror/vcard> ;
+          rdfs:label "Neighbor"@en .
+
+
+###  http://purl.org/roh/mirror/vcard#None
+:None rdf:type owl:Class ;
+      rdfs:subClassOf :Gender ;
+      rdfs:isDefinedBy <http://purl.org/roh/mirror/vcard> ;
+      rdfs:label "None"@en .
+
+
+###  http://purl.org/roh/mirror/vcard#Organization
+:Organization rdf:type owl:Class ;
+              rdfs:subClassOf :Kind ;
+              rdfs:comment """An object representing an organization.  An organization is a single entity, and might represent a business or government, a department or division within a business or government, a club, an association, or the like.
+"""@en ;
+              rdfs:isDefinedBy <http://purl.org/roh/mirror/vcard> ;
+              rdfs:label "Organization"@en .
+
+
+###  http://purl.org/roh/mirror/vcard#Other
+:Other rdf:type owl:Class ;
+       rdfs:subClassOf :Gender ;
+       rdfs:isDefinedBy <http://purl.org/roh/mirror/vcard> ;
+       rdfs:label "Other"@en .
+
+
+###  http://purl.org/roh/mirror/vcard#PCS
+:PCS rdf:type owl:Class ;
+     rdfs:subClassOf :TelephoneType ;
+     rdfs:comment "This class is deprecated"@en ;
+     rdfs:isDefinedBy <http://purl.org/roh/mirror/vcard> ;
+     rdfs:label "PCS"@en ;
+     owl:deprecated "true"^^xsd:boolean .
+
+
+###  http://purl.org/roh/mirror/vcard#Pager
+:Pager rdf:type owl:Class ;
+       rdfs:subClassOf :TelephoneType ;
+       rdfs:isDefinedBy <http://purl.org/roh/mirror/vcard> ;
+       rdfs:label "Pager"@en .
+
+
+###  http://purl.org/roh/mirror/vcard#Parcel
+:Parcel rdf:type owl:Class ;
+        rdfs:subClassOf :Type ;
+        rdfs:comment "This class is deprecated"@en ;
+        rdfs:isDefinedBy <http://purl.org/roh/mirror/vcard> ;
+        rdfs:label "Parcel"@en ;
+        owl:deprecated "true"^^xsd:boolean .
+
+
+###  http://purl.org/roh/mirror/vcard#Parent
+:Parent rdf:type owl:Class ;
+        rdfs:subClassOf :RelatedType ;
+        rdfs:isDefinedBy <http://purl.org/roh/mirror/vcard> ;
+        rdfs:label "Parent"@en .
+
+
+###  http://purl.org/roh/mirror/vcard#Postal
+:Postal rdf:type owl:Class ;
+        rdfs:subClassOf :Type ;
+        rdfs:comment "This class is deprecated"@en ;
+        rdfs:isDefinedBy <http://purl.org/roh/mirror/vcard> ;
+        rdfs:label "Postal"@en ;
+        owl:deprecated "true"^^xsd:boolean .
+
+
+###  http://purl.org/roh/mirror/vcard#Pref
+:Pref rdf:type owl:Class ;
+      rdfs:subClassOf :Type ;
+      rdfs:comment "This class is deprecated"@en ;
+      rdfs:isDefinedBy <http://purl.org/roh/mirror/vcard> ;
+      rdfs:label "Pref"@en ;
+      owl:deprecated "true"^^xsd:boolean .
+
+
+###  http://purl.org/roh/mirror/vcard#RelatedType
+:RelatedType rdf:type owl:Class ;
+             rdfs:comment "Used for relation type codes. The URI of the relation type code must be used as the value for the Relation Type."@en ;
+             rdfs:isDefinedBy <http://purl.org/roh/mirror/vcard> ;
+             rdfs:label "Relation Type"@en .
+
+
+###  http://purl.org/roh/mirror/vcard#Sibling
+:Sibling rdf:type owl:Class ;
+         rdfs:subClassOf :RelatedType ;
+         rdfs:isDefinedBy <http://purl.org/roh/mirror/vcard> ;
+         rdfs:label "Sibling"@en .
+
+
+###  http://purl.org/roh/mirror/vcard#Spouse
+:Spouse rdf:type owl:Class ;
+        rdfs:subClassOf :RelatedType ;
+        rdfs:isDefinedBy <http://purl.org/roh/mirror/vcard> ;
+        rdfs:label "Spouse"@en .
+
+
+###  http://purl.org/roh/mirror/vcard#Sweetheart
+:Sweetheart rdf:type owl:Class ;
+            rdfs:subClassOf :RelatedType ;
+            rdfs:isDefinedBy <http://purl.org/roh/mirror/vcard> ;
+            rdfs:label "Sweetheart"@en .
+
+
+###  http://purl.org/roh/mirror/vcard#Tel
+:Tel rdf:type owl:Class ;
+     rdfs:comment "This class is deprecated. Use the hasTelephone object property."@en ;
+     rdfs:isDefinedBy <http://purl.org/roh/mirror/vcard> ;
+     rdfs:label "Tel"@en ;
+     owl:deprecated "true"^^xsd:boolean .
+
+
+###  http://purl.org/roh/mirror/vcard#TelephoneType
+:TelephoneType rdf:type owl:Class ;
+               rdfs:comment "Used for telephone type codes. The URI of the telephone type code must be used as the value for the Telephone Type."@en ;
+               rdfs:isDefinedBy <http://purl.org/roh/mirror/vcard> ;
+               rdfs:label "Phone"@en .
+
+
+###  http://purl.org/roh/mirror/vcard#Text
+:Text rdf:type owl:Class ;
+      rdfs:subClassOf :TelephoneType ;
+      rdfs:comment "Also called sms telephone"@en ;
+      rdfs:isDefinedBy <http://purl.org/roh/mirror/vcard> ;
+      rdfs:label "Text"@en .
+
+
+###  http://purl.org/roh/mirror/vcard#TextPhone
+:TextPhone rdf:type owl:Class ;
+           rdfs:subClassOf :TelephoneType ;
+           rdfs:isDefinedBy <http://purl.org/roh/mirror/vcard> ;
+           rdfs:label "Text phone"@en .
+
+
+###  http://purl.org/roh/mirror/vcard#Type
+:Type rdf:type owl:Class ;
+      rdfs:comment "Used for type codes. The URI of the type code must be used as the value for Type."@en ;
+      rdfs:isDefinedBy <http://purl.org/roh/mirror/vcard> ;
+      rdfs:label "Type"@en .
+
+
+###  http://purl.org/roh/mirror/vcard#Unknown
+:Unknown rdf:type owl:Class ;
+         rdfs:subClassOf :Gender ;
+         rdfs:isDefinedBy <http://purl.org/roh/mirror/vcard> ;
+         rdfs:label "Unknown"@en .
+
+
+###  http://purl.org/roh/mirror/vcard#VCard
+:VCard rdf:type owl:Class ;
+       rdfs:comment "The vCard class is  equivalent to the new Kind class, which is the parent for the four explicit types of vCards (Individual, Organization, Location, Group)"@en ;
+       rdfs:isDefinedBy <http://purl.org/roh/mirror/vcard> ;
+       rdfs:label "VCard"@en .
+
+
+###  http://purl.org/roh/mirror/vcard#Video
+:Video rdf:type owl:Class ;
+       rdfs:subClassOf :TelephoneType ;
+       rdfs:isDefinedBy <http://purl.org/roh/mirror/vcard> ;
+       rdfs:label "Video"@en .
+
+
+###  http://purl.org/roh/mirror/vcard#Voice
+:Voice rdf:type owl:Class ;
+       rdfs:subClassOf :TelephoneType ;
+       rdfs:isDefinedBy <http://purl.org/roh/mirror/vcard> ;
+       rdfs:label "Voice"@en .
+
+
+###  http://purl.org/roh/mirror/vcard#Work
+:Work rdf:type owl:Class ;
+      rdfs:subClassOf :Type ;
+      rdfs:comment "This implies that the property is related to an individual's work place"@en ;
+      rdfs:isDefinedBy <http://purl.org/roh/mirror/vcard> ;
+      rdfs:label "Work"@en .
+
+
+###  http://purl.org/roh/mirror/vcard#X400
+:X400 rdf:type owl:Class ;
+      rdfs:subClassOf :Type ;
+      rdfs:comment "This class is deprecated"@en ;
+      rdfs:isDefinedBy <http://purl.org/roh/mirror/vcard> ;
+      rdfs:label "X400"@en ;
+      owl:deprecated "true"^^xsd:boolean .
+
+
+###  Generated by the OWL API (version 4.5.9.2019-02-01T07:24:44Z) https://github.com/owlcs/owlapi

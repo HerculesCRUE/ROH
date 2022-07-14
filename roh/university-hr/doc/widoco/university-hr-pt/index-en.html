@@ -1,0 +1,527 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+ <link rel="stylesheet" href="resources/primer.css" media="screen" />    <link rel="stylesheet" href="resources/rec.css" media="screen" />    <link rel="stylesheet" href="resources/extra.css" media="screen" />    <link rel="stylesheet" href="resources/owl.css" media="screen" />    <title>ROH Spanish University HR Module</title>
+
+
+<!-- SCHEMA.ORG METADATA -->
+<script type="application/ld+json">{"@context":"http://schema.org","@type":"TechArticle","url":"http://purl.org/roh/university-hr/es","image":"http://vowl.visualdataweb.org/webvowl/#iri=http://purl.org/roh/university-hr/es","name":"ROH Spanish University HR Module", "headline":"The University of Murcia signed on November 29, 2017, a Covenant with the Ministry of Economy, Industry and Competitiveness backing the “HÉRCULES: Semantic University Research Data” Project with a budget of FIVE MILLION FOUR HUNDRED AND SIXTY-TWO THOUSAND SIX HUNDRED euros with an 80% of co-financiering from the European Regional Development Fund program (ERDF) within the 2014-2020 period. ", "datePublished":"Fri Feb 19 15:13:58 EET 2021", "version":"0.0.1", "license":"https://creativecommons.org/publicdomain/zero/1.0/", "author":[{"@type":"Person","name":"Mikel Emaldi, Emilio Rubiera Azcona"}], "contributor":[{"@type":"Person","name":"Iñigo Apellániz, Diego López de Ipiña, Esteban Sota, Álvaro Palacios, Alejandro González Hevia, José Emilio Labra Gayo"}]}</script>
+
+<script src="resources/jquery.js"></script> 
+<script src="resources/marked.min.js"></script> 
+    <script> 
+function loadHash() {
+  jQuery(".markdown").each(function(el){jQuery(this).after(marked(jQuery(this).text())).remove()});
+	var hash = location.hash;
+	if($(hash).offset()!=null){
+	  $('html, body').animate({scrollTop: $(hash).offset().top}, 0);
+}
+	loadTOC();
+}
+function loadTOC(){
+	//process toc dynamically
+	  var t='<h2>Table of contents</h2><ul>';i = 1;j=0;
+	  jQuery(".list").each(function(){
+		if(jQuery(this).is('h2')){
+			if(j>0){
+				t+='</ul>';
+				j=0;
+			}
+			t+= '<li>'+i+'. <a href=#'+ jQuery(this).attr('id')+'>'+ jQuery(this).ignore("span").text()+'</a></li>';
+			i++;
+		}
+		if(jQuery(this).is('h3')){
+			if(j==0){
+				t+='<ul>';
+			}
+			j++;
+			t+= '<li>'+(i-1)+'.'+j+'. '+'<a href=#'+ jQuery(this).attr('id')+'>'+ jQuery(this).ignore("span").text()+'</a></li>';
+		}
+	  });
+	  t+='</ul>';
+	  $("#toc").html(t); 
+}
+ $.fn.ignore = function(sel){
+        return this.clone().find(sel||">*").remove().end();
+ }; 
+   </script> 
+  </head> 
+
+<body>
+<div class="container">
+<div class="head">
+<div style="float:right">language <a href="index-en.html"><b>en</b></a> </div>
+<h1>ROH Spanish University HR Module</h1>
+
+
+<dl>
+<dt>Latest version:</dt>
+<dd><a href="http://purl.org/roh/university-hr/es">http://purl.org/roh/university-hr/es</a></dd>
+<dt>Revision:</dt>
+<dd>0.0.1</dd>
+<dt>Authors:</dt>
+<dd>Mikel Emaldi, Emilio Rubiera Azcona</dd>
+
+<dt>Contributors:</dt>
+<dd>Iñigo Apellániz, Diego López de Ipiña, Esteban Sota, Álvaro Palacios, Alejandro González Hevia, José Emilio Labra Gayo</dd>
+
+<dt>Download serialization:</dt><dd><span><a href="ontology.json" target="_blank"><img src="https://img.shields.io/badge/Format-JSON_LD-blue.svg" alt="JSON-LD" /></a> </span><span><a href="ontology.xml" target="_blank"><img src="https://img.shields.io/badge/Format-RDF/XML-blue.svg" alt="RDF/XML" /></a> </span><span><a href="ontology.nt" target="_blank"><img src="https://img.shields.io/badge/Format-N_Triples-blue.svg" alt="N-Triples" /></a> </span><span><a href="ontology.ttl" target="_blank"><img src="https://img.shields.io/badge/Format-TTL-blue.svg" alt="TTL" /></a> </span></dd><dt>License: </dt><dd><a href="https://creativecommons.org/publicdomain/zero/1.0/" target="_blank"><img src="https://img.shields.io/badge/License-https://creativecommons.org/publicdomain/zero/1.0/-blue.svg" alt="https://creativecommons.org/publicdomain/zero/1.0/" /></a>
+</dd><dt>Visualization:</dt><dd><a href="webvowl/index.html#" target="_blank"><img src="https://img.shields.io/badge/Visualize_with-WebVowl-blue.svg" alt="Visualize with WebVowl" /></a></dd>
+<!-- <dt>Evaluation:</dt><dd><a href="OOPSEvaluation/OOPSeval.html#" target="_blank"><img src="https://img.shields.io/badge/Evaluate_with-OOPS! (OntOlogy Pitfall Scanner!)-blue.svg" alt="Evaluate with OOPS!" /></a></dd> --></dl>
+
+<hr/>
+</div>
+<div class="status">
+<div>
+<span>Ontology Specification Draft</span>
+</div>
+</div>     <div id="abstract"><h2>Abstract</h2><span class="markdown">
+The University of Murcia signed on November 29, 2017, a Covenant with the Ministry of Economy, Industry and Competitiveness backing the “HÉRCULES: Semantic University Research Data” Project with a budget of FIVE MILLION FOUR HUNDRED AND SIXTY-TWO THOUSAND SIX HUNDRED euros with an 80% of co-financiering from the European Regional Development Fund program (ERDF) within the 2014-2020 period. </span>
+</div>
+<div id="toc"></div> 
+
+<!--INTRODUCTION SECTION-->
+    <div id="introduction"><h2 id="intro" class="list">Introduction <span class="backlink"> back to <a href="#toc">ToC</a></span></h2>
+<span class="markdown">
+This is a place holder text for the introduction. The introduction should briefly describe the ontology, its motivation, state of the art and goals.</span>
+<div id="namespacedeclarations">
+<h3 id="ns" class="list">Namespace declarations</h3>
+<div id="ns" align="center">
+<table>
+<caption> <a href="#ns"> Table 1</a>: Namespaces used in the document </caption>
+<tbody>
+<tr><td><b>roh</b></td><td>&lt;http://purl.org/roh/university-hr/es&gt;</td></tr>
+<tr><td><b>country</b></td><td>&lt;http://publications.europa.eu/resource/authority/country&gt;</td></tr>
+<tr><td><b>pt</b></td><td>&lt;http://purl.org/roh/university-hr/pt&gt;</td></tr>
+<tr><td><b>owl</b></td><td>&lt;http://www.w3.org/2002/07/owl&gt;</td></tr>
+<tr><td><b>unescothes</b></td><td>&lt;http://skos.um.es/unescothes&gt;</td></tr>
+<tr><td><b>xsd</b></td><td>&lt;http://www.w3.org/2001/XMLSchema&gt;</td></tr>
+<tr><td><b>skos</b></td><td>&lt;http://www.w3.org/2004/02/skos/core&gt;</td></tr>
+<tr><td><b>rdfs</b></td><td>&lt;http://www.w3.org/2000/01/rdf-schema&gt;</td></tr>
+<tr><td><b>roh</b></td><td>&lt;http://purl.org/roh&gt;</td></tr>
+<tr><td><b>university-hr</b></td><td>&lt;http://purl.org/roh/university-hr&gt;</td></tr>
+<tr><td><b>rdf</b></td><td>&lt;http://www.w3.org/1999/02/22-rdf-syntax-ns&gt;</td></tr>
+<tr><td><b>terms</b></td><td>&lt;http://purl.org/dc/terms&gt;</td></tr>
+<tr><td><b>vivo</b></td><td>&lt;http://purl.org/roh/mirror/vivo&gt;</td></tr>
+<tr><td><b>default namespace</b></td><td>&lt;http://purl.org/roh/university-hr/pt&gt;</td></tr>
+</tbody>
+</table>
+</div>
+</div>
+</div>
+  
+
+<!--OVERVIEW SECTION-->
+    <div id="overview"><h2 id="overv" class="list">The ROH ontology: Overview <span class="backlink"> back to <a href="#toc">ToC</a></span></h2>
+<span class="markdown">
+This ontology has the following classes and properties.</span>
+<h4>Classes</h4>
+<ul class="hlist">
+   <li>
+      <a href="#http://www.w3.org/2004/02/skos/core#Concept" title="http://www.w3.org/2004/02/skos/core#Concept">Concept</a>
+   </li>
+   <li>
+      <a href="#http://www.w3.org/2004/02/skos/core#ConceptScheme"
+         title="http://www.w3.org/2004/02/skos/core#ConceptScheme">Concept Scheme</a>
+   </li>
+   <li>
+      <a href="#http://purl.org/roh/mirror/vivo#FacultyPosition" title="http://purl.org/roh/mirror/vivo#FacultyPosition">Faculty Position</a>
+   </li>
+   <li>
+      <a href="#http://purl.org/roh/university-hr/pt#PT_UNIVERSITY_HR_PTPAS"
+         title="http://purl.org/roh/university-hr/pt#PT_UNIVERSITY_HR_PTPAS">Professor associado Irakasle elkartua</a>
+   </li>
+   <li>
+      <a href="#http://purl.org/roh/university-hr/pt#PT_UNIVERSITY_HR_PTPAU"
+         title="http://purl.org/roh/university-hr/pt#PT_UNIVERSITY_HR_PTPAU">Professor auxiliar Profesor auxiliar</a>
+   </li>
+   <li>
+      <a href="#http://purl.org/roh/university-hr/pt#PT_UNIVERSITY_HR_PTPC"
+         title="http://purl.org/roh/university-hr/pt#PT_UNIVERSITY_HR_PTPC">Professor catedrático Profesor catedrático</a>
+   </li>
+   <li>
+      <a href="#http://purl.org/roh/university-hr/pt#PT_UNIVERSITY_HR_PTPEM"
+         title="http://purl.org/roh/university-hr/pt#PT_UNIVERSITY_HR_PTPEM">Professor emérito Profesor emérito</a>
+   </li>
+</ul><h4>Named Individuals</h4><ul class="hlist">
+   <li>
+      <a href="#http://purl.org/roh/university-hr/pt#PTUniversityHumanResourcesCodesList"
+         title="http://purl.org/roh/university-hr/pt#PTUniversityHumanResourcesCodesList">Codes for the human resources of the universities from Portugal Codes for the human resources of the universities from Portugal</a>
+   </li>
+   <li>
+      <a href="#http://purl.org/roh/university-hr/pt#PTUniversityHumanResourcesList"
+         title="http://purl.org/roh/university-hr/pt#PTUniversityHumanResourcesList">Human resources of the universities from Portugal Human resources of the universities from Portugal</a>
+   </li>
+   <li>
+      <a href="#http://purl.org/roh/university-hr/pt#PT_UNIVERSITY_HR_CODE_PTPAS"
+         title="http://purl.org/roh/university-hr/pt#PT_UNIVERSITY_HR_CODE_PTPAS">PTPAS PTPAS</a>
+   </li>
+   <li>
+      <a href="#http://purl.org/roh/university-hr/pt#PT_UNIVERSITY_HR_CODE_PTPAU"
+         title="http://purl.org/roh/university-hr/pt#PT_UNIVERSITY_HR_CODE_PTPAU">PTPAU PTPAU</a>
+   </li>
+   <li>
+      <a href="#http://purl.org/roh/university-hr/pt#PT_UNIVERSITY_HR_CODE_PTPC"
+         title="http://purl.org/roh/university-hr/pt#PT_UNIVERSITY_HR_CODE_PTPC">PTPC PTPC</a>
+   </li>
+   <li>
+      <a href="#http://purl.org/roh/university-hr/pt#PT_UNIVERSITY_HR_CODE_PTPEM"
+         title="http://purl.org/roh/university-hr/pt#PT_UNIVERSITY_HR_CODE_PTPEM">PTPEM PTPEM</a>
+   </li>
+</ul><iframe align="center" width="100%" height ="500px" src="webvowl/index.html"></iframe> 
+</div>
+  
+
+<!--DESCRIPTION SECTION-->
+    <div id="description"><h2 id="desc" class="list">The ROH ontology: Description <span class="backlink"> back to <a href="#toc">ToC</a></span></h2>
+<span class="markdown">
+This is a placeholder text for the description of your ontology. The description should include an explanation and a diagram explaining how the classes are related, examples of usage, etc.</span>
+
+</div>
+   
+
+<!--CROSSREF SECTION-->
+   <div id="crossref"><h2 id="crossreference" class="list">Cross reference for The ROH ontology classes, properties and dataproperties <span class="backlink"> back to <a href="#toc">ToC</a></span></h2>
+This section provides details for each class and property defined by The ROH ontology.
+<div id="classes">
+   <h3 id="classes-headline" class="list">Classes</h3>
+   <ul class="hlist">
+      <li>
+         <a href="#http://www.w3.org/2004/02/skos/core#Concept" title="http://www.w3.org/2004/02/skos/core#Concept">Concept</a>
+      </li>
+      <li>
+         <a href="#http://www.w3.org/2004/02/skos/core#ConceptScheme"
+            title="http://www.w3.org/2004/02/skos/core#ConceptScheme">Concept Scheme</a>
+      </li>
+      <li>
+         <a href="#http://purl.org/roh/mirror/vivo#FacultyPosition" title="http://purl.org/roh/mirror/vivo#FacultyPosition">Faculty Position</a>
+      </li>
+      <li>
+         <a href="#http://purl.org/roh/university-hr/pt#PT_UNIVERSITY_HR_PTPAS"
+            title="http://purl.org/roh/university-hr/pt#PT_UNIVERSITY_HR_PTPAS">Professor associado Irakasle elkartua</a>
+      </li>
+      <li>
+         <a href="#http://purl.org/roh/university-hr/pt#PT_UNIVERSITY_HR_PTPAU"
+            title="http://purl.org/roh/university-hr/pt#PT_UNIVERSITY_HR_PTPAU">Professor auxiliar Profesor auxiliar</a>
+      </li>
+      <li>
+         <a href="#http://purl.org/roh/university-hr/pt#PT_UNIVERSITY_HR_PTPC"
+            title="http://purl.org/roh/university-hr/pt#PT_UNIVERSITY_HR_PTPC">Professor catedrático Profesor catedrático</a>
+      </li>
+      <li>
+         <a href="#http://purl.org/roh/university-hr/pt#PT_UNIVERSITY_HR_PTPEM"
+            title="http://purl.org/roh/university-hr/pt#PT_UNIVERSITY_HR_PTPEM">Professor emérito Profesor emérito</a>
+      </li>
+   </ul>
+   <div class="entity" id="http://www.w3.org/2004/02/skos/core#Concept">
+      <h3>Concept<sup class="type-c" title="class">c</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://www.w3.org/2004/02/skos/core#Concept</p>
+      <dl class="description">
+         <dt>has members</dt>
+         <dd>
+            <a href="#http://purl.org/roh/university-hr/pt#PT_UNIVERSITY_HR_CODE_PTPAS"
+               title="http://purl.org/roh/university-hr/pt#PT_UNIVERSITY_HR_CODE_PTPAS">PTPAS PTPAS</a>
+            <sup class="type-ni" title="named individual">ni</sup>, <a href="#http://purl.org/roh/university-hr/pt#PT_UNIVERSITY_HR_CODE_PTPAU"
+               title="http://purl.org/roh/university-hr/pt#PT_UNIVERSITY_HR_CODE_PTPAU">PTPAU PTPAU</a>
+            <sup class="type-ni" title="named individual">ni</sup>, <a href="#http://purl.org/roh/university-hr/pt#PT_UNIVERSITY_HR_CODE_PTPC"
+               title="http://purl.org/roh/university-hr/pt#PT_UNIVERSITY_HR_CODE_PTPC">PTPC PTPC</a>
+            <sup class="type-ni" title="named individual">ni</sup>, <a href="#http://purl.org/roh/university-hr/pt#PT_UNIVERSITY_HR_CODE_PTPEM"
+               title="http://purl.org/roh/university-hr/pt#PT_UNIVERSITY_HR_CODE_PTPEM">PTPEM PTPEM</a>
+            <sup class="type-ni" title="named individual">ni</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="http://www.w3.org/2004/02/skos/core#ConceptScheme">
+      <h3>Concept Scheme<sup class="type-c" title="class">c</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://www.w3.org/2004/02/skos/core#ConceptScheme</p>
+      <dl class="description">
+         <dt>has members</dt>
+         <dd>
+            <a href="#http://purl.org/roh/university-hr/pt#PTUniversityHumanResourcesCodesList"
+               title="http://purl.org/roh/university-hr/pt#PTUniversityHumanResourcesCodesList">Codes for the human resources of the universities from Portugal Codes for the human resources of the universities from Portugal</a>
+            <sup class="type-ni" title="named individual">ni</sup>, <a href="#http://purl.org/roh/university-hr/pt#PTUniversityHumanResourcesList"
+               title="http://purl.org/roh/university-hr/pt#PTUniversityHumanResourcesList">Human resources of the universities from Portugal Human resources of the universities from Portugal</a>
+            <sup class="type-ni" title="named individual">ni</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="http://purl.org/roh/mirror/vivo#FacultyPosition">
+      <h3>Faculty Position<sup class="type-c" title="class">c</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://purl.org/roh/mirror/vivo#FacultyPosition</p>
+      <dl class="description">
+         <dt>has sub-classes</dt>
+         <dd>
+            <a href="#http://purl.org/roh/university-hr/pt#PT_UNIVERSITY_HR_PTPAS"
+               title="http://purl.org/roh/university-hr/pt#PT_UNIVERSITY_HR_PTPAS">Professor associado Irakasle elkartua</a>
+            <sup class="type-c" title="class">c</sup>, <a href="#http://purl.org/roh/university-hr/pt#PT_UNIVERSITY_HR_PTPAU"
+               title="http://purl.org/roh/university-hr/pt#PT_UNIVERSITY_HR_PTPAU">Professor auxiliar Profesor auxiliar</a>
+            <sup class="type-c" title="class">c</sup>, <a href="#http://purl.org/roh/university-hr/pt#PT_UNIVERSITY_HR_PTPC"
+               title="http://purl.org/roh/university-hr/pt#PT_UNIVERSITY_HR_PTPC">Professor catedrático Profesor catedrático</a>
+            <sup class="type-c" title="class">c</sup>, <a href="#http://purl.org/roh/university-hr/pt#PT_UNIVERSITY_HR_PTPEM"
+               title="http://purl.org/roh/university-hr/pt#PT_UNIVERSITY_HR_PTPEM">Professor emérito Profesor emérito</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="http://purl.org/roh/university-hr/pt#PT_UNIVERSITY_HR_PTPAS">
+      <h3>Professor associado<sup class="type-c" title="class">c</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a>
+         </span>
+      </h3>
+      <h3>Irakasle elkartua<sup class="type-c" title="class">c</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://purl.org/roh/university-hr/pt#PT_UNIVERSITY_HR_PTPAS</p>
+      <dl class="description">
+         <dt>has super-classes</dt>
+         <dd>
+            <a href="#http://purl.org/roh/mirror/vivo#FacultyPosition" title="http://purl.org/roh/mirror/vivo#FacultyPosition">Faculty Position</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="http://purl.org/roh/university-hr/pt#PT_UNIVERSITY_HR_PTPAU">
+      <h3>Professor auxiliar<sup class="type-c" title="class">c</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a>
+         </span>
+      </h3>
+      <h3>Profesor auxiliar<sup class="type-c" title="class">c</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://purl.org/roh/university-hr/pt#PT_UNIVERSITY_HR_PTPAU</p>
+      <dl class="description">
+         <dt>has super-classes</dt>
+         <dd>
+            <a href="#http://purl.org/roh/mirror/vivo#FacultyPosition" title="http://purl.org/roh/mirror/vivo#FacultyPosition">Faculty Position</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="http://purl.org/roh/university-hr/pt#PT_UNIVERSITY_HR_PTPC">
+      <h3>Professor catedrático<sup class="type-c" title="class">c</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a>
+         </span>
+      </h3>
+      <h3>Profesor catedrático<sup class="type-c" title="class">c</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://purl.org/roh/university-hr/pt#PT_UNIVERSITY_HR_PTPC</p>
+      <dl class="description">
+         <dt>has super-classes</dt>
+         <dd>
+            <a href="#http://purl.org/roh/mirror/vivo#FacultyPosition" title="http://purl.org/roh/mirror/vivo#FacultyPosition">Faculty Position</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="http://purl.org/roh/university-hr/pt#PT_UNIVERSITY_HR_PTPEM">
+      <h3>Professor emérito<sup class="type-c" title="class">c</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a>
+         </span>
+      </h3>
+      <h3>Profesor emérito<sup class="type-c" title="class">c</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://purl.org/roh/university-hr/pt#PT_UNIVERSITY_HR_PTPEM</p>
+      <dl class="description">
+         <dt>has super-classes</dt>
+         <dd>
+            <a href="#http://purl.org/roh/mirror/vivo#FacultyPosition" title="http://purl.org/roh/mirror/vivo#FacultyPosition">Faculty Position</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+      </dl>
+   </div>
+</div><div id="namedindividuals">
+   <h3 id="namedindividuals" class="list">Named Individuals</h3>
+   <ul class="hlist">
+      <li>
+         <a href="#http://purl.org/roh/university-hr/pt#PTUniversityHumanResourcesCodesList"
+            title="http://purl.org/roh/university-hr/pt#PTUniversityHumanResourcesCodesList">Codes for the human resources of the universities from Portugal Codes for the human resources of the universities from Portugal</a>
+      </li>
+      <li>
+         <a href="#http://purl.org/roh/university-hr/pt#PTUniversityHumanResourcesList"
+            title="http://purl.org/roh/university-hr/pt#PTUniversityHumanResourcesList">Human resources of the universities from Portugal Human resources of the universities from Portugal</a>
+      </li>
+      <li>
+         <a href="#http://purl.org/roh/university-hr/pt#PT_UNIVERSITY_HR_CODE_PTPAS"
+            title="http://purl.org/roh/university-hr/pt#PT_UNIVERSITY_HR_CODE_PTPAS">PTPAS PTPAS</a>
+      </li>
+      <li>
+         <a href="#http://purl.org/roh/university-hr/pt#PT_UNIVERSITY_HR_CODE_PTPAU"
+            title="http://purl.org/roh/university-hr/pt#PT_UNIVERSITY_HR_CODE_PTPAU">PTPAU PTPAU</a>
+      </li>
+      <li>
+         <a href="#http://purl.org/roh/university-hr/pt#PT_UNIVERSITY_HR_CODE_PTPC"
+            title="http://purl.org/roh/university-hr/pt#PT_UNIVERSITY_HR_CODE_PTPC">PTPC PTPC</a>
+      </li>
+      <li>
+         <a href="#http://purl.org/roh/university-hr/pt#PT_UNIVERSITY_HR_CODE_PTPEM"
+            title="http://purl.org/roh/university-hr/pt#PT_UNIVERSITY_HR_CODE_PTPEM">PTPEM PTPEM</a>
+      </li>
+   </ul>
+   <div class="entity" id="http://purl.org/roh/university-hr/pt#PTUniversityHumanResourcesCodesList">
+      <h3>Codes for the human resources of the universities from Portugal<sup class="type-ni" title="named individual">ni</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#namedindividuals">Named Individual ToC</a>
+         </span>
+      </h3>
+      <h3>Codes for the human resources of the universities from Portugal<sup class="type-ni" title="named individual">ni</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#namedindividuals">Named Individual ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://purl.org/roh/university-hr/pt#PTUniversityHumanResourcesCodesList</p>
+      <dl class="description">
+         <dt>belongs to</dt>
+         <dd>
+            <a href="#http://www.w3.org/2004/02/skos/core#ConceptScheme"
+               title="http://www.w3.org/2004/02/skos/core#ConceptScheme">Concept Scheme</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="http://purl.org/roh/university-hr/pt#PTUniversityHumanResourcesList">
+      <h3>Human resources of the universities from Portugal<sup class="type-ni" title="named individual">ni</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#namedindividuals">Named Individual ToC</a>
+         </span>
+      </h3>
+      <h3>Human resources of the universities from Portugal<sup class="type-ni" title="named individual">ni</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#namedindividuals">Named Individual ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://purl.org/roh/university-hr/pt#PTUniversityHumanResourcesList</p>
+      <dl class="description">
+         <dt>belongs to</dt>
+         <dd>
+            <a href="#http://www.w3.org/2004/02/skos/core#ConceptScheme"
+               title="http://www.w3.org/2004/02/skos/core#ConceptScheme">Concept Scheme</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="http://purl.org/roh/university-hr/pt#PT_UNIVERSITY_HR_CODE_PTPAS">
+      <h3>PTPAS<sup class="type-ni" title="named individual">ni</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#namedindividuals">Named Individual ToC</a>
+         </span>
+      </h3>
+      <h3>PTPAS<sup class="type-ni" title="named individual">ni</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#namedindividuals">Named Individual ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://purl.org/roh/university-hr/pt#PT_UNIVERSITY_HR_CODE_PTPAS</p>
+      <dl class="description">
+         <dt>belongs to</dt>
+         <dd>
+            <a href="#http://www.w3.org/2004/02/skos/core#Concept" title="http://www.w3.org/2004/02/skos/core#Concept">Concept</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="http://purl.org/roh/university-hr/pt#PT_UNIVERSITY_HR_CODE_PTPAU">
+      <h3>PTPAU<sup class="type-ni" title="named individual">ni</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#namedindividuals">Named Individual ToC</a>
+         </span>
+      </h3>
+      <h3>PTPAU<sup class="type-ni" title="named individual">ni</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#namedindividuals">Named Individual ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://purl.org/roh/university-hr/pt#PT_UNIVERSITY_HR_CODE_PTPAU</p>
+      <dl class="description">
+         <dt>belongs to</dt>
+         <dd>
+            <a href="#http://www.w3.org/2004/02/skos/core#Concept" title="http://www.w3.org/2004/02/skos/core#Concept">Concept</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="http://purl.org/roh/university-hr/pt#PT_UNIVERSITY_HR_CODE_PTPC">
+      <h3>PTPC<sup class="type-ni" title="named individual">ni</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#namedindividuals">Named Individual ToC</a>
+         </span>
+      </h3>
+      <h3>PTPC<sup class="type-ni" title="named individual">ni</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#namedindividuals">Named Individual ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://purl.org/roh/university-hr/pt#PT_UNIVERSITY_HR_CODE_PTPC</p>
+      <dl class="description">
+         <dt>belongs to</dt>
+         <dd>
+            <a href="#http://www.w3.org/2004/02/skos/core#Concept" title="http://www.w3.org/2004/02/skos/core#Concept">Concept</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="http://purl.org/roh/university-hr/pt#PT_UNIVERSITY_HR_CODE_PTPEM">
+      <h3>PTPEM<sup class="type-ni" title="named individual">ni</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#namedindividuals">Named Individual ToC</a>
+         </span>
+      </h3>
+      <h3>PTPEM<sup class="type-ni" title="named individual">ni</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#namedindividuals">Named Individual ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://purl.org/roh/university-hr/pt#PT_UNIVERSITY_HR_CODE_PTPEM</p>
+      <dl class="description">
+         <dt>belongs to</dt>
+         <dd>
+            <a href="#http://www.w3.org/2004/02/skos/core#Concept" title="http://www.w3.org/2004/02/skos/core#Concept">Concept</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+      </dl>
+   </div>
+</div><div id="legend">
+<h2>Legend <span class="backlink"> back to <a href="#toc">ToC</a></span></h2>
+<div   class="entity">
+<sup class="type-c" title="Classes">c</sup>: Classes <br/>
+<sup class="type-op" title="Object Properties">op</sup>: Object Properties <br/>
+<sup class="type-dp" title="Data Properties">dp</sup>: Data Properties <br/>
+<sup class="type-ni" title="Named Individuals">ni</sup>: Named Individuals
+</div>
+</div>
+</div>
+    
+
+<!--REFERENCES SECTION-->
+  <div id="references">
+<h2 id="ref" class="list">References <span class="backlink"> back to <a href="#toc">ToC</a></span></h2>
+<span class="markdown">
+Add your references here. It is recommended to have them as a list.</span>
+
+</div>
+<div id="acknowledgements">
+<h2 id="ack" class="list">Acknowledgements <span class="backlink"> back to <a href="#toc">ToC</a></span></h2>
+<p>
+The authors would like to thank <a href="http://www.essepuntato.it/">Silvio Peroni</a> for developing <a href="http://www.essepuntato.it/lode">LODE</a>, a Live OWL Documentation Environment, which is used for representing the Cross Referencing Section of this document and <a href="https://w3id.org/people/dgarijo">Daniel Garijo</a> for developing <a href="https://github.com/dgarijo/Widoco">Widoco</a>, the program used to create the template used in this documentation.</p>
+</div>
+
+
+</div>
+</body>
+</html>

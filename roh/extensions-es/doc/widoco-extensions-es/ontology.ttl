@@ -1,0 +1,1236 @@
+@prefix : <http://purl.org/roh/es#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@base <http://purl.org/roh/es#> .
+
+<http://purl.org/roh/es#> rdf:type owl:Ontology ;
+                           owl:versionIRI <http://purl.org/roh/es/1.0> ;
+                           <http://purl.org/dc/terms/license> <https://creativecommons.org/licenses/by-sa/4.0/> ;
+                           rdfs:comment """The University of Murcia signed on November 29, 2017, a Covenant with the Ministry of Economy, Industry and Competitiveness backing the “HÉRCULES: Semantic University Research Data” Project with a budget of FIVE MILLION FOUR HUNDRED AND SIXTY-TWO THOUSAND SIX HUNDRED euros with an 80% of co-financiering from the European Regional Development Fund program (ERDF) within the 2014-2020 period. 
+
+The project arose as a CRUE initiative, to create the basis for a new collaboration model between universities, to develop the information management systems and with the main objective of encouraging this type of collaboration.
+
+Therefore, the purpose of this agreement was to contribute to the improvement of public services and business innovation and research through the improvement of:
+
+    efficiency in public investment by decreasing the duplication of investment in R&D.
+    efficiency of research in universities.
+    scientific dissemination of research results.
+    detection of synergies in R&D between universities.
+    transfer of R&D results to companies.
+    efficiency in the management of research. 
+
+by creating a research management system with semantic capacities based on semantic open data and that will provide a global view of the research data contained in the Spanish University System."""@en ;
+                           rdfs:label "ROH Spanish Extensions Module"@en .
+
+#################################################################
+#    Annotation properties
+#################################################################
+
+###  http://purl.obolibrary.org/obo/IAO_0000111
+<http://purl.obolibrary.org/obo/IAO_0000111> rdf:type owl:AnnotationProperty .
+
+
+###  http://purl.obolibrary.org/obo/IAO_0000112
+<http://purl.obolibrary.org/obo/IAO_0000112> rdf:type owl:AnnotationProperty .
+
+
+###  http://purl.obolibrary.org/obo/IAO_0000115
+<http://purl.obolibrary.org/obo/IAO_0000115> rdf:type owl:AnnotationProperty .
+
+
+###  http://purl.obolibrary.org/obo/IAO_0000117
+<http://purl.obolibrary.org/obo/IAO_0000117> rdf:type owl:AnnotationProperty .
+
+
+###  http://purl.org/dc/terms/license
+<http://purl.org/dc/terms/license> rdf:type owl:AnnotationProperty .
+
+
+###  http://purl.org/roh/mirror/obo/iao#IAO_0000111
+<http://purl.org/roh/mirror/obo/iao#IAO_0000111> rdf:type owl:AnnotationProperty .
+
+
+###  http://purl.org/roh/mirror/obo/iao#IAO_0000112
+<http://purl.org/roh/mirror/obo/iao#IAO_0000112> rdf:type owl:AnnotationProperty .
+
+
+###  http://purl.org/roh/mirror/obo/iao#IAO_0000115
+<http://purl.org/roh/mirror/obo/iao#IAO_0000115> rdf:type owl:AnnotationProperty .
+
+
+###  http://purl.org/roh/mirror/obo/iao#IAO_0000117
+<http://purl.org/roh/mirror/obo/iao#IAO_0000117> rdf:type owl:AnnotationProperty .
+
+
+###  http://purl.org/roh/mirror/obo/iao#IAO_0000118
+<http://purl.org/roh/mirror/obo/iao#IAO_0000118> rdf:type owl:AnnotationProperty .
+
+
+###  http://purl.org/roh/mirror/obo/iao#IAO_0000412
+<http://purl.org/roh/mirror/obo/iao#IAO_0000412> rdf:type owl:AnnotationProperty .
+
+
+###  http://purl.org/roh/mirror/skos#definition
+<http://purl.org/roh/mirror/skos#definition> rdf:type owl:AnnotationProperty .
+
+
+###  http://www.w3.org/2003/06/sw-vocab-status/ns#term_status
+<http://www.w3.org/2003/06/sw-vocab-status/ns#term_status> rdf:type owl:AnnotationProperty .
+
+
+#################################################################
+#    Object Properties
+#################################################################
+
+###  http://purl.org/roh/es#charges
+:charges rdf:type owl:ObjectProperty ;
+         rdfs:domain :Account ;
+         rdfs:range <http://purl.org/roh#Expense> .
+
+
+###  http://purl.org/roh/mirror/vivo#dateTimeInterval
+<http://purl.org/roh/mirror/vivo#dateTimeInterval> rdf:type owl:ObjectProperty .
+
+
+#################################################################
+#    Data properties
+#################################################################
+
+###  http://purl.org/roh/es#code
+:code rdf:type owl:DatatypeProperty ;
+      rdfs:label "code"@en ,
+                 "código"@es .
+
+
+###  http://purl.org/roh/es#doctoradoEuropeo
+:doctoradoEuropeo rdf:type owl:DatatypeProperty ;
+                  rdfs:domain <http://purl.org/roh#PhDThesisMetric> ;
+                  rdfs:range xsd:boolean ;
+                  rdfs:comment "La mención europea en el título de Doctor está regulada en el artículo 14 del Real Decreto 56/2005, de 21 de enero, sobre estudios universitarios oficiales de posgrado y en el artículo 22 del Real Decreto 1393/2007, de 29 de octubre, por el que se establece la ordenación de las enseñanzas universitarias oficiales. Los doctorandos que hayan comenzado sus estudios de doctorado con posterioridad al 11 de febrero de 2011 podrán obtener la mención internacional pero no la mención europea en el título de Doctor, ya que ésta ha sido derogada por el RD 99/2011. Los doctorandos que comenzaron sus estudios antes del 11 de febrero de 2011 y que hayan leído o lean sus tesis con posterioridad a dicha fecha, podrán obtener la mención europea, de acuerdo con la anterior normativa, o la mención internacional."@es ;
+                  rdfs:label "Doctorado Europeo"@es ,
+                             "European PhD"@en .
+
+
+###  http://purl.org/roh/es#doctoradoInternacional
+:doctoradoInternacional rdf:type owl:DatatypeProperty ;
+                        rdfs:range xsd:boolean ;
+                        rdfs:label "Doctorado Internacional"@es ,
+                                   "Interpnational PhD"@es .
+
+
+###  http://purl.org/roh/es#finalist
+:finalist rdf:type owl:DatatypeProperty ;
+          rdfs:domain <http://purl.org/roh/mirror/vivo#Project> ;
+          rdfs:range [ rdf:type rdfs:Datatype ;
+                       owl:oneOf [ rdf:type rdf:List ;
+                                   rdf:first "F" ;
+                                   rdf:rest [ rdf:type rdf:List ;
+                                              rdf:first "N" ;
+                                              rdf:rest [ rdf:type rdf:List ;
+                                                         rdf:first "P" ;
+                                                         rdf:rest rdf:nil
+                                                       ]
+                                            ]
+                                 ]
+                     ] ;
+          rdfs:comment "A finalist project can have one value of the following three types: a) finalist (F), non-finalist (N), and partially finalist (P)." .
+
+
+###  http://purl.org/roh/es#limitative
+:limitative rdf:type owl:DatatypeProperty ;
+            rdfs:domain <http://purl.org/roh/mirror/vivo#Project> ;
+            rdfs:range xsd:boolean .
+
+
+###  http://purl.org/roh/es#mencionCalidad
+:mencionCalidad rdf:type owl:DatatypeProperty ;
+                rdfs:domain <http://purl.org/roh#PhDThesisMetric> ;
+                rdfs:range xsd:boolean ;
+                rdfs:comment "La mención de calidad es una expresión de reconocimiento a la solvencia científico/técnica y formadora otorgada al programa de doctorado en su conjunto y a los grupos de investigación y departamentos que intervienen en el mismo. La mención de calidad ha sido sustituida por la mención hacia la excelencia, distinción con la que el Ministerio de Educación reconoce la calidad de los mejores programas oficiales de Doctorado, y supone un proceso previo de acreditación de los méritos y la trayectoria del programa ante la ANECA (artículo 16.1 del Real Decreto 99/2011, de 28 de enero, por el que se regulan las enseñanzas oficiales de doctorado: http://www.boe.es/boe/dias/2011/02/10/pdfs/BOE-A-2011-2541.pdf)"@es ;
+                rdfs:label "Mención de Calidad"@es ,
+                           "Quality mention"@en .
+
+
+###  http://purl.org/roh/es#premioExtraordinarioDoctorado
+:premioExtraordinarioDoctorado rdf:type owl:DatatypeProperty ;
+                               rdfs:domain <http://purl.org/roh#PhDThesisMetric> ;
+                               rdfs:range xsd:boolean ;
+                               rdfs:comment "El premio extraordinario de doctorado se concede a aquellos Doctores que, habiendo obtenido la mención \"cum laude\", sean beneficiarios asimismo de dicho premio."@es ;
+                               rdfs:label "PhD extraordinary award"@es ,
+                                          "Premio extraordinario del doctorado"@es .
+
+
+###  http://purl.org/roh/es#rate
+:rate rdf:type owl:DatatypeProperty ;
+      rdfs:domain :Tax ;
+      rdfs:range xsd:float .
+
+
+#################################################################
+#    Classes
+#################################################################
+
+###  http://purl.org/roh#AcademicAccreditation
+<http://purl.org/roh#AcademicAccreditation> rdf:type owl:Class .
+
+
+###  http://purl.org/roh#Expense
+<http://purl.org/roh#Expense> rdf:type owl:Class .
+
+
+###  http://purl.org/roh#FundingSource
+<http://purl.org/roh#FundingSource> rdf:type owl:Class .
+
+
+###  http://purl.org/roh#KnowledgeArea
+<http://purl.org/roh#KnowledgeArea> rdf:type owl:Class .
+
+
+###  http://purl.org/roh#PhDThesisMetric
+<http://purl.org/roh#PhDThesisMetric> rdf:type owl:Class .
+
+
+###  http://purl.org/roh#ResearchAccreditation
+<http://purl.org/roh#ResearchAccreditation> rdf:type owl:Class .
+
+
+###  http://purl.org/roh/es#Account
+:Account rdf:type owl:Class ;
+         rdfs:comment "Cuenta del Plan General Contable en la que se imputan unos gastos determinados."@es ;
+         rdfs:label "Account"@en ,
+                    "Cuenta"@es .
+
+
+###  http://purl.org/roh/es#ActivoNoCorriente
+:ActivoNoCorriente rdf:type owl:Class ;
+                   rdfs:subClassOf :Account ,
+                                   [ rdf:type owl:Restriction ;
+                                     owl:onProperty :code ;
+                                     owl:hasValue "2"^^xsd:int
+                                   ] ;
+                   owl:disjointWith :ComprasYGastosPorNaturaleza ;
+                   rdfs:label "Activo no corriente"@es ,
+                              "Non-active Active"@en .
+
+
+###  http://purl.org/roh/es#AdaptacionDeTerrenos
+:AdaptacionDeTerrenos rdf:type owl:Class ;
+                      rdfs:subClassOf :InmovilizacionesMaterialesEInversionesInmobiliarias ,
+                                      [ rdf:type owl:Restriction ;
+                                        owl:onProperty :code ;
+                                        owl:hasValue "230"^^xsd:int
+                                      ] ;
+                      rdfs:label "Adaptación de terrenos y bienes naturales"@es ,
+                                 "Adaptation of land and natural assets"@en .
+
+
+###  http://purl.org/roh/es#AdaptacionDeTerrenosInmovilizadoMaterial
+:AdaptacionDeTerrenosInmovilizadoMaterial rdf:type owl:Class ;
+                                          rdfs:subClassOf :AdaptacionDeTerrenos ,
+                                                          [ rdf:type owl:Restriction ;
+                                                            owl:onProperty :code ;
+                                                            owl:hasValue "2300"^^xsd:int
+                                                          ] ;
+                                          rdfs:label "Adaptación de terrenos y bienes naturales. Inmovilizado material"@es ,
+                                                     "Adaptation of land and natural assets. Tangible fixed assets"@en .
+
+
+###  http://purl.org/roh/es#Agua
+:Agua rdf:type owl:Class ;
+      rdfs:subClassOf :Suministros ,
+                      [ rdf:type owl:Restriction ;
+                        owl:onProperty :code ;
+                        owl:hasValue "6281"^^xsd:int
+                      ] ;
+      rdfs:label "Agua"@es ,
+                 "Water"@en .
+
+
+###  http://purl.org/roh/es#AplicacionesInformaticas
+:AplicacionesInformaticas rdf:type owl:Class ;
+                          rdfs:subClassOf :InmovilizacionesIntangibles ,
+                                          [ rdf:type owl:Restriction ;
+                                            owl:onProperty :code ;
+                                            owl:hasValue "206"^^xsd:int
+                                          ] ;
+                          owl:disjointWith :PropiedadIndustrial ;
+                          rdfs:label "Aplicaciones informáticas"@es ,
+                                     "Computer applications"@en .
+
+
+###  http://purl.org/roh/es#ArrendamientosYCanones
+:ArrendamientosYCanones rdf:type owl:Class ;
+                        rdfs:subClassOf :ServiciosExteriores ,
+                                        [ rdf:type owl:Restriction ;
+                                          owl:onProperty :code ;
+                                          owl:hasValue "621"^^xsd:int
+                                        ] ,
+                                        [ rdf:type owl:Restriction ;
+                                          owl:onProperty :code ;
+                                          owl:hasValue "6218"^^xsd:int
+                                        ] ;
+                        rdfs:label "Arrendamientos y cánones"@es ,
+                                   "Rent and royalties"@en .
+
+
+###  http://purl.org/roh/es#AyudanteDoctor
+:AyudanteDoctor rdf:type owl:Class ;
+                rdfs:subClassOf <http://purl.org/roh#AcademicAccreditation> ;
+                rdfs:label "Assistant Doctor"@en ,
+                           "Ayudante Doctor"@es .
+
+
+###  http://purl.org/roh/es#BienesDelPatrimonioHistorico
+:BienesDelPatrimonioHistorico rdf:type owl:Class ;
+                              rdfs:subClassOf :InmovilizacionesMateriales ,
+                                              [ rdf:type owl:Restriction ;
+                                                owl:onProperty :code ;
+                                                owl:hasValue "213"^^xsd:int
+                                              ] ;
+                              rdfs:label "Bienes del patrimonio histórico"@es ,
+                                         "Historical Heritage Properties"@en .
+
+
+###  http://purl.org/roh/es#Canones
+:Canones rdf:type owl:Class ;
+         rdfs:subClassOf :ArrendamientosYCanones ;
+         rdfs:label "Cánones"@es ,
+                    "Royalties"@en .
+
+
+###  http://purl.org/roh/es#CatedraticoUniversidad
+:CatedraticoUniversidad rdf:type owl:Class ;
+                        rdfs:subClassOf <http://purl.org/roh#AcademicAccreditation> ;
+                        rdfs:label "Catedrático de Universidad"@es ,
+                                   "University Professor"@en .
+
+
+###  http://purl.org/roh/es#Combustibles
+:Combustibles rdf:type owl:Class ;
+              rdfs:subClassOf :Suministros ,
+                              [ rdf:type owl:Restriction ;
+                                owl:onProperty :code ;
+                                owl:hasValue "6283"^^xsd:int
+                              ] ;
+              rdfs:label "Combustibles"@es ,
+                         "Fuels"@en .
+
+
+###  http://purl.org/roh/es#ComprasYGastosPorNaturaleza
+:ComprasYGastosPorNaturaleza rdf:type owl:Class ;
+                             rdfs:subClassOf :Account ,
+                                             [ rdf:type owl:Restriction ;
+                                               owl:onProperty :code ;
+                                               owl:hasValue "6"^^xsd:int
+                                             ] ;
+                             rdfs:label "Compras y gastos por naturaleza"@es ,
+                                        "Purchases and expenses by nature"@en .
+
+
+###  http://purl.org/roh/es#ComunicacionesTelefonicas
+:ComunicacionesTelefonicas rdf:type owl:Class ;
+                           rdfs:subClassOf :ComunicacionesYOtrosServicios ,
+                                           [ rdf:type owl:Restriction ;
+                                             owl:onProperty :code ;
+                                             owl:hasValue "6297"^^xsd:int
+                                           ] ;
+                           rdfs:label "Comunicaciones telefónicas"@es ,
+                                      "Telephone communications"@en .
+
+
+###  http://purl.org/roh/es#ComunicacionesYOtrosServicios
+:ComunicacionesYOtrosServicios rdf:type owl:Class ;
+                               rdfs:subClassOf :ServiciosExteriores ,
+                                               [ rdf:type owl:Restriction ;
+                                                 owl:onProperty :code ;
+                                                 owl:hasValue "629"^^xsd:int
+                                               ] ;
+                               rdfs:label "Communications and other services"@en ,
+                                          "Comunicaciones y otros servicios"@es .
+
+
+###  http://purl.org/roh/es#Construcciones
+:Construcciones rdf:type owl:Class ;
+                rdfs:subClassOf :InmovilizacionesMateriales ,
+                                [ rdf:type owl:Restriction ;
+                                  owl:onProperty :code ;
+                                  owl:hasValue "211"^^xsd:int
+                                ] ;
+                owl:disjointWith :TerrenosYBienesNaturalesCompras ;
+                rdfs:label "Construcciones"@es ,
+                           "Construction"@en .
+
+
+###  http://purl.org/roh/es#ConstruccionesCompras
+:ConstruccionesCompras rdf:type owl:Class ;
+                       rdfs:subClassOf :ArrendamientosYCanones ,
+                                       [ rdf:type owl:Restriction ;
+                                         owl:onProperty :code ;
+                                         owl:hasValue "6211"^^xsd:int
+                                       ] ;
+                       rdfs:label "Construcciones"@es ,
+                                  "Construction"@en .
+
+
+###  http://purl.org/roh/es#ConstruccionesEnCurso
+:ConstruccionesEnCurso rdf:type owl:Class ;
+                       rdfs:subClassOf :InmovilizacionesMaterialesEInversionesInmobiliarias ,
+                                       [ rdf:type owl:Restriction ;
+                                         owl:onProperty :code ;
+                                         owl:hasValue "231"^^xsd:int
+                                       ] ;
+                       rdfs:label "Construcciones en curso"@es ,
+                                  "Construction in progress"@en .
+
+
+###  http://purl.org/roh/es#ConstruccionesEnCursoInmovilizadoMaterial
+:ConstruccionesEnCursoInmovilizadoMaterial rdf:type owl:Class ;
+                                           rdfs:subClassOf :ConstruccionesEnCurso ,
+                                                           [ rdf:type owl:Restriction ;
+                                                             owl:onProperty :code ;
+                                                             owl:hasValue "2310"^^xsd:int
+                                                           ] ;
+                                           rdfs:label "Construcciones en curso. Inmovilizado material"@es ,
+                                                      "Construction in progress. Tangible fixed assets"@en .
+
+
+###  http://purl.org/roh/es#ContratadoDoctor
+:ContratadoDoctor rdf:type owl:Class ;
+                  rdfs:subClassOf <http://purl.org/roh#AcademicAccreditation> ;
+                  rdfs:label "Contratado Doctor"@es ,
+                             "Hired Doctor"@en .
+
+
+###  http://purl.org/roh/es#Dietas
+:Dietas rdf:type owl:Class ;
+        rdfs:subClassOf :ComunicacionesYOtrosServicios ,
+                        [ rdf:type owl:Restriction ;
+                          owl:onProperty :code ;
+                          owl:hasValue "6294"^^xsd:int
+                        ] ;
+        rdfs:label "Dietas"@es ,
+                   "Work expenses"@en .
+
+
+###  http://purl.org/roh/es#ElementosDeTransporte
+:ElementosDeTransporte rdf:type owl:Class ;
+                       rdfs:subClassOf :InmovilizacionesMateriales ,
+                                       [ rdf:type owl:Restriction ;
+                                         owl:onProperty :code ;
+                                         owl:hasValue "218"^^xsd:int
+                                       ] ;
+                       rdfs:label "Elementos de transporte"@es ,
+                                  "Transport elements"@en .
+
+
+###  http://purl.org/roh/es#EnergiaElectrica
+:EnergiaElectrica rdf:type owl:Class ;
+                  rdfs:subClassOf :Suministros ,
+                                  [ rdf:type owl:Restriction ;
+                                    owl:onProperty :code ;
+                                    owl:hasValue "6280"^^xsd:int
+                                  ] ;
+                  rdfs:label "Electric power"@en ,
+                             "Energía eléctrica"@es .
+
+
+###  http://purl.org/roh/es#EquiposParaProcesosDeInformacion
+:EquiposParaProcesosDeInformacion rdf:type owl:Class ;
+                                  rdfs:subClassOf :InmovilizacionesMateriales ,
+                                                  [ rdf:type owl:Restriction ;
+                                                    owl:onProperty :code ;
+                                                    owl:hasValue "217"^^xsd:int
+                                                  ] ;
+                                  rdfs:label "Equipment for information processes"@en ,
+                                             "Equipos para procesos de información"@es .
+
+
+###  http://purl.org/roh/es#EquiposParaProcesosDeInformacionCompras
+:EquiposParaProcesosDeInformacionCompras rdf:type owl:Class ;
+                                         rdfs:subClassOf :ArrendamientosYCanones ,
+                                                         [ rdf:type owl:Restriction ;
+                                                           owl:onProperty :code ;
+                                                           owl:hasValue "6216"^^xsd:int
+                                                         ] ;
+                                         rdfs:label "Equipment for information processes"@en ,
+                                                    "Equipos para procesos de información"@es .
+
+
+###  http://purl.org/roh/es#FECYTKnowledgeArea
+:FECYTKnowledgeArea rdf:type owl:Class ;
+                    rdfs:subClassOf <http://purl.org/roh#KnowledgeArea> ;
+                    rdfs:comment "List of terms used in subject analysis and retrieval of documents and publications in the fields of education, culture, natural sciences, social and human sciences, communication and information by FECYT."@es ;
+                    rdfs:label "FECYT Knowledge Area"@en ,
+                               "Área de Conocimiento de FECYT"@es .
+
+
+###  http://purl.org/roh/es#Gas
+:Gas rdf:type owl:Class ;
+     rdfs:subClassOf :Suministros ,
+                     [ rdf:type owl:Restriction ;
+                       owl:onProperty :code ;
+                       owl:hasValue "6282"^^xsd:int
+                     ] ;
+     rdfs:label "Gas"@en ,
+                "Gas"@es .
+
+
+###  http://purl.org/roh/es#GastosEnInvestigacionYDesarrollo
+:GastosEnInvestigacionYDesarrollo rdf:type owl:Class ;
+                                  rdfs:subClassOf :ServiciosExteriores ,
+                                                  [ rdf:type owl:Restriction ;
+                                                    owl:onProperty :code ;
+                                                    owl:hasValue "620"^^xsd:int
+                                                  ] ;
+                                  rdfs:label "Expenditure on research and development"@en ,
+                                             "Gastos en investigación y desarrollo"@es .
+
+
+###  http://purl.org/roh/es#GastosExcepcionales
+:GastosExcepcionales rdf:type owl:Class ;
+                     rdfs:subClassOf :Perdidas ;
+                     rdfs:label "Exceptional expenses"@en ,
+                                "Gastos excepcionales"@es .
+
+
+###  http://purl.org/roh/es#GeneracionConocimiento
+:GeneracionConocimiento rdf:type owl:Class .
+
+
+###  http://purl.org/roh/es#IRNR
+:IRNR rdf:type owl:Class ;
+      rdfs:subClassOf :Tax ;
+      rdfs:label "Impuesto sobre la renta de no residentes"@es ,
+                 "Non-resident income tax"@en .
+
+
+###  http://purl.org/roh/es#IRPF
+:IRPF rdf:type owl:Class ;
+      rdfs:subClassOf :Tax ;
+      rdfs:label "Impuesto sobre la renta de las personas físicas"@es ,
+                 "Personal income tax"@en .
+
+
+###  http://purl.org/roh/es#IVA
+:IVA rdf:type owl:Class ;
+     rdfs:subClassOf :Tax ;
+     rdfs:label "Impuesto sobre el Valor Añadido"@es ,
+                "Value Added Tax"@en .
+
+
+###  http://purl.org/roh/es#InfrastructurasInvestigacionEquipamientoCientifico
+:InfrastructurasInvestigacionEquipamientoCientifico rdf:type owl:Class ;
+                                                    rdfs:subClassOf :GeneracionConocimiento .
+
+
+###  http://purl.org/roh/es#InmovilizacionesIntangibles
+:InmovilizacionesIntangibles rdf:type owl:Class ;
+                             rdfs:subClassOf :ActivoNoCorriente ,
+                                             [ rdf:type owl:Restriction ;
+                                               owl:onProperty :code ;
+                                               owl:hasValue "20"^^xsd:int
+                                             ] ;
+                             rdfs:label "INMOVILIZACIONES INTANGIBLES"@es ,
+                                        "INTANGIBLE ASSETS"@en .
+
+
+###  http://purl.org/roh/es#InmovilizacionesMateriales
+:InmovilizacionesMateriales rdf:type owl:Class ;
+                            rdfs:subClassOf :ActivoNoCorriente ,
+                                            [ rdf:type owl:Restriction ;
+                                              owl:onProperty :code ;
+                                              owl:hasValue "21"^^xsd:int
+                                            ] ;
+                            rdfs:label "INMOVILIZACIONES MATERIALES"@es ,
+                                       "TANGIBLE FIXED ASSETS"@en .
+
+
+###  http://purl.org/roh/es#InmovilizacionesMaterialesEInversionesInmobiliarias
+:InmovilizacionesMaterialesEInversionesInmobiliarias rdf:type owl:Class ;
+                                                     rdfs:subClassOf :ActivoNoCorriente ,
+                                                                     [ rdf:type owl:Restriction ;
+                                                                       owl:onProperty :code ;
+                                                                       owl:hasValue "23"^^xsd:int
+                                                                     ] ;
+                                                     rdfs:label "INMOVILIZACIONES MATERIALES E INVERSIONES INMOBILIARIAS EN CURSO"@es ,
+                                                                "TANGIBLE FIXED ASSETS AND INVESTMENT PROPERTY IN PROGRESS"@en .
+
+
+###  http://purl.org/roh/es#InstalacionesTecnicas
+:InstalacionesTecnicas rdf:type owl:Class ;
+                       rdfs:subClassOf :InmovilizacionesMateriales ,
+                                       [ rdf:type owl:Restriction ;
+                                         owl:onProperty :code ;
+                                         owl:hasValue "215"^^xsd:int
+                                       ] ;
+                       rdfs:label "Instalaciones técnicas y otras instalaciones"@es ,
+                                  "Technical and other installations"@en .
+
+
+###  http://purl.org/roh/es#InstalacionesTecnicasEnMontaje
+:InstalacionesTecnicasEnMontaje rdf:type owl:Class ;
+                                rdfs:subClassOf :InmovilizacionesMaterialesEInversionesInmobiliarias ,
+                                                [ rdf:type owl:Restriction ;
+                                                  owl:onProperty :code ;
+                                                  owl:hasValue "235"^^xsd:int
+                                                ] ;
+                                rdfs:label "Instalaciones técnicas y otras instalaciones en montaje"@es ,
+                                           "Technical installations and other installations in assembly"@en .
+
+
+###  http://purl.org/roh/es#LimpiezaYAseo
+:LimpiezaYAseo rdf:type owl:Class ;
+               rdfs:subClassOf :ComunicacionesYOtrosServicios ,
+                               [ rdf:type owl:Restriction ;
+                                 owl:onProperty :code ;
+                                 owl:hasValue "6293"^^xsd:int
+                               ] ;
+               rdfs:label "Cleanliness and tidiness"@en ,
+                          "Limpieza y aseo"@es .
+
+
+###  http://purl.org/roh/es#Locomocion
+:Locomocion rdf:type owl:Class ;
+            rdfs:subClassOf :ComunicacionesYOtrosServicios ,
+                            [ rdf:type owl:Restriction ;
+                              owl:onProperty :code ;
+                              owl:hasValue "6295"^^xsd:int
+                            ] ;
+            rdfs:label "Locomoción"@es ,
+                       "Locomotion"@en .
+
+
+###  http://purl.org/roh/es#MaquinariaUtillaje
+:MaquinariaUtillaje rdf:type owl:Class ;
+                    rdfs:subClassOf :ArrendamientosYCanones ,
+                                    [ rdf:type owl:Restriction ;
+                                      owl:onProperty :code ;
+                                      owl:hasValue "6214"^^xsd:int
+                                    ] ;
+                    rdfs:label "Machinery, tools, technical facilities and other installations"@en ,
+                               "Maquinaria, Utillaje, instalaciones técnicas y otras instalaciones"@es .
+
+
+###  http://purl.org/roh/es#MaquinariaYUtillaje
+:MaquinariaYUtillaje rdf:type owl:Class ;
+                     rdfs:subClassOf :InmovilizacionesMateriales ,
+                                     [ rdf:type owl:Restriction ;
+                                       owl:onProperty :code ;
+                                       owl:hasValue "214"^^xsd:int
+                                     ] ;
+                     rdfs:label "Machinery and tools"@en ,
+                                "Maquinaria y utillaje"@es .
+
+
+###  http://purl.org/roh/es#MaterialDeOficina
+:MaterialDeOficina rdf:type owl:Class ;
+                   rdfs:subClassOf :ComunicacionesYOtrosServicios ,
+                                   [ rdf:type owl:Restriction ;
+                                     owl:onProperty :code ;
+                                     owl:hasValue "6290"^^xsd:int
+                                   ] ;
+                   rdfs:label "Material de oficina ordinario no inventariable"@es ,
+                              "Ordinary non-inventory office supplies"@en .
+
+
+###  http://purl.org/roh/es#Mobiliario
+:Mobiliario rdf:type owl:Class ;
+            rdfs:subClassOf :InmovilizacionesMateriales ,
+                            [ rdf:type owl:Restriction ;
+                              owl:onProperty :code ;
+                              owl:hasValue "216"^^xsd:int
+                            ] ;
+            rdfs:label "Furniture"@en ,
+                       "Mobiliario"@es .
+
+
+###  http://purl.org/roh/es#MobiliarioCompras
+:MobiliarioCompras rdf:type owl:Class ;
+                   rdfs:subClassOf :ArrendamientosYCanones ,
+                                   [ rdf:type owl:Restriction ;
+                                     owl:onProperty :code ;
+                                     owl:hasValue "6215"^^xsd:int
+                                   ] ;
+                   rdfs:label "Furniture"@en ,
+                              "Mobiliario"@es .
+
+
+###  http://purl.org/roh/es#OtrasComunicaciones
+:OtrasComunicaciones rdf:type owl:Class ;
+                     rdfs:subClassOf :ComunicacionesYOtrosServicios ,
+                                     [ rdf:type owl:Restriction ;
+                                       owl:onProperty :code ;
+                                       owl:hasValue "6298"^^xsd:int
+                                     ] ;
+                     rdfs:label "Other communications"@en ,
+                                "Otras comunicaciones"@es .
+
+
+###  http://purl.org/roh/es#OtroInmovilizadoMaterial
+:OtroInmovilizadoMaterial rdf:type owl:Class ;
+                          rdfs:subClassOf :InmovilizacionesMateriales ,
+                                          [ rdf:type owl:Restriction ;
+                                            owl:onProperty :code ;
+                                            owl:hasValue "219"^^xsd:int
+                                          ] ;
+                          rdfs:label "Other tangible fixed assets"@en ,
+                                     "Otro inmovilizado material"@es .
+
+
+###  http://purl.org/roh/es#OtroInmovilizadoMaterialCompras
+:OtroInmovilizadoMaterialCompras rdf:type owl:Class ;
+                                 rdfs:subClassOf :ArrendamientosYCanones ,
+                                                 [ rdf:type owl:Restriction ;
+                                                   owl:onProperty :code ;
+                                                   owl:hasValue "6217"^^xsd:int
+                                                 ] ;
+                                 rdfs:label "Other tangible fixed assets"@en ,
+                                            "Otro inmovilizado material"@es .
+
+
+###  http://purl.org/roh/es#OtrosServicios
+:OtrosServicios rdf:type owl:Class ;
+                rdfs:subClassOf :ComunicacionesYOtrosServicios ,
+                                [ rdf:type owl:Restriction ;
+                                  owl:onProperty :code ;
+                                  owl:hasValue "6299"^^xsd:int
+                                ] ;
+                rdfs:label "Other Services"@en ,
+                           "Otros Servicios"@es .
+
+
+###  http://purl.org/roh/es#OtrosSuministros
+:OtrosSuministros rdf:type owl:Class ;
+                  rdfs:subClassOf :Suministros ,
+                                  [ rdf:type owl:Restriction ;
+                                    owl:onProperty :code ;
+                                    owl:hasValue "6289"^^xsd:int
+                                  ] ;
+                  rdfs:label "Other supplies"@en ,
+                             "Otros suministros"@es .
+
+
+###  http://purl.org/roh/es#Perdidas
+:Perdidas rdf:type owl:Class ;
+          rdfs:subClassOf :ComprasYGastosPorNaturaleza ,
+                          [ rdf:type owl:Restriction ;
+                            owl:onProperty :code ;
+                            owl:hasValue "67"^^xsd:int
+                          ] ,
+                          [ rdf:type owl:Restriction ;
+                            owl:onProperty :code ;
+                            owl:hasValue "678"^^xsd:int
+                          ] ;
+          rdfs:label "LOSSES ON NON-CURRENT ASSETS, OTHER ORDINARY MANAGEMENT EXPENSES AND EXCEPTIONAL EXPENSES"@en ,
+                     "PÉRDIDAS PROCEDENTES DE ACTIVOS NO CORRIENTES, OTROS GASTOS DE GESTIÓN ORDINARIA Y GASTOS EXCEPCIONALES"@es .
+
+
+###  http://purl.org/roh/es#Prensa
+:Prensa rdf:type owl:Class ;
+        rdfs:subClassOf :ComunicacionesYOtrosServicios ,
+                        [ rdf:type owl:Restriction ;
+                          owl:onProperty :code ;
+                          owl:hasValue "6291"^^xsd:int
+                        ] ;
+        rdfs:label "Prensa, revistas, libros y otras publicaciones"@es ,
+                   "Press, magazines, books and other publications"@en .
+
+
+###  http://purl.org/roh/es#PrimasDeSeguros
+:PrimasDeSeguros rdf:type owl:Class ;
+                 rdfs:subClassOf :ServiciosExteriores ,
+                                 [ rdf:type owl:Restriction ;
+                                   owl:onProperty :code ;
+                                   owl:hasValue "625"^^xsd:int
+                                 ] ;
+                 rdfs:label "Insurance premiums"@en ,
+                            "Primas de seguros"@es .
+
+
+###  http://purl.org/roh/es#ProfesorUniversidadPrivada
+:ProfesorUniversidadPrivada rdf:type owl:Class ;
+                            rdfs:subClassOf <http://purl.org/roh#AcademicAccreditation> ;
+                            rdfs:label "Private University Professor"@en ,
+                                       "Profesor de Universidad Privada"@es .
+
+
+###  http://purl.org/roh/es#PropiedadIndustrial
+:PropiedadIndustrial rdf:type owl:Class ;
+                     rdfs:subClassOf :InmovilizacionesIntangibles ,
+                                     [ rdf:type owl:Restriction ;
+                                       owl:onProperty :code ;
+                                       owl:hasValue "203"^^xsd:int
+                                     ] ;
+                     rdfs:label "Industrial and intellectual property"@en ,
+                                "Propiedad industrial e intelectual"@es .
+
+
+###  http://purl.org/roh/es#Publicidad
+:Publicidad rdf:type owl:Class ;
+            rdfs:subClassOf :ServiciosExteriores ,
+                            [ rdf:type owl:Restriction ;
+                              owl:onProperty :code ;
+                              owl:hasValue "627"^^xsd:int
+                            ] ;
+            rdfs:label "Advertising, propaganda and public relations"@en ,
+                       "Publicidad, propaganda y relaciones públicas"@es .
+
+
+###  http://purl.org/roh/es#ReparacionConstrucciones
+:ReparacionConstrucciones rdf:type owl:Class ;
+                          rdfs:subClassOf :ReparacionesYConservacion ,
+                                          [ rdf:type owl:Restriction ;
+                                            owl:onProperty :code ;
+                                            owl:hasValue "6221"^^xsd:int
+                                          ] ;
+                          rdfs:label "Construcciones"@es ,
+                                     "Construction"@en .
+
+
+###  http://purl.org/roh/es#ReparacionEquiposParaProcesosDeInformacion
+:ReparacionEquiposParaProcesosDeInformacion rdf:type owl:Class ;
+                                            rdfs:subClassOf :ReparacionesYConservacion ,
+                                                            [ rdf:type owl:Restriction ;
+                                                              owl:onProperty :code ;
+                                                              owl:hasValue "6227"^^xsd:int
+                                                            ] ;
+                                            rdfs:label "Equipment for information processes"@en ,
+                                                       "Equipos para procesos de información"@es .
+
+
+###  http://purl.org/roh/es#ReparacionInstalacionesTecnicas
+:ReparacionInstalacionesTecnicas rdf:type owl:Class ;
+                                 rdfs:subClassOf :ReparacionesYConservacion ,
+                                                 [ rdf:type owl:Restriction ;
+                                                   owl:onProperty :code ;
+                                                   owl:hasValue "6225"^^xsd:int
+                                                 ] ;
+                                 rdfs:label "Instalaciones técnicas y otras instalaciones"@es ,
+                                            "Technical and other installations"@en .
+
+
+###  http://purl.org/roh/es#ReparacionMaquinariaUtillaje
+:ReparacionMaquinariaUtillaje rdf:type owl:Class ;
+                              rdfs:subClassOf :ReparacionesYConservacion ,
+                                              [ rdf:type owl:Restriction ;
+                                                owl:onProperty :code ;
+                                                owl:hasValue "6224"^^xsd:int
+                                              ] ;
+                              rdfs:label "Machinery and tools"@en ,
+                                         "Maquinaria y utillaje"@es .
+
+
+###  http://purl.org/roh/es#ReparacionMobiliario
+:ReparacionMobiliario rdf:type owl:Class ;
+                      rdfs:subClassOf :ReparacionesYConservacion ,
+                                      [ rdf:type owl:Restriction ;
+                                        owl:onProperty :code ;
+                                        owl:hasValue "6226"^^xsd:int
+                                      ] ;
+                      rdfs:label "Furniture"@en ,
+                                 "Mobiliario"@es .
+
+
+###  http://purl.org/roh/es#ReparacionOtroInmovilizadoMaterial
+:ReparacionOtroInmovilizadoMaterial rdf:type owl:Class ;
+                                    rdfs:subClassOf :ReparacionesYConservacion ,
+                                                    [ rdf:type owl:Restriction ;
+                                                      owl:onProperty :code ;
+                                                      owl:hasValue "6228"^^xsd:int
+                                                    ] ;
+                                    rdfs:label "Other tangible fixed assets"@en ,
+                                               "Otro inmovilizado material"@es .
+
+
+###  http://purl.org/roh/es#ReparacionTerrenosYBienesNaturales
+:ReparacionTerrenosYBienesNaturales rdf:type owl:Class ;
+                                    rdfs:subClassOf :ReparacionesYConservacion ,
+                                                    [ rdf:type owl:Restriction ;
+                                                      owl:onProperty :code ;
+                                                      owl:hasValue "6220"^^xsd:int
+                                                    ] ;
+                                    rdfs:label "Land and natural assets"@en ,
+                                               "Terrenos y bienes naturales"@es .
+
+
+###  http://purl.org/roh/es#ReparacionesYConservacion
+:ReparacionesYConservacion rdf:type owl:Class ;
+                           rdfs:subClassOf :ServiciosExteriores ,
+                                           [ rdf:type owl:Restriction ;
+                                             owl:onProperty :code ;
+                                             owl:hasValue "622"^^xsd:int
+                                           ] .
+
+
+###  http://purl.org/roh/es#Seguridad
+:Seguridad rdf:type owl:Class ;
+           rdfs:subClassOf :ComunicacionesYOtrosServicios ,
+                           [ rdf:type owl:Restriction ;
+                             owl:onProperty :code ;
+                             owl:hasValue "6292"^^xsd:int
+                           ] ;
+           rdfs:label "Security"@en ,
+                      "Seguridad"@es .
+
+
+###  http://purl.org/roh/es#ServiciosBancariosYSimilares
+:ServiciosBancariosYSimilares rdf:type owl:Class ;
+                              rdfs:subClassOf :ServiciosExteriores ,
+                                              [ rdf:type owl:Restriction ;
+                                                owl:onProperty :code ;
+                                                owl:hasValue "626"^^xsd:int
+                                              ] ;
+                              rdfs:label "Banking and similar services"@en ,
+                                         "Servicios bancarios y similares"@es .
+
+
+###  http://purl.org/roh/es#ServiciosDeProfesionalesIndependientes
+:ServiciosDeProfesionalesIndependientes rdf:type owl:Class ;
+                                        rdfs:subClassOf :ServiciosExteriores ,
+                                                        [ rdf:type owl:Restriction ;
+                                                          owl:onProperty :code ;
+                                                          owl:hasValue "623"^^xsd:int
+                                                        ] ;
+                                        rdfs:label "Independent professional services"@en ,
+                                                   "Servicios de profesionales independientes"@es .
+
+
+###  http://purl.org/roh/es#ServiciosExteriores
+:ServiciosExteriores rdf:type owl:Class ;
+                     rdfs:subClassOf :ComprasYGastosPorNaturaleza ,
+                                     [ rdf:type owl:Restriction ;
+                                       owl:onProperty :code ;
+                                       owl:hasValue "62"^^xsd:int
+                                     ] ;
+                     rdfs:label "OUTSIDE FACILITIES"@en ,
+                                "SERVICIOS EXTERIORES"@es .
+
+
+###  http://purl.org/roh/es#Sexenio
+:Sexenio rdf:type owl:Class ;
+         rdfs:subClassOf <http://purl.org/roh#ResearchAccreditation> ,
+                         [ rdf:type owl:Restriction ;
+                           owl:onProperty <http://purl.org/roh/mirror/vivo#dateTimeInterval> ;
+                           owl:someValuesFrom <http://purl.org/roh/mirror/vivo#DateTimeInterval>
+                         ] ,
+                         [ rdf:type owl:Restriction ;
+                           owl:onProperty <http://purl.org/roh/mirror/vivo#dateTimeInterval> ;
+                           owl:allValuesFrom <http://purl.org/roh/mirror/vivo#DateTimeInterval>
+                         ] ;
+         rdfs:comment "Tramo de investigación reconocido al profesorado universitario por los méritos de su actividad investigadora, labor realizada a través de un programa de ANECA. Se denomina así porque los solicitantes han de someter a evaluación una selección de los trabajos científicos publicados durante un período de seis años. La finalidad es el fomento, mediante la asignación de un complemento económico, del trabajo investigador de los docentes de las universidades españolas."@es ;
+         rdfs:label "Sexenio"@es ,
+                    "Sexennial"@en .
+
+
+###  http://purl.org/roh/es#Suministros
+:Suministros rdf:type owl:Class ;
+             rdfs:subClassOf :ServiciosExteriores ,
+                             [ rdf:type owl:Restriction ;
+                               owl:onProperty :code ;
+                               owl:hasValue "628"^^xsd:int
+                             ] ;
+             rdfs:label "Suministros"@es ,
+                        "Supplies"@en .
+
+
+###  http://purl.org/roh/es#Tax
+:Tax rdf:type owl:Class ;
+     rdfs:comment "Money paid to the government that is based on your income or the cost of goods or services you have bought"@en ;
+     rdfs:label "Impuestos"@es ,
+                "Tax"@en .
+
+
+###  http://purl.org/roh/es#TerrenosYBienesNaturales
+:TerrenosYBienesNaturales rdf:type owl:Class ;
+                          rdfs:subClassOf :InmovilizacionesMateriales ,
+                                          [ rdf:type owl:Restriction ;
+                                            owl:onProperty :code ;
+                                            owl:hasValue "210"^^xsd:int
+                                          ] ;
+                          rdfs:label "Land and natural assets"@en ,
+                                     "Terrenos y bienes naturales"@es .
+
+
+###  http://purl.org/roh/es#TerrenosYBienesNaturalesCompras
+:TerrenosYBienesNaturalesCompras rdf:type owl:Class ;
+                                 rdfs:subClassOf :ArrendamientosYCanones ,
+                                                 [ rdf:type owl:Restriction ;
+                                                   owl:onProperty :code ;
+                                                   owl:hasValue "6210"^^xsd:int
+                                                 ] ;
+                                 rdfs:label "Land and natural assets"@en ,
+                                            "Terrenos y bienes naturales"@es .
+
+
+###  http://purl.org/roh/es#TitularUniversidad
+:TitularUniversidad rdf:type owl:Class ;
+                    rdfs:subClassOf <http://purl.org/roh#AcademicAccreditation> ;
+                    rdfs:label "Associate Professor"@en ,
+                               "Titular de Universidad"@es .
+
+
+###  http://purl.org/roh/es#Transportes
+:Transportes rdf:type owl:Class ;
+             rdfs:subClassOf :ServiciosExteriores ,
+                             [ rdf:type owl:Restriction ;
+                               owl:onProperty :code ;
+                               owl:hasValue "624"^^xsd:int
+                             ] ;
+             rdfs:label "Transportes"@es ,
+                        "Transports"@en .
+
+
+###  http://purl.org/roh/es#Tributos
+:Tributos rdf:type owl:Class ;
+          rdfs:subClassOf :ComprasYGastosPorNaturaleza ,
+                          [ rdf:type owl:Restriction ;
+                            owl:onProperty :code ;
+                            owl:hasValue "63"^^xsd:int
+                          ] ;
+          rdfs:label "TRIBUTES"@en ,
+                     "TRIBUTOS"@es .
+
+
+###  http://purl.org/roh/es#TributosAutonomicos
+:TributosAutonomicos rdf:type owl:Class ;
+                     rdfs:subClassOf :Tributos ,
+                                     [ rdf:type owl:Restriction ;
+                                       owl:onProperty :code ;
+                                       owl:hasValue "631"^^xsd:int
+                                     ] ;
+                     rdfs:label "Taxes of an autonomous nature"@en ,
+                                "Tributos de carácter autonómico"@es .
+
+
+###  http://purl.org/roh/es#TributosEstatales
+:TributosEstatales rdf:type owl:Class ;
+                   rdfs:subClassOf :Tributos ,
+                                   [ rdf:type owl:Restriction ;
+                                     owl:onProperty :code ;
+                                     owl:hasValue "632"^^xsd:int
+                                   ] ;
+                   rdfs:label "State taxes"@en ,
+                              "Tributos de carácter estatal"@es .
+
+
+###  http://purl.org/roh/es#TributosLocales
+:TributosLocales rdf:type owl:Class ;
+                 rdfs:subClassOf :Tributos ,
+                                 [ rdf:type owl:Restriction ;
+                                   owl:onProperty :code ;
+                                   owl:hasValue "630"^^xsd:int
+                                 ] ;
+                 rdfs:label "Local taxes"@en ,
+                            "Tributos de carácter local"@es .
+
+
+###  http://purl.org/roh/mirror/vivo#DateTimeInterval
+<http://purl.org/roh/mirror/vivo#DateTimeInterval> rdf:type owl:Class .
+
+
+###  http://purl.org/roh/mirror/vivo#Project
+<http://purl.org/roh/mirror/vivo#Project> rdf:type owl:Class .
+
+
+###  http://purl.org/roh/project-classification#National
+<http://purl.org/roh/project-classification#National> rdf:type owl:Class .
+
+
+###  http://www.w3.org/2004/02/skos/core#ConceptScheme
+<http://www.w3.org/2004/02/skos/core#ConceptScheme> rdf:type owl:Class .
+
+
+#################################################################
+#    Individuals
+#################################################################
+
+###  http://purl.org/roh/es#General
+:General rdf:type owl:NamedIndividual ,
+                  :IVA ;
+         :rate "21.0"^^xsd:float .
+
+
+###  http://purl.org/roh/es#InstrumentoFinancieroDeOrientacionDeLaPesca
+:InstrumentoFinancieroDeOrientacionDeLaPesca rdf:type owl:NamedIndividual ,
+                                                      <http://purl.org/roh#FundingSource> ;
+                                             rdfs:comment """El IFOP es uno de los cuatro Fondos Estructurales de la Unión Europea y existe desde 1993, año en el que sustituyó a los distintos instrumentos estructurales ya existentes.
+
+El IFOP contribuye en primer lugar a la consecución de los objetivos de la política pesquera común al acompañar la reestructuración del sector, y, por otro, a la consolidación de la cohesión económica y social de la Unión, al fomentar el desarrollo de las zonas litorales en las que la pesca ocupa un lugar preponderante dentro de la actividad económica."""@es ;
+                                             rdfs:label "Financial Instrument for Fisheries Guidance"@en ,
+                                                        "Instrumento Financiero de Orientación de la Pesca"@es .
+
+
+###  http://purl.org/roh/es#PlanE
+:PlanE rdf:type owl:NamedIndividual ,
+                <http://purl.org/roh#FundingSource> ;
+       rdfs:comment "El Plan Español para el Estímulo de la Economía y el Empleo o, en su forma abreviada, Plan E fue un conjunto de más de un centenar de medidas de política económica planteadas por el Gobierno de José Luis Rodríguez Zapatero en noviembre de 2008 y desarrolladas a lo largo de la IX legislatura.1​2​ Su objetivo fue el de impulsar la actividad económica del país, movilizando grandes cantidades de dinero público, para hacer frente a la crisis económica originada tras el pinchazo de la burbuja inmobiliaria y financiera global en 2007."@es ;
+       rdfs:label "E plan"@en ,
+                  "Plan E"@es .
+
+
+###  http://purl.org/roh/es#PresupuestosGeneralesDelEstado
+:PresupuestosGeneralesDelEstado rdf:type owl:NamedIndividual ,
+                                         <http://purl.org/roh#FundingSource> ;
+                                rdfs:comment "Los Presupuestos Generales del Estado (PGE) es el nombre que recibe el presupuesto público en España. Son considerados la ley más importante que un gobierno promulga en un año y determinan su política en la mayor parte de los ámbitos, además de ser la base sobre la que se moverá la economía del Estado en ese año."@es ;
+                                rdfs:label "General State Budget"@en ,
+                                           "Presupuestos Generales del Estado"@es .
+
+
+###  http://purl.org/roh/es#Reducido
+:Reducido rdf:type owl:NamedIndividual ,
+                   :IVA ;
+          :rate "10%" .
+
+
+###  http://purl.org/roh/es#SuperReducido
+:SuperReducido rdf:type owl:NamedIndividual ,
+                        :IVA ;
+               :rate "4%" .
+
+
+#################################################################
+#    General axioms
+#################################################################
+
+[ rdf:type owl:AllDisjointClasses ;
+  owl:members ( :AdaptacionDeTerrenos
+                :ConstruccionesEnCurso
+                :InstalacionesTecnicasEnMontaje
+              )
+] .
+
+
+[ rdf:type owl:AllDisjointClasses ;
+  owl:members ( :Agua
+                :Combustibles
+                :EnergiaElectrica
+                :Gas
+                :OtrosSuministros
+              )
+] .
+
+
+[ rdf:type owl:AllDisjointClasses ;
+  owl:members ( :ArrendamientosYCanones
+                :ComunicacionesYOtrosServicios
+                :GastosEnInvestigacionYDesarrollo
+                :PrimasDeSeguros
+                :Publicidad
+                :ReparacionesYConservacion
+                :ServiciosBancariosYSimilares
+                :ServiciosDeProfesionalesIndependientes
+                :Suministros
+                :Transportes
+              )
+] .
+
+
+[ rdf:type owl:AllDisjointClasses ;
+  owl:members ( :AyudanteDoctor
+                :CatedraticoUniversidad
+                :ContratadoDoctor
+                :ProfesorUniversidadPrivada
+                :TitularUniversidad
+              )
+] .
+
+
+[ rdf:type owl:AllDisjointClasses ;
+  owl:members ( :BienesDelPatrimonioHistorico
+                :Construcciones
+                :ElementosDeTransporte
+                :EquiposParaProcesosDeInformacion
+                :InstalacionesTecnicas
+                :MaquinariaYUtillaje
+                :Mobiliario
+                :OtroInmovilizadoMaterial
+                :TerrenosYBienesNaturales
+              )
+] .
+
+
+[ rdf:type owl:AllDisjointClasses ;
+  owl:members ( :Canones
+                :ConstruccionesCompras
+                :EquiposParaProcesosDeInformacionCompras
+                :MaquinariaUtillaje
+                :MobiliarioCompras
+                :OtroInmovilizadoMaterialCompras
+                :TerrenosYBienesNaturalesCompras
+              )
+] .
+
+
+[ rdf:type owl:AllDisjointClasses ;
+  owl:members ( :ComunicacionesTelefonicas
+                :Dietas
+                :LimpiezaYAseo
+                :Locomocion
+                :MaterialDeOficina
+                :OtrasComunicaciones
+                :OtrosServicios
+                :Prensa
+                :Seguridad
+              )
+] .
+
+
+[ rdf:type owl:AllDisjointClasses ;
+  owl:members ( :ConstruccionesCompras
+                :EquiposParaProcesosDeInformacionCompras
+                :MaquinariaUtillaje
+                :MobiliarioCompras
+                :OtroInmovilizadoMaterialCompras
+                :TerrenosYBienesNaturalesCompras
+              )
+] .
+
+
+[ rdf:type owl:AllDisjointClasses ;
+  owl:members ( :ConstruccionesCompras
+                :MaquinariaUtillaje
+                :TerrenosYBienesNaturalesCompras
+              )
+] .
+
+
+[ rdf:type owl:AllDisjointClasses ;
+  owl:members ( :InmovilizacionesIntangibles
+                :InmovilizacionesMateriales
+                :InmovilizacionesMaterialesEInversionesInmobiliarias
+              )
+] .
+
+
+[ rdf:type owl:AllDisjointClasses ;
+  owl:members ( :Perdidas
+                :ServiciosExteriores
+                :Tributos
+              )
+] .
+
+
+[ rdf:type owl:AllDisjointClasses ;
+  owl:members ( :ReparacionConstrucciones
+                :ReparacionEquiposParaProcesosDeInformacion
+                :ReparacionInstalacionesTecnicas
+                :ReparacionMaquinariaUtillaje
+                :ReparacionMobiliario
+                :ReparacionOtroInmovilizadoMaterial
+                :ReparacionTerrenosYBienesNaturales
+              )
+] .
+
+
+[ rdf:type owl:AllDisjointClasses ;
+  owl:members ( :TributosAutonomicos
+                :TributosEstatales
+                :TributosLocales
+              )
+] .
+
+
+###  Generated by the OWL API (version 5.1.14) https://github.com/owlcs/owlapi/

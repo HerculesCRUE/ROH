@@ -1,0 +1,312 @@
+@prefix : <http://purl.org/roh/project-classification#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@base <http://purl.org/roh/project-classification> .
+
+<http://purl.org/roh/project-classification> rdf:type owl:Ontology .
+
+#################################################################
+#    Annotation properties
+#################################################################
+
+###  http://www.w3.org/2004/02/skos/core#definition
+<http://www.w3.org/2004/02/skos/core#definition> rdf:type owl:AnnotationProperty .
+
+
+###  http://www.w3.org/2004/02/skos/core#example
+<http://www.w3.org/2004/02/skos/core#example> rdf:type owl:AnnotationProperty .
+
+
+###  http://www.w3.org/2004/02/skos/core#inScheme
+<http://www.w3.org/2004/02/skos/core#inScheme> rdf:type owl:AnnotationProperty .
+
+
+###  http://www.w3.org/2004/02/skos/core#scopeNote
+<http://www.w3.org/2004/02/skos/core#scopeNote> rdf:type owl:AnnotationProperty .
+
+
+#################################################################
+#    Object Properties
+#################################################################
+
+###  http://www.w3.org/2004/02/skos/core#broader
+<http://www.w3.org/2004/02/skos/core#broader> rdf:type owl:ObjectProperty ;
+                                              rdfs:subPropertyOf <http://www.w3.org/2004/02/skos/core#broaderTransitive> ;
+                                              owl:inverseOf <http://www.w3.org/2004/02/skos/core#narrower> ;
+                                              rdfs:comment "Broader concepts are typically rendered as parents in a concept hierarchy (tree)."@en ;
+                                              rdfs:isDefinedBy <http://www.w3.org/2004/02/skos/core> ;
+                                              rdfs:label "has broader"@en ;
+                                              <http://www.w3.org/2004/02/skos/core#definition> "Relates a concept to a concept that is more general in meaning."@en ;
+                                              <http://www.w3.org/2004/02/skos/core#scopeNote> "By convention, skos:broader is only used to assert an immediate (i.e. direct) hierarchical link between two conceptual resources."@en .
+
+
+###  http://www.w3.org/2004/02/skos/core#broaderTransitive
+<http://www.w3.org/2004/02/skos/core#broaderTransitive> rdf:type owl:ObjectProperty .
+
+
+###  http://www.w3.org/2004/02/skos/core#hasTopConcept
+<http://www.w3.org/2004/02/skos/core#hasTopConcept> rdf:type owl:ObjectProperty ;
+                                                    owl:inverseOf <http://www.w3.org/2004/02/skos/core#topConceptOf> ;
+                                                    rdfs:domain <http://www.w3.org/2004/02/skos/core#ConceptScheme> ;
+                                                    rdfs:range <http://www.w3.org/2004/02/skos/core#Concept> ;
+                                                    rdfs:isDefinedBy <http://www.w3.org/2004/02/skos/core> ;
+                                                    rdfs:label "has top concept"@en ;
+                                                    <http://www.w3.org/2004/02/skos/core#definition> "Relates, by convention, a concept scheme to a concept which is topmost in the broader/narrower concept hierarchies for that scheme, providing an entry point to these hierarchies."@en .
+
+
+###  http://www.w3.org/2004/02/skos/core#narrower
+<http://www.w3.org/2004/02/skos/core#narrower> rdf:type owl:ObjectProperty ;
+                                               rdfs:subPropertyOf <http://www.w3.org/2004/02/skos/core#narrowerTransitive> ;
+                                               rdfs:comment "Narrower concepts are typically rendered as children in a concept hierarchy (tree)."@en ;
+                                               rdfs:isDefinedBy <http://www.w3.org/2004/02/skos/core> ;
+                                               rdfs:label "has narrower"@en ;
+                                               <http://www.w3.org/2004/02/skos/core#definition> "Relates a concept to a concept that is more specific in meaning."@en ;
+                                               <http://www.w3.org/2004/02/skos/core#scopeNote> "By convention, skos:broader is only used to assert an immediate (i.e. direct) hierarchical link between two conceptual resources."@en .
+
+
+###  http://www.w3.org/2004/02/skos/core#narrowerTransitive
+<http://www.w3.org/2004/02/skos/core#narrowerTransitive> rdf:type owl:ObjectProperty .
+
+
+###  http://www.w3.org/2004/02/skos/core#topConceptOf
+<http://www.w3.org/2004/02/skos/core#topConceptOf> rdf:type owl:ObjectProperty .
+
+
+#################################################################
+#    Classes
+#################################################################
+
+###  http://purl.org/roh#ProjectClassification
+<http://purl.org/roh#ProjectClassification> rdf:type owl:Class ;
+                                            rdfs:subClassOf <http://www.w3.org/2004/02/skos/core#ConceptScheme> ;
+                                            rdfs:label "Clasificación de Proyecto"@es ,
+                                                       "Project Classification"@en .
+
+
+###  http://www.w3.org/2004/02/skos/core#Collection
+<http://www.w3.org/2004/02/skos/core#Collection> rdf:type owl:Class ;
+                                                 owl:disjointWith <http://www.w3.org/2004/02/skos/core#Concept> ,
+                                                                  <http://www.w3.org/2004/02/skos/core#ConceptScheme> .
+
+
+###  http://www.w3.org/2004/02/skos/core#Concept
+<http://www.w3.org/2004/02/skos/core#Concept> rdf:type owl:Class ;
+                                              owl:disjointWith <http://www.w3.org/2004/02/skos/core#ConceptScheme> ;
+                                              rdfs:isDefinedBy <http://www.w3.org/2004/02/skos/core> ;
+                                              rdfs:label "Concept"@en ;
+                                              <http://www.w3.org/2004/02/skos/core#definition> "An idea or notion; a unit of thought."@en .
+
+
+###  http://www.w3.org/2004/02/skos/core#ConceptScheme
+<http://www.w3.org/2004/02/skos/core#ConceptScheme> rdf:type owl:Class ;
+                                                    rdfs:isDefinedBy <http://www.w3.org/2004/02/skos/core> ;
+                                                    rdfs:label "Concept Scheme"@en ;
+                                                    <http://www.w3.org/2004/02/skos/core#definition> "A set of concepts, optionally including statements about semantic relationships between those concepts."@en ;
+                                                    <http://www.w3.org/2004/02/skos/core#example> "Thesauri, classification schemes, subject heading lists, taxonomies, 'folksonomies', and other types of controlled vocabulary are all examples of concept schemes. Concept schemes are also embedded in glossaries and terminologies."@en ;
+                                                    <http://www.w3.org/2004/02/skos/core#scopeNote> "A concept scheme may be defined to include concepts from different sources."@en .
+
+
+#################################################################
+#    Individuals
+#################################################################
+
+###  http://purl.org/roh/project-classification#European
+:European rdf:type owl:NamedIndividual ,
+                   <http://www.w3.org/2004/02/skos/core#Concept> ;
+          <http://www.w3.org/2004/02/skos/core#inScheme> :ProjectClassification .
+
+
+###  http://purl.org/roh/project-classification#ExcellentScience
+:ExcellentScience rdf:type owl:NamedIndividual ,
+                           <http://www.w3.org/2004/02/skos/core#Concept> ;
+                  <http://www.w3.org/2004/02/skos/core#broader> :Horizon2020 ;
+                  <http://www.w3.org/2004/02/skos/core#inScheme> :ProjectClassification .
+
+
+###  http://purl.org/roh/project-classification#FomentoInvestigacionCientificoTecnica
+:FomentoInvestigacionCientificoTecnica rdf:type owl:NamedIndividual ,
+                                                <http://www.w3.org/2004/02/skos/core#Concept> ;
+                                       <http://www.w3.org/2004/02/skos/core#broader> :PlanEstatal2013-2016 ;
+                                       <http://www.w3.org/2004/02/skos/core#inScheme> :ProjectClassification .
+
+
+###  http://purl.org/roh/project-classification#FormacionTalento
+:FormacionTalento rdf:type owl:NamedIndividual ,
+                           <http://www.w3.org/2004/02/skos/core#Concept> ;
+                  <http://www.w3.org/2004/02/skos/core#broader> :PlanEstatal2017-2020 ;
+                  <http://www.w3.org/2004/02/skos/core#inScheme> :ProjectClassification .
+
+
+###  http://purl.org/roh/project-classification#GeneracionConocimiento
+:GeneracionConocimiento rdf:type owl:NamedIndividual ,
+                                 <http://www.w3.org/2004/02/skos/core#Concept> ;
+                        <http://www.w3.org/2004/02/skos/core#broader> :PlanEstatal2017-2020 ;
+                        rdfs:label "Generación de Conocimiento"@es ,
+                                   "Knowledge Generation"@en ;
+                        <http://www.w3.org/2004/02/skos/core#inScheme> :ProjectClassification .
+
+
+###  http://purl.org/roh/project-classification#Horizon2020
+:Horizon2020 rdf:type owl:NamedIndividual ,
+                      <http://www.w3.org/2004/02/skos/core#Concept> ;
+             <http://www.w3.org/2004/02/skos/core#broader> :European ;
+             <http://www.w3.org/2004/02/skos/core#inScheme> :ProjectClassification .
+
+
+###  http://purl.org/roh/project-classification#ITN-ETN
+:ITN-ETN rdf:type owl:NamedIndividual ,
+                  <http://www.w3.org/2004/02/skos/core#Concept> ;
+         <http://www.w3.org/2004/02/skos/core#broader> :ExcellentScience ;
+         <http://www.w3.org/2004/02/skos/core#inScheme> :ProjectClassification .
+
+
+###  http://purl.org/roh/project-classification#IndividualFellowships
+:IndividualFellowships rdf:type owl:NamedIndividual ,
+                                <http://www.w3.org/2004/02/skos/core#Concept> ;
+                       <http://www.w3.org/2004/02/skos/core#broader> :ExcellentScience ;
+                       <http://www.w3.org/2004/02/skos/core#inScheme> :ProjectClassification .
+
+
+###  http://purl.org/roh/project-classification#Internal
+:Internal rdf:type owl:NamedIndividual ,
+                   <http://www.w3.org/2004/02/skos/core#Concept> ;
+          <http://www.w3.org/2004/02/skos/core#inScheme> :ProjectClassification .
+
+
+###  http://purl.org/roh/project-classification#International
+:International rdf:type owl:NamedIndividual ,
+                        <http://www.w3.org/2004/02/skos/core#Concept> ;
+               <http://www.w3.org/2004/02/skos/core#inScheme> :ProjectClassification .
+
+
+###  http://purl.org/roh/project-classification#Interreg
+:Interreg rdf:type owl:NamedIndividual ,
+                   <http://www.w3.org/2004/02/skos/core#Concept> ;
+          <http://www.w3.org/2004/02/skos/core#broader> :European ;
+          <http://www.w3.org/2004/02/skos/core#inScheme> :ProjectClassification .
+
+
+###  http://purl.org/roh/project-classification#Movilidad
+:Movilidad rdf:type owl:NamedIndividual ,
+                    <http://www.w3.org/2004/02/skos/core#Concept> ;
+           <http://www.w3.org/2004/02/skos/core#broader> :FormacionTalento ;
+           <http://www.w3.org/2004/02/skos/core#inScheme> :ProjectClassification .
+
+
+###  http://purl.org/roh/project-classification#National
+:National rdf:type owl:NamedIndividual ,
+                   <http://www.w3.org/2004/02/skos/core#Concept> ;
+          <http://www.w3.org/2004/02/skos/core#inScheme> :ProjectClassification .
+
+
+###  http://purl.org/roh/project-classification#PlanEstatal2013-2016
+:PlanEstatal2013-2016 rdf:type owl:NamedIndividual ,
+                               <http://www.w3.org/2004/02/skos/core#Concept> ;
+                      <http://www.w3.org/2004/02/skos/core#broader> :National ;
+                      <http://www.w3.org/2004/02/skos/core#inScheme> :ProjectClassification .
+
+
+###  http://purl.org/roh/project-classification#PlanEstatal2017-2020
+:PlanEstatal2017-2020 rdf:type owl:NamedIndividual ,
+                               <http://www.w3.org/2004/02/skos/core#Concept> ;
+                      <http://www.w3.org/2004/02/skos/core#broader> :National ;
+                      <http://www.w3.org/2004/02/skos/core#inScheme> :ProjectClassification .
+
+
+###  http://purl.org/roh/project-classification#ProjectClassification
+:ProjectClassification rdf:type owl:NamedIndividual ,
+                                <http://purl.org/roh#ProjectClassification> ;
+                       <http://www.w3.org/2004/02/skos/core#hasTopConcept> :European ,
+                                                                           :Internal ,
+                                                                           :International ,
+                                                                           :National ,
+                                                                           :Regional .
+
+
+###  http://purl.org/roh/project-classification#PromocionTalento
+:PromocionTalento rdf:type owl:NamedIndividual ,
+                           <http://www.w3.org/2004/02/skos/core#Concept> ;
+                  <http://www.w3.org/2004/02/skos/core#broader> :PlanEstatal2013-2016 ;
+                  <http://www.w3.org/2004/02/skos/core#inScheme> :ProjectClassification .
+
+
+###  http://purl.org/roh/project-classification#Regional
+:Regional rdf:type owl:NamedIndividual ,
+                   <http://www.w3.org/2004/02/skos/core#Concept> ;
+          <http://www.w3.org/2004/02/skos/core#inScheme> :ProjectClassification .
+
+
+###  http://purl.org/roh/project-classification#RegionsofEurope
+:RegionsofEurope rdf:type owl:NamedIndividual ,
+                          <http://www.w3.org/2004/02/skos/core#Concept> ;
+                 <http://www.w3.org/2004/02/skos/core#broader> :Interreg ;
+                 <http://www.w3.org/2004/02/skos/core#inScheme> :ProjectClassification .
+
+
+###  http://purl.org/roh/project-classification#SC1
+:SC1 rdf:type owl:NamedIndividual ,
+              <http://www.w3.org/2004/02/skos/core#Concept> ;
+     <http://www.w3.org/2004/02/skos/core#broader> :SocietalChallenges ;
+     <http://www.w3.org/2004/02/skos/core#inScheme> :ProjectClassification .
+
+
+###  http://purl.org/roh/project-classification#SC2
+:SC2 rdf:type owl:NamedIndividual ,
+              <http://www.w3.org/2004/02/skos/core#Concept> ;
+     <http://www.w3.org/2004/02/skos/core#broader> :SocietalChallenges ;
+     <http://www.w3.org/2004/02/skos/core#inScheme> :ProjectClassification .
+
+
+###  http://purl.org/roh/project-classification#SocietalChallenges
+:SocietalChallenges rdf:type owl:NamedIndividual ,
+                             <http://www.w3.org/2004/02/skos/core#Concept> ;
+                    <http://www.w3.org/2004/02/skos/core#broader> :Horizon2020 ;
+                    <http://www.w3.org/2004/02/skos/core#inScheme> :ProjectClassification .
+
+
+###  http://purl.org/roh/project-classification#SubprogramaEstatalFormacion
+:SubprogramaEstatalFormacion rdf:type owl:NamedIndividual ,
+                                      <http://www.w3.org/2004/02/skos/core#Concept> ;
+                             <http://www.w3.org/2004/02/skos/core#broader> :PromocionTalento ;
+                             <http://www.w3.org/2004/02/skos/core#inScheme> :ProjectClassification .
+
+
+###  http://purl.org/roh/project-classification#SubprogramaEstatalIncorporacion
+:SubprogramaEstatalIncorporacion rdf:type owl:NamedIndividual ,
+                                          <http://www.w3.org/2004/02/skos/core#Concept> ;
+                                 <http://www.w3.org/2004/02/skos/core#broader> :PromocionTalento ;
+                                 <http://www.w3.org/2004/02/skos/core#inScheme> :ProjectClassification .
+
+
+###  http://purl.org/roh/project-classification#SubprogramaFortalecimientoInstitucional
+:SubprogramaFortalecimientoInstitucional rdf:type owl:NamedIndividual ,
+                                                  <http://www.w3.org/2004/02/skos/core#Concept> ;
+                                         <http://www.w3.org/2004/02/skos/core#broader> :FomentoInvestigacionCientificoTecnica ;
+                                         <http://www.w3.org/2004/02/skos/core#inScheme> :ProjectClassification .
+
+
+###  http://purl.org/roh/project-classification#SubprogramaGeneracionConocimiento
+:SubprogramaGeneracionConocimiento rdf:type owl:NamedIndividual ,
+                                            <http://www.w3.org/2004/02/skos/core#Concept> ;
+                                   <http://www.w3.org/2004/02/skos/core#broader> :FomentoInvestigacionCientificoTecnica ;
+                                   <http://www.w3.org/2004/02/skos/core#inScheme> :ProjectClassification .
+
+
+###  http://purl.org/roh/project-classification#Sudoe
+:Sudoe rdf:type owl:NamedIndividual ,
+                <http://www.w3.org/2004/02/skos/core#Concept> ;
+       <http://www.w3.org/2004/02/skos/core#broader> :Interreg ;
+       <http://www.w3.org/2004/02/skos/core#inScheme> :ProjectClassification .
+
+
+###  http://purl.org/roh/project-classification#FormacionI+D+i
+<http://purl.org/roh/project-classification#FormacionI+D+i> rdf:type owl:NamedIndividual ,
+                                                                     <http://www.w3.org/2004/02/skos/core#Concept> ;
+                                                            <http://www.w3.org/2004/02/skos/core#broader> :FormacionTalento ;
+                                                            <http://www.w3.org/2004/02/skos/core#inScheme> :ProjectClassification .
+
+
+###  Generated by the OWL API (version 5.1.14) https://github.com/owlcs/owlapi/

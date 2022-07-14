@@ -1,0 +1,388 @@
+@prefix foaf:    <http://xmlns.com/foaf/0.1/#> .
+@prefix asio:  <http://purl.org/hercules/asio/core#> .
+@prefix euCountry:  <http://publications.europa.eu/resource/authority/country/> .
+@prefix my:      <http://weso.es/tablines/project/HRuniversitiesGB/resource/> .
+@prefix project:  <http://weso.es/tablines/project/HRuniversitiesGB/> .
+@prefix rdfs:    <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix dcat:    <http://www.w3.org/ns/dcat#> .
+@prefix asioModules:  <http://purl.org/asio/modules#> .
+@prefix dct:     <http://purl.org/dc/terms/> .
+@prefix owl:     <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:     <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix skos:    <http://www.w3.org/2004/02/skos/core#> .
+@prefix unescothes:    <http://skos.um.es/unescothes/> .
+
+asioModules:GB_UNIVERSITY_HR_CODE_GBTPROF
+      a       skos:Concept ;
+      rdfs:label "GBTPROF" ;
+      asio:codeOf asioModules:GB_UNIVERSITY_HR_GBTPROF ;
+      skos:inScheme asioModules:GBUniversityHumanResourcesCodesList ;
+      skos:prefLabel "GBTPROF" .
+
+asioModules:GB_UNIVERSITY_HR_CODE_GBRTREAD
+      a       skos:Concept ;
+      rdfs:label "GBRTREAD" ;
+      asio:codeOf asioModules:GB_UNIVERSITY_HR_GBRTREAD ;
+      skos:inScheme asioModules:GBUniversityHumanResourcesCodesList ;
+      skos:prefLabel "GBRTREAD" .
+
+asioModules:GB_UNIVERSITY_HR_GBRREAASS
+      a       owl:NamedIndividual , asio:Role , skos:Concept ;
+      rdfs:label "Research assistant"@en ;
+      asio:country euCountry:GBR ;
+      asio:hasCode asioModules:GB_UNIVERSITY_HR_CODE_GBRREAASS ;
+      skos:inScheme asioModules:GBUniversityHumanResourcesList ;
+      skos:notation "GBRREAASS" ;
+      skos:closeMatch unescothes:C03376 ;
+      skos:prefLabel "Research assistant"@en .
+
+asioModules:GB_UNIVERSITY_HR_GBRPROF
+      a       owl:NamedIndividual , asio:Role , skos:Concept ;
+      rdfs:label "Professorial research fellow"@en ;
+      asio:country euCountry:GBR ;
+      asio:hasCode asioModules:GB_UNIVERSITY_HR_CODE_GBRPROF ;
+      skos:inScheme asioModules:GBUniversityHumanResourcesList ;
+      skos:notation "GBRPROF" ;
+      skos:closeMatch unescothes:C03376 ;
+      skos:closeMatch unescothes:C00015 ;
+      skos:closeMatch unescothes:C03965 ;
+      skos:prefLabel "Professorial research fellow"@en .
+
+asioModules:GB_UNIVERSITY_HR_GBCHAN
+      a       owl:NamedIndividual , asio:Role , skos:Concept ;
+      rdfs:label "Chancellor"@en ;
+      asio:country euCountry:GBR ;
+      asio:hasCode asioModules:GB_UNIVERSITY_HR_CODE_GBCHAN ;
+      skos:inScheme asioModules:GBUniversityHumanResourcesList ;
+      skos:notation "GBCHAN" ;
+      skos:prefLabel "Chancellor"@en .
+
+asioModules:GB_UNIVERSITY_HR_CODE_GBDEPDIR
+      a       skos:Concept ;
+      rdfs:label "GBDEPDIR" ;
+      asio:codeOf asioModules:GB_UNIVERSITY_HR_GBDEPDIR ;
+      skos:inScheme asioModules:GBUniversityHumanResourcesCodesList ;
+      skos:prefLabel "GBDEPDIR" .
+
+asioModules:GB_UNIVERSITY_HR_GBDEPVICHAN
+      a       owl:NamedIndividual , asio:Role , skos:Concept ;
+      rdfs:label "Deputy vice-chancellor"@en ;
+      asio:country euCountry:GBR ;
+      asio:hasCode asioModules:GB_UNIVERSITY_HR_CODE_GBDEPVICHAN ;
+      skos:inScheme asioModules:GBUniversityHumanResourcesList ;
+      skos:notation "GBDEPVICHAN" ;
+      skos:prefLabel "Deputy vice-chancellor"@en .
+
+asioModules:GB_UNIVERSITY_HR_CODE_GBVICCHAN
+      a       skos:Concept ;
+      rdfs:label "GBVICCHAN" ;
+      asio:codeOf asioModules:GB_UNIVERSITY_HR_GBVICCHAN ;
+      skos:inScheme asioModules:GBUniversityHumanResourcesCodesList ;
+      skos:prefLabel "GBVICCHAN" .
+
+asioModules:GB_UNIVERSITY_HR_GBRTASSLEC
+      a       owl:NamedIndividual , asio:Role , skos:Concept ;
+      rdfs:label "Assistant lecturer"@en ;
+      asio:country euCountry:GBR ;
+      asio:hasCode asioModules:GB_UNIVERSITY_HR_CODE_GBRTASSLEC ;
+      skos:altLabel "Associate lecturer"@en ;
+      skos:inScheme asioModules:GBUniversityHumanResourcesList ;
+      skos:notation "GBRTASSLEC" ;
+      skos:closeMatch unescothes:C00015 ;
+      skos:closeMatch unescothes:C03965 ;
+      skos:prefLabel "Assistant lecturer"@en .
+
+asioModules:GB_UNIVERSITY_HR_GBRTSENLEC
+      a       owl:NamedIndividual , asio:Role , skos:Concept ;
+      rdfs:label "Senior lecturer"@en ;
+      asio:country euCountry:GBR ;
+      asio:hasCode asioModules:GB_UNIVERSITY_HR_CODE_GBRTSENLEC ;
+      skos:inScheme asioModules:GBUniversityHumanResourcesList ;
+      skos:notation "GBRTSENLEC" ;
+      skos:closeMatch unescothes:C00015 ;
+      skos:closeMatch unescothes:C03965 ;
+      skos:prefLabel "Senior lecturer"@en .
+
+asioModules:GB_UNIVERSITY_HR_CODE_GBRSENREAFEL
+      a       skos:Concept ;
+      rdfs:label "GBRSENREAFEL" ;
+      asio:codeOf asioModules:GB_UNIVERSITY_HR_GBRSENREAFEL ;
+      skos:inScheme asioModules:GBUniversityHumanResourcesCodesList ;
+      skos:prefLabel "GBRSENREAFEL" .
+
+asioModules:GB_UNIVERSITY_HR_CODE_GBRREAASS
+      a       skos:Concept ;
+      rdfs:label "GBRREAASS" ;
+      asio:codeOf asioModules:GB_UNIVERSITY_HR_GBRREAASS ;
+      skos:inScheme asioModules:GBUniversityHumanResourcesCodesList ;
+      skos:prefLabel "GBRREAASS" .
+
+asioModules:GB_UNIVERSITY_HR_CODE_GBRPROF
+      a       skos:Concept ;
+      rdfs:label "GBRPROF" ;
+      asio:codeOf asioModules:GB_UNIVERSITY_HR_GBRPROF ;
+      skos:inScheme asioModules:GBUniversityHumanResourcesCodesList ;
+      skos:prefLabel "GBRPROF" .
+
+asioModules:GBUniversityHumanResourcesList
+      a       asioModules:UniversityHumanResources ;
+      rdfs:label "Human resources of the universities from the United Kingdom"@en , "Resources humains des universités du Royaume Uni"@fr , "Recursos humanos das universidades do Reino Unido"@gl , "Recursos humanos das universidades do Reino Unido"@pt , "Recursos humanos de les universidaes del Reinu Xuníu"@ast , "Recursos humans de les universitats del Regne Unit"@ca , "Recursos humanos de las universidades del Reino Unido"@es ;
+      skos:prefLabel "Human resources of the universities from the United Kingdom"@en , "Resources humains des universités du Royaume Uni"@fr , "Recursos humanos das universidades do Reino Unido"@gl , "Recursos humanos das universidades do Reino Unido"@pt , "Recursos humanos de les universidaes del Reinu Xuníu"@ast , "Recursos humans de les universitats del Regne Unit"@ca , "Recursos humanos de las universidades del Reino Unido"@es .
+
+asioModules:GB_UNIVERSITY_HR_CODE_GBPROVICCHAN
+      a       skos:Concept ;
+      rdfs:label "GBPROVICCHAN" ;
+      asio:codeOf asioModules:GB_UNIVERSITY_HR_GBPROVICCHAN ;
+      skos:inScheme asioModules:GBUniversityHumanResourcesCodesList ;
+      skos:prefLabel "GBPROVICCHAN" .
+
+asioModules:GB_UNIVERSITY_HR_CODE_GBEPROF
+      a       skos:Concept ;
+      rdfs:label "GBEPROF" ;
+      asio:codeOf asioModules:GB_UNIVERSITY_HR_GBEPROF ;
+      skos:inScheme asioModules:GBUniversityHumanResourcesCodesList ;
+      skos:prefLabel "GBEPROF" .
+
+asioModules:GB_UNIVERSITY_HR_GBRREAFEL
+      a       owl:NamedIndividual , asio:Role , skos:Concept ;
+      rdfs:label "Research fellow"@en ;
+      asio:country euCountry:GBR ;
+      asio:hasCode asioModules:GB_UNIVERSITY_HR_CODE_GBRREAFEL ;
+      skos:inScheme asioModules:GBUniversityHumanResourcesList ;
+      skos:notation "GBRREAFEL" ;
+      skos:closeMatch unescothes:C03376 ;
+      skos:prefLabel "Research fellow"@en .
+
+asioModules:GB_UNIVERSITY_HR_CODE_GBRTPROF
+      a       skos:Concept ;
+      rdfs:label "GBRTPROF" ;
+      asio:codeOf asioModules:GB_UNIVERSITY_HR_GBRTPROF ;
+      skos:inScheme asioModules:GBUniversityHumanResourcesCodesList ;
+      skos:prefLabel "GBRTPROF" .
+
+asioModules:GB_UNIVERSITY_HR_CODE_GBCHAN
+      a       skos:Concept ;
+      rdfs:label "GBCHAN" ;
+      asio:codeOf asioModules:GB_UNIVERSITY_HR_GBCHAN ;
+      skos:inScheme asioModules:GBUniversityHumanResourcesCodesList ;
+      skos:prefLabel "GBCHAN" .
+
+asioModules:GB_UNIVERSITY_HR_CODE_GBDEAN
+      a       skos:Concept ;
+      rdfs:label "GBDEAN" ;
+      asio:codeOf asioModules:GB_UNIVERSITY_HR_GBDEAN ;
+      skos:inScheme asioModules:GBUniversityHumanResourcesCodesList ;
+      skos:prefLabel "GBDEAN" .
+
+asioModules:GB_UNIVERSITY_HR_GBPROVICCHAN
+      a       owl:NamedIndividual , asio:Role , skos:Concept ;
+      rdfs:label "Pro-vice-chancellor"@en ;
+      asio:country euCountry:GBR ;
+      asio:hasCode asioModules:GB_UNIVERSITY_HR_CODE_GBPROVICCHAN ;
+      skos:inScheme asioModules:GBUniversityHumanResourcesList ;
+      skos:notation "GBPROVICCHAN" ;
+      skos:prefLabel "Pro-vice-chancellor"@en .
+
+asioModules:GB_UNIVERSITY_HR_GBEREAD
+      a       owl:NamedIndividual , asio:Role , skos:Concept ;
+      rdfs:label "Emeritus reader"@en ;
+      asio:country euCountry:GBR ;
+      asio:hasCode asioModules:GB_UNIVERSITY_HR_CODE_GBEREAD ;
+      skos:inScheme asioModules:GBUniversityHumanResourcesList ;
+      skos:notation "GBEREAD" ;
+      skos:closeMatch unescothes:C00015 ;
+      skos:closeMatch unescothes:C03965 ;
+      skos:prefLabel "Emeritus reader"@en .
+
+asioModules:GB_UNIVERSITY_HR_GBDEPDIR
+      a       owl:NamedIndividual , asio:Role , skos:Concept ;
+      rdfs:label "Department director of studies"@en ;
+      asio:country euCountry:GBR ;
+      asio:hasCode asioModules:GB_UNIVERSITY_HR_CODE_GBDEPDIR ;
+      skos:altLabel "School directors of studies"@en ;
+      skos:inScheme asioModules:GBUniversityHumanResourcesList ;
+      skos:notation "GBDEPDIR" ;
+      skos:prefLabel "Department director of studies"@en .
+
+asioModules:GB_UNIVERSITY_HR_CODE_GBDEPVICHAN
+      a       skos:Concept ;
+      rdfs:label "GBDEPVICHAN" ;
+      asio:codeOf asioModules:GB_UNIVERSITY_HR_GBDEPVICHAN ;
+      skos:inScheme asioModules:GBUniversityHumanResourcesCodesList ;
+      skos:prefLabel "GBDEPVICHAN" .
+
+asioModules:GB_UNIVERSITY_HR_CODE_GBRTASSLEC
+      a       skos:Concept ;
+      rdfs:label "GBRTASSLEC" ;
+      asio:codeOf asioModules:GB_UNIVERSITY_HR_GBRTASSLEC ;
+      skos:inScheme asioModules:GBUniversityHumanResourcesCodesList ;
+      skos:prefLabel "GBRTASSLEC" .
+
+asioModules:GB_UNIVERSITY_HR_GBEPROF
+      a       owl:NamedIndividual , asio:Role , skos:Concept ;
+      rdfs:label "Emeritus professor"@en ;
+      asio:country euCountry:GBR ;
+      asio:hasCode asioModules:GB_UNIVERSITY_HR_CODE_GBEPROF ;
+      skos:inScheme asioModules:GBUniversityHumanResourcesList ;
+      skos:notation "GBEPROF" ;
+      skos:closeMatch unescothes:C00015 ;
+      skos:closeMatch unescothes:C03965 ;
+      skos:prefLabel "Emeritus professor"@en .
+
+asioModules:GB_UNIVERSITY_HR_GBPROCHAN
+      a       owl:NamedIndividual , asio:Role , skos:Concept ;
+      rdfs:label "Pro-chancellor"@en ;
+      asio:country euCountry:GBR ;
+      asio:hasCode asioModules:GB_UNIVERSITY_HR_CODE_GBPROCHAN ;
+      skos:inScheme asioModules:GBUniversityHumanResourcesList ;
+      skos:notation "GBPROCHAN" ;
+      skos:prefLabel "Pro-chancellor"@en .
+
+asioModules:GB_UNIVERSITY_HR_CODE_GBEREAD
+      a       skos:Concept ;
+      rdfs:label "GBEREAD" ;
+      asio:codeOf asioModules:GB_UNIVERSITY_HR_GBEREAD ;
+      skos:inScheme asioModules:GBUniversityHumanResourcesCodesList ;
+      skos:prefLabel "GBEREAD" .
+
+asioModules:GB_UNIVERSITY_HR_GBRTCLLEC
+      a       owl:NamedIndividual , asio:Role , skos:Concept ;
+      rdfs:label "Clinical lecturer"@en ;
+      asio:country euCountry:GBR ;
+      asio:hasCode asioModules:GB_UNIVERSITY_HR_CODE_GBRTCLLEC ;
+      skos:inScheme asioModules:GBUniversityHumanResourcesList ;
+      skos:notation "GBRTCLLEC" ;
+      skos:closeMatch unescothes:C00015 ;
+      skos:closeMatch unescothes:C03965 ;
+      skos:prefLabel "Clinical lecturer"@en .
+
+asioModules:GB_UNIVERSITY_HR_GBDEAN
+      a       owl:NamedIndividual , asio:Role , skos:Concept ;
+      rdfs:label "Dean of faculty"@en ;
+      asio:country euCountry:GBR ;
+      asio:hasCode asioModules:GB_UNIVERSITY_HR_CODE_GBDEAN ;
+      skos:inScheme asioModules:GBUniversityHumanResourcesList ;
+      skos:notation "GBDEAN" ;
+      skos:prefLabel "Dean of faculty"@en .
+
+asioModules:GB_UNIVERSITY_HR_CODE_GBPROCHAN
+      a       skos:Concept ;
+      rdfs:label "GBPROCHAN" ;
+      asio:codeOf asioModules:GB_UNIVERSITY_HR_GBPROCHAN ;
+      skos:inScheme asioModules:GBUniversityHumanResourcesCodesList ;
+      skos:prefLabel "GBPROCHAN" .
+
+asioModules:GB_UNIVERSITY_HR_GBRSENREAFEL
+      a       owl:NamedIndividual , asio:Role , skos:Concept ;
+      rdfs:label "Senior research fellow"@en ;
+      asio:country euCountry:GBR ;
+      asio:hasCode asioModules:GB_UNIVERSITY_HR_CODE_GBRSENREAFEL ;
+      skos:inScheme asioModules:GBUniversityHumanResourcesList ;
+      skos:notation "GBRSENREAFEL" ;
+      skos:closeMatch unescothes:C03376 ;
+      skos:prefLabel "Senior research fellow"@en .
+
+asioModules:GB_UNIVERSITY_HR_GBVICCHAN
+      a       owl:NamedIndividual , asio:Role , skos:Concept ;
+      rdfs:label "Vice-chancellor"@en ;
+      asio:country euCountry:GBR ;
+      asio:hasCode asioModules:GB_UNIVERSITY_HR_CODE_GBVICCHAN ;
+      skos:altLabel "Provost"@en ;
+      skos:inScheme asioModules:GBUniversityHumanResourcesList ;
+      skos:notation "GBVICCHAN" ;
+      skos:prefLabel "Vice-chancellor"@en .
+
+asioModules:GB_UNIVERSITY_HR_GBHEADDEP
+      a       owl:NamedIndividual , asio:Role , skos:Concept ;
+      rdfs:label "Head of department"@en ;
+      asio:country euCountry:GBR ;
+      asio:hasCode asioModules:GB_UNIVERSITY_HR_CODE_GBHEADDEP ;
+      skos:altLabel "Head of school"@en ;
+      skos:inScheme asioModules:GBUniversityHumanResourcesList ;
+      skos:notation "GBHEADDEP" ;
+      skos:prefLabel "Head of department"@en .
+
+asioModules:GB_UNIVERSITY_HR_GBRTLEC
+      a       owl:NamedIndividual , asio:Role , skos:Concept ;
+      rdfs:label "Lecturer"@en ;
+      asio:country euCountry:GBR ;
+      asio:hasCode asioModules:GB_UNIVERSITY_HR_CODE_GBRTLEC ;
+      skos:inScheme asioModules:GBUniversityHumanResourcesList ;
+      skos:notation "GBRTLEC" ;
+      skos:closeMatch unescothes:C00015 ;
+      skos:closeMatch unescothes:C03965 ;
+      skos:prefLabel "Lecturer"@en .
+
+asioModules:GB_UNIVERSITY_HR_CODE_GBRTLEC
+      a       skos:Concept ;
+      rdfs:label "GBRTLEC" ;
+      asio:codeOf asioModules:GB_UNIVERSITY_HR_GBRTLEC ;
+      skos:inScheme asioModules:GBUniversityHumanResourcesCodesList ;
+      skos:prefLabel "GBRTLEC" .
+
+asioModules:GB_UNIVERSITY_HR_GBTPROF
+      a       owl:NamedIndividual , asio:Role , skos:Concept ;
+      rdfs:label "Professorial teaching fellow"@en ;
+      asio:country euCountry:GBR ;
+      asio:hasCode asioModules:GB_UNIVERSITY_HR_CODE_GBTPROF ;
+      skos:inScheme asioModules:GBUniversityHumanResourcesList ;
+      skos:notation "GBTPROF" ;
+      skos:closeMatch unescothes:C00015 ;
+      skos:closeMatch unescothes:C03965 ;
+      skos:prefLabel "Professorial teaching fellow"@en .
+
+asioModules:GB_UNIVERSITY_HR_CODE_GBRREAFEL
+      a       skos:Concept ;
+      rdfs:label "GBRREAFEL" ;
+      asio:codeOf asioModules:GB_UNIVERSITY_HR_GBRREAFEL ;
+      skos:inScheme asioModules:GBUniversityHumanResourcesCodesList ;
+      skos:prefLabel "GBRREAFEL" .
+
+asioModules:GB_UNIVERSITY_HR_CODE_GBRTSENLEC
+      a       skos:Concept ;
+      rdfs:label "GBRTSENLEC" ;
+      asio:codeOf asioModules:GB_UNIVERSITY_HR_GBRTSENLEC ;
+      skos:inScheme asioModules:GBUniversityHumanResourcesCodesList ;
+      skos:prefLabel "GBRTSENLEC" .
+
+asioModules:GB_UNIVERSITY_HR_CODE_GBRTCLLEC
+      a       skos:Concept ;
+      rdfs:label "GBRTCLLEC" ;
+      asio:codeOf asioModules:GB_UNIVERSITY_HR_GBRTCLLEC ;
+      skos:inScheme asioModules:GBUniversityHumanResourcesCodesList ;
+      skos:prefLabel "GBRTCLLEC" .
+
+asioModules:GB_UNIVERSITY_HR_GBRTREAD
+      a       owl:NamedIndividual , asio:Role , skos:Concept ;
+      rdfs:label "Reader"@en ;
+      asio:country euCountry:GBR ;
+      asio:hasCode asioModules:GB_UNIVERSITY_HR_CODE_GBRTREAD ;
+      skos:altLabel "Principal lecturer"@en ;
+      skos:inScheme asioModules:GBUniversityHumanResourcesList ;
+      skos:notation "GBRTREAD" ;
+      skos:closeMatch unescothes:C00015 ;
+      skos:closeMatch unescothes:C03965 ;
+      skos:prefLabel "Reader"@en .
+
+asioModules:GB_UNIVERSITY_HR_GBRTPROF
+      a       owl:NamedIndividual , asio:Role , skos:Concept ;
+      rdfs:label "Professor"@en ;
+      asio:country euCountry:GBR ;
+      asio:hasCode asioModules:GB_UNIVERSITY_HR_CODE_GBRTPROF ;
+      skos:inScheme asioModules:GBUniversityHumanResourcesList ;
+      skos:notation "GBRTPROF" ;
+      skos:closeMatch unescothes:C00015 ;
+      skos:closeMatch unescothes:C03965 ;
+      skos:prefLabel "Professor"@en .
+
+asioModules:GBUniversityHumanResourcesCodesList
+      a       asioModules:UniversityHumanResources ;
+      rdfs:label "Codes des resources humains des universités du Royaume Uni"@fr , "Codes for the human resources of the universities from the United Kingdom"@en , "Códigos de los recursos humanos de las universidades del Reino Unido"@es , "Códigos de los recursos humanos de les universidaes del Reinu Xuníu"@ast , "Codis dels recursos humans de les universitats del Regne Unit"@ca , "Códigos dos recursos humanos das universidades do Reino Unido"@pt , "Códigos dos recursos humanos das universidades do Reino Unido"@gl ;
+      skos:prefLabel "Codes des resources humains des universités du Royaume Uni"@fr , "Codes for the human resources of the universities from the United Kingdom"@en , "Códigos de los recursos humanos de las universidades del Reino Unido"@es , "Códigos de los recursos humanos de les universidaes del Reinu Xuníu"@ast , "Codis dels recursos humans de les universitats del Regne Unit"@ca , "Códigos dos recursos humanos das universidades do Reino Unido"@pt , "Códigos dos recursos humanos das universidades do Reino Unido"@gl .
+
+asioModules:GB_UNIVERSITY_HR_CODE_GBHEADDEP
+      a       skos:Concept ;
+      rdfs:label "GBHEADDEP" ;
+      asio:codeOf asioModules:GB_UNIVERSITY_HR_GBHEADDEP ;
+      skos:inScheme asioModules:GBUniversityHumanResourcesCodesList ;
+      skos:prefLabel "GBHEADDEP" .

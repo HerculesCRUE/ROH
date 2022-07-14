@@ -1,0 +1,3171 @@
+<?xml version="1.0"?>
+<rdf:RDF xmlns="http://www.w3.org/2002/07/owl#"
+     xml:base="http://www.w3.org/2002/07/owl"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:roh="http://purl.org/roh#"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     xmlns:skos="http://www.w3.org/2004/02/skos/core#"
+     xmlns:ontolex="http://www.w3.org/ns/lemon/ontolex#">
+    <Ontology/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Annotation properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+
+    
+
+
+    <!-- http://purl.org/roh#codeOf -->
+
+
+    <AnnotationProperty rdf:about="http://purl.org/roh#codeOf"/>
+    
+
+
+    <!-- http://purl.org/roh#hasCode -->
+
+
+    <AnnotationProperty rdf:about="http://purl.org/roh#hasCode"/>
+    
+
+
+    <!-- http://www.w3.org/2004/02/skos/core#broader -->
+
+
+    <AnnotationProperty rdf:about="http://www.w3.org/2004/02/skos/core#broader"/>
+    
+
+
+    <!-- http://www.w3.org/2004/02/skos/core#closeMatch -->
+
+
+    <AnnotationProperty rdf:about="http://www.w3.org/2004/02/skos/core#closeMatch"/>
+    
+
+
+    <!-- http://www.w3.org/2004/02/skos/core#exactMatch -->
+
+
+    <AnnotationProperty rdf:about="http://www.w3.org/2004/02/skos/core#exactMatch"/>
+    
+
+
+    <!-- http://www.w3.org/2004/02/skos/core#inScheme -->
+
+
+    <AnnotationProperty rdf:about="http://www.w3.org/2004/02/skos/core#inScheme"/>
+    
+
+
+    <!-- http://www.w3.org/2004/02/skos/core#notation -->
+
+
+    <AnnotationProperty rdf:about="http://www.w3.org/2004/02/skos/core#notation"/>
+    
+
+
+    <!-- http://www.w3.org/2004/02/skos/core#prefLabel -->
+
+
+    <AnnotationProperty rdf:about="http://www.w3.org/2004/02/skos/core#prefLabel"/>
+    
+
+
+    <!-- http://www.w3.org/ns/lemon/ontolex#phoneticRep -->
+
+
+    <AnnotationProperty rdf:about="http://www.w3.org/ns/lemon/ontolex#phoneticRep"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+
+    
+
+
+    <!-- http://purl.org/roh#ESSubjectArea -->
+
+
+    <Class rdf:about="http://purl.org/roh#ESSubjectArea">
+        <rdfs:subClassOf rdf:resource="http://purl.org/roh#KnowledgeArea"/>
+        <rdfs:label xml:lang="en">ES Subject Area</rdfs:label>
+    </Class>
+    
+
+
+    <!-- http://purl.org/roh#KnowledgeArea -->
+
+
+    <Class rdf:about="http://purl.org/roh#KnowledgeArea">
+        <rdfs:subClassOf rdf:resource="http://www.w3.org/2004/02/skos/core#ConceptScheme"/>
+        <rdfs:label xml:lang="en">Knowledge Area</rdfs:label>
+    </Class>
+    
+
+
+    <!-- http://www.w3.org/2004/02/skos/core#Concept -->
+
+
+    <Class rdf:about="http://www.w3.org/2004/02/skos/core#Concept">
+        <rdfs:label xml:lang="en">Concept</rdfs:label>
+    </Class>
+    
+
+
+    <!-- http://www.w3.org/2004/02/skos/core#ConceptScheme -->
+
+
+    <Class rdf:about="http://www.w3.org/2004/02/skos/core#ConceptScheme">
+        <rdfs:label xml:lang="en">Concept Scheme</rdfs:label>
+    </Class>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Individuals
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+
+    
+
+
+    <!-- http://purl.org/roh/subject-areas#ESSubjectAreas1stList -->
+
+
+    <NamedIndividual rdf:about="http://purl.org/roh/subject-areas#ESSubjectAreas1stList">
+        <rdf:type rdf:resource="http://purl.org/roh#ESSubjectArea"/>
+        <rdfs:label xml:lang="fr">Domains thématiques de premier niveau de l&apos;Agence Espagnole pour la Recherche (AEI)</rdfs:label>
+        <rdfs:label xml:lang="ca">Dominis temàtics de primer nivell de l&apos;Agència Estatal de Recerca (AEI)</rdfs:label>
+        <rdfs:label xml:lang="eu">FIXME</rdfs:label>
+        <rdfs:label xml:lang="en">First-level subject areas of Spain&apos;s State Research Agency (AEI)</rdfs:label>
+        <rdfs:label xml:lang="ca-ca-fonipa">duˈminis təˈmatikz ðə pɾiˈme niˈβeʎ ðə ɫə ʒənˈsiə əstəˈtaɫ ðə rəˈsɛrkə</rdfs:label>
+        <rdfs:label xml:lang="en-us-fonipa">fɜrst ˈlɛvəl ˈsʌbʤɪkt ˈɛriə</rdfs:label>
+        <rdfs:label xml:lang="en-gb-fonipa">fɜːst ˈlɛvl ˈsʌbʤɪkt ˈeərɪəz</rdfs:label>
+        <rdfs:label xml:lang="oc">Áreas tematicas de primièr nivel de l&apos;AEI</rdfs:label>
+        <rdfs:label xml:lang="gl">Áreas temáticas de primeiro nivel da Axencia Estatal de Investigación (AEI)</rdfs:label>
+        <rdfs:label xml:lang="pt">Áreas temáticas de primeiro nível</rdfs:label>
+        <rdfs:label xml:lang="an">Áreas temáticas de primer libel d&apos;a AEI</rdfs:label>
+        <rdfs:label xml:lang="es">Áreas temáticas de primer nivel de la Agencia Estatal de Investigación (AEI)</rdfs:label>
+        <rdfs:label xml:lang="ast">Árees temátiques de primer nivel de l&apos;Axencia Estatal de Investigación (AEI)</rdfs:label>
+        <rdfs:label xml:lang="es-es-fonipa">ˈaɾeas teˈmatikas ðe priˈmer niˈβel ðe la aˈxenθja estaˈtal ðe imbestiɣ̞aˈθjon</rdfs:label>
+        <skos:prefLabel xml:lang="fr">Domains thématiques de premier niveau de l&apos;Agence Espagnole pour la Recherche (AEI)</skos:prefLabel>
+        <skos:prefLabel xml:lang="ca">Dominis temàtics de primer nivell de l&apos;Agència Estatal de Recerca (AEI)</skos:prefLabel>
+        <skos:prefLabel xml:lang="eu">FIXME</skos:prefLabel>
+        <skos:prefLabel xml:lang="en">First-level subject areas of Spain&apos;s State Research Agency (AEI)</skos:prefLabel>
+        <skos:prefLabel xml:lang="ca-ca-fonipa">duˈminis təˈmatikz ðə pɾiˈme niˈβeʎ ðə ɫə ʒənˈsiə əstəˈtaɫ ðə rəˈsɛrkə</skos:prefLabel>
+        <skos:prefLabel xml:lang="en-us-fonipa">fɜrst ˈlɛvəl ˈsʌbʤɪkt ˈɛriəz</skos:prefLabel>
+        <skos:prefLabel xml:lang="en-gb-fonipa">fɜːst ˈlɛvl ˈsʌbʤɪkt ˈeərɪəz</skos:prefLabel>
+        <skos:prefLabel xml:lang="oc">Áreas tematicas de primièr nivel de l&apos;AEI</skos:prefLabel>
+        <skos:prefLabel xml:lang="gl">Áreas temáticas de primeiro nivel da Axencia Estatal de Investigación (AEI)</skos:prefLabel>
+        <skos:prefLabel xml:lang="pt">Áreas temáticas de primeiro nível</skos:prefLabel>
+        <skos:prefLabel xml:lang="an">Áreas temáticas de primer libel d&apos;a AEI</skos:prefLabel>
+        <skos:prefLabel xml:lang="es">Áreas temáticas de primer nivel de la Agencia Estatal de Investigación (AEI)</skos:prefLabel>
+        <skos:prefLabel xml:lang="ast">Árees temátiques de primer nivel de l&apos;Axencia Estatal de Investigación (AEI)</skos:prefLabel>
+        <skos:prefLabel xml:lang="es-es-fonipa">ˈaɾeas teˈmatikas ðe priˈmer niˈβel ðe la aˈxenθja estaˈtal ðe imbestiɣ̞aˈθjon</skos:prefLabel>
+        <ontolex:phoneticRep xml:lang="ca-ca-fonipa">duˈminis təˈmatikz ðə pɾiˈme niˈβeʎ ðə ɫə ʒənˈsiə əstəˈtaɫ ðə rəˈsɛrkə</ontolex:phoneticRep>
+        <ontolex:phoneticRep xml:lang="en-us-fonipa">fɜrst ˈlɛvəl ˈsʌbʤɪkt ˈɛriə</ontolex:phoneticRep>
+        <ontolex:phoneticRep xml:lang="en-gb-fonipa">fɜːst ˈlɛvl ˈsʌbʤɪkt ˈeərɪəz</ontolex:phoneticRep>
+        <ontolex:phoneticRep xml:lang="es-es-fonipa">ˈaɾeas teˈmatikas ðe priˈmer niˈβel ðe la aˈxenθja estaˈtal ðe imbestiɣ̞aˈθjon</ontolex:phoneticRep>
+    </NamedIndividual>
+    
+
+
+    <!-- http://purl.org/roh/subject-areas#ESSubjectAreas2ndList -->
+
+
+    <NamedIndividual rdf:about="http://purl.org/roh/subject-areas#ESSubjectAreas2ndList">
+        <rdf:type rdf:resource="http://purl.org/roh#ESSubjectArea"/>
+        <rdfs:label xml:lang="fr">Domains thématiques de second niveau de l&apos;Agence Espagnole pour la Recherche (AEI)</rdfs:label>
+        <rdfs:label xml:lang="ca">Dominis temàtics de segon nivell de l&apos;Agència Estatal de Recerca (AEI)</rdfs:label>
+        <rdfs:label xml:lang="eu">FIXME</rdfs:label>
+        <rdfs:label xml:lang="en">Second-level subject areas of Spain&apos;s State Research Agency (AEI)</rdfs:label>
+        <rdfs:label xml:lang="ca-ca-fonipa">duˈminis təˈmatikz ðə səˈɣon niˈβeʎ ðə ɫə ʒənˈsiə əstəˈtaɫ ðə rəˈsɛrkə</rdfs:label>
+        <rdfs:label xml:lang="en-gb-fonipa">sɛkənd ˈlɛvl ˈsʌbʤɪkt ˈeərɪəz</rdfs:label>
+        <rdfs:label xml:lang="en-us-fonipa">sɛkənd ˈlɛvəl ˈsʌbʤɪkt ˈɛriə</rdfs:label>
+        <rdfs:label xml:lang="oc">Áreas tematicas de segond nivel de l&apos;AEI</rdfs:label>
+        <rdfs:label xml:lang="an">Áreas temáticas de segundo libel d&apos;a AEI</rdfs:label>
+        <rdfs:label xml:lang="gl">Áreas temáticas de segundo nivel da Axencia Estatal de Investigación (AEI)</rdfs:label>
+        <rdfs:label xml:lang="es">Áreas temáticas de segundo nivel de la Agencia Estatal de Investigación (AEI)</rdfs:label>
+        <rdfs:label xml:lang="pt">Áreas temáticas de segundo nível</rdfs:label>
+        <rdfs:label xml:lang="ast">Árees temátiques de segundu nivel de l&apos;Axencia Estatal de Investigación (AEI)</rdfs:label>
+        <rdfs:label xml:lang="es-es-fonipa">ˈaɾeas teˈmatikas ðe seˈɣ̞un̟do niˈβel ðe la aˈxenθja estaˈtal ðe imbestiɣ̞aˈθjon</rdfs:label>
+        <skos:prefLabel xml:lang="fr">Domains thématiques de second niveau de l&apos;Agence Espagnole pour la Recherche (AEI)</skos:prefLabel>
+        <skos:prefLabel xml:lang="ca">Dominis temàtics de segon nivell de l&apos;Agència Estatal de Recerca (AEI)</skos:prefLabel>
+        <skos:prefLabel xml:lang="eu">FIXME</skos:prefLabel>
+        <skos:prefLabel xml:lang="en">Second-level subject areas of Spain&apos;s State Research Agency (AEI)</skos:prefLabel>
+        <skos:prefLabel xml:lang="ca-ca-fonipa">duˈminis təˈmatikz ðə səˈɣon niˈβeʎ ðə ɫə ʒənˈsiə əstəˈtaɫ ðə rəˈsɛrkə</skos:prefLabel>
+        <skos:prefLabel xml:lang="en-gb-fonipa">sɛkənd ˈlɛvl ˈsʌbʤɪkt ˈeərɪəz</skos:prefLabel>
+        <skos:prefLabel xml:lang="en-us-fonipa">sɛkənd ˈlɛvəl ˈsʌbʤɪkt ˈɛriəz</skos:prefLabel>
+        <skos:prefLabel xml:lang="oc">Áreas tematicas de segond nivel de l&apos;AEI</skos:prefLabel>
+        <skos:prefLabel xml:lang="an">Áreas temáticas de segundo libel d&apos;a AEI</skos:prefLabel>
+        <skos:prefLabel xml:lang="gl">Áreas temáticas de segundo nivel da Axencia Estatal de Investigación (AEI)</skos:prefLabel>
+        <skos:prefLabel xml:lang="es">Áreas temáticas de segundo nivel de la Agencia Estatal de Investigación (AEI)</skos:prefLabel>
+        <skos:prefLabel xml:lang="pt">Áreas temáticas de segundo nível</skos:prefLabel>
+        <skos:prefLabel xml:lang="ast">Árees temátiques de segundu nivel de l&apos;Axencia Estatal de Investigación (AEI)</skos:prefLabel>
+        <skos:prefLabel xml:lang="es-es-fonipa">ˈaɾeas teˈmatikas ðe seˈɣ̞un̟do niˈβel ðe la aˈxenθja estaˈtal ðe imbestiɣ̞aˈθjon</skos:prefLabel>
+        <ontolex:phoneticRep xml:lang="ca-ca-fonipa">duˈminis təˈmatikz ðə səˈɣon niˈβeʎ ðə ɫə ʒənˈsiə əstəˈtaɫ ðə rəˈsɛrkə</ontolex:phoneticRep>
+        <ontolex:phoneticRep xml:lang="en-gb-fonipa">sɛkənd ˈlɛvl ˈsʌbʤɪkt ˈeərɪəz</ontolex:phoneticRep>
+        <ontolex:phoneticRep xml:lang="en-us-fonipa">sɛkənd ˈlɛvəl ˈsʌbʤɪkt ˈɛriə</ontolex:phoneticRep>
+        <ontolex:phoneticRep xml:lang="es-es-fonipa">ˈaɾeas teˈmatikas ðe seˈɣ̞un̟do niˈβel ðe la aˈxenθja estaˈtal ðe imbestiɣ̞aˈθjon</ontolex:phoneticRep>
+    </NamedIndividual>
+    
+
+
+    <!-- http://purl.org/roh/subject-areas#ESSubjectAreas3rdList -->
+
+
+    <NamedIndividual rdf:about="http://purl.org/roh/subject-areas#ESSubjectAreas3rdList">
+        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+        <rdfs:label xml:lang="fr">Domains thématiques de troisième niveau de l&apos;Agence Espagnole pour la Recherche (AEI)</rdfs:label>
+        <rdfs:label xml:lang="ca">Dominis temàtics de tercer nivell de l&apos;Agència Estatal de Recerca (AEI)</rdfs:label>
+        <rdfs:label xml:lang="eu">FIXME</rdfs:label>
+        <rdfs:label xml:lang="en">Third-level subject areas of Spain&apos;s State Research Agency (AEI)</rdfs:label>
+        <rdfs:label xml:lang="ca-ca-fonipa">duˈminis təˈmatikz ðə tərˈse niˈβeʎ ðə ɫə ʒənˈsiə əstəˈtaɫ ðə rəˈsɛrkə</rdfs:label>
+        <rdfs:label xml:lang="oc">Áreas tematicas de tresen nivel de l&apos;AEI</rdfs:label>
+        <rdfs:label xml:lang="gl">Áreas temáticas de terceiro nivel da Axencia Estatal de Investigación (AEI)</rdfs:label>
+        <rdfs:label xml:lang="pt">Áreas temáticas de terceiro nível</rdfs:label>
+        <rdfs:label xml:lang="an">Áreas temáticas de tercer libel d&apos;a AEI</rdfs:label>
+        <rdfs:label xml:lang="es">Áreas temáticas de tercer nivel de la Agencia Estatal de Investigación (AEI)</rdfs:label>
+        <rdfs:label xml:lang="ast">Árees temátiques de tercer nivel de l&apos;Axencia Estatal de Investigación (AEI)</rdfs:label>
+        <rdfs:label xml:lang="es-es-fonipa">ˈaɾeas teˈmatikas ðe terˈθer niˈβel ðe la aˈxenθja estaˈtal ðe imbestiɣ̞aˈθjon</rdfs:label>
+        <rdfs:label xml:lang="en-us-fonipa">θɜrd ˈlɛvəl ˈsʌbʤɪkt ˈɛriə</rdfs:label>
+        <rdfs:label xml:lang="en-gb-fonipa">θɜːd ˈlɛvl ˈsʌbʤɪkt ˈeərɪəz</rdfs:label>
+        <skos:prefLabel xml:lang="fr">Domains thématiques de troisième niveau de l&apos;Agence Espagnole pour la Recherche (AEI)</skos:prefLabel>
+        <skos:prefLabel xml:lang="ca">Dominis temàtics de tercer nivell de l&apos;Agència Estatal de Recerca (AEI)</skos:prefLabel>
+        <skos:prefLabel xml:lang="eu">FIXME</skos:prefLabel>
+        <skos:prefLabel xml:lang="en">Third-level subject areas of Spain&apos;s State Research Agency (AEI)</skos:prefLabel>
+        <skos:prefLabel xml:lang="ca-ca-fonipa">duˈminis təˈmatikz ðə tərˈse niˈβeʎ ðə ɫə ʒənˈsiə əstəˈtaɫ ðə rəˈsɛrkə</skos:prefLabel>
+        <skos:prefLabel xml:lang="oc">Áreas tematicas de tresen nivel de l&apos;AEI</skos:prefLabel>
+        <skos:prefLabel xml:lang="gl">Áreas temáticas de terceiro nivel da Axencia Estatal de Investigación (AEI)</skos:prefLabel>
+        <skos:prefLabel xml:lang="pt">Áreas temáticas de terceiro nível</skos:prefLabel>
+        <skos:prefLabel xml:lang="an">Áreas temáticas de tercer libel d&apos;a AEI</skos:prefLabel>
+        <skos:prefLabel xml:lang="es">Áreas temáticas de tercer nivel de la Agencia Estatal de Investigación (AEI)</skos:prefLabel>
+        <skos:prefLabel xml:lang="ast">Árees temátiques de tercer nivel de l&apos;Axencia Estatal de Investigación (AEI)</skos:prefLabel>
+        <skos:prefLabel xml:lang="es-es-fonipa">ˈaɾeas teˈmatikas ðe terˈθer niˈβel ðe la aˈxenθja estaˈtal ðe imbestiɣ̞aˈθjon</skos:prefLabel>
+        <skos:prefLabel xml:lang="en-us-fonipa">θɜrd ˈlɛvəl ˈsʌbʤɪkt ˈɛriəz</skos:prefLabel>
+        <skos:prefLabel xml:lang="en-gb-fonipa">θɜːd ˈlɛvl ˈsʌbʤɪkt ˈeərɪəz</skos:prefLabel>
+        <ontolex:phoneticRep xml:lang="ca-ca-fonipa">duˈminis təˈmatikz ðə tərˈse niˈβeʎ ðə ɫə ʒənˈsiə əstəˈtaɫ ðə rəˈsɛrkə</ontolex:phoneticRep>
+        <ontolex:phoneticRep xml:lang="es-es-fonipa">ˈaɾeas teˈmatikas ðe terˈθer niˈβel ðe la aˈxenθja estaˈtal ðe imbestiɣ̞aˈθjon</ontolex:phoneticRep>
+        <ontolex:phoneticRep xml:lang="en-us-fonipa">θɜrd ˈlɛvəl ˈsʌbʤɪkt ˈɛriə</ontolex:phoneticRep>
+        <ontolex:phoneticRep xml:lang="en-gb-fonipa">θɜːd ˈlɛvl ˈsʌbʤɪkt ˈeərɪəz</ontolex:phoneticRep>
+    </NamedIndividual>
+    
+
+
+    <!-- http://purl.org/roh/subject-areas#ESSubjectCode1stList -->
+
+
+    <NamedIndividual rdf:about="http://purl.org/roh/subject-areas#ESSubjectCode1stList">
+        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+        <rdfs:label xml:lang="fr">Codes des domains thématiques de premier niveau de l&apos;Agence Espagnole pour la Recherche (AEI)</rdfs:label>
+        <rdfs:label xml:lang="en">Codes for the first-level subject areas of Spain&apos;s State Research Agency (AEI)</rdfs:label>
+        <rdfs:label xml:lang="ca">Codis dels dominis temàtics de primer nivell de l&apos;Agència Estatal de Recerca (AEI)</rdfs:label>
+        <rdfs:label xml:lang="gl">Códigos das áreas temáticas de primeiro nivel da Axencia Estatal de Investigación (AEI)</rdfs:label>
+        <rdfs:label xml:lang="pt">Códigos das áreas temáticas de primeiro nível da Agência Estadual de Pesquisa Espanhola (AEI)</rdfs:label>
+        <rdfs:label xml:lang="es">Códigos de las áreas temáticas de primer nivel de la Agencia Estatal de Investigación (AEI)</rdfs:label>
+        <rdfs:label xml:lang="ast">Códigos de les árees temátiques de primer nivel</rdfs:label>
+        <rdfs:label xml:lang="ca-ca-fonipa">duˈminis təˈmatikz ðə pɾiˈme niˈβeʎ ðə ɫə ʒənˈsiə əstəˈtaɫ ðə rəˈsɛrkə</rdfs:label>
+        <rdfs:label xml:lang="es-es-fonipa">ˈkoðiγoz ðe las ˈaɾeas teˈmatikas ðe priˈmer niˈβel ðe la aˈxenθja estaˈtal ðe imbestiɣ̞aˈθjon</rdfs:label>
+        <rdfs:label xml:lang="en-us-fonipa">ˈkoʊdz fɔr ðə fɜrst ˈlɛvəl ˈsʌbʤɪkt ˈɛriəz ʌv speɪnz steɪt riˈsɜrʧ ˈeɪʤənsi</rdfs:label>
+        <rdfs:label xml:lang="en-gb-fonipa">ˈkəʊdz fɔː ðə fɜːst ˈlɛvl ˈsʌbʤɪkt ˈeərɪəz ɒv speɪnz steɪt rɪˈsɜːʧ ˈeɪʤənsi</rdfs:label>
+        <skos:prefLabel xml:lang="fr">Codes des domains thématiques de premier niveau de l&apos;Agence Espagnole pour la Recherche (AEI)</skos:prefLabel>
+        <skos:prefLabel xml:lang="en">Codes for the first-level subject areas of Spain&apos;s State Research Agency (AEI)</skos:prefLabel>
+        <skos:prefLabel xml:lang="ca">Codis dels dominis temàtics de primer nivell de l&apos;Agència Estatal de Recerca (AEI)</skos:prefLabel>
+        <skos:prefLabel xml:lang="gl">Códigos das áreas temáticas de primeiro nivel da Axencia Estatal de Investigación (AEI)</skos:prefLabel>
+        <skos:prefLabel xml:lang="pt">Códigos das áreas temáticas de primeiro nível da Agência Estadual de Pesquisa Espanhola (AEI)</skos:prefLabel>
+        <skos:prefLabel xml:lang="es">Códigos de las áreas temáticas de primer nivel de la Agencia Estatal de Investigación (AEI)</skos:prefLabel>
+        <skos:prefLabel xml:lang="ast">Códigos de les árees temátiques de primer nivel</skos:prefLabel>
+        <skos:prefLabel xml:lang="ca-ca-fonipa">duˈminis təˈmatikz ðə pɾiˈme niˈβeʎ ðə ɫə ʒənˈsiə əstəˈtaɫ ðə rəˈsɛrkə</skos:prefLabel>
+        <skos:prefLabel xml:lang="es-es-fonipa">ˈkoðiγoz ðe las ˈaɾeas teˈmatikas ðe priˈmer niˈβel ðe la aˈxenθja estaˈtal ðe imbestiɣ̞aˈθjon</skos:prefLabel>
+        <skos:prefLabel xml:lang="en-us-fonipa">ˈkoʊdz fɔr ðə fɜrst ˈlɛvəl ˈsʌbʤɪkt ˈɛriəz ʌv speɪnz steɪt riˈsɜrʧ ˈeɪʤənsi</skos:prefLabel>
+        <skos:prefLabel xml:lang="en-gb-fonipa">ˈkəʊdz fɔː ðə fɜːst ˈlɛvl ˈsʌbʤɪkt ˈeərɪəz ɒv speɪnz steɪt rɪˈsɜːʧ ˈeɪʤənsi</skos:prefLabel>
+        <ontolex:phoneticRep xml:lang="ca-ca-fonipa">duˈminis təˈmatikz ðə pɾiˈme niˈβeʎ ðə ɫə ʒənˈsiə əstəˈtaɫ ðə rəˈsɛrkə</ontolex:phoneticRep>
+        <ontolex:phoneticRep xml:lang="es-es-fonipa">ˈkoðiγoz ðe las ˈaɾeas teˈmatikas ðe priˈmer niˈβel ðe la aˈxenθja estaˈtal ðe imbestiɣ̞aˈθjon</ontolex:phoneticRep>
+        <ontolex:phoneticRep xml:lang="en-us-fonipa">ˈkoʊdz fɔr ðə fɜrst ˈlɛvəl ˈsʌbʤɪkt ˈɛriəz ʌv speɪnz steɪt riˈsɜrʧ ˈeɪʤənsi</ontolex:phoneticRep>
+        <ontolex:phoneticRep xml:lang="en-gb-fonipa">ˈkəʊdz fɔː ðə fɜːst ˈlɛvl ˈsʌbʤɪkt ˈeərɪəz ɒv speɪnz steɪt rɪˈsɜːʧ ˈeɪʤənsi</ontolex:phoneticRep>
+    </NamedIndividual>
+    
+
+
+    <!-- http://purl.org/roh/subject-areas#ESSubjectCode2ndList -->
+
+
+    <NamedIndividual rdf:about="http://purl.org/roh/subject-areas#ESSubjectCode2ndList">
+        <rdf:type rdf:resource="http://purl.org/roh#ESSubjectArea"/>
+        <rdfs:label xml:lang="fr">Codes des domains thématiques de second niveau de l&apos;Agence Espagnole pour la Recherche (AEI)</rdfs:label>
+        <rdfs:label xml:lang="en">Codes for the second-level subject areas of Spain&apos;s State Research Agency (AEI)</rdfs:label>
+        <rdfs:label xml:lang="ca">Codis dels dominis temàtics de segon nivell de l&apos;Agència Estatal de Recerca (AEI)</rdfs:label>
+        <rdfs:label xml:lang="gl">Códigos das áreas temáticas de segundo nivel da Axencia Estatal de Investigación (AEI)</rdfs:label>
+        <rdfs:label xml:lang="pt">Códigos das áreas temáticas de segundo nível da Agência Estadual de Pesquisa Espanhola (AEI)</rdfs:label>
+        <rdfs:label xml:lang="es">Códigos de las áreas temáticas de segundo nivel de la Agencia Estatal de Investigación (AEI)</rdfs:label>
+        <rdfs:label xml:lang="ast">Códigos de les árees temátiques de segundu nivel</rdfs:label>
+        <rdfs:label xml:lang="ca-ca-fonipa">duˈminis təˈmatikz ðə səˈɣon niˈβeʎ ðə ɫə ʒənˈsiə əstəˈtaɫ ðə rəˈsɛrkə</rdfs:label>
+        <rdfs:label xml:lang="es-es-fonipa">ˈkoðiγoz ðe las ˈaɾeas teˈmatikas ðe seˈɣ̞un̟do niˈβel ðe la aˈxenθja estaˈtal ðe imbestiɣ̞aˈθjon</rdfs:label>
+        <rdfs:label xml:lang="en-us-fonipa">ˈkoʊdz fɔr ðə sɛkənd ˈlɛvəl ˈsʌbʤɪkt ˈɛriəz ʌv speɪnz steɪt riˈsɜrʧ ˈeɪʤənsi</rdfs:label>
+        <rdfs:label xml:lang="en-gb-fonipa">ˈkəʊdz fɔː ðə sɛkənd ˈlɛvl ˈsʌbʤɪkt ˈeərɪəz ɒv speɪnz steɪt rɪˈsɜːʧ ˈeɪʤənsi</rdfs:label>
+        <skos:prefLabel xml:lang="fr">Codes des domains thématiques de second niveau de l&apos;Agence Espagnole pour la Recherche (AEI)</skos:prefLabel>
+        <skos:prefLabel xml:lang="en">Codes for the second-level subject areas of Spain&apos;s State Research Agency (AEI)</skos:prefLabel>
+        <skos:prefLabel xml:lang="ca">Codis dels dominis temàtics de segon nivell de l&apos;Agència Estatal de Recerca (AEI)</skos:prefLabel>
+        <skos:prefLabel xml:lang="gl">Códigos das áreas temáticas de segundo nivel da Axencia Estatal de Investigación (AEI)</skos:prefLabel>
+        <skos:prefLabel xml:lang="pt">Códigos das áreas temáticas de segundo nível da Agência Estadual de Pesquisa Espanhola (AEI)</skos:prefLabel>
+        <skos:prefLabel xml:lang="es">Códigos de las áreas temáticas de segundo nivel de la Agencia Estatal de Investigación (AEI)</skos:prefLabel>
+        <skos:prefLabel xml:lang="ast">Códigos de les árees temátiques de segundu nivel</skos:prefLabel>
+        <skos:prefLabel xml:lang="ca-ca-fonipa">duˈminis təˈmatikz ðə səˈɣon niˈβeʎ ðə ɫə ʒənˈsiə əstəˈtaɫ ðə rəˈsɛrkə</skos:prefLabel>
+        <skos:prefLabel xml:lang="es-es-fonipa">ˈkoðiγoz ðe las ˈaɾeas teˈmatikas ðe seˈɣ̞un̟do niˈβel ðe la aˈxenθja estaˈtal ðe imbestiɣ̞aˈθjon</skos:prefLabel>
+        <skos:prefLabel xml:lang="en-us-fonipa">ˈkoʊdz fɔr ðə sɛkənd ˈlɛvəl ˈsʌbʤɪkt ˈɛriəz ʌv speɪnz steɪt riˈsɜrʧ ˈeɪʤənsi</skos:prefLabel>
+        <skos:prefLabel xml:lang="en-gb-fonipa">ˈkəʊdz fɔː ðə sɛkənd ˈlɛvl ˈsʌbʤɪkt ˈeərɪəz ɒv speɪnz steɪt rɪˈsɜːʧ ˈeɪʤənsi</skos:prefLabel>
+        <ontolex:phoneticRep xml:lang="ca-ca-fonipa">duˈminis təˈmatikz ðə səˈɣon niˈβeʎ ðə ɫə ʒənˈsiə əstəˈtaɫ ðə rəˈsɛrkə</ontolex:phoneticRep>
+        <ontolex:phoneticRep xml:lang="es-es-fonipa">ˈkoðiγoz ðe las ˈaɾeas teˈmatikas ðe seˈɣ̞un̟do niˈβel ðe la aˈxenθja estaˈtal ðe imbestiɣ̞aˈθjon</ontolex:phoneticRep>
+        <ontolex:phoneticRep xml:lang="en-us-fonipa">ˈkoʊdz fɔr ðə sɛkənd ˈlɛvəl ˈsʌbʤɪkt ˈɛriəz ʌv speɪnz steɪt riˈsɜrʧ ˈeɪʤənsi</ontolex:phoneticRep>
+        <ontolex:phoneticRep xml:lang="en-gb-fonipa">ˈkəʊdz fɔː ðə sɛkənd ˈlɛvl ˈsʌbʤɪkt ˈeərɪəz ɒv speɪnz steɪt rɪˈsɜːʧ ˈeɪʤənsi</ontolex:phoneticRep>
+    </NamedIndividual>
+    
+
+
+    <!-- http://purl.org/roh/subject-areas#ESSubjectCode3rdList -->
+
+
+    <NamedIndividual rdf:about="http://purl.org/roh/subject-areas#ESSubjectCode3rdList">
+        <rdf:type rdf:resource="http://purl.org/roh#ESSubjectArea"/>
+        <rdfs:label xml:lang="fr">Codes des domains thématiques de troisième niveau de l&apos;Agence Espagnole pour la Recherche (AEI)</rdfs:label>
+        <rdfs:label xml:lang="en">Codes for the third-level subject areas of Spain&apos;s State Research Agency (AEI)</rdfs:label>
+        <rdfs:label xml:lang="ca">Codis dels dominis temàtics de tercer nivell de l&apos;Agència Estatal de Recerca (AEI)</rdfs:label>
+        <rdfs:label xml:lang="gl">Códigos das áreas temáticas de terceiro nivel da Axencia Estatal de Investigación (AEI)</rdfs:label>
+        <rdfs:label xml:lang="pt">Códigos das áreas temáticas de terceiro nível da Agência Estadual de Pesquisa Espanhola (AEI)</rdfs:label>
+        <rdfs:label xml:lang="es">Códigos de las áreas temáticas de tercer nivel de la Agencia Estatal de Investigación (AEI)</rdfs:label>
+        <rdfs:label xml:lang="ast">Códigos de les árees temátiques de tercer nivel</rdfs:label>
+        <rdfs:label xml:lang="ca-ca-fonipa">duˈminis təˈmatikz ðə tərˈse niˈβeʎ ðə ɫə ʒənˈsiə əstəˈtaɫ ðə rəˈsɛrkə</rdfs:label>
+        <rdfs:label xml:lang="es-es-fonipa">ˈkoðiγoz ðe las ˈaɾeas teˈmatikas ðe terˈθer niˈβel ðe la aˈxenθja estaˈtal ðe imbestiɣ̞aˈθjon</rdfs:label>
+        <rdfs:label xml:lang="en-us-fonipa">ˈkoʊdz fɔr ðə θɜrd ˈlɛvəl ˈsʌbʤɪkt ˈɛriəz ʌv speɪnz steɪt riˈsɜrʧ ˈeɪʤənsi</rdfs:label>
+        <rdfs:label xml:lang="en-gb-fonipa">ˈkəʊdz fɔː ðə θɜːd ˈlɛvl ˈsʌbʤɪkt ˈeərɪəz ɒv speɪnz steɪt rɪˈsɜːʧ ˈeɪʤənsi</rdfs:label>
+        <skos:prefLabel xml:lang="fr">Codes des domains thématiques de troisième niveau de l&apos;Agence Espagnole pour la Recherche (AEI)</skos:prefLabel>
+        <skos:prefLabel xml:lang="en">Codes for the third-level subject areas of Spain&apos;s State Research Agency (AEI)</skos:prefLabel>
+        <skos:prefLabel xml:lang="ca">Codis dels dominis temàtics de tercer nivell de l&apos;Agència Estatal de Recerca (AEI)</skos:prefLabel>
+        <skos:prefLabel xml:lang="gl">Códigos das áreas temáticas de terceiro nivel da Axencia Estatal de Investigación (AEI)</skos:prefLabel>
+        <skos:prefLabel xml:lang="pt">Códigos das áreas temáticas de terceiro nível da Agência Estadual de Pesquisa Espanhola (AEI)</skos:prefLabel>
+        <skos:prefLabel xml:lang="es">Códigos de las áreas temáticas de tercer nivel de la Agencia Estatal de Investigación (AEI)</skos:prefLabel>
+        <skos:prefLabel xml:lang="ast">Códigos de les árees temátiques de tercer nivel</skos:prefLabel>
+        <skos:prefLabel xml:lang="ca-ca-fonipa">duˈminis təˈmatikz ðə tərˈse niˈβeʎ ðə ɫə ʒənˈsiə əstəˈtaɫ ðə rəˈsɛrkə</skos:prefLabel>
+        <skos:prefLabel xml:lang="es-es-fonipa">ˈkoðiγoz ðe las ˈaɾeas teˈmatikas ðe terˈθer niˈβel ðe la aˈxenθja estaˈtal ðe imbestiɣ̞aˈθjon</skos:prefLabel>
+        <skos:prefLabel xml:lang="en-us-fonipa">ˈkoʊdz fɔr ðə θɜrd ˈlɛvəl ˈsʌbʤɪkt ˈɛriəz ʌv speɪnz steɪt riˈsɜrʧ ˈeɪʤənsi</skos:prefLabel>
+        <skos:prefLabel xml:lang="en-gb-fonipa">ˈkəʊdz fɔː ðə θɜːd ˈlɛvl ˈsʌbʤɪkt ˈeərɪəz ɒv speɪnz steɪt rɪˈsɜːʧ ˈeɪʤənsi</skos:prefLabel>
+        <ontolex:phoneticRep xml:lang="ca-ca-fonipa">duˈminis təˈmatikz ðə tərˈse niˈβeʎ ðə ɫə ʒənˈsiə əstəˈtaɫ ðə rəˈsɛrkə</ontolex:phoneticRep>
+        <ontolex:phoneticRep xml:lang="es-es-fonipa">ˈkoðiγoz ðe las ˈaɾeas teˈmatikas ðe terˈθer niˈβel ðe la aˈxenθja estaˈtal ðe imbestiɣ̞aˈθjon</ontolex:phoneticRep>
+        <ontolex:phoneticRep xml:lang="en-us-fonipa">ˈkoʊdz fɔr ðə θɜrd ˈlɛvəl ˈsʌbʤɪkt ˈɛriəz ʌv speɪnz steɪt riˈsɜrʧ ˈeɪʤənsi</ontolex:phoneticRep>
+        <ontolex:phoneticRep xml:lang="en-gb-fonipa">ˈkəʊdz fɔː ðə θɜːd ˈlɛvl ˈsʌbʤɪkt ˈeərɪəz ɒv speɪnz steɪt rɪˈsɜːʧ ˈeɪʤənsi</ontolex:phoneticRep>
+    </NamedIndividual>
+    
+
+
+    <!-- http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_1_CMIFQ -->
+
+
+    <NamedIndividual rdf:about="http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_1_CMIFQ">
+        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+        <roh:hasCode rdf:resource="http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_1_CODE_CMIFQ"/>
+        <rdfs:label>Ciencias matemáticas, físicas, químicas e ingenierías</rdfs:label>
+        <skos:closeMatch rdf:resource="http://skos.um.es/unescothes/C00568"/>
+        <skos:closeMatch rdf:resource="http://skos.um.es/unescothes/C01363"/>
+        <skos:closeMatch rdf:resource="http://skos.um.es/unescothes/C02437"/>
+        <skos:closeMatch rdf:resource="http://skos.um.es/unescothes/C02994"/>
+        <skos:inScheme rdf:resource="http://purl.org/roh/subject-areas#ESSubjectAreas1stList"/>
+        <skos:notation>CMIFQ</skos:notation>
+        <skos:prefLabel xml:lang="gl">Ciencias matemáticas, físicas, químicas e de enxeñaría</skos:prefLabel>
+        <skos:prefLabel xml:lang="es">Ciencias matemáticas, físicas, químicas e ingenierías</skos:prefLabel>
+        <skos:prefLabel xml:lang="ast">Ciencies matemátiques, físiques, químiques ya inxenieríes</skos:prefLabel>
+        <skos:prefLabel xml:lang="ca">Ciències matemàtiques, físiques, químiques i enginyeries</skos:prefLabel>
+        <skos:prefLabel xml:lang="pt">Ciências matemáticas, físicas, químicas e de engenharia</skos:prefLabel>
+        <skos:prefLabel xml:lang="ext">Céncias i ingenierías</skos:prefLabel>
+        <skos:prefLabel xml:lang="eu">Matematika, fisika, kimika eta ingeniaritza zientziak</skos:prefLabel>
+        <skos:prefLabel xml:lang="en">Mathematical, physical, chemical and engineering sciences</skos:prefLabel>
+        <skos:prefLabel xml:lang="fr">Sciences mathématiques, physiques, chimiques et du génie</skos:prefLabel>
+        <skos:prefLabel xml:lang="an">Sciencias matematicas, fisicas, quimicas y inchenierías</skos:prefLabel>
+        <skos:prefLabel xml:lang="oc">Sciéncias matematicas, fisicas, quimicas e engenhariá</skos:prefLabel>
+        <skos:prefLabel xml:lang="ca">siˈɛnsiəs mətəˈmatikəs ˈfizikəs ˈkimikəz i əɲʒiɲəˈɾiəs</skos:prefLabel>
+        <skos:prefLabel xml:lang="es-es">ˈθjenθjaz mateˈmatikas ˈfisikas ˈkimikas e iŋxenjeˈrias</skos:prefLabel>
+        <skos:prefLabel xml:lang="en-us">ˌmæθəˈmætɪkəl, ˈfɪzɪkəl, ˈkɛməkəl ænd ˈɛnʤəˈnɪrɪŋ ˈsaɪənsəz</skos:prefLabel>
+        <skos:prefLabel xml:lang="en-gb">ˌmæθɪˈmætɪkəl, ˈfɪzɪkəl, ˈkɛmɪkəl ænd ˌɛnʤɪˈnɪərɪŋ ˈsaɪənsɪz</skos:prefLabel>
+        <skos:prefLabel>Ciencias matemáticas, físicas, químicas e ingenierías</skos:prefLabel>
+        <ontolex:phoneticRep xml:lang="ca">siˈɛnsiəs mətəˈmatikəs ˈfizikəs ˈkimikəz i əɲʒiɲəˈɾiəs</ontolex:phoneticRep>
+        <ontolex:phoneticRep xml:lang="es-es">ˈθjenθjaz mateˈmatikas ˈfisikas ˈkimikas e iŋxenjeˈrias</ontolex:phoneticRep>
+        <ontolex:phoneticRep xml:lang="en-us">ˌmæθəˈmætɪkəl, ˈfɪzɪkəl, ˈkɛməkəl ænd ˈɛnʤəˈnɪrɪŋ ˈsaɪənsəz</ontolex:phoneticRep>
+        <ontolex:phoneticRep xml:lang="en-gb">ˌmæθɪˈmætɪkəl, ˈfɪzɪkəl, ˈkɛmɪkəl ænd ˌɛnʤɪˈnɪərɪŋ ˈsaɪənsɪz</ontolex:phoneticRep>
+    </NamedIndividual>
+    
+
+
+    <!-- http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_1_CODE_CMIFQ -->
+
+
+    <NamedIndividual rdf:about="http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_1_CODE_CMIFQ">
+        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+        <roh:codeOf rdf:resource="http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_1_CMIFQ"/>
+        <rdfs:label>CMIFQ</rdfs:label>
+        <skos:inScheme rdf:resource="http://purl.org/roh/subject-areas#ESSubjectCode1stList"/>
+        <skos:prefLabel>CMIFQ</skos:prefLabel>
+    </NamedIndividual>
+    
+
+
+    <!-- http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_1_CODE_CSH -->
+
+
+    <NamedIndividual rdf:about="http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_1_CODE_CSH">
+        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+        <roh:codeOf rdf:resource="http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_1_CSH"/>
+        <rdfs:label>CSH</rdfs:label>
+        <skos:inScheme rdf:resource="http://purl.org/roh/subject-areas#ESSubjectCode1stList"/>
+        <skos:prefLabel>CSH</skos:prefLabel>
+    </NamedIndividual>
+    
+
+
+    <!-- http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_1_CODE_CV -->
+
+
+    <NamedIndividual rdf:about="http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_1_CODE_CV">
+        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+        <roh:codeOf rdf:resource="http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_1_CV"/>
+        <rdfs:label>CV</rdfs:label>
+        <skos:inScheme rdf:resource="http://purl.org/roh/subject-areas#ESSubjectCode1stList"/>
+        <skos:prefLabel>CV</skos:prefLabel>
+    </NamedIndividual>
+    
+
+
+    <!-- http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_1_CSH -->
+
+
+    <NamedIndividual rdf:about="http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_1_CSH">
+        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+        <roh:hasCode rdf:resource="http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_1_CODE_CSH"/>
+        <rdfs:label>Ciencias sociales y humanidades</rdfs:label>
+        <skos:closeMatch rdf:resource="http://skos.um.es/unescothes/C03719"/>
+        <skos:inScheme rdf:resource="http://purl.org/roh/subject-areas#ESSubjectAreas1stList"/>
+        <skos:notation>CSH</skos:notation>
+        <skos:prefLabel xml:lang="gl">Ciencias sociais e humanidades</skos:prefLabel>
+        <skos:prefLabel xml:lang="es">Ciencias sociales y humanidades</skos:prefLabel>
+        <skos:prefLabel xml:lang="ast">Ciencies sociales y humanidaes</skos:prefLabel>
+        <skos:prefLabel xml:lang="ca">Ciències socials i humanitats</skos:prefLabel>
+        <skos:prefLabel xml:lang="pt">Ciências sociais e humanas</skos:prefLabel>
+        <skos:prefLabel xml:lang="ext">Céncias socialis i humanidadis</skos:prefLabel>
+        <skos:prefLabel xml:lang="eu">Gizarte zientziak eta giza zientziak</skos:prefLabel>
+        <skos:prefLabel xml:lang="fr">Sciences sociales et humaines</skos:prefLabel>
+        <skos:prefLabel xml:lang="an">Sciencias socials y humanidatz</skos:prefLabel>
+        <skos:prefLabel xml:lang="oc">Sciéncias socials e humanas</skos:prefLabel>
+        <skos:prefLabel xml:lang="en">Social sciences and humanities</skos:prefLabel>
+        <skos:prefLabel xml:lang="ca">siˈɛnsiəs susiˈaɫs i uˈmanəs</skos:prefLabel>
+        <skos:prefLabel xml:lang="en-us">ˈsoʊʃəl ˈsaɪənsəz ænd hjuˈmænɪtiz</skos:prefLabel>
+        <skos:prefLabel xml:lang="en-gb">ˈsəʊʃəl ˈsaɪənsɪz ænd hju(ː)ˈmænɪtiz</skos:prefLabel>
+        <skos:prefLabel xml:lang="es-es">ˈθjen̟θjas soˈθjales i wmaniˈðaðes</skos:prefLabel>
+        <skos:prefLabel>Ciencias sociales y humanidades</skos:prefLabel>
+        <ontolex:phoneticRep xml:lang="ca">siˈɛnsiəs susiˈaɫs i uˈmanəs</ontolex:phoneticRep>
+        <ontolex:phoneticRep xml:lang="en-us">ˈsoʊʃəl ˈsaɪənsəz ænd hjuˈmænɪtiz</ontolex:phoneticRep>
+        <ontolex:phoneticRep xml:lang="en-gb">ˈsəʊʃəl ˈsaɪənsɪz ænd hju(ː)ˈmænɪtiz</ontolex:phoneticRep>
+        <ontolex:phoneticRep xml:lang="es-es">ˈθjen̟θjas soˈθjales i wmaniˈðaðes</ontolex:phoneticRep>
+    </NamedIndividual>
+    
+
+
+    <!-- http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_1_CV -->
+
+
+    <NamedIndividual rdf:about="http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_1_CV">
+        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+        <roh:hasCode rdf:resource="http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_1_CODE_CV"/>
+        <rdfs:label>Ciencias de la vida</rdfs:label>
+        <skos:exactMatch rdf:resource="http://skos.um.es/unescothes/C02293"/>
+        <skos:inScheme rdf:resource="http://purl.org/roh/subject-areas#ESSubjectAreas1stList"/>
+        <skos:notation>CV</skos:notation>
+        <skos:prefLabel xml:lang="eu">Bizi zientziak</skos:prefLabel>
+        <skos:prefLabel xml:lang="gl">Ciencias da vida</skos:prefLabel>
+        <skos:prefLabel xml:lang="es">Ciencias de la vida</skos:prefLabel>
+        <skos:prefLabel xml:lang="ast">Ciencies de la vida</skos:prefLabel>
+        <skos:prefLabel xml:lang="ca">Ciències de la vida</skos:prefLabel>
+        <skos:prefLabel xml:lang="pt">Ciências da vida</skos:prefLabel>
+        <skos:prefLabel xml:lang="ext">Céncias de la vida</skos:prefLabel>
+        <skos:prefLabel xml:lang="en">Life sciences</skos:prefLabel>
+        <skos:prefLabel xml:lang="fr">Sciences de la vie</skos:prefLabel>
+        <skos:prefLabel xml:lang="an">Sciencias d&apos;a vida</skos:prefLabel>
+        <skos:prefLabel xml:lang="oc">Sciéncias de la vida</skos:prefLabel>
+        <skos:prefLabel xml:lang="en-us">laɪf ˈsaɪənsəz</skos:prefLabel>
+        <skos:prefLabel xml:lang="en-gb">laɪf ˈsaɪənsɪz</skos:prefLabel>
+        <skos:prefLabel xml:lang="ca">siˈɛnsiəs ðə ɫə ˈbiðə</skos:prefLabel>
+        <skos:prefLabel xml:lang="es-es">ˈθjen̟θjaz ðe la ˈβ̞iða</skos:prefLabel>
+        <skos:prefLabel>Ciencias de la vida</skos:prefLabel>
+        <ontolex:phoneticRep xml:lang="en-us">laɪf ˈsaɪənsəz</ontolex:phoneticRep>
+        <ontolex:phoneticRep xml:lang="en-gb">laɪf ˈsaɪənsɪz</ontolex:phoneticRep>
+        <ontolex:phoneticRep xml:lang="ca">siˈɛnsiəs ðə ɫə ˈbiðə</ontolex:phoneticRep>
+        <ontolex:phoneticRep xml:lang="es-es">ˈθjen̟θjaz ðe la ˈβ̞iða</ontolex:phoneticRep>
+    </NamedIndividual>
+    
+
+
+    <!-- http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_2_BIO -->
+
+
+    <NamedIndividual rdf:about="http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_2_BIO">
+        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+        <roh:hasCode rdf:resource="http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_2_CODE_BIO"/>
+        <rdfs:label>Biociencias y biotecnología</rdfs:label>
+        <skos:broader rdf:resource="http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_1_CV"/>
+        <skos:closeMatch rdf:resource="http://skos.um.es/unescothes/C00409"/>
+        <skos:inScheme rdf:resource="http://purl.org/roh/subject-areas#ESSubjectAreas2ndList"/>
+        <skos:notation>BIO</skos:notation>
+        <skos:prefLabel xml:lang="gl">Biociencias e biotecnoloxía</skos:prefLabel>
+        <skos:prefLabel xml:lang="es">Biociencias y biotecnología</skos:prefLabel>
+        <skos:prefLabel xml:lang="ast">Biociencies y biotecnoloxía</skos:prefLabel>
+        <skos:prefLabel xml:lang="ca">Biociències i biotecnologia</skos:prefLabel>
+        <skos:prefLabel xml:lang="pt">Biociências e biotecnologia</skos:prefLabel>
+        <skos:prefLabel xml:lang="en">Biosciences and biotechnology</skos:prefLabel>
+        <skos:prefLabel xml:lang="fr">Biosciences et biotechnologie</skos:prefLabel>
+        <skos:prefLabel>Biociencias y biotecnología</skos:prefLabel>
+    </NamedIndividual>
+    
+
+
+    <!-- http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_2_BME -->
+
+
+    <NamedIndividual rdf:about="http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_2_BME">
+        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+        <roh:hasCode rdf:resource="http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_2_CODE_BME"/>
+        <rdfs:label>Biomedicina</rdfs:label>
+        <skos:broader rdf:resource="http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_1_CV"/>
+        <skos:closeMatch rdf:resource="http://skos.um.es/unescothes/C02464"/>
+        <skos:inScheme rdf:resource="http://purl.org/roh/subject-areas#ESSubjectAreas2ndList"/>
+        <skos:notation>BME</skos:notation>
+        <skos:prefLabel xml:lang="an">Biomedecina</skos:prefLabel>
+        <skos:prefLabel xml:lang="ast">Biomedicina</skos:prefLabel>
+        <skos:prefLabel xml:lang="ca">Biomedicina</skos:prefLabel>
+        <skos:prefLabel xml:lang="es">Biomedicina</skos:prefLabel>
+        <skos:prefLabel xml:lang="gl">Biomedicina</skos:prefLabel>
+        <skos:prefLabel xml:lang="pt">Biomedicina</skos:prefLabel>
+        <skos:prefLabel xml:lang="en">Biomedicine</skos:prefLabel>
+        <skos:prefLabel xml:lang="fr">Biomédecine</skos:prefLabel>
+        <skos:prefLabel>Biomedicina</skos:prefLabel>
+    </NamedIndividual>
+    
+
+
+    <!-- http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_2_CAA -->
+
+
+    <NamedIndividual rdf:about="http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_2_CAA">
+        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+        <roh:hasCode rdf:resource="http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_2_CODE_CAA"/>
+        <rdfs:label>Ciencias agrarias y agroalimentarias</rdfs:label>
+        <skos:broader rdf:resource="http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_1_CV"/>
+        <skos:inScheme rdf:resource="http://purl.org/roh/subject-areas#ESSubjectAreas2ndList"/>
+        <skos:notation>CAA</skos:notation>
+        <skos:prefLabel xml:lang="en">Agricultural and agri-food sciences</skos:prefLabel>
+        <skos:prefLabel xml:lang="es">Ciencias agrarias y agroalimentarias</skos:prefLabel>
+        <skos:prefLabel xml:lang="gl">Ciencias agrícolas e agroalimentarias</skos:prefLabel>
+        <skos:prefLabel xml:lang="ast">Ciencies agraries y agroalimentarias</skos:prefLabel>
+        <skos:prefLabel xml:lang="ca">Ciències agràries i agroalimentàries</skos:prefLabel>
+        <skos:prefLabel xml:lang="pt">Ciências agrícolas e agroalimentares</skos:prefLabel>
+        <skos:prefLabel xml:lang="fr">Sciences agronomiques et agroalimentaires</skos:prefLabel>
+        <skos:prefLabel>Ciencias agrarias y agroalimentarias </skos:prefLabel>
+    </NamedIndividual>
+    
+
+
+    <!-- http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_2_CODE_BIO -->
+
+
+    <NamedIndividual rdf:about="http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_2_CODE_BIO">
+        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+        <roh:codeOf rdf:resource="http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_2_BIO"/>
+        <rdfs:label>BIO</rdfs:label>
+        <skos:inScheme rdf:resource="http://purl.org/roh/subject-areas#ESSubjectCode2ndList"/>
+        <skos:prefLabel>BIO</skos:prefLabel>
+    </NamedIndividual>
+    
+
+
+    <!-- http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_2_CODE_BME -->
+
+
+    <NamedIndividual rdf:about="http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_2_CODE_BME">
+        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+        <roh:codeOf rdf:resource="http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_2_BME"/>
+        <rdfs:label>BME</rdfs:label>
+        <skos:inScheme rdf:resource="http://purl.org/roh/subject-areas#ESSubjectCode2ndList"/>
+        <skos:prefLabel>BME</skos:prefLabel>
+    </NamedIndividual>
+    
+
+
+    <!-- http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_2_CODE_CAA -->
+
+
+    <NamedIndividual rdf:about="http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_2_CODE_CAA">
+        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+        <roh:codeOf rdf:resource="http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_2_CAA"/>
+        <rdfs:label>CAA</rdfs:label>
+        <skos:inScheme rdf:resource="http://purl.org/roh/subject-areas#ESSubjectCode2ndList"/>
+        <skos:prefLabel>CAA</skos:prefLabel>
+    </NamedIndividual>
+    
+
+
+    <!-- http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_2_CODE_CSO -->
+
+
+    <NamedIndividual rdf:about="http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_2_CODE_CSO">
+        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+        <roh:codeOf rdf:resource="http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_2_CSO"/>
+        <rdfs:label>CSO</rdfs:label>
+        <skos:inScheme rdf:resource="http://purl.org/roh/subject-areas#ESSubjectCode2ndList"/>
+        <skos:prefLabel>CSO</skos:prefLabel>
+    </NamedIndividual>
+    
+
+
+    <!-- http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_2_CODE_CTM -->
+
+
+    <NamedIndividual rdf:about="http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_2_CODE_CTM">
+        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+        <roh:codeOf rdf:resource="http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_2_CTM"/>
+        <rdfs:label>CTM</rdfs:label>
+        <skos:inScheme rdf:resource="http://purl.org/roh/subject-areas#ESSubjectCode2ndList"/>
+        <skos:prefLabel>CTM</skos:prefLabel>
+    </NamedIndividual>
+    
+
+
+    <!-- http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_2_CODE_CTQ -->
+
+
+    <NamedIndividual rdf:about="http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_2_CODE_CTQ">
+        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+        <roh:codeOf rdf:resource="http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_2_CTQ"/>
+        <rdfs:label>CTQ</rdfs:label>
+        <skos:inScheme rdf:resource="http://purl.org/roh/subject-areas#ESSubjectCode2ndList"/>
+        <skos:prefLabel>CTQ</skos:prefLabel>
+    </NamedIndividual>
+    
+
+
+    <!-- http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_2_CODE_DER -->
+
+
+    <NamedIndividual rdf:about="http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_2_CODE_DER">
+        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+        <roh:codeOf rdf:resource="http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_2_DER"/>
+        <rdfs:label>DER</rdfs:label>
+        <skos:inScheme rdf:resource="http://purl.org/roh/subject-areas#ESSubjectCode2ndList"/>
+        <skos:prefLabel>DER</skos:prefLabel>
+    </NamedIndividual>
+    
+
+
+    <!-- http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_2_CODE_ECO -->
+
+
+    <NamedIndividual rdf:about="http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_2_CODE_ECO">
+        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+        <roh:codeOf rdf:resource="http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_2_ECO"/>
+        <rdfs:label>ECO</rdfs:label>
+        <skos:inScheme rdf:resource="http://purl.org/roh/subject-areas#ESSubjectCode2ndList"/>
+        <skos:prefLabel>ECO</skos:prefLabel>
+    </NamedIndividual>
+    
+
+
+    <!-- http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_2_CODE_EDU -->
+
+
+    <NamedIndividual rdf:about="http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_2_CODE_EDU">
+        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+        <roh:codeOf rdf:resource="http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_2_EDU"/>
+        <rdfs:label>EDU</rdfs:label>
+        <skos:inScheme rdf:resource="http://purl.org/roh/subject-areas#ESSubjectCode2ndList"/>
+        <skos:prefLabel>EDU</skos:prefLabel>
+    </NamedIndividual>
+    
+
+
+    <!-- http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_2_CODE_EYT -->
+
+
+    <NamedIndividual rdf:about="http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_2_CODE_EYT">
+        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+        <roh:codeOf rdf:resource="http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_2_EYT"/>
+        <rdfs:label>EYT</rdfs:label>
+        <skos:inScheme rdf:resource="http://purl.org/roh/subject-areas#ESSubjectCode2ndList"/>
+        <skos:prefLabel>EYT</skos:prefLabel>
+    </NamedIndividual>
+    
+
+
+    <!-- http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_2_CODE_FIS -->
+
+
+    <NamedIndividual rdf:about="http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_2_CODE_FIS">
+        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+        <roh:codeOf rdf:resource="http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_2_FIS"/>
+        <rdfs:label>FIS</rdfs:label>
+        <skos:inScheme rdf:resource="http://purl.org/roh/subject-areas#ESSubjectCode2ndList"/>
+        <skos:prefLabel>FIS</skos:prefLabel>
+    </NamedIndividual>
+    
+
+
+    <!-- http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_2_CODE_FLA -->
+
+
+    <NamedIndividual rdf:about="http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_2_CODE_FLA">
+        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+        <roh:codeOf rdf:resource="http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_2_FLA"/>
+        <rdfs:label>FLA</rdfs:label>
+        <skos:inScheme rdf:resource="http://purl.org/roh/subject-areas#ESSubjectCode2ndList"/>
+        <skos:prefLabel>FLA</skos:prefLabel>
+    </NamedIndividual>
+    
+
+
+    <!-- http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_2_CODE_MAT -->
+
+
+    <NamedIndividual rdf:about="http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_2_CODE_MAT">
+        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+        <roh:codeOf rdf:resource="http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_2_MAT"/>
+        <rdfs:label>MAT</rdfs:label>
+        <skos:inScheme rdf:resource="http://purl.org/roh/subject-areas#ESSubjectCode2ndList"/>
+        <skos:prefLabel>MAT</skos:prefLabel>
+    </NamedIndividual>
+    
+
+
+    <!-- http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_2_CODE_MLP -->
+
+
+    <NamedIndividual rdf:about="http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_2_CODE_MLP">
+        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+        <roh:codeOf rdf:resource="http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_2_MLP"/>
+        <rdfs:label>MLP</rdfs:label>
+        <skos:inScheme rdf:resource="http://purl.org/roh/subject-areas#ESSubjectCode2ndList"/>
+        <skos:prefLabel>MLP</skos:prefLabel>
+    </NamedIndividual>
+    
+
+
+    <!-- http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_2_CODE_MTM -->
+
+
+    <NamedIndividual rdf:about="http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_2_CODE_MTM">
+        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+        <roh:codeOf rdf:resource="http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_2_MTM"/>
+        <rdfs:label>MTM</rdfs:label>
+        <skos:inScheme rdf:resource="http://purl.org/roh/subject-areas#ESSubjectCode2ndList"/>
+        <skos:prefLabel>MTM</skos:prefLabel>
+    </NamedIndividual>
+    
+
+
+    <!-- http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_2_CODE_PHA -->
+
+
+    <NamedIndividual rdf:about="http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_2_CODE_PHA">
+        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+        <roh:codeOf rdf:resource="http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_2_PHA"/>
+        <rdfs:label>PHA</rdfs:label>
+        <skos:inScheme rdf:resource="http://purl.org/roh/subject-areas#ESSubjectCode2ndList"/>
+        <skos:prefLabel>PHA</skos:prefLabel>
+    </NamedIndividual>
+    
+
+
+    <!-- http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_2_CODE_PIN -->
+
+
+    <NamedIndividual rdf:about="http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_2_CODE_PIN">
+        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+        <roh:codeOf rdf:resource="http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_2_PIN"/>
+        <rdfs:label>PIN</rdfs:label>
+        <skos:inScheme rdf:resource="http://purl.org/roh/subject-areas#ESSubjectCode2ndList"/>
+        <skos:prefLabel>PIN</skos:prefLabel>
+    </NamedIndividual>
+    
+
+
+    <!-- http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_2_CODE_PSI -->
+
+
+    <NamedIndividual rdf:about="http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_2_CODE_PSI">
+        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+        <roh:codeOf rdf:resource="http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_2_PSI"/>
+        <rdfs:label>PSI</rdfs:label>
+        <skos:inScheme rdf:resource="http://purl.org/roh/subject-areas#ESSubjectCode2ndList"/>
+        <skos:prefLabel>PSI</skos:prefLabel>
+    </NamedIndividual>
+    
+
+
+    <!-- http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_2_CODE_TIC -->
+
+
+    <NamedIndividual rdf:about="http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_2_CODE_TIC">
+        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+        <roh:codeOf rdf:resource="http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_2_TIC"/>
+        <rdfs:label>TIC</rdfs:label>
+        <skos:inScheme rdf:resource="http://purl.org/roh/subject-areas#ESSubjectCode2ndList"/>
+        <skos:prefLabel>TIC</skos:prefLabel>
+    </NamedIndividual>
+    
+
+
+    <!-- http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_2_CSO -->
+
+
+    <NamedIndividual rdf:about="http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_2_CSO">
+        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+        <roh:hasCode rdf:resource="http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_2_CODE_CSO"/>
+        <rdfs:label>Ciencias sociales</rdfs:label>
+        <skos:broader rdf:resource="http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_1_CSH"/>
+        <skos:exactMatch rdf:resource="http://skos.um.es/unescothes/C03719"/>
+        <skos:inScheme rdf:resource="http://purl.org/roh/subject-areas#ESSubjectAreas2ndList"/>
+        <skos:notation>CSO</skos:notation>
+        <skos:prefLabel xml:lang="gl">Ciencias sociais</skos:prefLabel>
+        <skos:prefLabel xml:lang="es">Ciencias sociales</skos:prefLabel>
+        <skos:prefLabel xml:lang="ast">Ciencies sociales</skos:prefLabel>
+        <skos:prefLabel xml:lang="ca">Ciències socials</skos:prefLabel>
+        <skos:prefLabel xml:lang="pt">Ciências Sociais</skos:prefLabel>
+        <skos:prefLabel xml:lang="fr">Sciences sociales</skos:prefLabel>
+        <skos:prefLabel xml:lang="en">Social Sciences</skos:prefLabel>
+        <skos:prefLabel>Ciencias sociales </skos:prefLabel>
+    </NamedIndividual>
+    
+
+
+    <!-- http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_2_CTM -->
+
+
+    <NamedIndividual rdf:about="http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_2_CTM">
+        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+        <roh:hasCode rdf:resource="http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_2_CODE_CTM"/>
+        <rdfs:label>Ciencias y tecnologías medioambientales</rdfs:label>
+        <skos:broader rdf:resource="http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_1_CV"/>
+        <skos:closeMatch rdf:resource="http://skos.um.es/unescothes/C01397"/>
+        <skos:inScheme rdf:resource="http://purl.org/roh/subject-areas#ESSubjectAreas2ndList"/>
+        <skos:notation>CTM</skos:notation>
+        <skos:prefLabel xml:lang="gl">Ciencia e tecnoloxía ambiental</skos:prefLabel>
+        <skos:prefLabel xml:lang="es">Ciencias y tecnologías medioambientales</skos:prefLabel>
+        <skos:prefLabel xml:lang="ast">Ciencies y tecnoloxíes medioambientales</skos:prefLabel>
+        <skos:prefLabel xml:lang="ca">Ciències i tecnologies mediambientals</skos:prefLabel>
+        <skos:prefLabel xml:lang="pt">Ciência e tecnologia ambiental</skos:prefLabel>
+        <skos:prefLabel xml:lang="en">Environmental science and technology</skos:prefLabel>
+        <skos:prefLabel xml:lang="fr">Sciences et technologies de l&apos;environnement</skos:prefLabel>
+        <skos:prefLabel>Ciencias y tecnologías medioambientales</skos:prefLabel>
+    </NamedIndividual>
+    
+
+
+    <!-- http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_2_CTQ -->
+
+
+    <NamedIndividual rdf:about="http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_2_CTQ">
+        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+        <roh:hasCode rdf:resource="http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_2_CODE_CTQ"/>
+        <rdfs:label>Ciencias y tecnologías químicas</rdfs:label>
+        <skos:broader rdf:resource="http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_1_CMIFQ"/>
+        <skos:exactMatch rdf:resource="http://skos.um.es/unescothes/C00565"/>
+        <skos:inScheme rdf:resource="http://purl.org/roh/subject-areas#ESSubjectAreas2ndList"/>
+        <skos:notation>CTQ</skos:notation>
+        <skos:prefLabel xml:lang="en">Chemical Sciences and Technologies</skos:prefLabel>
+        <skos:prefLabel xml:lang="gl">Ciencias e Tecnoloxías Químicas</skos:prefLabel>
+        <skos:prefLabel xml:lang="es">Ciencias y tecnologías químicas</skos:prefLabel>
+        <skos:prefLabel xml:lang="ast">Ciencies y tecnoloxíes químiques</skos:prefLabel>
+        <skos:prefLabel xml:lang="ca">Ciències i tecnologies químiques</skos:prefLabel>
+        <skos:prefLabel xml:lang="pt">Ciências e tecnologias químicas</skos:prefLabel>
+        <skos:prefLabel xml:lang="fr">Sciences et technologies chimiques</skos:prefLabel>
+        <skos:prefLabel>Ciencias y tecnologías químicas</skos:prefLabel>
+    </NamedIndividual>
+    
+
+
+    <!-- http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_2_DER -->
+
+
+    <NamedIndividual rdf:about="http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_2_DER">
+        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+        <roh:hasCode rdf:resource="http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_2_CODE_DER"/>
+        <rdfs:label>Derecho</rdfs:label>
+        <skos:broader rdf:resource="http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_1_CSH"/>
+        <skos:exactMatch rdf:resource="http://skos.um.es/unescothes/C02229"/>
+        <skos:inScheme rdf:resource="http://purl.org/roh/subject-areas#ESSubjectAreas2ndList"/>
+        <skos:notation>DER</skos:notation>
+        <skos:prefLabel xml:lang="es">Derecho</skos:prefLabel>
+        <skos:prefLabel xml:lang="gl">Dereito</skos:prefLabel>
+        <skos:prefLabel xml:lang="pt">Direito</skos:prefLabel>
+        <skos:prefLabel xml:lang="ast">Drechu</skos:prefLabel>
+        <skos:prefLabel xml:lang="ca">Dret</skos:prefLabel>
+        <skos:prefLabel xml:lang="fr">Droit</skos:prefLabel>
+        <skos:prefLabel xml:lang="en">Law</skos:prefLabel>
+        <skos:prefLabel>Derecho </skos:prefLabel>
+    </NamedIndividual>
+    
+
+
+    <!-- http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_2_ECO -->
+
+
+    <NamedIndividual rdf:about="http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_2_ECO">
+        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+        <roh:hasCode rdf:resource="http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_2_CODE_ECO"/>
+        <rdfs:label>Economía</rdfs:label>
+        <skos:broader rdf:resource="http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_1_CSH"/>
+        <skos:exactMatch rdf:resource="http://skos.um.es/unescothes/C01180"/>
+        <skos:inScheme rdf:resource="http://purl.org/roh/subject-areas#ESSubjectAreas2ndList"/>
+        <skos:notation>ECO</skos:notation>
+        <skos:prefLabel xml:lang="ca">Economia</skos:prefLabel>
+        <skos:prefLabel xml:lang="pt">Economia</skos:prefLabel>
+        <skos:prefLabel xml:lang="en">Economy</skos:prefLabel>
+        <skos:prefLabel xml:lang="ast">Economía</skos:prefLabel>
+        <skos:prefLabel xml:lang="es">Economía</skos:prefLabel>
+        <skos:prefLabel xml:lang="gl">Economía</skos:prefLabel>
+        <skos:prefLabel xml:lang="fr">Économie</skos:prefLabel>
+        <skos:prefLabel>Economía</skos:prefLabel>
+    </NamedIndividual>
+    
+
+
+    <!-- http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_2_EDU -->
+
+
+    <NamedIndividual rdf:about="http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_2_EDU">
+        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+        <roh:hasCode rdf:resource="http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_2_CODE_EDU"/>
+        <rdfs:label>Ciencias de la educación</rdfs:label>
+        <skos:broader rdf:resource="http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_1_CSH"/>
+        <skos:exactMatch rdf:resource="http://skos.um.es/unescothes/C01281"/>
+        <skos:inScheme rdf:resource="http://purl.org/roh/subject-areas#ESSubjectAreas2ndList"/>
+        <skos:notation>EDU</skos:notation>
+        <skos:prefLabel xml:lang="gl">Ciencias da educación</skos:prefLabel>
+        <skos:prefLabel xml:lang="es">Ciencias de la educación</skos:prefLabel>
+        <skos:prefLabel xml:lang="ast">Ciencies de la educación</skos:prefLabel>
+        <skos:prefLabel xml:lang="ca">Ciències de l&apos;educació</skos:prefLabel>
+        <skos:prefLabel xml:lang="pt">Ciências da Educação</skos:prefLabel>
+        <skos:prefLabel xml:lang="en">Education sciences</skos:prefLabel>
+        <skos:prefLabel xml:lang="fr">Sciences de l&apos;éducation</skos:prefLabel>
+        <skos:prefLabel>Ciencias de la educación</skos:prefLabel>
+    </NamedIndividual>
+    
+
+
+    <!-- http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_2_EYT -->
+
+
+    <NamedIndividual rdf:about="http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_2_EYT">
+        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+        <roh:hasCode rdf:resource="http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_2_CODE_EYT"/>
+        <rdfs:label>Energía y transporte</rdfs:label>
+        <skos:broader rdf:resource="http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_1_CMIFQ"/>
+        <skos:closeMatch rdf:resource="http://skos.um.es/unescothes/C01360"/>
+        <skos:closeMatch rdf:resource="http://skos.um.es/unescothes/C04122"/>
+        <skos:inScheme rdf:resource="http://purl.org/roh/subject-areas#ESSubjectAreas2ndList"/>
+        <skos:notation>EYT</skos:notation>
+        <skos:prefLabel xml:lang="pt">Energia e transporte</skos:prefLabel>
+        <skos:prefLabel xml:lang="ca">Energia i transport</skos:prefLabel>
+        <skos:prefLabel xml:lang="en">Energy and transportation</skos:prefLabel>
+        <skos:prefLabel xml:lang="es">Energía y transporte</skos:prefLabel>
+        <skos:prefLabel xml:lang="gl">Enerxía e transporte</skos:prefLabel>
+        <skos:prefLabel xml:lang="ast">Enerxía y tresporte</skos:prefLabel>
+        <skos:prefLabel xml:lang="fr">Énergie et transports</skos:prefLabel>
+        <skos:prefLabel>Energía y transporte</skos:prefLabel>
+    </NamedIndividual>
+    
+
+
+    <!-- http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_2_FIS -->
+
+
+    <NamedIndividual rdf:about="http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_2_FIS">
+        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+        <roh:hasCode rdf:resource="http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_2_CODE_FIS"/>
+        <rdfs:label>Ciencias físicas</rdfs:label>
+        <skos:broader rdf:resource="http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_1_CMIFQ"/>
+        <skos:exactMatch rdf:resource="http://skos.um.es/unescothes/COL220"/>
+        <skos:inScheme rdf:resource="http://purl.org/roh/subject-areas#ESSubjectAreas2ndList"/>
+        <skos:notation>FIS</skos:notation>
+        <skos:prefLabel xml:lang="es">Ciencias físicas</skos:prefLabel>
+        <skos:prefLabel xml:lang="gl">Ciencias físicas</skos:prefLabel>
+        <skos:prefLabel xml:lang="ast">Ciencies físiques</skos:prefLabel>
+        <skos:prefLabel xml:lang="ca">Ciències físiques</skos:prefLabel>
+        <skos:prefLabel xml:lang="pt">Ciências físicas</skos:prefLabel>
+        <skos:prefLabel xml:lang="en">Physical sciences</skos:prefLabel>
+        <skos:prefLabel xml:lang="fr">Sciences physiques</skos:prefLabel>
+        <skos:prefLabel>Ciencias físicas</skos:prefLabel>
+    </NamedIndividual>
+    
+
+
+    <!-- http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_2_FLA -->
+
+
+    <NamedIndividual rdf:about="http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_2_FLA">
+        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+        <roh:hasCode rdf:resource="http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_2_CODE_FLA"/>
+        <rdfs:label>Cultura: filología, literatura y arte</rdfs:label>
+        <skos:broader rdf:resource="http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_1_CSH"/>
+        <skos:inScheme rdf:resource="http://purl.org/roh/subject-areas#ESSubjectAreas2ndList"/>
+        <skos:notation>FLA</skos:notation>
+        <skos:prefLabel xml:lang="pt">Cultura: Filologia, Literatura e Arte</skos:prefLabel>
+        <skos:prefLabel xml:lang="gl">Cultura: Filoloxía, Literatura e Arte</skos:prefLabel>
+        <skos:prefLabel xml:lang="ca">Cultura: filologia, literatura i art</skos:prefLabel>
+        <skos:prefLabel xml:lang="es">Cultura: filología, literatura y arte</skos:prefLabel>
+        <skos:prefLabel xml:lang="ast">Cultura: filoloxía, lliteratura y arte</skos:prefLabel>
+        <skos:prefLabel xml:lang="en">Culture: Philology, Literature and Art</skos:prefLabel>
+        <skos:prefLabel xml:lang="fr">Culture: philologie, littérature et art</skos:prefLabel>
+        <skos:prefLabel>Cultura: filología, literatura y arte</skos:prefLabel>
+    </NamedIndividual>
+    
+
+
+    <!-- http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_2_MAT -->
+
+
+    <NamedIndividual rdf:about="http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_2_MAT">
+        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+        <roh:hasCode rdf:resource="http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_2_CODE_MAT"/>
+        <rdfs:label>Ciencias y tecnologías de materiales</rdfs:label>
+        <skos:broader rdf:resource="http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_1_CMIFQ"/>
+        <skos:inScheme rdf:resource="http://purl.org/roh/subject-areas#ESSubjectAreas2ndList"/>
+        <skos:notation>MAT</skos:notation>
+        <skos:prefLabel xml:lang="gl">Ciencia e tecnoloxía dos materiais</skos:prefLabel>
+        <skos:prefLabel xml:lang="es">Ciencias y tecnologías de materiales</skos:prefLabel>
+        <skos:prefLabel xml:lang="ast">Ciencies y tecnoloxíes de materiales</skos:prefLabel>
+        <skos:prefLabel xml:lang="ca">Ciències i tecnologies de materials</skos:prefLabel>
+        <skos:prefLabel xml:lang="pt">Ciência e tecnologia de materiais</skos:prefLabel>
+        <skos:prefLabel xml:lang="en">Materials science and technology</skos:prefLabel>
+        <skos:prefLabel xml:lang="fr">Science et technologie des matériaux</skos:prefLabel>
+        <skos:prefLabel>Ciencias y tecnologías de materiales</skos:prefLabel>
+    </NamedIndividual>
+    
+
+
+    <!-- http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_2_MLP -->
+
+
+    <NamedIndividual rdf:about="http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_2_MLP">
+        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+        <roh:hasCode rdf:resource="http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_2_CODE_MLP"/>
+        <rdfs:label>Mente, lenguaje y pensamiento</rdfs:label>
+        <skos:broader rdf:resource="http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_1_CSH"/>
+        <skos:closeMatch rdf:resource="http://skos.um.es/unescothes/C02212"/>
+        <skos:closeMatch rdf:resource="http://skos.um.es/unescothes/C02537"/>
+        <skos:closeMatch rdf:resource="http://skos.um.es/unescothes/C04060"/>
+        <skos:inScheme rdf:resource="http://purl.org/roh/subject-areas#ESSubjectAreas2ndList"/>
+        <skos:notation>MLP</skos:notation>
+        <skos:prefLabel xml:lang="fr">Esprit, langage et pensée</skos:prefLabel>
+        <skos:prefLabel xml:lang="ca">Ment, llenguatge i pensament</skos:prefLabel>
+        <skos:prefLabel xml:lang="es">Mente, lenguaje y pensamiento</skos:prefLabel>
+        <skos:prefLabel xml:lang="pt">Mente, linguagem e pensamento</skos:prefLabel>
+        <skos:prefLabel xml:lang="gl">Mente, linguaxe e pensamento</skos:prefLabel>
+        <skos:prefLabel xml:lang="ast">Mente, llinguaxe y pensamiento</skos:prefLabel>
+        <skos:prefLabel xml:lang="en">Mind, language and thought</skos:prefLabel>
+        <skos:prefLabel>Mente, lenguaje y pensamiento</skos:prefLabel>
+    </NamedIndividual>
+    
+
+
+    <!-- http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_2_MTM -->
+
+
+    <NamedIndividual rdf:about="http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_2_MTM">
+        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+        <roh:hasCode rdf:resource="http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_2_CODE_MTM"/>
+        <rdfs:label>Ciencias matemáticas</rdfs:label>
+        <skos:broader rdf:resource="http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_1_CMIFQ"/>
+        <skos:closeMatch rdf:resource="http://skos.um.es/unescothes/C02437"/>
+        <skos:inScheme rdf:resource="http://purl.org/roh/subject-areas#ESSubjectAreas2ndList"/>
+        <skos:notation>MTM</skos:notation>
+        <skos:prefLabel xml:lang="es">Ciencias matemáticas</skos:prefLabel>
+        <skos:prefLabel xml:lang="gl">Ciencias matemáticas</skos:prefLabel>
+        <skos:prefLabel xml:lang="ast">Ciencies matemátiques</skos:prefLabel>
+        <skos:prefLabel xml:lang="ca">Ciències matemàtiques</skos:prefLabel>
+        <skos:prefLabel xml:lang="pt">Ciências Matemáticas</skos:prefLabel>
+        <skos:prefLabel xml:lang="en">Mathematical Sciences</skos:prefLabel>
+        <skos:prefLabel xml:lang="fr">Sciences mathématiques</skos:prefLabel>
+        <skos:prefLabel>Ciencias matemáticas</skos:prefLabel>
+    </NamedIndividual>
+    
+
+
+    <!-- http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_2_PHA -->
+
+
+    <NamedIndividual rdf:about="http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_2_PHA">
+        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+        <roh:hasCode rdf:resource="http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_2_CODE_PHA"/>
+        <rdfs:label>Estudios del pasado: historia y arqueología</rdfs:label>
+        <skos:broader rdf:resource="http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_1_CSH"/>
+        <skos:inScheme rdf:resource="http://purl.org/roh/subject-areas#ESSubjectAreas2ndList"/>
+        <skos:notation>PHA</skos:notation>
+        <skos:prefLabel xml:lang="es">Estudios del pasado: historia y arqueología</skos:prefLabel>
+        <skos:prefLabel xml:lang="ast">Estudios del pasáu: hestoria y arqueoloxía</skos:prefLabel>
+        <skos:prefLabel xml:lang="ca">Estudis de el passat: història i arqueologia</skos:prefLabel>
+        <skos:prefLabel xml:lang="gl">Estudos do pasado: historia e arqueoloxía</skos:prefLabel>
+        <skos:prefLabel xml:lang="pt">Estudos do passado: história e arqueologia</skos:prefLabel>
+        <skos:prefLabel xml:lang="en">Studies of the past: history and archeology</skos:prefLabel>
+        <skos:prefLabel xml:lang="fr">Études du passé: histoire et archéologie</skos:prefLabel>
+        <skos:prefLabel>Estudios del pasado: historia y arqueología</skos:prefLabel>
+    </NamedIndividual>
+    
+
+
+    <!-- http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_2_PIN -->
+
+
+    <NamedIndividual rdf:about="http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_2_PIN">
+        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+        <roh:hasCode rdf:resource="http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_2_CODE_PIN"/>
+        <rdfs:label>Producción industrial, ingeniería civil e ingenierías para la sociedad</rdfs:label>
+        <skos:broader rdf:resource="http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_1_CMIFQ"/>
+        <skos:closeMatch rdf:resource="http://skos.um.es/unescothes/C00606"/>
+        <skos:closeMatch rdf:resource="http://skos.um.es/unescothes/C01963"/>
+        <skos:inScheme rdf:resource="http://purl.org/roh/subject-areas#ESSubjectAreas2ndList"/>
+        <skos:notation>PIN</skos:notation>
+        <skos:prefLabel xml:lang="en">Industrial production, civil engineering and engineering for society</skos:prefLabel>
+        <skos:prefLabel xml:lang="ca">Producció industrial, enginyeria civil i enginyeries per a la societat</skos:prefLabel>
+        <skos:prefLabel xml:lang="es">Producción industrial, ingeniería civil e ingenierías para la sociedad</skos:prefLabel>
+        <skos:prefLabel xml:lang="ast">Producción industrial, inxeniería civil ya inxenieríes para la sociedá</skos:prefLabel>
+        <skos:prefLabel xml:lang="gl">Produción industrial, enxeñería civil e enxeñaría para a sociedade</skos:prefLabel>
+        <skos:prefLabel xml:lang="fr">Production industrielle, génie civil et génie pour la société</skos:prefLabel>
+        <skos:prefLabel xml:lang="pt">Produção industrial, engenharia civil e engenharia para a sociedade</skos:prefLabel>
+        <skos:prefLabel>Producción industrial, ingeniería civil e ingenierías para la sociedad</skos:prefLabel>
+    </NamedIndividual>
+    
+
+
+    <!-- http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_2_PSI -->
+
+
+    <NamedIndividual rdf:about="http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_2_PSI">
+        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+        <roh:hasCode rdf:resource="http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_2_CODE_PSI"/>
+        <rdfs:label>Psicología</rdfs:label>
+        <skos:broader rdf:resource="http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_1_CSH"/>
+        <skos:exactMatch rdf:resource="http://skos.um.es/unescothes/C03195"/>
+        <skos:inScheme rdf:resource="http://purl.org/roh/subject-areas#ESSubjectAreas2ndList"/>
+        <skos:notation>PSI</skos:notation>
+        <skos:prefLabel xml:lang="ca">Psicologia</skos:prefLabel>
+        <skos:prefLabel xml:lang="pt">Psicologia</skos:prefLabel>
+        <skos:prefLabel xml:lang="es">Psicología</skos:prefLabel>
+        <skos:prefLabel xml:lang="ast">Psicoloxía</skos:prefLabel>
+        <skos:prefLabel xml:lang="gl">Psicoloxía</skos:prefLabel>
+        <skos:prefLabel xml:lang="fr">Psychologie</skos:prefLabel>
+        <skos:prefLabel xml:lang="en">Psychology</skos:prefLabel>
+        <skos:prefLabel>Psicología</skos:prefLabel>
+    </NamedIndividual>
+    
+
+
+    <!-- http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_2_TIC -->
+
+
+    <NamedIndividual rdf:about="http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_2_TIC">
+        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+        <roh:hasCode rdf:resource="http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_2_CODE_TIC"/>
+        <rdfs:label>Tecnologías de la información y de las comunicaciones</rdfs:label>
+        <skos:broader rdf:resource="http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_1_CMIFQ"/>
+        <skos:closeMatch rdf:resource="http://skos.um.es/unescothes/C00705"/>
+        <skos:closeMatch rdf:resource="http://skos.um.es/unescothes/C01995"/>
+        <skos:inScheme rdf:resource="http://purl.org/roh/subject-areas#ESSubjectAreas2ndList"/>
+        <skos:notation>TIC</skos:notation>
+        <skos:prefLabel xml:lang="en">Information and communication technologies</skos:prefLabel>
+        <skos:prefLabel xml:lang="fr">Technologies de l&apos;information et de la communication</skos:prefLabel>
+        <skos:prefLabel xml:lang="pt">Tecnologias de informação e comunicação</skos:prefLabel>
+        <skos:prefLabel xml:lang="ca">Tecnologies de la informació i de les comunicacions</skos:prefLabel>
+        <skos:prefLabel xml:lang="es">Tecnologías de la información y de las comunicaciones</skos:prefLabel>
+        <skos:prefLabel xml:lang="gl">Tecnoloxías da información e comunicación</skos:prefLabel>
+        <skos:prefLabel xml:lang="ast">Tecnoloxíes de la información y de les comunicaciones</skos:prefLabel>
+        <skos:prefLabel>Tecnologías de la información y de las comunicaciones</skos:prefLabel>
+    </NamedIndividual>
+    
+
+
+    <!-- http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_3_ALI -->
+
+
+    <NamedIndividual rdf:about="http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_3_ALI">
+        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+        <roh:hasCode rdf:resource="http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_3_CODE_ALI"/>
+        <rdfs:label>Ciencias y tecnologías de alimentos</rdfs:label>
+        <skos:broader rdf:resource="http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_2_CAA"/>
+        <skos:closeMatch rdf:resource="http://skos.um.es/unescothes/C01577"/>
+        <skos:inScheme rdf:resource="http://purl.org/roh/subject-areas#ESSubjectAreas3rdList"/>
+        <skos:notation>ALI</skos:notation>
+        <skos:prefLabel xml:lang="gl">Ciencia e tecnoloxía dos alimentos</skos:prefLabel>
+        <skos:prefLabel xml:lang="es">Ciencias y tecnologías de alimentos</skos:prefLabel>
+        <skos:prefLabel xml:lang="ast">Ciencies y tecnoloxíes d&apos;alimentos</skos:prefLabel>
+        <skos:prefLabel xml:lang="ca">Ciències i tecnologies d&apos;aliments</skos:prefLabel>
+        <skos:prefLabel xml:lang="pt">Ciência e tecnologia de alimentos</skos:prefLabel>
+        <skos:prefLabel xml:lang="en">Food science and technology</skos:prefLabel>
+        <skos:prefLabel xml:lang="fr">Science et technologie alimentaire</skos:prefLabel>
+        <skos:prefLabel>Ciencias y tecnologías de alimentos</skos:prefLabel>
+    </NamedIndividual>
+    
+
+
+    <!-- http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_3_ARQ -->
+
+
+    <NamedIndividual rdf:about="http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_3_ARQ">
+        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+        <roh:hasCode rdf:resource="http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_3_CODE_ARQ"/>
+        <rdfs:label>Arqueología</rdfs:label>
+        <skos:broader rdf:resource="http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_2_PHA"/>
+        <skos:inScheme rdf:resource="http://purl.org/roh/subject-areas#ESSubjectAreas3rdList"/>
+        <skos:notation>ARQ</skos:notation>
+        <skos:prefLabel xml:lang="en">Archeology</skos:prefLabel>
+        <skos:prefLabel xml:lang="fr">Archéologie</skos:prefLabel>
+        <skos:prefLabel xml:lang="ca">Arqueologia</skos:prefLabel>
+        <skos:prefLabel xml:lang="pt">Arqueologia</skos:prefLabel>
+        <skos:prefLabel xml:lang="ast">Arqueología</skos:prefLabel>
+        <skos:prefLabel xml:lang="es">Arqueología</skos:prefLabel>
+        <skos:prefLabel xml:lang="gl">Arqueoloxía</skos:prefLabel>
+        <skos:prefLabel>Arqueología</skos:prefLabel>
+    </NamedIndividual>
+    
+
+
+    <!-- http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_3_ART -->
+
+
+    <NamedIndividual rdf:about="http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_3_ART">
+        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+        <roh:hasCode rdf:resource="http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_3_CODE_ART"/>
+        <rdfs:label>Arte, bellas artes, museística</rdfs:label>
+        <skos:broader rdf:resource="http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_2_FLA"/>
+        <skos:closeMatch rdf:resource="http://skos.um.es/unescothes/C00267"/>
+        <skos:closeMatch rdf:resource="http://skos.um.es/unescothes/C02619"/>
+        <skos:inScheme rdf:resource="http://purl.org/roh/subject-areas#ESSubjectAreas3rdList"/>
+        <skos:notation>ART</skos:notation>
+        <skos:prefLabel xml:lang="fr">Art, beaux-arts, musée</skos:prefLabel>
+        <skos:prefLabel xml:lang="ca">Art, belles arts, museística</skos:prefLabel>
+        <skos:prefLabel xml:lang="en">Art, fine arts, museum</skos:prefLabel>
+        <skos:prefLabel xml:lang="gl">Arte, belas artes, museo</skos:prefLabel>
+        <skos:prefLabel xml:lang="pt">Arte, belas artes, museu</skos:prefLabel>
+        <skos:prefLabel xml:lang="es">Arte, bellas artes, museística</skos:prefLabel>
+        <skos:prefLabel xml:lang="ast">Arte, belles artes, museística</skos:prefLabel>
+        <skos:prefLabel>Arte, bellas artes, museística</skos:prefLabel>
+    </NamedIndividual>
+    
+
+
+    <!-- http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_3_AYA -->
+
+
+    <NamedIndividual rdf:about="http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_3_AYA">
+        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+        <roh:hasCode rdf:resource="http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_3_CODE_AYA"/>
+        <rdfs:label>Astronomía y astrofísica</rdfs:label>
+        <skos:broader rdf:resource="http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_2_FIS"/>
+        <skos:closeMatch rdf:resource="http://skos.um.es/unescothes/C00283"/>
+        <skos:closeMatch rdf:resource="http://skos.um.es/unescothes/C00284"/>
+        <skos:inScheme rdf:resource="http://purl.org/roh/subject-areas#ESSubjectAreas3rdList"/>
+        <skos:notation>AYA</skos:notation>
+        <skos:prefLabel xml:lang="pt">Astronomia e astrofísica</skos:prefLabel>
+        <skos:prefLabel xml:lang="ca">Astronomia i astrofísica</skos:prefLabel>
+        <skos:prefLabel xml:lang="fr">Astronomie et astrophysique</skos:prefLabel>
+        <skos:prefLabel xml:lang="en">Astronomy and astrophysics</skos:prefLabel>
+        <skos:prefLabel xml:lang="gl">Astronomía e astrofísica</skos:prefLabel>
+        <skos:prefLabel xml:lang="ast">Astronomía y astrofísica</skos:prefLabel>
+        <skos:prefLabel xml:lang="es">Astronomía y astrofísica</skos:prefLabel>
+        <skos:prefLabel>Astronomía y astrofísica</skos:prefLabel>
+    </NamedIndividual>
+    
+
+
+    <!-- http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_3_AYF -->
+
+
+    <NamedIndividual rdf:about="http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_3_AYF">
+        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+        <roh:hasCode rdf:resource="http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_3_CODE_AYF"/>
+        <rdfs:label>Agricultura y forestal</rdfs:label>
+        <skos:broader rdf:resource="http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_2_CAA"/>
+        <skos:closeMatch rdf:resource="http://skos.um.es/unescothes/C00112"/>
+        <skos:closeMatch rdf:resource="http://skos.um.es/unescothes/C01594"/>
+        <skos:inScheme rdf:resource="http://purl.org/roh/subject-areas#ESSubjectAreas3rdList"/>
+        <skos:notation>AYF</skos:notation>
+        <skos:prefLabel xml:lang="gl">Agricultura e silvicultura</skos:prefLabel>
+        <skos:prefLabel xml:lang="pt">Agricultura e silvicultura</skos:prefLabel>
+        <skos:prefLabel xml:lang="ca">Agricultura i forestal</skos:prefLabel>
+        <skos:prefLabel xml:lang="ast">Agricultura y forestal</skos:prefLabel>
+        <skos:prefLabel xml:lang="es">Agricultura y forestal</skos:prefLabel>
+        <skos:prefLabel xml:lang="en">Agriculture and forestry</skos:prefLabel>
+        <skos:prefLabel xml:lang="fr">Agriculture et foresterie</skos:prefLabel>
+        <skos:prefLabel>Agricultura y forestal</skos:prefLabel>
+    </NamedIndividual>
+    
+
+
+    <!-- http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_3_BDV -->
+
+
+    <NamedIndividual rdf:about="http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_3_BDV">
+        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+        <roh:hasCode rdf:resource="http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_3_CODE_BDV"/>
+        <rdfs:label>Biodiversidad</rdfs:label>
+        <skos:broader rdf:resource="http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_2_CTM"/>
+        <skos:exactMatch rdf:resource="http://skos.um.es/unescothes/C00396"/>
+        <skos:inScheme rdf:resource="http://purl.org/roh/subject-areas#ESSubjectAreas3rdList"/>
+        <skos:notation>BDV</skos:notation>
+        <skos:prefLabel xml:lang="ast">Biodiversidad</skos:prefLabel>
+        <skos:prefLabel xml:lang="es">Biodiversidad</skos:prefLabel>
+        <skos:prefLabel xml:lang="gl">Biodiversidade</skos:prefLabel>
+        <skos:prefLabel xml:lang="pt">Biodiversidade</skos:prefLabel>
+        <skos:prefLabel xml:lang="ca">Biodiversitat</skos:prefLabel>
+        <skos:prefLabel xml:lang="en">Biodiversity</skos:prefLabel>
+        <skos:prefLabel xml:lang="fr">Biodiversité</skos:prefLabel>
+        <skos:prefLabel>Biodiversidad</skos:prefLabel>
+    </NamedIndividual>
+    
+
+
+    <!-- http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_3_BIF -->
+
+
+    <NamedIndividual rdf:about="http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_3_BIF">
+        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+        <roh:hasCode rdf:resource="http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_3_CODE_BIF"/>
+        <rdfs:label>Biología integrativa y fisiología</rdfs:label>
+        <skos:broader rdf:resource="http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_2_BIO"/>
+        <skos:inScheme rdf:resource="http://purl.org/roh/subject-areas#ESSubjectAreas3rdList"/>
+        <skos:notation>BIF</skos:notation>
+        <skos:prefLabel xml:lang="pt">Biologia e fisiologia integrativas</skos:prefLabel>
+        <skos:prefLabel xml:lang="ca">Biologia integrativa i fisiologia</skos:prefLabel>
+        <skos:prefLabel xml:lang="fr">Biologie intégrative et physiologie</skos:prefLabel>
+        <skos:prefLabel xml:lang="es">Biología integrativa y fisiología</skos:prefLabel>
+        <skos:prefLabel xml:lang="gl">Bioloxía e fisioloxía integradora</skos:prefLabel>
+        <skos:prefLabel xml:lang="ast">Bioloxía integrativa y fisioloxía</skos:prefLabel>
+        <skos:prefLabel xml:lang="en">Integrative biology and physiology</skos:prefLabel>
+        <skos:prefLabel>Biología integrativa y fisiología</skos:prefLabel>
+    </NamedIndividual>
+    
+
+
+    <!-- http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_3_BMC -->
+
+
+    <NamedIndividual rdf:about="http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_3_BMC">
+        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+        <roh:hasCode rdf:resource="http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_3_CODE_BMC"/>
+        <rdfs:label>Biología molecular y celular</rdfs:label>
+        <skos:broader rdf:resource="http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_2_BIO"/>
+        <skos:closeMatch rdf:resource="http://skos.um.es/unescothes/C00536"/>
+        <skos:closeMatch rdf:resource="http://skos.um.es/unescothes/C02567"/>
+        <skos:inScheme rdf:resource="http://purl.org/roh/subject-areas#ESSubjectAreas3rdList"/>
+        <skos:notation>BMC</skos:notation>
+        <skos:prefLabel xml:lang="pt">Biologia molecular e celular</skos:prefLabel>
+        <skos:prefLabel xml:lang="ca">Biologia molecular i cel·lular</skos:prefLabel>
+        <skos:prefLabel xml:lang="fr">Biologie moléculaire et cellulaire</skos:prefLabel>
+        <skos:prefLabel xml:lang="es">Biología molecular y celular</skos:prefLabel>
+        <skos:prefLabel xml:lang="gl">Bioloxía molecular e celular</skos:prefLabel>
+        <skos:prefLabel xml:lang="ast">Bioloxía molecular y celular</skos:prefLabel>
+        <skos:prefLabel xml:lang="en">Molecular and cellular biology</skos:prefLabel>
+        <skos:prefLabel>Biología molecular y celular</skos:prefLabel>
+    </NamedIndividual>
+    
+
+
+    <!-- http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_3_BTC -->
+
+
+    <NamedIndividual rdf:about="http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_3_BTC">
+        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+        <roh:hasCode rdf:resource="http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_3_CODE_BTC"/>
+        <rdfs:label>Biotecnología</rdfs:label>
+        <skos:broader rdf:resource="http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_2_BIO"/>
+        <skos:exactMatch rdf:resource="http://skos.um.es/unescothes/C00409"/>
+        <skos:inScheme rdf:resource="http://purl.org/roh/subject-areas#ESSubjectAreas3rdList"/>
+        <skos:notation>BTC</skos:notation>
+        <skos:prefLabel xml:lang="fr">Biotechnologie</skos:prefLabel>
+        <skos:prefLabel xml:lang="en">Biotechnology</skos:prefLabel>
+        <skos:prefLabel xml:lang="ca">Biotecnologia</skos:prefLabel>
+        <skos:prefLabel xml:lang="pt">Biotecnologia</skos:prefLabel>
+        <skos:prefLabel xml:lang="es">Biotecnología</skos:prefLabel>
+        <skos:prefLabel xml:lang="ast">Biotecnoloxía</skos:prefLabel>
+        <skos:prefLabel xml:lang="gl">Biotecnoloxía</skos:prefLabel>
+        <skos:prefLabel>Biotecnología</skos:prefLabel>
+    </NamedIndividual>
+    
+
+
+    <!-- http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_3_CAN -->
+
+
+    <NamedIndividual rdf:about="http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_3_CAN">
+        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+        <roh:hasCode rdf:resource="http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_3_CODE_CAN"/>
+        <rdfs:label>Cáncer</rdfs:label>
+        <skos:broader rdf:resource="http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_2_BME"/>
+        <skos:exactMatch rdf:resource="http://skos.um.es/unescothes/C00499"/>
+        <skos:inScheme rdf:resource="http://purl.org/roh/subject-areas#ESSubjectAreas3rdList"/>
+        <skos:notation>CAN</skos:notation>
+        <skos:prefLabel xml:lang="en">Cancer</skos:prefLabel>
+        <skos:prefLabel xml:lang="fr">Cancer</skos:prefLabel>
+        <skos:prefLabel xml:lang="ca">Càncer</skos:prefLabel>
+        <skos:prefLabel xml:lang="ast">Cáncer</skos:prefLabel>
+        <skos:prefLabel xml:lang="es">Cáncer</skos:prefLabel>
+        <skos:prefLabel xml:lang="gl">Cáncer</skos:prefLabel>
+        <skos:prefLabel xml:lang="pt">Câncer</skos:prefLabel>
+        <skos:prefLabel>Cáncer</skos:prefLabel>
+    </NamedIndividual>
+    
+
+
+    <!-- http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_3_CODE_ALI -->
+
+
+    <NamedIndividual rdf:about="http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_3_CODE_ALI">
+        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+        <roh:codeOf rdf:resource="http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_3_ALI"/>
+        <rdfs:label>ALI</rdfs:label>
+        <skos:inScheme rdf:resource="http://purl.org/roh/subject-areas#ESSubjectCode3rdList"/>
+        <skos:prefLabel>ALI</skos:prefLabel>
+    </NamedIndividual>
+    
+
+
+    <!-- http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_3_CODE_ARQ -->
+
+
+    <NamedIndividual rdf:about="http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_3_CODE_ARQ">
+        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+        <roh:codeOf rdf:resource="http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_3_ARQ"/>
+        <rdfs:label>ARQ</rdfs:label>
+        <skos:inScheme rdf:resource="http://purl.org/roh/subject-areas#ESSubjectCode3rdList"/>
+        <skos:prefLabel>ARQ</skos:prefLabel>
+    </NamedIndividual>
+    
+
+
+    <!-- http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_3_CODE_ART -->
+
+
+    <NamedIndividual rdf:about="http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_3_CODE_ART">
+        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+        <roh:codeOf rdf:resource="http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_3_ART"/>
+        <rdfs:label>ART</rdfs:label>
+        <skos:inScheme rdf:resource="http://purl.org/roh/subject-areas#ESSubjectCode3rdList"/>
+        <skos:prefLabel>ART</skos:prefLabel>
+    </NamedIndividual>
+    
+
+
+    <!-- http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_3_CODE_AYA -->
+
+
+    <NamedIndividual rdf:about="http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_3_CODE_AYA">
+        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+        <roh:codeOf rdf:resource="http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_3_AYA"/>
+        <rdfs:label>AYA</rdfs:label>
+        <skos:inScheme rdf:resource="http://purl.org/roh/subject-areas#ESSubjectCode3rdList"/>
+        <skos:prefLabel>AYA</skos:prefLabel>
+    </NamedIndividual>
+    
+
+
+    <!-- http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_3_CODE_AYF -->
+
+
+    <NamedIndividual rdf:about="http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_3_CODE_AYF">
+        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+        <roh:codeOf rdf:resource="http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_3_AYF"/>
+        <rdfs:label>AYF</rdfs:label>
+        <skos:inScheme rdf:resource="http://purl.org/roh/subject-areas#ESSubjectCode3rdList"/>
+        <skos:prefLabel>AYF</skos:prefLabel>
+    </NamedIndividual>
+    
+
+
+    <!-- http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_3_CODE_BDV -->
+
+
+    <NamedIndividual rdf:about="http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_3_CODE_BDV">
+        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+        <roh:codeOf rdf:resource="http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_3_BDV"/>
+        <rdfs:label>BDV</rdfs:label>
+        <skos:inScheme rdf:resource="http://purl.org/roh/subject-areas#ESSubjectCode3rdList"/>
+        <skos:prefLabel>BDV</skos:prefLabel>
+    </NamedIndividual>
+    
+
+
+    <!-- http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_3_CODE_BIF -->
+
+
+    <NamedIndividual rdf:about="http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_3_CODE_BIF">
+        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+        <roh:codeOf rdf:resource="http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_3_BIF"/>
+        <rdfs:label>BIF</rdfs:label>
+        <skos:inScheme rdf:resource="http://purl.org/roh/subject-areas#ESSubjectCode3rdList"/>
+        <skos:prefLabel>BIF</skos:prefLabel>
+    </NamedIndividual>
+    
+
+
+    <!-- http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_3_CODE_BMC -->
+
+
+    <NamedIndividual rdf:about="http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_3_CODE_BMC">
+        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+        <roh:codeOf rdf:resource="http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_3_BMC"/>
+        <rdfs:label>BMC</rdfs:label>
+        <skos:inScheme rdf:resource="http://purl.org/roh/subject-areas#ESSubjectCode3rdList"/>
+        <skos:prefLabel>BMC</skos:prefLabel>
+    </NamedIndividual>
+    
+
+
+    <!-- http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_3_CODE_BTC -->
+
+
+    <NamedIndividual rdf:about="http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_3_CODE_BTC">
+        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+        <roh:codeOf rdf:resource="http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_3_BTC"/>
+        <rdfs:label>BTC</rdfs:label>
+        <skos:inScheme rdf:resource="http://purl.org/roh/subject-areas#ESSubjectCode3rdList"/>
+        <skos:prefLabel>BTC</skos:prefLabel>
+    </NamedIndividual>
+    
+
+
+    <!-- http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_3_CODE_CAN -->
+
+
+    <NamedIndividual rdf:about="http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_3_CODE_CAN">
+        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+        <roh:codeOf rdf:resource="http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_3_CAN"/>
+        <rdfs:label>CAN</rdfs:label>
+        <skos:inScheme rdf:resource="http://purl.org/roh/subject-areas#ESSubjectCode3rdList"/>
+        <skos:prefLabel>CAN</skos:prefLabel>
+    </NamedIndividual>
+    
+
+
+    <!-- http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_3_CODE_COM -->
+
+
+    <NamedIndividual rdf:about="http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_3_CODE_COM">
+        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+        <roh:codeOf rdf:resource="http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_3_COM"/>
+        <rdfs:label>COM</rdfs:label>
+        <skos:inScheme rdf:resource="http://purl.org/roh/subject-areas#ESSubjectCode3rdList"/>
+        <skos:prefLabel>COM</skos:prefLabel>
+    </NamedIndividual>
+    
+
+
+    <!-- http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_3_CODE_CPO -->
+
+
+    <NamedIndividual rdf:about="http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_3_CODE_CPO">
+        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+        <roh:codeOf rdf:resource="http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_3_CPO"/>
+        <rdfs:label>CPO</rdfs:label>
+        <skos:inScheme rdf:resource="http://purl.org/roh/subject-areas#ESSubjectCode3rdList"/>
+        <skos:prefLabel>CPO</skos:prefLabel>
+    </NamedIndividual>
+    
+
+
+    <!-- http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_3_CODE_CTA -->
+
+
+    <NamedIndividual rdf:about="http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_3_CODE_CTA">
+        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+        <roh:codeOf rdf:resource="http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_3_CTA"/>
+        <rdfs:label>CTA</rdfs:label>
+        <skos:inScheme rdf:resource="http://purl.org/roh/subject-areas#ESSubjectCode3rdList"/>
+        <skos:prefLabel>CTA</skos:prefLabel>
+    </NamedIndividual>
+    
+
+
+    <!-- http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_3_CODE_CYA -->
+
+
+    <NamedIndividual rdf:about="http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_3_CODE_CYA">
+        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+        <roh:codeOf rdf:resource="http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_3_CYA"/>
+        <rdfs:label>CYA</rdfs:label>
+        <skos:inScheme rdf:resource="http://purl.org/roh/subject-areas#ESSubjectCode3rdList"/>
+        <skos:prefLabel>CYA</skos:prefLabel>
+    </NamedIndividual>
+    
+
+
+    <!-- http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_3_CODE_DE3 -->
+
+
+    <NamedIndividual rdf:about="http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_3_CODE_DE3">
+        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+        <roh:codeOf rdf:resource="http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_3_DE3"/>
+        <rdfs:label>DE3</rdfs:label>
+        <skos:inScheme rdf:resource="http://purl.org/roh/subject-areas#ESSubjectCode3rdList"/>
+        <skos:prefLabel>DE3</skos:prefLabel>
+    </NamedIndividual>
+    
+
+
+    <!-- http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_3_CODE_DPT -->
+
+
+    <NamedIndividual rdf:about="http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_3_CODE_DPT">
+        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+        <roh:codeOf rdf:resource="http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_3_DPT"/>
+        <rdfs:label>DPT</rdfs:label>
+        <skos:inScheme rdf:resource="http://purl.org/roh/subject-areas#ESSubjectCode3rdList"/>
+        <skos:prefLabel>DPT</skos:prefLabel>
+    </NamedIndividual>
+    
+
+
+    <!-- http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_3_CODE_ED3 -->
+
+
+    <NamedIndividual rdf:about="http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_3_CODE_ED3">
+        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+        <roh:codeOf rdf:resource="http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_3_ED3"/>
+        <rdfs:label>ED3</rdfs:label>
+        <skos:inScheme rdf:resource="http://purl.org/roh/subject-areas#ESSubjectCode3rdList"/>
+        <skos:prefLabel>ED3</skos:prefLabel>
+    </NamedIndividual>
+    
+
+
+    <!-- http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_3_CODE_ENE -->
+
+
+    <NamedIndividual rdf:about="http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_3_CODE_ENE">
+        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+        <roh:codeOf rdf:resource="http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_3_ENE"/>
+        <rdfs:label>ENE</rdfs:label>
+        <skos:inScheme rdf:resource="http://purl.org/roh/subject-areas#ESSubjectCode3rdList"/>
+        <skos:prefLabel>ENE</skos:prefLabel>
+    </NamedIndividual>
+    
+
+
+    <!-- http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_3_CODE_ESN -->
+
+
+    <NamedIndividual rdf:about="http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_3_CODE_ESN">
+        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+        <roh:codeOf rdf:resource="http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_3_ESN"/>
+        <rdfs:label>ESN</rdfs:label>
+        <skos:inScheme rdf:resource="http://purl.org/roh/subject-areas#ESSubjectCode3rdList"/>
+        <skos:prefLabel>ESN</skos:prefLabel>
+    </NamedIndividual>
+    
+
+
+    <!-- http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_3_CODE_ESP -->
+
+
+    <NamedIndividual rdf:about="http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_3_CODE_ESP">
+        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+        <roh:codeOf rdf:resource="http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_3_ESP"/>
+        <rdfs:label>ESP</rdfs:label>
+        <skos:inScheme rdf:resource="http://purl.org/roh/subject-areas#ESSubjectCode3rdList"/>
+        <skos:prefLabel>ESP</skos:prefLabel>
+    </NamedIndividual>
+    
+
+
+    <!-- http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_3_CODE_EYA -->
+
+
+    <NamedIndividual rdf:about="http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_3_CODE_EYA">
+        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+        <roh:codeOf rdf:resource="http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_3_EYA"/>
+        <rdfs:label>EYA</rdfs:label>
+        <skos:inScheme rdf:resource="http://purl.org/roh/subject-areas#ESSubjectCode3rdList"/>
+        <skos:prefLabel>EYA</skos:prefLabel>
+    </NamedIndividual>
+    
+
+
+    <!-- http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_3_CODE_EYF -->
+
+
+    <NamedIndividual rdf:about="http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_3_CODE_EYF">
+        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+        <roh:codeOf rdf:resource="http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_3_EYF"/>
+        <rdfs:label>EYF</rdfs:label>
+        <skos:inScheme rdf:resource="http://purl.org/roh/subject-areas#ESSubjectCode3rdList"/>
+        <skos:prefLabel>EYF</skos:prefLabel>
+    </NamedIndividual>
+    
+
+
+    <!-- http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_3_CODE_FEM -->
+
+
+    <NamedIndividual rdf:about="http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_3_CODE_FEM">
+        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+        <roh:codeOf rdf:resource="http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_3_FEM"/>
+        <rdfs:label>FEM</rdfs:label>
+        <skos:inScheme rdf:resource="http://purl.org/roh/subject-areas#ESSubjectCode3rdList"/>
+        <skos:prefLabel>FEM</skos:prefLabel>
+    </NamedIndividual>
+    
+
+
+    <!-- http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_3_CODE_FFP -->
+
+
+    <NamedIndividual rdf:about="http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_3_CODE_FFP">
+        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+        <roh:codeOf rdf:resource="http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_3_FFP"/>
+        <rdfs:label>FFP</rdfs:label>
+        <skos:inScheme rdf:resource="http://purl.org/roh/subject-areas#ESSubjectCode3rdList"/>
+        <skos:prefLabel>FFP</skos:prefLabel>
+    </NamedIndividual>
+    
+
+
+    <!-- http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_3_CODE_FIL -->
+
+
+    <NamedIndividual rdf:about="http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_3_CODE_FIL">
+        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+        <roh:codeOf rdf:resource="http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_3_FIL"/>
+        <rdfs:label>FIL</rdfs:label>
+        <skos:inScheme rdf:resource="http://purl.org/roh/subject-areas#ESSubjectCode3rdList"/>
+        <skos:prefLabel>FIL</skos:prefLabel>
+    </NamedIndividual>
+    
+
+
+    <!-- http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_3_CODE_FOS -->
+
+
+    <NamedIndividual rdf:about="http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_3_CODE_FOS">
+        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+        <roh:codeOf rdf:resource="http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_3_FOS"/>
+        <rdfs:label>FOS</rdfs:label>
+        <skos:inScheme rdf:resource="http://purl.org/roh/subject-areas#ESSubjectCode3rdList"/>
+        <skos:prefLabel>FOS</skos:prefLabel>
+    </NamedIndividual>
+    
+
+
+    <!-- http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_3_CODE_FYA -->
+
+
+    <NamedIndividual rdf:about="http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_3_CODE_FYA">
+        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+        <roh:codeOf rdf:resource="http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_3_FYA"/>
+        <rdfs:label>FYA</rdfs:label>
+        <skos:inScheme rdf:resource="http://purl.org/roh/subject-areas#ESSubjectCode3rdList"/>
+        <skos:prefLabel>FYA</skos:prefLabel>
+    </NamedIndividual>
+    
+
+
+    <!-- http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_3_CODE_GEO -->
+
+
+    <NamedIndividual rdf:about="http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_3_CODE_GEO">
+        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+        <roh:codeOf rdf:resource="http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_3_GEO"/>
+        <rdfs:label>GEO</rdfs:label>
+        <skos:inScheme rdf:resource="http://purl.org/roh/subject-areas#ESSubjectCode3rdList"/>
+        <skos:prefLabel>GEO</skos:prefLabel>
+    </NamedIndividual>
+    
+
+
+    <!-- http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_3_CODE_GYA -->
+
+
+    <NamedIndividual rdf:about="http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_3_CODE_GYA">
+        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+        <roh:codeOf rdf:resource="http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_3_GYA"/>
+        <rdfs:label>GYA</rdfs:label>
+        <skos:inScheme rdf:resource="http://purl.org/roh/subject-areas#ESSubjectCode3rdList"/>
+        <skos:prefLabel>GYA</skos:prefLabel>
+    </NamedIndividual>
+    
+
+
+    <!-- http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_3_CODE_HIS -->
+
+
+    <NamedIndividual rdf:about="http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_3_CODE_HIS">
+        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+        <roh:codeOf rdf:resource="http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_3_HIS"/>
+        <rdfs:label>HIS</rdfs:label>
+        <skos:inScheme rdf:resource="http://purl.org/roh/subject-areas#ESSubjectCode3rdList"/>
+        <skos:prefLabel>HIS</skos:prefLabel>
+    </NamedIndividual>
+    
+
+
+    <!-- http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_3_CODE_IBI -->
+
+
+    <NamedIndividual rdf:about="http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_3_CODE_IBI">
+        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+        <roh:codeOf rdf:resource="http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_3_IBI"/>
+        <rdfs:label>IBI</rdfs:label>
+        <skos:inScheme rdf:resource="http://purl.org/roh/subject-areas#ESSubjectCode3rdList"/>
+        <skos:prefLabel>IBI</skos:prefLabel>
+    </NamedIndividual>
+    
+
+
+    <!-- http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_3_CODE_ICA -->
+
+
+    <NamedIndividual rdf:about="http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_3_CODE_ICA">
+        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+        <roh:codeOf rdf:resource="http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_3_ICA"/>
+        <rdfs:label>ICA</rdfs:label>
+        <skos:inScheme rdf:resource="http://purl.org/roh/subject-areas#ESSubjectCode3rdList"/>
+        <skos:prefLabel>ICA</skos:prefLabel>
+    </NamedIndividual>
+    
+
+
+    <!-- http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_3_CODE_IEA -->
+
+
+    <NamedIndividual rdf:about="http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_3_CODE_IEA">
+        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+        <roh:codeOf rdf:resource="http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_3_IEA"/>
+        <rdfs:label>IEA</rdfs:label>
+        <skos:inScheme rdf:resource="http://purl.org/roh/subject-areas#ESSubjectCode3rdList"/>
+        <skos:prefLabel>IEA</skos:prefLabel>
+    </NamedIndividual>
+    
+
+
+    <!-- http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_3_CODE_IIT -->
+
+
+    <NamedIndividual rdf:about="http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_3_CODE_IIT">
+        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+        <roh:codeOf rdf:resource="http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_3_IIT"/>
+        <rdfs:label>IIT</rdfs:label>
+        <skos:inScheme rdf:resource="http://purl.org/roh/subject-areas#ESSubjectCode3rdList"/>
+        <skos:prefLabel>IIT</skos:prefLabel>
+    </NamedIndividual>
+    
+
+
+    <!-- http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_3_CODE_INA -->
+
+
+    <NamedIndividual rdf:about="http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_3_CODE_INA">
+        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+        <roh:codeOf rdf:resource="http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_3_INA"/>
+        <rdfs:label>INA</rdfs:label>
+        <skos:inScheme rdf:resource="http://purl.org/roh/subject-areas#ESSubjectCode3rdList"/>
+        <skos:prefLabel>INA</skos:prefLabel>
+    </NamedIndividual>
+    
+
+
+    <!-- http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_3_CODE_INF -->
+
+
+    <NamedIndividual rdf:about="http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_3_CODE_INF">
+        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+        <roh:codeOf rdf:resource="http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_3_INF"/>
+        <rdfs:label>INF</rdfs:label>
+        <skos:inScheme rdf:resource="http://purl.org/roh/subject-areas#ESSubjectCode3rdList"/>
+        <skos:prefLabel>INF</skos:prefLabel>
+    </NamedIndividual>
+    
+
+
+    <!-- http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_3_CODE_IQM -->
+
+
+    <NamedIndividual rdf:about="http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_3_CODE_IQM">
+        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+        <roh:codeOf rdf:resource="http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_3_IQM"/>
+        <rdfs:label>IQM</rdfs:label>
+        <skos:inScheme rdf:resource="http://purl.org/roh/subject-areas#ESSubjectCode3rdList"/>
+        <skos:prefLabel>IQM</skos:prefLabel>
+    </NamedIndividual>
+    
+
+
+    <!-- http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_3_CODE_LFL -->
+
+
+    <NamedIndividual rdf:about="http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_3_CODE_LFL">
+        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+        <roh:codeOf rdf:resource="http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_3_LFL"/>
+        <rdfs:label>LFL</rdfs:label>
+        <skos:inScheme rdf:resource="http://purl.org/roh/subject-areas#ESSubjectCode3rdList"/>
+        <skos:prefLabel>LFL</skos:prefLabel>
+    </NamedIndividual>
+    
+
+
+    <!-- http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_3_CODE_LYL -->
+
+
+    <NamedIndividual rdf:about="http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_3_CODE_LYL">
+        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+        <roh:codeOf rdf:resource="http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_3_LYL"/>
+        <rdfs:label>LYL</rdfs:label>
+        <skos:inScheme rdf:resource="http://purl.org/roh/subject-areas#ESSubjectCode3rdList"/>
+        <skos:prefLabel>LYL</skos:prefLabel>
+    </NamedIndividual>
+    
+
+
+    <!-- http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_3_CODE_MAE -->
+
+
+    <NamedIndividual rdf:about="http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_3_CODE_MAE">
+        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+        <roh:codeOf rdf:resource="http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_3_MAE"/>
+        <rdfs:label>MAE</rdfs:label>
+        <skos:inScheme rdf:resource="http://purl.org/roh/subject-areas#ESSubjectCode3rdList"/>
+        <skos:prefLabel>MAE</skos:prefLabel>
+    </NamedIndividual>
+    
+
+
+    <!-- http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_3_CODE_MAR -->
+
+
+    <NamedIndividual rdf:about="http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_3_CODE_MAR">
+        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+        <roh:codeOf rdf:resource="http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_3_MAR"/>
+        <rdfs:label>MAR</rdfs:label>
+        <skos:inScheme rdf:resource="http://purl.org/roh/subject-areas#ESSubjectCode3rdList"/>
+        <skos:prefLabel>MAR</skos:prefLabel>
+    </NamedIndividual>
+    
+
+
+    <!-- http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_3_CODE_MBM -->
+
+
+    <NamedIndividual rdf:about="http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_3_CODE_MBM">
+        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+        <roh:codeOf rdf:resource="http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_3_MBM"/>
+        <rdfs:label>MBM</rdfs:label>
+        <skos:inScheme rdf:resource="http://purl.org/roh/subject-areas#ESSubjectCode3rdList"/>
+        <skos:prefLabel>MBM</skos:prefLabel>
+    </NamedIndividual>
+    
+
+
+    <!-- http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_3_CODE_MEN -->
+
+
+    <NamedIndividual rdf:about="http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_3_CODE_MEN">
+        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+        <roh:codeOf rdf:resource="http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_3_MEN"/>
+        <rdfs:label>MEN</rdfs:label>
+        <skos:inScheme rdf:resource="http://purl.org/roh/subject-areas#ESSubjectCode3rdList"/>
+        <skos:prefLabel>MEN</skos:prefLabel>
+    </NamedIndividual>
+    
+
+
+    <!-- http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_3_CODE_MES -->
+
+
+    <NamedIndividual rdf:about="http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_3_CODE_MES">
+        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+        <roh:codeOf rdf:resource="http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_3_MES"/>
+        <rdfs:label>MES</rdfs:label>
+        <skos:inScheme rdf:resource="http://purl.org/roh/subject-areas#ESSubjectCode3rdList"/>
+        <skos:prefLabel>MES</skos:prefLabel>
+    </NamedIndividual>
+    
+
+
+    <!-- http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_3_CODE_MFU -->
+
+
+    <NamedIndividual rdf:about="http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_3_CODE_MFU">
+        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+        <roh:codeOf rdf:resource="http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_3_MFU"/>
+        <rdfs:label>MFU</rdfs:label>
+        <skos:inScheme rdf:resource="http://purl.org/roh/subject-areas#ESSubjectCode3rdList"/>
+        <skos:prefLabel>MFU</skos:prefLabel>
+    </NamedIndividual>
+    
+
+
+    <!-- http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_3_CODE_MNF -->
+
+
+    <NamedIndividual rdf:about="http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_3_CODE_MNF">
+        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+        <roh:codeOf rdf:resource="http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_3_MNF"/>
+        <rdfs:label>MNF</rdfs:label>
+        <skos:inScheme rdf:resource="http://purl.org/roh/subject-areas#ESSubjectCode3rdList"/>
+        <skos:prefLabel>MNF</skos:prefLabel>
+    </NamedIndividual>
+    
+
+
+    <!-- http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_3_CODE_MT3 -->
+
+
+    <NamedIndividual rdf:about="http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_3_CODE_MT3">
+        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+        <roh:codeOf rdf:resource="http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_3_MT3"/>
+        <rdfs:label>MT3</rdfs:label>
+        <skos:inScheme rdf:resource="http://purl.org/roh/subject-areas#ESSubjectCode3rdList"/>
+        <skos:prefLabel>MT3</skos:prefLabel>
+    </NamedIndividual>
+    
+
+
+    <!-- http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_3_CODE_POL -->
+
+
+    <NamedIndividual rdf:about="http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_3_CODE_POL">
+        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+        <roh:codeOf rdf:resource="http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_3_POL"/>
+        <rdfs:label>POL</rdfs:label>
+        <skos:inScheme rdf:resource="http://purl.org/roh/subject-areas#ESSubjectCode3rdList"/>
+        <skos:prefLabel>POL</skos:prefLabel>
+    </NamedIndividual>
+    
+
+
+    <!-- http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_3_CODE_PS3 -->
+
+
+    <NamedIndividual rdf:about="http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_3_CODE_PS3">
+        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+        <roh:codeOf rdf:resource="http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_3_PS3"/>
+        <rdfs:label>PS3</rdfs:label>
+        <skos:inScheme rdf:resource="http://purl.org/roh/subject-areas#ESSubjectCode3rdList"/>
+        <skos:prefLabel>PS3</skos:prefLabel>
+    </NamedIndividual>
+    
+
+
+    <!-- http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_3_CODE_QMC -->
+
+
+    <NamedIndividual rdf:about="http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_3_CODE_QMC">
+        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+        <roh:codeOf rdf:resource="http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_3_QMC"/>
+        <rdfs:label>QMC</rdfs:label>
+        <skos:inScheme rdf:resource="http://purl.org/roh/subject-areas#ESSubjectCode3rdList"/>
+        <skos:prefLabel>QMC</skos:prefLabel>
+    </NamedIndividual>
+    
+
+
+    <!-- http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_3_CODE_SOC -->
+
+
+    <NamedIndividual rdf:about="http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_3_CODE_SOC">
+        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+        <roh:codeOf rdf:resource="http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_3_SOC"/>
+        <rdfs:label>SOC</rdfs:label>
+        <skos:inScheme rdf:resource="http://purl.org/roh/subject-areas#ESSubjectCode3rdList"/>
+        <skos:prefLabel>SOC</skos:prefLabel>
+    </NamedIndividual>
+    
+
+
+    <!-- http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_3_CODE_TCO -->
+
+
+    <NamedIndividual rdf:about="http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_3_CODE_TCO">
+        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+        <roh:codeOf rdf:resource="http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_3_TCO"/>
+        <rdfs:label>TCO</rdfs:label>
+        <skos:inScheme rdf:resource="http://purl.org/roh/subject-areas#ESSubjectCode3rdList"/>
+        <skos:prefLabel>TCO</skos:prefLabel>
+    </NamedIndividual>
+    
+
+
+    <!-- http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_3_CODE_TMA -->
+
+
+    <NamedIndividual rdf:about="http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_3_CODE_TMA">
+        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+        <roh:codeOf rdf:resource="http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_3_TMA"/>
+        <rdfs:label>TMA</rdfs:label>
+        <skos:inScheme rdf:resource="http://purl.org/roh/subject-areas#ESSubjectCode3rdList"/>
+        <skos:prefLabel>TMA</skos:prefLabel>
+    </NamedIndividual>
+    
+
+
+    <!-- http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_3_CODE_TRA -->
+
+
+    <NamedIndividual rdf:about="http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_3_CODE_TRA">
+        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+        <roh:codeOf rdf:resource="http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_3_TRA"/>
+        <rdfs:label>TRA</rdfs:label>
+        <skos:inScheme rdf:resource="http://purl.org/roh/subject-areas#ESSubjectCode3rdList"/>
+        <skos:prefLabel>TRA</skos:prefLabel>
+    </NamedIndividual>
+    
+
+
+    <!-- http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_3_COM -->
+
+
+    <NamedIndividual rdf:about="http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_3_COM">
+        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+        <roh:hasCode rdf:resource="http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_3_CODE_COM"/>
+        <rdfs:label>Comunicación</rdfs:label>
+        <skos:broader rdf:resource="http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_2_CSO"/>
+        <skos:exactMatch rdf:resource="http://skos.um.es/unescothes/C00678"/>
+        <skos:inScheme rdf:resource="http://purl.org/roh/subject-areas#ESSubjectAreas3rdList"/>
+        <skos:notation>COM</skos:notation>
+        <skos:prefLabel xml:lang="en">Communication</skos:prefLabel>
+        <skos:prefLabel xml:lang="fr">Communication</skos:prefLabel>
+        <skos:prefLabel xml:lang="ca">Comunicació</skos:prefLabel>
+        <skos:prefLabel xml:lang="ast">Comunicación</skos:prefLabel>
+        <skos:prefLabel xml:lang="es">Comunicación</skos:prefLabel>
+        <skos:prefLabel xml:lang="gl">Comunicación</skos:prefLabel>
+        <skos:prefLabel xml:lang="pt">Comunicação</skos:prefLabel>
+        <skos:prefLabel>Comunicación</skos:prefLabel>
+    </NamedIndividual>
+    
+
+
+    <!-- http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_3_CPO -->
+
+
+    <NamedIndividual rdf:about="http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_3_CPO">
+        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+        <roh:hasCode rdf:resource="http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_3_CODE_CPO"/>
+        <rdfs:label>Ciencia política</rdfs:label>
+        <skos:broader rdf:resource="http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_2_CSO"/>
+        <skos:exactMatch rdf:resource="http://skos.um.es/unescothes/C03057"/>
+        <skos:inScheme rdf:resource="http://purl.org/roh/subject-areas#ESSubjectAreas3rdList"/>
+        <skos:notation>CPO</skos:notation>
+        <skos:prefLabel xml:lang="ast">Ciencia política</skos:prefLabel>
+        <skos:prefLabel xml:lang="es">Ciencia política</skos:prefLabel>
+        <skos:prefLabel xml:lang="gl">Ciencias políticas</skos:prefLabel>
+        <skos:prefLabel xml:lang="ca">Ciència política</skos:prefLabel>
+        <skos:prefLabel xml:lang="pt">Ciência Política</skos:prefLabel>
+        <skos:prefLabel xml:lang="en">Politic science</skos:prefLabel>
+        <skos:prefLabel xml:lang="fr">Sciences politiques</skos:prefLabel>
+        <skos:prefLabel>Ciencia política</skos:prefLabel>
+    </NamedIndividual>
+    
+
+
+    <!-- http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_3_CTA -->
+
+
+    <NamedIndividual rdf:about="http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_3_CTA">
+        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+        <roh:hasCode rdf:resource="http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_3_CODE_CTA"/>
+        <rdfs:label>Ciencias de la Tierra y del agua</rdfs:label>
+        <skos:broader rdf:resource="http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_2_CTM"/>
+        <skos:closeMatch rdf:resource="http://skos.um.es/unescothes/C01131"/>
+        <skos:closeMatch rdf:resource="http://skos.um.es/unescothes/C01896"/>
+        <skos:inScheme rdf:resource="http://purl.org/roh/subject-areas#ESSubjectAreas3rdList"/>
+        <skos:notation>CTA</skos:notation>
+        <skos:prefLabel xml:lang="gl">Ciencias da terra e da auga</skos:prefLabel>
+        <skos:prefLabel xml:lang="es">Ciencias de la Tierra y del agua</skos:prefLabel>
+        <skos:prefLabel xml:lang="ast">Ciencies de la Tierra y del agua</skos:prefLabel>
+        <skos:prefLabel xml:lang="ca">Ciències de la Terra i de l&apos;aigua</skos:prefLabel>
+        <skos:prefLabel xml:lang="pt">Ciências da terra e da água</skos:prefLabel>
+        <skos:prefLabel xml:lang="en">Earth and water sciences</skos:prefLabel>
+        <skos:prefLabel xml:lang="fr">Sciences de la terre et de l&apos;eau</skos:prefLabel>
+        <skos:prefLabel>Ciencias de la Tierra y del agua</skos:prefLabel>
+    </NamedIndividual>
+    
+
+
+    <!-- http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_3_CYA -->
+
+
+    <NamedIndividual rdf:about="http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_3_CYA">
+        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+        <roh:hasCode rdf:resource="http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_3_CODE_CYA"/>
+        <rdfs:label>Clima y atmósfera</rdfs:label>
+        <skos:broader rdf:resource="http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_2_CTM"/>
+        <skos:closeMatch rdf:resource="http://skos.um.es/unescothes/C00289"/>
+        <skos:closeMatch rdf:resource="http://skos.um.es/unescothes/C00626"/>
+        <skos:inScheme rdf:resource="http://purl.org/roh/subject-areas#ESSubjectAreas3rdList"/>
+        <skos:notation>CYA</skos:notation>
+        <skos:prefLabel xml:lang="gl">Clima e atmosfera</skos:prefLabel>
+        <skos:prefLabel xml:lang="pt">Clima e atmosfera</skos:prefLabel>
+        <skos:prefLabel xml:lang="ca">Clima i atmosfera</skos:prefLabel>
+        <skos:prefLabel xml:lang="ast">Clima y atmósfera</skos:prefLabel>
+        <skos:prefLabel xml:lang="es">Clima y atmósfera</skos:prefLabel>
+        <skos:prefLabel xml:lang="fr">Climat et atmosphère</skos:prefLabel>
+        <skos:prefLabel xml:lang="en">Climate and atmosphere</skos:prefLabel>
+        <skos:prefLabel>Clima y atmósfera</skos:prefLabel>
+    </NamedIndividual>
+    
+
+
+    <!-- http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_3_DE3 -->
+
+
+    <NamedIndividual rdf:about="http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_3_DE3">
+        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+        <roh:hasCode rdf:resource="http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_3_CODE_DE3"/>
+        <rdfs:label>Derecho</rdfs:label>
+        <skos:broader rdf:resource="http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_2_DER"/>
+        <skos:exactMatch rdf:resource="http://skos.um.es/unescothes/C02229"/>
+        <skos:inScheme rdf:resource="http://purl.org/roh/subject-areas#ESSubjectAreas3rdList"/>
+        <skos:notation>DE3</skos:notation>
+        <skos:prefLabel xml:lang="es">Derecho</skos:prefLabel>
+        <skos:prefLabel xml:lang="gl">Dereito</skos:prefLabel>
+        <skos:prefLabel xml:lang="pt">Direito</skos:prefLabel>
+        <skos:prefLabel xml:lang="ast">Drechu</skos:prefLabel>
+        <skos:prefLabel xml:lang="ca">Dret</skos:prefLabel>
+        <skos:prefLabel xml:lang="fr">Droit</skos:prefLabel>
+        <skos:prefLabel xml:lang="en">Law</skos:prefLabel>
+        <skos:prefLabel>Derecho</skos:prefLabel>
+    </NamedIndividual>
+    
+
+
+    <!-- http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_3_DPT -->
+
+
+    <NamedIndividual rdf:about="http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_3_DPT">
+        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+        <roh:hasCode rdf:resource="http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_3_CODE_DPT"/>
+        <rdfs:label>Herramientas diagnósticas, pronósticas y terapéuticas</rdfs:label>
+        <skos:broader rdf:resource="http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_2_BME"/>
+        <skos:inScheme rdf:resource="http://purl.org/roh/subject-areas#ESSubjectAreas3rdList"/>
+        <skos:notation>DPT</skos:notation>
+        <skos:prefLabel xml:lang="en">Diagnostic, prognostic and therapeutic tools</skos:prefLabel>
+        <skos:prefLabel xml:lang="ca">Eines diagnòstiques, pronòstiques i terapèutiques</skos:prefLabel>
+        <skos:prefLabel xml:lang="pt">Ferramentas de diagnóstico, prognóstico e terapêutico</skos:prefLabel>
+        <skos:prefLabel xml:lang="gl">Ferramentas diagnósticas, prognósticas e terapéuticas</skos:prefLabel>
+        <skos:prefLabel xml:lang="ast">Ferramientes diagnóstiques, pronóstiques y terapéutiques</skos:prefLabel>
+        <skos:prefLabel xml:lang="es">Herramientas diagnósticas, pronósticas y terapéuticas</skos:prefLabel>
+        <skos:prefLabel xml:lang="fr">Outils diagnostiques, pronostiques et thérapeutiques</skos:prefLabel>
+        <skos:prefLabel>Herramientas diagnósticas, pronósticas y terapéuticas</skos:prefLabel>
+    </NamedIndividual>
+    
+
+
+    <!-- http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_3_ED3 -->
+
+
+    <NamedIndividual rdf:about="http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_3_ED3">
+        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+        <roh:hasCode rdf:resource="http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_3_CODE_ED3"/>
+        <rdfs:label>Ciencias de la educación</rdfs:label>
+        <skos:broader rdf:resource="http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_2_EDU"/>
+        <skos:exactMatch rdf:resource="http://skos.um.es/unescothes/C01281"/>
+        <skos:inScheme rdf:resource="http://purl.org/roh/subject-areas#ESSubjectAreas3rdList"/>
+        <skos:notation>ED3</skos:notation>
+        <skos:prefLabel xml:lang="gl">Ciencias da educación</skos:prefLabel>
+        <skos:prefLabel xml:lang="es">Ciencias de la educación</skos:prefLabel>
+        <skos:prefLabel xml:lang="ast">Ciencies de la educación</skos:prefLabel>
+        <skos:prefLabel xml:lang="ca">Ciències de l&apos;educació</skos:prefLabel>
+        <skos:prefLabel xml:lang="pt">Ciências da Educação</skos:prefLabel>
+        <skos:prefLabel xml:lang="en">Education sciences</skos:prefLabel>
+        <skos:prefLabel xml:lang="fr">Sciences de l&apos;éducation</skos:prefLabel>
+        <skos:prefLabel>Ciencias de la educación</skos:prefLabel>
+    </NamedIndividual>
+    
+
+
+    <!-- http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_3_ENE -->
+
+
+    <NamedIndividual rdf:about="http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_3_ENE">
+        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+        <roh:hasCode rdf:resource="http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_3_CODE_ENE"/>
+        <rdfs:label>Energía</rdfs:label>
+        <skos:broader rdf:resource="http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_2_EYT"/>
+        <skos:exactMatch rdf:resource="http://skos.um.es/unescothes/C01360"/>
+        <skos:inScheme rdf:resource="http://purl.org/roh/subject-areas#ESSubjectAreas3rdList"/>
+        <skos:notation>ENE</skos:notation>
+        <skos:prefLabel xml:lang="ca">Energia</skos:prefLabel>
+        <skos:prefLabel xml:lang="pt">Energia</skos:prefLabel>
+        <skos:prefLabel xml:lang="en">Energy</skos:prefLabel>
+        <skos:prefLabel xml:lang="es">Energía</skos:prefLabel>
+        <skos:prefLabel xml:lang="ast">Enerxía</skos:prefLabel>
+        <skos:prefLabel xml:lang="gl">Enerxía</skos:prefLabel>
+        <skos:prefLabel xml:lang="fr">Énergie</skos:prefLabel>
+        <skos:prefLabel>Energía</skos:prefLabel>
+    </NamedIndividual>
+    
+
+
+    <!-- http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_3_ESN -->
+
+
+    <NamedIndividual rdf:about="http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_3_ESN">
+        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+        <roh:hasCode rdf:resource="http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_3_CODE_ESN"/>
+        <rdfs:label>Enfermedades del sistema nervioso</rdfs:label>
+        <skos:broader rdf:resource="http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_2_BME"/>
+        <skos:exactMatch rdf:resource="http://skos.um.es/unescothes/C02702"/>
+        <skos:inScheme rdf:resource="http://purl.org/roh/subject-areas#ESSubjectAreas3rdList"/>
+        <skos:notation>ESN</skos:notation>
+        <skos:prefLabel xml:lang="pt">Doenças do sistema nervoso</skos:prefLabel>
+        <skos:prefLabel xml:lang="es">Enfermedades del sistema nervioso</skos:prefLabel>
+        <skos:prefLabel xml:lang="ast">Enfermedaes del sistema nerviosu</skos:prefLabel>
+        <skos:prefLabel xml:lang="gl">Enfermidades do sistema nervioso</skos:prefLabel>
+        <skos:prefLabel xml:lang="fr">Maladies du système nerveux</skos:prefLabel>
+        <skos:prefLabel xml:lang="ca">Malalties de sistema nerviós</skos:prefLabel>
+        <skos:prefLabel xml:lang="en">Nervous system diseases</skos:prefLabel>
+        <skos:prefLabel>Enfermedades del sistema nervioso</skos:prefLabel>
+    </NamedIndividual>
+    
+
+
+    <!-- http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_3_ESP -->
+
+
+    <NamedIndividual rdf:about="http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_3_ESP">
+        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+        <roh:hasCode rdf:resource="http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_3_CODE_ESP"/>
+        <rdfs:label>Investigación espacial</rdfs:label>
+        <skos:broader rdf:resource="http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_2_FIS"/>
+        <skos:closeMatch rdf:resource="http://skos.um.es/unescothes/C00064"/>
+        <skos:inScheme rdf:resource="http://purl.org/roh/subject-areas#ESSubjectAreas3rdList"/>
+        <skos:notation>ESP</skos:notation>
+        <skos:prefLabel xml:lang="ast">Investigación espacial</skos:prefLabel>
+        <skos:prefLabel xml:lang="es">Investigación espacial</skos:prefLabel>
+        <skos:prefLabel xml:lang="gl">Investigación espacial</skos:prefLabel>
+        <skos:prefLabel xml:lang="pt">Investigação espacial</skos:prefLabel>
+        <skos:prefLabel xml:lang="ca">Recerca espacial</skos:prefLabel>
+        <skos:prefLabel xml:lang="fr">Recherche spatiale</skos:prefLabel>
+        <skos:prefLabel xml:lang="en">Space research</skos:prefLabel>
+        <skos:prefLabel>Investigación espacial</skos:prefLabel>
+    </NamedIndividual>
+    
+
+
+    <!-- http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_3_EYA -->
+
+
+    <NamedIndividual rdf:about="http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_3_EYA">
+        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+        <roh:hasCode rdf:resource="http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_3_CODE_EYA"/>
+        <rdfs:label>Economía y sus aplicaciones</rdfs:label>
+        <skos:broader rdf:resource="http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_2_ECO"/>
+        <skos:closeMatch rdf:resource="http://skos.um.es/unescothes/C01180"/>
+        <skos:inScheme rdf:resource="http://purl.org/roh/subject-areas#ESSubjectAreas3rdList"/>
+        <skos:notation>EYA</skos:notation>
+        <skos:prefLabel xml:lang="pt">Economia e suas aplicações</skos:prefLabel>
+        <skos:prefLabel xml:lang="ca">Economia i les seves aplicacions</skos:prefLabel>
+        <skos:prefLabel xml:lang="en">Economy and its applications</skos:prefLabel>
+        <skos:prefLabel xml:lang="gl">Economía e as súas aplicacións</skos:prefLabel>
+        <skos:prefLabel xml:lang="ast">Economía y les sos aplicaciones</skos:prefLabel>
+        <skos:prefLabel xml:lang="es">Economía y sus aplicaciones</skos:prefLabel>
+        <skos:prefLabel xml:lang="fr">Économie et ses applications</skos:prefLabel>
+        <skos:prefLabel>Economía y sus aplicaciones</skos:prefLabel>
+    </NamedIndividual>
+    
+
+
+    <!-- http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_3_EYF -->
+
+
+    <NamedIndividual rdf:about="http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_3_EYF">
+        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+        <roh:hasCode rdf:resource="http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_3_CODE_EYF"/>
+        <rdfs:label>Empresas y finanzas</rdfs:label>
+        <skos:broader rdf:resource="http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_2_ECO"/>
+        <skos:closeMatch rdf:resource="http://skos.um.es/unescothes/C01374"/>
+        <skos:closeMatch rdf:resource="http://skos.um.es/unescothes/C01527"/>
+        <skos:inScheme rdf:resource="http://purl.org/roh/subject-areas#ESSubjectAreas3rdList"/>
+        <skos:notation>EYF</skos:notation>
+        <skos:prefLabel xml:lang="fr">Affaires et finances</skos:prefLabel>
+        <skos:prefLabel xml:lang="en">Business and finance</skos:prefLabel>
+        <skos:prefLabel xml:lang="es">Empresas y finanzas</skos:prefLabel>
+        <skos:prefLabel xml:lang="ca">Empreses i finances</skos:prefLabel>
+        <skos:prefLabel xml:lang="ast">Empreses y finances</skos:prefLabel>
+        <skos:prefLabel xml:lang="gl">Negocios e finanzas</skos:prefLabel>
+        <skos:prefLabel xml:lang="pt">Negócios e finanças</skos:prefLabel>
+        <skos:prefLabel>Empresas y finanzas</skos:prefLabel>
+    </NamedIndividual>
+    
+
+
+    <!-- http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_3_FEM -->
+
+
+    <NamedIndividual rdf:about="http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_3_FEM">
+        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+        <roh:hasCode rdf:resource="http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_3_CODE_FEM"/>
+        <rdfs:label>Estudios feministas, de las mujeres y de género</rdfs:label>
+        <skos:broader rdf:resource="http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_2_CSO"/>
+        <skos:closeMatch rdf:resource="http://skos.um.es/unescothes/C01650"/>
+        <skos:closeMatch rdf:resource="http://skos.um.es/unescothes/C01651"/>
+        <skos:closeMatch rdf:resource="http://skos.um.es/unescothes/C01652"/>
+        <skos:closeMatch rdf:resource="http://skos.um.es/unescothes/C01653"/>
+        <skos:closeMatch rdf:resource="http://skos.um.es/unescothes/C04347"/>
+        <skos:inScheme rdf:resource="http://purl.org/roh/subject-areas#ESSubjectAreas3rdList"/>
+        <skos:notation>FEM</skos:notation>
+        <skos:prefLabel xml:lang="es">Estudios feministas, de las mujeres y de género</skos:prefLabel>
+        <skos:prefLabel xml:lang="ast">Estudios feministes, de les muyeres y de género</skos:prefLabel>
+        <skos:prefLabel xml:lang="ca">Estudis feministes, de les dones i de gènere</skos:prefLabel>
+        <skos:prefLabel xml:lang="pt">Estudos feministas, de mulheres e de gênero</skos:prefLabel>
+        <skos:prefLabel xml:lang="gl">Estudos feministas, femininos e de xénero</skos:prefLabel>
+        <skos:prefLabel xml:lang="en">Feminist, women&apos;s and gender studies</skos:prefLabel>
+        <skos:prefLabel xml:lang="fr">Études féministes, féminines et de genre</skos:prefLabel>
+        <skos:prefLabel>Estudios feministas, de las mujeres y de género</skos:prefLabel>
+    </NamedIndividual>
+    
+
+
+    <!-- http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_3_FFP -->
+
+
+    <NamedIndividual rdf:about="http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_3_FFP">
+        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+        <roh:hasCode rdf:resource="http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_3_CODE_FFP"/>
+        <rdfs:label>Física fundamental y de partículas</rdfs:label>
+        <skos:broader rdf:resource="http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_2_FIS"/>
+        <skos:inScheme rdf:resource="http://purl.org/roh/subject-areas#ESSubjectAreas3rdList"/>
+        <skos:notation>FFP</skos:notation>
+        <skos:prefLabel xml:lang="en">Fundamental and particle physics</skos:prefLabel>
+        <skos:prefLabel xml:lang="ca">Física fonamental i de partícules</skos:prefLabel>
+        <skos:prefLabel xml:lang="gl">Física fundamental e de partículas</skos:prefLabel>
+        <skos:prefLabel xml:lang="pt">Física fundamental e de partículas</skos:prefLabel>
+        <skos:prefLabel xml:lang="es">Física fundamental y de partículas</skos:prefLabel>
+        <skos:prefLabel xml:lang="ast">Física fundamental y de partícules</skos:prefLabel>
+        <skos:prefLabel xml:lang="fr">Physique fondamentale et physique des particules</skos:prefLabel>
+        <skos:prefLabel>Física fundamental y de partículas</skos:prefLabel>
+    </NamedIndividual>
+    
+
+
+    <!-- http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_3_FIL -->
+
+
+    <NamedIndividual rdf:about="http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_3_FIL">
+        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+        <roh:hasCode rdf:resource="http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_3_CODE_FIL"/>
+        <rdfs:label>Filosofía</rdfs:label>
+        <skos:broader rdf:resource="http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_2_MLP"/>
+        <skos:exactMatch rdf:resource="http://skos.um.es/unescothes/C02971"/>
+        <skos:inScheme rdf:resource="http://purl.org/roh/subject-areas#ESSubjectAreas3rdList"/>
+        <skos:notation>FIL</skos:notation>
+        <skos:prefLabel xml:lang="ca">Filosofia</skos:prefLabel>
+        <skos:prefLabel xml:lang="pt">Filosofia</skos:prefLabel>
+        <skos:prefLabel xml:lang="ast">Filosofía</skos:prefLabel>
+        <skos:prefLabel xml:lang="es">Filosofía</skos:prefLabel>
+        <skos:prefLabel xml:lang="gl">Filosofía</skos:prefLabel>
+        <skos:prefLabel xml:lang="fr">Philosophie</skos:prefLabel>
+        <skos:prefLabel xml:lang="en">Philosophy</skos:prefLabel>
+        <skos:prefLabel>Filosofía</skos:prefLabel>
+    </NamedIndividual>
+    
+
+
+    <!-- http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_3_FOS -->
+
+
+    <NamedIndividual rdf:about="http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_3_FOS">
+        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+        <roh:hasCode rdf:resource="http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_3_CODE_FOS"/>
+        <rdfs:label>Fisiopatología de órganos y sistemas</rdfs:label>
+        <skos:broader rdf:resource="http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_2_BME"/>
+        <skos:closeMatch rdf:resource="http://skos.um.es/unescothes/C02921"/>
+        <skos:inScheme rdf:resource="http://purl.org/roh/subject-areas#ESSubjectAreas3rdList"/>
+        <skos:notation>FOS</skos:notation>
+        <skos:prefLabel xml:lang="ca">Fisiopatologia d&apos;òrgans i sistemes</skos:prefLabel>
+        <skos:prefLabel xml:lang="pt">Fisiopatologia de órgãos e sistemas</skos:prefLabel>
+        <skos:prefLabel xml:lang="ast">Fisiopatología d&apos;órganos y sistemes</skos:prefLabel>
+        <skos:prefLabel xml:lang="es">Fisiopatología de órganos y sistemas</skos:prefLabel>
+        <skos:prefLabel xml:lang="gl">Fisiopatoloxía de órganos e sistemas</skos:prefLabel>
+        <skos:prefLabel xml:lang="en">Pathophysiology of organs and systems</skos:prefLabel>
+        <skos:prefLabel xml:lang="fr">Physiopathologie des organes et des systèmes</skos:prefLabel>
+        <skos:prefLabel>Fisiopatología de órganos y sistemas</skos:prefLabel>
+    </NamedIndividual>
+    
+
+
+    <!-- http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_3_FYA -->
+
+
+    <NamedIndividual rdf:about="http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_3_FYA">
+        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+        <roh:hasCode rdf:resource="http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_3_CODE_FYA"/>
+        <rdfs:label>Física y sus aplicaciones</rdfs:label>
+        <skos:broader rdf:resource="http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_2_FIS"/>
+        <skos:closeMatch rdf:resource="http://skos.um.es/unescothes/C02994"/>
+        <skos:inScheme rdf:resource="http://purl.org/roh/subject-areas#ESSubjectAreas3rdList"/>
+        <skos:notation>FYA</skos:notation>
+        <skos:prefLabel xml:lang="gl">Física e as súas aplicacións</skos:prefLabel>
+        <skos:prefLabel xml:lang="pt">Física e suas aplicações</skos:prefLabel>
+        <skos:prefLabel xml:lang="ca">Física i les seves aplicacions</skos:prefLabel>
+        <skos:prefLabel xml:lang="ast">Física y les sos aplicaciones</skos:prefLabel>
+        <skos:prefLabel xml:lang="es">Física y sus aplicaciones</skos:prefLabel>
+        <skos:prefLabel xml:lang="en">Physics and its applications</skos:prefLabel>
+        <skos:prefLabel xml:lang="fr">Physique et ses applications</skos:prefLabel>
+        <skos:prefLabel>Física y sus aplicaciones</skos:prefLabel>
+    </NamedIndividual>
+    
+
+
+    <!-- http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_3_GEO -->
+
+
+    <NamedIndividual rdf:about="http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_3_GEO">
+        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+        <roh:hasCode rdf:resource="http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_3_CODE_GEO"/>
+        <rdfs:label>Geografía</rdfs:label>
+        <skos:broader rdf:resource="http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_2_CSO"/>
+        <skos:exactMatch rdf:resource="http://skos.um.es/unescothes/C01672"/>
+        <skos:inScheme rdf:resource="http://purl.org/roh/subject-areas#ESSubjectAreas3rdList"/>
+        <skos:notation>GEO</skos:notation>
+        <skos:prefLabel xml:lang="ca">Geografia</skos:prefLabel>
+        <skos:prefLabel xml:lang="pt">Geografia</skos:prefLabel>
+        <skos:prefLabel xml:lang="ast">Geografía</skos:prefLabel>
+        <skos:prefLabel xml:lang="es">Geografía</skos:prefLabel>
+        <skos:prefLabel xml:lang="en">Geography</skos:prefLabel>
+        <skos:prefLabel xml:lang="fr">Géographie</skos:prefLabel>
+        <skos:prefLabel xml:lang="gl">Xeografía</skos:prefLabel>
+        <skos:prefLabel>Geografía</skos:prefLabel>
+    </NamedIndividual>
+    
+
+
+    <!-- http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_3_GYA -->
+
+
+    <NamedIndividual rdf:about="http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_3_GYA">
+        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+        <roh:hasCode rdf:resource="http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_3_CODE_GYA"/>
+        <rdfs:label>Ganadería y acuicultura</rdfs:label>
+        <skos:broader rdf:resource="http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_2_CAA"/>
+        <skos:closeMatch rdf:resource="http://skos.um.es/unescothes/C00165"/>
+        <skos:closeMatch rdf:resource="http://skos.um.es/unescothes/C00192"/>
+        <skos:inScheme rdf:resource="http://purl.org/roh/subject-areas#ESSubjectAreas3rdList"/>
+        <skos:notation>GYA</skos:notation>
+        <skos:prefLabel xml:lang="fr">Bétail et aquaculture</skos:prefLabel>
+        <skos:prefLabel xml:lang="ast">Ganadería y acuicultura</skos:prefLabel>
+        <skos:prefLabel xml:lang="es">Ganadería y acuicultura</skos:prefLabel>
+        <skos:prefLabel xml:lang="gl">Gandería e acuicultura</skos:prefLabel>
+        <skos:prefLabel xml:lang="en">Livestock and aquaculture</skos:prefLabel>
+        <skos:prefLabel xml:lang="pt">Pecuária e aquicultura</skos:prefLabel>
+        <skos:prefLabel xml:lang="ca">Ramaderia i aqüicultura</skos:prefLabel>
+        <skos:prefLabel>Ganadería y acuicultura</skos:prefLabel>
+    </NamedIndividual>
+    
+
+
+    <!-- http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_3_HIS -->
+
+
+    <NamedIndividual rdf:about="http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_3_HIS">
+        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+        <roh:hasCode rdf:resource="http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_3_CODE_HIS"/>
+        <rdfs:label>Historia</rdfs:label>
+        <skos:broader rdf:resource="http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_2_PHA"/>
+        <skos:exactMatch rdf:resource="http://skos.um.es/unescothes/C01809"/>
+        <skos:inScheme rdf:resource="http://purl.org/roh/subject-areas#ESSubjectAreas3rdList"/>
+        <skos:notation>HIS</skos:notation>
+        <skos:prefLabel xml:lang="fr">Histoire</skos:prefLabel>
+        <skos:prefLabel xml:lang="ast">Historia</skos:prefLabel>
+        <skos:prefLabel xml:lang="es">Historia</skos:prefLabel>
+        <skos:prefLabel xml:lang="gl">Historia</skos:prefLabel>
+        <skos:prefLabel xml:lang="en">History</skos:prefLabel>
+        <skos:prefLabel xml:lang="ca">Història</skos:prefLabel>
+        <skos:prefLabel xml:lang="pt">História</skos:prefLabel>
+        <skos:prefLabel>Historia</skos:prefLabel>
+    </NamedIndividual>
+    
+
+
+    <!-- http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_3_IBI -->
+
+
+    <NamedIndividual rdf:about="http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_3_IBI">
+        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+        <roh:hasCode rdf:resource="http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_3_CODE_IBI"/>
+        <rdfs:label>Ingeniería biomédica</rdfs:label>
+        <skos:broader rdf:resource="http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_2_PIN"/>
+        <skos:exactMatch rdf:resource="http://skos.um.es/unescothes/C02465"/>
+        <skos:inScheme rdf:resource="http://purl.org/roh/subject-areas#ESSubjectAreas3rdList"/>
+        <skos:notation>IBI</skos:notation>
+        <skos:prefLabel xml:lang="en">Biomedical engineering</skos:prefLabel>
+        <skos:prefLabel xml:lang="pt">Engenharia Biomédica</skos:prefLabel>
+        <skos:prefLabel xml:lang="ca">Enginyeria biomèdica</skos:prefLabel>
+        <skos:prefLabel xml:lang="gl">Enxeñaría biomédica</skos:prefLabel>
+        <skos:prefLabel xml:lang="es">Ingeniería biomédica</skos:prefLabel>
+        <skos:prefLabel xml:lang="fr">Ingénierie biomédical</skos:prefLabel>
+        <skos:prefLabel xml:lang="ast">Inxeniería biomédica</skos:prefLabel>
+        <skos:prefLabel>Ingeniería biomédica</skos:prefLabel>
+    </NamedIndividual>
+    
+
+
+    <!-- http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_3_ICA -->
+
+
+    <NamedIndividual rdf:about="http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_3_ICA">
+        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+        <roh:hasCode rdf:resource="http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_3_CODE_ICA"/>
+        <rdfs:label>Ingeniería civil y arquitectura</rdfs:label>
+        <skos:broader rdf:resource="http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_2_PIN"/>
+        <skos:closeMatch rdf:resource="http://skos.um.es/unescothes/C00216"/>
+        <skos:closeMatch rdf:resource="http://skos.um.es/unescothes/C00606"/>
+        <skos:inScheme rdf:resource="http://purl.org/roh/subject-areas#ESSubjectAreas3rdList"/>
+        <skos:notation>ICA</skos:notation>
+        <skos:prefLabel xml:lang="en">Civil engineering and architecture</skos:prefLabel>
+        <skos:prefLabel xml:lang="pt">Engenharia civil e arquitetura</skos:prefLabel>
+        <skos:prefLabel xml:lang="ca">Enginyeria civil i arquitectura</skos:prefLabel>
+        <skos:prefLabel xml:lang="gl">Enxeñaría civil e arquitectura</skos:prefLabel>
+        <skos:prefLabel xml:lang="es">Ingeniería civil y arquitectura</skos:prefLabel>
+        <skos:prefLabel xml:lang="fr">Ingénierie civil et architecture</skos:prefLabel>
+        <skos:prefLabel xml:lang="ast">Inxeniería civil y arquitectura</skos:prefLabel>
+        <skos:prefLabel>Ingeniería civil y arquitectura</skos:prefLabel>
+    </NamedIndividual>
+    
+
+
+    <!-- http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_3_IEA -->
+
+
+    <NamedIndividual rdf:about="http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_3_IEA">
+        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+        <roh:hasCode rdf:resource="http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_3_CODE_IEA"/>
+        <rdfs:label>Ingeniería eléctrica, electrónica y automática</rdfs:label>
+        <skos:broader rdf:resource="http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_2_PIN"/>
+        <skos:closeMatch rdf:resource="http://skos.um.es/unescothes/C01311"/>
+        <skos:closeMatch rdf:resource="http://skos.um.es/unescothes/C01321"/>
+        <skos:closeMatch rdf:resource="http://skos.um.es/unescothes/C01363"/>
+        <skos:inScheme rdf:resource="http://purl.org/roh/subject-areas#ESSubjectAreas3rdList"/>
+        <skos:notation>IEA</skos:notation>
+        <skos:prefLabel xml:lang="en">Electrical, electronic and automatic engineering</skos:prefLabel>
+        <skos:prefLabel xml:lang="pt">Engenharia elétrica, eletrônica e automática</skos:prefLabel>
+        <skos:prefLabel xml:lang="ca">Enginyeria elèctrica, electrònica i automàtica</skos:prefLabel>
+        <skos:prefLabel xml:lang="gl">Enxeñaría eléctrica, electrónica e automática</skos:prefLabel>
+        <skos:prefLabel xml:lang="es">Ingeniería eléctrica, electrónica y automática</skos:prefLabel>
+        <skos:prefLabel xml:lang="fr">Ingénierie électrique, électronique et automatique</skos:prefLabel>
+        <skos:prefLabel xml:lang="ast">Inxeniería eléctrica, electrónica y automática</skos:prefLabel>
+        <skos:prefLabel>Ingeniería eléctrica, electrónica y automática</skos:prefLabel>
+    </NamedIndividual>
+    
+
+
+    <!-- http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_3_IIT -->
+
+
+    <NamedIndividual rdf:about="http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_3_IIT">
+        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+        <roh:hasCode rdf:resource="http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_3_CODE_IIT"/>
+        <rdfs:label>Inmunidad, infección y nuevas terapias</rdfs:label>
+        <skos:broader rdf:resource="http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_2_BME"/>
+        <skos:closeMatch rdf:resource="http://skos.um.es/unescothes/C01921"/>
+        <skos:closeMatch rdf:resource="http://skos.um.es/unescothes/C01973"/>
+        <skos:inScheme rdf:resource="http://purl.org/roh/subject-areas#ESSubjectAreas3rdList"/>
+        <skos:notation>IIT</skos:notation>
+        <skos:prefLabel xml:lang="ca">Immunitat, infecció i noves teràpies</skos:prefLabel>
+        <skos:prefLabel xml:lang="en">Immunity, infection and new therapies</skos:prefLabel>
+        <skos:prefLabel xml:lang="fr">Immunité, infection et nouvelles thérapies</skos:prefLabel>
+        <skos:prefLabel xml:lang="pt">Imunidade, infecção e novas terapias</skos:prefLabel>
+        <skos:prefLabel xml:lang="es">Inmunidad, infección y nuevas terapias</skos:prefLabel>
+        <skos:prefLabel xml:lang="ast">Inmunidad, infección y nueves terapies</skos:prefLabel>
+        <skos:prefLabel xml:lang="gl">Inmunidade, infección e novas terapias</skos:prefLabel>
+        <skos:prefLabel>Inmunidad, infección y nuevas terapias</skos:prefLabel>
+    </NamedIndividual>
+    
+
+
+    <!-- http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_3_INA -->
+
+
+    <NamedIndividual rdf:about="http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_3_INA">
+        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+        <roh:hasCode rdf:resource="http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_3_CODE_INA"/>
+        <rdfs:label>Ingeniería mecánica, naval y aeronáutica</rdfs:label>
+        <skos:broader rdf:resource="http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_2_PIN"/>
+        <skos:closeMatch rdf:resource="http://skos.um.es/unescothes/C00064"/>
+        <skos:closeMatch rdf:resource="http://skos.um.es/unescothes/C02398"/>
+        <skos:closeMatch rdf:resource="http://skos.um.es/unescothes/C02447"/>
+        <skos:inScheme rdf:resource="http://purl.org/roh/subject-areas#ESSubjectAreas3rdList"/>
+        <skos:notation>INA</skos:notation>
+        <skos:prefLabel xml:lang="pt">Engenharia mecânica, naval e aeronáutica</skos:prefLabel>
+        <skos:prefLabel xml:lang="ca">Enginyeria mecànica, naval i aeronàutica</skos:prefLabel>
+        <skos:prefLabel xml:lang="gl">Enxeñaría mecánica, naval e aeronáutica</skos:prefLabel>
+        <skos:prefLabel xml:lang="es">Ingeniería mecánica, naval y aeronáutica</skos:prefLabel>
+        <skos:prefLabel xml:lang="fr">Ingénierie mécanique, naval et aéronautique</skos:prefLabel>
+        <skos:prefLabel xml:lang="ast">Inxeniería mecánica, naval y aeronáutica</skos:prefLabel>
+        <skos:prefLabel xml:lang="en">Mechanical, naval and aeronautical engineering</skos:prefLabel>
+        <skos:prefLabel>Ingeniería mecánica, naval y aeronáutica</skos:prefLabel>
+    </NamedIndividual>
+    
+
+
+    <!-- http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_3_INF -->
+
+
+    <NamedIndividual rdf:about="http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_3_INF">
+        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+        <roh:hasCode rdf:resource="http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_3_CODE_INF"/>
+        <rdfs:label>Ciencias de la computación y tecnología informática</rdfs:label>
+        <skos:broader rdf:resource="http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_2_TIC"/>
+        <skos:closeMatch rdf:resource="http://skos.um.es/unescothes/C00750"/>
+        <skos:inScheme rdf:resource="http://purl.org/roh/subject-areas#ESSubjectAreas3rdList"/>
+        <skos:notation>INF</skos:notation>
+        <skos:prefLabel xml:lang="es">Ciencias de la computación y tecnología informática</skos:prefLabel>
+        <skos:prefLabel xml:lang="ast">Ciencies de la computación y tecnoloxía informática</skos:prefLabel>
+        <skos:prefLabel xml:lang="ca">Ciències de la computació i tecnologia informàtica</skos:prefLabel>
+        <skos:prefLabel xml:lang="pt">Ciência da computação e tecnologia da computação</skos:prefLabel>
+        <skos:prefLabel xml:lang="en">Computer science and computer technology</skos:prefLabel>
+        <skos:prefLabel xml:lang="fr">Informatique et technologie informatique</skos:prefLabel>
+        <skos:prefLabel xml:lang="gl">Informática e tecnoloxía informática</skos:prefLabel>
+        <skos:prefLabel>Ciencias de la computación y tecnología informática</skos:prefLabel>
+    </NamedIndividual>
+    
+
+
+    <!-- http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_3_IQM -->
+
+
+    <NamedIndividual rdf:about="http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_3_IQM">
+        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+        <roh:hasCode rdf:resource="http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_3_CODE_IQM"/>
+        <rdfs:label>Ingeniería química</rdfs:label>
+        <skos:broader rdf:resource="http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_2_CTQ"/>
+        <skos:exactMatch rdf:resource="http://skos.um.es/unescothes/C00565"/>
+        <skos:inScheme rdf:resource="http://purl.org/roh/subject-areas#ESSubjectAreas3rdList"/>
+        <skos:notation>IQM</skos:notation>
+        <skos:prefLabel xml:lang="en">Chemical engineering</skos:prefLabel>
+        <skos:prefLabel xml:lang="pt">Engenharia Química</skos:prefLabel>
+        <skos:prefLabel xml:lang="ca">Enginyeria química</skos:prefLabel>
+        <skos:prefLabel xml:lang="gl">Enxeñaría química</skos:prefLabel>
+        <skos:prefLabel xml:lang="es">Ingeniería química</skos:prefLabel>
+        <skos:prefLabel xml:lang="fr">Ingénierie chimique</skos:prefLabel>
+        <skos:prefLabel xml:lang="ast">Inxeniería química</skos:prefLabel>
+        <skos:prefLabel>Ingeniería química</skos:prefLabel>
+    </NamedIndividual>
+    
+
+
+    <!-- http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_3_LFL -->
+
+
+    <NamedIndividual rdf:about="http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_3_LFL">
+        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+        <roh:hasCode rdf:resource="http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_3_CODE_LFL"/>
+        <rdfs:label>Literatura, filología, lenguas y culturas antiguas y estudios culturales</rdfs:label>
+        <skos:broader rdf:resource="http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_2_FLA"/>
+        <skos:closeMatch rdf:resource="http://skos.um.es/unescothes/C00152"/>
+        <skos:closeMatch rdf:resource="http://skos.um.es/unescothes/C00921"/>
+        <skos:closeMatch rdf:resource="http://skos.um.es/unescothes/C02314"/>
+        <skos:closeMatch rdf:resource="http://skos.um.es/unescothes/C02321"/>
+        <skos:inScheme rdf:resource="http://purl.org/roh/subject-areas#ESSubjectAreas3rdList"/>
+        <skos:notation>LFL</skos:notation>
+        <skos:prefLabel xml:lang="ca">Literatura, filologia, llengües i cultures antigues i estudis culturals</skos:prefLabel>
+        <skos:prefLabel xml:lang="pt">Literatura, filologia, línguas e culturas antigas e estudos culturais</skos:prefLabel>
+        <skos:prefLabel xml:lang="es">Literatura, filología, lenguas y culturas antiguas y estudios culturales</skos:prefLabel>
+        <skos:prefLabel xml:lang="gl">Literatura, filoloxía, linguas e culturas antigas e estudos culturais</skos:prefLabel>
+        <skos:prefLabel xml:lang="en">Literature, philology, ancient languages and cultures and cultural studies</skos:prefLabel>
+        <skos:prefLabel xml:lang="fr">Littérature, philologie, langues et cultures anciennes et études culturelles</skos:prefLabel>
+        <skos:prefLabel xml:lang="ast">Lliteratura, filoloxía, llingües y cultures antigües y estudios culturales</skos:prefLabel>
+        <skos:prefLabel>Literatura, filología, lenguas y culturas antiguas y estudios culturales</skos:prefLabel>
+    </NamedIndividual>
+    
+
+
+    <!-- http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_3_LYL -->
+
+
+    <NamedIndividual rdf:about="http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_3_LYL">
+        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+        <roh:hasCode rdf:resource="http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_3_CODE_LYL"/>
+        <rdfs:label>Lingüística y lenguas</rdfs:label>
+        <skos:broader rdf:resource="http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_2_MLP"/>
+        <skos:closeMatch rdf:resource="http://skos.um.es/unescothes/C02306"/>
+        <skos:inScheme rdf:resource="http://purl.org/roh/subject-areas#ESSubjectAreas3rdList"/>
+        <skos:notation>LYL</skos:notation>
+        <skos:prefLabel xml:lang="en">Linguistics and languages</skos:prefLabel>
+        <skos:prefLabel xml:lang="fr">Linguistique et langues</skos:prefLabel>
+        <skos:prefLabel xml:lang="pt">Linguística e línguas</skos:prefLabel>
+        <skos:prefLabel xml:lang="gl">Lingüística e linguas</skos:prefLabel>
+        <skos:prefLabel xml:lang="ca">Lingüística i llengües</skos:prefLabel>
+        <skos:prefLabel xml:lang="es">Lingüística y lenguas</skos:prefLabel>
+        <skos:prefLabel xml:lang="ast">Llingüística y lengua</skos:prefLabel>
+        <skos:prefLabel>Lingüística y lenguas</skos:prefLabel>
+    </NamedIndividual>
+    
+
+
+    <!-- http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_3_MAE -->
+
+
+    <NamedIndividual rdf:about="http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_3_MAE">
+        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+        <roh:hasCode rdf:resource="http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_3_CODE_MAE"/>
+        <rdfs:label>Métodos de análisis económico</rdfs:label>
+        <skos:broader rdf:resource="http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_2_ECO"/>
+        <skos:closeMatch rdf:resource="http://skos.um.es/unescothes/C01147"/>
+        <skos:inScheme rdf:resource="http://purl.org/roh/subject-areas#ESSubjectAreas3rdList"/>
+        <skos:notation>MAE</skos:notation>
+        <skos:prefLabel xml:lang="en">Economic analysis methods</skos:prefLabel>
+        <skos:prefLabel xml:lang="ca">Mètodes d&apos;anàlisi econòmica</skos:prefLabel>
+        <skos:prefLabel xml:lang="fr">Méthodes d&apos;analyse économique</skos:prefLabel>
+        <skos:prefLabel xml:lang="ast">Método d&apos;analís económicu</skos:prefLabel>
+        <skos:prefLabel xml:lang="gl">Métodos de análise económica</skos:prefLabel>
+        <skos:prefLabel xml:lang="pt">Métodos de análise econômica</skos:prefLabel>
+        <skos:prefLabel xml:lang="es">Métodos de análisis económico</skos:prefLabel>
+        <skos:prefLabel>Métodos de análisis económico</skos:prefLabel>
+    </NamedIndividual>
+    
+
+
+    <!-- http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_3_MAR -->
+
+
+    <NamedIndividual rdf:about="http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_3_MAR">
+        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+        <roh:hasCode rdf:resource="http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_3_CODE_MAR"/>
+        <rdfs:label>Ciencias y tecnologías marinas</rdfs:label>
+        <skos:broader rdf:resource="http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_2_CTM"/>
+        <skos:closeMatch rdf:resource="http://skos.um.es/unescothes/C02814"/>
+        <skos:inScheme rdf:resource="http://purl.org/roh/subject-areas#ESSubjectAreas3rdList"/>
+        <skos:notation>MAR</skos:notation>
+        <skos:prefLabel xml:lang="gl">Ciencia e tecnoloxía mariña</skos:prefLabel>
+        <skos:prefLabel xml:lang="es">Ciencias y tecnologías marinas</skos:prefLabel>
+        <skos:prefLabel xml:lang="ast">Ciencies y tecnoloxíes marines</skos:prefLabel>
+        <skos:prefLabel xml:lang="ca">Ciències i tecnologies marines</skos:prefLabel>
+        <skos:prefLabel xml:lang="pt">Ciência e tecnologia marinha</skos:prefLabel>
+        <skos:prefLabel xml:lang="en">Marine science and technology</skos:prefLabel>
+        <skos:prefLabel xml:lang="fr">Sciences et technologies marines</skos:prefLabel>
+        <skos:prefLabel>Ciencias y tecnologías marinas</skos:prefLabel>
+    </NamedIndividual>
+    
+
+
+    <!-- http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_3_MBM -->
+
+
+    <NamedIndividual rdf:about="http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_3_MBM">
+        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+        <roh:hasCode rdf:resource="http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_3_CODE_MBM"/>
+        <rdfs:label>Materiales para biomedicina</rdfs:label>
+        <skos:broader rdf:resource="http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_2_MAT"/>
+        <skos:inScheme rdf:resource="http://purl.org/roh/subject-areas#ESSubjectAreas3rdList"/>
+        <skos:notation>MBM</skos:notation>
+        <skos:prefLabel xml:lang="gl">Materiais para biomedicina</skos:prefLabel>
+        <skos:prefLabel xml:lang="pt">Materiais para biomedicina</skos:prefLabel>
+        <skos:prefLabel xml:lang="ast">Materiales para biomedicina</skos:prefLabel>
+        <skos:prefLabel xml:lang="es">Materiales para biomedicina</skos:prefLabel>
+        <skos:prefLabel xml:lang="en">Materials for biomedicine</skos:prefLabel>
+        <skos:prefLabel xml:lang="ca">Materials per a biomedicina</skos:prefLabel>
+        <skos:prefLabel xml:lang="fr">Matériaux pour la biomédecine</skos:prefLabel>
+        <skos:prefLabel>Materiales para biomedicina</skos:prefLabel>
+    </NamedIndividual>
+    
+
+
+    <!-- http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_3_MEN -->
+
+
+    <NamedIndividual rdf:about="http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_3_MEN">
+        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+        <roh:hasCode rdf:resource="http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_3_CODE_MEN"/>
+        <rdfs:label>Materiales para la energía y el medioambiente</rdfs:label>
+        <skos:broader rdf:resource="http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_2_MAT"/>
+        <skos:inScheme rdf:resource="http://purl.org/roh/subject-areas#ESSubjectAreas3rdList"/>
+        <skos:notation>MEN</skos:notation>
+        <skos:prefLabel xml:lang="gl">Materiais para a enerxía e o medio ambiente</skos:prefLabel>
+        <skos:prefLabel xml:lang="pt">Materiais para energia e meio ambiente</skos:prefLabel>
+        <skos:prefLabel xml:lang="ast">Materiales pa la enerxía y el medioambiente</skos:prefLabel>
+        <skos:prefLabel xml:lang="es">Materiales para la energía y el medioambiente</skos:prefLabel>
+        <skos:prefLabel xml:lang="en">Materials for energy and the environment</skos:prefLabel>
+        <skos:prefLabel xml:lang="ca">Materials per a l&apos;energia i el medi ambient</skos:prefLabel>
+        <skos:prefLabel xml:lang="fr">Matériaux pour l&apos;énergie et l&apos;environnement</skos:prefLabel>
+        <skos:prefLabel>Materiales para la energía y el medioambiente</skos:prefLabel>
+    </NamedIndividual>
+    
+
+
+    <!-- http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_3_MES -->
+
+
+    <NamedIndividual rdf:about="http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_3_MES">
+        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+        <roh:hasCode rdf:resource="http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_3_CODE_MES"/>
+        <rdfs:label>Materiales estructurales</rdfs:label>
+        <skos:broader rdf:resource="http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_2_MAT"/>
+        <skos:inScheme rdf:resource="http://purl.org/roh/subject-areas#ESSubjectAreas3rdList"/>
+        <skos:notation>MES</skos:notation>
+        <skos:prefLabel xml:lang="gl">Materiais estruturais</skos:prefLabel>
+        <skos:prefLabel xml:lang="pt">Materiais estruturais</skos:prefLabel>
+        <skos:prefLabel xml:lang="ast">Materiales estructurales</skos:prefLabel>
+        <skos:prefLabel xml:lang="es">Materiales estructurales</skos:prefLabel>
+        <skos:prefLabel xml:lang="ca">Materials estructurals</skos:prefLabel>
+        <skos:prefLabel xml:lang="fr">Matériaux structurels</skos:prefLabel>
+        <skos:prefLabel xml:lang="en">Structural materials</skos:prefLabel>
+        <skos:prefLabel>Materiales estructurales</skos:prefLabel>
+    </NamedIndividual>
+    
+
+
+    <!-- http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_3_MFU -->
+
+
+    <NamedIndividual rdf:about="http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_3_MFU">
+        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+        <roh:hasCode rdf:resource="http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_3_CODE_MFU"/>
+        <rdfs:label>Materiales con funcionalidad eléctrica, magnética, óptica o térmica</rdfs:label>
+        <skos:broader rdf:resource="http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_2_MAT"/>
+        <skos:inScheme rdf:resource="http://purl.org/roh/subject-areas#ESSubjectAreas3rdList"/>
+        <skos:notation>MFU</skos:notation>
+        <skos:prefLabel xml:lang="pt">Materiais com funcionalidade elétrica, magnética, óptica ou térmica</skos:prefLabel>
+        <skos:prefLabel xml:lang="gl">Materiais con funcionalidade eléctrica, magnética, óptica ou térmica</skos:prefLabel>
+        <skos:prefLabel xml:lang="ast">Materiales con funcionalidad eléctrica, magnética, óptica o térmica</skos:prefLabel>
+        <skos:prefLabel xml:lang="es">Materiales con funcionalidad eléctrica, magnética, óptica o térmica</skos:prefLabel>
+        <skos:prefLabel xml:lang="ca">Materials amb funcionalitat elèctrica, magnètica, òptica o tèrmica</skos:prefLabel>
+        <skos:prefLabel xml:lang="en">Materials with electrical, magnetic, optical or thermal functionality</skos:prefLabel>
+        <skos:prefLabel xml:lang="fr">Matériaux à fonctionnalité électrique, magnétique, optique ou thermique</skos:prefLabel>
+        <skos:prefLabel>Materiales con funcionalidad eléctrica, magnética, óptica o térmica</skos:prefLabel>
+    </NamedIndividual>
+    
+
+
+    <!-- http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_3_MNF -->
+
+
+    <NamedIndividual rdf:about="http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_3_MNF">
+        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+        <roh:hasCode rdf:resource="http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_3_CODE_MNF"/>
+        <rdfs:label>Microelectrónica, nanotecnología y fotónica</rdfs:label>
+        <skos:broader rdf:resource="http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_2_TIC"/>
+        <skos:closeMatch rdf:resource="http://skos.um.es/unescothes/C02507"/>
+        <skos:closeMatch rdf:resource="http://skos.um.es/unescothes/C02659"/>
+        <skos:inScheme rdf:resource="http://purl.org/roh/subject-areas#ESSubjectAreas3rdList"/>
+        <skos:notation>MNF</skos:notation>
+        <skos:prefLabel xml:lang="en">Microelectronics, nanotechnology and photonics</skos:prefLabel>
+        <skos:prefLabel xml:lang="ca">Microelectrònica, nanotecnologia i fotònica</skos:prefLabel>
+        <skos:prefLabel xml:lang="ast">Microelectrónica, nanotecnología y fotónica</skos:prefLabel>
+        <skos:prefLabel xml:lang="es">Microelectrónica, nanotecnología y fotónica</skos:prefLabel>
+        <skos:prefLabel xml:lang="gl">Microelectrónica, nanotecnoloxía e fotónica</skos:prefLabel>
+        <skos:prefLabel xml:lang="pt">Microeletrônica, nanotecnologia e fotônica</skos:prefLabel>
+        <skos:prefLabel xml:lang="fr">Microélectronique, nanotechnologie et photonique</skos:prefLabel>
+        <skos:prefLabel>Microelectrónica, nanotecnología y fotónica</skos:prefLabel>
+    </NamedIndividual>
+    
+
+
+    <!-- http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_3_MT3 -->
+
+
+    <NamedIndividual rdf:about="http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_3_MT3">
+        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+        <roh:hasCode rdf:resource="http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_3_CODE_MT3"/>
+        <rdfs:label>Ciencias matemáticas</rdfs:label>
+        <skos:broader rdf:resource="http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_2_MTM"/>
+        <skos:closeMatch rdf:resource="http://skos.um.es/unescothes/C02437"/>
+        <skos:inScheme rdf:resource="http://purl.org/roh/subject-areas#ESSubjectAreas3rdList"/>
+        <skos:notation>MT3</skos:notation>
+        <skos:prefLabel xml:lang="es">Ciencias matemáticas</skos:prefLabel>
+        <skos:prefLabel xml:lang="gl">Ciencias matemáticas</skos:prefLabel>
+        <skos:prefLabel xml:lang="ast">Ciencies matemátiques</skos:prefLabel>
+        <skos:prefLabel xml:lang="ca">Ciències matemàtiques</skos:prefLabel>
+        <skos:prefLabel xml:lang="pt">Ciências Matemáticas</skos:prefLabel>
+        <skos:prefLabel xml:lang="en">Mathematical Sciences</skos:prefLabel>
+        <skos:prefLabel xml:lang="fr">Sciences mathématiques</skos:prefLabel>
+        <skos:prefLabel>Ciencias matemáticas</skos:prefLabel>
+    </NamedIndividual>
+    
+
+
+    <!-- http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_3_POL -->
+
+
+    <NamedIndividual rdf:about="http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_3_POL">
+        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+        <roh:hasCode rdf:resource="http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_3_CODE_POL"/>
+        <rdfs:label>Investigación polar</rdfs:label>
+        <skos:broader rdf:resource="http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_2_CTM"/>
+        <skos:inScheme rdf:resource="http://purl.org/roh/subject-areas#ESSubjectAreas3rdList"/>
+        <skos:notation>POL</skos:notation>
+        <skos:prefLabel xml:lang="ast">Investigación polar</skos:prefLabel>
+        <skos:prefLabel xml:lang="es">Investigación polar</skos:prefLabel>
+        <skos:prefLabel xml:lang="gl">Investigación polar</skos:prefLabel>
+        <skos:prefLabel xml:lang="pt">Pesquisa polar</skos:prefLabel>
+        <skos:prefLabel xml:lang="en">Polar research</skos:prefLabel>
+        <skos:prefLabel xml:lang="ca">Recerca polar</skos:prefLabel>
+        <skos:prefLabel xml:lang="fr">Recherche polaire</skos:prefLabel>
+        <skos:prefLabel>Investigación polar</skos:prefLabel>
+    </NamedIndividual>
+    
+
+
+    <!-- http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_3_PS3 -->
+
+
+    <NamedIndividual rdf:about="http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_3_PS3">
+        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+        <roh:hasCode rdf:resource="http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_3_CODE_PS3"/>
+        <rdfs:label>Psicología</rdfs:label>
+        <skos:broader rdf:resource="http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_2_PSI"/>
+        <skos:inScheme rdf:resource="http://purl.org/roh/subject-areas#ESSubjectAreas3rdList"/>
+        <skos:notation>PS3</skos:notation>
+        <skos:prefLabel xml:lang="ca">Psicologia</skos:prefLabel>
+        <skos:prefLabel xml:lang="pt">Psicologia</skos:prefLabel>
+        <skos:prefLabel xml:lang="es">Psicología</skos:prefLabel>
+        <skos:prefLabel xml:lang="ast">Psicoloxía</skos:prefLabel>
+        <skos:prefLabel xml:lang="gl">Psicoloxía</skos:prefLabel>
+        <skos:prefLabel xml:lang="fr">Psychologie</skos:prefLabel>
+        <skos:prefLabel xml:lang="en">Psychology</skos:prefLabel>
+        <skos:prefLabel>Psicología</skos:prefLabel>
+    </NamedIndividual>
+    
+
+
+    <!-- http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_3_QMC -->
+
+
+    <NamedIndividual rdf:about="http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_3_QMC">
+        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+        <roh:hasCode rdf:resource="http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_3_CODE_QMC"/>
+        <rdfs:label>Química</rdfs:label>
+        <skos:broader rdf:resource="http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_2_CTQ"/>
+        <skos:exactMatch rdf:resource="http://skos.um.es/unescothes/C00568"/>
+        <skos:inScheme rdf:resource="http://purl.org/roh/subject-areas#ESSubjectAreas3rdList"/>
+        <skos:notation>QMC</skos:notation>
+        <skos:prefLabel xml:lang="en">Chemistry</skos:prefLabel>
+        <skos:prefLabel xml:lang="fr">Chimie</skos:prefLabel>
+        <skos:prefLabel xml:lang="ast">Química</skos:prefLabel>
+        <skos:prefLabel xml:lang="ca">Química</skos:prefLabel>
+        <skos:prefLabel xml:lang="es">Química</skos:prefLabel>
+        <skos:prefLabel xml:lang="gl">Química</skos:prefLabel>
+        <skos:prefLabel xml:lang="pt">Química</skos:prefLabel>
+        <skos:prefLabel>Química</skos:prefLabel>
+    </NamedIndividual>
+    
+
+
+    <!-- http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_3_SOC -->
+
+
+    <NamedIndividual rdf:about="http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_3_SOC">
+        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+        <roh:hasCode rdf:resource="http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_3_CODE_SOC"/>
+        <rdfs:label>Sociología y antropología social</rdfs:label>
+        <skos:broader rdf:resource="http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_2_CSO"/>
+        <skos:closeMatch rdf:resource="http://skos.um.es/unescothes/C01430"/>
+        <skos:closeMatch rdf:resource="http://skos.um.es/unescothes/C03740"/>
+        <skos:inScheme rdf:resource="http://purl.org/roh/subject-areas#ESSubjectAreas3rdList"/>
+        <skos:notation>SOC</skos:notation>
+        <skos:prefLabel xml:lang="pt">Sociologia e antropologia social</skos:prefLabel>
+        <skos:prefLabel xml:lang="ca">Sociologia i antropologia social</skos:prefLabel>
+        <skos:prefLabel xml:lang="fr">Sociologie et anthropologie sociale</skos:prefLabel>
+        <skos:prefLabel xml:lang="en">Sociology and social anthropology</skos:prefLabel>
+        <skos:prefLabel xml:lang="es">Sociología y antropología social</skos:prefLabel>
+        <skos:prefLabel xml:lang="gl">Socioloxía e antropoloxía social</skos:prefLabel>
+        <skos:prefLabel xml:lang="ast">Socioloxía y antropoloxía social</skos:prefLabel>
+        <skos:prefLabel>Sociología y antropología social</skos:prefLabel>
+    </NamedIndividual>
+    
+
+
+    <!-- http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_3_TCO -->
+
+
+    <NamedIndividual rdf:about="http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_3_TCO">
+        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+        <roh:hasCode rdf:resource="http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_3_CODE_TCO"/>
+        <rdfs:label>Tecnologías de las comunicaciones</rdfs:label>
+        <skos:broader rdf:resource="http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_2_TIC"/>
+        <skos:exactMatch rdf:resource="http://skos.um.es/unescothes/C00705"/>
+        <skos:inScheme rdf:resource="http://purl.org/roh/subject-areas#ESSubjectAreas3rdList"/>
+        <skos:notation>TCO</skos:notation>
+        <skos:prefLabel xml:lang="en">Communication technologies</skos:prefLabel>
+        <skos:prefLabel xml:lang="fr">Technologies de communication</skos:prefLabel>
+        <skos:prefLabel xml:lang="pt">Tecnologias de comunicação</skos:prefLabel>
+        <skos:prefLabel xml:lang="ca">Tecnologies de les comunicacions</skos:prefLabel>
+        <skos:prefLabel xml:lang="es">Tecnologías de las comunicaciones</skos:prefLabel>
+        <skos:prefLabel xml:lang="gl">Tecnoloxías da comunicación</skos:prefLabel>
+        <skos:prefLabel xml:lang="ast">Tecnoloxíes de les comunicaciones</skos:prefLabel>
+        <skos:prefLabel>Tecnologías de las comunicaciones</skos:prefLabel>
+    </NamedIndividual>
+    
+
+
+    <!-- http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_3_TMA -->
+
+
+    <NamedIndividual rdf:about="http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_3_TMA">
+        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+        <roh:hasCode rdf:resource="http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_3_CODE_TMA"/>
+        <rdfs:label>Tecnologías medioambientales</rdfs:label>
+        <skos:broader rdf:resource="http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_2_CTM"/>
+        <skos:exactMatch rdf:resource="http://skos.um.es/unescothes/C01386"/>
+        <skos:inScheme rdf:resource="http://purl.org/roh/subject-areas#ESSubjectAreas3rdList"/>
+        <skos:notation>TMA</skos:notation>
+        <skos:prefLabel xml:lang="en">Environmental technologies</skos:prefLabel>
+        <skos:prefLabel xml:lang="fr">Technologies environnementales</skos:prefLabel>
+        <skos:prefLabel xml:lang="pt">Tecnologias ambientais</skos:prefLabel>
+        <skos:prefLabel xml:lang="ca">Tecnologies mediambientals</skos:prefLabel>
+        <skos:prefLabel xml:lang="es">Tecnologías medioambientales</skos:prefLabel>
+        <skos:prefLabel xml:lang="gl">Tecnoloxías ambientais</skos:prefLabel>
+        <skos:prefLabel xml:lang="ast">Tecnoloxíes medioambientales</skos:prefLabel>
+        <skos:prefLabel>Tecnologías medioambientales</skos:prefLabel>
+    </NamedIndividual>
+    
+
+
+    <!-- http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_3_TRA -->
+
+
+    <NamedIndividual rdf:about="http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_3_TRA">
+        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+        <roh:hasCode rdf:resource="http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_3_CODE_TRA"/>
+        <rdfs:label>Transporte</rdfs:label>
+        <skos:broader rdf:resource="http://purl.org/roh/subject-areas#ES_SUBJECT_AREA_LEVEL_2_EYT"/>
+        <skos:exactMatch rdf:resource="http://skos.um.es/unescothes/C04122"/>
+        <skos:inScheme rdf:resource="http://purl.org/roh/subject-areas#ESSubjectAreas3rdList"/>
+        <skos:notation>TRA</skos:notation>
+        <skos:prefLabel xml:lang="ca">Transport</skos:prefLabel>
+        <skos:prefLabel xml:lang="en">Transport</skos:prefLabel>
+        <skos:prefLabel xml:lang="fr">Transport</skos:prefLabel>
+        <skos:prefLabel xml:lang="es">Transporte</skos:prefLabel>
+        <skos:prefLabel xml:lang="gl">Transporte</skos:prefLabel>
+        <skos:prefLabel xml:lang="pt">Transporte</skos:prefLabel>
+        <skos:prefLabel xml:lang="ast">Tresporte</skos:prefLabel>
+        <skos:prefLabel>Transporte</skos:prefLabel>
+    </NamedIndividual>
+</rdf:RDF>
+
+
+
+<!-- Generated by the OWL API (version 5.1.14) https://github.com/owlcs/owlapi/ -->
+
+

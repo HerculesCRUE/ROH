@@ -1,0 +1,620 @@
+{
+  "_comment" : "Created with OWL2VOWL (version 0.3.5), http://vowl.visualdataweb.org",
+  "header" : {
+    "languages" : [ "eu", "ast", "pt", "gl", "en", "fr", "ca", "es", "undefined" ],
+    "baseIris" : [ "http://www.w3.org/1999/02/22-rdf-syntax-ns", "http://purl.org/roh/mirror/vivo", "http://www.w3.org/2000/01/rdf-schema", "http://www.w3.org/2001/XMLSchema", "http://purl.org/roh/university-hr/pt", "http://www.w3.org/2004/02/skos/core" ],
+    "iri" : "http://purl.org/roh/university-hr/pt",
+    "labels" : {
+      "en" : "ROH Portuguese University HR Module"
+    },
+    "comments" : {
+      "en" : "The University of Murcia signed on November 29, 2017, a Covenant with the Ministry of Economy, Industry and Competitiveness backing the “HÉRCULES: Semantic University Research Data” Project with a budget of FIVE MILLION FOUR HUNDRED AND SIXTY-TWO THOUSAND SIX HUNDRED euros with an 80% of co-financiering from the European Regional Development Fund program (ERDF) within the 2014-2020 period. \n\nThe project arose as a CRUE initiative, to create the basis for a new collaboration model between universities, to develop the information management systems and with the main objective of encouraging this type of collaboration.\n\nTherefore, the purpose of this agreement was to contribute to the improvement of public services and business innovation and research through the improvement of:\n\n    efficiency in public investment by decreasing the duplication of investment in R&D.\n    efficiency of research in universities.\n    scientific dissemination of research results.\n    detection of synergies in R&D between universities.\n    transfer of R&D results to companies.\n    efficiency in the management of research. \n\nby creating a research management system with semantic capacities based on semantic open data and that will provide a global view of the research data contained in the Spanish University System."
+    },
+    "other" : {
+      "license" : [ {
+        "identifier" : "license",
+        "language" : "undefined",
+        "value" : "https://creativecommons.org/licenses/by-sa/4.0/",
+        "type" : "iri"
+      } ]
+    }
+  },
+  "namespace" : [ ],
+  "class" : [ {
+    "id" : "0",
+    "type" : "owl:Class"
+  }, {
+    "id" : "5",
+    "type" : "owl:Class"
+  }, {
+    "id" : "6",
+    "type" : "owl:Class"
+  }, {
+    "id" : "1",
+    "type" : "owl:Class"
+  }, {
+    "id" : "2",
+    "type" : "owl:Class"
+  }, {
+    "id" : "3",
+    "type" : "owl:Class"
+  }, {
+    "id" : "4",
+    "type" : "owl:Class"
+  } ],
+  "classAttribute" : [ {
+    "iri" : "http://purl.org/roh/mirror/vivo#FacultyPosition",
+    "baseIri" : "http://purl.org/roh/mirror/vivo",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "FacultyPosition",
+      "en" : "Faculty Position"
+    },
+    "subClasses" : [ "1", "2", "3", "4" ],
+    "attributes" : [ "external" ],
+    "id" : "0"
+  }, {
+    "iri" : "http://www.w3.org/2004/02/skos/core#ConceptScheme",
+    "baseIri" : "http://www.w3.org/2004/02/skos/core",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "ConceptScheme",
+      "en" : "Concept Scheme"
+    },
+    "individuals" : [ {
+      "iri" : "http://purl.org/roh/university-hr/pt#PTUniversityHumanResourcesList",
+      "baseIri" : "http://purl.org/roh/university-hr/pt",
+      "annotations" : {
+        "prefLabel" : [ {
+          "identifier" : "prefLabel",
+          "language" : "en",
+          "value" : "Human resources of the universities from Portugal",
+          "type" : "label"
+        }, {
+          "identifier" : "prefLabel",
+          "language" : "es",
+          "value" : "Recursos humanos de las universidades de Portugal",
+          "type" : "label"
+        }, {
+          "identifier" : "prefLabel",
+          "language" : "fr",
+          "value" : "Resources humains des universités de Portugal",
+          "type" : "label"
+        }, {
+          "identifier" : "prefLabel",
+          "language" : "ast",
+          "value" : "Recursos humanos de les universidaes de Portugal",
+          "type" : "label"
+        }, {
+          "identifier" : "prefLabel",
+          "language" : "pt",
+          "value" : "Recursos humanos das universidades de Portugal",
+          "type" : "label"
+        }, {
+          "identifier" : "prefLabel",
+          "language" : "gl",
+          "value" : "Recursos humanos das universidades de Portugal",
+          "type" : "label"
+        }, {
+          "identifier" : "prefLabel",
+          "language" : "ca",
+          "value" : "Recursos humans de les universitats de Portugal",
+          "type" : "label"
+        } ]
+      },
+      "labels" : {
+        "IRI-based" : "PTUniversityHumanResourcesList",
+        "ast" : "Recursos humanos de les universidaes de Portugal",
+        "pt" : "Recursos humanos das universidades de Portugal",
+        "gl" : "Recursos humanos das universidades de Portugal",
+        "en" : "Human resources of the universities from Portugal",
+        "fr" : "Resources humains des universités de Portugal",
+        "ca" : "Recursos humans de les universitats de Portugal",
+        "es" : "Recursos humanos de las universidades de Portugal"
+      }
+    }, {
+      "iri" : "http://purl.org/roh/university-hr/pt#PTUniversityHumanResourcesCodesList",
+      "baseIri" : "http://purl.org/roh/university-hr/pt",
+      "annotations" : {
+        "prefLabel" : [ {
+          "identifier" : "prefLabel",
+          "language" : "pt",
+          "value" : "Códigos dos recursos humanos das universidades de Portugal",
+          "type" : "label"
+        }, {
+          "identifier" : "prefLabel",
+          "language" : "fr",
+          "value" : "Codes des resources humains des universités de Portugal",
+          "type" : "label"
+        }, {
+          "identifier" : "prefLabel",
+          "language" : "es",
+          "value" : "Códigos de los recursos humanos de las universidades de España",
+          "type" : "label"
+        }, {
+          "identifier" : "prefLabel",
+          "language" : "ca",
+          "value" : "Codis dels recursos humans de les universitats de Portugal",
+          "type" : "label"
+        }, {
+          "identifier" : "prefLabel",
+          "language" : "ast",
+          "value" : "Códigos de los recursos humanos de les universidaes de Portugal",
+          "type" : "label"
+        }, {
+          "identifier" : "prefLabel",
+          "language" : "en",
+          "value" : "Codes for the human resources of the universities from Portugal",
+          "type" : "label"
+        }, {
+          "identifier" : "prefLabel",
+          "language" : "gl",
+          "value" : "Códigos dos recursos humanos das universidades de Portugal",
+          "type" : "label"
+        } ]
+      },
+      "labels" : {
+        "IRI-based" : "PTUniversityHumanResourcesCodesList",
+        "ast" : "Códigos de los recursos humanos de les universidaes de Portugal",
+        "pt" : "Códigos dos recursos humanos das universidades de Portugal",
+        "gl" : "Códigos dos recursos humanos das universidades de Portugal",
+        "en" : "Codes for the human resources of the universities from Portugal",
+        "fr" : "Codes des resources humains des universités de Portugal",
+        "ca" : "Codis dels recursos humans de les universitats de Portugal",
+        "es" : "Códigos de los recursos humanos de las universidades de Portugal"
+      }
+    } ],
+    "attributes" : [ "external" ],
+    "id" : "5"
+  }, {
+    "iri" : "http://www.w3.org/2004/02/skos/core#Concept",
+    "baseIri" : "http://www.w3.org/2004/02/skos/core",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "Concept",
+      "en" : "Concept"
+    },
+    "individuals" : [ {
+      "iri" : "http://purl.org/roh/university-hr/pt#PT_UNIVERSITY_HR_CODE_PTPC",
+      "baseIri" : "http://purl.org/roh/university-hr/pt",
+      "annotations" : {
+        "inScheme" : [ {
+          "identifier" : "inScheme",
+          "language" : "undefined",
+          "value" : "http://purl.org/roh/university-hr/pt#PTUniversityHumanResourcesCodesList",
+          "type" : "iri"
+        } ],
+        "prefLabel" : [ {
+          "identifier" : "prefLabel",
+          "language" : "undefined",
+          "value" : "PTPC",
+          "type" : "label"
+        } ],
+        "codeOf" : [ {
+          "identifier" : "codeOf",
+          "language" : "undefined",
+          "value" : "http://purl.org/roh/university-hr/pt#PT_UNIVERSITY_HR_PTPC",
+          "type" : "iri"
+        } ]
+      },
+      "labels" : {
+        "IRI-based" : "PT_UNIVERSITY_HR_CODE_PTPC",
+        "undefined" : "PTPC"
+      }
+    }, {
+      "iri" : "http://purl.org/roh/university-hr/pt#PT_UNIVERSITY_HR_CODE_PTPAU",
+      "baseIri" : "http://purl.org/roh/university-hr/pt",
+      "annotations" : {
+        "inScheme" : [ {
+          "identifier" : "inScheme",
+          "language" : "undefined",
+          "value" : "http://purl.org/roh/university-hr/pt#PTUniversityHumanResourcesCodesList",
+          "type" : "iri"
+        } ],
+        "prefLabel" : [ {
+          "identifier" : "prefLabel",
+          "language" : "undefined",
+          "value" : "PTPAU",
+          "type" : "label"
+        } ],
+        "codeOf" : [ {
+          "identifier" : "codeOf",
+          "language" : "undefined",
+          "value" : "http://purl.org/roh/university-hr/pt#PT_UNIVERSITY_HR_PTPAU",
+          "type" : "iri"
+        } ]
+      },
+      "labels" : {
+        "IRI-based" : "PT_UNIVERSITY_HR_CODE_PTPAU",
+        "undefined" : "PTPAU"
+      }
+    }, {
+      "iri" : "http://purl.org/roh/university-hr/pt#PT_UNIVERSITY_HR_CODE_PTPAS",
+      "baseIri" : "http://purl.org/roh/university-hr/pt",
+      "annotations" : {
+        "inScheme" : [ {
+          "identifier" : "inScheme",
+          "language" : "undefined",
+          "value" : "http://purl.org/roh/university-hr/pt#PTUniversityHumanResourcesCodesList",
+          "type" : "iri"
+        } ],
+        "prefLabel" : [ {
+          "identifier" : "prefLabel",
+          "language" : "undefined",
+          "value" : "PTPAS",
+          "type" : "label"
+        } ],
+        "codeOf" : [ {
+          "identifier" : "codeOf",
+          "language" : "undefined",
+          "value" : "http://purl.org/roh/university-hr/pt#PT_UNIVERSITY_HR_PTPAS",
+          "type" : "iri"
+        } ]
+      },
+      "labels" : {
+        "IRI-based" : "PT_UNIVERSITY_HR_CODE_PTPAS",
+        "undefined" : "PTPAS"
+      }
+    }, {
+      "iri" : "http://purl.org/roh/university-hr/pt#PT_UNIVERSITY_HR_CODE_PTPEM",
+      "baseIri" : "http://purl.org/roh/university-hr/pt",
+      "annotations" : {
+        "inScheme" : [ {
+          "identifier" : "inScheme",
+          "language" : "undefined",
+          "value" : "http://purl.org/roh/university-hr/pt#PTUniversityHumanResourcesCodesList",
+          "type" : "iri"
+        } ],
+        "prefLabel" : [ {
+          "identifier" : "prefLabel",
+          "language" : "undefined",
+          "value" : "PTPEM",
+          "type" : "label"
+        } ],
+        "codeOf" : [ {
+          "identifier" : "codeOf",
+          "language" : "undefined",
+          "value" : "http://purl.org/roh/university-hr/pt#PT_UNIVERSITY_HR_PTPEM",
+          "type" : "iri"
+        } ]
+      },
+      "labels" : {
+        "IRI-based" : "PT_UNIVERSITY_HR_CODE_PTPEM",
+        "undefined" : "PTPEM"
+      }
+    } ],
+    "attributes" : [ "external" ],
+    "id" : "6"
+  }, {
+    "iri" : "http://purl.org/roh/university-hr/pt#PT_UNIVERSITY_HR_PTPEM",
+    "baseIri" : "http://purl.org/roh/university-hr/pt",
+    "instances" : 0,
+    "annotations" : {
+      "country" : [ {
+        "identifier" : "country",
+        "language" : "undefined",
+        "value" : "http://publications.europa.eu/resource/authority/country/PRT",
+        "type" : "iri"
+      } ],
+      "inScheme" : [ {
+        "identifier" : "inScheme",
+        "language" : "undefined",
+        "value" : "http://purl.org/roh/university-hr/pt#PTUniversityHumanResourcesList",
+        "type" : "iri"
+      } ],
+      "closeMatch" : [ {
+        "identifier" : "closeMatch",
+        "language" : "undefined",
+        "value" : "http://skos.um.es/unescothes/C00015",
+        "type" : "iri"
+      }, {
+        "identifier" : "closeMatch",
+        "language" : "undefined",
+        "value" : "http://skos.um.es/unescothes/C03965",
+        "type" : "iri"
+      } ],
+      "hasCode" : [ {
+        "identifier" : "hasCode",
+        "language" : "undefined",
+        "value" : "http://purl.org/roh/university-hr/pt#PT_UNIVERSITY_HR_CODE_PTPEM",
+        "type" : "iri"
+      } ],
+      "notation" : [ {
+        "identifier" : "notation",
+        "language" : "undefined",
+        "value" : "PTPEM",
+        "type" : "label"
+      } ],
+      "prefLabel" : [ {
+        "identifier" : "prefLabel",
+        "language" : "ast",
+        "value" : "Profesor eméritu",
+        "type" : "label"
+      }, {
+        "identifier" : "prefLabel",
+        "language" : "ca",
+        "value" : "Professor emèrit",
+        "type" : "label"
+      }, {
+        "identifier" : "prefLabel",
+        "language" : "es",
+        "value" : "Profesor emérito",
+        "type" : "label"
+      }, {
+        "identifier" : "prefLabel",
+        "language" : "gl",
+        "value" : "Profesor emérito",
+        "type" : "label"
+      }, {
+        "identifier" : "prefLabel",
+        "language" : "pt",
+        "value" : "Professor emérito",
+        "type" : "label"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "PT_UNIVERSITY_HR_PTPEM",
+      "pt" : "Professor emérito"
+    },
+    "id" : "1",
+    "superClasses" : [ "0" ]
+  }, {
+    "iri" : "http://purl.org/roh/university-hr/pt#PT_UNIVERSITY_HR_PTPAS",
+    "baseIri" : "http://purl.org/roh/university-hr/pt",
+    "instances" : 0,
+    "annotations" : {
+      "country" : [ {
+        "identifier" : "country",
+        "language" : "undefined",
+        "value" : "http://publications.europa.eu/resource/authority/country/PRT",
+        "type" : "iri"
+      } ],
+      "closeMatch" : [ {
+        "identifier" : "closeMatch",
+        "language" : "undefined",
+        "value" : "http://skos.um.es/unescothes/C00015",
+        "type" : "iri"
+      }, {
+        "identifier" : "closeMatch",
+        "language" : "undefined",
+        "value" : "http://skos.um.es/unescothes/C03965",
+        "type" : "iri"
+      } ],
+      "inScheme" : [ {
+        "identifier" : "inScheme",
+        "language" : "undefined",
+        "value" : "http://purl.org/roh/university-hr/pt#PTUniversityHumanResourcesList",
+        "type" : "iri"
+      } ],
+      "hasCode" : [ {
+        "identifier" : "hasCode",
+        "language" : "undefined",
+        "value" : "http://purl.org/roh/university-hr/pt#PT_UNIVERSITY_HR_CODE_PTPAS",
+        "type" : "iri"
+      } ],
+      "notation" : [ {
+        "identifier" : "notation",
+        "language" : "undefined",
+        "value" : "PTPAS",
+        "type" : "label"
+      } ],
+      "prefLabel" : [ {
+        "identifier" : "prefLabel",
+        "language" : "ast",
+        "value" : "Profesor asociáu",
+        "type" : "label"
+      }, {
+        "identifier" : "prefLabel",
+        "language" : "pt",
+        "value" : "Professor associado",
+        "type" : "label"
+      }, {
+        "identifier" : "prefLabel",
+        "language" : "es",
+        "value" : "Profesor asociado",
+        "type" : "label"
+      }, {
+        "identifier" : "prefLabel",
+        "language" : "ca",
+        "value" : "Professor associat",
+        "type" : "label"
+      }, {
+        "identifier" : "prefLabel",
+        "language" : "eu",
+        "value" : "Irakasle elkartua",
+        "type" : "label"
+      }, {
+        "identifier" : "prefLabel",
+        "language" : "gl",
+        "value" : "Profesor asociado",
+        "type" : "label"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "PT_UNIVERSITY_HR_PTPAS",
+      "pt" : "Professor associado"
+    },
+    "id" : "2",
+    "superClasses" : [ "0" ]
+  }, {
+    "iri" : "http://purl.org/roh/university-hr/pt#PT_UNIVERSITY_HR_PTPAU",
+    "baseIri" : "http://purl.org/roh/university-hr/pt",
+    "instances" : 0,
+    "annotations" : {
+      "country" : [ {
+        "identifier" : "country",
+        "language" : "undefined",
+        "value" : "http://publications.europa.eu/resource/authority/country/PRT",
+        "type" : "iri"
+      } ],
+      "closeMatch" : [ {
+        "identifier" : "closeMatch",
+        "language" : "undefined",
+        "value" : "http://skos.um.es/unescothes/C00015",
+        "type" : "iri"
+      }, {
+        "identifier" : "closeMatch",
+        "language" : "undefined",
+        "value" : "http://skos.um.es/unescothes/C03965",
+        "type" : "iri"
+      } ],
+      "inScheme" : [ {
+        "identifier" : "inScheme",
+        "language" : "undefined",
+        "value" : "http://purl.org/roh/university-hr/pt#PTUniversityHumanResourcesList",
+        "type" : "iri"
+      } ],
+      "hasCode" : [ {
+        "identifier" : "hasCode",
+        "language" : "undefined",
+        "value" : "http://purl.org/roh/university-hr/pt#PT_UNIVERSITY_HR_CODE_PTPAU",
+        "type" : "iri"
+      } ],
+      "notation" : [ {
+        "identifier" : "notation",
+        "language" : "undefined",
+        "value" : "PTPAU",
+        "type" : "label"
+      } ],
+      "prefLabel" : [ {
+        "identifier" : "prefLabel",
+        "language" : "gl",
+        "value" : "Profesor auxiliar",
+        "type" : "label"
+      }, {
+        "identifier" : "prefLabel",
+        "language" : "es",
+        "value" : "Profesor auxiliar",
+        "type" : "label"
+      }, {
+        "identifier" : "prefLabel",
+        "language" : "ast",
+        "value" : "Profesor auxiliar",
+        "type" : "label"
+      }, {
+        "identifier" : "prefLabel",
+        "language" : "ca",
+        "value" : "Professor auxiliar",
+        "type" : "label"
+      }, {
+        "identifier" : "prefLabel",
+        "language" : "pt",
+        "value" : "Professor auxiliar",
+        "type" : "label"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "PT_UNIVERSITY_HR_PTPAU",
+      "pt" : "Professor auxiliar"
+    },
+    "id" : "3",
+    "superClasses" : [ "0" ]
+  }, {
+    "iri" : "http://purl.org/roh/university-hr/pt#PT_UNIVERSITY_HR_PTPC",
+    "baseIri" : "http://purl.org/roh/university-hr/pt",
+    "instances" : 0,
+    "annotations" : {
+      "country" : [ {
+        "identifier" : "country",
+        "language" : "undefined",
+        "value" : "http://publications.europa.eu/resource/authority/country/PRT",
+        "type" : "iri"
+      } ],
+      "closeMatch" : [ {
+        "identifier" : "closeMatch",
+        "language" : "undefined",
+        "value" : "http://skos.um.es/unescothes/C00015",
+        "type" : "iri"
+      }, {
+        "identifier" : "closeMatch",
+        "language" : "undefined",
+        "value" : "http://skos.um.es/unescothes/C03965",
+        "type" : "iri"
+      } ],
+      "inScheme" : [ {
+        "identifier" : "inScheme",
+        "language" : "undefined",
+        "value" : "http://purl.org/roh/university-hr/pt#PTUniversityHumanResourcesList",
+        "type" : "iri"
+      } ],
+      "hasCode" : [ {
+        "identifier" : "hasCode",
+        "language" : "undefined",
+        "value" : "http://purl.org/roh/university-hr/pt#PT_UNIVERSITY_HR_CODE_PTPC",
+        "type" : "iri"
+      } ],
+      "notation" : [ {
+        "identifier" : "notation",
+        "language" : "undefined",
+        "value" : "PTPC",
+        "type" : "label"
+      } ],
+      "prefLabel" : [ {
+        "identifier" : "prefLabel",
+        "language" : "es",
+        "value" : "Profesor catedrático",
+        "type" : "label"
+      }, {
+        "identifier" : "prefLabel",
+        "language" : "ast",
+        "value" : "Profesor catedráticu",
+        "type" : "label"
+      }, {
+        "identifier" : "prefLabel",
+        "language" : "pt",
+        "value" : "Professor catedrático",
+        "type" : "label"
+      }, {
+        "identifier" : "prefLabel",
+        "language" : "gl",
+        "value" : "Profesor catedrático",
+        "type" : "label"
+      }, {
+        "identifier" : "prefLabel",
+        "language" : "ca",
+        "value" : "Professor catedràtic",
+        "type" : "label"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "PT_UNIVERSITY_HR_PTPC",
+      "pt" : "Professor catedrático"
+    },
+    "id" : "4",
+    "superClasses" : [ "0" ]
+  } ],
+  "property" : [ {
+    "id" : "7",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "8",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "9",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "10",
+    "type" : "rdfs:SubClassOf"
+  } ],
+  "propertyAttribute" : [ {
+    "range" : "0",
+    "domain" : "3",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "7"
+  }, {
+    "range" : "0",
+    "domain" : "4",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "8"
+  }, {
+    "range" : "0",
+    "domain" : "1",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "9"
+  }, {
+    "range" : "0",
+    "domain" : "2",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "10"
+  } ]
+}

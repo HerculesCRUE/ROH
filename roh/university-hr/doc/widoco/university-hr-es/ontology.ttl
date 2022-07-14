@@ -1,0 +1,996 @@
+@prefix : <http://purl.org/roh/university-hr/es#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@base <http://purl.org/roh/university-hr/es> .
+
+<http://purl.org/roh/university-hr/es> rdf:type owl:Ontology ;
+                                        owl:versionIRI <http://purl.org/roh/university-hr/1.0> ;
+                                        <http://purl.org/dc/terms/license> <https://creativecommons.org/licenses/by-sa/4.0/> ;
+                                        rdfs:comment """The University of Murcia signed on November 29, 2017, a Covenant with the Ministry of Economy, Industry and Competitiveness backing the “HÉRCULES: Semantic University Research Data” Project with a budget of FIVE MILLION FOUR HUNDRED AND SIXTY-TWO THOUSAND SIX HUNDRED euros with an 80% of co-financiering from the European Regional Development Fund program (ERDF) within the 2014-2020 period. 
+
+The project arose as a CRUE initiative, to create the basis for a new collaboration model between universities, to develop the information management systems and with the main objective of encouraging this type of collaboration.
+
+Therefore, the purpose of this agreement was to contribute to the improvement of public services and business innovation and research through the improvement of:
+
+    efficiency in public investment by decreasing the duplication of investment in R&D.
+    efficiency of research in universities.
+    scientific dissemination of research results.
+    detection of synergies in R&D between universities.
+    transfer of R&D results to companies.
+    efficiency in the management of research. 
+
+by creating a research management system with semantic capacities based on semantic open data and that will provide a global view of the research data contained in the Spanish University System."""@en ;
+                                        rdfs:label "ROH Spanish University HR Module"@en .
+
+#################################################################
+#    Annotation properties
+#################################################################
+
+###  http://purl.org/dc/terms/license
+<http://purl.org/dc/terms/license> rdf:type owl:AnnotationProperty .
+
+
+###  http://purl.org/roh#codeOf
+<http://purl.org/roh#codeOf> rdf:type owl:AnnotationProperty .
+
+
+###  http://purl.org/roh#country
+<http://purl.org/roh#country> rdf:type owl:AnnotationProperty .
+
+
+###  http://purl.org/roh#geoDivision
+<http://purl.org/roh#geoDivision> rdf:type owl:AnnotationProperty .
+
+
+###  http://purl.org/roh#hasCode
+<http://purl.org/roh#hasCode> rdf:type owl:AnnotationProperty .
+
+
+###  http://www.w3.org/2004/02/skos/core#closeMatch
+<http://www.w3.org/2004/02/skos/core#closeMatch> rdf:type owl:AnnotationProperty .
+
+
+###  http://www.w3.org/2004/02/skos/core#exactMatch
+<http://www.w3.org/2004/02/skos/core#exactMatch> rdf:type owl:AnnotationProperty .
+
+
+###  http://www.w3.org/2004/02/skos/core#inScheme
+<http://www.w3.org/2004/02/skos/core#inScheme> rdf:type owl:AnnotationProperty .
+
+
+###  http://www.w3.org/2004/02/skos/core#notation
+<http://www.w3.org/2004/02/skos/core#notation> rdf:type owl:AnnotationProperty .
+
+
+###  http://www.w3.org/2004/02/skos/core#prefLabel
+<http://www.w3.org/2004/02/skos/core#prefLabel> rdf:type owl:AnnotationProperty .
+
+
+#################################################################
+#    Classes
+#################################################################
+
+###  http://purl.org/roh/mirror/vivo#FacultyAdministrativePosition
+<http://purl.org/roh/mirror/vivo#FacultyAdministrativePosition> rdf:type owl:Class ;
+                                                                rdfs:subClassOf <http://purl.org/roh/mirror/vivo#Position> ;
+                                                                rdfs:label "Faculty Administrative Position"@en ,
+                                                                           "Posición Administrativa en Facultad"@es .
+
+
+###  http://purl.org/roh/mirror/vivo#FacultyPosition
+<http://purl.org/roh/mirror/vivo#FacultyPosition> rdf:type owl:Class ;
+                                                  rdfs:subClassOf <http://purl.org/roh/mirror/vivo#Position> ;
+                                                  rdfs:label "Faculty Position"@en ,
+                                                             "Posición en Facultad"@es .
+
+
+###  http://purl.org/roh/mirror/vivo#NonAcademicPosition
+<http://purl.org/roh/mirror/vivo#NonAcademicPosition> rdf:type owl:Class ;
+                                                      rdfs:subClassOf <http://purl.org/roh/mirror/vivo#Position> ;
+                                                      rdfs:label "Non-Academic Position"@en ,
+                                                                 "Posición no Académica"@es .
+
+
+###  http://purl.org/roh/mirror/vivo#NonFacultyAcademicPosition
+<http://purl.org/roh/mirror/vivo#NonFacultyAcademicPosition> rdf:type owl:Class ;
+                                                             rdfs:subClassOf <http://purl.org/roh/mirror/vivo#Position> ;
+                                                             rdfs:label "Non-Faculty Academic Position"@en ,
+                                                                        "Posición Académica no de Facultad"@es .
+
+
+###  http://purl.org/roh/mirror/vivo#Position
+<http://purl.org/roh/mirror/vivo#Position> rdf:type owl:Class ;
+                                           rdfs:label "Posición"@es ,
+                                                      "Position"@en .
+
+
+###  http://purl.org/roh/university-hr/es#Ayudante
+:Ayudante rdf:type owl:Class ;
+          rdfs:subClassOf :PDIContratado ;
+          rdfs:comment "Los ayudantes serán contratados entre quienes hayan superado todas las materias de estudio que se determinen en los criterios a que hace referencia el artículo 38 y con la finalidad principal de completar su formación investigadora. La contratación será con dedicación a tiempo completo, por una duración no superior a cuatro años improrrogables. Los ayudantes también podrán colaborar en tareas docentes en los términos que establezcan los Estatutos."@es ;
+          rdfs:label "Assistant"@en ,
+                     "Ayudante"@es .
+
+
+###  http://purl.org/roh/university-hr/es#CatedraticoDeEscuelaUniversitaria
+:CatedraticoDeEscuelaUniversitaria rdf:type owl:Class ;
+                                   rdfs:subClassOf :CuerpoDocente ;
+                                   <http://purl.org/roh#country> <http://publications.europa.eu/resource/authority/country/ESP> ;
+                                   <http://purl.org/roh#hasCode> :ES_UNIVERSITY_HR_CODE_ESFPCEU ;
+                                   rdfs:label "Catedrático de Escuela Universitaria"@es ,
+                                              "Profesor catedrático de escuela universitaria"@es ,
+                                              "University School Professor"@en ;
+                                   <http://www.w3.org/2004/02/skos/core#closeMatch> <http://skos.um.es/unescothes/C00015> ,
+                                                                                    <http://skos.um.es/unescothes/C03965> ;
+                                   <http://www.w3.org/2004/02/skos/core#inScheme> :ESUniversityHumanResourcesList ;
+                                   <http://www.w3.org/2004/02/skos/core#notation> "ESFPCEU" ;
+                                   <http://www.w3.org/2004/02/skos/core#prefLabel> "Profesor catedrático de escola universitaria"@gl ,
+                                                                                   "Profesor catedrático de escuela universitaria"@es ,
+                                                                                   "Profesor catedráticu d'escuela universitaria"@ast ,
+                                                                                   "Professor catedràtic d’escola universitària"@ca ,
+                                                                                   "Unibertsitateko Eskolako Katedraduna"@eu .
+
+
+###  http://purl.org/roh/university-hr/es#CatedraticoDeUniversidad
+:CatedraticoDeUniversidad rdf:type owl:Class ;
+                          rdfs:subClassOf :CuerpoDocente ;
+                          <http://purl.org/roh#country> <http://publications.europa.eu/resource/authority/country/ESP> ;
+                          <http://purl.org/roh#hasCode> :ES_UNIVERSITY_HR_CODE_ESFPCU ;
+                          rdfs:label "Catedrático de Universidad"@es ,
+                                     "Profesor catedrático de universidad"@es ,
+                                     "University Professor"@en ;
+                          <http://www.w3.org/2004/02/skos/core#closeMatch> <http://skos.um.es/unescothes/C00015> ,
+                                                                           <http://skos.um.es/unescothes/C03965> ;
+                          <http://www.w3.org/2004/02/skos/core#inScheme> :ESUniversityHumanResourcesList ;
+                          <http://www.w3.org/2004/02/skos/core#notation> "ESFPCU" ;
+                          <http://www.w3.org/2004/02/skos/core#prefLabel> "Profesor catedrático de universidad"@es ,
+                                                                          "Profesor catedrático de universidade"@gl ,
+                                                                          "Profesor catedráticu d'universidá"@ast ,
+                                                                          "Professeur d'université"@fr ,
+                                                                          "Professor catedràtic d'universitat"@ca ,
+                                                                          "Professor catedrático de universidade"@pt ,
+                                                                          "Unibertsitateko katedraduna"@eu .
+
+
+###  http://purl.org/roh/university-hr/es#CuerpoDocente
+:CuerpoDocente rdf:type owl:Class ;
+               rdfs:subClassOf <http://purl.org/roh/mirror/vivo#FacultyPosition> ;
+               owl:disjointWith :PDIContratado ;
+               rdfs:comment "Personal funcionario o permanente de una universidad."@es ;
+               rdfs:label "Cuerpo Docente"@es ,
+                          "Faculty"@en .
+
+
+###  http://purl.org/roh/university-hr/es#ES_UNIVERSITY_HR_ESDECA
+:ES_UNIVERSITY_HR_ESDECA rdf:type owl:Class ;
+                         rdfs:subClassOf <http://purl.org/roh/mirror/vivo#FacultyAdministrativePosition> ;
+                         <http://purl.org/roh#country> <http://publications.europa.eu/resource/authority/country/ESP> ;
+                         <http://purl.org/roh#hasCode> :ES_UNIVERSITY_HR_CODE_ESDECA ;
+                         rdfs:label "Decano"@es ;
+                         <http://www.w3.org/2004/02/skos/core#closeMatch> <http://purl.org/roh/university-hr/uk#GB_UNIVERSITY_HR_GBDEAN> ;
+                         <http://www.w3.org/2004/02/skos/core#inScheme> :ESUniversityHumanResourcesList ;
+                         <http://www.w3.org/2004/02/skos/core#notation> "ESDECA" ;
+                         <http://www.w3.org/2004/02/skos/core#prefLabel> "Decano"@es ,
+                                                                         "Decano"@gl ,
+                                                                         "Decanu"@ast ,
+                                                                         "Degà"@ca ,
+                                                                         "Dekanoa"@eu .
+
+
+###  http://purl.org/roh/university-hr/es#ES_UNIVERSITY_HR_ESFIVEFNP
+:ES_UNIVERSITY_HR_ESFIVEFNP rdf:type owl:Class ;
+                            rdfs:subClassOf :PDIContratado ;
+                            <http://purl.org/roh#country> <http://publications.europa.eu/resource/authority/country/ESP> ;
+                            <http://purl.org/roh#geoDivision> <http://purl.org/hercules/asio/modules#ES_DIVISION_LEVEL_1_ES_PV> ;
+                            <http://purl.org/roh#hasCode> :ES_UNIVERSITY_HR_CODE_ESFIVEFNP ;
+                            rdfs:label "Profesor Ivef no permanente"@es ;
+                            <http://www.w3.org/2004/02/skos/core#closeMatch> <http://skos.um.es/unescothes/C00015> ;
+                            <http://www.w3.org/2004/02/skos/core#inScheme> :ESUniversityHumanResourcesList ;
+                            <http://www.w3.org/2004/02/skos/core#notation> "ESFIVEFNP" ;
+                            <http://www.w3.org/2004/02/skos/core#prefLabel> "Profesor Ivef no permanente"@ast ,
+                                                                            "Profesor Ivef no permanente"@es ,
+                                                                            "Profesor Ivef no permanente"@gl ,
+                                                                            "Professor Ivef no permanent"@ca ,
+                                                                            "SHEE Iraskaslea (Ez--Iraunkorra)"@eu .
+
+
+###  http://purl.org/roh/university-hr/es#ES_UNIVERSITY_HR_ESFIVEFP
+:ES_UNIVERSITY_HR_ESFIVEFP rdf:type owl:Class ;
+                           rdfs:subClassOf :CuerpoDocente ;
+                           <http://purl.org/roh#country> <http://publications.europa.eu/resource/authority/country/ESP> ;
+                           <http://purl.org/roh#geoDivision> <http://purl.org/hercules/asio/modules#ES_DIVISION_LEVEL_1_ES_PV> ;
+                           <http://purl.org/roh#hasCode> :ES_UNIVERSITY_HR_CODE_ESFIVEFP ;
+                           rdfs:label "Profesor Ivef permanente"@es ;
+                           <http://www.w3.org/2004/02/skos/core#closeMatch> <http://skos.um.es/unescothes/C00015> ,
+                                                                            <http://skos.um.es/unescothes/C03965> ;
+                           <http://www.w3.org/2004/02/skos/core#inScheme> :ESUniversityHumanResourcesList ;
+                           <http://www.w3.org/2004/02/skos/core#notation> "ESFIVEFP" ;
+                           <http://www.w3.org/2004/02/skos/core#prefLabel> "Profesor Ivef permanente"@ast ,
+                                                                           "Profesor Ivef permanente"@es ,
+                                                                           "Profesor Ivef permanente"@gl ,
+                                                                           "Professor Ivef permanent"@ca ,
+                                                                           "SHEE Irakaslea (Iraunkorra)"@eu .
+
+
+###  http://purl.org/roh/university-hr/es#ES_UNIVERSITY_HR_ESFPTN
+:ES_UNIVERSITY_HR_ESFPTN rdf:type owl:Class ;
+                         rdfs:subClassOf :CuerpoDocente ;
+                         <http://purl.org/roh#country> <http://publications.europa.eu/resource/authority/country/ESP> ;
+                         <http://purl.org/roh#geoDivision> <http://purl.org/hercules/asio/modules#ES_DIVISION_LEVEL_1_ES_PV> ;
+                         <http://purl.org/roh#hasCode> :ES_UNIVERSITY_HR_CODE_ESFPTN ;
+                         rdfs:label "Profesor titular de escuela de náutica"@es ;
+                         <http://www.w3.org/2004/02/skos/core#closeMatch> <http://skos.um.es/unescothes/C00015> ,
+                                                                          <http://skos.um.es/unescothes/C03965> ;
+                         <http://www.w3.org/2004/02/skos/core#inScheme> :ESUniversityHumanResourcesList ;
+                         <http://www.w3.org/2004/02/skos/core#notation> "ESFPTN" ;
+                         <http://www.w3.org/2004/02/skos/core#prefLabel> "Nautika Eskola Ofizialeko Irakasle numerarioa"@eu ,
+                                                                         "Profesor oficial d'escuela de náutica"@ast ,
+                                                                         "Profesor titular de escola de náutica"@gl ,
+                                                                         "Profesor titular de escuela de náutica"@es ,
+                                                                         "Professor titular d'escola de nàutica"@ca .
+
+
+###  http://purl.org/roh/university-hr/es#ES_UNIVERSITY_HR_ESJEFDEP
+:ES_UNIVERSITY_HR_ESJEFDEP rdf:type owl:Class ;
+                           rdfs:subClassOf <http://purl.org/roh/mirror/vivo#FacultyAdministrativePosition> ;
+                           <http://purl.org/roh#country> <http://publications.europa.eu/resource/authority/country/ESP> ;
+                           <http://purl.org/roh#hasCode> :ES_UNIVERSITY_HR_CODE_ESJEFDEP ;
+                           rdfs:label "Director de departamento"@es ;
+                           <http://www.w3.org/2004/02/skos/core#closeMatch> <http://purl.org/roh/university-hr/uk#GB_UNIVERSITY_GBHEADDEP> ;
+                           <http://www.w3.org/2004/02/skos/core#inScheme> :ESUniversityHumanResourcesList ;
+                           <http://www.w3.org/2004/02/skos/core#notation> "ESJEFDEP" ;
+                           <http://www.w3.org/2004/02/skos/core#prefLabel> "Director de departament"@ca ,
+                                                                           "Director de departamento"@es ,
+                                                                           "Director de departamento"@gl ,
+                                                                           "Director de departamentu"@ast ,
+                                                                           "Saileko Zuzendaria"@eu .
+
+
+###  http://purl.org/roh/university-hr/es#ES_UNIVERSITY_HR_ESLI
+:ES_UNIVERSITY_HR_ESLI rdf:type owl:Class ;
+                       rdfs:subClassOf <http://purl.org/roh/mirror/vivo#NonFacultyAcademicPosition> ;
+                       <http://purl.org/roh#country> <http://publications.europa.eu/resource/authority/country/ESP> ;
+                       <http://purl.org/roh#hasCode> :ES_UNIVERSITY_HR_CODE_ESLI ;
+                       rdfs:label "Investigador"@es ;
+                       <http://www.w3.org/2004/02/skos/core#closeMatch> <http://skos.um.es/unescothes/C03376> ;
+                       <http://www.w3.org/2004/02/skos/core#inScheme> :ESUniversityHumanResourcesList ;
+                       <http://www.w3.org/2004/02/skos/core#notation> "ESLI" ;
+                       <http://www.w3.org/2004/02/skos/core#prefLabel> "Ikertzaileak"@eu ,
+                                                                       "Investigador"@ast ,
+                                                                       "Investigador"@ca ,
+                                                                       "Investigador"@es ,
+                                                                       "Investigador"@gl .
+
+
+###  http://purl.org/roh/university-hr/es#ES_UNIVERSITY_HR_ESLPADJ
+:ES_UNIVERSITY_HR_ESLPADJ rdf:type owl:Class ;
+                          rdfs:subClassOf :PDIContratado ;
+                          <http://purl.org/roh#country> <http://publications.europa.eu/resource/authority/country/ESP> ;
+                          <http://purl.org/roh#hasCode> :ES_UNIVERSITY_HR_CODE_ESLPADJ ;
+                          rdfs:label "Profesor adjunto"@es ;
+                          <http://www.w3.org/2004/02/skos/core#closeMatch> <http://skos.um.es/unescothes/C00015> ,
+                                                                           <http://skos.um.es/unescothes/C03965> ;
+                          <http://www.w3.org/2004/02/skos/core#inScheme> :ESUniversityHumanResourcesList ;
+                          <http://www.w3.org/2004/02/skos/core#notation> "ESLPADJ" ;
+                          <http://www.w3.org/2004/02/skos/core#prefLabel> "Irakasle atxikia"@eu ,
+                                                                          "Profesor adjunto"@es ,
+                                                                          "Profesor adxunto"@gl ,
+                                                                          "Profesor adxuntu"@ast ,
+                                                                          "Professor adjunt"@ca .
+
+
+###  http://purl.org/roh/university-hr/es#ES_UNIVERSITY_HR_ESLPAG
+:ES_UNIVERSITY_HR_ESLPAG rdf:type owl:Class ;
+                         rdfs:subClassOf :CuerpoDocente ;
+                         <http://purl.org/roh#country> <http://publications.europa.eu/resource/authority/country/ESP> ;
+                         <http://purl.org/roh#hasCode> :ES_UNIVERSITY_HR_CODE_ESLPAG ;
+                         rdfs:label "Profesor agregado"@es ;
+                         <http://www.w3.org/2004/02/skos/core#closeMatch> <http://skos.um.es/unescothes/C00015> ,
+                                                                          <http://skos.um.es/unescothes/C03965> ;
+                         <http://www.w3.org/2004/02/skos/core#inScheme> :ESUniversityHumanResourcesList ;
+                         <http://www.w3.org/2004/02/skos/core#notation> "ESLPAG" ;
+                         <http://www.w3.org/2004/02/skos/core#prefLabel> "Irakasle agregatua"@eu ,
+                                                                         "Profesor agregado"@es ,
+                                                                         "Profesor agregado"@gl ,
+                                                                         "Profesor agregáu"@ast ,
+                                                                         "Professor agregat"@ca .
+
+
+###  http://purl.org/roh/university-hr/es#ES_UNIVERSITY_HR_ESLPAM
+:ES_UNIVERSITY_HR_ESLPAM rdf:type owl:Class ;
+                         rdfs:subClassOf :PDIContratado ;
+                         <http://purl.org/roh#country> <http://publications.europa.eu/resource/authority/country/ESP> ;
+                         <http://purl.org/roh#hasCode> :ES_UNIVERSITY_HR_CODE_ESLPAM ;
+                         rdfs:label "Profesor asociado médico"@es ;
+                         <http://www.w3.org/2004/02/skos/core#closeMatch> <http://skos.um.es/unescothes/C00015> ,
+                                                                          <http://skos.um.es/unescothes/C03965> ;
+                         <http://www.w3.org/2004/02/skos/core#inScheme> :ESUniversityHumanResourcesList ;
+                         <http://www.w3.org/2004/02/skos/core#notation> "ESLPAM" ;
+                         <http://www.w3.org/2004/02/skos/core#prefLabel> "Profesor asociado médico"@es ,
+                                                                         "Profesor asociado médico"@gl ,
+                                                                         "Profesor asociáu mélicu"@ast ,
+                                                                         "Professor associat mèdic"@ca .
+
+
+###  http://purl.org/roh/university-hr/es#ES_UNIVERSITY_HR_ESLPAY
+:ES_UNIVERSITY_HR_ESLPAY rdf:type owl:Class ;
+                         rdfs:subClassOf :PDIContratado ;
+                         <http://purl.org/roh#country> <http://publications.europa.eu/resource/authority/country/ESP> ;
+                         <http://purl.org/roh#hasCode> :ES_UNIVERSITY_HR_CODE_ESLPAY ;
+                         rdfs:label "Profesor ayudante"@es ;
+                         <http://www.w3.org/2004/02/skos/core#closeMatch> <http://skos.um.es/unescothes/C00015> ,
+                                                                          <http://skos.um.es/unescothes/C03965> ;
+                         <http://www.w3.org/2004/02/skos/core#inScheme> :ESUniversityHumanResourcesList ;
+                         <http://www.w3.org/2004/02/skos/core#notation> "ESLPAY" ;
+                         <http://www.w3.org/2004/02/skos/core#prefLabel> "Irakasle laguntzailea"@eu ,
+                                                                         "Profesor axudante"@gl ,
+                                                                         "Profesor ayudante"@ast ,
+                                                                         "Profesor ayudante"@es ,
+                                                                         "Professor ajudante"@ca .
+
+
+###  http://purl.org/roh/university-hr/es#ES_UNIVERSITY_HR_ESLPC
+:ES_UNIVERSITY_HR_ESLPC rdf:type owl:Class ;
+                        rdfs:subClassOf :CuerpoDocente ;
+                        <http://purl.org/roh#country> <http://publications.europa.eu/resource/authority/country/ESP> ;
+                        <http://purl.org/roh#geoDivision> <http://purl.org/hercules/asio/modules#ES_DIVISION_LEVEL_1_ES_CT> ;
+                        <http://purl.org/roh#hasCode> :ES_UNIVERSITY_HR_CODE_ESLPC ;
+                        rdfs:label "Profesor catedrático laboral"@es ;
+                        <http://www.w3.org/2004/02/skos/core#closeMatch> <http://skos.um.es/unescothes/C00015> ,
+                                                                         <http://skos.um.es/unescothes/C03965> ;
+                        <http://www.w3.org/2004/02/skos/core#inScheme> :ESUniversityHumanResourcesList ;
+                        <http://www.w3.org/2004/02/skos/core#notation> "ESLPC" ;
+                        <http://www.w3.org/2004/02/skos/core#prefLabel> "Profesor catedrático laboral"@es ,
+                                                                        "Profesor catedrático laboral"@gl ,
+                                                                        "Profesor catedráticu llaboral"@ast ,
+                                                                        "Professor catedràtic laboral"@ca .
+
+
+###  http://purl.org/roh/university-hr/es#ES_UNIVERSITY_HR_ESLPCNP
+:ES_UNIVERSITY_HR_ESLPCNP rdf:type owl:Class ;
+                          rdfs:subClassOf :PDIContratado ;
+                          <http://purl.org/roh#country> <http://publications.europa.eu/resource/authority/country/ESP> ;
+                          <http://purl.org/roh#hasCode> :ES_UNIVERSITY_HR_CODE_ESLPCNP ;
+                          rdfs:label "Profesor colaborador no permanente"@es ;
+                          <http://www.w3.org/2004/02/skos/core#closeMatch> <http://skos.um.es/unescothes/C00015> ,
+                                                                           <http://skos.um.es/unescothes/C03965> ;
+                          <http://www.w3.org/2004/02/skos/core#inScheme> :ESUniversityHumanResourcesList ;
+                          <http://www.w3.org/2004/02/skos/core#notation> "ESLPCNP" ;
+                          <http://www.w3.org/2004/02/skos/core#prefLabel> "Profesor colaborador no permanente"@es ,
+                                                                          "Profesor colaborador non permanente"@gl ,
+                                                                          "Profesor collaborador non permanente"@ast ,
+                                                                          "Professor col·laborador no permanent"@ca ,
+                                                                          "Unibertsitateko kolaboratzailea (Ez--iraunkorra)"@eu .
+
+
+###  http://purl.org/roh/university-hr/es#ES_UNIVERSITY_HR_ESLPCP
+:ES_UNIVERSITY_HR_ESLPCP rdf:type owl:Class ;
+                         rdfs:subClassOf :CuerpoDocente ;
+                         <http://purl.org/roh#country> <http://publications.europa.eu/resource/authority/country/ESP> ;
+                         <http://purl.org/roh#hasCode> :ES_UNIVERSITY_HR_CODE_ESLPCP ;
+                         rdfs:label "Profesor colaborador permanente"@es ;
+                         <http://www.w3.org/2004/02/skos/core#closeMatch> <http://skos.um.es/unescothes/C00015> ,
+                                                                          <http://skos.um.es/unescothes/C03965> ;
+                         <http://www.w3.org/2004/02/skos/core#inScheme> :ESUniversityHumanResourcesList ;
+                         <http://www.w3.org/2004/02/skos/core#notation> "ESLPCP" ;
+                         <http://www.w3.org/2004/02/skos/core#prefLabel> "Profesor colaborador permanente"@es ,
+                                                                         "Profesor colaborador permanente"@gl ,
+                                                                         "Profesor collaborador permanente"@ast ,
+                                                                         "Professor col·laborador permanent"@ca ,
+                                                                         "Unibertsitateko kolaboratzailea (Iraunkorra)"@eu .
+
+
+###  http://purl.org/roh/university-hr/es#ES_UNIVERSITY_HR_ESLPI
+:ES_UNIVERSITY_HR_ESLPI rdf:type owl:Class ;
+                        rdfs:subClassOf :PDIContratado ;
+                        <http://purl.org/roh#country> <http://publications.europa.eu/resource/authority/country/ESP> ;
+                        <http://purl.org/roh#hasCode> :ES_UNIVERSITY_HR_CODE_ESLPI ;
+                        rdfs:label "Profesor laboral interino"@es ;
+                        <http://www.w3.org/2004/02/skos/core#closeMatch> <http://skos.um.es/unescothes/C00015> ,
+                                                                         <http://skos.um.es/unescothes/C03965> ;
+                        <http://www.w3.org/2004/02/skos/core#inScheme> :ESUniversityHumanResourcesList ;
+                        <http://www.w3.org/2004/02/skos/core#notation> "ESLPI" ;
+                        <http://www.w3.org/2004/02/skos/core#prefLabel> "Lan kontratudun bitarteko irakaslea"@eu ,
+                                                                        "Profesor laboral interino"@es ,
+                                                                        "Profesor laboral interino"@gl ,
+                                                                        "Profesor llaboral interín"@ast ,
+                                                                        "Professor laboral interí"@ca .
+
+
+###  http://purl.org/roh/university-hr/es#ES_UNIVERSITY_HR_ESLPL
+:ES_UNIVERSITY_HR_ESLPL rdf:type owl:Class ;
+                        rdfs:subClassOf :PDIContratado ;
+                        <http://purl.org/roh#country> <http://publications.europa.eu/resource/authority/country/ESP> ;
+                        <http://purl.org/roh#hasCode> :ES_UNIVERSITY_HR_CODE_ESLPL ;
+                        rdfs:label "Profesor lector"@es ;
+                        <http://www.w3.org/2004/02/skos/core#closeMatch> <http://skos.um.es/unescothes/C00015> ,
+                                                                         <http://skos.um.es/unescothes/C03965> ;
+                        <http://www.w3.org/2004/02/skos/core#inScheme> :ESUniversityHumanResourcesList ;
+                        <http://www.w3.org/2004/02/skos/core#notation> "ESLPL" ;
+                        <http://www.w3.org/2004/02/skos/core#prefLabel> "Irakurlea"@eu ,
+                                                                        "Profesor lector"@ast ,
+                                                                        "Profesor lector"@es ,
+                                                                        "Profesor lector"@gl ,
+                                                                        "Professor lector"@ca .
+
+
+###  http://purl.org/roh/university-hr/es#ES_UNIVERSITY_HR_ESPASF
+:ES_UNIVERSITY_HR_ESPASF rdf:type owl:Class ;
+                         rdfs:subClassOf <http://purl.org/roh/mirror/vivo#NonAcademicPosition> ;
+                         <http://purl.org/roh#country> <http://publications.europa.eu/resource/authority/country/ESP> ;
+                         <http://purl.org/roh#hasCode> :ES_UNIVERSITY_HR_CODE_ESPASF ;
+                         rdfs:label "Personal de administración y servicios funcionario"@es ;
+                         <http://www.w3.org/2004/02/skos/core#inScheme> :ESUniversityHumanResourcesList ;
+                         <http://www.w3.org/2004/02/skos/core#notation> "ESPASF" ;
+                         <http://www.w3.org/2004/02/skos/core#prefLabel> "Karrerako Funtzionarioak"@eu ,
+                                                                         "Persoal de administración e servizos funcionario"@gl ,
+                                                                         "Personal d'alministración y servicios funcionario"@ast ,
+                                                                         "Personal de administración y servicios funcionario"@es ,
+                                                                         "Personal d’administració i serveis funcionari"@ca .
+
+
+###  http://purl.org/roh/university-hr/es#ES_UNIVERSITY_HR_ESPASL
+:ES_UNIVERSITY_HR_ESPASL rdf:type owl:Class ;
+                         rdfs:subClassOf <http://purl.org/roh/mirror/vivo#NonAcademicPosition> ;
+                         <http://purl.org/roh#country> <http://publications.europa.eu/resource/authority/country/ESP> ;
+                         <http://purl.org/roh#hasCode> :ES_UNIVERSITY_HR_CODE_ESPASL ;
+                         rdfs:label "Personal de administración y servicios laboral"@es ;
+                         <http://www.w3.org/2004/02/skos/core#inScheme> :ESUniversityHumanResourcesList ;
+                         <http://www.w3.org/2004/02/skos/core#notation> "ESPASL" ;
+                         <http://www.w3.org/2004/02/skos/core#prefLabel> "Lan kontratudun langile finkoak"@eu ,
+                                                                         "Persoal de administración e servizos laboral"@gl ,
+                                                                         "Personal d'alministración y servicios llaboral"@ast ,
+                                                                         "Personal de administración y servicios laboral"@es ,
+                                                                         "Personal d’administració i serveis laboral"@ca .
+
+
+###  http://purl.org/roh/university-hr/es#ES_UNIVERSITY_HR_ESRECT
+:ES_UNIVERSITY_HR_ESRECT rdf:type owl:Class ;
+                         rdfs:subClassOf <http://purl.org/roh/mirror/vivo#FacultyAdministrativePosition> ;
+                         <http://purl.org/roh#country> <http://publications.europa.eu/resource/authority/country/ESP> ;
+                         <http://purl.org/roh#hasCode> :ES_UNIVERSITY_HR_CODE_ESRECT ;
+                         rdfs:label "Rector"@es ;
+                         <http://www.w3.org/2004/02/skos/core#closeMatch> <http://purl.org/roh/university-hr/uk#GB_UNIVERSITY_CODE_GBCHAN> ;
+                         <http://www.w3.org/2004/02/skos/core#inScheme> :ESUniversityHumanResourcesList ;
+                         <http://www.w3.org/2004/02/skos/core#notation> "ESRECT" ;
+                         <http://www.w3.org/2004/02/skos/core#prefLabel> "Errektorea"@eu ,
+                                                                         "Rector"@ast ,
+                                                                         "Rector"@ca ,
+                                                                         "Rector"@es ,
+                                                                         "Rector"@gl .
+
+
+###  http://purl.org/roh/university-hr/es#ES_UNIVERSITY_HR_ESSECGE
+:ES_UNIVERSITY_HR_ESSECGE rdf:type owl:Class ;
+                          rdfs:subClassOf <http://purl.org/roh/mirror/vivo#FacultyAdministrativePosition> ;
+                          <http://purl.org/roh#country> <http://publications.europa.eu/resource/authority/country/ESP> ;
+                          <http://purl.org/roh#hasCode> :ES_UNIVERSITY_HR_CODE_ESSECGE ;
+                          rdfs:label "Secretario general"@es ;
+                          <http://www.w3.org/2004/02/skos/core#inScheme> :ESUniversityHumanResourcesList ;
+                          <http://www.w3.org/2004/02/skos/core#notation> "ESSECGE" ;
+                          <http://www.w3.org/2004/02/skos/core#prefLabel> "Idazkari Nagusia"@eu ,
+                                                                          "Secretari general"@ca ,
+                                                                          "Secretario general"@es ,
+                                                                          "Secretario xeral"@gl ,
+                                                                          "Secretariu xeneral"@ast .
+
+
+###  http://purl.org/roh/university-hr/es#ES_UNIVERSITY_HR_ESVIDEC
+:ES_UNIVERSITY_HR_ESVIDEC rdf:type owl:Class ;
+                          rdfs:subClassOf <http://purl.org/roh/mirror/vivo#FacultyAdministrativePosition> ;
+                          <http://purl.org/roh#country> <http://publications.europa.eu/resource/authority/country/ESP> ;
+                          <http://purl.org/roh#hasCode> :ES_UNIVERSITY_HR_CODE_ESVIDEC ;
+                          rdfs:label "Vicedecano"@es ;
+                          <http://www.w3.org/2004/02/skos/core#inScheme> :ESUniversityHumanResourcesList ;
+                          <http://www.w3.org/2004/02/skos/core#notation> "ESVIDEC" ;
+                          <http://www.w3.org/2004/02/skos/core#prefLabel> "Dekanordea"@eu ,
+                                                                          "Vicedecano"@es ,
+                                                                          "Vicedecano"@gl ,
+                                                                          "Vicedecanu"@ast ,
+                                                                          "Vicedegà"@ca .
+
+
+###  http://purl.org/roh/university-hr/es#ES_UNIVERSITY_HR_ESVIREC
+:ES_UNIVERSITY_HR_ESVIREC rdf:type owl:Class ;
+                          rdfs:subClassOf <http://purl.org/roh/mirror/vivo#FacultyAdministrativePosition> ;
+                          <http://purl.org/roh#country> <http://publications.europa.eu/resource/authority/country/ESP> ;
+                          <http://purl.org/roh#hasCode> :ES_UNIVERSITY_HR_CODE_ESVIREC ;
+                          rdfs:label "Vicerrector"@es ;
+                          <http://www.w3.org/2004/02/skos/core#closeMatch> <http://purl.org/roh/university-hr/uk#GB_UNIVERSITY_HR_GBCHAN> ;
+                          <http://www.w3.org/2004/02/skos/core#inScheme> :ESUniversityHumanResourcesList ;
+                          <http://www.w3.org/2004/02/skos/core#notation> "ESVIREC" ;
+                          <http://www.w3.org/2004/02/skos/core#prefLabel> "Errektoreordea"@eu ,
+                                                                          "Vicerector"@ca ,
+                                                                          "Vicerrector"@ast ,
+                                                                          "Vicerrector"@es ,
+                                                                          "Vicerrector"@gl .
+
+
+###  http://purl.org/roh/university-hr/es#PDIContratado
+:PDIContratado rdf:type owl:Class ;
+               rdfs:subClassOf <http://purl.org/roh/mirror/vivo#FacultyPosition> ;
+               rdfs:comment "Personal temporal de una universidad."@es ;
+               rdfs:label "Hired PDI"@en ,
+                          "PDI Contratado"@es .
+
+
+###  http://purl.org/roh/university-hr/es#ProfesorAsociado
+:ProfesorAsociado rdf:type owl:Class ;
+                  rdfs:subClassOf :PDIContratado ;
+                  <http://purl.org/roh#country> <http://publications.europa.eu/resource/authority/country/ESP> ;
+                  <http://purl.org/roh#hasCode> :ES_UNIVERSITY_HR_CODE_ESLPAS ;
+                  rdfs:comment """La contratación de Profesoras y Profesores Asociados se ajustará a las siguientes reglas:
+a) El contrato se podrá celebrar con especialistas de reconocida competencia que acrediten ejercer su actividad profesional fuera del ámbito académico universitario.
+b) La finalidad del contrato será la de desarrollar tareas docentes a través de las que se aporten sus conocimientos y experiencia profesionales a la universidad.
+c) El contrato será de carácter temporal y con dedicación a tiempo parcial.
+d) La duración del contrato será trimestral, semestral o anual, y se podrá renovar por períodos de igual duración, siempre que se siga acreditando el ejercicio de la actividad profesional fuera del ámbito académico universitario."""@es ;
+                  rdfs:label "Associate Professor"@en ,
+                             "Profesor Asociado"@es ,
+                             "Profesor asociado"@es ;
+                  <http://www.w3.org/2004/02/skos/core#closeMatch> <http://skos.um.es/unescothes/C00015> ,
+                                                                   "C03965" ;
+                  <http://www.w3.org/2004/02/skos/core#inScheme> :ESUniversityHumanResourcesList ;
+                  <http://www.w3.org/2004/02/skos/core#notation> "ESLPAS" ;
+                  <http://www.w3.org/2004/02/skos/core#prefLabel> "Irakasle elkartua"@eu ,
+                                                                  "Profesor asociado"@es ,
+                                                                  "Profesor asociado"@gl ,
+                                                                  "Profesor asociáu"@ast ,
+                                                                  "Professor associat"@ca .
+
+
+###  http://purl.org/roh/university-hr/es#ProfesorAyudanteDoctor
+:ProfesorAyudanteDoctor rdf:type owl:Class ;
+                        rdfs:subClassOf :PDIContratado ;
+                        <http://purl.org/roh#country> <http://publications.europa.eu/resource/authority/country/ESP> ;
+                        <http://purl.org/roh#hasCode> :ES_UNIVERSITY_HR_CODE_ESLPAD ;
+                        rdfs:comment """La contratación de Profesoras y Profesores Ayudantes Doctores se ajustará a las siguientes reglas:
+a) El contrato se celebrará con doctores. La contratación exigirá la previa evaluación positiva de su actividad por parte de la Agencia Nacional de Evaluación de la Calidad y Acreditación o del órgano de evaluación externa que la ley de la Comunidad Autónoma determine, y será mérito preferente la estancia del candidato en universidades o centros de investigación de reconocido prestigio, españoles o extranjeros, distintos de la universidad que lleve a cabo la contratación.
+b) La finalidad del contrato será la de desarrollar tareas docentes y de investigación.
+c) El contrato será de carácter temporal y con dedicación a tiempo completo.
+d) La duración del contrato no podrá ser inferior a un año ni superior a cinco, pudiendo prorrogarse o renovarse si se hubiera concertado por duración inferior a la máxima, siempre que la duración total no exceda de los indicados cinco años. En cualquier caso, el tiempo total de duración conjunta entre esta figura contractual y la prevista en el artículo anterior, en la misma o distinta universidad, no podrá exceder de ocho años. Las situaciones de incapacidad temporal, maternidad y adopción o acogimiento durante el período de duración del contrato, interrumpirán su cómputo"""@es ;
+                        rdfs:label "Assistant Professor Doctor"@en ,
+                                   "Profesor Ayudante Doctor"@es ,
+                                   "Profesor ayudante doctor"@es ;
+                        <http://www.w3.org/2004/02/skos/core#closeMatch> <http://skos.um.es/unescothes/C00015> ,
+                                                                         <http://skos.um.es/unescothes/C03965> ;
+                        <http://www.w3.org/2004/02/skos/core#inScheme> :ESUniversityHumanResourcesList ;
+                        <http://www.w3.org/2004/02/skos/core#notation> "ESLPAD" ;
+                        <http://www.w3.org/2004/02/skos/core#prefLabel> "Profesor axudante doutor"@gl ,
+                                                                        "Profesor ayudante doctor"@ast ,
+                                                                        "Profesor ayudante doctor"@es ,
+                                                                        "Professor ajudant doctor"@ca .
+
+
+###  http://purl.org/roh/university-hr/es#ProfesorContratadoDoctor
+:ProfesorContratadoDoctor rdf:type owl:Class ;
+                          rdfs:subClassOf :PDIContratado ;
+                          <http://purl.org/roh#country> <http://publications.europa.eu/resource/authority/country/ESP> ;
+                          <http://purl.org/roh#hasCode> :ES_UNIVERSITY_HR_CODE_ESLPCD ;
+                          rdfs:comment """La contratación de Profesoras y Profesores Contratados Doctores se ajustará a las siguientes reglas:
+a) El contrato se celebrará con doctores que reciban la evaluación positiva por parte de la Agencia Nacional de Evaluación de la Calidad y Acreditación o del órgano de evaluación externo que la ley de la Comunidad Autónoma determine.
+b) La finalidad del contrato será la de desarrollar, con plena capacidad docente e investigadora, tareas de docencia y de investigación, o prioritariamente de investigación.
+c) El contrato será de carácter indefinido y con dedicación a tiempo completo."""@es ;
+                          rdfs:label "Hired Professor Doctorr"@en ,
+                                     "Profesor Contratado Doctor"@es ,
+                                     "Profesor contratado doctor"@es ;
+                          <http://www.w3.org/2004/02/skos/core#closeMatch> <http://skos.um.es/unescothes/C00015> ,
+                                                                           <http://skos.um.es/unescothes/C03965> ;
+                          <http://www.w3.org/2004/02/skos/core#inScheme> :ESUniversityHumanResourcesList ;
+                          <http://www.w3.org/2004/02/skos/core#notation> "ESLPCD" ;
+                          <http://www.w3.org/2004/02/skos/core#prefLabel> "Profesor contratado doctor"@es ,
+                                                                          "Profesor contratado doutor"@gl ,
+                                                                          "Profesor contratáu doctor"@ast ,
+                                                                          "Professor contractat doctor"@ca .
+
+
+###  http://purl.org/roh/university-hr/es#ProfesorEmerito
+:ProfesorEmerito rdf:type owl:Class ;
+                 rdfs:subClassOf :PDIContratado ;
+                 <http://purl.org/roh#country> <http://publications.europa.eu/resource/authority/country/ESP> ;
+                 <http://purl.org/roh#hasCode> :ES_UNIVERSITY_HR_CODE_ESPLEM ;
+                 rdfs:comment "Las universidades, de acuerdo con sus estatutos, podrán nombrar a Profesores Eméritos entre profesoras y profesores jubilados que hayan prestado servicios destacados a la universidad"@es ;
+                 rdfs:label "Profesor Emérito"@es ,
+                            "Profesor emérito"@es ,
+                            "Professor Emeritus"@en ;
+                 <http://www.w3.org/2004/02/skos/core#closeMatch> <http://purl.org/roh/university-hr/pt#PT_UNIVERSITY_HR_PTPEM> ,
+                                                                  <http://skos.um.es/unescothes/C00015> ,
+                                                                  <http://skos.um.es/unescothes/C03965> ;
+                 <http://www.w3.org/2004/02/skos/core#inScheme> :ESUniversityHumanResourcesList ;
+                 <http://www.w3.org/2004/02/skos/core#notation> "ESPLEM" ;
+                 <http://www.w3.org/2004/02/skos/core#prefLabel> "Irakasle emeritua"@eu ,
+                                                                 "Profesor emérito"@es ,
+                                                                 "Profesor emérito"@gl ,
+                                                                 "Profesor eméritu"@ast ,
+                                                                 "Professor emèrit"@ca .
+
+
+###  http://purl.org/roh/university-hr/es#ProfesorTitularDeEscuelaUniversitaria
+:ProfesorTitularDeEscuelaUniversitaria rdf:type owl:Class ;
+                                       rdfs:subClassOf :CuerpoDocente ;
+                                       <http://purl.org/roh#country> <http://publications.europa.eu/resource/authority/country/ESP> ;
+                                       <http://purl.org/roh#hasCode> :ES_UNIVERSITY_HR_CODE_ESFEU ;
+                                       rdfs:label "Profesor Titular de Escuela Universitaria"@es ,
+                                                  "Profesor titular de escuela universitaria"@es ,
+                                                  "University School Reader"@en ;
+                                       <http://www.w3.org/2004/02/skos/core#closeMatch> <http://skos.um.es/unescothes/C00015> ,
+                                                                                        <http://skos.um.es/unescothes/C03965> ;
+                                       <http://www.w3.org/2004/02/skos/core#inScheme> :ESUniversityHumanResourcesList ;
+                                       <http://www.w3.org/2004/02/skos/core#notation> "ESFEU" ;
+                                       <http://www.w3.org/2004/02/skos/core#prefLabel> "Eskolako irakasle titutarra"@eu ,
+                                                                                       "Profesor titular de escola universitaria"@gl ,
+                                                                                       "Profesor titular de escuela universitaria"@es ,
+                                                                                       "Profesor titular d’escuela universitaria"@ast ,
+                                                                                       "Professor titular d’escola universitària"@ca .
+
+
+###  http://purl.org/roh/university-hr/es#ProfesorTitularDeUniversidad
+:ProfesorTitularDeUniversidad rdf:type owl:Class ;
+                              rdfs:subClassOf :CuerpoDocente ;
+                              <http://purl.org/roh#country> <http://publications.europa.eu/resource/authority/country/ESP> ;
+                              <http://purl.org/roh#hasCode> :ES_UNIVERSITY_HR_CODE_ESFPTU ;
+                              rdfs:label "Associate Professor"@en ,
+                                         "Profesor Titular de Universidad"@es ,
+                                         "Profesor titular de universidad"@es ;
+                              <http://www.w3.org/2004/02/skos/core#closeMatch> <http://skos.um.es/unescothes/C00015> ,
+                                                                               <http://skos.um.es/unescothes/C03965> ;
+                              <http://www.w3.org/2004/02/skos/core#inScheme> :ESUniversityHumanResourcesList ;
+                              <http://www.w3.org/2004/02/skos/core#notation> "ESFPTU" ;
+                              <http://www.w3.org/2004/02/skos/core#prefLabel> "Irakasle titularra"@eu ,
+                                                                              "Profesor titular d'universidá"@ast ,
+                                                                              "Profesor titular de universidad"@es ,
+                                                                              "Profesor titular de universidade"@gl ,
+                                                                              "Professeur titulaire d'université"@fr ,
+                                                                              "Professor titular d'universitat"@ca ,
+                                                                              "Professor titular de universidade"@pt .
+
+
+###  http://purl.org/roh/university-hr/es#ProfesorVisitante
+:ProfesorVisitante rdf:type owl:Class ;
+                   rdfs:subClassOf :PDIContratado ;
+                   <http://purl.org/roh#country> <http://publications.europa.eu/resource/authority/country/ESP> ;
+                   <http://purl.org/roh#hasCode> :ES_UNIVERSITY_HR_CODE_ESPLV ;
+                   rdfs:comment """La contratación de Profesoras y Profesores Visitantes se ajustará a las siguientes reglas:
+a) El contrato se podrá celebrar con profesores o investigadores de reconocido prestigio de otras universidades y centros de investigación, tanto españoles como extranjeros.
+b) La finalidad del contrato será la de desarrollar tareas docentes o investigadoras a través de las que se aporten los conocimientos y la experiencia docente e investigadora de los indicados profesores a la universidad.
+c) El contrato será de carácter temporal con la duración que se acuerde entre las partes y dedicación a tiempo parcial o completo"""@es ;
+                   rdfs:label "Profesor Visitante"@es ,
+                              "Profesor visitante"@es ,
+                              "Visiting Professor"@en ;
+                   <http://www.w3.org/2004/02/skos/core#closeMatch> <http://skos.um.es/unescothes/C00015> ,
+                                                                    <http://skos.um.es/unescothes/C03965> ;
+                   <http://www.w3.org/2004/02/skos/core#exactMatch> <http://skos.um.es/unescothes/C04254> ;
+                   <http://www.w3.org/2004/02/skos/core#inScheme> :ESUniversityHumanResourcesList ;
+                   <http://www.w3.org/2004/02/skos/core#notation> "ESPLV" ;
+                   <http://www.w3.org/2004/02/skos/core#prefLabel> "Irakasle bisitaria"@eu ,
+                                                                   "Profesor visitante"@ast ,
+                                                                   "Profesor visitante"@es ,
+                                                                   "Profesor visitante"@gl ,
+                                                                   "Professor visitant"@ca .
+
+
+###  http://www.w3.org/2004/02/skos/core#Concept
+<http://www.w3.org/2004/02/skos/core#Concept> rdf:type owl:Class ;
+                                              rdfs:label "Concept"@en .
+
+
+###  http://www.w3.org/2004/02/skos/core#ConceptScheme
+<http://www.w3.org/2004/02/skos/core#ConceptScheme> rdf:type owl:Class ;
+                                                    rdfs:label "Concept Scheme"@en .
+
+
+#################################################################
+#    Individuals
+#################################################################
+
+###  http://purl.org/roh/university-hr/es#ESUniversityHumanResourcesCodesList
+:ESUniversityHumanResourcesCodesList rdf:type owl:NamedIndividual ,
+                                              <http://www.w3.org/2004/02/skos/core#ConceptScheme> ;
+                                     rdfs:label "Codes des resources humains des universités d'Espagne"@fr ,
+                                                "Codes for the human resources of the universities from Spain"@en ,
+                                                "Codis dels recursos humans de les universitats d'Espanya"@ca ,
+                                                "Códigos de los recursos humanos de las universidades de España"@es ,
+                                                "Códigos de los recursos humanos de les universidaes d'España"@ast ,
+                                                "Códigos dos recursos humanos das universidades de Espanha"@pt ,
+                                                "Códigos dos recursos humanos das universidades de España"@gl ;
+                                     <http://www.w3.org/2004/02/skos/core#prefLabel> "Codes des resources humains des universités d'Espagne"@fr ,
+                                                                                     "Codes for the human resources of the universities from Spain"@en ,
+                                                                                     "Codis dels recursos humans de les universitats d'Espanya"@ca ,
+                                                                                     "Códigos de los recursos humanos de las universidades de España"@es ,
+                                                                                     "Códigos de los recursos humanos de les universidaes d'España"@ast ,
+                                                                                     "Códigos dos recursos humanos das universidades de Espanha"@pt ,
+                                                                                     "Códigos dos recursos humanos das universidades de España"@gl .
+
+
+###  http://purl.org/roh/university-hr/es#ESUniversityHumanResourcesList
+:ESUniversityHumanResourcesList rdf:type owl:NamedIndividual ,
+                                         <http://www.w3.org/2004/02/skos/core#ConceptScheme> ;
+                                rdfs:label "Human resources of the universities from Spain"@en ,
+                                           "Recursos humanos das universidades de Espanha"@pt ,
+                                           "Recursos humanos das universidades de España"@gl ,
+                                           "Recursos humanos de las universidades de España"@es ,
+                                           "Recursos humanos de les universidaes d'España"@ast ,
+                                           "Recursos humans de les universitats d'Espanya"@ca ,
+                                           "Resources humains des universités d'Espagne"@fr ;
+                                <http://www.w3.org/2004/02/skos/core#prefLabel> "Human resources of the universities from Spain"@en ,
+                                                                                "Recursos humanos das universidades de Espanha"@pt ,
+                                                                                "Recursos humanos das universidades de España"@gl ,
+                                                                                "Recursos humanos de las universidades de España"@es ,
+                                                                                "Recursos humanos de les universidaes d'España"@ast ,
+                                                                                "Recursos humans de les universitats d'Espanya"@ca ,
+                                                                                "Resources humains des universités d'Espagne"@fr .
+
+
+###  http://purl.org/roh/university-hr/es#ES_UNIVERSITY_HR_CODE_ESDECA
+:ES_UNIVERSITY_HR_CODE_ESDECA rdf:type owl:NamedIndividual ,
+                                       <http://www.w3.org/2004/02/skos/core#Concept> ;
+                              <http://purl.org/roh#codeOf> :ES_UNIVERSITY_HR_ESDECA ;
+                              rdfs:label "ESDECA" ;
+                              <http://www.w3.org/2004/02/skos/core#inScheme> :ESUniversityHumanResourcesCodesList ;
+                              <http://www.w3.org/2004/02/skos/core#prefLabel> "ESDECA" .
+
+
+###  http://purl.org/roh/university-hr/es#ES_UNIVERSITY_HR_CODE_ESFEU
+:ES_UNIVERSITY_HR_CODE_ESFEU rdf:type owl:NamedIndividual ,
+                                      <http://www.w3.org/2004/02/skos/core#Concept> ;
+                             <http://purl.org/roh#codeOf> :ProfesorTitularDeEscuelaUniversitaria ;
+                             rdfs:label "ESFEU" ;
+                             <http://www.w3.org/2004/02/skos/core#inScheme> :ESUniversityHumanResourcesCodesList ;
+                             <http://www.w3.org/2004/02/skos/core#prefLabel> "ESFEU" .
+
+
+###  http://purl.org/roh/university-hr/es#ES_UNIVERSITY_HR_CODE_ESFIVEFNP
+:ES_UNIVERSITY_HR_CODE_ESFIVEFNP rdf:type owl:NamedIndividual ,
+                                          <http://www.w3.org/2004/02/skos/core#Concept> ;
+                                 <http://purl.org/roh#codeOf> :ES_UNIVERSITY_HR_ESFIVEFNP ;
+                                 rdfs:label "ESFIVEFNP" ;
+                                 <http://www.w3.org/2004/02/skos/core#inScheme> :ESUniversityHumanResourcesCodesList ;
+                                 <http://www.w3.org/2004/02/skos/core#prefLabel> "ESFIVEFNP" .
+
+
+###  http://purl.org/roh/university-hr/es#ES_UNIVERSITY_HR_CODE_ESFIVEFP
+:ES_UNIVERSITY_HR_CODE_ESFIVEFP rdf:type owl:NamedIndividual ,
+                                         <http://www.w3.org/2004/02/skos/core#Concept> ;
+                                <http://purl.org/roh#codeOf> :ES_UNIVERSITY_HR_ESFIVEFP ;
+                                rdfs:label "ESFIVEFP" ;
+                                <http://www.w3.org/2004/02/skos/core#inScheme> :ESUniversityHumanResourcesCodesList ;
+                                <http://www.w3.org/2004/02/skos/core#prefLabel> "ESFIVEFP" .
+
+
+###  http://purl.org/roh/university-hr/es#ES_UNIVERSITY_HR_CODE_ESFPCEU
+:ES_UNIVERSITY_HR_CODE_ESFPCEU rdf:type owl:NamedIndividual ,
+                                        <http://www.w3.org/2004/02/skos/core#Concept> ;
+                               <http://purl.org/roh#codeOf> :CatedraticoDeEscuelaUniversitaria ;
+                               rdfs:label "ESFPCEU" ;
+                               <http://www.w3.org/2004/02/skos/core#inScheme> :ESUniversityHumanResourcesCodesList ;
+                               <http://www.w3.org/2004/02/skos/core#prefLabel> "ESFPCEU" .
+
+
+###  http://purl.org/roh/university-hr/es#ES_UNIVERSITY_HR_CODE_ESFPCU
+:ES_UNIVERSITY_HR_CODE_ESFPCU rdf:type owl:NamedIndividual ,
+                                       <http://www.w3.org/2004/02/skos/core#Concept> ;
+                              <http://purl.org/roh#codeOf> :CatedraticoDeUniversidad ;
+                              rdfs:label "ESFPCU" ;
+                              <http://www.w3.org/2004/02/skos/core#inScheme> :ESUniversityHumanResourcesCodesList ;
+                              <http://www.w3.org/2004/02/skos/core#prefLabel> "ESFPCU" .
+
+
+###  http://purl.org/roh/university-hr/es#ES_UNIVERSITY_HR_CODE_ESFPTN
+:ES_UNIVERSITY_HR_CODE_ESFPTN rdf:type owl:NamedIndividual ,
+                                       <http://www.w3.org/2004/02/skos/core#Concept> ;
+                              <http://purl.org/roh#codeOf> :ES_UNIVERSITY_HR_ESFPTN ;
+                              rdfs:label "ESFPTN" ;
+                              <http://www.w3.org/2004/02/skos/core#inScheme> :ESUniversityHumanResourcesCodesList ;
+                              <http://www.w3.org/2004/02/skos/core#prefLabel> "ESFPTN" .
+
+
+###  http://purl.org/roh/university-hr/es#ES_UNIVERSITY_HR_CODE_ESFPTU
+:ES_UNIVERSITY_HR_CODE_ESFPTU rdf:type owl:NamedIndividual ,
+                                       <http://www.w3.org/2004/02/skos/core#Concept> ;
+                              <http://purl.org/roh#codeOf> :ProfesorTitularDeUniversidad ;
+                              rdfs:label "ESFPTU" ;
+                              <http://www.w3.org/2004/02/skos/core#inScheme> :ESUniversityHumanResourcesCodesList ;
+                              <http://www.w3.org/2004/02/skos/core#prefLabel> "ESFPTU" .
+
+
+###  http://purl.org/roh/university-hr/es#ES_UNIVERSITY_HR_CODE_ESJEFDEP
+:ES_UNIVERSITY_HR_CODE_ESJEFDEP rdf:type owl:NamedIndividual ,
+                                         <http://www.w3.org/2004/02/skos/core#Concept> ;
+                                <http://purl.org/roh#codeOf> :ES_UNIVERSITY_HR_ESJEFDEP ;
+                                rdfs:label "ESJEFDEP" ;
+                                <http://www.w3.org/2004/02/skos/core#inScheme> :ESUniversityHumanResourcesCodesList ;
+                                <http://www.w3.org/2004/02/skos/core#prefLabel> "ESJEFDEP" .
+
+
+###  http://purl.org/roh/university-hr/es#ES_UNIVERSITY_HR_CODE_ESLI
+:ES_UNIVERSITY_HR_CODE_ESLI rdf:type owl:NamedIndividual ,
+                                     <http://www.w3.org/2004/02/skos/core#Concept> ;
+                            <http://purl.org/roh#codeOf> :ES_UNIVERSITY_HR_ESLI ;
+                            rdfs:label "ESLI" ;
+                            <http://www.w3.org/2004/02/skos/core#inScheme> :ESUniversityHumanResourcesCodesList ;
+                            <http://www.w3.org/2004/02/skos/core#prefLabel> "ESLI" .
+
+
+###  http://purl.org/roh/university-hr/es#ES_UNIVERSITY_HR_CODE_ESLPAD
+:ES_UNIVERSITY_HR_CODE_ESLPAD rdf:type owl:NamedIndividual ,
+                                       <http://www.w3.org/2004/02/skos/core#Concept> ;
+                              <http://purl.org/roh#codeOf> :ProfesorAyudanteDoctor ;
+                              rdfs:label "ESLPAD" ;
+                              <http://www.w3.org/2004/02/skos/core#inScheme> :ESUniversityHumanResourcesCodesList ;
+                              <http://www.w3.org/2004/02/skos/core#prefLabel> "ESLPAD" .
+
+
+###  http://purl.org/roh/university-hr/es#ES_UNIVERSITY_HR_CODE_ESLPADJ
+:ES_UNIVERSITY_HR_CODE_ESLPADJ rdf:type owl:NamedIndividual ,
+                                        <http://www.w3.org/2004/02/skos/core#Concept> ;
+                               <http://purl.org/roh#codeOf> :ES_UNIVERSITY_HR_ESLPADJ ;
+                               rdfs:label "ESLPADJ" ;
+                               <http://www.w3.org/2004/02/skos/core#inScheme> :ESUniversityHumanResourcesCodesList ;
+                               <http://www.w3.org/2004/02/skos/core#prefLabel> "ESLPADJ" .
+
+
+###  http://purl.org/roh/university-hr/es#ES_UNIVERSITY_HR_CODE_ESLPAG
+:ES_UNIVERSITY_HR_CODE_ESLPAG rdf:type owl:NamedIndividual ,
+                                       <http://www.w3.org/2004/02/skos/core#Concept> ;
+                              <http://purl.org/roh#codeOf> :ES_UNIVERSITY_HR_ESLPAG ;
+                              rdfs:label "ESLPAG" ;
+                              <http://www.w3.org/2004/02/skos/core#inScheme> :ESUniversityHumanResourcesCodesList ;
+                              <http://www.w3.org/2004/02/skos/core#prefLabel> "ESLPAG" .
+
+
+###  http://purl.org/roh/university-hr/es#ES_UNIVERSITY_HR_CODE_ESLPAM
+:ES_UNIVERSITY_HR_CODE_ESLPAM rdf:type owl:NamedIndividual ,
+                                       <http://www.w3.org/2004/02/skos/core#Concept> ;
+                              <http://purl.org/roh#codeOf> :ES_UNIVERSITY_HR_ESLPAM ;
+                              rdfs:label "ESLPAM" ;
+                              <http://www.w3.org/2004/02/skos/core#inScheme> :ESUniversityHumanResourcesCodesList ;
+                              <http://www.w3.org/2004/02/skos/core#prefLabel> "ESLPAM" .
+
+
+###  http://purl.org/roh/university-hr/es#ES_UNIVERSITY_HR_CODE_ESLPAS
+:ES_UNIVERSITY_HR_CODE_ESLPAS rdf:type owl:NamedIndividual ,
+                                       <http://www.w3.org/2004/02/skos/core#Concept> ;
+                              <http://purl.org/roh#codeOf> :ProfesorAsociado ;
+                              rdfs:label "ESLPAS" ;
+                              <http://www.w3.org/2004/02/skos/core#inScheme> :ESUniversityHumanResourcesCodesList ;
+                              <http://www.w3.org/2004/02/skos/core#prefLabel> "ESLPAS" .
+
+
+###  http://purl.org/roh/university-hr/es#ES_UNIVERSITY_HR_CODE_ESLPAY
+:ES_UNIVERSITY_HR_CODE_ESLPAY rdf:type owl:NamedIndividual ,
+                                       <http://www.w3.org/2004/02/skos/core#Concept> ;
+                              <http://purl.org/roh#codeOf> :ES_UNIVERSITY_HR_ESLPAY ;
+                              rdfs:label "ESLPAY" ;
+                              <http://www.w3.org/2004/02/skos/core#inScheme> :ESUniversityHumanResourcesCodesList ;
+                              <http://www.w3.org/2004/02/skos/core#prefLabel> "ESLPAY" .
+
+
+###  http://purl.org/roh/university-hr/es#ES_UNIVERSITY_HR_CODE_ESLPC
+:ES_UNIVERSITY_HR_CODE_ESLPC rdf:type owl:NamedIndividual ,
+                                      <http://www.w3.org/2004/02/skos/core#Concept> ;
+                             <http://purl.org/roh#codeOf> :ES_UNIVERSITY_HR_ESLPC ;
+                             rdfs:label "ESLPC" ;
+                             <http://www.w3.org/2004/02/skos/core#inScheme> :ESUniversityHumanResourcesCodesList ;
+                             <http://www.w3.org/2004/02/skos/core#prefLabel> "ESLPC" .
+
+
+###  http://purl.org/roh/university-hr/es#ES_UNIVERSITY_HR_CODE_ESLPCD
+:ES_UNIVERSITY_HR_CODE_ESLPCD rdf:type owl:NamedIndividual ,
+                                       <http://www.w3.org/2004/02/skos/core#Concept> ;
+                              <http://purl.org/roh#codeOf> :ProfesorContratadoDoctor ;
+                              rdfs:label "ESLPCD" ;
+                              <http://www.w3.org/2004/02/skos/core#inScheme> :ESUniversityHumanResourcesCodesList ;
+                              <http://www.w3.org/2004/02/skos/core#prefLabel> "ESLPCD" .
+
+
+###  http://purl.org/roh/university-hr/es#ES_UNIVERSITY_HR_CODE_ESLPCNP
+:ES_UNIVERSITY_HR_CODE_ESLPCNP rdf:type owl:NamedIndividual ,
+                                        <http://www.w3.org/2004/02/skos/core#Concept> ;
+                               <http://purl.org/roh#codeOf> :ES_UNIVERSITY_HR_ESLPCNP ;
+                               rdfs:label "ESLPCNP" ;
+                               <http://www.w3.org/2004/02/skos/core#inScheme> :ESUniversityHumanResourcesCodesList ;
+                               <http://www.w3.org/2004/02/skos/core#prefLabel> "ESLPCNP" .
+
+
+###  http://purl.org/roh/university-hr/es#ES_UNIVERSITY_HR_CODE_ESLPCP
+:ES_UNIVERSITY_HR_CODE_ESLPCP rdf:type owl:NamedIndividual ,
+                                       <http://www.w3.org/2004/02/skos/core#Concept> ;
+                              <http://purl.org/roh#codeOf> :ES_UNIVERSITY_HR_ESLPCP ;
+                              rdfs:label "ESLPCP" ;
+                              <http://www.w3.org/2004/02/skos/core#inScheme> :ESUniversityHumanResourcesCodesList ;
+                              <http://www.w3.org/2004/02/skos/core#prefLabel> "ESLPCP" .
+
+
+###  http://purl.org/roh/university-hr/es#ES_UNIVERSITY_HR_CODE_ESLPI
+:ES_UNIVERSITY_HR_CODE_ESLPI rdf:type owl:NamedIndividual ,
+                                      <http://www.w3.org/2004/02/skos/core#Concept> ;
+                             <http://purl.org/roh#codeOf> :ES_UNIVERSITY_HR_ESLPI ;
+                             rdfs:label "ESLPI" ;
+                             <http://www.w3.org/2004/02/skos/core#inScheme> :ESUniversityHumanResourcesCodesList ;
+                             <http://www.w3.org/2004/02/skos/core#prefLabel> "ESLPI" .
+
+
+###  http://purl.org/roh/university-hr/es#ES_UNIVERSITY_HR_CODE_ESLPL
+:ES_UNIVERSITY_HR_CODE_ESLPL rdf:type owl:NamedIndividual ,
+                                      <http://www.w3.org/2004/02/skos/core#Concept> ;
+                             <http://purl.org/roh#codeOf> :ES_UNIVERSITY_HR_ESLPL ;
+                             rdfs:label "ESLPL" ;
+                             <http://www.w3.org/2004/02/skos/core#inScheme> :ESUniversityHumanResourcesCodesList ;
+                             <http://www.w3.org/2004/02/skos/core#prefLabel> "ESLPL" .
+
+
+###  http://purl.org/roh/university-hr/es#ES_UNIVERSITY_HR_CODE_ESPASF
+:ES_UNIVERSITY_HR_CODE_ESPASF rdf:type owl:NamedIndividual ,
+                                       <http://www.w3.org/2004/02/skos/core#Concept> ;
+                              <http://purl.org/roh#codeOf> :ES_UNIVERSITY_HR_ESPASF ;
+                              rdfs:label "ESPASF" ;
+                              <http://www.w3.org/2004/02/skos/core#inScheme> :ESUniversityHumanResourcesCodesList ;
+                              <http://www.w3.org/2004/02/skos/core#prefLabel> "ESPASF" .
+
+
+###  http://purl.org/roh/university-hr/es#ES_UNIVERSITY_HR_CODE_ESPASL
+:ES_UNIVERSITY_HR_CODE_ESPASL rdf:type owl:NamedIndividual ,
+                                       <http://www.w3.org/2004/02/skos/core#Concept> ;
+                              <http://purl.org/roh#codeOf> :ES_UNIVERSITY_HR_ESPASL ;
+                              rdfs:label "ESPASL" ;
+                              <http://www.w3.org/2004/02/skos/core#inScheme> :ESUniversityHumanResourcesCodesList ;
+                              <http://www.w3.org/2004/02/skos/core#prefLabel> "ESPASL" .
+
+
+###  http://purl.org/roh/university-hr/es#ES_UNIVERSITY_HR_CODE_ESPLEM
+:ES_UNIVERSITY_HR_CODE_ESPLEM rdf:type owl:NamedIndividual ,
+                                       <http://www.w3.org/2004/02/skos/core#Concept> ;
+                              <http://purl.org/roh#codeOf> :ProfesorEmerito ;
+                              rdfs:label "ESPLEM" ;
+                              <http://www.w3.org/2004/02/skos/core#inScheme> :ESUniversityHumanResourcesCodesList ;
+                              <http://www.w3.org/2004/02/skos/core#prefLabel> "ESPLEM" .
+
+
+###  http://purl.org/roh/university-hr/es#ES_UNIVERSITY_HR_CODE_ESPLV
+:ES_UNIVERSITY_HR_CODE_ESPLV rdf:type owl:NamedIndividual ,
+                                      <http://www.w3.org/2004/02/skos/core#Concept> ;
+                             <http://purl.org/roh#codeOf> :ProfesorVisitante ;
+                             rdfs:label "ESPLV" ;
+                             <http://www.w3.org/2004/02/skos/core#inScheme> :ESUniversityHumanResourcesCodesList ;
+                             <http://www.w3.org/2004/02/skos/core#prefLabel> "ESPLV" .
+
+
+###  http://purl.org/roh/university-hr/es#ES_UNIVERSITY_HR_CODE_ESRECT
+:ES_UNIVERSITY_HR_CODE_ESRECT rdf:type owl:NamedIndividual ,
+                                       <http://www.w3.org/2004/02/skos/core#Concept> ;
+                              <http://purl.org/roh#codeOf> :ES_UNIVERSITY_HR_ESRECT ;
+                              rdfs:label "ESRECT" ;
+                              <http://www.w3.org/2004/02/skos/core#inScheme> :ESUniversityHumanResourcesCodesList ;
+                              <http://www.w3.org/2004/02/skos/core#prefLabel> "ESRECT" .
+
+
+###  http://purl.org/roh/university-hr/es#ES_UNIVERSITY_HR_CODE_ESSECGE
+:ES_UNIVERSITY_HR_CODE_ESSECGE rdf:type owl:NamedIndividual ,
+                                        <http://www.w3.org/2004/02/skos/core#Concept> ;
+                               <http://purl.org/roh#codeOf> :ES_UNIVERSITY_HR_ESSECGE ;
+                               rdfs:label "ESSECGE" ;
+                               <http://www.w3.org/2004/02/skos/core#inScheme> :ESUniversityHumanResourcesCodesList ;
+                               <http://www.w3.org/2004/02/skos/core#prefLabel> "ESSECGE" .
+
+
+###  http://purl.org/roh/university-hr/es#ES_UNIVERSITY_HR_CODE_ESVIDEC
+:ES_UNIVERSITY_HR_CODE_ESVIDEC rdf:type owl:NamedIndividual ,
+                                        <http://www.w3.org/2004/02/skos/core#Concept> ;
+                               <http://purl.org/roh#codeOf> :ES_UNIVERSITY_HR_ESVIDEC ;
+                               rdfs:label "ESVIDEC" ;
+                               <http://www.w3.org/2004/02/skos/core#inScheme> :ESUniversityHumanResourcesCodesList ;
+                               <http://www.w3.org/2004/02/skos/core#prefLabel> "ESVIDEC" .
+
+
+###  http://purl.org/roh/university-hr/es#ES_UNIVERSITY_HR_CODE_ESVIREC
+:ES_UNIVERSITY_HR_CODE_ESVIREC rdf:type owl:NamedIndividual ,
+                                        <http://www.w3.org/2004/02/skos/core#Concept> ;
+                               <http://purl.org/roh#codeOf> :ES_UNIVERSITY_HR_ESVIREC ;
+                               rdfs:label "ESVIREC" ;
+                               <http://www.w3.org/2004/02/skos/core#inScheme> :ESUniversityHumanResourcesCodesList ;
+                               <http://www.w3.org/2004/02/skos/core#prefLabel> "ESVIREC" .
+
+
+###  Generated by the OWL API (version 5.1.14) https://github.com/owlcs/owlapi/

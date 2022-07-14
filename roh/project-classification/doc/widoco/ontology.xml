@@ -1,0 +1,511 @@
+<?xml version="1.0"?>
+<rdf:RDF xmlns="http://purl.org/roh/project-classification#"
+     xml:base="http://purl.org/roh/project-classification"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     xmlns:skos="http://www.w3.org/2004/02/skos/core#">
+    <owl:Ontology rdf:about="http://purl.org/roh/project-classification"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Annotation properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+
+    
+
+
+    <!-- http://www.w3.org/2004/02/skos/core#definition -->
+
+
+    <owl:AnnotationProperty rdf:about="http://www.w3.org/2004/02/skos/core#definition"/>
+    
+
+
+    <!-- http://www.w3.org/2004/02/skos/core#example -->
+
+
+    <owl:AnnotationProperty rdf:about="http://www.w3.org/2004/02/skos/core#example"/>
+    
+
+
+    <!-- http://www.w3.org/2004/02/skos/core#inScheme -->
+
+
+    <owl:AnnotationProperty rdf:about="http://www.w3.org/2004/02/skos/core#inScheme"/>
+    
+
+
+    <!-- http://www.w3.org/2004/02/skos/core#scopeNote -->
+
+
+    <owl:AnnotationProperty rdf:about="http://www.w3.org/2004/02/skos/core#scopeNote"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Object Properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+
+    
+
+
+    <!-- http://www.w3.org/2004/02/skos/core#broader -->
+
+
+    <owl:ObjectProperty rdf:about="http://www.w3.org/2004/02/skos/core#broader">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2004/02/skos/core#broaderTransitive"/>
+        <owl:inverseOf rdf:resource="http://www.w3.org/2004/02/skos/core#narrower"/>
+        <rdfs:comment xml:lang="en">Broader concepts are typically rendered as parents in a concept hierarchy (tree).</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="http://www.w3.org/2004/02/skos/core"/>
+        <rdfs:label xml:lang="en">has broader</rdfs:label>
+        <skos:definition xml:lang="en">Relates a concept to a concept that is more general in meaning.</skos:definition>
+        <skos:scopeNote xml:lang="en">By convention, skos:broader is only used to assert an immediate (i.e. direct) hierarchical link between two conceptual resources.</skos:scopeNote>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.w3.org/2004/02/skos/core#broaderTransitive -->
+
+
+    <owl:ObjectProperty rdf:about="http://www.w3.org/2004/02/skos/core#broaderTransitive"/>
+    
+
+
+    <!-- http://www.w3.org/2004/02/skos/core#hasTopConcept -->
+
+
+    <owl:ObjectProperty rdf:about="http://www.w3.org/2004/02/skos/core#hasTopConcept">
+        <owl:inverseOf rdf:resource="http://www.w3.org/2004/02/skos/core#topConceptOf"/>
+        <rdfs:domain rdf:resource="http://www.w3.org/2004/02/skos/core#ConceptScheme"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+        <rdfs:isDefinedBy rdf:resource="http://www.w3.org/2004/02/skos/core"/>
+        <rdfs:label xml:lang="en">has top concept</rdfs:label>
+        <skos:definition xml:lang="en">Relates, by convention, a concept scheme to a concept which is topmost in the broader/narrower concept hierarchies for that scheme, providing an entry point to these hierarchies.</skos:definition>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.w3.org/2004/02/skos/core#narrower -->
+
+
+    <owl:ObjectProperty rdf:about="http://www.w3.org/2004/02/skos/core#narrower">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2004/02/skos/core#narrowerTransitive"/>
+        <rdfs:comment xml:lang="en">Narrower concepts are typically rendered as children in a concept hierarchy (tree).</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="http://www.w3.org/2004/02/skos/core"/>
+        <rdfs:label xml:lang="en">has narrower</rdfs:label>
+        <skos:definition xml:lang="en">Relates a concept to a concept that is more specific in meaning.</skos:definition>
+        <skos:scopeNote xml:lang="en">By convention, skos:broader is only used to assert an immediate (i.e. direct) hierarchical link between two conceptual resources.</skos:scopeNote>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.w3.org/2004/02/skos/core#narrowerTransitive -->
+
+
+    <owl:ObjectProperty rdf:about="http://www.w3.org/2004/02/skos/core#narrowerTransitive"/>
+    
+
+
+    <!-- http://www.w3.org/2004/02/skos/core#topConceptOf -->
+
+
+    <owl:ObjectProperty rdf:about="http://www.w3.org/2004/02/skos/core#topConceptOf"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+
+    
+
+
+    <!-- http://purl.org/roh#ProjectClassification -->
+
+
+    <owl:Class rdf:about="http://purl.org/roh#ProjectClassification">
+        <rdfs:subClassOf rdf:resource="http://www.w3.org/2004/02/skos/core#ConceptScheme"/>
+        <rdfs:label xml:lang="es">Clasificación de Proyecto</rdfs:label>
+        <rdfs:label xml:lang="en">Project Classification</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.w3.org/2004/02/skos/core#Collection -->
+
+
+    <owl:Class rdf:about="http://www.w3.org/2004/02/skos/core#Collection">
+        <owl:disjointWith rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+        <owl:disjointWith rdf:resource="http://www.w3.org/2004/02/skos/core#ConceptScheme"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.w3.org/2004/02/skos/core#Concept -->
+
+
+    <owl:Class rdf:about="http://www.w3.org/2004/02/skos/core#Concept">
+        <owl:disjointWith rdf:resource="http://www.w3.org/2004/02/skos/core#ConceptScheme"/>
+        <rdfs:isDefinedBy rdf:resource="http://www.w3.org/2004/02/skos/core"/>
+        <rdfs:label xml:lang="en">Concept</rdfs:label>
+        <skos:definition xml:lang="en">An idea or notion; a unit of thought.</skos:definition>
+    </owl:Class>
+    
+
+
+    <!-- http://www.w3.org/2004/02/skos/core#ConceptScheme -->
+
+
+    <owl:Class rdf:about="http://www.w3.org/2004/02/skos/core#ConceptScheme">
+        <rdfs:isDefinedBy rdf:resource="http://www.w3.org/2004/02/skos/core"/>
+        <rdfs:label xml:lang="en">Concept Scheme</rdfs:label>
+        <skos:definition xml:lang="en">A set of concepts, optionally including statements about semantic relationships between those concepts.</skos:definition>
+        <skos:example xml:lang="en">Thesauri, classification schemes, subject heading lists, taxonomies, &apos;folksonomies&apos;, and other types of controlled vocabulary are all examples of concept schemes. Concept schemes are also embedded in glossaries and terminologies.</skos:example>
+        <skos:scopeNote xml:lang="en">A concept scheme may be defined to include concepts from different sources.</skos:scopeNote>
+    </owl:Class>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Individuals
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+
+    
+
+
+    <!-- http://purl.org/roh/project-classification#European -->
+
+
+    <owl:NamedIndividual rdf:about="http://purl.org/roh/project-classification#European">
+        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+        <skos:inScheme rdf:resource="http://purl.org/roh/project-classification#ProjectClassification"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://purl.org/roh/project-classification#ExcellentScience -->
+
+
+    <owl:NamedIndividual rdf:about="http://purl.org/roh/project-classification#ExcellentScience">
+        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+        <skos:broader rdf:resource="http://purl.org/roh/project-classification#Horizon2020"/>
+        <skos:inScheme rdf:resource="http://purl.org/roh/project-classification#ProjectClassification"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://purl.org/roh/project-classification#FomentoInvestigacionCientificoTecnica -->
+
+
+    <owl:NamedIndividual rdf:about="http://purl.org/roh/project-classification#FomentoInvestigacionCientificoTecnica">
+        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+        <skos:broader rdf:resource="http://purl.org/roh/project-classification#PlanEstatal2013-2016"/>
+        <skos:inScheme rdf:resource="http://purl.org/roh/project-classification#ProjectClassification"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://purl.org/roh/project-classification#FormacionTalento -->
+
+
+    <owl:NamedIndividual rdf:about="http://purl.org/roh/project-classification#FormacionTalento">
+        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+        <skos:broader rdf:resource="http://purl.org/roh/project-classification#PlanEstatal2017-2020"/>
+        <skos:inScheme rdf:resource="http://purl.org/roh/project-classification#ProjectClassification"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://purl.org/roh/project-classification#GeneracionConocimiento -->
+
+
+    <owl:NamedIndividual rdf:about="http://purl.org/roh/project-classification#GeneracionConocimiento">
+        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+        <skos:broader rdf:resource="http://purl.org/roh/project-classification#PlanEstatal2017-2020"/>
+        <rdfs:label xml:lang="es">Generación de Conocimiento</rdfs:label>
+        <rdfs:label xml:lang="en">Knowledge Generation</rdfs:label>
+        <skos:inScheme rdf:resource="http://purl.org/roh/project-classification#ProjectClassification"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://purl.org/roh/project-classification#Horizon2020 -->
+
+
+    <owl:NamedIndividual rdf:about="http://purl.org/roh/project-classification#Horizon2020">
+        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+        <skos:broader rdf:resource="http://purl.org/roh/project-classification#European"/>
+        <skos:inScheme rdf:resource="http://purl.org/roh/project-classification#ProjectClassification"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://purl.org/roh/project-classification#ITN-ETN -->
+
+
+    <owl:NamedIndividual rdf:about="http://purl.org/roh/project-classification#ITN-ETN">
+        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+        <skos:broader rdf:resource="http://purl.org/roh/project-classification#ExcellentScience"/>
+        <skos:inScheme rdf:resource="http://purl.org/roh/project-classification#ProjectClassification"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://purl.org/roh/project-classification#IndividualFellowships -->
+
+
+    <owl:NamedIndividual rdf:about="http://purl.org/roh/project-classification#IndividualFellowships">
+        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+        <skos:broader rdf:resource="http://purl.org/roh/project-classification#ExcellentScience"/>
+        <skos:inScheme rdf:resource="http://purl.org/roh/project-classification#ProjectClassification"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://purl.org/roh/project-classification#Internal -->
+
+
+    <owl:NamedIndividual rdf:about="http://purl.org/roh/project-classification#Internal">
+        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+        <skos:inScheme rdf:resource="http://purl.org/roh/project-classification#ProjectClassification"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://purl.org/roh/project-classification#International -->
+
+
+    <owl:NamedIndividual rdf:about="http://purl.org/roh/project-classification#International">
+        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+        <skos:inScheme rdf:resource="http://purl.org/roh/project-classification#ProjectClassification"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://purl.org/roh/project-classification#Interreg -->
+
+
+    <owl:NamedIndividual rdf:about="http://purl.org/roh/project-classification#Interreg">
+        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+        <skos:broader rdf:resource="http://purl.org/roh/project-classification#European"/>
+        <skos:inScheme rdf:resource="http://purl.org/roh/project-classification#ProjectClassification"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://purl.org/roh/project-classification#Movilidad -->
+
+
+    <owl:NamedIndividual rdf:about="http://purl.org/roh/project-classification#Movilidad">
+        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+        <skos:broader rdf:resource="http://purl.org/roh/project-classification#FormacionTalento"/>
+        <skos:inScheme rdf:resource="http://purl.org/roh/project-classification#ProjectClassification"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://purl.org/roh/project-classification#National -->
+
+
+    <owl:NamedIndividual rdf:about="http://purl.org/roh/project-classification#National">
+        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+        <skos:inScheme rdf:resource="http://purl.org/roh/project-classification#ProjectClassification"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://purl.org/roh/project-classification#PlanEstatal2013-2016 -->
+
+
+    <owl:NamedIndividual rdf:about="http://purl.org/roh/project-classification#PlanEstatal2013-2016">
+        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+        <skos:broader rdf:resource="http://purl.org/roh/project-classification#National"/>
+        <skos:inScheme rdf:resource="http://purl.org/roh/project-classification#ProjectClassification"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://purl.org/roh/project-classification#PlanEstatal2017-2020 -->
+
+
+    <owl:NamedIndividual rdf:about="http://purl.org/roh/project-classification#PlanEstatal2017-2020">
+        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+        <skos:broader rdf:resource="http://purl.org/roh/project-classification#National"/>
+        <skos:inScheme rdf:resource="http://purl.org/roh/project-classification#ProjectClassification"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://purl.org/roh/project-classification#ProjectClassification -->
+
+
+    <owl:NamedIndividual rdf:about="http://purl.org/roh/project-classification#ProjectClassification">
+        <rdf:type rdf:resource="http://purl.org/roh#ProjectClassification"/>
+        <skos:hasTopConcept rdf:resource="http://purl.org/roh/project-classification#European"/>
+        <skos:hasTopConcept rdf:resource="http://purl.org/roh/project-classification#Internal"/>
+        <skos:hasTopConcept rdf:resource="http://purl.org/roh/project-classification#International"/>
+        <skos:hasTopConcept rdf:resource="http://purl.org/roh/project-classification#National"/>
+        <skos:hasTopConcept rdf:resource="http://purl.org/roh/project-classification#Regional"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://purl.org/roh/project-classification#PromocionTalento -->
+
+
+    <owl:NamedIndividual rdf:about="http://purl.org/roh/project-classification#PromocionTalento">
+        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+        <skos:broader rdf:resource="http://purl.org/roh/project-classification#PlanEstatal2013-2016"/>
+        <skos:inScheme rdf:resource="http://purl.org/roh/project-classification#ProjectClassification"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://purl.org/roh/project-classification#Regional -->
+
+
+    <owl:NamedIndividual rdf:about="http://purl.org/roh/project-classification#Regional">
+        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+        <skos:inScheme rdf:resource="http://purl.org/roh/project-classification#ProjectClassification"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://purl.org/roh/project-classification#RegionsofEurope -->
+
+
+    <owl:NamedIndividual rdf:about="http://purl.org/roh/project-classification#RegionsofEurope">
+        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+        <skos:broader rdf:resource="http://purl.org/roh/project-classification#Interreg"/>
+        <skos:inScheme rdf:resource="http://purl.org/roh/project-classification#ProjectClassification"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://purl.org/roh/project-classification#SC1 -->
+
+
+    <owl:NamedIndividual rdf:about="http://purl.org/roh/project-classification#SC1">
+        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+        <skos:broader rdf:resource="http://purl.org/roh/project-classification#SocietalChallenges"/>
+        <skos:inScheme rdf:resource="http://purl.org/roh/project-classification#ProjectClassification"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://purl.org/roh/project-classification#SC2 -->
+
+
+    <owl:NamedIndividual rdf:about="http://purl.org/roh/project-classification#SC2">
+        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+        <skos:broader rdf:resource="http://purl.org/roh/project-classification#SocietalChallenges"/>
+        <skos:inScheme rdf:resource="http://purl.org/roh/project-classification#ProjectClassification"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://purl.org/roh/project-classification#SocietalChallenges -->
+
+
+    <owl:NamedIndividual rdf:about="http://purl.org/roh/project-classification#SocietalChallenges">
+        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+        <skos:broader rdf:resource="http://purl.org/roh/project-classification#Horizon2020"/>
+        <skos:inScheme rdf:resource="http://purl.org/roh/project-classification#ProjectClassification"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://purl.org/roh/project-classification#SubprogramaEstatalFormacion -->
+
+
+    <owl:NamedIndividual rdf:about="http://purl.org/roh/project-classification#SubprogramaEstatalFormacion">
+        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+        <skos:broader rdf:resource="http://purl.org/roh/project-classification#PromocionTalento"/>
+        <skos:inScheme rdf:resource="http://purl.org/roh/project-classification#ProjectClassification"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://purl.org/roh/project-classification#SubprogramaEstatalIncorporacion -->
+
+
+    <owl:NamedIndividual rdf:about="http://purl.org/roh/project-classification#SubprogramaEstatalIncorporacion">
+        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+        <skos:broader rdf:resource="http://purl.org/roh/project-classification#PromocionTalento"/>
+        <skos:inScheme rdf:resource="http://purl.org/roh/project-classification#ProjectClassification"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://purl.org/roh/project-classification#SubprogramaFortalecimientoInstitucional -->
+
+
+    <owl:NamedIndividual rdf:about="http://purl.org/roh/project-classification#SubprogramaFortalecimientoInstitucional">
+        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+        <skos:broader rdf:resource="http://purl.org/roh/project-classification#FomentoInvestigacionCientificoTecnica"/>
+        <skos:inScheme rdf:resource="http://purl.org/roh/project-classification#ProjectClassification"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://purl.org/roh/project-classification#SubprogramaGeneracionConocimiento -->
+
+
+    <owl:NamedIndividual rdf:about="http://purl.org/roh/project-classification#SubprogramaGeneracionConocimiento">
+        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+        <skos:broader rdf:resource="http://purl.org/roh/project-classification#FomentoInvestigacionCientificoTecnica"/>
+        <skos:inScheme rdf:resource="http://purl.org/roh/project-classification#ProjectClassification"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://purl.org/roh/project-classification#Sudoe -->
+
+
+    <owl:NamedIndividual rdf:about="http://purl.org/roh/project-classification#Sudoe">
+        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+        <skos:broader rdf:resource="http://purl.org/roh/project-classification#Interreg"/>
+        <skos:inScheme rdf:resource="http://purl.org/roh/project-classification#ProjectClassification"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://purl.org/roh/project-classification#FormacionI+D+i -->
+
+
+    <owl:NamedIndividual rdf:about="http://purl.org/roh/project-classification#FormacionI+D+i">
+        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+        <skos:broader rdf:resource="http://purl.org/roh/project-classification#FormacionTalento"/>
+        <skos:inScheme rdf:resource="http://purl.org/roh/project-classification#ProjectClassification"/>
+    </owl:NamedIndividual>
+</rdf:RDF>
+
+
+
+<!-- Generated by the OWL API (version 5.1.14) https://github.com/owlcs/owlapi/ -->
+
+

@@ -1,0 +1,13 @@
+@prefix prov: <http://www.w3.org/ns/prov#> .
+@prefix dc: <http://purl.org/dc/terms/> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix : <> .
+<..\index-en.html> a prov:Entity;
+	 dc:title "The ROH ontology";
+	 prov:wasAttributedTo :agent0;
+	 prov:wasAttributedTo :agent1;
+	 prov:wasAttributedTo <https://github.com/dgarijo/Widoco/>,<http://www.essepuntato.it/lode/>;
+	 prov:specializationOf <http://w3id.org/roh/0.3>;
+.
+:agent0 a prov:Agent; foaf:name "Mikel Emaldi, Emilio Rubiera Azcona".
+:agent1 a prov:Agent; foaf:name "Iñigo Apellániz, Diego López de Ipiña, Esteban Sota, Álvaro Palacios, Alejandro González Hevia, José Emilio Labra Gayo".

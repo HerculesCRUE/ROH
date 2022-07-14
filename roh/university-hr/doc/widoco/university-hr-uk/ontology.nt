@@ -1,0 +1,530 @@
+<http://purl.org/roh/university-hr/uk> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Ontology> .
+<http://purl.org/roh/university-hr/uk> <http://www.w3.org/2002/07/owl#versionIRI> <http://purl.org/roh/university-hr/uk/1.0> .
+<http://purl.org/roh/university-hr/uk> <http://purl.org/dc/terms/license> <https://creativecommons.org/licenses/by-sa/4.0/> .
+<http://purl.org/roh/university-hr/uk> <http://www.w3.org/2000/01/rdf-schema#comment> "The University of Murcia signed on November 29, 2017, a Covenant with the Ministry of Economy, Industry and Competitiveness backing the “HÉRCULES: Semantic University Research Data” Project with a budget of FIVE MILLION FOUR HUNDRED AND SIXTY-TWO THOUSAND SIX HUNDRED euros with an 80% of co-financiering from the European Regional Development Fund program (ERDF) within the 2014-2020 period. \n\nThe project arose as a CRUE initiative, to create the basis for a new collaboration model between universities, to develop the information management systems and with the main objective of encouraging this type of collaboration.\n\nTherefore, the purpose of this agreement was to contribute to the improvement of public services and business innovation and research through the improvement of:\n\n    efficiency in public investment by decreasing the duplication of investment in R&D.\n    efficiency of research in universities.\n    scientific dissemination of research results.\n    detection of synergies in R&D between universities.\n    transfer of R&D results to companies.\n    efficiency in the management of research. \n\nby creating a research management system with semantic capacities based on semantic open data and that will provide a global view of the research data contained in the Spanish University System."@en .
+<http://purl.org/roh/university-hr/uk> <http://www.w3.org/2000/01/rdf-schema#label> "ROH UK University HR Module"@en .
+# 
+# 
+# #################################################################
+# #
+# #    Annotation properties
+# #
+# #################################################################
+# 
+# 
+# http://purl.org/dc/terms/license
+<http://purl.org/dc/terms/license> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+# 
+# http://purl.org/roh#codeOf
+<http://purl.org/roh#codeOf> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+# 
+# http://purl.org/roh#country
+<http://purl.org/roh#country> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+# 
+# http://purl.org/roh#hasCode
+<http://purl.org/roh#hasCode> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+# 
+# http://www.w3.org/2004/02/skos/core#altLabel
+<http://www.w3.org/2004/02/skos/core#altLabel> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+# 
+# http://www.w3.org/2004/02/skos/core#closeMatch
+<http://www.w3.org/2004/02/skos/core#closeMatch> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+# 
+# http://www.w3.org/2004/02/skos/core#inScheme
+<http://www.w3.org/2004/02/skos/core#inScheme> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+# 
+# http://www.w3.org/2004/02/skos/core#notation
+<http://www.w3.org/2004/02/skos/core#notation> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+# 
+# http://www.w3.org/2004/02/skos/core#prefLabel
+<http://www.w3.org/2004/02/skos/core#prefLabel> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+# 
+# 
+# 
+# #################################################################
+# #
+# #    Classes
+# #
+# #################################################################
+# 
+# 
+# http://purl.org/roh#ResearcherPosition
+<http://purl.org/roh#ResearcherPosition> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://purl.org/roh#ResearcherPosition> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://purl.org/roh/mirror/vivo#Position> .
+<http://purl.org/roh#ResearcherPosition> <http://www.w3.org/2000/01/rdf-schema#label> "Researcher Position"@en .
+# 
+# http://purl.org/roh/mirror/vivo#FacultyAdministrativePosition
+<http://purl.org/roh/mirror/vivo#FacultyAdministrativePosition> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://purl.org/roh/mirror/vivo#FacultyAdministrativePosition> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://purl.org/roh/mirror/vivo#Position> .
+<http://purl.org/roh/mirror/vivo#FacultyAdministrativePosition> <http://www.w3.org/2000/01/rdf-schema#label> "Faculty Administrative Position"@en .
+# 
+# http://purl.org/roh/mirror/vivo#FacultyPosition
+<http://purl.org/roh/mirror/vivo#FacultyPosition> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://purl.org/roh/mirror/vivo#FacultyPosition> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://purl.org/roh/mirror/vivo#Position> .
+<http://purl.org/roh/mirror/vivo#FacultyPosition> <http://www.w3.org/2000/01/rdf-schema#label> "Faculty Position"@en .
+# 
+# http://purl.org/roh/mirror/vivo#Position
+<http://purl.org/roh/mirror/vivo#Position> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://purl.org/roh/mirror/vivo#Position> <http://www.w3.org/2000/01/rdf-schema#label> "Position"@en .
+# 
+# http://purl.org/roh/university-hr/uk#GB_UNIVERSITY_HR_GBCHAN
+<http://purl.org/roh/university-hr/uk#GB_UNIVERSITY_HR_GBCHAN> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://purl.org/roh/university-hr/uk#GB_UNIVERSITY_HR_GBCHAN> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://purl.org/roh/mirror/vivo#FacultyAdministrativePosition> .
+<http://purl.org/roh/university-hr/uk#GB_UNIVERSITY_HR_GBCHAN> <http://purl.org/roh#country> <http://publications.europa.eu/resource/authority/country/GBR> .
+<http://purl.org/roh/university-hr/uk#GB_UNIVERSITY_HR_GBCHAN> <http://purl.org/roh#hasCode> <http://purl.org/roh/university-hr/uk#GB_UNIVERSITY_HR_CODE_GBCHAN> .
+<http://purl.org/roh/university-hr/uk#GB_UNIVERSITY_HR_GBCHAN> <http://www.w3.org/2000/01/rdf-schema#label> "Chancellor"@en .
+<http://purl.org/roh/university-hr/uk#GB_UNIVERSITY_HR_GBCHAN> <http://www.w3.org/2004/02/skos/core#inScheme> <http://purl.org/roh/university-hr/uk#GBUniversityHumanResourcesList> .
+<http://purl.org/roh/university-hr/uk#GB_UNIVERSITY_HR_GBCHAN> <http://www.w3.org/2004/02/skos/core#notation> "GBCHAN" .
+<http://purl.org/roh/university-hr/uk#GB_UNIVERSITY_HR_GBCHAN> <http://www.w3.org/2004/02/skos/core#prefLabel> "Chancellor"@en .
+# 
+# http://purl.org/roh/university-hr/uk#GB_UNIVERSITY_HR_GBDEAN
+<http://purl.org/roh/university-hr/uk#GB_UNIVERSITY_HR_GBDEAN> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://purl.org/roh/university-hr/uk#GB_UNIVERSITY_HR_GBDEAN> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://purl.org/roh/mirror/vivo#FacultyAdministrativePosition> .
+<http://purl.org/roh/university-hr/uk#GB_UNIVERSITY_HR_GBDEAN> <http://purl.org/roh#country> <http://publications.europa.eu/resource/authority/country/GBR> .
+<http://purl.org/roh/university-hr/uk#GB_UNIVERSITY_HR_GBDEAN> <http://purl.org/roh#hasCode> <http://purl.org/roh/university-hr/uk#GB_UNIVERSITY_HR_CODE_GBDEAN> .
+<http://purl.org/roh/university-hr/uk#GB_UNIVERSITY_HR_GBDEAN> <http://www.w3.org/2000/01/rdf-schema#label> "Dean of faculty"@en .
+<http://purl.org/roh/university-hr/uk#GB_UNIVERSITY_HR_GBDEAN> <http://www.w3.org/2004/02/skos/core#inScheme> <http://purl.org/roh/university-hr/uk#GBUniversityHumanResourcesList> .
+<http://purl.org/roh/university-hr/uk#GB_UNIVERSITY_HR_GBDEAN> <http://www.w3.org/2004/02/skos/core#notation> "GBDEAN" .
+<http://purl.org/roh/university-hr/uk#GB_UNIVERSITY_HR_GBDEAN> <http://www.w3.org/2004/02/skos/core#prefLabel> "Dean of faculty"@en .
+# 
+# http://purl.org/roh/university-hr/uk#GB_UNIVERSITY_HR_GBDEPDIR
+<http://purl.org/roh/university-hr/uk#GB_UNIVERSITY_HR_GBDEPDIR> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://purl.org/roh/university-hr/uk#GB_UNIVERSITY_HR_GBDEPDIR> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://purl.org/roh/mirror/vivo#FacultyAdministrativePosition> .
+<http://purl.org/roh/university-hr/uk#GB_UNIVERSITY_HR_GBDEPDIR> <http://purl.org/roh#country> <http://publications.europa.eu/resource/authority/country/GBR> .
+<http://purl.org/roh/university-hr/uk#GB_UNIVERSITY_HR_GBDEPDIR> <http://purl.org/roh#hasCode> <http://purl.org/roh/university-hr/uk#GB_UNIVERSITY_HR_CODE_GBDEPDIR> .
+<http://purl.org/roh/university-hr/uk#GB_UNIVERSITY_HR_GBDEPDIR> <http://www.w3.org/2000/01/rdf-schema#label> "Department director of studies"@en .
+<http://purl.org/roh/university-hr/uk#GB_UNIVERSITY_HR_GBDEPDIR> <http://www.w3.org/2004/02/skos/core#altLabel> "School directors of studies"@en .
+<http://purl.org/roh/university-hr/uk#GB_UNIVERSITY_HR_GBDEPDIR> <http://www.w3.org/2004/02/skos/core#inScheme> <http://purl.org/roh/university-hr/uk#GBUniversityHumanResourcesList> .
+<http://purl.org/roh/university-hr/uk#GB_UNIVERSITY_HR_GBDEPDIR> <http://www.w3.org/2004/02/skos/core#notation> "GBDEPDIR" .
+<http://purl.org/roh/university-hr/uk#GB_UNIVERSITY_HR_GBDEPDIR> <http://www.w3.org/2004/02/skos/core#prefLabel> "Department director of studies"@en .
+# 
+# http://purl.org/roh/university-hr/uk#GB_UNIVERSITY_HR_GBDEPVICHAN
+<http://purl.org/roh/university-hr/uk#GB_UNIVERSITY_HR_GBDEPVICHAN> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://purl.org/roh/university-hr/uk#GB_UNIVERSITY_HR_GBDEPVICHAN> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://purl.org/roh/mirror/vivo#FacultyAdministrativePosition> .
+<http://purl.org/roh/university-hr/uk#GB_UNIVERSITY_HR_GBDEPVICHAN> <http://purl.org/roh#country> <http://publications.europa.eu/resource/authority/country/GBR> .
+<http://purl.org/roh/university-hr/uk#GB_UNIVERSITY_HR_GBDEPVICHAN> <http://purl.org/roh#hasCode> <http://purl.org/roh/university-hr/uk#GB_UNIVERSITY_HR_CODE_GBDEPVICHAN> .
+<http://purl.org/roh/university-hr/uk#GB_UNIVERSITY_HR_GBDEPVICHAN> <http://www.w3.org/2000/01/rdf-schema#label> "Deputy vice-chancellor"@en .
+<http://purl.org/roh/university-hr/uk#GB_UNIVERSITY_HR_GBDEPVICHAN> <http://www.w3.org/2004/02/skos/core#inScheme> <http://purl.org/roh/university-hr/uk#GBUniversityHumanResourcesList> .
+<http://purl.org/roh/university-hr/uk#GB_UNIVERSITY_HR_GBDEPVICHAN> <http://www.w3.org/2004/02/skos/core#notation> "GBDEPVICHAN" .
+<http://purl.org/roh/university-hr/uk#GB_UNIVERSITY_HR_GBDEPVICHAN> <http://www.w3.org/2004/02/skos/core#prefLabel> "Deputy vice-chancellor"@en .
+# 
+# http://purl.org/roh/university-hr/uk#GB_UNIVERSITY_HR_GBEPROF
+<http://purl.org/roh/university-hr/uk#GB_UNIVERSITY_HR_GBEPROF> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://purl.org/roh/university-hr/uk#GB_UNIVERSITY_HR_GBEPROF> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://purl.org/roh/mirror/vivo#FacultyPosition> .
+<http://purl.org/roh/university-hr/uk#GB_UNIVERSITY_HR_GBEPROF> <http://purl.org/roh#country> <http://publications.europa.eu/resource/authority/country/GBR> .
+<http://purl.org/roh/university-hr/uk#GB_UNIVERSITY_HR_GBEPROF> <http://purl.org/roh#hasCode> <http://purl.org/roh/university-hr/uk#GB_UNIVERSITY_HR_CODE_GBEPROF> .
+<http://purl.org/roh/university-hr/uk#GB_UNIVERSITY_HR_GBEPROF> <http://www.w3.org/2000/01/rdf-schema#label> "Emeritus professor"@en .
+<http://purl.org/roh/university-hr/uk#GB_UNIVERSITY_HR_GBEPROF> <http://www.w3.org/2004/02/skos/core#closeMatch> <http://skos.um.es/unescothes/C00015> .
+<http://purl.org/roh/university-hr/uk#GB_UNIVERSITY_HR_GBEPROF> <http://www.w3.org/2004/02/skos/core#closeMatch> <http://skos.um.es/unescothes/C03965> .
+<http://purl.org/roh/university-hr/uk#GB_UNIVERSITY_HR_GBEPROF> <http://www.w3.org/2004/02/skos/core#inScheme> <http://purl.org/roh/university-hr/uk#GBUniversityHumanResourcesList> .
+<http://purl.org/roh/university-hr/uk#GB_UNIVERSITY_HR_GBEPROF> <http://www.w3.org/2004/02/skos/core#notation> "GBEPROF" .
+<http://purl.org/roh/university-hr/uk#GB_UNIVERSITY_HR_GBEPROF> <http://www.w3.org/2004/02/skos/core#prefLabel> "Emeritus professor"@en .
+# 
+# http://purl.org/roh/university-hr/uk#GB_UNIVERSITY_HR_GBEREAD
+<http://purl.org/roh/university-hr/uk#GB_UNIVERSITY_HR_GBEREAD> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://purl.org/roh/university-hr/uk#GB_UNIVERSITY_HR_GBEREAD> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://purl.org/roh/mirror/vivo#FacultyPosition> .
+<http://purl.org/roh/university-hr/uk#GB_UNIVERSITY_HR_GBEREAD> <http://purl.org/roh#country> <http://publications.europa.eu/resource/authority/country/GBR> .
+<http://purl.org/roh/university-hr/uk#GB_UNIVERSITY_HR_GBEREAD> <http://purl.org/roh#hasCode> <http://purl.org/roh/university-hr/uk#GB_UNIVERSITY_HR_CODE_GBEREAD> .
+<http://purl.org/roh/university-hr/uk#GB_UNIVERSITY_HR_GBEREAD> <http://www.w3.org/2000/01/rdf-schema#label> "Emeritus reader"@en .
+<http://purl.org/roh/university-hr/uk#GB_UNIVERSITY_HR_GBEREAD> <http://www.w3.org/2004/02/skos/core#closeMatch> <http://skos.um.es/unescothes/C00015> .
+<http://purl.org/roh/university-hr/uk#GB_UNIVERSITY_HR_GBEREAD> <http://www.w3.org/2004/02/skos/core#closeMatch> <http://skos.um.es/unescothes/C03965> .
+<http://purl.org/roh/university-hr/uk#GB_UNIVERSITY_HR_GBEREAD> <http://www.w3.org/2004/02/skos/core#inScheme> <http://purl.org/roh/university-hr/uk#GBUniversityHumanResourcesList> .
+<http://purl.org/roh/university-hr/uk#GB_UNIVERSITY_HR_GBEREAD> <http://www.w3.org/2004/02/skos/core#notation> "GBEREAD" .
+<http://purl.org/roh/university-hr/uk#GB_UNIVERSITY_HR_GBEREAD> <http://www.w3.org/2004/02/skos/core#prefLabel> "Emeritus reader"@en .
+# 
+# http://purl.org/roh/university-hr/uk#GB_UNIVERSITY_HR_GBHEADDEP
+<http://purl.org/roh/university-hr/uk#GB_UNIVERSITY_HR_GBHEADDEP> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://purl.org/roh/university-hr/uk#GB_UNIVERSITY_HR_GBHEADDEP> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://purl.org/roh/mirror/vivo#FacultyAdministrativePosition> .
+<http://purl.org/roh/university-hr/uk#GB_UNIVERSITY_HR_GBHEADDEP> <http://purl.org/roh#country> <http://publications.europa.eu/resource/authority/country/GBR> .
+<http://purl.org/roh/university-hr/uk#GB_UNIVERSITY_HR_GBHEADDEP> <http://purl.org/roh#hasCode> <http://purl.org/roh/university-hr/uk#GB_UNIVERSITY_HR_CODE_GBHEADDEP> .
+<http://purl.org/roh/university-hr/uk#GB_UNIVERSITY_HR_GBHEADDEP> <http://www.w3.org/2000/01/rdf-schema#label> "Head of department"@en .
+<http://purl.org/roh/university-hr/uk#GB_UNIVERSITY_HR_GBHEADDEP> <http://www.w3.org/2004/02/skos/core#altLabel> "Head of school"@en .
+<http://purl.org/roh/university-hr/uk#GB_UNIVERSITY_HR_GBHEADDEP> <http://www.w3.org/2004/02/skos/core#inScheme> <http://purl.org/roh/university-hr/uk#GBUniversityHumanResourcesList> .
+<http://purl.org/roh/university-hr/uk#GB_UNIVERSITY_HR_GBHEADDEP> <http://www.w3.org/2004/02/skos/core#notation> "GBHEADDEP" .
+<http://purl.org/roh/university-hr/uk#GB_UNIVERSITY_HR_GBHEADDEP> <http://www.w3.org/2004/02/skos/core#prefLabel> "Head of department"@en .
+# 
+# http://purl.org/roh/university-hr/uk#GB_UNIVERSITY_HR_GBPROCHAN
+<http://purl.org/roh/university-hr/uk#GB_UNIVERSITY_HR_GBPROCHAN> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://purl.org/roh/university-hr/uk#GB_UNIVERSITY_HR_GBPROCHAN> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://purl.org/roh/mirror/vivo#FacultyAdministrativePosition> .
+<http://purl.org/roh/university-hr/uk#GB_UNIVERSITY_HR_GBPROCHAN> <http://purl.org/roh#country> <http://publications.europa.eu/resource/authority/country/GBR> .
+<http://purl.org/roh/university-hr/uk#GB_UNIVERSITY_HR_GBPROCHAN> <http://purl.org/roh#hasCode> <http://purl.org/roh/university-hr/uk#GB_UNIVERSITY_HR_CODE_GBPROCHAN> .
+<http://purl.org/roh/university-hr/uk#GB_UNIVERSITY_HR_GBPROCHAN> <http://www.w3.org/2000/01/rdf-schema#label> "Pro-chancellor"@en .
+<http://purl.org/roh/university-hr/uk#GB_UNIVERSITY_HR_GBPROCHAN> <http://www.w3.org/2004/02/skos/core#inScheme> <http://purl.org/roh/university-hr/uk#GBUniversityHumanResourcesList> .
+<http://purl.org/roh/university-hr/uk#GB_UNIVERSITY_HR_GBPROCHAN> <http://www.w3.org/2004/02/skos/core#notation> "GBPROCHAN" .
+<http://purl.org/roh/university-hr/uk#GB_UNIVERSITY_HR_GBPROCHAN> <http://www.w3.org/2004/02/skos/core#prefLabel> "Pro-chancellor"@en .
+# 
+# http://purl.org/roh/university-hr/uk#GB_UNIVERSITY_HR_GBPROVICCHAN
+<http://purl.org/roh/university-hr/uk#GB_UNIVERSITY_HR_GBPROVICCHAN> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://purl.org/roh/university-hr/uk#GB_UNIVERSITY_HR_GBPROVICCHAN> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://purl.org/roh/mirror/vivo#FacultyAdministrativePosition> .
+<http://purl.org/roh/university-hr/uk#GB_UNIVERSITY_HR_GBPROVICCHAN> <http://purl.org/roh#country> <http://publications.europa.eu/resource/authority/country/GBR> .
+<http://purl.org/roh/university-hr/uk#GB_UNIVERSITY_HR_GBPROVICCHAN> <http://purl.org/roh#hasCode> <http://purl.org/roh/university-hr/uk#GB_UNIVERSITY_HR_CODE_GBPROVICCHAN> .
+<http://purl.org/roh/university-hr/uk#GB_UNIVERSITY_HR_GBPROVICCHAN> <http://www.w3.org/2000/01/rdf-schema#label> "Pro-vice-chancellor"@en .
+<http://purl.org/roh/university-hr/uk#GB_UNIVERSITY_HR_GBPROVICCHAN> <http://www.w3.org/2004/02/skos/core#inScheme> <http://purl.org/roh/university-hr/uk#GBUniversityHumanResourcesList> .
+<http://purl.org/roh/university-hr/uk#GB_UNIVERSITY_HR_GBPROVICCHAN> <http://www.w3.org/2004/02/skos/core#notation> "GBPROVICCHAN" .
+<http://purl.org/roh/university-hr/uk#GB_UNIVERSITY_HR_GBPROVICCHAN> <http://www.w3.org/2004/02/skos/core#prefLabel> "Pro-vice-chancellor"@en .
+# 
+# http://purl.org/roh/university-hr/uk#GB_UNIVERSITY_HR_GBRPROF
+<http://purl.org/roh/university-hr/uk#GB_UNIVERSITY_HR_GBRPROF> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://purl.org/roh/university-hr/uk#GB_UNIVERSITY_HR_GBRPROF> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://purl.org/roh#ResearcherPosition> .
+<http://purl.org/roh/university-hr/uk#GB_UNIVERSITY_HR_GBRPROF> <http://purl.org/roh#country> <http://publications.europa.eu/resource/authority/country/GBR> .
+<http://purl.org/roh/university-hr/uk#GB_UNIVERSITY_HR_GBRPROF> <http://purl.org/roh#hasCode> <http://purl.org/roh/university-hr/uk#GB_UNIVERSITY_HR_CODE_GBRPROF> .
+<http://purl.org/roh/university-hr/uk#GB_UNIVERSITY_HR_GBRPROF> <http://www.w3.org/2000/01/rdf-schema#label> "Professorial research fellow"@en .
+<http://purl.org/roh/university-hr/uk#GB_UNIVERSITY_HR_GBRPROF> <http://www.w3.org/2004/02/skos/core#closeMatch> <http://skos.um.es/unescothes/C00015> .
+<http://purl.org/roh/university-hr/uk#GB_UNIVERSITY_HR_GBRPROF> <http://www.w3.org/2004/02/skos/core#closeMatch> <http://skos.um.es/unescothes/C03376> .
+<http://purl.org/roh/university-hr/uk#GB_UNIVERSITY_HR_GBRPROF> <http://www.w3.org/2004/02/skos/core#closeMatch> <http://skos.um.es/unescothes/C03965> .
+<http://purl.org/roh/university-hr/uk#GB_UNIVERSITY_HR_GBRPROF> <http://www.w3.org/2004/02/skos/core#inScheme> <http://purl.org/roh/university-hr/uk#GBUniversityHumanResourcesList> .
+<http://purl.org/roh/university-hr/uk#GB_UNIVERSITY_HR_GBRPROF> <http://www.w3.org/2004/02/skos/core#notation> "GBRPROF" .
+<http://purl.org/roh/university-hr/uk#GB_UNIVERSITY_HR_GBRPROF> <http://www.w3.org/2004/02/skos/core#prefLabel> "Professorial research fellow"@en .
+# 
+# http://purl.org/roh/university-hr/uk#GB_UNIVERSITY_HR_GBRREAASS
+<http://purl.org/roh/university-hr/uk#GB_UNIVERSITY_HR_GBRREAASS> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://purl.org/roh/university-hr/uk#GB_UNIVERSITY_HR_GBRREAASS> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://purl.org/roh#ResearcherPosition> .
+<http://purl.org/roh/university-hr/uk#GB_UNIVERSITY_HR_GBRREAASS> <http://purl.org/roh#country> <http://publications.europa.eu/resource/authority/country/GBR> .
+<http://purl.org/roh/university-hr/uk#GB_UNIVERSITY_HR_GBRREAASS> <http://purl.org/roh#hasCode> <http://purl.org/roh/university-hr/uk#GB_UNIVERSITY_HR_CODE_GBRREAASS> .
+<http://purl.org/roh/university-hr/uk#GB_UNIVERSITY_HR_GBRREAASS> <http://www.w3.org/2000/01/rdf-schema#label> "Research assistant"@en .
+<http://purl.org/roh/university-hr/uk#GB_UNIVERSITY_HR_GBRREAASS> <http://www.w3.org/2004/02/skos/core#closeMatch> <http://skos.um.es/unescothes/C03376> .
+<http://purl.org/roh/university-hr/uk#GB_UNIVERSITY_HR_GBRREAASS> <http://www.w3.org/2004/02/skos/core#inScheme> <http://purl.org/roh/university-hr/uk#GBUniversityHumanResourcesList> .
+<http://purl.org/roh/university-hr/uk#GB_UNIVERSITY_HR_GBRREAASS> <http://www.w3.org/2004/02/skos/core#notation> "GBRREAASS" .
+<http://purl.org/roh/university-hr/uk#GB_UNIVERSITY_HR_GBRREAASS> <http://www.w3.org/2004/02/skos/core#prefLabel> "Research assistant"@en .
+# 
+# http://purl.org/roh/university-hr/uk#GB_UNIVERSITY_HR_GBRREAFEL
+<http://purl.org/roh/university-hr/uk#GB_UNIVERSITY_HR_GBRREAFEL> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://purl.org/roh/university-hr/uk#GB_UNIVERSITY_HR_GBRREAFEL> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://purl.org/roh#ResearcherPosition> .
+<http://purl.org/roh/university-hr/uk#GB_UNIVERSITY_HR_GBRREAFEL> <http://purl.org/roh#country> <http://publications.europa.eu/resource/authority/country/GBR> .
+<http://purl.org/roh/university-hr/uk#GB_UNIVERSITY_HR_GBRREAFEL> <http://purl.org/roh#hasCode> <http://purl.org/roh/university-hr/uk#GB_UNIVERSITY_HR_CODE_GBRREAFEL> .
+<http://purl.org/roh/university-hr/uk#GB_UNIVERSITY_HR_GBRREAFEL> <http://www.w3.org/2000/01/rdf-schema#label> "Research fellow"@en .
+<http://purl.org/roh/university-hr/uk#GB_UNIVERSITY_HR_GBRREAFEL> <http://www.w3.org/2004/02/skos/core#closeMatch> <http://skos.um.es/unescothes/C03376> .
+<http://purl.org/roh/university-hr/uk#GB_UNIVERSITY_HR_GBRREAFEL> <http://www.w3.org/2004/02/skos/core#inScheme> <http://purl.org/roh/university-hr/uk#GBUniversityHumanResourcesList> .
+<http://purl.org/roh/university-hr/uk#GB_UNIVERSITY_HR_GBRREAFEL> <http://www.w3.org/2004/02/skos/core#notation> "GBRREAFEL" .
+<http://purl.org/roh/university-hr/uk#GB_UNIVERSITY_HR_GBRREAFEL> <http://www.w3.org/2004/02/skos/core#prefLabel> "Research fellow"@en .
+# 
+# http://purl.org/roh/university-hr/uk#GB_UNIVERSITY_HR_GBRSENREAFEL
+<http://purl.org/roh/university-hr/uk#GB_UNIVERSITY_HR_GBRSENREAFEL> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://purl.org/roh/university-hr/uk#GB_UNIVERSITY_HR_GBRSENREAFEL> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://purl.org/roh#ResearcherPosition> .
+<http://purl.org/roh/university-hr/uk#GB_UNIVERSITY_HR_GBRSENREAFEL> <http://purl.org/roh#country> <http://publications.europa.eu/resource/authority/country/GBR> .
+<http://purl.org/roh/university-hr/uk#GB_UNIVERSITY_HR_GBRSENREAFEL> <http://purl.org/roh#hasCode> <http://purl.org/roh/university-hr/uk#GB_UNIVERSITY_HR_CODE_GBRSENREAFEL> .
+<http://purl.org/roh/university-hr/uk#GB_UNIVERSITY_HR_GBRSENREAFEL> <http://www.w3.org/2000/01/rdf-schema#label> "Senior research fellow"@en .
+<http://purl.org/roh/university-hr/uk#GB_UNIVERSITY_HR_GBRSENREAFEL> <http://www.w3.org/2004/02/skos/core#closeMatch> <http://skos.um.es/unescothes/C03376> .
+<http://purl.org/roh/university-hr/uk#GB_UNIVERSITY_HR_GBRSENREAFEL> <http://www.w3.org/2004/02/skos/core#inScheme> <http://purl.org/roh/university-hr/uk#GBUniversityHumanResourcesList> .
+<http://purl.org/roh/university-hr/uk#GB_UNIVERSITY_HR_GBRSENREAFEL> <http://www.w3.org/2004/02/skos/core#notation> "GBRSENREAFEL" .
+<http://purl.org/roh/university-hr/uk#GB_UNIVERSITY_HR_GBRSENREAFEL> <http://www.w3.org/2004/02/skos/core#prefLabel> "Senior research fellow"@en .
+# 
+# http://purl.org/roh/university-hr/uk#GB_UNIVERSITY_HR_GBRTASSLEC
+<http://purl.org/roh/university-hr/uk#GB_UNIVERSITY_HR_GBRTASSLEC> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://purl.org/roh/university-hr/uk#GB_UNIVERSITY_HR_GBRTASSLEC> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://purl.org/roh/mirror/vivo#FacultyPosition> .
+<http://purl.org/roh/university-hr/uk#GB_UNIVERSITY_HR_GBRTASSLEC> <http://purl.org/roh#country> <http://publications.europa.eu/resource/authority/country/GBR> .
+<http://purl.org/roh/university-hr/uk#GB_UNIVERSITY_HR_GBRTASSLEC> <http://purl.org/roh#hasCode> <http://purl.org/roh/university-hr/uk#GB_UNIVERSITY_HR_CODE_GBRTASSLEC> .
+<http://purl.org/roh/university-hr/uk#GB_UNIVERSITY_HR_GBRTASSLEC> <http://www.w3.org/2000/01/rdf-schema#label> "Assistant lecturer"@en .
+<http://purl.org/roh/university-hr/uk#GB_UNIVERSITY_HR_GBRTASSLEC> <http://www.w3.org/2004/02/skos/core#altLabel> "Associate lecturer"@en .
+<http://purl.org/roh/university-hr/uk#GB_UNIVERSITY_HR_GBRTASSLEC> <http://www.w3.org/2004/02/skos/core#closeMatch> <http://skos.um.es/unescothes/C00015> .
+<http://purl.org/roh/university-hr/uk#GB_UNIVERSITY_HR_GBRTASSLEC> <http://www.w3.org/2004/02/skos/core#closeMatch> <http://skos.um.es/unescothes/C03965> .
+<http://purl.org/roh/university-hr/uk#GB_UNIVERSITY_HR_GBRTASSLEC> <http://www.w3.org/2004/02/skos/core#inScheme> <http://purl.org/roh/university-hr/uk#GBUniversityHumanResourcesList> .
+<http://purl.org/roh/university-hr/uk#GB_UNIVERSITY_HR_GBRTASSLEC> <http://www.w3.org/2004/02/skos/core#notation> "GBRTASSLEC" .
+<http://purl.org/roh/university-hr/uk#GB_UNIVERSITY_HR_GBRTASSLEC> <http://www.w3.org/2004/02/skos/core#prefLabel> "Assistant lecturer"@en .
+# 
+# http://purl.org/roh/university-hr/uk#GB_UNIVERSITY_HR_GBRTCLLEC
+<http://purl.org/roh/university-hr/uk#GB_UNIVERSITY_HR_GBRTCLLEC> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://purl.org/roh/university-hr/uk#GB_UNIVERSITY_HR_GBRTCLLEC> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://purl.org/roh/mirror/vivo#FacultyPosition> .
+<http://purl.org/roh/university-hr/uk#GB_UNIVERSITY_HR_GBRTCLLEC> <http://purl.org/roh#country> <http://publications.europa.eu/resource/authority/country/GBR> .
+<http://purl.org/roh/university-hr/uk#GB_UNIVERSITY_HR_GBRTCLLEC> <http://purl.org/roh#hasCode> <http://purl.org/roh/university-hr/uk#GB_UNIVERSITY_HR_CODE_GBRTCLLEC> .
+<http://purl.org/roh/university-hr/uk#GB_UNIVERSITY_HR_GBRTCLLEC> <http://www.w3.org/2000/01/rdf-schema#label> "Clinical lecturer"@en .
+<http://purl.org/roh/university-hr/uk#GB_UNIVERSITY_HR_GBRTCLLEC> <http://www.w3.org/2004/02/skos/core#closeMatch> <http://skos.um.es/unescothes/C00015> .
+<http://purl.org/roh/university-hr/uk#GB_UNIVERSITY_HR_GBRTCLLEC> <http://www.w3.org/2004/02/skos/core#closeMatch> <http://skos.um.es/unescothes/C03965> .
+<http://purl.org/roh/university-hr/uk#GB_UNIVERSITY_HR_GBRTCLLEC> <http://www.w3.org/2004/02/skos/core#inScheme> <http://purl.org/roh/university-hr/uk#GBUniversityHumanResourcesList> .
+<http://purl.org/roh/university-hr/uk#GB_UNIVERSITY_HR_GBRTCLLEC> <http://www.w3.org/2004/02/skos/core#notation> "GBRTCLLEC" .
+<http://purl.org/roh/university-hr/uk#GB_UNIVERSITY_HR_GBRTCLLEC> <http://www.w3.org/2004/02/skos/core#prefLabel> "Clinical lecturer"@en .
+# 
+# http://purl.org/roh/university-hr/uk#GB_UNIVERSITY_HR_GBRTLEC
+<http://purl.org/roh/university-hr/uk#GB_UNIVERSITY_HR_GBRTLEC> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://purl.org/roh/university-hr/uk#GB_UNIVERSITY_HR_GBRTLEC> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://purl.org/roh/mirror/vivo#FacultyPosition> .
+<http://purl.org/roh/university-hr/uk#GB_UNIVERSITY_HR_GBRTLEC> <http://purl.org/roh#country> <http://publications.europa.eu/resource/authority/country/GBR> .
+<http://purl.org/roh/university-hr/uk#GB_UNIVERSITY_HR_GBRTLEC> <http://purl.org/roh#hasCode> <http://purl.org/roh/university-hr/uk#GB_UNIVERSITY_HR_CODE_GBRTLEC> .
+<http://purl.org/roh/university-hr/uk#GB_UNIVERSITY_HR_GBRTLEC> <http://www.w3.org/2000/01/rdf-schema#label> "Lecturer"@en .
+<http://purl.org/roh/university-hr/uk#GB_UNIVERSITY_HR_GBRTLEC> <http://www.w3.org/2004/02/skos/core#closeMatch> <http://skos.um.es/unescothes/C00015> .
+<http://purl.org/roh/university-hr/uk#GB_UNIVERSITY_HR_GBRTLEC> <http://www.w3.org/2004/02/skos/core#closeMatch> <http://skos.um.es/unescothes/C03965> .
+<http://purl.org/roh/university-hr/uk#GB_UNIVERSITY_HR_GBRTLEC> <http://www.w3.org/2004/02/skos/core#inScheme> <http://purl.org/roh/university-hr/uk#GBUniversityHumanResourcesList> .
+<http://purl.org/roh/university-hr/uk#GB_UNIVERSITY_HR_GBRTLEC> <http://www.w3.org/2004/02/skos/core#notation> "GBRTLEC" .
+<http://purl.org/roh/university-hr/uk#GB_UNIVERSITY_HR_GBRTLEC> <http://www.w3.org/2004/02/skos/core#prefLabel> "Lecturer"@en .
+# 
+# http://purl.org/roh/university-hr/uk#GB_UNIVERSITY_HR_GBRTPROF
+<http://purl.org/roh/university-hr/uk#GB_UNIVERSITY_HR_GBRTPROF> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://purl.org/roh/university-hr/uk#GB_UNIVERSITY_HR_GBRTPROF> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://purl.org/roh/mirror/vivo#FacultyPosition> .
+<http://purl.org/roh/university-hr/uk#GB_UNIVERSITY_HR_GBRTPROF> <http://purl.org/roh#country> <http://publications.europa.eu/resource/authority/country/GBR> .
+<http://purl.org/roh/university-hr/uk#GB_UNIVERSITY_HR_GBRTPROF> <http://purl.org/roh#hasCode> <http://purl.org/roh/university-hr/uk#GB_UNIVERSITY_HR_CODE_GBRTPROF> .
+<http://purl.org/roh/university-hr/uk#GB_UNIVERSITY_HR_GBRTPROF> <http://www.w3.org/2000/01/rdf-schema#label> "Professor"@en .
+<http://purl.org/roh/university-hr/uk#GB_UNIVERSITY_HR_GBRTPROF> <http://www.w3.org/2004/02/skos/core#closeMatch> <http://skos.um.es/unescothes/C00015> .
+<http://purl.org/roh/university-hr/uk#GB_UNIVERSITY_HR_GBRTPROF> <http://www.w3.org/2004/02/skos/core#closeMatch> <http://skos.um.es/unescothes/C03965> .
+<http://purl.org/roh/university-hr/uk#GB_UNIVERSITY_HR_GBRTPROF> <http://www.w3.org/2004/02/skos/core#inScheme> <http://purl.org/roh/university-hr/uk#GBUniversityHumanResourcesList> .
+<http://purl.org/roh/university-hr/uk#GB_UNIVERSITY_HR_GBRTPROF> <http://www.w3.org/2004/02/skos/core#notation> "GBRTPROF" .
+<http://purl.org/roh/university-hr/uk#GB_UNIVERSITY_HR_GBRTPROF> <http://www.w3.org/2004/02/skos/core#prefLabel> "Professor"@en .
+# 
+# http://purl.org/roh/university-hr/uk#GB_UNIVERSITY_HR_GBRTREAD
+<http://purl.org/roh/university-hr/uk#GB_UNIVERSITY_HR_GBRTREAD> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://purl.org/roh/university-hr/uk#GB_UNIVERSITY_HR_GBRTREAD> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://purl.org/roh/mirror/vivo#FacultyPosition> .
+<http://purl.org/roh/university-hr/uk#GB_UNIVERSITY_HR_GBRTREAD> <http://purl.org/roh#country> <http://publications.europa.eu/resource/authority/country/GBR> .
+<http://purl.org/roh/university-hr/uk#GB_UNIVERSITY_HR_GBRTREAD> <http://purl.org/roh#hasCode> <http://purl.org/roh/university-hr/uk#GB_UNIVERSITY_HR_CODE_GBRTREAD> .
+<http://purl.org/roh/university-hr/uk#GB_UNIVERSITY_HR_GBRTREAD> <http://www.w3.org/2000/01/rdf-schema#label> "Reader"@en .
+<http://purl.org/roh/university-hr/uk#GB_UNIVERSITY_HR_GBRTREAD> <http://www.w3.org/2004/02/skos/core#altLabel> "Principal lecturer"@en .
+<http://purl.org/roh/university-hr/uk#GB_UNIVERSITY_HR_GBRTREAD> <http://www.w3.org/2004/02/skos/core#closeMatch> <http://skos.um.es/unescothes/C00015> .
+<http://purl.org/roh/university-hr/uk#GB_UNIVERSITY_HR_GBRTREAD> <http://www.w3.org/2004/02/skos/core#closeMatch> <http://skos.um.es/unescothes/C03965> .
+<http://purl.org/roh/university-hr/uk#GB_UNIVERSITY_HR_GBRTREAD> <http://www.w3.org/2004/02/skos/core#inScheme> <http://purl.org/roh/university-hr/uk#GBUniversityHumanResourcesList> .
+<http://purl.org/roh/university-hr/uk#GB_UNIVERSITY_HR_GBRTREAD> <http://www.w3.org/2004/02/skos/core#notation> "GBRTREAD" .
+<http://purl.org/roh/university-hr/uk#GB_UNIVERSITY_HR_GBRTREAD> <http://www.w3.org/2004/02/skos/core#prefLabel> "Reader"@en .
+# 
+# http://purl.org/roh/university-hr/uk#GB_UNIVERSITY_HR_GBRTSENLEC
+<http://purl.org/roh/university-hr/uk#GB_UNIVERSITY_HR_GBRTSENLEC> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://purl.org/roh/university-hr/uk#GB_UNIVERSITY_HR_GBRTSENLEC> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://purl.org/roh/mirror/vivo#FacultyPosition> .
+<http://purl.org/roh/university-hr/uk#GB_UNIVERSITY_HR_GBRTSENLEC> <http://purl.org/roh#country> <http://publications.europa.eu/resource/authority/country/GBR> .
+<http://purl.org/roh/university-hr/uk#GB_UNIVERSITY_HR_GBRTSENLEC> <http://purl.org/roh#hasCode> <http://purl.org/roh/university-hr/uk#GB_UNIVERSITY_HR_CODE_GBRTSENLEC> .
+<http://purl.org/roh/university-hr/uk#GB_UNIVERSITY_HR_GBRTSENLEC> <http://www.w3.org/2000/01/rdf-schema#label> "Senior lecturer"@en .
+<http://purl.org/roh/university-hr/uk#GB_UNIVERSITY_HR_GBRTSENLEC> <http://www.w3.org/2004/02/skos/core#closeMatch> <http://skos.um.es/unescothes/C00015> .
+<http://purl.org/roh/university-hr/uk#GB_UNIVERSITY_HR_GBRTSENLEC> <http://www.w3.org/2004/02/skos/core#closeMatch> <http://skos.um.es/unescothes/C03965> .
+<http://purl.org/roh/university-hr/uk#GB_UNIVERSITY_HR_GBRTSENLEC> <http://www.w3.org/2004/02/skos/core#inScheme> <http://purl.org/roh/university-hr/uk#GBUniversityHumanResourcesList> .
+<http://purl.org/roh/university-hr/uk#GB_UNIVERSITY_HR_GBRTSENLEC> <http://www.w3.org/2004/02/skos/core#notation> "GBRTSENLEC" .
+<http://purl.org/roh/university-hr/uk#GB_UNIVERSITY_HR_GBRTSENLEC> <http://www.w3.org/2004/02/skos/core#prefLabel> "Senior lecturer"@en .
+# 
+# http://purl.org/roh/university-hr/uk#GB_UNIVERSITY_HR_GBTPROF
+<http://purl.org/roh/university-hr/uk#GB_UNIVERSITY_HR_GBTPROF> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://purl.org/roh/university-hr/uk#GB_UNIVERSITY_HR_GBTPROF> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://purl.org/roh/mirror/vivo#FacultyPosition> .
+<http://purl.org/roh/university-hr/uk#GB_UNIVERSITY_HR_GBTPROF> <http://purl.org/roh#country> <http://publications.europa.eu/resource/authority/country/GBR> .
+<http://purl.org/roh/university-hr/uk#GB_UNIVERSITY_HR_GBTPROF> <http://purl.org/roh#hasCode> <http://purl.org/roh/university-hr/uk#GB_UNIVERSITY_HR_CODE_GBTPROF> .
+<http://purl.org/roh/university-hr/uk#GB_UNIVERSITY_HR_GBTPROF> <http://www.w3.org/2000/01/rdf-schema#label> "Professorial teaching fellow"@en .
+<http://purl.org/roh/university-hr/uk#GB_UNIVERSITY_HR_GBTPROF> <http://www.w3.org/2004/02/skos/core#closeMatch> <http://skos.um.es/unescothes/C00015> .
+<http://purl.org/roh/university-hr/uk#GB_UNIVERSITY_HR_GBTPROF> <http://www.w3.org/2004/02/skos/core#closeMatch> <http://skos.um.es/unescothes/C03965> .
+<http://purl.org/roh/university-hr/uk#GB_UNIVERSITY_HR_GBTPROF> <http://www.w3.org/2004/02/skos/core#inScheme> <http://purl.org/roh/university-hr/uk#GBUniversityHumanResourcesList> .
+<http://purl.org/roh/university-hr/uk#GB_UNIVERSITY_HR_GBTPROF> <http://www.w3.org/2004/02/skos/core#notation> "GBTPROF" .
+<http://purl.org/roh/university-hr/uk#GB_UNIVERSITY_HR_GBTPROF> <http://www.w3.org/2004/02/skos/core#prefLabel> "Professorial teaching fellow"@en .
+# 
+# http://purl.org/roh/university-hr/uk#GB_UNIVERSITY_HR_GBVICCHAN
+<http://purl.org/roh/university-hr/uk#GB_UNIVERSITY_HR_GBVICCHAN> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://purl.org/roh/university-hr/uk#GB_UNIVERSITY_HR_GBVICCHAN> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://purl.org/roh/mirror/vivo#FacultyAdministrativePosition> .
+<http://purl.org/roh/university-hr/uk#GB_UNIVERSITY_HR_GBVICCHAN> <http://purl.org/roh#country> <http://publications.europa.eu/resource/authority/country/GBR> .
+<http://purl.org/roh/university-hr/uk#GB_UNIVERSITY_HR_GBVICCHAN> <http://purl.org/roh#hasCode> <http://purl.org/roh/university-hr/uk#GB_UNIVERSITY_HR_CODE_GBVICCHAN> .
+<http://purl.org/roh/university-hr/uk#GB_UNIVERSITY_HR_GBVICCHAN> <http://www.w3.org/2000/01/rdf-schema#label> "Vice-chancellor"@en .
+<http://purl.org/roh/university-hr/uk#GB_UNIVERSITY_HR_GBVICCHAN> <http://www.w3.org/2004/02/skos/core#altLabel> "Provost"@en .
+<http://purl.org/roh/university-hr/uk#GB_UNIVERSITY_HR_GBVICCHAN> <http://www.w3.org/2004/02/skos/core#inScheme> <http://purl.org/roh/university-hr/uk#GBUniversityHumanResourcesList> .
+<http://purl.org/roh/university-hr/uk#GB_UNIVERSITY_HR_GBVICCHAN> <http://www.w3.org/2004/02/skos/core#notation> "GBVICCHAN" .
+<http://purl.org/roh/university-hr/uk#GB_UNIVERSITY_HR_GBVICCHAN> <http://www.w3.org/2004/02/skos/core#prefLabel> "Vice-chancellor"@en .
+# 
+# http://www.w3.org/2004/02/skos/core#Concept
+<http://www.w3.org/2004/02/skos/core#Concept> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.w3.org/2004/02/skos/core#Concept> <http://www.w3.org/2000/01/rdf-schema#label> "Concept"@en .
+# 
+# http://www.w3.org/2004/02/skos/core#ConceptScheme
+<http://www.w3.org/2004/02/skos/core#ConceptScheme> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.w3.org/2004/02/skos/core#ConceptScheme> <http://www.w3.org/2000/01/rdf-schema#label> "Concept Scheme"@en .
+# 
+# 
+# 
+# #################################################################
+# #
+# #    Individuals
+# #
+# #################################################################
+# 
+# 
+# http://purl.org/roh/university-hr/uk#GBUniversityHumanResourcesCodesList
+<http://purl.org/roh/university-hr/uk#GBUniversityHumanResourcesCodesList> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://purl.org/roh/university-hr/uk#GBUniversityHumanResourcesCodesList> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2004/02/skos/core#ConceptScheme> .
+<http://purl.org/roh/university-hr/uk#GBUniversityHumanResourcesCodesList> <http://www.w3.org/2000/01/rdf-schema#label> "Codes des resources humains des universités du Royaume Uni"@fr .
+<http://purl.org/roh/university-hr/uk#GBUniversityHumanResourcesCodesList> <http://www.w3.org/2000/01/rdf-schema#label> "Codes for the human resources of the universities from the United Kingdom"@en .
+<http://purl.org/roh/university-hr/uk#GBUniversityHumanResourcesCodesList> <http://www.w3.org/2000/01/rdf-schema#label> "Codis dels recursos humans de les universitats del Regne Unit"@ca .
+<http://purl.org/roh/university-hr/uk#GBUniversityHumanResourcesCodesList> <http://www.w3.org/2000/01/rdf-schema#label> "Códigos de los recursos humanos de las universidades del Reino Unido"@es .
+<http://purl.org/roh/university-hr/uk#GBUniversityHumanResourcesCodesList> <http://www.w3.org/2000/01/rdf-schema#label> "Códigos de los recursos humanos de les universidaes del Reinu Xuníu"@ast .
+<http://purl.org/roh/university-hr/uk#GBUniversityHumanResourcesCodesList> <http://www.w3.org/2000/01/rdf-schema#label> "Códigos dos recursos humanos das universidades do Reino Unido"@gl .
+<http://purl.org/roh/university-hr/uk#GBUniversityHumanResourcesCodesList> <http://www.w3.org/2000/01/rdf-schema#label> "Códigos dos recursos humanos das universidades do Reino Unido"@pt .
+<http://purl.org/roh/university-hr/uk#GBUniversityHumanResourcesCodesList> <http://www.w3.org/2004/02/skos/core#prefLabel> "Codes des resources humains des universités du Royaume Uni"@fr .
+<http://purl.org/roh/university-hr/uk#GBUniversityHumanResourcesCodesList> <http://www.w3.org/2004/02/skos/core#prefLabel> "Codes for the human resources of the universities from the United Kingdom"@en .
+<http://purl.org/roh/university-hr/uk#GBUniversityHumanResourcesCodesList> <http://www.w3.org/2004/02/skos/core#prefLabel> "Codis dels recursos humans de les universitats del Regne Unit"@ca .
+<http://purl.org/roh/university-hr/uk#GBUniversityHumanResourcesCodesList> <http://www.w3.org/2004/02/skos/core#prefLabel> "Códigos de los recursos humanos de las universidades del Reino Unido"@es .
+<http://purl.org/roh/university-hr/uk#GBUniversityHumanResourcesCodesList> <http://www.w3.org/2004/02/skos/core#prefLabel> "Códigos de los recursos humanos de les universidaes del Reinu Xuníu"@ast .
+<http://purl.org/roh/university-hr/uk#GBUniversityHumanResourcesCodesList> <http://www.w3.org/2004/02/skos/core#prefLabel> "Códigos dos recursos humanos das universidades do Reino Unido"@gl .
+<http://purl.org/roh/university-hr/uk#GBUniversityHumanResourcesCodesList> <http://www.w3.org/2004/02/skos/core#prefLabel> "Códigos dos recursos humanos das universidades do Reino Unido"@pt .
+# 
+# http://purl.org/roh/university-hr/uk#GBUniversityHumanResourcesList
+<http://purl.org/roh/university-hr/uk#GBUniversityHumanResourcesList> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://purl.org/roh/university-hr/uk#GBUniversityHumanResourcesList> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2004/02/skos/core#ConceptScheme> .
+<http://purl.org/roh/university-hr/uk#GBUniversityHumanResourcesList> <http://www.w3.org/2000/01/rdf-schema#label> "Human resources of the universities from the United Kingdom"@en .
+<http://purl.org/roh/university-hr/uk#GBUniversityHumanResourcesList> <http://www.w3.org/2000/01/rdf-schema#label> "Recursos humanos das universidades do Reino Unido"@gl .
+<http://purl.org/roh/university-hr/uk#GBUniversityHumanResourcesList> <http://www.w3.org/2000/01/rdf-schema#label> "Recursos humanos das universidades do Reino Unido"@pt .
+<http://purl.org/roh/university-hr/uk#GBUniversityHumanResourcesList> <http://www.w3.org/2000/01/rdf-schema#label> "Recursos humanos de las universidades del Reino Unido"@es .
+<http://purl.org/roh/university-hr/uk#GBUniversityHumanResourcesList> <http://www.w3.org/2000/01/rdf-schema#label> "Recursos humanos de les universidaes del Reinu Xuníu"@ast .
+<http://purl.org/roh/university-hr/uk#GBUniversityHumanResourcesList> <http://www.w3.org/2000/01/rdf-schema#label> "Recursos humans de les universitats del Regne Unit"@ca .
+<http://purl.org/roh/university-hr/uk#GBUniversityHumanResourcesList> <http://www.w3.org/2000/01/rdf-schema#label> "Resources humains des universités du Royaume Uni"@fr .
+<http://purl.org/roh/university-hr/uk#GBUniversityHumanResourcesList> <http://www.w3.org/2004/02/skos/core#prefLabel> "Human resources of the universities from the United Kingdom"@en .
+<http://purl.org/roh/university-hr/uk#GBUniversityHumanResourcesList> <http://www.w3.org/2004/02/skos/core#prefLabel> "Recursos humanos das universidades do Reino Unido"@gl .
+<http://purl.org/roh/university-hr/uk#GBUniversityHumanResourcesList> <http://www.w3.org/2004/02/skos/core#prefLabel> "Recursos humanos das universidades do Reino Unido"@pt .
+<http://purl.org/roh/university-hr/uk#GBUniversityHumanResourcesList> <http://www.w3.org/2004/02/skos/core#prefLabel> "Recursos humanos de las universidades del Reino Unido"@es .
+<http://purl.org/roh/university-hr/uk#GBUniversityHumanResourcesList> <http://www.w3.org/2004/02/skos/core#prefLabel> "Recursos humanos de les universidaes del Reinu Xuníu"@ast .
+<http://purl.org/roh/university-hr/uk#GBUniversityHumanResourcesList> <http://www.w3.org/2004/02/skos/core#prefLabel> "Recursos humans de les universitats del Regne Unit"@ca .
+<http://purl.org/roh/university-hr/uk#GBUniversityHumanResourcesList> <http://www.w3.org/2004/02/skos/core#prefLabel> "Resources humains des universités du Royaume Uni"@fr .
+# 
+# http://purl.org/roh/university-hr/uk#GB_UNIVERSITY_HR_CODE_GBCHAN
+<http://purl.org/roh/university-hr/uk#GB_UNIVERSITY_HR_CODE_GBCHAN> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://purl.org/roh/university-hr/uk#GB_UNIVERSITY_HR_CODE_GBCHAN> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2004/02/skos/core#Concept> .
+<http://purl.org/roh/university-hr/uk#GB_UNIVERSITY_HR_CODE_GBCHAN> <http://purl.org/roh#codeOf> <http://purl.org/roh/university-hr/uk#GB_UNIVERSITY_HR_GBCHAN> .
+<http://purl.org/roh/university-hr/uk#GB_UNIVERSITY_HR_CODE_GBCHAN> <http://www.w3.org/2000/01/rdf-schema#label> "GBCHAN" .
+<http://purl.org/roh/university-hr/uk#GB_UNIVERSITY_HR_CODE_GBCHAN> <http://www.w3.org/2004/02/skos/core#inScheme> <http://purl.org/roh/university-hr/uk#GBUniversityHumanResourcesCodesList> .
+<http://purl.org/roh/university-hr/uk#GB_UNIVERSITY_HR_CODE_GBCHAN> <http://www.w3.org/2004/02/skos/core#prefLabel> "GBCHAN" .
+# 
+# http://purl.org/roh/university-hr/uk#GB_UNIVERSITY_HR_CODE_GBDEAN
+<http://purl.org/roh/university-hr/uk#GB_UNIVERSITY_HR_CODE_GBDEAN> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://purl.org/roh/university-hr/uk#GB_UNIVERSITY_HR_CODE_GBDEAN> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2004/02/skos/core#Concept> .
+<http://purl.org/roh/university-hr/uk#GB_UNIVERSITY_HR_CODE_GBDEAN> <http://purl.org/roh#codeOf> <http://purl.org/roh/university-hr/uk#GB_UNIVERSITY_HR_GBDEAN> .
+<http://purl.org/roh/university-hr/uk#GB_UNIVERSITY_HR_CODE_GBDEAN> <http://www.w3.org/2000/01/rdf-schema#label> "GBDEAN" .
+<http://purl.org/roh/university-hr/uk#GB_UNIVERSITY_HR_CODE_GBDEAN> <http://www.w3.org/2004/02/skos/core#inScheme> <http://purl.org/roh/university-hr/uk#GBUniversityHumanResourcesCodesList> .
+<http://purl.org/roh/university-hr/uk#GB_UNIVERSITY_HR_CODE_GBDEAN> <http://www.w3.org/2004/02/skos/core#prefLabel> "GBDEAN" .
+# 
+# http://purl.org/roh/university-hr/uk#GB_UNIVERSITY_HR_CODE_GBDEPDIR
+<http://purl.org/roh/university-hr/uk#GB_UNIVERSITY_HR_CODE_GBDEPDIR> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://purl.org/roh/university-hr/uk#GB_UNIVERSITY_HR_CODE_GBDEPDIR> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2004/02/skos/core#Concept> .
+<http://purl.org/roh/university-hr/uk#GB_UNIVERSITY_HR_CODE_GBDEPDIR> <http://purl.org/roh#codeOf> <http://purl.org/roh/university-hr/uk#GB_UNIVERSITY_HR_GBDEPDIR> .
+<http://purl.org/roh/university-hr/uk#GB_UNIVERSITY_HR_CODE_GBDEPDIR> <http://www.w3.org/2000/01/rdf-schema#label> "GBDEPDIR" .
+<http://purl.org/roh/university-hr/uk#GB_UNIVERSITY_HR_CODE_GBDEPDIR> <http://www.w3.org/2004/02/skos/core#inScheme> <http://purl.org/roh/university-hr/uk#GBUniversityHumanResourcesCodesList> .
+<http://purl.org/roh/university-hr/uk#GB_UNIVERSITY_HR_CODE_GBDEPDIR> <http://www.w3.org/2004/02/skos/core#prefLabel> "GBDEPDIR" .
+# 
+# http://purl.org/roh/university-hr/uk#GB_UNIVERSITY_HR_CODE_GBDEPVICHAN
+<http://purl.org/roh/university-hr/uk#GB_UNIVERSITY_HR_CODE_GBDEPVICHAN> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://purl.org/roh/university-hr/uk#GB_UNIVERSITY_HR_CODE_GBDEPVICHAN> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2004/02/skos/core#Concept> .
+<http://purl.org/roh/university-hr/uk#GB_UNIVERSITY_HR_CODE_GBDEPVICHAN> <http://purl.org/roh#codeOf> <http://purl.org/roh/university-hr/uk#GB_UNIVERSITY_HR_GBDEPVICHAN> .
+<http://purl.org/roh/university-hr/uk#GB_UNIVERSITY_HR_CODE_GBDEPVICHAN> <http://www.w3.org/2000/01/rdf-schema#label> "GBDEPVICHAN" .
+<http://purl.org/roh/university-hr/uk#GB_UNIVERSITY_HR_CODE_GBDEPVICHAN> <http://www.w3.org/2004/02/skos/core#inScheme> <http://purl.org/roh/university-hr/uk#GBUniversityHumanResourcesCodesList> .
+<http://purl.org/roh/university-hr/uk#GB_UNIVERSITY_HR_CODE_GBDEPVICHAN> <http://www.w3.org/2004/02/skos/core#prefLabel> "GBDEPVICHAN" .
+# 
+# http://purl.org/roh/university-hr/uk#GB_UNIVERSITY_HR_CODE_GBEPROF
+<http://purl.org/roh/university-hr/uk#GB_UNIVERSITY_HR_CODE_GBEPROF> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://purl.org/roh/university-hr/uk#GB_UNIVERSITY_HR_CODE_GBEPROF> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2004/02/skos/core#Concept> .
+<http://purl.org/roh/university-hr/uk#GB_UNIVERSITY_HR_CODE_GBEPROF> <http://purl.org/roh#codeOf> <http://purl.org/roh/university-hr/uk#GB_UNIVERSITY_HR_GBEPROF> .
+<http://purl.org/roh/university-hr/uk#GB_UNIVERSITY_HR_CODE_GBEPROF> <http://www.w3.org/2000/01/rdf-schema#label> "GBEPROF" .
+<http://purl.org/roh/university-hr/uk#GB_UNIVERSITY_HR_CODE_GBEPROF> <http://www.w3.org/2004/02/skos/core#inScheme> <http://purl.org/roh/university-hr/uk#GBUniversityHumanResourcesCodesList> .
+<http://purl.org/roh/university-hr/uk#GB_UNIVERSITY_HR_CODE_GBEPROF> <http://www.w3.org/2004/02/skos/core#prefLabel> "GBEPROF" .
+# 
+# http://purl.org/roh/university-hr/uk#GB_UNIVERSITY_HR_CODE_GBEREAD
+<http://purl.org/roh/university-hr/uk#GB_UNIVERSITY_HR_CODE_GBEREAD> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://purl.org/roh/university-hr/uk#GB_UNIVERSITY_HR_CODE_GBEREAD> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2004/02/skos/core#Concept> .
+<http://purl.org/roh/university-hr/uk#GB_UNIVERSITY_HR_CODE_GBEREAD> <http://purl.org/roh#codeOf> <http://purl.org/roh/university-hr/uk#GB_UNIVERSITY_HR_GBEREAD> .
+<http://purl.org/roh/university-hr/uk#GB_UNIVERSITY_HR_CODE_GBEREAD> <http://www.w3.org/2000/01/rdf-schema#label> "GBEREAD" .
+<http://purl.org/roh/university-hr/uk#GB_UNIVERSITY_HR_CODE_GBEREAD> <http://www.w3.org/2004/02/skos/core#inScheme> <http://purl.org/roh/university-hr/uk#GBUniversityHumanResourcesCodesList> .
+<http://purl.org/roh/university-hr/uk#GB_UNIVERSITY_HR_CODE_GBEREAD> <http://www.w3.org/2004/02/skos/core#prefLabel> "GBEREAD" .
+# 
+# http://purl.org/roh/university-hr/uk#GB_UNIVERSITY_HR_CODE_GBHEADDEP
+<http://purl.org/roh/university-hr/uk#GB_UNIVERSITY_HR_CODE_GBHEADDEP> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://purl.org/roh/university-hr/uk#GB_UNIVERSITY_HR_CODE_GBHEADDEP> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2004/02/skos/core#Concept> .
+<http://purl.org/roh/university-hr/uk#GB_UNIVERSITY_HR_CODE_GBHEADDEP> <http://purl.org/roh#codeOf> <http://purl.org/roh/university-hr/uk#GB_UNIVERSITY_HR_GBHEADDEP> .
+<http://purl.org/roh/university-hr/uk#GB_UNIVERSITY_HR_CODE_GBHEADDEP> <http://www.w3.org/2000/01/rdf-schema#label> "GBHEADDEP" .
+<http://purl.org/roh/university-hr/uk#GB_UNIVERSITY_HR_CODE_GBHEADDEP> <http://www.w3.org/2004/02/skos/core#inScheme> <http://purl.org/roh/university-hr/uk#GBUniversityHumanResourcesCodesList> .
+<http://purl.org/roh/university-hr/uk#GB_UNIVERSITY_HR_CODE_GBHEADDEP> <http://www.w3.org/2004/02/skos/core#prefLabel> "GBHEADDEP" .
+# 
+# http://purl.org/roh/university-hr/uk#GB_UNIVERSITY_HR_CODE_GBPROCHAN
+<http://purl.org/roh/university-hr/uk#GB_UNIVERSITY_HR_CODE_GBPROCHAN> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://purl.org/roh/university-hr/uk#GB_UNIVERSITY_HR_CODE_GBPROCHAN> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2004/02/skos/core#Concept> .
+<http://purl.org/roh/university-hr/uk#GB_UNIVERSITY_HR_CODE_GBPROCHAN> <http://purl.org/roh#codeOf> <http://purl.org/roh/university-hr/uk#GB_UNIVERSITY_HR_GBPROCHAN> .
+<http://purl.org/roh/university-hr/uk#GB_UNIVERSITY_HR_CODE_GBPROCHAN> <http://www.w3.org/2000/01/rdf-schema#label> "GBPROCHAN" .
+<http://purl.org/roh/university-hr/uk#GB_UNIVERSITY_HR_CODE_GBPROCHAN> <http://www.w3.org/2004/02/skos/core#inScheme> <http://purl.org/roh/university-hr/uk#GBUniversityHumanResourcesCodesList> .
+<http://purl.org/roh/university-hr/uk#GB_UNIVERSITY_HR_CODE_GBPROCHAN> <http://www.w3.org/2004/02/skos/core#prefLabel> "GBPROCHAN" .
+# 
+# http://purl.org/roh/university-hr/uk#GB_UNIVERSITY_HR_CODE_GBPROVICCHAN
+<http://purl.org/roh/university-hr/uk#GB_UNIVERSITY_HR_CODE_GBPROVICCHAN> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://purl.org/roh/university-hr/uk#GB_UNIVERSITY_HR_CODE_GBPROVICCHAN> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2004/02/skos/core#Concept> .
+<http://purl.org/roh/university-hr/uk#GB_UNIVERSITY_HR_CODE_GBPROVICCHAN> <http://purl.org/roh#codeOf> <http://purl.org/roh/university-hr/uk#GB_UNIVERSITY_HR_GBPROVICCHAN> .
+<http://purl.org/roh/university-hr/uk#GB_UNIVERSITY_HR_CODE_GBPROVICCHAN> <http://www.w3.org/2000/01/rdf-schema#label> "GBPROVICCHAN" .
+<http://purl.org/roh/university-hr/uk#GB_UNIVERSITY_HR_CODE_GBPROVICCHAN> <http://www.w3.org/2004/02/skos/core#inScheme> <http://purl.org/roh/university-hr/uk#GBUniversityHumanResourcesCodesList> .
+<http://purl.org/roh/university-hr/uk#GB_UNIVERSITY_HR_CODE_GBPROVICCHAN> <http://www.w3.org/2004/02/skos/core#prefLabel> "GBPROVICCHAN" .
+# 
+# http://purl.org/roh/university-hr/uk#GB_UNIVERSITY_HR_CODE_GBRPROF
+<http://purl.org/roh/university-hr/uk#GB_UNIVERSITY_HR_CODE_GBRPROF> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://purl.org/roh/university-hr/uk#GB_UNIVERSITY_HR_CODE_GBRPROF> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2004/02/skos/core#Concept> .
+<http://purl.org/roh/university-hr/uk#GB_UNIVERSITY_HR_CODE_GBRPROF> <http://purl.org/roh#codeOf> <http://purl.org/roh/university-hr/uk#GB_UNIVERSITY_HR_GBRPROF> .
+<http://purl.org/roh/university-hr/uk#GB_UNIVERSITY_HR_CODE_GBRPROF> <http://www.w3.org/2000/01/rdf-schema#label> "GBRPROF" .
+<http://purl.org/roh/university-hr/uk#GB_UNIVERSITY_HR_CODE_GBRPROF> <http://www.w3.org/2004/02/skos/core#inScheme> <http://purl.org/roh/university-hr/uk#GBUniversityHumanResourcesCodesList> .
+<http://purl.org/roh/university-hr/uk#GB_UNIVERSITY_HR_CODE_GBRPROF> <http://www.w3.org/2004/02/skos/core#prefLabel> "GBRPROF" .
+# 
+# http://purl.org/roh/university-hr/uk#GB_UNIVERSITY_HR_CODE_GBRREAASS
+<http://purl.org/roh/university-hr/uk#GB_UNIVERSITY_HR_CODE_GBRREAASS> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://purl.org/roh/university-hr/uk#GB_UNIVERSITY_HR_CODE_GBRREAASS> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2004/02/skos/core#Concept> .
+<http://purl.org/roh/university-hr/uk#GB_UNIVERSITY_HR_CODE_GBRREAASS> <http://purl.org/roh#codeOf> <http://purl.org/roh/university-hr/uk#GB_UNIVERSITY_HR_GBRREAASS> .
+<http://purl.org/roh/university-hr/uk#GB_UNIVERSITY_HR_CODE_GBRREAASS> <http://www.w3.org/2000/01/rdf-schema#label> "GBRREAASS" .
+<http://purl.org/roh/university-hr/uk#GB_UNIVERSITY_HR_CODE_GBRREAASS> <http://www.w3.org/2004/02/skos/core#inScheme> <http://purl.org/roh/university-hr/uk#GBUniversityHumanResourcesCodesList> .
+<http://purl.org/roh/university-hr/uk#GB_UNIVERSITY_HR_CODE_GBRREAASS> <http://www.w3.org/2004/02/skos/core#prefLabel> "GBRREAASS" .
+# 
+# http://purl.org/roh/university-hr/uk#GB_UNIVERSITY_HR_CODE_GBRREAFEL
+<http://purl.org/roh/university-hr/uk#GB_UNIVERSITY_HR_CODE_GBRREAFEL> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://purl.org/roh/university-hr/uk#GB_UNIVERSITY_HR_CODE_GBRREAFEL> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2004/02/skos/core#Concept> .
+<http://purl.org/roh/university-hr/uk#GB_UNIVERSITY_HR_CODE_GBRREAFEL> <http://purl.org/roh#codeOf> <http://purl.org/roh/university-hr/uk#GB_UNIVERSITY_HR_GBRREAFEL> .
+<http://purl.org/roh/university-hr/uk#GB_UNIVERSITY_HR_CODE_GBRREAFEL> <http://www.w3.org/2000/01/rdf-schema#label> "GBRREAFEL" .
+<http://purl.org/roh/university-hr/uk#GB_UNIVERSITY_HR_CODE_GBRREAFEL> <http://www.w3.org/2004/02/skos/core#inScheme> <http://purl.org/roh/university-hr/uk#GBUniversityHumanResourcesCodesList> .
+<http://purl.org/roh/university-hr/uk#GB_UNIVERSITY_HR_CODE_GBRREAFEL> <http://www.w3.org/2004/02/skos/core#prefLabel> "GBRREAFEL" .
+# 
+# http://purl.org/roh/university-hr/uk#GB_UNIVERSITY_HR_CODE_GBRSENREAFEL
+<http://purl.org/roh/university-hr/uk#GB_UNIVERSITY_HR_CODE_GBRSENREAFEL> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://purl.org/roh/university-hr/uk#GB_UNIVERSITY_HR_CODE_GBRSENREAFEL> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2004/02/skos/core#Concept> .
+<http://purl.org/roh/university-hr/uk#GB_UNIVERSITY_HR_CODE_GBRSENREAFEL> <http://purl.org/roh#codeOf> <http://purl.org/roh/university-hr/uk#GB_UNIVERSITY_HR_GBRSENREAFEL> .
+<http://purl.org/roh/university-hr/uk#GB_UNIVERSITY_HR_CODE_GBRSENREAFEL> <http://www.w3.org/2000/01/rdf-schema#label> "GBRSENREAFEL" .
+<http://purl.org/roh/university-hr/uk#GB_UNIVERSITY_HR_CODE_GBRSENREAFEL> <http://www.w3.org/2004/02/skos/core#inScheme> <http://purl.org/roh/university-hr/uk#GBUniversityHumanResourcesCodesList> .
+<http://purl.org/roh/university-hr/uk#GB_UNIVERSITY_HR_CODE_GBRSENREAFEL> <http://www.w3.org/2004/02/skos/core#prefLabel> "GBRSENREAFEL" .
+# 
+# http://purl.org/roh/university-hr/uk#GB_UNIVERSITY_HR_CODE_GBRTASSLEC
+<http://purl.org/roh/university-hr/uk#GB_UNIVERSITY_HR_CODE_GBRTASSLEC> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://purl.org/roh/university-hr/uk#GB_UNIVERSITY_HR_CODE_GBRTASSLEC> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2004/02/skos/core#Concept> .
+<http://purl.org/roh/university-hr/uk#GB_UNIVERSITY_HR_CODE_GBRTASSLEC> <http://purl.org/roh#codeOf> <http://purl.org/roh/university-hr/uk#GB_UNIVERSITY_HR_GBRTASSLEC> .
+<http://purl.org/roh/university-hr/uk#GB_UNIVERSITY_HR_CODE_GBRTASSLEC> <http://www.w3.org/2000/01/rdf-schema#label> "GBRTASSLEC" .
+<http://purl.org/roh/university-hr/uk#GB_UNIVERSITY_HR_CODE_GBRTASSLEC> <http://www.w3.org/2004/02/skos/core#inScheme> <http://purl.org/roh/university-hr/uk#GBUniversityHumanResourcesCodesList> .
+<http://purl.org/roh/university-hr/uk#GB_UNIVERSITY_HR_CODE_GBRTASSLEC> <http://www.w3.org/2004/02/skos/core#prefLabel> "GBRTASSLEC" .
+# 
+# http://purl.org/roh/university-hr/uk#GB_UNIVERSITY_HR_CODE_GBRTCLLEC
+<http://purl.org/roh/university-hr/uk#GB_UNIVERSITY_HR_CODE_GBRTCLLEC> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://purl.org/roh/university-hr/uk#GB_UNIVERSITY_HR_CODE_GBRTCLLEC> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2004/02/skos/core#Concept> .
+<http://purl.org/roh/university-hr/uk#GB_UNIVERSITY_HR_CODE_GBRTCLLEC> <http://purl.org/roh#codeOf> <http://purl.org/roh/university-hr/uk#GB_UNIVERSITY_HR_GBRTCLLEC> .
+<http://purl.org/roh/university-hr/uk#GB_UNIVERSITY_HR_CODE_GBRTCLLEC> <http://www.w3.org/2000/01/rdf-schema#label> "GBRTCLLEC" .
+<http://purl.org/roh/university-hr/uk#GB_UNIVERSITY_HR_CODE_GBRTCLLEC> <http://www.w3.org/2004/02/skos/core#inScheme> <http://purl.org/roh/university-hr/uk#GBUniversityHumanResourcesCodesList> .
+<http://purl.org/roh/university-hr/uk#GB_UNIVERSITY_HR_CODE_GBRTCLLEC> <http://www.w3.org/2004/02/skos/core#prefLabel> "GBRTCLLEC" .
+# 
+# http://purl.org/roh/university-hr/uk#GB_UNIVERSITY_HR_CODE_GBRTLEC
+<http://purl.org/roh/university-hr/uk#GB_UNIVERSITY_HR_CODE_GBRTLEC> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://purl.org/roh/university-hr/uk#GB_UNIVERSITY_HR_CODE_GBRTLEC> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2004/02/skos/core#Concept> .
+<http://purl.org/roh/university-hr/uk#GB_UNIVERSITY_HR_CODE_GBRTLEC> <http://purl.org/roh#codeOf> <http://purl.org/roh/university-hr/uk#GB_UNIVERSITY_HR_GBRTLEC> .
+<http://purl.org/roh/university-hr/uk#GB_UNIVERSITY_HR_CODE_GBRTLEC> <http://www.w3.org/2000/01/rdf-schema#label> "GBRTLEC" .
+<http://purl.org/roh/university-hr/uk#GB_UNIVERSITY_HR_CODE_GBRTLEC> <http://www.w3.org/2004/02/skos/core#inScheme> <http://purl.org/roh/university-hr/uk#GBUniversityHumanResourcesCodesList> .
+<http://purl.org/roh/university-hr/uk#GB_UNIVERSITY_HR_CODE_GBRTLEC> <http://www.w3.org/2004/02/skos/core#prefLabel> "GBRTLEC" .
+# 
+# http://purl.org/roh/university-hr/uk#GB_UNIVERSITY_HR_CODE_GBRTPROF
+<http://purl.org/roh/university-hr/uk#GB_UNIVERSITY_HR_CODE_GBRTPROF> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://purl.org/roh/university-hr/uk#GB_UNIVERSITY_HR_CODE_GBRTPROF> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2004/02/skos/core#Concept> .
+<http://purl.org/roh/university-hr/uk#GB_UNIVERSITY_HR_CODE_GBRTPROF> <http://purl.org/roh#codeOf> <http://purl.org/roh/university-hr/uk#GB_UNIVERSITY_HR_GBRTPROF> .
+<http://purl.org/roh/university-hr/uk#GB_UNIVERSITY_HR_CODE_GBRTPROF> <http://www.w3.org/2000/01/rdf-schema#label> "GBRTPROF" .
+<http://purl.org/roh/university-hr/uk#GB_UNIVERSITY_HR_CODE_GBRTPROF> <http://www.w3.org/2004/02/skos/core#inScheme> <http://purl.org/roh/university-hr/uk#GBUniversityHumanResourcesCodesList> .
+<http://purl.org/roh/university-hr/uk#GB_UNIVERSITY_HR_CODE_GBRTPROF> <http://www.w3.org/2004/02/skos/core#prefLabel> "GBRTPROF" .
+# 
+# http://purl.org/roh/university-hr/uk#GB_UNIVERSITY_HR_CODE_GBRTREAD
+<http://purl.org/roh/university-hr/uk#GB_UNIVERSITY_HR_CODE_GBRTREAD> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://purl.org/roh/university-hr/uk#GB_UNIVERSITY_HR_CODE_GBRTREAD> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2004/02/skos/core#Concept> .
+<http://purl.org/roh/university-hr/uk#GB_UNIVERSITY_HR_CODE_GBRTREAD> <http://purl.org/roh#codeOf> <http://purl.org/roh/university-hr/uk#GB_UNIVERSITY_HR_GBRTREAD> .
+<http://purl.org/roh/university-hr/uk#GB_UNIVERSITY_HR_CODE_GBRTREAD> <http://www.w3.org/2000/01/rdf-schema#label> "GBRTREAD" .
+<http://purl.org/roh/university-hr/uk#GB_UNIVERSITY_HR_CODE_GBRTREAD> <http://www.w3.org/2004/02/skos/core#inScheme> <http://purl.org/roh/university-hr/uk#GBUniversityHumanResourcesCodesList> .
+<http://purl.org/roh/university-hr/uk#GB_UNIVERSITY_HR_CODE_GBRTREAD> <http://www.w3.org/2004/02/skos/core#prefLabel> "GBRTREAD" .
+# 
+# http://purl.org/roh/university-hr/uk#GB_UNIVERSITY_HR_CODE_GBRTSENLEC
+<http://purl.org/roh/university-hr/uk#GB_UNIVERSITY_HR_CODE_GBRTSENLEC> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://purl.org/roh/university-hr/uk#GB_UNIVERSITY_HR_CODE_GBRTSENLEC> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2004/02/skos/core#Concept> .
+<http://purl.org/roh/university-hr/uk#GB_UNIVERSITY_HR_CODE_GBRTSENLEC> <http://purl.org/roh#codeOf> <http://purl.org/roh/university-hr/uk#GB_UNIVERSITY_HR_GBRTSENLEC> .
+<http://purl.org/roh/university-hr/uk#GB_UNIVERSITY_HR_CODE_GBRTSENLEC> <http://www.w3.org/2000/01/rdf-schema#label> "GBRTSENLEC" .
+<http://purl.org/roh/university-hr/uk#GB_UNIVERSITY_HR_CODE_GBRTSENLEC> <http://www.w3.org/2004/02/skos/core#inScheme> <http://purl.org/roh/university-hr/uk#GBUniversityHumanResourcesCodesList> .
+<http://purl.org/roh/university-hr/uk#GB_UNIVERSITY_HR_CODE_GBRTSENLEC> <http://www.w3.org/2004/02/skos/core#prefLabel> "GBRTSENLEC" .
+# 
+# http://purl.org/roh/university-hr/uk#GB_UNIVERSITY_HR_CODE_GBTPROF
+<http://purl.org/roh/university-hr/uk#GB_UNIVERSITY_HR_CODE_GBTPROF> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://purl.org/roh/university-hr/uk#GB_UNIVERSITY_HR_CODE_GBTPROF> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2004/02/skos/core#Concept> .
+<http://purl.org/roh/university-hr/uk#GB_UNIVERSITY_HR_CODE_GBTPROF> <http://purl.org/roh#codeOf> <http://purl.org/roh/university-hr/uk#GB_UNIVERSITY_HR_GBTPROF> .
+<http://purl.org/roh/university-hr/uk#GB_UNIVERSITY_HR_CODE_GBTPROF> <http://www.w3.org/2000/01/rdf-schema#label> "GBTPROF" .
+<http://purl.org/roh/university-hr/uk#GB_UNIVERSITY_HR_CODE_GBTPROF> <http://www.w3.org/2004/02/skos/core#inScheme> <http://purl.org/roh/university-hr/uk#GBUniversityHumanResourcesCodesList> .
+<http://purl.org/roh/university-hr/uk#GB_UNIVERSITY_HR_CODE_GBTPROF> <http://www.w3.org/2004/02/skos/core#prefLabel> "GBTPROF" .
+# 
+# http://purl.org/roh/university-hr/uk#GB_UNIVERSITY_HR_CODE_GBVICCHAN
+<http://purl.org/roh/university-hr/uk#GB_UNIVERSITY_HR_CODE_GBVICCHAN> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://purl.org/roh/university-hr/uk#GB_UNIVERSITY_HR_CODE_GBVICCHAN> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2004/02/skos/core#Concept> .
+<http://purl.org/roh/university-hr/uk#GB_UNIVERSITY_HR_CODE_GBVICCHAN> <http://purl.org/roh#codeOf> <http://purl.org/roh/university-hr/uk#GB_UNIVERSITY_HR_GBVICCHAN> .
+<http://purl.org/roh/university-hr/uk#GB_UNIVERSITY_HR_CODE_GBVICCHAN> <http://www.w3.org/2000/01/rdf-schema#label> "GBVICCHAN" .
+<http://purl.org/roh/university-hr/uk#GB_UNIVERSITY_HR_CODE_GBVICCHAN> <http://www.w3.org/2004/02/skos/core#inScheme> <http://purl.org/roh/university-hr/uk#GBUniversityHumanResourcesCodesList> .
+<http://purl.org/roh/university-hr/uk#GB_UNIVERSITY_HR_CODE_GBVICCHAN> <http://www.w3.org/2004/02/skos/core#prefLabel> "GBVICCHAN" .
+# 
+# Generated by the OWL API (version 5.1.14) https://github.com/owlcs/owlapi/

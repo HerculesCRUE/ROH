@@ -1,0 +1,218 @@
+From URI	Equivalent URI	Use instead URI	Super URI	Notes
+event:Event	event:Event, roh:Activity			
+frapo:FinancialEntity	X			roh:Funding, roh:FundingSource
+asio:Abstract	vivo:Abstract			
+asio:AcademicDegree	vivo:AwardedDegree			
+asio:AcademicPublication	bibo:Document, bibo:AcademicArticle			
+asio:AcademicSubject	roh:KnowledgeArea			TODO: not sure if difference
+asio:AdministrativeEntity				 (not subclassed?)
+asio:Article	bibo:Article, bibo:AcademicArticle			
+asio:AudioVisualDocument	bibo:AudioVisualDocument			 (not explicity included)
+asio:BachelorsDegreeSubject				roh:BachelorDegree (but no differentiation of subject)
+asio:BachelorsThesis				roh:DegreeThesis? (allDisjoint with MastersThesis, PhDThesis)
+asio:BacherlorsDegree	roh:BachelorDegree			
+asio:Book	bibo:Book			
+asio:Budget				
+asio:CV	roh:CurriculumVitae			
+asio:CaseStudy				
+asio:Catalog				(BIBO equivalent?)
+asio:CollectedDocument	bibo:CollectedDocument			
+asio:Company	vivo:Company			
+asio:Conference	bibo:Conference			
+asio:Context				(Q: similar to what a Role is realized in?)
+asio:Contract		vivo:Contract		
+asio:Country				
+asio:Database				
+asio:DoctoralDegree	roh:DoctoralDegree			
+asio:DoctoralProgram				
+asio:EditedPublication				superclass of bibo:EditedBook ?
+asio:EmploymentContract	roh:PersonContract			
+asio:Equipment	vivo:Equipment			
+asio:EuropeanProject	X			ProjectClassification#European
+asio:EventSeries	vivo:EventSeries			
+asio:Expenditure		roh:Expense		
+asio:Facility	vivo:Facility			
+asio:FinancialDocument	X			(not clear how used)
+asio:Funding		roh:Funding		
+asio:FundingAgency		vivo:FundingOrganization		review?
+asio:FundingProgramme	roh:FundingProgram			
+asio:Grant	roh:Grant			
+asio:InternalProject	X			doesn't seem to be a ProjectClassification for this
+asio:InternationalProject	X			ProjectClassification#International
+asio:Invention	roh:Invention			
+asio:Invoice		roh:Invoice		roh:Invoice
+asio:LargeEnterprise	roh:LargeEnterprise			
+asio:Manual	bibo:Manual			
+asio:MastersDegree	roh:MasterDegree			
+asio:MastersDegreeSubject				
+asio:MastersThesis	roh:MastersThesis			
+asio:NationalProject	X			
+asio:Patent	bibo:Patent			
+asio:PeerReviewedArticle			bibo:AcademicArticle	axiom with vivo:PeerReviewerRole?
+asio:PhDThesis	roh:PhDThesis			
+asio:Proceedings	bibo:Proceedings			
+asio:Product			roh:ResearchObject	
+asio:Profile	X			(an instance of a Role in BFO? Inheres in a specific person)
+asio:ProformaInvoice			roh:Invoice	
+asio:ProjectBudget				
+asio:Prototype			roh:ResearchObject	
+asio:Publication	bibo:Document			
+asio:QualifiedValue				Keep and use in preference to datatype properties from ROH
+asio:RegionalProject	X			ProjectClassification#Regional
+asio:Report	bibo:Report			
+asio:ResearchContribution			http://purl.obolibrary.org/obo/BFO_0000015	subclass of bfo:Process. Instances likely (but not necessarily) partOf some vivo:Project
+asio:ResearchField				
+asio:ResearchGroup			roh:ResearchGroup	
+asio:ResearchInstitute			vivo:Institute	
+asio:ResearchMaterial			http://purl.obolibrary.org/obo/BFO_0000040	subclass of bfo:MaterialEntity
+asio:ResearchMethod			http://purl.obolibrary.org/obo/BFO_0000015	could be subclass of OBI_0000011 (obi:PlannedProcess)
+asio:ResearchProblem			skos:Concept	perhaps a different parent
+asio:ResearchResult	roh:ResearchObject			
+asio:Role		http://purl.org/roh/mirror/obo/bfo#BFO_0000023		use bfo:Role instead
+asio:SME				possibly equivalent to union of roh:MicroEnterprise roh:SmallEnterprise and roh:MediumEnterprise?
+asio:ScientificPublication			bibo:Document	
+asio:SealOfQuality			roh:Accreditation	TODO: perhaps more informal that what one typically associates with an accreditation
+asio:Service		http://purl.obolibrary.org/obo/ERO_0000005		use ero:Service
+asio:ServiceContract			vivo:Contract	
+asio:SpainUniversityStaffing	X			
+asio:Spinoff	X			Use roh:isSpinoffOf property instead of class.  Each spinoff is an Organization in its own right.
+asio:Status				Harmonize with projectStatus and patentStatus. Not clear why either nominals or custom datatype values would be preferable to subclasses.
+asio:TechnicalReport			vivo:Report	
+asio:Thesis	bibo:Thesis			
+asio:University	vivo:University			
+asio:UniversityDivision			foaf:Organization	
+asio:Workshop			bibo:Workshop	
+http://purl.org/hercules/asio/modules#GeopoliticalEntities	X			
+http://purl.org/hercules/asio/modules#ScientificDomain	X			
+ro:AggregatedAnnotation	X			
+ro:Folder	X			
+ro:FolderEntry	X			
+ro:Manifest	X			
+ro:ResearchObject		roh:ResearchObject		
+ro:Resource	X			
+ro:SemanticAnnotation	X			
+foaf:Project		vivo:Project		
+				
+asio:addresses				
+asio:advises				"Seems OK as a shortcut, though ""advisesPublication"" or similar might be better as a more precise name.  In an expanded form, the advisor might bear a vivo:AdvisorRole in a vivo:AdvisingProcess whose output is the publication"
+asio:associatedWith				Could also consider representing as a subclass of vivo:Relationship, which would allow limiting the association to a specific time period
+asio:atContent				TODO: not clear what this is
+asio:authorCitation				use instead of roh:cites (though neither name seems ideal).  The association to the CurriculumVitae in which it is found could be via the QualifiedValue, allowing the citation count to be unambiguously associated with the person (rather than perhaps suggesting that a CV has been cited a certain number of times) 
+asio:authors				useful as a shortcut around bibo:authorList
+asio:awards		vivo:assigns		TODO: any counterexamples?
+asio:capital	X			
+asio:cites		bibo:cites		
+asio:coadvisedBy				See notes on asio:advises
+asio:coadvises				See notes on asio:advises
+asio:coauthors	X			TODO: not sure of purpose
+asio:codeOf				
+asio:companyFounder				"Sounds as if named backwards. Perhaps ""companyFounderOf""?"
+asio:coordinatedBy				Possibly useful shortcut.  Perhaps better remodeled as CoordinatorRole
+asio:country				
+asio:employs			http://purl.obolibrary.org/obo/RO_0000057	TODO: perhaps better renamed as employsResearchMethod given the explicit range. Subproperty of hasParticipant
+asio:funds				Leave for now as shortcut around Funding Role?
+asio:geoDivision	X			
+asio:h-index				Use instead of roh:factorH
+asio:hasCV		roh:hasCV		
+asio:hasCode				
+asio:hasPatent				
+asio:hasResearchContribution				not clear from axioms how intended to be used
+asio:hasResearchField				
+asio:hasResearchLine				need to better understand the definition of a research line, but neither this nor the roh datatype property seem ideal. Is a research line really a process in which the agent participants and which addresses one or more concepts?  
+asio:hasScientificDomain				
+asio:hasSealOfQuality			roh:hasAccreditation	
+asio:i10-index				doesn't seem to be an equivalent in roh
+asio:invoiceOf	X			
+asio:isAdvisedBy				
+asio:isAuthoredBy				
+asio:isAwardedBy			vivo:assignedBy	
+asio:isCoauthoredBy				
+asio:isFundedBy				
+asio:isMemberOf	X			use vivo:MemberRole
+asio:mainResearcherParticipant	X			TODO: Can vivo:PrincipalInvestigatorRole subsitute for this? Or should this be added as subclass of ResearcherRole
+asio:participant	X			
+asio:participates	X			
+asio:patentAssignee	vivo:assignee			
+asio:patentAssistantExaminer				
+asio:patentCountry				"TODO: not sure if this is subsumed by the use of ""locatedIn"" in roh.  In either case, it seems better to have an explicit jurisdiction, which may be an international one. "
+asio:patentInventor				
+asio:patentPrimaryExaminer				
+asio:patentStatus	X			
+asio:personalizes	X			not used in core definitions
+asio:plays	X	http://purl.obolibrary.org/obo/RO_0000053		deleted because not used in core definitions. Otherwise use bearerOf instead
+asio:profiles	X			
+asio:projectCoordinator				See notes on asio:coordinatedBy
+asio:projectOutcome		roh:produces		Subproperty of hasOutput if not already
+asio:projectStatus	X			
+asio:publicationCitation				TODO: use in preference to roh
+asio:publishedBy	vivo:publisher			
+asio:publishes	vivo:publisherOf			
+asio:requiredFor				In the future, would be nice to align these properties and vivo:hasPrerequisite and vivo:prerequisiteFor, the latter two of which are scoped to courses
+asio:requires				In the future, would be nice to align these properties and vivo:hasPrerequisite and vivo:prerequisiteFor, the latter two of which are scoped to courses
+asio:researchesIn		vivo:hasResearchArea		
+asio:specializes	X			becomes obsolete when role individuals are converted to subclasses
+asio:spinsOffFrom	roh:isSpinfoffOf			TODO: roh property is misspelled, but otherwise seems like the more natural formulation.
+asio:student	X			use StudentRole and subclasses
+asio:taughtBy				TODO: make naming parallel to, e.g., vivo.hasResearchArea and vivo:hasSubjectArea.  Perhaps vivo:hasTeachingArea?
+asio:teaches				
+asio:taughtBy				
+asio:utilizes			http://purl.obolibrary.org/obo/RO_0000057	subproperty of hasParticipant
+asio:yields		roh:produces		
+ro:annotatesAggregatedResource	X			
+http://www.w3.org/ns/prov#wasDerivedFrom	X			
+https://www.w3.org/TR/prov-o/#wasDerivedFrom	X			
+foaf:member	X			use vivo:MemberRole
+asio:awardedWith				TODO: ???
+asio:hasDOI		bibo:doi		
+asio:hasORCID		roh:ORCID		
+asio:hasResearcherID		vivo:researcherId		
+asio:hasTRL				
+asio:identifier		vivo:identifier		
+asio:isActive	X			
+asio:isCompetitive				TODO: is this an attribute of the project itself or of the process by which the contract was awarded? (Or, if latter, is this still important as a shortcut?)
+asio:isbn10		bibo:isbn10		
+asio:isbn13		bibo:isbn13		
+asio:issn		bibo:issn		
+asio:patentDate		vivo:dateIssued		
+asio:patentExpirationDate				TODO: DateTimeInterval for validity?
+asio:projectAcronym			vivo:abbreviation	
+asio:projectBudget	X			TODO: handle in financial module
+asio:projectEndDate	X			use vivo:dateTimeInterval instead
+asio:projectID			vivo:identifier	
+asio:projectKeyword		vivo:freetextKeyword		
+asio:projectStartDate				use vivo:dateTimeInterval instead
+asio:pubmedcentralid	vivo:pmcid			
+asio:pubmedid		bibo:pmid		
+asio:qualifieddate				"perhaps just ""date"" (Use vivo:DateTimeValue)?"
+asio:qualifiedvaluation				"perhaps just ""value""?"
+asio:referencedLaw				
+asio:upc				
+ro:entryName	X			
+roh:cites	X			
+roh:factorH	X			
+roh:patentStatus				
+roh:projectStatus				
+roh:status				
+asio:Status	roh:Status			
+asio:accepted	X			
+asio:cancelled	X			
+asio:closed	X			
+asio:funded	X			
+asio:rejected	X			
+asio:signed	X			
+asio:terminated	X			
+asio:unfunded	X			
+asio:Administrative			vivo:AdministratorRole	
+asio:CatedraticoEscuelaUniversitaria			vivo:Position	TODO: Role or Position?
+asio:CatedraticoUniversidad			vivo:Position	TODO: Role or Position?
+asio:EventOrganiser			vivo:OrganizerRole	
+asio:MasterStudent			http://purl.org/roh/mirror/obo/ero#ERO_0000783	subclass of StudentRole
+asio:PASfuncionario			vivo:Position	TODO: Role or Position?
+asio:PASlaboral			vivo:Position	TODO: Role or Position?
+asio:PhDStudent		http://purl.org/roh/mirror/obo/ero#ERO_0000785		use PhD Student from ERO
+asio:Researching			vivo:ResearcherRole	
+asio:Teaching			vivo:TeacherRole	
+asio:TechnicalSupport			http://purl.org/roh/mirror/obo/bfo#BFO_0000023	TODO: Role or Position?
+asio:TitularUniversidad			vivo:Position	TODO: Role or Position?
+asio:UndergraduateStudent			http://purl.org/roh/mirror/obo/ero#ERO_0000784	UndergraduateStudentRole
+roh:CurriculumVitae			bibo:Document	
